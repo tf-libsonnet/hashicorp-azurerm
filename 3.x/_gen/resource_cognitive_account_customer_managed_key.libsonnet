@@ -1,28 +1,41 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    cognitive_account_id,
+    key_vault_key_id,
     resourceLabel,
     identity_client_id=null,
-    key_vault_key_id,
-    cognitive_account_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_cognitive_account_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(
+    cognitive_account_id=cognitive_account_id,
     identity_client_id=identity_client_id,
     key_vault_key_id=key_vault_key_id,
-    cognitive_account_id=cognitive_account_id,
     timeouts=timeouts
   )),
   newAttrs(
-    identity_client_id=null,
-    key_vault_key_id,
     cognitive_account_id,
+    key_vault_key_id,
+    identity_client_id=null,
     timeouts=null
   ):: std.prune(a={
+    cognitive_account_id: cognitive_account_id,
     identity_client_id: identity_client_id,
     key_vault_key_id: key_vault_key_id,
-    cognitive_account_id: cognitive_account_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withCognitiveAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account_customer_managed_key+: {
@@ -67,18 +80,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

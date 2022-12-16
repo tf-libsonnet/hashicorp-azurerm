@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     log_analytics_workspace_id,
     name,
+    resourceLabel,
     subscription_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_iot', label=resourceLabel, attrs=self.newAttrs(
@@ -13,16 +13,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    log_analytics_workspace_id,
     name,
     subscription_id=null,
-    log_analytics_workspace_id,
     timeouts=null
   ):: std.prune(a={
+    log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     subscription_id: subscription_id,
-    log_analytics_workspace_id: log_analytics_workspace_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_iot+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_iot+: {
@@ -37,15 +57,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_data_connector_iot+: {
         [resourceLabel]+: {
           subscription_id: value,
-        },
-      },
-    },
-  },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_iot+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
         },
       },
     },
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

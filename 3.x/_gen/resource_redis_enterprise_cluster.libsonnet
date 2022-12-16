@@ -1,58 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    location,
+    name,
     resourceLabel,
-    zones=null,
-    minimum_tls_version=null,
     resource_group_name,
     sku_name,
-    name,
+    minimum_tls_version=null,
     tags=null,
-    location,
-    timeouts=null
+    timeouts=null,
+    zones=null
   ):: tf.withResource(type='azurerm_redis_enterprise_cluster', label=resourceLabel, attrs=self.newAttrs(
-    zones=zones,
+    location=location,
     minimum_tls_version=minimum_tls_version,
+    name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
-    name=name,
     tags=tags,
-    location=location,
-    timeouts=timeouts
+    timeouts=timeouts,
+    zones=zones
   )),
   newAttrs(
     location,
     name,
-    tags=null,
-    minimum_tls_version=null,
     resource_group_name,
     sku_name,
-    zones=null,
-    timeouts=null
+    minimum_tls_version=null,
+    tags=null,
+    timeouts=null,
+    zones=null
   ):: std.prune(a={
     location: location,
-    name: name,
-    tags: tags,
     minimum_tls_version: minimum_tls_version,
+    name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
-    zones: zones,
+    tags: tags,
     timeouts: timeouts,
+    zones: zones,
   }),
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_cluster+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withZones(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_cluster+: {
         [resourceLabel]+: {
-          zones: value,
+          location: value,
         },
       },
     },
@@ -66,6 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_cluster+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_cluster+: {
@@ -75,20 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_cluster+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_cluster+: {
-        [resourceLabel]+: {
-          name: value,
+          sku_name: value,
         },
       },
     },
@@ -120,17 +124,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withZones(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_cluster+: {
+        [resourceLabel]+: {
+          zones: value,
+        },
+      },
+    },
   },
 }

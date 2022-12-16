@@ -1,75 +1,79 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  key_vault_password:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
+  },
   new(
+    connection_string,
+    data_factory_id,
+    name,
     resourceLabel,
-    integration_runtime_name=null,
     additional_properties=null,
     annotations=null,
-    connection_string,
     description=null,
-    name,
-    parameters=null,
-    data_factory_id,
+    integration_runtime_name=null,
     key_vault_password=null,
+    parameters=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_snowflake', label=resourceLabel, attrs=self.newAttrs(
-    integration_runtime_name=integration_runtime_name,
     additional_properties=additional_properties,
     annotations=annotations,
     connection_string=connection_string,
+    data_factory_id=data_factory_id,
     description=description,
+    integration_runtime_name=integration_runtime_name,
+    key_vault_password=key_vault_password,
     name=name,
     parameters=parameters,
-    data_factory_id=data_factory_id,
-    key_vault_password=key_vault_password,
     timeouts=timeouts
   )),
   newAttrs(
+    connection_string,
+    data_factory_id,
     name,
-    parameters=null,
     additional_properties=null,
     annotations=null,
-    data_factory_id,
-    integration_runtime_name=null,
-    connection_string,
     description=null,
+    integration_runtime_name=null,
     key_vault_password=null,
+    parameters=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    parameters: parameters,
     additional_properties: additional_properties,
     annotations: annotations,
-    data_factory_id: data_factory_id,
-    integration_runtime_name: integration_runtime_name,
     connection_string: connection_string,
+    data_factory_id: data_factory_id,
     description: description,
+    integration_runtime_name: integration_runtime_name,
     key_vault_password: key_vault_password,
+    name: name,
+    parameters: parameters,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_snowflake+: {
         [resourceLabel]+: {
           additional_properties: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_snowflake+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_snowflake+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
         },
       },
     },
@@ -92,11 +96,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_snowflake+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_snowflake+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_snowflake+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  withKeyVaultPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_snowflake+: {
+        [resourceLabel]+: {
+          key_vault_password: value,
+        },
+      },
+    },
+  },
+  withKeyVaultPasswordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_snowflake+: {
+        [resourceLabel]+: {
+          key_vault_password+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -136,45 +176,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
-  withKeyVaultPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_snowflake+: {
-        [resourceLabel]+: {
-          key_vault_password: value,
-        },
-      },
-    },
-  },
-  withKeyVaultPasswordMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_snowflake+: {
-        [resourceLabel]+: {
-          key_vault_password+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  key_vault_password:: {
-    new(
-      linked_service_name,
-      secret_name
-    ):: std.prune(a={
-      linked_service_name: linked_service_name,
-      secret_name: secret_name,
-    }),
   },
 }

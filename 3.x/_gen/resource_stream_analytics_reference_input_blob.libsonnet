@@ -1,110 +1,89 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    storage_account_name,
-    authentication_mode=null,
-    storage_account_key,
-    stream_analytics_job_name,
-    resource_group_name,
-    storage_container_name,
-    time_format,
     date_format,
     name,
     path_pattern,
-    timeouts=null,
-    serialization=null
+    resourceLabel,
+    resource_group_name,
+    storage_account_key,
+    storage_account_name,
+    storage_container_name,
+    stream_analytics_job_name,
+    time_format,
+    authentication_mode=null,
+    serialization=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_reference_input_blob', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_name=storage_account_name,
     authentication_mode=authentication_mode,
-    storage_account_key=storage_account_key,
-    stream_analytics_job_name=stream_analytics_job_name,
-    resource_group_name=resource_group_name,
-    storage_container_name=storage_container_name,
-    time_format=time_format,
     date_format=date_format,
     name=name,
     path_pattern=path_pattern,
-    timeouts=timeouts,
-    serialization=serialization
+    resource_group_name=resource_group_name,
+    serialization=serialization,
+    storage_account_key=storage_account_key,
+    storage_account_name=storage_account_name,
+    storage_container_name=storage_container_name,
+    stream_analytics_job_name=stream_analytics_job_name,
+    time_format=time_format,
+    timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    path_pattern,
-    storage_container_name,
-    authentication_mode=null,
     date_format,
-    storage_account_key,
-    stream_analytics_job_name,
     name,
+    path_pattern,
+    resource_group_name,
+    storage_account_key,
     storage_account_name,
+    storage_container_name,
+    stream_analytics_job_name,
     time_format,
+    authentication_mode=null,
     serialization=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    path_pattern: path_pattern,
-    storage_container_name: storage_container_name,
     authentication_mode: authentication_mode,
     date_format: date_format,
-    storage_account_key: storage_account_key,
-    stream_analytics_job_name: stream_analytics_job_name,
     name: name,
-    storage_account_name: storage_account_name,
-    time_format: time_format,
+    path_pattern: path_pattern,
+    resource_group_name: resource_group_name,
     serialization: serialization,
+    storage_account_key: storage_account_key,
+    storage_account_name: storage_account_name,
+    storage_container_name: storage_container_name,
+    stream_analytics_job_name: stream_analytics_job_name,
+    time_format: time_format,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  serialization:: {
+    new(
+      type,
+      encoding=null,
+      field_delimiter=null
+    ):: std.prune(a={
+      encoding: encoding,
+      field_delimiter: field_delimiter,
+      type: type,
+    }),
   },
-  withStorageAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          storage_account_key: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withPathPattern(resourceLabel, value):: {
+  withAuthenticationMode(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_reference_input_blob+: {
         [resourceLabel]+: {
-          path_pattern: value,
-        },
-      },
-    },
-  },
-  withStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          storage_account_name: value,
-        },
-      },
-    },
-  },
-  withStorageContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          storage_container_name: value,
-        },
-      },
-    },
-  },
-  withTimeFormat(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          time_format: value,
+          authentication_mode: value,
         },
       },
     },
@@ -118,29 +97,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStreamAnalyticsJobName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
-  withAuthenticationMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          authentication_mode: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_reference_input_blob+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPathPattern(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          path_pattern: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -163,16 +142,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  serialization:: {
-    new(
-      encoding=null,
-      field_delimiter=null,
-      type
-    ):: std.prune(a={
-      encoding: encoding,
-      field_delimiter: field_delimiter,
-      type: type,
-    }),
+  withStorageAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          storage_account_key: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
+  withStorageContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          storage_container_name: value,
+        },
+      },
+    },
+  },
+  withStreamAnalyticsJobName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          stream_analytics_job_name: value,
+        },
+      },
+    },
+  },
+  withTimeFormat(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          time_format: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -191,18 +204,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

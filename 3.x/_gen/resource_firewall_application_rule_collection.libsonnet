@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     action,
     azure_firewall_name,
     name,
     priority,
+    resourceLabel,
     resource_group_name,
     rule=null,
     timeouts=null
@@ -19,22 +19,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    action,
     azure_firewall_name,
     name,
     priority,
     resource_group_name,
-    action,
     rule=null,
     timeouts=null
   ):: std.prune(a={
+    action: action,
     azure_firewall_name: azure_firewall_name,
     name: name,
     priority: priority,
     resource_group_name: resource_group_name,
-    action: action,
     rule: rule,
     timeouts: timeouts,
   }),
+  rule:: {
+    new(
+      name,
+      description=null,
+      fqdn_tags=null,
+      protocol=null,
+      source_addresses=null,
+      source_ip_groups=null,
+      target_fqdns=null
+    ):: std.prune(a={
+      description: description,
+      fqdn_tags: fqdn_tags,
+      name: name,
+      protocol: protocol,
+      source_addresses: source_addresses,
+      source_ip_groups: source_ip_groups,
+      target_fqdns: target_fqdns,
+    }),
+    protocol:: {
+      new(
+        port,
+        type
+      ):: std.prune(a={
+        port: port,
+        type: type,
+      }),
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAction(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_application_rule_collection+: {
+        [resourceLabel]+: {
+          action: value,
+        },
+      },
+    },
+  },
   withAzureFirewallName(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_application_rule_collection+: {
@@ -71,15 +121,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAction(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_application_rule_collection+: {
-        [resourceLabel]+: {
-          action: value,
-        },
-      },
-    },
-  },
   withRule(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_application_rule_collection+: {
@@ -96,34 +137,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           rule+: if std.isArray(v=value) then value else [value],
         },
       },
-    },
-  },
-  rule:: {
-    new(
-      source_ip_groups=null,
-      target_fqdns=null,
-      description=null,
-      fqdn_tags=null,
-      name,
-      source_addresses=null,
-      protocol=null
-    ):: std.prune(a={
-      source_ip_groups: source_ip_groups,
-      target_fqdns: target_fqdns,
-      description: description,
-      fqdn_tags: fqdn_tags,
-      name: name,
-      source_addresses: source_addresses,
-      protocol: protocol,
-    }),
-    protocol:: {
-      new(
-        port,
-        type
-      ):: std.prune(a={
-        port: port,
-        type: type,
-      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -143,18 +156,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

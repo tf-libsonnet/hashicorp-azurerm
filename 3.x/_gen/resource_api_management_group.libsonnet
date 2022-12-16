@@ -1,52 +1,56 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    api_management_name,
+    display_name,
+    name,
     resourceLabel,
     resource_group_name,
-    type=null,
-    api_management_name,
     description=null,
-    display_name,
     external_id=null,
-    name,
-    timeouts=null
+    timeouts=null,
+    type=null
   ):: tf.withResource(type='azurerm_api_management_group', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    type=type,
     api_management_name=api_management_name,
     description=description,
     display_name=display_name,
     external_id=external_id,
     name=name,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    timeouts=timeouts,
+    type=type
   )),
   newAttrs(
-    description=null,
+    api_management_name,
     display_name,
-    external_id=null,
     name,
     resource_group_name,
-    type=null,
-    api_management_name,
-    timeouts=null
+    description=null,
+    external_id=null,
+    timeouts=null,
+    type=null
   ):: std.prune(a={
+    api_management_name: api_management_name,
     description: description,
     display_name: display_name,
     external_id: external_id,
     name: name,
     resource_group_name: resource_group_name,
-    type: type,
-    api_management_name: api_management_name,
     timeouts: timeouts,
+    type: type,
   }),
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_group+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
@@ -120,17 +124,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_group+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

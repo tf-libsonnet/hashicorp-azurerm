@@ -1,79 +1,83 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  action:: {
+    new(
+      endpoint,
+      name
+    ):: std.prune(a={
+      endpoint: endpoint,
+      name: name,
+    }),
+  },
   new(
-    resourceLabel,
-    tags=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
-    validation=null,
     action=null,
     resource_type=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    validation=null
   ):: tf.withResource(type='azurerm_custom_provider', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
+    action=action,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    validation=validation,
-    action=action,
     resource_type=resource_type,
-    timeouts=timeouts
+    tags=tags,
+    timeouts=timeouts,
+    validation=validation
   )),
   newAttrs(
     location,
     name,
     resource_group_name,
-    tags=null,
     action=null,
     resource_type=null,
+    tags=null,
     timeouts=null,
     validation=null
   ):: std.prune(a={
+    action: action,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
-    action: action,
     resource_type: resource_type,
+    tags: tags,
     timeouts: timeouts,
     validation: validation,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  resource_type:: {
+    new(
+      endpoint,
+      name,
+      routing_type=null
+    ):: std.prune(a={
+      endpoint: endpoint,
+      name: name,
+      routing_type: routing_type,
+    }),
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
+  validation:: {
+    new(
+      specification
+    ):: std.prune(a={
+      specification: specification,
+    }),
   },
   withAction(resourceLabel, value):: {
     resource+: {
@@ -93,14 +97,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  action:: {
-    new(
-      name,
-      endpoint
-    ):: std.prune(a={
-      name: name,
-      endpoint: endpoint,
-    }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
   },
   withResourceType(resourceLabel, value):: {
     resource+: {
@@ -120,16 +142,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  resource_type:: {
-    new(
-      routing_type=null,
-      endpoint,
-      name
-    ):: std.prune(a={
-      routing_type: routing_type,
-      endpoint: endpoint,
-      name: name,
-    }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -149,19 +169,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withValidation(resourceLabel, value):: {
     resource+: {
       azurerm_custom_provider+: {
@@ -179,12 +186,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  validation:: {
-    new(
-      specification
-    ):: std.prune(a={
-      specification: specification,
-    }),
   },
 }

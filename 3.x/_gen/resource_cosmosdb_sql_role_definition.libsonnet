@@ -1,44 +1,64 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    role_definition_id=null,
-    type=null,
     account_name,
     assignable_scopes,
     name,
+    resourceLabel,
     resource_group_name,
     permissions=null,
-    timeouts=null
+    role_definition_id=null,
+    timeouts=null,
+    type=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_role_definition', label=resourceLabel, attrs=self.newAttrs(
-    role_definition_id=role_definition_id,
-    type=type,
     account_name=account_name,
     assignable_scopes=assignable_scopes,
     name=name,
-    resource_group_name=resource_group_name,
     permissions=permissions,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    role_definition_id=role_definition_id,
+    timeouts=timeouts,
+    type=type
   )),
   newAttrs(
+    account_name,
     assignable_scopes,
     name,
     resource_group_name,
-    role_definition_id=null,
-    type=null,
-    account_name,
     permissions=null,
-    timeouts=null
+    role_definition_id=null,
+    timeouts=null,
+    type=null
   ):: std.prune(a={
+    account_name: account_name,
     assignable_scopes: assignable_scopes,
     name: name,
+    permissions: permissions,
     resource_group_name: resource_group_name,
     role_definition_id: role_definition_id,
-    type: type,
-    account_name: account_name,
-    permissions: permissions,
     timeouts: timeouts,
+    type: type,
   }),
+  permissions:: {
+    new(
+      data_actions
+    ):: std.prune(a={
+      data_actions: data_actions,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_role_definition+: {
@@ -66,33 +86,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_role_definition+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withRoleDefinitionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_role_definition+: {
-        [resourceLabel]+: {
-          role_definition_id: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_role_definition+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
   withPermissions(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_role_definition+: {
@@ -111,12 +104,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  permissions:: {
-    new(
-      data_actions
-    ):: std.prune(a={
-      data_actions: data_actions,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_role_definition+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRoleDefinitionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_role_definition+: {
+        [resourceLabel]+: {
+          role_definition_id: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -136,17 +140,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_role_definition+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

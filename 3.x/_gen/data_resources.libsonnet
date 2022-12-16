@@ -2,31 +2,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    type=null,
     name=null,
     required_tags=null,
     resource_group_name=null,
-    timeouts=null
+    timeouts=null,
+    type=null
   ):: tf.withData(type='azurerm_resources', label=dataSrcLabel, attrs=self.newAttrs(
-    type=type,
     name=name,
     required_tags=required_tags,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    type=type
   )),
   newAttrs(
-    type=null,
     name=null,
     required_tags=null,
     resource_group_name=null,
-    timeouts=null
+    timeouts=null,
+    type=null
   ):: std.prune(a={
-    type: type,
     name: name,
     required_tags: required_tags,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
+    type: type,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_resources+: {
@@ -54,15 +61,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withType(dataSrcLabel, value):: {
-    data+: {
-      azurerm_resources+: {
-        [dataSrcLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_resources+: {
@@ -81,11 +79,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withType(dataSrcLabel, value):: {
+    data+: {
+      azurerm_resources+: {
+        [dataSrcLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

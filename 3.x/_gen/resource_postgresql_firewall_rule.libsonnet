@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     end_ip_address,
     name,
+    resourceLabel,
     resource_group_name,
     server_name,
     start_ip_address,
@@ -31,23 +31,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     start_ip_address: start_ip_address,
     timeouts: timeouts,
   }),
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_firewall_rule+: {
-        [resourceLabel]+: {
-          server_name: value,
-        },
-      },
-    },
-  },
-  withStartIpAddress(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_firewall_rule+: {
-        [resourceLabel]+: {
-          start_ip_address: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withEndIpAddress(resourceLabel, value):: {
     resource+: {
@@ -76,6 +71,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_firewall_rule+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
+  withStartIpAddress(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_firewall_rule+: {
+        [resourceLabel]+: {
+          start_ip_address: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_firewall_rule+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,18 +1,18 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    value,
     name,
+    resourceLabel,
     resource_group_name,
     server_name,
+    value,
     timeouts=null
   ):: tf.withResource(type='azurerm_mariadb_configuration', label=resourceLabel, attrs=self.newAttrs(
-    value=value,
     name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    value=value
   )),
   newAttrs(
     name,
@@ -24,9 +24,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
-    value: value,
     timeouts: timeouts,
+    value: value,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_configuration+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_configuration+: {
@@ -41,24 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mariadb_configuration+: {
         [resourceLabel]+: {
           server_name: value,
-        },
-      },
-    },
-  },
-  withValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_configuration+: {
-        [resourceLabel]+: {
-          value: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_configuration+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -81,17 +85,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_configuration+: {
+        [resourceLabel]+: {
+          value: value,
+        },
+      },
+    },
   },
 }

@@ -1,36 +1,67 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    log_analytics_workspace_id,
     name,
-    tenant_id=null,
+    resourceLabel,
     alerts_enabled=null,
     discovery_logs_enabled=null,
-    log_analytics_workspace_id,
+    tenant_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_microsoft_cloud_app_security', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    tenant_id=tenant_id,
     alerts_enabled=alerts_enabled,
     discovery_logs_enabled=discovery_logs_enabled,
     log_analytics_workspace_id=log_analytics_workspace_id,
+    name=name,
+    tenant_id=tenant_id,
     timeouts=timeouts
   )),
   newAttrs(
     log_analytics_workspace_id,
     name,
-    tenant_id=null,
     alerts_enabled=null,
     discovery_logs_enabled=null,
+    tenant_id=null,
     timeouts=null
   ):: std.prune(a={
+    alerts_enabled: alerts_enabled,
+    discovery_logs_enabled: discovery_logs_enabled,
     log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     tenant_id: tenant_id,
-    alerts_enabled: alerts_enabled,
-    discovery_logs_enabled: discovery_logs_enabled,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAlertsEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_microsoft_cloud_app_security+: {
+        [resourceLabel]+: {
+          alerts_enabled: value,
+        },
+      },
+    },
+  },
+  withDiscoveryLogsEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_microsoft_cloud_app_security+: {
+        [resourceLabel]+: {
+          discovery_logs_enabled: value,
+        },
+      },
+    },
+  },
   withLogAnalyticsWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_microsoft_cloud_app_security+: {
@@ -58,24 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAlertsEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_microsoft_cloud_app_security+: {
-        [resourceLabel]+: {
-          alerts_enabled: value,
-        },
-      },
-    },
-  },
-  withDiscoveryLogsEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_microsoft_cloud_app_security+: {
-        [resourceLabel]+: {
-          discovery_logs_enabled: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_microsoft_cloud_app_security+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

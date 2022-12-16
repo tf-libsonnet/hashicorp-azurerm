@@ -1,52 +1,72 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    location,
-    name,
     device_mapping_json,
     eventhub_consumer_group_name,
     eventhub_name,
-    tags=null,
-    workspace_id,
     eventhub_namespace_name,
+    location,
+    name,
+    resourceLabel,
+    workspace_id,
     identity=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_medtech_service', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
     device_mapping_json=device_mapping_json,
     eventhub_consumer_group_name=eventhub_consumer_group_name,
     eventhub_name=eventhub_name,
-    tags=tags,
-    workspace_id=workspace_id,
     eventhub_namespace_name=eventhub_namespace_name,
     identity=identity,
-    timeouts=timeouts
+    location=location,
+    name=name,
+    tags=tags,
+    timeouts=timeouts,
+    workspace_id=workspace_id
   )),
   newAttrs(
+    device_mapping_json,
+    eventhub_consumer_group_name,
     eventhub_name,
     eventhub_namespace_name,
     location,
     name,
-    tags=null,
     workspace_id,
-    device_mapping_json,
-    eventhub_consumer_group_name,
     identity=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    device_mapping_json: device_mapping_json,
+    eventhub_consumer_group_name: eventhub_consumer_group_name,
     eventhub_name: eventhub_name,
     eventhub_namespace_name: eventhub_namespace_name,
+    identity: identity,
     location: location,
     name: name,
     tags: tags,
-    workspace_id: workspace_id,
-    device_mapping_json: device_mapping_json,
-    eventhub_consumer_group_name: eventhub_consumer_group_name,
-    identity: identity,
     timeouts: timeouts,
+    workspace_id: workspace_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDeviceMappingJson(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
@@ -83,6 +103,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
@@ -110,15 +148,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          workspace_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
@@ -137,42 +166,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
+  withWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
         [resourceLabel]+: {
-          identity: value,
+          workspace_id: value,
         },
       },
     },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
   },
 }

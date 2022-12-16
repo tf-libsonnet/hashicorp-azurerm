@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     private_markdown_storage_enforced,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_portal_tenant_configuration', label=resourceLabel, attrs=self.newAttrs(private_markdown_storage_enforced=private_markdown_storage_enforced, timeouts=timeouts)),
   newAttrs(
@@ -12,6 +12,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     private_markdown_storage_enforced: private_markdown_storage_enforced,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withPrivateMarkdownStorageEnforced(resourceLabel, value):: {
     resource+: {
       azurerm_portal_tenant_configuration+: {
@@ -38,18 +51,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

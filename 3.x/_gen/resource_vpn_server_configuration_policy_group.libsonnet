@@ -1,44 +1,59 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    is_default=null,
     name,
-    priority=null,
+    resourceLabel,
     vpn_server_configuration_id,
-    timeouts=null,
-    policy=null
+    is_default=null,
+    policy=null,
+    priority=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_vpn_server_configuration_policy_group', label=resourceLabel, attrs=self.newAttrs(
     is_default=is_default,
     name=name,
+    policy=policy,
     priority=priority,
-    vpn_server_configuration_id=vpn_server_configuration_id,
     timeouts=timeouts,
-    policy=policy
+    vpn_server_configuration_id=vpn_server_configuration_id
   )),
   newAttrs(
-    priority=null,
+    name,
     vpn_server_configuration_id,
     is_default=null,
-    name,
     policy=null,
+    priority=null,
     timeouts=null
   ):: std.prune(a={
-    priority: priority,
-    vpn_server_configuration_id: vpn_server_configuration_id,
     is_default: is_default,
     name: name,
     policy: policy,
+    priority: priority,
     timeouts: timeouts,
+    vpn_server_configuration_id: vpn_server_configuration_id,
   }),
-  withVpnServerConfigurationId(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration_policy_group+: {
-        [resourceLabel]+: {
-          vpn_server_configuration_id: value,
-        },
-      },
-    },
+  policy:: {
+    new(
+      name,
+      type,
+      value
+    ):: std.prune(a={
+      name: name,
+      type: type,
+      value: value,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withIsDefault(resourceLabel, value):: {
     resource+: {
@@ -54,6 +69,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_vpn_server_configuration_policy_group+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration_policy_group+: {
+        [resourceLabel]+: {
+          policy: value,
+        },
+      },
+    },
+  },
+  withPolicyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration_policy_group+: {
+        [resourceLabel]+: {
+          policy+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -85,46 +118,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withPolicy(resourceLabel, value):: {
+  withVpnServerConfigurationId(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration_policy_group+: {
         [resourceLabel]+: {
-          policy: value,
+          vpn_server_configuration_id: value,
         },
       },
     },
-  },
-  withPolicyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration_policy_group+: {
-        [resourceLabel]+: {
-          policy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  policy:: {
-    new(
-      type,
-      value,
-      name
-    ):: std.prune(a={
-      type: type,
-      value: value,
-      name: name,
-    }),
   },
 }

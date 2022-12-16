@@ -1,142 +1,111 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  azure_active_directory_authentication:: {
+    new(
+      audience,
+      issuer,
+      tenant
+    ):: std.prune(a={
+      audience: audience,
+      issuer: issuer,
+      tenant: tenant,
+    }),
+  },
+  client_revoked_certificate:: {
+    new(
+      name,
+      thumbprint
+    ):: std.prune(a={
+      name: name,
+      thumbprint: thumbprint,
+    }),
+  },
+  client_root_certificate:: {
+    new(
+      name,
+      public_cert_data
+    ):: std.prune(a={
+      name: name,
+      public_cert_data: public_cert_data,
+    }),
+  },
+  ipsec_policy:: {
+    new(
+      dh_group,
+      ike_encryption,
+      ike_integrity,
+      ipsec_encryption,
+      ipsec_integrity,
+      pfs_group,
+      sa_data_size_kilobytes,
+      sa_lifetime_seconds
+    ):: std.prune(a={
+      dh_group: dh_group,
+      ike_encryption: ike_encryption,
+      ike_integrity: ike_integrity,
+      ipsec_encryption: ipsec_encryption,
+      ipsec_integrity: ipsec_integrity,
+      pfs_group: pfs_group,
+      sa_data_size_kilobytes: sa_data_size_kilobytes,
+      sa_lifetime_seconds: sa_lifetime_seconds,
+    }),
+  },
   new(
-    resourceLabel,
-    name,
-    resource_group_name,
-    tags=null,
-    vpn_authentication_types,
-    vpn_protocols=null,
     location,
-    radius=null,
-    timeouts=null,
+    name,
+    resourceLabel,
+    resource_group_name,
+    vpn_authentication_types,
     azure_active_directory_authentication=null,
     client_revoked_certificate=null,
     client_root_certificate=null,
-    ipsec_policy=null
+    ipsec_policy=null,
+    radius=null,
+    tags=null,
+    timeouts=null,
+    vpn_protocols=null
   ):: tf.withResource(type='azurerm_vpn_server_configuration', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    vpn_authentication_types=vpn_authentication_types,
-    vpn_protocols=vpn_protocols,
-    location=location,
-    radius=radius,
-    timeouts=timeouts,
     azure_active_directory_authentication=azure_active_directory_authentication,
     client_revoked_certificate=client_revoked_certificate,
     client_root_certificate=client_root_certificate,
-    ipsec_policy=ipsec_policy
+    ipsec_policy=ipsec_policy,
+    location=location,
+    name=name,
+    radius=radius,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    vpn_authentication_types=vpn_authentication_types,
+    vpn_protocols=vpn_protocols
   )),
   newAttrs(
-    vpn_authentication_types,
-    vpn_protocols=null,
     location,
     name,
     resource_group_name,
-    tags=null,
-    ipsec_policy=null,
-    radius=null,
-    timeouts=null,
+    vpn_authentication_types,
     azure_active_directory_authentication=null,
     client_revoked_certificate=null,
-    client_root_certificate=null
+    client_root_certificate=null,
+    ipsec_policy=null,
+    radius=null,
+    tags=null,
+    timeouts=null,
+    vpn_protocols=null
   ):: std.prune(a={
-    vpn_authentication_types: vpn_authentication_types,
-    vpn_protocols: vpn_protocols,
-    location: location,
-    name: name,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    ipsec_policy: ipsec_policy,
-    radius: radius,
-    timeouts: timeouts,
     azure_active_directory_authentication: azure_active_directory_authentication,
     client_revoked_certificate: client_revoked_certificate,
     client_root_certificate: client_root_certificate,
+    ipsec_policy: ipsec_policy,
+    location: location,
+    name: name,
+    radius: radius,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    timeouts: timeouts,
+    vpn_authentication_types: vpn_authentication_types,
+    vpn_protocols: vpn_protocols,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withVpnAuthenticationTypes(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          vpn_authentication_types: value,
-        },
-      },
-    },
-  },
-  withVpnProtocols(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          vpn_protocols: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withRadius(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          radius: value,
-        },
-      },
-    },
-  },
-  withRadiusMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          radius+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
   radius:: {
-    new(
-      client_root_certificate=null,
-      server=null,
-      server_root_certificate=null
-    ):: std.prune(a={
-      client_root_certificate: client_root_certificate,
-      server: server,
-      server_root_certificate: server_root_certificate,
-    }),
     client_root_certificate:: {
       new(
         name,
@@ -146,6 +115,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         thumbprint: thumbprint,
       }),
     },
+    new(
+      client_root_certificate=null,
+      server=null,
+      server_root_certificate=null
+    ):: std.prune(a={
+      client_root_certificate: client_root_certificate,
+      server: server,
+      server_root_certificate: server_root_certificate,
+    }),
     server:: {
       new(
         address,
@@ -159,30 +137,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     server_root_certificate:: {
       new(
-        public_cert_data,
-        name
+        name,
+        public_cert_data
       ):: std.prune(a={
-        public_cert_data: public_cert_data,
         name: name,
+        public_cert_data: public_cert_data,
       }),
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
     },
   },
   timeouts:: {
@@ -216,17 +176,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  azure_active_directory_authentication:: {
-    new(
-      audience,
-      issuer,
-      tenant
-    ):: std.prune(a={
-      audience: audience,
-      issuer: issuer,
-      tenant: tenant,
-    }),
-  },
   withClientRevokedCertificate(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
@@ -244,15 +193,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  client_revoked_certificate:: {
-    new(
-      name,
-      thumbprint
-    ):: std.prune(a={
-      name: name,
-      thumbprint: thumbprint,
-    }),
   },
   withClientRootCertificate(resourceLabel, value):: {
     resource+: {
@@ -272,15 +212,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  client_root_certificate:: {
-    new(
-      public_cert_data,
-      name
-    ):: std.prune(a={
-      public_cert_data: public_cert_data,
-      name: name,
-    }),
-  },
   withIpsecPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
@@ -299,25 +230,94 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  ipsec_policy:: {
-    new(
-      dh_group,
-      ike_encryption,
-      ike_integrity,
-      ipsec_encryption,
-      ipsec_integrity,
-      pfs_group,
-      sa_data_size_kilobytes,
-      sa_lifetime_seconds
-    ):: std.prune(a={
-      dh_group: dh_group,
-      ike_encryption: ike_encryption,
-      ike_integrity: ike_integrity,
-      ipsec_encryption: ipsec_encryption,
-      ipsec_integrity: ipsec_integrity,
-      pfs_group: pfs_group,
-      sa_data_size_kilobytes: sa_data_size_kilobytes,
-      sa_lifetime_seconds: sa_lifetime_seconds,
-    }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withRadius(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          radius: value,
+        },
+      },
+    },
+  },
+  withRadiusMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          radius+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  withVpnAuthenticationTypes(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          vpn_authentication_types: value,
+        },
+      },
+    },
+  },
+  withVpnProtocols(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          vpn_protocols: value,
+        },
+      },
+    },
   },
 }

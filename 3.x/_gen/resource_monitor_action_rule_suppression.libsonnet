@@ -1,53 +1,188 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  condition:: {
+    alert_context:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    alert_rule_id:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    description:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    monitor:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    monitor_service:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    new(
+      alert_context=null,
+      alert_rule_id=null,
+      description=null,
+      monitor=null,
+      monitor_service=null,
+      severity=null,
+      target_resource_type=null
+    ):: std.prune(a={
+      alert_context: alert_context,
+      alert_rule_id: alert_rule_id,
+      description: description,
+      monitor: monitor,
+      monitor_service: monitor_service,
+      severity: severity,
+      target_resource_type: target_resource_type,
+    }),
+    severity:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    target_resource_type:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+  },
   new(
-    resourceLabel,
-    enabled=null,
     name,
+    resourceLabel,
     resource_group_name,
-    tags=null,
-    description=null,
-    suppression=null,
-    timeouts=null,
     condition=null,
-    scope=null
+    description=null,
+    enabled=null,
+    scope=null,
+    suppression=null,
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_monitor_action_rule_suppression', label=resourceLabel, attrs=self.newAttrs(
+    condition=condition,
+    description=description,
     enabled=enabled,
     name=name,
     resource_group_name=resource_group_name,
-    tags=tags,
-    description=description,
+    scope=scope,
     suppression=suppression,
-    timeouts=timeouts,
-    condition=condition,
-    scope=scope
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
-    enabled=null,
     name,
     resource_group_name,
-    tags=null,
-    description=null,
-    suppression=null,
-    timeouts=null,
     condition=null,
-    scope=null
+    description=null,
+    enabled=null,
+    scope=null,
+    suppression=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
+    condition: condition,
+    description: description,
     enabled: enabled,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
-    description: description,
-    suppression: suppression,
-    timeouts: timeouts,
-    condition: condition,
     scope: scope,
+    suppression: suppression,
+    tags: tags,
+    timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
+  scope:: {
+    new(
+      resource_ids,
+      type
+    ):: std.prune(a={
+      resource_ids: resource_ids,
+      type: type,
+    }),
+  },
+  suppression:: {
+    new(
+      recurrence_type,
+      schedule=null
+    ):: std.prune(a={
+      recurrence_type: recurrence_type,
+      schedule: schedule,
+    }),
+    schedule:: {
+      new(
+        end_date_utc,
+        start_date_utc,
+        recurrence_monthly=null,
+        recurrence_weekly=null
+      ):: std.prune(a={
+        end_date_utc: end_date_utc,
+        recurrence_monthly: recurrence_monthly,
+        recurrence_weekly: recurrence_weekly,
+        start_date_utc: start_date_utc,
+      }),
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withCondition(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_action_rule_suppression+: {
         [resourceLabel]+: {
-          tags: value,
+          condition: value,
+        },
+      },
+    },
+  },
+  withConditionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_rule_suppression+: {
+        [resourceLabel]+: {
+          condition+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -88,106 +223,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCondition(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_rule_suppression+: {
-        [resourceLabel]+: {
-          condition: value,
-        },
-      },
-    },
-  },
-  withConditionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_rule_suppression+: {
-        [resourceLabel]+: {
-          condition+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  condition:: {
-    new(
-      severity=null,
-      target_resource_type=null,
-      alert_context=null,
-      alert_rule_id=null,
-      description=null,
-      monitor=null,
-      monitor_service=null
-    ):: std.prune(a={
-      severity: severity,
-      target_resource_type: target_resource_type,
-      alert_context: alert_context,
-      alert_rule_id: alert_rule_id,
-      description: description,
-      monitor: monitor,
-      monitor_service: monitor_service,
-    }),
-    monitor_service:: {
-      new(
-        values,
-        operator
-      ):: std.prune(a={
-        values: values,
-        operator: operator,
-      }),
-    },
-    severity:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    target_resource_type:: {
-      new(
-        values,
-        operator
-      ):: std.prune(a={
-        values: values,
-        operator: operator,
-      }),
-    },
-    alert_context:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    alert_rule_id:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    description:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    monitor:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-  },
   withScope(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_action_rule_suppression+: {
@@ -205,15 +240,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  scope:: {
-    new(
-      resource_ids,
-      type
-    ):: std.prune(a={
-      resource_ids: resource_ids,
-      type: type,
-    }),
   },
   withSuppression(resourceLabel, value):: {
     resource+: {
@@ -233,26 +259,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  suppression:: {
-    new(
-      recurrence_type,
-      schedule=null
-    ):: std.prune(a={
-      recurrence_type: recurrence_type,
-      schedule: schedule,
-    }),
-    schedule:: {
-      new(
-        start_date_utc,
-        end_date_utc,
-        recurrence_monthly=null,
-        recurrence_weekly=null
-      ):: std.prune(a={
-        start_date_utc: start_date_utc,
-        end_date_utc: end_date_utc,
-        recurrence_monthly: recurrence_monthly,
-        recurrence_weekly: recurrence_weekly,
-      }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_rule_suppression+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -272,18 +285,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

@@ -2,19 +2,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    subscription_id,
     name,
+    subscription_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_consumption_budget_subscription', label=dataSrcLabel, attrs=self.newAttrs(subscription_id=subscription_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_consumption_budget_subscription', label=dataSrcLabel, attrs=self.newAttrs(name=name, subscription_id=subscription_id, timeouts=timeouts)),
   newAttrs(
-    subscription_id,
     name,
+    subscription_id,
     timeouts=null
   ):: std.prune(a={
-    subscription_id: subscription_id,
     name: name,
+    subscription_id: subscription_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_consumption_budget_subscription+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

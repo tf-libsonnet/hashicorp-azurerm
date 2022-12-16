@@ -1,23 +1,23 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    tags=null,
     cdn_frontdoor_profile_id,
+    name,
+    resourceLabel,
     enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    tags=tags,
     cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
     enabled=enabled,
+    name=name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
     cdn_frontdoor_profile_id,
-    enabled=null,
     name,
+    enabled=null,
     tags=null,
     timeouts=null
   ):: std.prune(a={
@@ -27,23 +27,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags: tags,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_endpoint+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_endpoint+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withCdnFrontdoorProfileId(resourceLabel, value):: {
     resource+: {
@@ -59,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cdn_frontdoor_endpoint+: {
         [resourceLabel]+: {
           enabled: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_endpoint+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_endpoint+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

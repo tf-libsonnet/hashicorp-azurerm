@@ -1,51 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
     api_management_name,
+    dataSrcLabel,
     resource_group_name,
     user_id,
     timeouts=null
   ):: tf.withData(type='azurerm_api_management_user', label=dataSrcLabel, attrs=self.newAttrs(
     api_management_name=api_management_name,
     resource_group_name=resource_group_name,
-    user_id=user_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    user_id=user_id
   )),
   newAttrs(
+    api_management_name,
     resource_group_name,
     user_id,
-    api_management_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    user_id: user_id,
     api_management_name: api_management_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
+    user_id: user_id,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_api_management_user+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withUserId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_api_management_user+: {
-        [dataSrcLabel]+: {
-          user_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withApiManagementName(dataSrcLabel, value):: {
     data+: {
       azurerm_api_management_user+: {
         [dataSrcLabel]+: {
           api_management_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_api_management_user+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withUserId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_api_management_user+: {
+        [dataSrcLabel]+: {
+          user_id: value,
+        },
+      },
+    },
   },
 }

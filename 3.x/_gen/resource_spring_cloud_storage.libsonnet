@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     spring_cloud_service_id,
     storage_account_key,
     storage_account_name,
@@ -27,23 +27,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_name: storage_account_name,
     timeouts: timeouts,
   }),
-  withStorageAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_storage+: {
-        [resourceLabel]+: {
-          storage_account_key: value,
-        },
-      },
-    },
-  },
-  withStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_storage+: {
-        [resourceLabel]+: {
-          storage_account_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withName(resourceLabel, value):: {
     resource+: {
@@ -59,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_storage+: {
         [resourceLabel]+: {
           spring_cloud_service_id: value,
+        },
+      },
+    },
+  },
+  withStorageAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_storage+: {
+        [resourceLabel]+: {
+          storage_account_key: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_storage+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
         },
       },
     },
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

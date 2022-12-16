@@ -1,73 +1,99 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  manage_action:: {
+    new(
+      install,
+      remove,
+      update=null
+    ):: std.prune(a={
+      install: install,
+      remove: remove,
+      update: update,
+    }),
+  },
   new(
-    resourceLabel,
-    exclude_from_latest=null,
     gallery_application_id,
     location,
     name,
-    tags=null,
+    resourceLabel,
     enable_health_check=null,
     end_of_life_date=null,
-    timeouts=null,
+    exclude_from_latest=null,
     manage_action=null,
     source=null,
-    target_region=null
+    tags=null,
+    target_region=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_gallery_application_version', label=resourceLabel, attrs=self.newAttrs(
+    enable_health_check=enable_health_check,
+    end_of_life_date=end_of_life_date,
     exclude_from_latest=exclude_from_latest,
     gallery_application_id=gallery_application_id,
     location=location,
-    name=name,
-    tags=tags,
-    enable_health_check=enable_health_check,
-    end_of_life_date=end_of_life_date,
-    timeouts=timeouts,
     manage_action=manage_action,
+    name=name,
     source=source,
-    target_region=target_region
+    tags=tags,
+    target_region=target_region,
+    timeouts=timeouts
   )),
   newAttrs(
-    end_of_life_date=null,
-    exclude_from_latest=null,
     gallery_application_id,
     location,
     name,
-    tags=null,
     enable_health_check=null,
+    end_of_life_date=null,
+    exclude_from_latest=null,
+    manage_action=null,
     source=null,
+    tags=null,
     target_region=null,
-    timeouts=null,
-    manage_action=null
+    timeouts=null
   ):: std.prune(a={
+    enable_health_check: enable_health_check,
     end_of_life_date: end_of_life_date,
     exclude_from_latest: exclude_from_latest,
     gallery_application_id: gallery_application_id,
     location: location,
+    manage_action: manage_action,
     name: name,
-    tags: tags,
-    enable_health_check: enable_health_check,
     source: source,
+    tags: tags,
     target_region: target_region,
     timeouts: timeouts,
-    manage_action: manage_action,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  source:: {
+    new(
+      media_link,
+      default_configuration_link=null
+    ):: std.prune(a={
+      default_configuration_link: default_configuration_link,
+      media_link: media_link,
+    }),
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  target_region:: {
+    new(
+      name,
+      regional_replica_count,
+      storage_account_type=null
+    ):: std.prune(a={
+      name: name,
+      regional_replica_count: regional_replica_count,
+      storage_account_type: storage_account_type,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withEnableHealthCheck(resourceLabel, value):: {
     resource+: {
@@ -114,66 +140,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetRegion(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          target_region: value,
-        },
-      },
-    },
-  },
-  withTargetRegionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          target_region+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  target_region:: {
-    new(
-      name,
-      regional_replica_count,
-      storage_account_type=null
-    ):: std.prune(a={
-      name: name,
-      regional_replica_count: regional_replica_count,
-      storage_account_type: storage_account_type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withManageAction(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application_version+: {
@@ -192,16 +158,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  manage_action:: {
-    new(
-      update=null,
-      install,
-      remove
-    ):: std.prune(a={
-      update: update,
-      install: install,
-      remove: remove,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
   },
   withSource(resourceLabel, value):: {
     resource+: {
@@ -221,13 +185,49 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  source:: {
-    new(
-      default_configuration_link=null,
-      media_link
-    ):: std.prune(a={
-      default_configuration_link: default_configuration_link,
-      media_link: media_link,
-    }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTargetRegion(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          target_region: value,
+        },
+      },
+    },
+  },
+  withTargetRegionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          target_region+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
   },
 }

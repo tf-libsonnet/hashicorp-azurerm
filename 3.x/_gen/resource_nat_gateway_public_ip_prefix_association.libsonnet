@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     nat_gateway_id,
     public_ip_prefix_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_nat_gateway_public_ip_prefix_association', label=resourceLabel, attrs=self.newAttrs(nat_gateway_id=nat_gateway_id, public_ip_prefix_id=public_ip_prefix_id, timeouts=timeouts)),
   newAttrs(
@@ -15,6 +15,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_ip_prefix_id: public_ip_prefix_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withNatGatewayId(resourceLabel, value):: {
     resource+: {
       azurerm_nat_gateway_public_ip_prefix_association+: {
@@ -50,16 +61,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

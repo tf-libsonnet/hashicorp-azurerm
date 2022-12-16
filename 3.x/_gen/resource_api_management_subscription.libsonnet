@@ -1,74 +1,78 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    product_id=null,
-    resource_group_name,
-    subscription_id=null,
-    api_id=null,
-    state=null,
-    user_id=null,
-    allow_tracing=null,
-    primary_key=null,
-    display_name,
-    secondary_key=null,
     api_management_name,
-    timeouts=null
+    display_name,
+    resourceLabel,
+    resource_group_name,
+    allow_tracing=null,
+    api_id=null,
+    primary_key=null,
+    product_id=null,
+    secondary_key=null,
+    state=null,
+    subscription_id=null,
+    timeouts=null,
+    user_id=null
   ):: tf.withResource(type='azurerm_api_management_subscription', label=resourceLabel, attrs=self.newAttrs(
+    allow_tracing=allow_tracing,
+    api_id=api_id,
+    api_management_name=api_management_name,
+    display_name=display_name,
+    primary_key=primary_key,
     product_id=product_id,
     resource_group_name=resource_group_name,
-    subscription_id=subscription_id,
-    api_id=api_id,
-    state=state,
-    user_id=user_id,
-    allow_tracing=allow_tracing,
-    primary_key=primary_key,
-    display_name=display_name,
     secondary_key=secondary_key,
-    api_management_name=api_management_name,
-    timeouts=timeouts
+    state=state,
+    subscription_id=subscription_id,
+    timeouts=timeouts,
+    user_id=user_id
   )),
   newAttrs(
-    secondary_key=null,
-    api_id=null,
-    display_name,
-    product_id=null,
-    state=null,
-    allow_tracing=null,
-    primary_key=null,
-    resource_group_name,
-    subscription_id=null,
-    user_id=null,
     api_management_name,
-    timeouts=null
+    display_name,
+    resource_group_name,
+    allow_tracing=null,
+    api_id=null,
+    primary_key=null,
+    product_id=null,
+    secondary_key=null,
+    state=null,
+    subscription_id=null,
+    timeouts=null,
+    user_id=null
   ):: std.prune(a={
-    secondary_key: secondary_key,
-    api_id: api_id,
-    display_name: display_name,
-    product_id: product_id,
-    state: state,
     allow_tracing: allow_tracing,
-    primary_key: primary_key,
-    resource_group_name: resource_group_name,
-    subscription_id: subscription_id,
-    user_id: user_id,
+    api_id: api_id,
     api_management_name: api_management_name,
+    display_name: display_name,
+    primary_key: primary_key,
+    product_id: product_id,
+    resource_group_name: resource_group_name,
+    secondary_key: secondary_key,
+    state: state,
+    subscription_id: subscription_id,
     timeouts: timeouts,
+    user_id: user_id,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withState(resourceLabel, value):: {
+  withAllowTracing(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
         [resourceLabel]+: {
-          state: value,
+          allow_tracing: value,
         },
       },
     },
@@ -82,47 +86,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withProductId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          product_id: value,
-        },
-      },
-    },
-  },
-  withSubscriptionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          subscription_id: value,
-        },
-      },
-    },
-  },
-  withAllowTracing(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          allow_tracing: value,
-        },
-      },
-    },
-  },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
         [resourceLabel]+: {
           api_management_name: value,
+        },
+      },
+    },
+  },
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          display_name: value,
         },
       },
     },
@@ -136,6 +113,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withProductId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          product_id: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withSecondaryKey(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
@@ -145,11 +140,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUserId(resourceLabel, value):: {
+  withState(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
         [resourceLabel]+: {
-          user_id: value,
+          state: value,
+        },
+      },
+    },
+  },
+  withSubscriptionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          subscription_id: value,
         },
       },
     },
@@ -172,17 +176,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withUserId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          user_id: value,
+        },
+      },
+    },
   },
 }

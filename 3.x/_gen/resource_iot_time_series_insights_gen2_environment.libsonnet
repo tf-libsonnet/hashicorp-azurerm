@@ -1,53 +1,93 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    sku_name,
-    warm_store_data_retention_time=null,
     id_properties,
     location,
-    tags=null,
     name,
+    resourceLabel,
     resource_group_name,
+    sku_name,
     storage=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    warm_store_data_retention_time=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_gen2_environment', label=resourceLabel, attrs=self.newAttrs(
-    sku_name=sku_name,
-    warm_store_data_retention_time=warm_store_data_retention_time,
     id_properties=id_properties,
     location=location,
-    tags=tags,
     name=name,
     resource_group_name=resource_group_name,
+    sku_name=sku_name,
     storage=storage,
-    timeouts=timeouts
+    tags=tags,
+    timeouts=timeouts,
+    warm_store_data_retention_time=warm_store_data_retention_time
   )),
   newAttrs(
-    sku_name,
-    warm_store_data_retention_time=null,
     id_properties,
     location,
-    tags=null,
     name,
     resource_group_name,
+    sku_name,
     storage=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    warm_store_data_retention_time=null
   ):: std.prune(a={
-    sku_name: sku_name,
-    warm_store_data_retention_time: warm_store_data_retention_time,
     id_properties: id_properties,
     location: location,
-    tags: tags,
     name: name,
     resource_group_name: resource_group_name,
+    sku_name: sku_name,
     storage: storage,
+    tags: tags,
     timeouts: timeouts,
+    warm_store_data_retention_time: warm_store_data_retention_time,
   }),
+  storage:: {
+    new(
+      key,
+      name
+    ):: std.prune(a={
+      key: key,
+      name: name,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withIdProperties(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_gen2_environment+: {
         [resourceLabel]+: {
           id_properties: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_gen2_environment+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_gen2_environment+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -70,42 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWarmStoreDataRetentionTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_gen2_environment+: {
-        [resourceLabel]+: {
-          warm_store_data_retention_time: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_gen2_environment+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_gen2_environment+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_gen2_environment+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withStorage(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_gen2_environment+: {
@@ -124,14 +128,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  storage:: {
-    new(
-      key,
-      name
-    ):: std.prune(a={
-      key: key,
-      name: name,
-    }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_gen2_environment+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -151,17 +155,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withWarmStoreDataRetentionTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_gen2_environment+: {
+        [resourceLabel]+: {
+          warm_store_data_retention_time: value,
+        },
+      },
+    },
   },
 }

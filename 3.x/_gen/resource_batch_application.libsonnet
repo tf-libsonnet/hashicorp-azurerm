@@ -1,40 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    account_name,
+    name,
     resourceLabel,
+    resource_group_name,
+    allow_updates=null,
     default_version=null,
     display_name=null,
-    name,
-    resource_group_name,
-    account_name,
-    allow_updates=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_batch_application', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
+    allow_updates=allow_updates,
     default_version=default_version,
     display_name=display_name,
     name=name,
     resource_group_name=resource_group_name,
-    account_name=account_name,
-    allow_updates=allow_updates,
     timeouts=timeouts
   )),
   newAttrs(
+    account_name,
     name,
     resource_group_name,
-    account_name,
     allow_updates=null,
     default_version=null,
     display_name=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
     account_name: account_name,
     allow_updates: allow_updates,
     default_version: default_version,
     display_name: display_name,
+    name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_application+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
   withAllowUpdates(resourceLabel, value):: {
     resource+: {
       azurerm_batch_application+: {
@@ -80,15 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_application+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_batch_application+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,40 +1,66 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
-    role_definition_id=null,
+    resourceLabel,
     scope,
     assignable_scopes=null,
     description=null,
     permissions=null,
+    role_definition_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_role_definition', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    role_definition_id=role_definition_id,
-    scope=scope,
     assignable_scopes=assignable_scopes,
     description=description,
+    name=name,
     permissions=permissions,
+    role_definition_id=role_definition_id,
+    scope=scope,
     timeouts=timeouts
   )),
   newAttrs(
-    role_definition_id=null,
+    name,
     scope,
     assignable_scopes=null,
     description=null,
-    name,
     permissions=null,
+    role_definition_id=null,
     timeouts=null
   ):: std.prune(a={
-    role_definition_id: role_definition_id,
-    scope: scope,
     assignable_scopes: assignable_scopes,
     description: description,
     name: name,
     permissions: permissions,
+    role_definition_id: role_definition_id,
+    scope: scope,
     timeouts: timeouts,
   }),
+  permissions:: {
+    new(
+      actions=null,
+      data_actions=null,
+      not_actions=null,
+      not_data_actions=null
+    ):: std.prune(a={
+      actions: actions,
+      data_actions: data_actions,
+      not_actions: not_actions,
+      not_data_actions: not_data_actions,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAssignableScopes(resourceLabel, value):: {
     resource+: {
       azurerm_role_definition+: {
@@ -62,24 +88,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRoleDefinitionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_definition+: {
-        [resourceLabel]+: {
-          role_definition_id: value,
-        },
-      },
-    },
-  },
-  withScope(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_definition+: {
-        [resourceLabel]+: {
-          scope: value,
-        },
-      },
-    },
-  },
   withPermissions(resourceLabel, value):: {
     resource+: {
       azurerm_role_definition+: {
@@ -98,18 +106,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  permissions:: {
-    new(
-      not_actions=null,
-      not_data_actions=null,
-      actions=null,
-      data_actions=null
-    ):: std.prune(a={
-      not_actions: not_actions,
-      not_data_actions: not_data_actions,
-      actions: actions,
-      data_actions: data_actions,
-    }),
+  withRoleDefinitionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_definition+: {
+        [resourceLabel]+: {
+          role_definition_id: value,
+        },
+      },
+    },
+  },
+  withScope(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_definition+: {
+        [resourceLabel]+: {
+          scope: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -128,18 +141,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

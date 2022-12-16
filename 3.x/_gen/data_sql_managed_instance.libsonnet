@@ -3,31 +3,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     name,
-    tags=null,
     resource_group_name,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_sql_managed_instance', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
-    tags=tags,
     resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     tags=null,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    name: name,
     timeouts: timeouts,
   }),
-  withTags(dataSrcLabel, value):: {
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withName(dataSrcLabel, value):: {
     data+: {
       azurerm_sql_managed_instance+: {
         [dataSrcLabel]+: {
-          tags: value,
+          name: value,
         },
       },
     },
@@ -41,11 +48,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
+  withTags(dataSrcLabel, value):: {
     data+: {
       azurerm_sql_managed_instance+: {
         [dataSrcLabel]+: {
-          name: value,
+          tags: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

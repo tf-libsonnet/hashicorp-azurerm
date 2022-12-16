@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     location,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_cosmosdb_restorable_database_accounts', label=dataSrcLabel, attrs=self.newAttrs(name=name, location=location, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_cosmosdb_restorable_database_accounts', label=dataSrcLabel, attrs=self.newAttrs(location=location, name=name, timeouts=timeouts)),
   newAttrs(
     location,
     name,
@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withLocation(dataSrcLabel, value):: {
     data+: {
       azurerm_cosmosdb_restorable_database_accounts+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

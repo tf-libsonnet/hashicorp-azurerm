@@ -1,36 +1,85 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  container_network_interface:: {
+    ip_configuration:: {
+      new(
+        name,
+        subnet_id
+      ):: std.prune(a={
+        name: name,
+        subnet_id: subnet_id,
+      }),
+    },
+    new(
+      name,
+      ip_configuration=null
+    ):: std.prune(a={
+      ip_configuration: ip_configuration,
+      name: name,
+    }),
+  },
   new(
-    resourceLabel,
-    tags=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
-    timeouts=null,
-    container_network_interface=null
+    container_network_interface=null,
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_network_profile', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
+    container_network_interface=container_network_interface,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    container_network_interface=container_network_interface
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
     location,
     name,
-    timeouts=null,
-    container_network_interface=null
+    resource_group_name,
+    container_network_interface=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
+    container_network_interface: container_network_interface,
     location: location,
     name: name,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
-    container_network_interface: container_network_interface,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withContainerNetworkInterface(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_profile+: {
+        [resourceLabel]+: {
+          container_network_interface: value,
+        },
+      },
+    },
+  },
+  withContainerNetworkInterfaceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_profile+: {
+        [resourceLabel]+: {
+          container_network_interface+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_network_profile+: {
@@ -67,42 +116,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContainerNetworkInterface(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_profile+: {
-        [resourceLabel]+: {
-          container_network_interface: value,
-        },
-      },
-    },
-  },
-  withContainerNetworkInterfaceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_profile+: {
-        [resourceLabel]+: {
-          container_network_interface+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  container_network_interface:: {
-    new(
-      name,
-      ip_configuration=null
-    ):: std.prune(a={
-      name: name,
-      ip_configuration: ip_configuration,
-    }),
-    ip_configuration:: {
-      new(
-        name,
-        subnet_id
-      ):: std.prune(a={
-        name: name,
-        subnet_id: subnet_id,
-      }),
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_network_profile+: {
@@ -120,18 +133,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     cdn_frontdoor_profile_id,
     name,
+    resourceLabel,
     security_policies=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_security_policy', label=resourceLabel, attrs=self.newAttrs(
@@ -13,30 +13,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     cdn_frontdoor_profile_id,
+    name,
     security_policies=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
+    name: name,
     security_policies: security_policies,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_security_policy+: {
-        [resourceLabel]+: {
-          name: value,
+  security_policies:: {
+    firewall:: {
+      association:: {
+        domain:: {
+          new(
+            cdn_frontdoor_domain_id
+          ):: std.prune(a={
+            cdn_frontdoor_domain_id: cdn_frontdoor_domain_id,
+          }),
         },
+        new(
+          patterns_to_match,
+          domain=null
+        ):: std.prune(a={
+          domain: domain,
+          patterns_to_match: patterns_to_match,
+        }),
       },
+      new(
+        cdn_frontdoor_firewall_policy_id,
+        association=null
+      ):: std.prune(a={
+        association: association,
+        cdn_frontdoor_firewall_policy_id: cdn_frontdoor_firewall_policy_id,
+      }),
     },
+    new(
+      firewall=null
+    ):: std.prune(a={
+      firewall: firewall,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withCdnFrontdoorProfileId(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_security_policy+: {
         [resourceLabel]+: {
           cdn_frontdoor_profile_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_security_policy+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -59,38 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  security_policies:: {
-    new(
-      firewall=null
-    ):: std.prune(a={
-      firewall: firewall,
-    }),
-    firewall:: {
-      new(
-        cdn_frontdoor_firewall_policy_id,
-        association=null
-      ):: std.prune(a={
-        cdn_frontdoor_firewall_policy_id: cdn_frontdoor_firewall_policy_id,
-        association: association,
-      }),
-      association:: {
-        new(
-          patterns_to_match,
-          domain=null
-        ):: std.prune(a={
-          patterns_to_match: patterns_to_match,
-          domain: domain,
-        }),
-        domain:: {
-          new(
-            cdn_frontdoor_domain_id
-          ):: std.prune(a={
-            cdn_frontdoor_domain_id: cdn_frontdoor_domain_id,
-          }),
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_security_policy+: {
@@ -108,16 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

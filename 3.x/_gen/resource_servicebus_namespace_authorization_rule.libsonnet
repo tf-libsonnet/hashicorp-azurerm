@@ -1,50 +1,72 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
-    send=null,
-    listen=null,
     namespace_id,
+    resourceLabel,
+    listen=null,
     manage=null,
+    send=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_namespace_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    send=send,
     listen=listen,
-    namespace_id=namespace_id,
     manage=manage,
+    name=name,
+    namespace_id=namespace_id,
+    send=send,
     timeouts=timeouts
   )),
   newAttrs(
-    listen=null,
-    namespace_id,
-    manage=null,
     name,
+    namespace_id,
+    listen=null,
+    manage=null,
     send=null,
     timeouts=null
   ):: std.prune(a={
     listen: listen,
-    namespace_id: namespace_id,
     manage: manage,
     name: name,
+    namespace_id: namespace_id,
     send: send,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace_authorization_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withListen(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_authorization_rule+: {
         [resourceLabel]+: {
           listen: value,
+        },
+      },
+    },
+  },
+  withManage(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace_authorization_rule+: {
+        [resourceLabel]+: {
+          manage: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace_authorization_rule+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -67,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withManage(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace_authorization_rule+: {
-        [resourceLabel]+: {
-          manage: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_authorization_rule+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

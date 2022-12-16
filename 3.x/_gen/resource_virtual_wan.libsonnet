@@ -1,62 +1,66 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    tags=null,
+    location,
     name,
+    resourceLabel,
     resource_group_name,
-    type=null,
     allow_branch_to_branch_traffic=null,
     disable_vpn_encryption=null,
-    location,
     office365_local_breakout_category=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    type=null
   ):: tf.withResource(type='azurerm_virtual_wan', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    name=name,
-    resource_group_name=resource_group_name,
-    type=type,
     allow_branch_to_branch_traffic=allow_branch_to_branch_traffic,
     disable_vpn_encryption=disable_vpn_encryption,
     location=location,
+    name=name,
     office365_local_breakout_category=office365_local_breakout_category,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    type=type
   )),
   newAttrs(
-    disable_vpn_encryption=null,
+    location,
     name,
     resource_group_name,
-    type=null,
-    location,
+    allow_branch_to_branch_traffic=null,
+    disable_vpn_encryption=null,
     office365_local_breakout_category=null,
     tags=null,
-    allow_branch_to_branch_traffic=null,
-    timeouts=null
+    timeouts=null,
+    type=null
   ):: std.prune(a={
-    disable_vpn_encryption: disable_vpn_encryption,
-    name: name,
-    resource_group_name: resource_group_name,
-    type: type,
-    location: location,
-    office365_local_breakout_category: office365_local_breakout_category,
-    tags: tags,
     allow_branch_to_branch_traffic: allow_branch_to_branch_traffic,
+    disable_vpn_encryption: disable_vpn_encryption,
+    location: location,
+    name: name,
+    office365_local_breakout_category: office365_local_breakout_category,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
+    type: type,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withLocation(resourceLabel, value):: {
+  withAllowBranchToBranchTraffic(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
-          location: value,
+          allow_branch_to_branch_traffic: value,
         },
       },
     },
@@ -70,11 +74,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withOffice365LocalBreakoutCategory(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          office365_local_breakout_category: value,
         },
       },
     },
@@ -88,29 +110,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withType(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withAllowBranchToBranchTraffic(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          allow_branch_to_branch_traffic: value,
-        },
-      },
-    },
-  },
-  withOffice365LocalBreakoutCategory(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          office365_local_breakout_category: value,
+          tags: value,
         },
       },
     },
@@ -133,17 +137,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

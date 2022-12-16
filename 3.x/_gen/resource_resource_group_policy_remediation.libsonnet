@@ -1,73 +1,68 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
+    policy_assignment_id,
     resourceLabel,
+    resource_group_id,
+    failure_percentage=null,
     location_filters=null,
     parallel_deployments=null,
     policy_definition_id=null,
     policy_definition_reference_id=null,
     resource_count=null,
-    policy_assignment_id,
     resource_discovery_mode=null,
-    name,
-    resource_group_id,
-    failure_percentage=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_group_policy_remediation', label=resourceLabel, attrs=self.newAttrs(
+    failure_percentage=failure_percentage,
     location_filters=location_filters,
+    name=name,
     parallel_deployments=parallel_deployments,
+    policy_assignment_id=policy_assignment_id,
     policy_definition_id=policy_definition_id,
     policy_definition_reference_id=policy_definition_reference_id,
     resource_count=resource_count,
-    policy_assignment_id=policy_assignment_id,
     resource_discovery_mode=resource_discovery_mode,
-    name=name,
     resource_group_id=resource_group_id,
-    failure_percentage=failure_percentage,
     timeouts=timeouts
   )),
   newAttrs(
-    location_filters=null,
-    policy_definition_id=null,
-    resource_count=null,
+    name,
+    policy_assignment_id,
     resource_group_id,
     failure_percentage=null,
-    name,
+    location_filters=null,
     parallel_deployments=null,
-    policy_assignment_id,
-    resource_discovery_mode=null,
+    policy_definition_id=null,
     policy_definition_reference_id=null,
+    resource_count=null,
+    resource_discovery_mode=null,
     timeouts=null
   ):: std.prune(a={
-    location_filters: location_filters,
-    policy_definition_id: policy_definition_id,
-    resource_count: resource_count,
-    resource_group_id: resource_group_id,
     failure_percentage: failure_percentage,
+    location_filters: location_filters,
     name: name,
     parallel_deployments: parallel_deployments,
     policy_assignment_id: policy_assignment_id,
-    resource_discovery_mode: resource_discovery_mode,
+    policy_definition_id: policy_definition_id,
     policy_definition_reference_id: policy_definition_reference_id,
+    resource_count: resource_count,
+    resource_discovery_mode: resource_discovery_mode,
+    resource_group_id: resource_group_id,
     timeouts: timeouts,
   }),
-  withResourceDiscoveryMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_remediation+: {
-        [resourceLabel]+: {
-          resource_discovery_mode: value,
-        },
-      },
-    },
-  },
-  withLocationFilters(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_remediation+: {
-        [resourceLabel]+: {
-          location_filters: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withFailurePercentage(resourceLabel, value):: {
     resource+: {
@@ -78,29 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceCount(resourceLabel, value):: {
+  withLocationFilters(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_policy_remediation+: {
         [resourceLabel]+: {
-          resource_count: value,
-        },
-      },
-    },
-  },
-  withResourceGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_remediation+: {
-        [resourceLabel]+: {
-          resource_group_id: value,
-        },
-      },
-    },
-  },
-  withPolicyAssignmentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_remediation+: {
-        [resourceLabel]+: {
-          policy_assignment_id: value,
+          location_filters: value,
         },
       },
     },
@@ -123,11 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPolicyDefinitionReferenceId(resourceLabel, value):: {
+  withPolicyAssignmentId(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_policy_remediation+: {
         [resourceLabel]+: {
-          policy_definition_reference_id: value,
+          policy_assignment_id: value,
         },
       },
     },
@@ -137,6 +114,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_resource_group_policy_remediation+: {
         [resourceLabel]+: {
           policy_definition_id: value,
+        },
+      },
+    },
+  },
+  withPolicyDefinitionReferenceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_remediation+: {
+        [resourceLabel]+: {
+          policy_definition_reference_id: value,
+        },
+      },
+    },
+  },
+  withResourceCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_remediation+: {
+        [resourceLabel]+: {
+          resource_count: value,
+        },
+      },
+    },
+  },
+  withResourceDiscoveryMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_remediation+: {
+        [resourceLabel]+: {
+          resource_discovery_mode: value,
+        },
+      },
+    },
+  },
+  withResourceGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_remediation+: {
+        [resourceLabel]+: {
+          resource_group_id: value,
         },
       },
     },
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

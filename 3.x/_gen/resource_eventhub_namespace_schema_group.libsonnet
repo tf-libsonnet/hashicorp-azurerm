@@ -1,17 +1,17 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
+    namespace_id,
     resourceLabel,
     schema_compatibility,
     schema_type,
-    name,
-    namespace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_schema_group', label=resourceLabel, attrs=self.newAttrs(
-    schema_compatibility=schema_compatibility,
-    schema_type=schema_type,
     name=name,
     namespace_id=namespace_id,
+    schema_compatibility=schema_compatibility,
+    schema_type=schema_type,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,6 +27,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     schema_type: schema_type,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace_schema_group+: {
@@ -80,16 +91,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

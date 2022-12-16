@@ -1,40 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     default_action,
+    resourceLabel,
     signalr_service_id,
+    private_endpoint=null,
     public_network=null,
-    timeouts=null,
-    private_endpoint=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_signalr_service_network_acl', label=resourceLabel, attrs=self.newAttrs(
     default_action=default_action,
-    signalr_service_id=signalr_service_id,
+    private_endpoint=private_endpoint,
     public_network=public_network,
-    timeouts=timeouts,
-    private_endpoint=private_endpoint
+    signalr_service_id=signalr_service_id,
+    timeouts=timeouts
   )),
   newAttrs(
-    signalr_service_id,
     default_action,
-    timeouts=null,
+    signalr_service_id,
     private_endpoint=null,
-    public_network=null
+    public_network=null,
+    timeouts=null
   ):: std.prune(a={
-    signalr_service_id: signalr_service_id,
     default_action: default_action,
-    timeouts: timeouts,
     private_endpoint: private_endpoint,
     public_network: public_network,
+    signalr_service_id: signalr_service_id,
+    timeouts: timeouts,
   }),
-  withSignalrServiceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service_network_acl+: {
-        [resourceLabel]+: {
-          signalr_service_id: value,
-        },
-      },
-    },
+  private_endpoint:: {
+    new(
+      allowed_request_types=null,
+      denied_request_types=null
+    ):: std.prune(a={
+      allowed_request_types: allowed_request_types,
+      denied_request_types: denied_request_types,
+    }),
+  },
+  public_network:: {
+    new(
+      allowed_request_types=null,
+      denied_request_types=null
+    ):: std.prune(a={
+      allowed_request_types: allowed_request_types,
+      denied_request_types: denied_request_types,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDefaultAction(resourceLabel, value):: {
     resource+: {
@@ -63,15 +85,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  private_endpoint:: {
-    new(
-      allowed_request_types=null,
-      denied_request_types=null
-    ):: std.prune(a={
-      allowed_request_types: allowed_request_types,
-      denied_request_types: denied_request_types,
-    }),
-  },
   withPublicNetwork(resourceLabel, value):: {
     resource+: {
       azurerm_signalr_service_network_acl+: {
@@ -90,14 +103,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  public_network:: {
-    new(
-      denied_request_types=null,
-      allowed_request_types=null
-    ):: std.prune(a={
-      denied_request_types: denied_request_types,
-      allowed_request_types: allowed_request_types,
-    }),
+  withSignalrServiceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service_network_acl+: {
+        [resourceLabel]+: {
+          signalr_service_id: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -116,18 +129,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

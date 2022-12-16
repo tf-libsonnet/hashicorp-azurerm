@@ -1,69 +1,91 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    failure_suppression_enabled=null,
     name,
-    settings=null,
-    protected_settings=null,
     publisher,
+    resourceLabel,
+    type,
     type_handler_version,
     virtual_machine_id,
-    automatic_upgrade_enabled=null,
     auto_upgrade_minor_version=null,
-    tags=null,
-    type,
+    automatic_upgrade_enabled=null,
+    failure_suppression_enabled=null,
+    protected_settings=null,
     protected_settings_from_key_vault=null,
+    settings=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_machine_extension', label=resourceLabel, attrs=self.newAttrs(
+    auto_upgrade_minor_version=auto_upgrade_minor_version,
+    automatic_upgrade_enabled=automatic_upgrade_enabled,
     failure_suppression_enabled=failure_suppression_enabled,
     name=name,
-    settings=settings,
     protected_settings=protected_settings,
-    publisher=publisher,
-    type_handler_version=type_handler_version,
-    virtual_machine_id=virtual_machine_id,
-    automatic_upgrade_enabled=automatic_upgrade_enabled,
-    auto_upgrade_minor_version=auto_upgrade_minor_version,
-    tags=tags,
-    type=type,
     protected_settings_from_key_vault=protected_settings_from_key_vault,
-    timeouts=timeouts
+    publisher=publisher,
+    settings=settings,
+    tags=tags,
+    timeouts=timeouts,
+    type=type,
+    type_handler_version=type_handler_version,
+    virtual_machine_id=virtual_machine_id
   )),
   newAttrs(
+    name,
     publisher,
     type,
-    virtual_machine_id,
-    failure_suppression_enabled=null,
-    settings=null,
-    name,
     type_handler_version,
-    automatic_upgrade_enabled=null,
-    protected_settings=null,
+    virtual_machine_id,
     auto_upgrade_minor_version=null,
-    tags=null,
+    automatic_upgrade_enabled=null,
+    failure_suppression_enabled=null,
+    protected_settings=null,
     protected_settings_from_key_vault=null,
+    settings=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    publisher: publisher,
-    type: type,
-    virtual_machine_id: virtual_machine_id,
-    failure_suppression_enabled: failure_suppression_enabled,
-    settings: settings,
-    name: name,
-    type_handler_version: type_handler_version,
-    automatic_upgrade_enabled: automatic_upgrade_enabled,
-    protected_settings: protected_settings,
     auto_upgrade_minor_version: auto_upgrade_minor_version,
-    tags: tags,
+    automatic_upgrade_enabled: automatic_upgrade_enabled,
+    failure_suppression_enabled: failure_suppression_enabled,
+    name: name,
+    protected_settings: protected_settings,
     protected_settings_from_key_vault: protected_settings_from_key_vault,
+    publisher: publisher,
+    settings: settings,
+    tags: tags,
     timeouts: timeouts,
+    type: type,
+    type_handler_version: type_handler_version,
+    virtual_machine_id: virtual_machine_id,
   }),
-  withTypeHandlerVersion(resourceLabel, value):: {
+  protected_settings_from_key_vault:: {
+    new(
+      secret_url,
+      source_vault_id
+    ):: std.prune(a={
+      secret_url: secret_url,
+      source_vault_id: source_vault_id,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAutoUpgradeMinorVersion(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          type_handler_version: value,
+          auto_upgrade_minor_version: value,
         },
       },
     },
@@ -86,24 +108,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withProtectedSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          protected_settings: value,
-        },
-      },
-    },
-  },
-  withAutoUpgradeMinorVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          auto_upgrade_minor_version: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
@@ -113,47 +117,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withProtectedSettings(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          virtual_machine_id: value,
-        },
-      },
-    },
-  },
-  withPublisher(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          publisher: value,
-        },
-      },
-    },
-  },
-  withSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          settings: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          type: value,
+          protected_settings: value,
         },
       },
     },
@@ -176,14 +144,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  protected_settings_from_key_vault:: {
-    new(
-      source_vault_id,
-      secret_url
-    ):: std.prune(a={
-      source_vault_id: source_vault_id,
-      secret_url: secret_url,
-    }),
+  withPublisher(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          publisher: value,
+        },
+      },
+    },
+  },
+  withSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          settings: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -203,17 +189,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
+  },
+  withTypeHandlerVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          type_handler_version: value,
+        },
+      },
+    },
+  },
+  withVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          virtual_machine_id: value,
+        },
+      },
+    },
   },
 }

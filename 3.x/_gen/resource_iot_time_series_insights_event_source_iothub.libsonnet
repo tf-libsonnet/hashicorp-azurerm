@@ -1,61 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    shared_access_key_name,
-    timestamp_property_name=null,
-    event_source_resource_id,
-    shared_access_key,
-    location,
-    name,
-    iothub_name,
     consumer_group_name,
     environment_id,
+    event_source_resource_id,
+    iothub_name,
+    location,
+    name,
+    resourceLabel,
+    shared_access_key,
+    shared_access_key_name,
     tags=null,
-    timeouts=null
+    timeouts=null,
+    timestamp_property_name=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_event_source_iothub', label=resourceLabel, attrs=self.newAttrs(
-    shared_access_key_name=shared_access_key_name,
-    timestamp_property_name=timestamp_property_name,
-    event_source_resource_id=event_source_resource_id,
-    shared_access_key=shared_access_key,
-    location=location,
-    name=name,
-    iothub_name=iothub_name,
     consumer_group_name=consumer_group_name,
     environment_id=environment_id,
+    event_source_resource_id=event_source_resource_id,
+    iothub_name=iothub_name,
+    location=location,
+    name=name,
+    shared_access_key=shared_access_key,
+    shared_access_key_name=shared_access_key_name,
     tags=tags,
-    timeouts=timeouts
+    timeouts=timeouts,
+    timestamp_property_name=timestamp_property_name
   )),
   newAttrs(
-    location,
+    consumer_group_name,
+    environment_id,
     event_source_resource_id,
     iothub_name,
-    environment_id,
-    shared_access_key,
-    tags=null,
-    shared_access_key_name,
-    timestamp_property_name=null,
-    consumer_group_name,
+    location,
     name,
-    timeouts=null
+    shared_access_key,
+    shared_access_key_name,
+    tags=null,
+    timeouts=null,
+    timestamp_property_name=null
   ):: std.prune(a={
-    location: location,
+    consumer_group_name: consumer_group_name,
+    environment_id: environment_id,
     event_source_resource_id: event_source_resource_id,
     iothub_name: iothub_name,
-    environment_id: environment_id,
-    shared_access_key: shared_access_key,
-    tags: tags,
-    shared_access_key_name: shared_access_key_name,
-    timestamp_property_name: timestamp_property_name,
-    consumer_group_name: consumer_group_name,
+    location: location,
     name: name,
+    shared_access_key: shared_access_key,
+    shared_access_key_name: shared_access_key_name,
+    tags: tags,
     timeouts: timeouts,
+    timestamp_property_name: timestamp_property_name,
   }),
-  withSharedAccessKey(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withConsumerGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_iothub+: {
         [resourceLabel]+: {
-          shared_access_key: value,
+          consumer_group_name: value,
         },
       },
     },
@@ -69,38 +82,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEventSourceResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_iothub+: {
+        [resourceLabel]+: {
+          event_source_resource_id: value,
+        },
+      },
+    },
+  },
   withIothubName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_iothub+: {
         [resourceLabel]+: {
           iothub_name: value,
-        },
-      },
-    },
-  },
-  withTimestampPropertyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_iothub+: {
-        [resourceLabel]+: {
-          timestamp_property_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_iothub+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_iothub+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -114,11 +109,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEventSourceResourceId(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_iothub+: {
         [resourceLabel]+: {
-          event_source_resource_id: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withSharedAccessKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_iothub+: {
+        [resourceLabel]+: {
+          shared_access_key: value,
         },
       },
     },
@@ -132,11 +136,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withConsumerGroupName(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_iothub+: {
         [resourceLabel]+: {
-          consumer_group_name: value,
+          tags: value,
         },
       },
     },
@@ -159,17 +163,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withTimestampPropertyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_iothub+: {
+        [resourceLabel]+: {
+          timestamp_property_name: value,
+        },
+      },
+    },
   },
 }

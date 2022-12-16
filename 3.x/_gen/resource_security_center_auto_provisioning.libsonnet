@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     auto_provision,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_auto_provisioning', label=resourceLabel, attrs=self.newAttrs(auto_provision=auto_provision, timeouts=timeouts)),
   newAttrs(
@@ -12,6 +12,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     auto_provision: auto_provision,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAutoProvision(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_auto_provisioning+: {
@@ -38,18 +51,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

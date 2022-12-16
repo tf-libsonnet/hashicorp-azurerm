@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     loadbalancer_id,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_lb_outbound_rule', label=dataSrcLabel, attrs=self.newAttrs(name=name, loadbalancer_id=loadbalancer_id, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_lb_outbound_rule', label=dataSrcLabel, attrs=self.newAttrs(loadbalancer_id=loadbalancer_id, name=name, timeouts=timeouts)),
   newAttrs(
     loadbalancer_id,
     name,
@@ -15,20 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_lb_outbound_rule+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withLoadbalancerId(dataSrcLabel, value):: {
     data+: {
       azurerm_lb_outbound_rule+: {
         [dataSrcLabel]+: {
           loadbalancer_id: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_lb_outbound_rule+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

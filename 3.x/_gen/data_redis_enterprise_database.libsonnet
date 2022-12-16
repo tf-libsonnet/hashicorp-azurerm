@@ -1,36 +1,34 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    cluster_id,
     dataSrcLabel,
     name,
     resource_group_name=null,
-    cluster_id,
     timeouts=null
   ):: tf.withData(type='azurerm_redis_enterprise_database', label=dataSrcLabel, attrs=self.newAttrs(
+    cluster_id=cluster_id,
     name=name,
     resource_group_name=resource_group_name,
-    cluster_id=cluster_id,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name=null,
     cluster_id,
     name,
+    resource_group_name=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     cluster_id: cluster_id,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_redis_enterprise_database+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withClusterId(dataSrcLabel, value):: {
     data+: {
@@ -46,6 +44,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_redis_enterprise_database+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_redis_enterprise_database+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

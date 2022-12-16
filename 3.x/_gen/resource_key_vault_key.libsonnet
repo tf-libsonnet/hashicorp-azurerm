@@ -1,66 +1,70 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    not_before_date=null,
+    key_opts,
     key_type,
     key_vault_id,
-    key_opts,
-    key_size=null,
-    tags=null,
-    expiration_date=null,
+    name,
+    resourceLabel,
     curve=null,
+    expiration_date=null,
+    key_size=null,
+    not_before_date=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_key', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    not_before_date=not_before_date,
-    key_type=key_type,
-    key_vault_id=key_vault_id,
+    curve=curve,
+    expiration_date=expiration_date,
     key_opts=key_opts,
     key_size=key_size,
+    key_type=key_type,
+    key_vault_id=key_vault_id,
+    name=name,
+    not_before_date=not_before_date,
     tags=tags,
-    expiration_date=expiration_date,
-    curve=curve,
     timeouts=timeouts
   )),
   newAttrs(
+    key_opts,
+    key_type,
+    key_vault_id,
+    name,
+    curve=null,
+    expiration_date=null,
     key_size=null,
     not_before_date=null,
-    key_type,
-    expiration_date=null,
-    key_vault_id,
-    key_opts,
-    name,
     tags=null,
-    curve=null,
     timeouts=null
   ):: std.prune(a={
-    key_size: key_size,
-    not_before_date: not_before_date,
-    key_type: key_type,
-    expiration_date: expiration_date,
-    key_vault_id: key_vault_id,
-    key_opts: key_opts,
-    name: name,
-    tags: tags,
     curve: curve,
+    expiration_date: expiration_date,
+    key_opts: key_opts,
+    key_size: key_size,
+    key_type: key_type,
+    key_vault_id: key_vault_id,
+    name: name,
+    not_before_date: not_before_date,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withNotBeforeDate(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_key+: {
-        [resourceLabel]+: {
-          not_before_date: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withKeyType(resourceLabel, value):: {
+  withCurve(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
-          key_type: value,
+          curve: value,
         },
       },
     },
@@ -70,15 +74,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
           expiration_date: value,
-        },
-      },
-    },
-  },
-  withKeyVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_key+: {
-        [resourceLabel]+: {
-          key_vault_id: value,
         },
       },
     },
@@ -101,20 +96,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withKeyType(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
-          tags: value,
+          key_type: value,
         },
       },
     },
   },
-  withCurve(resourceLabel, value):: {
+  withKeyVaultId(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
-          curve: value,
+          key_vault_id: value,
         },
       },
     },
@@ -124,6 +119,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withNotBeforeDate(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_key+: {
+        [resourceLabel]+: {
+          not_before_date: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_key+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -145,18 +158,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

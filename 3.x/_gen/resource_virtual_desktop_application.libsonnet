@@ -1,61 +1,83 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    application_group_id,
+    command_line_argument_policy,
+    name,
+    path,
     resourceLabel,
+    command_line_arguments=null,
+    description=null,
+    friendly_name=null,
     icon_index=null,
     icon_path=null,
-    application_group_id,
-    command_line_arguments=null,
-    path,
-    friendly_name=null,
-    description=null,
     show_in_portal=null,
-    name,
-    command_line_argument_policy,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_desktop_application', label=resourceLabel, attrs=self.newAttrs(
+    application_group_id=application_group_id,
+    command_line_argument_policy=command_line_argument_policy,
+    command_line_arguments=command_line_arguments,
+    description=description,
+    friendly_name=friendly_name,
     icon_index=icon_index,
     icon_path=icon_path,
-    application_group_id=application_group_id,
-    command_line_arguments=command_line_arguments,
-    path=path,
-    friendly_name=friendly_name,
-    description=description,
-    show_in_portal=show_in_portal,
     name=name,
-    command_line_argument_policy=command_line_argument_policy,
+    path=path,
+    show_in_portal=show_in_portal,
     timeouts=timeouts
   )),
   newAttrs(
-    icon_path=null,
-    command_line_arguments=null,
     application_group_id,
-    icon_index=null,
+    command_line_argument_policy,
     name,
     path,
-    command_line_argument_policy,
+    command_line_arguments=null,
     description=null,
-    show_in_portal=null,
     friendly_name=null,
+    icon_index=null,
+    icon_path=null,
+    show_in_portal=null,
     timeouts=null
   ):: std.prune(a={
-    icon_path: icon_path,
-    command_line_arguments: command_line_arguments,
     application_group_id: application_group_id,
+    command_line_argument_policy: command_line_argument_policy,
+    command_line_arguments: command_line_arguments,
+    description: description,
+    friendly_name: friendly_name,
     icon_index: icon_index,
+    icon_path: icon_path,
     name: name,
     path: path,
-    command_line_argument_policy: command_line_argument_policy,
-    description: description,
     show_in_portal: show_in_portal,
-    friendly_name: friendly_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withApplicationGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application+: {
         [resourceLabel]+: {
           application_group_id: value,
+        },
+      },
+    },
+  },
+  withCommandLineArgumentPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_application+: {
+        [resourceLabel]+: {
+          command_line_argument_policy: value,
         },
       },
     },
@@ -69,11 +91,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPath(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application+: {
         [resourceLabel]+: {
-          path: value,
+          description: value,
         },
       },
     },
@@ -96,15 +118,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withShowInPortal(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_application+: {
-        [resourceLabel]+: {
-          show_in_portal: value,
-        },
-      },
-    },
-  },
   withIconPath(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application+: {
@@ -123,20 +136,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCommandLineArgumentPolicy(resourceLabel, value):: {
+  withPath(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application+: {
         [resourceLabel]+: {
-          command_line_argument_policy: value,
+          path: value,
         },
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withShowInPortal(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application+: {
         [resourceLabel]+: {
-          description: value,
+          show_in_portal: value,
         },
       },
     },
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

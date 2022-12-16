@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    server_id,
     name,
+    server_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_mssql_database', label=dataSrcLabel, attrs=self.newAttrs(server_id=server_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_mssql_database', label=dataSrcLabel, attrs=self.newAttrs(name=name, server_id=server_id, timeouts=timeouts)),
   newAttrs(
     name,
     server_id,
@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     server_id: server_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_mssql_database+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

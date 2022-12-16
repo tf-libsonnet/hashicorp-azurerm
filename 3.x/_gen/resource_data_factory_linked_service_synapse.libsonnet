@@ -1,52 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  key_vault_password:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
+  },
   new(
-    resourceLabel,
-    parameters=null,
-    additional_properties=null,
-    annotations=null,
     connection_string,
     data_factory_id,
+    name,
+    resourceLabel,
+    additional_properties=null,
+    annotations=null,
     description=null,
     integration_runtime_name=null,
-    name,
     key_vault_password=null,
+    parameters=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_synapse', label=resourceLabel, attrs=self.newAttrs(
-    parameters=parameters,
     additional_properties=additional_properties,
     annotations=annotations,
     connection_string=connection_string,
     data_factory_id=data_factory_id,
     description=description,
     integration_runtime_name=integration_runtime_name,
-    name=name,
     key_vault_password=key_vault_password,
+    name=name,
+    parameters=parameters,
     timeouts=timeouts
   )),
   newAttrs(
-    additional_properties=null,
-    annotations=null,
-    parameters=null,
-    name,
     connection_string,
     data_factory_id,
+    name,
+    additional_properties=null,
+    annotations=null,
     description=null,
     integration_runtime_name=null,
     key_vault_password=null,
+    parameters=null,
     timeouts=null
   ):: std.prune(a={
     additional_properties: additional_properties,
     annotations: annotations,
-    parameters: parameters,
-    name: name,
     connection_string: connection_string,
     data_factory_id: data_factory_id,
     description: description,
     integration_runtime_name: integration_runtime_name,
     key_vault_password: key_vault_password,
+    name: name,
+    parameters: parameters,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
@@ -61,24 +83,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
           annotations: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -137,14 +141,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  key_vault_password:: {
-    new(
-      linked_service_name,
-      secret_name
-    ):: std.prune(a={
-      linked_service_name: linked_service_name,
-      secret_name: secret_name,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -163,18 +176,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

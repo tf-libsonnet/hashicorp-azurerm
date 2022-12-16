@@ -2,33 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    dns_servers=null,
     virtual_network_id,
+    dns_servers=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_network_dns_servers', label=resourceLabel, attrs=self.newAttrs(dns_servers=dns_servers, virtual_network_id=virtual_network_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_virtual_network_dns_servers', label=resourceLabel, attrs=self.newAttrs(dns_servers=dns_servers, timeouts=timeouts, virtual_network_id=virtual_network_id)),
   newAttrs(
-    dns_servers=null,
     virtual_network_id,
+    dns_servers=null,
     timeouts=null
   ):: std.prune(a={
     dns_servers: dns_servers,
-    virtual_network_id: virtual_network_id,
     timeouts: timeouts,
+    virtual_network_id: virtual_network_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDnsServers(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_dns_servers+: {
         [resourceLabel]+: {
           dns_servers: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_dns_servers+: {
-        [resourceLabel]+: {
-          virtual_network_id: value,
         },
       },
     },
@@ -51,17 +55,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVirtualNetworkId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_dns_servers+: {
+        [resourceLabel]+: {
+          virtual_network_id: value,
+        },
+      },
+    },
   },
 }

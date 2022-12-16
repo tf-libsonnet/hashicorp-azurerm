@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     bot_name,
     location,
+    resourceLabel,
     resource_group_name,
     skill_id,
     timeouts=null
@@ -27,14 +27,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     skill_id: skill_id,
     timeouts: timeouts,
   }),
-  withSkillId(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_alexa+: {
-        [resourceLabel]+: {
-          skill_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBotName(resourceLabel, value):: {
     resource+: {
@@ -63,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSkillId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_alexa+: {
+        [resourceLabel]+: {
+          skill_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_alexa+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

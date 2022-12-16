@@ -1,22 +1,22 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    security_provider_name,
-    tags=null,
-    virtual_hub_id=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
-    timeouts=null
+    security_provider_name,
+    tags=null,
+    timeouts=null,
+    virtual_hub_id=null
   ):: tf.withResource(type='azurerm_virtual_hub_security_partner_provider', label=resourceLabel, attrs=self.newAttrs(
-    security_provider_name=security_provider_name,
-    tags=tags,
-    virtual_hub_id=virtual_hub_id,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    security_provider_name=security_provider_name,
+    tags=tags,
+    timeouts=timeouts,
+    virtual_hub_id=virtual_hub_id
   )),
   newAttrs(
     location,
@@ -24,17 +24,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     security_provider_name,
     tags=null,
-    virtual_hub_id=null,
-    timeouts=null
+    timeouts=null,
+    virtual_hub_id=null
   ):: std.prune(a={
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     security_provider_name: security_provider_name,
     tags: tags,
-    virtual_hub_id: virtual_hub_id,
     timeouts: timeouts,
+    virtual_hub_id: virtual_hub_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_security_partner_provider+: {
@@ -80,15 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualHubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_security_partner_provider+: {
-        [resourceLabel]+: {
-          virtual_hub_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_security_partner_provider+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVirtualHubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_security_partner_provider+: {
+        [resourceLabel]+: {
+          virtual_hub_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,83 +1,60 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    identity_id=null,
     iothub_id,
     name,
+    resourceLabel,
     resource_group_name,
     authentication_type=null,
-    entity_path=null,
     connection_string=null,
     endpoint_uri=null,
+    entity_path=null,
+    identity_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_endpoint_servicebus_topic', label=resourceLabel, attrs=self.newAttrs(
+    authentication_type=authentication_type,
+    connection_string=connection_string,
+    endpoint_uri=endpoint_uri,
+    entity_path=entity_path,
     identity_id=identity_id,
     iothub_id=iothub_id,
     name=name,
     resource_group_name=resource_group_name,
-    authentication_type=authentication_type,
-    entity_path=entity_path,
-    connection_string=connection_string,
-    endpoint_uri=endpoint_uri,
     timeouts=timeouts
   )),
   newAttrs(
-    identity_id=null,
     iothub_id,
     name,
     resource_group_name,
-    entity_path=null,
     authentication_type=null,
     connection_string=null,
     endpoint_uri=null,
+    entity_path=null,
+    identity_id=null,
     timeouts=null
   ):: std.prune(a={
+    authentication_type: authentication_type,
+    connection_string: connection_string,
+    endpoint_uri: endpoint_uri,
+    entity_path: entity_path,
     identity_id: identity_id,
     iothub_id: iothub_id,
     name: name,
     resource_group_name: resource_group_name,
-    entity_path: entity_path,
-    authentication_type: authentication_type,
-    connection_string: connection_string,
-    endpoint_uri: endpoint_uri,
     timeouts: timeouts,
   }),
-  withIdentityId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_servicebus_topic+: {
-        [resourceLabel]+: {
-          identity_id: value,
-        },
-      },
-    },
-  },
-  withIothubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_servicebus_topic+: {
-        [resourceLabel]+: {
-          iothub_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_servicebus_topic+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_servicebus_topic+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAuthenticationType(resourceLabel, value):: {
     resource+: {
@@ -115,6 +92,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withIdentityId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_servicebus_topic+: {
+        [resourceLabel]+: {
+          identity_id: value,
+        },
+      },
+    },
+  },
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_servicebus_topic+: {
+        [resourceLabel]+: {
+          iothub_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_servicebus_topic+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_servicebus_topic+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_servicebus_topic+: {
@@ -132,18 +145,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

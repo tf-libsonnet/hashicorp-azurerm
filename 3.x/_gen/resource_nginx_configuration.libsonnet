@@ -1,62 +1,66 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  config_file:: {
+    new(
+      content,
+      virtual_path
+    ):: std.prune(a={
+      content: content,
+      virtual_path: virtual_path,
+    }),
+  },
   new(
-    resourceLabel,
     nginx_deployment_id,
-    package_data=null,
+    resourceLabel,
     root_file,
     config_file=null,
+    package_data=null,
     protected_file=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_nginx_configuration', label=resourceLabel, attrs=self.newAttrs(
+    config_file=config_file,
     nginx_deployment_id=nginx_deployment_id,
     package_data=package_data,
-    root_file=root_file,
-    config_file=config_file,
     protected_file=protected_file,
+    root_file=root_file,
     timeouts=timeouts
   )),
   newAttrs(
-    package_data=null,
-    root_file,
     nginx_deployment_id,
+    root_file,
     config_file=null,
+    package_data=null,
     protected_file=null,
     timeouts=null
   ):: std.prune(a={
-    package_data: package_data,
-    root_file: root_file,
-    nginx_deployment_id: nginx_deployment_id,
     config_file: config_file,
+    nginx_deployment_id: nginx_deployment_id,
+    package_data: package_data,
     protected_file: protected_file,
+    root_file: root_file,
     timeouts: timeouts,
   }),
-  withNginxDeploymentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_configuration+: {
-        [resourceLabel]+: {
-          nginx_deployment_id: value,
-        },
-      },
-    },
+  protected_file:: {
+    new(
+      content,
+      virtual_path
+    ):: std.prune(a={
+      content: content,
+      virtual_path: virtual_path,
+    }),
   },
-  withPackageData(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_configuration+: {
-        [resourceLabel]+: {
-          package_data: value,
-        },
-      },
-    },
-  },
-  withRootFile(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_configuration+: {
-        [resourceLabel]+: {
-          root_file: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withConfigFile(resourceLabel, value):: {
     resource+: {
@@ -76,14 +80,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  config_file:: {
-    new(
-      content,
-      virtual_path
-    ):: std.prune(a={
-      content: content,
-      virtual_path: virtual_path,
-    }),
+  withNginxDeploymentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_configuration+: {
+        [resourceLabel]+: {
+          nginx_deployment_id: value,
+        },
+      },
+    },
+  },
+  withPackageData(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_configuration+: {
+        [resourceLabel]+: {
+          package_data: value,
+        },
+      },
+    },
   },
   withProtectedFile(resourceLabel, value):: {
     resource+: {
@@ -103,14 +116,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  protected_file:: {
-    new(
-      content,
-      virtual_path
-    ):: std.prune(a={
-      content: content,
-      virtual_path: virtual_path,
-    }),
+  withRootFile(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_configuration+: {
+        [resourceLabel]+: {
+          root_file: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -129,18 +142,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

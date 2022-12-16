@@ -1,73 +1,68 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    annotations=null,
-    parameters=null,
-    description=null,
-    moniter_metrics_after_duration=null,
-    variables=null,
     data_factory_id,
-    folder=null,
-    activities_json=null,
-    concurrency=null,
     name,
-    timeouts=null
+    resourceLabel,
+    activities_json=null,
+    annotations=null,
+    concurrency=null,
+    description=null,
+    folder=null,
+    moniter_metrics_after_duration=null,
+    parameters=null,
+    timeouts=null,
+    variables=null
   ):: tf.withResource(type='azurerm_data_factory_pipeline', label=resourceLabel, attrs=self.newAttrs(
-    annotations=annotations,
-    parameters=parameters,
-    description=description,
-    moniter_metrics_after_duration=moniter_metrics_after_duration,
-    variables=variables,
-    data_factory_id=data_factory_id,
-    folder=folder,
     activities_json=activities_json,
+    annotations=annotations,
     concurrency=concurrency,
+    data_factory_id=data_factory_id,
+    description=description,
+    folder=folder,
+    moniter_metrics_after_duration=moniter_metrics_after_duration,
     name=name,
-    timeouts=timeouts
+    parameters=parameters,
+    timeouts=timeouts,
+    variables=variables
   )),
   newAttrs(
     data_factory_id,
-    folder=null,
-    activities_json=null,
-    concurrency=null,
-    moniter_metrics_after_duration=null,
     name,
-    parameters=null,
-    variables=null,
+    activities_json=null,
     annotations=null,
+    concurrency=null,
     description=null,
-    timeouts=null
+    folder=null,
+    moniter_metrics_after_duration=null,
+    parameters=null,
+    timeouts=null,
+    variables=null
   ):: std.prune(a={
-    data_factory_id: data_factory_id,
-    folder: folder,
     activities_json: activities_json,
+    annotations: annotations,
     concurrency: concurrency,
+    data_factory_id: data_factory_id,
+    description: description,
+    folder: folder,
     moniter_metrics_after_duration: moniter_metrics_after_duration,
     name: name,
     parameters: parameters,
-    variables: variables,
-    annotations: annotations,
-    description: description,
     timeouts: timeouts,
+    variables: variables,
   }),
-  withFolder(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          folder: value,
-        },
-      },
-    },
-  },
-  withConcurrency(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          concurrency: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withActivitiesJson(resourceLabel, value):: {
     resource+: {
@@ -87,20 +82,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withConcurrency(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          parameters: value,
+          concurrency: value,
         },
       },
     },
@@ -123,6 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          folder: value,
+        },
+      },
+    },
+  },
   withMoniterMetricsAfterDuration(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
@@ -132,11 +127,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVariables(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          variables: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -159,17 +163,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withVariables(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          variables: value,
+        },
+      },
+    },
   },
 }

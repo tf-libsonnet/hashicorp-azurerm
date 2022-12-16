@@ -1,45 +1,76 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    workspace_id,
     location,
     name,
+    resourceLabel,
+    workspace_id,
+    identity=null,
     public_network_access_enabled=null,
     tags=null,
-    identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_dicom_service', label=resourceLabel, attrs=self.newAttrs(
-    workspace_id=workspace_id,
+    identity=identity,
     location=location,
     name=name,
     public_network_access_enabled=public_network_access_enabled,
     tags=tags,
-    identity=identity,
-    timeouts=timeouts
+    timeouts=timeouts,
+    workspace_id=workspace_id
   )),
   newAttrs(
-    workspace_id,
     location,
+    name,
+    workspace_id,
+    identity=null,
     public_network_access_enabled=null,
     tags=null,
-    name,
-    identity=null,
     timeouts=null
   ):: std.prune(a={
-    workspace_id: workspace_id,
+    identity: identity,
     location: location,
+    name: name,
     public_network_access_enabled: public_network_access_enabled,
     tags: tags,
-    name: name,
-    identity: identity,
     timeouts: timeouts,
+    workspace_id: workspace_id,
   }),
-  withName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_dicom_service+: {
         [resourceLabel]+: {
-          name: value,
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_dicom_service+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -49,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_healthcare_dicom_service+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_dicom_service+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -71,42 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_dicom_service+: {
-        [resourceLabel]+: {
-          workspace_id: value,
-        },
-      },
-    },
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_dicom_service+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_dicom_service+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_dicom_service+: {
@@ -125,17 +129,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_dicom_service+: {
+        [resourceLabel]+: {
+          workspace_id: value,
+        },
+      },
+    },
   },
 }

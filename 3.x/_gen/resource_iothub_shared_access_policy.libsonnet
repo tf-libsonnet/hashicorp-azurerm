@@ -1,23 +1,23 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    resource_group_name,
     iothub_name,
+    name,
+    resourceLabel,
+    resource_group_name,
+    device_connect=null,
     registry_read=null,
     registry_write=null,
     service_connect=null,
-    device_connect=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_shared_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
+    device_connect=device_connect,
     iothub_name=iothub_name,
+    name=name,
     registry_read=registry_read,
     registry_write=registry_write,
+    resource_group_name=resource_group_name,
     service_connect=service_connect,
-    device_connect=device_connect,
     timeouts=timeouts
   )),
   newAttrs(
@@ -30,38 +30,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     service_connect=null,
     timeouts=null
   ):: std.prune(a={
+    device_connect: device_connect,
     iothub_name: iothub_name,
     name: name,
-    resource_group_name: resource_group_name,
-    device_connect: device_connect,
     registry_read: registry_read,
     registry_write: registry_write,
+    resource_group_name: resource_group_name,
     service_connect: service_connect,
     timeouts: timeouts,
   }),
-  withRegistryRead(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_shared_access_policy+: {
-        [resourceLabel]+: {
-          registry_read: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withRegistryWrite(resourceLabel, value):: {
+  withDeviceConnect(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_shared_access_policy+: {
         [resourceLabel]+: {
-          registry_write: value,
-        },
-      },
-    },
-  },
-  withServiceConnect(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_shared_access_policy+: {
-        [resourceLabel]+: {
-          service_connect: value,
+          device_connect: value,
         },
       },
     },
@@ -84,6 +79,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withRegistryRead(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_shared_access_policy+: {
+        [resourceLabel]+: {
+          registry_read: value,
+        },
+      },
+    },
+  },
+  withRegistryWrite(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_shared_access_policy+: {
+        [resourceLabel]+: {
+          registry_write: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_shared_access_policy+: {
@@ -93,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeviceConnect(resourceLabel, value):: {
+  withServiceConnect(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_shared_access_policy+: {
         [resourceLabel]+: {
-          device_connect: value,
+          service_connect: value,
         },
       },
     },
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

@@ -1,68 +1,61 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  autoscale_settings:: {
+    new(
+      max_throughput=null
+    ):: std.prune(a={
+      max_throughput: max_throughput,
+    }),
+  },
   new(
-    resourceLabel,
-    resource_group_name,
-    throughput=null,
     account_name,
     name,
-    timeouts=null,
-    autoscale_settings=null
+    resourceLabel,
+    resource_group_name,
+    autoscale_settings=null,
+    throughput=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_gremlin_database', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
+    autoscale_settings=autoscale_settings,
+    name=name,
     resource_group_name=resource_group_name,
     throughput=throughput,
-    account_name=account_name,
-    name=name,
-    timeouts=timeouts,
-    autoscale_settings=autoscale_settings
+    timeouts=timeouts
   )),
   newAttrs(
-    throughput=null,
     account_name,
     name,
     resource_group_name,
     autoscale_settings=null,
+    throughput=null,
     timeouts=null
   ):: std.prune(a={
-    throughput: throughput,
     account_name: account_name,
+    autoscale_settings: autoscale_settings,
     name: name,
     resource_group_name: resource_group_name,
-    autoscale_settings: autoscale_settings,
+    throughput: throughput,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_database+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withThroughput(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_database+: {
-        [resourceLabel]+: {
-          throughput: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_database+: {
         [resourceLabel]+: {
           account_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_database+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -85,12 +78,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  autoscale_settings:: {
-    new(
-      max_throughput=null
-    ):: std.prune(a={
-      max_throughput: max_throughput,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_database+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_database+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withThroughput(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_database+: {
+        [resourceLabel]+: {
+          throughput: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -109,18 +122,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

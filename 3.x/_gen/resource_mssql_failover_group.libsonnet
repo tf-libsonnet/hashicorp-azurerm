@@ -1,44 +1,71 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
-    readonly_endpoint_failover_policy_enabled=null,
+    resourceLabel,
     server_id,
-    tags=null,
     databases=null,
     partner_server=null,
     read_write_endpoint_failover_policy=null,
+    readonly_endpoint_failover_policy_enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_failover_group', label=resourceLabel, attrs=self.newAttrs(
+    databases=databases,
     name=name,
+    partner_server=partner_server,
+    read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
     readonly_endpoint_failover_policy_enabled=readonly_endpoint_failover_policy_enabled,
     server_id=server_id,
     tags=tags,
-    databases=databases,
-    partner_server=partner_server,
-    read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
     timeouts=timeouts
   )),
   newAttrs(
-    server_id,
-    tags=null,
-    databases=null,
     name,
-    readonly_endpoint_failover_policy_enabled=null,
-    timeouts=null,
+    server_id,
+    databases=null,
     partner_server=null,
-    read_write_endpoint_failover_policy=null
+    read_write_endpoint_failover_policy=null,
+    readonly_endpoint_failover_policy_enabled=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    server_id: server_id,
-    tags: tags,
     databases: databases,
     name: name,
-    readonly_endpoint_failover_policy_enabled: readonly_endpoint_failover_policy_enabled,
-    timeouts: timeouts,
     partner_server: partner_server,
     read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
+    readonly_endpoint_failover_policy_enabled: readonly_endpoint_failover_policy_enabled,
+    server_id: server_id,
+    tags: tags,
+    timeouts: timeouts,
   }),
+  partner_server:: {
+    new(
+
+    ):: std.prune(a={}),
+  },
+  read_write_endpoint_failover_policy:: {
+    new(
+      mode,
+      grace_minutes=null
+    ):: std.prune(a={
+      grace_minutes: grace_minutes,
+      mode: mode,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDatabases(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_failover_group+: {
@@ -53,6 +80,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_failover_group+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPartnerServer(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_failover_group+: {
+        [resourceLabel]+: {
+          partner_server: value,
+        },
+      },
+    },
+  },
+  withPartnerServerMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_failover_group+: {
+        [resourceLabel]+: {
+          partner_server+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withReadWriteEndpointFailoverPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_failover_group+: {
+        [resourceLabel]+: {
+          read_write_endpoint_failover_policy: value,
+        },
+      },
+    },
+  },
+  withReadWriteEndpointFailoverPolicyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_failover_group+: {
+        [resourceLabel]+: {
+          read_write_endpoint_failover_policy+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -84,56 +147,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPartnerServer(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_failover_group+: {
-        [resourceLabel]+: {
-          partner_server: value,
-        },
-      },
-    },
-  },
-  withPartnerServerMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_failover_group+: {
-        [resourceLabel]+: {
-          partner_server+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  partner_server:: {
-    new(
-
-    ):: std.prune(a={}),
-  },
-  withReadWriteEndpointFailoverPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_failover_group+: {
-        [resourceLabel]+: {
-          read_write_endpoint_failover_policy: value,
-        },
-      },
-    },
-  },
-  withReadWriteEndpointFailoverPolicyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_failover_group+: {
-        [resourceLabel]+: {
-          read_write_endpoint_failover_policy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  read_write_endpoint_failover_policy:: {
-    new(
-      grace_minutes=null,
-      mode
-    ):: std.prune(a={
-      grace_minutes: grace_minutes,
-      mode: mode,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_failover_group+: {
@@ -151,18 +164,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

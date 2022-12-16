@@ -1,139 +1,115 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
+  input_mapping_default_values:: {
+    new(
+      data_version=null,
+      event_type=null,
+      subject=null
+    ):: std.prune(a={
+      data_version: data_version,
+      event_type: event_type,
+      subject: subject,
+    }),
+  },
+  input_mapping_fields:: {
+    new(
+      data_version=null,
+      event_time=null,
+      event_type=null,
+      subject=null,
+      topic=null
+    ):: std.prune(a={
+      data_version: data_version,
+      event_time: event_time,
+      event_type: event_type,
+      subject: subject,
+      topic: topic,
+    }),
+  },
   new(
-    resourceLabel,
-    name,
-    tags=null,
     location,
-    input_schema=null,
-    auto_delete_topic_with_last_subscription=null,
-    auto_create_topic_with_first_subscription=null,
-    local_auth_enabled=null,
-    public_network_access_enabled=null,
+    name,
+    resourceLabel,
     resource_group_name,
-    inbound_ip_rule=null,
+    auto_create_topic_with_first_subscription=null,
+    auto_delete_topic_with_last_subscription=null,
     identity=null,
+    inbound_ip_rule=null,
     input_mapping_default_values=null,
     input_mapping_fields=null,
+    input_schema=null,
+    local_auth_enabled=null,
+    public_network_access_enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventgrid_domain', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    tags=tags,
-    location=location,
-    input_schema=input_schema,
-    auto_delete_topic_with_last_subscription=auto_delete_topic_with_last_subscription,
     auto_create_topic_with_first_subscription=auto_create_topic_with_first_subscription,
-    local_auth_enabled=local_auth_enabled,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    inbound_ip_rule=inbound_ip_rule,
+    auto_delete_topic_with_last_subscription=auto_delete_topic_with_last_subscription,
     identity=identity,
+    inbound_ip_rule=inbound_ip_rule,
     input_mapping_default_values=input_mapping_default_values,
     input_mapping_fields=input_mapping_fields,
+    input_schema=input_schema,
+    local_auth_enabled=local_auth_enabled,
+    location=location,
+    name=name,
+    public_network_access_enabled=public_network_access_enabled,
+    resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    local_auth_enabled=null,
-    inbound_ip_rule=null,
-    input_schema=null,
-    public_network_access_enabled=null,
-    name,
-    auto_create_topic_with_first_subscription=null,
-    resource_group_name,
     location,
-    tags=null,
+    name,
+    resource_group_name,
+    auto_create_topic_with_first_subscription=null,
     auto_delete_topic_with_last_subscription=null,
     identity=null,
+    inbound_ip_rule=null,
     input_mapping_default_values=null,
     input_mapping_fields=null,
+    input_schema=null,
+    local_auth_enabled=null,
+    public_network_access_enabled=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    local_auth_enabled: local_auth_enabled,
-    inbound_ip_rule: inbound_ip_rule,
-    input_schema: input_schema,
-    public_network_access_enabled: public_network_access_enabled,
-    name: name,
     auto_create_topic_with_first_subscription: auto_create_topic_with_first_subscription,
-    resource_group_name: resource_group_name,
-    location: location,
-    tags: tags,
     auto_delete_topic_with_last_subscription: auto_delete_topic_with_last_subscription,
     identity: identity,
+    inbound_ip_rule: inbound_ip_rule,
     input_mapping_default_values: input_mapping_default_values,
     input_mapping_fields: input_mapping_fields,
+    input_schema: input_schema,
+    local_auth_enabled: local_auth_enabled,
+    location: location,
+    name: name,
+    public_network_access_enabled: public_network_access_enabled,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withInboundIpRule(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          inbound_ip_rule: value,
-        },
-      },
-    },
-  },
-  withInputSchema(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          input_schema: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withAutoDeleteTopicWithLastSubscription(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          auto_delete_topic_with_last_subscription: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_domain+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAutoCreateTopicWithFirstSubscription(resourceLabel, value):: {
     resource+: {
@@ -144,11 +120,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withAutoDeleteTopicWithLastSubscription(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_domain+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          auto_delete_topic_with_last_subscription: value,
         },
       },
     },
@@ -171,14 +147,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
+  withInboundIpRule(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          inbound_ip_rule: value,
+        },
+      },
+    },
   },
   withInputMappingDefaultValues(resourceLabel, value):: {
     resource+: {
@@ -198,17 +174,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  input_mapping_default_values:: {
-    new(
-      subject=null,
-      data_version=null,
-      event_type=null
-    ):: std.prune(a={
-      subject: subject,
-      data_version: data_version,
-      event_type: event_type,
-    }),
-  },
   withInputMappingFields(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_domain+: {
@@ -227,20 +192,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  input_mapping_fields:: {
-    new(
-      subject=null,
-      topic=null,
-      data_version=null,
-      event_time=null,
-      event_type=null
-    ):: std.prune(a={
-      subject: subject,
-      topic: topic,
-      data_version: data_version,
-      event_time: event_time,
-      event_type: event_type,
-    }),
+  withInputSchema(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          input_schema: value,
+        },
+      },
+    },
+  },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_domain+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -259,18 +272,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

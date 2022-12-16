@@ -1,34 +1,47 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     enabled,
+    resourceLabel,
     target_resource_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_advanced_threat_protection', label=resourceLabel, attrs=self.newAttrs(enabled=enabled, target_resource_id=target_resource_id, timeouts=timeouts)),
   newAttrs(
-    target_resource_id,
     enabled,
+    target_resource_id,
     timeouts=null
   ):: std.prune(a={
-    target_resource_id: target_resource_id,
     enabled: enabled,
+    target_resource_id: target_resource_id,
     timeouts: timeouts,
   }),
-  withTargetResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_advanced_threat_protection+: {
-        [resourceLabel]+: {
-          target_resource_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_advanced_threat_protection+: {
         [resourceLabel]+: {
           enabled: value,
+        },
+      },
+    },
+  },
+  withTargetResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_advanced_threat_protection+: {
+        [resourceLabel]+: {
+          target_resource_id: value,
         },
       },
     },
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

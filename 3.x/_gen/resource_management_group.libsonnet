@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    display_name=null,
     name=null,
     parent_management_group_id=null,
     subscription_ids=null,
-    display_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_management_group', label=resourceLabel, attrs=self.newAttrs(
+    display_name=display_name,
     name=name,
     parent_management_group_id=parent_management_group_id,
     subscription_ids=subscription_ids,
-    display_name=display_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,6 +27,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_ids: subscription_ids,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group+: {
+        [resourceLabel]+: {
+          display_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_management_group+: {
@@ -54,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_management_group+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

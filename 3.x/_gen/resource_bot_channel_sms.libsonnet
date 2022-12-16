@@ -1,40 +1,53 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    bot_name,
+    location,
     phone_number,
+    resourceLabel,
     resource_group_name,
     sms_channel_account_security_id,
     sms_channel_auth_token,
-    bot_name,
-    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_sms', label=resourceLabel, attrs=self.newAttrs(
+    bot_name=bot_name,
+    location=location,
     phone_number=phone_number,
     resource_group_name=resource_group_name,
     sms_channel_account_security_id=sms_channel_account_security_id,
     sms_channel_auth_token=sms_channel_auth_token,
-    bot_name=bot_name,
-    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    sms_channel_account_security_id,
-    sms_channel_auth_token,
     bot_name,
     location,
     phone_number,
+    resource_group_name,
+    sms_channel_account_security_id,
+    sms_channel_auth_token,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    sms_channel_account_security_id: sms_channel_account_security_id,
-    sms_channel_auth_token: sms_channel_auth_token,
     bot_name: bot_name,
     location: location,
     phone_number: phone_number,
+    resource_group_name: resource_group_name,
+    sms_channel_account_security_id: sms_channel_account_security_id,
+    sms_channel_auth_token: sms_channel_auth_token,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withBotName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_sms+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

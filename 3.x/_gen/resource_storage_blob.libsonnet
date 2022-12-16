@@ -1,131 +1,99 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
     resourceLabel,
     storage_account_name,
-    size=null,
     storage_container_name,
+    type,
+    access_tier=null,
+    cache_control=null,
+    content_md5=null,
     content_type=null,
+    metadata=null,
     parallelism=null,
+    size=null,
     source=null,
     source_content=null,
-    access_tier=null,
-    type,
-    cache_control=null,
     source_uri=null,
-    content_md5=null,
-    metadata=null,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_blob', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_name=storage_account_name,
-    size=size,
-    storage_container_name=storage_container_name,
-    content_type=content_type,
-    parallelism=parallelism,
-    source=source,
-    source_content=source_content,
     access_tier=access_tier,
-    type=type,
     cache_control=cache_control,
-    source_uri=source_uri,
     content_md5=content_md5,
+    content_type=content_type,
     metadata=metadata,
     name=name,
-    timeouts=timeouts
+    parallelism=parallelism,
+    size=size,
+    source=source,
+    source_content=source_content,
+    source_uri=source_uri,
+    storage_account_name=storage_account_name,
+    storage_container_name=storage_container_name,
+    timeouts=timeouts,
+    type=type
   )),
   newAttrs(
+    name,
+    storage_account_name,
+    storage_container_name,
+    type,
+    access_tier=null,
+    cache_control=null,
     content_md5=null,
-    source=null,
-    metadata=null,
     content_type=null,
+    metadata=null,
+    parallelism=null,
     size=null,
+    source=null,
     source_content=null,
     source_uri=null,
-    name,
-    type,
-    parallelism=null,
-    storage_container_name,
-    storage_account_name,
-    cache_control=null,
-    access_tier=null,
     timeouts=null
   ):: std.prune(a={
+    access_tier: access_tier,
+    cache_control: cache_control,
     content_md5: content_md5,
-    source: source,
-    metadata: metadata,
     content_type: content_type,
+    metadata: metadata,
+    name: name,
+    parallelism: parallelism,
     size: size,
+    source: source,
     source_content: source_content,
     source_uri: source_uri,
-    name: name,
-    type: type,
-    parallelism: parallelism,
-    storage_container_name: storage_container_name,
     storage_account_name: storage_account_name,
-    cache_control: cache_control,
-    access_tier: access_tier,
+    storage_container_name: storage_container_name,
     timeouts: timeouts,
+    type: type,
   }),
-  withStorageAccountName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAccessTier(resourceLabel, value):: {
     resource+: {
       azurerm_storage_blob+: {
         [resourceLabel]+: {
-          storage_account_name: value,
+          access_tier: value,
         },
       },
     },
   },
-  withSourceUri(resourceLabel, value):: {
+  withCacheControl(resourceLabel, value):: {
     resource+: {
       azurerm_storage_blob+: {
         [resourceLabel]+: {
-          source_uri: value,
-        },
-      },
-    },
-  },
-  withStorageContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          storage_container_name: value,
-        },
-      },
-    },
-  },
-  withSource(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          source: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withParallelism(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          parallelism: value,
-        },
-      },
-    },
-  },
-  withSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          size: value,
+          cache_control: value,
         },
       },
     },
@@ -148,24 +116,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSourceContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          source_content: value,
-        },
-      },
-    },
-  },
-  withAccessTier(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          access_tier: value,
-        },
-      },
-    },
-  },
   withMetadata(resourceLabel, value):: {
     resource+: {
       azurerm_storage_blob+: {
@@ -175,20 +125,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCacheControl(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob+: {
-        [resourceLabel]+: {
-          cache_control: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_storage_blob+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withParallelism(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          parallelism: value,
+        },
+      },
+    },
+  },
+  withSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          size: value,
+        },
+      },
+    },
+  },
+  withSource(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          source: value,
+        },
+      },
+    },
+  },
+  withSourceContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          source_content: value,
+        },
+      },
+    },
+  },
+  withSourceUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          source_uri: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
+  withStorageContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          storage_container_name: value,
         },
       },
     },
@@ -211,17 +215,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

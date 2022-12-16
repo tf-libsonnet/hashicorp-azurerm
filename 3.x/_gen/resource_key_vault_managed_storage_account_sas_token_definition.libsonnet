@@ -1,40 +1,71 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    validity_period,
     managed_storage_account_id,
     name,
+    resourceLabel,
     sas_template_uri,
     sas_type,
+    validity_period,
     tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_managed_storage_account_sas_token_definition', label=resourceLabel, attrs=self.newAttrs(
-    validity_period=validity_period,
     managed_storage_account_id=managed_storage_account_id,
     name=name,
     sas_template_uri=sas_template_uri,
     sas_type=sas_type,
     tags=tags,
-    timeouts=timeouts
+    timeouts=timeouts,
+    validity_period=validity_period
   )),
   newAttrs(
-    sas_template_uri,
-    sas_type,
-    tags=null,
-    validity_period,
     managed_storage_account_id,
     name,
+    sas_template_uri,
+    sas_type,
+    validity_period,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    managed_storage_account_id: managed_storage_account_id,
+    name: name,
     sas_template_uri: sas_template_uri,
     sas_type: sas_type,
     tags: tags,
-    validity_period: validity_period,
-    managed_storage_account_id: managed_storage_account_id,
-    name: name,
     timeouts: timeouts,
+    validity_period: validity_period,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withManagedStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_storage_account_sas_token_definition+: {
+        [resourceLabel]+: {
+          managed_storage_account_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_storage_account_sas_token_definition+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSasTemplateUri(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_storage_account_sas_token_definition+: {
@@ -62,33 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withValidityPeriod(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_storage_account_sas_token_definition+: {
-        [resourceLabel]+: {
-          validity_period: value,
-        },
-      },
-    },
-  },
-  withManagedStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_storage_account_sas_token_definition+: {
-        [resourceLabel]+: {
-          managed_storage_account_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_storage_account_sas_token_definition+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_storage_account_sas_token_definition+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withValidityPeriod(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_storage_account_sas_token_definition+: {
+        [resourceLabel]+: {
+          validity_period: value,
+        },
+      },
+    },
   },
 }

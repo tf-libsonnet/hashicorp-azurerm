@@ -1,16 +1,16 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
-    version,
     blueprint_name,
+    dataSrcLabel,
     scope_id,
+    version,
     timeouts=null
   ):: tf.withData(type='azurerm_blueprint_published_version', label=dataSrcLabel, attrs=self.newAttrs(
-    version=version,
     blueprint_name=blueprint_name,
     scope_id=scope_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    version=version
   )),
   newAttrs(
     blueprint_name,
@@ -20,17 +20,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   ):: std.prune(a={
     blueprint_name: blueprint_name,
     scope_id: scope_id,
-    version: version,
     timeouts: timeouts,
+    version: version,
   }),
-  withVersion(dataSrcLabel, value):: {
-    data+: {
-      azurerm_blueprint_published_version+: {
-        [dataSrcLabel]+: {
-          version: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withBlueprintName(dataSrcLabel, value):: {
     data+: {
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_blueprint_published_version+: {
+        [dataSrcLabel]+: {
+          version: value,
+        },
+      },
+    },
   },
 }

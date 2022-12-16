@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     acl_mode,
     disks_pool_id,
     name,
+    resourceLabel,
     target_iqn=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_disk_pool_iscsi_target', label=resourceLabel, attrs=self.newAttrs(
@@ -15,18 +15,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    target_iqn=null,
     acl_mode,
     disks_pool_id,
+    name,
+    target_iqn=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    target_iqn: target_iqn,
     acl_mode: acl_mode,
     disks_pool_id: disks_pool_id,
+    name: name,
+    target_iqn: target_iqn,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
+  withAclMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_pool_iscsi_target+: {
+        [resourceLabel]+: {
+          acl_mode: value,
+        },
+      },
+    },
+  },
   withDisksPoolId(resourceLabel, value):: {
     resource+: {
       azurerm_disk_pool_iscsi_target+: {
@@ -54,15 +74,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAclMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_pool_iscsi_target+: {
-        [resourceLabel]+: {
-          acl_mode: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_disk_pool_iscsi_target+: {
@@ -80,16 +91,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

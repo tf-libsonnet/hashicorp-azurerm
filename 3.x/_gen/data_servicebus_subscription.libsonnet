@@ -5,40 +5,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     namespace_name=null,
     resource_group_name=null,
+    timeouts=null,
     topic_id=null,
-    topic_name=null,
-    timeouts=null
+    topic_name=null
   ):: tf.withData(type='azurerm_servicebus_subscription', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
     namespace_name=namespace_name,
     resource_group_name=resource_group_name,
+    timeouts=timeouts,
     topic_id=topic_id,
-    topic_name=topic_name,
-    timeouts=timeouts
+    topic_name=topic_name
   )),
   newAttrs(
-    topic_id=null,
-    topic_name=null,
     name,
     namespace_name=null,
     resource_group_name=null,
-    timeouts=null
+    timeouts=null,
+    topic_id=null,
+    topic_name=null
   ):: std.prune(a={
-    topic_id: topic_id,
-    topic_name: topic_name,
     name: name,
     namespace_name: namespace_name,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
+    topic_id: topic_id,
+    topic_name: topic_name,
   }),
-  withTopicName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_subscription+: {
-        [dataSrcLabel]+: {
-          topic_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -67,15 +65,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTopicId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_subscription+: {
-        [dataSrcLabel]+: {
-          topic_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_subscription+: {
@@ -94,11 +83,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withTopicId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_subscription+: {
+        [dataSrcLabel]+: {
+          topic_id: value,
+        },
+      },
+    },
+  },
+  withTopicName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_subscription+: {
+        [dataSrcLabel]+: {
+          topic_name: value,
+        },
+      },
+    },
   },
 }

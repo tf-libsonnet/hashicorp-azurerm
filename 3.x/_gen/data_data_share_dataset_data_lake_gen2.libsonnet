@@ -15,20 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     share_id: share_id,
     timeouts: timeouts,
   }),
-  withShareId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_data_share_dataset_data_lake_gen2+: {
-        [dataSrcLabel]+: {
-          share_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_data_share_dataset_data_lake_gen2+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withShareId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_data_share_dataset_data_lake_gen2+: {
+        [dataSrcLabel]+: {
+          share_id: value,
         },
       },
     },
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

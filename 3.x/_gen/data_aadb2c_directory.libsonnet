@@ -7,14 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withData(type='azurerm_aadb2c_directory', label=dataSrcLabel, attrs=self.newAttrs(domain_name=domain_name, resource_group_name=resource_group_name, timeouts=timeouts)),
   newAttrs(
-    resource_group_name,
     domain_name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     domain_name: domain_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withDomainName(dataSrcLabel, value):: {
     data+: {
       azurerm_aadb2c_directory+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

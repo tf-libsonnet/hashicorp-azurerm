@@ -1,49 +1,53 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  line_channel:: {
+    new(
+      access_token,
+      secret
+    ):: std.prune(a={
+      access_token: access_token,
+      secret: secret,
+    }),
+  },
   new(
-    resourceLabel,
     bot_name,
     location,
+    resourceLabel,
     resource_group_name,
     line_channel=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_line', label=resourceLabel, attrs=self.newAttrs(
     bot_name=bot_name,
+    line_channel=line_channel,
     location=location,
     resource_group_name=resource_group_name,
-    line_channel=line_channel,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     bot_name,
     location,
+    resource_group_name,
     line_channel=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     bot_name: bot_name,
-    location: location,
     line_channel: line_channel,
+    location: location,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_line+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_line+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBotName(resourceLabel, value):: {
     resource+: {
@@ -72,14 +76,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  line_channel:: {
-    new(
-      secret,
-      access_token
-    ):: std.prune(a={
-      secret: secret,
-      access_token: access_token,
-    }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_line+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_line+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -98,18 +111,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

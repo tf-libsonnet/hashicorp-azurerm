@@ -1,66 +1,52 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    connection_string,
-    description=null,
-    name,
-    redis_cache_id=null,
     api_management_id,
+    connection_string,
+    name,
+    resourceLabel,
     cache_location=null,
+    description=null,
+    redis_cache_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_redis_cache', label=resourceLabel, attrs=self.newAttrs(
+    api_management_id=api_management_id,
+    cache_location=cache_location,
     connection_string=connection_string,
     description=description,
     name=name,
     redis_cache_id=redis_cache_id,
-    api_management_id=api_management_id,
-    cache_location=cache_location,
     timeouts=timeouts
   )),
   newAttrs(
-    redis_cache_id=null,
     api_management_id,
-    cache_location=null,
     connection_string,
-    description=null,
     name,
+    cache_location=null,
+    description=null,
+    redis_cache_id=null,
     timeouts=null
   ):: std.prune(a={
-    redis_cache_id: redis_cache_id,
     api_management_id: api_management_id,
     cache_location: cache_location,
     connection_string: connection_string,
     description: description,
     name: name,
+    redis_cache_id: redis_cache_id,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_redis_cache+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_redis_cache+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withRedisCacheId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_redis_cache+: {
-        [resourceLabel]+: {
-          redis_cache_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withApiManagementId(resourceLabel, value):: {
     resource+: {
@@ -89,6 +75,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_redis_cache+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_redis_cache+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withRedisCacheId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_redis_cache+: {
+        [resourceLabel]+: {
+          redis_cache_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_redis_cache+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

@@ -1,68 +1,98 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  authentication_configuration:: {
+    new(
+      audience=null,
+      authority=null,
+      smart_proxy_enabled=null
+    ):: std.prune(a={
+      audience: audience,
+      authority: authority,
+      smart_proxy_enabled: smart_proxy_enabled,
+    }),
+  },
+  cors_configuration:: {
+    new(
+      allow_credentials=null,
+      allowed_headers=null,
+      allowed_methods=null,
+      allowed_origins=null,
+      max_age_in_seconds=null
+    ):: std.prune(a={
+      allow_credentials: allow_credentials,
+      allowed_headers: allowed_headers,
+      allowed_methods: allowed_methods,
+      allowed_origins: allowed_origins,
+      max_age_in_seconds: max_age_in_seconds,
+    }),
+  },
   new(
-    resourceLabel,
+    location,
     name,
-    public_network_access_enabled=null,
+    resourceLabel,
+    resource_group_name,
+    access_policy_object_ids=null,
+    authentication_configuration=null,
+    cors_configuration=null,
     cosmosdb_key_vault_key_versionless_id=null,
     cosmosdb_throughput=null,
-    resource_group_name,
-    tags=null,
-    access_policy_object_ids=null,
-    location,
     kind=null,
-    timeouts=null,
-    authentication_configuration=null,
-    cors_configuration=null
+    public_network_access_enabled=null,
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_service', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
+    access_policy_object_ids=access_policy_object_ids,
+    authentication_configuration=authentication_configuration,
+    cors_configuration=cors_configuration,
     cosmosdb_key_vault_key_versionless_id=cosmosdb_key_vault_key_versionless_id,
     cosmosdb_throughput=cosmosdb_throughput,
+    kind=kind,
+    location=location,
+    name=name,
+    public_network_access_enabled=public_network_access_enabled,
     resource_group_name=resource_group_name,
     tags=tags,
-    access_policy_object_ids=access_policy_object_ids,
-    location=location,
-    kind=kind,
-    timeouts=timeouts,
-    authentication_configuration=authentication_configuration,
-    cors_configuration=cors_configuration
+    timeouts=timeouts
   )),
   newAttrs(
     location,
-    public_network_access_enabled=null,
-    cosmosdb_throughput=null,
-    tags=null,
-    access_policy_object_ids=null,
     name,
-    cosmosdb_key_vault_key_versionless_id=null,
     resource_group_name,
-    kind=null,
+    access_policy_object_ids=null,
     authentication_configuration=null,
     cors_configuration=null,
+    cosmosdb_key_vault_key_versionless_id=null,
+    cosmosdb_throughput=null,
+    kind=null,
+    public_network_access_enabled=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    public_network_access_enabled: public_network_access_enabled,
-    cosmosdb_throughput: cosmosdb_throughput,
-    tags: tags,
     access_policy_object_ids: access_policy_object_ids,
-    name: name,
-    cosmosdb_key_vault_key_versionless_id: cosmosdb_key_vault_key_versionless_id,
-    resource_group_name: resource_group_name,
-    kind: kind,
     authentication_configuration: authentication_configuration,
     cors_configuration: cors_configuration,
+    cosmosdb_key_vault_key_versionless_id: cosmosdb_key_vault_key_versionless_id,
+    cosmosdb_throughput: cosmosdb_throughput,
+    kind: kind,
+    location: location,
+    name: name,
+    public_network_access_enabled: public_network_access_enabled,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_service+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAccessPolicyObjectIds(resourceLabel, value):: {
     resource+: {
@@ -73,11 +103,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withAuthenticationConfiguration(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_service+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          authentication_configuration: value,
+        },
+      },
+    },
+  },
+  withAuthenticationConfigurationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_service+: {
+        [resourceLabel]+: {
+          authentication_configuration+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withCorsConfiguration(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_service+: {
+        [resourceLabel]+: {
+          cors_configuration: value,
+        },
+      },
+    },
+  },
+  withCorsConfigurationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_service+: {
+        [resourceLabel]+: {
+          cors_configuration+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -100,11 +157,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withKind(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_service+: {
+        [resourceLabel]+: {
+          kind: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_service+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_service+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -118,11 +193,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKind(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_service+: {
         [resourceLabel]+: {
-          kind: value,
+          resource_group_name: value,
         },
       },
     },
@@ -153,80 +228,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withAuthenticationConfiguration(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_service+: {
-        [resourceLabel]+: {
-          authentication_configuration: value,
-        },
-      },
-    },
-  },
-  withAuthenticationConfigurationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_service+: {
-        [resourceLabel]+: {
-          authentication_configuration+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  authentication_configuration:: {
-    new(
-      audience=null,
-      authority=null,
-      smart_proxy_enabled=null
-    ):: std.prune(a={
-      audience: audience,
-      authority: authority,
-      smart_proxy_enabled: smart_proxy_enabled,
-    }),
-  },
-  withCorsConfiguration(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_service+: {
-        [resourceLabel]+: {
-          cors_configuration: value,
-        },
-      },
-    },
-  },
-  withCorsConfigurationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_service+: {
-        [resourceLabel]+: {
-          cors_configuration+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  cors_configuration:: {
-    new(
-      allowed_methods=null,
-      allowed_origins=null,
-      max_age_in_seconds=null,
-      allow_credentials=null,
-      allowed_headers=null
-    ):: std.prune(a={
-      allowed_methods: allowed_methods,
-      allowed_origins: allowed_origins,
-      max_age_in_seconds: max_age_in_seconds,
-      allow_credentials: allow_credentials,
-      allowed_headers: allowed_headers,
-    }),
   },
 }

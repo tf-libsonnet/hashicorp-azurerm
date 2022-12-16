@@ -2,9 +2,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    min_tls_version=null,
     name,
     resource_group_name,
+    min_tls_version=null,
     timeouts=null
   ):: tf.withData(type='azurerm_storage_account', label=dataSrcLabel, attrs=self.newAttrs(
     min_tls_version=min_tls_version,
@@ -13,9 +13,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    min_tls_version=null,
     name,
     resource_group_name,
+    min_tls_version=null,
     timeouts=null
   ):: std.prune(a={
     min_tls_version: min_tls_version,
@@ -23,6 +23,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withMinTlsVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account+: {
+        [dataSrcLabel]+: {
+          min_tls_version: value,
+        },
+      },
+    },
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account+: {
@@ -37,15 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_storage_account+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withMinTlsVersion(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account+: {
-        [dataSrcLabel]+: {
-          min_tls_version: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

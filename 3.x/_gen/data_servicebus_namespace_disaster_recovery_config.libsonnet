@@ -2,35 +2,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
+    alias_authorization_rule_id=null,
     namespace_id=null,
     namespace_name=null,
-    alias_authorization_rule_id=null,
-    name,
     resource_group_name=null,
     timeouts=null
   ):: tf.withData(type='azurerm_servicebus_namespace_disaster_recovery_config', label=dataSrcLabel, attrs=self.newAttrs(
-    namespace_id=namespace_id,
-    namespace_name=namespace_name,
     alias_authorization_rule_id=alias_authorization_rule_id,
     name=name,
+    namespace_id=namespace_id,
+    namespace_name=namespace_name,
     resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     alias_authorization_rule_id=null,
     namespace_id=null,
     namespace_name=null,
-    name,
     resource_group_name=null,
     timeouts=null
   ):: std.prune(a={
     alias_authorization_rule_id: alias_authorization_rule_id,
+    name: name,
     namespace_id: namespace_id,
     namespace_name: namespace_name,
-    name: name,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withAliasAuthorizationRuleId(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_namespace_disaster_recovery_config+: {
@@ -45,15 +52,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_servicebus_namespace_disaster_recovery_config+: {
         [dataSrcLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_namespace_disaster_recovery_config+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -76,6 +74,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_namespace_disaster_recovery_config+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_namespace_disaster_recovery_config+: {
@@ -93,12 +100,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

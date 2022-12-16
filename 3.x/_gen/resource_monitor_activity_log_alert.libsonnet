@@ -1,48 +1,172 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  action:: {
+    new(
+      action_group_id,
+      webhook_properties=null
+    ):: std.prune(a={
+      action_group_id: action_group_id,
+      webhook_properties: webhook_properties,
+    }),
+  },
+  criteria:: {
+    new(
+      category,
+      caller=null,
+      level=null,
+      operation_name=null,
+      recommendation_category=null,
+      recommendation_impact=null,
+      recommendation_type=null,
+      resource_group=null,
+      resource_health=null,
+      resource_id=null,
+      resource_provider=null,
+      resource_type=null,
+      service_health=null,
+      status=null,
+      sub_status=null
+    ):: std.prune(a={
+      caller: caller,
+      category: category,
+      level: level,
+      operation_name: operation_name,
+      recommendation_category: recommendation_category,
+      recommendation_impact: recommendation_impact,
+      recommendation_type: recommendation_type,
+      resource_group: resource_group,
+      resource_health: resource_health,
+      resource_id: resource_id,
+      resource_provider: resource_provider,
+      resource_type: resource_type,
+      service_health: service_health,
+      status: status,
+      sub_status: sub_status,
+    }),
+    resource_health:: {
+      new(
+        current=null,
+        previous=null,
+        reason=null
+      ):: std.prune(a={
+        current: current,
+        previous: previous,
+        reason: reason,
+      }),
+    },
+    service_health:: {
+      new(
+        events=null,
+        locations=null,
+        services=null
+      ):: std.prune(a={
+        events: events,
+        locations: locations,
+        services: services,
+      }),
+    },
+  },
   new(
-    resourceLabel,
-    tags=null,
-    description=null,
-    enabled=null,
     name,
+    resourceLabel,
     resource_group_name,
     scopes,
+    action=null,
     criteria=null,
-    timeouts=null,
-    action=null
+    description=null,
+    enabled=null,
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_monitor_activity_log_alert', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
+    action=action,
+    criteria=criteria,
     description=description,
     enabled=enabled,
     name=name,
     resource_group_name=resource_group_name,
     scopes=scopes,
-    criteria=criteria,
-    timeouts=timeouts,
-    action=action
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    enabled=null,
     name,
     resource_group_name,
     scopes,
-    tags=null,
+    action=null,
     criteria=null,
-    timeouts=null,
-    action=null
+    description=null,
+    enabled=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
+    action: action,
+    criteria: criteria,
     description: description,
     enabled: enabled,
     name: name,
     resource_group_name: resource_group_name,
     scopes: scopes,
     tags: tags,
-    criteria: criteria,
     timeouts: timeouts,
-    action: action,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAction(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          action: value,
+        },
+      },
+    },
+  },
+  withActionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          action+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withCriteria(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          criteria: value,
+        },
+      },
+    },
+  },
+  withCriteriaMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          criteria+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_activity_log_alert+: {
@@ -88,15 +212,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_activity_log_alert+: {
@@ -113,121 +228,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           timeouts+: value,
         },
       },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withAction(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          action: value,
-        },
-      },
-    },
-  },
-  withActionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          action+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  action:: {
-    new(
-      webhook_properties=null,
-      action_group_id
-    ):: std.prune(a={
-      webhook_properties: webhook_properties,
-      action_group_id: action_group_id,
-    }),
-  },
-  withCriteria(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          criteria: value,
-        },
-      },
-    },
-  },
-  withCriteriaMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          criteria+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  criteria:: {
-    new(
-      caller=null,
-      sub_status=null,
-      recommendation_category=null,
-      category,
-      level=null,
-      operation_name=null,
-      resource_type=null,
-      resource_id=null,
-      status=null,
-      recommendation_impact=null,
-      resource_provider=null,
-      recommendation_type=null,
-      resource_group=null,
-      service_health=null,
-      resource_health=null
-    ):: std.prune(a={
-      caller: caller,
-      sub_status: sub_status,
-      recommendation_category: recommendation_category,
-      category: category,
-      level: level,
-      operation_name: operation_name,
-      resource_type: resource_type,
-      resource_id: resource_id,
-      status: status,
-      recommendation_impact: recommendation_impact,
-      resource_provider: resource_provider,
-      recommendation_type: recommendation_type,
-      resource_group: resource_group,
-      service_health: service_health,
-      resource_health: resource_health,
-    }),
-    service_health:: {
-      new(
-        events=null,
-        locations=null,
-        services=null
-      ):: std.prune(a={
-        events: events,
-        locations: locations,
-        services: services,
-      }),
-    },
-    resource_health:: {
-      new(
-        current=null,
-        previous=null,
-        reason=null
-      ):: std.prune(a={
-        current: current,
-        previous: previous,
-        reason: reason,
-      }),
     },
   },
 }

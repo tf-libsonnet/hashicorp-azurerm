@@ -1,187 +1,178 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  action:: {
+    new(
+      action_group_id,
+      webhook_properties=null
+    ):: std.prune(a={
+      action_group_id: action_group_id,
+      webhook_properties: webhook_properties,
+    }),
+  },
+  application_insights_web_test_location_availability_criteria:: {
+    new(
+      component_id,
+      failed_location_count,
+      web_test_id
+    ):: std.prune(a={
+      component_id: component_id,
+      failed_location_count: failed_location_count,
+      web_test_id: web_test_id,
+    }),
+  },
+  criteria:: {
+    dimension:: {
+      new(
+        name,
+        operator,
+        values
+      ):: std.prune(a={
+        name: name,
+        operator: operator,
+        values: values,
+      }),
+    },
+    new(
+      aggregation,
+      metric_name,
+      metric_namespace,
+      operator,
+      threshold,
+      dimension=null,
+      skip_metric_validation=null
+    ):: std.prune(a={
+      aggregation: aggregation,
+      dimension: dimension,
+      metric_name: metric_name,
+      metric_namespace: metric_namespace,
+      operator: operator,
+      skip_metric_validation: skip_metric_validation,
+      threshold: threshold,
+    }),
+  },
+  dynamic_criteria:: {
+    dimension:: {
+      new(
+        name,
+        operator,
+        values
+      ):: std.prune(a={
+        name: name,
+        operator: operator,
+        values: values,
+      }),
+    },
+    new(
+      aggregation,
+      alert_sensitivity,
+      metric_name,
+      metric_namespace,
+      operator,
+      dimension=null,
+      evaluation_failure_count=null,
+      evaluation_total_count=null,
+      ignore_data_before=null,
+      skip_metric_validation=null
+    ):: std.prune(a={
+      aggregation: aggregation,
+      alert_sensitivity: alert_sensitivity,
+      dimension: dimension,
+      evaluation_failure_count: evaluation_failure_count,
+      evaluation_total_count: evaluation_total_count,
+      ignore_data_before: ignore_data_before,
+      metric_name: metric_name,
+      metric_namespace: metric_namespace,
+      operator: operator,
+      skip_metric_validation: skip_metric_validation,
+    }),
+  },
   new(
-    resourceLabel,
-    severity=null,
-    tags=null,
-    description=null,
-    enabled=null,
     name,
-    scopes,
-    target_resource_location=null,
+    resourceLabel,
     resource_group_name,
-    target_resource_type=null,
-    auto_mitigate=null,
-    frequency=null,
-    window_size=null,
-    dynamic_criteria=null,
-    timeouts=null,
+    scopes,
     action=null,
     application_insights_web_test_location_availability_criteria=null,
-    criteria=null
+    auto_mitigate=null,
+    criteria=null,
+    description=null,
+    dynamic_criteria=null,
+    enabled=null,
+    frequency=null,
+    severity=null,
+    tags=null,
+    target_resource_location=null,
+    target_resource_type=null,
+    timeouts=null,
+    window_size=null
   ):: tf.withResource(type='azurerm_monitor_metric_alert', label=resourceLabel, attrs=self.newAttrs(
-    severity=severity,
-    tags=tags,
-    description=description,
-    enabled=enabled,
-    name=name,
-    scopes=scopes,
-    target_resource_location=target_resource_location,
-    resource_group_name=resource_group_name,
-    target_resource_type=target_resource_type,
-    auto_mitigate=auto_mitigate,
-    frequency=frequency,
-    window_size=window_size,
-    dynamic_criteria=dynamic_criteria,
-    timeouts=timeouts,
     action=action,
     application_insights_web_test_location_availability_criteria=application_insights_web_test_location_availability_criteria,
-    criteria=criteria
+    auto_mitigate=auto_mitigate,
+    criteria=criteria,
+    description=description,
+    dynamic_criteria=dynamic_criteria,
+    enabled=enabled,
+    frequency=frequency,
+    name=name,
+    resource_group_name=resource_group_name,
+    scopes=scopes,
+    severity=severity,
+    tags=tags,
+    target_resource_location=target_resource_location,
+    target_resource_type=target_resource_type,
+    timeouts=timeouts,
+    window_size=window_size
   )),
   newAttrs(
-    severity=null,
-    description=null,
-    enabled=null,
     name,
-    target_resource_location=null,
-    target_resource_type=null,
-    auto_mitigate=null,
     resource_group_name,
-    tags=null,
-    window_size=null,
     scopes,
-    frequency=null,
-    dynamic_criteria=null,
-    timeouts=null,
     action=null,
     application_insights_web_test_location_availability_criteria=null,
-    criteria=null
+    auto_mitigate=null,
+    criteria=null,
+    description=null,
+    dynamic_criteria=null,
+    enabled=null,
+    frequency=null,
+    severity=null,
+    tags=null,
+    target_resource_location=null,
+    target_resource_type=null,
+    timeouts=null,
+    window_size=null
   ):: std.prune(a={
-    severity: severity,
-    description: description,
-    enabled: enabled,
-    name: name,
-    target_resource_location: target_resource_location,
-    target_resource_type: target_resource_type,
-    auto_mitigate: auto_mitigate,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    window_size: window_size,
-    scopes: scopes,
-    frequency: frequency,
-    dynamic_criteria: dynamic_criteria,
-    timeouts: timeouts,
     action: action,
     application_insights_web_test_location_availability_criteria: application_insights_web_test_location_availability_criteria,
+    auto_mitigate: auto_mitigate,
     criteria: criteria,
+    description: description,
+    dynamic_criteria: dynamic_criteria,
+    enabled: enabled,
+    frequency: frequency,
+    name: name,
+    resource_group_name: resource_group_name,
+    scopes: scopes,
+    severity: severity,
+    tags: tags,
+    target_resource_location: target_resource_location,
+    target_resource_type: target_resource_type,
+    timeouts: timeouts,
+    window_size: window_size,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withAutoMitigate(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          auto_mitigate: value,
-        },
-      },
-    },
-  },
-  withFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          frequency: value,
-        },
-      },
-    },
-  },
-  withTargetResourceLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          target_resource_location: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withSeverity(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          severity: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withWindowSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          window_size: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withScopes(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          scopes: value,
-        },
-      },
-    },
-  },
-  withTargetResourceType(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          target_resource_type: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAction(resourceLabel, value):: {
     resource+: {
@@ -201,15 +192,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  action:: {
-    new(
-      action_group_id,
-      webhook_properties=null
-    ):: std.prune(a={
-      action_group_id: action_group_id,
-      webhook_properties: webhook_properties,
-    }),
-  },
   withApplicationInsightsWebTestLocationAvailabilityCriteria(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_metric_alert+: {
@@ -228,16 +210,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  application_insights_web_test_location_availability_criteria:: {
-    new(
-      component_id,
-      failed_location_count,
-      web_test_id
-    ):: std.prune(a={
-      component_id: component_id,
-      failed_location_count: failed_location_count,
-      web_test_id: web_test_id,
-    }),
+  withAutoMitigate(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          auto_mitigate: value,
+        },
+      },
+    },
   },
   withCriteria(resourceLabel, value):: {
     resource+: {
@@ -257,34 +237,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  criteria:: {
-    new(
-      aggregation,
-      metric_name,
-      metric_namespace,
-      operator,
-      skip_metric_validation=null,
-      threshold,
-      dimension=null
-    ):: std.prune(a={
-      aggregation: aggregation,
-      metric_name: metric_name,
-      metric_namespace: metric_namespace,
-      operator: operator,
-      skip_metric_validation: skip_metric_validation,
-      threshold: threshold,
-      dimension: dimension,
-    }),
-    dimension:: {
-      new(
-        operator,
-        values,
-        name
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-        name: name,
-      }),
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
     },
   },
   withDynamicCriteria(resourceLabel, value):: {
@@ -305,40 +264,85 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  dynamic_criteria:: {
-    new(
-      metric_namespace,
-      evaluation_failure_count=null,
-      skip_metric_validation=null,
-      aggregation,
-      evaluation_total_count=null,
-      ignore_data_before=null,
-      alert_sensitivity,
-      metric_name,
-      operator,
-      dimension=null
-    ):: std.prune(a={
-      metric_namespace: metric_namespace,
-      evaluation_failure_count: evaluation_failure_count,
-      skip_metric_validation: skip_metric_validation,
-      aggregation: aggregation,
-      evaluation_total_count: evaluation_total_count,
-      ignore_data_before: ignore_data_before,
-      alert_sensitivity: alert_sensitivity,
-      metric_name: metric_name,
-      operator: operator,
-      dimension: dimension,
-    }),
-    dimension:: {
-      new(
-        values,
-        name,
-        operator
-      ):: std.prune(a={
-        values: values,
-        name: name,
-        operator: operator,
-      }),
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withFrequency(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          frequency: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withScopes(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          scopes: value,
+        },
+      },
+    },
+  },
+  withSeverity(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          severity: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTargetResourceLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          target_resource_location: value,
+        },
+      },
+    },
+  },
+  withTargetResourceType(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          target_resource_type: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -359,17 +363,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withWindowSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          window_size: value,
+        },
+      },
+    },
   },
 }

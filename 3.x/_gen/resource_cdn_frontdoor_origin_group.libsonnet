@@ -1,40 +1,122 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  health_probe:: {
+    new(
+      interval_in_seconds,
+      protocol,
+      path=null,
+      request_type=null
+    ):: std.prune(a={
+      interval_in_seconds: interval_in_seconds,
+      path: path,
+      protocol: protocol,
+      request_type: request_type,
+    }),
+  },
+  load_balancing:: {
+    new(
+      additional_latency_in_milliseconds=null,
+      sample_size=null,
+      successful_samples_required=null
+    ):: std.prune(a={
+      additional_latency_in_milliseconds: additional_latency_in_milliseconds,
+      sample_size: sample_size,
+      successful_samples_required: successful_samples_required,
+    }),
+  },
   new(
-    resourceLabel,
     cdn_frontdoor_profile_id,
     name,
-    restore_traffic_time_to_healed_or_new_endpoint_in_minutes=null,
-    session_affinity_enabled=null,
+    resourceLabel,
     health_probe=null,
     load_balancing=null,
+    restore_traffic_time_to_healed_or_new_endpoint_in_minutes=null,
+    session_affinity_enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_origin_group', label=resourceLabel, attrs=self.newAttrs(
     cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
+    health_probe=health_probe,
+    load_balancing=load_balancing,
     name=name,
     restore_traffic_time_to_healed_or_new_endpoint_in_minutes=restore_traffic_time_to_healed_or_new_endpoint_in_minutes,
     session_affinity_enabled=session_affinity_enabled,
-    health_probe=health_probe,
-    load_balancing=load_balancing,
     timeouts=timeouts
   )),
   newAttrs(
     cdn_frontdoor_profile_id,
     name,
+    health_probe=null,
+    load_balancing=null,
     restore_traffic_time_to_healed_or_new_endpoint_in_minutes=null,
     session_affinity_enabled=null,
-    timeouts=null,
-    health_probe=null,
-    load_balancing=null
+    timeouts=null
   ):: std.prune(a={
     cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
+    health_probe: health_probe,
+    load_balancing: load_balancing,
     name: name,
     restore_traffic_time_to_healed_or_new_endpoint_in_minutes: restore_traffic_time_to_healed_or_new_endpoint_in_minutes,
     session_affinity_enabled: session_affinity_enabled,
     timeouts: timeouts,
-    health_probe: health_probe,
-    load_balancing: load_balancing,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withCdnFrontdoorProfileId(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_origin_group+: {
+        [resourceLabel]+: {
+          cdn_frontdoor_profile_id: value,
+        },
+      },
+    },
+  },
+  withHealthProbe(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_origin_group+: {
+        [resourceLabel]+: {
+          health_probe: value,
+        },
+      },
+    },
+  },
+  withHealthProbeMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_origin_group+: {
+        [resourceLabel]+: {
+          health_probe+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withLoadBalancing(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_origin_group+: {
+        [resourceLabel]+: {
+          load_balancing: value,
+        },
+      },
+    },
+  },
+  withLoadBalancingMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_origin_group+: {
+        [resourceLabel]+: {
+          load_balancing+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_origin_group+: {
@@ -62,44 +144,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCdnFrontdoorProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_origin_group+: {
-        [resourceLabel]+: {
-          cdn_frontdoor_profile_id: value,
-        },
-      },
-    },
-  },
-  withLoadBalancing(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_origin_group+: {
-        [resourceLabel]+: {
-          load_balancing: value,
-        },
-      },
-    },
-  },
-  withLoadBalancingMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_origin_group+: {
-        [resourceLabel]+: {
-          load_balancing+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  load_balancing:: {
-    new(
-      sample_size=null,
-      successful_samples_required=null,
-      additional_latency_in_milliseconds=null
-    ):: std.prune(a={
-      sample_size: sample_size,
-      successful_samples_required: successful_samples_required,
-      additional_latency_in_milliseconds: additional_latency_in_milliseconds,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_origin_group+: {
@@ -117,49 +161,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withHealthProbe(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_origin_group+: {
-        [resourceLabel]+: {
-          health_probe: value,
-        },
-      },
-    },
-  },
-  withHealthProbeMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_origin_group+: {
-        [resourceLabel]+: {
-          health_probe+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  health_probe:: {
-    new(
-      request_type=null,
-      interval_in_seconds,
-      path=null,
-      protocol
-    ):: std.prune(a={
-      request_type: request_type,
-      interval_in_seconds: interval_in_seconds,
-      path: path,
-      protocol: protocol,
-    }),
   },
 }

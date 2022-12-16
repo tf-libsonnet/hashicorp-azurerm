@@ -2,9 +2,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tier,
     resource_type=null,
     subplan=null,
-    tier,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_subscription_pricing', label=resourceLabel, attrs=self.newAttrs(
     resource_type=resource_type,
@@ -13,9 +13,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    tier,
     resource_type=null,
     subplan=null,
-    tier,
     timeouts=null
   ):: std.prune(a={
     resource_type: resource_type,
@@ -23,6 +23,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tier: tier,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withResourceType(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_subscription_pricing+: {
+        [resourceLabel]+: {
+          resource_type: value,
+        },
+      },
+    },
+  },
   withSubplan(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_subscription_pricing+: {
@@ -37,15 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_security_center_subscription_pricing+: {
         [resourceLabel]+: {
           tier: value,
-        },
-      },
-    },
-  },
-  withResourceType(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_subscription_pricing+: {
-        [resourceLabel]+: {
-          resource_type: value,
         },
       },
     },
@@ -67,18 +80,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

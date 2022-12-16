@@ -1,61 +1,69 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    instance_count=null,
     name,
-    public_network_access_enabled=null,
+    resourceLabel,
     spring_cloud_service_id,
     gateway_ids=null,
     https_only_enabled=null,
-    timeouts=null,
-    sso=null
+    instance_count=null,
+    public_network_access_enabled=null,
+    sso=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_api_portal', label=resourceLabel, attrs=self.newAttrs(
+    gateway_ids=gateway_ids,
+    https_only_enabled=https_only_enabled,
     instance_count=instance_count,
     name=name,
     public_network_access_enabled=public_network_access_enabled,
     spring_cloud_service_id=spring_cloud_service_id,
-    gateway_ids=gateway_ids,
-    https_only_enabled=https_only_enabled,
-    timeouts=timeouts,
-    sso=sso
+    sso=sso,
+    timeouts=timeouts
   )),
   newAttrs(
+    name,
     spring_cloud_service_id,
     gateway_ids=null,
     https_only_enabled=null,
     instance_count=null,
-    name,
     public_network_access_enabled=null,
-    timeouts=null,
-    sso=null
+    sso=null,
+    timeouts=null
   ):: std.prune(a={
-    spring_cloud_service_id: spring_cloud_service_id,
     gateway_ids: gateway_ids,
     https_only_enabled: https_only_enabled,
     instance_count: instance_count,
     name: name,
     public_network_access_enabled: public_network_access_enabled,
-    timeouts: timeouts,
+    spring_cloud_service_id: spring_cloud_service_id,
     sso: sso,
+    timeouts: timeouts,
   }),
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
+  sso:: {
+    new(
+      client_id=null,
+      client_secret=null,
+      issuer_uri=null,
+      scope=null
+    ):: std.prune(a={
+      client_id: client_id,
+      client_secret: client_secret,
+      issuer_uri: issuer_uri,
+      scope: scope,
+    }),
   },
-  withSpringCloudServiceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal+: {
-        [resourceLabel]+: {
-          spring_cloud_service_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withGatewayIds(resourceLabel, value):: {
     resource+: {
@@ -93,6 +101,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withSpringCloudServiceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal+: {
+        [resourceLabel]+: {
+          spring_cloud_service_id: value,
+        },
+      },
+    },
+  },
   withSso(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_api_portal+: {
@@ -111,19 +137,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  sso:: {
-    new(
-      issuer_uri=null,
-      scope=null,
-      client_id=null,
-      client_secret=null
-    ):: std.prune(a={
-      issuer_uri: issuer_uri,
-      scope: scope,
-      client_id: client_id,
-      client_secret: client_secret,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_api_portal+: {
@@ -141,18 +154,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

@@ -1,61 +1,92 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    description=null,
-    name,
-    tags=null,
     gallery_id,
-    release_note_uri=null,
-    privacy_statement_uri=null,
-    supported_os_type,
-    eula=null,
-    end_of_life_date=null,
     location,
+    name,
+    resourceLabel,
+    supported_os_type,
+    description=null,
+    end_of_life_date=null,
+    eula=null,
+    privacy_statement_uri=null,
+    release_note_uri=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_gallery_application', label=resourceLabel, attrs=self.newAttrs(
     description=description,
-    name=name,
-    tags=tags,
-    gallery_id=gallery_id,
-    release_note_uri=release_note_uri,
-    privacy_statement_uri=privacy_statement_uri,
-    supported_os_type=supported_os_type,
-    eula=eula,
     end_of_life_date=end_of_life_date,
+    eula=eula,
+    gallery_id=gallery_id,
     location=location,
+    name=name,
+    privacy_statement_uri=privacy_statement_uri,
+    release_note_uri=release_note_uri,
+    supported_os_type=supported_os_type,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    supported_os_type,
-    end_of_life_date=null,
     gallery_id,
     location,
+    name,
+    supported_os_type,
+    description=null,
+    end_of_life_date=null,
+    eula=null,
     privacy_statement_uri=null,
     release_note_uri=null,
-    description=null,
-    name,
     tags=null,
-    eula=null,
     timeouts=null
   ):: std.prune(a={
-    supported_os_type: supported_os_type,
+    description: description,
     end_of_life_date: end_of_life_date,
+    eula: eula,
     gallery_id: gallery_id,
     location: location,
+    name: name,
     privacy_statement_uri: privacy_statement_uri,
     release_note_uri: release_note_uri,
-    description: description,
-    name: name,
+    supported_os_type: supported_os_type,
     tags: tags,
-    eula: eula,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withEndOfLifeDate(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application+: {
         [resourceLabel]+: {
           end_of_life_date: value,
+        },
+      },
+    },
+  },
+  withEula(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          eula: value,
         },
       },
     },
@@ -69,20 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSupportedOsType(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application+: {
         [resourceLabel]+: {
-          supported_os_type: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          description: value,
+          location: value,
         },
       },
     },
@@ -114,20 +136,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEula(resourceLabel, value):: {
+  withSupportedOsType(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application+: {
         [resourceLabel]+: {
-          eula: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          location: value,
+          supported_os_type: value,
         },
       },
     },
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

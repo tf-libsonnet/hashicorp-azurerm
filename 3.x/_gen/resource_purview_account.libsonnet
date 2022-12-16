@@ -1,58 +1,89 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
     location,
+    name,
+    resourceLabel,
+    resource_group_name,
+    identity=null,
     managed_resource_group_name=null,
     public_network_enabled=null,
-    resource_group_name,
     tags=null,
-    name,
-    identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_purview_account', label=resourceLabel, attrs=self.newAttrs(
+    identity=identity,
     location=location,
     managed_resource_group_name=managed_resource_group_name,
+    name=name,
     public_network_enabled=public_network_enabled,
     resource_group_name=resource_group_name,
     tags=tags,
-    name=name,
-    identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    tags=null,
-    public_network_enabled=null,
-    resource_group_name,
     location,
+    name,
+    resource_group_name,
+    identity=null,
     managed_resource_group_name=null,
-    timeouts=null,
-    identity=null
+    public_network_enabled=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    name: name,
-    tags: tags,
-    public_network_enabled: public_network_enabled,
-    resource_group_name: resource_group_name,
+    identity: identity,
     location: location,
     managed_resource_group_name: managed_resource_group_name,
+    name: name,
+    public_network_enabled: public_network_enabled,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
-    identity: identity,
   }),
-  withTags(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_purview_account+: {
         [resourceLabel]+: {
-          tags: value,
+          identity: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withIdentityMixin(resourceLabel, value):: {
     resource+: {
       azurerm_purview_account+: {
         [resourceLabel]+: {
-          name: value,
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_purview_account+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -62,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_purview_account+: {
         [resourceLabel]+: {
           managed_resource_group_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_purview_account+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -84,41 +124,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_purview_account+: {
         [resourceLabel]+: {
-          location: value,
+          tags: value,
         },
       },
     },
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_purview_account+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_purview_account+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -137,18 +150,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

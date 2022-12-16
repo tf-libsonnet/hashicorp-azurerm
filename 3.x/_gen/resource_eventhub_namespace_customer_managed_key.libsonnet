@@ -1,20 +1,33 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    eventhub_namespace_id,
+    key_vault_key_ids,
     resourceLabel,
-    key_vault_key_ids,
-    eventhub_namespace_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_ids=key_vault_key_ids, eventhub_namespace_id=eventhub_namespace_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(eventhub_namespace_id=eventhub_namespace_id, key_vault_key_ids=key_vault_key_ids, timeouts=timeouts)),
   newAttrs(
-    key_vault_key_ids,
     eventhub_namespace_id,
+    key_vault_key_ids,
     timeouts=null
   ):: std.prune(a={
-    key_vault_key_ids: key_vault_key_ids,
     eventhub_namespace_id: eventhub_namespace_id,
+    key_vault_key_ids: key_vault_key_ids,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withEventhubNamespaceId(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace_customer_managed_key+: {
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

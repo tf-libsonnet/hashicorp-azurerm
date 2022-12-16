@@ -1,18 +1,44 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  datadog_organization:: {
+    new(
+      api_key,
+      application_key,
+      enterprise_app_id=null,
+      linking_auth_code=null,
+      linking_client_id=null,
+      redirect_uri=null
+    ):: std.prune(a={
+      api_key: api_key,
+      application_key: application_key,
+      enterprise_app_id: enterprise_app_id,
+      linking_auth_code: linking_auth_code,
+      linking_client_id: linking_client_id,
+      redirect_uri: redirect_uri,
+    }),
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
     location,
-    monitoring_enabled=null,
     name,
+    resourceLabel,
     resource_group_name,
     sku_name,
+    datadog_organization=null,
+    identity=null,
+    monitoring_enabled=null,
     tags=null,
     timeouts=null,
-    user=null,
-    datadog_organization=null,
-    identity=null
+    user=null
   ):: tf.withResource(type='azurerm_datadog_monitor', label=resourceLabel, attrs=self.newAttrs(
+    datadog_organization=datadog_organization,
+    identity=identity,
     location=location,
     monitoring_enabled=monitoring_enabled,
     name=name,
@@ -20,33 +46,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku_name=sku_name,
     tags=tags,
     timeouts=timeouts,
-    user=user,
-    datadog_organization=datadog_organization,
-    identity=identity
+    user=user
   )),
   newAttrs(
-    sku_name,
-    tags=null,
     location,
-    monitoring_enabled=null,
     name,
     resource_group_name,
-    timeouts=null,
-    user=null,
+    sku_name,
     datadog_organization=null,
-    identity=null
+    identity=null,
+    monitoring_enabled=null,
+    tags=null,
+    timeouts=null,
+    user=null
   ):: std.prune(a={
-    sku_name: sku_name,
-    tags: tags,
+    datadog_organization: datadog_organization,
+    identity: identity,
     location: location,
     monitoring_enabled: monitoring_enabled,
     name: name,
     resource_group_name: resource_group_name,
+    sku_name: sku_name,
+    tags: tags,
     timeouts: timeouts,
     user: user,
-    datadog_organization: datadog_organization,
-    identity: identity,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  user:: {
+    new(
+      email,
+      name,
+      phone_number=null
+    ):: std.prune(a={
+      email: email,
+      name: name,
+      phone_number: phone_number,
+    }),
+  },
+  withDatadogOrganization(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor+: {
+        [resourceLabel]+: {
+          datadog_organization: value,
+        },
+      },
+    },
+  },
+  withDatadogOrganizationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor+: {
+        [resourceLabel]+: {
+          datadog_organization+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withMonitoringEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_datadog_monitor+: {
@@ -92,11 +185,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_datadog_monitor+: {
         [resourceLabel]+: {
-          location: value,
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor+: {
+        [resourceLabel]+: {
+          timeouts+: value,
         },
       },
     },
@@ -118,107 +220,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  user:: {
-    new(
-      phone_number=null,
-      email,
-      name
-    ):: std.prune(a={
-      phone_number: phone_number,
-      email: email,
-      name: name,
-    }),
-  },
-  withDatadogOrganization(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor+: {
-        [resourceLabel]+: {
-          datadog_organization: value,
-        },
-      },
-    },
-  },
-  withDatadogOrganizationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor+: {
-        [resourceLabel]+: {
-          datadog_organization+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  datadog_organization:: {
-    new(
-      enterprise_app_id=null,
-      linking_auth_code=null,
-      linking_client_id=null,
-      redirect_uri=null,
-      api_key,
-      application_key
-    ):: std.prune(a={
-      enterprise_app_id: enterprise_app_id,
-      linking_auth_code: linking_auth_code,
-      linking_client_id: linking_client_id,
-      redirect_uri: redirect_uri,
-      api_key: api_key,
-      application_key: application_key,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

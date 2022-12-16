@@ -1,44 +1,48 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
     resourceLabel,
     topic_id,
     listen=null,
     manage=null,
-    name,
     send=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_topic_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    topic_id=topic_id,
     listen=listen,
     manage=manage,
     name=name,
     send=send,
-    timeouts=timeouts
+    timeouts=timeouts,
+    topic_id=topic_id
   )),
   newAttrs(
-    manage=null,
     name,
     topic_id,
     listen=null,
+    manage=null,
     send=null,
     timeouts=null
   ):: std.prune(a={
+    listen: listen,
     manage: manage,
     name: name,
-    topic_id: topic_id,
-    listen: listen,
     send: send,
     timeouts: timeouts,
+    topic_id: topic_id,
   }),
-  withTopicId(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_topic_authorization_rule+: {
-        [resourceLabel]+: {
-          topic_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withListen(resourceLabel, value):: {
     resource+: {
@@ -94,17 +98,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withTopicId(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_topic_authorization_rule+: {
+        [resourceLabel]+: {
+          topic_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,49 +1,64 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  event_handler:: {
+    auth:: {
+      new(
+        managed_identity_id
+      ):: std.prune(a={
+        managed_identity_id: managed_identity_id,
+      }),
+    },
+    new(
+      url_template,
+      auth=null,
+      system_events=null,
+      user_event_pattern=null
+    ):: std.prune(a={
+      auth: auth,
+      system_events: system_events,
+      url_template: url_template,
+      user_event_pattern: user_event_pattern,
+    }),
+  },
   new(
-    resourceLabel,
-    anonymous_connections_enabled=null,
     name,
+    resourceLabel,
     web_pubsub_id,
-    timeouts=null,
-    event_handler=null
+    anonymous_connections_enabled=null,
+    event_handler=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_web_pubsub_hub', label=resourceLabel, attrs=self.newAttrs(
     anonymous_connections_enabled=anonymous_connections_enabled,
+    event_handler=event_handler,
     name=name,
-    web_pubsub_id=web_pubsub_id,
     timeouts=timeouts,
-    event_handler=event_handler
+    web_pubsub_id=web_pubsub_id
   )),
   newAttrs(
-    anonymous_connections_enabled=null,
     name,
     web_pubsub_id,
+    anonymous_connections_enabled=null,
     event_handler=null,
     timeouts=null
   ):: std.prune(a={
     anonymous_connections_enabled: anonymous_connections_enabled,
-    name: name,
-    web_pubsub_id: web_pubsub_id,
     event_handler: event_handler,
+    name: name,
     timeouts: timeouts,
+    web_pubsub_id: web_pubsub_id,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_pubsub_hub+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withWebPubsubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_pubsub_hub+: {
-        [resourceLabel]+: {
-          web_pubsub_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAnonymousConnectionsEnabled(resourceLabel, value):: {
     resource+: {
@@ -72,24 +87,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  event_handler:: {
-    new(
-      url_template,
-      user_event_pattern=null,
-      system_events=null,
-      auth=null
-    ):: std.prune(a={
-      url_template: url_template,
-      user_event_pattern: user_event_pattern,
-      system_events: system_events,
-      auth: auth,
-    }),
-    auth:: {
-      new(
-        managed_identity_id
-      ):: std.prune(a={
-        managed_identity_id: managed_identity_id,
-      }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_pubsub_hub+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -110,17 +114,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withWebPubsubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_pubsub_hub+: {
+        [resourceLabel]+: {
+          web_pubsub_id: value,
+        },
+      },
+    },
   },
 }

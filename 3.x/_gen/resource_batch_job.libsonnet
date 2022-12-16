@@ -1,48 +1,52 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    priority=null,
-    task_retry_maximum=null,
     batch_pool_id,
+    name,
+    resourceLabel,
     common_environment_properties=null,
     display_name=null,
-    name,
+    priority=null,
+    task_retry_maximum=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_batch_job', label=resourceLabel, attrs=self.newAttrs(
-    priority=priority,
-    task_retry_maximum=task_retry_maximum,
     batch_pool_id=batch_pool_id,
     common_environment_properties=common_environment_properties,
     display_name=display_name,
     name=name,
+    priority=priority,
+    task_retry_maximum=task_retry_maximum,
     timeouts=timeouts
   )),
   newAttrs(
-    priority=null,
-    task_retry_maximum=null,
     batch_pool_id,
+    name,
     common_environment_properties=null,
     display_name=null,
-    name,
+    priority=null,
+    task_retry_maximum=null,
     timeouts=null
   ):: std.prune(a={
-    priority: priority,
-    task_retry_maximum: task_retry_maximum,
     batch_pool_id: batch_pool_id,
     common_environment_properties: common_environment_properties,
     display_name: display_name,
     name: name,
+    priority: priority,
+    task_retry_maximum: task_retry_maximum,
     timeouts: timeouts,
   }),
-  withTaskRetryMaximum(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_job+: {
-        [resourceLabel]+: {
-          task_retry_maximum: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBatchPoolId(resourceLabel, value):: {
     resource+: {
@@ -89,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTaskRetryMaximum(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_job+: {
+        [resourceLabel]+: {
+          task_retry_maximum: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_batch_job+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

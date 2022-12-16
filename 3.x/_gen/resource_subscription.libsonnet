@@ -2,39 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    subscription_name,
+    alias=null,
     billing_scope_id=null,
     subscription_id=null,
-    subscription_name,
     tags=null,
-    workload=null,
-    alias=null,
-    timeouts=null
+    timeouts=null,
+    workload=null
   ):: tf.withResource(type='azurerm_subscription', label=resourceLabel, attrs=self.newAttrs(
+    alias=alias,
     billing_scope_id=billing_scope_id,
     subscription_id=subscription_id,
     subscription_name=subscription_name,
     tags=tags,
-    workload=workload,
-    alias=alias,
-    timeouts=timeouts
+    timeouts=timeouts,
+    workload=workload
   )),
   newAttrs(
-    workload=null,
+    subscription_name,
     alias=null,
     billing_scope_id=null,
     subscription_id=null,
-    subscription_name,
     tags=null,
-    timeouts=null
+    timeouts=null,
+    workload=null
   ):: std.prune(a={
-    workload: workload,
     alias: alias,
     billing_scope_id: billing_scope_id,
     subscription_id: subscription_id,
     subscription_name: subscription_name,
     tags: tags,
     timeouts: timeouts,
+    workload: workload,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAlias(resourceLabel, value):: {
     resource+: {
       azurerm_subscription+: {
@@ -80,15 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkload(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription+: {
-        [resourceLabel]+: {
-          workload: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_subscription+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withWorkload(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription+: {
+        [resourceLabel]+: {
+          workload: value,
+        },
+      },
+    },
   },
 }

@@ -1,40 +1,53 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    tags=null,
-    integration_service_environment_id=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
     sku_name,
+    integration_service_environment_id=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
     integration_service_environment_id=integration_service_environment_id,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    sku_name,
-    tags=null,
-    integration_service_environment_id=null,
     location,
     name,
     resource_group_name,
+    sku_name,
+    integration_service_environment_id=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    sku_name: sku_name,
-    tags: tags,
     integration_service_environment_id: integration_service_environment_id,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
+    sku_name: sku_name,
+    tags: tags,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withIntegrationServiceEnvironmentId(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

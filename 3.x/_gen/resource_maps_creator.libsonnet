@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     location,
     maps_account_id,
     name,
+    resourceLabel,
     storage_units,
     tags=null,
     timeouts=null
@@ -17,20 +17,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    location,
+    maps_account_id,
     name,
     storage_units,
     tags=null,
-    location,
-    maps_account_id,
     timeouts=null
   ):: std.prune(a={
+    location: location,
+    maps_account_id: maps_account_id,
     name: name,
     storage_units: storage_units,
     tags: tags,
-    location: location,
-    maps_account_id: maps_account_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_maps_creator+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

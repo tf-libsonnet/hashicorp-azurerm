@@ -1,127 +1,86 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    timeout=null,
+    application_insights_id,
     configuration,
-    description=null,
-    frequency=null,
     geo_locations,
-    tags=null,
+    kind,
     location,
     name,
+    resourceLabel,
     resource_group_name,
-    application_insights_id,
+    description=null,
     enabled=null,
-    kind,
+    frequency=null,
     retry_enabled=null,
+    tags=null,
+    timeout=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_web_test', label=resourceLabel, attrs=self.newAttrs(
-    timeout=timeout,
+    application_insights_id=application_insights_id,
     configuration=configuration,
     description=description,
+    enabled=enabled,
     frequency=frequency,
     geo_locations=geo_locations,
-    tags=tags,
+    kind=kind,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    application_insights_id=application_insights_id,
-    enabled=enabled,
-    kind=kind,
     retry_enabled=retry_enabled,
+    tags=tags,
+    timeout=timeout,
     timeouts=timeouts
   )),
   newAttrs(
-    configuration,
-    timeout=null,
-    resource_group_name,
-    geo_locations,
-    location,
-    kind,
-    tags=null,
-    description=null,
-    name,
     application_insights_id,
+    configuration,
+    geo_locations,
+    kind,
+    location,
+    name,
+    resource_group_name,
+    description=null,
     enabled=null,
     frequency=null,
     retry_enabled=null,
+    tags=null,
+    timeout=null,
     timeouts=null
   ):: std.prune(a={
-    configuration: configuration,
-    timeout: timeout,
-    resource_group_name: resource_group_name,
-    geo_locations: geo_locations,
-    location: location,
-    kind: kind,
-    tags: tags,
-    description: description,
-    name: name,
     application_insights_id: application_insights_id,
+    configuration: configuration,
+    description: description,
     enabled: enabled,
     frequency: frequency,
+    geo_locations: geo_locations,
+    kind: kind,
+    location: location,
+    name: name,
+    resource_group_name: resource_group_name,
     retry_enabled: retry_enabled,
+    tags: tags,
+    timeout: timeout,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withName(resourceLabel, value):: {
+  withApplicationInsightsId(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_web_test+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTimeout(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          timeout: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withRetryEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          retry_enabled: value,
-        },
-      },
-    },
-  },
-  withGeoLocations(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          geo_locations: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          location: value,
+          application_insights_id: value,
         },
       },
     },
@@ -144,15 +103,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withApplicationInsightsId(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          application_insights_id: value,
-        },
-      },
-    },
-  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_web_test+: {
@@ -171,11 +121,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withGeoLocations(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          geo_locations: value,
+        },
+      },
+    },
+  },
   withKind(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_web_test+: {
         [resourceLabel]+: {
           kind: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRetryEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          retry_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTimeout(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          timeout: value,
         },
       },
     },
@@ -197,18 +210,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

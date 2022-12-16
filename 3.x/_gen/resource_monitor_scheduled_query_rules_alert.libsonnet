@@ -1,161 +1,164 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  action:: {
+    new(
+      action_group,
+      custom_webhook_payload=null,
+      email_subject=null
+    ):: std.prune(a={
+      action_group: action_group,
+      custom_webhook_payload: custom_webhook_payload,
+      email_subject: email_subject,
+    }),
+  },
   new(
-    resourceLabel,
-    time_window,
-    tags=null,
-    frequency,
-    name,
     data_source_id,
-    severity=null,
-    authorized_resource_ids=null,
-    throttling=null,
+    frequency,
     location,
-    query_type=null,
-    auto_mitigation_enabled=null,
+    name,
     query,
+    resourceLabel,
     resource_group_name,
-    enabled=null,
+    time_window,
+    action=null,
+    authorized_resource_ids=null,
+    auto_mitigation_enabled=null,
     description=null,
+    enabled=null,
+    query_type=null,
+    severity=null,
+    tags=null,
+    throttling=null,
     timeouts=null,
-    trigger=null,
-    action=null
+    trigger=null
   ):: tf.withResource(type='azurerm_monitor_scheduled_query_rules_alert', label=resourceLabel, attrs=self.newAttrs(
-    time_window=time_window,
-    tags=tags,
-    frequency=frequency,
-    name=name,
-    data_source_id=data_source_id,
-    severity=severity,
+    action=action,
     authorized_resource_ids=authorized_resource_ids,
-    throttling=throttling,
-    location=location,
-    query_type=query_type,
     auto_mitigation_enabled=auto_mitigation_enabled,
-    query=query,
-    resource_group_name=resource_group_name,
-    enabled=enabled,
+    data_source_id=data_source_id,
     description=description,
+    enabled=enabled,
+    frequency=frequency,
+    location=location,
+    name=name,
+    query=query,
+    query_type=query_type,
+    resource_group_name=resource_group_name,
+    severity=severity,
+    tags=tags,
+    throttling=throttling,
+    time_window=time_window,
     timeouts=timeouts,
-    trigger=trigger,
-    action=action
+    trigger=trigger
   )),
   newAttrs(
-    query_type=null,
+    data_source_id,
+    frequency,
+    location,
+    name,
     query,
     resource_group_name,
-    severity=null,
-    description=null,
-    auto_mitigation_enabled=null,
-    frequency,
-    tags=null,
-    data_source_id,
-    enabled=null,
     time_window,
-    authorized_resource_ids=null,
-    throttling=null,
-    name,
-    location,
     action=null,
+    authorized_resource_ids=null,
+    auto_mitigation_enabled=null,
+    description=null,
+    enabled=null,
+    query_type=null,
+    severity=null,
+    tags=null,
+    throttling=null,
     timeouts=null,
     trigger=null
   ):: std.prune(a={
-    query_type: query_type,
+    action: action,
+    authorized_resource_ids: authorized_resource_ids,
+    auto_mitigation_enabled: auto_mitigation_enabled,
+    data_source_id: data_source_id,
+    description: description,
+    enabled: enabled,
+    frequency: frequency,
+    location: location,
+    name: name,
     query: query,
+    query_type: query_type,
     resource_group_name: resource_group_name,
     severity: severity,
-    description: description,
-    auto_mitigation_enabled: auto_mitigation_enabled,
-    frequency: frequency,
     tags: tags,
-    data_source_id: data_source_id,
-    enabled: enabled,
-    time_window: time_window,
-    authorized_resource_ids: authorized_resource_ids,
     throttling: throttling,
-    name: name,
-    location: location,
-    action: action,
+    time_window: time_window,
     timeouts: timeouts,
     trigger: trigger,
   }),
-  withThrottling(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  trigger:: {
+    metric_trigger:: {
+      new(
+        metric_column,
+        metric_trigger_type,
+        operator,
+        threshold
+      ):: std.prune(a={
+        metric_column: metric_column,
+        metric_trigger_type: metric_trigger_type,
+        operator: operator,
+        threshold: threshold,
+      }),
+    },
+    new(
+      operator,
+      threshold,
+      metric_trigger=null
+    ):: std.prune(a={
+      metric_trigger: metric_trigger,
+      operator: operator,
+      threshold: threshold,
+    }),
+  },
+  withAction(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          throttling: value,
+          action: value,
         },
       },
     },
   },
-  withSeverity(resourceLabel, value):: {
+  withActionMixin(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          severity: value,
+          action+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withAuthorizedResourceIds(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          location: value,
+          authorized_resource_ids: value,
         },
       },
     },
   },
-  withQueryType(resourceLabel, value):: {
+  withAutoMitigationEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          query_type: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withQuery(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert+: {
-        [resourceLabel]+: {
-          query: value,
-        },
-      },
-    },
-  },
-  withTimeWindow(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert+: {
-        [resourceLabel]+: {
-          time_window: value,
+          auto_mitigation_enabled: value,
         },
       },
     },
@@ -178,20 +181,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withAutoMitigationEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert+: {
-        [resourceLabel]+: {
-          auto_mitigation_enabled: value,
+          enabled: value,
         },
       },
     },
@@ -205,43 +199,86 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAuthorizedResourceIds(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          authorized_resource_ids: value,
+          location: value,
         },
       },
     },
   },
-  withAction(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          action: value,
+          name: value,
         },
       },
     },
   },
-  withActionMixin(resourceLabel, value):: {
+  withQuery(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
         [resourceLabel]+: {
-          action+: if std.isArray(v=value) then value else [value],
+          query: value,
         },
       },
     },
   },
-  action:: {
-    new(
-      action_group,
-      custom_webhook_payload=null,
-      email_subject=null
-    ):: std.prune(a={
-      action_group: action_group,
-      custom_webhook_payload: custom_webhook_payload,
-      email_subject: email_subject,
-    }),
+  withQueryType(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert+: {
+        [resourceLabel]+: {
+          query_type: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSeverity(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert+: {
+        [resourceLabel]+: {
+          severity: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withThrottling(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert+: {
+        [resourceLabel]+: {
+          throttling: value,
+        },
+      },
+    },
+  },
+  withTimeWindow(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert+: {
+        [resourceLabel]+: {
+          time_window: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -261,19 +298,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withTrigger(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert+: {
@@ -290,30 +314,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           trigger+: if std.isArray(v=value) then value else [value],
         },
       },
-    },
-  },
-  trigger:: {
-    new(
-      operator,
-      threshold,
-      metric_trigger=null
-    ):: std.prune(a={
-      operator: operator,
-      threshold: threshold,
-      metric_trigger: metric_trigger,
-    }),
-    metric_trigger:: {
-      new(
-        operator,
-        threshold,
-        metric_column,
-        metric_trigger_type
-      ):: std.prune(a={
-        operator: operator,
-        threshold: threshold,
-        metric_column: metric_column,
-        metric_trigger_type: metric_trigger_type,
-      }),
     },
   },
 }

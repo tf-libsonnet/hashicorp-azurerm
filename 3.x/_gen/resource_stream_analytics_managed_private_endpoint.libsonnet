@@ -1,19 +1,19 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
     resourceLabel,
+    resource_group_name,
     stream_analytics_cluster_name,
     subresource_name,
     target_resource_id,
-    name,
-    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    resource_group_name=resource_group_name,
     stream_analytics_cluster_name=stream_analytics_cluster_name,
     subresource_name=subresource_name,
     target_resource_id=target_resource_id,
-    name=name,
-    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,6 +31,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_resource_id: target_resource_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_managed_private_endpoint+: {
@@ -93,16 +104,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

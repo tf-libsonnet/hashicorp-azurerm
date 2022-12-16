@@ -1,48 +1,79 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    verification_token,
-    client_secret,
-    signing_secret=null,
     bot_name,
     client_id,
-    landing_page_url=null,
+    client_secret,
     location,
+    resourceLabel,
     resource_group_name,
+    verification_token,
+    landing_page_url=null,
+    signing_secret=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_slack', label=resourceLabel, attrs=self.newAttrs(
-    verification_token=verification_token,
-    client_secret=client_secret,
-    signing_secret=signing_secret,
     bot_name=bot_name,
     client_id=client_id,
+    client_secret=client_secret,
     landing_page_url=landing_page_url,
     location=location,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    signing_secret=signing_secret,
+    timeouts=timeouts,
+    verification_token=verification_token
   )),
   newAttrs(
-    signing_secret=null,
+    bot_name,
+    client_id,
+    client_secret,
     location,
     resource_group_name,
     verification_token,
-    bot_name,
-    client_id,
     landing_page_url=null,
-    client_secret,
+    signing_secret=null,
     timeouts=null
   ):: std.prune(a={
-    signing_secret: signing_secret,
-    location: location,
-    resource_group_name: resource_group_name,
-    verification_token: verification_token,
     bot_name: bot_name,
     client_id: client_id,
-    landing_page_url: landing_page_url,
     client_secret: client_secret,
+    landing_page_url: landing_page_url,
+    location: location,
+    resource_group_name: resource_group_name,
+    signing_secret: signing_secret,
     timeouts: timeouts,
+    verification_token: verification_token,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withBotName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          bot_name: value,
+        },
+      },
+    },
+  },
+  withClientId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          client_id: value,
+        },
+      },
+    },
+  },
   withClientSecret(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_slack+: {
@@ -52,11 +83,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSigningSecret(resourceLabel, value):: {
+  withLandingPageUrl(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_slack+: {
         [resourceLabel]+: {
-          signing_secret: value,
+          landing_page_url: value,
         },
       },
     },
@@ -79,38 +110,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVerificationToken(resourceLabel, value):: {
+  withSigningSecret(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_slack+: {
         [resourceLabel]+: {
-          verification_token: value,
-        },
-      },
-    },
-  },
-  withBotName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          bot_name: value,
-        },
-      },
-    },
-  },
-  withClientId(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          client_id: value,
-        },
-      },
-    },
-  },
-  withLandingPageUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          landing_page_url: value,
+          signing_secret: value,
         },
       },
     },
@@ -133,17 +137,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withVerificationToken(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          verification_token: value,
+        },
+      },
+    },
   },
 }

@@ -1,65 +1,69 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    logic_app_id,
+    method,
     name,
-    queries=null,
+    resourceLabel,
     uri,
     body=null,
     headers=null,
-    logic_app_id,
-    method,
-    timeouts=null,
-    run_after=null
+    queries=null,
+    run_after=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_action_http', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    queries=queries,
-    uri=uri,
     body=body,
     headers=headers,
     logic_app_id=logic_app_id,
     method=method,
+    name=name,
+    queries=queries,
+    run_after=run_after,
     timeouts=timeouts,
-    run_after=run_after
+    uri=uri
   )),
   newAttrs(
+    logic_app_id,
+    method,
     name,
-    queries=null,
     uri,
     body=null,
     headers=null,
-    logic_app_id,
-    method,
+    queries=null,
     run_after=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    queries: queries,
-    uri: uri,
     body: body,
     headers: headers,
     logic_app_id: logic_app_id,
     method: method,
+    name: name,
+    queries: queries,
     run_after: run_after,
     timeouts: timeouts,
+    uri: uri,
   }),
-  withQueries(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_action_http+: {
-        [resourceLabel]+: {
-          queries: value,
-        },
-      },
-    },
+  run_after:: {
+    new(
+      action_name,
+      action_result
+    ):: std.prune(a={
+      action_name: action_name,
+      action_result: action_result,
+    }),
   },
-  withUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_action_http+: {
-        [resourceLabel]+: {
-          uri: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBody(resourceLabel, value):: {
     resource+: {
@@ -106,36 +110,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withQueries(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_action_http+: {
         [resourceLabel]+: {
-          timeouts: value,
+          queries: value,
         },
       },
     },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_action_http+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
   withRunAfter(resourceLabel, value):: {
     resource+: {
@@ -155,13 +137,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  run_after:: {
-    new(
-      action_result,
-      action_name
-    ):: std.prune(a={
-      action_result: action_result,
-      action_name: action_name,
-    }),
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_action_http+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_action_http+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  withUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_action_http+: {
+        [resourceLabel]+: {
+          uri: value,
+        },
+      },
+    },
   },
 }

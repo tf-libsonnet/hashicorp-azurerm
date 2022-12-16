@@ -1,69 +1,64 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    host_name,
-    http2_enabled=null,
-    name,
-    request_client_certificate_enabled=null,
     api_management_id,
-    gateway_name,
     certificate_id,
+    gateway_name,
+    host_name,
+    name,
+    resourceLabel,
+    http2_enabled=null,
+    request_client_certificate_enabled=null,
+    timeouts=null,
     tls10_enabled=null,
-    tls11_enabled=null,
-    timeouts=null
+    tls11_enabled=null
   ):: tf.withResource(type='azurerm_api_management_gateway_host_name_configuration', label=resourceLabel, attrs=self.newAttrs(
+    api_management_id=api_management_id,
+    certificate_id=certificate_id,
+    gateway_name=gateway_name,
     host_name=host_name,
     http2_enabled=http2_enabled,
     name=name,
     request_client_certificate_enabled=request_client_certificate_enabled,
-    api_management_id=api_management_id,
-    gateway_name=gateway_name,
-    certificate_id=certificate_id,
+    timeouts=timeouts,
     tls10_enabled=tls10_enabled,
-    tls11_enabled=tls11_enabled,
-    timeouts=timeouts
+    tls11_enabled=tls11_enabled
   )),
   newAttrs(
+    api_management_id,
+    certificate_id,
     gateway_name,
     host_name,
-    tls10_enabled=null,
-    http2_enabled=null,
-    tls11_enabled=null,
-    api_management_id,
-    request_client_certificate_enabled=null,
-    certificate_id,
     name,
-    timeouts=null
+    http2_enabled=null,
+    request_client_certificate_enabled=null,
+    timeouts=null,
+    tls10_enabled=null,
+    tls11_enabled=null
   ):: std.prune(a={
+    api_management_id: api_management_id,
+    certificate_id: certificate_id,
     gateway_name: gateway_name,
     host_name: host_name,
-    tls10_enabled: tls10_enabled,
     http2_enabled: http2_enabled,
-    tls11_enabled: tls11_enabled,
-    api_management_id: api_management_id,
-    request_client_certificate_enabled: request_client_certificate_enabled,
-    certificate_id: certificate_id,
     name: name,
+    request_client_certificate_enabled: request_client_certificate_enabled,
     timeouts: timeouts,
+    tls10_enabled: tls10_enabled,
+    tls11_enabled: tls11_enabled,
   }),
-  withTls10Enabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_gateway_host_name_configuration+: {
-        [resourceLabel]+: {
-          tls10_enabled: value,
-        },
-      },
-    },
-  },
-  withTls11Enabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_gateway_host_name_configuration+: {
-        [resourceLabel]+: {
-          tls11_enabled: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withApiManagementId(resourceLabel, value):: {
     resource+: {
@@ -74,29 +69,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_gateway_host_name_configuration+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withRequestClientCertificateEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_gateway_host_name_configuration+: {
-        [resourceLabel]+: {
-          request_client_certificate_enabled: value,
-        },
-      },
-    },
-  },
   withCertificateId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_gateway_host_name_configuration+: {
         [resourceLabel]+: {
           certificate_id: value,
+        },
+      },
+    },
+  },
+  withGatewayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_gateway_host_name_configuration+: {
+        [resourceLabel]+: {
+          gateway_name: value,
         },
       },
     },
@@ -119,11 +105,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGatewayName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_gateway_host_name_configuration+: {
         [resourceLabel]+: {
-          gateway_name: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withRequestClientCertificateEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_gateway_host_name_configuration+: {
+        [resourceLabel]+: {
+          request_client_certificate_enabled: value,
         },
       },
     },
@@ -146,17 +141,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withTls10Enabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_gateway_host_name_configuration+: {
+        [resourceLabel]+: {
+          tls10_enabled: value,
+        },
+      },
+    },
+  },
+  withTls11Enabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_gateway_host_name_configuration+: {
+        [resourceLabel]+: {
+          tls11_enabled: value,
+        },
+      },
+    },
   },
 }

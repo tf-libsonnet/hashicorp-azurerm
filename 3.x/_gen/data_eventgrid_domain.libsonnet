@@ -2,35 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    public_network_access_enabled=null,
-    resource_group_name,
-    tags=null,
-    inbound_ip_rule=null,
     name,
+    resource_group_name,
+    inbound_ip_rule=null,
+    public_network_access_enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_eventgrid_domain', label=dataSrcLabel, attrs=self.newAttrs(
+    inbound_ip_rule=inbound_ip_rule,
+    name=name,
     public_network_access_enabled=public_network_access_enabled,
     resource_group_name=resource_group_name,
     tags=tags,
-    inbound_ip_rule=inbound_ip_rule,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    resource_group_name,
     inbound_ip_rule=null,
     public_network_access_enabled=null,
-    resource_group_name,
-    name,
     tags=null,
     timeouts=null
   ):: std.prune(a={
     inbound_ip_rule: inbound_ip_rule,
+    name: name,
     public_network_access_enabled: public_network_access_enabled,
     resource_group_name: resource_group_name,
-    name: name,
     tags: tags,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withInboundIpRule(dataSrcLabel, value):: {
+    data+: {
+      azurerm_eventgrid_domain+: {
+        [dataSrcLabel]+: {
+          inbound_ip_rule: value,
+        },
+      },
+    },
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_eventgrid_domain+: {
@@ -67,15 +83,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withInboundIpRule(dataSrcLabel, value):: {
-    data+: {
-      azurerm_eventgrid_domain+: {
-        [dataSrcLabel]+: {
-          inbound_ip_rule: value,
-        },
-      },
-    },
-  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_eventgrid_domain+: {
@@ -93,12 +100,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

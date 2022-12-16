@@ -1,24 +1,24 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    alert_rule_template_guid,
     log_analytics_workspace_id,
     name,
-    alert_rule_template_guid,
+    resourceLabel,
     enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_machine_learning_behavior_analytics', label=resourceLabel, attrs=self.newAttrs(
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
     alert_rule_template_guid=alert_rule_template_guid,
     enabled=enabled,
+    log_analytics_workspace_id=log_analytics_workspace_id,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
     alert_rule_template_guid,
-    enabled=null,
     log_analytics_workspace_id,
     name,
+    enabled=null,
     timeouts=null
   ):: std.prune(a={
     alert_rule_template_guid: alert_rule_template_guid,
@@ -27,14 +27,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_machine_learning_behavior_analytics+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAlertRuleTemplateGuid(resourceLabel, value):: {
     resource+: {
@@ -63,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_machine_learning_behavior_analytics+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_machine_learning_behavior_analytics+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

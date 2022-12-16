@@ -3,44 +3,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     name,
-    tags=null,
-    traffic_view_enabled=null,
     resource_group_name,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    traffic_view_enabled=null
   ):: tf.withData(type='azurerm_traffic_manager_profile', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
-    tags=tags,
-    traffic_view_enabled=traffic_view_enabled,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    tags=tags,
+    timeouts=timeouts,
+    traffic_view_enabled=traffic_view_enabled
   )),
   newAttrs(
-    traffic_view_enabled=null,
     name,
-    tags=null,
     resource_group_name,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    traffic_view_enabled=null
   ):: std.prune(a={
-    traffic_view_enabled: traffic_view_enabled,
     name: name,
-    tags: tags,
     resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
+    traffic_view_enabled: traffic_view_enabled,
   }),
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_traffic_manager_profile+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
-  withTrafficViewEnabled(dataSrcLabel, value):: {
+  withName(dataSrcLabel, value):: {
     data+: {
       azurerm_traffic_manager_profile+: {
         [dataSrcLabel]+: {
-          traffic_view_enabled: value,
+          name: value,
         },
       },
     },
@@ -54,11 +52,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
+  withTags(dataSrcLabel, value):: {
     data+: {
       azurerm_traffic_manager_profile+: {
         [dataSrcLabel]+: {
-          name: value,
+          tags: value,
         },
       },
     },
@@ -81,11 +79,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withTrafficViewEnabled(dataSrcLabel, value):: {
+    data+: {
+      azurerm_traffic_manager_profile+: {
+        [dataSrcLabel]+: {
+          traffic_view_enabled: value,
+        },
+      },
+    },
   },
 }

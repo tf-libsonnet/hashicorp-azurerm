@@ -1,36 +1,36 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    scope,
-    tags=null,
-    visibility=null,
     location,
     name,
-    properties=null,
+    resourceLabel,
     resource_group_name,
+    scope,
+    properties=null,
+    tags=null,
     timeouts=null,
+    visibility=null,
     window=null
   ):: tf.withResource(type='azurerm_maintenance_configuration', label=resourceLabel, attrs=self.newAttrs(
-    scope=scope,
-    tags=tags,
-    visibility=visibility,
     location=location,
     name=name,
     properties=properties,
     resource_group_name=resource_group_name,
+    scope=scope,
+    tags=tags,
     timeouts=timeouts,
+    visibility=visibility,
     window=window
   )),
   newAttrs(
     location,
     name,
-    properties=null,
     resource_group_name,
     scope,
+    properties=null,
     tags=null,
-    visibility=null,
     timeouts=null,
+    visibility=null,
     window=null
   ):: std.prune(a={
     location: location,
@@ -39,18 +39,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     scope: scope,
     tags: tags,
-    visibility: visibility,
     timeouts: timeouts,
+    visibility: visibility,
     window: window,
   }),
-  withVisibility(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_configuration+: {
-        [resourceLabel]+: {
-          visibility: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  window:: {
+    new(
+      start_date_time,
+      time_zone,
+      duration=null,
+      expiration_date_time=null,
+      recur_every=null
+    ):: std.prune(a={
+      duration: duration,
+      expiration_date_time: expiration_date_time,
+      recur_every: recur_every,
+      start_date_time: start_date_time,
+      time_zone: time_zone,
+    }),
   },
   withLocation(resourceLabel, value):: {
     resource+: {
@@ -124,18 +143,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVisibility(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_configuration+: {
+        [resourceLabel]+: {
+          visibility: value,
+        },
+      },
+    },
   },
   withWindow(resourceLabel, value):: {
     resource+: {
@@ -154,20 +169,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  window:: {
-    new(
-      expiration_date_time=null,
-      recur_every=null,
-      start_date_time,
-      time_zone,
-      duration=null
-    ):: std.prune(a={
-      expiration_date_time: expiration_date_time,
-      recur_every: recur_every,
-      start_date_time: start_date_time,
-      time_zone: time_zone,
-      duration: duration,
-    }),
   },
 }

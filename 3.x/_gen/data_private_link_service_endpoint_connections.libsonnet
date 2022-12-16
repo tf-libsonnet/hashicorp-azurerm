@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    service_id,
     resource_group_name,
+    service_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_private_link_service_endpoint_connections', label=dataSrcLabel, attrs=self.newAttrs(service_id=service_id, resource_group_name=resource_group_name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_private_link_service_endpoint_connections', label=dataSrcLabel, attrs=self.newAttrs(resource_group_name=resource_group_name, service_id=service_id, timeouts=timeouts)),
   newAttrs(
     resource_group_name,
     service_id,
@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     service_id: service_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_private_link_service_endpoint_connections+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

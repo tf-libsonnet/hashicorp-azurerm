@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     recovery_vault_name,
+    resourceLabel,
     resource_group_name,
     storage_account_id,
     timeouts=null
@@ -23,14 +23,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id: storage_account_id,
     timeouts: timeouts,
   }),
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_container_storage_account+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withRecoveryVaultName(resourceLabel, value):: {
     resource+: {
@@ -46,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_backup_container_storage_account+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_container_storage_account+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
         },
       },
     },
@@ -67,18 +80,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

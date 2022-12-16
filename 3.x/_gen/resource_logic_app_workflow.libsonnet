@@ -1,118 +1,165 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  access_control:: {
+    action:: {
+      new(
+        allowed_caller_ip_address_range
+      ):: std.prune(a={
+        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
+      }),
+    },
+    content:: {
+      new(
+        allowed_caller_ip_address_range
+      ):: std.prune(a={
+        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
+      }),
+    },
+    new(
+      action=null,
+      content=null,
+      trigger=null,
+      workflow_management=null
+    ):: std.prune(a={
+      action: action,
+      content: content,
+      trigger: trigger,
+      workflow_management: workflow_management,
+    }),
+    trigger:: {
+      new(
+        allowed_caller_ip_address_range,
+        open_authentication_policy=null
+      ):: std.prune(a={
+        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
+        open_authentication_policy: open_authentication_policy,
+      }),
+      open_authentication_policy:: {
+        claim:: {
+          new(
+            name,
+            value
+          ):: std.prune(a={
+            name: name,
+            value: value,
+          }),
+        },
+        new(
+          name,
+          claim=null
+        ):: std.prune(a={
+          claim: claim,
+          name: name,
+        }),
+      },
+    },
+    workflow_management:: {
+      new(
+        allowed_caller_ip_address_range
+      ):: std.prune(a={
+        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
+      }),
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
+    location,
+    name,
     resourceLabel,
+    resource_group_name,
+    access_control=null,
     enabled=null,
+    identity=null,
+    integration_service_environment_id=null,
     logic_app_integration_account_id=null,
     parameters=null,
-    workflow_parameters=null,
-    resource_group_name,
-    workflow_schema=null,
-    location,
-    workflow_version=null,
-    integration_service_environment_id=null,
-    name,
     tags=null,
-    access_control=null,
-    identity=null,
-    timeouts=null
+    timeouts=null,
+    workflow_parameters=null,
+    workflow_schema=null,
+    workflow_version=null
   ):: tf.withResource(type='azurerm_logic_app_workflow', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    logic_app_integration_account_id=logic_app_integration_account_id,
-    parameters=parameters,
-    workflow_parameters=workflow_parameters,
-    resource_group_name=resource_group_name,
-    workflow_schema=workflow_schema,
-    location=location,
-    workflow_version=workflow_version,
-    integration_service_environment_id=integration_service_environment_id,
-    name=name,
-    tags=tags,
     access_control=access_control,
+    enabled=enabled,
     identity=identity,
-    timeouts=timeouts
+    integration_service_environment_id=integration_service_environment_id,
+    location=location,
+    logic_app_integration_account_id=logic_app_integration_account_id,
+    name=name,
+    parameters=parameters,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    workflow_parameters=workflow_parameters,
+    workflow_schema=workflow_schema,
+    workflow_version=workflow_version
   )),
   newAttrs(
-    enabled=null,
-    parameters=null,
-    workflow_version=null,
-    tags=null,
-    workflow_parameters=null,
-    workflow_schema=null,
+    location,
     name,
     resource_group_name,
-    location,
-    logic_app_integration_account_id=null,
-    integration_service_environment_id=null,
     access_control=null,
+    enabled=null,
     identity=null,
-    timeouts=null
+    integration_service_environment_id=null,
+    logic_app_integration_account_id=null,
+    parameters=null,
+    tags=null,
+    timeouts=null,
+    workflow_parameters=null,
+    workflow_schema=null,
+    workflow_version=null
   ):: std.prune(a={
+    access_control: access_control,
     enabled: enabled,
-    parameters: parameters,
-    workflow_version: workflow_version,
-    tags: tags,
-    workflow_parameters: workflow_parameters,
-    workflow_schema: workflow_schema,
-    name: name,
-    resource_group_name: resource_group_name,
+    identity: identity,
+    integration_service_environment_id: integration_service_environment_id,
     location: location,
     logic_app_integration_account_id: logic_app_integration_account_id,
-    integration_service_environment_id: integration_service_environment_id,
-    access_control: access_control,
-    identity: identity,
+    name: name,
+    parameters: parameters,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
+    workflow_parameters: workflow_parameters,
+    workflow_schema: workflow_schema,
+    workflow_version: workflow_version,
   }),
-  withParameters(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAccessControl(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          parameters: value,
+          access_control: value,
         },
       },
     },
   },
-  withWorkflowParameters(resourceLabel, value):: {
+  withAccessControlMixin(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          workflow_parameters: value,
-        },
-      },
-    },
-  },
-  withWorkflowVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          workflow_version: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          access_control+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -122,6 +169,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
           enabled: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withIntegrationServiceEnvironmentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          integration_service_environment_id: value,
         },
       },
     },
@@ -144,20 +218,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIntegrationServiceEnvironmentId(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          integration_service_environment_id: value,
+          name: value,
         },
       },
     },
   },
-  withWorkflowSchema(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          workflow_schema: value,
+          parameters: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -180,123 +272,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
-  withAccessControl(resourceLabel, value):: {
+  withWorkflowParameters(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          access_control: value,
+          workflow_parameters: value,
         },
       },
     },
   },
-  withAccessControlMixin(resourceLabel, value):: {
+  withWorkflowSchema(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          access_control+: if std.isArray(v=value) then value else [value],
+          workflow_schema: value,
         },
       },
     },
   },
-  access_control:: {
-    new(
-      workflow_management=null,
-      action=null,
-      content=null,
-      trigger=null
-    ):: std.prune(a={
-      workflow_management: workflow_management,
-      action: action,
-      content: content,
-      trigger: trigger,
-    }),
-    content:: {
-      new(
-        allowed_caller_ip_address_range
-      ):: std.prune(a={
-        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
-      }),
-    },
-    trigger:: {
-      new(
-        allowed_caller_ip_address_range,
-        open_authentication_policy=null
-      ):: std.prune(a={
-        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
-        open_authentication_policy: open_authentication_policy,
-      }),
-      open_authentication_policy:: {
-        new(
-          name,
-          claim=null
-        ):: std.prune(a={
-          name: name,
-          claim: claim,
-        }),
-        claim:: {
-          new(
-            name,
-            value
-          ):: std.prune(a={
-            name: name,
-            value: value,
-          }),
-        },
-      },
-    },
-    workflow_management:: {
-      new(
-        allowed_caller_ip_address_range
-      ):: std.prune(a={
-        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
-      }),
-    },
-    action:: {
-      new(
-        allowed_caller_ip_address_range
-      ):: std.prune(a={
-        allowed_caller_ip_address_range: allowed_caller_ip_address_range,
-      }),
-    },
-  },
-  withIdentity(resourceLabel, value):: {
+  withWorkflowVersion(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          identity: value,
+          workflow_version: value,
         },
       },
     },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
   },
 }

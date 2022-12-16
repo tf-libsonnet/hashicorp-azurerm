@@ -1,28 +1,41 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    location,
-    subnet_id,
     domain_service_id,
+    location,
+    resourceLabel,
+    subnet_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_active_directory_domain_service_replica_set', label=resourceLabel, attrs=self.newAttrs(
+    domain_service_id=domain_service_id,
     location=location,
     subnet_id=subnet_id,
-    domain_service_id=domain_service_id,
     timeouts=timeouts
   )),
   newAttrs(
+    domain_service_id,
     location,
     subnet_id,
-    domain_service_id,
     timeouts=null
   ):: std.prune(a={
+    domain_service_id: domain_service_id,
     location: location,
     subnet_id: subnet_id,
-    domain_service_id: domain_service_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDomainServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service_replica_set+: {
@@ -67,18 +80,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

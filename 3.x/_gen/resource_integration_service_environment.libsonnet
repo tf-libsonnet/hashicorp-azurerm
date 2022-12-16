@@ -1,76 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    virtual_network_subnet_ids,
-    name,
-    resource_group_name,
-    sku_name=null,
-    tags=null,
     access_endpoint_type,
     location,
+    name,
+    resourceLabel,
+    resource_group_name,
+    virtual_network_subnet_ids,
+    sku_name=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_integration_service_environment', label=resourceLabel, attrs=self.newAttrs(
-    virtual_network_subnet_ids=virtual_network_subnet_ids,
+    access_endpoint_type=access_endpoint_type,
+    location=location,
     name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    access_endpoint_type=access_endpoint_type,
-    location=location,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_network_subnet_ids=virtual_network_subnet_ids
   )),
   newAttrs(
-    resource_group_name,
-    sku_name=null,
-    tags=null,
     access_endpoint_type,
-    virtual_network_subnet_ids,
     location,
     name,
+    resource_group_name,
+    virtual_network_subnet_ids,
+    sku_name=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    access_endpoint_type: access_endpoint_type,
+    location: location,
+    name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
-    access_endpoint_type: access_endpoint_type,
-    virtual_network_subnet_ids: virtual_network_subnet_ids,
-    location: location,
-    name: name,
     timeouts: timeouts,
+    virtual_network_subnet_ids: virtual_network_subnet_ids,
   }),
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAccessEndpointType(resourceLabel, value):: {
     resource+: {
       azurerm_integration_service_environment+: {
         [resourceLabel]+: {
           access_endpoint_type: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkSubnetIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          virtual_network_subnet_ids: value,
         },
       },
     },
@@ -102,6 +88,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_integration_service_environment+: {
@@ -120,17 +124,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withVirtualNetworkSubnetIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          virtual_network_subnet_ids: value,
+        },
+      },
+    },
   },
 }

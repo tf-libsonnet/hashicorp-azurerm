@@ -2,27 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    workspace_id,
     name,
+    workspace_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_healthcare_medtech_service', label=dataSrcLabel, attrs=self.newAttrs(workspace_id=workspace_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_healthcare_medtech_service', label=dataSrcLabel, attrs=self.newAttrs(name=name, timeouts=timeouts, workspace_id=workspace_id)),
   newAttrs(
     name,
     workspace_id,
     timeouts=null
   ):: std.prune(a={
     name: name,
-    workspace_id: workspace_id,
     timeouts: timeouts,
+    workspace_id: workspace_id,
   }),
-  withWorkspaceId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_healthcare_medtech_service+: {
-        [dataSrcLabel]+: {
-          workspace_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -51,11 +49,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withWorkspaceId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_healthcare_medtech_service+: {
+        [dataSrcLabel]+: {
+          workspace_id: value,
+        },
+      },
+    },
   },
 }

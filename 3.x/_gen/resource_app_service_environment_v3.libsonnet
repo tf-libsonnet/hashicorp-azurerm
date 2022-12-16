@@ -1,60 +1,73 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  cluster_setting:: {
+    new(
+      name,
+      value
+    ):: std.prune(a={
+      name: name,
+      value: value,
+    }),
+  },
   new(
-    resourceLabel,
-    dedicated_host_count=null,
-    subnet_id,
-    tags=null,
-    allow_new_private_endpoint_connections=null,
-    resource_group_name,
-    zone_redundant=null,
-    internal_load_balancing_mode=null,
     name,
+    resourceLabel,
+    resource_group_name,
+    subnet_id,
+    allow_new_private_endpoint_connections=null,
     cluster_setting=null,
-    timeouts=null
+    dedicated_host_count=null,
+    internal_load_balancing_mode=null,
+    tags=null,
+    timeouts=null,
+    zone_redundant=null
   ):: tf.withResource(type='azurerm_app_service_environment_v3', label=resourceLabel, attrs=self.newAttrs(
-    dedicated_host_count=dedicated_host_count,
-    subnet_id=subnet_id,
-    tags=tags,
     allow_new_private_endpoint_connections=allow_new_private_endpoint_connections,
-    resource_group_name=resource_group_name,
-    zone_redundant=zone_redundant,
+    cluster_setting=cluster_setting,
+    dedicated_host_count=dedicated_host_count,
     internal_load_balancing_mode=internal_load_balancing_mode,
     name=name,
-    cluster_setting=cluster_setting,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    subnet_id=subnet_id,
+    tags=tags,
+    timeouts=timeouts,
+    zone_redundant=zone_redundant
   )),
   newAttrs(
-    zone_redundant=null,
+    name,
+    resource_group_name,
+    subnet_id,
+    allow_new_private_endpoint_connections=null,
+    cluster_setting=null,
     dedicated_host_count=null,
     internal_load_balancing_mode=null,
-    name,
-    allow_new_private_endpoint_connections=null,
-    subnet_id,
     tags=null,
-    resource_group_name,
-    cluster_setting=null,
-    timeouts=null
+    timeouts=null,
+    zone_redundant=null
   ):: std.prune(a={
-    zone_redundant: zone_redundant,
+    allow_new_private_endpoint_connections: allow_new_private_endpoint_connections,
+    cluster_setting: cluster_setting,
     dedicated_host_count: dedicated_host_count,
     internal_load_balancing_mode: internal_load_balancing_mode,
     name: name,
-    allow_new_private_endpoint_connections: allow_new_private_endpoint_connections,
+    resource_group_name: resource_group_name,
     subnet_id: subnet_id,
     tags: tags,
-    resource_group_name: resource_group_name,
-    cluster_setting: cluster_setting,
     timeouts: timeouts,
+    zone_redundant: zone_redundant,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_environment_v3+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAllowNewPrivateEndpointConnections(resourceLabel, value):: {
     resource+: {
@@ -65,20 +78,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withClusterSetting(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          cluster_setting: value,
         },
       },
     },
   },
-  withZoneRedundant(resourceLabel, value):: {
+  withClusterSettingMixin(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          zone_redundant: value,
+          cluster_setting+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withDedicatedHostCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_environment_v3+: {
+        [resourceLabel]+: {
+          dedicated_host_count: value,
         },
       },
     },
@@ -101,11 +123,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDedicatedHostCount(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          dedicated_host_count: value,
+          resource_group_name: value,
         },
       },
     },
@@ -115,6 +137,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
           subnet_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_environment_v3+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -137,44 +168,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
-  withClusterSetting(resourceLabel, value):: {
+  withZoneRedundant(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          cluster_setting: value,
+          zone_redundant: value,
         },
       },
     },
-  },
-  withClusterSettingMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_environment_v3+: {
-        [resourceLabel]+: {
-          cluster_setting+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  cluster_setting:: {
-    new(
-      value,
-      name
-    ):: std.prune(a={
-      value: value,
-      name: name,
-    }),
   },
 }

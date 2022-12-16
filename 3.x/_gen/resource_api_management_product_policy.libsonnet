@@ -1,36 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    xml_link=null,
     api_management_name,
     product_id,
+    resourceLabel,
     resource_group_name,
+    timeouts=null,
     xml_content=null,
-    timeouts=null
+    xml_link=null
   ):: tf.withResource(type='azurerm_api_management_product_policy', label=resourceLabel, attrs=self.newAttrs(
-    xml_link=xml_link,
     api_management_name=api_management_name,
     product_id=product_id,
     resource_group_name=resource_group_name,
+    timeouts=timeouts,
     xml_content=xml_content,
-    timeouts=timeouts
+    xml_link=xml_link
   )),
   newAttrs(
+    api_management_name,
     product_id,
     resource_group_name,
+    timeouts=null,
     xml_content=null,
-    xml_link=null,
-    api_management_name,
-    timeouts=null
+    xml_link=null
   ):: std.prune(a={
+    api_management_name: api_management_name,
     product_id: product_id,
     resource_group_name: resource_group_name,
+    timeouts: timeouts,
     xml_content: xml_content,
     xml_link: xml_link,
-    api_management_name: api_management_name,
-    timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_product_policy+: {
@@ -58,24 +71,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withXmlContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_product_policy+: {
-        [resourceLabel]+: {
-          xml_content: value,
-        },
-      },
-    },
-  },
-  withXmlLink(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_product_policy+: {
-        [resourceLabel]+: {
-          xml_link: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_product_policy+: {
@@ -94,17 +89,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withXmlContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_product_policy+: {
+        [resourceLabel]+: {
+          xml_content: value,
+        },
+      },
+    },
+  },
+  withXmlLink(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_product_policy+: {
+        [resourceLabel]+: {
+          xml_link: value,
+        },
+      },
+    },
   },
 }

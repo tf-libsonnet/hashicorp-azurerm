@@ -1,40 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    function_alias=null,
-    name,
-    scope,
-    content,
-    type,
     application_insights_id,
+    content,
+    name,
+    resourceLabel,
+    scope,
+    type,
+    function_alias=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_analytics_item', label=resourceLabel, attrs=self.newAttrs(
+    application_insights_id=application_insights_id,
+    content=content,
     function_alias=function_alias,
     name=name,
     scope=scope,
-    content=content,
-    type=type,
-    application_insights_id=application_insights_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    type=type
   )),
   newAttrs(
-    type,
     application_insights_id,
-    function_alias=null,
+    content,
     name,
     scope,
-    content,
+    type,
+    function_alias=null,
     timeouts=null
   ):: std.prune(a={
-    type: type,
     application_insights_id: application_insights_id,
+    content: content,
     function_alias: function_alias,
     name: name,
     scope: scope,
-    content: content,
     timeouts: timeouts,
+    type: type,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withApplicationInsightsId(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_analytics_item+: {
+        [resourceLabel]+: {
+          application_insights_id: value,
+        },
+      },
+    },
+  },
   withContent(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_analytics_item+: {
@@ -44,11 +66,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withType(resourceLabel, value):: {
+  withFunctionAlias(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_analytics_item+: {
         [resourceLabel]+: {
-          type: value,
+          function_alias: value,
         },
       },
     },
@@ -71,24 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withApplicationInsightsId(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_analytics_item+: {
-        [resourceLabel]+: {
-          application_insights_id: value,
-        },
-      },
-    },
-  },
-  withFunctionAlias(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_analytics_item+: {
-        [resourceLabel]+: {
-          function_alias: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_analytics_item+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_analytics_item+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

@@ -1,44 +1,93 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    zones=null,
-    idle_timeout_in_minutes=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
+    idle_timeout_in_minutes=null,
     sku_name=null,
     tags=null,
-    timeouts=null
+    timeouts=null,
+    zones=null
   ):: tf.withResource(type='azurerm_nat_gateway', label=resourceLabel, attrs=self.newAttrs(
-    zones=zones,
     idle_timeout_in_minutes=idle_timeout_in_minutes,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    timeouts=timeouts
+    timeouts=timeouts,
+    zones=zones
   )),
   newAttrs(
-    idle_timeout_in_minutes=null,
+    location,
     name,
     resource_group_name,
+    idle_timeout_in_minutes=null,
     sku_name=null,
     tags=null,
-    location,
-    zones=null,
-    timeouts=null
+    timeouts=null,
+    zones=null
   ):: std.prune(a={
     idle_timeout_in_minutes: idle_timeout_in_minutes,
+    location: location,
     name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
-    location: location,
-    zones: zones,
     timeouts: timeouts,
+    zones: zones,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withIdleTimeoutInMinutes(resourceLabel, value):: {
+    resource+: {
+      azurerm_nat_gateway+: {
+        [resourceLabel]+: {
+          idle_timeout_in_minutes: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_nat_gateway+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_nat_gateway+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_nat_gateway+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_nat_gateway+: {
@@ -53,51 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_nat_gateway+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withZones(resourceLabel, value):: {
-    resource+: {
-      azurerm_nat_gateway+: {
-        [resourceLabel]+: {
-          zones: value,
-        },
-      },
-    },
-  },
-  withIdleTimeoutInMinutes(resourceLabel, value):: {
-    resource+: {
-      azurerm_nat_gateway+: {
-        [resourceLabel]+: {
-          idle_timeout_in_minutes: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_nat_gateway+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_nat_gateway+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_nat_gateway+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -120,17 +124,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withZones(resourceLabel, value):: {
+    resource+: {
+      azurerm_nat_gateway+: {
+        [resourceLabel]+: {
+          zones: value,
+        },
+      },
+    },
   },
 }

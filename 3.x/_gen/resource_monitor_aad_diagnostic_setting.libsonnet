@@ -1,103 +1,5 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
-  new(
-    resourceLabel,
-    log_analytics_workspace_id=null,
-    name,
-    storage_account_id=null,
-    eventhub_authorization_rule_id=null,
-    eventhub_name=null,
-    timeouts=null,
-    log=null
-  ):: tf.withResource(type='azurerm_monitor_aad_diagnostic_setting', label=resourceLabel, attrs=self.newAttrs(
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    storage_account_id=storage_account_id,
-    eventhub_authorization_rule_id=eventhub_authorization_rule_id,
-    eventhub_name=eventhub_name,
-    timeouts=timeouts,
-    log=log
-  )),
-  newAttrs(
-    eventhub_authorization_rule_id=null,
-    eventhub_name=null,
-    log_analytics_workspace_id=null,
-    name,
-    storage_account_id=null,
-    log=null,
-    timeouts=null
-  ):: std.prune(a={
-    eventhub_authorization_rule_id: eventhub_authorization_rule_id,
-    eventhub_name: eventhub_name,
-    log_analytics_workspace_id: log_analytics_workspace_id,
-    name: name,
-    storage_account_id: storage_account_id,
-    log: log,
-    timeouts: timeouts,
-  }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withEventhubAuthorizationRuleId(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          eventhub_authorization_rule_id: value,
-        },
-      },
-    },
-  },
-  withEventhubName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          eventhub_name: value,
-        },
-      },
-    },
-  },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withLog(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          log: value,
-        },
-      },
-    },
-  },
-  withLogMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_aad_diagnostic_setting+: {
-        [resourceLabel]+: {
-          log+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
   log:: {
     new(
       category,
@@ -118,6 +20,117 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
     },
   },
+  new(
+    name,
+    resourceLabel,
+    eventhub_authorization_rule_id=null,
+    eventhub_name=null,
+    log=null,
+    log_analytics_workspace_id=null,
+    storage_account_id=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_monitor_aad_diagnostic_setting', label=resourceLabel, attrs=self.newAttrs(
+    eventhub_authorization_rule_id=eventhub_authorization_rule_id,
+    eventhub_name=eventhub_name,
+    log=log,
+    log_analytics_workspace_id=log_analytics_workspace_id,
+    name=name,
+    storage_account_id=storage_account_id,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    name,
+    eventhub_authorization_rule_id=null,
+    eventhub_name=null,
+    log=null,
+    log_analytics_workspace_id=null,
+    storage_account_id=null,
+    timeouts=null
+  ):: std.prune(a={
+    eventhub_authorization_rule_id: eventhub_authorization_rule_id,
+    eventhub_name: eventhub_name,
+    log: log,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    name: name,
+    storage_account_id: storage_account_id,
+    timeouts: timeouts,
+  }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withEventhubAuthorizationRuleId(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          eventhub_authorization_rule_id: value,
+        },
+      },
+    },
+  },
+  withEventhubName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          eventhub_name: value,
+        },
+      },
+    },
+  },
+  withLog(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          log: value,
+        },
+      },
+    },
+  },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
+  withLogMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          log+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_aad_diagnostic_setting+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_aad_diagnostic_setting+: {
@@ -135,18 +148,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

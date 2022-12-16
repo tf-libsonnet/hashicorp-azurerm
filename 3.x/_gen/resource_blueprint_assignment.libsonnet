@@ -1,70 +1,92 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      identity_ids,
+      type
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
+    location,
+    name,
     resourceLabel,
     target_subscription_id,
-    lock_exclude_principals=null,
-    parameter_values=null,
-    lock_mode=null,
-    lock_exclude_actions=null,
-    resource_groups=null,
     version_id,
-    location,
-    name,
-    timeouts=null,
-    identity=null
+    identity=null,
+    lock_exclude_actions=null,
+    lock_exclude_principals=null,
+    lock_mode=null,
+    parameter_values=null,
+    resource_groups=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_blueprint_assignment', label=resourceLabel, attrs=self.newAttrs(
-    target_subscription_id=target_subscription_id,
-    lock_exclude_principals=lock_exclude_principals,
-    parameter_values=parameter_values,
-    lock_mode=lock_mode,
-    lock_exclude_actions=lock_exclude_actions,
-    resource_groups=resource_groups,
-    version_id=version_id,
+    identity=identity,
     location=location,
+    lock_exclude_actions=lock_exclude_actions,
+    lock_exclude_principals=lock_exclude_principals,
+    lock_mode=lock_mode,
     name=name,
+    parameter_values=parameter_values,
+    resource_groups=resource_groups,
+    target_subscription_id=target_subscription_id,
     timeouts=timeouts,
-    identity=identity
+    version_id=version_id
   )),
   newAttrs(
-    lock_mode=null,
-    version_id,
-    target_subscription_id,
-    lock_exclude_actions=null,
-    resource_groups=null,
-    lock_exclude_principals=null,
-    parameter_values=null,
-    name,
     location,
+    name,
+    target_subscription_id,
+    version_id,
     identity=null,
+    lock_exclude_actions=null,
+    lock_exclude_principals=null,
+    lock_mode=null,
+    parameter_values=null,
+    resource_groups=null,
     timeouts=null
   ):: std.prune(a={
-    lock_mode: lock_mode,
-    version_id: version_id,
-    target_subscription_id: target_subscription_id,
-    lock_exclude_actions: lock_exclude_actions,
-    resource_groups: resource_groups,
-    lock_exclude_principals: lock_exclude_principals,
-    parameter_values: parameter_values,
-    name: name,
-    location: location,
     identity: identity,
+    location: location,
+    lock_exclude_actions: lock_exclude_actions,
+    lock_exclude_principals: lock_exclude_principals,
+    lock_mode: lock_mode,
+    name: name,
+    parameter_values: parameter_values,
+    resource_groups: resource_groups,
+    target_subscription_id: target_subscription_id,
     timeouts: timeouts,
+    version_id: version_id,
   }),
-  withLockExcludePrincipals(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
-          lock_exclude_principals: value,
+          identity: value,
         },
       },
     },
   },
-  withParameterValues(resourceLabel, value):: {
+  withIdentityMixin(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
-          parameter_values: value,
+          identity+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -87,20 +109,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVersionId(resourceLabel, value):: {
+  withLockExcludePrincipals(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
-          version_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroups(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          resource_groups: value,
+          lock_exclude_principals: value,
         },
       },
     },
@@ -114,20 +127,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetSubscriptionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          target_subscription_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withParameterValues(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          parameter_values: value,
+        },
+      },
+    },
+  },
+  withResourceGroups(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          resource_groups: value,
+        },
+      },
+    },
+  },
+  withTargetSubscriptionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          target_subscription_id: value,
         },
       },
     },
@@ -150,44 +181,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
+  withVersionId(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
-          identity: value,
+          version_id: value,
         },
       },
     },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
   },
 }

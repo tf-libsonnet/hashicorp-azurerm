@@ -1,18 +1,18 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    user_id,
     api_management_name,
     group_name,
+    resourceLabel,
     resource_group_name,
+    user_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_group_user', label=resourceLabel, attrs=self.newAttrs(
-    user_id=user_id,
     api_management_name=api_management_name,
     group_name=group_name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    user_id=user_id
   )),
   newAttrs(
     api_management_name,
@@ -24,26 +24,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     api_management_name: api_management_name,
     group_name: group_name,
     resource_group_name: resource_group_name,
-    user_id: user_id,
     timeouts: timeouts,
+    user_id: user_id,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_group_user+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withUserId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_group_user+: {
-        [resourceLabel]+: {
-          user_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
@@ -59,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_group_user+: {
         [resourceLabel]+: {
           group_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_group_user+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -81,17 +85,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withUserId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_group_user+: {
+        [resourceLabel]+: {
+          user_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
     configuration_store_id,
+    dataSrcLabel,
     key=null,
     label=null,
     timeouts=null
@@ -13,16 +13,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    configuration_store_id,
     key=null,
     label=null,
-    configuration_store_id,
     timeouts=null
   ):: std.prune(a={
+    configuration_store_id: configuration_store_id,
     key: key,
     label: label,
-    configuration_store_id: configuration_store_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withConfigurationStoreId(dataSrcLabel, value):: {
     data+: {
       azurerm_app_configuration_keys+: {
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

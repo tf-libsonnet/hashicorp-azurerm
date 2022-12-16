@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    certificate_name=null,
     name,
+    resourceLabel,
     spring_cloud_app_id,
+    certificate_name=null,
     thumbprint=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_custom_domain', label=resourceLabel, attrs=self.newAttrs(
@@ -17,16 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   newAttrs(
     name,
     spring_cloud_app_id,
-    thumbprint=null,
     certificate_name=null,
+    thumbprint=null,
     timeouts=null
   ):: std.prune(a={
+    certificate_name: certificate_name,
     name: name,
     spring_cloud_app_id: spring_cloud_app_id,
     thumbprint: thumbprint,
-    certificate_name: certificate_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withCertificateName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_custom_domain+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

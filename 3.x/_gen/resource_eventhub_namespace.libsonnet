@@ -1,84 +1,97 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
+    location,
+    name,
     resourceLabel,
     resource_group_name,
-    maximum_throughput_units=null,
-    public_network_access_enabled=null,
-    network_rulesets=null,
-    auto_inflate_enabled=null,
-    dedicated_cluster_id=null,
     sku,
-    tags=null,
-    local_authentication_enabled=null,
-    location,
+    auto_inflate_enabled=null,
     capacity=null,
-    zone_redundant=null,
-    minimum_tls_version=null,
-    name,
+    dedicated_cluster_id=null,
     identity=null,
-    timeouts=null
+    local_authentication_enabled=null,
+    maximum_throughput_units=null,
+    minimum_tls_version=null,
+    network_rulesets=null,
+    public_network_access_enabled=null,
+    tags=null,
+    timeouts=null,
+    zone_redundant=null
   ):: tf.withResource(type='azurerm_eventhub_namespace', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    maximum_throughput_units=maximum_throughput_units,
-    public_network_access_enabled=public_network_access_enabled,
-    network_rulesets=network_rulesets,
     auto_inflate_enabled=auto_inflate_enabled,
+    capacity=capacity,
     dedicated_cluster_id=dedicated_cluster_id,
-    sku=sku,
-    tags=tags,
+    identity=identity,
     local_authentication_enabled=local_authentication_enabled,
     location=location,
-    capacity=capacity,
-    zone_redundant=zone_redundant,
+    maximum_throughput_units=maximum_throughput_units,
     minimum_tls_version=minimum_tls_version,
     name=name,
-    identity=identity,
-    timeouts=timeouts
+    network_rulesets=network_rulesets,
+    public_network_access_enabled=public_network_access_enabled,
+    resource_group_name=resource_group_name,
+    sku=sku,
+    tags=tags,
+    timeouts=timeouts,
+    zone_redundant=zone_redundant
   )),
   newAttrs(
-    local_authentication_enabled=null,
     location,
-    minimum_tls_version=null,
-    public_network_access_enabled=null,
-    dedicated_cluster_id=null,
     name,
-    zone_redundant=null,
-    network_rulesets=null,
-    auto_inflate_enabled=null,
-    maximum_throughput_units=null,
-    capacity=null,
     resource_group_name,
     sku,
-    tags=null,
+    auto_inflate_enabled=null,
+    capacity=null,
+    dedicated_cluster_id=null,
     identity=null,
-    timeouts=null
+    local_authentication_enabled=null,
+    maximum_throughput_units=null,
+    minimum_tls_version=null,
+    network_rulesets=null,
+    public_network_access_enabled=null,
+    tags=null,
+    timeouts=null,
+    zone_redundant=null
   ):: std.prune(a={
+    auto_inflate_enabled: auto_inflate_enabled,
+    capacity: capacity,
+    dedicated_cluster_id: dedicated_cluster_id,
+    identity: identity,
     local_authentication_enabled: local_authentication_enabled,
     location: location,
-    minimum_tls_version: minimum_tls_version,
-    public_network_access_enabled: public_network_access_enabled,
-    dedicated_cluster_id: dedicated_cluster_id,
-    name: name,
-    zone_redundant: zone_redundant,
-    network_rulesets: network_rulesets,
-    auto_inflate_enabled: auto_inflate_enabled,
     maximum_throughput_units: maximum_throughput_units,
-    capacity: capacity,
+    minimum_tls_version: minimum_tls_version,
+    name: name,
+    network_rulesets: network_rulesets,
+    public_network_access_enabled: public_network_access_enabled,
     resource_group_name: resource_group_name,
     sku: sku,
     tags: tags,
-    identity: identity,
     timeouts: timeouts,
+    zone_redundant: zone_redundant,
   }),
-  withMinimumTlsVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace+: {
-        [resourceLabel]+: {
-          minimum_tls_version: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAutoInflateEnabled(resourceLabel, value):: {
     resource+: {
@@ -89,47 +102,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withCapacity(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withZoneRedundant(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace+: {
-        [resourceLabel]+: {
-          zone_redundant: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withNetworkRulesets(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace+: {
-        [resourceLabel]+: {
-          network_rulesets: value,
+          capacity: value,
         },
       },
     },
@@ -143,20 +120,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMaximumThroughputUnits(resourceLabel, value):: {
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace+: {
         [resourceLabel]+: {
-          maximum_throughput_units: value,
+          identity: value,
         },
       },
     },
   },
-  withSku(resourceLabel, value):: {
+  withIdentityMixin(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace+: {
         [resourceLabel]+: {
-          sku: value,
+          identity+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -179,11 +156,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCapacity(resourceLabel, value):: {
+  withMaximumThroughputUnits(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace+: {
         [resourceLabel]+: {
-          capacity: value,
+          maximum_throughput_units: value,
+        },
+      },
+    },
+  },
+  withMinimumTlsVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace+: {
+        [resourceLabel]+: {
+          minimum_tls_version: value,
         },
       },
     },
@@ -193,6 +179,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventhub_namespace+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withNetworkRulesets(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace+: {
+        [resourceLabel]+: {
+          network_rulesets: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -215,44 +246,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
+  withZoneRedundant(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace+: {
         [resourceLabel]+: {
-          identity: value,
+          zone_redundant: value,
         },
       },
     },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
-    }),
   },
 }

@@ -12,6 +12,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_vault_id: key_vault_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withKeyVaultId(dataSrcLabel, value):: {
     data+: {
       azurerm_key_vault_secrets+: {
@@ -38,12 +45,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

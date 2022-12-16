@@ -1,66 +1,105 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    enterprise_app_id=null,
     location,
-    company_name=null,
-    resource_group_name,
     name,
-    tags=null,
+    resourceLabel,
+    resource_group_name,
+    company_name=null,
     enabled=null,
-    user=null,
+    enterprise_app_id=null,
     plan=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    user=null
   ):: tf.withResource(type='azurerm_logz_monitor', label=resourceLabel, attrs=self.newAttrs(
+    company_name=company_name,
+    enabled=enabled,
     enterprise_app_id=enterprise_app_id,
     location=location,
-    company_name=company_name,
-    resource_group_name=resource_group_name,
     name=name,
-    tags=tags,
-    enabled=enabled,
-    user=user,
     plan=plan,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    user=user
   )),
   newAttrs(
-    enterprise_app_id=null,
-    company_name=null,
-    resource_group_name,
     location,
     name,
-    tags=null,
+    resource_group_name,
+    company_name=null,
     enabled=null,
+    enterprise_app_id=null,
     plan=null,
+    tags=null,
     timeouts=null,
     user=null
   ):: std.prune(a={
-    enterprise_app_id: enterprise_app_id,
     company_name: company_name,
-    resource_group_name: resource_group_name,
+    enabled: enabled,
+    enterprise_app_id: enterprise_app_id,
     location: location,
     name: name,
-    tags: tags,
-    enabled: enabled,
     plan: plan,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
     user: user,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_monitor+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  plan:: {
+    new(
+      billing_cycle,
+      effective_date,
+      usage_type,
+      plan_id=null
+    ):: std.prune(a={
+      billing_cycle: billing_cycle,
+      effective_date: effective_date,
+      plan_id: plan_id,
+      usage_type: usage_type,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  user:: {
+    new(
+      email,
+      first_name,
+      last_name,
+      phone_number
+    ):: std.prune(a={
+      email: email,
+      first_name: first_name,
+      last_name: last_name,
+      phone_number: phone_number,
+    }),
   },
   withCompanyName(resourceLabel, value):: {
     resource+: {
       azurerm_logz_monitor+: {
         [resourceLabel]+: {
           company_name: value,
+        },
+      },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_monitor+: {
+        [resourceLabel]+: {
+          enabled: value,
         },
       },
     },
@@ -92,24 +131,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_monitor+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_monitor+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withPlan(resourceLabel, value):: {
     resource+: {
       azurerm_logz_monitor+: {
@@ -128,18 +149,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  plan:: {
-    new(
-      billing_cycle,
-      effective_date,
-      plan_id=null,
-      usage_type
-    ):: std.prune(a={
-      billing_cycle: billing_cycle,
-      effective_date: effective_date,
-      plan_id: plan_id,
-      usage_type: usage_type,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_monitor+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_monitor+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -159,19 +185,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
   withUser(resourceLabel, value):: {
     resource+: {
       azurerm_logz_monitor+: {
@@ -189,18 +202,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  user:: {
-    new(
-      first_name,
-      last_name,
-      phone_number,
-      email
-    ):: std.prune(a={
-      first_name: first_name,
-      last_name: last_name,
-      phone_number: phone_number,
-      email: email,
-    }),
   },
 }

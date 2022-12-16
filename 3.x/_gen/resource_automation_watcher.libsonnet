@@ -1,70 +1,83 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    description=null,
-    script_name,
-    script_parameters=null,
-    execution_frequency_in_seconds,
-    name,
-    script_run_on,
-    location,
-    etag=null,
-    tags=null,
     automation_account_id,
+    execution_frequency_in_seconds,
+    location,
+    name,
+    resourceLabel,
+    script_name,
+    script_run_on,
+    description=null,
+    etag=null,
+    script_parameters=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_watcher', label=resourceLabel, attrs=self.newAttrs(
+    automation_account_id=automation_account_id,
     description=description,
+    etag=etag,
+    execution_frequency_in_seconds=execution_frequency_in_seconds,
+    location=location,
+    name=name,
     script_name=script_name,
     script_parameters=script_parameters,
-    execution_frequency_in_seconds=execution_frequency_in_seconds,
-    name=name,
     script_run_on=script_run_on,
-    location=location,
-    etag=etag,
     tags=tags,
-    automation_account_id=automation_account_id,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    etag=null,
-    script_name,
-    script_parameters=null,
-    script_run_on,
-    tags=null,
+    automation_account_id,
     execution_frequency_in_seconds,
     location,
-    automation_account_id,
+    name,
+    script_name,
+    script_run_on,
     description=null,
+    etag=null,
+    script_parameters=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
+    automation_account_id: automation_account_id,
+    description: description,
     etag: etag,
+    execution_frequency_in_seconds: execution_frequency_in_seconds,
+    location: location,
+    name: name,
     script_name: script_name,
     script_parameters: script_parameters,
     script_run_on: script_run_on,
     tags: tags,
-    execution_frequency_in_seconds: execution_frequency_in_seconds,
-    location: location,
-    automation_account_id: automation_account_id,
-    description: description,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAutomationAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_automation_watcher+: {
         [resourceLabel]+: {
-          location: value,
+          automation_account_id: value,
         },
       },
     },
   },
-  withScriptParameters(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_automation_watcher+: {
         [resourceLabel]+: {
-          script_parameters: value,
+          description: value,
         },
       },
     },
@@ -87,11 +100,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_watcher+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_watcher+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withScriptName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_watcher+: {
+        [resourceLabel]+: {
+          script_name: value,
+        },
+      },
+    },
+  },
+  withScriptParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_watcher+: {
+        [resourceLabel]+: {
+          script_parameters: value,
         },
       },
     },
@@ -114,33 +154,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutomationAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_watcher+: {
-        [resourceLabel]+: {
-          automation_account_id: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_watcher+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withScriptName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_watcher+: {
-        [resourceLabel]+: {
-          script_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_automation_watcher+: {
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

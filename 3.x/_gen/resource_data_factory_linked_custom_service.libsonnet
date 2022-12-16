@@ -1,93 +1,79 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  integration_runtime:: {
+    new(
+      name,
+      parameters=null
+    ):: std.prune(a={
+      name: name,
+      parameters: parameters,
+    }),
+  },
   new(
-    resourceLabel,
-    additional_properties=null,
     data_factory_id,
-    annotations=null,
-    description=null,
     name,
-    parameters=null,
+    resourceLabel,
     type,
     type_properties_json,
+    additional_properties=null,
+    annotations=null,
+    description=null,
     integration_runtime=null,
+    parameters=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_custom_service', label=resourceLabel, attrs=self.newAttrs(
     additional_properties=additional_properties,
-    data_factory_id=data_factory_id,
     annotations=annotations,
+    data_factory_id=data_factory_id,
     description=description,
+    integration_runtime=integration_runtime,
     name=name,
     parameters=parameters,
+    timeouts=timeouts,
     type=type,
-    type_properties_json=type_properties_json,
-    integration_runtime=integration_runtime,
-    timeouts=timeouts
+    type_properties_json=type_properties_json
   )),
   newAttrs(
-    annotations=null,
-    description=null,
-    name,
-    parameters=null,
-    additional_properties=null,
     data_factory_id,
+    name,
     type,
     type_properties_json,
+    additional_properties=null,
+    annotations=null,
+    description=null,
     integration_runtime=null,
+    parameters=null,
     timeouts=null
   ):: std.prune(a={
+    additional_properties: additional_properties,
     annotations: annotations,
+    data_factory_id: data_factory_id,
     description: description,
+    integration_runtime: integration_runtime,
     name: name,
     parameters: parameters,
-    additional_properties: additional_properties,
-    data_factory_id: data_factory_id,
+    timeouts: timeouts,
     type: type,
     type_properties_json: type_properties_json,
-    integration_runtime: integration_runtime,
-    timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_custom_service+: {
         [resourceLabel]+: {
           additional_properties: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_custom_service+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_custom_service+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_custom_service+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withTypePropertiesJson(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_custom_service+: {
-        [resourceLabel]+: {
-          type_properties_json: value,
         },
       },
     },
@@ -101,20 +87,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_custom_service+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_custom_service+: {
         [resourceLabel]+: {
           description: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_custom_service+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -137,14 +123,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  integration_runtime:: {
-    new(
-      name,
-      parameters=null
-    ):: std.prune(a={
-      name: name,
-      parameters: parameters,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_custom_service+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_custom_service+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -164,17 +159,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_custom_service+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
+  },
+  withTypePropertiesJson(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_custom_service+: {
+        [resourceLabel]+: {
+          type_properties_json: value,
+        },
+      },
+    },
   },
 }

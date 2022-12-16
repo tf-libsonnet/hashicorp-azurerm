@@ -1,42 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
     account_name,
-    resource_group_name,
+    dataSrcLabel,
     name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_netapp_snapshot_policy', label=dataSrcLabel, attrs=self.newAttrs(
     account_name=account_name,
-    resource_group_name=resource_group_name,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
     account_name,
-    resource_group_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
     account_name: account_name,
-    resource_group_name: resource_group_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_netapp_snapshot_policy+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_netapp_snapshot_policy+: {
         [dataSrcLabel]+: {
           account_name: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_netapp_snapshot_policy+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

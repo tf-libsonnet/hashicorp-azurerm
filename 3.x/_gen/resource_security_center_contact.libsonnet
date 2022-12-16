@@ -1,19 +1,19 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    email,
-    name=null,
-    phone=null,
     alert_notifications,
     alerts_to_admins,
+    email,
+    resourceLabel,
+    name=null,
+    phone=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_contact', label=resourceLabel, attrs=self.newAttrs(
+    alert_notifications=alert_notifications,
+    alerts_to_admins=alerts_to_admins,
     email=email,
     name=name,
     phone=phone,
-    alert_notifications=alert_notifications,
-    alerts_to_admins=alerts_to_admins,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,23 +31,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     phone: phone,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_contact+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPhone(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_contact+: {
-        [resourceLabel]+: {
-          phone: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAlertNotifications(resourceLabel, value):: {
     resource+: {
@@ -76,6 +71,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_contact+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPhone(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_contact+: {
+        [resourceLabel]+: {
+          phone: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_contact+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

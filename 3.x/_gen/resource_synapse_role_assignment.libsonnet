@@ -1,32 +1,43 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    synapse_workspace_id=null,
     principal_id,
+    resourceLabel,
     role_name,
     synapse_spark_pool_id=null,
+    synapse_workspace_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_role_assignment', label=resourceLabel, attrs=self.newAttrs(
-    synapse_workspace_id=synapse_workspace_id,
     principal_id=principal_id,
     role_name=role_name,
     synapse_spark_pool_id=synapse_spark_pool_id,
+    synapse_workspace_id=synapse_workspace_id,
     timeouts=timeouts
   )),
   newAttrs(
-    synapse_spark_pool_id=null,
-    synapse_workspace_id=null,
     principal_id,
     role_name,
+    synapse_spark_pool_id=null,
+    synapse_workspace_id=null,
     timeouts=null
   ):: std.prune(a={
-    synapse_spark_pool_id: synapse_spark_pool_id,
-    synapse_workspace_id: synapse_workspace_id,
     principal_id: principal_id,
     role_name: role_name,
+    synapse_spark_pool_id: synapse_spark_pool_id,
+    synapse_workspace_id: synapse_workspace_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withPrincipalId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_role_assignment+: {
@@ -80,16 +91,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

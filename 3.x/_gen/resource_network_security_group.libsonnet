@@ -1,44 +1,48 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    security_rule=null,
-    tags=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
+    security_rule=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_network_security_group', label=resourceLabel, attrs=self.newAttrs(
-    security_rule=security_rule,
-    tags=tags,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
+    security_rule=security_rule,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    security_rule=null,
-    tags=null,
     location,
     name,
     resource_group_name,
+    security_rule=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    security_rule: security_rule,
-    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
+    security_rule: security_rule,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_security_group+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withLocation(resourceLabel, value):: {
     resource+: {
@@ -76,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_security_group+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_network_security_group+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

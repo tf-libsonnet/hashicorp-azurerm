@@ -1,99 +1,87 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  ip_configuration:: {
+    new(
+      name,
+      public_ip_address_id,
+      subnet_id
+    ):: std.prune(a={
+      name: name,
+      public_ip_address_id: public_ip_address_id,
+      subnet_id: subnet_id,
+    }),
+  },
   new(
+    location,
+    name,
     resourceLabel,
-    ip_connect_enabled=null,
-    scale_units=null,
+    resource_group_name,
     copy_paste_enabled=null,
     file_copy_enabled=null,
-    resource_group_name,
-    sku=null,
-    name,
+    ip_configuration=null,
+    ip_connect_enabled=null,
+    scale_units=null,
     shareable_link_enabled=null,
-    location,
+    sku=null,
     tags=null,
-    tunneling_enabled=null,
     timeouts=null,
-    ip_configuration=null
+    tunneling_enabled=null
   ):: tf.withResource(type='azurerm_bastion_host', label=resourceLabel, attrs=self.newAttrs(
-    ip_connect_enabled=ip_connect_enabled,
-    scale_units=scale_units,
     copy_paste_enabled=copy_paste_enabled,
     file_copy_enabled=file_copy_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    name=name,
-    shareable_link_enabled=shareable_link_enabled,
+    ip_configuration=ip_configuration,
+    ip_connect_enabled=ip_connect_enabled,
     location=location,
+    name=name,
+    resource_group_name=resource_group_name,
+    scale_units=scale_units,
+    shareable_link_enabled=shareable_link_enabled,
+    sku=sku,
     tags=tags,
-    tunneling_enabled=tunneling_enabled,
     timeouts=timeouts,
-    ip_configuration=ip_configuration
+    tunneling_enabled=tunneling_enabled
   )),
   newAttrs(
-    scale_units=null,
-    tags=null,
+    location,
     name,
+    resource_group_name,
     copy_paste_enabled=null,
     file_copy_enabled=null,
-    location,
-    tunneling_enabled=null,
-    ip_connect_enabled=null,
-    resource_group_name,
-    sku=null,
-    shareable_link_enabled=null,
     ip_configuration=null,
-    timeouts=null
+    ip_connect_enabled=null,
+    scale_units=null,
+    shareable_link_enabled=null,
+    sku=null,
+    tags=null,
+    timeouts=null,
+    tunneling_enabled=null
   ):: std.prune(a={
-    scale_units: scale_units,
-    tags: tags,
-    name: name,
     copy_paste_enabled: copy_paste_enabled,
     file_copy_enabled: file_copy_enabled,
-    location: location,
-    tunneling_enabled: tunneling_enabled,
-    ip_connect_enabled: ip_connect_enabled,
-    resource_group_name: resource_group_name,
-    sku: sku,
-    shareable_link_enabled: shareable_link_enabled,
     ip_configuration: ip_configuration,
+    ip_connect_enabled: ip_connect_enabled,
+    location: location,
+    name: name,
+    resource_group_name: resource_group_name,
+    scale_units: scale_units,
+    shareable_link_enabled: shareable_link_enabled,
+    sku: sku,
+    tags: tags,
     timeouts: timeouts,
+    tunneling_enabled: tunneling_enabled,
   }),
-  withTunnelingEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          tunneling_enabled: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withShareableLinkEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          shareable_link_enabled: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withCopyPasteEnabled(resourceLabel, value):: {
     resource+: {
@@ -109,51 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bastion_host+: {
         [resourceLabel]+: {
           file_copy_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withScaleUnits(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          scale_units: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withIpConnectEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_bastion_host+: {
-        [resourceLabel]+: {
-          ip_connect_enabled: value,
         },
       },
     },
@@ -176,16 +119,77 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  ip_configuration:: {
-    new(
-      name,
-      public_ip_address_id,
-      subnet_id
-    ):: std.prune(a={
-      name: name,
-      public_ip_address_id: public_ip_address_id,
-      subnet_id: subnet_id,
-    }),
+  withIpConnectEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          ip_connect_enabled: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withScaleUnits(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          scale_units: value,
+        },
+      },
+    },
+  },
+  withShareableLinkEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          shareable_link_enabled: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -205,17 +209,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withTunnelingEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_bastion_host+: {
+        [resourceLabel]+: {
+          tunneling_enabled: value,
+        },
+      },
+    },
   },
 }

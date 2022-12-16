@@ -1,60 +1,164 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  backup:: {
+    new(
+      frequency,
+      time,
+      hour_duration=null,
+      hour_interval=null,
+      weekdays=null
+    ):: std.prune(a={
+      frequency: frequency,
+      hour_duration: hour_duration,
+      hour_interval: hour_interval,
+      time: time,
+      weekdays: weekdays,
+    }),
+  },
   new(
+    name,
+    recovery_vault_name,
     resourceLabel,
-    name,
-    policy_type=null,
-    recovery_vault_name,
     resource_group_name,
-    timezone=null,
-    instant_restore_retention_days=null,
-    retention_yearly=null,
-    timeouts=null,
     backup=null,
-    retention_daily=null,
-    retention_monthly=null,
-    retention_weekly=null
-  ):: tf.withResource(type='azurerm_backup_policy_vm', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    policy_type=policy_type,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    timezone=timezone,
-    instant_restore_retention_days=instant_restore_retention_days,
-    retention_yearly=retention_yearly,
-    timeouts=timeouts,
-    backup=backup,
-    retention_daily=retention_daily,
-    retention_monthly=retention_monthly,
-    retention_weekly=retention_weekly
-  )),
-  newAttrs(
-    resource_group_name,
-    timezone=null,
     instant_restore_retention_days=null,
-    name,
     policy_type=null,
-    recovery_vault_name,
+    retention_daily=null,
     retention_monthly=null,
     retention_weekly=null,
     retention_yearly=null,
     timeouts=null,
+    timezone=null
+  ):: tf.withResource(type='azurerm_backup_policy_vm', label=resourceLabel, attrs=self.newAttrs(
+    backup=backup,
+    instant_restore_retention_days=instant_restore_retention_days,
+    name=name,
+    policy_type=policy_type,
+    recovery_vault_name=recovery_vault_name,
+    resource_group_name=resource_group_name,
+    retention_daily=retention_daily,
+    retention_monthly=retention_monthly,
+    retention_weekly=retention_weekly,
+    retention_yearly=retention_yearly,
+    timeouts=timeouts,
+    timezone=timezone
+  )),
+  newAttrs(
+    name,
+    recovery_vault_name,
+    resource_group_name,
     backup=null,
-    retention_daily=null
+    instant_restore_retention_days=null,
+    policy_type=null,
+    retention_daily=null,
+    retention_monthly=null,
+    retention_weekly=null,
+    retention_yearly=null,
+    timeouts=null,
+    timezone=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    timezone: timezone,
+    backup: backup,
     instant_restore_retention_days: instant_restore_retention_days,
     name: name,
     policy_type: policy_type,
     recovery_vault_name: recovery_vault_name,
+    resource_group_name: resource_group_name,
+    retention_daily: retention_daily,
     retention_monthly: retention_monthly,
     retention_weekly: retention_weekly,
     retention_yearly: retention_yearly,
     timeouts: timeouts,
-    backup: backup,
-    retention_daily: retention_daily,
+    timezone: timezone,
   }),
+  retention_daily:: {
+    new(
+      count
+    ):: std.prune(a={
+      count: count,
+    }),
+  },
+  retention_monthly:: {
+    new(
+      count,
+      weekdays,
+      weeks
+    ):: std.prune(a={
+      count: count,
+      weekdays: weekdays,
+      weeks: weeks,
+    }),
+  },
+  retention_weekly:: {
+    new(
+      count,
+      weekdays
+    ):: std.prune(a={
+      count: count,
+      weekdays: weekdays,
+    }),
+  },
+  retention_yearly:: {
+    new(
+      count,
+      months,
+      weekdays,
+      weeks
+    ):: std.prune(a={
+      count: count,
+      months: months,
+      weekdays: weekdays,
+      weeks: weeks,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withBackup(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_vm+: {
+        [resourceLabel]+: {
+          backup: value,
+        },
+      },
+    },
+  },
+  withBackupMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_vm+: {
+        [resourceLabel]+: {
+          backup+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withInstantRestoreRetentionDays(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_vm+: {
+        [resourceLabel]+: {
+          instant_restore_retention_days: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_vm+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withPolicyType(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_vm+: {
@@ -82,29 +186,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimezone(resourceLabel, value):: {
+  withRetentionDaily(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_vm+: {
         [resourceLabel]+: {
-          timezone: value,
+          retention_daily: value,
         },
       },
     },
   },
-  withInstantRestoreRetentionDays(resourceLabel, value):: {
+  withRetentionDailyMixin(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_vm+: {
         [resourceLabel]+: {
-          instant_restore_retention_days: value,
+          retention_daily+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withRetentionMonthly(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_vm+: {
         [resourceLabel]+: {
-          name: value,
+          retention_monthly: value,
+        },
+      },
+    },
+  },
+  withRetentionMonthlyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_vm+: {
+        [resourceLabel]+: {
+          retention_monthly+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -127,15 +240,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  retention_weekly:: {
-    new(
-      weekdays,
-      count
-    ):: std.prune(a={
-      weekdays: weekdays,
-      count: count,
-    }),
-  },
   withRetentionYearly(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_vm+: {
@@ -153,19 +257,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  retention_yearly:: {
-    new(
-      count,
-      months,
-      weekdays,
-      weeks
-    ):: std.prune(a={
-      count: count,
-      months: months,
-      weekdays: weekdays,
-      weeks: weeks,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -185,104 +276,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
-  withBackup(resourceLabel, value):: {
+  withTimezone(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_vm+: {
         [resourceLabel]+: {
-          backup: value,
+          timezone: value,
         },
       },
     },
-  },
-  withBackupMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_vm+: {
-        [resourceLabel]+: {
-          backup+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  backup:: {
-    new(
-      frequency,
-      hour_duration=null,
-      hour_interval=null,
-      time,
-      weekdays=null
-    ):: std.prune(a={
-      frequency: frequency,
-      hour_duration: hour_duration,
-      hour_interval: hour_interval,
-      time: time,
-      weekdays: weekdays,
-    }),
-  },
-  withRetentionDaily(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_vm+: {
-        [resourceLabel]+: {
-          retention_daily: value,
-        },
-      },
-    },
-  },
-  withRetentionDailyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_vm+: {
-        [resourceLabel]+: {
-          retention_daily+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  retention_daily:: {
-    new(
-      count
-    ):: std.prune(a={
-      count: count,
-    }),
-  },
-  withRetentionMonthly(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_vm+: {
-        [resourceLabel]+: {
-          retention_monthly: value,
-        },
-      },
-    },
-  },
-  withRetentionMonthlyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_vm+: {
-        [resourceLabel]+: {
-          retention_monthly+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  retention_monthly:: {
-    new(
-      count,
-      weekdays,
-      weeks
-    ):: std.prune(a={
-      count: count,
-      weekdays: weekdays,
-      weeks: weeks,
-    }),
   },
 }

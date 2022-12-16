@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    enabled=null,
     logz_monitor_id,
     name,
+    resourceLabel,
+    enabled=null,
     tags=null,
     timeouts=null,
     user=null
@@ -19,18 +19,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   newAttrs(
     logz_monitor_id,
     name,
-    tags=null,
     enabled=null,
+    tags=null,
     timeouts=null,
     user=null
   ):: std.prune(a={
+    enabled: enabled,
     logz_monitor_id: logz_monitor_id,
     name: name,
     tags: tags,
-    enabled: enabled,
     timeouts: timeouts,
     user: user,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  user:: {
+    new(
+      email,
+      first_name,
+      last_name,
+      phone_number
+    ):: std.prune(a={
+      email: email,
+      first_name: first_name,
+      last_name: last_name,
+      phone_number: phone_number,
+    }),
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_sub_account+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
   withLogzMonitorId(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account+: {
@@ -58,15 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_sub_account+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account+: {
@@ -85,19 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withUser(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account+: {
@@ -115,18 +128,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  user:: {
-    new(
-      phone_number,
-      email,
-      first_name,
-      last_name
-    ):: std.prune(a={
-      phone_number: phone_number,
-      email: email,
-      first_name: first_name,
-      last_name: last_name,
-    }),
   },
 }

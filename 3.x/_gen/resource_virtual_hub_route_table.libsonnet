@@ -1,18 +1,18 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    labels=null,
     name,
+    resourceLabel,
     virtual_hub_id,
+    labels=null,
     route=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_hub_route_table', label=resourceLabel, attrs=self.newAttrs(
     labels=labels,
     name=name,
-    virtual_hub_id=virtual_hub_id,
     route=route,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_hub_id=virtual_hub_id
   )),
   newAttrs(
     name,
@@ -21,12 +21,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     route=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    virtual_hub_id: virtual_hub_id,
     labels: labels,
+    name: name,
     route: route,
     timeouts: timeouts,
+    virtual_hub_id: virtual_hub_id,
   }),
+  route:: {
+    new(
+      destinations,
+      destinations_type,
+      name,
+      next_hop,
+      next_hop_type=null
+    ):: std.prune(a={
+      destinations: destinations,
+      destinations_type: destinations_type,
+      name: name,
+      next_hop: next_hop,
+      next_hop_type: next_hop_type,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLabels(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_route_table+: {
@@ -41,15 +69,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_virtual_hub_route_table+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withVirtualHubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_route_table+: {
-        [resourceLabel]+: {
-          virtual_hub_id: value,
         },
       },
     },
@@ -72,21 +91,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  route:: {
-    new(
-      destinations,
-      destinations_type,
-      name,
-      next_hop,
-      next_hop_type=null
-    ):: std.prune(a={
-      destinations: destinations,
-      destinations_type: destinations_type,
-      name: name,
-      next_hop: next_hop,
-      next_hop_type: next_hop_type,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_route_table+: {
@@ -105,17 +109,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVirtualHubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_route_table+: {
+        [resourceLabel]+: {
+          virtual_hub_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
     private_cloud_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_vmware_express_route_authorization', label=resourceLabel, attrs=self.newAttrs(name=name, private_cloud_id=private_cloud_id, timeouts=timeouts)),
   newAttrs(
@@ -15,6 +15,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     private_cloud_id: private_cloud_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_express_route_authorization+: {
@@ -50,16 +61,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      create: create,
-      delete: delete,
-    }),
   },
 }

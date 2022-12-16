@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     nat_gateway_id,
+    resourceLabel,
     subnet_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_subnet_nat_gateway_association', label=resourceLabel, attrs=self.newAttrs(nat_gateway_id=nat_gateway_id, subnet_id=subnet_id, timeouts=timeouts)),
@@ -15,20 +15,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet_id: subnet_id,
     timeouts: timeouts,
   }),
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet_nat_gateway_association+: {
-        [resourceLabel]+: {
-          subnet_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withNatGatewayId(resourceLabel, value):: {
     resource+: {
       azurerm_subnet_nat_gateway_association+: {
         [resourceLabel]+: {
           nat_gateway_id: value,
+        },
+      },
+    },
+  },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet_nat_gateway_association+: {
+        [resourceLabel]+: {
+          subnet_id: value,
         },
       },
     },
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

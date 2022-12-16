@@ -1,36 +1,58 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    container_registry_name,
     name,
+    resourceLabel,
     resource_group_name,
     scope_map_id,
-    container_registry_name,
     enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_token', label=resourceLabel, attrs=self.newAttrs(
+    container_registry_name=container_registry_name,
+    enabled=enabled,
     name=name,
     resource_group_name=resource_group_name,
     scope_map_id=scope_map_id,
-    container_registry_name=container_registry_name,
-    enabled=enabled,
     timeouts=timeouts
   )),
   newAttrs(
+    container_registry_name,
+    name,
     resource_group_name,
     scope_map_id,
-    container_registry_name,
     enabled=null,
-    name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    scope_map_id: scope_map_id,
     container_registry_name: container_registry_name,
     enabled: enabled,
     name: name,
+    resource_group_name: resource_group_name,
+    scope_map_id: scope_map_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withContainerRegistryName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_token+: {
+        [resourceLabel]+: {
+          container_registry_name: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token+: {
@@ -67,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContainerRegistryName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_token+: {
-        [resourceLabel]+: {
-          container_registry_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

@@ -1,44 +1,104 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  ace:: {
+    new(
+      permissions,
+      type,
+      scope=null
+    ):: std.prune(a={
+      permissions: permissions,
+      scope: scope,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
+    filesystem_name,
     path,
     resource,
+    resourceLabel,
     storage_account_id,
-    filesystem_name,
+    ace=null,
     group=null,
     owner=null,
-    ace=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_data_lake_gen2_path', label=resourceLabel, attrs=self.newAttrs(
-    path=path,
-    resource=resource,
-    storage_account_id=storage_account_id,
+    ace=ace,
     filesystem_name=filesystem_name,
     group=group,
     owner=owner,
-    ace=ace,
+    path=path,
+    resource=resource,
+    storage_account_id=storage_account_id,
     timeouts=timeouts
   )),
   newAttrs(
+    filesystem_name,
+    path,
     resource,
     storage_account_id,
-    filesystem_name,
+    ace=null,
     group=null,
     owner=null,
-    path,
-    timeouts=null,
-    ace=null
+    timeouts=null
   ):: std.prune(a={
-    resource: resource,
-    storage_account_id: storage_account_id,
+    ace: ace,
     filesystem_name: filesystem_name,
     group: group,
     owner: owner,
     path: path,
+    resource: resource,
+    storage_account_id: storage_account_id,
     timeouts: timeouts,
-    ace: ace,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAce(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          ace: value,
+        },
+      },
+    },
+  },
+  withAceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          ace+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withFilesystemName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          filesystem_name: value,
+        },
+      },
+    },
+  },
+  withGroup(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          group: value,
+        },
+      },
+    },
+  },
   withOwner(resourceLabel, value):: {
     resource+: {
       azurerm_storage_data_lake_gen2_path+: {
@@ -75,53 +135,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFilesystemName(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          filesystem_name: value,
-        },
-      },
-    },
-  },
-  withGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          group: value,
-        },
-      },
-    },
-  },
-  withAce(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          ace: value,
-        },
-      },
-    },
-  },
-  withAceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          ace+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  ace:: {
-    new(
-      permissions,
-      scope=null,
-      type
-    ):: std.prune(a={
-      permissions: permissions,
-      scope: scope,
-      type: type,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_storage_data_lake_gen2_path+: {
@@ -139,18 +152,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     container_registry_task_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_task_schedule_run_now', label=resourceLabel, attrs=self.newAttrs(container_registry_task_id=container_registry_task_id, timeouts=timeouts)),
   newAttrs(
@@ -12,6 +12,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     container_registry_task_id: container_registry_task_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withContainerRegistryTaskId(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task_schedule_run_now+: {
@@ -38,16 +49,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

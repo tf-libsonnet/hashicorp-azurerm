@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     backup_repeating_time_intervals,
     default_retention_duration,
     name,
+    resourceLabel,
     resource_group_name,
     vault_name,
     retention_rule=null,
@@ -14,9 +14,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     default_retention_duration=default_retention_duration,
     name=name,
     resource_group_name=resource_group_name,
-    vault_name=vault_name,
     retention_rule=retention_rule,
-    timeouts=timeouts
+    timeouts=timeouts,
+    vault_name=vault_name
   )),
   newAttrs(
     backup_repeating_time_intervals,
@@ -31,10 +31,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     default_retention_duration: default_retention_duration,
     name: name,
     resource_group_name: resource_group_name,
-    vault_name: vault_name,
     retention_rule: retention_rule,
     timeouts: timeouts,
+    vault_name: vault_name,
   }),
+  retention_rule:: {
+    criteria:: {
+      new(
+        absolute_criteria=null,
+        days_of_week=null,
+        months_of_year=null,
+        scheduled_backup_times=null,
+        weeks_of_month=null
+      ):: std.prune(a={
+        absolute_criteria: absolute_criteria,
+        days_of_week: days_of_week,
+        months_of_year: months_of_year,
+        scheduled_backup_times: scheduled_backup_times,
+        weeks_of_month: weeks_of_month,
+      }),
+    },
+    new(
+      duration,
+      name,
+      priority,
+      criteria=null
+    ):: std.prune(a={
+      criteria: criteria,
+      duration: duration,
+      name: name,
+      priority: priority,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withBackupRepeatingTimeIntervals(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_policy_postgresql+: {
@@ -71,15 +112,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVaultName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_policy_postgresql+: {
-        [resourceLabel]+: {
-          vault_name: value,
-        },
-      },
-    },
-  },
   withRetentionRule(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_policy_postgresql+: {
@@ -96,34 +128,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           retention_rule+: if std.isArray(v=value) then value else [value],
         },
       },
-    },
-  },
-  retention_rule:: {
-    new(
-      duration,
-      name,
-      priority,
-      criteria=null
-    ):: std.prune(a={
-      duration: duration,
-      name: name,
-      priority: priority,
-      criteria: criteria,
-    }),
-    criteria:: {
-      new(
-        days_of_week=null,
-        months_of_year=null,
-        scheduled_backup_times=null,
-        weeks_of_month=null,
-        absolute_criteria=null
-      ):: std.prune(a={
-        days_of_week: days_of_week,
-        months_of_year: months_of_year,
-        scheduled_backup_times: scheduled_backup_times,
-        weeks_of_month: weeks_of_month,
-        absolute_criteria: absolute_criteria,
-      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -144,17 +148,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withVaultName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_policy_postgresql+: {
+        [resourceLabel]+: {
+          vault_name: value,
+        },
+      },
+    },
   },
 }

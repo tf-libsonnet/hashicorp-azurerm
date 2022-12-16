@@ -1,44 +1,57 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    automation_account_name,
     resourceLabel,
-    parameters=null,
     resource_group_name,
-    run_on=null,
     runbook_name,
     schedule_name,
-    automation_account_name,
     job_schedule_id=null,
+    parameters=null,
+    run_on=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_job_schedule', label=resourceLabel, attrs=self.newAttrs(
+    automation_account_name=automation_account_name,
+    job_schedule_id=job_schedule_id,
     parameters=parameters,
     resource_group_name=resource_group_name,
     run_on=run_on,
     runbook_name=runbook_name,
     schedule_name=schedule_name,
-    automation_account_name=automation_account_name,
-    job_schedule_id=job_schedule_id,
     timeouts=timeouts
   )),
   newAttrs(
-    schedule_name,
     automation_account_name,
+    resource_group_name,
+    runbook_name,
+    schedule_name,
     job_schedule_id=null,
     parameters=null,
-    resource_group_name,
     run_on=null,
-    runbook_name,
     timeouts=null
   ):: std.prune(a={
-    schedule_name: schedule_name,
     automation_account_name: automation_account_name,
     job_schedule_id: job_schedule_id,
     parameters: parameters,
     resource_group_name: resource_group_name,
     run_on: run_on,
     runbook_name: runbook_name,
+    schedule_name: schedule_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_job_schedule+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

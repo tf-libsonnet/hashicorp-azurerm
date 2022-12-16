@@ -2,8 +2,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    display_name=null,
     log_analytics_workspace_id,
+    display_name=null,
     name=null,
     timeouts=null
   ):: tf.withData(type='azurerm_sentinel_alert_rule_template', label=dataSrcLabel, attrs=self.newAttrs(
@@ -13,8 +13,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    display_name=null,
     log_analytics_workspace_id,
+    display_name=null,
     name=null,
     timeouts=null
   ):: std.prune(a={
@@ -23,6 +23,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withDisplayName(dataSrcLabel, value):: {
     data+: {
       azurerm_sentinel_alert_rule_template+: {
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

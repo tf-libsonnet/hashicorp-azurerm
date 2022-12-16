@@ -1,16 +1,16 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     location,
     maintenance_configuration_id,
+    resourceLabel,
     virtual_machine_scale_set_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_maintenance_assignment_virtual_machine_scale_set', label=resourceLabel, attrs=self.newAttrs(
     location=location,
     maintenance_configuration_id=maintenance_configuration_id,
-    virtual_machine_scale_set_id=virtual_machine_scale_set_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_machine_scale_set_id=virtual_machine_scale_set_id
   )),
   newAttrs(
     location,
@@ -20,9 +20,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   ):: std.prune(a={
     location: location,
     maintenance_configuration_id: maintenance_configuration_id,
-    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
     timeouts: timeouts,
+    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_maintenance_assignment_virtual_machine_scale_set+: {
@@ -37,15 +48,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_maintenance_assignment_virtual_machine_scale_set+: {
         [resourceLabel]+: {
           maintenance_configuration_id: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineScaleSetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_assignment_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          virtual_machine_scale_set_id: value,
         },
       },
     },
@@ -68,15 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withVirtualMachineScaleSetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_assignment_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          virtual_machine_scale_set_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,32 +1,58 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  location_data:: {
+    new(
+      name,
+      city=null,
+      district=null,
+      region=null
+    ):: std.prune(a={
+      city: city,
+      district: district,
+      name: name,
+      region: region,
+    }),
+  },
   new(
+    api_management_id,
+    name,
     resourceLabel,
     description=null,
-    name,
-    api_management_id,
-    timeouts=null,
-    location_data=null
+    location_data=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_api_management_gateway', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    name=name,
     api_management_id=api_management_id,
-    timeouts=timeouts,
-    location_data=location_data
+    description=description,
+    location_data=location_data,
+    name=name,
+    timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    name,
     api_management_id,
+    name,
+    description=null,
     location_data=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
-    name: name,
     api_management_id: api_management_id,
+    description: description,
     location_data: location_data,
+    name: name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withApiManagementId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_gateway+: {
@@ -41,15 +67,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_gateway+: {
         [resourceLabel]+: {
           description: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_gateway+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -72,18 +89,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  location_data:: {
-    new(
-      district=null,
-      name,
-      region=null,
-      city=null
-    ):: std.prune(a={
-      district: district,
-      name: name,
-      region: region,
-      city: city,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_gateway+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -102,18 +115,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

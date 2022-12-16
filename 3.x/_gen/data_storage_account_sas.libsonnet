@@ -1,52 +1,126 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
-    start,
     connection_string,
+    dataSrcLabel,
     expiry,
+    start,
     https_only=null,
     ip_addresses=null,
-    signed_version=null,
-    services=null,
-    timeouts=null,
     permissions=null,
-    resource_types=null
+    resource_types=null,
+    services=null,
+    signed_version=null,
+    timeouts=null
   ):: tf.withData(type='azurerm_storage_account_sas', label=dataSrcLabel, attrs=self.newAttrs(
-    start=start,
     connection_string=connection_string,
     expiry=expiry,
     https_only=https_only,
     ip_addresses=ip_addresses,
-    signed_version=signed_version,
-    services=services,
-    timeouts=timeouts,
     permissions=permissions,
-    resource_types=resource_types
+    resource_types=resource_types,
+    services=services,
+    signed_version=signed_version,
+    start=start,
+    timeouts=timeouts
   )),
   newAttrs(
-    ip_addresses=null,
-    signed_version=null,
-    start,
     connection_string,
     expiry,
+    start,
     https_only=null,
-    services=null,
-    timeouts=null,
+    ip_addresses=null,
     permissions=null,
-    resource_types=null
+    resource_types=null,
+    services=null,
+    signed_version=null,
+    timeouts=null
   ):: std.prune(a={
-    ip_addresses: ip_addresses,
-    signed_version: signed_version,
-    start: start,
     connection_string: connection_string,
     expiry: expiry,
     https_only: https_only,
-    services: services,
-    timeouts: timeouts,
+    ip_addresses: ip_addresses,
     permissions: permissions,
     resource_types: resource_types,
+    services: services,
+    signed_version: signed_version,
+    start: start,
+    timeouts: timeouts,
   }),
+  permissions:: {
+    new(
+      add,
+      create,
+      delete,
+      filter,
+      list,
+      process,
+      read,
+      tag,
+      update,
+      write
+    ):: std.prune(a={
+      add: add,
+      create: create,
+      delete: delete,
+      filter: filter,
+      list: list,
+      process: process,
+      read: read,
+      tag: tag,
+      update: update,
+      write: write,
+    }),
+  },
+  resource_types:: {
+    new(
+      container,
+      object,
+      service
+    ):: std.prune(a={
+      container: container,
+      object: object,
+      service: service,
+    }),
+  },
+  services:: {
+    new(
+      blob,
+      file,
+      queue,
+      table
+    ):: std.prune(a={
+      blob: blob,
+      file: file,
+      queue: queue,
+      table: table,
+    }),
+  },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withConnectionString(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
+  withExpiry(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          expiry: value,
+        },
+      },
+    },
+  },
   withHttpsOnly(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
@@ -65,38 +139,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSignedVersion(dataSrcLabel, value):: {
+  withPermissions(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
         [dataSrcLabel]+: {
-          signed_version: value,
+          permissions: value,
         },
       },
     },
   },
-  withStart(dataSrcLabel, value):: {
+  withPermissionsMixin(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
         [dataSrcLabel]+: {
-          start: value,
+          permissions+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withConnectionString(dataSrcLabel, value):: {
+  withResourceTypes(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
         [dataSrcLabel]+: {
-          connection_string: value,
+          resource_types: value,
         },
       },
     },
   },
-  withExpiry(dataSrcLabel, value):: {
+  withResourceTypesMixin(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
         [dataSrcLabel]+: {
-          expiry: value,
+          resource_types+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -119,18 +193,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  services:: {
-    new(
-      file,
-      queue,
-      table,
-      blob
-    ):: std.prune(a={
-      file: file,
-      queue: queue,
-      table: table,
-      blob: blob,
-    }),
+  withSignedVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          signed_version: value,
+        },
+      },
+    },
+  },
+  withStart(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          start: value,
+        },
+      },
+    },
   },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
@@ -149,84 +228,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
-  },
-  withPermissions(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          permissions: value,
-        },
-      },
-    },
-  },
-  withPermissionsMixin(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          permissions+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  permissions:: {
-    new(
-      write,
-      delete,
-      filter,
-      process,
-      list,
-      read,
-      add,
-      tag,
-      update,
-      create
-    ):: std.prune(a={
-      write: write,
-      delete: delete,
-      filter: filter,
-      process: process,
-      list: list,
-      read: read,
-      add: add,
-      tag: tag,
-      update: update,
-      create: create,
-    }),
-  },
-  withResourceTypes(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          resource_types: value,
-        },
-      },
-    },
-  },
-  withResourceTypesMixin(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          resource_types+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  resource_types:: {
-    new(
-      service,
-      container,
-      object
-    ):: std.prune(a={
-      service: service,
-      container: container,
-      object: object,
-    }),
   },
 }

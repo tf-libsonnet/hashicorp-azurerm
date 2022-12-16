@@ -1,36 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  active_directory:: {
+    new(
+      dns_servers,
+      domain,
+      password,
+      smb_server_name,
+      username,
+      organizational_unit=null
+    ):: std.prune(a={
+      dns_servers: dns_servers,
+      domain: domain,
+      organizational_unit: organizational_unit,
+      password: password,
+      smb_server_name: smb_server_name,
+      username: username,
+    }),
+  },
   new(
-    resourceLabel,
-    name,
-    resource_group_name,
-    tags=null,
     location,
+    name,
+    resourceLabel,
+    resource_group_name,
     active_directory=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_netapp_account', label=resourceLabel, attrs=self.newAttrs(
+    active_directory=active_directory,
+    location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    location=location,
-    active_directory=active_directory,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
     name,
     resource_group_name,
-    tags=null,
-    location,
     active_directory=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    active_directory: active_directory,
+    location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    location: location,
-    active_directory: active_directory,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withActiveDirectory(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_account+: {
+        [resourceLabel]+: {
+          active_directory: value,
+        },
+      },
+    },
+  },
+  withActiveDirectoryMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_account+: {
+        [resourceLabel]+: {
+          active_directory+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_account+: {
@@ -67,41 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withActiveDirectory(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_account+: {
-        [resourceLabel]+: {
-          active_directory: value,
-        },
-      },
-    },
-  },
-  withActiveDirectoryMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_account+: {
-        [resourceLabel]+: {
-          active_directory+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  active_directory:: {
-    new(
-      dns_servers,
-      domain,
-      organizational_unit=null,
-      password,
-      smb_server_name,
-      username
-    ):: std.prune(a={
-      dns_servers: dns_servers,
-      domain: domain,
-      organizational_unit: organizational_unit,
-      password: password,
-      smb_server_name: smb_server_name,
-      username: username,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_account+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

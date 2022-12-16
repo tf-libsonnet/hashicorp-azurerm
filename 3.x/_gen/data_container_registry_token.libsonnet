@@ -1,15 +1,15 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
-    resource_group_name,
     container_registry_name,
+    dataSrcLabel,
     name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_container_registry_token', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     container_registry_name=container_registry_name,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withContainerRegistryName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_container_registry_token+: {
+        [dataSrcLabel]+: {
+          container_registry_name: value,
+        },
+      },
+    },
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_container_registry_token+: {
@@ -37,15 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_container_registry_token+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withContainerRegistryName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_container_registry_token+: {
-        [dataSrcLabel]+: {
-          container_registry_name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

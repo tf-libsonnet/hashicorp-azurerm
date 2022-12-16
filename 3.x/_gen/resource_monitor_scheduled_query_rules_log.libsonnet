@@ -1,60 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  criteria:: {
+    dimension:: {
+      new(
+        name,
+        values,
+        operator=null
+      ):: std.prune(a={
+        name: name,
+        operator: operator,
+        values: values,
+      }),
+    },
+    new(
+      metric_name,
+      dimension=null
+    ):: std.prune(a={
+      dimension: dimension,
+      metric_name: metric_name,
+    }),
+  },
   new(
-    resourceLabel,
-    enabled=null,
-    description=null,
-    tags=null,
+    data_source_id,
     location,
     name,
+    resourceLabel,
     resource_group_name,
     authorized_resource_ids=null,
-    data_source_id,
     criteria=null,
+    description=null,
+    enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_scheduled_query_rules_log', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
+    authorized_resource_ids=authorized_resource_ids,
+    criteria=criteria,
+    data_source_id=data_source_id,
     description=description,
-    tags=tags,
+    enabled=enabled,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    authorized_resource_ids=authorized_resource_ids,
-    data_source_id=data_source_id,
-    criteria=criteria,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    tags=null,
-    authorized_resource_ids=null,
     data_source_id,
-    enabled=null,
     location,
     name,
     resource_group_name,
+    authorized_resource_ids=null,
     criteria=null,
+    description=null,
+    enabled=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
-    tags: tags,
     authorized_resource_ids: authorized_resource_ids,
+    criteria: criteria,
     data_source_id: data_source_id,
+    description: description,
     enabled: enabled,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    criteria: criteria,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_log+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAuthorizedResourceIds(resourceLabel, value):: {
     resource+: {
@@ -65,11 +89,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCriteria(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_log+: {
+        [resourceLabel]+: {
+          criteria: value,
+        },
+      },
+    },
+  },
+  withCriteriaMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_log+: {
+        [resourceLabel]+: {
+          criteria+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withDataSourceId(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_log+: {
         [resourceLabel]+: {
           data_source_id: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_log+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -110,11 +161,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_log+: {
         [resourceLabel]+: {
-          description: value,
+          tags: value,
         },
       },
     },
@@ -135,57 +186,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           timeouts+: value,
         },
       },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withCriteria(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_log+: {
-        [resourceLabel]+: {
-          criteria: value,
-        },
-      },
-    },
-  },
-  withCriteriaMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_log+: {
-        [resourceLabel]+: {
-          criteria+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  criteria:: {
-    new(
-      metric_name,
-      dimension=null
-    ):: std.prune(a={
-      metric_name: metric_name,
-      dimension: dimension,
-    }),
-    dimension:: {
-      new(
-        operator=null,
-        values,
-        name
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-        name: name,
-      }),
     },
   },
 }

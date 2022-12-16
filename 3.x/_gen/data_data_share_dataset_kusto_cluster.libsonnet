@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    share_id,
     name,
+    share_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_data_share_dataset_kusto_cluster', label=dataSrcLabel, attrs=self.newAttrs(share_id=share_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_data_share_dataset_kusto_cluster', label=dataSrcLabel, attrs=self.newAttrs(name=name, share_id=share_id, timeouts=timeouts)),
   newAttrs(
     name,
     share_id,
@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     share_id: share_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_data_share_dataset_kusto_cluster+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

@@ -1,69 +1,136 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  azure_blob_storage_location:: {
+    new(
+      container,
+      dynamic_container_enabled=null,
+      dynamic_filename_enabled=null,
+      dynamic_path_enabled=null,
+      filename=null,
+      path=null
+    ):: std.prune(a={
+      container: container,
+      dynamic_container_enabled: dynamic_container_enabled,
+      dynamic_filename_enabled: dynamic_filename_enabled,
+      dynamic_path_enabled: dynamic_path_enabled,
+      filename: filename,
+      path: path,
+    }),
+  },
+  compression:: {
+    new(
+      type,
+      level=null
+    ):: std.prune(a={
+      level: level,
+      type: type,
+    }),
+  },
+  http_server_location:: {
+    new(
+      filename,
+      path,
+      relative_url,
+      dynamic_filename_enabled=null,
+      dynamic_path_enabled=null
+    ):: std.prune(a={
+      dynamic_filename_enabled: dynamic_filename_enabled,
+      dynamic_path_enabled: dynamic_path_enabled,
+      filename: filename,
+      path: path,
+      relative_url: relative_url,
+    }),
+  },
   new(
-    resourceLabel,
-    folder=null,
-    annotations=null,
-    description=null,
+    data_factory_id,
     linked_service_name,
     name,
-    parameters=null,
+    resourceLabel,
     additional_properties=null,
-    data_factory_id,
-    http_server_location=null,
-    sftp_server_location=null,
-    timeouts=null,
+    annotations=null,
     azure_blob_storage_location=null,
-    compression=null
+    compression=null,
+    description=null,
+    folder=null,
+    http_server_location=null,
+    parameters=null,
+    sftp_server_location=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_binary', label=resourceLabel, attrs=self.newAttrs(
-    folder=folder,
+    additional_properties=additional_properties,
     annotations=annotations,
+    azure_blob_storage_location=azure_blob_storage_location,
+    compression=compression,
+    data_factory_id=data_factory_id,
     description=description,
+    folder=folder,
+    http_server_location=http_server_location,
     linked_service_name=linked_service_name,
     name=name,
     parameters=parameters,
-    additional_properties=additional_properties,
-    data_factory_id=data_factory_id,
-    http_server_location=http_server_location,
     sftp_server_location=sftp_server_location,
-    timeouts=timeouts,
-    azure_blob_storage_location=azure_blob_storage_location,
-    compression=compression
+    timeouts=timeouts
   )),
   newAttrs(
     data_factory_id,
-    folder=null,
-    parameters=null,
-    annotations=null,
-    description=null,
     linked_service_name,
     name,
     additional_properties=null,
-    timeouts=null,
+    annotations=null,
     azure_blob_storage_location=null,
     compression=null,
+    description=null,
+    folder=null,
     http_server_location=null,
-    sftp_server_location=null
+    parameters=null,
+    sftp_server_location=null,
+    timeouts=null
   ):: std.prune(a={
-    data_factory_id: data_factory_id,
-    folder: folder,
-    parameters: parameters,
-    annotations: annotations,
-    description: description,
-    linked_service_name: linked_service_name,
-    name: name,
     additional_properties: additional_properties,
-    timeouts: timeouts,
+    annotations: annotations,
     azure_blob_storage_location: azure_blob_storage_location,
     compression: compression,
+    data_factory_id: data_factory_id,
+    description: description,
+    folder: folder,
     http_server_location: http_server_location,
+    linked_service_name: linked_service_name,
+    name: name,
+    parameters: parameters,
     sftp_server_location: sftp_server_location,
+    timeouts: timeouts,
   }),
-  withFolder(resourceLabel, value):: {
+  sftp_server_location:: {
+    new(
+      filename,
+      path,
+      dynamic_filename_enabled=null,
+      dynamic_path_enabled=null
+    ):: std.prune(a={
+      dynamic_filename_enabled: dynamic_filename_enabled,
+      dynamic_path_enabled: dynamic_path_enabled,
+      filename: filename,
+      path: path,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_binary+: {
         [resourceLabel]+: {
-          folder: value,
+          additional_properties: value,
         },
       },
     },
@@ -77,11 +144,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAzureBlobStorageLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          azure_blob_storage_location: value,
+        },
+      },
+    },
+  },
+  withAzureBlobStorageLocationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          azure_blob_storage_location+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withCompression(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          compression: value,
+        },
+      },
+    },
+  },
+  withCompressionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          compression+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_binary+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          folder: value,
+        },
+      },
+    },
+  },
+  withHttpServerLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          http_server_location: value,
+        },
+      },
+    },
+  },
+  withHttpServerLocationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_binary+: {
+        [resourceLabel]+: {
+          http_server_location+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -113,20 +252,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
+  withSftpServerLocation(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_binary+: {
         [resourceLabel]+: {
-          additional_properties: value,
+          sftp_server_location: value,
         },
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
+  withSftpServerLocationMixin(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_binary+: {
         [resourceLabel]+: {
-          data_factory_id: value,
+          sftp_server_location+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -148,144 +287,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withAzureBlobStorageLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          azure_blob_storage_location: value,
-        },
-      },
-    },
-  },
-  withAzureBlobStorageLocationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          azure_blob_storage_location+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  azure_blob_storage_location:: {
-    new(
-      container,
-      dynamic_container_enabled=null,
-      dynamic_filename_enabled=null,
-      dynamic_path_enabled=null,
-      filename=null,
-      path=null
-    ):: std.prune(a={
-      container: container,
-      dynamic_container_enabled: dynamic_container_enabled,
-      dynamic_filename_enabled: dynamic_filename_enabled,
-      dynamic_path_enabled: dynamic_path_enabled,
-      filename: filename,
-      path: path,
-    }),
-  },
-  withCompression(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          compression: value,
-        },
-      },
-    },
-  },
-  withCompressionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          compression+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  compression:: {
-    new(
-      level=null,
-      type
-    ):: std.prune(a={
-      level: level,
-      type: type,
-    }),
-  },
-  withHttpServerLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          http_server_location: value,
-        },
-      },
-    },
-  },
-  withHttpServerLocationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          http_server_location+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  http_server_location:: {
-    new(
-      filename,
-      path,
-      relative_url,
-      dynamic_filename_enabled=null,
-      dynamic_path_enabled=null
-    ):: std.prune(a={
-      filename: filename,
-      path: path,
-      relative_url: relative_url,
-      dynamic_filename_enabled: dynamic_filename_enabled,
-      dynamic_path_enabled: dynamic_path_enabled,
-    }),
-  },
-  withSftpServerLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          sftp_server_location: value,
-        },
-      },
-    },
-  },
-  withSftpServerLocationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_binary+: {
-        [resourceLabel]+: {
-          sftp_server_location+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  sftp_server_location:: {
-    new(
-      filename,
-      path,
-      dynamic_filename_enabled=null,
-      dynamic_path_enabled=null
-    ):: std.prune(a={
-      filename: filename,
-      path: path,
-      dynamic_filename_enabled: dynamic_filename_enabled,
-      dynamic_path_enabled: dynamic_path_enabled,
-    }),
   },
 }

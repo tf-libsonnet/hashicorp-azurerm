@@ -2,27 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    tags=null,
-    resource_group_name,
     name,
+    resource_group_name,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_app_service_certificate', label=dataSrcLabel, attrs=self.newAttrs(
-    tags=tags,
-    resource_group_name=resource_group_name,
     name=name,
+    resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     name,
+    resource_group_name,
     tags=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     name: name,
+    resource_group_name: resource_group_name,
     tags: tags,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_app_service_certificate+: {
@@ -32,20 +39,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_app_service_certificate+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_app_service_certificate+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(dataSrcLabel, value):: {
+    data+: {
+      azurerm_app_service_certificate+: {
+        [dataSrcLabel]+: {
+          tags: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

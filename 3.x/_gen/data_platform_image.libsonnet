@@ -6,48 +6,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     offer,
     publisher,
     sku,
-    version=null,
-    timeouts=null
+    timeouts=null,
+    version=null
   ):: tf.withData(type='azurerm_platform_image', label=dataSrcLabel, attrs=self.newAttrs(
     location=location,
     offer=offer,
     publisher=publisher,
     sku=sku,
-    version=version,
-    timeouts=timeouts
+    timeouts=timeouts,
+    version=version
   )),
   newAttrs(
-    version=null,
     location,
     offer,
     publisher,
     sku,
-    timeouts=null
+    timeouts=null,
+    version=null
   ):: std.prune(a={
-    version: version,
     location: location,
     offer: offer,
     publisher: publisher,
     sku: sku,
     timeouts: timeouts,
+    version: version,
   }),
-  withSku(dataSrcLabel, value):: {
-    data+: {
-      azurerm_platform_image+: {
-        [dataSrcLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withVersion(dataSrcLabel, value):: {
-    data+: {
-      azurerm_platform_image+: {
-        [dataSrcLabel]+: {
-          version: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withLocation(dataSrcLabel, value):: {
     data+: {
@@ -76,6 +65,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSku(dataSrcLabel, value):: {
+    data+: {
+      azurerm_platform_image+: {
+        [dataSrcLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_platform_image+: {
@@ -94,11 +92,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_platform_image+: {
+        [dataSrcLabel]+: {
+          version: value,
+        },
+      },
+    },
   },
 }

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    description=null,
     name,
+    resourceLabel,
     synapse_workspace_id,
+    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_integration_runtime_self_hosted', label=resourceLabel, attrs=self.newAttrs(
     description=description,
@@ -13,9 +13,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
     name,
     synapse_workspace_id,
+    description=null,
     timeouts=null
   ):: std.prune(a={
     description: description,
@@ -23,14 +23,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     synapse_workspace_id: synapse_workspace_id,
     timeouts: timeouts,
   }),
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_integration_runtime_self_hosted+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDescription(resourceLabel, value):: {
     resource+: {
@@ -46,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_integration_runtime_self_hosted+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_integration_runtime_self_hosted+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
         },
       },
     },
@@ -67,18 +80,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

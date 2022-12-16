@@ -1,61 +1,103 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    data_factory_id,
+    linked_service_name,
+    name,
     resourceLabel,
     additional_properties=null,
-    linked_service_name,
-    parameters=null,
-    folder=null,
-    table_name=null,
-    data_factory_id,
-    description=null,
-    name,
     annotations=null,
+    description=null,
+    folder=null,
+    parameters=null,
     schema_column=null,
+    table_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_postgresql', label=resourceLabel, attrs=self.newAttrs(
     additional_properties=additional_properties,
-    linked_service_name=linked_service_name,
-    parameters=parameters,
-    folder=folder,
-    table_name=table_name,
+    annotations=annotations,
     data_factory_id=data_factory_id,
     description=description,
+    folder=folder,
+    linked_service_name=linked_service_name,
     name=name,
-    annotations=annotations,
+    parameters=parameters,
     schema_column=schema_column,
+    table_name=table_name,
     timeouts=timeouts
   )),
   newAttrs(
-    folder=null,
-    table_name=null,
-    annotations=null,
     data_factory_id,
-    description=null,
     linked_service_name,
     name,
-    parameters=null,
     additional_properties=null,
+    annotations=null,
+    description=null,
+    folder=null,
+    parameters=null,
     schema_column=null,
+    table_name=null,
     timeouts=null
   ):: std.prune(a={
-    folder: folder,
-    table_name: table_name,
+    additional_properties: additional_properties,
     annotations: annotations,
     data_factory_id: data_factory_id,
     description: description,
+    folder: folder,
     linked_service_name: linked_service_name,
     name: name,
     parameters: parameters,
-    additional_properties: additional_properties,
     schema_column: schema_column,
+    table_name: table_name,
     timeouts: timeouts,
   }),
-  withFolder(resourceLabel, value):: {
+  schema_column:: {
+    new(
+      name,
+      description=null,
+      type=null
+    ):: std.prune(a={
+      description: description,
+      name: name,
+      type: type,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_postgresql+: {
         [resourceLabel]+: {
-          folder: value,
+          additional_properties: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
         },
       },
     },
@@ -65,6 +107,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_dataset_postgresql+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          folder: value,
         },
       },
     },
@@ -96,42 +147,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          additional_properties: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withTableName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          table_name: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
   withSchemaColumn(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_postgresql+: {
@@ -150,16 +165,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  schema_column:: {
-    new(
-      description=null,
-      name,
-      type=null
-    ):: std.prune(a={
-      description: description,
-      name: name,
-      type: type,
-    }),
+  withTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          table_name: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -178,18 +191,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

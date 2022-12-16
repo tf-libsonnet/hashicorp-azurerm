@@ -1,48 +1,52 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    location,
+    name,
     resourceLabel,
     resource_group_name,
     scale_units,
-    tags=null,
     virtual_hub_id,
-    location,
-    name,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_express_route_gateway', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
+    name=name,
     resource_group_name=resource_group_name,
     scale_units=scale_units,
     tags=tags,
-    virtual_hub_id=virtual_hub_id,
-    location=location,
-    name=name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_hub_id=virtual_hub_id
   )),
   newAttrs(
-    tags=null,
-    virtual_hub_id,
     location,
     name,
     resource_group_name,
     scale_units,
+    virtual_hub_id,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    virtual_hub_id: virtual_hub_id,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     scale_units: scale_units,
+    tags: tags,
     timeouts: timeouts,
+    virtual_hub_id: virtual_hub_id,
   }),
-  withVirtualHubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_gateway+: {
-        [resourceLabel]+: {
-          virtual_hub_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withLocation(resourceLabel, value):: {
     resource+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVirtualHubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_gateway+: {
+        [resourceLabel]+: {
+          virtual_hub_id: value,
+        },
+      },
+    },
   },
 }

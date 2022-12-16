@@ -1,58 +1,123 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  autoscale_settings:: {
+    new(
+      max_throughput=null
+    ):: std.prune(a={
+      max_throughput: max_throughput,
+    }),
+  },
   new(
-    resourceLabel,
-    default_ttl=null,
-    name,
-    throughput=null,
-    analytical_storage_ttl=null,
     cassandra_keyspace_id,
+    name,
+    resourceLabel,
+    analytical_storage_ttl=null,
     autoscale_settings=null,
+    default_ttl=null,
     schema=null,
+    throughput=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_cassandra_table', label=resourceLabel, attrs=self.newAttrs(
+    analytical_storage_ttl=analytical_storage_ttl,
+    autoscale_settings=autoscale_settings,
+    cassandra_keyspace_id=cassandra_keyspace_id,
     default_ttl=default_ttl,
     name=name,
-    throughput=throughput,
-    analytical_storage_ttl=analytical_storage_ttl,
-    cassandra_keyspace_id=cassandra_keyspace_id,
-    autoscale_settings=autoscale_settings,
     schema=schema,
+    throughput=throughput,
     timeouts=timeouts
   )),
   newAttrs(
-    throughput=null,
-    analytical_storage_ttl=null,
     cassandra_keyspace_id,
-    default_ttl=null,
     name,
+    analytical_storage_ttl=null,
     autoscale_settings=null,
+    default_ttl=null,
     schema=null,
+    throughput=null,
     timeouts=null
   ):: std.prune(a={
-    throughput: throughput,
     analytical_storage_ttl: analytical_storage_ttl,
+    autoscale_settings: autoscale_settings,
     cassandra_keyspace_id: cassandra_keyspace_id,
     default_ttl: default_ttl,
     name: name,
-    autoscale_settings: autoscale_settings,
     schema: schema,
+    throughput: throughput,
     timeouts: timeouts,
   }),
-  withThroughput(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_table+: {
-        [resourceLabel]+: {
-          throughput: value,
-        },
-      },
+  schema:: {
+    cluster_key:: {
+      new(
+        name,
+        order_by
+      ):: std.prune(a={
+        name: name,
+        order_by: order_by,
+      }),
     },
+    column:: {
+      new(
+        name,
+        type
+      ):: std.prune(a={
+        name: name,
+        type: type,
+      }),
+    },
+    new(
+      cluster_key=null,
+      column=null,
+      partition_key=null
+    ):: std.prune(a={
+      cluster_key: cluster_key,
+      column: column,
+      partition_key: partition_key,
+    }),
+    partition_key:: {
+      new(
+        name
+      ):: std.prune(a={
+        name: name,
+      }),
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAnalyticalStorageTtl(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_table+: {
         [resourceLabel]+: {
           analytical_storage_ttl: value,
+        },
+      },
+    },
+  },
+  withAutoscaleSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_table+: {
+        [resourceLabel]+: {
+          autoscale_settings: value,
+        },
+      },
+    },
+  },
+  withAutoscaleSettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_table+: {
+        [resourceLabel]+: {
+          autoscale_settings+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -84,31 +149,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutoscaleSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_table+: {
-        [resourceLabel]+: {
-          autoscale_settings: value,
-        },
-      },
-    },
-  },
-  withAutoscaleSettingsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_table+: {
-        [resourceLabel]+: {
-          autoscale_settings+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  autoscale_settings:: {
-    new(
-      max_throughput=null
-    ):: std.prune(a={
-      max_throughput: max_throughput,
-    }),
-  },
   withSchema(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_table+: {
@@ -127,40 +167,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  schema:: {
-    new(
-      cluster_key=null,
-      column=null,
-      partition_key=null
-    ):: std.prune(a={
-      cluster_key: cluster_key,
-      column: column,
-      partition_key: partition_key,
-    }),
-    partition_key:: {
-      new(
-        name
-      ):: std.prune(a={
-        name: name,
-      }),
-    },
-    cluster_key:: {
-      new(
-        name,
-        order_by
-      ):: std.prune(a={
-        name: name,
-        order_by: order_by,
-      }),
-    },
-    column:: {
-      new(
-        name,
-        type
-      ):: std.prune(a={
-        name: name,
-        type: type,
-      }),
+  withThroughput(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_table+: {
+        [resourceLabel]+: {
+          throughput: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -180,18 +193,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

@@ -1,32 +1,45 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    value,
     name,
+    resourceLabel,
     resource_group_name,
     server_name,
+    value,
     timeouts=null
   ):: tf.withResource(type='azurerm_postgresql_configuration', label=resourceLabel, attrs=self.newAttrs(
-    value=value,
     name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    value=value
   )),
   newAttrs(
+    name,
     resource_group_name,
     server_name,
     value,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
-    value: value,
-    name: name,
     timeouts: timeouts,
+    value: value,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_configuration+: {
@@ -54,15 +67,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_configuration+: {
-        [resourceLabel]+: {
-          value: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_configuration+: {
@@ -81,17 +85,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_configuration+: {
+        [resourceLabel]+: {
+          value: value,
+        },
+      },
+    },
   },
 }

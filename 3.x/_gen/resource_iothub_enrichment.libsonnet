@@ -1,62 +1,48 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    endpoint_names,
     iothub_name,
     key,
+    resourceLabel,
     resource_group_name,
     value,
-    endpoint_names,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_enrichment', label=resourceLabel, attrs=self.newAttrs(
+    endpoint_names=endpoint_names,
     iothub_name=iothub_name,
     key=key,
     resource_group_name=resource_group_name,
-    value=value,
-    endpoint_names=endpoint_names,
-    timeouts=timeouts
+    timeouts=timeouts,
+    value=value
   )),
   newAttrs(
-    value,
     endpoint_names,
     iothub_name,
     key,
     resource_group_name,
+    value,
     timeouts=null
   ):: std.prune(a={
-    value: value,
     endpoint_names: endpoint_names,
     iothub_name: iothub_name,
     key: key,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
+    value: value,
   }),
-  withKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_enrichment+: {
-        [resourceLabel]+: {
-          key: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_enrichment+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_enrichment+: {
-        [resourceLabel]+: {
-          value: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withEndpointNames(resourceLabel, value):: {
     resource+: {
@@ -72,6 +58,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_enrichment+: {
         [resourceLabel]+: {
           iothub_name: value,
+        },
+      },
+    },
+  },
+  withKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_enrichment+: {
+        [resourceLabel]+: {
+          key: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_enrichment+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -94,17 +98,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_enrichment+: {
+        [resourceLabel]+: {
+          value: value,
+        },
+      },
+    },
   },
 }

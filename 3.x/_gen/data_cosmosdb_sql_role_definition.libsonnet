@@ -1,15 +1,15 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    account_name,
     dataSrcLabel,
     resource_group_name,
     role_definition_id,
-    account_name,
     timeouts=null
   ):: tf.withData(type='azurerm_cosmosdb_sql_role_definition', label=dataSrcLabel, attrs=self.newAttrs(
+    account_name=account_name,
     resource_group_name=resource_group_name,
     role_definition_id=role_definition_id,
-    account_name=account_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     role_definition_id: role_definition_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_cosmosdb_sql_role_definition+: {
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

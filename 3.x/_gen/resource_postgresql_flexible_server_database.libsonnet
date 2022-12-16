@@ -1,17 +1,17 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     server_id,
     charset=null,
     collation=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_postgresql_flexible_server_database', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    server_id=server_id,
     charset=charset,
     collation=collation,
+    name=name,
+    server_id=server_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -21,29 +21,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     collation=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    server_id: server_id,
     charset: charset,
     collation: collation,
+    name: name,
+    server_id: server_id,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server_database+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withServerId(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server_database+: {
-        [resourceLabel]+: {
-          server_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withCharset(resourceLabel, value):: {
     resource+: {
@@ -59,6 +52,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_postgresql_flexible_server_database+: {
         [resourceLabel]+: {
           collation: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server_database+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withServerId(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server_database+: {
+        [resourceLabel]+: {
+          server_id: value,
         },
       },
     },
@@ -80,16 +91,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

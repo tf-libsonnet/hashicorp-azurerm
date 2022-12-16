@@ -1,61 +1,56 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     media_services_account_name,
     name,
+    resourceLabel,
     resource_group_name,
-    storage_account_name=null,
     alternate_id=null,
     container=null,
     description=null,
+    storage_account_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_media_asset', label=resourceLabel, attrs=self.newAttrs(
+    alternate_id=alternate_id,
+    container=container,
+    description=description,
     media_services_account_name=media_services_account_name,
     name=name,
     resource_group_name=resource_group_name,
     storage_account_name=storage_account_name,
-    alternate_id=alternate_id,
-    container=container,
-    description=description,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
     media_services_account_name,
     name,
     resource_group_name,
-    storage_account_name=null,
     alternate_id=null,
     container=null,
+    description=null,
+    storage_account_name=null,
     timeouts=null
   ):: std.prune(a={
+    alternate_id: alternate_id,
+    container: container,
     description: description,
     media_services_account_name: media_services_account_name,
     name: name,
     resource_group_name: resource_group_name,
     storage_account_name: storage_account_name,
-    alternate_id: alternate_id,
-    container: container,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_asset+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_asset+: {
-        [resourceLabel]+: {
-          storage_account_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAlternateId(resourceLabel, value):: {
     resource+: {
@@ -102,6 +97,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_asset+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_asset+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_media_asset+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

@@ -1,79 +1,110 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  external_mapping:: {
+    new(
+      address_space,
+      port_range=null
+    ):: std.prune(a={
+      address_space: address_space,
+      port_range: port_range,
+    }),
+  },
+  internal_mapping:: {
+    new(
+      address_space,
+      port_range=null
+    ):: std.prune(a={
+      address_space: address_space,
+      port_range: port_range,
+    }),
+  },
   new(
+    name,
     resourceLabel,
-    internal_address_space_mappings=null,
-    external_address_space_mappings=null,
     resource_group_name,
+    vpn_gateway_id,
+    external_address_space_mappings=null,
+    external_mapping=null,
+    internal_address_space_mappings=null,
+    internal_mapping=null,
     ip_configuration_id=null,
     mode=null,
-    name,
-    type=null,
-    vpn_gateway_id,
-    internal_mapping=null,
     timeouts=null,
-    external_mapping=null
+    type=null
   ):: tf.withResource(type='azurerm_vpn_gateway_nat_rule', label=resourceLabel, attrs=self.newAttrs(
-    internal_address_space_mappings=internal_address_space_mappings,
     external_address_space_mappings=external_address_space_mappings,
-    resource_group_name=resource_group_name,
+    external_mapping=external_mapping,
+    internal_address_space_mappings=internal_address_space_mappings,
+    internal_mapping=internal_mapping,
     ip_configuration_id=ip_configuration_id,
     mode=mode,
     name=name,
-    type=type,
-    vpn_gateway_id=vpn_gateway_id,
-    internal_mapping=internal_mapping,
+    resource_group_name=resource_group_name,
     timeouts=timeouts,
-    external_mapping=external_mapping
+    type=type,
+    vpn_gateway_id=vpn_gateway_id
   )),
   newAttrs(
-    resource_group_name,
-    internal_address_space_mappings=null,
-    ip_configuration_id=null,
-    mode=null,
     name,
-    type=null,
+    resource_group_name,
     vpn_gateway_id,
     external_address_space_mappings=null,
+    external_mapping=null,
+    internal_address_space_mappings=null,
     internal_mapping=null,
+    ip_configuration_id=null,
+    mode=null,
     timeouts=null,
-    external_mapping=null
+    type=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
+    external_address_space_mappings: external_address_space_mappings,
+    external_mapping: external_mapping,
     internal_address_space_mappings: internal_address_space_mappings,
+    internal_mapping: internal_mapping,
     ip_configuration_id: ip_configuration_id,
     mode: mode,
     name: name,
+    resource_group_name: resource_group_name,
+    timeouts: timeouts,
     type: type,
     vpn_gateway_id: vpn_gateway_id,
-    external_address_space_mappings: external_address_space_mappings,
-    internal_mapping: internal_mapping,
-    timeouts: timeouts,
-    external_mapping: external_mapping,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withExternalAddressSpaceMappings(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          external_address_space_mappings: value,
         },
       },
     },
   },
-  withType(resourceLabel, value):: {
+  withExternalMapping(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
-          type: value,
+          external_mapping: value,
         },
       },
     },
   },
-  withVpnGatewayId(resourceLabel, value):: {
+  withExternalMappingMixin(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
-          vpn_gateway_id: value,
+          external_mapping+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -83,6 +114,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
           internal_address_space_mappings: value,
+        },
+      },
+    },
+  },
+  withInternalMapping(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          internal_mapping: value,
+        },
+      },
+    },
+  },
+  withInternalMappingMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          internal_mapping+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -114,41 +163,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withExternalAddressSpaceMappings(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_address_space_mappings: value,
+          resource_group_name: value,
         },
       },
     },
-  },
-  withInternalMapping(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          internal_mapping: value,
-        },
-      },
-    },
-  },
-  withInternalMappingMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          internal_mapping+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  internal_mapping:: {
-    new(
-      address_space,
-      port_range=null
-    ):: std.prune(a={
-      address_space: address_space,
-      port_range: port_range,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -168,44 +190,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
-  withExternalMapping(resourceLabel, value):: {
+  withType(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_mapping: value,
+          type: value,
         },
       },
     },
   },
-  withExternalMappingMixin(resourceLabel, value):: {
+  withVpnGatewayId(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_mapping+: if std.isArray(v=value) then value else [value],
+          vpn_gateway_id: value,
         },
       },
     },
-  },
-  external_mapping:: {
-    new(
-      address_space,
-      port_range=null
-    ):: std.prune(a={
-      address_space: address_space,
-      port_range: port_range,
-    }),
   },
 }

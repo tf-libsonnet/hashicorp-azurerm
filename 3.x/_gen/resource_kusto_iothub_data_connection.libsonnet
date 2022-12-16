@@ -1,91 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    database_routing_type=null,
-    data_format=null,
-    iothub_id,
-    resource_group_name,
+    cluster_name,
     consumer_group,
-    location,
     database_name,
+    iothub_id,
+    location,
+    name,
+    resourceLabel,
+    resource_group_name,
+    shared_access_policy_name,
+    data_format=null,
+    database_routing_type=null,
+    event_system_properties=null,
     mapping_rule_name=null,
     table_name=null,
-    event_system_properties=null,
-    name,
-    cluster_name,
-    shared_access_policy_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_iothub_data_connection', label=resourceLabel, attrs=self.newAttrs(
-    database_routing_type=database_routing_type,
-    data_format=data_format,
-    iothub_id=iothub_id,
-    resource_group_name=resource_group_name,
-    consumer_group=consumer_group,
-    location=location,
-    database_name=database_name,
-    mapping_rule_name=mapping_rule_name,
-    table_name=table_name,
-    event_system_properties=event_system_properties,
-    name=name,
     cluster_name=cluster_name,
+    consumer_group=consumer_group,
+    data_format=data_format,
+    database_name=database_name,
+    database_routing_type=database_routing_type,
+    event_system_properties=event_system_properties,
+    iothub_id=iothub_id,
+    location=location,
+    mapping_rule_name=mapping_rule_name,
+    name=name,
+    resource_group_name=resource_group_name,
     shared_access_policy_name=shared_access_policy_name,
+    table_name=table_name,
     timeouts=timeouts
   )),
   newAttrs(
     cluster_name,
-    database_name,
-    database_routing_type=null,
-    location,
-    iothub_id,
-    mapping_rule_name=null,
     consumer_group,
-    event_system_properties=null,
-    resource_group_name,
+    database_name,
+    iothub_id,
+    location,
     name,
+    resource_group_name,
     shared_access_policy_name,
-    table_name=null,
     data_format=null,
+    database_routing_type=null,
+    event_system_properties=null,
+    mapping_rule_name=null,
+    table_name=null,
     timeouts=null
   ):: std.prune(a={
     cluster_name: cluster_name,
+    consumer_group: consumer_group,
+    data_format: data_format,
     database_name: database_name,
     database_routing_type: database_routing_type,
-    location: location,
-    iothub_id: iothub_id,
-    mapping_rule_name: mapping_rule_name,
-    consumer_group: consumer_group,
     event_system_properties: event_system_properties,
-    resource_group_name: resource_group_name,
+    iothub_id: iothub_id,
+    location: location,
+    mapping_rule_name: mapping_rule_name,
     name: name,
+    resource_group_name: resource_group_name,
     shared_access_policy_name: shared_access_policy_name,
     table_name: table_name,
-    data_format: data_format,
     timeouts: timeouts,
   }),
-  withDatabaseName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_iothub_data_connection+: {
-        [resourceLabel]+: {
-          database_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
-  withTableName(resourceLabel, value):: {
+  withClusterName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_iothub_data_connection+: {
         [resourceLabel]+: {
-          table_name: value,
-        },
-      },
-    },
-  },
-  withDataFormat(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_iothub_data_connection+: {
-        [resourceLabel]+: {
-          data_format: value,
+          cluster_name: value,
         },
       },
     },
@@ -99,56 +92,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDataFormat(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_iothub_data_connection+: {
         [resourceLabel]+: {
-          name: value,
+          data_format: value,
         },
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withDatabaseName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_iothub_data_connection+: {
         [resourceLabel]+: {
-          location: value,
+          database_name: value,
         },
       },
     },
   },
-  withSharedAccessPolicyName(resourceLabel, value):: {
+  withDatabaseRoutingType(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_iothub_data_connection+: {
         [resourceLabel]+: {
-          shared_access_policy_name: value,
-        },
-      },
-    },
-  },
-  withMappingRuleName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_iothub_data_connection+: {
-        [resourceLabel]+: {
-          mapping_rule_name: value,
-        },
-      },
-    },
-  },
-  withIothubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_iothub_data_connection+: {
-        [resourceLabel]+: {
-          iothub_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_iothub_data_connection+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          database_routing_type: value,
         },
       },
     },
@@ -162,20 +128,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withClusterName(resourceLabel, value):: {
+  withIothubId(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_iothub_data_connection+: {
         [resourceLabel]+: {
-          cluster_name: value,
+          iothub_id: value,
         },
       },
     },
   },
-  withDatabaseRoutingType(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_iothub_data_connection+: {
         [resourceLabel]+: {
-          database_routing_type: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withMappingRuleName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_iothub_data_connection+: {
+        [resourceLabel]+: {
+          mapping_rule_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_iothub_data_connection+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_iothub_data_connection+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSharedAccessPolicyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_iothub_data_connection+: {
+        [resourceLabel]+: {
+          shared_access_policy_name: value,
+        },
+      },
+    },
+  },
+  withTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_iothub_data_connection+: {
+        [resourceLabel]+: {
+          table_name: value,
         },
       },
     },
@@ -197,16 +208,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }
