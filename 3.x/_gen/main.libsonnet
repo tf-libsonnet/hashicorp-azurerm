@@ -1,4 +1,5 @@
 {
+  provider: (import 'provider_azurerm.libsonnet'),
   aadb2c_directory: (import 'resource_aadb2c_directory.libsonnet'),
   active_directory_domain_service: (import 'resource_active_directory_domain_service.libsonnet'),
   active_directory_domain_service_replica_set: (import 'resource_active_directory_domain_service_replica_set.libsonnet'),
