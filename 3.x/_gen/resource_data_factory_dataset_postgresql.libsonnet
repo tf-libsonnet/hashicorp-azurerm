@@ -1,0 +1,195 @@
+local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
+{
+  new(
+    resourceLabel,
+    parameters=null,
+    additional_properties=null,
+    data_factory_id,
+    linked_service_name,
+    name,
+    annotations=null,
+    description=null,
+    folder=null,
+    table_name=null,
+    schema_column=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_data_factory_dataset_postgresql', label=resourceLabel, attrs=self.newAttrs(
+    parameters=parameters,
+    additional_properties=additional_properties,
+    data_factory_id=data_factory_id,
+    linked_service_name=linked_service_name,
+    name=name,
+    annotations=annotations,
+    description=description,
+    folder=folder,
+    table_name=table_name,
+    schema_column=schema_column,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    name,
+    additional_properties=null,
+    data_factory_id,
+    table_name=null,
+    annotations=null,
+    description=null,
+    parameters=null,
+    linked_service_name,
+    folder=null,
+    schema_column=null,
+    timeouts=null
+  ):: std.prune(a={
+    name: name,
+    additional_properties: additional_properties,
+    data_factory_id: data_factory_id,
+    table_name: table_name,
+    annotations: annotations,
+    description: description,
+    parameters: parameters,
+    linked_service_name: linked_service_name,
+    folder: folder,
+    schema_column: schema_column,
+    timeouts: timeouts,
+  }),
+  withLinkedServiceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          linked_service_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          folder: value,
+        },
+      },
+    },
+  },
+  withTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          table_name: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          additional_properties: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withSchemaColumn(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          schema_column: value,
+        },
+      },
+    },
+  },
+  withSchemaColumnMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          schema_column+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  schema_column:: {
+    new(
+      description=null,
+      name,
+      type=null
+    ):: std.prune(a={
+      description: description,
+      name: name,
+      type: type,
+    }),
+  },
+}

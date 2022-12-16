@@ -1,0 +1,110 @@
+local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
+{
+  new(
+    resourceLabel,
+    api_management_name,
+    body,
+    resource_group_name,
+    subject,
+    template_name,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_api_management_email_template', label=resourceLabel, attrs=self.newAttrs(
+    api_management_name=api_management_name,
+    body=body,
+    resource_group_name=resource_group_name,
+    subject=subject,
+    template_name=template_name,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    resource_group_name,
+    subject,
+    template_name,
+    api_management_name,
+    body,
+    timeouts=null
+  ):: std.prune(a={
+    resource_group_name: resource_group_name,
+    subject: subject,
+    template_name: template_name,
+    api_management_name: api_management_name,
+    body: body,
+    timeouts: timeouts,
+  }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSubject(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          subject: value,
+        },
+      },
+    },
+  },
+  withTemplateName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          template_name: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
+  withBody(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          body: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
+    }),
+  },
+}

@@ -1,0 +1,61 @@
+local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
+{
+  new(
+    dataSrcLabel,
+    name,
+    location,
+    timeouts=null
+  ):: tf.withData(type='azurerm_managed_api', label=dataSrcLabel, attrs=self.newAttrs(name=name, location=location, timeouts=timeouts)),
+  newAttrs(
+    location,
+    name,
+    timeouts=null
+  ):: std.prune(a={
+    location: location,
+    name: name,
+    timeouts: timeouts,
+  }),
+  withLocation(dataSrcLabel, value):: {
+    data+: {
+      azurerm_managed_api+: {
+        [dataSrcLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_managed_api+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTimeouts(dataSrcLabel, value):: {
+    data+: {
+      azurerm_managed_api+: {
+        [dataSrcLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(dataSrcLabel, value):: {
+    data+: {
+      azurerm_managed_api+: {
+        [dataSrcLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+}
