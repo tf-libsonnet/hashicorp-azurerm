@@ -34,24 +34,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     service_principal_key=null,
     tenant_id=null,
     timeouts=null,
-    use_managed_identity=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_sql_database', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    connection_string=connection_string,
-    data_factory_id=data_factory_id,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    key_vault_connection_string=key_vault_connection_string,
-    key_vault_password=key_vault_password,
-    name=name,
-    parameters=parameters,
-    service_principal_id=service_principal_id,
-    service_principal_key=service_principal_key,
-    tenant_id=tenant_id,
-    timeouts=timeouts,
-    use_managed_identity=use_managed_identity
-  )),
+    use_managed_identity=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_azure_sql_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      connection_string=connection_string,
+      data_factory_id=data_factory_id,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      key_vault_connection_string=key_vault_connection_string,
+      key_vault_password=key_vault_password,
+      name=name,
+      parameters=parameters,
+      service_principal_id=service_principal_id,
+      service_principal_key=service_principal_key,
+      tenant_id=tenant_id,
+      timeouts=timeouts,
+      use_managed_identity=use_managed_identity
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

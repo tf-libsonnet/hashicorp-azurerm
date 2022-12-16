@@ -168,24 +168,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     operation_name_format=null,
     sampling_percentage=null,
     timeouts=null,
-    verbosity=null
-  ):: tf.withResource(type='azurerm_api_management_diagnostic', label=resourceLabel, attrs=self.newAttrs(
-    always_log_errors=always_log_errors,
-    api_management_logger_id=api_management_logger_id,
-    api_management_name=api_management_name,
-    backend_request=backend_request,
-    backend_response=backend_response,
-    frontend_request=frontend_request,
-    frontend_response=frontend_response,
-    http_correlation_protocol=http_correlation_protocol,
-    identifier=identifier,
-    log_client_ip=log_client_ip,
-    operation_name_format=operation_name_format,
-    resource_group_name=resource_group_name,
-    sampling_percentage=sampling_percentage,
-    timeouts=timeouts,
-    verbosity=verbosity
-  )),
+    verbosity=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_diagnostic',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      always_log_errors=always_log_errors,
+      api_management_logger_id=api_management_logger_id,
+      api_management_name=api_management_name,
+      backend_request=backend_request,
+      backend_response=backend_response,
+      frontend_request=frontend_request,
+      frontend_response=frontend_response,
+      http_correlation_protocol=http_correlation_protocol,
+      identifier=identifier,
+      log_client_ip=log_client_ip,
+      operation_name_format=operation_name_format,
+      resource_group_name=resource_group_name,
+      sampling_percentage=sampling_percentage,
+      timeouts=timeouts,
+      verbosity=verbosity
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_logger_id,
     api_management_name,

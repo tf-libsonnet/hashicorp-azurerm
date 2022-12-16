@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     namespace_name,
     resource_group_name,
     timeouts=null,
-    user_metadata=null
-  ):: tf.withResource(type='azurerm_eventhub_consumer_group', label=resourceLabel, attrs=self.newAttrs(
-    eventhub_name=eventhub_name,
-    name=name,
-    namespace_name=namespace_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    user_metadata=user_metadata
-  )),
+    user_metadata=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventhub_consumer_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      eventhub_name=eventhub_name,
+      name=name,
+      namespace_name=namespace_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      user_metadata=user_metadata
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     eventhub_name,
     name,

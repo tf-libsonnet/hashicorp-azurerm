@@ -26,25 +26,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network_access_enabled=null,
     tags=null,
     timeouts=null,
-    zone_redundant=null
-  ):: tf.withResource(type='azurerm_eventhub_namespace', label=resourceLabel, attrs=self.newAttrs(
-    auto_inflate_enabled=auto_inflate_enabled,
-    capacity=capacity,
-    dedicated_cluster_id=dedicated_cluster_id,
-    identity=identity,
-    local_authentication_enabled=local_authentication_enabled,
-    location=location,
-    maximum_throughput_units=maximum_throughput_units,
-    minimum_tls_version=minimum_tls_version,
-    name=name,
-    network_rulesets=network_rulesets,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    zone_redundant=zone_redundant
-  )),
+    zone_redundant=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventhub_namespace',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_inflate_enabled=auto_inflate_enabled,
+      capacity=capacity,
+      dedicated_cluster_id=dedicated_cluster_id,
+      identity=identity,
+      local_authentication_enabled=local_authentication_enabled,
+      location=location,
+      maximum_throughput_units=maximum_throughput_units,
+      minimum_tls_version=minimum_tls_version,
+      name=name,
+      network_rulesets=network_rulesets,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      zone_redundant=zone_redundant
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

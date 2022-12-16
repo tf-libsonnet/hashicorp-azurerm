@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     spring_cloud_app_id,
     certificate_name=null,
     thumbprint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_custom_domain', label=resourceLabel, attrs=self.newAttrs(
-    certificate_name=certificate_name,
-    name=name,
-    spring_cloud_app_id=spring_cloud_app_id,
-    thumbprint=thumbprint,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_custom_domain',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      certificate_name=certificate_name,
+      name=name,
+      spring_cloud_app_id=spring_cloud_app_id,
+      thumbprint=thumbprint,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_app_id,

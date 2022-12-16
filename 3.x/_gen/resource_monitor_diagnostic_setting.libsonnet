@@ -54,20 +54,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     metric=null,
     partner_solution_id=null,
     storage_account_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_diagnostic_setting', label=resourceLabel, attrs=self.newAttrs(
-    eventhub_authorization_rule_id=eventhub_authorization_rule_id,
-    eventhub_name=eventhub_name,
-    log=log,
-    log_analytics_destination_type=log_analytics_destination_type,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    metric=metric,
-    name=name,
-    partner_solution_id=partner_solution_id,
-    storage_account_id=storage_account_id,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_diagnostic_setting',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      eventhub_authorization_rule_id=eventhub_authorization_rule_id,
+      eventhub_name=eventhub_name,
+      log=log,
+      log_analytics_destination_type=log_analytics_destination_type,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      metric=metric,
+      name=name,
+      partner_solution_id=partner_solution_id,
+      storage_account_id=storage_account_id,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     target_resource_id,

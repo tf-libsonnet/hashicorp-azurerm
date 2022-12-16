@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     icon_index=null,
     icon_path=null,
     show_in_portal=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_desktop_application', label=resourceLabel, attrs=self.newAttrs(
-    application_group_id=application_group_id,
-    command_line_argument_policy=command_line_argument_policy,
-    command_line_arguments=command_line_arguments,
-    description=description,
-    friendly_name=friendly_name,
-    icon_index=icon_index,
-    icon_path=icon_path,
-    name=name,
-    path=path,
-    show_in_portal=show_in_portal,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_desktop_application',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_group_id=application_group_id,
+      command_line_argument_policy=command_line_argument_policy,
+      command_line_arguments=command_line_arguments,
+      description=description,
+      friendly_name=friendly_name,
+      icon_index=icon_index,
+      icon_path=icon_path,
+      name=name,
+      path=path,
+      show_in_portal=show_in_portal,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     application_group_id,
     command_line_argument_policy,

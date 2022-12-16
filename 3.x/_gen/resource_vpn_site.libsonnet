@@ -38,20 +38,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     link=null,
     o365_policy=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_vpn_site', label=resourceLabel, attrs=self.newAttrs(
-    address_cidrs=address_cidrs,
-    device_model=device_model,
-    device_vendor=device_vendor,
-    link=link,
-    location=location,
-    name=name,
-    o365_policy=o365_policy,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_wan_id=virtual_wan_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vpn_site',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_cidrs=address_cidrs,
+      device_model=device_model,
+      device_vendor=device_vendor,
+      link=link,
+      location=location,
+      name=name,
+      o365_policy=o365_policy,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_wan_id=virtual_wan_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

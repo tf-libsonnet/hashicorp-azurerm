@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     role,
     tenant_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_cluster_principal_assignment', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
-    name=name,
-    principal_id=principal_id,
-    principal_type=principal_type,
-    resource_group_name=resource_group_name,
-    role=role,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_cluster_principal_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_name=cluster_name,
+      name=name,
+      principal_id=principal_id,
+      principal_type=principal_type,
+      resource_group_name=resource_group_name,
+      role=role,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     name,

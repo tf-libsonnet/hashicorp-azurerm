@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     ignore_empty_blobs=null,
     pipeline=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_trigger_blob_event', label=resourceLabel, attrs=self.newAttrs(
-    activated=activated,
-    additional_properties=additional_properties,
-    annotations=annotations,
-    blob_path_begins_with=blob_path_begins_with,
-    blob_path_ends_with=blob_path_ends_with,
-    data_factory_id=data_factory_id,
-    description=description,
-    events=events,
-    ignore_empty_blobs=ignore_empty_blobs,
-    name=name,
-    pipeline=pipeline,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_trigger_blob_event',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      activated=activated,
+      additional_properties=additional_properties,
+      annotations=annotations,
+      blob_path_begins_with=blob_path_begins_with,
+      blob_path_ends_with=blob_path_ends_with,
+      data_factory_id=data_factory_id,
+      description=description,
+      events=events,
+      ignore_empty_blobs=ignore_empty_blobs,
+      name=name,
+      pipeline=pipeline,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     events,

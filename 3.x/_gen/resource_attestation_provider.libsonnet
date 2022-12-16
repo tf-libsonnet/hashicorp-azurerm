@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     policy_signing_certificate_data=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_attestation_provider', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    policy_signing_certificate_data=policy_signing_certificate_data,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_attestation_provider',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      policy_signing_certificate_data=policy_signing_certificate_data,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

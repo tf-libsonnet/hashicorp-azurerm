@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet_id,
     branch_to_branch_traffic_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_route_server', label=resourceLabel, attrs=self.newAttrs(
-    branch_to_branch_traffic_enabled=branch_to_branch_traffic_enabled,
-    location=location,
-    name=name,
-    public_ip_address_id=public_ip_address_id,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    subnet_id=subnet_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_route_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      branch_to_branch_traffic_enabled=branch_to_branch_traffic_enabled,
+      location=location,
+      name=name,
+      public_ip_address_id=public_ip_address_id,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      subnet_id=subnet_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

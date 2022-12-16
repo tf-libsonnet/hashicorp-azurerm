@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     retention_days=null,
     storage_account_access_key=null,
     storage_endpoint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_sql_pool_security_alert_policy', label=resourceLabel, attrs=self.newAttrs(
-    disabled_alerts=disabled_alerts,
-    email_account_admins_enabled=email_account_admins_enabled,
-    email_addresses=email_addresses,
-    policy_state=policy_state,
-    retention_days=retention_days,
-    sql_pool_id=sql_pool_id,
-    storage_account_access_key=storage_account_access_key,
-    storage_endpoint=storage_endpoint,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_sql_pool_security_alert_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      disabled_alerts=disabled_alerts,
+      email_account_admins_enabled=email_account_admins_enabled,
+      email_addresses=email_addresses,
+      policy_state=policy_state,
+      retention_days=retention_days,
+      sql_pool_id=sql_pool_id,
+      storage_account_access_key=storage_account_access_key,
+      storage_endpoint=storage_endpoint,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     policy_state,
     sql_pool_id,

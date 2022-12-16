@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     custom_hostname_binding_id,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_managed_certificate', label=resourceLabel, attrs=self.newAttrs(custom_hostname_binding_id=custom_hostname_binding_id, tags=tags, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_managed_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(custom_hostname_binding_id=custom_hostname_binding_id, tags=tags, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     custom_hostname_binding_id,
     tags=null,

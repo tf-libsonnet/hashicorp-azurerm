@@ -92,18 +92,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     scope=null,
     suppression=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_action_rule_suppression', label=resourceLabel, attrs=self.newAttrs(
-    condition=condition,
-    description=description,
-    enabled=enabled,
-    name=name,
-    resource_group_name=resource_group_name,
-    scope=scope,
-    suppression=suppression,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_action_rule_suppression',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      condition=condition,
+      description=description,
+      enabled=enabled,
+      name=name,
+      resource_group_name=resource_group_name,
+      scope=scope,
+      suppression=suppression,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

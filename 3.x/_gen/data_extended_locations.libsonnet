@@ -3,8 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     location,
-    timeouts=null
-  ):: tf.withData(type='azurerm_extended_locations', label=dataSrcLabel, attrs=self.newAttrs(location=location, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_extended_locations',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(location=location, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     timeouts=null

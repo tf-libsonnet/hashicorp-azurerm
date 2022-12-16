@@ -17,18 +17,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enable_tcp_reset=null,
     frontend_ip_configuration=null,
     idle_timeout_in_minutes=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lb_outbound_rule', label=resourceLabel, attrs=self.newAttrs(
-    allocated_outbound_ports=allocated_outbound_ports,
-    backend_address_pool_id=backend_address_pool_id,
-    enable_tcp_reset=enable_tcp_reset,
-    frontend_ip_configuration=frontend_ip_configuration,
-    idle_timeout_in_minutes=idle_timeout_in_minutes,
-    loadbalancer_id=loadbalancer_id,
-    name=name,
-    protocol=protocol,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb_outbound_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allocated_outbound_ports=allocated_outbound_ports,
+      backend_address_pool_id=backend_address_pool_id,
+      enable_tcp_reset=enable_tcp_reset,
+      frontend_ip_configuration=frontend_ip_configuration,
+      idle_timeout_in_minutes=idle_timeout_in_minutes,
+      loadbalancer_id=loadbalancer_id,
+      name=name,
+      protocol=protocol,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backend_address_pool_id,
     loadbalancer_id,

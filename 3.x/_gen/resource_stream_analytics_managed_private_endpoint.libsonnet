@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stream_analytics_cluster_name,
     subresource_name,
     target_resource_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    stream_analytics_cluster_name=stream_analytics_cluster_name,
-    subresource_name=subresource_name,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_managed_private_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      stream_analytics_cluster_name=stream_analytics_cluster_name,
+      subresource_name=subresource_name,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

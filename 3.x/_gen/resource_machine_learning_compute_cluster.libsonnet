@@ -24,23 +24,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ssh_public_access_enabled=null,
     subnet_resource_id=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_machine_learning_compute_cluster', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    identity=identity,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    machine_learning_workspace_id=machine_learning_workspace_id,
-    name=name,
-    scale_settings=scale_settings,
-    ssh=ssh,
-    ssh_public_access_enabled=ssh_public_access_enabled,
-    subnet_resource_id=subnet_resource_id,
-    tags=tags,
-    timeouts=timeouts,
-    vm_priority=vm_priority,
-    vm_size=vm_size
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_machine_learning_compute_cluster',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      identity=identity,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      machine_learning_workspace_id=machine_learning_workspace_id,
+      name=name,
+      scale_settings=scale_settings,
+      ssh=ssh,
+      ssh_public_access_enabled=ssh_public_access_enabled,
+      subnet_resource_id=subnet_resource_id,
+      tags=tags,
+      timeouts=timeouts,
+      vm_priority=vm_priority,
+      vm_size=vm_size
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     machine_learning_workspace_id,

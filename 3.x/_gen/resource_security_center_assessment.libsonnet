@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_resource_id,
     additional_data=null,
     status=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_security_center_assessment', label=resourceLabel, attrs=self.newAttrs(
-    additional_data=additional_data,
-    assessment_policy_id=assessment_policy_id,
-    status=status,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_security_center_assessment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_data=additional_data,
+      assessment_policy_id=assessment_policy_id,
+      status=status,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     assessment_policy_id,
     target_resource_id,

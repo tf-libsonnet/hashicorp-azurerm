@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     public_ip_address_ids=null,
     public_ip_prefix_ids=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_nat_gateway', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    public_ip_address_ids=public_ip_address_ids,
-    public_ip_prefix_ids=public_ip_prefix_ids,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_nat_gateway',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      public_ip_address_ids=public_ip_address_ids,
+      public_ip_prefix_ids=public_ip_prefix_ids,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

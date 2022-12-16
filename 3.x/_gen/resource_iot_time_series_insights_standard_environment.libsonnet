@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     partition_key=null,
     storage_limit_exceeded_behavior=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iot_time_series_insights_standard_environment', label=resourceLabel, attrs=self.newAttrs(
-    data_retention_time=data_retention_time,
-    location=location,
-    name=name,
-    partition_key=partition_key,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    storage_limit_exceeded_behavior=storage_limit_exceeded_behavior,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iot_time_series_insights_standard_environment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      data_retention_time=data_retention_time,
+      location=location,
+      name=name,
+      partition_key=partition_key,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      storage_limit_exceeded_behavior=storage_limit_exceeded_behavior,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_retention_time,
     location,

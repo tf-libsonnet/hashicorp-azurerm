@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     state=null,
     subscription_id=null,
     timeouts=null,
-    user_id=null
-  ):: tf.withResource(type='azurerm_api_management_subscription', label=resourceLabel, attrs=self.newAttrs(
-    allow_tracing=allow_tracing,
-    api_id=api_id,
-    api_management_name=api_management_name,
-    display_name=display_name,
-    primary_key=primary_key,
-    product_id=product_id,
-    resource_group_name=resource_group_name,
-    secondary_key=secondary_key,
-    state=state,
-    subscription_id=subscription_id,
-    timeouts=timeouts,
-    user_id=user_id
-  )),
+    user_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_subscription',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_tracing=allow_tracing,
+      api_id=api_id,
+      api_management_name=api_management_name,
+      display_name=display_name,
+      primary_key=primary_key,
+      product_id=product_id,
+      resource_group_name=resource_group_name,
+      secondary_key=secondary_key,
+      state=state,
+      subscription_id=subscription_id,
+      timeouts=timeouts,
+      user_id=user_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     display_name,

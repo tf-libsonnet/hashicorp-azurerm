@@ -50,23 +50,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     local_auth_enabled=null,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_eventgrid_domain', label=resourceLabel, attrs=self.newAttrs(
-    auto_create_topic_with_first_subscription=auto_create_topic_with_first_subscription,
-    auto_delete_topic_with_last_subscription=auto_delete_topic_with_last_subscription,
-    identity=identity,
-    inbound_ip_rule=inbound_ip_rule,
-    input_mapping_default_values=input_mapping_default_values,
-    input_mapping_fields=input_mapping_fields,
-    input_schema=input_schema,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventgrid_domain',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_create_topic_with_first_subscription=auto_create_topic_with_first_subscription,
+      auto_delete_topic_with_last_subscription=auto_delete_topic_with_last_subscription,
+      identity=identity,
+      inbound_ip_rule=inbound_ip_rule,
+      input_mapping_default_values=input_mapping_default_values,
+      input_mapping_fields=input_mapping_fields,
+      input_schema=input_schema,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

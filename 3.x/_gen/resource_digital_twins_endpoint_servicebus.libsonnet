@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     servicebus_primary_connection_string,
     servicebus_secondary_connection_string,
     dead_letter_storage_secret=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_digital_twins_endpoint_servicebus', label=resourceLabel, attrs=self.newAttrs(
-    dead_letter_storage_secret=dead_letter_storage_secret,
-    digital_twins_id=digital_twins_id,
-    name=name,
-    servicebus_primary_connection_string=servicebus_primary_connection_string,
-    servicebus_secondary_connection_string=servicebus_secondary_connection_string,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_digital_twins_endpoint_servicebus',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dead_letter_storage_secret=dead_letter_storage_secret,
+      digital_twins_id=digital_twins_id,
+      name=name,
+      servicebus_primary_connection_string=servicebus_primary_connection_string,
+      servicebus_secondary_connection_string=servicebus_secondary_connection_string,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     digital_twins_id,
     name,

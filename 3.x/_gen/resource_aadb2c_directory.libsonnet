@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     country_code=null,
     display_name=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_aadb2c_directory', label=resourceLabel, attrs=self.newAttrs(
-    country_code=country_code,
-    data_residency_location=data_residency_location,
-    display_name=display_name,
-    domain_name=domain_name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_aadb2c_directory',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      country_code=country_code,
+      data_residency_location=data_residency_location,
+      display_name=display_name,
+      domain_name=domain_name,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_residency_location,
     domain_name,

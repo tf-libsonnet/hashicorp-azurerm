@@ -32,16 +32,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     load_balancing=null,
     restore_traffic_time_to_healed_or_new_endpoint_in_minutes=null,
     session_affinity_enabled=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_origin_group', label=resourceLabel, attrs=self.newAttrs(
-    cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
-    health_probe=health_probe,
-    load_balancing=load_balancing,
-    name=name,
-    restore_traffic_time_to_healed_or_new_endpoint_in_minutes=restore_traffic_time_to_healed_or_new_endpoint_in_minutes,
-    session_affinity_enabled=session_affinity_enabled,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_origin_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
+      health_probe=health_probe,
+      load_balancing=load_balancing,
+      name=name,
+      restore_traffic_time_to_healed_or_new_endpoint_in_minutes=restore_traffic_time_to_healed_or_new_endpoint_in_minutes,
+      session_affinity_enabled=session_affinity_enabled,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_frontdoor_profile_id,
     name,

@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     max_resource_percent_per_request=null,
     min_resource_percent_per_request=null,
     query_execution_timeout_in_seconds=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_sql_pool_workload_group', label=resourceLabel, attrs=self.newAttrs(
-    importance=importance,
-    max_resource_percent=max_resource_percent,
-    max_resource_percent_per_request=max_resource_percent_per_request,
-    min_resource_percent=min_resource_percent,
-    min_resource_percent_per_request=min_resource_percent_per_request,
-    name=name,
-    query_execution_timeout_in_seconds=query_execution_timeout_in_seconds,
-    sql_pool_id=sql_pool_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_sql_pool_workload_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      importance=importance,
+      max_resource_percent=max_resource_percent,
+      max_resource_percent_per_request=max_resource_percent_per_request,
+      min_resource_percent=min_resource_percent,
+      min_resource_percent_per_request=min_resource_percent_per_request,
+      name=name,
+      query_execution_timeout_in_seconds=query_execution_timeout_in_seconds,
+      sql_pool_id=sql_pool_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     max_resource_percent,
     min_resource_percent,

@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     friendly_name=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_desktop_application_group', label=resourceLabel, attrs=self.newAttrs(
-    default_desktop_display_name=default_desktop_display_name,
-    description=description,
-    friendly_name=friendly_name,
-    host_pool_id=host_pool_id,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    type=type
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_desktop_application_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      default_desktop_display_name=default_desktop_display_name,
+      description=description,
+      friendly_name=friendly_name,
+      host_pool_id=host_pool_id,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      type=type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     host_pool_id,
     location,

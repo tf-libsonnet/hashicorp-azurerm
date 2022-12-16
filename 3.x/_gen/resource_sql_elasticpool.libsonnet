@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     db_dtu_min=null,
     pool_size=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sql_elasticpool', label=resourceLabel, attrs=self.newAttrs(
-    db_dtu_max=db_dtu_max,
-    db_dtu_min=db_dtu_min,
-    dtu=dtu,
-    edition=edition,
-    location=location,
-    name=name,
-    pool_size=pool_size,
-    resource_group_name=resource_group_name,
-    server_name=server_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sql_elasticpool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      db_dtu_max=db_dtu_max,
+      db_dtu_min=db_dtu_min,
+      dtu=dtu,
+      edition=edition,
+      location=location,
+      name=name,
+      pool_size=pool_size,
+      resource_group_name=resource_group_name,
+      server_name=server_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     dtu,
     edition,

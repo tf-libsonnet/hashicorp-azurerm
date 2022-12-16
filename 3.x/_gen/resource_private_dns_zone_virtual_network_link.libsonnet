@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_network_id,
     registration_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_private_dns_zone_virtual_network_link', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    private_dns_zone_name=private_dns_zone_name,
-    registration_enabled=registration_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_network_id=virtual_network_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_private_dns_zone_virtual_network_link',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      private_dns_zone_name=private_dns_zone_name,
+      registration_enabled=registration_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_network_id=virtual_network_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     private_dns_zone_name,

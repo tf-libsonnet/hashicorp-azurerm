@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     timeouts=null,
-    virtual_wan_id=null
-  ):: tf.withResource(type='azurerm_virtual_hub', label=resourceLabel, attrs=self.newAttrs(
-    address_prefix=address_prefix,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    route=route,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_wan_id=virtual_wan_id
-  )),
+    virtual_wan_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_hub',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_prefix=address_prefix,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      route=route,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_wan_id=virtual_wan_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

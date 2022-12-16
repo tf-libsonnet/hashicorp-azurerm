@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     note=null,
     password=null,
     state=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_user', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    confirmation=confirmation,
-    email=email,
-    first_name=first_name,
-    last_name=last_name,
-    note=note,
-    password=password,
-    resource_group_name=resource_group_name,
-    state=state,
-    timeouts=timeouts,
-    user_id=user_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_user',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      confirmation=confirmation,
+      email=email,
+      first_name=first_name,
+      last_name=last_name,
+      note=note,
+      password=password,
+      resource_group_name=resource_group_name,
+      state=state,
+      timeouts=timeouts,
+      user_id=user_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     email,

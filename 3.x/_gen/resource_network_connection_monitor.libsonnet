@@ -50,19 +50,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     test_configuration=null,
     test_group=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_network_connection_monitor', label=resourceLabel, attrs=self.newAttrs(
-    endpoint=endpoint,
-    location=location,
-    name=name,
-    network_watcher_id=network_watcher_id,
-    notes=notes,
-    output_workspace_resource_ids=output_workspace_resource_ids,
-    tags=tags,
-    test_configuration=test_configuration,
-    test_group=test_group,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_connection_monitor',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      endpoint=endpoint,
+      location=location,
+      name=name,
+      network_watcher_id=network_watcher_id,
+      notes=notes,
+      output_workspace_resource_ids=output_workspace_resource_ids,
+      tags=tags,
+      test_configuration=test_configuration,
+      test_group=test_group,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

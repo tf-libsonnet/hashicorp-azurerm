@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     integration_runtime_name=null,
     parameters=null,
     server_version_is_32_or_higher=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_cosmosdb_mongoapi', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    connection_string=connection_string,
-    data_factory_id=data_factory_id,
-    database=database,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    name=name,
-    parameters=parameters,
-    server_version_is_32_or_higher=server_version_is_32_or_higher,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_cosmosdb_mongoapi',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      connection_string=connection_string,
+      data_factory_id=data_factory_id,
+      database=database,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      name=name,
+      parameters=parameters,
+      server_version_is_32_or_higher=server_version_is_32_or_higher,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

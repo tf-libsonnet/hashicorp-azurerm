@@ -31,16 +31,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     action=null,
     correlation_filter=null,
     sql_filter=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_servicebus_subscription_rule', label=resourceLabel, attrs=self.newAttrs(
-    action=action,
-    correlation_filter=correlation_filter,
-    filter_type=filter_type,
-    name=name,
-    sql_filter=sql_filter,
-    subscription_id=subscription_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_servicebus_subscription_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      action=action,
+      correlation_filter=correlation_filter,
+      filter_type=filter_type,
+      name=name,
+      sql_filter=sql_filter,
+      subscription_id=subscription_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     filter_type,
     name,

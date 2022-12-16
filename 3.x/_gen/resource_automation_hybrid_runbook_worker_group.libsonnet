@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     credential_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_hybrid_runbook_worker_group', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    credential_name=credential_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_hybrid_runbook_worker_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      credential_name=credential_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     name,

@@ -104,26 +104,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_resource_location=null,
     target_resource_type=null,
     timeouts=null,
-    window_size=null
-  ):: tf.withResource(type='azurerm_monitor_metric_alert', label=resourceLabel, attrs=self.newAttrs(
-    action=action,
-    application_insights_web_test_location_availability_criteria=application_insights_web_test_location_availability_criteria,
-    auto_mitigate=auto_mitigate,
-    criteria=criteria,
-    description=description,
-    dynamic_criteria=dynamic_criteria,
-    enabled=enabled,
-    frequency=frequency,
-    name=name,
-    resource_group_name=resource_group_name,
-    scopes=scopes,
-    severity=severity,
-    tags=tags,
-    target_resource_location=target_resource_location,
-    target_resource_type=target_resource_type,
-    timeouts=timeouts,
-    window_size=window_size
-  )),
+    window_size=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_metric_alert',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      action=action,
+      application_insights_web_test_location_availability_criteria=application_insights_web_test_location_availability_criteria,
+      auto_mitigate=auto_mitigate,
+      criteria=criteria,
+      description=description,
+      dynamic_criteria=dynamic_criteria,
+      enabled=enabled,
+      frequency=frequency,
+      name=name,
+      resource_group_name=resource_group_name,
+      scopes=scopes,
+      severity=severity,
+      tags=tags,
+      target_resource_location=target_resource_location,
+      target_resource_type=target_resource_type,
+      timeouts=timeouts,
+      window_size=window_size
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

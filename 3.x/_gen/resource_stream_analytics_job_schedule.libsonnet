@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     start_mode,
     stream_analytics_job_id,
     start_time=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_job_schedule', label=resourceLabel, attrs=self.newAttrs(
-    start_mode=start_mode,
-    start_time=start_time,
-    stream_analytics_job_id=stream_analytics_job_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_job_schedule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      start_mode=start_mode,
+      start_time=start_time,
+      stream_analytics_job_id=stream_analytics_job_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     start_mode,
     stream_analytics_job_id,

@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_size=null,
     not_before_date=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_key', label=resourceLabel, attrs=self.newAttrs(
-    curve=curve,
-    expiration_date=expiration_date,
-    key_opts=key_opts,
-    key_size=key_size,
-    key_type=key_type,
-    key_vault_id=key_vault_id,
-    name=name,
-    not_before_date=not_before_date,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      curve=curve,
+      expiration_date=expiration_date,
+      key_opts=key_opts,
+      key_size=key_size,
+      key_type=key_type,
+      key_vault_id=key_vault_id,
+      name=name,
+      not_before_date=not_before_date,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_opts,
     key_type,

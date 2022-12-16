@@ -23,22 +23,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     non_compliance_message=null,
     not_scopes=null,
     parameters=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_management_group_policy_assignment', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    display_name=display_name,
-    enforce=enforce,
-    identity=identity,
-    location=location,
-    management_group_id=management_group_id,
-    metadata=metadata,
-    name=name,
-    non_compliance_message=non_compliance_message,
-    not_scopes=not_scopes,
-    parameters=parameters,
-    policy_definition_id=policy_definition_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_management_group_policy_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      display_name=display_name,
+      enforce=enforce,
+      identity=identity,
+      location=location,
+      management_group_id=management_group_id,
+      metadata=metadata,
+      name=name,
+      non_compliance_message=non_compliance_message,
+      not_scopes=not_scopes,
+      parameters=parameters,
+      policy_definition_id=policy_definition_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     management_group_id,
     name,

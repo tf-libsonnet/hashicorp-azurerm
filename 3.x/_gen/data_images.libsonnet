@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     resource_group_name,
     tags_filter=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_images', label=dataSrcLabel, attrs=self.newAttrs(resource_group_name=resource_group_name, tags_filter=tags_filter, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_images',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(resource_group_name=resource_group_name, tags_filter=tags_filter, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     resource_group_name,
     tags_filter=null,

@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     minimum_tls_version=null,
     tags=null,
     timeouts=null,
-    zones=null
-  ):: tf.withResource(type='azurerm_redis_enterprise_cluster', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    minimum_tls_version=minimum_tls_version,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts,
-    zones=zones
-  )),
+    zones=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_redis_enterprise_cluster',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      minimum_tls_version=minimum_tls_version,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts,
+      zones=zones
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

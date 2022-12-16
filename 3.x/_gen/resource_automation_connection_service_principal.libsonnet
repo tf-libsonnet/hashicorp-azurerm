@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_id,
     tenant_id,
     description=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_connection_service_principal', label=resourceLabel, attrs=self.newAttrs(
-    application_id=application_id,
-    automation_account_name=automation_account_name,
-    certificate_thumbprint=certificate_thumbprint,
-    description=description,
-    name=name,
-    resource_group_name=resource_group_name,
-    subscription_id=subscription_id,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_connection_service_principal',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_id=application_id,
+      automation_account_name=automation_account_name,
+      certificate_thumbprint=certificate_thumbprint,
+      description=description,
+      name=name,
+      resource_group_name=resource_group_name,
+      subscription_id=subscription_id,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     application_id,
     automation_account_name,

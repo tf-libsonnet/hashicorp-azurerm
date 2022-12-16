@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     image_name,
     resource_group_name,
     tags_filter=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_shared_image_versions', label=dataSrcLabel, attrs=self.newAttrs(
-    gallery_name=gallery_name,
-    image_name=image_name,
-    resource_group_name=resource_group_name,
-    tags_filter=tags_filter,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_shared_image_versions',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      gallery_name=gallery_name,
+      image_name=image_name,
+      resource_group_name=resource_group_name,
+      tags_filter=tags_filter,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     gallery_name,
     image_name,

@@ -26,19 +26,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     localized=null,
     priority=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_application_insights_workbook_template', label=resourceLabel, attrs=self.newAttrs(
-    author=author,
-    galleries=galleries,
-    localized=localized,
-    location=location,
-    name=name,
-    priority=priority,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    template_data=template_data,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_application_insights_workbook_template',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      author=author,
+      galleries=galleries,
+      localized=localized,
+      location=location,
+      name=name,
+      priority=priority,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      template_data=template_data,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     api_management_id,
     email,
     notification_type,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_notification_recipient_email', label=resourceLabel, attrs=self.newAttrs(
-    api_management_id=api_management_id,
-    email=email,
-    notification_type=notification_type,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_notification_recipient_email',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_id=api_management_id,
+      email=email,
+      notification_type=notification_type,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_id,
     email,

@@ -85,23 +85,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null,
     workflow_parameters=null,
     workflow_schema=null,
-    workflow_version=null
-  ):: tf.withResource(type='azurerm_logic_app_workflow', label=resourceLabel, attrs=self.newAttrs(
-    access_control=access_control,
-    enabled=enabled,
-    identity=identity,
-    integration_service_environment_id=integration_service_environment_id,
-    location=location,
-    logic_app_integration_account_id=logic_app_integration_account_id,
-    name=name,
-    parameters=parameters,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    workflow_parameters=workflow_parameters,
-    workflow_schema=workflow_schema,
-    workflow_version=workflow_version
-  )),
+    workflow_version=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_workflow',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_control=access_control,
+      enabled=enabled,
+      identity=identity,
+      integration_service_environment_id=integration_service_environment_id,
+      location=location,
+      logic_app_integration_account_id=logic_app_integration_account_id,
+      name=name,
+      parameters=parameters,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      workflow_parameters=workflow_parameters,
+      workflow_schema=workflow_schema,
+      workflow_version=workflow_version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

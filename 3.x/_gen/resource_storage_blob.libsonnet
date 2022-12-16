@@ -16,24 +16,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source=null,
     source_content=null,
     source_uri=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_blob', label=resourceLabel, attrs=self.newAttrs(
-    access_tier=access_tier,
-    cache_control=cache_control,
-    content_md5=content_md5,
-    content_type=content_type,
-    metadata=metadata,
-    name=name,
-    parallelism=parallelism,
-    size=size,
-    source=source,
-    source_content=source_content,
-    source_uri=source_uri,
-    storage_account_name=storage_account_name,
-    storage_container_name=storage_container_name,
-    timeouts=timeouts,
-    type=type
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_blob',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_tier=access_tier,
+      cache_control=cache_control,
+      content_md5=content_md5,
+      content_type=content_type,
+      metadata=metadata,
+      name=name,
+      parallelism=parallelism,
+      size=size,
+      source=source,
+      source_content=source_content,
+      source_uri=source_uri,
+      storage_account_name=storage_account_name,
+      storage_container_name=storage_container_name,
+      timeouts=timeouts,
+      type=type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     storage_account_name,

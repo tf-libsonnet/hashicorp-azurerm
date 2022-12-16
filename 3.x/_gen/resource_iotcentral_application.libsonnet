@@ -19,20 +19,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     template=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iotcentral_application', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    identity=identity,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    sub_domain=sub_domain,
-    tags=tags,
-    template=template,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iotcentral_application',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      display_name=display_name,
+      identity=identity,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      sub_domain=sub_domain,
+      tags=tags,
+      template=template,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

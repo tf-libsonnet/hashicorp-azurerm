@@ -50,19 +50,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     profile_status=null,
     tags=null,
     timeouts=null,
-    traffic_view_enabled=null
-  ):: tf.withResource(type='azurerm_traffic_manager_profile', label=resourceLabel, attrs=self.newAttrs(
-    dns_config=dns_config,
-    max_return=max_return,
-    monitor_config=monitor_config,
-    name=name,
-    profile_status=profile_status,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    traffic_routing_method=traffic_routing_method,
-    traffic_view_enabled=traffic_view_enabled
-  )),
+    traffic_view_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_traffic_manager_profile',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dns_config=dns_config,
+      max_return=max_return,
+      monitor_config=monitor_config,
+      name=name,
+      profile_status=profile_status,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      traffic_routing_method=traffic_routing_method,
+      traffic_view_enabled=traffic_view_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

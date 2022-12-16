@@ -16,17 +16,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     identity=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_protection_backup_vault', label=resourceLabel, attrs=self.newAttrs(
-    datastore_type=datastore_type,
-    identity=identity,
-    location=location,
-    name=name,
-    redundancy=redundancy,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_protection_backup_vault',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      datastore_type=datastore_type,
+      identity=identity,
+      location=location,
+      name=name,
+      redundancy=redundancy,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     datastore_type,
     location,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     publisher,
     sku,
     timeouts=null,
-    version=null
-  ):: tf.withData(type='azurerm_platform_image', label=dataSrcLabel, attrs=self.newAttrs(
-    location=location,
-    offer=offer,
-    publisher=publisher,
-    sku=sku,
-    timeouts=timeouts,
-    version=version
-  )),
+    version=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_platform_image',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      location=location,
+      offer=offer,
+      publisher=publisher,
+      sku=sku,
+      timeouts=timeouts,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     offer,

@@ -19,18 +19,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     identity=null,
     local_auth_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_machine_learning_synapse_spark', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    identity=identity,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    machine_learning_workspace_id=machine_learning_workspace_id,
-    name=name,
-    synapse_spark_pool_id=synapse_spark_pool_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_machine_learning_synapse_spark',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      identity=identity,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      machine_learning_workspace_id=machine_learning_workspace_id,
+      name=name,
+      synapse_spark_pool_id=synapse_spark_pool_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     machine_learning_workspace_id,

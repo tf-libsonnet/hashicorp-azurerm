@@ -14,15 +14,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     autoscale_settings=null,
     throughput=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_mongo_database', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    autoscale_settings=autoscale_settings,
-    name=name,
-    resource_group_name=resource_group_name,
-    throughput=throughput,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_mongo_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      autoscale_settings=autoscale_settings,
+      name=name,
+      resource_group_name=resource_group_name,
+      throughput=throughput,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     name,

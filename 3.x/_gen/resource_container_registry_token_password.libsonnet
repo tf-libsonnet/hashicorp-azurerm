@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     container_registry_token_id,
     password1=null,
     password2=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_container_registry_token_password', label=resourceLabel, attrs=self.newAttrs(
-    container_registry_token_id=container_registry_token_id,
-    password1=password1,
-    password2=password2,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_container_registry_token_password',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      container_registry_token_id=container_registry_token_id,
+      password1=password1,
+      password2=password2,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     container_registry_token_id,
     password1=null,

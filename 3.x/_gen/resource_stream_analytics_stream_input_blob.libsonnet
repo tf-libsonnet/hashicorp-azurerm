@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stream_analytics_job_name,
     time_format,
     serialization=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_stream_input_blob', label=resourceLabel, attrs=self.newAttrs(
-    date_format=date_format,
-    name=name,
-    path_pattern=path_pattern,
-    resource_group_name=resource_group_name,
-    serialization=serialization,
-    storage_account_key=storage_account_key,
-    storage_account_name=storage_account_name,
-    storage_container_name=storage_container_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    time_format=time_format,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_stream_input_blob',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      date_format=date_format,
+      name=name,
+      path_pattern=path_pattern,
+      resource_group_name=resource_group_name,
+      serialization=serialization,
+      storage_account_key=storage_account_key,
+      storage_account_name=storage_account_name,
+      storage_container_name=storage_container_name,
+      stream_analytics_job_name=stream_analytics_job_name,
+      time_format=time_format,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     date_format,
     name,

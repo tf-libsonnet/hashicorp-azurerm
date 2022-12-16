@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     shared_access_policy_name,
     stream_analytics_job_name,
     serialization=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_stream_input_iothub', label=resourceLabel, attrs=self.newAttrs(
-    endpoint=endpoint,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
-    iothub_namespace=iothub_namespace,
-    name=name,
-    resource_group_name=resource_group_name,
-    serialization=serialization,
-    shared_access_policy_key=shared_access_policy_key,
-    shared_access_policy_name=shared_access_policy_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_stream_input_iothub',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      endpoint=endpoint,
+      eventhub_consumer_group_name=eventhub_consumer_group_name,
+      iothub_namespace=iothub_namespace,
+      name=name,
+      resource_group_name=resource_group_name,
+      serialization=serialization,
+      shared_access_policy_key=shared_access_policy_key,
+      shared_access_policy_name=shared_access_policy_name,
+      stream_analytics_job_name=stream_analytics_job_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     endpoint,
     eventhub_consumer_group_name,

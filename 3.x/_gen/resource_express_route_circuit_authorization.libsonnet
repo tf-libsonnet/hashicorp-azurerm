@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     express_route_circuit_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_circuit_authorization', label=resourceLabel, attrs=self.newAttrs(
-    express_route_circuit_name=express_route_circuit_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_circuit_authorization',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      express_route_circuit_name=express_route_circuit_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     express_route_circuit_name,
     name,

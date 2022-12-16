@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     read_permissions=null,
     timeouts=null,
-    write_permissions=null
-  ):: tf.withResource(type='azurerm_application_insights_api_key', label=resourceLabel, attrs=self.newAttrs(
-    application_insights_id=application_insights_id,
-    name=name,
-    read_permissions=read_permissions,
-    timeouts=timeouts,
-    write_permissions=write_permissions
-  )),
+    write_permissions=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_application_insights_api_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_insights_id=application_insights_id,
+      name=name,
+      read_permissions=read_permissions,
+      timeouts=timeouts,
+      write_permissions=write_permissions
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     application_insights_id,
     name,

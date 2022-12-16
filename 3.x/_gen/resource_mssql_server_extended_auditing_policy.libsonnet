@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_access_key_is_secondary=null,
     storage_account_subscription_id=null,
     storage_endpoint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_server_extended_auditing_policy', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    log_monitoring_enabled=log_monitoring_enabled,
-    retention_in_days=retention_in_days,
-    server_id=server_id,
-    storage_account_access_key=storage_account_access_key,
-    storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
-    storage_account_subscription_id=storage_account_subscription_id,
-    storage_endpoint=storage_endpoint,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_server_extended_auditing_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      enabled=enabled,
+      log_monitoring_enabled=log_monitoring_enabled,
+      retention_in_days=retention_in_days,
+      server_id=server_id,
+      storage_account_access_key=storage_account_access_key,
+      storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
+      storage_account_subscription_id=storage_account_subscription_id,
+      storage_endpoint=storage_endpoint,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     server_id,
     enabled=null,

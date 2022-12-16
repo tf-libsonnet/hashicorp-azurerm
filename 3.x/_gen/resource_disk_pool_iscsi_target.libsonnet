@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     disks_pool_id,
     name,
     target_iqn=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_disk_pool_iscsi_target', label=resourceLabel, attrs=self.newAttrs(
-    acl_mode=acl_mode,
-    disks_pool_id=disks_pool_id,
-    name=name,
-    target_iqn=target_iqn,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_disk_pool_iscsi_target',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      acl_mode=acl_mode,
+      disks_pool_id=disks_pool_id,
+      name=name,
+      target_iqn=target_iqn,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     acl_mode,
     disks_pool_id,

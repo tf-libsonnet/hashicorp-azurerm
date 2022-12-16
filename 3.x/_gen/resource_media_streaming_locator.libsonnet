@@ -28,21 +28,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     end_time=null,
     start_time=null,
     streaming_locator_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_streaming_locator', label=resourceLabel, attrs=self.newAttrs(
-    alternative_media_id=alternative_media_id,
-    asset_name=asset_name,
-    content_key=content_key,
-    default_content_key_policy_name=default_content_key_policy_name,
-    end_time=end_time,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    start_time=start_time,
-    streaming_locator_id=streaming_locator_id,
-    streaming_policy_name=streaming_policy_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_streaming_locator',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      alternative_media_id=alternative_media_id,
+      asset_name=asset_name,
+      content_key=content_key,
+      default_content_key_policy_name=default_content_key_policy_name,
+      end_time=end_time,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      start_time=start_time,
+      streaming_locator_id=streaming_locator_id,
+      streaming_policy_name=streaming_policy_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     asset_name,
     media_services_account_name,

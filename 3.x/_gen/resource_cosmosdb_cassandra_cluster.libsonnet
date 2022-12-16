@@ -23,24 +23,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     repair_enabled=null,
     tags=null,
     timeouts=null,
-    version=null
-  ):: tf.withResource(type='azurerm_cosmosdb_cassandra_cluster', label=resourceLabel, attrs=self.newAttrs(
-    authentication_method=authentication_method,
-    client_certificate_pems=client_certificate_pems,
-    default_admin_password=default_admin_password,
-    delegated_management_subnet_id=delegated_management_subnet_id,
-    external_gossip_certificate_pems=external_gossip_certificate_pems,
-    external_seed_node_ip_addresses=external_seed_node_ip_addresses,
-    hours_between_backups=hours_between_backups,
-    identity=identity,
-    location=location,
-    name=name,
-    repair_enabled=repair_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    version=version
-  )),
+    version=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_cassandra_cluster',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication_method=authentication_method,
+      client_certificate_pems=client_certificate_pems,
+      default_admin_password=default_admin_password,
+      delegated_management_subnet_id=delegated_management_subnet_id,
+      external_gossip_certificate_pems=external_gossip_certificate_pems,
+      external_seed_node_ip_addresses=external_seed_node_ip_addresses,
+      hours_between_backups=hours_between_backups,
+      identity=identity,
+      location=location,
+      name=name,
+      repair_enabled=repair_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     default_admin_password,
     delegated_management_subnet_id,

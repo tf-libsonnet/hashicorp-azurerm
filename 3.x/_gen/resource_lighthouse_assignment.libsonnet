@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     lighthouse_definition_id,
     scope,
     name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lighthouse_assignment', label=resourceLabel, attrs=self.newAttrs(
-    lighthouse_definition_id=lighthouse_definition_id,
-    name=name,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lighthouse_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      lighthouse_definition_id=lighthouse_definition_id,
+      name=name,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     lighthouse_definition_id,
     scope,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_virtual_path,
     name,
     nginx_deployment_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_nginx_certificate', label=resourceLabel, attrs=self.newAttrs(
-    certificate_virtual_path=certificate_virtual_path,
-    key_vault_secret_id=key_vault_secret_id,
-    key_virtual_path=key_virtual_path,
-    name=name,
-    nginx_deployment_id=nginx_deployment_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_nginx_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      certificate_virtual_path=certificate_virtual_path,
+      key_vault_secret_id=key_vault_secret_id,
+      key_virtual_path=key_virtual_path,
+      name=name,
+      nginx_deployment_id=nginx_deployment_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     certificate_virtual_path,
     key_vault_secret_id,

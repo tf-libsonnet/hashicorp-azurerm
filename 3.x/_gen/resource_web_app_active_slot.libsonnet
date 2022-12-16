@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     slot_id,
     overwrite_network_config=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_web_app_active_slot', label=resourceLabel, attrs=self.newAttrs(overwrite_network_config=overwrite_network_config, slot_id=slot_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_web_app_active_slot',
+    label=resourceLabel,
+    attrs=self.newAttrs(overwrite_network_config=overwrite_network_config, slot_id=slot_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     slot_id,
     overwrite_network_config=null,

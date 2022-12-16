@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_vault_id,
     name,
     timeouts=null,
-    version=null
-  ):: tf.withData(type='azurerm_key_vault_certificate', label=dataSrcLabel, attrs=self.newAttrs(
-    key_vault_id=key_vault_id,
-    name=name,
-    timeouts=timeouts,
-    version=version
-  )),
+    version=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_key_vault_certificate',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      key_vault_id=key_vault_id,
+      name=name,
+      timeouts=timeouts,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_id,
     name,

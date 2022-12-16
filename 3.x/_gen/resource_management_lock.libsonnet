@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     scope,
     notes=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_management_lock', label=resourceLabel, attrs=self.newAttrs(
-    lock_level=lock_level,
-    name=name,
-    notes=notes,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_management_lock',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      lock_level=lock_level,
+      name=name,
+      notes=notes,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     lock_level,
     name,

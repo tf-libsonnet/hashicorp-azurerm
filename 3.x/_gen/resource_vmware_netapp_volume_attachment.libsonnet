@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     netapp_volume_id,
     vmware_cluster_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_vmware_netapp_volume_attachment', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    netapp_volume_id=netapp_volume_id,
-    timeouts=timeouts,
-    vmware_cluster_id=vmware_cluster_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vmware_netapp_volume_attachment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      netapp_volume_id=netapp_volume_id,
+      timeouts=timeouts,
+      vmware_cluster_id=vmware_cluster_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     netapp_volume_id,

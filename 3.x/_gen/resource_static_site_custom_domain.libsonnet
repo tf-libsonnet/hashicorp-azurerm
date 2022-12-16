@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     domain_name,
     static_site_id,
     timeouts=null,
-    validation_type=null
-  ):: tf.withResource(type='azurerm_static_site_custom_domain', label=resourceLabel, attrs=self.newAttrs(
-    domain_name=domain_name,
-    static_site_id=static_site_id,
-    timeouts=timeouts,
-    validation_type=validation_type
-  )),
+    validation_type=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_static_site_custom_domain',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      domain_name=domain_name,
+      static_site_id=static_site_id,
+      timeouts=timeouts,
+      validation_type=validation_type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     domain_name,
     static_site_id,

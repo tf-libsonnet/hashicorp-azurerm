@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     signalr_service_id,
     private_endpoint=null,
     public_network=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_signalr_service_network_acl', label=resourceLabel, attrs=self.newAttrs(
-    default_action=default_action,
-    private_endpoint=private_endpoint,
-    public_network=public_network,
-    signalr_service_id=signalr_service_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_signalr_service_network_acl',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      default_action=default_action,
+      private_endpoint=private_endpoint,
+      public_network=public_network,
+      signalr_service_id=signalr_service_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     default_action,
     signalr_service_id,

@@ -17,25 +17,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_availability_set_id=null,
     target_network_id=null,
     target_zone=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_site_recovery_replicated_vm', label=resourceLabel, attrs=self.newAttrs(
-    managed_disk=managed_disk,
-    name=name,
-    network_interface=network_interface,
-    recovery_replication_policy_id=recovery_replication_policy_id,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    source_recovery_fabric_name=source_recovery_fabric_name,
-    source_recovery_protection_container_name=source_recovery_protection_container_name,
-    source_vm_id=source_vm_id,
-    target_availability_set_id=target_availability_set_id,
-    target_network_id=target_network_id,
-    target_recovery_fabric_id=target_recovery_fabric_id,
-    target_recovery_protection_container_id=target_recovery_protection_container_id,
-    target_resource_group_id=target_resource_group_id,
-    target_zone=target_zone,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_site_recovery_replicated_vm',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      managed_disk=managed_disk,
+      name=name,
+      network_interface=network_interface,
+      recovery_replication_policy_id=recovery_replication_policy_id,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      source_recovery_fabric_name=source_recovery_fabric_name,
+      source_recovery_protection_container_name=source_recovery_protection_container_name,
+      source_vm_id=source_vm_id,
+      target_availability_set_id=target_availability_set_id,
+      target_network_id=target_network_id,
+      target_recovery_fabric_id=target_recovery_fabric_id,
+      target_recovery_protection_container_id=target_recovery_protection_container_id,
+      target_resource_group_id=target_resource_group_id,
+      target_zone=target_zone,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     recovery_replication_policy_id,

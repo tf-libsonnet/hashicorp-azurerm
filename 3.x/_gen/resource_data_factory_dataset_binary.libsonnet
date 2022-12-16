@@ -55,22 +55,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     http_server_location=null,
     parameters=null,
     sftp_server_location=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_dataset_binary', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    azure_blob_storage_location=azure_blob_storage_location,
-    compression=compression,
-    data_factory_id=data_factory_id,
-    description=description,
-    folder=folder,
-    http_server_location=http_server_location,
-    linked_service_name=linked_service_name,
-    name=name,
-    parameters=parameters,
-    sftp_server_location=sftp_server_location,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_dataset_binary',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      azure_blob_storage_location=azure_blob_storage_location,
+      compression=compression,
+      data_factory_id=data_factory_id,
+      description=description,
+      folder=folder,
+      http_server_location=http_server_location,
+      linked_service_name=linked_service_name,
+      name=name,
+      parameters=parameters,
+      sftp_server_location=sftp_server_location,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     linked_service_name,

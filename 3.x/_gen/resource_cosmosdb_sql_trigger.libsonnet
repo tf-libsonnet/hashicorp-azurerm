@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     operation,
     type,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_sql_trigger', label=resourceLabel, attrs=self.newAttrs(
-    body=body,
-    container_id=container_id,
-    name=name,
-    operation=operation,
-    timeouts=timeouts,
-    type=type
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_sql_trigger',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      body=body,
+      container_id=container_id,
+      name=name,
+      operation=operation,
+      timeouts=timeouts,
+      type=type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     body,
     container_id,

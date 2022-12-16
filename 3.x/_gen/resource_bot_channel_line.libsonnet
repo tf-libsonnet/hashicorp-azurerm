@@ -15,14 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     resource_group_name,
     line_channel=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_channel_line', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
-    line_channel=line_channel,
-    location=location,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_channel_line',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bot_name=bot_name,
+      line_channel=line_channel,
+      location=location,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bot_name,
     location,

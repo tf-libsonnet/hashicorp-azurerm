@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_network_subnet_ids,
     sku_name=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_integration_service_environment', label=resourceLabel, attrs=self.newAttrs(
-    access_endpoint_type=access_endpoint_type,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_network_subnet_ids=virtual_network_subnet_ids
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_integration_service_environment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_endpoint_type=access_endpoint_type,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_network_subnet_ids=virtual_network_subnet_ids
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     access_endpoint_type,
     location,

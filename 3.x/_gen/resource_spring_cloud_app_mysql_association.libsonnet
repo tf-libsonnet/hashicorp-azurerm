@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     password,
     spring_cloud_app_id,
     username,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_app_mysql_association', label=resourceLabel, attrs=self.newAttrs(
-    database_name=database_name,
-    mysql_server_id=mysql_server_id,
-    name=name,
-    password=password,
-    spring_cloud_app_id=spring_cloud_app_id,
-    timeouts=timeouts,
-    username=username
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_app_mysql_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      database_name=database_name,
+      mysql_server_id=mysql_server_id,
+      name=name,
+      password=password,
+      spring_cloud_app_id=spring_cloud_app_id,
+      timeouts=timeouts,
+      username=username
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     database_name,
     mysql_server_id,

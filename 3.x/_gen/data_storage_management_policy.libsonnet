@@ -3,8 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     storage_account_id,
-    timeouts=null
-  ):: tf.withData(type='azurerm_storage_management_policy', label=dataSrcLabel, attrs=self.newAttrs(storage_account_id=storage_account_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_storage_management_policy',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(storage_account_id=storage_account_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     storage_account_id,
     timeouts=null

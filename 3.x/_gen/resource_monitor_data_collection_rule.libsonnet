@@ -110,19 +110,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     destinations=null,
     kind=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_data_collection_rule', label=resourceLabel, attrs=self.newAttrs(
-    data_flow=data_flow,
-    data_sources=data_sources,
-    description=description,
-    destinations=destinations,
-    kind=kind,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_data_collection_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      data_flow=data_flow,
+      data_sources=data_sources,
+      description=description,
+      destinations=destinations,
+      kind=kind,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     gallery_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_shared_image', label=dataSrcLabel, attrs=self.newAttrs(
-    gallery_name=gallery_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_shared_image',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      gallery_name=gallery_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     gallery_name,
     name,

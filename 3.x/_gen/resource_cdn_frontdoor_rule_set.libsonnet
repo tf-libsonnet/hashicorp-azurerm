@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     cdn_frontdoor_profile_id,
     name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_rule_set', label=resourceLabel, attrs=self.newAttrs(cdn_frontdoor_profile_id=cdn_frontdoor_profile_id, name=name, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_rule_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(cdn_frontdoor_profile_id=cdn_frontdoor_profile_id, name=name, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_frontdoor_profile_id,
     name,

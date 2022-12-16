@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     row_key,
     storage_account_name,
     table_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_table_entity', label=resourceLabel, attrs=self.newAttrs(
-    entity=entity,
-    partition_key=partition_key,
-    row_key=row_key,
-    storage_account_name=storage_account_name,
-    table_name=table_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_table_entity',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      entity=entity,
+      partition_key=partition_key,
+      row_key=row_key,
+      storage_account_name=storage_account_name,
+      table_name=table_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     entity,
     partition_key,

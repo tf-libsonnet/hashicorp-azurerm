@@ -54,20 +54,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dns_servers=null,
     routing_preference_internet_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_point_to_site_vpn_gateway', label=resourceLabel, attrs=self.newAttrs(
-    connection_configuration=connection_configuration,
-    dns_servers=dns_servers,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    routing_preference_internet_enabled=routing_preference_internet_enabled,
-    scale_unit=scale_unit,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_hub_id=virtual_hub_id,
-    vpn_server_configuration_id=vpn_server_configuration_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_point_to_site_vpn_gateway',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      connection_configuration=connection_configuration,
+      dns_servers=dns_servers,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      routing_preference_internet_enabled=routing_preference_internet_enabled,
+      scale_unit=scale_unit,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_hub_id=virtual_hub_id,
+      vpn_server_configuration_id=vpn_server_configuration_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

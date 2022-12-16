@@ -15,16 +15,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     identity=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_load_test', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    identity=identity,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_load_test',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      identity=identity,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

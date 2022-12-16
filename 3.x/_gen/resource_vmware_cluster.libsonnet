@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     sku_name,
     vmware_cloud_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_vmware_cluster', label=resourceLabel, attrs=self.newAttrs(
-    cluster_node_count=cluster_node_count,
-    name=name,
-    sku_name=sku_name,
-    timeouts=timeouts,
-    vmware_cloud_id=vmware_cloud_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vmware_cluster',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_node_count=cluster_node_count,
+      name=name,
+      sku_name=sku_name,
+      timeouts=timeouts,
+      vmware_cloud_id=vmware_cloud_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_node_count,
     name,

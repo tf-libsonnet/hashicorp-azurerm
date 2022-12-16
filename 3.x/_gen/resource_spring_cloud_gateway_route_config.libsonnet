@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     route=null,
     spring_cloud_app_id=null,
     sso_validation_enabled=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_gateway_route_config', label=resourceLabel, attrs=self.newAttrs(
-    filters=filters,
-    name=name,
-    open_api=open_api,
-    predicates=predicates,
-    protocol=protocol,
-    route=route,
-    spring_cloud_app_id=spring_cloud_app_id,
-    spring_cloud_gateway_id=spring_cloud_gateway_id,
-    sso_validation_enabled=sso_validation_enabled,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_gateway_route_config',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      filters=filters,
+      name=name,
+      open_api=open_api,
+      predicates=predicates,
+      protocol=protocol,
+      route=route,
+      spring_cloud_app_id=spring_cloud_app_id,
+      spring_cloud_gateway_id=spring_cloud_gateway_id,
+      sso_validation_enabled=sso_validation_enabled,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_gateway_id,

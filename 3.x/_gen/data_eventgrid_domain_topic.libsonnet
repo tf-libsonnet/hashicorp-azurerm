@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     domain_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_eventgrid_domain_topic', label=dataSrcLabel, attrs=self.newAttrs(
-    domain_name=domain_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_eventgrid_domain_topic',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      domain_name=domain_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     domain_name,
     name,

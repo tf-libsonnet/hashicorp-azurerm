@@ -39,21 +39,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     kind=null,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_healthcare_service', label=resourceLabel, attrs=self.newAttrs(
-    access_policy_object_ids=access_policy_object_ids,
-    authentication_configuration=authentication_configuration,
-    cors_configuration=cors_configuration,
-    cosmosdb_key_vault_key_versionless_id=cosmosdb_key_vault_key_versionless_id,
-    cosmosdb_throughput=cosmosdb_throughput,
-    kind=kind,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_healthcare_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_policy_object_ids=access_policy_object_ids,
+      authentication_configuration=authentication_configuration,
+      cors_configuration=cors_configuration,
+      cosmosdb_key_vault_key_versionless_id=cosmosdb_key_vault_key_versionless_id,
+      cosmosdb_throughput=cosmosdb_throughput,
+      kind=kind,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

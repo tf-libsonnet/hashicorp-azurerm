@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     is_default=null,
     policy=null,
     priority=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_vpn_server_configuration_policy_group', label=resourceLabel, attrs=self.newAttrs(
-    is_default=is_default,
-    name=name,
-    policy=policy,
-    priority=priority,
-    timeouts=timeouts,
-    vpn_server_configuration_id=vpn_server_configuration_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vpn_server_configuration_policy_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      is_default=is_default,
+      name=name,
+      policy=policy,
+      priority=priority,
+      timeouts=timeouts,
+      vpn_server_configuration_id=vpn_server_configuration_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     vpn_server_configuration_id,

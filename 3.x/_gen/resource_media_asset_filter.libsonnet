@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     first_quality_bitrate=null,
     presentation_time_range=null,
     timeouts=null,
-    track_selection=null
-  ):: tf.withResource(type='azurerm_media_asset_filter', label=resourceLabel, attrs=self.newAttrs(
-    asset_id=asset_id,
-    first_quality_bitrate=first_quality_bitrate,
-    name=name,
-    presentation_time_range=presentation_time_range,
-    timeouts=timeouts,
-    track_selection=track_selection
-  )),
+    track_selection=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_asset_filter',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      asset_id=asset_id,
+      first_quality_bitrate=first_quality_bitrate,
+      name=name,
+      presentation_time_range=presentation_time_range,
+      timeouts=timeouts,
+      track_selection=track_selection
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     asset_id,
     name,

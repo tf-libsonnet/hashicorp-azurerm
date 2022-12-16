@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     pipeline=null,
     subject_begins_with=null,
     subject_ends_with=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_trigger_custom_event', label=resourceLabel, attrs=self.newAttrs(
-    activated=activated,
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    eventgrid_topic_id=eventgrid_topic_id,
-    events=events,
-    name=name,
-    pipeline=pipeline,
-    subject_begins_with=subject_begins_with,
-    subject_ends_with=subject_ends_with,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_trigger_custom_event',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      activated=activated,
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      eventgrid_topic_id=eventgrid_topic_id,
+      events=events,
+      name=name,
+      pipeline=pipeline,
+      subject_begins_with=subject_begins_with,
+      subject_ends_with=subject_ends_with,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     eventgrid_topic_id,

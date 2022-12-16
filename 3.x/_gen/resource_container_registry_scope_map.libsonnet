@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     description=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_container_registry_scope_map', label=resourceLabel, attrs=self.newAttrs(
-    actions=actions,
-    container_registry_name=container_registry_name,
-    description=description,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_container_registry_scope_map',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      actions=actions,
+      container_registry_name=container_registry_name,
+      description=description,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     actions,
     container_registry_name,

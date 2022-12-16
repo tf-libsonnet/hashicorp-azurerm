@@ -20,21 +20,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     flow_timeout_in_minutes=null,
     subnet=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_network', label=resourceLabel, attrs=self.newAttrs(
-    address_space=address_space,
-    bgp_community=bgp_community,
-    ddos_protection_plan=ddos_protection_plan,
-    dns_servers=dns_servers,
-    edge_zone=edge_zone,
-    flow_timeout_in_minutes=flow_timeout_in_minutes,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    subnet=subnet,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_network',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_space=address_space,
+      bgp_community=bgp_community,
+      ddos_protection_plan=ddos_protection_plan,
+      dns_servers=dns_servers,
+      edge_zone=edge_zone,
+      flow_timeout_in_minutes=flow_timeout_in_minutes,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      subnet=subnet,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     address_space,
     location,

@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parameters=null,
     scopes=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_connection', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
-    client_id=client_id,
-    client_secret=client_secret,
-    location=location,
-    name=name,
-    parameters=parameters,
-    resource_group_name=resource_group_name,
-    scopes=scopes,
-    service_provider_name=service_provider_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bot_name=bot_name,
+      client_id=client_id,
+      client_secret=client_secret,
+      location=location,
+      name=name,
+      parameters=parameters,
+      resource_group_name=resource_group_name,
+      scopes=scopes,
+      service_provider_name=service_provider_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bot_name,
     client_id,

@@ -111,15 +111,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     certificate=null,
     certificate_policy=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_certificate', label=resourceLabel, attrs=self.newAttrs(
-    certificate=certificate,
-    certificate_policy=certificate_policy,
-    key_vault_id=key_vault_id,
-    name=name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      certificate=certificate,
+      certificate_policy=certificate_policy,
+      key_vault_id=key_vault_id,
+      name=name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_id,
     name,

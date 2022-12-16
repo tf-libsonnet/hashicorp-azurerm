@@ -3,8 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     private_markdown_storage_enforced,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_portal_tenant_configuration', label=resourceLabel, attrs=self.newAttrs(private_markdown_storage_enforced=private_markdown_storage_enforced, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_portal_tenant_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(private_markdown_storage_enforced=private_markdown_storage_enforced, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     private_markdown_storage_enforced,
     timeouts=null

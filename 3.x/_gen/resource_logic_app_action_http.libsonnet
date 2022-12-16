@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     headers=null,
     queries=null,
     run_after=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_action_http', label=resourceLabel, attrs=self.newAttrs(
-    body=body,
-    headers=headers,
-    logic_app_id=logic_app_id,
-    method=method,
-    name=name,
-    queries=queries,
-    run_after=run_after,
-    timeouts=timeouts,
-    uri=uri
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_action_http',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      body=body,
+      headers=headers,
+      logic_app_id=logic_app_id,
+      method=method,
+      name=name,
+      queries=queries,
+      run_after=run_after,
+      timeouts=timeouts,
+      uri=uri
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     logic_app_id,
     method,

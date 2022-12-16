@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     endpoint_uri=null,
     entity_path=null,
     identity_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_endpoint_servicebus_topic', label=resourceLabel, attrs=self.newAttrs(
-    authentication_type=authentication_type,
-    connection_string=connection_string,
-    endpoint_uri=endpoint_uri,
-    entity_path=entity_path,
-    identity_id=identity_id,
-    iothub_id=iothub_id,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_endpoint_servicebus_topic',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication_type=authentication_type,
+      connection_string=connection_string,
+      endpoint_uri=endpoint_uri,
+      entity_path=entity_path,
+      identity_id=identity_id,
+      iothub_id=iothub_id,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     iothub_id,
     name,

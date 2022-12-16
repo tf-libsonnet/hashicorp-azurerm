@@ -17,25 +17,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     start_vm_on_connect=null,
     tags=null,
     timeouts=null,
-    validate_environment=null
-  ):: tf.withResource(type='azurerm_virtual_desktop_host_pool', label=resourceLabel, attrs=self.newAttrs(
-    custom_rdp_properties=custom_rdp_properties,
-    description=description,
-    friendly_name=friendly_name,
-    load_balancer_type=load_balancer_type,
-    location=location,
-    maximum_sessions_allowed=maximum_sessions_allowed,
-    name=name,
-    personal_desktop_assignment_type=personal_desktop_assignment_type,
-    preferred_app_group_type=preferred_app_group_type,
-    resource_group_name=resource_group_name,
-    scheduled_agent_updates=scheduled_agent_updates,
-    start_vm_on_connect=start_vm_on_connect,
-    tags=tags,
-    timeouts=timeouts,
-    type=type,
-    validate_environment=validate_environment
-  )),
+    validate_environment=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_desktop_host_pool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_rdp_properties=custom_rdp_properties,
+      description=description,
+      friendly_name=friendly_name,
+      load_balancer_type=load_balancer_type,
+      location=location,
+      maximum_sessions_allowed=maximum_sessions_allowed,
+      name=name,
+      personal_desktop_assignment_type=personal_desktop_assignment_type,
+      preferred_app_group_type=preferred_app_group_type,
+      resource_group_name=resource_group_name,
+      scheduled_agent_updates=scheduled_agent_updates,
+      start_vm_on_connect=start_vm_on_connect,
+      tags=tags,
+      timeouts=timeouts,
+      type=type,
+      validate_environment=validate_environment
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     load_balancer_type,
     location,

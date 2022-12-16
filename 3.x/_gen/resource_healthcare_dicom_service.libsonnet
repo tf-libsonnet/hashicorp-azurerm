@@ -17,16 +17,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     identity=null,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_healthcare_dicom_service', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    tags=tags,
-    timeouts=timeouts,
-    workspace_id=workspace_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_healthcare_dicom_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      tags=tags,
+      timeouts=timeouts,
+      workspace_id=workspace_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

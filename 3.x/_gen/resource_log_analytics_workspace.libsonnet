@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     retention_in_days=null,
     sku=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_log_analytics_workspace', label=resourceLabel, attrs=self.newAttrs(
-    allow_resource_only_permissions=allow_resource_only_permissions,
-    cmk_for_query_forced=cmk_for_query_forced,
-    daily_quota_gb=daily_quota_gb,
-    internet_ingestion_enabled=internet_ingestion_enabled,
-    internet_query_enabled=internet_query_enabled,
-    location=location,
-    name=name,
-    reservation_capacity_in_gb_per_day=reservation_capacity_in_gb_per_day,
-    resource_group_name=resource_group_name,
-    retention_in_days=retention_in_days,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_workspace',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_resource_only_permissions=allow_resource_only_permissions,
+      cmk_for_query_forced=cmk_for_query_forced,
+      daily_quota_gb=daily_quota_gb,
+      internet_ingestion_enabled=internet_ingestion_enabled,
+      internet_query_enabled=internet_query_enabled,
+      location=location,
+      name=name,
+      reservation_capacity_in_gb_per_day=reservation_capacity_in_gb_per_day,
+      resource_group_name=resource_group_name,
+      retention_in_days=retention_in_days,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

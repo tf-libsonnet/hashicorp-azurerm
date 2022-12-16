@@ -28,18 +28,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     active=null,
     export_data_options=null,
     export_data_storage_location=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_resource_group_cost_management_export', label=resourceLabel, attrs=self.newAttrs(
-    active=active,
-    export_data_options=export_data_options,
-    export_data_storage_location=export_data_storage_location,
-    name=name,
-    recurrence_period_end_date=recurrence_period_end_date,
-    recurrence_period_start_date=recurrence_period_start_date,
-    recurrence_type=recurrence_type,
-    resource_group_id=resource_group_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_resource_group_cost_management_export',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      active=active,
+      export_data_options=export_data_options,
+      export_data_storage_location=export_data_storage_location,
+      name=name,
+      recurrence_period_end_date=recurrence_period_end_date,
+      recurrence_period_start_date=recurrence_period_start_date,
+      recurrence_type=recurrence_type,
+      resource_group_id=resource_group_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     recurrence_period_end_date,

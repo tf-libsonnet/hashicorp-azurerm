@@ -16,24 +16,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     identity_id=null,
     mapping_rule_name=null,
     table_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_eventhub_data_connection', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
-    compression=compression,
-    consumer_group=consumer_group,
-    data_format=data_format,
-    database_name=database_name,
-    database_routing_type=database_routing_type,
-    event_system_properties=event_system_properties,
-    eventhub_id=eventhub_id,
-    identity_id=identity_id,
-    location=location,
-    mapping_rule_name=mapping_rule_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    table_name=table_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_eventhub_data_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_name=cluster_name,
+      compression=compression,
+      consumer_group=consumer_group,
+      data_format=data_format,
+      database_name=database_name,
+      database_routing_type=database_routing_type,
+      event_system_properties=event_system_properties,
+      eventhub_id=eventhub_id,
+      identity_id=identity_id,
+      location=location,
+      mapping_rule_name=mapping_rule_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      table_name=table_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     consumer_group,

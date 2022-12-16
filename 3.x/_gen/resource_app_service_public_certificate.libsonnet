@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     certificate_location,
     certificate_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_public_certificate', label=resourceLabel, attrs=self.newAttrs(
-    app_service_name=app_service_name,
-    blob=blob,
-    certificate_location=certificate_location,
-    certificate_name=certificate_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_public_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_service_name=app_service_name,
+      blob=blob,
+      certificate_location=certificate_location,
+      certificate_name=certificate_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     app_service_name,
     blob,

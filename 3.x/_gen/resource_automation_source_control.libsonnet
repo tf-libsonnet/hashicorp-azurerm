@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     publish_runbook_enabled=null,
     security=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_source_control', label=resourceLabel, attrs=self.newAttrs(
-    automatic_sync=automatic_sync,
-    automation_account_id=automation_account_id,
-    branch=branch,
-    description=description,
-    folder_path=folder_path,
-    name=name,
-    publish_runbook_enabled=publish_runbook_enabled,
-    repository_url=repository_url,
-    security=security,
-    source_control_type=source_control_type,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_source_control',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automatic_sync=automatic_sync,
+      automation_account_id=automation_account_id,
+      branch=branch,
+      description=description,
+      folder_path=folder_path,
+      name=name,
+      publish_runbook_enabled=publish_runbook_enabled,
+      repository_url=repository_url,
+      security=security,
+      source_control_type=source_control_type,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_id,
     folder_path,

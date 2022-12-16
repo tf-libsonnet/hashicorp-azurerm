@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     recovery_database_id=null,
     restore=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_sql_pool', label=resourceLabel, attrs=self.newAttrs(
-    collation=collation,
-    create_mode=create_mode,
-    data_encrypted=data_encrypted,
-    name=name,
-    recovery_database_id=recovery_database_id,
-    restore=restore,
-    sku_name=sku_name,
-    synapse_workspace_id=synapse_workspace_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_sql_pool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      collation=collation,
+      create_mode=create_mode,
+      data_encrypted=data_encrypted,
+      name=name,
+      recovery_database_id=recovery_database_id,
+      restore=restore,
+      sku_name=sku_name,
+      synapse_workspace_id=synapse_workspace_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     sku_name,

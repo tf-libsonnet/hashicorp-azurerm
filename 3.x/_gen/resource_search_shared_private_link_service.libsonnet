@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subresource_name,
     target_resource_id,
     request_message=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_search_shared_private_link_service', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    request_message=request_message,
-    search_service_id=search_service_id,
-    subresource_name=subresource_name,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_search_shared_private_link_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      request_message=request_message,
+      search_service_id=search_service_id,
+      subresource_name=subresource_name,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     search_service_id,

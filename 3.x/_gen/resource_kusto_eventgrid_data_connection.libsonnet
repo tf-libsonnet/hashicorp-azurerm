@@ -18,26 +18,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     mapping_rule_name=null,
     skip_first_record=null,
     table_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_eventgrid_data_connection', label=resourceLabel, attrs=self.newAttrs(
-    blob_storage_event_type=blob_storage_event_type,
-    cluster_name=cluster_name,
-    data_format=data_format,
-    database_name=database_name,
-    database_routing_type=database_routing_type,
-    eventgrid_resource_id=eventgrid_resource_id,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
-    eventhub_id=eventhub_id,
-    location=location,
-    managed_identity_resource_id=managed_identity_resource_id,
-    mapping_rule_name=mapping_rule_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    skip_first_record=skip_first_record,
-    storage_account_id=storage_account_id,
-    table_name=table_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_eventgrid_data_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      blob_storage_event_type=blob_storage_event_type,
+      cluster_name=cluster_name,
+      data_format=data_format,
+      database_name=database_name,
+      database_routing_type=database_routing_type,
+      eventgrid_resource_id=eventgrid_resource_id,
+      eventhub_consumer_group_name=eventhub_consumer_group_name,
+      eventhub_id=eventhub_id,
+      location=location,
+      managed_identity_resource_id=managed_identity_resource_id,
+      mapping_rule_name=mapping_rule_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      skip_first_record=skip_first_record,
+      storage_account_id=storage_account_id,
+      table_name=table_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     database_name,

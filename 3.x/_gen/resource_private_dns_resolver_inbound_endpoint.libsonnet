@@ -16,15 +16,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     private_dns_resolver_id,
     ip_configurations=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_private_dns_resolver_inbound_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    ip_configurations=ip_configurations,
-    location=location,
-    name=name,
-    private_dns_resolver_id=private_dns_resolver_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_private_dns_resolver_inbound_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      ip_configurations=ip_configurations,
+      location=location,
+      name=name,
+      private_dns_resolver_id=private_dns_resolver_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

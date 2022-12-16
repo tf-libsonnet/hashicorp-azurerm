@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     alerts_enabled=null,
     discovery_logs_enabled=null,
     tenant_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_data_connector_microsoft_cloud_app_security', label=resourceLabel, attrs=self.newAttrs(
-    alerts_enabled=alerts_enabled,
-    discovery_logs_enabled=discovery_logs_enabled,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_data_connector_microsoft_cloud_app_security',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      alerts_enabled=alerts_enabled,
+      discovery_logs_enabled=discovery_logs_enabled,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     log_analytics_workspace_id,
     name,

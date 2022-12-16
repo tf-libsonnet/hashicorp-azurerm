@@ -21,22 +21,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     secure_ldap=null,
     security=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_active_directory_domain_service', label=resourceLabel, attrs=self.newAttrs(
-    domain_configuration_type=domain_configuration_type,
-    domain_name=domain_name,
-    filtered_sync_enabled=filtered_sync_enabled,
-    initial_replica_set=initial_replica_set,
-    location=location,
-    name=name,
-    notifications=notifications,
-    resource_group_name=resource_group_name,
-    secure_ldap=secure_ldap,
-    security=security,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_active_directory_domain_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      domain_configuration_type=domain_configuration_type,
+      domain_name=domain_name,
+      filtered_sync_enabled=filtered_sync_enabled,
+      initial_replica_set=initial_replica_set,
+      location=location,
+      name=name,
+      notifications=notifications,
+      resource_group_name=resource_group_name,
+      secure_ldap=secure_ldap,
+      security=security,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     domain_name,
     location,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     service,
     location_filter=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_network_service_tags', label=dataSrcLabel, attrs=self.newAttrs(
-    location=location,
-    location_filter=location_filter,
-    service=service,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_network_service_tags',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      location=location,
+      location_filter=location_filter,
+      service=service,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     service,

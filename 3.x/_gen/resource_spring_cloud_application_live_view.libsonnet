@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     name,
     spring_cloud_service_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_application_live_view', label=resourceLabel, attrs=self.newAttrs(name=name, spring_cloud_service_id=spring_cloud_service_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_application_live_view',
+    label=resourceLabel,
+    attrs=self.newAttrs(name=name, spring_cloud_service_id=spring_cloud_service_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_service_id,

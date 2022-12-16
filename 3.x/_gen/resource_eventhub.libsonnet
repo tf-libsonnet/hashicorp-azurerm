@@ -39,17 +39,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     capture_description=null,
     status=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_eventhub', label=resourceLabel, attrs=self.newAttrs(
-    capture_description=capture_description,
-    message_retention=message_retention,
-    name=name,
-    namespace_name=namespace_name,
-    partition_count=partition_count,
-    resource_group_name=resource_group_name,
-    status=status,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventhub',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      capture_description=capture_description,
+      message_retention=message_retention,
+      name=name,
+      namespace_name=namespace_name,
+      partition_count=partition_count,
+      resource_group_name=resource_group_name,
+      status=status,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     message_retention,
     name,

@@ -24,14 +24,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     module_link=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_module', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    module_link=module_link,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_module',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      module_link=module_link,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     source_file_share_name,
     source_storage_account_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_backup_protected_file_share', label=resourceLabel, attrs=self.newAttrs(
-    backup_policy_id=backup_policy_id,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    source_file_share_name=source_file_share_name,
-    source_storage_account_id=source_storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_backup_protected_file_share',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backup_policy_id=backup_policy_id,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      source_file_share_name=source_file_share_name,
+      source_storage_account_id=source_storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backup_policy_id,
     recovery_vault_name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enabled=null,
     tags=null,
     timeouts=null,
-    user=null
-  ):: tf.withResource(type='azurerm_logz_sub_account', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    logz_monitor_id=logz_monitor_id,
-    name=name,
-    tags=tags,
-    timeouts=timeouts,
-    user=user
-  )),
+    user=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logz_sub_account',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      enabled=enabled,
+      logz_monitor_id=logz_monitor_id,
+      name=name,
+      tags=tags,
+      timeouts=timeouts,
+      user=user
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     logz_monitor_id,
     name,

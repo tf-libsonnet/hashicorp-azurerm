@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     route_table_name,
     next_hop_in_ip_address=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_route', label=resourceLabel, attrs=self.newAttrs(
-    address_prefix=address_prefix,
-    name=name,
-    next_hop_in_ip_address=next_hop_in_ip_address,
-    next_hop_type=next_hop_type,
-    resource_group_name=resource_group_name,
-    route_table_name=route_table_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_route',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_prefix=address_prefix,
+      name=name,
+      next_hop_in_ip_address=next_hop_in_ip_address,
+      next_hop_type=next_hop_type,
+      resource_group_name=resource_group_name,
+      route_table_name=route_table_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     address_prefix,
     name,

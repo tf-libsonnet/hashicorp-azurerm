@@ -56,18 +56,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     eligible_authorization=null,
     lighthouse_definition_id=null,
     plan=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lighthouse_definition', label=resourceLabel, attrs=self.newAttrs(
-    authorization=authorization,
-    description=description,
-    eligible_authorization=eligible_authorization,
-    lighthouse_definition_id=lighthouse_definition_id,
-    managing_tenant_id=managing_tenant_id,
-    name=name,
-    plan=plan,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lighthouse_definition',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authorization=authorization,
+      description=description,
+      eligible_authorization=eligible_authorization,
+      lighthouse_definition_id=lighthouse_definition_id,
+      managing_tenant_id=managing_tenant_id,
+      name=name,
+      plan=plan,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     managing_tenant_id,
     name,

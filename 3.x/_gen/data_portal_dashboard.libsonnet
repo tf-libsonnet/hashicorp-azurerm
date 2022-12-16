@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dashboard_properties=null,
     display_name=null,
     name=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_portal_dashboard', label=dataSrcLabel, attrs=self.newAttrs(
-    dashboard_properties=dashboard_properties,
-    display_name=display_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_portal_dashboard',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      dashboard_properties=dashboard_properties,
+      display_name=display_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     resource_group_name,
     dashboard_properties=null,

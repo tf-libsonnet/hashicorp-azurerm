@@ -16,24 +16,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     schedule=null,
     start_time=null,
     time_zone=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_trigger_schedule', label=resourceLabel, attrs=self.newAttrs(
-    activated=activated,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    end_time=end_time,
-    frequency=frequency,
-    interval=interval,
-    name=name,
-    pipeline=pipeline,
-    pipeline_name=pipeline_name,
-    pipeline_parameters=pipeline_parameters,
-    schedule=schedule,
-    start_time=start_time,
-    time_zone=time_zone,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_trigger_schedule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      activated=activated,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      end_time=end_time,
+      frequency=frequency,
+      interval=interval,
+      name=name,
+      pipeline=pipeline,
+      pipeline_name=pipeline_name,
+      pipeline_parameters=pipeline_parameters,
+      schedule=schedule,
+      start_time=start_time,
+      time_zone=time_zone,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

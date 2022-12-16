@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     default_principal_modification_kind=null,
     sharing=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_attached_database_configuration', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
-    cluster_resource_id=cluster_resource_id,
-    database_name=database_name,
-    default_principal_modification_kind=default_principal_modification_kind,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    sharing=sharing,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_attached_database_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_name=cluster_name,
+      cluster_resource_id=cluster_resource_id,
+      database_name=database_name,
+      default_principal_modification_kind=default_principal_modification_kind,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      sharing=sharing,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     cluster_resource_id,

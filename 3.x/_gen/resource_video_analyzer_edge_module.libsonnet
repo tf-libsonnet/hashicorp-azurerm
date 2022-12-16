@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     video_analyzer_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_video_analyzer_edge_module', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    video_analyzer_name=video_analyzer_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_video_analyzer_edge_module',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      video_analyzer_name=video_analyzer_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

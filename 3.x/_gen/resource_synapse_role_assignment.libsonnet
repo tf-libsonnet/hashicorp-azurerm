@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     role_name,
     synapse_spark_pool_id=null,
     synapse_workspace_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_role_assignment', label=resourceLabel, attrs=self.newAttrs(
-    principal_id=principal_id,
-    role_name=role_name,
-    synapse_spark_pool_id=synapse_spark_pool_id,
-    synapse_workspace_id=synapse_workspace_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_role_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      principal_id=principal_id,
+      role_name=role_name,
+      synapse_spark_pool_id=synapse_spark_pool_id,
+      synapse_workspace_id=synapse_workspace_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     principal_id,
     role_name,

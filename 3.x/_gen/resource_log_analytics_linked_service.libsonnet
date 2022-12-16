@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     workspace_id,
     read_access_id=null,
     timeouts=null,
-    write_access_id=null
-  ):: tf.withResource(type='azurerm_log_analytics_linked_service', label=resourceLabel, attrs=self.newAttrs(
-    read_access_id=read_access_id,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    workspace_id=workspace_id,
-    write_access_id=write_access_id
-  )),
+    write_access_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_linked_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      read_access_id=read_access_id,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      workspace_id=workspace_id,
+      write_access_id=write_access_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     resource_group_name,
     workspace_id,

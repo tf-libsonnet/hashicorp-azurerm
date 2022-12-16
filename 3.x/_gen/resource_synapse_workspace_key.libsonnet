@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     customer_managed_key_name,
     synapse_workspace_id,
     customer_managed_key_versionless_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_workspace_key', label=resourceLabel, attrs=self.newAttrs(
-    active=active,
-    customer_managed_key_name=customer_managed_key_name,
-    customer_managed_key_versionless_id=customer_managed_key_versionless_id,
-    synapse_workspace_id=synapse_workspace_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_workspace_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      active=active,
+      customer_managed_key_name=customer_managed_key_name,
+      customer_managed_key_versionless_id=customer_managed_key_versionless_id,
+      synapse_workspace_id=synapse_workspace_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     active,
     customer_managed_key_name,

@@ -28,21 +28,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     retention_weekly=null,
     retention_yearly=null,
     timeouts=null,
-    timezone=null
-  ):: tf.withResource(type='azurerm_backup_policy_vm', label=resourceLabel, attrs=self.newAttrs(
-    backup=backup,
-    instant_restore_retention_days=instant_restore_retention_days,
-    name=name,
-    policy_type=policy_type,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    retention_daily=retention_daily,
-    retention_monthly=retention_monthly,
-    retention_weekly=retention_weekly,
-    retention_yearly=retention_yearly,
-    timeouts=timeouts,
-    timezone=timezone
-  )),
+    timezone=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_backup_policy_vm',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backup=backup,
+      instant_restore_retention_days=instant_restore_retention_days,
+      name=name,
+      policy_type=policy_type,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      retention_daily=retention_daily,
+      retention_monthly=retention_monthly,
+      retention_weekly=retention_weekly,
+      retention_yearly=retention_yearly,
+      timeouts=timeouts,
+      timezone=timezone
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     recovery_vault_name,

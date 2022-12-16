@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     iothub_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_iothub_shared_access_policy', label=dataSrcLabel, attrs=self.newAttrs(
-    iothub_name=iothub_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_iothub_shared_access_policy',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      iothub_name=iothub_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     iothub_name,
     name,

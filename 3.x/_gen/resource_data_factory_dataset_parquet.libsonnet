@@ -47,23 +47,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     http_server_location=null,
     parameters=null,
     schema_column=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_dataset_parquet', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    azure_blob_storage_location=azure_blob_storage_location,
-    compression_codec=compression_codec,
-    compression_level=compression_level,
-    data_factory_id=data_factory_id,
-    description=description,
-    folder=folder,
-    http_server_location=http_server_location,
-    linked_service_name=linked_service_name,
-    name=name,
-    parameters=parameters,
-    schema_column=schema_column,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_dataset_parquet',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      azure_blob_storage_location=azure_blob_storage_location,
+      compression_codec=compression_codec,
+      compression_level=compression_level,
+      data_factory_id=data_factory_id,
+      description=description,
+      folder=folder,
+      http_server_location=http_server_location,
+      linked_service_name=linked_service_name,
+      name=name,
+      parameters=parameters,
+      schema_column=schema_column,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     linked_service_name,

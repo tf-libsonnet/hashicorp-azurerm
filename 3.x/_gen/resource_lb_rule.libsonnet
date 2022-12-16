@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     idle_timeout_in_minutes=null,
     load_distribution=null,
     probe_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lb_rule', label=resourceLabel, attrs=self.newAttrs(
-    backend_address_pool_ids=backend_address_pool_ids,
-    backend_port=backend_port,
-    disable_outbound_snat=disable_outbound_snat,
-    enable_floating_ip=enable_floating_ip,
-    enable_tcp_reset=enable_tcp_reset,
-    frontend_ip_configuration_name=frontend_ip_configuration_name,
-    frontend_port=frontend_port,
-    idle_timeout_in_minutes=idle_timeout_in_minutes,
-    load_distribution=load_distribution,
-    loadbalancer_id=loadbalancer_id,
-    name=name,
-    probe_id=probe_id,
-    protocol=protocol,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backend_address_pool_ids=backend_address_pool_ids,
+      backend_port=backend_port,
+      disable_outbound_snat=disable_outbound_snat,
+      enable_floating_ip=enable_floating_ip,
+      enable_tcp_reset=enable_tcp_reset,
+      frontend_ip_configuration_name=frontend_ip_configuration_name,
+      frontend_port=frontend_port,
+      idle_timeout_in_minutes=idle_timeout_in_minutes,
+      load_distribution=load_distribution,
+      loadbalancer_id=loadbalancer_id,
+      name=name,
+      probe_id=probe_id,
+      protocol=protocol,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backend_port,
     frontend_ip_configuration_name,

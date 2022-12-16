@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sink=null,
     source=null,
     timeouts=null,
-    transformation=null
-  ):: tf.withResource(type='azurerm_data_factory_data_flow', label=resourceLabel, attrs=self.newAttrs(
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    folder=folder,
-    name=name,
-    script=script,
-    script_lines=script_lines,
-    sink=sink,
-    source=source,
-    timeouts=timeouts,
-    transformation=transformation
-  )),
+    transformation=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_data_flow',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      folder=folder,
+      name=name,
+      script=script,
+      script_lines=script_lines,
+      sink=sink,
+      source=source,
+      timeouts=timeouts,
+      transformation=transformation
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

@@ -19,14 +19,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     contact=null,
     shipment_address=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_databox_edge_order', label=resourceLabel, attrs=self.newAttrs(
-    contact=contact,
-    device_name=device_name,
-    resource_group_name=resource_group_name,
-    shipment_address=shipment_address,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_databox_edge_order',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      contact=contact,
+      device_name=device_name,
+      resource_group_name=resource_group_name,
+      shipment_address=shipment_address,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     device_name,
     resource_group_name,

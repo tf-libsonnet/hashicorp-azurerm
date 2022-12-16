@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     tags=null,
     tenant_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stack_hci_cluster', label=resourceLabel, attrs=self.newAttrs(
-    client_id=client_id,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stack_hci_cluster',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      client_id=client_id,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     client_id,
     location,

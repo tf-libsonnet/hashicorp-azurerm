@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     etag=null,
     script_parameters=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_watcher', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_id=automation_account_id,
-    description=description,
-    etag=etag,
-    execution_frequency_in_seconds=execution_frequency_in_seconds,
-    location=location,
-    name=name,
-    script_name=script_name,
-    script_parameters=script_parameters,
-    script_run_on=script_run_on,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_watcher',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_id=automation_account_id,
+      description=description,
+      etag=etag,
+      execution_frequency_in_seconds=execution_frequency_in_seconds,
+      location=location,
+      name=name,
+      script_name=script_name,
+      script_parameters=script_parameters,
+      script_run_on=script_run_on,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_id,
     execution_frequency_in_seconds,

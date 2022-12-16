@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     table,
     timeouts=null,
     token_user_display_name=null,
-    token_user_principal_name=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_powerbi', label=resourceLabel, attrs=self.newAttrs(
-    dataset=dataset,
-    group_id=group_id,
-    group_name=group_name,
-    name=name,
-    stream_analytics_job_id=stream_analytics_job_id,
-    table=table,
-    timeouts=timeouts,
-    token_user_display_name=token_user_display_name,
-    token_user_principal_name=token_user_principal_name
-  )),
+    token_user_principal_name=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_powerbi',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dataset=dataset,
+      group_id=group_id,
+      group_name=group_name,
+      name=name,
+      stream_analytics_job_id=stream_analytics_job_id,
+      table=table,
+      timeouts=timeouts,
+      token_user_display_name=token_user_display_name,
+      token_user_principal_name=token_user_principal_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     dataset,
     group_id,

@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     protected_settings_from_key_vault=null,
     provision_after_extensions=null,
     settings=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_machine_scale_set_extension', label=resourceLabel, attrs=self.newAttrs(
-    auto_upgrade_minor_version=auto_upgrade_minor_version,
-    automatic_upgrade_enabled=automatic_upgrade_enabled,
-    failure_suppression_enabled=failure_suppression_enabled,
-    force_update_tag=force_update_tag,
-    name=name,
-    protected_settings=protected_settings,
-    protected_settings_from_key_vault=protected_settings_from_key_vault,
-    provision_after_extensions=provision_after_extensions,
-    publisher=publisher,
-    settings=settings,
-    timeouts=timeouts,
-    type=type,
-    type_handler_version=type_handler_version,
-    virtual_machine_scale_set_id=virtual_machine_scale_set_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_machine_scale_set_extension',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_upgrade_minor_version=auto_upgrade_minor_version,
+      automatic_upgrade_enabled=automatic_upgrade_enabled,
+      failure_suppression_enabled=failure_suppression_enabled,
+      force_update_tag=force_update_tag,
+      name=name,
+      protected_settings=protected_settings,
+      protected_settings_from_key_vault=protected_settings_from_key_vault,
+      provision_after_extensions=provision_after_extensions,
+      publisher=publisher,
+      settings=settings,
+      timeouts=timeouts,
+      type=type,
+      type_handler_version=type_handler_version,
+      virtual_machine_scale_set_id=virtual_machine_scale_set_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     publisher,

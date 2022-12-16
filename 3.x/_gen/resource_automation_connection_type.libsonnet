@@ -20,15 +20,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     field=null,
     is_global=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_connection_type', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    field=field,
-    is_global=is_global,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_connection_type',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      field=field,
+      is_global=is_global,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     name,

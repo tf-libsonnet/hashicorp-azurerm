@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     description=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_openid_connect_provider', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    client_id=client_id,
-    client_secret=client_secret,
-    description=description,
-    display_name=display_name,
-    metadata_endpoint=metadata_endpoint,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_openid_connect_provider',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      client_id=client_id,
+      client_secret=client_secret,
+      description=description,
+      display_name=display_name,
+      metadata_endpoint=metadata_endpoint,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     client_id,

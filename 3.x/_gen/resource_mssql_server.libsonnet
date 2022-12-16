@@ -38,24 +38,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     primary_user_assigned_identity_id=null,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_server', label=resourceLabel, attrs=self.newAttrs(
-    administrator_login=administrator_login,
-    administrator_login_password=administrator_login_password,
-    azuread_administrator=azuread_administrator,
-    connection_policy=connection_policy,
-    identity=identity,
-    location=location,
-    minimum_tls_version=minimum_tls_version,
-    name=name,
-    outbound_network_restriction_enabled=outbound_network_restriction_enabled,
-    primary_user_assigned_identity_id=primary_user_assigned_identity_id,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    version=version
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      administrator_login=administrator_login,
+      administrator_login_password=administrator_login_password,
+      azuread_administrator=azuread_administrator,
+      connection_policy=connection_policy,
+      identity=identity,
+      location=location,
+      minimum_tls_version=minimum_tls_version,
+      name=name,
+      outbound_network_restriction_enabled=outbound_network_restriction_enabled,
+      primary_user_assigned_identity_id=primary_user_assigned_identity_id,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

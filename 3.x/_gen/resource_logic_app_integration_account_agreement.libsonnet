@@ -30,20 +30,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     guest_identity=null,
     host_identity=null,
     metadata=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_integration_account_agreement', label=resourceLabel, attrs=self.newAttrs(
-    agreement_type=agreement_type,
-    content=content,
-    guest_identity=guest_identity,
-    guest_partner_name=guest_partner_name,
-    host_identity=host_identity,
-    host_partner_name=host_partner_name,
-    integration_account_name=integration_account_name,
-    metadata=metadata,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_integration_account_agreement',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      agreement_type=agreement_type,
+      content=content,
+      guest_identity=guest_identity,
+      guest_partner_name=guest_partner_name,
+      host_identity=host_identity,
+      host_partner_name=host_partner_name,
+      integration_account_name=integration_account_name,
+      metadata=metadata,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     agreement_type,
     content,

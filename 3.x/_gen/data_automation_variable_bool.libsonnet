@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     automation_account_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_automation_variable_bool', label=dataSrcLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_automation_variable_bool',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     name,

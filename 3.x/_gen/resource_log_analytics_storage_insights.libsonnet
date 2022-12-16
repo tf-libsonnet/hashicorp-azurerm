@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     workspace_id,
     blob_container_names=null,
     table_names=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_log_analytics_storage_insights', label=resourceLabel, attrs=self.newAttrs(
-    blob_container_names=blob_container_names,
-    name=name,
-    resource_group_name=resource_group_name,
-    storage_account_id=storage_account_id,
-    storage_account_key=storage_account_key,
-    table_names=table_names,
-    timeouts=timeouts,
-    workspace_id=workspace_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_storage_insights',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      blob_container_names=blob_container_names,
+      name=name,
+      resource_group_name=resource_group_name,
+      storage_account_id=storage_account_id,
+      storage_account_key=storage_account_key,
+      table_names=table_names,
+      timeouts=timeouts,
+      workspace_id=workspace_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

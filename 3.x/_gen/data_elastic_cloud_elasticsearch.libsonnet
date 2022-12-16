@@ -10,13 +10,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     logs=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_elastic_cloud_elasticsearch', label=dataSrcLabel, attrs=self.newAttrs(
-    logs=logs,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_elastic_cloud_elasticsearch',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      logs=logs,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

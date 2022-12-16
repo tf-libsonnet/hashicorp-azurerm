@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     cache_location=null,
     description=null,
     redis_cache_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_redis_cache', label=resourceLabel, attrs=self.newAttrs(
-    api_management_id=api_management_id,
-    cache_location=cache_location,
-    connection_string=connection_string,
-    description=description,
-    name=name,
-    redis_cache_id=redis_cache_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_redis_cache',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_id=api_management_id,
+      cache_location=cache_location,
+      connection_string=connection_string,
+      description=description,
+      name=name,
+      redis_cache_id=redis_cache_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_id,
     connection_string,

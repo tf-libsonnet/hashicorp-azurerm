@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     password,
     username,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_job_credential', label=resourceLabel, attrs=self.newAttrs(
-    job_agent_id=job_agent_id,
-    name=name,
-    password=password,
-    timeouts=timeouts,
-    username=username
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_job_credential',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      job_agent_id=job_agent_id,
+      name=name,
+      password=password,
+      timeouts=timeouts,
+      username=username
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     job_agent_id,
     name,

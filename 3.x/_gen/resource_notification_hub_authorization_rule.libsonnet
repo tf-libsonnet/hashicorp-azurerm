@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     listen=null,
     manage=null,
     send=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_notification_hub_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    listen=listen,
-    manage=manage,
-    name=name,
-    namespace_name=namespace_name,
-    notification_hub_name=notification_hub_name,
-    resource_group_name=resource_group_name,
-    send=send,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_notification_hub_authorization_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      listen=listen,
+      manage=manage,
+      name=name,
+      namespace_name=namespace_name,
+      notification_hub_name=notification_hub_name,
+      resource_group_name=resource_group_name,
+      send=send,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     namespace_name,

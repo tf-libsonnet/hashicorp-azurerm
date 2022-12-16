@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     signup_policy,
     password_reset_policy=null,
     profile_editing_policy=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_identity_provider_aadb2c', label=resourceLabel, attrs=self.newAttrs(
-    allowed_tenant=allowed_tenant,
-    api_management_name=api_management_name,
-    authority=authority,
-    client_id=client_id,
-    client_secret=client_secret,
-    password_reset_policy=password_reset_policy,
-    profile_editing_policy=profile_editing_policy,
-    resource_group_name=resource_group_name,
-    signin_policy=signin_policy,
-    signin_tenant=signin_tenant,
-    signup_policy=signup_policy,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_identity_provider_aadb2c',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allowed_tenant=allowed_tenant,
+      api_management_name=api_management_name,
+      authority=authority,
+      client_id=client_id,
+      client_secret=client_secret,
+      password_reset_policy=password_reset_policy,
+      profile_editing_policy=profile_editing_policy,
+      resource_group_name=resource_group_name,
+      signin_policy=signin_policy,
+      signin_tenant=signin_tenant,
+      signup_policy=signup_policy,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     allowed_tenant,
     api_management_name,

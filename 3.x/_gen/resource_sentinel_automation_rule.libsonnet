@@ -52,19 +52,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     condition=null,
     enabled=null,
     expiration=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_automation_rule', label=resourceLabel, attrs=self.newAttrs(
-    action_incident=action_incident,
-    action_playbook=action_playbook,
-    condition=condition,
-    display_name=display_name,
-    enabled=enabled,
-    expiration=expiration,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    order=order,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_automation_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      action_incident=action_incident,
+      action_playbook=action_playbook,
+      condition=condition,
+      display_name=display_name,
+      enabled=enabled,
+      expiration=expiration,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      order=order,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     display_name,
     log_analytics_workspace_id,

@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     resource_group_name,
     page=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_channel_facebook', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
-    facebook_application_id=facebook_application_id,
-    facebook_application_secret=facebook_application_secret,
-    location=location,
-    page=page,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_channel_facebook',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bot_name=bot_name,
+      facebook_application_id=facebook_application_id,
+      facebook_application_secret=facebook_application_secret,
+      location=location,
+      page=page,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bot_name,
     facebook_application_id,

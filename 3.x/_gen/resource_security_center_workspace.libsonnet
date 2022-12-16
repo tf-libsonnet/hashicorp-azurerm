@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     scope,
     workspace_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_security_center_workspace', label=resourceLabel, attrs=self.newAttrs(scope=scope, timeouts=timeouts, workspace_id=workspace_id)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_security_center_workspace',
+    label=resourceLabel,
+    attrs=self.newAttrs(scope=scope, timeouts=timeouts, workspace_id=workspace_id),
+    _meta=_meta
+  ),
   newAttrs(
     scope,
     workspace_id,

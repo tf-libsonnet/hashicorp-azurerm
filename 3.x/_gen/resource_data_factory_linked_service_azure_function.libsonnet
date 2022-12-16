@@ -21,20 +21,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key=null,
     key_vault_key=null,
     parameters=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_function', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    key=key,
-    key_vault_key=key_vault_key,
-    name=name,
-    parameters=parameters,
-    timeouts=timeouts,
-    url=url
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_azure_function',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      key=key,
+      key_vault_key=key_vault_key,
+      name=name,
+      parameters=parameters,
+      timeouts=timeouts,
+      url=url
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

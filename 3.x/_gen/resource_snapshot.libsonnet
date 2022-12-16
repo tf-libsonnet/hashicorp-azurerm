@@ -41,20 +41,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source_uri=null,
     storage_account_id=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_snapshot', label=resourceLabel, attrs=self.newAttrs(
-    create_option=create_option,
-    disk_size_gb=disk_size_gb,
-    encryption_settings=encryption_settings,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    source_resource_id=source_resource_id,
-    source_uri=source_uri,
-    storage_account_id=storage_account_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_snapshot',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      create_option=create_option,
+      disk_size_gb=disk_size_gb,
+      encryption_settings=encryption_settings,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      source_resource_id=source_resource_id,
+      source_uri=source_uri,
+      storage_account_id=storage_account_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     create_option,
     location,

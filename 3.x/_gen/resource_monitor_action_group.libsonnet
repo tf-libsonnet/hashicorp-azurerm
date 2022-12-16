@@ -130,26 +130,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     voice_receiver=null,
-    webhook_receiver=null
-  ):: tf.withResource(type='azurerm_monitor_action_group', label=resourceLabel, attrs=self.newAttrs(
-    arm_role_receiver=arm_role_receiver,
-    automation_runbook_receiver=automation_runbook_receiver,
-    azure_app_push_receiver=azure_app_push_receiver,
-    azure_function_receiver=azure_function_receiver,
-    email_receiver=email_receiver,
-    enabled=enabled,
-    event_hub_receiver=event_hub_receiver,
-    itsm_receiver=itsm_receiver,
-    logic_app_receiver=logic_app_receiver,
-    name=name,
-    resource_group_name=resource_group_name,
-    short_name=short_name,
-    sms_receiver=sms_receiver,
-    tags=tags,
-    timeouts=timeouts,
-    voice_receiver=voice_receiver,
-    webhook_receiver=webhook_receiver
-  )),
+    webhook_receiver=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_action_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      arm_role_receiver=arm_role_receiver,
+      automation_runbook_receiver=automation_runbook_receiver,
+      azure_app_push_receiver=azure_app_push_receiver,
+      azure_function_receiver=azure_function_receiver,
+      email_receiver=email_receiver,
+      enabled=enabled,
+      event_hub_receiver=event_hub_receiver,
+      itsm_receiver=itsm_receiver,
+      logic_app_receiver=logic_app_receiver,
+      name=name,
+      resource_group_name=resource_group_name,
+      short_name=short_name,
+      sms_receiver=sms_receiver,
+      tags=tags,
+      timeouts=timeouts,
+      voice_receiver=voice_receiver,
+      webhook_receiver=webhook_receiver
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

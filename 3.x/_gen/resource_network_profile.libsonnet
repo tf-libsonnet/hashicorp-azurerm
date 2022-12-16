@@ -25,15 +25,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     container_network_interface=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_network_profile', label=resourceLabel, attrs=self.newAttrs(
-    container_network_interface=container_network_interface,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_profile',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      container_network_interface=container_network_interface,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

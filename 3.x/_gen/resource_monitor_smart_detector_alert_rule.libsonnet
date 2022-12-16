@@ -24,21 +24,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enabled=null,
     tags=null,
     throttling_duration=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_smart_detector_alert_rule', label=resourceLabel, attrs=self.newAttrs(
-    action_group=action_group,
-    description=description,
-    detector_type=detector_type,
-    enabled=enabled,
-    frequency=frequency,
-    name=name,
-    resource_group_name=resource_group_name,
-    scope_resource_ids=scope_resource_ids,
-    severity=severity,
-    tags=tags,
-    throttling_duration=throttling_duration,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_smart_detector_alert_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      action_group=action_group,
+      description=description,
+      detector_type=detector_type,
+      enabled=enabled,
+      frequency=frequency,
+      name=name,
+      resource_group_name=resource_group_name,
+      scope_resource_ids=scope_resource_ids,
+      severity=severity,
+      tags=tags,
+      throttling_duration=throttling_duration,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     detector_type,
     frequency,

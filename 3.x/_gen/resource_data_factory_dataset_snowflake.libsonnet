@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     schema_column=null,
     schema_name=null,
     table_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_dataset_snowflake', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    folder=folder,
-    linked_service_name=linked_service_name,
-    name=name,
-    parameters=parameters,
-    schema_column=schema_column,
-    schema_name=schema_name,
-    table_name=table_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_dataset_snowflake',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      folder=folder,
+      linked_service_name=linked_service_name,
+      name=name,
+      parameters=parameters,
+      schema_column=schema_column,
+      schema_name=schema_name,
+      table_name=table_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     linked_service_name,

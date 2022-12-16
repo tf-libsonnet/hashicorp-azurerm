@@ -13,8 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     name,
     feature=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_resource_provider_registration', label=resourceLabel, attrs=self.newAttrs(feature=feature, name=name, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_resource_provider_registration',
+    label=resourceLabel,
+    attrs=self.newAttrs(feature=feature, name=name, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     feature=null,

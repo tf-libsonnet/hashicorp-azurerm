@@ -11,14 +11,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_name,
     acl=null,
     metadata=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_storage_share', label=dataSrcLabel, attrs=self.newAttrs(
-    acl=acl,
-    metadata=metadata,
-    name=name,
-    storage_account_name=storage_account_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_storage_share',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      acl=acl,
+      metadata=metadata,
+      name=name,
+      storage_account_name=storage_account_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     storage_account_name,

@@ -123,21 +123,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     managed_rule=null,
     redirect_url=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_firewall_policy', label=resourceLabel, attrs=self.newAttrs(
-    custom_block_response_body=custom_block_response_body,
-    custom_block_response_status_code=custom_block_response_status_code,
-    custom_rule=custom_rule,
-    enabled=enabled,
-    managed_rule=managed_rule,
-    mode=mode,
-    name=name,
-    redirect_url=redirect_url,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_firewall_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_block_response_body=custom_block_response_body,
+      custom_block_response_status_code=custom_block_response_status_code,
+      custom_rule=custom_rule,
+      enabled=enabled,
+      managed_rule=managed_rule,
+      mode=mode,
+      name=name,
+      redirect_url=redirect_url,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     mode,
     name,

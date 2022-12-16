@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     relay_id,
     resource_group_name,
     send_key_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(
-    app_service_name=app_service_name,
-    hostname=hostname,
-    port=port,
-    relay_id=relay_id,
-    resource_group_name=resource_group_name,
-    send_key_name=send_key_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_hybrid_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_service_name=app_service_name,
+      hostname=hostname,
+      port=port,
+      relay_id=relay_id,
+      resource_group_name=resource_group_name,
+      send_key_name=send_key_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     app_service_name,
     hostname,

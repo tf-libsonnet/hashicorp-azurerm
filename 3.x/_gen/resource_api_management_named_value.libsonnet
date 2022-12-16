@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     value=null,
-    value_from_key_vault=null
-  ):: tf.withResource(type='azurerm_api_management_named_value', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    display_name=display_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    secret=secret,
-    tags=tags,
-    timeouts=timeouts,
-    value=value,
-    value_from_key_vault=value_from_key_vault
-  )),
+    value_from_key_vault=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_named_value',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      display_name=display_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      secret=secret,
+      tags=tags,
+      timeouts=timeouts,
+      value=value,
+      value_from_key_vault=value_from_key_vault
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     display_name,

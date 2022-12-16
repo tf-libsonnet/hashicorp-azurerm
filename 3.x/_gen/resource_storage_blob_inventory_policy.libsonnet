@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     storage_account_id,
     rules=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_blob_inventory_policy', label=resourceLabel, attrs=self.newAttrs(rules=rules, storage_account_id=storage_account_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_blob_inventory_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(rules=rules, storage_account_id=storage_account_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     storage_account_id,
     rules=null,

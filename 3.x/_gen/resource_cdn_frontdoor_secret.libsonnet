@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     cdn_frontdoor_profile_id,
     name,
     secret=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_secret', label=resourceLabel, attrs=self.newAttrs(
-    cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
-    name=name,
-    secret=secret,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_secret',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
+      name=name,
+      secret=secret,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_frontdoor_profile_id,
     name,

@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stream_analytics_job_name,
     table,
     user,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_synapse', label=resourceLabel, attrs=self.newAttrs(
-    database=database,
-    name=name,
-    password=password,
-    resource_group_name=resource_group_name,
-    server=server,
-    stream_analytics_job_name=stream_analytics_job_name,
-    table=table,
-    timeouts=timeouts,
-    user=user
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_synapse',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      database=database,
+      name=name,
+      password=password,
+      resource_group_name=resource_group_name,
+      server=server,
+      stream_analytics_job_name=stream_analytics_job_name,
+      table=table,
+      timeouts=timeouts,
+      user=user
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     database,
     name,

@@ -62,24 +62,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     transcription_languages=null,
-    use_static_hostname=null
-  ):: tf.withResource(type='azurerm_media_live_event', label=resourceLabel, attrs=self.newAttrs(
-    auto_start_enabled=auto_start_enabled,
-    cross_site_access_policy=cross_site_access_policy,
-    description=description,
-    encoding=encoding,
-    hostname_prefix=hostname_prefix,
-    input=input,
-    location=location,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    preview=preview,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    transcription_languages=transcription_languages,
-    use_static_hostname=use_static_hostname
-  )),
+    use_static_hostname=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_live_event',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_start_enabled=auto_start_enabled,
+      cross_site_access_policy=cross_site_access_policy,
+      description=description,
+      encoding=encoding,
+      hostname_prefix=hostname_prefix,
+      input=input,
+      location=location,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      preview=preview,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      transcription_languages=transcription_languages,
+      use_static_hostname=use_static_hostname
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     media_services_account_name,

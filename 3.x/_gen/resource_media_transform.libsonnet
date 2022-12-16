@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     description=null,
     output=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_transform', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    output=output,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_transform',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      output=output,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     media_services_account_name,
     name,

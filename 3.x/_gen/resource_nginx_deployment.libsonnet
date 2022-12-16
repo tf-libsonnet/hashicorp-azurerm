@@ -57,22 +57,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     managed_resource_group=null,
     network_interface=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_nginx_deployment', label=resourceLabel, attrs=self.newAttrs(
-    diagnose_support_enabled=diagnose_support_enabled,
-    frontend_private=frontend_private,
-    frontend_public=frontend_public,
-    identity=identity,
-    location=location,
-    logging_storage_account=logging_storage_account,
-    managed_resource_group=managed_resource_group,
-    name=name,
-    network_interface=network_interface,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_nginx_deployment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      diagnose_support_enabled=diagnose_support_enabled,
+      frontend_private=frontend_private,
+      frontend_public=frontend_public,
+      identity=identity,
+      location=location,
+      logging_storage_account=logging_storage_account,
+      managed_resource_group=managed_resource_group,
+      name=name,
+      network_interface=network_interface,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

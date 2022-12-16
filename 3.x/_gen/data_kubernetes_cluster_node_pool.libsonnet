@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     kubernetes_cluster_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_kubernetes_cluster_node_pool', label=dataSrcLabel, attrs=self.newAttrs(
-    kubernetes_cluster_name=kubernetes_cluster_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_kubernetes_cluster_node_pool',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      kubernetes_cluster_name=kubernetes_cluster_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     kubernetes_cluster_name,
     name,

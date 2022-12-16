@@ -18,13 +18,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     custom_https_provisioning_enabled,
     frontend_endpoint_id,
     custom_https_configuration=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_frontdoor_custom_https_configuration', label=resourceLabel, attrs=self.newAttrs(
-    custom_https_configuration=custom_https_configuration,
-    custom_https_provisioning_enabled=custom_https_provisioning_enabled,
-    frontend_endpoint_id=frontend_endpoint_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_frontdoor_custom_https_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_https_configuration=custom_https_configuration,
+      custom_https_provisioning_enabled=custom_https_provisioning_enabled,
+      frontend_endpoint_id=frontend_endpoint_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     custom_https_provisioning_enabled,
     frontend_endpoint_id,

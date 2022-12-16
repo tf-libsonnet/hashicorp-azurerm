@@ -40,26 +40,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     inbound_nat_rule=null,
     notes=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_dev_test_windows_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
-    allow_claim=allow_claim,
-    disallow_public_ip_address=disallow_public_ip_address,
-    gallery_image_reference=gallery_image_reference,
-    inbound_nat_rule=inbound_nat_rule,
-    lab_name=lab_name,
-    lab_subnet_name=lab_subnet_name,
-    lab_virtual_network_id=lab_virtual_network_id,
-    location=location,
-    name=name,
-    notes=notes,
-    password=password,
-    resource_group_name=resource_group_name,
-    size=size,
-    storage_type=storage_type,
-    tags=tags,
-    timeouts=timeouts,
-    username=username
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dev_test_windows_virtual_machine',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_claim=allow_claim,
+      disallow_public_ip_address=disallow_public_ip_address,
+      gallery_image_reference=gallery_image_reference,
+      inbound_nat_rule=inbound_nat_rule,
+      lab_name=lab_name,
+      lab_subnet_name=lab_subnet_name,
+      lab_virtual_network_id=lab_virtual_network_id,
+      location=location,
+      name=name,
+      notes=notes,
+      password=password,
+      resource_group_name=resource_group_name,
+      size=size,
+      storage_type=storage_type,
+      tags=tags,
+      timeouts=timeouts,
+      username=username
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     lab_name,
     lab_subnet_name,

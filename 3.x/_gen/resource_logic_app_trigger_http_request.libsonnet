@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     schema,
     method=null,
     relative_path=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_trigger_http_request', label=resourceLabel, attrs=self.newAttrs(
-    logic_app_id=logic_app_id,
-    method=method,
-    name=name,
-    relative_path=relative_path,
-    schema=schema,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_trigger_http_request',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      logic_app_id=logic_app_id,
+      method=method,
+      name=name,
+      relative_path=relative_path,
+      schema=schema,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     logic_app_id,
     name,

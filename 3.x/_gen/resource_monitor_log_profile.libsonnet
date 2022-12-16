@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     retention_policy=null,
     servicebus_rule_id=null,
     storage_account_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_log_profile', label=resourceLabel, attrs=self.newAttrs(
-    categories=categories,
-    locations=locations,
-    name=name,
-    retention_policy=retention_policy,
-    servicebus_rule_id=servicebus_rule_id,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_log_profile',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      categories=categories,
+      locations=locations,
+      name=name,
+      retention_policy=retention_policy,
+      servicebus_rule_id=servicebus_rule_id,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     categories,
     locations,

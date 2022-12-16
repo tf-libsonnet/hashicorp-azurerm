@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     medtech_service_id,
     name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_healthcare_medtech_service_fhir_destination', label=resourceLabel, attrs=self.newAttrs(
-    destination_fhir_mapping_json=destination_fhir_mapping_json,
-    destination_fhir_service_id=destination_fhir_service_id,
-    destination_identity_resolution_type=destination_identity_resolution_type,
-    location=location,
-    medtech_service_id=medtech_service_id,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_healthcare_medtech_service_fhir_destination',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      destination_fhir_mapping_json=destination_fhir_mapping_json,
+      destination_fhir_service_id=destination_fhir_service_id,
+      destination_identity_resolution_type=destination_identity_resolution_type,
+      location=location,
+      medtech_service_id=medtech_service_id,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     destination_fhir_mapping_json,
     destination_fhir_service_id,

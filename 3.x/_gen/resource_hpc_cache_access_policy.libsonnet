@@ -26,13 +26,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     hpc_cache_id,
     name,
     access_rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_hpc_cache_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    access_rule=access_rule,
-    hpc_cache_id=hpc_cache_id,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_hpc_cache_access_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_rule=access_rule,
+      hpc_cache_id=hpc_cache_id,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     hpc_cache_id,
     name,

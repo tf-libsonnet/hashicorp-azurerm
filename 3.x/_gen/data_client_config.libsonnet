@@ -2,8 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    timeouts=null
-  ):: tf.withData(type='azurerm_client_config', label=dataSrcLabel, attrs=self.newAttrs(timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_client_config',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     timeouts=null
   ):: std.prune(a={

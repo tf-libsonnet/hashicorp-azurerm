@@ -32,22 +32,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ssh=null,
     subnet_resource_id=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_machine_learning_compute_instance', label=resourceLabel, attrs=self.newAttrs(
-    assign_to_user=assign_to_user,
-    authorization_type=authorization_type,
-    description=description,
-    identity=identity,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    machine_learning_workspace_id=machine_learning_workspace_id,
-    name=name,
-    ssh=ssh,
-    subnet_resource_id=subnet_resource_id,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_machine_size=virtual_machine_size
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_machine_learning_compute_instance',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      assign_to_user=assign_to_user,
+      authorization_type=authorization_type,
+      description=description,
+      identity=identity,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      machine_learning_workspace_id=machine_learning_workspace_id,
+      name=name,
+      ssh=ssh,
+      subnet_resource_id=subnet_resource_id,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_machine_size=virtual_machine_size
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     machine_learning_workspace_id,

@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parameters=null,
     path=null,
     schema_column=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_dataset_azure_blob', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    dynamic_filename_enabled=dynamic_filename_enabled,
-    dynamic_path_enabled=dynamic_path_enabled,
-    filename=filename,
-    folder=folder,
-    linked_service_name=linked_service_name,
-    name=name,
-    parameters=parameters,
-    path=path,
-    schema_column=schema_column,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_dataset_azure_blob',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      dynamic_filename_enabled=dynamic_filename_enabled,
+      dynamic_path_enabled=dynamic_path_enabled,
+      filename=filename,
+      folder=folder,
+      linked_service_name=linked_service_name,
+      name=name,
+      parameters=parameters,
+      path=path,
+      schema_column=schema_column,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     linked_service_name,

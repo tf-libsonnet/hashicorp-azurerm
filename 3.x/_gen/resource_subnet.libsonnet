@@ -31,21 +31,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     private_link_service_network_policies_enabled=null,
     service_endpoint_policy_ids=null,
     service_endpoints=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_subnet', label=resourceLabel, attrs=self.newAttrs(
-    address_prefixes=address_prefixes,
-    delegation=delegation,
-    enforce_private_link_endpoint_network_policies=enforce_private_link_endpoint_network_policies,
-    enforce_private_link_service_network_policies=enforce_private_link_service_network_policies,
-    name=name,
-    private_endpoint_network_policies_enabled=private_endpoint_network_policies_enabled,
-    private_link_service_network_policies_enabled=private_link_service_network_policies_enabled,
-    resource_group_name=resource_group_name,
-    service_endpoint_policy_ids=service_endpoint_policy_ids,
-    service_endpoints=service_endpoints,
-    timeouts=timeouts,
-    virtual_network_name=virtual_network_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_subnet',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_prefixes=address_prefixes,
+      delegation=delegation,
+      enforce_private_link_endpoint_network_policies=enforce_private_link_endpoint_network_policies,
+      enforce_private_link_service_network_policies=enforce_private_link_service_network_policies,
+      name=name,
+      private_endpoint_network_policies_enabled=private_endpoint_network_policies_enabled,
+      private_link_service_network_policies_enabled=private_link_service_network_policies_enabled,
+      resource_group_name=resource_group_name,
+      service_endpoint_policy_ids=service_endpoint_policy_ids,
+      service_endpoints=service_endpoints,
+      timeouts=timeouts,
+      virtual_network_name=virtual_network_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     address_prefixes,
     name,

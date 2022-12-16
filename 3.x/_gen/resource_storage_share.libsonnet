@@ -27,17 +27,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     acl=null,
     enabled_protocol=null,
     metadata=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_share', label=resourceLabel, attrs=self.newAttrs(
-    access_tier=access_tier,
-    acl=acl,
-    enabled_protocol=enabled_protocol,
-    metadata=metadata,
-    name=name,
-    quota=quota,
-    storage_account_name=storage_account_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_share',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_tier=access_tier,
+      acl=acl,
+      enabled_protocol=enabled_protocol,
+      metadata=metadata,
+      name=name,
+      quota=quota,
+      storage_account_name=storage_account_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     quota,

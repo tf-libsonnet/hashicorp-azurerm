@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enabled=null,
     notification_settings=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_dev_test_global_vm_shutdown_schedule', label=resourceLabel, attrs=self.newAttrs(
-    daily_recurrence_time=daily_recurrence_time,
-    enabled=enabled,
-    location=location,
-    notification_settings=notification_settings,
-    tags=tags,
-    timeouts=timeouts,
-    timezone=timezone,
-    virtual_machine_id=virtual_machine_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dev_test_global_vm_shutdown_schedule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      daily_recurrence_time=daily_recurrence_time,
+      enabled=enabled,
+      location=location,
+      notification_settings=notification_settings,
+      tags=tags,
+      timeouts=timeouts,
+      timezone=timezone,
+      virtual_machine_id=virtual_machine_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     daily_recurrence_time,
     location,

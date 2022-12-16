@@ -3,8 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     web_pubsub_id,
-    timeouts=null
-  ):: tf.withData(type='azurerm_web_pubsub_private_link_resource', label=dataSrcLabel, attrs=self.newAttrs(timeouts=timeouts, web_pubsub_id=web_pubsub_id)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_web_pubsub_private_link_resource',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(timeouts=timeouts, web_pubsub_id=web_pubsub_id),
+    _meta=_meta
+  ),
   newAttrs(
     web_pubsub_id,
     timeouts=null

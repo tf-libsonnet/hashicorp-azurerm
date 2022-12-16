@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     container=null,
     description=null,
     storage_account_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_asset', label=resourceLabel, attrs=self.newAttrs(
-    alternate_id=alternate_id,
-    container=container,
-    description=description,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    storage_account_name=storage_account_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_asset',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      alternate_id=alternate_id,
+      container=container,
+      description=description,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      storage_account_name=storage_account_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     media_services_account_name,
     name,

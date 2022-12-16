@@ -21,20 +21,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name=null,
     port=null,
     resource_group_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_redis_enterprise_database', label=resourceLabel, attrs=self.newAttrs(
-    client_protocol=client_protocol,
-    cluster_id=cluster_id,
-    clustering_policy=clustering_policy,
-    eviction_policy=eviction_policy,
-    linked_database_group_nickname=linked_database_group_nickname,
-    linked_database_id=linked_database_id,
-    module=module,
-    name=name,
-    port=port,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_redis_enterprise_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      client_protocol=client_protocol,
+      cluster_id=cluster_id,
+      clustering_policy=clustering_policy,
+      eviction_policy=eviction_policy,
+      linked_database_group_nickname=linked_database_group_nickname,
+      linked_database_id=linked_database_id,
+      module=module,
+      name=name,
+      port=port,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_id,
     client_protocol=null,

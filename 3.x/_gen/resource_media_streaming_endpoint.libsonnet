@@ -57,25 +57,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     max_cache_age_seconds=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_streaming_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    access_control=access_control,
-    auto_start_enabled=auto_start_enabled,
-    cdn_enabled=cdn_enabled,
-    cdn_profile=cdn_profile,
-    cdn_provider=cdn_provider,
-    cross_site_access_policy=cross_site_access_policy,
-    custom_host_names=custom_host_names,
-    description=description,
-    location=location,
-    max_cache_age_seconds=max_cache_age_seconds,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    scale_units=scale_units,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_streaming_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_control=access_control,
+      auto_start_enabled=auto_start_enabled,
+      cdn_enabled=cdn_enabled,
+      cdn_profile=cdn_profile,
+      cdn_provider=cdn_provider,
+      cross_site_access_policy=cross_site_access_policy,
+      custom_host_names=custom_host_names,
+      description=description,
+      location=location,
+      max_cache_age_seconds=max_cache_age_seconds,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      scale_units=scale_units,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     media_services_account_name,

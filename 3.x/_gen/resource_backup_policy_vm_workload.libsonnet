@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     workload_type,
     protection_policy=null,
     settings=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_backup_policy_vm_workload', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    protection_policy=protection_policy,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    settings=settings,
-    timeouts=timeouts,
-    workload_type=workload_type
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_backup_policy_vm_workload',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      protection_policy=protection_policy,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      settings=settings,
+      timeouts=timeouts,
+      workload_type=workload_type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     recovery_vault_name,

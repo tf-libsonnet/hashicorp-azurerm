@@ -18,17 +18,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     managed_resource_group_name=null,
     public_network_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_purview_account', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    location=location,
-    managed_resource_group_name=managed_resource_group_name,
-    name=name,
-    public_network_enabled=public_network_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_purview_account',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      location=location,
+      managed_resource_group_name=managed_resource_group_name,
+      name=name,
+      public_network_enabled=public_network_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

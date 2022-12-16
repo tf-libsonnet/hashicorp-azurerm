@@ -17,25 +17,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     pipeline=null,
     retry=null,
     timeouts=null,
-    trigger_dependency=null
-  ):: tf.withResource(type='azurerm_data_factory_trigger_tumbling_window', label=resourceLabel, attrs=self.newAttrs(
-    activated=activated,
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    delay=delay,
-    description=description,
-    end_time=end_time,
-    frequency=frequency,
-    interval=interval,
-    max_concurrency=max_concurrency,
-    name=name,
-    pipeline=pipeline,
-    retry=retry,
-    start_time=start_time,
-    timeouts=timeouts,
-    trigger_dependency=trigger_dependency
-  )),
+    trigger_dependency=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_trigger_tumbling_window',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      activated=activated,
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      delay=delay,
+      description=description,
+      end_time=end_time,
+      frequency=frequency,
+      interval=interval,
+      max_concurrency=max_concurrency,
+      name=name,
+      pipeline=pipeline,
+      retry=retry,
+      start_time=start_time,
+      timeouts=timeouts,
+      trigger_dependency=trigger_dependency
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     frequency,

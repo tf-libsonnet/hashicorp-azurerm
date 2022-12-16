@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     default_duration=null,
     description=null,
     labels=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_watchlist', label=resourceLabel, attrs=self.newAttrs(
-    default_duration=default_duration,
-    description=description,
-    display_name=display_name,
-    item_search_key=item_search_key,
-    labels=labels,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_watchlist',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      default_duration=default_duration,
+      description=description,
+      display_name=display_name,
+      item_search_key=item_search_key,
+      labels=labels,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     display_name,
     item_search_key,

@@ -19,16 +19,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_vault_key=null,
     metadata=null,
     public_certificate=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_integration_account_certificate', label=resourceLabel, attrs=self.newAttrs(
-    integration_account_name=integration_account_name,
-    key_vault_key=key_vault_key,
-    metadata=metadata,
-    name=name,
-    public_certificate=public_certificate,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_integration_account_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      integration_account_name=integration_account_name,
+      key_vault_key=key_vault_key,
+      metadata=metadata,
+      name=name,
+      public_certificate=public_certificate,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     integration_account_name,
     name,

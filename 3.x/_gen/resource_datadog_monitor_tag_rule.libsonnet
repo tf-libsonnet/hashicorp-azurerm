@@ -48,14 +48,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     log=null,
     metric=null,
     name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_datadog_monitor_tag_rule', label=resourceLabel, attrs=self.newAttrs(
-    datadog_monitor_id=datadog_monitor_id,
-    log=log,
-    metric=metric,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_datadog_monitor_tag_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      datadog_monitor_id=datadog_monitor_id,
+      log=log,
+      metric=metric,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     datadog_monitor_id,
     log=null,

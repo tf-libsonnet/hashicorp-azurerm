@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     priority,
     resource_group_name,
     rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_firewall_network_rule_collection', label=resourceLabel, attrs=self.newAttrs(
-    action=action,
-    azure_firewall_name=azure_firewall_name,
-    name=name,
-    priority=priority,
-    resource_group_name=resource_group_name,
-    rule=rule,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_firewall_network_rule_collection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      action=action,
+      azure_firewall_name=azure_firewall_name,
+      name=name,
+      priority=priority,
+      resource_group_name=resource_group_name,
+      rule=rule,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     action,
     azure_firewall_name,

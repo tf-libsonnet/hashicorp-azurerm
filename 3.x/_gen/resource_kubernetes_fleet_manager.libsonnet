@@ -14,15 +14,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     hub_profile=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kubernetes_fleet_manager', label=resourceLabel, attrs=self.newAttrs(
-    hub_profile=hub_profile,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kubernetes_fleet_manager',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      hub_profile=hub_profile,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

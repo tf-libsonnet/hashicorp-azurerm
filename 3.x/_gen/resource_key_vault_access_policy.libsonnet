@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_permissions=null,
     secret_permissions=null,
     storage_permissions=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    application_id=application_id,
-    certificate_permissions=certificate_permissions,
-    key_permissions=key_permissions,
-    key_vault_id=key_vault_id,
-    object_id=object_id,
-    secret_permissions=secret_permissions,
-    storage_permissions=storage_permissions,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_access_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_id=application_id,
+      certificate_permissions=certificate_permissions,
+      key_permissions=key_permissions,
+      key_vault_id=key_vault_id,
+      object_id=object_id,
+      secret_permissions=secret_permissions,
+      storage_permissions=storage_permissions,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_id,
     object_id,

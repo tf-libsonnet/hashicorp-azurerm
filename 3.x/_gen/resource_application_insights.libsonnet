@@ -17,25 +17,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sampling_percentage=null,
     tags=null,
     timeouts=null,
-    workspace_id=null
-  ):: tf.withResource(type='azurerm_application_insights', label=resourceLabel, attrs=self.newAttrs(
-    application_type=application_type,
-    daily_data_cap_in_gb=daily_data_cap_in_gb,
-    daily_data_cap_notifications_disabled=daily_data_cap_notifications_disabled,
-    disable_ip_masking=disable_ip_masking,
-    force_customer_storage_for_profiler=force_customer_storage_for_profiler,
-    internet_ingestion_enabled=internet_ingestion_enabled,
-    internet_query_enabled=internet_query_enabled,
-    local_authentication_disabled=local_authentication_disabled,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    retention_in_days=retention_in_days,
-    sampling_percentage=sampling_percentage,
-    tags=tags,
-    timeouts=timeouts,
-    workspace_id=workspace_id
-  )),
+    workspace_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_application_insights',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_type=application_type,
+      daily_data_cap_in_gb=daily_data_cap_in_gb,
+      daily_data_cap_notifications_disabled=daily_data_cap_notifications_disabled,
+      disable_ip_masking=disable_ip_masking,
+      force_customer_storage_for_profiler=force_customer_storage_for_profiler,
+      internet_ingestion_enabled=internet_ingestion_enabled,
+      internet_query_enabled=internet_query_enabled,
+      local_authentication_disabled=local_authentication_disabled,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      retention_in_days=retention_in_days,
+      sampling_percentage=sampling_percentage,
+      tags=tags,
+      timeouts=timeouts,
+      workspace_id=workspace_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     application_type,
     location,

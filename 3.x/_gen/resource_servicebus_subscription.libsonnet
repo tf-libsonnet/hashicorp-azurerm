@@ -26,25 +26,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     lock_duration=null,
     requires_session=null,
     status=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_servicebus_subscription', label=resourceLabel, attrs=self.newAttrs(
-    auto_delete_on_idle=auto_delete_on_idle,
-    client_scoped_subscription=client_scoped_subscription,
-    client_scoped_subscription_enabled=client_scoped_subscription_enabled,
-    dead_lettering_on_filter_evaluation_error=dead_lettering_on_filter_evaluation_error,
-    dead_lettering_on_message_expiration=dead_lettering_on_message_expiration,
-    default_message_ttl=default_message_ttl,
-    enable_batched_operations=enable_batched_operations,
-    forward_dead_lettered_messages_to=forward_dead_lettered_messages_to,
-    forward_to=forward_to,
-    lock_duration=lock_duration,
-    max_delivery_count=max_delivery_count,
-    name=name,
-    requires_session=requires_session,
-    status=status,
-    timeouts=timeouts,
-    topic_id=topic_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_servicebus_subscription',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_delete_on_idle=auto_delete_on_idle,
+      client_scoped_subscription=client_scoped_subscription,
+      client_scoped_subscription_enabled=client_scoped_subscription_enabled,
+      dead_lettering_on_filter_evaluation_error=dead_lettering_on_filter_evaluation_error,
+      dead_lettering_on_message_expiration=dead_lettering_on_message_expiration,
+      default_message_ttl=default_message_ttl,
+      enable_batched_operations=enable_batched_operations,
+      forward_dead_lettered_messages_to=forward_dead_lettered_messages_to,
+      forward_to=forward_to,
+      lock_duration=lock_duration,
+      max_delivery_count=max_delivery_count,
+      name=name,
+      requires_session=requires_session,
+      status=status,
+      timeouts=timeouts,
+      topic_id=topic_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     max_delivery_count,
     name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     vm_resource_id,
     worker_group_name,
     worker_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_hybrid_runbook_worker', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    vm_resource_id=vm_resource_id,
-    worker_group_name=worker_group_name,
-    worker_id=worker_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_hybrid_runbook_worker',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      vm_resource_id=vm_resource_id,
+      worker_group_name=worker_group_name,
+      worker_id=worker_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     resource_group_name,

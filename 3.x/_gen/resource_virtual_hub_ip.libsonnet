@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_hub_id,
     private_ip_address=null,
     private_ip_allocation_method=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_hub_ip', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    private_ip_address=private_ip_address,
-    private_ip_allocation_method=private_ip_allocation_method,
-    public_ip_address_id=public_ip_address_id,
-    subnet_id=subnet_id,
-    timeouts=timeouts,
-    virtual_hub_id=virtual_hub_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_hub_ip',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      private_ip_address=private_ip_address,
+      private_ip_allocation_method=private_ip_allocation_method,
+      public_ip_address_id=public_ip_address_id,
+      subnet_id=subnet_id,
+      timeouts=timeouts,
+      virtual_hub_id=virtual_hub_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     public_ip_address_id,

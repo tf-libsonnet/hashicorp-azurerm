@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     virtual_network_id,
     dns_servers=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_network_dns_servers', label=resourceLabel, attrs=self.newAttrs(dns_servers=dns_servers, timeouts=timeouts, virtual_network_id=virtual_network_id)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_network_dns_servers',
+    label=resourceLabel,
+    attrs=self.newAttrs(dns_servers=dns_servers, timeouts=timeouts, virtual_network_id=virtual_network_id),
+    _meta=_meta
+  ),
   newAttrs(
     virtual_network_id,
     dns_servers=null,

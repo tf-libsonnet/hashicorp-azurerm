@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     log_analytics_workspace_id,
     display_name=null,
     name=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_sentinel_alert_rule_template', label=dataSrcLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_sentinel_alert_rule_template',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      display_name=display_name,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     log_analytics_workspace_id,
     display_name=null,

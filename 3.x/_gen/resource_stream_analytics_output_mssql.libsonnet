@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     max_writer_count=null,
     password=null,
     timeouts=null,
-    user=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_mssql', label=resourceLabel, attrs=self.newAttrs(
-    authentication_mode=authentication_mode,
-    database=database,
-    max_batch_count=max_batch_count,
-    max_writer_count=max_writer_count,
-    name=name,
-    password=password,
-    resource_group_name=resource_group_name,
-    server=server,
-    stream_analytics_job_name=stream_analytics_job_name,
-    table=table,
-    timeouts=timeouts,
-    user=user
-  )),
+    user=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_mssql',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication_mode=authentication_mode,
+      database=database,
+      max_batch_count=max_batch_count,
+      max_writer_count=max_writer_count,
+      name=name,
+      password=password,
+      resource_group_name=resource_group_name,
+      server=server,
+      stream_analytics_job_name=stream_analytics_job_name,
+      table=table,
+      timeouts=timeouts,
+      user=user
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     database,
     name,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     share_name,
     storage_account_name,
     metadata=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_share_directory', label=resourceLabel, attrs=self.newAttrs(
-    metadata=metadata,
-    name=name,
-    share_name=share_name,
-    storage_account_name=storage_account_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_share_directory',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      metadata=metadata,
+      name=name,
+      share_name=share_name,
+      storage_account_name=storage_account_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     share_name,

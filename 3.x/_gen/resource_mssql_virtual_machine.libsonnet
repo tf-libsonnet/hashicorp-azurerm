@@ -98,24 +98,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sql_instance=null,
     storage_configuration=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
-    assessment=assessment,
-    auto_backup=auto_backup,
-    auto_patching=auto_patching,
-    key_vault_credential=key_vault_credential,
-    r_services_enabled=r_services_enabled,
-    sql_connectivity_port=sql_connectivity_port,
-    sql_connectivity_type=sql_connectivity_type,
-    sql_connectivity_update_password=sql_connectivity_update_password,
-    sql_connectivity_update_username=sql_connectivity_update_username,
-    sql_instance=sql_instance,
-    sql_license_type=sql_license_type,
-    storage_configuration=storage_configuration,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_machine_id=virtual_machine_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_virtual_machine',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      assessment=assessment,
+      auto_backup=auto_backup,
+      auto_patching=auto_patching,
+      key_vault_credential=key_vault_credential,
+      r_services_enabled=r_services_enabled,
+      sql_connectivity_port=sql_connectivity_port,
+      sql_connectivity_type=sql_connectivity_type,
+      sql_connectivity_update_password=sql_connectivity_update_password,
+      sql_connectivity_update_username=sql_connectivity_update_username,
+      sql_instance=sql_instance,
+      sql_license_type=sql_license_type,
+      storage_configuration=storage_configuration,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_machine_id=virtual_machine_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     sql_license_type,
     virtual_machine_id,

@@ -25,18 +25,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     maximum_bytes_per_session=null,
     maximum_capture_duration_in_seconds=null,
     storage_location=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_machine_packet_capture', label=resourceLabel, attrs=self.newAttrs(
-    filter=filter,
-    maximum_bytes_per_packet=maximum_bytes_per_packet,
-    maximum_bytes_per_session=maximum_bytes_per_session,
-    maximum_capture_duration_in_seconds=maximum_capture_duration_in_seconds,
-    name=name,
-    network_watcher_id=network_watcher_id,
-    storage_location=storage_location,
-    timeouts=timeouts,
-    virtual_machine_id=virtual_machine_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_machine_packet_capture',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      filter=filter,
+      maximum_bytes_per_packet=maximum_bytes_per_packet,
+      maximum_bytes_per_session=maximum_bytes_per_session,
+      maximum_capture_duration_in_seconds=maximum_capture_duration_in_seconds,
+      name=name,
+      network_watcher_id=network_watcher_id,
+      storage_location=storage_location,
+      timeouts=timeouts,
+      virtual_machine_id=virtual_machine_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     network_watcher_id,

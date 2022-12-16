@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     size_in_tb,
     qos_type=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_netapp_pool', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    location=location,
-    name=name,
-    qos_type=qos_type,
-    resource_group_name=resource_group_name,
-    service_level=service_level,
-    size_in_tb=size_in_tb,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_netapp_pool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      location=location,
+      name=name,
+      qos_type=qos_type,
+      resource_group_name=resource_group_name,
+      service_level=service_level,
+      size_in_tb=size_in_tb,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     location,

@@ -22,21 +22,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source_id=null,
     storage_container_id=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_application_insights_workbook', label=resourceLabel, attrs=self.newAttrs(
-    category=category,
-    data_json=data_json,
-    description=description,
-    display_name=display_name,
-    identity=identity,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    source_id=source_id,
-    storage_container_id=storage_container_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_application_insights_workbook',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      category=category,
+      data_json=data_json,
+      description=description,
+      display_name=display_name,
+      identity=identity,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      source_id=source_id,
+      storage_container_id=storage_container_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_json,
     display_name,

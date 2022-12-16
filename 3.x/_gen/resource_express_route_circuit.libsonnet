@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     service_provider_name=null,
     sku=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_circuit', label=resourceLabel, attrs=self.newAttrs(
-    allow_classic_operations=allow_classic_operations,
-    bandwidth_in_gbps=bandwidth_in_gbps,
-    bandwidth_in_mbps=bandwidth_in_mbps,
-    express_route_port_id=express_route_port_id,
-    location=location,
-    name=name,
-    peering_location=peering_location,
-    resource_group_name=resource_group_name,
-    service_provider_name=service_provider_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_circuit',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_classic_operations=allow_classic_operations,
+      bandwidth_in_gbps=bandwidth_in_gbps,
+      bandwidth_in_mbps=bandwidth_in_mbps,
+      express_route_port_id=express_route_port_id,
+      location=location,
+      name=name,
+      peering_location=peering_location,
+      resource_group_name=resource_group_name,
+      service_provider_name=service_provider_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

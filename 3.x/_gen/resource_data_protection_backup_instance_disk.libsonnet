@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     snapshot_resource_group_name,
     vault_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_protection_backup_instance_disk', label=resourceLabel, attrs=self.newAttrs(
-    backup_policy_id=backup_policy_id,
-    disk_id=disk_id,
-    location=location,
-    name=name,
-    snapshot_resource_group_name=snapshot_resource_group_name,
-    timeouts=timeouts,
-    vault_id=vault_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_protection_backup_instance_disk',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backup_policy_id=backup_policy_id,
+      disk_id=disk_id,
+      location=location,
+      name=name,
+      snapshot_resource_group_name=snapshot_resource_group_name,
+      timeouts=timeouts,
+      vault_id=vault_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backup_policy_id,
     disk_id,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     enabled=null,
     rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_frontdoor_rules_engine', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    frontdoor_name=frontdoor_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    rule=rule,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_frontdoor_rules_engine',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      enabled=enabled,
+      frontdoor_name=frontdoor_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      rule=rule,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     frontdoor_name,
     name,

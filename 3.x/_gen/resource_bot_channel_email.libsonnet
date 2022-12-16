@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     email_password,
     location,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_channel_email', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
-    email_address=email_address,
-    email_password=email_password,
-    location=location,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_channel_email',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bot_name=bot_name,
+      email_address=email_address,
+      email_password=email_password,
+      location=location,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bot_name,
     email_address,

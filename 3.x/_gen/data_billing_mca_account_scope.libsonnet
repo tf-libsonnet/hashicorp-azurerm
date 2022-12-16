@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     billing_account_name,
     billing_profile_name,
     invoice_section_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_billing_mca_account_scope', label=dataSrcLabel, attrs=self.newAttrs(
-    billing_account_name=billing_account_name,
-    billing_profile_name=billing_profile_name,
-    invoice_section_name=invoice_section_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_billing_mca_account_scope',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      billing_account_name=billing_account_name,
+      billing_profile_name=billing_profile_name,
+      invoice_section_name=invoice_section_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     billing_account_name,
     billing_profile_name,

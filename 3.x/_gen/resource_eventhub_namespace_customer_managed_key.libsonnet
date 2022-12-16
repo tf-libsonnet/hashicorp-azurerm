@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     eventhub_namespace_id,
     key_vault_key_ids,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(eventhub_namespace_id=eventhub_namespace_id, key_vault_key_ids=key_vault_key_ids, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventhub_namespace_customer_managed_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(eventhub_namespace_id=eventhub_namespace_id, key_vault_key_ids=key_vault_key_ids, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     eventhub_namespace_id,
     key_vault_key_ids,

@@ -28,18 +28,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account=null,
     storage_authentication_type=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_services_account', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    key_delivery_access_control=key_delivery_access_control,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    storage_account=storage_account,
-    storage_authentication_type=storage_authentication_type,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_services_account',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      key_delivery_access_control=key_delivery_access_control,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      storage_account=storage_account,
+      storage_authentication_type=storage_authentication_type,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

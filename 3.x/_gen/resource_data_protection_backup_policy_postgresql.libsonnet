@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     vault_name,
     retention_rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_protection_backup_policy_postgresql', label=resourceLabel, attrs=self.newAttrs(
-    backup_repeating_time_intervals=backup_repeating_time_intervals,
-    default_retention_duration=default_retention_duration,
-    name=name,
-    resource_group_name=resource_group_name,
-    retention_rule=retention_rule,
-    timeouts=timeouts,
-    vault_name=vault_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_protection_backup_policy_postgresql',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backup_repeating_time_intervals=backup_repeating_time_intervals,
+      default_retention_duration=default_retention_duration,
+      name=name,
+      resource_group_name=resource_group_name,
+      retention_rule=retention_rule,
+      timeouts=timeouts,
+      vault_name=vault_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backup_repeating_time_intervals,
     default_retention_duration,

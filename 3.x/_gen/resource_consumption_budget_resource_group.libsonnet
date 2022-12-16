@@ -74,18 +74,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     notification=null,
     time_grain=null,
     time_period=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_consumption_budget_resource_group', label=resourceLabel, attrs=self.newAttrs(
-    amount=amount,
-    etag=etag,
-    filter=filter,
-    name=name,
-    notification=notification,
-    resource_group_id=resource_group_id,
-    time_grain=time_grain,
-    time_period=time_period,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_consumption_budget_resource_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      amount=amount,
+      etag=etag,
+      filter=filter,
+      name=name,
+      notification=notification,
+      resource_group_id=resource_group_id,
+      time_grain=time_grain,
+      time_period=time_period,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     amount,
     name,

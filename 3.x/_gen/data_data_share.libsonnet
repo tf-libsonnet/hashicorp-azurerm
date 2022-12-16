@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     account_id,
     name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_data_share', label=dataSrcLabel, attrs=self.newAttrs(account_id=account_id, name=name, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_data_share',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(account_id=account_id, name=name, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     account_id,
     name,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enterprise_application_id,
     single_sign_on_enabled,
     name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_datadog_monitor_sso_configuration', label=resourceLabel, attrs=self.newAttrs(
-    datadog_monitor_id=datadog_monitor_id,
-    enterprise_application_id=enterprise_application_id,
-    name=name,
-    single_sign_on_enabled=single_sign_on_enabled,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_datadog_monitor_sso_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      datadog_monitor_id=datadog_monitor_id,
+      enterprise_application_id=enterprise_application_id,
+      name=name,
+      single_sign_on_enabled=single_sign_on_enabled,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     datadog_monitor_id,
     enterprise_application_id,

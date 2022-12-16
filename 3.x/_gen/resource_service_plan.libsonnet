@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     worker_count=null,
-    zone_balancing_enabled=null
-  ):: tf.withResource(type='azurerm_service_plan', label=resourceLabel, attrs=self.newAttrs(
-    app_service_environment_id=app_service_environment_id,
-    location=location,
-    maximum_elastic_worker_count=maximum_elastic_worker_count,
-    name=name,
-    os_type=os_type,
-    per_site_scaling_enabled=per_site_scaling_enabled,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts,
-    worker_count=worker_count,
-    zone_balancing_enabled=zone_balancing_enabled
-  )),
+    zone_balancing_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_service_plan',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_service_environment_id=app_service_environment_id,
+      location=location,
+      maximum_elastic_worker_count=maximum_elastic_worker_count,
+      name=name,
+      os_type=os_type,
+      per_site_scaling_enabled=per_site_scaling_enabled,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts,
+      worker_count=worker_count,
+      zone_balancing_enabled=zone_balancing_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

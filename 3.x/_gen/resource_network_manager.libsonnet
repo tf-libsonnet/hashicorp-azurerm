@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     scope=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_network_manager', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    scope=scope,
-    scope_accesses=scope_accesses,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_manager',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      scope=scope,
+      scope_accesses=scope_accesses,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

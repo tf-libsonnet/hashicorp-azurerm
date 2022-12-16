@@ -36,22 +36,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     service_fabric_cluster=null,
     timeouts=null,
     title=null,
-    tls=null
-  ):: tf.withResource(type='azurerm_api_management_backend', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    credentials=credentials,
-    description=description,
-    name=name,
-    protocol=protocol,
-    proxy=proxy,
-    resource_group_name=resource_group_name,
-    resource_id=resource_id,
-    service_fabric_cluster=service_fabric_cluster,
-    timeouts=timeouts,
-    title=title,
-    tls=tls,
-    url=url
-  )),
+    tls=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_backend',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      credentials=credentials,
+      description=description,
+      name=name,
+      protocol=protocol,
+      proxy=proxy,
+      resource_group_name=resource_group_name,
+      resource_id=resource_id,
+      service_fabric_cluster=service_fabric_cluster,
+      timeouts=timeouts,
+      title=title,
+      tls=tls,
+      url=url
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     name,

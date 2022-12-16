@@ -43,18 +43,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null,
     use_local_git=null,
     use_manual_integration=null,
-    use_mercurial=null
-  ):: tf.withResource(type='azurerm_app_service_source_control', label=resourceLabel, attrs=self.newAttrs(
-    app_id=app_id,
-    branch=branch,
-    github_action_configuration=github_action_configuration,
-    repo_url=repo_url,
-    rollback_enabled=rollback_enabled,
-    timeouts=timeouts,
-    use_local_git=use_local_git,
-    use_manual_integration=use_manual_integration,
-    use_mercurial=use_mercurial
-  )),
+    use_mercurial=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_source_control',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_id=app_id,
+      branch=branch,
+      github_action_configuration=github_action_configuration,
+      repo_url=repo_url,
+      rollback_enabled=rollback_enabled,
+      timeouts=timeouts,
+      use_local_git=use_local_git,
+      use_manual_integration=use_manual_integration,
+      use_mercurial=use_mercurial
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     app_id,
     branch=null,

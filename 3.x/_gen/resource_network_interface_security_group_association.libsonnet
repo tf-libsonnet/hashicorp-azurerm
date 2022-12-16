@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     network_interface_id,
     network_security_group_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_network_interface_security_group_association', label=resourceLabel, attrs=self.newAttrs(network_interface_id=network_interface_id, network_security_group_id=network_security_group_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_interface_security_group_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(network_interface_id=network_interface_id, network_security_group_id=network_security_group_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     network_interface_id,
     network_security_group_id,

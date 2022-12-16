@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     platform_update_domain_count=null,
     proximity_placement_group_id=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_availability_set', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    managed=managed,
-    name=name,
-    platform_fault_domain_count=platform_fault_domain_count,
-    platform_update_domain_count=platform_update_domain_count,
-    proximity_placement_group_id=proximity_placement_group_id,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_availability_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      managed=managed,
+      name=name,
+      platform_fault_domain_count=platform_fault_domain_count,
+      platform_update_domain_count=platform_update_domain_count,
+      proximity_placement_group_id=proximity_placement_group_id,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

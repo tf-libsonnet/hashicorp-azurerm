@@ -28,18 +28,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ip_configuration_id=null,
     mode=null,
     timeouts=null,
-    type=null
-  ):: tf.withResource(type='azurerm_virtual_network_gateway_nat_rule', label=resourceLabel, attrs=self.newAttrs(
-    external_mapping=external_mapping,
-    internal_mapping=internal_mapping,
-    ip_configuration_id=ip_configuration_id,
-    mode=mode,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    type=type,
-    virtual_network_gateway_id=virtual_network_gateway_id
-  )),
+    type=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_network_gateway_nat_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      external_mapping=external_mapping,
+      internal_mapping=internal_mapping,
+      ip_configuration_id=ip_configuration_id,
+      mode=mode,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      type=type,
+      virtual_network_gateway_id=virtual_network_gateway_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

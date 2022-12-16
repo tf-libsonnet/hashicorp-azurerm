@@ -20,19 +20,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     federated_client_id=null,
     identity=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_disk_encryption_set', label=resourceLabel, attrs=self.newAttrs(
-    auto_key_rotation_enabled=auto_key_rotation_enabled,
-    encryption_type=encryption_type,
-    federated_client_id=federated_client_id,
-    identity=identity,
-    key_vault_key_id=key_vault_key_id,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_disk_encryption_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_key_rotation_enabled=auto_key_rotation_enabled,
+      encryption_type=encryption_type,
+      federated_client_id=federated_client_id,
+      identity=identity,
+      key_vault_key_id=key_vault_key_id,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_key_id,
     location,

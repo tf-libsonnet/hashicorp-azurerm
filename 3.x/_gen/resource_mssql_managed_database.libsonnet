@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     managed_instance_id,
     name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_managed_database', label=resourceLabel, attrs=self.newAttrs(managed_instance_id=managed_instance_id, name=name, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_managed_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(managed_instance_id=managed_instance_id, name=name, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     managed_instance_id,
     name,

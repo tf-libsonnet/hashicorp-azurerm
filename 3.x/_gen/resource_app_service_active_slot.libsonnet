@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     app_service_name,
     app_service_slot_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_active_slot', label=resourceLabel, attrs=self.newAttrs(
-    app_service_name=app_service_name,
-    app_service_slot_name=app_service_slot_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_active_slot',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_service_name=app_service_name,
+      app_service_slot_name=app_service_slot_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     app_service_name,
     app_service_slot_name,

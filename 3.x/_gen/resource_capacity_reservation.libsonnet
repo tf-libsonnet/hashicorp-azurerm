@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     timeouts=null,
-    zone=null
-  ):: tf.withResource(type='azurerm_capacity_reservation', label=resourceLabel, attrs=self.newAttrs(
-    capacity_reservation_group_id=capacity_reservation_group_id,
-    name=name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    zone=zone
-  )),
+    zone=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_capacity_reservation',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      capacity_reservation_group_id=capacity_reservation_group_id,
+      name=name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      zone=zone
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     capacity_reservation_group_id,
     name,

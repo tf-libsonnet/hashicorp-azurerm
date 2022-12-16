@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     targeting_filter=null,
     timeouts=null,
-    timewindow_filter=null
-  ):: tf.withResource(type='azurerm_app_configuration_feature', label=resourceLabel, attrs=self.newAttrs(
-    configuration_store_id=configuration_store_id,
-    description=description,
-    enabled=enabled,
-    etag=etag,
-    label=label,
-    locked=locked,
-    name=name,
-    percentage_filter_value=percentage_filter_value,
-    tags=tags,
-    targeting_filter=targeting_filter,
-    timeouts=timeouts,
-    timewindow_filter=timewindow_filter
-  )),
+    timewindow_filter=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_configuration_feature',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      configuration_store_id=configuration_store_id,
+      description=description,
+      enabled=enabled,
+      etag=etag,
+      label=label,
+      locked=locked,
+      name=name,
+      percentage_filter_value=percentage_filter_value,
+      tags=tags,
+      targeting_filter=targeting_filter,
+      timeouts=timeouts,
+      timewindow_filter=timewindow_filter
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     configuration_store_id,
     name,

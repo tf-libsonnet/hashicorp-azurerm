@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     event_system_properties=null,
     mapping_rule_name=null,
     table_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_iothub_data_connection', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
-    consumer_group=consumer_group,
-    data_format=data_format,
-    database_name=database_name,
-    database_routing_type=database_routing_type,
-    event_system_properties=event_system_properties,
-    iothub_id=iothub_id,
-    location=location,
-    mapping_rule_name=mapping_rule_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    shared_access_policy_name=shared_access_policy_name,
-    table_name=table_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_iothub_data_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_name=cluster_name,
+      consumer_group=consumer_group,
+      data_format=data_format,
+      database_name=database_name,
+      database_routing_type=database_routing_type,
+      event_system_properties=event_system_properties,
+      iothub_id=iothub_id,
+      location=location,
+      mapping_rule_name=mapping_rule_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      shared_access_policy_name=shared_access_policy_name,
+      table_name=table_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     consumer_group,

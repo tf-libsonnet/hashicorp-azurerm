@@ -16,24 +16,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     integration_runtime_name=null,
     parameters=null,
     skip_host_key_validation=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_sftp', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    authentication_type=authentication_type,
-    data_factory_id=data_factory_id,
-    description=description,
-    host=host,
-    host_key_fingerprint=host_key_fingerprint,
-    integration_runtime_name=integration_runtime_name,
-    name=name,
-    parameters=parameters,
-    password=password,
-    port=port,
-    skip_host_key_validation=skip_host_key_validation,
-    timeouts=timeouts,
-    username=username
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_sftp',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      authentication_type=authentication_type,
+      data_factory_id=data_factory_id,
+      description=description,
+      host=host,
+      host_key_fingerprint=host_key_fingerprint,
+      integration_runtime_name=integration_runtime_name,
+      name=name,
+      parameters=parameters,
+      password=password,
+      port=port,
+      skip_host_key_validation=skip_host_key_validation,
+      timeouts=timeouts,
+      username=username
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     authentication_type,
     data_factory_id,

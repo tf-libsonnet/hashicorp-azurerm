@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     scale_units,
     virtual_hub_id,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_gateway', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    scale_units=scale_units,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_hub_id=virtual_hub_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_gateway',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      scale_units=scale_units,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_hub_id=virtual_hub_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

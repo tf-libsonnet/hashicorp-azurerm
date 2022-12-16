@@ -19,14 +19,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     description=null,
     location_data=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_gateway', label=resourceLabel, attrs=self.newAttrs(
-    api_management_id=api_management_id,
-    description=description,
-    location_data=location_data,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_gateway',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_id=api_management_id,
+      description=description,
+      location_data=location_data,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_id,
     name,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     lab_name,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_dev_test_virtual_network', label=dataSrcLabel, attrs=self.newAttrs(
-    lab_name=lab_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_dev_test_virtual_network',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      lab_name=lab_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     lab_name,
     name,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     recovery_fabric_name,
     recovery_vault_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_site_recovery_protection_container', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    recovery_fabric_name=recovery_fabric_name,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_site_recovery_protection_container',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      recovery_fabric_name=recovery_fabric_name,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     recovery_fabric_name,

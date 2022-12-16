@@ -3,8 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     subscription_id=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_subscription', label=dataSrcLabel, attrs=self.newAttrs(subscription_id=subscription_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_subscription',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(subscription_id=subscription_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     subscription_id=null,
     timeouts=null

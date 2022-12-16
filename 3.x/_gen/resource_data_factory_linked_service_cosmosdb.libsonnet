@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     integration_runtime_name=null,
     parameters=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_cosmosdb', label=resourceLabel, attrs=self.newAttrs(
-    account_endpoint=account_endpoint,
-    account_key=account_key,
-    additional_properties=additional_properties,
-    annotations=annotations,
-    connection_string=connection_string,
-    data_factory_id=data_factory_id,
-    database=database,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    name=name,
-    parameters=parameters,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_cosmosdb',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_endpoint=account_endpoint,
+      account_key=account_key,
+      additional_properties=additional_properties,
+      annotations=annotations,
+      connection_string=connection_string,
+      data_factory_id=data_factory_id,
+      database=database,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      name=name,
+      parameters=parameters,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

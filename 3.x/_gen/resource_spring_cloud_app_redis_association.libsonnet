@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     redis_cache_id,
     spring_cloud_app_id,
     ssl_enabled=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_app_redis_association', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    redis_access_key=redis_access_key,
-    redis_cache_id=redis_cache_id,
-    spring_cloud_app_id=spring_cloud_app_id,
-    ssl_enabled=ssl_enabled,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_app_redis_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      redis_access_key=redis_access_key,
+      redis_cache_id=redis_cache_id,
+      spring_cloud_app_id=spring_cloud_app_id,
+      ssl_enabled=ssl_enabled,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     redis_access_key,

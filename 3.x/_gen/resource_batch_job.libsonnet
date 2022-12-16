@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     display_name=null,
     priority=null,
     task_retry_maximum=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_batch_job', label=resourceLabel, attrs=self.newAttrs(
-    batch_pool_id=batch_pool_id,
-    common_environment_properties=common_environment_properties,
-    display_name=display_name,
-    name=name,
-    priority=priority,
-    task_retry_maximum=task_retry_maximum,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_batch_job',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      batch_pool_id=batch_pool_id,
+      common_environment_properties=common_environment_properties,
+      display_name=display_name,
+      name=name,
+      priority=priority,
+      task_retry_maximum=task_retry_maximum,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     batch_pool_id,
     name,

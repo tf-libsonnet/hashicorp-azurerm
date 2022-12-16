@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     server_id,
     subnet_id,
     ignore_missing_vnet_service_endpoint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_virtual_network_rule', label=resourceLabel, attrs=self.newAttrs(
-    ignore_missing_vnet_service_endpoint=ignore_missing_vnet_service_endpoint,
-    name=name,
-    server_id=server_id,
-    subnet_id=subnet_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_virtual_network_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      ignore_missing_vnet_service_endpoint=ignore_missing_vnet_service_endpoint,
+      name=name,
+      server_id=server_id,
+      subnet_id=subnet_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     server_id,

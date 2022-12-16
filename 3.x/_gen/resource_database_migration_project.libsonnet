@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source_platform,
     target_platform,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_database_migration_project', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    service_name=service_name,
-    source_platform=source_platform,
-    tags=tags,
-    target_platform=target_platform,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_database_migration_project',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      service_name=service_name,
+      source_platform=source_platform,
+      tags=tags,
+      target_platform=target_platform,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     timeouts=null,
-    zone_redundant=null
-  ):: tf.withResource(type='azurerm_app_service_plan', label=resourceLabel, attrs=self.newAttrs(
-    app_service_environment_id=app_service_environment_id,
-    is_xenon=is_xenon,
-    kind=kind,
-    location=location,
-    maximum_elastic_worker_count=maximum_elastic_worker_count,
-    name=name,
-    per_site_scaling=per_site_scaling,
-    reserved=reserved,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    zone_redundant=zone_redundant
-  )),
+    zone_redundant=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_plan',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_service_environment_id=app_service_environment_id,
+      is_xenon=is_xenon,
+      kind=kind,
+      location=location,
+      maximum_elastic_worker_count=maximum_elastic_worker_count,
+      name=name,
+      per_site_scaling=per_site_scaling,
+      reserved=reserved,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      zone_redundant=zone_redundant
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

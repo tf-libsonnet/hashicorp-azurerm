@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     access_level,
     duration_in_seconds,
     managed_disk_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_managed_disk_sas_token', label=resourceLabel, attrs=self.newAttrs(
-    access_level=access_level,
-    duration_in_seconds=duration_in_seconds,
-    managed_disk_id=managed_disk_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_managed_disk_sas_token',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_level=access_level,
+      duration_in_seconds=duration_in_seconds,
+      managed_disk_id=managed_disk_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     access_level,
     duration_in_seconds,

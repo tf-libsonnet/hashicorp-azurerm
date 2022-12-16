@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     spring_cloud_api_portal_id,
     thumbprint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_api_portal_custom_domain', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    spring_cloud_api_portal_id=spring_cloud_api_portal_id,
-    thumbprint=thumbprint,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_api_portal_custom_domain',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      spring_cloud_api_portal_id=spring_cloud_api_portal_id,
+      thumbprint=thumbprint,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_api_portal_id,

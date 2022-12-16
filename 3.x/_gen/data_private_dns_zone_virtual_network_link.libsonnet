@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     private_dns_zone_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_private_dns_zone_virtual_network_link', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    private_dns_zone_name=private_dns_zone_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_private_dns_zone_virtual_network_link',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      private_dns_zone_name=private_dns_zone_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     private_dns_zone_name,

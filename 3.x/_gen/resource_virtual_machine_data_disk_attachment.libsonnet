@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_machine_id,
     create_option=null,
     timeouts=null,
-    write_accelerator_enabled=null
-  ):: tf.withResource(type='azurerm_virtual_machine_data_disk_attachment', label=resourceLabel, attrs=self.newAttrs(
-    caching=caching,
-    create_option=create_option,
-    lun=lun,
-    managed_disk_id=managed_disk_id,
-    timeouts=timeouts,
-    virtual_machine_id=virtual_machine_id,
-    write_accelerator_enabled=write_accelerator_enabled
-  )),
+    write_accelerator_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_machine_data_disk_attachment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      caching=caching,
+      create_option=create_option,
+      lun=lun,
+      managed_disk_id=managed_disk_id,
+      timeouts=timeouts,
+      virtual_machine_id=virtual_machine_id,
+      write_accelerator_enabled=write_accelerator_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     caching,
     lun,

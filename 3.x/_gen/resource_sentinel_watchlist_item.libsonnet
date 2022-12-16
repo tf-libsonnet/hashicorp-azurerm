@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     properties,
     watchlist_id,
     name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_watchlist_item', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    properties=properties,
-    timeouts=timeouts,
-    watchlist_id=watchlist_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_watchlist_item',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      properties=properties,
+      timeouts=timeouts,
+      watchlist_id=watchlist_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     properties,
     watchlist_id,

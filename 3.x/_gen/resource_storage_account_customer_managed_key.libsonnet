@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id,
     key_version=null,
     timeouts=null,
-    user_assigned_identity_id=null
-  ):: tf.withResource(type='azurerm_storage_account_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(
-    key_name=key_name,
-    key_vault_id=key_vault_id,
-    key_version=key_version,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts,
-    user_assigned_identity_id=user_assigned_identity_id
-  )),
+    user_assigned_identity_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_account_customer_managed_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      key_name=key_name,
+      key_vault_id=key_vault_id,
+      key_version=key_version,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts,
+      user_assigned_identity_id=user_assigned_identity_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_name,
     key_vault_id,

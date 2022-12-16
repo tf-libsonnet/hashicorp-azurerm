@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     is_verified=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_dps_certificate', label=resourceLabel, attrs=self.newAttrs(
-    certificate_content=certificate_content,
-    iot_dps_name=iot_dps_name,
-    is_verified=is_verified,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_dps_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      certificate_content=certificate_content,
+      iot_dps_name=iot_dps_name,
+      is_verified=is_verified,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     certificate_content,
     iot_dps_name,
