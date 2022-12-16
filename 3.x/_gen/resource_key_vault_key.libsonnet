@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     key_opts,
     key_type,
     key_vault_id,
     name,
-    resourceLabel,
     curve=null,
     expiration_date=null,
     key_size=null,

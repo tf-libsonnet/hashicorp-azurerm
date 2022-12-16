@@ -38,11 +38,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     account_name,
     location,
     name,
     pool_name,
-    resourceLabel,
     resource_group_name,
     service_level,
     storage_quota_in_gb,

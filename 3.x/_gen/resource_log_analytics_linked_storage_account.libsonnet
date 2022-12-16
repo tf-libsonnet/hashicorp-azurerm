@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    data_source_type,
     resourceLabel,
+    data_source_type,
     resource_group_name,
     storage_account_ids,
     workspace_resource_id,

@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     certificate_virtual_path,
     key_vault_secret_id,
     key_virtual_path,
     name,
     nginx_deployment_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_nginx_certificate', label=resourceLabel, attrs=self.newAttrs(
     certificate_virtual_path=certificate_virtual_path,

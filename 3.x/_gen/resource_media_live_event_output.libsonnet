@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     archive_window_duration,
     asset_name,
     live_event_id,
     name,
-    resourceLabel,
     description=null,
     hls_fragments_per_ts_segment=null,
     manifest_name=null,

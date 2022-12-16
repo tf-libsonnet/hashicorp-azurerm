@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     active,
     customer_managed_key_name,
-    resourceLabel,
     synapse_workspace_id,
     customer_managed_key_versionless_id=null,
     timeouts=null

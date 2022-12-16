@@ -43,8 +43,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    datadog_monitor_id,
     resourceLabel,
+    datadog_monitor_id,
     log=null,
     metric=null,
     name=null,

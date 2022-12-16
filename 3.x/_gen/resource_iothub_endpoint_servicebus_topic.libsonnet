@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     iothub_id,
     name,
-    resourceLabel,
     resource_group_name,
     authentication_type=null,
     connection_string=null,

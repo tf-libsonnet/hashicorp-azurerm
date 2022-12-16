@@ -10,8 +10,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     feature=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_provider_registration', label=resourceLabel, attrs=self.newAttrs(feature=feature, name=name, timeouts=timeouts)),

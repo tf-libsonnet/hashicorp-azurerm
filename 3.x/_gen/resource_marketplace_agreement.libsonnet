@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     offer,
     plan,
     publisher,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_marketplace_agreement', label=resourceLabel, attrs=self.newAttrs(
     offer=offer,

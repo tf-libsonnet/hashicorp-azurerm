@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    name,
     resourceLabel,
+    name,
     topic_id,
     listen=null,
     manage=null,

@@ -36,12 +36,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     bandwidth_in_gbps,
     encapsulation,
     location,
     name,
     peering_location,
-    resourceLabel,
     resource_group_name,
     identity=null,
     link1=null,

@@ -12,10 +12,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     gallery_application_id,
     location,
     name,
-    resourceLabel,
     enable_health_check=null,
     end_of_life_date=null,
     exclude_from_latest=null,

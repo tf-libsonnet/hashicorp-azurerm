@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     kusto_database_id,
     name,
-    resourceLabel,
     share_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_kusto_database', label=resourceLabel, attrs=self.newAttrs(

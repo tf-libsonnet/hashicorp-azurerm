@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     api_type,
     cosmosdb_access_key,
     cosmosdb_account_id,
     name,
-    resourceLabel,
     spring_cloud_app_id,
     cosmosdb_cassandra_keyspace_name=null,
     cosmosdb_gremlin_database_name=null,

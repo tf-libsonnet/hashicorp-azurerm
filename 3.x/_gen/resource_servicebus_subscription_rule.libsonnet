@@ -24,9 +24,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     filter_type,
     name,
-    resourceLabel,
     subscription_id,
     action=null,
     correlation_filter=null,

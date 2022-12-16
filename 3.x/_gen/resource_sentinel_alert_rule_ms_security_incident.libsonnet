@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     display_name,
     log_analytics_workspace_id,
     name,
     product_filter,
-    resourceLabel,
     severity_filter,
     alert_rule_template_guid=null,
     description=null,

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     remote_virtual_network_id,
-    resourceLabel,
     virtual_hub_id,
     internet_security_enabled=null,
     routing=null,

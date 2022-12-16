@@ -19,9 +19,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     address_prefixes,
     name,
-    resourceLabel,
     resource_group_name,
     virtual_network_name,
     delegation=null,

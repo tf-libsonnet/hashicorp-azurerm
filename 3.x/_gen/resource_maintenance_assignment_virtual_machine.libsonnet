@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     location,
     maintenance_configuration_id,
-    resourceLabel,
     virtual_machine_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_maintenance_assignment_virtual_machine', label=resourceLabel, attrs=self.newAttrs(

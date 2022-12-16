@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     remote_vpn_site_id,
-    resourceLabel,
     vpn_gateway_id,
     internet_security_enabled=null,
     routing=null,

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    logz_sub_account_id,
     resourceLabel,
+    logz_sub_account_id,
     send_aad_logs=null,
     send_activity_logs=null,
     send_subscription_logs=null,

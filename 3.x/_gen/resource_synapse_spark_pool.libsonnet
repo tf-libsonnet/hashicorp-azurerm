@@ -26,10 +26,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     name,
     node_size,
     node_size_family,
-    resourceLabel,
     synapse_workspace_id,
     auto_pause=null,
     auto_scale=null,

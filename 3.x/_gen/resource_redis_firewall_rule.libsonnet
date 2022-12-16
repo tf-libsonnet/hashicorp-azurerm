@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     end_ip,
     name,
     redis_cache_name,
-    resourceLabel,
     resource_group_name,
     start_ip,
     timeouts=null

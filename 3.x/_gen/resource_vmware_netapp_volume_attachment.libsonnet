@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     netapp_volume_id,
-    resourceLabel,
     vmware_cluster_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_vmware_netapp_volume_attachment', label=resourceLabel, attrs=self.newAttrs(

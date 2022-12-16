@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    principal_id,
     resourceLabel,
+    principal_id,
     role_name,
     synapse_spark_pool_id=null,
     synapse_workspace_id=null,

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     automation_account_name,
     automation_certificate_name,
     name,
-    resourceLabel,
     resource_group_name,
     subscription_id,
     description=null,

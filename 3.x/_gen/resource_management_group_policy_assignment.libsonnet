@@ -10,10 +10,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     management_group_id,
     name,
     policy_definition_id,
-    resourceLabel,
     description=null,
     display_name=null,
     enforce=null,

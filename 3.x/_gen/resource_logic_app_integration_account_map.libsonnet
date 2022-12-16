@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     content,
     integration_account_name,
     map_type,
     name,
-    resourceLabel,
     resource_group_name,
     metadata=null,
     timeouts=null

@@ -85,11 +85,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     management_endpoint,
     name,
     reliability_level,
-    resourceLabel,
     resource_group_name,
     upgrade_mode,
     vm_image,

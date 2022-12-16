@@ -17,9 +17,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     allowed_authentication_modes=null,
     encryption=null,

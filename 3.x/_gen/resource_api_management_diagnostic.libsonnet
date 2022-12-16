@@ -153,10 +153,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     api_management_logger_id,
     api_management_name,
     identifier,
-    resourceLabel,
     resource_group_name,
     always_log_errors=null,
     backend_request=null,

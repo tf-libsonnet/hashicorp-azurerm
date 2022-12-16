@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    enabled,
     resourceLabel,
+    enabled,
     setting_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_setting', label=resourceLabel, attrs=self.newAttrs(enabled=enabled, setting_name=setting_name, timeouts=timeouts)),

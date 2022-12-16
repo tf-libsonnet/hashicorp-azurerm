@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    cluster_id,
     dataSrcLabel,
+    cluster_id,
     name,
     resource_group_name=null,
     timeouts=null

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    custom_hostname_binding_id,
     resourceLabel,
+    custom_hostname_binding_id,
     tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_managed_certificate', label=resourceLabel, attrs=self.newAttrs(custom_hostname_binding_id=custom_hostname_binding_id, tags=tags, timeouts=timeouts)),

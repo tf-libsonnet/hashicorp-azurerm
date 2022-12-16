@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     dedicated_host_id,
     location,
     maintenance_configuration_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_maintenance_assignment_dedicated_host', label=resourceLabel, attrs=self.newAttrs(
     dedicated_host_id=dedicated_host_id,

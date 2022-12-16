@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     automation_account_name,
     content_embedded,
     name,
-    resourceLabel,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_dsc_nodeconfiguration', label=resourceLabel, attrs=self.newAttrs(

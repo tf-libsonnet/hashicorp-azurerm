@@ -21,8 +21,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     web_pubsub_id,
     anonymous_connections_enabled=null,
     event_handler=null,

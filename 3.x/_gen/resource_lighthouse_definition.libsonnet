@@ -47,9 +47,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     managing_tenant_id,
     name,
-    resourceLabel,
     scope,
     authorization=null,
     description=null,

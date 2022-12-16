@@ -1,6 +1,7 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     digital_twins_id,
     eventhub_name,
     eventhub_namespace_endpoint_uri,
@@ -9,7 +10,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     kusto_cluster_uri,
     kusto_database_name,
     name,
-    resourceLabel,
     eventhub_consumer_group_name=null,
     kusto_table_name=null,
     timeouts=null

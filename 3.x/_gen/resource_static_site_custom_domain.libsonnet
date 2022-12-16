@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    domain_name,
     resourceLabel,
+    domain_name,
     static_site_id,
     timeouts=null,
     validation_type=null

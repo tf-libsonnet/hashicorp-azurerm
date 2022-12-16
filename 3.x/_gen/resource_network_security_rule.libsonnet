@@ -1,13 +1,13 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     access,
     direction,
     name,
     network_security_group_name,
     priority,
     protocol,
-    resourceLabel,
     resource_group_name,
     description=null,
     destination_address_prefix=null,

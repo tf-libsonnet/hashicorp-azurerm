@@ -14,8 +14,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    device_name,
     resourceLabel,
+    device_name,
     resource_group_name,
     contact=null,
     shipment_address=null,

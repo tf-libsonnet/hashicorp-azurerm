@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     account_name,
     body,
     container_name,
     database_name,
     name,
-    resourceLabel,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_stored_procedure', label=resourceLabel, attrs=self.newAttrs(

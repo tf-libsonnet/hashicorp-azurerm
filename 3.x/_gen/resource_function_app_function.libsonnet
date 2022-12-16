@@ -10,10 +10,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     config_json,
     function_app_id,
     name,
-    resourceLabel,
     enabled=null,
     file=null,
     language=null,

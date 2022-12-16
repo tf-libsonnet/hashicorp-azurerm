@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    lighthouse_definition_id,
     resourceLabel,
+    lighthouse_definition_id,
     scope,
     name=null,
     timeouts=null

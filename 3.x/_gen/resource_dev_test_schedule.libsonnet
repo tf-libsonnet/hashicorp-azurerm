@@ -15,10 +15,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     lab_name,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     task_type,
     time_zone_id,

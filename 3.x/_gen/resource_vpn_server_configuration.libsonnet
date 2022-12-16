@@ -51,9 +51,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     vpn_authentication_types,
     azure_active_directory_authentication=null,

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    managed_instance_id,
     resourceLabel,
+    managed_instance_id,
     auto_rotation_enabled=null,
     key_vault_key_id=null,
     timeouts=null

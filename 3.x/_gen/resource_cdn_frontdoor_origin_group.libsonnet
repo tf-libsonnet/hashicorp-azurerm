@@ -25,9 +25,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     cdn_frontdoor_profile_id,
     name,
-    resourceLabel,
     health_probe=null,
     load_balancing=null,
     restore_traffic_time_to_healed_or_new_endpoint_in_minutes=null,

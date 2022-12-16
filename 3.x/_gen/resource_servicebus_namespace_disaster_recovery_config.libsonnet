@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     partner_namespace_id,
     primary_namespace_id,
-    resourceLabel,
     alias_authorization_rule_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_namespace_disaster_recovery_config', label=resourceLabel, attrs=self.newAttrs(

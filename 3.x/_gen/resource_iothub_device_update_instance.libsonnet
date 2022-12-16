@@ -8,10 +8,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     device_update_account_id,
     iothub_id,
     name,
-    resourceLabel,
     diagnostic_enabled=null,
     diagnostic_storage_account=null,
     tags=null,

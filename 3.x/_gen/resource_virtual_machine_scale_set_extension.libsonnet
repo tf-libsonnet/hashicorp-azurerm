@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     publisher,
-    resourceLabel,
     type,
     type_handler_version,
     virtual_machine_scale_set_id,

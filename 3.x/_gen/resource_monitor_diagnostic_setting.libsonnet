@@ -43,8 +43,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
-    name,
     resourceLabel,
+    name,
     target_resource_id,
     eventhub_authorization_rule_id=null,
     eventhub_name=null,

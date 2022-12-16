@@ -58,11 +58,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     client_connection_port,
     http_gateway_port,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     authentication=null,
     backup_service_enabled=null,

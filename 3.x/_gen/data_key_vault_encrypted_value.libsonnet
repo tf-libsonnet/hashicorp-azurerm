@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    algorithm,
     dataSrcLabel,
+    algorithm,
     key_vault_key_id,
     encrypted_data=null,
     plain_text_value=null,

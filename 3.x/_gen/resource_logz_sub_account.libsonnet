@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     logz_monitor_id,
     name,
-    resourceLabel,
     enabled=null,
     tags=null,
     timeouts=null,

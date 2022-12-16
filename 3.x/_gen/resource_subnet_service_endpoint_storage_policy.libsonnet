@@ -12,9 +12,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     definition=null,
     tags=null,

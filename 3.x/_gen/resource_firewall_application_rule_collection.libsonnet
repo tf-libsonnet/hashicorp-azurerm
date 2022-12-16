@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     action,
     azure_firewall_name,
     name,
     priority,
-    resourceLabel,
     resource_group_name,
     rule=null,
     timeouts=null

@@ -34,8 +34,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    app_id,
     resourceLabel,
+    app_id,
     branch=null,
     github_action_configuration=null,
     repo_url=null,

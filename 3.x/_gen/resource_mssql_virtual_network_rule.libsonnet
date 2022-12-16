@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    name,
     resourceLabel,
+    name,
     server_id,
     subnet_id,
     ignore_missing_vnet_service_endpoint=null,

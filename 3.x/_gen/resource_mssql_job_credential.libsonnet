@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     job_agent_id,
     name,
     password,
-    resourceLabel,
     username,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_job_credential', label=resourceLabel, attrs=self.newAttrs(

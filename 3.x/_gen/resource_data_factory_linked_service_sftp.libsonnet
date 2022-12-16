@@ -1,13 +1,13 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     authentication_type,
     data_factory_id,
     host,
     name,
     password,
     port,
-    resourceLabel,
     username,
     additional_properties=null,
     annotations=null,

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     api_id,
     gateway_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_gateway_api', label=resourceLabel, attrs=self.newAttrs(api_id=api_id, gateway_id=gateway_id, timeouts=timeouts)),
   newAttrs(

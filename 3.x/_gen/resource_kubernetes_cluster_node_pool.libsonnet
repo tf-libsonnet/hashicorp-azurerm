@@ -102,9 +102,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     kubernetes_cluster_id,
     name,
-    resourceLabel,
     vm_size,
     capacity_reservation_group_id=null,
     custom_ca_trust_enabled=null,

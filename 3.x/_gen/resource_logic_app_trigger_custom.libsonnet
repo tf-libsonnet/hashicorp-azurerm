@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     body,
     logic_app_id,
     name,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_trigger_custom', label=resourceLabel, attrs=self.newAttrs(
     body=body,

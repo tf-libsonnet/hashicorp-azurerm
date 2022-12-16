@@ -426,9 +426,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     aci_connector_linux=null,
     api_server_authorized_ip_ranges=null,

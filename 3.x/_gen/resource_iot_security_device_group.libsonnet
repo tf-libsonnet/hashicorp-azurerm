@@ -14,9 +14,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     iothub_id,
     name,
-    resourceLabel,
     allow_rule=null,
     range_rule=null,
     timeouts=null

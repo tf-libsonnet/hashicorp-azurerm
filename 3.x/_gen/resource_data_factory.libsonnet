@@ -36,9 +36,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     customer_managed_key_id=null,
     customer_managed_key_identity_id=null,

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     allocation_method,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     ddos_protection_mode=null,
     ddos_protection_plan_id=null,

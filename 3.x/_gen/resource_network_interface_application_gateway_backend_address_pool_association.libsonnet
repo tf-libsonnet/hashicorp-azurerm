@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     backend_address_pool_id,
     ip_configuration_name,
     network_interface_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_network_interface_application_gateway_backend_address_pool_association', label=resourceLabel, attrs=self.newAttrs(
     backend_address_pool_id=backend_address_pool_id,

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     access_level,
     duration_in_seconds,
     managed_disk_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_managed_disk_sas_token', label=resourceLabel, attrs=self.newAttrs(
     access_level=access_level,

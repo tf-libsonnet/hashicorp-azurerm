@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     peer_asn,
     peer_ip,
-    resourceLabel,
     route_server_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_route_server_bgp_connection', label=resourceLabel, attrs=self.newAttrs(

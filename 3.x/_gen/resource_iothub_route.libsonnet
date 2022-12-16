@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     enabled,
     endpoint_names,
     iothub_name,
     name,
-    resourceLabel,
     resource_group_name,
     source,
     condition=null,

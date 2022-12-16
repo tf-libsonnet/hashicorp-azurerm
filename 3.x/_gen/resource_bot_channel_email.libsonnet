@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     bot_name,
     email_address,
     email_password,
     location,
-    resourceLabel,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_email', label=resourceLabel, attrs=self.newAttrs(

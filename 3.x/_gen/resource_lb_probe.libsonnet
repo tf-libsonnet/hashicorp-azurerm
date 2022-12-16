@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     loadbalancer_id,
     name,
     port,
-    resourceLabel,
     interval_in_seconds=null,
     number_of_probes=null,
     probe_threshold=null,

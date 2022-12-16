@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     api_management_id,
     email,
     notification_type,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_notification_recipient_email', label=resourceLabel, attrs=self.newAttrs(
     api_management_id=api_management_id,

@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cdn_frontdoor_origin_group_id,
     certificate_name_check_enabled,
     host_name,
     name,
-    resourceLabel,
     enabled=null,
     health_probes_enabled=null,
     http_port=null,

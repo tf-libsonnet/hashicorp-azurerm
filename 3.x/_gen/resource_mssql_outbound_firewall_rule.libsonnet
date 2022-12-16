@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    name,
     resourceLabel,
+    name,
     server_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_outbound_firewall_rule', label=resourceLabel, attrs=self.newAttrs(name=name, server_id=server_id, timeouts=timeouts)),

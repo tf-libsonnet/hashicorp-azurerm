@@ -14,9 +14,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     custom_https_provisioning_enabled,
     frontend_endpoint_id,
-    resourceLabel,
     custom_https_configuration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_frontdoor_custom_https_configuration', label=resourceLabel, attrs=self.newAttrs(

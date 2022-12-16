@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     frequency,
     interval,
     logic_app_id,
     name,
-    resourceLabel,
     schedule=null,
     start_time=null,
     time_zone=null,

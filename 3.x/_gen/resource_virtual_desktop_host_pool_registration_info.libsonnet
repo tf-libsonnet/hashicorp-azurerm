@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     expiration_date,
     hostpool_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_desktop_host_pool_registration_info', label=resourceLabel, attrs=self.newAttrs(expiration_date=expiration_date, hostpool_id=hostpool_id, timeouts=timeouts)),
   newAttrs(

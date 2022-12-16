@@ -40,10 +40,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
     network_watcher_id,
-    resourceLabel,
     endpoint=null,
     notes=null,
     output_workspace_resource_ids=null,

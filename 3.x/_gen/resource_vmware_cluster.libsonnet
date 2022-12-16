@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cluster_node_count,
     name,
-    resourceLabel,
     sku_name,
     vmware_cloud_id,
     timeouts=null

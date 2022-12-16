@@ -34,11 +34,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     account_name,
     enabled,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     daily_schedule=null,
     hourly_schedule=null,

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     dns_forwarding_ruleset_id,
     name,
-    resourceLabel,
     virtual_network_id,
     metadata=null,
     timeouts=null

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cognitive_account_id,
     key_vault_key_id,
-    resourceLabel,
     identity_client_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cognitive_account_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     database_id,
     location,
     name,
-    resourceLabel,
     tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_job_agent', label=resourceLabel, attrs=self.newAttrs(

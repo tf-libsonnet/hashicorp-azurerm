@@ -14,10 +14,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     automation_account_id,
     name,
     operating_system,
-    resourceLabel,
     duration=null,
     linux=null,
     non_azure_computer_names=null,

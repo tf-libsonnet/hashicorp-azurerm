@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     capacity_reservation_group_id,
     name,
-    resourceLabel,
     sku=null,
     tags=null,
     timeouts=null,

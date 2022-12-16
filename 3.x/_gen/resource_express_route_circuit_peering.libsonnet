@@ -38,9 +38,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     express_route_circuit_name,
     peering_type,
-    resourceLabel,
     resource_group_name,
     vlan_id,
     ipv4_enabled=null,

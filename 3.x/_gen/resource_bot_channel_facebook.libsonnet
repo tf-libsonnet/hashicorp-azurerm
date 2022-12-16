@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     bot_name,
     facebook_application_id,
     facebook_application_secret,
     location,
-    resourceLabel,
     resource_group_name,
     page=null,
     timeouts=null

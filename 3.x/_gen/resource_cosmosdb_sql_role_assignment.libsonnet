@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     account_name,
     principal_id,
-    resourceLabel,
     resource_group_name,
     role_definition_id,
     scope,

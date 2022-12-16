@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    private_markdown_storage_enforced,
     resourceLabel,
+    private_markdown_storage_enforced,
     timeouts=null
   ):: tf.withResource(type='azurerm_portal_tenant_configuration', label=resourceLabel, attrs=self.newAttrs(private_markdown_storage_enforced=private_markdown_storage_enforced, timeouts=timeouts)),
   newAttrs(

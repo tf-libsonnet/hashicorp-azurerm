@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     eventhub_namespace_id,
     key_vault_key_ids,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(eventhub_namespace_id=eventhub_namespace_id, key_vault_key_ids=key_vault_key_ids, timeouts=timeouts)),
   newAttrs(

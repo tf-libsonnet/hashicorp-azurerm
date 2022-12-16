@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    key_vault_key_id,
     resourceLabel,
+    key_vault_key_id,
     workspace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_databricks_workspace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_id=key_vault_key_id, timeouts=timeouts, workspace_id=workspace_id)),

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    default_action,
     resourceLabel,
+    default_action,
     signalr_service_id,
     private_endpoint=null,
     public_network=null,

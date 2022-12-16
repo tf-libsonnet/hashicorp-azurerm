@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    assessment_policy_id,
     resourceLabel,
+    assessment_policy_id,
     target_resource_id,
     additional_data=null,
     status=null,

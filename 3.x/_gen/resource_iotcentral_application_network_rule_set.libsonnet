@@ -10,8 +10,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    iotcentral_application_id,
     resourceLabel,
+    iotcentral_application_id,
     apply_to_device=null,
     default_action=null,
     ip_rule=null,

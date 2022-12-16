@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     digital_twins_id,
     eventhub_primary_connection_string,
     eventhub_secondary_connection_string,
     name,
-    resourceLabel,
     dead_letter_storage_secret=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_digital_twins_endpoint_eventhub', label=resourceLabel, attrs=self.newAttrs(

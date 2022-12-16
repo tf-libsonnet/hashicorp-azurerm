@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     batch_pool_id,
     name,
-    resourceLabel,
     common_environment_properties=null,
     display_name=null,
     priority=null,

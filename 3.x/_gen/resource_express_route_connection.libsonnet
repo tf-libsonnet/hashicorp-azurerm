@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     express_route_circuit_peering_id,
     express_route_gateway_id,
     name,
-    resourceLabel,
     authorization_key=null,
     enable_internet_security=null,
     routing=null,

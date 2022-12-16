@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    properties,
     resourceLabel,
+    properties,
     watchlist_id,
     name=null,
     timeouts=null

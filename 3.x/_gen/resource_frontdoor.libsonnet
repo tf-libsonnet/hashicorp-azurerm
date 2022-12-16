@@ -87,8 +87,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     resource_group_name,
     backend_pool=null,
     backend_pool_health_probe=null,

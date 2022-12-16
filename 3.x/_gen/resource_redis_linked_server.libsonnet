@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     linked_redis_cache_id,
     linked_redis_cache_location,
-    resourceLabel,
     resource_group_name,
     server_role,
     target_redis_cache_name,

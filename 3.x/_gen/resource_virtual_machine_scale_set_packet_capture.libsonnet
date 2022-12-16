@@ -25,9 +25,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     name,
     network_watcher_id,
-    resourceLabel,
     virtual_machine_scale_set_id,
     filter=null,
     machine_scope=null,

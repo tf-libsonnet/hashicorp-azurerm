@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     api_management_name,
     api_management_product_id,
     name,
-    resourceLabel,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_product_tag', label=resourceLabel, attrs=self.newAttrs(

@@ -89,9 +89,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     container_registry_id,
     name,
-    resourceLabel,
     agent_pool_name=null,
     agent_setting=null,
     base_image_trigger=null,

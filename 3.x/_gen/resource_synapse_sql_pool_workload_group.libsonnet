@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     max_resource_percent,
     min_resource_percent,
     name,
-    resourceLabel,
     sql_pool_id,
     importance=null,
     max_resource_percent_per_request=null,

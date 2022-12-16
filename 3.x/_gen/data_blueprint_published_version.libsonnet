@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    blueprint_name,
     dataSrcLabel,
+    blueprint_name,
     scope_id,
     version,
     timeouts=null

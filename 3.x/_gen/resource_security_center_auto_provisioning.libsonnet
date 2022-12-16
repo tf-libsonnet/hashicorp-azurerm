@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    auto_provision,
     resourceLabel,
+    auto_provision,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_auto_provisioning', label=resourceLabel, attrs=self.newAttrs(auto_provision=auto_provision, timeouts=timeouts)),
   newAttrs(

@@ -116,10 +116,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     cluster_version,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     tier,
     component_version=null,

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     nat_gateway_id,
     public_ip_address_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_nat_gateway_public_ip_association', label=resourceLabel, attrs=self.newAttrs(nat_gateway_id=nat_gateway_id, public_ip_address_id=public_ip_address_id, timeouts=timeouts)),
   newAttrs(

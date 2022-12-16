@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    account_id,
     dataSrcLabel,
+    account_id,
     name,
     timeouts=null
   ):: tf.withData(type='azurerm_data_share', label=dataSrcLabel, attrs=self.newAttrs(account_id=account_id, name=name, timeouts=timeouts)),

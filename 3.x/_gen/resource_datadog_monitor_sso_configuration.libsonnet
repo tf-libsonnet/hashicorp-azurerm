@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     datadog_monitor_id,
     enterprise_application_id,
-    resourceLabel,
     single_sign_on_enabled,
     name=null,
     timeouts=null

@@ -19,10 +19,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     machine_learning_workspace_id,
     name,
-    resourceLabel,
     virtual_machine_size,
     assign_to_user=null,
     authorization_type=null,

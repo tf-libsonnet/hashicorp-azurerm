@@ -10,9 +10,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     time_series_insights_environment_id,
     data_string_comparison_behavior=null,
     key_property=null,
