@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    blueprint_name,
     version,
+    blueprint_name,
     scope_id,
     timeouts=null
   ):: tf.withData(type='azurerm_blueprint_published_version', label=dataSrcLabel, attrs=self.newAttrs(
-    blueprint_name=blueprint_name,
     version=version,
+    blueprint_name=blueprint_name,
     scope_id=scope_id,
     timeouts=timeouts
   )),
   newAttrs(
-    scope_id,
     blueprint_name,
+    scope_id,
     version,
     timeouts=null
   ):: std.prune(a={
-    scope_id: scope_id,
     blueprint_name: blueprint_name,
+    scope_id: scope_id,
     version: version,
     timeouts: timeouts,
   }),
-  withScopeId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_blueprint_published_version+: {
-        [dataSrcLabel]+: {
-          scope_id: value,
-        },
-      },
-    },
-  },
   withVersion(dataSrcLabel, value):: {
     data+: {
       azurerm_blueprint_published_version+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_blueprint_published_version+: {
         [dataSrcLabel]+: {
           blueprint_name: value,
+        },
+      },
+    },
+  },
+  withScopeId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_blueprint_published_version+: {
+        [dataSrcLabel]+: {
+          scope_id: value,
         },
       },
     },

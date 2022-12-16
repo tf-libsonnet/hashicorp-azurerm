@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    server_name,
     charset,
     collation,
     name,
+    resource_group_name,
+    server_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_mysql_database', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    server_name=server_name,
     charset=charset,
     collation=collation,
     name=name,
+    resource_group_name=resource_group_name,
+    server_name=server_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,24 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     charset: charset,
     timeouts: timeouts,
   }),
-  withCharset(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_database+: {
-        [resourceLabel]+: {
-          charset: value,
-        },
-      },
-    },
-  },
-  withCollation(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_database+: {
-        [resourceLabel]+: {
-          collation: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_database+: {
@@ -76,6 +58,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCharset(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_database+: {
+        [resourceLabel]+: {
+          charset: value,
+        },
+      },
+    },
+  },
+  withCollation(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_database+: {
+        [resourceLabel]+: {
+          collation: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_database+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

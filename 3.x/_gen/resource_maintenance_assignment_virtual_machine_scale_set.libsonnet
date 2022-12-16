@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_machine_scale_set_id: virtual_machine_scale_set_id,
     timeouts: timeouts,
   }),
-  withVirtualMachineScaleSetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_assignment_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          virtual_machine_scale_set_id: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_maintenance_assignment_virtual_machine_scale_set+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_maintenance_assignment_virtual_machine_scale_set+: {
         [resourceLabel]+: {
           maintenance_configuration_id: value,
+        },
+      },
+    },
+  },
+  withVirtualMachineScaleSetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_assignment_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          virtual_machine_scale_set_id: value,
         },
       },
     },

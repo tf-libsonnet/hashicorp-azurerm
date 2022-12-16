@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_product_group+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
-  withGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_product_group+: {
-        [resourceLabel]+: {
-          group_name: value,
-        },
-      },
-    },
-  },
   withProductId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_product_group+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_product_group+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_product_group+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
+  withGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_product_group+: {
+        [resourceLabel]+: {
+          group_name: value,
         },
       },
     },

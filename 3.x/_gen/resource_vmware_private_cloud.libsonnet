@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    internet_connection_enabled=null,
+    name,
+    resource_group_name,
+    tags=null,
+    sku_name,
+    vcenter_password=null,
     network_subnet_cidr,
     nsxt_password=null,
-    name,
-    vcenter_password=null,
-    resource_group_name,
-    sku_name,
+    internet_connection_enabled=null,
     location,
-    tags=null,
     management_cluster=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_vmware_private_cloud', label=resourceLabel, attrs=self.newAttrs(
-    internet_connection_enabled=internet_connection_enabled,
+    name=name,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    sku_name=sku_name,
+    vcenter_password=vcenter_password,
     network_subnet_cidr=network_subnet_cidr,
     nsxt_password=nsxt_password,
-    name=name,
-    vcenter_password=vcenter_password,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
+    internet_connection_enabled=internet_connection_enabled,
     location=location,
-    tags=tags,
     management_cluster=management_cluster,
     timeouts=timeouts
   )),
   newAttrs(
-    network_subnet_cidr,
     sku_name,
-    location,
-    vcenter_password=null,
-    resource_group_name,
-    internet_connection_enabled=null,
-    tags=null,
-    name,
     nsxt_password=null,
+    name,
+    vcenter_password=null,
+    internet_connection_enabled=null,
+    network_subnet_cidr,
+    location,
+    resource_group_name,
+    tags=null,
     management_cluster=null,
     timeouts=null
   ):: std.prune(a={
-    network_subnet_cidr: network_subnet_cidr,
     sku_name: sku_name,
-    location: location,
-    vcenter_password: vcenter_password,
-    resource_group_name: resource_group_name,
-    internet_connection_enabled: internet_connection_enabled,
-    tags: tags,
-    name: name,
     nsxt_password: nsxt_password,
+    name: name,
+    vcenter_password: vcenter_password,
+    internet_connection_enabled: internet_connection_enabled,
+    network_subnet_cidr: network_subnet_cidr,
+    location: location,
+    resource_group_name: resource_group_name,
+    tags: tags,
     management_cluster: management_cluster,
     timeouts: timeouts,
   }),
@@ -56,33 +56,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_vmware_private_cloud+: {
         [resourceLabel]+: {
           sku_name: value,
-        },
-      },
-    },
-  },
-  withNetworkSubnetCidr(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          network_subnet_cidr: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -105,11 +78,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withNetworkSubnetCidr(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_private_cloud+: {
         [resourceLabel]+: {
-          location: value,
+          network_subnet_cidr: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -128,6 +119,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_vmware_private_cloud+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -177,15 +177,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

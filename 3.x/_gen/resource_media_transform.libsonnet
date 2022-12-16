@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
     description=null,
     media_services_account_name,
     name,
+    resource_group_name,
     output=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_media_transform', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     description=description,
     media_services_account_name=media_services_account_name,
     name=name,
+    resource_group_name=resource_group_name,
     output=output,
     timeouts=timeouts
   )),
@@ -31,24 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     output: output,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_transform+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_transform+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withMediaServicesAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_media_transform+: {
@@ -63,6 +45,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_media_transform+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_transform+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_transform+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -89,18 +89,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     new(
       on_error_action=null,
       relative_priority=null,
-      face_detector_preset=null,
       video_analyzer_preset=null,
       audio_analyzer_preset=null,
-      builtin_preset=null
+      builtin_preset=null,
+      face_detector_preset=null
     ):: std.prune(a={
       on_error_action: on_error_action,
       relative_priority: relative_priority,
-      face_detector_preset: face_detector_preset,
       video_analyzer_preset: video_analyzer_preset,
       audio_analyzer_preset: audio_analyzer_preset,
       builtin_preset: builtin_preset,
+      face_detector_preset: face_detector_preset,
     }),
+    audio_analyzer_preset:: {
+      new(
+        audio_language=null,
+        audio_analysis_mode=null
+      ):: std.prune(a={
+        audio_language: audio_language,
+        audio_analysis_mode: audio_analysis_mode,
+      }),
+    },
     builtin_preset:: {
       new(
         preset_name
@@ -117,22 +126,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     video_analyzer_preset:: {
       new(
-        insights_type=null,
         audio_analysis_mode=null,
-        audio_language=null
+        audio_language=null,
+        insights_type=null
       ):: std.prune(a={
+        audio_analysis_mode: audio_analysis_mode,
+        audio_language: audio_language,
         insights_type: insights_type,
-        audio_analysis_mode: audio_analysis_mode,
-        audio_language: audio_language,
-      }),
-    },
-    audio_analyzer_preset:: {
-      new(
-        audio_analysis_mode=null,
-        audio_language=null
-      ):: std.prune(a={
-        audio_analysis_mode: audio_analysis_mode,
-        audio_language: audio_language,
       }),
     },
   },
@@ -156,15 +156,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

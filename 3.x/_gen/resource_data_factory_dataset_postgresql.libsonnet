@@ -2,87 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    table_name=null,
-    folder=null,
     additional_properties=null,
-    annotations=null,
+    linked_service_name,
+    parameters=null,
+    folder=null,
+    table_name=null,
     data_factory_id,
     description=null,
-    parameters=null,
-    linked_service_name,
     name,
+    annotations=null,
     schema_column=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_postgresql', label=resourceLabel, attrs=self.newAttrs(
-    table_name=table_name,
-    folder=folder,
     additional_properties=additional_properties,
-    annotations=annotations,
+    linked_service_name=linked_service_name,
+    parameters=parameters,
+    folder=folder,
+    table_name=table_name,
     data_factory_id=data_factory_id,
     description=description,
-    parameters=parameters,
-    linked_service_name=linked_service_name,
     name=name,
+    annotations=annotations,
     schema_column=schema_column,
     timeouts=timeouts
   )),
   newAttrs(
     folder=null,
-    additional_properties=null,
+    table_name=null,
     annotations=null,
     data_factory_id,
     description=null,
     linked_service_name,
     name,
     parameters=null,
-    table_name=null,
+    additional_properties=null,
     schema_column=null,
     timeouts=null
   ):: std.prune(a={
     folder: folder,
-    additional_properties: additional_properties,
+    table_name: table_name,
     annotations: annotations,
     data_factory_id: data_factory_id,
     description: description,
     linked_service_name: linked_service_name,
     name: name,
     parameters: parameters,
-    table_name: table_name,
+    additional_properties: additional_properties,
     schema_column: schema_column,
     timeouts: timeouts,
   }),
-  withLinkedServiceName(resourceLabel, value):: {
+  withFolder(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_postgresql+: {
         [resourceLabel]+: {
-          linked_service_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_postgresql+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
+          folder: value,
         },
       },
     },
@@ -96,20 +69,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFolder(resourceLabel, value):: {
+  withLinkedServiceName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_postgresql+: {
         [resourceLabel]+: {
-          folder: value,
+          linked_service_name: value,
         },
       },
     },
   },
-  withTableName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_postgresql+: {
         [resourceLabel]+: {
-          table_name: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -123,11 +105,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_postgresql+: {
         [resourceLabel]+: {
-          name: value,
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          table_name: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_postgresql+: {
+        [resourceLabel]+: {
+          annotations: value,
         },
       },
     },

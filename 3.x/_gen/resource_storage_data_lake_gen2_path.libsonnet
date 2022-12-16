@@ -2,21 +2,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    path,
+    resource,
     storage_account_id,
     filesystem_name,
     group=null,
     owner=null,
-    path,
-    resource,
     ace=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_data_lake_gen2_path', label=resourceLabel, attrs=self.newAttrs(
+    path=path,
+    resource=resource,
     storage_account_id=storage_account_id,
     filesystem_name=filesystem_name,
     group=group,
     owner=owner,
-    path=path,
-    resource=resource,
     ace=ace,
     timeouts=timeouts
   )),
@@ -27,8 +27,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     group=null,
     owner=null,
     path,
-    ace=null,
-    timeouts=null
+    timeouts=null,
+    ace=null
   ):: std.prune(a={
     resource: resource,
     storage_account_id: storage_account_id,
@@ -36,36 +36,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     group: group,
     owner: owner,
     path: path,
-    ace: ace,
     timeouts: timeouts,
+    ace: ace,
   }),
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withFilesystemName(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          filesystem_name: value,
-        },
-      },
-    },
-  },
-  withGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          group: value,
-        },
-      },
-    },
-  },
   withOwner(resourceLabel, value):: {
     resource+: {
       azurerm_storage_data_lake_gen2_path+: {
@@ -93,6 +66,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
+  withFilesystemName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          filesystem_name: value,
+        },
+      },
+    },
+  },
+  withGroup(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          group: value,
+        },
+      },
+    },
+  },
   withAce(resourceLabel, value):: {
     resource+: {
       azurerm_storage_data_lake_gen2_path+: {
@@ -113,13 +113,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ace:: {
     new(
+      permissions,
       scope=null,
-      type,
-      permissions
+      type
     ):: std.prune(a={
+      permissions: permissions,
       scope: scope,
       type: type,
-      permissions: permissions,
     }),
   },
   withTimeouts(resourceLabel, value):: {

@@ -19,40 +19,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     private_link_access=private_link_access
   )),
   newAttrs(
+    default_action,
+    ip_rules=null,
     storage_account_id,
     virtual_network_subnet_ids=null,
     bypass=null,
-    default_action,
-    ip_rules=null,
-    private_link_access=null,
-    timeouts=null
+    timeouts=null,
+    private_link_access=null
   ):: std.prune(a={
+    default_action: default_action,
+    ip_rules: ip_rules,
     storage_account_id: storage_account_id,
     virtual_network_subnet_ids: virtual_network_subnet_ids,
     bypass: bypass,
-    default_action: default_action,
-    ip_rules: ip_rules,
-    private_link_access: private_link_access,
     timeouts: timeouts,
+    private_link_access: private_link_access,
   }),
-  withDefaultAction(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_account_network_rules+: {
-        [resourceLabel]+: {
-          default_action: value,
-        },
-      },
-    },
-  },
-  withIpRules(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_account_network_rules+: {
-        [resourceLabel]+: {
-          ip_rules: value,
-        },
-      },
-    },
-  },
   withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_storage_account_network_rules+: {
@@ -80,6 +62,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDefaultAction(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_account_network_rules+: {
+        [resourceLabel]+: {
+          default_action: value,
+        },
+      },
+    },
+  },
+  withIpRules(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_account_network_rules+: {
+        [resourceLabel]+: {
+          ip_rules: value,
+        },
+      },
+    },
+  },
   withPrivateLinkAccess(resourceLabel, value):: {
     resource+: {
       azurerm_storage_account_network_rules+: {
@@ -100,11 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   private_link_access:: {
     new(
-      endpoint_resource_id,
-      endpoint_tenant_id=null
+      endpoint_tenant_id=null,
+      endpoint_resource_id
     ):: std.prune(a={
-      endpoint_resource_id: endpoint_resource_id,
       endpoint_tenant_id: endpoint_tenant_id,
+      endpoint_resource_id: endpoint_resource_id,
     }),
   },
   withTimeouts(resourceLabel, value):: {

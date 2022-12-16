@@ -2,43 +2,70 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    content_type=null,
+    tags=null,
     expiration_date=null,
     name,
     not_before_date=null,
-    value,
+    content_type=null,
     key_vault_id,
-    tags=null,
+    value,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_secret', label=resourceLabel, attrs=self.newAttrs(
-    content_type=content_type,
+    tags=tags,
     expiration_date=expiration_date,
     name=name,
     not_before_date=not_before_date,
-    value=value,
+    content_type=content_type,
     key_vault_id=key_vault_id,
-    tags=tags,
+    value=value,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     not_before_date=null,
     tags=null,
+    expiration_date=null,
+    value,
     content_type=null,
     key_vault_id,
-    value,
-    expiration_date=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     not_before_date: not_before_date,
     tags: tags,
+    expiration_date: expiration_date,
+    value: value,
     content_type: content_type,
     key_vault_id: key_vault_id,
-    value: value,
-    expiration_date: expiration_date,
+    name: name,
     timeouts: timeouts,
   }),
+  withKeyVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_secret+: {
+        [resourceLabel]+: {
+          key_vault_id: value,
+        },
+      },
+    },
+  },
+  withValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_secret+: {
+        [resourceLabel]+: {
+          value: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_secret+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withExpirationDate(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_secret+: {
@@ -62,33 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_secret+: {
         [resourceLabel]+: {
           not_before_date: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_secret+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withKeyVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_secret+: {
-        [resourceLabel]+: {
-          key_vault_id: value,
-        },
-      },
-    },
-  },
-  withValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_secret+: {
-        [resourceLabel]+: {
-          value: value,
         },
       },
     },

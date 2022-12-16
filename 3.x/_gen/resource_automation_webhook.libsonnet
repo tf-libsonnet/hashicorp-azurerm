@@ -2,51 +2,87 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    automation_account_name,
     enabled=null,
-    expiry_time,
-    uri=null,
-    resource_group_name,
     runbook_name,
-    name,
     parameters=null,
+    expiry_time,
+    name,
+    resource_group_name,
     run_on_worker_group=null,
+    automation_account_name,
+    uri=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_webhook', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
     enabled=enabled,
-    expiry_time=expiry_time,
-    uri=uri,
-    resource_group_name=resource_group_name,
     runbook_name=runbook_name,
-    name=name,
     parameters=parameters,
+    expiry_time=expiry_time,
+    name=name,
+    resource_group_name=resource_group_name,
     run_on_worker_group=run_on_worker_group,
+    automation_account_name=automation_account_name,
+    uri=uri,
     timeouts=timeouts
   )),
   newAttrs(
-    uri=null,
-    resource_group_name,
-    runbook_name,
     enabled=null,
     expiry_time,
-    run_on_worker_group=null,
-    automation_account_name,
     name,
+    resource_group_name,
     parameters=null,
+    uri=null,
+    runbook_name,
+    automation_account_name,
+    run_on_worker_group=null,
     timeouts=null
   ):: std.prune(a={
-    uri: uri,
-    resource_group_name: resource_group_name,
-    runbook_name: runbook_name,
     enabled: enabled,
     expiry_time: expiry_time,
-    run_on_worker_group: run_on_worker_group,
-    automation_account_name: automation_account_name,
     name: name,
+    resource_group_name: resource_group_name,
     parameters: parameters,
+    uri: uri,
+    runbook_name: runbook_name,
+    automation_account_name: automation_account_name,
+    run_on_worker_group: run_on_worker_group,
     timeouts: timeouts,
   }),
+  withRunOnWorkerGroup(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          run_on_worker_group: value,
+        },
+      },
+    },
+  },
+  withRunbookName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          runbook_name: value,
+        },
+      },
+    },
+  },
+  withUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          uri: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
@@ -74,15 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
@@ -92,38 +119,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRunbookName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          runbook_name: value,
-        },
-      },
-    },
-  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
         [resourceLabel]+: {
           automation_account_name: value,
-        },
-      },
-    },
-  },
-  withRunOnWorkerGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          run_on_worker_group: value,
-        },
-      },
-    },
-  },
-  withUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          uri: value,
         },
       },
     },

@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
     throughput=null,
     account_name,
     name,
-    resource_group_name,
     autoscale_settings=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_database', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
     throughput=throughput,
     account_name=account_name,
     name=name,
-    resource_group_name=resource_group_name,
     autoscale_settings=autoscale_settings,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     throughput=null,
     account_name,
-    name,
     timeouts=null,
     autoscale_settings=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     throughput: throughput,
     account_name: account_name,
-    name: name,
     timeouts: timeouts,
     autoscale_settings: autoscale_settings,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_database+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_database+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_sql_database+: {
         [resourceLabel]+: {
           account_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_database+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -112,15 +112,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_ids=key_vault_key_ids, eventhub_namespace_id=eventhub_namespace_id, timeouts=timeouts)),
   newAttrs(
-    eventhub_namespace_id,
     key_vault_key_ids,
+    eventhub_namespace_id,
     timeouts=null
   ):: std.prune(a={
-    eventhub_namespace_id: eventhub_namespace_id,
     key_vault_key_ids: key_vault_key_ids,
+    eventhub_namespace_id: eventhub_namespace_id,
     timeouts: timeouts,
   }),
   withEventhubNamespaceId(resourceLabel, value):: {

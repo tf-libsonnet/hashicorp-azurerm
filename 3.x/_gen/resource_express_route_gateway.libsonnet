@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    virtual_hub_id,
-    location,
-    name,
     resource_group_name,
     scale_units,
     tags=null,
+    virtual_hub_id,
+    location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_express_route_gateway', label=resourceLabel, attrs=self.newAttrs(
-    virtual_hub_id=virtual_hub_id,
-    location=location,
-    name=name,
     resource_group_name=resource_group_name,
     scale_units=scale_units,
     tags=tags,
+    virtual_hub_id=virtual_hub_id,
+    location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,6 +35,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     scale_units: scale_units,
     timeouts: timeouts,
   }),
+  withVirtualHubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_gateway+: {
+        [resourceLabel]+: {
+          virtual_hub_id: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_gateway+: {
@@ -80,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualHubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_gateway+: {
-        [resourceLabel]+: {
-          virtual_hub_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_gateway+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

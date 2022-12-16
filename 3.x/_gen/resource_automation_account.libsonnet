@@ -2,65 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    public_network_access_enabled=null,
-    name,
-    resource_group_name,
     sku_name,
+    location,
+    name,
+    public_network_access_enabled=null,
     tags=null,
     local_authentication_enabled=null,
-    location,
+    resource_group_name,
     encryption=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_account', label=resourceLabel, attrs=self.newAttrs(
-    public_network_access_enabled=public_network_access_enabled,
-    name=name,
-    resource_group_name=resource_group_name,
     sku_name=sku_name,
+    location=location,
+    name=name,
+    public_network_access_enabled=public_network_access_enabled,
     tags=tags,
     local_authentication_enabled=local_authentication_enabled,
-    location=location,
+    resource_group_name=resource_group_name,
     encryption=encryption,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
+    name,
     resource_group_name,
     sku_name,
     tags=null,
     local_authentication_enabled=null,
-    location,
     public_network_access_enabled=null,
-    name,
+    timeouts=null,
     encryption=null,
-    identity=null,
-    timeouts=null
+    identity=null
   ):: std.prune(a={
+    location: location,
+    name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
     local_authentication_enabled: local_authentication_enabled,
-    location: location,
     public_network_access_enabled: public_network_access_enabled,
-    name: name,
+    timeouts: timeouts,
     encryption: encryption,
     identity: identity,
-    timeouts: timeouts,
   }),
-  withLocalAuthenticationEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_account+: {
-        [resourceLabel]+: {
-          local_authentication_enabled: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_automation_account+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_account+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -74,11 +74,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withLocalAuthenticationEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_automation_account+: {
         [resourceLabel]+: {
-          name: value,
+          local_authentication_enabled: value,
         },
       },
     },
@@ -109,6 +109,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_account+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_account+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withEncryption(resourceLabel, value):: {
     resource+: {
@@ -159,42 +190,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_account+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_account+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
+      identity_ids: identity_ids,
     }),
   },
 }

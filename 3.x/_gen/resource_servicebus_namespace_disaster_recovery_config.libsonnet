@@ -2,31 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    primary_namespace_id,
     partner_namespace_id,
     alias_authorization_rule_id=null,
+    primary_namespace_id,
     name,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_namespace_disaster_recovery_config', label=resourceLabel, attrs=self.newAttrs(
-    primary_namespace_id=primary_namespace_id,
     partner_namespace_id=partner_namespace_id,
     alias_authorization_rule_id=alias_authorization_rule_id,
+    primary_namespace_id=primary_namespace_id,
     name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    alias_authorization_rule_id=null,
     name,
     primary_namespace_id,
-    alias_authorization_rule_id=null,
     partner_namespace_id,
     timeouts=null
   ):: std.prune(a={
+    alias_authorization_rule_id: alias_authorization_rule_id,
     name: name,
     primary_namespace_id: primary_namespace_id,
-    alias_authorization_rule_id: alias_authorization_rule_id,
     partner_namespace_id: partner_namespace_id,
     timeouts: timeouts,
   }),
+  withPrimaryNamespaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace_disaster_recovery_config+: {
+        [resourceLabel]+: {
+          primary_namespace_id: value,
+        },
+      },
+    },
+  },
   withPartnerNamespaceId(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_disaster_recovery_config+: {
@@ -50,15 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_servicebus_namespace_disaster_recovery_config+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withPrimaryNamespaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace_disaster_recovery_config+: {
-        [resourceLabel]+: {
-          primary_namespace_id: value,
         },
       },
     },

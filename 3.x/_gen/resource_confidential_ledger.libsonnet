@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    ledger_type,
     location,
     name,
     resource_group_name,
     tags=null,
-    ledger_type,
     azuread_based_service_principal=null,
     certificate_based_security_principal=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_confidential_ledger', label=resourceLabel, attrs=self.newAttrs(
+    ledger_type=ledger_type,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    ledger_type=ledger_type,
     azuread_based_service_principal=azuread_based_service_principal,
     certificate_based_security_principal=certificate_based_security_principal,
     timeouts=timeouts
@@ -26,19 +26,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     tags=null,
-    timeouts=null,
     azuread_based_service_principal=null,
-    certificate_based_security_principal=null
+    certificate_based_security_principal=null,
+    timeouts=null
   ):: std.prune(a={
     ledger_type: ledger_type,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    timeouts: timeouts,
     azuread_based_service_principal: azuread_based_service_principal,
     certificate_based_security_principal: certificate_based_security_principal,
+    timeouts: timeouts,
   }),
+  withLedgerType(resourceLabel, value):: {
+    resource+: {
+      azurerm_confidential_ledger+: {
+        [resourceLabel]+: {
+          ledger_type: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_confidential_ledger+: {
@@ -75,15 +84,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLedgerType(resourceLabel, value):: {
-    resource+: {
-      azurerm_confidential_ledger+: {
-        [resourceLabel]+: {
-          ledger_type: value,
-        },
-      },
-    },
-  },
   withAzureadBasedServicePrincipal(resourceLabel, value):: {
     resource+: {
       azurerm_confidential_ledger+: {
@@ -104,13 +104,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   azuread_based_service_principal:: {
     new(
+      principal_id,
       tenant_id,
-      ledger_role_name,
-      principal_id
+      ledger_role_name
     ):: std.prune(a={
+      principal_id: principal_id,
       tenant_id: tenant_id,
       ledger_role_name: ledger_role_name,
-      principal_id: principal_id,
     }),
   },
   withCertificateBasedSecurityPrincipal(resourceLabel, value):: {
@@ -133,11 +133,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   certificate_based_security_principal:: {
     new(
-      ledger_role_name,
-      pem_public_key
+      pem_public_key,
+      ledger_role_name
     ):: std.prune(a={
-      ledger_role_name: ledger_role_name,
       pem_public_key: pem_public_key,
+      ledger_role_name: ledger_role_name,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -160,15 +160,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

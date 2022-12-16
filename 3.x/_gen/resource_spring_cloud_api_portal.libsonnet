@@ -2,43 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    instance_count=null,
     name,
     public_network_access_enabled=null,
     spring_cloud_service_id,
     gateway_ids=null,
     https_only_enabled=null,
-    instance_count=null,
-    sso=null,
-    timeouts=null
+    timeouts=null,
+    sso=null
   ):: tf.withResource(type='azurerm_spring_cloud_api_portal', label=resourceLabel, attrs=self.newAttrs(
+    instance_count=instance_count,
     name=name,
     public_network_access_enabled=public_network_access_enabled,
     spring_cloud_service_id=spring_cloud_service_id,
     gateway_ids=gateway_ids,
     https_only_enabled=https_only_enabled,
-    instance_count=instance_count,
-    sso=sso,
-    timeouts=timeouts
+    timeouts=timeouts,
+    sso=sso
   )),
   newAttrs(
-    public_network_access_enabled=null,
     spring_cloud_service_id,
     gateway_ids=null,
     https_only_enabled=null,
     instance_count=null,
     name,
-    sso=null,
-    timeouts=null
+    public_network_access_enabled=null,
+    timeouts=null,
+    sso=null
   ):: std.prune(a={
-    public_network_access_enabled: public_network_access_enabled,
     spring_cloud_service_id: spring_cloud_service_id,
     gateway_ids: gateway_ids,
     https_only_enabled: https_only_enabled,
     instance_count: instance_count,
     name: name,
-    sso: sso,
+    public_network_access_enabled: public_network_access_enabled,
     timeouts: timeouts,
+    sso: sso,
   }),
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
   withSpringCloudServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_api_portal+: {
@@ -80,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_api_portal+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
         },
       },
     },

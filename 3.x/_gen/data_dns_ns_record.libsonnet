@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_dns_ns_record+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_dns_ns_record+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_dns_ns_record+: {
         [dataSrcLabel]+: {
           zone_name: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_dns_ns_record+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

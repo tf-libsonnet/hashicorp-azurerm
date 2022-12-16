@@ -2,47 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    connection_string,
-    description=null,
-    parameters=null,
-    additional_properties=null,
     annotations=null,
     data_factory_id,
+    description=null,
+    connection_string,
     integration_runtime_name=null,
+    name,
+    parameters=null,
+    additional_properties=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_postgresql', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    connection_string=connection_string,
-    description=description,
-    parameters=parameters,
-    additional_properties=additional_properties,
     annotations=annotations,
     data_factory_id=data_factory_id,
+    description=description,
+    connection_string=connection_string,
     integration_runtime_name=integration_runtime_name,
+    name=name,
+    parameters=parameters,
+    additional_properties=additional_properties,
     timeouts=timeouts
   )),
   newAttrs(
-    additional_properties=null,
-    annotations=null,
     data_factory_id,
-    integration_runtime_name=null,
-    name,
-    connection_string,
     description=null,
     parameters=null,
+    connection_string,
+    integration_runtime_name=null,
+    name,
+    additional_properties=null,
+    annotations=null,
     timeouts=null
   ):: std.prune(a={
-    additional_properties: additional_properties,
-    annotations: annotations,
     data_factory_id: data_factory_id,
-    integration_runtime_name: integration_runtime_name,
-    name: name,
-    connection_string: connection_string,
     description: description,
     parameters: parameters,
+    connection_string: connection_string,
+    integration_runtime_name: integration_runtime_name,
+    name: name,
+    additional_properties: additional_properties,
+    annotations: annotations,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_postgresql+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_postgresql+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
   withIntegrationRuntimeName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_postgresql+: {
@@ -52,11 +70,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_postgresql+: {
         [resourceLabel]+: {
-          name: value,
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_postgresql+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_postgresql+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -75,42 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_postgresql+: {
         [resourceLabel]+: {
           annotations: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_postgresql+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_postgresql+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_postgresql+: {
-        [resourceLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_postgresql+: {
-        [resourceLabel]+: {
-          description: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

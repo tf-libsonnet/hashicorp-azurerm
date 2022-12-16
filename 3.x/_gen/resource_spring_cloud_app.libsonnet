@@ -2,104 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    service_name,
     tls_enabled=null,
-    https_only=null,
+    is_public=null,
     name,
+    addon_json=null,
+    https_only=null,
     public_endpoint_enabled=null,
     resource_group_name,
-    service_name,
-    addon_json=null,
-    is_public=null,
+    custom_persistent_disk=null,
     identity=null,
     ingress_settings=null,
     persistent_disk=null,
-    timeouts=null,
-    custom_persistent_disk=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_app', label=resourceLabel, attrs=self.newAttrs(
+    service_name=service_name,
     tls_enabled=tls_enabled,
-    https_only=https_only,
+    is_public=is_public,
     name=name,
+    addon_json=addon_json,
+    https_only=https_only,
     public_endpoint_enabled=public_endpoint_enabled,
     resource_group_name=resource_group_name,
-    service_name=service_name,
-    addon_json=addon_json,
-    is_public=is_public,
+    custom_persistent_disk=custom_persistent_disk,
     identity=identity,
     ingress_settings=ingress_settings,
     persistent_disk=persistent_disk,
-    timeouts=timeouts,
-    custom_persistent_disk=custom_persistent_disk
+    timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    service_name,
-    addon_json=null,
     is_public=null,
-    tls_enabled=null,
-    https_only=null,
     name,
+    service_name,
+    tls_enabled=null,
+    addon_json=null,
+    https_only=null,
     public_endpoint_enabled=null,
+    resource_group_name,
+    custom_persistent_disk=null,
+    identity=null,
     ingress_settings=null,
     persistent_disk=null,
-    timeouts=null,
-    custom_persistent_disk=null,
-    identity=null
+    timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    service_name: service_name,
-    addon_json: addon_json,
     is_public: is_public,
-    tls_enabled: tls_enabled,
-    https_only: https_only,
     name: name,
+    service_name: service_name,
+    tls_enabled: tls_enabled,
+    addon_json: addon_json,
+    https_only: https_only,
     public_endpoint_enabled: public_endpoint_enabled,
+    resource_group_name: resource_group_name,
+    custom_persistent_disk: custom_persistent_disk,
+    identity: identity,
     ingress_settings: ingress_settings,
     persistent_disk: persistent_disk,
     timeouts: timeouts,
-    custom_persistent_disk: custom_persistent_disk,
-    identity: identity,
   }),
-  withTlsEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app+: {
-        [resourceLabel]+: {
-          tls_enabled: value,
-        },
-      },
-    },
-  },
   withHttpsOnly(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app+: {
         [resourceLabel]+: {
           https_only: value,
-        },
-      },
-    },
-  },
-  withAddonJson(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app+: {
-        [resourceLabel]+: {
-          addon_json: value,
-        },
-      },
-    },
-  },
-  withIsPublic(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app+: {
-        [resourceLabel]+: {
-          is_public: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -131,6 +95,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTlsEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app+: {
+        [resourceLabel]+: {
+          tls_enabled: value,
+        },
+      },
+    },
+  },
+  withIsPublic(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app+: {
+        [resourceLabel]+: {
+          is_public: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withAddonJson(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app+: {
+        [resourceLabel]+: {
+          addon_json: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app+: {
@@ -151,15 +151,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
   withCustomPersistentDisk(resourceLabel, value):: {
@@ -242,17 +242,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ingress_settings:: {
     new(
+      backend_protocol=null,
+      read_timeout_in_seconds=null,
       send_timeout_in_seconds=null,
       session_affinity=null,
-      session_cookie_max_age=null,
-      backend_protocol=null,
-      read_timeout_in_seconds=null
+      session_cookie_max_age=null
     ):: std.prune(a={
+      backend_protocol: backend_protocol,
+      read_timeout_in_seconds: read_timeout_in_seconds,
       send_timeout_in_seconds: send_timeout_in_seconds,
       session_affinity: session_affinity,
       session_cookie_max_age: session_cookie_max_age,
-      backend_protocol: backend_protocol,
-      read_timeout_in_seconds: read_timeout_in_seconds,
     }),
   },
   withPersistentDisk(resourceLabel, value):: {

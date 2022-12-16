@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_units,
-    tags=null,
     location,
     maps_account_id,
     name,
+    storage_units,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_maps_creator', label=resourceLabel, attrs=self.newAttrs(
-    storage_units=storage_units,
-    tags=tags,
     location=location,
     maps_account_id=maps_account_id,
     name=name,
+    storage_units=storage_units,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    location,
-    maps_account_id,
     name,
     storage_units,
     tags=null,
+    location,
+    maps_account_id,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    maps_account_id: maps_account_id,
     name: name,
     storage_units: storage_units,
     tags: tags,
+    location: location,
+    maps_account_id: maps_account_id,
     timeouts: timeouts,
   }),
   withLocation(resourceLabel, value):: {

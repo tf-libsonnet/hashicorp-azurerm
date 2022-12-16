@@ -2,27 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    enabled=null,
     geo_mappings=null,
     name,
     priority=null,
     profile_id,
     target_resource_id,
     weight=null,
+    enabled=null,
+    timeouts=null,
     custom_header=null,
-    subnet=null,
-    timeouts=null
+    subnet=null
   ):: tf.withResource(type='azurerm_traffic_manager_azure_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
     geo_mappings=geo_mappings,
     name=name,
     priority=priority,
     profile_id=profile_id,
     target_resource_id=target_resource_id,
     weight=weight,
+    enabled=enabled,
+    timeouts=timeouts,
     custom_header=custom_header,
-    subnet=subnet,
-    timeouts=timeouts
+    subnet=subnet
   )),
   newAttrs(
     geo_mappings=null,
@@ -47,6 +47,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet: subnet,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_azure_endpoint+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPriority(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_azure_endpoint+: {
+        [resourceLabel]+: {
+          priority: value,
+        },
+      },
+    },
+  },
+  withProfileId(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_azure_endpoint+: {
+        [resourceLabel]+: {
+          profile_id: value,
+        },
+      },
+    },
+  },
   withTargetResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_azure_endpoint+: {
@@ -79,33 +106,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_traffic_manager_azure_endpoint+: {
         [resourceLabel]+: {
           geo_mappings: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_azure_endpoint+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPriority(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_azure_endpoint+: {
-        [resourceLabel]+: {
-          priority: value,
-        },
-      },
-    },
-  },
-  withProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_azure_endpoint+: {
-        [resourceLabel]+: {
-          profile_id: value,
         },
       },
     },
@@ -157,13 +157,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   subnet:: {
     new(
+      first,
       last=null,
-      scope=null,
-      first
+      scope=null
     ):: std.prune(a={
+      first: first,
       last: last,
       scope: scope,
-      first: first,
     }),
   },
   withTimeouts(resourceLabel, value):: {

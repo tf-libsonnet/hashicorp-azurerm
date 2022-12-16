@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    user_identity=null,
     cluster_id,
     key_name,
     key_vault_id,
     key_version,
+    user_identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_cluster_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(
-    user_identity=user_identity,
     cluster_id=cluster_id,
     key_name=key_name,
     key_vault_id=key_vault_id,
     key_version=key_version,
+    user_identity=user_identity,
     timeouts=timeouts
   )),
   newAttrs(
-    cluster_id,
-    key_name,
     key_vault_id,
     key_version,
     user_identity=null,
+    cluster_id,
+    key_name,
     timeouts=null
   ):: std.prune(a={
-    cluster_id: cluster_id,
-    key_name: key_name,
     key_vault_id: key_vault_id,
     key_version: key_version,
     user_identity: user_identity,
+    cluster_id: cluster_id,
+    key_name: key_name,
     timeouts: timeouts,
   }),
+  withKeyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster_customer_managed_key+: {
+        [resourceLabel]+: {
+          key_name: value,
+        },
+      },
+    },
+  },
+  withKeyVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster_customer_managed_key+: {
+        [resourceLabel]+: {
+          key_vault_id: value,
+        },
+      },
+    },
+  },
   withKeyVersion(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_customer_managed_key+: {
@@ -54,24 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_kusto_cluster_customer_managed_key+: {
         [resourceLabel]+: {
           cluster_id: value,
-        },
-      },
-    },
-  },
-  withKeyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster_customer_managed_key+: {
-        [resourceLabel]+: {
-          key_name: value,
-        },
-      },
-    },
-  },
-  withKeyVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster_customer_managed_key+: {
-        [resourceLabel]+: {
-          key_vault_id: value,
         },
       },
     },

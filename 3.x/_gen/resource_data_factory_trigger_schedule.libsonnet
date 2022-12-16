@@ -2,76 +2,103 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    interval=null,
+    name,
+    annotations=null,
     start_time=null,
     time_zone=null,
-    annotations=null,
-    description=null,
     frequency=null,
-    activated=null,
-    name,
+    description=null,
     end_time=null,
-    interval=null,
-    data_factory_id,
     pipeline_name=null,
     pipeline_parameters=null,
+    activated=null,
+    data_factory_id,
+    timeouts=null,
     pipeline=null,
-    schedule=null,
-    timeouts=null
+    schedule=null
   ):: tf.withResource(type='azurerm_data_factory_trigger_schedule', label=resourceLabel, attrs=self.newAttrs(
+    interval=interval,
+    name=name,
+    annotations=annotations,
     start_time=start_time,
     time_zone=time_zone,
-    annotations=annotations,
-    description=description,
     frequency=frequency,
-    activated=activated,
-    name=name,
+    description=description,
     end_time=end_time,
-    interval=interval,
-    data_factory_id=data_factory_id,
     pipeline_name=pipeline_name,
     pipeline_parameters=pipeline_parameters,
+    activated=activated,
+    data_factory_id=data_factory_id,
+    timeouts=timeouts,
     pipeline=pipeline,
-    schedule=schedule,
-    timeouts=timeouts
+    schedule=schedule
   )),
   newAttrs(
-    time_zone=null,
-    interval=null,
-    activated=null,
-    name,
-    pipeline_parameters=null,
     start_time=null,
+    interval=null,
+    description=null,
+    name,
+    pipeline_name=null,
     annotations=null,
     data_factory_id,
-    description=null,
-    end_time=null,
+    time_zone=null,
+    activated=null,
+    pipeline_parameters=null,
     frequency=null,
-    pipeline_name=null,
+    end_time=null,
     schedule=null,
     timeouts=null,
     pipeline=null
   ):: std.prune(a={
-    time_zone: time_zone,
-    interval: interval,
-    activated: activated,
-    name: name,
-    pipeline_parameters: pipeline_parameters,
     start_time: start_time,
+    interval: interval,
+    description: description,
+    name: name,
+    pipeline_name: pipeline_name,
     annotations: annotations,
     data_factory_id: data_factory_id,
-    description: description,
-    end_time: end_time,
+    time_zone: time_zone,
+    activated: activated,
+    pipeline_parameters: pipeline_parameters,
     frequency: frequency,
-    pipeline_name: pipeline_name,
+    end_time: end_time,
     schedule: schedule,
     timeouts: timeouts,
     pipeline: pipeline,
   }),
-  withInterval(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_schedule+: {
         [resourceLabel]+: {
-          interval: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withPipelineName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          pipeline_name: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withPipelineParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          pipeline_parameters: value,
         },
       },
     },
@@ -94,69 +121,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          frequency: value,
-        },
-      },
-    },
-  },
-  withActivated(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          activated: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPipelineName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          pipeline_name: value,
-        },
-      },
-    },
-  },
-  withPipelineParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          pipeline_parameters: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_schedule+: {
@@ -174,6 +138,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withActivated(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          activated: value,
+        },
+      },
+    },
+  },
+  withInterval(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          interval: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withFrequency(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          frequency: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_schedule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withPipeline(resourceLabel, value):: {
     resource+: {
@@ -222,57 +253,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   schedule:: {
     new(
-      hours=null,
       minutes=null,
       days_of_month=null,
       days_of_week=null,
+      hours=null,
       monthly=null
     ):: std.prune(a={
-      hours: hours,
       minutes: minutes,
       days_of_month: days_of_month,
       days_of_week: days_of_week,
+      hours: hours,
       monthly: monthly,
     }),
     monthly:: {
       new(
-        week=null,
-        weekday
+        weekday,
+        week=null
       ):: std.prune(a={
-        week: week,
         weekday: weekday,
+        week: week,
       }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_schedule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

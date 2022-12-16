@@ -2,46 +2,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    scopes,
-    tags=null,
     description=null,
     enabled=null,
     name,
     resource_group_name,
-    condition=null,
+    scopes,
+    tags=null,
     schedule=null,
-    timeouts=null
+    timeouts=null,
+    condition=null
   ):: tf.withResource(type='azurerm_monitor_alert_processing_rule_suppression', label=resourceLabel, attrs=self.newAttrs(
-    scopes=scopes,
-    tags=tags,
     description=description,
     enabled=enabled,
     name=name,
     resource_group_name=resource_group_name,
-    condition=condition,
+    scopes=scopes,
+    tags=tags,
     schedule=schedule,
-    timeouts=timeouts
+    timeouts=timeouts,
+    condition=condition
   )),
   newAttrs(
-    enabled=null,
     name,
     resource_group_name,
     scopes,
     tags=null,
     description=null,
+    enabled=null,
+    condition=null,
     schedule=null,
-    timeouts=null,
-    condition=null
+    timeouts=null
   ):: std.prune(a={
-    enabled: enabled,
     name: name,
     resource_group_name: resource_group_name,
     scopes: scopes,
     tags: tags,
     description: description,
+    enabled: enabled,
+    condition: condition,
     schedule: schedule,
     timeouts: timeouts,
-    condition: condition,
   }),
   withName(resourceLabel, value):: {
     resource+: {
@@ -117,76 +117,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   condition:: {
     new(
-      alert_rule_name=null,
-      target_resource_group=null,
-      severity=null,
-      monitor_condition=null,
-      description=null,
-      signal_type=null,
-      target_resource=null,
-      alert_context=null,
       alert_rule_id=null,
+      target_resource=null,
       target_resource_type=null,
-      monitor_service=null
+      signal_type=null,
+      description=null,
+      target_resource_group=null,
+      monitor_condition=null,
+      monitor_service=null,
+      severity=null,
+      alert_context=null,
+      alert_rule_name=null
     ):: std.prune(a={
-      alert_rule_name: alert_rule_name,
-      target_resource_group: target_resource_group,
-      severity: severity,
-      monitor_condition: monitor_condition,
-      description: description,
-      signal_type: signal_type,
-      target_resource: target_resource,
-      alert_context: alert_context,
       alert_rule_id: alert_rule_id,
+      target_resource: target_resource,
       target_resource_type: target_resource_type,
+      signal_type: signal_type,
+      description: description,
+      target_resource_group: target_resource_group,
+      monitor_condition: monitor_condition,
       monitor_service: monitor_service,
+      severity: severity,
+      alert_context: alert_context,
+      alert_rule_name: alert_rule_name,
     }),
-    target_resource_type:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    signal_type:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    target_resource_group:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    alert_context:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    alert_rule_id:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    severity:: {
+    target_resource:: {
       new(
         operator,
         values
@@ -204,7 +159,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         values: values,
       }),
     },
+    severity:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    alert_rule_id:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
     monitor_service:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    signal_type:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    target_resource_type:: {
+      new(
+        values,
+        operator
+      ):: std.prune(a={
+        values: values,
+        operator: operator,
+      }),
+    },
+    alert_context:: {
       new(
         operator,
         values
@@ -215,11 +215,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     alert_rule_name:: {
       new(
-        values,
-        operator
+        operator,
+        values
       ):: std.prune(a={
-        values: values,
         operator: operator,
+        values: values,
       }),
     },
     description:: {
@@ -231,7 +231,7 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         values: values,
       }),
     },
-    target_resource:: {
+    target_resource_group:: {
       new(
         operator,
         values
@@ -283,24 +283,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
       monthly:: {
         new(
+          start_time=null,
           days_of_month,
-          end_time=null,
-          start_time=null
+          end_time=null
         ):: std.prune(a={
+          start_time: start_time,
           days_of_month: days_of_month,
           end_time: end_time,
-          start_time: start_time,
         }),
       },
       weekly:: {
         new(
+          start_time=null,
           days_of_week,
-          end_time=null,
-          start_time=null
+          end_time=null
         ):: std.prune(a={
+          start_time: start_time,
           days_of_week: days_of_week,
           end_time: end_time,
-          start_time: start_time,
         }),
       },
       daily:: {
@@ -334,15 +334,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

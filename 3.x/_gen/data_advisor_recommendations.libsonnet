@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     filter_by_resource_groups: filter_by_resource_groups,
     timeouts: timeouts,
   }),
-  withFilterByResourceGroups(dataSrcLabel, value):: {
-    data+: {
-      azurerm_advisor_recommendations+: {
-        [dataSrcLabel]+: {
-          filter_by_resource_groups: value,
-        },
-      },
-    },
-  },
   withFilterByCategory(dataSrcLabel, value):: {
     data+: {
       azurerm_advisor_recommendations+: {
         [dataSrcLabel]+: {
           filter_by_category: value,
+        },
+      },
+    },
+  },
+  withFilterByResourceGroups(dataSrcLabel, value):: {
+    data+: {
+      azurerm_advisor_recommendations+: {
+        [dataSrcLabel]+: {
+          filter_by_resource_groups: value,
         },
       },
     },

@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     synapse_workspace_id: synapse_workspace_id,
     timeouts: timeouts,
   }),
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_integration_runtime_self_hosted+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_integration_runtime_self_hosted+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_integration_runtime_self_hosted+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_integration_runtime_self_hosted+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
         },
       },
     },

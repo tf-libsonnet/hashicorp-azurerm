@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    server_name,
     value,
     name,
+    resource_group_name,
+    server_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_mariadb_configuration', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    server_name=server_name,
     value=value,
     name=name,
+    resource_group_name=resource_group_name,
+    server_name=server_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     value: value,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_configuration+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_configuration+: {
@@ -59,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mariadb_configuration+: {
         [resourceLabel]+: {
           value: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_configuration+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

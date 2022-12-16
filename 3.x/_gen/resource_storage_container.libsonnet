@@ -15,36 +15,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    storage_account_name,
     container_access_type=null,
     metadata=null,
     name,
-    storage_account_name,
     timeouts=null
   ):: std.prune(a={
+    storage_account_name: storage_account_name,
     container_access_type: container_access_type,
     metadata: metadata,
     name: name,
-    storage_account_name: storage_account_name,
     timeouts: timeouts,
   }),
-  withStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_container+: {
-        [resourceLabel]+: {
-          storage_account_name: value,
-        },
-      },
-    },
-  },
-  withContainerAccessType(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_container+: {
-        [resourceLabel]+: {
-          container_access_type: value,
-        },
-      },
-    },
-  },
   withMetadata(resourceLabel, value):: {
     resource+: {
       azurerm_storage_container+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_storage_container+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_container+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
+  withContainerAccessType(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_container+: {
+        [resourceLabel]+: {
+          container_access_type: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

@@ -2,61 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    bot_name,
+    cognitive_service_access_key,
+    cognitive_service_location,
     custom_speech_model_id=null,
     custom_voice_deployment_id=null,
     location,
     resource_group_name,
-    bot_name,
-    cognitive_service_access_key,
-    cognitive_service_location,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_direct_line_speech', label=resourceLabel, attrs=self.newAttrs(
+    bot_name=bot_name,
+    cognitive_service_access_key=cognitive_service_access_key,
+    cognitive_service_location=cognitive_service_location,
     custom_speech_model_id=custom_speech_model_id,
     custom_voice_deployment_id=custom_voice_deployment_id,
     location=location,
     resource_group_name=resource_group_name,
-    bot_name=bot_name,
-    cognitive_service_access_key=cognitive_service_access_key,
-    cognitive_service_location=cognitive_service_location,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
+    resource_group_name,
+    bot_name,
     cognitive_service_access_key,
     cognitive_service_location,
     custom_speech_model_id=null,
     custom_voice_deployment_id=null,
-    location,
-    resource_group_name,
-    bot_name,
     timeouts=null
   ):: std.prune(a={
+    location: location,
+    resource_group_name: resource_group_name,
+    bot_name: bot_name,
     cognitive_service_access_key: cognitive_service_access_key,
     cognitive_service_location: cognitive_service_location,
     custom_speech_model_id: custom_speech_model_id,
     custom_voice_deployment_id: custom_voice_deployment_id,
-    location: location,
-    resource_group_name: resource_group_name,
-    bot_name: bot_name,
     timeouts: timeouts,
   }),
-  withCustomSpeechModelId(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_direct_line_speech+: {
-        [resourceLabel]+: {
-          custom_speech_model_id: value,
-        },
-      },
-    },
-  },
-  withCustomVoiceDeploymentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_direct_line_speech+: {
-        [resourceLabel]+: {
-          custom_voice_deployment_id: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_direct_line_speech+: {
@@ -102,6 +84,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCustomSpeechModelId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_direct_line_speech+: {
+        [resourceLabel]+: {
+          custom_speech_model_id: value,
+        },
+      },
+    },
+  },
+  withCustomVoiceDeploymentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_direct_line_speech+: {
+        [resourceLabel]+: {
+          custom_voice_deployment_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_direct_line_speech+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

@@ -15,27 +15,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    username,
     job_agent_id,
     name,
     password,
+    username,
     timeouts=null
   ):: std.prune(a={
-    username: username,
     job_agent_id: job_agent_id,
     name: name,
     password: password,
+    username: username,
     timeouts: timeouts,
   }),
-  withJobAgentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_job_credential+: {
-        [resourceLabel]+: {
-          job_agent_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_job_credential+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withJobAgentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_job_credential+: {
+        [resourceLabel]+: {
+          job_agent_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_job_credential+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

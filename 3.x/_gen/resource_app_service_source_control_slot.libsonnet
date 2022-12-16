@@ -4,50 +4,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     rollback_enabled=null,
     use_manual_integration=null,
-    slot_id,
     use_local_git=null,
     use_mercurial=null,
     branch=null,
+    slot_id,
     repo_url=null,
     github_action_configuration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_source_control_slot', label=resourceLabel, attrs=self.newAttrs(
     rollback_enabled=rollback_enabled,
     use_manual_integration=use_manual_integration,
-    slot_id=slot_id,
     use_local_git=use_local_git,
     use_mercurial=use_mercurial,
     branch=branch,
+    slot_id=slot_id,
     repo_url=repo_url,
     github_action_configuration=github_action_configuration,
     timeouts=timeouts
   )),
   newAttrs(
-    use_mercurial=null,
     branch=null,
+    slot_id,
+    use_local_git=null,
+    use_mercurial=null,
     repo_url=null,
     rollback_enabled=null,
     use_manual_integration=null,
-    slot_id,
-    use_local_git=null,
-    github_action_configuration=null,
-    timeouts=null
+    timeouts=null,
+    github_action_configuration=null
   ):: std.prune(a={
-    use_mercurial: use_mercurial,
     branch: branch,
+    slot_id: slot_id,
+    use_local_git: use_local_git,
+    use_mercurial: use_mercurial,
     repo_url: repo_url,
     rollback_enabled: rollback_enabled,
     use_manual_integration: use_manual_integration,
-    slot_id: slot_id,
-    use_local_git: use_local_git,
-    github_action_configuration: github_action_configuration,
     timeouts: timeouts,
+    github_action_configuration: github_action_configuration,
   }),
-  withUseMercurial(resourceLabel, value):: {
+  withBranch(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_source_control_slot+: {
         [resourceLabel]+: {
-          use_mercurial: value,
+          branch: value,
         },
       },
     },
@@ -57,24 +57,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_source_control_slot+: {
         [resourceLabel]+: {
           slot_id: value,
-        },
-      },
-    },
-  },
-  withUseLocalGit(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control_slot+: {
-        [resourceLabel]+: {
-          use_local_git: value,
-        },
-      },
-    },
-  },
-  withBranch(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control_slot+: {
-        [resourceLabel]+: {
-          branch: value,
         },
       },
     },
@@ -106,6 +88,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withUseLocalGit(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control_slot+: {
+        [resourceLabel]+: {
+          use_local_git: value,
+        },
+      },
+    },
+  },
+  withUseMercurial(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control_slot+: {
+        [resourceLabel]+: {
+          use_mercurial: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control_slot+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control_slot+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withGithubActionConfiguration(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_source_control_slot+: {
@@ -134,6 +163,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       code_configuration: code_configuration,
       container_configuration: container_configuration,
     }),
+    code_configuration:: {
+      new(
+        runtime_stack,
+        runtime_version
+      ):: std.prune(a={
+        runtime_stack: runtime_stack,
+        runtime_version: runtime_version,
+      }),
+    },
     container_configuration:: {
       new(
         image_name,
@@ -147,43 +185,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         registry_username: registry_username,
       }),
     },
-    code_configuration:: {
-      new(
-        runtime_stack,
-        runtime_version
-      ):: std.prune(a={
-        runtime_stack: runtime_stack,
-        runtime_version: runtime_version,
-      }),
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control_slot+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control_slot+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

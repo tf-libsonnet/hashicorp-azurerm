@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    role_name,
-    synapse_spark_pool_id=null,
     synapse_workspace_id=null,
     principal_id,
+    role_name,
+    synapse_spark_pool_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_role_assignment', label=resourceLabel, attrs=self.newAttrs(
-    role_name=role_name,
-    synapse_spark_pool_id=synapse_spark_pool_id,
     synapse_workspace_id=synapse_workspace_id,
     principal_id=principal_id,
+    role_name=role_name,
+    synapse_spark_pool_id=synapse_spark_pool_id,
     timeouts=timeouts
   )),
   newAttrs(
-    role_name,
     synapse_spark_pool_id=null,
     synapse_workspace_id=null,
     principal_id,
+    role_name,
     timeouts=null
   ):: std.prune(a={
-    role_name: role_name,
     synapse_spark_pool_id: synapse_spark_pool_id,
     synapse_workspace_id: synapse_workspace_id,
     principal_id: principal_id,
+    role_name: role_name,
     timeouts: timeouts,
   }),
-  withSynapseSparkPoolId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_role_assignment+: {
-        [resourceLabel]+: {
-          synapse_spark_pool_id: value,
-        },
-      },
-    },
-  },
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_role_assignment+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
-        },
-      },
-    },
-  },
   withPrincipalId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_role_assignment+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_role_assignment+: {
         [resourceLabel]+: {
           role_name: value,
+        },
+      },
+    },
+  },
+  withSynapseSparkPoolId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_role_assignment+: {
+        [resourceLabel]+: {
+          synapse_spark_pool_id: value,
+        },
+      },
+    },
+  },
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_role_assignment+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
         },
       },
     },

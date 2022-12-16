@@ -2,68 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    virtual_machine_id,
-    name,
-    protected_settings=null,
-    tags=null,
-    type_handler_version,
-    publisher,
-    type,
-    auto_upgrade_minor_version=null,
-    settings=null,
-    automatic_upgrade_enabled=null,
     failure_suppression_enabled=null,
+    name,
+    settings=null,
+    protected_settings=null,
+    publisher,
+    type_handler_version,
+    virtual_machine_id,
+    automatic_upgrade_enabled=null,
+    auto_upgrade_minor_version=null,
+    tags=null,
+    type,
     protected_settings_from_key_vault=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_machine_extension', label=resourceLabel, attrs=self.newAttrs(
-    virtual_machine_id=virtual_machine_id,
-    name=name,
-    protected_settings=protected_settings,
-    tags=tags,
-    type_handler_version=type_handler_version,
-    publisher=publisher,
-    type=type,
-    auto_upgrade_minor_version=auto_upgrade_minor_version,
-    settings=settings,
-    automatic_upgrade_enabled=automatic_upgrade_enabled,
     failure_suppression_enabled=failure_suppression_enabled,
+    name=name,
+    settings=settings,
+    protected_settings=protected_settings,
+    publisher=publisher,
+    type_handler_version=type_handler_version,
+    virtual_machine_id=virtual_machine_id,
+    automatic_upgrade_enabled=automatic_upgrade_enabled,
+    auto_upgrade_minor_version=auto_upgrade_minor_version,
+    tags=tags,
+    type=type,
     protected_settings_from_key_vault=protected_settings_from_key_vault,
     timeouts=timeouts
   )),
   newAttrs(
-    virtual_machine_id,
-    auto_upgrade_minor_version=null,
-    automatic_upgrade_enabled=null,
     publisher,
-    type_handler_version,
-    name,
-    protected_settings=null,
-    settings=null,
     type,
+    virtual_machine_id,
     failure_suppression_enabled=null,
+    settings=null,
+    name,
+    type_handler_version,
+    automatic_upgrade_enabled=null,
+    protected_settings=null,
+    auto_upgrade_minor_version=null,
     tags=null,
     protected_settings_from_key_vault=null,
     timeouts=null
   ):: std.prune(a={
-    virtual_machine_id: virtual_machine_id,
-    auto_upgrade_minor_version: auto_upgrade_minor_version,
-    automatic_upgrade_enabled: automatic_upgrade_enabled,
     publisher: publisher,
-    type_handler_version: type_handler_version,
-    name: name,
-    protected_settings: protected_settings,
-    settings: settings,
     type: type,
+    virtual_machine_id: virtual_machine_id,
     failure_suppression_enabled: failure_suppression_enabled,
+    settings: settings,
+    name: name,
+    type_handler_version: type_handler_version,
+    automatic_upgrade_enabled: automatic_upgrade_enabled,
+    protected_settings: protected_settings,
+    auto_upgrade_minor_version: auto_upgrade_minor_version,
     tags: tags,
     protected_settings_from_key_vault: protected_settings_from_key_vault,
     timeouts: timeouts,
   }),
-  withSettings(resourceLabel, value):: {
+  withTypeHandlerVersion(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          settings: value,
+          type_handler_version: value,
         },
       },
     },
@@ -86,20 +86,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withType(resourceLabel, value):: {
+  withProtectedSettings(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          virtual_machine_id: value,
+          protected_settings: value,
         },
       },
     },
@@ -122,11 +113,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withProtectedSettings(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          protected_settings: value,
+          tags: value,
+        },
+      },
+    },
+  },
+  withVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          virtual_machine_id: value,
         },
       },
     },
@@ -140,54 +140,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTypeHandlerVersion(resourceLabel, value):: {
+  withSettings(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          type_handler_version: value,
+          settings: value,
         },
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withType(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_extension+: {
         [resourceLabel]+: {
-          tags: value,
+          type: value,
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_extension+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withProtectedSettingsFromKeyVault(resourceLabel, value):: {
     resource+: {
@@ -209,11 +178,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   protected_settings_from_key_vault:: {
     new(
-      secret_url,
-      source_vault_id
+      source_vault_id,
+      secret_url
     ):: std.prune(a={
-      secret_url: secret_url,
       source_vault_id: source_vault_id,
+      secret_url: secret_url,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_extension+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

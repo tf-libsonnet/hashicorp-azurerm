@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    storage_account_access_key=null,
     storage_account_access_key_is_secondary=null,
     storage_account_subscription_id=null,
-    enabled=null,
     storage_endpoint=null,
-    retention_in_days=null,
-    storage_account_access_key=null,
+    enabled=null,
     log_monitoring_enabled=null,
+    retention_in_days=null,
     server_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_server_extended_auditing_policy', label=resourceLabel, attrs=self.newAttrs(
+    storage_account_access_key=storage_account_access_key,
     storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
     storage_account_subscription_id=storage_account_subscription_id,
-    enabled=enabled,
     storage_endpoint=storage_endpoint,
-    retention_in_days=retention_in_days,
-    storage_account_access_key=storage_account_access_key,
+    enabled=enabled,
     log_monitoring_enabled=log_monitoring_enabled,
+    retention_in_days=retention_in_days,
     server_id=server_id,
     timeouts=timeouts
   )),
   newAttrs(
-    enabled=null,
     storage_account_access_key=null,
-    storage_endpoint=null,
-    retention_in_days=null,
-    log_monitoring_enabled=null,
-    server_id,
     storage_account_access_key_is_secondary=null,
     storage_account_subscription_id=null,
+    storage_endpoint=null,
+    enabled=null,
+    log_monitoring_enabled=null,
+    retention_in_days=null,
+    server_id,
     timeouts=null
   ):: std.prune(a={
-    enabled: enabled,
     storage_account_access_key: storage_account_access_key,
-    storage_endpoint: storage_endpoint,
-    retention_in_days: retention_in_days,
-    log_monitoring_enabled: log_monitoring_enabled,
-    server_id: server_id,
     storage_account_access_key_is_secondary: storage_account_access_key_is_secondary,
     storage_account_subscription_id: storage_account_subscription_id,
+    storage_endpoint: storage_endpoint,
+    enabled: enabled,
+    log_monitoring_enabled: log_monitoring_enabled,
+    retention_in_days: retention_in_days,
+    server_id: server_id,
     timeouts: timeouts,
   }),
-  withLogMonitoringEnabled(resourceLabel, value):: {
+  withRetentionInDays(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_extended_auditing_policy+: {
         [resourceLabel]+: {
-          log_monitoring_enabled: value,
+          retention_in_days: value,
         },
       },
     },
@@ -61,24 +61,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountAccessKeyIsSecondary(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_extended_auditing_policy+: {
-        [resourceLabel]+: {
-          storage_account_access_key_is_secondary: value,
-        },
-      },
-    },
-  },
-  withRetentionInDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_extended_auditing_policy+: {
-        [resourceLabel]+: {
-          retention_in_days: value,
-        },
-      },
-    },
-  },
   withStorageAccountAccessKey(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_extended_auditing_policy+: {
@@ -88,11 +70,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageEndpoint(resourceLabel, value):: {
+  withStorageAccountAccessKeyIsSecondary(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_extended_auditing_policy+: {
         [resourceLabel]+: {
-          storage_endpoint: value,
+          storage_account_access_key_is_secondary: value,
         },
       },
     },
@@ -106,11 +88,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageEndpoint(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_extended_auditing_policy+: {
+        [resourceLabel]+: {
+          storage_endpoint: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_extended_auditing_policy+: {
         [resourceLabel]+: {
           enabled: value,
+        },
+      },
+    },
+  },
+  withLogMonitoringEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_extended_auditing_policy+: {
+        [resourceLabel]+: {
+          log_monitoring_enabled: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

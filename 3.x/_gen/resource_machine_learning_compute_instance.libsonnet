@@ -2,28 +2,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    virtual_machine_size,
-    authorization_type=null,
     machine_learning_workspace_id,
-    name,
-    local_auth_enabled=null,
+    authorization_type=null,
     location,
     subnet_resource_id=null,
+    virtual_machine_size,
+    local_auth_enabled=null,
     tags=null,
+    name,
     description=null,
     timeouts=null,
     assign_to_user=null,
     identity=null,
     ssh=null
   ):: tf.withResource(type='azurerm_machine_learning_compute_instance', label=resourceLabel, attrs=self.newAttrs(
-    virtual_machine_size=virtual_machine_size,
-    authorization_type=authorization_type,
     machine_learning_workspace_id=machine_learning_workspace_id,
-    name=name,
-    local_auth_enabled=local_auth_enabled,
+    authorization_type=authorization_type,
     location=location,
     subnet_resource_id=subnet_resource_id,
+    virtual_machine_size=virtual_machine_size,
+    local_auth_enabled=local_auth_enabled,
     tags=tags,
+    name=name,
     description=description,
     timeouts=timeouts,
     assign_to_user=assign_to_user,
@@ -31,57 +31,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ssh=ssh
   )),
   newAttrs(
-    location,
-    name,
-    subnet_resource_id=null,
     tags=null,
-    authorization_type=null,
     description=null,
     machine_learning_workspace_id,
-    virtual_machine_size,
+    location,
+    subnet_resource_id=null,
     local_auth_enabled=null,
+    virtual_machine_size,
+    authorization_type=null,
+    name,
     ssh=null,
     timeouts=null,
     assign_to_user=null,
     identity=null
   ):: std.prune(a={
-    location: location,
-    name: name,
-    subnet_resource_id: subnet_resource_id,
     tags: tags,
-    authorization_type: authorization_type,
     description: description,
     machine_learning_workspace_id: machine_learning_workspace_id,
-    virtual_machine_size: virtual_machine_size,
+    location: location,
+    subnet_resource_id: subnet_resource_id,
     local_auth_enabled: local_auth_enabled,
+    virtual_machine_size: virtual_machine_size,
+    authorization_type: authorization_type,
+    name: name,
     ssh: ssh,
     timeouts: timeouts,
     assign_to_user: assign_to_user,
     identity: identity,
   }),
-  withTags(resourceLabel, value):: {
+  withVirtualMachineSize(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_compute_instance+: {
         [resourceLabel]+: {
-          tags: value,
+          virtual_machine_size: value,
         },
       },
     },
   },
-  withMachineLearningWorkspaceId(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_compute_instance+: {
         [resourceLabel]+: {
-          machine_learning_workspace_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_instance+: {
-        [resourceLabel]+: {
-          name: value,
+          description: value,
         },
       },
     },
@@ -95,29 +86,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocalAuthEnabled(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_compute_instance+: {
         [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_instance+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_instance+: {
-        [resourceLabel]+: {
-          virtual_machine_size: value,
+          tags: value,
         },
       },
     },
@@ -131,11 +104,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_compute_instance+: {
         [resourceLabel]+: {
-          description: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_instance+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_instance+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withMachineLearningWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_instance+: {
+        [resourceLabel]+: {
+          machine_learning_workspace_id: value,
         },
       },
     },
@@ -239,13 +239,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       create: create,
-      delete: delete,
     }),
   },
 }

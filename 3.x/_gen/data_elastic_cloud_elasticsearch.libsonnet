@@ -2,15 +2,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     name,
-    timeouts=null,
-    logs=null
+    resource_group_name,
+    logs=null,
+    timeouts=null
   ):: tf.withData(type='azurerm_elastic_cloud_elasticsearch', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     name=name,
-    timeouts=timeouts,
-    logs=logs
+    resource_group_name=resource_group_name,
+    logs=logs,
+    timeouts=timeouts
   )),
   newAttrs(
     resource_group_name,
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     logs: logs,
     timeouts: timeouts,
   }),
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_elastic_cloud_elasticsearch+: {
@@ -32,14 +41,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
+  withLogs(dataSrcLabel, value):: {
     data+: {
       azurerm_elastic_cloud_elasticsearch+: {
         [dataSrcLabel]+: {
-          name: value,
+          logs: value,
         },
       },
     },
+  },
+  withLogsMixin(dataSrcLabel, value):: {
+    data+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [dataSrcLabel]+: {
+          logs+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  logs:: {
+    new(
+
+    ):: std.prune(a={}),
   },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
@@ -65,28 +88,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       read: read,
     }),
-  },
-  withLogs(dataSrcLabel, value):: {
-    data+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [dataSrcLabel]+: {
-          logs: value,
-        },
-      },
-    },
-  },
-  withLogsMixin(dataSrcLabel, value):: {
-    data+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [dataSrcLabel]+: {
-          logs+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  logs:: {
-    new(
-
-    ):: std.prune(a={}),
   },
 }

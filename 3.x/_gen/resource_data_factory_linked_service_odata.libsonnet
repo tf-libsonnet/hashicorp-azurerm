@@ -2,60 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data_factory_id,
     name,
     url,
     additional_properties=null,
-    description=null,
-    integration_runtime_name=null,
-    parameters=null,
     annotations=null,
-    timeouts=null,
-    basic_authentication=null
+    parameters=null,
+    integration_runtime_name=null,
+    data_factory_id,
+    description=null,
+    basic_authentication=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_odata', label=resourceLabel, attrs=self.newAttrs(
-    data_factory_id=data_factory_id,
     name=name,
     url=url,
     additional_properties=additional_properties,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
     annotations=annotations,
-    timeouts=timeouts,
-    basic_authentication=basic_authentication
+    parameters=parameters,
+    integration_runtime_name=integration_runtime_name,
+    data_factory_id=data_factory_id,
+    description=description,
+    basic_authentication=basic_authentication,
+    timeouts=timeouts
   )),
   newAttrs(
     annotations=null,
     data_factory_id,
-    name,
-    additional_properties=null,
     description=null,
     integration_runtime_name=null,
     parameters=null,
+    name,
     url,
+    additional_properties=null,
     basic_authentication=null,
     timeouts=null
   ):: std.prune(a={
     annotations: annotations,
     data_factory_id: data_factory_id,
-    name: name,
-    additional_properties: additional_properties,
     description: description,
     integration_runtime_name: integration_runtime_name,
     parameters: parameters,
+    name: name,
     url: url,
+    additional_properties: additional_properties,
     basic_authentication: basic_authentication,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_odata+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withIntegrationRuntimeName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_odata+: {
@@ -74,11 +65,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUrl(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_odata+: {
         [resourceLabel]+: {
-          url: value,
+          additional_properties: value,
         },
       },
     },
@@ -101,6 +92,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_odata+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_odata+: {
@@ -110,11 +110,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
+  withUrl(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_odata+: {
         [resourceLabel]+: {
-          additional_properties: value,
+          url: value,
         },
       },
     },
@@ -139,11 +139,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   basic_authentication:: {
     new(
-      password,
-      username
+      username,
+      password
     ):: std.prune(a={
-      password: password,
       username: username,
+      password: password,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -166,15 +166,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

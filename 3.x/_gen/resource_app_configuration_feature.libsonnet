@@ -2,59 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    percentage_filter_value=null,
-    tags=null,
-    label=null,
-    locked=null,
-    etag=null,
-    description=null,
-    enabled=null,
-    name,
     configuration_store_id,
+    etag=null,
+    name,
+    tags=null,
+    percentage_filter_value=null,
+    label=null,
+    enabled=null,
+    locked=null,
+    description=null,
     timeouts=null,
     timewindow_filter=null,
     targeting_filter=null
   ):: tf.withResource(type='azurerm_app_configuration_feature', label=resourceLabel, attrs=self.newAttrs(
-    percentage_filter_value=percentage_filter_value,
-    tags=tags,
-    label=label,
-    locked=locked,
-    etag=etag,
-    description=description,
-    enabled=enabled,
-    name=name,
     configuration_store_id=configuration_store_id,
+    etag=etag,
+    name=name,
+    tags=tags,
+    percentage_filter_value=percentage_filter_value,
+    label=label,
+    enabled=enabled,
+    locked=locked,
+    description=description,
     timeouts=timeouts,
     timewindow_filter=timewindow_filter,
     targeting_filter=targeting_filter
   )),
   newAttrs(
-    name,
-    configuration_store_id,
-    etag=null,
     tags=null,
-    enabled=null,
+    description=null,
+    etag=null,
     locked=null,
+    name,
     label=null,
     percentage_filter_value=null,
-    description=null,
+    configuration_store_id,
+    enabled=null,
     timeouts=null,
     timewindow_filter=null,
     targeting_filter=null
   ):: std.prune(a={
-    name: name,
-    configuration_store_id: configuration_store_id,
-    etag: etag,
     tags: tags,
-    enabled: enabled,
+    description: description,
+    etag: etag,
     locked: locked,
+    name: name,
     label: label,
     percentage_filter_value: percentage_filter_value,
-    description: description,
+    configuration_store_id: configuration_store_id,
+    enabled: enabled,
     timeouts: timeouts,
     timewindow_filter: timewindow_filter,
     targeting_filter: targeting_filter,
   }),
+  withConfigurationStoreId(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration_feature+: {
+        [resourceLabel]+: {
+          configuration_store_id: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_feature+: {
@@ -64,11 +73,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withConfigurationStoreId(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_feature+: {
         [resourceLabel]+: {
-          configuration_store_id: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withPercentageFilterValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration_feature+: {
+        [resourceLabel]+: {
+          percentage_filter_value: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration_feature+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -91,33 +118,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPercentageFilterValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration_feature+: {
-        [resourceLabel]+: {
-          percentage_filter_value: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration_feature+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration_feature+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withLocked(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_feature+: {
@@ -127,11 +127,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_feature+: {
         [resourceLabel]+: {
-          name: value,
+          tags: value,
         },
       },
     },
@@ -194,15 +194,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
   withTimewindowFilter(resourceLabel, value):: {

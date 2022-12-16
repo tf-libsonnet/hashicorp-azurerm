@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     resource_group_name,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_mysql_server', label=dataSrcLabel, attrs=self.newAttrs(name=name, resource_group_name=resource_group_name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_mysql_server', label=dataSrcLabel, attrs=self.newAttrs(resource_group_name=resource_group_name, name=name, timeouts=timeouts)),
   newAttrs(
-    name,
     resource_group_name,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     resource_group_name: resource_group_name,
+    name: name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_mysql_server+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_mysql_server+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_mysql_server+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

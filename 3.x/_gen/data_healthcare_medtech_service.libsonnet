@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     workspace_id: workspace_id,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_healthcare_medtech_service+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withWorkspaceId(dataSrcLabel, value):: {
     data+: {
       azurerm_healthcare_medtech_service+: {
         [dataSrcLabel]+: {
           workspace_id: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_healthcare_medtech_service+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

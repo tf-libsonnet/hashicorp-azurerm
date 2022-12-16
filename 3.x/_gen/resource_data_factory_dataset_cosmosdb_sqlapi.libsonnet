@@ -2,78 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data_factory_id,
-    parameters=null,
-    description=null,
-    linked_service_name,
     name,
     annotations=null,
-    collection_name=null,
-    folder=null,
     additional_properties=null,
-    schema_column=null,
-    timeouts=null
+    linked_service_name,
+    folder=null,
+    data_factory_id,
+    collection_name=null,
+    parameters=null,
+    description=null,
+    timeouts=null,
+    schema_column=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_cosmosdb_sqlapi', label=resourceLabel, attrs=self.newAttrs(
-    data_factory_id=data_factory_id,
-    parameters=parameters,
-    description=description,
-    linked_service_name=linked_service_name,
     name=name,
     annotations=annotations,
-    collection_name=collection_name,
-    folder=folder,
     additional_properties=additional_properties,
-    schema_column=schema_column,
-    timeouts=timeouts
+    linked_service_name=linked_service_name,
+    folder=folder,
+    data_factory_id=data_factory_id,
+    collection_name=collection_name,
+    parameters=parameters,
+    description=description,
+    timeouts=timeouts,
+    schema_column=schema_column
   )),
   newAttrs(
-    collection_name=null,
-    data_factory_id,
     linked_service_name,
-    parameters=null,
-    folder=null,
-    annotations=null,
-    description=null,
     name,
     additional_properties=null,
+    collection_name=null,
+    folder=null,
+    description=null,
+    annotations=null,
+    parameters=null,
+    data_factory_id,
     schema_column=null,
     timeouts=null
   ):: std.prune(a={
-    collection_name: collection_name,
-    data_factory_id: data_factory_id,
     linked_service_name: linked_service_name,
-    parameters: parameters,
-    folder: folder,
-    annotations: annotations,
-    description: description,
     name: name,
     additional_properties: additional_properties,
+    collection_name: collection_name,
+    folder: folder,
+    description: description,
+    annotations: annotations,
+    parameters: parameters,
+    data_factory_id: data_factory_id,
     schema_column: schema_column,
     timeouts: timeouts,
   }),
-  withAdditionalProperties(resourceLabel, value):: {
+  withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
-          additional_properties: value,
+          annotations: value,
         },
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withLinkedServiceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
-        [resourceLabel]+: {
-          linked_service_name: value,
+          parameters: value,
         },
       },
     },
@@ -87,11 +78,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAnnotations(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
-          annotations: value,
+          description: value,
         },
       },
     },
@@ -105,11 +96,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
+  withLinkedServiceName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
-          parameters: value,
+          linked_service_name: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
+        [resourceLabel]+: {
+          additional_properties: value,
         },
       },
     },
@@ -181,15 +181,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

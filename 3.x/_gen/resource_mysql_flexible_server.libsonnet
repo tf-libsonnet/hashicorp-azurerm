@@ -2,109 +2,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
     zone=null,
-    tags=null,
-    location,
+    administrator_password=null,
     point_in_time_restore_time_in_utc=null,
-    sku_name=null,
-    create_mode=null,
-    delegated_subnet_id=null,
+    tags=null,
     name,
     administrator_login=null,
-    version=null,
-    private_dns_zone_id=null,
-    administrator_password=null,
-    source_server_id=null,
-    backup_retention_days=null,
-    geo_redundant_backup_enabled=null,
     replication_role=null,
-    high_availability=null,
-    maintenance_window=null,
+    resource_group_name,
+    sku_name=null,
+    location,
+    create_mode=null,
+    geo_redundant_backup_enabled=null,
+    private_dns_zone_id=null,
+    backup_retention_days=null,
+    source_server_id=null,
+    delegated_subnet_id=null,
+    version=null,
     storage=null,
-    timeouts=null
+    timeouts=null,
+    high_availability=null,
+    maintenance_window=null
   ):: tf.withResource(type='azurerm_mysql_flexible_server', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     zone=zone,
-    tags=tags,
-    location=location,
+    administrator_password=administrator_password,
     point_in_time_restore_time_in_utc=point_in_time_restore_time_in_utc,
-    sku_name=sku_name,
-    create_mode=create_mode,
-    delegated_subnet_id=delegated_subnet_id,
+    tags=tags,
     name=name,
     administrator_login=administrator_login,
-    version=version,
-    private_dns_zone_id=private_dns_zone_id,
-    administrator_password=administrator_password,
-    source_server_id=source_server_id,
-    backup_retention_days=backup_retention_days,
-    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
     replication_role=replication_role,
-    high_availability=high_availability,
-    maintenance_window=maintenance_window,
+    resource_group_name=resource_group_name,
+    sku_name=sku_name,
+    location=location,
+    create_mode=create_mode,
+    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
+    private_dns_zone_id=private_dns_zone_id,
+    backup_retention_days=backup_retention_days,
+    source_server_id=source_server_id,
+    delegated_subnet_id=delegated_subnet_id,
+    version=version,
     storage=storage,
-    timeouts=timeouts
+    timeouts=timeouts,
+    high_availability=high_availability,
+    maintenance_window=maintenance_window
   )),
   newAttrs(
-    replication_role=null,
-    delegated_subnet_id=null,
-    geo_redundant_backup_enabled=null,
-    version=null,
-    create_mode=null,
-    name,
-    tags=null,
-    administrator_login=null,
-    sku_name=null,
-    private_dns_zone_id=null,
     administrator_password=null,
     backup_retention_days=null,
-    location,
-    resource_group_name,
-    zone=null,
-    source_server_id=null,
+    create_mode=null,
+    version=null,
     point_in_time_restore_time_in_utc=null,
-    high_availability=null,
-    maintenance_window=null,
+    sku_name=null,
+    administrator_login=null,
+    location,
+    tags=null,
+    zone=null,
+    name,
+    delegated_subnet_id=null,
+    geo_redundant_backup_enabled=null,
+    private_dns_zone_id=null,
+    replication_role=null,
+    source_server_id=null,
+    resource_group_name,
     storage=null,
-    timeouts=null
+    timeouts=null,
+    high_availability=null,
+    maintenance_window=null
   ):: std.prune(a={
-    replication_role: replication_role,
-    delegated_subnet_id: delegated_subnet_id,
-    geo_redundant_backup_enabled: geo_redundant_backup_enabled,
-    version: version,
-    create_mode: create_mode,
-    name: name,
-    tags: tags,
-    administrator_login: administrator_login,
-    sku_name: sku_name,
-    private_dns_zone_id: private_dns_zone_id,
     administrator_password: administrator_password,
     backup_retention_days: backup_retention_days,
-    location: location,
-    resource_group_name: resource_group_name,
-    zone: zone,
-    source_server_id: source_server_id,
+    create_mode: create_mode,
+    version: version,
     point_in_time_restore_time_in_utc: point_in_time_restore_time_in_utc,
-    high_availability: high_availability,
-    maintenance_window: maintenance_window,
+    sku_name: sku_name,
+    administrator_login: administrator_login,
+    location: location,
+    tags: tags,
+    zone: zone,
+    name: name,
+    delegated_subnet_id: delegated_subnet_id,
+    geo_redundant_backup_enabled: geo_redundant_backup_enabled,
+    private_dns_zone_id: private_dns_zone_id,
+    replication_role: replication_role,
+    source_server_id: source_server_id,
+    resource_group_name: resource_group_name,
     storage: storage,
     timeouts: timeouts,
+    high_availability: high_availability,
+    maintenance_window: maintenance_window,
   }),
-  withVersion(resourceLabel, value):: {
+  withZone(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server+: {
         [resourceLabel]+: {
-          version: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          location: value,
+          zone: value,
         },
       },
     },
@@ -118,56 +109,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCreateMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          create_mode: value,
-        },
-      },
-    },
-  },
-  withSourceServerId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          source_server_id: value,
-        },
-      },
-    },
-  },
-  withZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          zone: value,
-        },
-      },
-    },
-  },
-  withAdministratorLogin(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          administrator_login: value,
-        },
-      },
-    },
-  },
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
   withReplicationRole(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server+: {
         [resourceLabel]+: {
           replication_role: value,
+        },
+      },
+    },
+  },
+  withDelegatedSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          delegated_subnet_id: value,
         },
       },
     },
@@ -181,11 +136,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBackupRetentionDays(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server+: {
         [resourceLabel]+: {
-          backup_retention_days: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          version: value,
+        },
+      },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withSourceServerId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          source_server_id: value,
         },
       },
     },
@@ -208,11 +199,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDelegatedSubnetId(resourceLabel, value):: {
+  withAdministratorLogin(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server+: {
         [resourceLabel]+: {
-          delegated_subnet_id: value,
+          administrator_login: value,
         },
       },
     },
@@ -226,11 +217,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withCreateMode(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server+: {
         [resourceLabel]+: {
-          tags: value,
+          create_mode: value,
         },
       },
     },
@@ -244,61 +235,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHighAvailability(resourceLabel, value):: {
+  withBackupRetentionDays(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server+: {
         [resourceLabel]+: {
-          high_availability: value,
+          backup_retention_days: value,
         },
       },
     },
-  },
-  withHighAvailabilityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          high_availability+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  high_availability:: {
-    new(
-      mode,
-      standby_availability_zone=null
-    ):: std.prune(a={
-      mode: mode,
-      standby_availability_zone: standby_availability_zone,
-    }),
-  },
-  withMaintenanceWindow(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          maintenance_window: value,
-        },
-      },
-    },
-  },
-  withMaintenanceWindowMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server+: {
-        [resourceLabel]+: {
-          maintenance_window+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  maintenance_window:: {
-    new(
-      day_of_week=null,
-      start_hour=null,
-      start_minute=null
-    ):: std.prune(a={
-      day_of_week: day_of_week,
-      start_hour: start_hour,
-      start_minute: start_minute,
-    }),
   },
   withStorage(resourceLabel, value):: {
     resource+: {
@@ -320,13 +264,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage:: {
     new(
+      iops=null,
       size_gb=null,
-      auto_grow_enabled=null,
-      iops=null
+      auto_grow_enabled=null
     ):: std.prune(a={
+      iops: iops,
       size_gb: size_gb,
       auto_grow_enabled: auto_grow_enabled,
-      iops: iops,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -358,6 +302,62 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       read: read,
       update: update,
       create: create,
+    }),
+  },
+  withHighAvailability(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          high_availability: value,
+        },
+      },
+    },
+  },
+  withHighAvailabilityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          high_availability+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  high_availability:: {
+    new(
+      standby_availability_zone=null,
+      mode
+    ):: std.prune(a={
+      standby_availability_zone: standby_availability_zone,
+      mode: mode,
+    }),
+  },
+  withMaintenanceWindow(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          maintenance_window: value,
+        },
+      },
+    },
+  },
+  withMaintenanceWindowMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server+: {
+        [resourceLabel]+: {
+          maintenance_window+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  maintenance_window:: {
+    new(
+      day_of_week=null,
+      start_hour=null,
+      start_minute=null
+    ):: std.prune(a={
+      day_of_week: day_of_week,
+      start_hour: start_hour,
+      start_minute: start_minute,
     }),
   },
 }

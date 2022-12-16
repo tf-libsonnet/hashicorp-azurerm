@@ -2,79 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    version_header_name=null,
-    version_query_name=null,
-    versioning_scheme,
     display_name,
+    versioning_scheme,
+    api_management_name,
     name,
     resource_group_name,
-    api_management_name,
+    version_header_name=null,
+    version_query_name=null,
+    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_api_version_set', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    version_header_name=version_header_name,
-    version_query_name=version_query_name,
-    versioning_scheme=versioning_scheme,
     display_name=display_name,
+    versioning_scheme=versioning_scheme,
+    api_management_name=api_management_name,
     name=name,
     resource_group_name=resource_group_name,
-    api_management_name=api_management_name,
+    version_header_name=version_header_name,
+    version_query_name=version_query_name,
+    description=description,
     timeouts=timeouts
   )),
   newAttrs(
     version_query_name=null,
+    description=null,
+    display_name,
     versioning_scheme,
     api_management_name,
-    description=null,
     name,
     resource_group_name,
-    display_name,
     version_header_name=null,
     timeouts=null
   ):: std.prune(a={
     version_query_name: version_query_name,
+    description: description,
+    display_name: display_name,
     versioning_scheme: versioning_scheme,
     api_management_name: api_management_name,
-    description: description,
     name: name,
     resource_group_name: resource_group_name,
-    display_name: display_name,
     version_header_name: version_header_name,
     timeouts: timeouts,
   }),
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_version_set+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
   withVersionHeaderName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_version_set+: {
         [resourceLabel]+: {
           version_header_name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_version_set+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_version_set+: {
-        [resourceLabel]+: {
-          api_management_name: value,
         },
       },
     },
@@ -88,11 +61,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_version_set+: {
         [resourceLabel]+: {
-          name: value,
+          display_name: value,
         },
       },
     },
@@ -111,6 +84,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_api_version_set+: {
         [resourceLabel]+: {
           versioning_scheme: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_version_set+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_version_set+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_version_set+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

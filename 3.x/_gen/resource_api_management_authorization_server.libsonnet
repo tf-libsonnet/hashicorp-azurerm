@@ -2,96 +2,96 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    client_id,
+    token_endpoint=null,
+    resource_owner_username=null,
     resource_owner_password=null,
+    name,
+    resource_group_name,
+    support_state=null,
+    authorization_methods,
+    client_registration_endpoint,
+    bearer_token_sending_methods=null,
+    display_name,
     client_secret=null,
     api_management_name,
-    bearer_token_sending_methods=null,
-    resource_owner_username=null,
-    support_state=null,
-    client_registration_endpoint,
-    grant_types,
-    token_endpoint=null,
-    authorization_methods,
-    client_authentication_method=null,
-    client_id,
-    display_name,
     authorization_endpoint,
-    default_scope=null,
-    name,
     description=null,
-    resource_group_name,
+    grant_types,
+    default_scope=null,
+    client_authentication_method=null,
     timeouts=null,
     token_body_parameter=null
   ):: tf.withResource(type='azurerm_api_management_authorization_server', label=resourceLabel, attrs=self.newAttrs(
+    client_id=client_id,
+    token_endpoint=token_endpoint,
+    resource_owner_username=resource_owner_username,
     resource_owner_password=resource_owner_password,
+    name=name,
+    resource_group_name=resource_group_name,
+    support_state=support_state,
+    authorization_methods=authorization_methods,
+    client_registration_endpoint=client_registration_endpoint,
+    bearer_token_sending_methods=bearer_token_sending_methods,
+    display_name=display_name,
     client_secret=client_secret,
     api_management_name=api_management_name,
-    bearer_token_sending_methods=bearer_token_sending_methods,
-    resource_owner_username=resource_owner_username,
-    support_state=support_state,
-    client_registration_endpoint=client_registration_endpoint,
-    grant_types=grant_types,
-    token_endpoint=token_endpoint,
-    authorization_methods=authorization_methods,
-    client_authentication_method=client_authentication_method,
-    client_id=client_id,
-    display_name=display_name,
     authorization_endpoint=authorization_endpoint,
-    default_scope=default_scope,
-    name=name,
     description=description,
-    resource_group_name=resource_group_name,
+    grant_types=grant_types,
+    default_scope=default_scope,
+    client_authentication_method=client_authentication_method,
     timeouts=timeouts,
     token_body_parameter=token_body_parameter
   )),
   newAttrs(
-    client_authentication_method=null,
+    default_scope=null,
+    display_name,
+    authorization_endpoint,
     description=null,
+    client_id,
+    client_secret=null,
+    name,
+    support_state=null,
+    client_registration_endpoint,
+    resource_group_name,
+    resource_owner_username=null,
+    authorization_methods,
+    resource_owner_password=null,
+    api_management_name,
     bearer_token_sending_methods=null,
     grant_types,
     token_endpoint=null,
-    resource_group_name,
-    client_secret=null,
-    authorization_endpoint,
-    api_management_name,
-    resource_owner_password=null,
-    client_id,
-    client_registration_endpoint,
-    name,
-    default_scope=null,
-    display_name,
-    resource_owner_username=null,
-    support_state=null,
-    authorization_methods,
+    client_authentication_method=null,
     timeouts=null,
     token_body_parameter=null
   ):: std.prune(a={
-    client_authentication_method: client_authentication_method,
+    default_scope: default_scope,
+    display_name: display_name,
+    authorization_endpoint: authorization_endpoint,
     description: description,
+    client_id: client_id,
+    client_secret: client_secret,
+    name: name,
+    support_state: support_state,
+    client_registration_endpoint: client_registration_endpoint,
+    resource_group_name: resource_group_name,
+    resource_owner_username: resource_owner_username,
+    authorization_methods: authorization_methods,
+    resource_owner_password: resource_owner_password,
+    api_management_name: api_management_name,
     bearer_token_sending_methods: bearer_token_sending_methods,
     grant_types: grant_types,
     token_endpoint: token_endpoint,
-    resource_group_name: resource_group_name,
-    client_secret: client_secret,
-    authorization_endpoint: authorization_endpoint,
-    api_management_name: api_management_name,
-    resource_owner_password: resource_owner_password,
-    client_id: client_id,
-    client_registration_endpoint: client_registration_endpoint,
-    name: name,
-    default_scope: default_scope,
-    display_name: display_name,
-    resource_owner_username: resource_owner_username,
-    support_state: support_state,
-    authorization_methods: authorization_methods,
+    client_authentication_method: client_authentication_method,
     timeouts: timeouts,
     token_body_parameter: token_body_parameter,
   }),
-  withDefaultScope(resourceLabel, value):: {
+  withBearerTokenSendingMethods(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_authorization_server+: {
         [resourceLabel]+: {
-          default_scope: value,
+          bearer_token_sending_methods: value,
         },
       },
     },
@@ -114,11 +114,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceOwnerUsername(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_authorization_server+: {
         [resourceLabel]+: {
-          resource_owner_username: value,
+          display_name: value,
         },
       },
     },
@@ -132,11 +132,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAuthorizationMethods(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          authorization_methods: value,
+        },
+      },
+    },
+  },
+  withDefaultScope(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          default_scope: value,
+        },
+      },
+    },
+  },
   withGrantTypes(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_authorization_server+: {
         [resourceLabel]+: {
           grant_types: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
+  withResourceOwnerUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          resource_owner_username: value,
+        },
+      },
+    },
+  },
+  withClientSecret(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          client_secret: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withClientRegistrationEndpoint(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          client_registration_endpoint: value,
+        },
+      },
+    },
+  },
+  withClientAuthenticationMethod(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_authorization_server+: {
+        [resourceLabel]+: {
+          client_authentication_method: value,
         },
       },
     },
@@ -168,83 +240,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
-  withAuthorizationMethods(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          authorization_methods: value,
-        },
-      },
-    },
-  },
-  withBearerTokenSendingMethods(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          bearer_token_sending_methods: value,
-        },
-      },
-    },
-  },
-  withClientAuthenticationMethod(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          client_authentication_method: value,
-        },
-      },
-    },
-  },
-  withClientSecret(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          client_secret: value,
-        },
-      },
-    },
-  },
   withResourceOwnerPassword(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_authorization_server+: {
         [resourceLabel]+: {
           resource_owner_password: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withClientRegistrationEndpoint(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          client_registration_endpoint: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_authorization_server+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },

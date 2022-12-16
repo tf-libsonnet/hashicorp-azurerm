@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    content,
     integration_account_name,
     map_type,
     metadata=null,
     name,
     resource_group_name,
-    content,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_map', label=resourceLabel, attrs=self.newAttrs(
+    content=content,
     integration_account_name=integration_account_name,
     map_type=map_type,
     metadata=metadata,
     name=name,
     resource_group_name=resource_group_name,
-    content=content,
     timeouts=timeouts
   )),
   newAttrs(
-    content,
     integration_account_name,
     map_type,
     metadata=null,
     name,
     resource_group_name,
+    content,
     timeouts=null
   ):: std.prune(a={
-    content: content,
     integration_account_name: integration_account_name,
     map_type: map_type,
     metadata: metadata,
     name: name,
     resource_group_name: resource_group_name,
+    content: content,
     timeouts: timeouts,
   }),
   withIntegrationAccountName(resourceLabel, value):: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

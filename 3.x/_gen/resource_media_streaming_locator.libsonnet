@@ -2,73 +2,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    streaming_locator_id=null,
     asset_name,
-    streaming_policy_name,
-    name,
     resource_group_name,
-    media_services_account_name,
-    default_content_key_policy_name=null,
-    start_time=null,
+    streaming_locator_id=null,
     alternative_media_id=null,
     end_time=null,
+    start_time=null,
+    media_services_account_name,
+    name,
+    streaming_policy_name,
+    default_content_key_policy_name=null,
     content_key=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_media_streaming_locator', label=resourceLabel, attrs=self.newAttrs(
-    streaming_locator_id=streaming_locator_id,
     asset_name=asset_name,
-    streaming_policy_name=streaming_policy_name,
-    name=name,
     resource_group_name=resource_group_name,
-    media_services_account_name=media_services_account_name,
-    default_content_key_policy_name=default_content_key_policy_name,
-    start_time=start_time,
+    streaming_locator_id=streaming_locator_id,
     alternative_media_id=alternative_media_id,
     end_time=end_time,
+    start_time=start_time,
+    media_services_account_name=media_services_account_name,
+    name=name,
+    streaming_policy_name=streaming_policy_name,
+    default_content_key_policy_name=default_content_key_policy_name,
     content_key=content_key,
     timeouts=timeouts
   )),
   newAttrs(
-    media_services_account_name,
-    streaming_locator_id=null,
-    asset_name,
-    default_content_key_policy_name=null,
-    streaming_policy_name,
-    end_time=null,
-    name,
-    resource_group_name,
-    alternative_media_id=null,
     start_time=null,
-    content_key=null,
-    timeouts=null
+    alternative_media_id=null,
+    end_time=null,
+    streaming_policy_name,
+    asset_name,
+    name,
+    default_content_key_policy_name=null,
+    streaming_locator_id=null,
+    media_services_account_name,
+    resource_group_name,
+    timeouts=null,
+    content_key=null
   ):: std.prune(a={
-    media_services_account_name: media_services_account_name,
-    streaming_locator_id: streaming_locator_id,
-    asset_name: asset_name,
-    default_content_key_policy_name: default_content_key_policy_name,
-    streaming_policy_name: streaming_policy_name,
-    end_time: end_time,
-    name: name,
-    resource_group_name: resource_group_name,
-    alternative_media_id: alternative_media_id,
     start_time: start_time,
-    content_key: content_key,
+    alternative_media_id: alternative_media_id,
+    end_time: end_time,
+    streaming_policy_name: streaming_policy_name,
+    asset_name: asset_name,
+    name: name,
+    default_content_key_policy_name: default_content_key_policy_name,
+    streaming_locator_id: streaming_locator_id,
+    media_services_account_name: media_services_account_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
+    content_key: content_key,
   }),
-  withAlternativeMediaId(resourceLabel, value):: {
+  withAssetName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
-          alternative_media_id: value,
+          asset_name: value,
         },
       },
     },
   },
-  withEndTime(resourceLabel, value):: {
+  withStreamingLocatorId(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
-          end_time: value,
+          streaming_locator_id: value,
         },
       },
     },
@@ -91,38 +91,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withStreamingLocatorId(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          streaming_locator_id: value,
-        },
-      },
-    },
-  },
-  withAssetName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          asset_name: value,
-        },
-      },
-    },
-  },
   withMediaServicesAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
           media_services_account_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -136,11 +127,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withAlternativeMediaId(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
-          name: value,
+          alternative_media_id: value,
+        },
+      },
+    },
+  },
+  withEndTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          end_time: value,
         },
       },
     },
@@ -165,17 +165,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   content_key:: {
     new(
+      policy_name=null,
+      type=null,
       value=null,
       content_key_id=null,
-      label_reference_in_streaming_policy=null,
-      policy_name=null,
-      type=null
+      label_reference_in_streaming_policy=null
     ):: std.prune(a={
+      policy_name: policy_name,
+      type: type,
       value: value,
       content_key_id: content_key_id,
       label_reference_in_streaming_policy: label_reference_in_streaming_policy,
-      policy_name: policy_name,
-      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {

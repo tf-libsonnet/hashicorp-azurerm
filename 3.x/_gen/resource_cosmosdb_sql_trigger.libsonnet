@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     operation,
     type,
     body,
     container_id,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_trigger', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     operation=operation,
     type=type,
     body=body,
     container_id=container_id,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    operation,
     type,
     body,
     container_id,
     name,
-    operation,
     timeouts=null
   ):: std.prune(a={
+    operation: operation,
     type: type,
     body: body,
     container_id: container_id,
     name: name,
-    operation: operation,
     timeouts: timeouts,
   }),
   withBody(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

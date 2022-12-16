@@ -2,43 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    entity_path=null,
     iothub_id,
     name,
+    resource_group_name,
     connection_string=null,
     endpoint_uri=null,
     identity_id=null,
-    resource_group_name,
     authentication_type=null,
-    entity_path=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_endpoint_eventhub', label=resourceLabel, attrs=self.newAttrs(
+    entity_path=entity_path,
     iothub_id=iothub_id,
     name=name,
+    resource_group_name=resource_group_name,
     connection_string=connection_string,
     endpoint_uri=endpoint_uri,
     identity_id=identity_id,
-    resource_group_name=resource_group_name,
     authentication_type=authentication_type,
-    entity_path=entity_path,
     timeouts=timeouts
   )),
   newAttrs(
     name,
-    connection_string=null,
-    endpoint_uri=null,
     resource_group_name,
     authentication_type=null,
     entity_path=null,
+    connection_string=null,
+    endpoint_uri=null,
     identity_id=null,
     iothub_id,
     timeouts=null
   ):: std.prune(a={
     name: name,
-    connection_string: connection_string,
-    endpoint_uri: endpoint_uri,
     resource_group_name: resource_group_name,
     authentication_type: authentication_type,
     entity_path: entity_path,
+    connection_string: connection_string,
+    endpoint_uri: endpoint_uri,
     identity_id: identity_id,
     iothub_id: iothub_id,
     timeouts: timeouts,
@@ -48,6 +48,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_endpoint_eventhub+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withAuthenticationType(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_eventhub+: {
+        [resourceLabel]+: {
+          authentication_type: value,
+        },
+      },
+    },
+  },
+  withEntityPath(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_eventhub+: {
+        [resourceLabel]+: {
+          entity_path: value,
         },
       },
     },
@@ -97,24 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAuthenticationType(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_eventhub+: {
-        [resourceLabel]+: {
-          authentication_type: value,
-        },
-      },
-    },
-  },
-  withEntityPath(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_eventhub+: {
-        [resourceLabel]+: {
-          entity_path: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_eventhub+: {
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

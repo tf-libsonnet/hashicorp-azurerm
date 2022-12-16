@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     server_id,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_mssql_database', label=dataSrcLabel, attrs=self.newAttrs(name=name, server_id=server_id, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_mssql_database', label=dataSrcLabel, attrs=self.newAttrs(server_id=server_id, name=name, timeouts=timeouts)),
   newAttrs(
     name,
     server_id,

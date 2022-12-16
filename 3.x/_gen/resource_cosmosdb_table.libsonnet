@@ -6,49 +6,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     throughput=null,
     account_name,
-    timeouts=null,
-    autoscale_settings=null
+    autoscale_settings=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_table', label=resourceLabel, attrs=self.newAttrs(
     name=name,
     resource_group_name=resource_group_name,
     throughput=throughput,
     account_name=account_name,
-    timeouts=timeouts,
-    autoscale_settings=autoscale_settings
+    autoscale_settings=autoscale_settings,
+    timeouts=timeouts
   )),
   newAttrs(
+    throughput=null,
     account_name,
     name,
     resource_group_name,
-    throughput=null,
     autoscale_settings=null,
     timeouts=null
   ):: std.prune(a={
+    throughput: throughput,
     account_name: account_name,
     name: name,
     resource_group_name: resource_group_name,
-    throughput: throughput,
     autoscale_settings: autoscale_settings,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_table+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withThroughput(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_table+: {
-        [resourceLabel]+: {
-          throughput: value,
-        },
-      },
-    },
-  },
   withAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_table+: {
@@ -63,6 +45,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_table+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_table+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withThroughput(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_table+: {
+        [resourceLabel]+: {
+          throughput: value,
         },
       },
     },
@@ -112,15 +112,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

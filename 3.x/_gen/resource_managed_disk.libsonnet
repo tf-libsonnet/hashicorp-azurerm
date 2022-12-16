@@ -2,215 +2,152 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    disk_mbps_read_write=null,
-    location,
-    os_type=null,
-    image_reference_id=null,
-    disk_iops_read_write=null,
-    storage_account_id=null,
-    edge_zone=null,
-    network_access_policy=null,
-    disk_access_id=null,
-    gallery_image_reference_id=null,
-    name,
-    hyper_v_generation=null,
     resource_group_name,
-    source_uri=null,
-    security_type=null,
-    logical_sector_size=null,
-    trusted_launch_enabled=null,
-    zone=null,
-    secure_vm_disk_encryption_set_id=null,
-    disk_mbps_read_only=null,
-    on_demand_bursting_enabled=null,
-    max_shares=null,
-    tags=null,
-    tier=null,
-    upload_size_bytes=null,
-    storage_account_type,
-    disk_size_gb=null,
-    disk_encryption_set_id=null,
-    create_option,
+    image_reference_id=null,
     public_network_access_enabled=null,
+    trusted_launch_enabled=null,
+    disk_access_id=null,
+    disk_mbps_read_only=null,
+    disk_encryption_set_id=null,
+    security_type=null,
+    disk_size_gb=null,
+    create_option,
+    disk_mbps_read_write=null,
+    tags=null,
+    upload_size_bytes=null,
+    network_access_policy=null,
+    secure_vm_disk_encryption_set_id=null,
+    gallery_image_reference_id=null,
     source_resource_id=null,
+    zone=null,
+    location,
+    storage_account_id=null,
+    hyper_v_generation=null,
+    edge_zone=null,
+    max_shares=null,
     disk_iops_read_only=null,
+    storage_account_type,
+    tier=null,
+    os_type=null,
+    source_uri=null,
+    name,
+    disk_iops_read_write=null,
+    logical_sector_size=null,
+    on_demand_bursting_enabled=null,
     encryption_settings=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_managed_disk', label=resourceLabel, attrs=self.newAttrs(
-    disk_mbps_read_write=disk_mbps_read_write,
-    location=location,
-    os_type=os_type,
-    image_reference_id=image_reference_id,
-    disk_iops_read_write=disk_iops_read_write,
-    storage_account_id=storage_account_id,
-    edge_zone=edge_zone,
-    network_access_policy=network_access_policy,
-    disk_access_id=disk_access_id,
-    gallery_image_reference_id=gallery_image_reference_id,
-    name=name,
-    hyper_v_generation=hyper_v_generation,
     resource_group_name=resource_group_name,
-    source_uri=source_uri,
-    security_type=security_type,
-    logical_sector_size=logical_sector_size,
-    trusted_launch_enabled=trusted_launch_enabled,
-    zone=zone,
-    secure_vm_disk_encryption_set_id=secure_vm_disk_encryption_set_id,
-    disk_mbps_read_only=disk_mbps_read_only,
-    on_demand_bursting_enabled=on_demand_bursting_enabled,
-    max_shares=max_shares,
-    tags=tags,
-    tier=tier,
-    upload_size_bytes=upload_size_bytes,
-    storage_account_type=storage_account_type,
-    disk_size_gb=disk_size_gb,
-    disk_encryption_set_id=disk_encryption_set_id,
-    create_option=create_option,
+    image_reference_id=image_reference_id,
     public_network_access_enabled=public_network_access_enabled,
+    trusted_launch_enabled=trusted_launch_enabled,
+    disk_access_id=disk_access_id,
+    disk_mbps_read_only=disk_mbps_read_only,
+    disk_encryption_set_id=disk_encryption_set_id,
+    security_type=security_type,
+    disk_size_gb=disk_size_gb,
+    create_option=create_option,
+    disk_mbps_read_write=disk_mbps_read_write,
+    tags=tags,
+    upload_size_bytes=upload_size_bytes,
+    network_access_policy=network_access_policy,
+    secure_vm_disk_encryption_set_id=secure_vm_disk_encryption_set_id,
+    gallery_image_reference_id=gallery_image_reference_id,
     source_resource_id=source_resource_id,
+    zone=zone,
+    location=location,
+    storage_account_id=storage_account_id,
+    hyper_v_generation=hyper_v_generation,
+    edge_zone=edge_zone,
+    max_shares=max_shares,
     disk_iops_read_only=disk_iops_read_only,
+    storage_account_type=storage_account_type,
+    tier=tier,
+    os_type=os_type,
+    source_uri=source_uri,
+    name=name,
+    disk_iops_read_write=disk_iops_read_write,
+    logical_sector_size=logical_sector_size,
+    on_demand_bursting_enabled=on_demand_bursting_enabled,
     encryption_settings=encryption_settings,
     timeouts=timeouts
   )),
   newAttrs(
-    os_type=null,
-    resource_group_name,
-    storage_account_id=null,
-    public_network_access_enabled=null,
-    trusted_launch_enabled=null,
-    disk_encryption_set_id=null,
     logical_sector_size=null,
-    network_access_policy=null,
-    on_demand_bursting_enabled=null,
-    name,
-    location,
-    tier=null,
-    storage_account_type,
-    create_option,
-    disk_iops_read_only=null,
-    image_reference_id=null,
-    max_shares=null,
-    upload_size_bytes=null,
-    source_uri=null,
-    disk_access_id=null,
-    gallery_image_reference_id=null,
-    zone=null,
-    secure_vm_disk_encryption_set_id=null,
-    tags=null,
-    source_resource_id=null,
+    trusted_launch_enabled=null,
     disk_size_gb=null,
-    disk_iops_read_write=null,
+    image_reference_id=null,
+    source_uri=null,
+    max_shares=null,
     security_type=null,
-    disk_mbps_read_only=null,
-    disk_mbps_read_write=null,
+    disk_iops_read_only=null,
+    resource_group_name,
+    public_network_access_enabled=null,
+    tier=null,
+    os_type=null,
+    gallery_image_reference_id=null,
+    tags=null,
     hyper_v_generation=null,
+    disk_iops_read_write=null,
+    disk_mbps_read_write=null,
+    secure_vm_disk_encryption_set_id=null,
+    source_resource_id=null,
+    storage_account_type,
+    location,
+    disk_encryption_set_id=null,
+    zone=null,
+    storage_account_id=null,
+    network_access_policy=null,
+    name,
+    upload_size_bytes=null,
+    on_demand_bursting_enabled=null,
+    create_option,
+    disk_access_id=null,
+    disk_mbps_read_only=null,
     edge_zone=null,
     encryption_settings=null,
     timeouts=null
   ):: std.prune(a={
-    os_type: os_type,
-    resource_group_name: resource_group_name,
-    storage_account_id: storage_account_id,
-    public_network_access_enabled: public_network_access_enabled,
-    trusted_launch_enabled: trusted_launch_enabled,
-    disk_encryption_set_id: disk_encryption_set_id,
     logical_sector_size: logical_sector_size,
-    network_access_policy: network_access_policy,
-    on_demand_bursting_enabled: on_demand_bursting_enabled,
-    name: name,
-    location: location,
-    tier: tier,
-    storage_account_type: storage_account_type,
-    create_option: create_option,
-    disk_iops_read_only: disk_iops_read_only,
-    image_reference_id: image_reference_id,
-    max_shares: max_shares,
-    upload_size_bytes: upload_size_bytes,
-    source_uri: source_uri,
-    disk_access_id: disk_access_id,
-    gallery_image_reference_id: gallery_image_reference_id,
-    zone: zone,
-    secure_vm_disk_encryption_set_id: secure_vm_disk_encryption_set_id,
-    tags: tags,
-    source_resource_id: source_resource_id,
+    trusted_launch_enabled: trusted_launch_enabled,
     disk_size_gb: disk_size_gb,
-    disk_iops_read_write: disk_iops_read_write,
+    image_reference_id: image_reference_id,
+    source_uri: source_uri,
+    max_shares: max_shares,
     security_type: security_type,
-    disk_mbps_read_only: disk_mbps_read_only,
-    disk_mbps_read_write: disk_mbps_read_write,
+    disk_iops_read_only: disk_iops_read_only,
+    resource_group_name: resource_group_name,
+    public_network_access_enabled: public_network_access_enabled,
+    tier: tier,
+    os_type: os_type,
+    gallery_image_reference_id: gallery_image_reference_id,
+    tags: tags,
     hyper_v_generation: hyper_v_generation,
+    disk_iops_read_write: disk_iops_read_write,
+    disk_mbps_read_write: disk_mbps_read_write,
+    secure_vm_disk_encryption_set_id: secure_vm_disk_encryption_set_id,
+    source_resource_id: source_resource_id,
+    storage_account_type: storage_account_type,
+    location: location,
+    disk_encryption_set_id: disk_encryption_set_id,
+    zone: zone,
+    storage_account_id: storage_account_id,
+    network_access_policy: network_access_policy,
+    name: name,
+    upload_size_bytes: upload_size_bytes,
+    on_demand_bursting_enabled: on_demand_bursting_enabled,
+    create_option: create_option,
+    disk_access_id: disk_access_id,
+    disk_mbps_read_only: disk_mbps_read_only,
     edge_zone: edge_zone,
     encryption_settings: encryption_settings,
     timeouts: timeouts,
   }),
-  withImageReferenceId(resourceLabel, value):: {
+  withNetworkAccessPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          image_reference_id: value,
-        },
-      },
-    },
-  },
-  withDiskAccessId(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          disk_access_id: value,
-        },
-      },
-    },
-  },
-  withTier(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          tier: value,
-        },
-      },
-    },
-  },
-  withSourceResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          source_resource_id: value,
-        },
-      },
-    },
-  },
-  withDiskMbpsReadOnly(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          disk_mbps_read_only: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withDiskSizeGb(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          disk_size_gb: value,
+          network_access_policy: value,
         },
       },
     },
@@ -224,38 +161,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogicalSectorSize(resourceLabel, value):: {
+  withDiskIopsReadWrite(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          logical_sector_size: value,
+          disk_iops_read_write: value,
         },
       },
     },
   },
-  withHyperVGeneration(resourceLabel, value):: {
+  withSourceUri(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          hyper_v_generation: value,
-        },
-      },
-    },
-  },
-  withNetworkAccessPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          network_access_policy: value,
-        },
-      },
-    },
-  },
-  withSecureVmDiskEncryptionSetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          secure_vm_disk_encryption_set_id: value,
+          source_uri: value,
         },
       },
     },
@@ -269,47 +188,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+  withStorageAccountType(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          public_network_access_enabled: value,
+          storage_account_type: value,
         },
       },
     },
   },
-  withGalleryImageReferenceId(resourceLabel, value):: {
+  withTier(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          gallery_image_reference_id: value,
-        },
-      },
-    },
-  },
-  withOnDemandBurstingEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          on_demand_bursting_enabled: value,
-        },
-      },
-    },
-  },
-  withZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          zone: value,
-        },
-      },
-    },
-  },
-  withDiskEncryptionSetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          disk_encryption_set_id: value,
+          tier: value,
         },
       },
     },
@@ -323,20 +215,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCreateOption(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          create_option: value,
-        },
-      },
-    },
-  },
-  withDiskIopsReadOnly(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          disk_iops_read_only: value,
+          location: value,
         },
       },
     },
@@ -359,38 +242,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDiskIopsReadWrite(resourceLabel, value):: {
+  withSecureVmDiskEncryptionSetId(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          disk_iops_read_write: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withSourceUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          source_uri: value,
-        },
-      },
-    },
-  },
-  withDiskMbpsReadWrite(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          disk_mbps_read_write: value,
+          secure_vm_disk_encryption_set_id: value,
         },
       },
     },
@@ -404,11 +260,146 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
+  withDiskIopsReadOnly(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          disk_iops_read_only: value,
+        },
+      },
+    },
+  },
+  withDiskEncryptionSetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          disk_encryption_set_id: value,
+        },
+      },
+    },
+  },
+  withSourceResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          source_resource_id: value,
+        },
+      },
+    },
+  },
+  withZone(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          zone: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withCreateOption(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          create_option: value,
+        },
+      },
+    },
+  },
+  withImageReferenceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          image_reference_id: value,
+        },
+      },
+    },
+  },
+  withGalleryImageReferenceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          gallery_image_reference_id: value,
+        },
+      },
+    },
+  },
+  withDiskMbpsReadWrite(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          disk_mbps_read_write: value,
+        },
+      },
+    },
+  },
+  withLogicalSectorSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          logical_sector_size: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
   withTrustedLaunchEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
           trusted_launch_enabled: value,
+        },
+      },
+    },
+  },
+  withDiskAccessId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          disk_access_id: value,
+        },
+      },
+    },
+  },
+  withHyperVGeneration(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          hyper_v_generation: value,
+        },
+      },
+    },
+  },
+  withDiskMbpsReadOnly(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          disk_mbps_read_only: value,
         },
       },
     },
@@ -422,13 +413,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountType(resourceLabel, value):: {
+  withOnDemandBurstingEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk+: {
         [resourceLabel]+: {
-          storage_account_type: value,
+          on_demand_bursting_enabled: value,
         },
       },
+    },
+  },
+  withDiskSizeGb(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          disk_size_gb: value,
+        },
+      },
+    },
+  },
+  withEncryptionSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          encryption_settings: value,
+        },
+      },
+    },
+  },
+  withEncryptionSettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk+: {
+        [resourceLabel]+: {
+          encryption_settings+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  encryption_settings:: {
+    new(
+      enabled=null,
+      disk_encryption_key=null,
+      key_encryption_key=null
+    ):: std.prune(a={
+      enabled: enabled,
+      disk_encryption_key: disk_encryption_key,
+      key_encryption_key: key_encryption_key,
+    }),
+    key_encryption_key:: {
+      new(
+        key_url,
+        source_vault_id
+      ):: std.prune(a={
+        key_url: key_url,
+        source_vault_id: source_vault_id,
+      }),
+    },
+    disk_encryption_key:: {
+      new(
+        secret_url,
+        source_vault_id
+      ):: std.prune(a={
+        secret_url: secret_url,
+        source_vault_id: source_vault_id,
+      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -461,52 +508,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
     }),
-  },
-  withEncryptionSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          encryption_settings: value,
-        },
-      },
-    },
-  },
-  withEncryptionSettingsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk+: {
-        [resourceLabel]+: {
-          encryption_settings+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  encryption_settings:: {
-    new(
-      enabled=null,
-      key_encryption_key=null,
-      disk_encryption_key=null
-    ):: std.prune(a={
-      enabled: enabled,
-      key_encryption_key: key_encryption_key,
-      disk_encryption_key: disk_encryption_key,
-    }),
-    disk_encryption_key:: {
-      new(
-        secret_url,
-        source_vault_id
-      ):: std.prune(a={
-        secret_url: secret_url,
-        source_vault_id: source_vault_id,
-      }),
-    },
-    key_encryption_key:: {
-      new(
-        key_url,
-        source_vault_id
-      ):: std.prune(a={
-        key_url: key_url,
-        source_vault_id: source_vault_id,
-      }),
-    },
   },
 }

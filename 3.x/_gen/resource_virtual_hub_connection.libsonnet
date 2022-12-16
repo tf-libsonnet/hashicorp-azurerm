@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    remote_virtual_network_id,
+    virtual_hub_id,
+    internet_security_enabled=null,
+    timeouts=null,
+    routing=null
+  ):: tf.withResource(type='azurerm_virtual_hub_connection', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    remote_virtual_network_id=remote_virtual_network_id,
+    virtual_hub_id=virtual_hub_id,
+    internet_security_enabled=internet_security_enabled,
+    timeouts=timeouts,
+    routing=routing
+  )),
+  newAttrs(
     virtual_hub_id,
     internet_security_enabled=null,
     name,
     remote_virtual_network_id,
     routing=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_hub_connection', label=resourceLabel, attrs=self.newAttrs(
-    virtual_hub_id=virtual_hub_id,
-    internet_security_enabled=internet_security_enabled,
-    name=name,
-    remote_virtual_network_id=remote_virtual_network_id,
-    routing=routing,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    remote_virtual_network_id,
-    virtual_hub_id,
-    internet_security_enabled=null,
-    name,
-    timeouts=null,
-    routing=null
   ):: std.prune(a={
-    remote_virtual_network_id: remote_virtual_network_id,
     virtual_hub_id: virtual_hub_id,
     internet_security_enabled: internet_security_enabled,
     name: name,
-    timeouts: timeouts,
+    remote_virtual_network_id: remote_virtual_network_id,
     routing: routing,
+    timeouts: timeouts,
   }),
-  withInternetSecurityEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_connection+: {
-        [resourceLabel]+: {
-          internet_security_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_connection+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withRemoteVirtualNetworkId(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_connection+: {
@@ -67,53 +49,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRouting(resourceLabel, value):: {
+  withInternetSecurityEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_connection+: {
         [resourceLabel]+: {
-          routing: value,
+          internet_security_enabled: value,
         },
       },
     },
   },
-  withRoutingMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_connection+: {
         [resourceLabel]+: {
-          routing+: if std.isArray(v=value) then value else [value],
+          name: value,
         },
       },
-    },
-  },
-  routing:: {
-    new(
-      associated_route_table_id=null,
-      propagated_route_table=null,
-      static_vnet_route=null
-    ):: std.prune(a={
-      associated_route_table_id: associated_route_table_id,
-      propagated_route_table: propagated_route_table,
-      static_vnet_route: static_vnet_route,
-    }),
-    propagated_route_table:: {
-      new(
-        labels=null,
-        route_table_ids=null
-      ):: std.prune(a={
-        labels: labels,
-        route_table_ids: route_table_ids,
-      }),
-    },
-    static_vnet_route:: {
-      new(
-        address_prefixes=null,
-        name=null,
-        next_hop_ip_address=null
-      ):: std.prune(a={
-        address_prefixes: address_prefixes,
-        name: name,
-        next_hop_ip_address: next_hop_ip_address,
-      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -146,5 +97,54 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       update: update,
       create: create,
     }),
+  },
+  withRouting(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_connection+: {
+        [resourceLabel]+: {
+          routing: value,
+        },
+      },
+    },
+  },
+  withRoutingMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_connection+: {
+        [resourceLabel]+: {
+          routing+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  routing:: {
+    new(
+      associated_route_table_id=null,
+      static_vnet_route=null,
+      propagated_route_table=null
+    ):: std.prune(a={
+      associated_route_table_id: associated_route_table_id,
+      static_vnet_route: static_vnet_route,
+      propagated_route_table: propagated_route_table,
+    }),
+    propagated_route_table:: {
+      new(
+        route_table_ids=null,
+        labels=null
+      ):: std.prune(a={
+        route_table_ids: route_table_ids,
+        labels: labels,
+      }),
+    },
+    static_vnet_route:: {
+      new(
+        name=null,
+        next_hop_ip_address=null,
+        address_prefixes=null
+      ):: std.prune(a={
+        name: name,
+        next_hop_ip_address: next_hop_ip_address,
+        address_prefixes: address_prefixes,
+      }),
+    },
   },
 }

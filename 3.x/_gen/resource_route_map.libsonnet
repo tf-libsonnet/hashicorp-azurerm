@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     rule: rule,
     timeouts: timeouts,
   }),
+  withVirtualHubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_map+: {
+        [resourceLabel]+: {
+          virtual_hub_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_route_map+: {
@@ -32,13 +41,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualHubId(resourceLabel, value):: {
+  withRule(resourceLabel, value):: {
     resource+: {
       azurerm_route_map+: {
         [resourceLabel]+: {
-          virtual_hub_id: value,
+          rule: value,
         },
       },
+    },
+  },
+  withRuleMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_map+: {
+        [resourceLabel]+: {
+          rule+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  rule:: {
+    new(
+      next_step_if_matched=null,
+      name,
+      action=null,
+      match_criterion=null
+    ):: std.prune(a={
+      next_step_if_matched: next_step_if_matched,
+      name: name,
+      action: action,
+      match_criterion: match_criterion,
+    }),
+    action:: {
+      new(
+        type,
+        parameter=null
+      ):: std.prune(a={
+        type: type,
+        parameter: parameter,
+      }),
+      parameter:: {
+        new(
+          as_path=null,
+          community=null,
+          route_prefix=null
+        ):: std.prune(a={
+          as_path: as_path,
+          community: community,
+          route_prefix: route_prefix,
+        }),
+      },
+    },
+    match_criterion:: {
+      new(
+        as_path=null,
+        community=null,
+        match_condition,
+        route_prefix=null
+      ):: std.prune(a={
+        as_path: as_path,
+        community: community,
+        match_condition: match_condition,
+        route_prefix: route_prefix,
+      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -71,69 +135,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       read: read,
       update: update,
     }),
-  },
-  withRule(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_map+: {
-        [resourceLabel]+: {
-          rule: value,
-        },
-      },
-    },
-  },
-  withRuleMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_map+: {
-        [resourceLabel]+: {
-          rule+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  rule:: {
-    new(
-      name,
-      next_step_if_matched=null,
-      action=null,
-      match_criterion=null
-    ):: std.prune(a={
-      name: name,
-      next_step_if_matched: next_step_if_matched,
-      action: action,
-      match_criterion: match_criterion,
-    }),
-    action:: {
-      new(
-        type,
-        parameter=null
-      ):: std.prune(a={
-        type: type,
-        parameter: parameter,
-      }),
-      parameter:: {
-        new(
-          as_path=null,
-          community=null,
-          route_prefix=null
-        ):: std.prune(a={
-          as_path: as_path,
-          community: community,
-          route_prefix: route_prefix,
-        }),
-      },
-    },
-    match_criterion:: {
-      new(
-        route_prefix=null,
-        as_path=null,
-        community=null,
-        match_condition
-      ):: std.prune(a={
-        route_prefix: route_prefix,
-        as_path: as_path,
-        community: community,
-        match_condition: match_condition,
-      }),
-    },
   },
 }

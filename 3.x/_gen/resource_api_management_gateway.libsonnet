@@ -5,25 +5,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     name,
     api_management_id,
-    location_data=null,
-    timeouts=null
+    timeouts=null,
+    location_data=null
   ):: tf.withResource(type='azurerm_api_management_gateway', label=resourceLabel, attrs=self.newAttrs(
     description=description,
     name=name,
     api_management_id=api_management_id,
-    location_data=location_data,
-    timeouts=timeouts
+    timeouts=timeouts,
+    location_data=location_data
   )),
   newAttrs(
-    api_management_id,
     description=null,
     name,
+    api_management_id,
     location_data=null,
     timeouts=null
   ):: std.prune(a={
-    api_management_id: api_management_id,
     description: description,
     name: name,
+    api_management_id: api_management_id,
     location_data: location_data,
     timeouts: timeouts,
   }),
@@ -105,15 +105,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

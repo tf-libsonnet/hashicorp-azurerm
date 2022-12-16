@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    description=null,
     lighthouse_definition_id=null,
     managing_tenant_id,
     name,
     scope,
-    description=null,
-    plan=null,
-    timeouts=null,
     authorization=null,
-    eligible_authorization=null
+    eligible_authorization=null,
+    plan=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_lighthouse_definition', label=resourceLabel, attrs=self.newAttrs(
+    description=description,
     lighthouse_definition_id=lighthouse_definition_id,
     managing_tenant_id=managing_tenant_id,
     name=name,
     scope=scope,
-    description=description,
-    plan=plan,
-    timeouts=timeouts,
     authorization=authorization,
-    eligible_authorization=eligible_authorization
+    eligible_authorization=eligible_authorization,
+    plan=plan,
+    timeouts=timeouts
   )),
   newAttrs(
     scope,
@@ -28,39 +28,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     lighthouse_definition_id=null,
     managing_tenant_id,
     name,
-    authorization=null,
-    eligible_authorization=null,
     plan=null,
-    timeouts=null
+    timeouts=null,
+    authorization=null,
+    eligible_authorization=null
   ):: std.prune(a={
     scope: scope,
     description: description,
     lighthouse_definition_id: lighthouse_definition_id,
     managing_tenant_id: managing_tenant_id,
     name: name,
-    authorization: authorization,
-    eligible_authorization: eligible_authorization,
     plan: plan,
     timeouts: timeouts,
+    authorization: authorization,
+    eligible_authorization: eligible_authorization,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_lighthouse_definition+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withScope(resourceLabel, value):: {
-    resource+: {
-      azurerm_lighthouse_definition+: {
-        [resourceLabel]+: {
-          scope: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_lighthouse_definition+: {
@@ -88,36 +70,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_lighthouse_definition+: {
         [resourceLabel]+: {
-          timeouts: value,
+          name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withScope(resourceLabel, value):: {
     resource+: {
       azurerm_lighthouse_definition+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          scope: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
   withAuthorization(resourceLabel, value):: {
     resource+: {
@@ -170,14 +139,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   eligible_authorization:: {
     new(
+      role_definition_id,
       principal_display_name=null,
       principal_id,
-      role_definition_id,
       just_in_time_access_policy=null
     ):: std.prune(a={
+      role_definition_id: role_definition_id,
       principal_display_name: principal_display_name,
       principal_id: principal_id,
-      role_definition_id: role_definition_id,
       just_in_time_access_policy: just_in_time_access_policy,
     }),
     just_in_time_access_policy:: {
@@ -230,6 +199,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       product: product,
       publisher: publisher,
       version: version,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_lighthouse_definition+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_lighthouse_definition+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

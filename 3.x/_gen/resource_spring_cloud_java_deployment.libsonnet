@@ -2,61 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    runtime_version=null,
     spring_cloud_app_id,
     environment_variables=null,
     instance_count=null,
     jvm_options=null,
     name,
-    runtime_version=null,
     quota=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_java_deployment', label=resourceLabel, attrs=self.newAttrs(
+    runtime_version=runtime_version,
     spring_cloud_app_id=spring_cloud_app_id,
     environment_variables=environment_variables,
     instance_count=instance_count,
     jvm_options=jvm_options,
     name=name,
-    runtime_version=runtime_version,
     quota=quota,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    runtime_version=null,
-    spring_cloud_app_id,
     environment_variables=null,
     instance_count=null,
     jvm_options=null,
+    name,
+    runtime_version=null,
+    spring_cloud_app_id,
     quota=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    runtime_version: runtime_version,
-    spring_cloud_app_id: spring_cloud_app_id,
     environment_variables: environment_variables,
     instance_count: instance_count,
     jvm_options: jvm_options,
+    name: name,
+    runtime_version: runtime_version,
+    spring_cloud_app_id: spring_cloud_app_id,
     quota: quota,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_java_deployment+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withRuntimeVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_java_deployment+: {
-        [resourceLabel]+: {
-          runtime_version: value,
-        },
-      },
-    },
-  },
   withSpringCloudAppId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_java_deployment+: {
@@ -93,6 +75,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_java_deployment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withRuntimeVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_java_deployment+: {
+        [resourceLabel]+: {
+          runtime_version: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_java_deployment+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_java_deployment+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withQuota(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_java_deployment+: {
@@ -118,37 +149,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       cpu: cpu,
       memory: memory,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_java_deployment+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_java_deployment+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

@@ -2,52 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    account_name,
+    name,
+    size_in_tb,
+    location,
     qos_type=null,
     resource_group_name,
-    account_name,
-    location,
     service_level,
-    size_in_tb,
     tags=null,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_netapp_pool', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
+    name=name,
+    size_in_tb=size_in_tb,
+    location=location,
     qos_type=qos_type,
     resource_group_name=resource_group_name,
-    account_name=account_name,
-    location=location,
     service_level=service_level,
-    size_in_tb=size_in_tb,
     tags=tags,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    size_in_tb,
-    tags=null,
-    name,
     qos_type=null,
     resource_group_name,
-    account_name,
-    location,
     service_level,
+    tags=null,
+    account_name,
+    name,
+    size_in_tb,
+    location,
     timeouts=null
   ):: std.prune(a={
-    size_in_tb: size_in_tb,
-    tags: tags,
-    name: name,
     qos_type: qos_type,
     resource_group_name: resource_group_name,
-    account_name: account_name,
-    location: location,
     service_level: service_level,
+    tags: tags,
+    account_name: account_name,
+    name: name,
+    size_in_tb: size_in_tb,
+    location: location,
     timeouts: timeouts,
   }),
-  withServiceLevel(resourceLabel, value):: {
+  withAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_pool+: {
         [resourceLabel]+: {
-          service_level: value,
+          account_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_pool+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -61,20 +70,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_pool+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_pool+: {
-        [resourceLabel]+: {
-          name: value,
+          location: value,
         },
       },
     },
@@ -97,20 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAccountName(resourceLabel, value):: {
+  withServiceLevel(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_pool+: {
         [resourceLabel]+: {
-          account_name: value,
+          service_level: value,
         },
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_pool+: {
         [resourceLabel]+: {
-          location: value,
+          tags: value,
         },
       },
     },

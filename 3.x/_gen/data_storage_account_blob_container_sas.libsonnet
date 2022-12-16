@@ -2,77 +2,77 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    https_only=null,
-    container_name,
-    content_encoding=null,
-    content_type=null,
-    expiry,
-    ip_address=null,
     cache_control=null,
-    connection_string,
-    content_disposition=null,
-    content_language=null,
+    content_encoding=null,
     start,
+    container_name,
+    connection_string,
+    expiry,
+    content_language=null,
+    content_type=null,
+    content_disposition=null,
+    https_only=null,
+    ip_address=null,
     permissions=null,
     timeouts=null
   ):: tf.withData(type='azurerm_storage_account_blob_container_sas', label=dataSrcLabel, attrs=self.newAttrs(
-    https_only=https_only,
-    container_name=container_name,
-    content_encoding=content_encoding,
-    content_type=content_type,
-    expiry=expiry,
-    ip_address=ip_address,
     cache_control=cache_control,
-    connection_string=connection_string,
-    content_disposition=content_disposition,
-    content_language=content_language,
+    content_encoding=content_encoding,
     start=start,
+    container_name=container_name,
+    connection_string=connection_string,
+    expiry=expiry,
+    content_language=content_language,
+    content_type=content_type,
+    content_disposition=content_disposition,
+    https_only=https_only,
+    ip_address=ip_address,
     permissions=permissions,
     timeouts=timeouts
   )),
   newAttrs(
-    https_only=null,
+    content_type=null,
+    cache_control=null,
     container_name,
-    expiry,
+    ip_address=null,
     start,
     connection_string,
+    expiry,
+    https_only=null,
     content_disposition=null,
     content_encoding=null,
-    content_type=null,
-    ip_address=null,
-    cache_control=null,
     content_language=null,
     permissions=null,
     timeouts=null
   ):: std.prune(a={
-    https_only: https_only,
+    content_type: content_type,
+    cache_control: cache_control,
     container_name: container_name,
-    expiry: expiry,
+    ip_address: ip_address,
     start: start,
     connection_string: connection_string,
+    expiry: expiry,
+    https_only: https_only,
     content_disposition: content_disposition,
     content_encoding: content_encoding,
-    content_type: content_type,
-    ip_address: ip_address,
-    cache_control: cache_control,
     content_language: content_language,
     permissions: permissions,
     timeouts: timeouts,
   }),
-  withConnectionString(dataSrcLabel, value):: {
+  withHttpsOnly(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_blob_container_sas+: {
         [dataSrcLabel]+: {
-          connection_string: value,
+          https_only: value,
         },
       },
     },
   },
-  withContentDisposition(dataSrcLabel, value):: {
+  withStart(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_blob_container_sas+: {
         [dataSrcLabel]+: {
-          content_disposition: value,
+          start: value,
         },
       },
     },
@@ -95,11 +95,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHttpsOnly(dataSrcLabel, value):: {
+  withCacheControl(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_blob_container_sas+: {
         [dataSrcLabel]+: {
-          https_only: value,
+          cache_control: value,
         },
       },
     },
@@ -113,11 +113,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStart(dataSrcLabel, value):: {
+  withConnectionString(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_blob_container_sas+: {
         [dataSrcLabel]+: {
-          start: value,
+          connection_string: value,
         },
       },
     },
@@ -140,20 +140,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withContentDisposition(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_blob_container_sas+: {
+        [dataSrcLabel]+: {
+          content_disposition: value,
+        },
+      },
+    },
+  },
   withExpiry(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_blob_container_sas+: {
         [dataSrcLabel]+: {
           expiry: value,
-        },
-      },
-    },
-  },
-  withCacheControl(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_blob_container_sas+: {
-        [dataSrcLabel]+: {
-          cache_control: value,
         },
       },
     },
@@ -178,19 +178,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   permissions:: {
     new(
+      add,
       create,
       delete,
       list,
       read,
-      write,
-      add
+      write
     ):: std.prune(a={
+      add: add,
       create: create,
       delete: delete,
       list: list,
       read: read,
       write: write,
-      add: add,
     }),
   },
   withTimeouts(dataSrcLabel, value):: {

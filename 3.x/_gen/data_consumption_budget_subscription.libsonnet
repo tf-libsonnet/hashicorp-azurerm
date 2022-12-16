@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withData(type='azurerm_consumption_budget_subscription', label=dataSrcLabel, attrs=self.newAttrs(subscription_id=subscription_id, name=name, timeouts=timeouts)),
   newAttrs(
-    name,
     subscription_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     subscription_id: subscription_id,
+    name: name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

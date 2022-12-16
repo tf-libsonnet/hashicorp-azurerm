@@ -2,88 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    client_id,
+    verification_token,
     client_secret,
-    location,
     signing_secret=null,
     bot_name,
+    client_id,
     landing_page_url=null,
+    location,
     resource_group_name,
-    verification_token,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_slack', label=resourceLabel, attrs=self.newAttrs(
-    client_id=client_id,
+    verification_token=verification_token,
     client_secret=client_secret,
-    location=location,
     signing_secret=signing_secret,
     bot_name=bot_name,
+    client_id=client_id,
     landing_page_url=landing_page_url,
+    location=location,
     resource_group_name=resource_group_name,
-    verification_token=verification_token,
     timeouts=timeouts
   )),
   newAttrs(
-    bot_name,
-    client_secret,
-    landing_page_url=null,
+    signing_secret=null,
+    location,
     resource_group_name,
     verification_token,
+    bot_name,
     client_id,
-    location,
-    signing_secret=null,
+    landing_page_url=null,
+    client_secret,
     timeouts=null
   ):: std.prune(a={
-    bot_name: bot_name,
-    client_secret: client_secret,
-    landing_page_url: landing_page_url,
+    signing_secret: signing_secret,
+    location: location,
     resource_group_name: resource_group_name,
     verification_token: verification_token,
+    bot_name: bot_name,
     client_id: client_id,
-    location: location,
-    signing_secret: signing_secret,
+    landing_page_url: landing_page_url,
+    client_secret: client_secret,
     timeouts: timeouts,
   }),
-  withLandingPageUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          landing_page_url: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withBotName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          bot_name: value,
-        },
-      },
-    },
-  },
   withClientSecret(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_slack+: {
         [resourceLabel]+: {
           client_secret: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_slack+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -97,6 +61,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withVerificationToken(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_slack+: {
@@ -106,11 +88,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withBotName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          bot_name: value,
+        },
+      },
+    },
+  },
   withClientId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_slack+: {
         [resourceLabel]+: {
           client_id: value,
+        },
+      },
+    },
+  },
+  withLandingPageUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_slack+: {
+        [resourceLabel]+: {
+          landing_page_url: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

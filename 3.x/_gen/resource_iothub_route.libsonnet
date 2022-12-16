@@ -2,43 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    endpoint_names,
+    iothub_name,
     name,
     resource_group_name,
     source,
     condition=null,
     enabled,
-    endpoint_names,
-    iothub_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_route', label=resourceLabel, attrs=self.newAttrs(
+    endpoint_names=endpoint_names,
+    iothub_name=iothub_name,
     name=name,
     resource_group_name=resource_group_name,
     source=source,
     condition=condition,
     enabled=enabled,
-    endpoint_names=endpoint_names,
-    iothub_name=iothub_name,
     timeouts=timeouts
   )),
   newAttrs(
+    iothub_name,
+    name,
+    resource_group_name,
     source,
     condition=null,
     enabled,
     endpoint_names,
-    iothub_name,
-    name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    iothub_name: iothub_name,
+    name: name,
+    resource_group_name: resource_group_name,
     source: source,
     condition: condition,
     enabled: enabled,
     endpoint_names: endpoint_names,
-    iothub_name: iothub_name,
-    name: name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withCondition(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_route+: {
+        [resourceLabel]+: {
+          condition: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_route+: {
@@ -89,15 +98,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_route+: {
         [resourceLabel]+: {
           source: value,
-        },
-      },
-    },
-  },
-  withCondition(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_route+: {
-        [resourceLabel]+: {
-          condition: value,
         },
       },
     },

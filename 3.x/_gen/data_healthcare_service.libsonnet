@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     location,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     location: location,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {
@@ -32,20 +32,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_healthcare_service+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withLocation(dataSrcLabel, value):: {
     data+: {
       azurerm_healthcare_service+: {
         [dataSrcLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_healthcare_service+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

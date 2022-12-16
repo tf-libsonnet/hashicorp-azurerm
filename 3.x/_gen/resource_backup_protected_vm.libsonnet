@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    source_vm_id=null,
     backup_policy_id,
     exclude_disk_luns=null,
     include_disk_luns=null,
     recovery_vault_name,
     resource_group_name,
+    source_vm_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_backup_protected_vm', label=resourceLabel, attrs=self.newAttrs(
-    source_vm_id=source_vm_id,
     backup_policy_id=backup_policy_id,
     exclude_disk_luns=exclude_disk_luns,
     include_disk_luns=include_disk_luns,
     recovery_vault_name=recovery_vault_name,
     resource_group_name=resource_group_name,
+    source_vm_id=source_vm_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,15 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withRecoveryVaultName(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_protected_vm+: {
-        [resourceLabel]+: {
-          recovery_vault_name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_backup_protected_vm+: {
@@ -89,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withRecoveryVaultName(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_protected_vm+: {
+        [resourceLabel]+: {
+          recovery_vault_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_backup_protected_vm+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

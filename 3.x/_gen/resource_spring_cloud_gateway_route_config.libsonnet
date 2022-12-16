@@ -110,31 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withOpenApi(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          open_api: value,
-        },
-      },
-    },
-  },
-  withOpenApiMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          open_api+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  open_api:: {
-    new(
-      uri=null
-    ):: std.prune(a={
-      uri: uri,
-    }),
-  },
   withRoute(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_gateway_route_config+: {
@@ -155,25 +130,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   route:: {
     new(
-      description=null,
-      title=null,
-      filters=null,
       order,
-      uri=null,
-      classification_tags=null,
-      predicates=null,
+      title=null,
       sso_validation_enabled=null,
-      token_relay=null
+      classification_tags=null,
+      description=null,
+      token_relay=null,
+      uri=null,
+      filters=null,
+      predicates=null
     ):: std.prune(a={
-      description: description,
-      title: title,
-      filters: filters,
       order: order,
-      uri: uri,
-      classification_tags: classification_tags,
-      predicates: predicates,
+      title: title,
       sso_validation_enabled: sso_validation_enabled,
+      classification_tags: classification_tags,
+      description: description,
       token_relay: token_relay,
+      uri: uri,
+      filters: filters,
+      predicates: predicates,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -205,6 +180,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withOpenApi(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          open_api: value,
+        },
+      },
+    },
+  },
+  withOpenApiMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          open_api+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  open_api:: {
+    new(
+      uri=null
+    ):: std.prune(a={
+      uri: uri,
     }),
   },
 }

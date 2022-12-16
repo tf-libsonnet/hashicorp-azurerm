@@ -2,92 +2,101 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    agent_pool_name=null,
+    enabled=null,
+    name,
+    container_registry_id,
     is_system_task=null,
     log_template=null,
     tags=null,
-    container_registry_id,
-    enabled=null,
-    name,
     timeout_in_seconds=null,
-    file_step=null,
-    identity=null,
-    timer_trigger=null,
-    docker_step=null,
-    encoded_step=null,
+    agent_pool_name=null,
     platform=null,
-    registry_credential=null,
     agent_setting=null,
+    identity=null,
+    base_image_trigger=null,
     source_trigger=null,
     timeouts=null,
-    base_image_trigger=null
+    encoded_step=null,
+    file_step=null,
+    registry_credential=null,
+    timer_trigger=null,
+    docker_step=null
   ):: tf.withResource(type='azurerm_container_registry_task', label=resourceLabel, attrs=self.newAttrs(
-    agent_pool_name=agent_pool_name,
+    enabled=enabled,
+    name=name,
+    container_registry_id=container_registry_id,
     is_system_task=is_system_task,
     log_template=log_template,
     tags=tags,
-    container_registry_id=container_registry_id,
-    enabled=enabled,
-    name=name,
     timeout_in_seconds=timeout_in_seconds,
-    file_step=file_step,
-    identity=identity,
-    timer_trigger=timer_trigger,
-    docker_step=docker_step,
-    encoded_step=encoded_step,
+    agent_pool_name=agent_pool_name,
     platform=platform,
-    registry_credential=registry_credential,
     agent_setting=agent_setting,
+    identity=identity,
+    base_image_trigger=base_image_trigger,
     source_trigger=source_trigger,
     timeouts=timeouts,
-    base_image_trigger=base_image_trigger
+    encoded_step=encoded_step,
+    file_step=file_step,
+    registry_credential=registry_credential,
+    timer_trigger=timer_trigger,
+    docker_step=docker_step
   )),
   newAttrs(
+    timeout_in_seconds=null,
+    agent_pool_name=null,
     is_system_task=null,
     log_template=null,
     tags=null,
-    agent_pool_name=null,
-    name,
-    timeout_in_seconds=null,
     container_registry_id,
     enabled=null,
-    identity=null,
+    name,
     timer_trigger=null,
-    docker_step=null,
     platform=null,
-    source_trigger=null,
     timeouts=null,
-    agent_setting=null,
-    file_step=null,
-    base_image_trigger=null,
     encoded_step=null,
-    registry_credential=null
+    registry_credential=null,
+    file_step=null,
+    identity=null,
+    agent_setting=null,
+    base_image_trigger=null,
+    source_trigger=null,
+    docker_step=null
   ):: std.prune(a={
+    timeout_in_seconds: timeout_in_seconds,
+    agent_pool_name: agent_pool_name,
     is_system_task: is_system_task,
     log_template: log_template,
     tags: tags,
-    agent_pool_name: agent_pool_name,
-    name: name,
-    timeout_in_seconds: timeout_in_seconds,
     container_registry_id: container_registry_id,
     enabled: enabled,
-    identity: identity,
+    name: name,
     timer_trigger: timer_trigger,
-    docker_step: docker_step,
     platform: platform,
-    source_trigger: source_trigger,
     timeouts: timeouts,
-    agent_setting: agent_setting,
-    file_step: file_step,
-    base_image_trigger: base_image_trigger,
     encoded_step: encoded_step,
     registry_credential: registry_credential,
+    file_step: file_step,
+    identity: identity,
+    agent_setting: agent_setting,
+    base_image_trigger: base_image_trigger,
+    source_trigger: source_trigger,
+    docker_step: docker_step,
   }),
-  withContainerRegistryId(resourceLabel, value):: {
+  withTimeoutInSeconds(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          container_registry_id: value,
+          timeout_in_seconds: value,
+        },
+      },
+    },
+  },
+  withAgentPoolName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          agent_pool_name: value,
         },
       },
     },
@@ -110,20 +119,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeoutInSeconds(resourceLabel, value):: {
+  withContainerRegistryId(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          timeout_in_seconds: value,
-        },
-      },
-    },
-  },
-  withAgentPoolName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          agent_pool_name: value,
+          container_registry_id: value,
         },
       },
     },
@@ -155,34 +155,90 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimerTrigger(resourceLabel, value):: {
+  withBaseImageTrigger(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          timer_trigger: value,
+          base_image_trigger: value,
         },
       },
     },
   },
-  withTimerTriggerMixin(resourceLabel, value):: {
+  withBaseImageTriggerMixin(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          timer_trigger+: if std.isArray(v=value) then value else [value],
+          base_image_trigger+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  timer_trigger:: {
+  base_image_trigger:: {
     new(
+      type,
+      update_trigger_endpoint=null,
+      update_trigger_payload_type=null,
       enabled=null,
-      name,
-      schedule
+      name
     ):: std.prune(a={
+      type: type,
+      update_trigger_endpoint: update_trigger_endpoint,
+      update_trigger_payload_type: update_trigger_payload_type,
       enabled: enabled,
       name: name,
-      schedule: schedule,
     }),
+  },
+  withSourceTrigger(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          source_trigger: value,
+        },
+      },
+    },
+  },
+  withSourceTriggerMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          source_trigger+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  source_trigger:: {
+    new(
+      enabled=null,
+      events,
+      name,
+      repository_url,
+      source_type,
+      branch=null,
+      authentication=null
+    ):: std.prune(a={
+      enabled: enabled,
+      events: events,
+      name: name,
+      repository_url: repository_url,
+      source_type: source_type,
+      branch: branch,
+      authentication: authentication,
+    }),
+    authentication:: {
+      new(
+        token_type,
+        expire_in_seconds=null,
+        refresh_token=null,
+        scope=null,
+        token
+      ):: std.prune(a={
+        token_type: token_type,
+        expire_in_seconds: expire_in_seconds,
+        refresh_token: refresh_token,
+        scope: scope,
+        token: token,
+      }),
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -204,83 +260,118 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
-  withBaseImageTrigger(resourceLabel, value):: {
+  withDockerStep(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          base_image_trigger: value,
+          docker_step: value,
         },
       },
     },
   },
-  withBaseImageTriggerMixin(resourceLabel, value):: {
+  withDockerStepMixin(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          base_image_trigger+: if std.isArray(v=value) then value else [value],
+          docker_step+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  base_image_trigger:: {
+  docker_step:: {
     new(
-      update_trigger_endpoint=null,
-      update_trigger_payload_type=null,
-      enabled=null,
-      name,
-      type
+      cache_enabled=null,
+      context_access_token,
+      secret_arguments=null,
+      target=null,
+      image_names=null,
+      push_enabled=null,
+      arguments=null,
+      context_path,
+      dockerfile_path
     ):: std.prune(a={
-      update_trigger_endpoint: update_trigger_endpoint,
-      update_trigger_payload_type: update_trigger_payload_type,
-      enabled: enabled,
-      name: name,
-      type: type,
+      cache_enabled: cache_enabled,
+      context_access_token: context_access_token,
+      secret_arguments: secret_arguments,
+      target: target,
+      image_names: image_names,
+      push_enabled: push_enabled,
+      arguments: arguments,
+      context_path: context_path,
+      dockerfile_path: dockerfile_path,
     }),
   },
-  withEncodedStep(resourceLabel, value):: {
+  withFileStep(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          encoded_step: value,
+          file_step: value,
         },
       },
     },
   },
-  withEncodedStepMixin(resourceLabel, value):: {
+  withFileStepMixin(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          encoded_step+: if std.isArray(v=value) then value else [value],
+          file_step+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  encoded_step:: {
+  file_step:: {
     new(
-      value_content=null,
+      value_file_path=null,
       values=null,
       context_access_token=null,
       context_path=null,
       secret_values=null,
-      task_content
+      task_file_path
     ):: std.prune(a={
-      value_content: value_content,
+      value_file_path: value_file_path,
       values: values,
       context_access_token: context_access_token,
       context_path: context_path,
       secret_values: secret_values,
-      task_content: task_content,
+      task_file_path: task_file_path,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
     }),
   },
   withRegistryCredential(resourceLabel, value):: {
@@ -330,136 +421,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
     },
   },
-  withFileStep(resourceLabel, value):: {
+  withTimerTrigger(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          file_step: value,
+          timer_trigger: value,
         },
       },
     },
   },
-  withFileStepMixin(resourceLabel, value):: {
+  withTimerTriggerMixin(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          file_step+: if std.isArray(v=value) then value else [value],
+          timer_trigger+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  file_step:: {
+  timer_trigger:: {
     new(
-      context_access_token=null,
-      context_path=null,
-      secret_values=null,
-      task_file_path,
-      value_file_path=null,
-      values=null
+      name,
+      schedule,
+      enabled=null
     ):: std.prune(a={
-      context_access_token: context_access_token,
-      context_path: context_path,
-      secret_values: secret_values,
-      task_file_path: task_file_path,
-      value_file_path: value_file_path,
-      values: values,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
-    }),
-  },
-  withDockerStep(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          docker_step: value,
-        },
-      },
-    },
-  },
-  withDockerStepMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          docker_step+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  docker_step:: {
-    new(
-      context_access_token,
-      image_names=null,
-      dockerfile_path,
-      push_enabled=null,
-      target=null,
-      cache_enabled=null,
-      secret_arguments=null,
-      arguments=null,
-      context_path
-    ):: std.prune(a={
-      context_access_token: context_access_token,
-      image_names: image_names,
-      dockerfile_path: dockerfile_path,
-      push_enabled: push_enabled,
-      target: target,
-      cache_enabled: cache_enabled,
-      secret_arguments: secret_arguments,
-      arguments: arguments,
-      context_path: context_path,
-    }),
-  },
-  withPlatform(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          platform: value,
-        },
-      },
-    },
-  },
-  withPlatformMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_task+: {
-        [resourceLabel]+: {
-          platform+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  platform:: {
-    new(
-      variant=null,
-      architecture=null,
-      os
-    ):: std.prune(a={
-      variant: variant,
-      architecture: architecture,
-      os: os,
+      name: name,
+      schedule: schedule,
+      enabled: enabled,
     }),
   },
   withAgentSetting(resourceLabel, value):: {
@@ -487,56 +475,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       cpu: cpu,
     }),
   },
-  withSourceTrigger(resourceLabel, value):: {
+  withPlatform(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          source_trigger: value,
+          platform: value,
         },
       },
     },
   },
-  withSourceTriggerMixin(resourceLabel, value):: {
+  withPlatformMixin(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_task+: {
         [resourceLabel]+: {
-          source_trigger+: if std.isArray(v=value) then value else [value],
+          platform+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  source_trigger:: {
+  platform:: {
     new(
-      name,
-      repository_url,
-      source_type,
-      branch=null,
-      enabled=null,
-      events,
-      authentication=null
+      architecture=null,
+      os,
+      variant=null
     ):: std.prune(a={
-      name: name,
-      repository_url: repository_url,
-      source_type: source_type,
-      branch: branch,
-      enabled: enabled,
-      events: events,
-      authentication: authentication,
+      architecture: architecture,
+      os: os,
+      variant: variant,
     }),
-    authentication:: {
-      new(
-        token_type,
-        expire_in_seconds=null,
-        refresh_token=null,
-        scope=null,
-        token
-      ):: std.prune(a={
-        token_type: token_type,
-        expire_in_seconds: expire_in_seconds,
-        refresh_token: refresh_token,
-        scope: scope,
-        token: token,
-      }),
+  },
+  withEncodedStep(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          encoded_step: value,
+        },
+      },
     },
+  },
+  withEncodedStepMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_task+: {
+        [resourceLabel]+: {
+          encoded_step+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  encoded_step:: {
+    new(
+      values=null,
+      context_access_token=null,
+      context_path=null,
+      secret_values=null,
+      task_content,
+      value_content=null
+    ):: std.prune(a={
+      values: values,
+      context_access_token: context_access_token,
+      context_path: context_path,
+      secret_values: secret_values,
+      task_content: task_content,
+      value_content: value_content,
+    }),
   },
 }

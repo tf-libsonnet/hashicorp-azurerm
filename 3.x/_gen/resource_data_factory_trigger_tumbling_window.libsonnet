@@ -3,16 +3,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     additional_properties=null,
-    end_time=null,
-    interval,
-    name,
-    delay=null,
-    frequency,
-    activated=null,
     data_factory_id,
-    start_time,
-    annotations=null,
     description=null,
+    start_time,
+    delay=null,
+    end_time=null,
+    frequency,
+    name,
+    activated=null,
+    interval,
+    annotations=null,
     max_concurrency=null,
     pipeline=null,
     retry=null,
@@ -20,16 +20,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     trigger_dependency=null
   ):: tf.withResource(type='azurerm_data_factory_trigger_tumbling_window', label=resourceLabel, attrs=self.newAttrs(
     additional_properties=additional_properties,
-    end_time=end_time,
-    interval=interval,
-    name=name,
-    delay=delay,
-    frequency=frequency,
-    activated=activated,
     data_factory_id=data_factory_id,
-    start_time=start_time,
-    annotations=annotations,
     description=description,
+    start_time=start_time,
+    delay=delay,
+    end_time=end_time,
+    frequency=frequency,
+    name=name,
+    activated=activated,
+    interval=interval,
+    annotations=annotations,
     max_concurrency=max_concurrency,
     pipeline=pipeline,
     retry=retry,
@@ -37,54 +37,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     trigger_dependency=trigger_dependency
   )),
   newAttrs(
-    start_time,
     description=null,
-    data_factory_id,
-    end_time=null,
     annotations=null,
+    name,
     delay=null,
+    end_time=null,
     frequency,
-    max_concurrency=null,
     activated=null,
     additional_properties=null,
+    data_factory_id,
     interval,
-    name,
-    retry=null,
-    timeouts=null,
+    start_time,
+    max_concurrency=null,
     trigger_dependency=null,
-    pipeline=null
+    pipeline=null,
+    retry=null,
+    timeouts=null
   ):: std.prune(a={
-    start_time: start_time,
     description: description,
-    data_factory_id: data_factory_id,
-    end_time: end_time,
     annotations: annotations,
+    name: name,
     delay: delay,
+    end_time: end_time,
     frequency: frequency,
-    max_concurrency: max_concurrency,
     activated: activated,
     additional_properties: additional_properties,
+    data_factory_id: data_factory_id,
     interval: interval,
-    name: name,
-    retry: retry,
-    timeouts: timeouts,
+    start_time: start_time,
+    max_concurrency: max_concurrency,
     trigger_dependency: trigger_dependency,
     pipeline: pipeline,
+    retry: retry,
+    timeouts: timeouts,
   }),
-  withInterval(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_tumbling_window+: {
         [resourceLabel]+: {
-          interval: value,
-        },
-      },
-    },
-  },
-  withActivated(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_tumbling_window+: {
-        [resourceLabel]+: {
-          activated: value,
+          additional_properties: value,
         },
       },
     },
@@ -98,38 +89,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEndTime(resourceLabel, value):: {
+  withStartTime(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_tumbling_window+: {
         [resourceLabel]+: {
-          end_time: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_tumbling_window+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withDelay(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_tumbling_window+: {
-        [resourceLabel]+: {
-          delay: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_tumbling_window+: {
-        [resourceLabel]+: {
-          description: value,
+          start_time: value,
         },
       },
     },
@@ -152,11 +116,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
+  withEndTime(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_tumbling_window+: {
         [resourceLabel]+: {
-          additional_properties: value,
+          end_time: value,
         },
       },
     },
@@ -170,43 +134,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStartTime(resourceLabel, value):: {
+  withActivated(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_tumbling_window+: {
         [resourceLabel]+: {
-          start_time: value,
+          activated: value,
         },
       },
     },
   },
-  withTriggerDependency(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_tumbling_window+: {
         [resourceLabel]+: {
-          trigger_dependency: value,
+          description: value,
         },
       },
     },
   },
-  withTriggerDependencyMixin(resourceLabel, value):: {
+  withInterval(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_tumbling_window+: {
         [resourceLabel]+: {
-          trigger_dependency+: if std.isArray(v=value) then value else [value],
+          interval: value,
         },
       },
     },
   },
-  trigger_dependency:: {
-    new(
-      size=null,
-      trigger_name=null,
-      offset=null
-    ):: std.prune(a={
-      size: size,
-      trigger_name: trigger_name,
-      offset: offset,
-    }),
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_tumbling_window+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withDelay(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_tumbling_window+: {
+        [resourceLabel]+: {
+          delay: value,
+        },
+      },
+    },
   },
   withPipeline(resourceLabel, value):: {
     resource+: {
@@ -228,11 +199,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   pipeline:: {
     new(
-      parameters=null,
-      name
+      name,
+      parameters=null
     ):: std.prune(a={
-      parameters: parameters,
       name: name,
+      parameters: parameters,
     }),
   },
   withRetry(resourceLabel, value):: {
@@ -282,15 +253,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
+    }),
+  },
+  withTriggerDependency(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_tumbling_window+: {
+        [resourceLabel]+: {
+          trigger_dependency: value,
+        },
+      },
+    },
+  },
+  withTriggerDependencyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_tumbling_window+: {
+        [resourceLabel]+: {
+          trigger_dependency+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  trigger_dependency:: {
+    new(
+      offset=null,
+      size=null,
+      trigger_name=null
+    ):: std.prune(a={
+      offset: offset,
+      size: size,
+      trigger_name: trigger_name,
     }),
   },
 }

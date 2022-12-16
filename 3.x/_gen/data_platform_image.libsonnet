@@ -17,20 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    sku,
     version=null,
     location,
     offer,
     publisher,
+    sku,
     timeouts=null
   ):: std.prune(a={
-    sku: sku,
     version: version,
     location: location,
     offer: offer,
     publisher: publisher,
+    sku: sku,
     timeouts: timeouts,
   }),
+  withSku(dataSrcLabel, value):: {
+    data+: {
+      azurerm_platform_image+: {
+        [dataSrcLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
   withVersion(dataSrcLabel, value):: {
     data+: {
       azurerm_platform_image+: {
@@ -63,15 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_platform_image+: {
         [dataSrcLabel]+: {
           publisher: value,
-        },
-      },
-    },
-  },
-  withSku(dataSrcLabel, value):: {
-    data+: {
-      azurerm_platform_image+: {
-        [dataSrcLabel]+: {
-          sku: value,
         },
       },
     },

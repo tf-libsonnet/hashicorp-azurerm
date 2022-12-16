@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    api_management_name,
     name,
     resource_group_name,
+    api_management_name,
     timeouts=null
   ):: tf.withData(type='azurerm_api_management_group', label=dataSrcLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
     name=name,
     resource_group_name=resource_group_name,
+    api_management_name=api_management_name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     api_management_name,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     api_management_name: api_management_name,
-    name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_api_management_group+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_api_management_group+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_group+: {
         [dataSrcLabel]+: {
           api_management_name: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_api_management_group+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

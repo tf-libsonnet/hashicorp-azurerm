@@ -2,152 +2,116 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    delete_os_disk_on_termination=null,
-    name,
-    network_interface_ids,
-    proximity_placement_group_id=null,
-    tags=null,
-    primary_network_interface_id=null,
+    vm_size,
     license_type=null,
+    proximity_placement_group_id=null,
+    location,
+    delete_data_disks_on_termination=null,
     zones=null,
     availability_set_id=null,
-    delete_data_disks_on_termination=null,
+    name,
+    primary_network_interface_id=null,
     resource_group_name,
-    vm_size,
-    location,
-    storage_os_disk=null,
-    additional_capabilities=null,
-    identity=null,
-    storage_data_disk=null,
-    storage_image_reference=null,
-    boot_diagnostics=null,
-    os_profile_linux_config=null,
-    os_profile_windows_config=null,
+    delete_os_disk_on_termination=null,
+    network_interface_ids,
+    tags=null,
     timeouts=null,
+    additional_capabilities=null,
     os_profile=null,
-    plan=null,
-    os_profile_secrets=null
+    storage_data_disk=null,
+    storage_os_disk=null,
+    boot_diagnostics=null,
+    identity=null,
+    os_profile_windows_config=null,
+    storage_image_reference=null,
+    os_profile_secrets=null,
+    os_profile_linux_config=null,
+    plan=null
   ):: tf.withResource(type='azurerm_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
-    delete_os_disk_on_termination=delete_os_disk_on_termination,
-    name=name,
-    network_interface_ids=network_interface_ids,
-    proximity_placement_group_id=proximity_placement_group_id,
-    tags=tags,
-    primary_network_interface_id=primary_network_interface_id,
+    vm_size=vm_size,
     license_type=license_type,
+    proximity_placement_group_id=proximity_placement_group_id,
+    location=location,
+    delete_data_disks_on_termination=delete_data_disks_on_termination,
     zones=zones,
     availability_set_id=availability_set_id,
-    delete_data_disks_on_termination=delete_data_disks_on_termination,
+    name=name,
+    primary_network_interface_id=primary_network_interface_id,
     resource_group_name=resource_group_name,
-    vm_size=vm_size,
-    location=location,
-    storage_os_disk=storage_os_disk,
-    additional_capabilities=additional_capabilities,
-    identity=identity,
-    storage_data_disk=storage_data_disk,
-    storage_image_reference=storage_image_reference,
-    boot_diagnostics=boot_diagnostics,
-    os_profile_linux_config=os_profile_linux_config,
-    os_profile_windows_config=os_profile_windows_config,
+    delete_os_disk_on_termination=delete_os_disk_on_termination,
+    network_interface_ids=network_interface_ids,
+    tags=tags,
     timeouts=timeouts,
+    additional_capabilities=additional_capabilities,
     os_profile=os_profile,
-    plan=plan,
-    os_profile_secrets=os_profile_secrets
+    storage_data_disk=storage_data_disk,
+    storage_os_disk=storage_os_disk,
+    boot_diagnostics=boot_diagnostics,
+    identity=identity,
+    os_profile_windows_config=os_profile_windows_config,
+    storage_image_reference=storage_image_reference,
+    os_profile_secrets=os_profile_secrets,
+    os_profile_linux_config=os_profile_linux_config,
+    plan=plan
   )),
   newAttrs(
+    network_interface_ids,
+    proximity_placement_group_id=null,
+    tags=null,
+    zones=null,
+    resource_group_name,
+    vm_size,
+    delete_os_disk_on_termination=null,
+    license_type=null,
     availability_set_id=null,
-    delete_data_disks_on_termination=null,
+    primary_network_interface_id=null,
     location,
     name,
-    network_interface_ids,
-    primary_network_interface_id=null,
-    proximity_placement_group_id=null,
-    zones=null,
-    delete_os_disk_on_termination=null,
-    resource_group_name,
-    tags=null,
-    vm_size,
-    license_type=null,
-    boot_diagnostics=null,
-    identity=null,
+    delete_data_disks_on_termination=null,
+    plan=null,
+    os_profile_secrets=null,
+    storage_image_reference=null,
     timeouts=null,
+    storage_data_disk=null,
+    identity=null,
+    os_profile_linux_config=null,
+    additional_capabilities=null,
     os_profile_windows_config=null,
     storage_os_disk=null,
-    os_profile_linux_config=null,
-    os_profile_secrets=null,
-    plan=null,
-    storage_data_disk=null,
-    storage_image_reference=null,
-    os_profile=null,
-    additional_capabilities=null
+    boot_diagnostics=null,
+    os_profile=null
   ):: std.prune(a={
+    network_interface_ids: network_interface_ids,
+    proximity_placement_group_id: proximity_placement_group_id,
+    tags: tags,
+    zones: zones,
+    resource_group_name: resource_group_name,
+    vm_size: vm_size,
+    delete_os_disk_on_termination: delete_os_disk_on_termination,
+    license_type: license_type,
     availability_set_id: availability_set_id,
-    delete_data_disks_on_termination: delete_data_disks_on_termination,
+    primary_network_interface_id: primary_network_interface_id,
     location: location,
     name: name,
-    network_interface_ids: network_interface_ids,
-    primary_network_interface_id: primary_network_interface_id,
-    proximity_placement_group_id: proximity_placement_group_id,
-    zones: zones,
-    delete_os_disk_on_termination: delete_os_disk_on_termination,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    vm_size: vm_size,
-    license_type: license_type,
-    boot_diagnostics: boot_diagnostics,
-    identity: identity,
+    delete_data_disks_on_termination: delete_data_disks_on_termination,
+    plan: plan,
+    os_profile_secrets: os_profile_secrets,
+    storage_image_reference: storage_image_reference,
     timeouts: timeouts,
+    storage_data_disk: storage_data_disk,
+    identity: identity,
+    os_profile_linux_config: os_profile_linux_config,
+    additional_capabilities: additional_capabilities,
     os_profile_windows_config: os_profile_windows_config,
     storage_os_disk: storage_os_disk,
-    os_profile_linux_config: os_profile_linux_config,
-    os_profile_secrets: os_profile_secrets,
-    plan: plan,
-    storage_data_disk: storage_data_disk,
-    storage_image_reference: storage_image_reference,
+    boot_diagnostics: boot_diagnostics,
     os_profile: os_profile,
-    additional_capabilities: additional_capabilities,
   }),
-  withDeleteDataDisksOnTermination(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
         [resourceLabel]+: {
-          delete_data_disks_on_termination: value,
-        },
-      },
-    },
-  },
-  withDeleteOsDiskOnTermination(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          delete_os_disk_on_termination: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withPrimaryNetworkInterfaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          primary_network_interface_id: value,
-        },
-      },
-    },
-  },
-  withProximityPlacementGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          proximity_placement_group_id: value,
+          name: value,
         },
       },
     },
@@ -161,38 +125,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVmSize(resourceLabel, value):: {
+  withDeleteOsDiskOnTermination(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
         [resourceLabel]+: {
-          vm_size: value,
+          delete_os_disk_on_termination: value,
         },
       },
     },
   },
-  withZones(resourceLabel, value):: {
+  withLicenseType(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
         [resourceLabel]+: {
-          zones: value,
-        },
-      },
-    },
-  },
-  withAvailabilitySetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          availability_set_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          name: value,
+          license_type: value,
         },
       },
     },
@@ -206,6 +152,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withVmSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          vm_size: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
@@ -215,14 +179,93 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLicenseType(resourceLabel, value):: {
+  withAvailabilitySetId(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
         [resourceLabel]+: {
-          license_type: value,
+          availability_set_id: value,
         },
       },
     },
+  },
+  withProximityPlacementGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          proximity_placement_group_id: value,
+        },
+      },
+    },
+  },
+  withZones(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          zones: value,
+        },
+      },
+    },
+  },
+  withDeleteDataDisksOnTermination(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          delete_data_disks_on_termination: value,
+        },
+      },
+    },
+  },
+  withPrimaryNetworkInterfaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          primary_network_interface_id: value,
+        },
+      },
+    },
+  },
+  withStorageOsDisk(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          storage_os_disk: value,
+        },
+      },
+    },
+  },
+  withStorageOsDiskMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          storage_os_disk+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  storage_os_disk:: {
+    new(
+      image_uri=null,
+      name,
+      vhd_uri=null,
+      managed_disk_id=null,
+      os_type=null,
+      caching=null,
+      create_option,
+      managed_disk_type=null,
+      write_accelerator_enabled=null,
+      disk_size_gb=null
+    ):: std.prune(a={
+      image_uri: image_uri,
+      name: name,
+      vhd_uri: vhd_uri,
+      managed_disk_id: managed_disk_id,
+      os_type: os_type,
+      caching: caching,
+      create_option: create_option,
+      managed_disk_type: managed_disk_type,
+      write_accelerator_enabled: write_accelerator_enabled,
+      disk_size_gb: disk_size_gb,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -253,6 +296,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withAdditionalCapabilities(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          additional_capabilities: value,
+        },
+      },
+    },
+  },
+  withAdditionalCapabilitiesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          additional_capabilities+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  additional_capabilities:: {
+    new(
+      ultra_ssd_enabled
+    ):: std.prune(a={
+      ultra_ssd_enabled: ultra_ssd_enabled,
     }),
   },
   withOsProfileSecrets(resourceLabel, value):: {
@@ -291,6 +359,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
     },
   },
+  withOsProfileWindowsConfig(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          os_profile_windows_config: value,
+        },
+      },
+    },
+  },
+  withOsProfileWindowsConfigMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          os_profile_windows_config+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  os_profile_windows_config:: {
+    new(
+      enable_automatic_upgrades=null,
+      provision_vm_agent=null,
+      timezone=null,
+      winrm=null,
+      additional_unattend_config=null
+    ):: std.prune(a={
+      enable_automatic_upgrades: enable_automatic_upgrades,
+      provision_vm_agent: provision_vm_agent,
+      timezone: timezone,
+      winrm: winrm,
+      additional_unattend_config: additional_unattend_config,
+    }),
+    winrm:: {
+      new(
+        certificate_url=null,
+        protocol
+      ):: std.prune(a={
+        certificate_url: certificate_url,
+        protocol: protocol,
+      }),
+    },
+    additional_unattend_config:: {
+      new(
+        content,
+        pass,
+        setting_name,
+        component
+      ):: std.prune(a={
+        content: content,
+        pass: pass,
+        setting_name: setting_name,
+        component: component,
+      }),
+    },
+  },
   withStorageDataDisk(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
@@ -311,68 +434,121 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage_data_disk:: {
     new(
-      managed_disk_type=null,
-      name,
-      lun,
-      caching=null,
-      vhd_uri=null,
       create_option,
-      disk_size_gb=null,
       managed_disk_id=null,
-      write_accelerator_enabled=null
+      write_accelerator_enabled=null,
+      vhd_uri=null,
+      caching=null,
+      disk_size_gb=null,
+      managed_disk_type=null,
+      lun,
+      name
     ):: std.prune(a={
-      managed_disk_type: managed_disk_type,
-      name: name,
-      lun: lun,
-      caching: caching,
-      vhd_uri: vhd_uri,
       create_option: create_option,
-      disk_size_gb: disk_size_gb,
       managed_disk_id: managed_disk_id,
       write_accelerator_enabled: write_accelerator_enabled,
+      vhd_uri: vhd_uri,
+      caching: caching,
+      disk_size_gb: disk_size_gb,
+      managed_disk_type: managed_disk_type,
+      lun: lun,
+      name: name,
     }),
   },
-  withStorageOsDisk(resourceLabel, value):: {
+  withOsProfileLinuxConfig(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
         [resourceLabel]+: {
-          storage_os_disk: value,
+          os_profile_linux_config: value,
         },
       },
     },
   },
-  withStorageOsDiskMixin(resourceLabel, value):: {
+  withOsProfileLinuxConfigMixin(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine+: {
         [resourceLabel]+: {
-          storage_os_disk+: if std.isArray(v=value) then value else [value],
+          os_profile_linux_config+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  storage_os_disk:: {
+  os_profile_linux_config:: {
     new(
-      create_option,
-      name,
-      vhd_uri=null,
-      write_accelerator_enabled=null,
-      caching=null,
-      disk_size_gb=null,
-      managed_disk_id=null,
-      os_type=null,
-      image_uri=null,
-      managed_disk_type=null
+      disable_password_authentication,
+      ssh_keys=null
     ):: std.prune(a={
-      create_option: create_option,
+      disable_password_authentication: disable_password_authentication,
+      ssh_keys: ssh_keys,
+    }),
+    ssh_keys:: {
+      new(
+        key_data,
+        path
+      ):: std.prune(a={
+        key_data: key_data,
+        path: path,
+      }),
+    },
+  },
+  withStorageImageReference(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          storage_image_reference: value,
+        },
+      },
+    },
+  },
+  withStorageImageReferenceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          storage_image_reference+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  storage_image_reference:: {
+    new(
+      offer=null,
+      publisher=null,
+      sku=null,
+      version=null
+    ):: std.prune(a={
+      offer: offer,
+      publisher: publisher,
+      sku: sku,
+      version: version,
+    }),
+  },
+  withPlan(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          plan: value,
+        },
+      },
+    },
+  },
+  withPlanMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine+: {
+        [resourceLabel]+: {
+          plan+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  plan:: {
+    new(
+      name,
+      product,
+      publisher
+    ):: std.prune(a={
       name: name,
-      vhd_uri: vhd_uri,
-      write_accelerator_enabled: write_accelerator_enabled,
-      caching: caching,
-      disk_size_gb: disk_size_gb,
-      managed_disk_id: managed_disk_id,
-      os_type: os_type,
-      image_uri: image_uri,
-      managed_disk_type: managed_disk_type,
+      product: product,
+      publisher: publisher,
     }),
   },
   withBootDiagnostics(resourceLabel, value):: {
@@ -422,11 +598,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
     }),
   },
   withOsProfile(resourceLabel, value):: {
@@ -449,191 +625,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   os_profile:: {
     new(
-      admin_username,
-      computer_name,
       custom_data=null,
-      admin_password=null
+      admin_password=null,
+      admin_username,
+      computer_name
     ):: std.prune(a={
-      admin_username: admin_username,
-      computer_name: computer_name,
       custom_data: custom_data,
       admin_password: admin_password,
-    }),
-  },
-  withOsProfileWindowsConfig(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          os_profile_windows_config: value,
-        },
-      },
-    },
-  },
-  withOsProfileWindowsConfigMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          os_profile_windows_config+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  os_profile_windows_config:: {
-    new(
-      enable_automatic_upgrades=null,
-      provision_vm_agent=null,
-      timezone=null,
-      winrm=null,
-      additional_unattend_config=null
-    ):: std.prune(a={
-      enable_automatic_upgrades: enable_automatic_upgrades,
-      provision_vm_agent: provision_vm_agent,
-      timezone: timezone,
-      winrm: winrm,
-      additional_unattend_config: additional_unattend_config,
-    }),
-    additional_unattend_config:: {
-      new(
-        pass,
-        setting_name,
-        component,
-        content
-      ):: std.prune(a={
-        pass: pass,
-        setting_name: setting_name,
-        component: component,
-        content: content,
-      }),
-    },
-    winrm:: {
-      new(
-        certificate_url=null,
-        protocol
-      ):: std.prune(a={
-        certificate_url: certificate_url,
-        protocol: protocol,
-      }),
-    },
-  },
-  withAdditionalCapabilities(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          additional_capabilities: value,
-        },
-      },
-    },
-  },
-  withAdditionalCapabilitiesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          additional_capabilities+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  additional_capabilities:: {
-    new(
-      ultra_ssd_enabled
-    ):: std.prune(a={
-      ultra_ssd_enabled: ultra_ssd_enabled,
-    }),
-  },
-  withOsProfileLinuxConfig(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          os_profile_linux_config: value,
-        },
-      },
-    },
-  },
-  withOsProfileLinuxConfigMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          os_profile_linux_config+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  os_profile_linux_config:: {
-    new(
-      disable_password_authentication,
-      ssh_keys=null
-    ):: std.prune(a={
-      disable_password_authentication: disable_password_authentication,
-      ssh_keys: ssh_keys,
-    }),
-    ssh_keys:: {
-      new(
-        key_data,
-        path
-      ):: std.prune(a={
-        key_data: key_data,
-        path: path,
-      }),
-    },
-  },
-  withPlan(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          plan: value,
-        },
-      },
-    },
-  },
-  withPlanMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          plan+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  plan:: {
-    new(
-      name,
-      product,
-      publisher
-    ):: std.prune(a={
-      name: name,
-      product: product,
-      publisher: publisher,
-    }),
-  },
-  withStorageImageReference(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          storage_image_reference: value,
-        },
-      },
-    },
-  },
-  withStorageImageReferenceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine+: {
-        [resourceLabel]+: {
-          storage_image_reference+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  storage_image_reference:: {
-    new(
-      version=null,
-      offer=null,
-      publisher=null,
-      sku=null
-    ):: std.prune(a={
-      version: version,
-      offer: offer,
-      publisher: publisher,
-      sku: sku,
+      admin_username: admin_username,
+      computer_name: computer_name,
     }),
   },
 }

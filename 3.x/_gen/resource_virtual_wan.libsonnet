@@ -2,61 +2,88 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    office365_local_breakout_category=null,
     tags=null,
+    name,
+    resource_group_name,
     type=null,
     allow_branch_to_branch_traffic=null,
     disable_vpn_encryption=null,
     location,
-    name,
-    resource_group_name,
+    office365_local_breakout_category=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_wan', label=resourceLabel, attrs=self.newAttrs(
-    office365_local_breakout_category=office365_local_breakout_category,
     tags=tags,
+    name=name,
+    resource_group_name=resource_group_name,
     type=type,
     allow_branch_to_branch_traffic=allow_branch_to_branch_traffic,
     disable_vpn_encryption=disable_vpn_encryption,
     location=location,
-    name=name,
-    resource_group_name=resource_group_name,
+    office365_local_breakout_category=office365_local_breakout_category,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    location,
+    disable_vpn_encryption=null,
     name,
+    resource_group_name,
+    type=null,
+    location,
     office365_local_breakout_category=null,
     tags=null,
-    type=null,
     allow_branch_to_branch_traffic=null,
-    disable_vpn_encryption=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    location: location,
+    disable_vpn_encryption: disable_vpn_encryption,
     name: name,
+    resource_group_name: resource_group_name,
+    type: type,
+    location: location,
     office365_local_breakout_category: office365_local_breakout_category,
     tags: tags,
-    type: type,
     allow_branch_to_branch_traffic: allow_branch_to_branch_traffic,
-    disable_vpn_encryption: disable_vpn_encryption,
     timeouts: timeouts,
   }),
-  withOffice365LocalBreakoutCategory(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          office365_local_breakout_category: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withDisableVpnEncryption(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          disable_vpn_encryption: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -79,38 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisableVpnEncryption(resourceLabel, value):: {
+  withOffice365LocalBreakoutCategory(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
-          disable_vpn_encryption: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          name: value,
+          office365_local_breakout_category: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

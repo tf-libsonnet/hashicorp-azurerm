@@ -24,16 +24,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     partner_managed_instance_id,
     readonly_endpoint_failover_policy_enabled=null,
-    read_write_endpoint_failover_policy=null,
-    timeouts=null
+    timeouts=null,
+    read_write_endpoint_failover_policy=null
   ):: std.prune(a={
     location: location,
     managed_instance_id: managed_instance_id,
     name: name,
     partner_managed_instance_id: partner_managed_instance_id,
     readonly_endpoint_failover_policy_enabled: readonly_endpoint_failover_policy_enabled,
-    read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
     timeouts: timeouts,
+    read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
   }),
   withReadonlyEndpointFailoverPolicyEnabled(resourceLabel, value):: {
     resource+: {
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

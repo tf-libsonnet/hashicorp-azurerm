@@ -2,113 +2,77 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    interval=null,
-    start_time=null,
-    automation_account_name,
-    frequency,
-    description=null,
-    name,
-    week_days=null,
     expiry_time=null,
+    week_days=null,
+    description=null,
+    interval=null,
     month_days=null,
+    start_time=null,
     resource_group_name,
+    automation_account_name,
+    name,
     timezone=null,
+    frequency,
     monthly_occurrence=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_schedule', label=resourceLabel, attrs=self.newAttrs(
-    interval=interval,
-    start_time=start_time,
-    automation_account_name=automation_account_name,
-    frequency=frequency,
-    description=description,
-    name=name,
-    week_days=week_days,
     expiry_time=expiry_time,
+    week_days=week_days,
+    description=description,
+    interval=interval,
     month_days=month_days,
+    start_time=start_time,
     resource_group_name=resource_group_name,
+    automation_account_name=automation_account_name,
+    name=name,
     timezone=timezone,
+    frequency=frequency,
     monthly_occurrence=monthly_occurrence,
     timeouts=timeouts
   )),
   newAttrs(
-    timezone=null,
-    frequency,
-    week_days=null,
-    resource_group_name,
-    interval=null,
-    name,
-    automation_account_name,
     expiry_time=null,
-    month_days=null,
+    name,
     start_time=null,
+    timezone=null,
+    week_days=null,
+    automation_account_name,
+    frequency,
+    resource_group_name,
     description=null,
+    interval=null,
+    month_days=null,
     monthly_occurrence=null,
     timeouts=null
   ):: std.prune(a={
-    timezone: timezone,
-    frequency: frequency,
-    week_days: week_days,
-    resource_group_name: resource_group_name,
-    interval: interval,
-    name: name,
-    automation_account_name: automation_account_name,
     expiry_time: expiry_time,
-    month_days: month_days,
+    name: name,
     start_time: start_time,
+    timezone: timezone,
+    week_days: week_days,
+    automation_account_name: automation_account_name,
+    frequency: frequency,
+    resource_group_name: resource_group_name,
     description: description,
+    interval: interval,
+    month_days: month_days,
     monthly_occurrence: monthly_occurrence,
     timeouts: timeouts,
   }),
+  withTimezone(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          timezone: value,
+        },
+      },
+    },
+  },
   withWeekDays(resourceLabel, value):: {
     resource+: {
       azurerm_automation_schedule+: {
         [resourceLabel]+: {
           week_days: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withInterval(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          interval: value,
-        },
-      },
-    },
-  },
-  withAutomationAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          automation_account_name: value,
-        },
-      },
-    },
-  },
-  withMonthDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          month_days: value,
-        },
-      },
-    },
-  },
-  withFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          frequency: value,
         },
       },
     },
@@ -140,11 +104,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimezone(resourceLabel, value):: {
+  withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_schedule+: {
         [resourceLabel]+: {
-          timezone: value,
+          automation_account_name: value,
         },
       },
     },
@@ -157,6 +121,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withMonthDays(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          month_days: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withInterval(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          interval: value,
+        },
+      },
+    },
+  },
+  withFrequency(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          frequency: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_schedule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
+    }),
   },
   withMonthlyOccurrence(resourceLabel, value):: {
     resource+: {
@@ -183,37 +214,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       day: day,
       occurrence: occurrence,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_schedule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
     }),
   },
 }

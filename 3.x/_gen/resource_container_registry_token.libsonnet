@@ -17,20 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     resource_group_name,
     scope_map_id,
     container_registry_name,
     enabled=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     resource_group_name: resource_group_name,
     scope_map_id: scope_map_id,
     container_registry_name: container_registry_name,
     enabled: enabled,
+    name: name,
     timeouts: timeouts,
   }),
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_token+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_token+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

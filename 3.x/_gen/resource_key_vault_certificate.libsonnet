@@ -2,40 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    key_vault_id,
+    name,
+    tags=null,
+    certificate_policy=null,
+    timeouts=null,
+    certificate=null
+  ):: tf.withResource(type='azurerm_key_vault_certificate', label=resourceLabel, attrs=self.newAttrs(
+    key_vault_id=key_vault_id,
+    name=name,
+    tags=tags,
+    certificate_policy=certificate_policy,
+    timeouts=timeouts,
+    certificate=certificate
+  )),
+  newAttrs(
     name,
     tags=null,
     key_vault_id,
     certificate=null,
     certificate_policy=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_certificate', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    tags=tags,
-    key_vault_id=key_vault_id,
-    certificate=certificate,
-    certificate_policy=certificate_policy,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    name,
-    tags=null,
-    key_vault_id,
-    certificate_policy=null,
-    timeouts=null,
-    certificate=null
   ):: std.prune(a={
     name: name,
     tags: tags,
     key_vault_id: key_vault_id,
+    certificate: certificate,
     certificate_policy: certificate_policy,
     timeouts: timeouts,
-    certificate: certificate,
   }),
-  withTags(resourceLabel, value):: {
+  withKeyVaultId(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_certificate+: {
         [resourceLabel]+: {
-          tags: value,
+          key_vault_id: value,
         },
       },
     },
@@ -49,11 +49,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKeyVaultId(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_certificate+: {
         [resourceLabel]+: {
-          key_vault_id: value,
+          tags: value,
         },
       },
     },
@@ -78,31 +78,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   certificate_policy:: {
     new(
+      key_properties=null,
       lifetime_action=null,
       secret_properties=null,
       x509_certificate_properties=null,
-      issuer_parameters=null,
-      key_properties=null
+      issuer_parameters=null
     ):: std.prune(a={
+      key_properties: key_properties,
       lifetime_action: lifetime_action,
       secret_properties: secret_properties,
       x509_certificate_properties: x509_certificate_properties,
       issuer_parameters: issuer_parameters,
-      key_properties: key_properties,
     }),
+    issuer_parameters:: {
+      new(
+        name
+      ):: std.prune(a={
+        name: name,
+      }),
+    },
     key_properties:: {
       new(
+        key_type,
+        reuse_key,
         curve=null,
         exportable,
-        key_size=null,
-        key_type,
-        reuse_key
+        key_size=null
       ):: std.prune(a={
+        key_type: key_type,
+        reuse_key: reuse_key,
         curve: curve,
         exportable: exportable,
         key_size: key_size,
-        key_type: key_type,
-        reuse_key: reuse_key,
       }),
     },
     lifetime_action:: {
@@ -113,20 +120,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         action: action,
         trigger: trigger,
       }),
+      trigger:: {
+        new(
+          days_before_expiry=null,
+          lifetime_percentage=null
+        ):: std.prune(a={
+          days_before_expiry: days_before_expiry,
+          lifetime_percentage: lifetime_percentage,
+        }),
+      },
       action:: {
         new(
           action_type
         ):: std.prune(a={
           action_type: action_type,
-        }),
-      },
-      trigger:: {
-        new(
-          lifetime_percentage=null,
-          days_before_expiry=null
-        ):: std.prune(a={
-          lifetime_percentage: lifetime_percentage,
-          days_before_expiry: days_before_expiry,
         }),
       },
     },
@@ -139,36 +146,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     x509_certificate_properties:: {
       new(
+        validity_in_months,
         extended_key_usage=null,
         key_usage,
         subject,
-        validity_in_months,
         subject_alternative_names=null
       ):: std.prune(a={
+        validity_in_months: validity_in_months,
         extended_key_usage: extended_key_usage,
         key_usage: key_usage,
         subject: subject,
-        validity_in_months: validity_in_months,
         subject_alternative_names: subject_alternative_names,
       }),
       subject_alternative_names:: {
         new(
-          upns=null,
           dns_names=null,
-          emails=null
+          emails=null,
+          upns=null
         ):: std.prune(a={
-          upns: upns,
           dns_names: dns_names,
           emails: emails,
+          upns: upns,
         }),
       },
-    },
-    issuer_parameters:: {
-      new(
-        name
-      ):: std.prune(a={
-        name: name,
-      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -191,15 +191,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
   withCertificate(resourceLabel, value):: {

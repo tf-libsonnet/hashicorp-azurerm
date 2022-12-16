@@ -6,31 +6,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     send_aad_logs=null,
     send_activity_logs=null,
     send_subscription_logs=null,
-    timeouts=null,
-    tag_filter=null
+    tag_filter=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_logz_sub_account_tag_rule', label=resourceLabel, attrs=self.newAttrs(
     logz_sub_account_id=logz_sub_account_id,
     send_aad_logs=send_aad_logs,
     send_activity_logs=send_activity_logs,
     send_subscription_logs=send_subscription_logs,
-    timeouts=timeouts,
-    tag_filter=tag_filter
+    tag_filter=tag_filter,
+    timeouts=timeouts
   )),
   newAttrs(
-    logz_sub_account_id,
     send_aad_logs=null,
     send_activity_logs=null,
     send_subscription_logs=null,
+    logz_sub_account_id,
     tag_filter=null,
     timeouts=null
   ):: std.prune(a={
-    logz_sub_account_id: logz_sub_account_id,
     send_aad_logs: send_aad_logs,
     send_activity_logs: send_activity_logs,
     send_subscription_logs: send_subscription_logs,
+    logz_sub_account_id: logz_sub_account_id,
     tag_filter: tag_filter,
     timeouts: timeouts,
   }),
+  withLogzSubAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_sub_account_tag_rule+: {
+        [resourceLabel]+: {
+          logz_sub_account_id: value,
+        },
+      },
+    },
+  },
   withSendAadLogs(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account_tag_rule+: {
@@ -57,46 +66,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withLogzSubAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_sub_account_tag_rule+: {
-        [resourceLabel]+: {
-          logz_sub_account_id: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_sub_account_tag_rule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_sub_account_tag_rule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withTagFilter(resourceLabel, value):: {
     resource+: {
@@ -125,6 +94,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       action: action,
       name: name,
       value: value,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_sub_account_tag_rule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_sub_account_tag_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

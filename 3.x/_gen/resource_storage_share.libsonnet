@@ -2,75 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    access_tier=null,
-    name,
-    storage_account_name,
     enabled_protocol=null,
     metadata=null,
+    name,
+    access_tier=null,
+    storage_account_name,
     quota,
     acl=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_share', label=resourceLabel, attrs=self.newAttrs(
-    access_tier=access_tier,
-    name=name,
-    storage_account_name=storage_account_name,
     enabled_protocol=enabled_protocol,
     metadata=metadata,
+    name=name,
+    access_tier=access_tier,
+    storage_account_name=storage_account_name,
     quota=quota,
     acl=acl,
     timeouts=timeouts
   )),
   newAttrs(
-    access_tier=null,
     name,
+    quota,
+    access_tier=null,
+    storage_account_name,
     enabled_protocol=null,
     metadata=null,
-    quota,
-    storage_account_name,
-    timeouts=null,
-    acl=null
+    acl=null,
+    timeouts=null
   ):: std.prune(a={
-    access_tier: access_tier,
     name: name,
+    quota: quota,
+    access_tier: access_tier,
+    storage_account_name: storage_account_name,
     enabled_protocol: enabled_protocol,
     metadata: metadata,
-    quota: quota,
-    storage_account_name: storage_account_name,
-    timeouts: timeouts,
     acl: acl,
+    timeouts: timeouts,
   }),
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share+: {
-        [resourceLabel]+: {
-          metadata: value,
-        },
-      },
-    },
-  },
-  withQuota(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share+: {
-        [resourceLabel]+: {
-          quota: value,
-        },
-      },
-    },
-  },
   withAccessTier(resourceLabel, value):: {
     resource+: {
       azurerm_storage_share+: {
         [resourceLabel]+: {
           access_tier: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -89,6 +62,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_storage_share+: {
         [resourceLabel]+: {
           enabled_protocol: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share+: {
+        [resourceLabel]+: {
+          metadata: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withQuota(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share+: {
+        [resourceLabel]+: {
+          quota: value,
         },
       },
     },
@@ -119,13 +119,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     access_policy:: {
       new(
-        expiry=null,
         permissions,
-        start=null
+        start=null,
+        expiry=null
       ):: std.prune(a={
-        expiry: expiry,
         permissions: permissions,
         start: start,
+        expiry: expiry,
       }),
     },
   },
@@ -149,15 +149,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

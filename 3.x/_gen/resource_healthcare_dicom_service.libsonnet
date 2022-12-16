@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    workspace_id,
     location,
     name,
-    tags=null,
     public_network_access_enabled=null,
-    workspace_id,
+    tags=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_dicom_service', label=resourceLabel, attrs=self.newAttrs(
+    workspace_id=workspace_id,
     location=location,
     name=name,
-    tags=tags,
     public_network_access_enabled=public_network_access_enabled,
-    workspace_id=workspace_id,
+    tags=tags,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    tags=null,
-    public_network_access_enabled=null,
     workspace_id,
     location,
+    public_network_access_enabled=null,
+    tags=null,
+    name,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    tags: tags,
-    public_network_access_enabled: public_network_access_enabled,
     workspace_id: workspace_id,
     location: location,
+    public_network_access_enabled: public_network_access_enabled,
+    tags: tags,
+    name: name,
     identity: identity,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_dicom_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_dicom_service+: {
@@ -53,11 +44,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_dicom_service+: {
         [resourceLabel]+: {
-          tags: value,
+          location: value,
         },
       },
     },
@@ -67,6 +58,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_healthcare_dicom_service+: {
         [resourceLabel]+: {
           public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_dicom_service+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

@@ -2,13 +2,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     profile_name,
+    name,
     resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_cdn_frontdoor_origin_group', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
     profile_name=profile_name,
+    name=name,
     resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_cdn_frontdoor_origin_group+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withProfileName(dataSrcLabel, value):: {
     data+: {
       azurerm_cdn_frontdoor_origin_group+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cdn_frontdoor_origin_group+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_cdn_frontdoor_origin_group+: {
-        [dataSrcLabel]+: {
-          name: value,
         },
       },
     },

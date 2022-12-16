@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    context=null,
     importance=null,
+    workload_group_id,
+    context=null,
+    end_time=null,
     label=null,
+    member_name,
     name,
     start_time=null,
-    workload_group_id,
-    end_time=null,
-    member_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_sql_pool_workload_classifier', label=resourceLabel, attrs=self.newAttrs(
-    context=context,
     importance=importance,
+    workload_group_id=workload_group_id,
+    context=context,
+    end_time=end_time,
     label=label,
+    member_name=member_name,
     name=name,
     start_time=start_time,
-    workload_group_id=workload_group_id,
-    end_time=end_time,
-    member_name=member_name,
     timeouts=timeouts
   )),
   newAttrs(
-    end_time=null,
-    importance=null,
-    label=null,
+    member_name,
     name,
     start_time=null,
-    workload_group_id,
     context=null,
-    member_name,
+    importance=null,
+    workload_group_id,
+    end_time=null,
+    label=null,
     timeouts=null
   ):: std.prune(a={
-    end_time: end_time,
-    importance: importance,
-    label: label,
+    member_name: member_name,
     name: name,
     start_time: start_time,
-    workload_group_id: workload_group_id,
     context: context,
-    member_name: member_name,
+    importance: importance,
+    workload_group_id: workload_group_id,
+    end_time: end_time,
+    label: label,
     timeouts: timeouts,
   }),
-  withContext(resourceLabel, value):: {
+  withWorkloadGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool_workload_classifier+: {
         [resourceLabel]+: {
-          context: value,
+          workload_group_id: value,
         },
       },
     },
@@ -70,6 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withMemberName(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool_workload_classifier+: {
+        [resourceLabel]+: {
+          member_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool_workload_classifier+: {
@@ -88,11 +97,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkloadGroupId(resourceLabel, value):: {
+  withContext(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool_workload_classifier+: {
         [resourceLabel]+: {
-          workload_group_id: value,
+          context: value,
         },
       },
     },
@@ -102,15 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_sql_pool_workload_classifier+: {
         [resourceLabel]+: {
           end_time: value,
-        },
-      },
-    },
-  },
-  withMemberName(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool_workload_classifier+: {
-        [resourceLabel]+: {
-          member_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

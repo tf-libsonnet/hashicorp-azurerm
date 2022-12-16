@@ -2,68 +2,104 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    sync_message_ttl=null,
+    client_token_ids=null,
     container_registry_id,
-    mode=null,
     name,
-    parent_registry_id=null,
+    sync_message_ttl=null,
+    sync_schedule=null,
+    sync_window=null,
     audit_log_enabled=null,
     log_level=null,
-    sync_window=null,
-    client_token_ids=null,
-    sync_schedule=null,
+    parent_registry_id=null,
     sync_token_id,
-    notification=null,
-    timeouts=null
+    mode=null,
+    timeouts=null,
+    notification=null
   ):: tf.withResource(type='azurerm_container_connected_registry', label=resourceLabel, attrs=self.newAttrs(
-    sync_message_ttl=sync_message_ttl,
+    client_token_ids=client_token_ids,
     container_registry_id=container_registry_id,
-    mode=mode,
     name=name,
-    parent_registry_id=parent_registry_id,
+    sync_message_ttl=sync_message_ttl,
+    sync_schedule=sync_schedule,
+    sync_window=sync_window,
     audit_log_enabled=audit_log_enabled,
     log_level=log_level,
-    sync_window=sync_window,
-    client_token_ids=client_token_ids,
-    sync_schedule=sync_schedule,
+    parent_registry_id=parent_registry_id,
     sync_token_id=sync_token_id,
-    notification=notification,
-    timeouts=timeouts
+    mode=mode,
+    timeouts=timeouts,
+    notification=notification
   )),
   newAttrs(
+    sync_schedule=null,
+    container_registry_id,
     log_level=null,
-    mode=null,
-    name,
+    parent_registry_id=null,
     sync_message_ttl=null,
     sync_window=null,
     audit_log_enabled=null,
-    sync_schedule=null,
-    parent_registry_id=null,
-    client_token_ids=null,
-    container_registry_id,
+    mode=null,
     sync_token_id,
+    client_token_ids=null,
+    name,
     notification=null,
     timeouts=null
   ):: std.prune(a={
+    sync_schedule: sync_schedule,
+    container_registry_id: container_registry_id,
     log_level: log_level,
-    mode: mode,
-    name: name,
+    parent_registry_id: parent_registry_id,
     sync_message_ttl: sync_message_ttl,
     sync_window: sync_window,
     audit_log_enabled: audit_log_enabled,
-    sync_schedule: sync_schedule,
-    parent_registry_id: parent_registry_id,
-    client_token_ids: client_token_ids,
-    container_registry_id: container_registry_id,
+    mode: mode,
     sync_token_id: sync_token_id,
+    client_token_ids: client_token_ids,
+    name: name,
     notification: notification,
     timeouts: timeouts,
   }),
-  withParentRegistryId(resourceLabel, value):: {
+  withLogLevel(resourceLabel, value):: {
     resource+: {
       azurerm_container_connected_registry+: {
         [resourceLabel]+: {
-          parent_registry_id: value,
+          log_level: value,
+        },
+      },
+    },
+  },
+  withSyncMessageTtl(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_connected_registry+: {
+        [resourceLabel]+: {
+          sync_message_ttl: value,
+        },
+      },
+    },
+  },
+  withSyncSchedule(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_connected_registry+: {
+        [resourceLabel]+: {
+          sync_schedule: value,
+        },
+      },
+    },
+  },
+  withAuditLogEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_connected_registry+: {
+        [resourceLabel]+: {
+          audit_log_enabled: value,
+        },
+      },
+    },
+  },
+  withMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_connected_registry+: {
+        [resourceLabel]+: {
+          mode: value,
         },
       },
     },
@@ -77,11 +113,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogLevel(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_container_connected_registry+: {
         [resourceLabel]+: {
-          log_level: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withParentRegistryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_connected_registry+: {
+        [resourceLabel]+: {
+          parent_registry_id: value,
         },
       },
     },
@@ -104,56 +149,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAuditLogEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_connected_registry+: {
-        [resourceLabel]+: {
-          audit_log_enabled: value,
-        },
-      },
-    },
-  },
   withContainerRegistryId(resourceLabel, value):: {
     resource+: {
       azurerm_container_connected_registry+: {
         [resourceLabel]+: {
           container_registry_id: value,
-        },
-      },
-    },
-  },
-  withMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_connected_registry+: {
-        [resourceLabel]+: {
-          mode: value,
-        },
-      },
-    },
-  },
-  withSyncSchedule(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_connected_registry+: {
-        [resourceLabel]+: {
-          sync_schedule: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_connected_registry+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSyncMessageTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_connected_registry+: {
-        [resourceLabel]+: {
-          sync_message_ttl: value,
         },
       },
     },
@@ -209,15 +209,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

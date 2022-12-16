@@ -2,160 +2,88 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    idle_timeout_in_minutes=null,
-    sku=null,
-    ip_version=null,
-    reverse_fqdn=null,
-    ddos_protection_plan_id=null,
-    ip_tags=null,
-    sku_tier=null,
-    name,
-    domain_name_label=null,
-    resource_group_name,
-    tags=null,
     public_ip_prefix_id=null,
+    domain_name_label=null,
+    sku_tier=null,
     location,
-    zones=null,
-    edge_zone=null,
-    ddos_protection_mode=null,
     allocation_method,
+    ip_tags=null,
+    reverse_fqdn=null,
+    sku=null,
+    name,
+    ip_version=null,
+    ddos_protection_mode=null,
+    tags=null,
+    resource_group_name,
+    ddos_protection_plan_id=null,
+    edge_zone=null,
+    idle_timeout_in_minutes=null,
+    zones=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_public_ip', label=resourceLabel, attrs=self.newAttrs(
-    idle_timeout_in_minutes=idle_timeout_in_minutes,
-    sku=sku,
-    ip_version=ip_version,
-    reverse_fqdn=reverse_fqdn,
-    ddos_protection_plan_id=ddos_protection_plan_id,
-    ip_tags=ip_tags,
-    sku_tier=sku_tier,
-    name=name,
-    domain_name_label=domain_name_label,
-    resource_group_name=resource_group_name,
-    tags=tags,
     public_ip_prefix_id=public_ip_prefix_id,
+    domain_name_label=domain_name_label,
+    sku_tier=sku_tier,
     location=location,
-    zones=zones,
-    edge_zone=edge_zone,
-    ddos_protection_mode=ddos_protection_mode,
     allocation_method=allocation_method,
+    ip_tags=ip_tags,
+    reverse_fqdn=reverse_fqdn,
+    sku=sku,
+    name=name,
+    ip_version=ip_version,
+    ddos_protection_mode=ddos_protection_mode,
+    tags=tags,
+    resource_group_name=resource_group_name,
+    ddos_protection_plan_id=ddos_protection_plan_id,
+    edge_zone=edge_zone,
+    idle_timeout_in_minutes=idle_timeout_in_minutes,
+    zones=zones,
     timeouts=timeouts
   )),
   newAttrs(
-    sku=null,
-    public_ip_prefix_id=null,
-    sku_tier=null,
     location,
-    ddos_protection_mode=null,
-    ip_tags=null,
-    ip_version=null,
+    allocation_method,
     name,
-    edge_zone=null,
-    resource_group_name,
+    public_ip_prefix_id=null,
     tags=null,
     idle_timeout_in_minutes=null,
-    zones=null,
-    allocation_method,
+    sku=null,
+    ip_version=null,
+    ddos_protection_mode=null,
     reverse_fqdn=null,
+    sku_tier=null,
+    zones=null,
+    ip_tags=null,
     ddos_protection_plan_id=null,
     domain_name_label=null,
+    resource_group_name,
+    edge_zone=null,
     timeouts=null
   ):: std.prune(a={
-    sku: sku,
-    public_ip_prefix_id: public_ip_prefix_id,
-    sku_tier: sku_tier,
     location: location,
-    ddos_protection_mode: ddos_protection_mode,
-    ip_tags: ip_tags,
-    ip_version: ip_version,
+    allocation_method: allocation_method,
     name: name,
-    edge_zone: edge_zone,
-    resource_group_name: resource_group_name,
+    public_ip_prefix_id: public_ip_prefix_id,
     tags: tags,
     idle_timeout_in_minutes: idle_timeout_in_minutes,
-    zones: zones,
-    allocation_method: allocation_method,
+    sku: sku,
+    ip_version: ip_version,
+    ddos_protection_mode: ddos_protection_mode,
     reverse_fqdn: reverse_fqdn,
+    sku_tier: sku_tier,
+    zones: zones,
+    ip_tags: ip_tags,
     ddos_protection_plan_id: ddos_protection_plan_id,
     domain_name_label: domain_name_label,
+    resource_group_name: resource_group_name,
+    edge_zone: edge_zone,
     timeouts: timeouts,
   }),
-  withIdleTimeoutInMinutes(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          idle_timeout_in_minutes: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withDdosProtectionMode(resourceLabel, value):: {
     resource+: {
       azurerm_public_ip+: {
         [resourceLabel]+: {
           ddos_protection_mode: value,
-        },
-      },
-    },
-  },
-  withIpVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          ip_version: value,
-        },
-      },
-    },
-  },
-  withPublicIpPrefixId(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          public_ip_prefix_id: value,
-        },
-      },
-    },
-  },
-  withDdosProtectionPlanId(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          ddos_protection_plan_id: value,
-        },
-      },
-    },
-  },
-  withZones(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          zones: value,
-        },
-      },
-    },
-  },
-  withAllocationMethod(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          allocation_method: value,
         },
       },
     },
@@ -169,47 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withReverseFqdn(resourceLabel, value):: {
+  withDdosProtectionPlanId(resourceLabel, value):: {
     resource+: {
       azurerm_public_ip+: {
         [resourceLabel]+: {
-          reverse_fqdn: value,
+          ddos_protection_plan_id: value,
         },
       },
     },
   },
-  withSkuTier(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_public_ip+: {
         [resourceLabel]+: {
-          sku_tier: value,
-        },
-      },
-    },
-  },
-  withDomainNameLabel(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          domain_name_label: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          name: value,
         },
       },
     },
@@ -223,11 +124,110 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withSkuTier(resourceLabel, value):: {
     resource+: {
       azurerm_public_ip+: {
         [resourceLabel]+: {
-          name: value,
+          sku_tier: value,
+        },
+      },
+    },
+  },
+  withPublicIpPrefixId(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          public_ip_prefix_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withAllocationMethod(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          allocation_method: value,
+        },
+      },
+    },
+  },
+  withZones(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          zones: value,
+        },
+      },
+    },
+  },
+  withDomainNameLabel(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          domain_name_label: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withReverseFqdn(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          reverse_fqdn: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withIdleTimeoutInMinutes(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          idle_timeout_in_minutes: value,
+        },
+      },
+    },
+  },
+  withIpVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          ip_version: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -252,15 +252,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

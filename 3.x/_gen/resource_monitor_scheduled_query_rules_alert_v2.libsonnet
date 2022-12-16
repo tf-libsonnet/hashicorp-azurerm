@@ -2,114 +2,132 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    resource_group_name,
-    tags=null,
-    window_duration,
-    auto_mitigation_enabled=null,
-    workspace_alerts_storage_enabled=null,
-    evaluation_frequency=null,
-    name,
-    severity,
-    target_resource_types=null,
     location,
-    query_time_range_override=null,
-    display_name=null,
-    enabled=null,
     skip_query_validation=null,
-    mute_actions_after_alert_duration=null,
     scopes,
+    evaluation_frequency=null,
+    tags=null,
+    target_resource_types=null,
+    workspace_alerts_storage_enabled=null,
+    name,
+    resource_group_name,
+    severity,
+    description=null,
+    display_name=null,
+    window_duration,
+    enabled=null,
+    query_time_range_override=null,
+    auto_mitigation_enabled=null,
+    mute_actions_after_alert_duration=null,
     action=null,
     criteria=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_scheduled_query_rules_alert_v2', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    window_duration=window_duration,
-    auto_mitigation_enabled=auto_mitigation_enabled,
-    workspace_alerts_storage_enabled=workspace_alerts_storage_enabled,
-    evaluation_frequency=evaluation_frequency,
-    name=name,
-    severity=severity,
-    target_resource_types=target_resource_types,
     location=location,
-    query_time_range_override=query_time_range_override,
-    display_name=display_name,
-    enabled=enabled,
     skip_query_validation=skip_query_validation,
-    mute_actions_after_alert_duration=mute_actions_after_alert_duration,
     scopes=scopes,
+    evaluation_frequency=evaluation_frequency,
+    tags=tags,
+    target_resource_types=target_resource_types,
+    workspace_alerts_storage_enabled=workspace_alerts_storage_enabled,
+    name=name,
+    resource_group_name=resource_group_name,
+    severity=severity,
+    description=description,
+    display_name=display_name,
+    window_duration=window_duration,
+    enabled=enabled,
+    query_time_range_override=query_time_range_override,
+    auto_mitigation_enabled=auto_mitigation_enabled,
+    mute_actions_after_alert_duration=mute_actions_after_alert_duration,
     action=action,
     criteria=criteria,
     timeouts=timeouts
   )),
   newAttrs(
-    window_duration,
-    severity,
-    enabled=null,
-    name,
-    scopes,
-    query_time_range_override=null,
     mute_actions_after_alert_duration=null,
-    resource_group_name,
-    description=null,
-    display_name=null,
-    location,
-    tags=null,
-    skip_query_validation=null,
-    target_resource_types=null,
+    scopes,
     auto_mitigation_enabled=null,
     workspace_alerts_storage_enabled=null,
+    tags=null,
+    query_time_range_override=null,
+    display_name=null,
+    enabled=null,
+    name,
+    window_duration,
+    skip_query_validation=null,
+    resource_group_name,
+    description=null,
     evaluation_frequency=null,
+    location,
+    severity,
+    target_resource_types=null,
     action=null,
     criteria=null,
     timeouts=null
   ):: std.prune(a={
-    window_duration: window_duration,
-    severity: severity,
-    enabled: enabled,
-    name: name,
-    scopes: scopes,
-    query_time_range_override: query_time_range_override,
     mute_actions_after_alert_duration: mute_actions_after_alert_duration,
-    resource_group_name: resource_group_name,
-    description: description,
-    display_name: display_name,
-    location: location,
-    tags: tags,
-    skip_query_validation: skip_query_validation,
-    target_resource_types: target_resource_types,
+    scopes: scopes,
     auto_mitigation_enabled: auto_mitigation_enabled,
     workspace_alerts_storage_enabled: workspace_alerts_storage_enabled,
+    tags: tags,
+    query_time_range_override: query_time_range_override,
+    display_name: display_name,
+    enabled: enabled,
+    name: name,
+    window_duration: window_duration,
+    skip_query_validation: skip_query_validation,
+    resource_group_name: resource_group_name,
+    description: description,
     evaluation_frequency: evaluation_frequency,
+    location: location,
+    severity: severity,
+    target_resource_types: target_resource_types,
     action: action,
     criteria: criteria,
     timeouts: timeouts,
   }),
-  withMuteActionsAfterAlertDuration(resourceLabel, value):: {
+  withTargetResourceTypes(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert_v2+: {
         [resourceLabel]+: {
-          mute_actions_after_alert_duration: value,
+          target_resource_types: value,
         },
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withSeverity(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert_v2+: {
         [resourceLabel]+: {
-          description: value,
+          severity: value,
         },
       },
     },
   },
-  withWorkspaceAlertsStorageEnabled(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert_v2+: {
         [resourceLabel]+: {
-          workspace_alerts_storage_enabled: value,
+          enabled: value,
+        },
+      },
+    },
+  },
+  withEvaluationFrequency(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          evaluation_frequency: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -132,92 +150,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetResourceTypes(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          target_resource_types: value,
-        },
-      },
-    },
-  },
-  withSkipQueryValidation(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          skip_query_validation: value,
-        },
-      },
-    },
-  },
   withAutoMitigationEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert_v2+: {
         [resourceLabel]+: {
           auto_mitigation_enabled: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withScopes(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          scopes: value,
-        },
-      },
-    },
-  },
-  withWindowDuration(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          window_duration: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSeverity(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          severity: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withEvaluationFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          evaluation_frequency: value,
         },
       },
     },
@@ -231,6 +168,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withScopes(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          scopes: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withMuteActionsAfterAlertDuration(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          mute_actions_after_alert_duration: value,
+        },
+      },
+    },
+  },
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          display_name: value,
+        },
+      },
+    },
+  },
+  withWorkspaceAlertsStorageEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          workspace_alerts_storage_enabled: value,
+        },
+      },
+    },
+  },
   withQueryTimeRangeOverride(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_scheduled_query_rules_alert_v2+: {
@@ -239,6 +221,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withWindowDuration(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          window_duration: value,
+        },
+      },
+    },
+  },
+  withSkipQueryValidation(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          skip_query_validation: value,
+        },
+      },
+    },
+  },
+  withAction(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          action: value,
+        },
+      },
+    },
+  },
+  withActionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_scheduled_query_rules_alert_v2+: {
+        [resourceLabel]+: {
+          action+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  action:: {
+    new(
+      action_groups=null,
+      custom_properties=null
+    ):: std.prune(a={
+      action_groups: action_groups,
+      custom_properties: custom_properties,
+    }),
   },
   withCriteria(resourceLabel, value):: {
     resource+: {
@@ -266,8 +293,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       query,
       resource_id_column=null,
       threshold,
-      failing_periods=null,
-      dimension=null
+      dimension=null,
+      failing_periods=null
     ):: std.prune(a={
       time_aggregation_method: time_aggregation_method,
       metric_measure_column: metric_measure_column,
@@ -275,18 +302,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       query: query,
       resource_id_column: resource_id_column,
       threshold: threshold,
-      failing_periods: failing_periods,
       dimension: dimension,
+      failing_periods: failing_periods,
     }),
     dimension:: {
       new(
-        name,
         operator,
-        values
+        values,
+        name
       ):: std.prune(a={
-        name: name,
         operator: operator,
         values: values,
+        name: name,
       }),
     },
     failing_periods:: {
@@ -319,42 +346,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
-    }),
-  },
-  withAction(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          action: value,
-        },
-      },
-    },
-  },
-  withActionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_scheduled_query_rules_alert_v2+: {
-        [resourceLabel]+: {
-          action+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  action:: {
-    new(
-      action_groups=null,
-      custom_properties=null
-    ):: std.prune(a={
-      action_groups: action_groups,
-      custom_properties: custom_properties,
+      update: update,
     }),
   },
 }

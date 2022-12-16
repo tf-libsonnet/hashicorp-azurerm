@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    virtual_network_id,
     dns_servers=null,
+    virtual_network_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_network_dns_servers', label=resourceLabel, attrs=self.newAttrs(virtual_network_id=virtual_network_id, dns_servers=dns_servers, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_virtual_network_dns_servers', label=resourceLabel, attrs=self.newAttrs(dns_servers=dns_servers, virtual_network_id=virtual_network_id, timeouts=timeouts)),
   newAttrs(
     dns_servers=null,
     virtual_network_id,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_network_id: virtual_network_id,
     timeouts: timeouts,
   }),
-  withVirtualNetworkId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_dns_servers+: {
-        [resourceLabel]+: {
-          virtual_network_id: value,
-        },
-      },
-    },
-  },
   withDnsServers(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_dns_servers+: {
         [resourceLabel]+: {
           dns_servers: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_dns_servers+: {
+        [resourceLabel]+: {
+          virtual_network_id: value,
         },
       },
     },
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

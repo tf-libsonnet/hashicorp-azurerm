@@ -13,25 +13,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    api_operation_id,
     display_name,
     name,
+    api_operation_id,
     timeouts=null
   ):: std.prune(a={
-    api_operation_id: api_operation_id,
     display_name: display_name,
     name: name,
+    api_operation_id: api_operation_id,
     timeouts: timeouts,
   }),
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_operation_tag+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_operation_tag+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_api_operation_tag+: {
         [resourceLabel]+: {
           api_operation_id: value,
+        },
+      },
+    },
+  },
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_operation_tag+: {
+        [resourceLabel]+: {
+          display_name: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

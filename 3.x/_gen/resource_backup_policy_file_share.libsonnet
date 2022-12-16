@@ -29,23 +29,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     recovery_vault_name,
     resource_group_name,
     timezone=null,
+    backup=null,
+    retention_daily=null,
     retention_monthly=null,
     retention_weekly=null,
     retention_yearly=null,
-    timeouts=null,
-    backup=null,
-    retention_daily=null
+    timeouts=null
   ):: std.prune(a={
     name: name,
     recovery_vault_name: recovery_vault_name,
     resource_group_name: resource_group_name,
     timezone: timezone,
+    backup: backup,
+    retention_daily: retention_daily,
     retention_monthly: retention_monthly,
     retention_weekly: retention_weekly,
     retention_yearly: retention_yearly,
     timeouts: timeouts,
-    backup: backup,
-    retention_daily: retention_daily,
   }),
   withTimezone(resourceLabel, value):: {
     resource+: {
@@ -83,64 +83,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRetentionWeekly(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_file_share+: {
-        [resourceLabel]+: {
-          retention_weekly: value,
-        },
-      },
-    },
-  },
-  withRetentionWeeklyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_file_share+: {
-        [resourceLabel]+: {
-          retention_weekly+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  retention_weekly:: {
-    new(
-      count,
-      weekdays
-    ):: std.prune(a={
-      count: count,
-      weekdays: weekdays,
-    }),
-  },
-  withRetentionYearly(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_file_share+: {
-        [resourceLabel]+: {
-          retention_yearly: value,
-        },
-      },
-    },
-  },
-  withRetentionYearlyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_policy_file_share+: {
-        [resourceLabel]+: {
-          retention_yearly+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  retention_yearly:: {
-    new(
-      count,
-      months,
-      weekdays,
-      weeks
-    ):: std.prune(a={
-      count: count,
-      months: months,
-      weekdays: weekdays,
-      weeks: weeks,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_backup_policy_file_share+: {
@@ -161,15 +103,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
   withBackup(resourceLabel, value):: {
@@ -192,11 +134,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   backup:: {
     new(
-      frequency,
-      time
+      time,
+      frequency
     ):: std.prune(a={
-      frequency: frequency,
       time: time,
+      frequency: frequency,
     }),
   },
   withRetentionDaily(resourceLabel, value):: {
@@ -251,6 +193,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       count: count,
       weekdays: weekdays,
       weeks: weeks,
+    }),
+  },
+  withRetentionWeekly(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_file_share+: {
+        [resourceLabel]+: {
+          retention_weekly: value,
+        },
+      },
+    },
+  },
+  withRetentionWeeklyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_file_share+: {
+        [resourceLabel]+: {
+          retention_weekly+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  retention_weekly:: {
+    new(
+      count,
+      weekdays
+    ):: std.prune(a={
+      count: count,
+      weekdays: weekdays,
+    }),
+  },
+  withRetentionYearly(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_file_share+: {
+        [resourceLabel]+: {
+          retention_yearly: value,
+        },
+      },
+    },
+  },
+  withRetentionYearlyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_policy_file_share+: {
+        [resourceLabel]+: {
+          retention_yearly+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  retention_yearly:: {
+    new(
+      weekdays,
+      weeks,
+      count,
+      months
+    ):: std.prune(a={
+      weekdays: weekdays,
+      weeks: weeks,
+      count: count,
+      months: months,
     }),
   },
 }

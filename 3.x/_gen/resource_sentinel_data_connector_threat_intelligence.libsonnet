@@ -13,25 +13,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    log_analytics_workspace_id,
     name,
     tenant_id=null,
+    log_analytics_workspace_id,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     tenant_id: tenant_id,
+    log_analytics_workspace_id: log_analytics_workspace_id,
     timeouts: timeouts,
   }),
-  withTenantId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_threat_intelligence+: {
-        [resourceLabel]+: {
-          tenant_id: value,
-        },
-      },
-    },
-  },
   withLogAnalyticsWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_threat_intelligence+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_data_connector_threat_intelligence+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withTenantId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_threat_intelligence+: {
+        [resourceLabel]+: {
+          tenant_id: value,
         },
       },
     },

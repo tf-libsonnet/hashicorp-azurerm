@@ -3,17 +3,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     storage_account_id,
-    timeouts=null,
-    rule=null
-  ):: tf.withResource(type='azurerm_storage_management_policy', label=resourceLabel, attrs=self.newAttrs(storage_account_id=storage_account_id, timeouts=timeouts, rule=rule)),
+    rule=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_storage_management_policy', label=resourceLabel, attrs=self.newAttrs(storage_account_id=storage_account_id, rule=rule, timeouts=timeouts)),
   newAttrs(
     storage_account_id,
-    timeouts=null,
-    rule=null
+    rule=null,
+    timeouts=null
   ):: std.prune(a={
     storage_account_id: storage_account_id,
-    timeouts: timeouts,
     rule: rule,
+    timeouts: timeouts,
   }),
   withStorageAccountId(resourceLabel, value):: {
     resource+: {
@@ -23,37 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_management_policy+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_management_policy+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withRule(resourceLabel, value):: {
     resource+: {
@@ -95,44 +64,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         snapshot: snapshot,
         version: version,
       }),
-      base_blob:: {
-        new(
-          delete_after_days_since_last_access_time_greater_than=null,
-          delete_after_days_since_creation_greater_than=null,
-          tier_to_archive_after_days_since_last_access_time_greater_than=null,
-          tier_to_archive_after_days_since_modification_greater_than=null,
-          tier_to_cool_after_days_since_last_access_time_greater_than=null,
-          tier_to_archive_after_days_since_creation_greater_than=null,
-          tier_to_cool_after_days_since_modification_greater_than=null,
-          delete_after_days_since_modification_greater_than=null,
-          tier_to_archive_after_days_since_last_tier_change_greater_than=null,
-          tier_to_cool_after_days_since_creation_greater_than=null
-        ):: std.prune(a={
-          delete_after_days_since_last_access_time_greater_than: delete_after_days_since_last_access_time_greater_than,
-          delete_after_days_since_creation_greater_than: delete_after_days_since_creation_greater_than,
-          tier_to_archive_after_days_since_last_access_time_greater_than: tier_to_archive_after_days_since_last_access_time_greater_than,
-          tier_to_archive_after_days_since_modification_greater_than: tier_to_archive_after_days_since_modification_greater_than,
-          tier_to_cool_after_days_since_last_access_time_greater_than: tier_to_cool_after_days_since_last_access_time_greater_than,
-          tier_to_archive_after_days_since_creation_greater_than: tier_to_archive_after_days_since_creation_greater_than,
-          tier_to_cool_after_days_since_modification_greater_than: tier_to_cool_after_days_since_modification_greater_than,
-          delete_after_days_since_modification_greater_than: delete_after_days_since_modification_greater_than,
-          tier_to_archive_after_days_since_last_tier_change_greater_than: tier_to_archive_after_days_since_last_tier_change_greater_than,
-          tier_to_cool_after_days_since_creation_greater_than: tier_to_cool_after_days_since_creation_greater_than,
-        }),
-      },
-      snapshot:: {
-        new(
-          change_tier_to_cool_after_days_since_creation=null,
-          delete_after_days_since_creation_greater_than=null,
-          tier_to_archive_after_days_since_last_tier_change_greater_than=null,
-          change_tier_to_archive_after_days_since_creation=null
-        ):: std.prune(a={
-          change_tier_to_cool_after_days_since_creation: change_tier_to_cool_after_days_since_creation,
-          delete_after_days_since_creation_greater_than: delete_after_days_since_creation_greater_than,
-          tier_to_archive_after_days_since_last_tier_change_greater_than: tier_to_archive_after_days_since_last_tier_change_greater_than,
-          change_tier_to_archive_after_days_since_creation: change_tier_to_archive_after_days_since_creation,
-        }),
-      },
       version:: {
         new(
           change_tier_to_archive_after_days_since_creation=null,
@@ -146,28 +77,97 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           tier_to_archive_after_days_since_last_tier_change_greater_than: tier_to_archive_after_days_since_last_tier_change_greater_than,
         }),
       },
+      base_blob:: {
+        new(
+          tier_to_cool_after_days_since_last_access_time_greater_than=null,
+          delete_after_days_since_last_access_time_greater_than=null,
+          delete_after_days_since_creation_greater_than=null,
+          tier_to_archive_after_days_since_modification_greater_than=null,
+          tier_to_cool_after_days_since_modification_greater_than=null,
+          tier_to_archive_after_days_since_last_tier_change_greater_than=null,
+          tier_to_cool_after_days_since_creation_greater_than=null,
+          tier_to_archive_after_days_since_creation_greater_than=null,
+          delete_after_days_since_modification_greater_than=null,
+          tier_to_archive_after_days_since_last_access_time_greater_than=null
+        ):: std.prune(a={
+          tier_to_cool_after_days_since_last_access_time_greater_than: tier_to_cool_after_days_since_last_access_time_greater_than,
+          delete_after_days_since_last_access_time_greater_than: delete_after_days_since_last_access_time_greater_than,
+          delete_after_days_since_creation_greater_than: delete_after_days_since_creation_greater_than,
+          tier_to_archive_after_days_since_modification_greater_than: tier_to_archive_after_days_since_modification_greater_than,
+          tier_to_cool_after_days_since_modification_greater_than: tier_to_cool_after_days_since_modification_greater_than,
+          tier_to_archive_after_days_since_last_tier_change_greater_than: tier_to_archive_after_days_since_last_tier_change_greater_than,
+          tier_to_cool_after_days_since_creation_greater_than: tier_to_cool_after_days_since_creation_greater_than,
+          tier_to_archive_after_days_since_creation_greater_than: tier_to_archive_after_days_since_creation_greater_than,
+          delete_after_days_since_modification_greater_than: delete_after_days_since_modification_greater_than,
+          tier_to_archive_after_days_since_last_access_time_greater_than: tier_to_archive_after_days_since_last_access_time_greater_than,
+        }),
+      },
+      snapshot:: {
+        new(
+          change_tier_to_archive_after_days_since_creation=null,
+          change_tier_to_cool_after_days_since_creation=null,
+          delete_after_days_since_creation_greater_than=null,
+          tier_to_archive_after_days_since_last_tier_change_greater_than=null
+        ):: std.prune(a={
+          change_tier_to_archive_after_days_since_creation: change_tier_to_archive_after_days_since_creation,
+          change_tier_to_cool_after_days_since_creation: change_tier_to_cool_after_days_since_creation,
+          delete_after_days_since_creation_greater_than: delete_after_days_since_creation_greater_than,
+          tier_to_archive_after_days_since_last_tier_change_greater_than: tier_to_archive_after_days_since_last_tier_change_greater_than,
+        }),
+      },
     },
     filters:: {
       new(
-        prefix_match=null,
         blob_types,
+        prefix_match=null,
         match_blob_index_tag=null
       ):: std.prune(a={
-        prefix_match: prefix_match,
         blob_types: blob_types,
+        prefix_match: prefix_match,
         match_blob_index_tag: match_blob_index_tag,
       }),
       match_blob_index_tag:: {
         new(
+          value,
           name,
-          operation=null,
-          value
+          operation=null
         ):: std.prune(a={
+          value: value,
           name: name,
           operation: operation,
-          value: value,
         }),
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_management_policy+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_management_policy+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
 }

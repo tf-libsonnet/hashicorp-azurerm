@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_dns_alias+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withMssqlServerId(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_dns_alias+: {
         [resourceLabel]+: {
           mssql_server_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_dns_alias+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

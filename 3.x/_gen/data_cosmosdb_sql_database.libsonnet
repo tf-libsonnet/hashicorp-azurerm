@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     account_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_cosmosdb_sql_database', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     account_name=account_name,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(

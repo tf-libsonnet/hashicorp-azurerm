@@ -2,60 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cleanup_enabled=null,
+    core_count=null,
     data_factory_id,
+    location,
+    name,
+    cleanup_enabled=null,
+    time_to_live_min=null,
     description=null,
     virtual_network_enabled=null,
     compute_type=null,
-    core_count=null,
-    location,
-    name,
-    time_to_live_min=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_integration_runtime_azure', label=resourceLabel, attrs=self.newAttrs(
-    cleanup_enabled=cleanup_enabled,
+    core_count=core_count,
     data_factory_id=data_factory_id,
+    location=location,
+    name=name,
+    cleanup_enabled=cleanup_enabled,
+    time_to_live_min=time_to_live_min,
     description=description,
     virtual_network_enabled=virtual_network_enabled,
     compute_type=compute_type,
-    core_count=core_count,
-    location=location,
-    name=name,
-    time_to_live_min=time_to_live_min,
     timeouts=timeouts
   )),
   newAttrs(
     core_count=null,
-    location,
-    time_to_live_min=null,
     data_factory_id,
     virtual_network_enabled=null,
-    compute_type=null,
-    name,
     description=null,
+    location,
+    name,
     cleanup_enabled=null,
+    compute_type=null,
+    time_to_live_min=null,
     timeouts=null
   ):: std.prune(a={
     core_count: core_count,
-    location: location,
-    time_to_live_min: time_to_live_min,
     data_factory_id: data_factory_id,
     virtual_network_enabled: virtual_network_enabled,
-    compute_type: compute_type,
-    name: name,
     description: description,
+    location: location,
+    name: name,
     cleanup_enabled: cleanup_enabled,
+    compute_type: compute_type,
+    time_to_live_min: time_to_live_min,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withVirtualNetworkEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure+: {
@@ -92,6 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure+: {
@@ -101,20 +101,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeToLiveMin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure+: {
-        [resourceLabel]+: {
-          time_to_live_min: value,
-        },
-      },
-    },
-  },
   withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure+: {
         [resourceLabel]+: {
           data_factory_id: value,
+        },
+      },
+    },
+  },
+  withTimeToLiveMin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure+: {
+        [resourceLabel]+: {
+          time_to_live_min: value,
         },
       },
     },

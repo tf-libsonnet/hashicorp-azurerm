@@ -2,78 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    template=null,
     location,
+    name,
     sku=null,
     resource_group_name,
     sub_domain,
     display_name=null,
     public_network_access_enabled=null,
-    name,
     tags=null,
+    template=null,
     timeouts=null,
     identity=null
   ):: tf.withResource(type='azurerm_iotcentral_application', label=resourceLabel, attrs=self.newAttrs(
-    template=template,
     location=location,
+    name=name,
     sku=sku,
     resource_group_name=resource_group_name,
     sub_domain=sub_domain,
     display_name=display_name,
     public_network_access_enabled=public_network_access_enabled,
-    name=name,
     tags=tags,
+    template=template,
     timeouts=timeouts,
     identity=identity
   )),
   newAttrs(
     sku=null,
-    name,
+    sub_domain,
     resource_group_name,
-    tags=null,
+    template=null,
     display_name=null,
     location,
+    name,
+    tags=null,
     public_network_access_enabled=null,
-    sub_domain,
-    template=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
     sku: sku,
-    name: name,
+    sub_domain: sub_domain,
     resource_group_name: resource_group_name,
-    tags: tags,
+    template: template,
     display_name: display_name,
     location: location,
+    name: name,
+    tags: tags,
     public_network_access_enabled: public_network_access_enabled,
-    sub_domain: sub_domain,
-    template: template,
     identity: identity,
     timeouts: timeouts,
   }),
-  withSubDomain(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application+: {
-        [resourceLabel]+: {
-          sub_domain: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_iotcentral_application+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -87,11 +69,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
   withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_iotcentral_application+: {
         [resourceLabel]+: {
           public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withSubDomain(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application+: {
+        [resourceLabel]+: {
+          sub_domain: value,
+        },
+      },
+    },
+  },
+  withTemplate(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application+: {
+        [resourceLabel]+: {
+          template: value,
         },
       },
     },
@@ -113,49 +131,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withTemplate(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application+: {
-        [resourceLabel]+: {
-          template: value,
-        },
-      },
-    },
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -186,6 +161,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
     }),
   },
 }

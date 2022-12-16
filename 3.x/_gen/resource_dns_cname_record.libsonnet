@@ -2,75 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    ttl,
-    record=null,
-    tags=null,
     target_resource_id=null,
+    ttl,
     zone_name,
     name,
+    tags=null,
     resource_group_name,
+    record=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dns_cname_record', label=resourceLabel, attrs=self.newAttrs(
-    ttl=ttl,
-    record=record,
-    tags=tags,
     target_resource_id=target_resource_id,
+    ttl=ttl,
     zone_name=zone_name,
     name=name,
+    tags=tags,
     resource_group_name=resource_group_name,
+    record=record,
     timeouts=timeouts
   )),
   newAttrs(
+    tags=null,
     name,
-    resource_group_name,
+    record=null,
+    target_resource_id=null,
     ttl,
     zone_name,
-    record=null,
-    tags=null,
-    target_resource_id=null,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    tags: tags,
     name: name,
-    resource_group_name: resource_group_name,
+    record: record,
+    target_resource_id: target_resource_id,
     ttl: ttl,
     zone_name: zone_name,
-    record: record,
-    tags: tags,
-    target_resource_id: target_resource_id,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_cname_record+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_dns_cname_record+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_cname_record+: {
-        [resourceLabel]+: {
-          ttl: value,
-        },
-      },
-    },
-  },
-  withRecord(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_cname_record+: {
-        [resourceLabel]+: {
-          record: value,
         },
       },
     },
@@ -84,6 +57,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withZoneName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_cname_record+: {
+        [resourceLabel]+: {
+          zone_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_cname_record+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withRecord(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_cname_record+: {
+        [resourceLabel]+: {
+          record: value,
+        },
+      },
+    },
+  },
   withTargetResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_dns_cname_record+: {
@@ -93,11 +93,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withZoneName(resourceLabel, value):: {
+  withTtl(resourceLabel, value):: {
     resource+: {
       azurerm_dns_cname_record+: {
         [resourceLabel]+: {
-          zone_name: value,
+          ttl: value,
         },
       },
     },

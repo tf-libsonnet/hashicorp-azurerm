@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    tags=null,
     name,
     resource_group_name,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_eventgrid_topic', label=dataSrcLabel, attrs=self.newAttrs(
-    tags=tags,
     name=name,
     resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_eventgrid_topic+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_eventgrid_topic+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventgrid_topic+: {
         [dataSrcLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_eventgrid_topic+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

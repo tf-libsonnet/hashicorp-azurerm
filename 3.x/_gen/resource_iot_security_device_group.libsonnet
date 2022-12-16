@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    iothub_id,
     name,
+    iothub_id,
+    range_rule=null,
     timeouts=null,
-    allow_rule=null,
-    range_rule=null
+    allow_rule=null
   ):: tf.withResource(type='azurerm_iot_security_device_group', label=resourceLabel, attrs=self.newAttrs(
-    iothub_id=iothub_id,
     name=name,
+    iothub_id=iothub_id,
+    range_rule=range_rule,
     timeouts=timeouts,
-    allow_rule=allow_rule,
-    range_rule=range_rule
+    allow_rule=allow_rule
   )),
   newAttrs(
     iothub_id,
@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     range_rule: range_rule,
     timeouts: timeouts,
   }),
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_device_group+: {
+        [resourceLabel]+: {
+          iothub_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_device_group+: {
@@ -36,14 +45,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIothubId(resourceLabel, value):: {
+  withAllowRule(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_device_group+: {
         [resourceLabel]+: {
-          iothub_id: value,
+          allow_rule: value,
         },
       },
     },
+  },
+  withAllowRuleMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_device_group+: {
+        [resourceLabel]+: {
+          allow_rule+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  allow_rule:: {
+    new(
+      processes_not_allowed=null,
+      connection_from_ips_not_allowed=null,
+      connection_to_ips_not_allowed=null,
+      local_users_not_allowed=null
+    ):: std.prune(a={
+      processes_not_allowed: processes_not_allowed,
+      connection_from_ips_not_allowed: connection_from_ips_not_allowed,
+      connection_to_ips_not_allowed: connection_to_ips_not_allowed,
+      local_users_not_allowed: local_users_not_allowed,
+    }),
   },
   withRangeRule(resourceLabel, value):: {
     resource+: {
@@ -96,46 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
-    }),
-  },
-  withAllowRule(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_device_group+: {
-        [resourceLabel]+: {
-          allow_rule: value,
-        },
-      },
-    },
-  },
-  withAllowRuleMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_device_group+: {
-        [resourceLabel]+: {
-          allow_rule+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  allow_rule:: {
-    new(
-      connection_from_ips_not_allowed=null,
-      connection_to_ips_not_allowed=null,
-      local_users_not_allowed=null,
-      processes_not_allowed=null
-    ):: std.prune(a={
-      connection_from_ips_not_allowed: connection_from_ips_not_allowed,
-      connection_to_ips_not_allowed: connection_to_ips_not_allowed,
-      local_users_not_allowed: local_users_not_allowed,
-      processes_not_allowed: processes_not_allowed,
+      read: read,
+      update: update,
     }),
   },
 }

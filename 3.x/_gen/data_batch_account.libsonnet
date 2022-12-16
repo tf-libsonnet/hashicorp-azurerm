@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     encryption=null,
     name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_batch_account', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     encryption=encryption,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(

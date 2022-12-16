@@ -2,41 +2,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     tags=null,
+    name,
     workspace_id,
     timeouts=null
   ):: tf.withData(type='azurerm_healthcare_fhir_service', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
     tags=tags,
+    name=name,
     workspace_id=workspace_id,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     tags=null,
+    name,
     workspace_id,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     tags: tags,
+    name: name,
     workspace_id: workspace_id,
     timeouts: timeouts,
   }),
-  withWorkspaceId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_healthcare_fhir_service+: {
-        [dataSrcLabel]+: {
-          workspace_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_healthcare_fhir_service+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withWorkspaceId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_healthcare_fhir_service+: {
+        [dataSrcLabel]+: {
+          workspace_id: value,
         },
       },
     },

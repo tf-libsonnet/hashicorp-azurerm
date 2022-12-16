@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    resource_group_name,
     automation_account_name,
     is_global=null,
+    name,
+    resource_group_name,
     field=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_connection_type', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
     automation_account_name=automation_account_name,
     is_global=is_global,
+    name=name,
+    resource_group_name=resource_group_name,
     field=field,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    automation_account_name,
     is_global=null,
     name,
-    timeouts=null,
-    field=null
+    resource_group_name,
+    automation_account_name,
+    field=null,
+    timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    automation_account_name: automation_account_name,
     is_global: is_global,
     name: name,
-    timeouts: timeouts,
+    resource_group_name: resource_group_name,
+    automation_account_name: automation_account_name,
     field: field,
+    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_type+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_type+: {
@@ -67,6 +58,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_type+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withField(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_type+: {
@@ -87,15 +87,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   field:: {
     new(
-      is_encrypted=null,
-      is_optional=null,
       name,
-      type
+      type,
+      is_encrypted=null,
+      is_optional=null
     ):: std.prune(a={
-      is_encrypted: is_encrypted,
-      is_optional: is_optional,
       name: name,
       type: type,
+      is_encrypted: is_encrypted,
+      is_optional: is_optional,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -118,13 +118,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
-      read=null,
-      create=null
+      read=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
-      create: create,
     }),
   },
 }

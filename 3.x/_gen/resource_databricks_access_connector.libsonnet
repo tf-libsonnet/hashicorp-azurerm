@@ -6,49 +6,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     tags=null,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_databricks_access_connector', label=resourceLabel, attrs=self.newAttrs(
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    timeouts=timeouts,
-    identity=identity
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
+    tags=null,
     location,
     name,
     resource_group_name,
-    tags=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
+    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
     identity: identity,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_databricks_access_connector+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_databricks_access_connector+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_databricks_access_connector+: {
@@ -67,36 +49,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_databricks_access_connector+: {
         [resourceLabel]+: {
-          timeouts: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_databricks_access_connector+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          tags: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -121,6 +90,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type
     ):: std.prune(a={
       type: type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_databricks_access_connector+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_databricks_access_connector+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

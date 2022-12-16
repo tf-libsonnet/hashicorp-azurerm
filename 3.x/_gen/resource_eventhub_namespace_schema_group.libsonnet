@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    namespace_id,
     schema_compatibility,
     schema_type,
     name,
+    namespace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_schema_group', label=resourceLabel, attrs=self.newAttrs(
-    namespace_id=namespace_id,
     schema_compatibility=schema_compatibility,
     schema_type=schema_type,
     name=name,
+    namespace_id=namespace_id,
     timeouts=timeouts
   )),
   newAttrs(
-    schema_compatibility,
-    schema_type,
     name,
     namespace_id,
+    schema_compatibility,
+    schema_type,
     timeouts=null
   ):: std.prune(a={
-    schema_compatibility: schema_compatibility,
-    schema_type: schema_type,
     name: name,
     namespace_id: namespace_id,
+    schema_compatibility: schema_compatibility,
+    schema_type: schema_type,
     timeouts: timeouts,
   }),
-  withSchemaCompatibility(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace_schema_group+: {
-        [resourceLabel]+: {
-          schema_compatibility: value,
-        },
-      },
-    },
-  },
-  withSchemaType(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace_schema_group+: {
-        [resourceLabel]+: {
-          schema_type: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace_schema_group+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventhub_namespace_schema_group+: {
         [resourceLabel]+: {
           namespace_id: value,
+        },
+      },
+    },
+  },
+  withSchemaCompatibility(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace_schema_group+: {
+        [resourceLabel]+: {
+          schema_compatibility: value,
+        },
+      },
+    },
+  },
+  withSchemaType(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace_schema_group+: {
+        [resourceLabel]+: {
+          schema_type: value,
         },
       },
     },
@@ -83,13 +83,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
-      read=null,
-      create=null
+      read=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
-      create: create,
     }),
   },
 }

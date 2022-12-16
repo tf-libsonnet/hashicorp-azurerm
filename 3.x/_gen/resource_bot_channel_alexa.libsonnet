@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    bot_name,
     location,
     resource_group_name,
     skill_id,
-    bot_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_alexa', label=resourceLabel, attrs=self.newAttrs(
+    bot_name=bot_name,
     location=location,
     resource_group_name=resource_group_name,
     skill_id=skill_id,
-    bot_name=bot_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    skill_id,
     bot_name,
     location,
+    resource_group_name,
+    skill_id,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    skill_id: skill_id,
     bot_name: bot_name,
     location: location,
+    resource_group_name: resource_group_name,
+    skill_id: skill_id,
     timeouts: timeouts,
   }),
   withSkillId(resourceLabel, value):: {

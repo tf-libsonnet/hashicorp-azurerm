@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    scope=null,
     location=null,
     recur_every=null,
-    scope=null,
     timeouts=null
   ):: tf.withData(type='azurerm_public_maintenance_configurations', label=dataSrcLabel, attrs=self.newAttrs(
+    scope=scope,
     location=location,
     recur_every=recur_every,
-    scope=scope,
     timeouts=timeouts
   )),
   newAttrs(

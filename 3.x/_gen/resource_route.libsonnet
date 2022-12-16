@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    route_table_name,
     address_prefix,
     name,
     next_hop_in_ip_address=null,
     next_hop_type,
+    resource_group_name,
+    route_table_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_route', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    route_table_name=route_table_name,
     address_prefix=address_prefix,
     name=name,
     next_hop_in_ip_address=next_hop_in_ip_address,
     next_hop_type=next_hop_type,
+    resource_group_name=resource_group_name,
+    route_table_name=route_table_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,15 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withRouteTableName(resourceLabel, value):: {
-    resource+: {
-      azurerm_route+: {
-        [resourceLabel]+: {
-          route_table_name: value,
-        },
-      },
-    },
-  },
   withAddressPrefix(resourceLabel, value):: {
     resource+: {
       azurerm_route+: {
@@ -89,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withRouteTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_route+: {
+        [resourceLabel]+: {
+          route_table_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_route+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

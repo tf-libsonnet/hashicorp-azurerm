@@ -2,46 +2,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     resource_group_name,
     tags=null,
     address_space=null,
     gateway_address=null,
     gateway_fqdn=null,
     location,
-    name,
     bgp_settings=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_local_network_gateway', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
     address_space=address_space,
     gateway_address=gateway_address,
     gateway_fqdn=gateway_fqdn,
     location=location,
-    name=name,
     bgp_settings=bgp_settings,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     tags=null,
     address_space=null,
     gateway_address=null,
     gateway_fqdn=null,
     location,
-    name,
-    timeouts=null,
-    bgp_settings=null
+    bgp_settings=null,
+    timeouts=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     address_space: address_space,
     gateway_address: gateway_address,
     gateway_fqdn: gateway_fqdn,
     location: location,
-    name: name,
-    timeouts: timeouts,
     bgp_settings: bgp_settings,
+    timeouts: timeouts,
   }),
   withAddressSpace(resourceLabel, value):: {
     resource+: {
@@ -106,37 +106,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_local_network_gateway+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_local_network_gateway+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
   withBgpSettings(resourceLabel, value):: {
     resource+: {
       azurerm_local_network_gateway+: {
@@ -157,13 +126,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   bgp_settings:: {
     new(
-      asn,
       bgp_peering_address,
-      peer_weight=null
+      peer_weight=null,
+      asn
     ):: std.prune(a={
-      asn: asn,
       bgp_peering_address: bgp_peering_address,
       peer_weight: peer_weight,
+      asn: asn,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_local_network_gateway+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_local_network_gateway+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

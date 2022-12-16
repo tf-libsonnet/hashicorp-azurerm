@@ -3,81 +3,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     authentication_mode=null,
+    shared_access_policy_key=null,
     partition_key=null,
-    eventhub_name,
-    stream_analytics_job_name,
-    name,
-    shared_access_policy_name=null,
-    eventhub_consumer_group_name=null,
     resource_group_name,
     servicebus_namespace,
-    shared_access_policy_key=null,
+    eventhub_name,
+    name,
+    stream_analytics_job_name,
+    eventhub_consumer_group_name=null,
+    shared_access_policy_name=null,
     serialization=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_stream_input_eventhub', label=resourceLabel, attrs=self.newAttrs(
     authentication_mode=authentication_mode,
+    shared_access_policy_key=shared_access_policy_key,
     partition_key=partition_key,
-    eventhub_name=eventhub_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    name=name,
-    shared_access_policy_name=shared_access_policy_name,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
     resource_group_name=resource_group_name,
     servicebus_namespace=servicebus_namespace,
-    shared_access_policy_key=shared_access_policy_key,
+    eventhub_name=eventhub_name,
+    name=name,
+    stream_analytics_job_name=stream_analytics_job_name,
+    eventhub_consumer_group_name=eventhub_consumer_group_name,
+    shared_access_policy_name=shared_access_policy_name,
     serialization=serialization,
     timeouts=timeouts
   )),
   newAttrs(
-    authentication_mode=null,
     eventhub_name,
-    partition_key=null,
-    servicebus_namespace,
     name,
-    shared_access_policy_key=null,
-    eventhub_consumer_group_name=null,
-    resource_group_name,
-    shared_access_policy_name=null,
     stream_analytics_job_name,
+    authentication_mode=null,
+    servicebus_namespace,
+    shared_access_policy_name=null,
+    eventhub_consumer_group_name=null,
+    shared_access_policy_key=null,
+    partition_key=null,
+    resource_group_name,
     serialization=null,
     timeouts=null
   ):: std.prune(a={
-    authentication_mode: authentication_mode,
     eventhub_name: eventhub_name,
-    partition_key: partition_key,
-    servicebus_namespace: servicebus_namespace,
     name: name,
-    shared_access_policy_key: shared_access_policy_key,
-    eventhub_consumer_group_name: eventhub_consumer_group_name,
-    resource_group_name: resource_group_name,
-    shared_access_policy_name: shared_access_policy_name,
     stream_analytics_job_name: stream_analytics_job_name,
+    authentication_mode: authentication_mode,
+    servicebus_namespace: servicebus_namespace,
+    shared_access_policy_name: shared_access_policy_name,
+    eventhub_consumer_group_name: eventhub_consumer_group_name,
+    shared_access_policy_key: shared_access_policy_key,
+    partition_key: partition_key,
+    resource_group_name: resource_group_name,
     serialization: serialization,
     timeouts: timeouts,
   }),
-  withAuthenticationMode(resourceLabel, value):: {
+  withEventhubName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_eventhub+: {
         [resourceLabel]+: {
-          authentication_mode: value,
+          eventhub_name: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withSharedAccessPolicyKey(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_eventhub+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_eventhub+: {
-        [resourceLabel]+: {
-          name: value,
+          shared_access_policy_key: value,
         },
       },
     },
@@ -100,29 +91,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSharedAccessPolicyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_eventhub+: {
-        [resourceLabel]+: {
-          shared_access_policy_name: value,
-        },
-      },
-    },
-  },
-  withEventhubName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_eventhub+: {
-        [resourceLabel]+: {
-          eventhub_name: value,
-        },
-      },
-    },
-  },
   withPartitionKey(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_eventhub+: {
         [resourceLabel]+: {
           partition_key: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_eventhub+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -136,11 +118,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSharedAccessPolicyKey(resourceLabel, value):: {
+  withAuthenticationMode(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_eventhub+: {
         [resourceLabel]+: {
-          shared_access_policy_key: value,
+          authentication_mode: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_eventhub+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withSharedAccessPolicyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_eventhub+: {
+        [resourceLabel]+: {
+          shared_access_policy_name: value,
         },
       },
     },
@@ -194,15 +194,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

@@ -13,25 +13,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    key_vault_id,
     name,
     version=null,
+    key_vault_id,
     timeouts=null
   ):: std.prune(a={
-    key_vault_id: key_vault_id,
     name: name,
     version: version,
+    key_vault_id: key_vault_id,
     timeouts: timeouts,
   }),
-  withVersion(dataSrcLabel, value):: {
-    data+: {
-      azurerm_key_vault_certificate+: {
-        [dataSrcLabel]+: {
-          version: value,
-        },
-      },
-    },
-  },
   withKeyVaultId(dataSrcLabel, value):: {
     data+: {
       azurerm_key_vault_certificate+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_certificate+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_key_vault_certificate+: {
+        [dataSrcLabel]+: {
+          version: value,
         },
       },
     },

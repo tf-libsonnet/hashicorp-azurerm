@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    tags=null,
+    zone=null,
+    capacity_reservation_group_id,
+    sku=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_capacity_reservation', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    tags=tags,
+    zone=zone,
+    capacity_reservation_group_id=capacity_reservation_group_id,
+    sku=sku,
+    timeouts=timeouts
+  )),
+  newAttrs(
     capacity_reservation_group_id,
     name,
     tags=null,
     zone=null,
     sku=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_capacity_reservation', label=resourceLabel, attrs=self.newAttrs(
-    capacity_reservation_group_id=capacity_reservation_group_id,
-    name=name,
-    tags=tags,
-    zone=zone,
-    sku=sku,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    zone=null,
-    capacity_reservation_group_id,
-    name,
-    tags=null,
-    timeouts=null,
-    sku=null
   ):: std.prune(a={
-    zone: zone,
     capacity_reservation_group_id: capacity_reservation_group_id,
     name: name,
     tags: tags,
-    timeouts: timeouts,
+    zone: zone,
     sku: sku,
+    timeouts: timeouts,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_capacity_reservation+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withZone(resourceLabel, value):: {
+    resource+: {
+      azurerm_capacity_reservation+: {
+        [resourceLabel]+: {
+          zone: value,
+        },
+      },
+    },
+  },
   withCapacityReservationGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation+: {
@@ -49,23 +67,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withSku(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation+: {
         [resourceLabel]+: {
-          tags: value,
+          sku: value,
         },
       },
     },
   },
-  withZone(resourceLabel, value):: {
+  withSkuMixin(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation+: {
         [resourceLabel]+: {
-          zone: value,
+          sku+: if std.isArray(v=value) then value else [value],
         },
       },
     },
+  },
+  sku:: {
+    new(
+      capacity,
+      name
+    ):: std.prune(a={
+      capacity: capacity,
+      name: name,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -96,33 +123,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_capacity_reservation+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withSkuMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_capacity_reservation+: {
-        [resourceLabel]+: {
-          sku+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  sku:: {
-    new(
-      capacity,
-      name
-    ):: std.prune(a={
-      capacity: capacity,
-      name: name,
     }),
   },
 }

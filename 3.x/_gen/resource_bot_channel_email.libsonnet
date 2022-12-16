@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    resource_group_name,
     bot_name,
     email_address,
     email_password,
+    location,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_email', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    resource_group_name=resource_group_name,
     bot_name=bot_name,
     email_address=email_address,
     email_password=email_password,
+    location=location,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,24 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location: location,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_email+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_email+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withBotName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_email+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bot_channel_email+: {
         [resourceLabel]+: {
           email_password: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_email+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_email+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

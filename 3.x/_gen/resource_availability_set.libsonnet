@@ -2,47 +2,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
     location,
     name,
     platform_update_domain_count=null,
-    proximity_placement_group_id=null,
+    resource_group_name,
     managed=null,
     platform_fault_domain_count=null,
-    resource_group_name,
+    proximity_placement_group_id=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_availability_set', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
     location=location,
     name=name,
     platform_update_domain_count=platform_update_domain_count,
-    proximity_placement_group_id=proximity_placement_group_id,
+    resource_group_name=resource_group_name,
     managed=managed,
     platform_fault_domain_count=platform_fault_domain_count,
-    resource_group_name=resource_group_name,
+    proximity_placement_group_id=proximity_placement_group_id,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
+    platform_update_domain_count=null,
     resource_group_name,
     tags=null,
-    location,
-    name,
-    platform_update_domain_count=null,
-    proximity_placement_group_id=null,
     managed=null,
     platform_fault_domain_count=null,
+    proximity_placement_group_id=null,
+    location,
+    name,
     timeouts=null
   ):: std.prune(a={
+    platform_update_domain_count: platform_update_domain_count,
     resource_group_name: resource_group_name,
     tags: tags,
-    location: location,
-    name: name,
-    platform_update_domain_count: platform_update_domain_count,
-    proximity_placement_group_id: proximity_placement_group_id,
     managed: managed,
     platform_fault_domain_count: platform_fault_domain_count,
+    proximity_placement_group_id: proximity_placement_group_id,
+    location: location,
+    name: name,
     timeouts: timeouts,
   }),
+  withPlatformFaultDomainCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_availability_set+: {
+        [resourceLabel]+: {
+          platform_fault_domain_count: value,
+        },
+      },
+    },
+  },
+  withProximityPlacementGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_availability_set+: {
+        [resourceLabel]+: {
+          proximity_placement_group_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_availability_set+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_availability_set+: {
@@ -57,33 +84,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_availability_set+: {
         [resourceLabel]+: {
           platform_update_domain_count: value,
-        },
-      },
-    },
-  },
-  withProximityPlacementGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_availability_set+: {
-        [resourceLabel]+: {
-          proximity_placement_group_id: value,
-        },
-      },
-    },
-  },
-  withManaged(resourceLabel, value):: {
-    resource+: {
-      azurerm_availability_set+: {
-        [resourceLabel]+: {
-          managed: value,
-        },
-      },
-    },
-  },
-  withPlatformFaultDomainCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_availability_set+: {
-        [resourceLabel]+: {
-          platform_fault_domain_count: value,
         },
       },
     },
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withManaged(resourceLabel, value):: {
     resource+: {
       azurerm_availability_set+: {
         [resourceLabel]+: {
-          location: value,
+          managed: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_virtual_network_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withServerId(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_virtual_network_rule+: {
@@ -59,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_virtual_network_rule+: {
         [resourceLabel]+: {
           ignore_missing_vnet_service_endpoint: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_virtual_network_rule+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

@@ -2,60 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    spring_cloud_service_id,
+    https_only=null,
     instance_count=null,
     name,
     public_network_access_enabled=null,
+    timeouts=null,
+    api_metadata=null,
+    cors=null,
+    quota=null,
+    sso=null
+  ):: tf.withResource(type='azurerm_spring_cloud_gateway', label=resourceLabel, attrs=self.newAttrs(
+    spring_cloud_service_id=spring_cloud_service_id,
+    https_only=https_only,
+    instance_count=instance_count,
+    name=name,
+    public_network_access_enabled=public_network_access_enabled,
+    timeouts=timeouts,
+    api_metadata=api_metadata,
+    cors=cors,
+    quota=quota,
+    sso=sso
+  )),
+  newAttrs(
     spring_cloud_service_id,
     https_only=null,
+    instance_count=null,
+    name,
+    public_network_access_enabled=null,
     sso=null,
     timeouts=null,
     api_metadata=null,
     cors=null,
     quota=null
-  ):: tf.withResource(type='azurerm_spring_cloud_gateway', label=resourceLabel, attrs=self.newAttrs(
-    instance_count=instance_count,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    spring_cloud_service_id=spring_cloud_service_id,
-    https_only=https_only,
-    sso=sso,
-    timeouts=timeouts,
-    api_metadata=api_metadata,
-    cors=cors,
-    quota=quota
-  )),
-  newAttrs(
-    instance_count=null,
-    name,
-    public_network_access_enabled=null,
-    spring_cloud_service_id,
-    https_only=null,
-    api_metadata=null,
-    cors=null,
-    quota=null,
-    sso=null,
-    timeouts=null
   ):: std.prune(a={
+    spring_cloud_service_id: spring_cloud_service_id,
+    https_only: https_only,
     instance_count: instance_count,
     name: name,
     public_network_access_enabled: public_network_access_enabled,
-    spring_cloud_service_id: spring_cloud_service_id,
-    https_only: https_only,
+    sso: sso,
+    timeouts: timeouts,
     api_metadata: api_metadata,
     cors: cors,
     quota: quota,
-    sso: sso,
-    timeouts: timeouts,
   }),
-  withHttpsOnly(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway+: {
-        [resourceLabel]+: {
-          https_only: value,
-        },
-      },
-    },
-  },
   withInstanceCount(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_gateway+: {
@@ -91,6 +82,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withHttpsOnly(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway+: {
+        [resourceLabel]+: {
+          https_only: value,
+        },
+      },
+    },
+  },
+  withSso(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway+: {
+        [resourceLabel]+: {
+          sso: value,
+        },
+      },
+    },
+  },
+  withSsoMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway+: {
+        [resourceLabel]+: {
+          sso+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  sso:: {
+    new(
+      client_id=null,
+      client_secret=null,
+      issuer_uri=null,
+      scope=null
+    ):: std.prune(a={
+      client_id: client_id,
+      client_secret: client_secret,
+      issuer_uri: issuer_uri,
+      scope: scope,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -143,17 +174,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   api_metadata:: {
     new(
-      version=null,
       description=null,
       documentation_url=null,
       server_url=null,
-      title=null
+      title=null,
+      version=null
     ):: std.prune(a={
-      version: version,
       description: description,
       documentation_url: documentation_url,
       server_url: server_url,
       title: title,
+      version: version,
     }),
   },
   withCors(resourceLabel, value):: {
@@ -176,19 +207,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   cors:: {
     new(
-      credentials_allowed=null,
       exposed_headers=null,
       max_age_seconds=null,
       allowed_headers=null,
       allowed_methods=null,
-      allowed_origins=null
+      allowed_origins=null,
+      credentials_allowed=null
     ):: std.prune(a={
-      credentials_allowed: credentials_allowed,
       exposed_headers: exposed_headers,
       max_age_seconds: max_age_seconds,
       allowed_headers: allowed_headers,
       allowed_methods: allowed_methods,
       allowed_origins: allowed_origins,
+      credentials_allowed: credentials_allowed,
     }),
   },
   withQuota(resourceLabel, value):: {
@@ -216,37 +247,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       cpu: cpu,
       memory: memory,
-    }),
-  },
-  withSso(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway+: {
-        [resourceLabel]+: {
-          sso: value,
-        },
-      },
-    },
-  },
-  withSsoMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway+: {
-        [resourceLabel]+: {
-          sso+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  sso:: {
-    new(
-      scope=null,
-      client_id=null,
-      client_secret=null,
-      issuer_uri=null
-    ):: std.prune(a={
-      scope: scope,
-      client_id: client_id,
-      client_secret: client_secret,
-      issuer_uri: issuer_uri,
     }),
   },
 }

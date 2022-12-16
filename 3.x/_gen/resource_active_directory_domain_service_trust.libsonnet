@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    password,
     trusted_domain_dns_ips,
     trusted_domain_fqdn,
     domain_service_id,
+    name,
+    password,
     timeouts=null
   ):: tf.withResource(type='azurerm_active_directory_domain_service_trust', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    password=password,
     trusted_domain_dns_ips=trusted_domain_dns_ips,
     trusted_domain_fqdn=trusted_domain_fqdn,
     domain_service_id=domain_service_id,
+    name=name,
+    password=password,
     timeouts=timeouts
   )),
   newAttrs(
-    domain_service_id,
-    name,
     password,
     trusted_domain_dns_ips,
     trusted_domain_fqdn,
+    domain_service_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    domain_service_id: domain_service_id,
-    name: name,
     password: password,
     trusted_domain_dns_ips: trusted_domain_dns_ips,
     trusted_domain_fqdn: trusted_domain_fqdn,
+    domain_service_id: domain_service_id,
+    name: name,
     timeouts: timeouts,
   }),
   withPassword(resourceLabel, value):: {

@@ -27,48 +27,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    script_lines=null,
-    annotations=null,
-    data_factory_id,
     description=null,
     folder=null,
     name,
     script=null,
-    source=null,
-    timeouts=null,
+    script_lines=null,
+    annotations=null,
+    data_factory_id,
     transformation=null,
-    sink=null
+    sink=null,
+    source=null,
+    timeouts=null
   ):: std.prune(a={
-    script_lines: script_lines,
-    annotations: annotations,
-    data_factory_id: data_factory_id,
     description: description,
     folder: folder,
     name: name,
     script: script,
-    source: source,
-    timeouts: timeouts,
+    script_lines: script_lines,
+    annotations: annotations,
+    data_factory_id: data_factory_id,
     transformation: transformation,
     sink: sink,
+    source: source,
+    timeouts: timeouts,
   }),
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_flowlet_data_flow+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_flowlet_data_flow+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_flowlet_data_flow+: {
@@ -114,150 +96,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTransformation(resourceLabel, value):: {
+  withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_flowlet_data_flow+: {
         [resourceLabel]+: {
-          transformation: value,
+          annotations: value,
         },
       },
     },
   },
-  withTransformationMixin(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_flowlet_data_flow+: {
         [resourceLabel]+: {
-          transformation+: if std.isArray(v=value) then value else [value],
+          data_factory_id: value,
         },
       },
-    },
-  },
-  transformation:: {
-    new(
-      description=null,
-      name,
-      dataset=null,
-      flowlet=null,
-      linked_service=null
-    ):: std.prune(a={
-      description: description,
-      name: name,
-      dataset: dataset,
-      flowlet: flowlet,
-      linked_service: linked_service,
-    }),
-    linked_service:: {
-      new(
-        name,
-        parameters=null
-      ):: std.prune(a={
-        name: name,
-        parameters: parameters,
-      }),
-    },
-    dataset:: {
-      new(
-        name,
-        parameters=null
-      ):: std.prune(a={
-        name: name,
-        parameters: parameters,
-      }),
-    },
-    flowlet:: {
-      new(
-        name,
-        parameters=null,
-        dataset_parameters=null
-      ):: std.prune(a={
-        name: name,
-        parameters: parameters,
-        dataset_parameters: dataset_parameters,
-      }),
-    },
-  },
-  withSink(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_flowlet_data_flow+: {
-        [resourceLabel]+: {
-          sink: value,
-        },
-      },
-    },
-  },
-  withSinkMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_flowlet_data_flow+: {
-        [resourceLabel]+: {
-          sink+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  sink:: {
-    new(
-      description=null,
-      name,
-      flowlet=null,
-      linked_service=null,
-      rejected_linked_service=null,
-      schema_linked_service=null,
-      dataset=null
-    ):: std.prune(a={
-      description: description,
-      name: name,
-      flowlet: flowlet,
-      linked_service: linked_service,
-      rejected_linked_service: rejected_linked_service,
-      schema_linked_service: schema_linked_service,
-      dataset: dataset,
-    }),
-    rejected_linked_service:: {
-      new(
-        name,
-        parameters=null
-      ):: std.prune(a={
-        name: name,
-        parameters: parameters,
-      }),
-    },
-    schema_linked_service:: {
-      new(
-        name,
-        parameters=null
-      ):: std.prune(a={
-        name: name,
-        parameters: parameters,
-      }),
-    },
-    dataset:: {
-      new(
-        name,
-        parameters=null
-      ):: std.prune(a={
-        name: name,
-        parameters: parameters,
-      }),
-    },
-    flowlet:: {
-      new(
-        dataset_parameters=null,
-        name,
-        parameters=null
-      ):: std.prune(a={
-        dataset_parameters: dataset_parameters,
-        name: name,
-        parameters: parameters,
-      }),
-    },
-    linked_service:: {
-      new(
-        parameters=null,
-        name
-      ):: std.prune(a={
-        parameters: parameters,
-        name: name,
-      }),
     },
   },
   withSource(resourceLabel, value):: {
@@ -280,32 +134,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   source:: {
     new(
-      description=null,
       name,
+      description=null,
       dataset=null,
       flowlet=null,
       linked_service=null,
       rejected_linked_service=null,
       schema_linked_service=null
     ):: std.prune(a={
-      description: description,
       name: name,
+      description: description,
       dataset: dataset,
       flowlet: flowlet,
       linked_service: linked_service,
       rejected_linked_service: rejected_linked_service,
       schema_linked_service: schema_linked_service,
     }),
-    rejected_linked_service:: {
-      new(
-        parameters=null,
-        name
-      ):: std.prune(a={
-        parameters: parameters,
-        name: name,
-      }),
-    },
-    schema_linked_service:: {
+    dataset:: {
       new(
         name,
         parameters=null
@@ -314,27 +159,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         parameters: parameters,
       }),
     },
-    dataset:: {
-      new(
-        parameters=null,
-        name
-      ):: std.prune(a={
-        parameters: parameters,
-        name: name,
-      }),
-    },
     flowlet:: {
       new(
+        dataset_parameters=null,
         name,
-        parameters=null,
-        dataset_parameters=null
+        parameters=null
       ):: std.prune(a={
+        dataset_parameters: dataset_parameters,
         name: name,
         parameters: parameters,
-        dataset_parameters: dataset_parameters,
       }),
     },
     linked_service:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
+    rejected_linked_service:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
+    schema_linked_service:: {
       new(
         name,
         parameters=null
@@ -364,15 +218,161 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
+  },
+  withTransformation(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_flowlet_data_flow+: {
+        [resourceLabel]+: {
+          transformation: value,
+        },
+      },
+    },
+  },
+  withTransformationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_flowlet_data_flow+: {
+        [resourceLabel]+: {
+          transformation+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  transformation:: {
+    new(
+      name,
+      description=null,
+      dataset=null,
+      flowlet=null,
+      linked_service=null
+    ):: std.prune(a={
+      name: name,
+      description: description,
+      dataset: dataset,
+      flowlet: flowlet,
+      linked_service: linked_service,
+    }),
+    dataset:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
+    flowlet:: {
+      new(
+        parameters=null,
+        dataset_parameters=null,
+        name
+      ):: std.prune(a={
+        parameters: parameters,
+        dataset_parameters: dataset_parameters,
+        name: name,
+      }),
+    },
+    linked_service:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
+  },
+  withSink(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_flowlet_data_flow+: {
+        [resourceLabel]+: {
+          sink: value,
+        },
+      },
+    },
+  },
+  withSinkMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_flowlet_data_flow+: {
+        [resourceLabel]+: {
+          sink+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  sink:: {
+    new(
+      description=null,
+      name,
+      dataset=null,
+      flowlet=null,
+      linked_service=null,
+      rejected_linked_service=null,
+      schema_linked_service=null
+    ):: std.prune(a={
+      description: description,
+      name: name,
+      dataset: dataset,
+      flowlet: flowlet,
+      linked_service: linked_service,
+      rejected_linked_service: rejected_linked_service,
+      schema_linked_service: schema_linked_service,
+    }),
+    dataset:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
+    flowlet:: {
+      new(
+        parameters=null,
+        dataset_parameters=null,
+        name
+      ):: std.prune(a={
+        parameters: parameters,
+        dataset_parameters: dataset_parameters,
+        name: name,
+      }),
+    },
+    linked_service:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
+    rejected_linked_service:: {
+      new(
+        parameters=null,
+        name
+      ):: std.prune(a={
+        parameters: parameters,
+        name: name,
+      }),
+    },
+    schema_linked_service:: {
+      new(
+        name,
+        parameters=null
+      ):: std.prune(a={
+        name: name,
+        parameters: parameters,
+      }),
+    },
   },
 }

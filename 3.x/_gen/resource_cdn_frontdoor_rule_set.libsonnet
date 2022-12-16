@@ -7,28 +7,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_rule_set', label=resourceLabel, attrs=self.newAttrs(cdn_frontdoor_profile_id=cdn_frontdoor_profile_id, name=name, timeouts=timeouts)),
   newAttrs(
-    cdn_frontdoor_profile_id,
     name,
+    cdn_frontdoor_profile_id,
     timeouts=null
   ):: std.prune(a={
-    cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
     name: name,
+    cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
     timeouts: timeouts,
   }),
-  withCdnFrontdoorProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_rule_set+: {
-        [resourceLabel]+: {
-          cdn_frontdoor_profile_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_rule_set+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withCdnFrontdoorProfileId(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_rule_set+: {
+        [resourceLabel]+: {
+          cdn_frontdoor_profile_id: value,
         },
       },
     },
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

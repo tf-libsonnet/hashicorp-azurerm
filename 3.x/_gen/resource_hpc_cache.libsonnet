@@ -4,131 +4,86 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     key_vault_key_id=null,
     location,
-    resource_group_name,
-    sku_name,
     ntp_server=null,
-    automatically_rotate_key_to_latest_enabled=null,
+    resource_group_name,
+    mtu=null,
+    tags=null,
+    sku_name,
     cache_size_in_gb,
-    mtu=null,
-    name,
-    subnet_id,
-    tags=null,
-    directory_ldap=null,
-    dns=null,
-    identity=null,
-    timeouts=null,
-    default_access_policy=null,
-    directory_active_directory=null,
-    directory_flat_file=null
-  ):: tf.withResource(type='azurerm_hpc_cache', label=resourceLabel, attrs=self.newAttrs(
-    key_vault_key_id=key_vault_key_id,
-    location=location,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    ntp_server=ntp_server,
-    automatically_rotate_key_to_latest_enabled=automatically_rotate_key_to_latest_enabled,
-    cache_size_in_gb=cache_size_in_gb,
-    mtu=mtu,
-    name=name,
-    subnet_id=subnet_id,
-    tags=tags,
-    directory_ldap=directory_ldap,
-    dns=dns,
-    identity=identity,
-    timeouts=timeouts,
-    default_access_policy=default_access_policy,
-    directory_active_directory=directory_active_directory,
-    directory_flat_file=directory_flat_file
-  )),
-  newAttrs(
-    ntp_server=null,
-    tags=null,
-    subnet_id,
-    mtu=null,
-    sku_name,
-    key_vault_key_id=null,
-    location,
-    resource_group_name,
     name,
     automatically_rotate_key_to_latest_enabled=null,
-    cache_size_in_gb,
-    default_access_policy=null,
+    subnet_id,
     directory_active_directory=null,
     directory_flat_file=null,
     directory_ldap=null,
     dns=null,
     identity=null,
-    timeouts=null
+    timeouts=null,
+    default_access_policy=null
+  ):: tf.withResource(type='azurerm_hpc_cache', label=resourceLabel, attrs=self.newAttrs(
+    key_vault_key_id=key_vault_key_id,
+    location=location,
+    ntp_server=ntp_server,
+    resource_group_name=resource_group_name,
+    mtu=mtu,
+    tags=tags,
+    sku_name=sku_name,
+    cache_size_in_gb=cache_size_in_gb,
+    name=name,
+    automatically_rotate_key_to_latest_enabled=automatically_rotate_key_to_latest_enabled,
+    subnet_id=subnet_id,
+    directory_active_directory=directory_active_directory,
+    directory_flat_file=directory_flat_file,
+    directory_ldap=directory_ldap,
+    dns=dns,
+    identity=identity,
+    timeouts=timeouts,
+    default_access_policy=default_access_policy
+  )),
+  newAttrs(
+    name,
+    automatically_rotate_key_to_latest_enabled=null,
+    subnet_id,
+    sku_name,
+    tags=null,
+    cache_size_in_gb,
+    key_vault_key_id=null,
+    mtu=null,
+    resource_group_name,
+    location,
+    ntp_server=null,
+    directory_active_directory=null,
+    directory_flat_file=null,
+    directory_ldap=null,
+    dns=null,
+    identity=null,
+    timeouts=null,
+    default_access_policy=null
   ):: std.prune(a={
-    ntp_server: ntp_server,
-    tags: tags,
-    subnet_id: subnet_id,
-    mtu: mtu,
-    sku_name: sku_name,
-    key_vault_key_id: key_vault_key_id,
-    location: location,
-    resource_group_name: resource_group_name,
     name: name,
     automatically_rotate_key_to_latest_enabled: automatically_rotate_key_to_latest_enabled,
+    subnet_id: subnet_id,
+    sku_name: sku_name,
+    tags: tags,
     cache_size_in_gb: cache_size_in_gb,
-    default_access_policy: default_access_policy,
+    key_vault_key_id: key_vault_key_id,
+    mtu: mtu,
+    resource_group_name: resource_group_name,
+    location: location,
+    ntp_server: ntp_server,
     directory_active_directory: directory_active_directory,
     directory_flat_file: directory_flat_file,
     directory_ldap: directory_ldap,
     dns: dns,
     identity: identity,
     timeouts: timeouts,
+    default_access_policy: default_access_policy,
   }),
-  withName(resourceLabel, value):: {
+  withCacheSizeInGb(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withNtpServer(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          ntp_server: value,
-        },
-      },
-    },
-  },
-  withAutomaticallyRotateKeyToLatestEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          automatically_rotate_key_to_latest_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          subnet_id: value,
+          cache_size_in_gb: value,
         },
       },
     },
@@ -142,11 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCacheSizeInGb(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache+: {
         [resourceLabel]+: {
-          cache_size_in_gb: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withAutomaticallyRotateKeyToLatestEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          automatically_rotate_key_to_latest_enabled: value,
         },
       },
     },
@@ -169,6 +133,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withNtpServer(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          ntp_server: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache+: {
@@ -176,6 +158,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           resource_group_name: value,
         },
       },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          subnet_id: value,
+        },
+      },
+    },
+  },
+  withDirectoryLdap(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          directory_ldap: value,
+        },
+      },
+    },
+  },
+  withDirectoryLdapMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache+: {
+        [resourceLabel]+: {
+          directory_ldap+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  directory_ldap:: {
+    new(
+      base_dn,
+      certificate_validation_uri=null,
+      download_certificate_automatically=null,
+      encrypted=null,
+      server,
+      bind=null
+    ):: std.prune(a={
+      base_dn: base_dn,
+      certificate_validation_uri: certificate_validation_uri,
+      download_certificate_automatically: download_certificate_automatically,
+      encrypted: encrypted,
+      server: server,
+      bind: bind,
+    }),
+    bind:: {
+      new(
+        dn,
+        password
+      ):: std.prune(a={
+        dn: dn,
+        password: password,
+      }),
     },
   },
   withDns(resourceLabel, value):: {
@@ -225,11 +269,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids,
-      type
+      type,
+      identity_ids
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -252,15 +296,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
   withDefaultAccessPolicy(resourceLabel, value):: {
@@ -289,23 +333,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     access_rule:: {
       new(
-        access,
-        anonymous_gid=null,
-        anonymous_uid=null,
-        filter=null,
         root_squash_enabled=null,
         scope,
         submount_access_enabled=null,
-        suid_enabled=null
+        suid_enabled=null,
+        access,
+        anonymous_gid=null,
+        anonymous_uid=null,
+        filter=null
       ):: std.prune(a={
-        access: access,
-        anonymous_gid: anonymous_gid,
-        anonymous_uid: anonymous_uid,
-        filter: filter,
         root_squash_enabled: root_squash_enabled,
         scope: scope,
         submount_access_enabled: submount_access_enabled,
         suid_enabled: suid_enabled,
+        access: access,
+        anonymous_gid: anonymous_gid,
+        anonymous_uid: anonymous_uid,
+        filter: filter,
       }),
     },
   },
@@ -329,21 +373,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   directory_active_directory:: {
     new(
-      dns_secondary_ip=null,
-      domain_name,
-      domain_netbios_name,
       password,
       username,
       cache_netbios_name,
-      dns_primary_ip
+      dns_primary_ip,
+      dns_secondary_ip=null,
+      domain_name,
+      domain_netbios_name
     ):: std.prune(a={
-      dns_secondary_ip: dns_secondary_ip,
-      domain_name: domain_name,
-      domain_netbios_name: domain_netbios_name,
       password: password,
       username: username,
       cache_netbios_name: cache_netbios_name,
       dns_primary_ip: dns_primary_ip,
+      dns_secondary_ip: dns_secondary_ip,
+      domain_name: domain_name,
+      domain_netbios_name: domain_netbios_name,
     }),
   },
   withDirectoryFlatFile(resourceLabel, value):: {
@@ -372,49 +416,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       group_file_uri: group_file_uri,
       password_file_uri: password_file_uri,
     }),
-  },
-  withDirectoryLdap(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          directory_ldap: value,
-        },
-      },
-    },
-  },
-  withDirectoryLdapMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache+: {
-        [resourceLabel]+: {
-          directory_ldap+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  directory_ldap:: {
-    new(
-      download_certificate_automatically=null,
-      encrypted=null,
-      server,
-      base_dn,
-      certificate_validation_uri=null,
-      bind=null
-    ):: std.prune(a={
-      download_certificate_automatically: download_certificate_automatically,
-      encrypted: encrypted,
-      server: server,
-      base_dn: base_dn,
-      certificate_validation_uri: certificate_validation_uri,
-      bind: bind,
-    }),
-    bind:: {
-      new(
-        password,
-        dn
-      ):: std.prune(a={
-        password: password,
-        dn: dn,
-      }),
-    },
   },
 }

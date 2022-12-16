@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    server_name,
+    start_ip_address,
     end_ip_address,
     name,
     resource_group_name,
-    server_name,
-    start_ip_address,
     timeouts=null
   ):: tf.withResource(type='azurerm_sql_firewall_rule', label=resourceLabel, attrs=self.newAttrs(
+    server_name=server_name,
+    start_ip_address=start_ip_address,
     end_ip_address=end_ip_address,
     name=name,
     resource_group_name=resource_group_name,
-    server_name=server_name,
-    start_ip_address=start_ip_address,
     timeouts=timeouts
   )),
   newAttrs(
-    server_name,
     start_ip_address,
     end_ip_address,
     name,
     resource_group_name,
+    server_name,
     timeouts=null
   ):: std.prune(a={
-    server_name: server_name,
     start_ip_address: start_ip_address,
     end_ip_address: end_ip_address,
     name: name,
     resource_group_name: resource_group_name,
+    server_name: server_name,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_firewall_rule+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_firewall_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withServerName(resourceLabel, value):: {
     resource+: {
       azurerm_sql_firewall_rule+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_firewall_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_firewall_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_sql_firewall_rule+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

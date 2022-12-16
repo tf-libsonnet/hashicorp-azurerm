@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    account_name,
     name,
     resource_group_name,
     throughput=null,
-    account_name,
-    autoscale_settings=null,
-    timeouts=null
+    timeouts=null,
+    autoscale_settings=null
   ):: tf.withResource(type='azurerm_cosmosdb_mongo_database', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
     name=name,
     resource_group_name=resource_group_name,
     throughput=throughput,
-    account_name=account_name,
-    autoscale_settings=autoscale_settings,
-    timeouts=timeouts
+    timeouts=timeouts,
+    autoscale_settings=autoscale_settings
   )),
   newAttrs(
-    resource_group_name,
-    throughput=null,
     account_name,
     name,
-    autoscale_settings=null,
-    timeouts=null
+    resource_group_name,
+    throughput=null,
+    timeouts=null,
+    autoscale_settings=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    throughput: throughput,
     account_name: account_name,
     name: name,
-    autoscale_settings: autoscale_settings,
+    resource_group_name: resource_group_name,
+    throughput: throughput,
     timeouts: timeouts,
+    autoscale_settings: autoscale_settings,
   }),
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_mongo_database+: {
@@ -63,6 +45,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_mongo_database+: {
         [resourceLabel]+: {
           throughput: value,
+        },
+      },
+    },
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

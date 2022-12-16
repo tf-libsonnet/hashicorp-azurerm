@@ -21,24 +21,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    role_definition_id=null,
-    type=null,
-    account_name,
     assignable_scopes,
     name,
     resource_group_name,
+    role_definition_id=null,
+    type=null,
+    account_name,
     permissions=null,
     timeouts=null
   ):: std.prune(a={
-    role_definition_id: role_definition_id,
-    type: type,
-    account_name: account_name,
     assignable_scopes: assignable_scopes,
     name: name,
     resource_group_name: resource_group_name,
+    role_definition_id: role_definition_id,
+    type: type,
+    account_name: account_name,
     permissions: permissions,
     timeouts: timeouts,
   }),
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_role_definition+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
+  withAssignableScopes(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_role_definition+: {
+        [resourceLabel]+: {
+          assignable_scopes: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_role_definition+: {
@@ -71,24 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_sql_role_definition+: {
         [resourceLabel]+: {
           type: value,
-        },
-      },
-    },
-  },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_role_definition+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
-  withAssignableScopes(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_role_definition+: {
-        [resourceLabel]+: {
-          assignable_scopes: value,
         },
       },
     },
@@ -138,15 +138,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

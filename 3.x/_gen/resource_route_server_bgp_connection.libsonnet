@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    peer_asn,
-    peer_ip,
     route_server_id,
     name,
+    peer_asn,
+    peer_ip,
     timeouts=null
   ):: tf.withResource(type='azurerm_route_server_bgp_connection', label=resourceLabel, attrs=self.newAttrs(
-    peer_asn=peer_asn,
-    peer_ip=peer_ip,
     route_server_id=route_server_id,
     name=name,
+    peer_asn=peer_asn,
+    peer_ip=peer_ip,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     peer_asn: peer_asn,
     timeouts: timeouts,
   }),
+  withPeerIp(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_server_bgp_connection+: {
+        [resourceLabel]+: {
+          peer_ip: value,
+        },
+      },
+    },
+  },
   withRouteServerId(resourceLabel, value):: {
     resource+: {
       azurerm_route_server_bgp_connection+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPeerIp(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_server_bgp_connection+: {
-        [resourceLabel]+: {
-          peer_ip: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_route_server_bgp_connection+: {
@@ -83,13 +83,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

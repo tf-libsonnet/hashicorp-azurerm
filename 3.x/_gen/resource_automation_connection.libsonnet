@@ -19,40 +19,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    values,
-    automation_account_name,
     description=null,
     name,
     resource_group_name,
     type,
+    values,
+    automation_account_name,
     timeouts=null
   ):: std.prune(a={
-    values: values,
-    automation_account_name: automation_account_name,
     description: description,
     name: name,
     resource_group_name: resource_group_name,
     type: type,
+    values: values,
+    automation_account_name: automation_account_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
   withValues(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection+: {
@@ -85,6 +67,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_automation_connection+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection+: {
+        [resourceLabel]+: {
+          type: value,
         },
       },
     },

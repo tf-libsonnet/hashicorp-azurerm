@@ -2,23 +2,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tags=null,
     location,
     name,
     resource_group_name,
-    tags=null,
+    validation=null,
     action=null,
     resource_type=null,
-    timeouts=null,
-    validation=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_custom_provider', label=resourceLabel, attrs=self.newAttrs(
+    tags=tags,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    tags=tags,
+    validation=validation,
     action=action,
     resource_type=resource_type,
-    timeouts=timeouts,
-    validation=validation
+    timeouts=timeouts
   )),
   newAttrs(
     location,
@@ -39,15 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts: timeouts,
     validation: validation,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_custom_provider+: {
@@ -75,30 +66,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withValidation(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_custom_provider+: {
         [resourceLabel]+: {
-          validation: value,
+          location: value,
         },
       },
     },
-  },
-  withValidationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          validation+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  validation:: {
-    new(
-      specification
-    ):: std.prune(a={
-      specification: specification,
-    }),
   },
   withAction(resourceLabel, value):: {
     resource+: {
@@ -176,15 +151,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
+    }),
+  },
+  withValidation(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          validation: value,
+        },
+      },
+    },
+  },
+  withValidationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          validation+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  validation:: {
+    new(
+      specification
+    ):: std.prune(a={
+      specification: specification,
     }),
   },
 }

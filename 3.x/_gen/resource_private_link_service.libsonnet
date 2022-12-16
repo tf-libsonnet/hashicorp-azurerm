@@ -2,105 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    load_balancer_frontend_ip_configuration_ids,
+    tags=null,
     visibility_subscription_ids=null,
-    location,
     auto_approval_subscription_ids=null,
     enable_proxy_protocol=null,
     fqdns=null,
-    load_balancer_frontend_ip_configuration_ids,
-    name,
+    location,
     resource_group_name,
-    tags=null,
     nat_ip_configuration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_link_service', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    load_balancer_frontend_ip_configuration_ids=load_balancer_frontend_ip_configuration_ids,
+    tags=tags,
     visibility_subscription_ids=visibility_subscription_ids,
-    location=location,
     auto_approval_subscription_ids=auto_approval_subscription_ids,
     enable_proxy_protocol=enable_proxy_protocol,
     fqdns=fqdns,
-    load_balancer_frontend_ip_configuration_ids=load_balancer_frontend_ip_configuration_ids,
-    name=name,
+    location=location,
     resource_group_name=resource_group_name,
-    tags=tags,
     nat_ip_configuration=nat_ip_configuration,
     timeouts=timeouts
   )),
   newAttrs(
-    enable_proxy_protocol=null,
-    tags=null,
-    fqdns=null,
     load_balancer_frontend_ip_configuration_ids,
+    fqdns=null,
     location,
-    auto_approval_subscription_ids=null,
     resource_group_name,
+    tags=null,
     visibility_subscription_ids=null,
+    auto_approval_subscription_ids=null,
+    enable_proxy_protocol=null,
     name,
-    nat_ip_configuration=null,
-    timeouts=null
+    timeouts=null,
+    nat_ip_configuration=null
   ):: std.prune(a={
-    enable_proxy_protocol: enable_proxy_protocol,
-    tags: tags,
-    fqdns: fqdns,
     load_balancer_frontend_ip_configuration_ids: load_balancer_frontend_ip_configuration_ids,
+    fqdns: fqdns,
     location: location,
-    auto_approval_subscription_ids: auto_approval_subscription_ids,
     resource_group_name: resource_group_name,
+    tags: tags,
     visibility_subscription_ids: visibility_subscription_ids,
+    auto_approval_subscription_ids: auto_approval_subscription_ids,
+    enable_proxy_protocol: enable_proxy_protocol,
     name: name,
-    nat_ip_configuration: nat_ip_configuration,
     timeouts: timeouts,
+    nat_ip_configuration: nat_ip_configuration,
   }),
-  withAutoApprovalSubscriptionIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          auto_approval_subscription_ids: value,
-        },
-      },
-    },
-  },
-  withEnableProxyProtocol(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          enable_proxy_protocol: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_link_service+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withFqdns(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          fqdns: value,
-        },
-      },
-    },
-  },
-  withLoadBalancerFrontendIpConfigurationIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          load_balancer_frontend_ip_configuration_ids: value,
         },
       },
     },
@@ -123,6 +78,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEnableProxyProtocol(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          enable_proxy_protocol: value,
+        },
+      },
+    },
+  },
+  withFqdns(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          fqdns: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withVisibilitySubscriptionIds(resourceLabel, value):: {
     resource+: {
       azurerm_private_link_service+: {
@@ -131,6 +113,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withLoadBalancerFrontendIpConfigurationIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          load_balancer_frontend_ip_configuration_ids: value,
+        },
+      },
+    },
+  },
+  withAutoApprovalSubscriptionIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          auto_approval_subscription_ids: value,
+        },
+      },
+    },
+  },
+  withNatIpConfiguration(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          nat_ip_configuration: value,
+        },
+      },
+    },
+  },
+  withNatIpConfigurationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          nat_ip_configuration+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  nat_ip_configuration:: {
+    new(
+      primary,
+      private_ip_address=null,
+      private_ip_address_version=null,
+      subnet_id,
+      name
+    ):: std.prune(a={
+      primary: primary,
+      private_ip_address: private_ip_address,
+      private_ip_address_version: private_ip_address_version,
+      subnet_id: subnet_id,
+      name: name,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -161,39 +194,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withNatIpConfiguration(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          nat_ip_configuration: value,
-        },
-      },
-    },
-  },
-  withNatIpConfigurationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          nat_ip_configuration+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  nat_ip_configuration:: {
-    new(
-      private_ip_address=null,
-      private_ip_address_version=null,
-      subnet_id,
-      name,
-      primary
-    ):: std.prune(a={
-      private_ip_address: private_ip_address,
-      private_ip_address_version: private_ip_address_version,
-      subnet_id: subnet_id,
-      name: name,
-      primary: primary,
     }),
   },
 }

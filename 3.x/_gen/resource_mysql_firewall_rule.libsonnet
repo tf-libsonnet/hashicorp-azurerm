@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    start_ip_address,
     end_ip_address,
     name,
     resource_group_name,
     server_name,
+    start_ip_address,
     timeouts=null
   ):: tf.withResource(type='azurerm_mysql_firewall_rule', label=resourceLabel, attrs=self.newAttrs(
-    start_ip_address=start_ip_address,
     end_ip_address=end_ip_address,
     name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
+    start_ip_address=start_ip_address,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,24 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     server_name: server_name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_firewall_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_firewall_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withServerName(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_firewall_rule+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mysql_firewall_rule+: {
         [resourceLabel]+: {
           end_ip_address: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_firewall_rule+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_firewall_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

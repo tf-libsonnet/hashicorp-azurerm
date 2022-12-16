@@ -2,87 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    categories=null,
-    display_name,
-    resource_types=null,
-    additional_settings_json=null,
-    name=null,
     body,
-    description=null,
+    name=null,
+    resource_types=null,
+    tags=null,
+    categories=null,
     query_pack_id,
     solutions=null,
-    tags=null,
+    additional_settings_json=null,
+    description=null,
+    display_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_query_pack_query', label=resourceLabel, attrs=self.newAttrs(
-    categories=categories,
-    display_name=display_name,
-    resource_types=resource_types,
-    additional_settings_json=additional_settings_json,
-    name=name,
     body=body,
-    description=description,
+    name=name,
+    resource_types=resource_types,
+    tags=tags,
+    categories=categories,
     query_pack_id=query_pack_id,
     solutions=solutions,
-    tags=tags,
+    additional_settings_json=additional_settings_json,
+    description=description,
+    display_name=display_name,
     timeouts=timeouts
   )),
   newAttrs(
-    name=null,
     resource_types=null,
-    solutions=null,
-    body,
-    categories=null,
-    display_name,
-    additional_settings_json=null,
     description=null,
+    categories=null,
     query_pack_id,
+    solutions=null,
+    additional_settings_json=null,
+    display_name,
+    name=null,
     tags=null,
+    body,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     resource_types: resource_types,
-    solutions: solutions,
-    body: body,
-    categories: categories,
-    display_name: display_name,
-    additional_settings_json: additional_settings_json,
     description: description,
+    categories: categories,
     query_pack_id: query_pack_id,
+    solutions: solutions,
+    additional_settings_json: additional_settings_json,
+    display_name: display_name,
+    name: name,
     tags: tags,
+    body: body,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_query_pack_query+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_query_pack_query+: {
         [resourceLabel]+: {
           display_name: value,
-        },
-      },
-    },
-  },
-  withQueryPackId(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_query_pack_query+: {
-        [resourceLabel]+: {
-          query_pack_id: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_query_pack_query+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -96,11 +69,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalSettingsJson(resourceLabel, value):: {
+  withResourceTypes(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_query_pack_query+: {
         [resourceLabel]+: {
-          additional_settings_json: value,
+          resource_types: value,
         },
       },
     },
@@ -110,6 +83,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_log_analytics_query_pack_query+: {
         [resourceLabel]+: {
           solutions: value,
+        },
+      },
+    },
+  },
+  withAdditionalSettingsJson(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_query_pack_query+: {
+        [resourceLabel]+: {
+          additional_settings_json: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_query_pack_query+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withQueryPackId(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_query_pack_query+: {
+        [resourceLabel]+: {
+          query_pack_id: value,
         },
       },
     },
@@ -132,11 +132,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceTypes(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_query_pack_query+: {
         [resourceLabel]+: {
-          resource_types: value,
+          description: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

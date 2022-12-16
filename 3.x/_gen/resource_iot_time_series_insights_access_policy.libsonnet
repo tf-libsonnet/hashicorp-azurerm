@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    time_series_insights_environment_id,
-    description=null,
     name,
     principal_object_id,
     roles,
+    time_series_insights_environment_id,
+    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    time_series_insights_environment_id=time_series_insights_environment_id,
-    description=description,
     name=name,
     principal_object_id=principal_object_id,
     roles=roles,
+    time_series_insights_environment_id=time_series_insights_environment_id,
+    description=description,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,6 +31,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     roles: roles,
     timeouts: timeouts,
   }),
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_access_policy+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_access_policy+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withPrincipalObjectId(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_access_policy+: {
@@ -54,24 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iot_time_series_insights_access_policy+: {
         [resourceLabel]+: {
           time_series_insights_environment_id: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_access_policy+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_access_policy+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },

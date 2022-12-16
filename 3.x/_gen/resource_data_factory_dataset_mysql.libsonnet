@@ -3,68 +3,59 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     annotations=null,
-    data_factory_id,
-    name,
-    parameters=null,
-    description=null,
-    table_name=null,
-    additional_properties=null,
     folder=null,
+    parameters=null,
     linked_service_name,
+    name,
+    additional_properties=null,
+    table_name=null,
+    data_factory_id,
+    description=null,
     schema_column=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_mysql', label=resourceLabel, attrs=self.newAttrs(
     annotations=annotations,
-    data_factory_id=data_factory_id,
-    name=name,
-    parameters=parameters,
-    description=description,
-    table_name=table_name,
-    additional_properties=additional_properties,
     folder=folder,
+    parameters=parameters,
     linked_service_name=linked_service_name,
+    name=name,
+    additional_properties=additional_properties,
+    table_name=table_name,
+    data_factory_id=data_factory_id,
+    description=description,
     schema_column=schema_column,
     timeouts=timeouts
   )),
   newAttrs(
-    parameters=null,
-    description=null,
+    additional_properties=null,
     annotations=null,
-    data_factory_id,
-    name,
+    linked_service_name,
+    parameters=null,
     table_name=null,
     folder=null,
-    linked_service_name,
-    additional_properties=null,
-    schema_column=null,
-    timeouts=null
+    data_factory_id,
+    description=null,
+    name,
+    timeouts=null,
+    schema_column=null
   ):: std.prune(a={
-    parameters: parameters,
-    description: description,
+    additional_properties: additional_properties,
     annotations: annotations,
-    data_factory_id: data_factory_id,
-    name: name,
+    linked_service_name: linked_service_name,
+    parameters: parameters,
     table_name: table_name,
     folder: folder,
-    linked_service_name: linked_service_name,
-    additional_properties: additional_properties,
-    schema_column: schema_column,
+    data_factory_id: data_factory_id,
+    description: description,
+    name: name,
     timeouts: timeouts,
+    schema_column: schema_column,
   }),
-  withName(resourceLabel, value):: {
+  withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_mysql+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_mysql+: {
-        [resourceLabel]+: {
-          additional_properties: value,
+          annotations: value,
         },
       },
     },
@@ -78,6 +69,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_mysql+: {
+        [resourceLabel]+: {
+          table_name: value,
+        },
+      },
+    },
+  },
   withLinkedServiceName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_mysql+: {
@@ -87,11 +87,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAnnotations(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_mysql+: {
         [resourceLabel]+: {
-          annotations: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_mysql+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_mysql+: {
+        [resourceLabel]+: {
+          additional_properties: value,
         },
       },
     },
@@ -113,53 +131,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTableName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_mysql+: {
-        [resourceLabel]+: {
-          table_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_mysql+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withSchemaColumn(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_mysql+: {
-        [resourceLabel]+: {
-          schema_column: value,
-        },
-      },
-    },
-  },
-  withSchemaColumnMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_mysql+: {
-        [resourceLabel]+: {
-          schema_column+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  schema_column:: {
-    new(
-      type=null,
-      description=null,
-      name
-    ):: std.prune(a={
-      type: type,
-      description: description,
-      name: name,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -190,6 +161,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withSchemaColumn(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_mysql+: {
+        [resourceLabel]+: {
+          schema_column: value,
+        },
+      },
+    },
+  },
+  withSchemaColumnMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_mysql+: {
+        [resourceLabel]+: {
+          schema_column+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  schema_column:: {
+    new(
+      description=null,
+      name,
+      type=null
+    ):: std.prune(a={
+      description: description,
+      name: name,
+      type: type,
     }),
   },
 }

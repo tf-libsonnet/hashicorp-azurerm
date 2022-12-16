@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    log_analytics_workspace_id,
     name,
     tenant_id=null,
-    log_analytics_workspace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_dynamics_365', label=resourceLabel, attrs=self.newAttrs(
+    log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     tenant_id=tenant_id,
-    log_analytics_workspace_id=log_analytics_workspace_id,
     timeouts=timeouts
   )),
   newAttrs(

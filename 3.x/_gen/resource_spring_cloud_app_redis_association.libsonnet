@@ -17,29 +17,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     redis_access_key,
     redis_cache_id,
     spring_cloud_app_id,
     ssl_enabled=null,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     redis_access_key: redis_access_key,
     redis_cache_id: redis_cache_id,
     spring_cloud_app_id: spring_cloud_app_id,
     ssl_enabled: ssl_enabled,
-    name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_redis_association+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withRedisAccessKey(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_redis_association+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_redis_association+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_redis_association+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

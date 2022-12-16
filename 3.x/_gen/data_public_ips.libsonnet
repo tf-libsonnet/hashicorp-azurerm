@@ -2,31 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
-    allocation_type=null,
     attachment_status=null,
     name_prefix=null,
+    resource_group_name,
+    allocation_type=null,
     timeouts=null
   ):: tf.withData(type='azurerm_public_ips', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    allocation_type=allocation_type,
     attachment_status=attachment_status,
     name_prefix=name_prefix,
+    resource_group_name=resource_group_name,
+    allocation_type=allocation_type,
     timeouts=timeouts
   )),
   newAttrs(
+    allocation_type=null,
     attachment_status=null,
     name_prefix=null,
     resource_group_name,
-    allocation_type=null,
     timeouts=null
   ):: std.prune(a={
+    allocation_type: allocation_type,
     attachment_status: attachment_status,
     name_prefix: name_prefix,
     resource_group_name: resource_group_name,
-    allocation_type: allocation_type,
     timeouts: timeouts,
   }),
+  withAttachmentStatus(dataSrcLabel, value):: {
+    data+: {
+      azurerm_public_ips+: {
+        [dataSrcLabel]+: {
+          attachment_status: value,
+        },
+      },
+    },
+  },
   withNamePrefix(dataSrcLabel, value):: {
     data+: {
       azurerm_public_ips+: {
@@ -50,15 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_public_ips+: {
         [dataSrcLabel]+: {
           allocation_type: value,
-        },
-      },
-    },
-  },
-  withAttachmentStatus(dataSrcLabel, value):: {
-    data+: {
-      azurerm_public_ips+: {
-        [dataSrcLabel]+: {
-          attachment_status: value,
         },
       },
     },

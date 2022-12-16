@@ -17,16 +17,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    nginx_deployment_id,
     package_data=null,
     root_file,
+    nginx_deployment_id,
     config_file=null,
     protected_file=null,
     timeouts=null
   ):: std.prune(a={
-    nginx_deployment_id: nginx_deployment_id,
     package_data: package_data,
     root_file: root_file,
+    nginx_deployment_id: nginx_deployment_id,
     config_file: config_file,
     protected_file: protected_file,
     timeouts: timeouts,
@@ -57,37 +57,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_configuration+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_configuration+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
   withConfigFile(resourceLabel, value):: {
     resource+: {
@@ -136,11 +105,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   protected_file:: {
     new(
-      virtual_path,
-      content
+      content,
+      virtual_path
     ):: std.prune(a={
-      virtual_path: virtual_path,
       content: content,
+      virtual_path: virtual_path,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_configuration+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_configuration+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

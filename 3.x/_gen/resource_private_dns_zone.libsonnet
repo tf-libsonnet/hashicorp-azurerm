@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     soa_record: soa_record,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_zone+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_zone+: {
@@ -54,42 +45,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSoaRecord(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_zone+: {
         [resourceLabel]+: {
-          soa_record: value,
+          name: value,
         },
       },
     },
-  },
-  withSoaRecordMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_zone+: {
-        [resourceLabel]+: {
-          soa_record+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  soa_record:: {
-    new(
-      minimum_ttl=null,
-      refresh_time=null,
-      email,
-      expire_time=null,
-      retry_time=null,
-      tags=null,
-      ttl=null
-    ):: std.prune(a={
-      minimum_ttl: minimum_ttl,
-      refresh_time: refresh_time,
-      email: email,
-      expire_time: expire_time,
-      retry_time: retry_time,
-      tags: tags,
-      ttl: ttl,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -111,15 +74,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withSoaRecord(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_zone+: {
+        [resourceLabel]+: {
+          soa_record: value,
+        },
+      },
+    },
+  },
+  withSoaRecordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_zone+: {
+        [resourceLabel]+: {
+          soa_record+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  soa_record:: {
+    new(
+      retry_time=null,
+      tags=null,
+      email,
+      minimum_ttl=null,
+      refresh_time=null,
+      expire_time=null,
+      ttl=null
+    ):: std.prune(a={
+      retry_time: retry_time,
+      tags: tags,
+      email: email,
+      minimum_ttl: minimum_ttl,
+      refresh_time: refresh_time,
+      expire_time: expire_time,
+      ttl: ttl,
     }),
   },
 }

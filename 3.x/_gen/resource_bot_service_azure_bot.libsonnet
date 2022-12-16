@@ -2,97 +2,88 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    display_name=null,
     developer_app_insights_key=null,
-    location,
+    luis_app_ids=null,
+    luis_key=null,
+    developer_app_insights_application_id=null,
     microsoft_app_type=null,
-    name,
-    developer_app_insights_api_key=null,
-    streaming_endpoint_enabled=null,
+    resource_group_name,
+    microsoft_app_tenant_id=null,
+    location,
+    endpoint=null,
+    display_name=null,
     microsoft_app_id,
+    name,
+    sku,
+    streaming_endpoint_enabled=null,
+    developer_app_insights_api_key=null,
     microsoft_app_msi_id=null,
     tags=null,
-    resource_group_name,
-    luis_app_ids=null,
-    sku,
-    microsoft_app_tenant_id=null,
-    developer_app_insights_application_id=null,
-    endpoint=null,
-    luis_key=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_service_azure_bot', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
     developer_app_insights_key=developer_app_insights_key,
-    location=location,
+    luis_app_ids=luis_app_ids,
+    luis_key=luis_key,
+    developer_app_insights_application_id=developer_app_insights_application_id,
     microsoft_app_type=microsoft_app_type,
-    name=name,
-    developer_app_insights_api_key=developer_app_insights_api_key,
-    streaming_endpoint_enabled=streaming_endpoint_enabled,
+    resource_group_name=resource_group_name,
+    microsoft_app_tenant_id=microsoft_app_tenant_id,
+    location=location,
+    endpoint=endpoint,
+    display_name=display_name,
     microsoft_app_id=microsoft_app_id,
+    name=name,
+    sku=sku,
+    streaming_endpoint_enabled=streaming_endpoint_enabled,
+    developer_app_insights_api_key=developer_app_insights_api_key,
     microsoft_app_msi_id=microsoft_app_msi_id,
     tags=tags,
-    resource_group_name=resource_group_name,
-    luis_app_ids=luis_app_ids,
-    sku=sku,
-    microsoft_app_tenant_id=microsoft_app_tenant_id,
-    developer_app_insights_application_id=developer_app_insights_application_id,
-    endpoint=endpoint,
-    luis_key=luis_key,
     timeouts=timeouts
   )),
   newAttrs(
-    microsoft_app_id,
-    microsoft_app_type=null,
-    name,
+    developer_app_insights_application_id=null,
+    streaming_endpoint_enabled=null,
     developer_app_insights_api_key=null,
     developer_app_insights_key=null,
-    luis_key=null,
-    endpoint=null,
+    sku,
+    resource_group_name,
     luis_app_ids=null,
     microsoft_app_msi_id=null,
-    location,
-    sku,
+    name,
     display_name=null,
-    developer_app_insights_application_id=null,
-    tags=null,
+    microsoft_app_id,
     microsoft_app_tenant_id=null,
-    streaming_endpoint_enabled=null,
-    resource_group_name,
+    tags=null,
+    location,
+    microsoft_app_type=null,
+    luis_key=null,
+    endpoint=null,
     timeouts=null
   ):: std.prune(a={
-    microsoft_app_id: microsoft_app_id,
-    microsoft_app_type: microsoft_app_type,
-    name: name,
+    developer_app_insights_application_id: developer_app_insights_application_id,
+    streaming_endpoint_enabled: streaming_endpoint_enabled,
     developer_app_insights_api_key: developer_app_insights_api_key,
     developer_app_insights_key: developer_app_insights_key,
-    luis_key: luis_key,
-    endpoint: endpoint,
+    sku: sku,
+    resource_group_name: resource_group_name,
     luis_app_ids: luis_app_ids,
     microsoft_app_msi_id: microsoft_app_msi_id,
-    location: location,
-    sku: sku,
+    name: name,
     display_name: display_name,
-    developer_app_insights_application_id: developer_app_insights_application_id,
-    tags: tags,
+    microsoft_app_id: microsoft_app_id,
     microsoft_app_tenant_id: microsoft_app_tenant_id,
-    streaming_endpoint_enabled: streaming_endpoint_enabled,
-    resource_group_name: resource_group_name,
+    tags: tags,
+    location: location,
+    microsoft_app_type: microsoft_app_type,
+    luis_key: luis_key,
+    endpoint: endpoint,
     timeouts: timeouts,
   }),
-  withEndpoint(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_bot_service_azure_bot+: {
         [resourceLabel]+: {
-          endpoint: value,
-        },
-      },
-    },
-  },
-  withLuisAppIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          luis_app_ids: value,
+          location: value,
         },
       },
     },
@@ -106,42 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeveloperAppInsightsKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          developer_app_insights_key: value,
-        },
-      },
-    },
-  },
-  withStreamingEndpointEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          streaming_endpoint_enabled: value,
-        },
-      },
-    },
-  },
-  withDeveloperAppInsightsApiKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          developer_app_insights_api_key: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withMicrosoftAppMsiId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_service_azure_bot+: {
@@ -151,38 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMicrosoftAppTenantId(resourceLabel, value):: {
+  withMicrosoftAppId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_service_azure_bot+: {
         [resourceLabel]+: {
-          microsoft_app_tenant_id: value,
-        },
-      },
-    },
-  },
-  withMicrosoftAppType(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          microsoft_app_type: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_service_azure_bot+: {
-        [resourceLabel]+: {
-          tags: value,
+          microsoft_app_id: value,
         },
       },
     },
@@ -205,11 +133,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLuisKey(resourceLabel, value):: {
+  withSku(resourceLabel, value):: {
     resource+: {
       azurerm_bot_service_azure_bot+: {
         [resourceLabel]+: {
-          luis_key: value,
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -223,11 +160,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMicrosoftAppId(resourceLabel, value):: {
+  withDeveloperAppInsightsKey(resourceLabel, value):: {
     resource+: {
       azurerm_bot_service_azure_bot+: {
         [resourceLabel]+: {
-          microsoft_app_id: value,
+          developer_app_insights_key: value,
+        },
+      },
+    },
+  },
+  withEndpoint(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          endpoint: value,
+        },
+      },
+    },
+  },
+  withLuisKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          luis_key: value,
+        },
+      },
+    },
+  },
+  withStreamingEndpointEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          streaming_endpoint_enabled: value,
+        },
+      },
+    },
+  },
+  withMicrosoftAppType(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          microsoft_app_type: value,
+        },
+      },
+    },
+  },
+  withLuisAppIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          luis_app_ids: value,
+        },
+      },
+    },
+  },
+  withDeveloperAppInsightsApiKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          developer_app_insights_api_key: value,
+        },
+      },
+    },
+  },
+  withMicrosoftAppTenantId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_service_azure_bot+: {
+        [resourceLabel]+: {
+          microsoft_app_tenant_id: value,
         },
       },
     },
@@ -252,15 +252,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

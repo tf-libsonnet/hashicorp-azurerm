@@ -2,44 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    two_line_elements,
+    location,
+    name,
     norad_id,
     resource_group_name,
     tags=null,
     title_line,
-    two_line_elements,
-    location,
-    name,
     links=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_orbital_spacecraft', label=resourceLabel, attrs=self.newAttrs(
+    two_line_elements=two_line_elements,
+    location=location,
+    name=name,
     norad_id=norad_id,
     resource_group_name=resource_group_name,
     tags=tags,
     title_line=title_line,
-    two_line_elements=two_line_elements,
-    location=location,
-    name=name,
     links=links,
     timeouts=timeouts
   )),
   newAttrs(
-    title_line,
-    two_line_elements,
     location,
     name,
     norad_id,
     resource_group_name,
     tags=null,
+    title_line,
+    two_line_elements,
     links=null,
     timeouts=null
   ):: std.prune(a={
-    title_line: title_line,
-    two_line_elements: two_line_elements,
     location: location,
     name: name,
     norad_id: norad_id,
     resource_group_name: resource_group_name,
     tags: tags,
+    title_line: title_line,
+    two_line_elements: two_line_elements,
     links: links,
     timeouts: timeouts,
   }),
@@ -159,15 +159,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

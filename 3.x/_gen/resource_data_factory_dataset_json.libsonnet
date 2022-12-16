@@ -2,104 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    linked_service_name,
+    data_factory_id,
+    annotations=null,
     folder=null,
     additional_properties=null,
     description=null,
     encoding=null,
-    linked_service_name,
     name,
     parameters=null,
-    annotations=null,
-    data_factory_id,
+    azure_blob_storage_location=null,
     http_server_location=null,
     schema_column=null,
-    timeouts=null,
-    azure_blob_storage_location=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_json', label=resourceLabel, attrs=self.newAttrs(
+    linked_service_name=linked_service_name,
+    data_factory_id=data_factory_id,
+    annotations=annotations,
     folder=folder,
     additional_properties=additional_properties,
     description=description,
     encoding=encoding,
-    linked_service_name=linked_service_name,
     name=name,
     parameters=parameters,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
+    azure_blob_storage_location=azure_blob_storage_location,
     http_server_location=http_server_location,
     schema_column=schema_column,
-    timeouts=timeouts,
-    azure_blob_storage_location=azure_blob_storage_location
+    timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    linked_service_name,
-    folder=null,
     additional_properties=null,
-    encoding=null,
-    name,
-    parameters=null,
     annotations=null,
+    description=null,
     data_factory_id,
+    encoding=null,
+    linked_service_name,
+    parameters=null,
+    folder=null,
+    name,
     schema_column=null,
     timeouts=null,
     azure_blob_storage_location=null,
     http_server_location=null
   ):: std.prune(a={
-    description: description,
-    linked_service_name: linked_service_name,
-    folder: folder,
     additional_properties: additional_properties,
-    encoding: encoding,
-    name: name,
-    parameters: parameters,
     annotations: annotations,
+    description: description,
     data_factory_id: data_factory_id,
+    encoding: encoding,
+    linked_service_name: linked_service_name,
+    parameters: parameters,
+    folder: folder,
+    name: name,
     schema_column: schema_column,
     timeouts: timeouts,
     azure_blob_storage_location: azure_blob_storage_location,
     http_server_location: http_server_location,
   }),
-  withEncoding(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_json+: {
-        [resourceLabel]+: {
-          encoding: value,
-        },
-      },
-    },
-  },
   withLinkedServiceName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_json+: {
         [resourceLabel]+: {
           linked_service_name: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_json+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withFolder(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_json+: {
-        [resourceLabel]+: {
-          folder: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_json+: {
-        [resourceLabel]+: {
-          description: value,
         },
       },
     },
@@ -113,15 +77,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_json+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_json+: {
@@ -131,11 +86,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_json+: {
+        [resourceLabel]+: {
+          folder: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_json+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_json+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withEncoding(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_json+: {
+        [resourceLabel]+: {
+          encoding: value,
+        },
+      },
+    },
+  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_json+: {
         [resourceLabel]+: {
           annotations: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_json+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -160,19 +160,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   azure_blob_storage_location:: {
     new(
+      container,
+      dynamic_container_enabled=null,
       dynamic_filename_enabled=null,
       dynamic_path_enabled=null,
       filename,
-      path,
-      container,
-      dynamic_container_enabled=null
+      path
     ):: std.prune(a={
+      container: container,
+      dynamic_container_enabled: dynamic_container_enabled,
       dynamic_filename_enabled: dynamic_filename_enabled,
       dynamic_path_enabled: dynamic_path_enabled,
       filename: filename,
       path: path,
-      container: container,
-      dynamic_container_enabled: dynamic_container_enabled,
     }),
   },
   withHttpServerLocation(resourceLabel, value):: {
@@ -195,17 +195,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   http_server_location:: {
     new(
+      filename,
+      path,
       relative_url,
       dynamic_filename_enabled=null,
-      dynamic_path_enabled=null,
-      filename,
-      path
+      dynamic_path_enabled=null
     ):: std.prune(a={
+      filename: filename,
+      path: path,
       relative_url: relative_url,
       dynamic_filename_enabled: dynamic_filename_enabled,
       dynamic_path_enabled: dynamic_path_enabled,
-      filename: filename,
-      path: path,
     }),
   },
   withSchemaColumn(resourceLabel, value):: {
@@ -257,15 +257,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

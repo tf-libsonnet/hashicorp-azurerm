@@ -2,109 +2,109 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    vcores,
-    sku_name,
-    maintenance_configuration_name=null,
-    subnet_id,
-    tags=null,
     license_type,
-    proxy_override=null,
-    administrator_login_password,
-    public_data_endpoint_enabled=null,
+    sku_name,
+    timezone_id=null,
+    maintenance_configuration_name=null,
+    tags=null,
     resource_group_name,
-    storage_account_type=null,
     administrator_login,
-    minimum_tls_version=null,
+    vcores,
     location,
+    proxy_override=null,
+    storage_size_in_gb,
+    administrator_login_password,
+    name,
+    minimum_tls_version=null,
+    public_data_endpoint_enabled=null,
+    subnet_id,
     dns_zone_partner_id=null,
     collation=null,
-    name,
-    storage_size_in_gb,
-    timezone_id=null,
+    storage_account_type=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_managed_instance', label=resourceLabel, attrs=self.newAttrs(
-    vcores=vcores,
-    sku_name=sku_name,
-    maintenance_configuration_name=maintenance_configuration_name,
-    subnet_id=subnet_id,
-    tags=tags,
     license_type=license_type,
-    proxy_override=proxy_override,
-    administrator_login_password=administrator_login_password,
-    public_data_endpoint_enabled=public_data_endpoint_enabled,
+    sku_name=sku_name,
+    timezone_id=timezone_id,
+    maintenance_configuration_name=maintenance_configuration_name,
+    tags=tags,
     resource_group_name=resource_group_name,
-    storage_account_type=storage_account_type,
     administrator_login=administrator_login,
-    minimum_tls_version=minimum_tls_version,
+    vcores=vcores,
     location=location,
+    proxy_override=proxy_override,
+    storage_size_in_gb=storage_size_in_gb,
+    administrator_login_password=administrator_login_password,
+    name=name,
+    minimum_tls_version=minimum_tls_version,
+    public_data_endpoint_enabled=public_data_endpoint_enabled,
+    subnet_id=subnet_id,
     dns_zone_partner_id=dns_zone_partner_id,
     collation=collation,
-    name=name,
-    storage_size_in_gb=storage_size_in_gb,
-    timezone_id=timezone_id,
+    storage_account_type=storage_account_type,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    proxy_override=null,
-    collation=null,
-    storage_account_type=null,
-    location,
-    license_type,
-    tags=null,
-    minimum_tls_version=null,
-    subnet_id,
-    name,
-    resource_group_name,
-    timezone_id=null,
-    vcores,
-    sku_name,
-    dns_zone_partner_id=null,
     maintenance_configuration_name=null,
-    storage_size_in_gb,
-    administrator_login_password,
-    administrator_login,
     public_data_endpoint_enabled=null,
+    resource_group_name,
+    collation=null,
+    sku_name,
+    administrator_login,
+    location,
+    storage_account_type=null,
+    dns_zone_partner_id=null,
+    proxy_override=null,
+    tags=null,
+    license_type,
+    vcores,
+    minimum_tls_version=null,
+    name,
+    administrator_login_password,
+    timezone_id=null,
+    storage_size_in_gb,
+    subnet_id,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    proxy_override: proxy_override,
-    collation: collation,
-    storage_account_type: storage_account_type,
-    location: location,
-    license_type: license_type,
-    tags: tags,
-    minimum_tls_version: minimum_tls_version,
-    subnet_id: subnet_id,
-    name: name,
-    resource_group_name: resource_group_name,
-    timezone_id: timezone_id,
-    vcores: vcores,
-    sku_name: sku_name,
-    dns_zone_partner_id: dns_zone_partner_id,
     maintenance_configuration_name: maintenance_configuration_name,
-    storage_size_in_gb: storage_size_in_gb,
-    administrator_login_password: administrator_login_password,
-    administrator_login: administrator_login,
     public_data_endpoint_enabled: public_data_endpoint_enabled,
+    resource_group_name: resource_group_name,
+    collation: collation,
+    sku_name: sku_name,
+    administrator_login: administrator_login,
+    location: location,
+    storage_account_type: storage_account_type,
+    dns_zone_partner_id: dns_zone_partner_id,
+    proxy_override: proxy_override,
+    tags: tags,
+    license_type: license_type,
+    vcores: vcores,
+    minimum_tls_version: minimum_tls_version,
+    name: name,
+    administrator_login_password: administrator_login_password,
+    timezone_id: timezone_id,
+    storage_size_in_gb: storage_size_in_gb,
+    subnet_id: subnet_id,
     identity: identity,
     timeouts: timeouts,
   }),
-  withAdministratorLogin(resourceLabel, value):: {
+  withDnsZonePartnerId(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          administrator_login: value,
+          dns_zone_partner_id: value,
         },
       },
     },
   },
-  withMaintenanceConfigurationName(resourceLabel, value):: {
+  withPublicDataEndpointEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          maintenance_configuration_name: value,
+          public_data_endpoint_enabled: value,
         },
       },
     },
@@ -118,20 +118,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withProxyOverride(resourceLabel, value):: {
+  withVcores(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          proxy_override: value,
+          vcores: value,
         },
       },
     },
   },
-  withStorageSizeInGb(resourceLabel, value):: {
+  withCollation(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          storage_size_in_gb: value,
+          collation: value,
+        },
+      },
+    },
+  },
+  withMinimumTlsVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          minimum_tls_version: value,
+        },
+      },
+    },
+  },
+  withMaintenanceConfigurationName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          maintenance_configuration_name: value,
+        },
+      },
+    },
+  },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          subnet_id: value,
+        },
+      },
+    },
+  },
+  withAdministratorLogin(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          administrator_login: value,
         },
       },
     },
@@ -154,29 +190,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVcores(resourceLabel, value):: {
+  withStorageAccountType(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          vcores: value,
-        },
-      },
-    },
-  },
-  withAdministratorLoginPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          administrator_login_password: value,
-        },
-      },
-    },
-  },
-  withMinimumTlsVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          minimum_tls_version: value,
+          storage_account_type: value,
         },
       },
     },
@@ -199,38 +217,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicDataEndpointEnabled(resourceLabel, value):: {
+  withStorageSizeInGb(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          public_data_endpoint_enabled: value,
+          storage_size_in_gb: value,
         },
       },
     },
   },
-  withSubnetId(resourceLabel, value):: {
+  withAdministratorLoginPassword(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          subnet_id: value,
+          administrator_login_password: value,
         },
       },
     },
   },
-  withDnsZonePartnerId(resourceLabel, value):: {
+  withProxyOverride(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          dns_zone_partner_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          name: value,
+          proxy_override: value,
         },
       },
     },
@@ -244,20 +253,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCollation(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          collation: value,
-        },
-      },
-    },
-  },
-  withStorageAccountType(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          storage_account_type: value,
+          name: value,
         },
       },
     },
@@ -309,15 +309,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    account_name,
     location,
     name,
     pool_name,
     resource_group_name,
     volume_name,
+    account_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_netapp_snapshot', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
     location=location,
     name=name,
     pool_name=pool_name,
     resource_group_name=resource_group_name,
     volume_name=volume_name,
+    account_name=account_name,
     timeouts=timeouts
   )),
   newAttrs(
+    pool_name,
+    resource_group_name,
     volume_name,
     account_name,
     location,
     name,
-    pool_name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    pool_name: pool_name,
+    resource_group_name: resource_group_name,
     volume_name: volume_name,
     account_name: account_name,
     location: location,
     name: name,
-    pool_name: pool_name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withPoolName(resourceLabel, value):: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

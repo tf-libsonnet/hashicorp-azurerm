@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     notification_type: notification_type,
     timeouts: timeouts,
   }),
+  withApiManagementId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_notification_recipient_email+: {
+        [resourceLabel]+: {
+          api_management_id: value,
+        },
+      },
+    },
+  },
   withEmail(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_notification_recipient_email+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_notification_recipient_email+: {
         [resourceLabel]+: {
           notification_type: value,
-        },
-      },
-    },
-  },
-  withApiManagementId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_notification_recipient_email+: {
-        [resourceLabel]+: {
-          api_management_id: value,
         },
       },
     },

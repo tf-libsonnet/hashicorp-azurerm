@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
     location,
     name,
     resource_group_name,
-    hub_profile=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    hub_profile=null
   ):: tf.withResource(type='azurerm_kubernetes_fleet_manager', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    hub_profile=hub_profile,
-    timeouts=timeouts
+    tags=tags,
+    timeouts=timeouts,
+    hub_profile=hub_profile
   )),
   newAttrs(
+    tags=null,
     location,
     name,
     resource_group_name,
-    tags=null,
-    hub_profile=null,
-    timeouts=null
+    timeouts=null,
+    hub_profile=null
   ):: std.prune(a={
+    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
-    hub_profile: hub_profile,
     timeouts: timeouts,
+    hub_profile: hub_profile,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_kubernetes_fleet_manager+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kubernetes_fleet_manager+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
@@ -67,36 +49,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
         [resourceLabel]+: {
-          timeouts: value,
+          location: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          name: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withHubProfile(resourceLabel, value):: {
     resource+: {
@@ -121,6 +90,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       dns_prefix
     ):: std.prune(a={
       dns_prefix: dns_prefix,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_kubernetes_fleet_manager+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_kubernetes_fleet_manager+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

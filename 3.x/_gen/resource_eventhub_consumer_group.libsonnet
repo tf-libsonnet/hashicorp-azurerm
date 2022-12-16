@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    namespace_name,
     resource_group_name,
     user_metadata=null,
     eventhub_name,
+    name,
+    namespace_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_consumer_group', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    namespace_name=namespace_name,
     resource_group_name=resource_group_name,
     user_metadata=user_metadata,
     eventhub_name=eventhub_name,
+    name=name,
+    namespace_name=namespace_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,6 +31,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     namespace_name: namespace_name,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_consumer_group+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withNamespaceName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_consumer_group+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_consumer_group+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_consumer_group+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

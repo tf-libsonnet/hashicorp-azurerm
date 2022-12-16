@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    lock_level,
     name,
     notes=null,
     scope,
-    lock_level,
     timeouts=null
   ):: tf.withResource(type='azurerm_management_lock', label=resourceLabel, attrs=self.newAttrs(
+    lock_level=lock_level,
     name=name,
     notes=notes,
     scope=scope,
-    lock_level=lock_level,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     scope: scope,
     timeouts: timeouts,
   }),
-  withScope(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_lock+: {
-        [resourceLabel]+: {
-          scope: value,
-        },
-      },
-    },
-  },
   withLockLevel(resourceLabel, value):: {
     resource+: {
       azurerm_management_lock+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withScope(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_lock+: {
+        [resourceLabel]+: {
+          scope: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_management_lock+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

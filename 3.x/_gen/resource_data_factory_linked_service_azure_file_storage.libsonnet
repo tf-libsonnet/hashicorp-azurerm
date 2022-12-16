@@ -2,81 +2,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    password=null,
-    user_id=null,
-    description=null,
-    host=null,
-    integration_runtime_name=null,
-    parameters=null,
-    file_share=null,
-    annotations=null,
-    data_factory_id,
     name,
+    file_share=null,
+    host=null,
     additional_properties=null,
     connection_string,
+    integration_runtime_name=null,
+    parameters=null,
+    password=null,
+    annotations=null,
+    data_factory_id,
+    description=null,
+    user_id=null,
     key_vault_password=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_file_storage', label=resourceLabel, attrs=self.newAttrs(
-    password=password,
-    user_id=user_id,
-    description=description,
-    host=host,
-    integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
-    file_share=file_share,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
     name=name,
+    file_share=file_share,
+    host=host,
     additional_properties=additional_properties,
     connection_string=connection_string,
+    integration_runtime_name=integration_runtime_name,
+    parameters=parameters,
+    password=password,
+    annotations=annotations,
+    data_factory_id=data_factory_id,
+    description=description,
+    user_id=user_id,
     key_vault_password=key_vault_password,
     timeouts=timeouts
   )),
   newAttrs(
-    user_id=null,
+    connection_string,
+    parameters=null,
+    password=null,
     annotations=null,
+    file_share=null,
     integration_runtime_name=null,
     name,
+    user_id=null,
     additional_properties=null,
-    connection_string,
-    file_share=null,
-    password=null,
     data_factory_id,
-    host=null,
-    parameters=null,
     description=null,
-    timeouts=null,
-    key_vault_password=null
+    host=null,
+    key_vault_password=null,
+    timeouts=null
   ):: std.prune(a={
-    user_id: user_id,
+    connection_string: connection_string,
+    parameters: parameters,
+    password: password,
     annotations: annotations,
+    file_share: file_share,
     integration_runtime_name: integration_runtime_name,
     name: name,
+    user_id: user_id,
     additional_properties: additional_properties,
-    connection_string: connection_string,
-    file_share: file_share,
-    password: password,
     data_factory_id: data_factory_id,
-    host: host,
-    parameters: parameters,
     description: description,
-    timeouts: timeouts,
+    host: host,
     key_vault_password: key_vault_password,
+    timeouts: timeouts,
   }),
-  withUserId(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_file_storage+: {
         [resourceLabel]+: {
-          user_id: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          annotations: value,
+          additional_properties: value,
         },
       },
     },
@@ -86,69 +77,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_azure_file_storage+: {
         [resourceLabel]+: {
           connection_string: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withHost(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          host: value,
-        },
-      },
-    },
-  },
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          password: value,
-        },
-      },
-    },
-  },
-  withFileShare(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          file_share: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          additional_properties: value,
         },
       },
     },
@@ -167,6 +95,78 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_azure_file_storage+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withHost(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          host: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withUserId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          user_id: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withFileShare(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          file_share: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          password: value,
         },
       },
     },

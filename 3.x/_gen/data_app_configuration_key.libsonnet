@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    configuration_store_id,
     key,
     label=null,
+    configuration_store_id,
     timeouts=null
   ):: tf.withData(type='azurerm_app_configuration_key', label=dataSrcLabel, attrs=self.newAttrs(
-    configuration_store_id=configuration_store_id,
     key=key,
     label=label,
+    configuration_store_id=configuration_store_id,
     timeouts=timeouts
   )),
   newAttrs(

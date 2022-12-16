@@ -4,111 +4,66 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     name,
     resource_group_name,
-    live_trace_enabled=null,
-    service_mode=null,
-    tags=null,
-    location,
-    connectivity_logs_enabled=null,
     messaging_logs_enabled=null,
-    upstream_endpoint=null,
-    cors=null,
-    live_trace=null,
-    sku=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_signalr_service', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    live_trace_enabled=live_trace_enabled,
-    service_mode=service_mode,
-    tags=tags,
-    location=location,
-    connectivity_logs_enabled=connectivity_logs_enabled,
-    messaging_logs_enabled=messaging_logs_enabled,
-    upstream_endpoint=upstream_endpoint,
-    cors=cors,
-    live_trace=live_trace,
-    sku=sku,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    resource_group_name,
-    live_trace_enabled=null,
     service_mode=null,
-    location,
-    tags=null,
     connectivity_logs_enabled=null,
-    messaging_logs_enabled=null,
-    name,
-    cors=null,
+    tags=null,
+    live_trace_enabled=null,
+    location,
     live_trace=null,
     sku=null,
     timeouts=null,
-    upstream_endpoint=null
+    upstream_endpoint=null,
+    cors=null
+  ):: tf.withResource(type='azurerm_signalr_service', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    resource_group_name=resource_group_name,
+    messaging_logs_enabled=messaging_logs_enabled,
+    service_mode=service_mode,
+    connectivity_logs_enabled=connectivity_logs_enabled,
+    tags=tags,
+    live_trace_enabled=live_trace_enabled,
+    location=location,
+    live_trace=live_trace,
+    sku=sku,
+    timeouts=timeouts,
+    upstream_endpoint=upstream_endpoint,
+    cors=cors
+  )),
+  newAttrs(
+    tags=null,
+    resource_group_name,
+    live_trace_enabled=null,
+    location,
+    name,
+    service_mode=null,
+    messaging_logs_enabled=null,
+    connectivity_logs_enabled=null,
+    timeouts=null,
+    upstream_endpoint=null,
+    cors=null,
+    live_trace=null,
+    sku=null
   ):: std.prune(a={
+    tags: tags,
     resource_group_name: resource_group_name,
     live_trace_enabled: live_trace_enabled,
-    service_mode: service_mode,
     location: location,
-    tags: tags,
-    connectivity_logs_enabled: connectivity_logs_enabled,
-    messaging_logs_enabled: messaging_logs_enabled,
     name: name,
+    service_mode: service_mode,
+    messaging_logs_enabled: messaging_logs_enabled,
+    connectivity_logs_enabled: connectivity_logs_enabled,
+    timeouts: timeouts,
+    upstream_endpoint: upstream_endpoint,
     cors: cors,
     live_trace: live_trace,
     sku: sku,
-    timeouts: timeouts,
-    upstream_endpoint: upstream_endpoint,
   }),
-  withLiveTraceEnabled(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_signalr_service+: {
         [resourceLabel]+: {
-          live_trace_enabled: value,
-        },
-      },
-    },
-  },
-  withServiceMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service+: {
-        [resourceLabel]+: {
-          service_mode: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withMessagingLogsEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service+: {
-        [resourceLabel]+: {
-          messaging_logs_enabled: value,
-        },
-      },
-    },
-  },
-  withConnectivityLogsEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service+: {
-        [resourceLabel]+: {
-          connectivity_logs_enabled: value,
+          name: value,
         },
       },
     },
@@ -122,11 +77,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withLiveTraceEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_signalr_service+: {
         [resourceLabel]+: {
-          name: value,
+          live_trace_enabled: value,
+        },
+      },
+    },
+  },
+  withMessagingLogsEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service+: {
+        [resourceLabel]+: {
+          messaging_logs_enabled: value,
+        },
+      },
+    },
+  },
+  withServiceMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service+: {
+        [resourceLabel]+: {
+          service_mode: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withConnectivityLogsEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service+: {
+        [resourceLabel]+: {
+          connectivity_logs_enabled: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -151,15 +151,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   upstream_endpoint:: {
     new(
-      category_pattern,
-      event_pattern,
       hub_pattern,
-      url_template
+      url_template,
+      category_pattern,
+      event_pattern
     ):: std.prune(a={
-      category_pattern: category_pattern,
-      event_pattern: event_pattern,
       hub_pattern: hub_pattern,
       url_template: url_template,
+      category_pattern: category_pattern,
+      event_pattern: event_pattern,
     }),
   },
   withCors(resourceLabel, value):: {
@@ -207,15 +207,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   live_trace:: {
     new(
-      enabled=null,
-      http_request_logs_enabled=null,
       messaging_logs_enabled=null,
-      connectivity_logs_enabled=null
+      connectivity_logs_enabled=null,
+      enabled=null,
+      http_request_logs_enabled=null
     ):: std.prune(a={
-      enabled: enabled,
-      http_request_logs_enabled: http_request_logs_enabled,
       messaging_logs_enabled: messaging_logs_enabled,
       connectivity_logs_enabled: connectivity_logs_enabled,
+      enabled: enabled,
+      http_request_logs_enabled: http_request_logs_enabled,
     }),
   },
   withSku(resourceLabel, value):: {
@@ -238,11 +238,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sku:: {
     new(
-      name,
-      capacity
+      capacity,
+      name
     ):: std.prune(a={
-      name: name,
       capacity: capacity,
+      name: name,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -265,15 +265,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

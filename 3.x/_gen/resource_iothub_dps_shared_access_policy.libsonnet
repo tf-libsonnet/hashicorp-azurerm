@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
+    service_config=null,
     enrollment_read=null,
     enrollment_write=null,
+    resource_group_name,
+    iothub_dps_name,
     name,
     registration_read=null,
     registration_write=null,
-    service_config=null,
-    iothub_dps_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_dps_shared_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
+    service_config=service_config,
     enrollment_read=enrollment_read,
     enrollment_write=enrollment_write,
+    resource_group_name=resource_group_name,
+    iothub_dps_name=iothub_dps_name,
     name=name,
     registration_read=registration_read,
     registration_write=registration_write,
-    service_config=service_config,
-    iothub_dps_name=iothub_dps_name,
     timeouts=timeouts
   )),
   newAttrs(
-    enrollment_write=null,
     name,
+    resource_group_name,
+    service_config=null,
+    enrollment_read=null,
+    enrollment_write=null,
     registration_read=null,
     registration_write=null,
-    service_config=null,
     iothub_dps_name,
-    resource_group_name,
-    enrollment_read=null,
     timeouts=null
   ):: std.prune(a={
-    enrollment_write: enrollment_write,
     name: name,
+    resource_group_name: resource_group_name,
+    service_config: service_config,
+    enrollment_read: enrollment_read,
+    enrollment_write: enrollment_write,
     registration_read: registration_read,
     registration_write: registration_write,
-    service_config: service_config,
     iothub_dps_name: iothub_dps_name,
-    resource_group_name: resource_group_name,
-    enrollment_read: enrollment_read,
     timeouts: timeouts,
   }),
   withIothubDpsName(resourceLabel, value):: {
@@ -70,11 +70,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRegistrationWrite(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_dps_shared_access_policy+: {
         [resourceLabel]+: {
-          registration_write: value,
+          resource_group_name: value,
         },
       },
     },
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withRegistrationWrite(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_dps_shared_access_policy+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          registration_write: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

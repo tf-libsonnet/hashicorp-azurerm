@@ -31,6 +31,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  withEventhubPrimaryConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_digital_twins_endpoint_eventhub+: {
+        [resourceLabel]+: {
+          eventhub_primary_connection_string: value,
+        },
+      },
+    },
+  },
   withEventhubSecondaryConnectionString(resourceLabel, value):: {
     resource+: {
       azurerm_digital_twins_endpoint_eventhub+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEventhubPrimaryConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_digital_twins_endpoint_eventhub+: {
-        [resourceLabel]+: {
-          eventhub_primary_connection_string: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_digital_twins_endpoint_eventhub+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

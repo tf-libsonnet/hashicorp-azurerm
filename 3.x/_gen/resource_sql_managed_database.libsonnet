@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     sql_managed_instance_id,
     location,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     sql_managed_instance_id: sql_managed_instance_id,
     location: location,
-    name: name,
     timeouts: timeouts,
   }),
   withLocation(resourceLabel, value):: {

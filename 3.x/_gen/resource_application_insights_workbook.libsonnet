@@ -2,64 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_container_id=null,
     tags=null,
-    category=null,
+    description=null,
     location,
+    category=null,
     data_json,
+    storage_container_id=null,
+    name,
+    source_id=null,
     resource_group_name,
     display_name,
-    name,
-    description=null,
-    source_id=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_workbook', label=resourceLabel, attrs=self.newAttrs(
-    storage_container_id=storage_container_id,
     tags=tags,
-    category=category,
+    description=description,
     location=location,
+    category=category,
     data_json=data_json,
+    storage_container_id=storage_container_id,
+    name=name,
+    source_id=source_id,
     resource_group_name=resource_group_name,
     display_name=display_name,
-    name=name,
-    description=description,
-    source_id=source_id,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    location,
-    name,
-    tags=null,
-    category=null,
-    source_id=null,
-    data_json,
-    storage_container_id=null,
     display_name,
+    location,
+    source_id=null,
+    storage_container_id=null,
+    tags=null,
     resource_group_name,
+    name,
+    category=null,
+    data_json,
     description=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    name: name,
-    tags: tags,
-    category: category,
-    source_id: source_id,
-    data_json: data_json,
-    storage_container_id: storage_container_id,
     display_name: display_name,
+    location: location,
+    source_id: source_id,
+    storage_container_id: storage_container_id,
+    tags: tags,
     resource_group_name: resource_group_name,
+    name: name,
+    category: category,
+    data_json: data_json,
     description: description,
     identity: identity,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
+  withCategory(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook+: {
         [resourceLabel]+: {
-          name: value,
+          category: value,
         },
       },
     },
@@ -73,11 +73,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSourceId(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook+: {
         [resourceLabel]+: {
-          source_id: value,
+          description: value,
+        },
+      },
+    },
+  },
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook+: {
+        [resourceLabel]+: {
+          display_name: value,
         },
       },
     },
@@ -100,20 +109,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCategory(resourceLabel, value):: {
+  withSourceId(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook+: {
         [resourceLabel]+: {
-          category: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook+: {
-        [resourceLabel]+: {
-          display_name: value,
+          source_id: value,
         },
       },
     },
@@ -136,11 +136,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook+: {
         [resourceLabel]+: {
-          description: value,
+          name: value,
         },
       },
     },
@@ -192,15 +192,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

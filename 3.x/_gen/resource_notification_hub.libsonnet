@@ -2,61 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    namespace_name,
     resource_group_name,
     tags=null,
     location,
-    name,
-    namespace_name,
     apns_credential=null,
     gcm_credential=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_notification_hub', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    namespace_name=namespace_name,
     resource_group_name=resource_group_name,
     tags=tags,
     location=location,
-    name=name,
-    namespace_name=namespace_name,
     apns_credential=apns_credential,
     gcm_credential=gcm_credential,
     timeouts=timeouts
   )),
   newAttrs(
+    tags=null,
     location,
     name,
     namespace_name,
     resource_group_name,
-    tags=null,
     timeouts=null,
     apns_credential=null,
     gcm_credential=null
   ):: std.prune(a={
+    tags: tags,
     location: location,
     name: name,
     namespace_name: namespace_name,
     resource_group_name: resource_group_name,
-    tags: tags,
     timeouts: timeouts,
     apns_credential: apns_credential,
     gcm_credential: gcm_credential,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub+: {
@@ -84,30 +66,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGcmCredential(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub+: {
         [resourceLabel]+: {
-          gcm_credential: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withGcmCredentialMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub+: {
         [resourceLabel]+: {
-          gcm_credential+: if std.isArray(v=value) then value else [value],
+          tags: value,
         },
       },
     },
-  },
-  gcm_credential:: {
-    new(
-      api_key
-    ):: std.prune(a={
-      api_key: api_key,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -160,17 +135,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   apns_credential:: {
     new(
+      token,
+      application_mode,
       bundle_id,
       key_id,
-      team_id,
-      token,
-      application_mode
+      team_id
     ):: std.prune(a={
+      token: token,
+      application_mode: application_mode,
       bundle_id: bundle_id,
       key_id: key_id,
       team_id: team_id,
-      token: token,
-      application_mode: application_mode,
+    }),
+  },
+  withGcmCredential(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub+: {
+        [resourceLabel]+: {
+          gcm_credential: value,
+        },
+      },
+    },
+  },
+  withGcmCredentialMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub+: {
+        [resourceLabel]+: {
+          gcm_credential+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  gcm_credential:: {
+    new(
+      api_key
+    ):: std.prune(a={
+      api_key: api_key,
     }),
   },
 }

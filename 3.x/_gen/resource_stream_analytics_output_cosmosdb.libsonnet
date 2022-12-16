@@ -2,61 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    stream_analytics_job_id,
     container_name,
     cosmosdb_account_key,
     cosmosdb_sql_database_id,
     document_id=null,
     name,
     partition_key=null,
+    stream_analytics_job_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_cosmosdb', label=resourceLabel, attrs=self.newAttrs(
-    stream_analytics_job_id=stream_analytics_job_id,
     container_name=container_name,
     cosmosdb_account_key=cosmosdb_account_key,
     cosmosdb_sql_database_id=cosmosdb_sql_database_id,
     document_id=document_id,
     name=name,
     partition_key=partition_key,
+    stream_analytics_job_id=stream_analytics_job_id,
     timeouts=timeouts
   )),
   newAttrs(
+    partition_key=null,
     stream_analytics_job_id,
     container_name,
     cosmosdb_account_key,
     cosmosdb_sql_database_id,
     document_id=null,
     name,
-    partition_key=null,
     timeouts=null
   ):: std.prune(a={
+    partition_key: partition_key,
     stream_analytics_job_id: stream_analytics_job_id,
     container_name: container_name,
     cosmosdb_account_key: cosmosdb_account_key,
     cosmosdb_sql_database_id: cosmosdb_sql_database_id,
     document_id: document_id,
     name: name,
-    partition_key: partition_key,
     timeouts: timeouts,
   }),
-  withContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_cosmosdb+: {
-        [resourceLabel]+: {
-          container_name: value,
-        },
-      },
-    },
-  },
-  withCosmosdbAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_cosmosdb+: {
-        [resourceLabel]+: {
-          cosmosdb_account_key: value,
-        },
-      },
-    },
-  },
   withCosmosdbSqlDatabaseId(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_cosmosdb+: {
@@ -98,6 +80,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_output_cosmosdb+: {
         [resourceLabel]+: {
           stream_analytics_job_id: value,
+        },
+      },
+    },
+  },
+  withContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_cosmosdb+: {
+        [resourceLabel]+: {
+          container_name: value,
+        },
+      },
+    },
+  },
+  withCosmosdbAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_cosmosdb+: {
+        [resourceLabel]+: {
+          cosmosdb_account_key: value,
         },
       },
     },

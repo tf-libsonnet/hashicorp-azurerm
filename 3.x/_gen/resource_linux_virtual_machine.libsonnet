@@ -2,205 +2,196 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    patch_mode=null,
+    location,
+    platform_fault_domain=null,
+    virtual_machine_scale_set_id=null,
+    dedicated_host_group_id=null,
+    license_type=null,
+    edge_zone=null,
+    encryption_at_host_enabled=null,
+    proximity_placement_group_id=null,
+    zone=null,
+    custom_data=null,
+    size,
+    eviction_policy=null,
+    capacity_reservation_group_id=null,
+    disable_password_authentication=null,
+    extensions_time_budget=null,
+    user_data=null,
+    tags=null,
+    provision_vm_agent=null,
     resource_group_name,
     secure_boot_enabled=null,
-    size,
-    vtpm_enabled=null,
-    source_image_id=null,
-    capacity_reservation_group_id=null,
-    eviction_policy=null,
-    platform_fault_domain=null,
-    disable_password_authentication=null,
-    location,
-    network_interface_ids,
-    provision_vm_agent=null,
-    user_data=null,
-    zone=null,
-    name,
-    tags=null,
-    virtual_machine_scale_set_id=null,
-    custom_data=null,
-    proximity_placement_group_id=null,
-    edge_zone=null,
-    extensions_time_budget=null,
-    max_bid_price=null,
-    admin_username,
-    encryption_at_host_enabled=null,
-    allow_extension_operations=null,
-    dedicated_host_group_id=null,
     patch_assessment_mode=null,
-    computer_name=null,
-    priority=null,
-    admin_password=null,
+    allow_extension_operations=null,
+    name,
+    patch_mode=null,
     availability_set_id=null,
-    license_type=null,
+    vtpm_enabled=null,
+    admin_username,
     dedicated_host_id=null,
-    additional_capabilities=null,
-    secret=null,
-    gallery_application=null,
+    max_bid_price=null,
+    network_interface_ids,
+    admin_password=null,
+    priority=null,
+    source_image_id=null,
+    computer_name=null,
     termination_notification=null,
-    admin_ssh_key=null,
     boot_diagnostics=null,
+    identity=null,
+    additional_capabilities=null,
+    gallery_application=null,
+    admin_ssh_key=null,
+    os_disk=null,
+    secret=null,
     plan=null,
     source_image_reference=null,
-    identity=null,
-    os_disk=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_linux_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
-    patch_mode=patch_mode,
+    location=location,
+    platform_fault_domain=platform_fault_domain,
+    virtual_machine_scale_set_id=virtual_machine_scale_set_id,
+    dedicated_host_group_id=dedicated_host_group_id,
+    license_type=license_type,
+    edge_zone=edge_zone,
+    encryption_at_host_enabled=encryption_at_host_enabled,
+    proximity_placement_group_id=proximity_placement_group_id,
+    zone=zone,
+    custom_data=custom_data,
+    size=size,
+    eviction_policy=eviction_policy,
+    capacity_reservation_group_id=capacity_reservation_group_id,
+    disable_password_authentication=disable_password_authentication,
+    extensions_time_budget=extensions_time_budget,
+    user_data=user_data,
+    tags=tags,
+    provision_vm_agent=provision_vm_agent,
     resource_group_name=resource_group_name,
     secure_boot_enabled=secure_boot_enabled,
-    size=size,
-    vtpm_enabled=vtpm_enabled,
-    source_image_id=source_image_id,
-    capacity_reservation_group_id=capacity_reservation_group_id,
-    eviction_policy=eviction_policy,
-    platform_fault_domain=platform_fault_domain,
-    disable_password_authentication=disable_password_authentication,
-    location=location,
-    network_interface_ids=network_interface_ids,
-    provision_vm_agent=provision_vm_agent,
-    user_data=user_data,
-    zone=zone,
-    name=name,
-    tags=tags,
-    virtual_machine_scale_set_id=virtual_machine_scale_set_id,
-    custom_data=custom_data,
-    proximity_placement_group_id=proximity_placement_group_id,
-    edge_zone=edge_zone,
-    extensions_time_budget=extensions_time_budget,
-    max_bid_price=max_bid_price,
-    admin_username=admin_username,
-    encryption_at_host_enabled=encryption_at_host_enabled,
-    allow_extension_operations=allow_extension_operations,
-    dedicated_host_group_id=dedicated_host_group_id,
     patch_assessment_mode=patch_assessment_mode,
-    computer_name=computer_name,
-    priority=priority,
-    admin_password=admin_password,
+    allow_extension_operations=allow_extension_operations,
+    name=name,
+    patch_mode=patch_mode,
     availability_set_id=availability_set_id,
-    license_type=license_type,
+    vtpm_enabled=vtpm_enabled,
+    admin_username=admin_username,
     dedicated_host_id=dedicated_host_id,
-    additional_capabilities=additional_capabilities,
-    secret=secret,
-    gallery_application=gallery_application,
+    max_bid_price=max_bid_price,
+    network_interface_ids=network_interface_ids,
+    admin_password=admin_password,
+    priority=priority,
+    source_image_id=source_image_id,
+    computer_name=computer_name,
     termination_notification=termination_notification,
-    admin_ssh_key=admin_ssh_key,
     boot_diagnostics=boot_diagnostics,
+    identity=identity,
+    additional_capabilities=additional_capabilities,
+    gallery_application=gallery_application,
+    admin_ssh_key=admin_ssh_key,
+    os_disk=os_disk,
+    secret=secret,
     plan=plan,
     source_image_reference=source_image_reference,
-    identity=identity,
-    os_disk=os_disk,
     timeouts=timeouts
   )),
   newAttrs(
-    dedicated_host_group_id=null,
     patch_assessment_mode=null,
-    vtpm_enabled=null,
-    license_type=null,
-    provision_vm_agent=null,
-    extensions_time_budget=null,
-    max_bid_price=null,
-    zone=null,
-    eviction_policy=null,
-    proximity_placement_group_id=null,
-    allow_extension_operations=null,
-    disable_password_authentication=null,
-    edge_zone=null,
-    resource_group_name,
-    dedicated_host_id=null,
-    source_image_id=null,
-    tags=null,
-    network_interface_ids,
-    user_data=null,
-    secure_boot_enabled=null,
-    name,
-    size,
-    admin_password=null,
-    admin_username,
-    custom_data=null,
     encryption_at_host_enabled=null,
-    capacity_reservation_group_id=null,
-    computer_name=null,
-    virtual_machine_scale_set_id=null,
-    location,
     availability_set_id=null,
-    patch_mode=null,
-    platform_fault_domain=null,
     priority=null,
-    plan=null,
-    identity=null,
+    vtpm_enabled=null,
+    patch_mode=null,
+    tags=null,
+    edge_zone=null,
+    location,
+    disable_password_authentication=null,
+    user_data=null,
+    virtual_machine_scale_set_id=null,
+    zone=null,
+    dedicated_host_id=null,
+    provision_vm_agent=null,
+    admin_password=null,
+    source_image_id=null,
+    license_type=null,
+    extensions_time_budget=null,
+    proximity_placement_group_id=null,
+    admin_username,
+    max_bid_price=null,
+    allow_extension_operations=null,
+    computer_name=null,
+    eviction_policy=null,
+    resource_group_name,
+    secure_boot_enabled=null,
+    capacity_reservation_group_id=null,
+    custom_data=null,
+    network_interface_ids,
+    size,
+    name,
+    platform_fault_domain=null,
+    dedicated_host_group_id=null,
     os_disk=null,
-    termination_notification=null,
-    additional_capabilities=null,
-    source_image_reference=null,
     admin_ssh_key=null,
-    secret=null,
+    gallery_application=null,
+    identity=null,
     timeouts=null,
+    additional_capabilities=null,
+    secret=null,
     boot_diagnostics=null,
-    gallery_application=null
+    plan=null,
+    source_image_reference=null,
+    termination_notification=null
   ):: std.prune(a={
-    dedicated_host_group_id: dedicated_host_group_id,
     patch_assessment_mode: patch_assessment_mode,
-    vtpm_enabled: vtpm_enabled,
-    license_type: license_type,
-    provision_vm_agent: provision_vm_agent,
-    extensions_time_budget: extensions_time_budget,
-    max_bid_price: max_bid_price,
-    zone: zone,
-    eviction_policy: eviction_policy,
-    proximity_placement_group_id: proximity_placement_group_id,
-    allow_extension_operations: allow_extension_operations,
-    disable_password_authentication: disable_password_authentication,
-    edge_zone: edge_zone,
-    resource_group_name: resource_group_name,
-    dedicated_host_id: dedicated_host_id,
-    source_image_id: source_image_id,
-    tags: tags,
-    network_interface_ids: network_interface_ids,
-    user_data: user_data,
-    secure_boot_enabled: secure_boot_enabled,
-    name: name,
-    size: size,
-    admin_password: admin_password,
-    admin_username: admin_username,
-    custom_data: custom_data,
     encryption_at_host_enabled: encryption_at_host_enabled,
-    capacity_reservation_group_id: capacity_reservation_group_id,
-    computer_name: computer_name,
-    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
-    location: location,
     availability_set_id: availability_set_id,
-    patch_mode: patch_mode,
-    platform_fault_domain: platform_fault_domain,
     priority: priority,
-    plan: plan,
-    identity: identity,
+    vtpm_enabled: vtpm_enabled,
+    patch_mode: patch_mode,
+    tags: tags,
+    edge_zone: edge_zone,
+    location: location,
+    disable_password_authentication: disable_password_authentication,
+    user_data: user_data,
+    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
+    zone: zone,
+    dedicated_host_id: dedicated_host_id,
+    provision_vm_agent: provision_vm_agent,
+    admin_password: admin_password,
+    source_image_id: source_image_id,
+    license_type: license_type,
+    extensions_time_budget: extensions_time_budget,
+    proximity_placement_group_id: proximity_placement_group_id,
+    admin_username: admin_username,
+    max_bid_price: max_bid_price,
+    allow_extension_operations: allow_extension_operations,
+    computer_name: computer_name,
+    eviction_policy: eviction_policy,
+    resource_group_name: resource_group_name,
+    secure_boot_enabled: secure_boot_enabled,
+    capacity_reservation_group_id: capacity_reservation_group_id,
+    custom_data: custom_data,
+    network_interface_ids: network_interface_ids,
+    size: size,
+    name: name,
+    platform_fault_domain: platform_fault_domain,
+    dedicated_host_group_id: dedicated_host_group_id,
     os_disk: os_disk,
-    termination_notification: termination_notification,
-    additional_capabilities: additional_capabilities,
-    source_image_reference: source_image_reference,
     admin_ssh_key: admin_ssh_key,
-    secret: secret,
-    timeouts: timeouts,
-    boot_diagnostics: boot_diagnostics,
     gallery_application: gallery_application,
+    identity: identity,
+    timeouts: timeouts,
+    additional_capabilities: additional_capabilities,
+    secret: secret,
+    boot_diagnostics: boot_diagnostics,
+    plan: plan,
+    source_image_reference: source_image_reference,
+    termination_notification: termination_notification,
   }),
-  withLicenseType(resourceLabel, value):: {
+  withExtensionsTimeBudget(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          license_type: value,
-        },
-      },
-    },
-  },
-  withZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          zone: value,
+          extensions_time_budget: value,
         },
       },
     },
@@ -214,254 +205,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSecureBootEnabled(resourceLabel, value):: {
+  withZone(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          secure_boot_enabled: value,
-        },
-      },
-    },
-  },
-  withSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          size: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withUserData(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          user_data: value,
-        },
-      },
-    },
-  },
-  withAllowExtensionOperations(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          allow_extension_operations: value,
-        },
-      },
-    },
-  },
-  withDedicatedHostGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          dedicated_host_group_id: value,
-        },
-      },
-    },
-  },
-  withProvisionVmAgent(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          provision_vm_agent: value,
-        },
-      },
-    },
-  },
-  withComputerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          computer_name: value,
-        },
-      },
-    },
-  },
-  withAdminUsername(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          admin_username: value,
-        },
-      },
-    },
-  },
-  withPatchAssessmentMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          patch_assessment_mode: value,
-        },
-      },
-    },
-  },
-  withAdminPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          admin_password: value,
-        },
-      },
-    },
-  },
-  withPlatformFaultDomain(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          platform_fault_domain: value,
-        },
-      },
-    },
-  },
-  withDisablePasswordAuthentication(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          disable_password_authentication: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withAvailabilitySetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          availability_set_id: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withCustomData(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          custom_data: value,
-        },
-      },
-    },
-  },
-  withExtensionsTimeBudget(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          extensions_time_budget: value,
-        },
-      },
-    },
-  },
-  withEvictionPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          eviction_policy: value,
-        },
-      },
-    },
-  },
-  withPriority(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          priority: value,
-        },
-      },
-    },
-  },
-  withNetworkInterfaceIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          network_interface_ids: value,
-        },
-      },
-    },
-  },
-  withVtpmEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          vtpm_enabled: value,
-        },
-      },
-    },
-  },
-  withDedicatedHostId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          dedicated_host_id: value,
-        },
-      },
-    },
-  },
-  withPatchMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          patch_mode: value,
-        },
-      },
-    },
-  },
-  withCapacityReservationGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          capacity_reservation_group_id: value,
-        },
-      },
-    },
-  },
-  withEdgeZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          edge_zone: value,
-        },
-      },
-    },
-  },
-  withSourceImageId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          source_image_id: value,
-        },
-      },
-    },
-  },
-  withMaxBidPrice(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          max_bid_price: value,
+          zone: value,
         },
       },
     },
@@ -475,11 +223,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEncryptionAtHostEnabled(resourceLabel, value):: {
+  withPriority(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          encryption_at_host_enabled: value,
+          priority: value,
         },
       },
     },
@@ -493,32 +241,477 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTerminationNotification(resourceLabel, value):: {
+  withPatchMode(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          termination_notification: value,
+          patch_mode: value,
         },
       },
     },
   },
-  withTerminationNotificationMixin(resourceLabel, value):: {
+  withSize(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          termination_notification+: if std.isArray(v=value) then value else [value],
+          size: value,
         },
       },
     },
   },
-  termination_notification:: {
+  withDisablePasswordAuthentication(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          disable_password_authentication: value,
+        },
+      },
+    },
+  },
+  withUserData(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          user_data: value,
+        },
+      },
+    },
+  },
+  withAdminPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          admin_password: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withVtpmEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          vtpm_enabled: value,
+        },
+      },
+    },
+  },
+  withComputerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          computer_name: value,
+        },
+      },
+    },
+  },
+  withDedicatedHostId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          dedicated_host_id: value,
+        },
+      },
+    },
+  },
+  withCapacityReservationGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          capacity_reservation_group_id: value,
+        },
+      },
+    },
+  },
+  withPlatformFaultDomain(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          platform_fault_domain: value,
+        },
+      },
+    },
+  },
+  withEvictionPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          eviction_policy: value,
+        },
+      },
+    },
+  },
+  withPatchAssessmentMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          patch_assessment_mode: value,
+        },
+      },
+    },
+  },
+  withLicenseType(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          license_type: value,
+        },
+      },
+    },
+  },
+  withAdminUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          admin_username: value,
+        },
+      },
+    },
+  },
+  withCustomData(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          custom_data: value,
+        },
+      },
+    },
+  },
+  withEncryptionAtHostEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          encryption_at_host_enabled: value,
+        },
+      },
+    },
+  },
+  withSecureBootEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          secure_boot_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withDedicatedHostGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          dedicated_host_group_id: value,
+        },
+      },
+    },
+  },
+  withAllowExtensionOperations(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          allow_extension_operations: value,
+        },
+      },
+    },
+  },
+  withEdgeZone(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          edge_zone: value,
+        },
+      },
+    },
+  },
+  withMaxBidPrice(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          max_bid_price: value,
+        },
+      },
+    },
+  },
+  withProvisionVmAgent(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          provision_vm_agent: value,
+        },
+      },
+    },
+  },
+  withNetworkInterfaceIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          network_interface_ids: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withAvailabilitySetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          availability_set_id: value,
+        },
+      },
+    },
+  },
+  withSourceImageId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          source_image_id: value,
+        },
+      },
+    },
+  },
+  withAdditionalCapabilities(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          additional_capabilities: value,
+        },
+      },
+    },
+  },
+  withAdditionalCapabilitiesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          additional_capabilities+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  additional_capabilities:: {
     new(
-      enabled,
-      timeout=null
+      ultra_ssd_enabled=null
     ):: std.prune(a={
-      enabled: enabled,
-      timeout: timeout,
+      ultra_ssd_enabled: ultra_ssd_enabled,
     }),
+  },
+  withBootDiagnostics(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          boot_diagnostics: value,
+        },
+      },
+    },
+  },
+  withBootDiagnosticsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          boot_diagnostics+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  boot_diagnostics:: {
+    new(
+      storage_account_uri=null
+    ):: std.prune(a={
+      storage_account_uri: storage_account_uri,
+    }),
+  },
+  withGalleryApplication(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          gallery_application: value,
+        },
+      },
+    },
+  },
+  withGalleryApplicationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          gallery_application+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  gallery_application:: {
+    new(
+      configuration_blob_uri=null,
+      order=null,
+      tag=null,
+      version_id
+    ):: std.prune(a={
+      configuration_blob_uri: configuration_blob_uri,
+      order: order,
+      tag: tag,
+      version_id: version_id,
+    }),
+  },
+  withSourceImageReference(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          source_image_reference: value,
+        },
+      },
+    },
+  },
+  withSourceImageReferenceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          source_image_reference+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  source_image_reference:: {
+    new(
+      offer,
+      publisher,
+      sku,
+      version
+    ):: std.prune(a={
+      offer: offer,
+      publisher: publisher,
+      sku: sku,
+      version: version,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAdminSshKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          admin_ssh_key: value,
+        },
+      },
+    },
+  },
+  withAdminSshKeyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          admin_ssh_key+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  admin_ssh_key:: {
+    new(
+      public_key,
+      username
+    ):: std.prune(a={
+      public_key: public_key,
+      username: username,
+    }),
+  },
+  withOsDisk(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          os_disk: value,
+        },
+      },
+    },
+  },
+  withOsDiskMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          os_disk+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  os_disk:: {
+    new(
+      write_accelerator_enabled=null,
+      caching,
+      disk_encryption_set_id=null,
+      disk_size_gb=null,
+      name=null,
+      secure_vm_disk_encryption_set_id=null,
+      security_encryption_type=null,
+      storage_account_type,
+      diff_disk_settings=null
+    ):: std.prune(a={
+      write_accelerator_enabled: write_accelerator_enabled,
+      caching: caching,
+      disk_encryption_set_id: disk_encryption_set_id,
+      disk_size_gb: disk_size_gb,
+      name: name,
+      secure_vm_disk_encryption_set_id: secure_vm_disk_encryption_set_id,
+      security_encryption_type: security_encryption_type,
+      storage_account_type: storage_account_type,
+      diff_disk_settings: diff_disk_settings,
+    }),
+    diff_disk_settings:: {
+      new(
+        placement=null,
+        option
+      ):: std.prune(a={
+        placement: placement,
+        option: option,
+      }),
+    },
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -547,55 +740,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       identity_ids: identity_ids,
     }),
   },
-  withOsDisk(resourceLabel, value):: {
+  withPlan(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          os_disk: value,
+          plan: value,
         },
       },
     },
   },
-  withOsDiskMixin(resourceLabel, value):: {
+  withPlanMixin(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine+: {
         [resourceLabel]+: {
-          os_disk+: if std.isArray(v=value) then value else [value],
+          plan+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  os_disk:: {
+  plan:: {
     new(
-      storage_account_type,
-      write_accelerator_enabled=null,
-      caching,
-      disk_encryption_set_id=null,
-      disk_size_gb=null,
-      name=null,
-      secure_vm_disk_encryption_set_id=null,
-      security_encryption_type=null,
-      diff_disk_settings=null
+      name,
+      product,
+      publisher
     ):: std.prune(a={
-      storage_account_type: storage_account_type,
-      write_accelerator_enabled: write_accelerator_enabled,
-      caching: caching,
-      disk_encryption_set_id: disk_encryption_set_id,
-      disk_size_gb: disk_size_gb,
       name: name,
-      secure_vm_disk_encryption_set_id: secure_vm_disk_encryption_set_id,
-      security_encryption_type: security_encryption_type,
-      diff_disk_settings: diff_disk_settings,
+      product: product,
+      publisher: publisher,
     }),
-    diff_disk_settings:: {
-      new(
-        option,
-        placement=null
-      ):: std.prune(a={
-        option: option,
-        placement: placement,
-      }),
+  },
+  withTerminationNotification(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          termination_notification: value,
+        },
+      },
     },
+  },
+  withTerminationNotificationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          termination_notification+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  termination_notification:: {
+    new(
+      enabled,
+      timeout=null
+    ):: std.prune(a={
+      enabled: enabled,
+      timeout: timeout,
+    }),
   },
   withSecret(resourceLabel, value):: {
     resource+: {
@@ -630,204 +829,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         url: url,
       }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withAdditionalCapabilities(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          additional_capabilities: value,
-        },
-      },
-    },
-  },
-  withAdditionalCapabilitiesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          additional_capabilities+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  additional_capabilities:: {
-    new(
-      ultra_ssd_enabled=null
-    ):: std.prune(a={
-      ultra_ssd_enabled: ultra_ssd_enabled,
-    }),
-  },
-  withGalleryApplication(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          gallery_application: value,
-        },
-      },
-    },
-  },
-  withGalleryApplicationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          gallery_application+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  gallery_application:: {
-    new(
-      tag=null,
-      version_id,
-      configuration_blob_uri=null,
-      order=null
-    ):: std.prune(a={
-      tag: tag,
-      version_id: version_id,
-      configuration_blob_uri: configuration_blob_uri,
-      order: order,
-    }),
-  },
-  withSourceImageReference(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          source_image_reference: value,
-        },
-      },
-    },
-  },
-  withSourceImageReferenceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          source_image_reference+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  source_image_reference:: {
-    new(
-      publisher,
-      sku,
-      version,
-      offer
-    ):: std.prune(a={
-      publisher: publisher,
-      sku: sku,
-      version: version,
-      offer: offer,
-    }),
-  },
-  withBootDiagnostics(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          boot_diagnostics: value,
-        },
-      },
-    },
-  },
-  withBootDiagnosticsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          boot_diagnostics+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  boot_diagnostics:: {
-    new(
-      storage_account_uri=null
-    ):: std.prune(a={
-      storage_account_uri: storage_account_uri,
-    }),
-  },
-  withPlan(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          plan: value,
-        },
-      },
-    },
-  },
-  withPlanMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          plan+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  plan:: {
-    new(
-      product,
-      publisher,
-      name
-    ):: std.prune(a={
-      product: product,
-      publisher: publisher,
-      name: name,
-    }),
-  },
-  withAdminSshKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          admin_ssh_key: value,
-        },
-      },
-    },
-  },
-  withAdminSshKeyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          admin_ssh_key+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  admin_ssh_key:: {
-    new(
-      username,
-      public_key
-    ):: std.prune(a={
-      username: username,
-      public_key: public_key,
-    }),
   },
 }

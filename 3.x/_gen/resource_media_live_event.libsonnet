@@ -2,76 +2,85 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    use_static_hostname=null,
-    location,
+    media_services_account_name,
     name,
+    auto_start_enabled=null,
+    hostname_prefix=null,
     resource_group_name,
     transcription_languages=null,
-    description=null,
-    hostname_prefix=null,
-    media_services_account_name,
-    auto_start_enabled=null,
     tags=null,
-    cross_site_access_policy=null,
-    encoding=null,
-    input=null,
-    preview=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_live_event', label=resourceLabel, attrs=self.newAttrs(
-    use_static_hostname=use_static_hostname,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    transcription_languages=transcription_languages,
-    description=description,
-    hostname_prefix=hostname_prefix,
-    media_services_account_name=media_services_account_name,
-    auto_start_enabled=auto_start_enabled,
-    tags=tags,
-    cross_site_access_policy=cross_site_access_policy,
-    encoding=encoding,
-    input=input,
-    preview=preview,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    media_services_account_name,
-    transcription_languages=null,
+    use_static_hostname=null,
     description=null,
     location,
-    name,
-    tags=null,
-    resource_group_name,
-    use_static_hostname=null,
-    hostname_prefix=null,
-    auto_start_enabled=null,
-    encoding=null,
-    input=null,
     preview=null,
     timeouts=null,
-    cross_site_access_policy=null
+    cross_site_access_policy=null,
+    encoding=null,
+    input=null
+  ):: tf.withResource(type='azurerm_media_live_event', label=resourceLabel, attrs=self.newAttrs(
+    media_services_account_name=media_services_account_name,
+    name=name,
+    auto_start_enabled=auto_start_enabled,
+    hostname_prefix=hostname_prefix,
+    resource_group_name=resource_group_name,
+    transcription_languages=transcription_languages,
+    tags=tags,
+    use_static_hostname=use_static_hostname,
+    description=description,
+    location=location,
+    preview=preview,
+    timeouts=timeouts,
+    cross_site_access_policy=cross_site_access_policy,
+    encoding=encoding,
+    input=input
+  )),
+  newAttrs(
+    transcription_languages=null,
+    use_static_hostname=null,
+    description=null,
+    location,
+    media_services_account_name,
+    resource_group_name,
+    auto_start_enabled=null,
+    hostname_prefix=null,
+    name,
+    tags=null,
+    preview=null,
+    timeouts=null,
+    cross_site_access_policy=null,
+    encoding=null,
+    input=null
   ):: std.prune(a={
-    media_services_account_name: media_services_account_name,
     transcription_languages: transcription_languages,
+    use_static_hostname: use_static_hostname,
     description: description,
     location: location,
+    media_services_account_name: media_services_account_name,
+    resource_group_name: resource_group_name,
+    auto_start_enabled: auto_start_enabled,
+    hostname_prefix: hostname_prefix,
     name: name,
     tags: tags,
-    resource_group_name: resource_group_name,
-    use_static_hostname: use_static_hostname,
-    hostname_prefix: hostname_prefix,
-    auto_start_enabled: auto_start_enabled,
-    encoding: encoding,
-    input: input,
     preview: preview,
     timeouts: timeouts,
     cross_site_access_policy: cross_site_access_policy,
+    encoding: encoding,
+    input: input,
   }),
-  withLocation(resourceLabel, value):: {
+  withHostnamePrefix(resourceLabel, value):: {
     resource+: {
       azurerm_media_live_event+: {
         [resourceLabel]+: {
-          location: value,
+          hostname_prefix: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_live_event+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -81,6 +90,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_media_live_event+: {
         [resourceLabel]+: {
           transcription_languages: value,
+        },
+      },
+    },
+  },
+  withMediaServicesAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_live_event+: {
+        [resourceLabel]+: {
+          media_services_account_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_live_event+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -103,11 +130,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHostnamePrefix(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_media_live_event+: {
         [resourceLabel]+: {
-          hostname_prefix: value,
+          tags: value,
         },
       },
     },
@@ -121,41 +148,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_media_live_event+: {
         [resourceLabel]+: {
-          name: value,
+          location: value,
         },
       },
     },
   },
-  withMediaServicesAccountName(resourceLabel, value):: {
+  withCrossSiteAccessPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_media_live_event+: {
         [resourceLabel]+: {
-          media_services_account_name: value,
+          cross_site_access_policy: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withCrossSiteAccessPolicyMixin(resourceLabel, value):: {
     resource+: {
       azurerm_media_live_event+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          cross_site_access_policy+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_live_event+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  cross_site_access_policy:: {
+    new(
+      cross_domain_policy=null,
+      client_access_policy=null
+    ):: std.prune(a={
+      cross_domain_policy: cross_domain_policy,
+      client_access_policy: client_access_policy,
+    }),
   },
   withEncoding(resourceLabel, value):: {
     resource+: {
@@ -250,25 +277,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   preview:: {
     new(
-      preview_locator=null,
       streaming_policy_name=null,
       alternative_media_id=null,
+      preview_locator=null,
       ip_access_control_allow=null
     ):: std.prune(a={
-      preview_locator: preview_locator,
       streaming_policy_name: streaming_policy_name,
       alternative_media_id: alternative_media_id,
+      preview_locator: preview_locator,
       ip_access_control_allow: ip_access_control_allow,
     }),
     ip_access_control_allow:: {
       new(
-        subnet_prefix_length=null,
         address=null,
-        name=null
+        name=null,
+        subnet_prefix_length=null
       ):: std.prune(a={
-        subnet_prefix_length: subnet_prefix_length,
         address: address,
         name: name,
+        subnet_prefix_length: subnet_prefix_length,
       }),
     },
   },
@@ -301,33 +328,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       read: read,
       update: update,
       create: create,
-    }),
-  },
-  withCrossSiteAccessPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_live_event+: {
-        [resourceLabel]+: {
-          cross_site_access_policy: value,
-        },
-      },
-    },
-  },
-  withCrossSiteAccessPolicyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_live_event+: {
-        [resourceLabel]+: {
-          cross_site_access_policy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  cross_site_access_policy:: {
-    new(
-      client_access_policy=null,
-      cross_domain_policy=null
-    ):: std.prune(a={
-      client_access_policy: client_access_policy,
-      cross_domain_policy: cross_domain_policy,
     }),
   },
 }

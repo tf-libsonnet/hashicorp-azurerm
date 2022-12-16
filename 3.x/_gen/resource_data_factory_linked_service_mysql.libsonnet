@@ -2,79 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    connection_string,
+    data_factory_id,
     integration_runtime_name=null,
-    name,
     parameters=null,
     additional_properties=null,
-    connection_string,
-    description=null,
     annotations=null,
-    data_factory_id,
+    description=null,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_mysql', label=resourceLabel, attrs=self.newAttrs(
+    connection_string=connection_string,
+    data_factory_id=data_factory_id,
     integration_runtime_name=integration_runtime_name,
-    name=name,
     parameters=parameters,
     additional_properties=additional_properties,
-    connection_string=connection_string,
-    description=description,
     annotations=annotations,
-    data_factory_id=data_factory_id,
+    description=description,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    parameters=null,
-    additional_properties=null,
+    name,
+    connection_string,
     data_factory_id,
     integration_runtime_name=null,
-    name,
+    parameters=null,
+    additional_properties=null,
     annotations=null,
-    connection_string,
+    description=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
-    parameters: parameters,
-    additional_properties: additional_properties,
+    name: name,
+    connection_string: connection_string,
     data_factory_id: data_factory_id,
     integration_runtime_name: integration_runtime_name,
-    name: name,
+    parameters: parameters,
+    additional_properties: additional_properties,
     annotations: annotations,
-    connection_string: connection_string,
+    description: description,
     timeouts: timeouts,
   }),
-  withIntegrationRuntimeName(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_mysql+: {
         [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_mysql+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_mysql+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_mysql+: {
-        [resourceLabel]+: {
-          additional_properties: value,
+          description: value,
         },
       },
     },
@@ -88,11 +61,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_mysql+: {
         [resourceLabel]+: {
-          description: value,
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_mysql+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_mysql+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_mysql+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_mysql+: {
+        [resourceLabel]+: {
+          additional_properties: value,
         },
       },
     },
@@ -102,15 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_mysql+: {
         [resourceLabel]+: {
           annotations: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_mysql+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

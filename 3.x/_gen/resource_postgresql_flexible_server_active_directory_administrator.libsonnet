@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    principal_type,
-    resource_group_name,
-    server_name,
     tenant_id,
     object_id,
     principal_name,
+    principal_type,
+    resource_group_name,
+    server_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_postgresql_flexible_server_active_directory_administrator', label=resourceLabel, attrs=self.newAttrs(
-    principal_type=principal_type,
-    resource_group_name=resource_group_name,
-    server_name=server_name,
     tenant_id=tenant_id,
     object_id=object_id,
     principal_name=principal_name,
+    principal_type=principal_type,
+    resource_group_name=resource_group_name,
+    server_name=server_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    server_name,
-    tenant_id,
     object_id,
     principal_name,
     principal_type,
+    resource_group_name,
+    server_name,
+    tenant_id,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    server_name: server_name,
-    tenant_id: tenant_id,
     object_id: object_id,
     principal_name: principal_name,
     principal_type: principal_type,
+    resource_group_name: resource_group_name,
+    server_name: server_name,
+    tenant_id: tenant_id,
     timeouts: timeouts,
   }),
   withServerName(resourceLabel, value):: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

@@ -2,47 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_id,
     active=null,
     name,
     recurrence_period_end_date,
     recurrence_period_start_date,
     recurrence_type,
+    resource_group_id,
     export_data_options=null,
     export_data_storage_location=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_group_cost_management_export', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_id=resource_group_id,
     active=active,
     name=name,
     recurrence_period_end_date=recurrence_period_end_date,
     recurrence_period_start_date=recurrence_period_start_date,
     recurrence_type=recurrence_type,
+    resource_group_id=resource_group_id,
     export_data_options=export_data_options,
     export_data_storage_location=export_data_storage_location,
     timeouts=timeouts
   )),
   newAttrs(
-    recurrence_period_start_date,
-    recurrence_type,
     resource_group_id,
     active=null,
     name,
     recurrence_period_end_date,
-    export_data_options=null,
+    recurrence_period_start_date,
+    recurrence_type,
     export_data_storage_location=null,
-    timeouts=null
+    timeouts=null,
+    export_data_options=null
   ):: std.prune(a={
-    recurrence_period_start_date: recurrence_period_start_date,
-    recurrence_type: recurrence_type,
     resource_group_id: resource_group_id,
     active: active,
     name: name,
     recurrence_period_end_date: recurrence_period_end_date,
-    export_data_options: export_data_options,
+    recurrence_period_start_date: recurrence_period_start_date,
+    recurrence_type: recurrence_type,
     export_data_storage_location: export_data_storage_location,
     timeouts: timeouts,
+    export_data_options: export_data_options,
   }),
+  withActive(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_cost_management_export+: {
+        [resourceLabel]+: {
+          active: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_cost_management_export+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withRecurrencePeriodEndDate(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_cost_management_export+: {
@@ -78,51 +96,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withActive(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_cost_management_export+: {
-        [resourceLabel]+: {
-          active: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_cost_management_export+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withExportDataOptions(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_cost_management_export+: {
-        [resourceLabel]+: {
-          export_data_options: value,
-        },
-      },
-    },
-  },
-  withExportDataOptionsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_cost_management_export+: {
-        [resourceLabel]+: {
-          export_data_options+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  export_data_options:: {
-    new(
-      time_frame,
-      type
-    ):: std.prune(a={
-      time_frame: time_frame,
-      type: type,
-    }),
   },
   withExportDataStorageLocation(resourceLabel, value):: {
     resource+: {
@@ -171,15 +144,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
+    }),
+  },
+  withExportDataOptions(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_cost_management_export+: {
+        [resourceLabel]+: {
+          export_data_options: value,
+        },
+      },
+    },
+  },
+  withExportDataOptionsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_cost_management_export+: {
+        [resourceLabel]+: {
+          export_data_options+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  export_data_options:: {
+    new(
+      time_frame,
+      type
+    ):: std.prune(a={
+      time_frame: time_frame,
+      type: type,
     }),
   },
 }

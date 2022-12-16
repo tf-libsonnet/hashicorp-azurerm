@@ -2,81 +2,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    reserved=null,
-    kind=null,
+    zone_redundant=null,
+    is_xenon=null,
+    per_site_scaling=null,
+    resource_group_name,
     tags=null,
     app_service_environment_id=null,
-    is_xenon=null,
-    name,
-    per_site_scaling=null,
-    zone_redundant=null,
-    location,
-    maximum_elastic_worker_count=null,
-    resource_group_name,
-    timeouts=null,
-    sku=null
-  ):: tf.withResource(type='azurerm_app_service_plan', label=resourceLabel, attrs=self.newAttrs(
-    reserved=reserved,
-    kind=kind,
-    tags=tags,
-    app_service_environment_id=app_service_environment_id,
-    is_xenon=is_xenon,
-    name=name,
-    per_site_scaling=per_site_scaling,
-    zone_redundant=zone_redundant,
-    location=location,
-    maximum_elastic_worker_count=maximum_elastic_worker_count,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    sku=sku
-  )),
-  newAttrs(
-    tags=null,
-    resource_group_name,
+    reserved=null,
     kind=null,
     location,
-    maximum_elastic_worker_count=null,
-    app_service_environment_id=null,
-    is_xenon=null,
     name,
-    per_site_scaling=null,
-    reserved=null,
-    zone_redundant=null,
+    maximum_elastic_worker_count=null,
     sku=null,
     timeouts=null
+  ):: tf.withResource(type='azurerm_app_service_plan', label=resourceLabel, attrs=self.newAttrs(
+    zone_redundant=zone_redundant,
+    is_xenon=is_xenon,
+    per_site_scaling=per_site_scaling,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    app_service_environment_id=app_service_environment_id,
+    reserved=reserved,
+    kind=kind,
+    location=location,
+    name=name,
+    maximum_elastic_worker_count=maximum_elastic_worker_count,
+    sku=sku,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    is_xenon=null,
+    maximum_elastic_worker_count=null,
+    reserved=null,
+    zone_redundant=null,
+    name,
+    per_site_scaling=null,
+    resource_group_name,
+    tags=null,
+    app_service_environment_id=null,
+    kind=null,
+    location,
+    timeouts=null,
+    sku=null
   ):: std.prune(a={
-    tags: tags,
-    resource_group_name: resource_group_name,
-    kind: kind,
-    location: location,
-    maximum_elastic_worker_count: maximum_elastic_worker_count,
-    app_service_environment_id: app_service_environment_id,
     is_xenon: is_xenon,
-    name: name,
-    per_site_scaling: per_site_scaling,
+    maximum_elastic_worker_count: maximum_elastic_worker_count,
     reserved: reserved,
     zone_redundant: zone_redundant,
-    sku: sku,
+    name: name,
+    per_site_scaling: per_site_scaling,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    app_service_environment_id: app_service_environment_id,
+    kind: kind,
+    location: location,
     timeouts: timeouts,
+    sku: sku,
   }),
-  withReserved(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_plan+: {
-        [resourceLabel]+: {
-          reserved: value,
-        },
-      },
-    },
-  },
-  withIsXenon(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_plan+: {
-        [resourceLabel]+: {
-          is_xenon: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_plan+: {
@@ -95,20 +77,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_plan+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withKind(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_plan+: {
         [resourceLabel]+: {
           kind: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_plan+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withReserved(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_plan+: {
+        [resourceLabel]+: {
+          reserved: value,
+        },
+      },
+    },
+  },
+  withZoneRedundant(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_plan+: {
+        [resourceLabel]+: {
+          zone_redundant: value,
+        },
+      },
+    },
+  },
+  withIsXenon(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_plan+: {
+        [resourceLabel]+: {
+          is_xenon: value,
+        },
+      },
+    },
+  },
+  withMaximumElasticWorkerCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_plan+: {
+        [resourceLabel]+: {
+          maximum_elastic_worker_count: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_plan+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -131,32 +158,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withSku(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_plan+: {
         [resourceLabel]+: {
-          location: value,
+          sku: value,
         },
       },
     },
   },
-  withMaximumElasticWorkerCount(resourceLabel, value):: {
+  withSkuMixin(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_plan+: {
         [resourceLabel]+: {
-          maximum_elastic_worker_count: value,
+          sku+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withZoneRedundant(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_plan+: {
-        [resourceLabel]+: {
-          zone_redundant: value,
-        },
-      },
-    },
+  sku:: {
+    new(
+      size,
+      tier,
+      capacity=null
+    ):: std.prune(a={
+      size: size,
+      tier: tier,
+      capacity: capacity,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -178,44 +207,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_plan+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withSkuMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_plan+: {
-        [resourceLabel]+: {
-          sku+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  sku:: {
-    new(
-      capacity=null,
-      size,
-      tier
-    ):: std.prune(a={
-      capacity: capacity,
-      size: size,
-      tier: tier,
+      create: create,
     }),
   },
 }

@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location: location,
     timeouts: timeouts,
   }),
+  withService(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          service: value,
+        },
+      },
+    },
+  },
   withLocation(dataSrcLabel, value):: {
     data+: {
       azurerm_network_service_tags+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_service_tags+: {
         [dataSrcLabel]+: {
           location_filter: value,
-        },
-      },
-    },
-  },
-  withService(dataSrcLabel, value):: {
-    data+: {
-      azurerm_network_service_tags+: {
-        [dataSrcLabel]+: {
-          service: value,
         },
       },
     },

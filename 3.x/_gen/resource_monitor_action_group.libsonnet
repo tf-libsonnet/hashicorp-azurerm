@@ -2,88 +2,79 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    enabled=null,
-    name,
     resource_group_name,
     short_name,
     tags=null,
-    webhook_receiver=null,
-    voice_receiver=null,
+    enabled=null,
+    name,
+    automation_runbook_receiver=null,
     azure_function_receiver=null,
+    voice_receiver=null,
+    webhook_receiver=null,
+    email_receiver=null,
+    logic_app_receiver=null,
     sms_receiver=null,
     timeouts=null,
-    email_receiver=null,
     event_hub_receiver=null,
-    logic_app_receiver=null,
-    arm_role_receiver=null,
-    automation_runbook_receiver=null,
     itsm_receiver=null,
+    arm_role_receiver=null,
     azure_app_push_receiver=null
   ):: tf.withResource(type='azurerm_monitor_action_group', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    name=name,
     resource_group_name=resource_group_name,
     short_name=short_name,
     tags=tags,
-    webhook_receiver=webhook_receiver,
-    voice_receiver=voice_receiver,
+    enabled=enabled,
+    name=name,
+    automation_runbook_receiver=automation_runbook_receiver,
     azure_function_receiver=azure_function_receiver,
+    voice_receiver=voice_receiver,
+    webhook_receiver=webhook_receiver,
+    email_receiver=email_receiver,
+    logic_app_receiver=logic_app_receiver,
     sms_receiver=sms_receiver,
     timeouts=timeouts,
-    email_receiver=email_receiver,
     event_hub_receiver=event_hub_receiver,
-    logic_app_receiver=logic_app_receiver,
-    arm_role_receiver=arm_role_receiver,
-    automation_runbook_receiver=automation_runbook_receiver,
     itsm_receiver=itsm_receiver,
+    arm_role_receiver=arm_role_receiver,
     azure_app_push_receiver=azure_app_push_receiver
   )),
   newAttrs(
-    enabled=null,
-    name,
     resource_group_name,
     short_name,
     tags=null,
-    automation_runbook_receiver=null,
-    voice_receiver=null,
-    azure_app_push_receiver=null,
-    azure_function_receiver=null,
-    sms_receiver=null,
-    timeouts=null,
-    webhook_receiver=null,
+    enabled=null,
+    name,
     arm_role_receiver=null,
-    itsm_receiver=null,
-    email_receiver=null,
+    sms_receiver=null,
     event_hub_receiver=null,
-    logic_app_receiver=null
+    automation_runbook_receiver=null,
+    logic_app_receiver=null,
+    voice_receiver=null,
+    webhook_receiver=null,
+    azure_app_push_receiver=null,
+    email_receiver=null,
+    itsm_receiver=null,
+    timeouts=null,
+    azure_function_receiver=null
   ):: std.prune(a={
-    enabled: enabled,
-    name: name,
     resource_group_name: resource_group_name,
     short_name: short_name,
     tags: tags,
-    automation_runbook_receiver: automation_runbook_receiver,
-    voice_receiver: voice_receiver,
-    azure_app_push_receiver: azure_app_push_receiver,
-    azure_function_receiver: azure_function_receiver,
-    sms_receiver: sms_receiver,
-    timeouts: timeouts,
-    webhook_receiver: webhook_receiver,
+    enabled: enabled,
+    name: name,
     arm_role_receiver: arm_role_receiver,
-    itsm_receiver: itsm_receiver,
-    email_receiver: email_receiver,
+    sms_receiver: sms_receiver,
     event_hub_receiver: event_hub_receiver,
+    automation_runbook_receiver: automation_runbook_receiver,
     logic_app_receiver: logic_app_receiver,
+    voice_receiver: voice_receiver,
+    webhook_receiver: webhook_receiver,
+    azure_app_push_receiver: azure_app_push_receiver,
+    email_receiver: email_receiver,
+    itsm_receiver: itsm_receiver,
+    timeouts: timeouts,
+    azure_function_receiver: azure_function_receiver,
   }),
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_action_group+: {
@@ -120,157 +111,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAzureAppPushReceiver(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_action_group+: {
         [resourceLabel]+: {
-          azure_app_push_receiver: value,
+          enabled: value,
         },
       },
     },
   },
-  withAzureAppPushReceiverMixin(resourceLabel, value):: {
+  withEventHubReceiver(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_action_group+: {
         [resourceLabel]+: {
-          azure_app_push_receiver+: if std.isArray(v=value) then value else [value],
+          event_hub_receiver: value,
         },
       },
     },
   },
-  azure_app_push_receiver:: {
+  withEventHubReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          event_hub_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  event_hub_receiver:: {
     new(
-      email_address,
-      name
-    ):: std.prune(a={
-      email_address: email_address,
-      name: name,
-    }),
-  },
-  withEmailReceiver(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          email_receiver: value,
-        },
-      },
-    },
-  },
-  withEmailReceiverMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          email_receiver+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  email_receiver:: {
-    new(
+      tenant_id=null,
       use_common_alert_schema=null,
-      email_address,
-      name
-    ):: std.prune(a={
-      use_common_alert_schema: use_common_alert_schema,
-      email_address: email_address,
-      name: name,
-    }),
-  },
-  withLogicAppReceiver(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          logic_app_receiver: value,
-        },
-      },
-    },
-  },
-  withLogicAppReceiverMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          logic_app_receiver+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  logic_app_receiver:: {
-    new(
-      resource_id,
-      use_common_alert_schema=null,
-      callback_url,
-      name
-    ):: std.prune(a={
-      resource_id: resource_id,
-      use_common_alert_schema: use_common_alert_schema,
-      callback_url: callback_url,
-      name: name,
-    }),
-  },
-  withArmRoleReceiver(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          arm_role_receiver: value,
-        },
-      },
-    },
-  },
-  withArmRoleReceiverMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          arm_role_receiver+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  arm_role_receiver:: {
-    new(
+      event_hub_id=null,
+      event_hub_name=null,
+      event_hub_namespace=null,
       name,
-      role_id,
-      use_common_alert_schema=null
+      subscription_id=null
     ):: std.prune(a={
-      name: name,
-      role_id: role_id,
+      tenant_id: tenant_id,
       use_common_alert_schema: use_common_alert_schema,
-    }),
-  },
-  withAutomationRunbookReceiver(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          automation_runbook_receiver: value,
-        },
-      },
-    },
-  },
-  withAutomationRunbookReceiverMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          automation_runbook_receiver+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  automation_runbook_receiver:: {
-    new(
-      name,
-      runbook_name,
-      service_uri,
-      use_common_alert_schema=null,
-      webhook_resource_id,
-      automation_account_id,
-      is_global_runbook
-    ):: std.prune(a={
+      event_hub_id: event_hub_id,
+      event_hub_name: event_hub_name,
+      event_hub_namespace: event_hub_namespace,
       name: name,
-      runbook_name: runbook_name,
-      service_uri: service_uri,
-      use_common_alert_schema: use_common_alert_schema,
-      webhook_resource_id: webhook_resource_id,
-      automation_account_id: automation_account_id,
-      is_global_runbook: is_global_runbook,
+      subscription_id: subscription_id,
     }),
   },
   withItsmReceiver(resourceLabel, value):: {
@@ -326,13 +210,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sms_receiver:: {
     new(
+      name,
       phone_number,
-      country_code,
-      name
+      country_code
     ):: std.prune(a={
+      name: name,
       phone_number: phone_number,
       country_code: country_code,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAzureAppPushReceiver(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          azure_app_push_receiver: value,
+        },
+      },
+    },
+  },
+  withAzureAppPushReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          azure_app_push_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  azure_app_push_receiver:: {
+    new(
+      email_address,
+      name
+    ):: std.prune(a={
+      email_address: email_address,
       name: name,
+    }),
+  },
+  withEmailReceiver(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          email_receiver: value,
+        },
+      },
+    },
+  },
+  withEmailReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          email_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  email_receiver:: {
+    new(
+      email_address,
+      name,
+      use_common_alert_schema=null
+    ):: std.prune(a={
+      email_address: email_address,
+      name: name,
+      use_common_alert_schema: use_common_alert_schema,
     }),
   },
   withWebhookReceiver(resourceLabel, value):: {
@@ -367,112 +338,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     aad_auth:: {
       new(
-        identifier_uri=null,
         object_id,
-        tenant_id=null
+        tenant_id=null,
+        identifier_uri=null
       ):: std.prune(a={
-        identifier_uri: identifier_uri,
         object_id: object_id,
         tenant_id: tenant_id,
+        identifier_uri: identifier_uri,
       }),
     },
-  },
-  withVoiceReceiver(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          voice_receiver: value,
-        },
-      },
-    },
-  },
-  withVoiceReceiverMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          voice_receiver+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  voice_receiver:: {
-    new(
-      country_code,
-      name,
-      phone_number
-    ):: std.prune(a={
-      country_code: country_code,
-      name: name,
-      phone_number: phone_number,
-    }),
-  },
-  withEventHubReceiver(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          event_hub_receiver: value,
-        },
-      },
-    },
-  },
-  withEventHubReceiverMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          event_hub_receiver+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  event_hub_receiver:: {
-    new(
-      subscription_id=null,
-      tenant_id=null,
-      use_common_alert_schema=null,
-      event_hub_id=null,
-      event_hub_name=null,
-      event_hub_namespace=null,
-      name
-    ):: std.prune(a={
-      subscription_id: subscription_id,
-      tenant_id: tenant_id,
-      use_common_alert_schema: use_common_alert_schema,
-      event_hub_id: event_hub_id,
-      event_hub_name: event_hub_name,
-      event_hub_namespace: event_hub_namespace,
-      name: name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_group+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withAzureFunctionReceiver(resourceLabel, value):: {
     resource+: {
@@ -494,16 +368,142 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   azure_function_receiver:: {
     new(
-      function_app_resource_id,
-      function_name,
       http_trigger_url,
       name,
-      use_common_alert_schema=null
+      use_common_alert_schema=null,
+      function_app_resource_id,
+      function_name
     ):: std.prune(a={
-      function_app_resource_id: function_app_resource_id,
-      function_name: function_name,
       http_trigger_url: http_trigger_url,
       name: name,
+      use_common_alert_schema: use_common_alert_schema,
+      function_app_resource_id: function_app_resource_id,
+      function_name: function_name,
+    }),
+  },
+  withAutomationRunbookReceiver(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          automation_runbook_receiver: value,
+        },
+      },
+    },
+  },
+  withAutomationRunbookReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          automation_runbook_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  automation_runbook_receiver:: {
+    new(
+      automation_account_id,
+      is_global_runbook,
+      name,
+      runbook_name,
+      service_uri,
+      use_common_alert_schema=null,
+      webhook_resource_id
+    ):: std.prune(a={
+      automation_account_id: automation_account_id,
+      is_global_runbook: is_global_runbook,
+      name: name,
+      runbook_name: runbook_name,
+      service_uri: service_uri,
+      use_common_alert_schema: use_common_alert_schema,
+      webhook_resource_id: webhook_resource_id,
+    }),
+  },
+  withLogicAppReceiver(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          logic_app_receiver: value,
+        },
+      },
+    },
+  },
+  withLogicAppReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          logic_app_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  logic_app_receiver:: {
+    new(
+      resource_id,
+      use_common_alert_schema=null,
+      callback_url,
+      name
+    ):: std.prune(a={
+      resource_id: resource_id,
+      use_common_alert_schema: use_common_alert_schema,
+      callback_url: callback_url,
+      name: name,
+    }),
+  },
+  withVoiceReceiver(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          voice_receiver: value,
+        },
+      },
+    },
+  },
+  withVoiceReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          voice_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  voice_receiver:: {
+    new(
+      phone_number,
+      country_code,
+      name
+    ):: std.prune(a={
+      phone_number: phone_number,
+      country_code: country_code,
+      name: name,
+    }),
+  },
+  withArmRoleReceiver(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          arm_role_receiver: value,
+        },
+      },
+    },
+  },
+  withArmRoleReceiverMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_group+: {
+        [resourceLabel]+: {
+          arm_role_receiver+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  arm_role_receiver:: {
+    new(
+      name,
+      role_id,
+      use_common_alert_schema=null
+    ):: std.prune(a={
+      name: name,
+      role_id: role_id,
       use_common_alert_schema: use_common_alert_schema,
     }),
   },

@@ -2,57 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    target_resource_id,
+    vnet_solution=null,
     client_type=null,
     name,
     spring_cloud_id,
-    target_resource_id,
-    vnet_solution=null,
-    authentication=null,
-    timeouts=null
+    timeouts=null,
+    authentication=null
   ):: tf.withResource(type='azurerm_spring_cloud_connection', label=resourceLabel, attrs=self.newAttrs(
+    target_resource_id=target_resource_id,
+    vnet_solution=vnet_solution,
     client_type=client_type,
     name=name,
     spring_cloud_id=spring_cloud_id,
-    target_resource_id=target_resource_id,
-    vnet_solution=vnet_solution,
-    authentication=authentication,
-    timeouts=timeouts
+    timeouts=timeouts,
+    authentication=authentication
   )),
   newAttrs(
-    vnet_solution=null,
-    client_type=null,
     name,
     spring_cloud_id,
     target_resource_id,
-    authentication=null,
-    timeouts=null
+    vnet_solution=null,
+    client_type=null,
+    timeouts=null,
+    authentication=null
   ):: std.prune(a={
-    vnet_solution: vnet_solution,
-    client_type: client_type,
     name: name,
     spring_cloud_id: spring_cloud_id,
     target_resource_id: target_resource_id,
-    authentication: authentication,
+    vnet_solution: vnet_solution,
+    client_type: client_type,
     timeouts: timeouts,
+    authentication: authentication,
   }),
-  withClientType(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_connection+: {
-        [resourceLabel]+: {
-          client_type: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_connection+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withSpringCloudId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_connection+: {
@@ -80,6 +62,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withClientType(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_connection+: {
+        [resourceLabel]+: {
+          client_type: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_connection+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withAuthentication(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_connection+: {
@@ -100,21 +100,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   authentication:: {
     new(
+      subscription_id=null,
+      type,
+      certificate=null,
       client_id=null,
       name=null,
       principal_id=null,
-      secret=null,
-      subscription_id=null,
-      type,
-      certificate=null
+      secret=null
     ):: std.prune(a={
+      subscription_id: subscription_id,
+      type: type,
+      certificate: certificate,
       client_id: client_id,
       name: name,
       principal_id: principal_id,
       secret: secret,
-      subscription_id: subscription_id,
-      type: type,
-      certificate: certificate,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -137,15 +137,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

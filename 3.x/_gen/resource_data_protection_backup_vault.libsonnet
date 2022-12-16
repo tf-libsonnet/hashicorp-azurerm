@@ -8,8 +8,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     redundancy,
     resource_group_name,
-    identity=null,
-    timeouts=null
+    timeouts=null,
+    identity=null
   ):: tf.withResource(type='azurerm_data_protection_backup_vault', label=resourceLabel, attrs=self.newAttrs(
     tags=tags,
     datastore_type=datastore_type,
@@ -17,28 +17,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name=name,
     redundancy=redundancy,
     resource_group_name=resource_group_name,
-    identity=identity,
-    timeouts=timeouts
+    timeouts=timeouts,
+    identity=identity
   )),
   newAttrs(
+    name,
     redundancy,
     resource_group_name,
     tags=null,
     datastore_type,
     location,
-    name,
     identity=null,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     redundancy: redundancy,
     resource_group_name: resource_group_name,
     tags: tags,
     datastore_type: datastore_type,
     location: location,
-    name: name,
     identity: identity,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_vault+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_vault+: {
@@ -84,46 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_vault+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_vault+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_vault+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_vault+: {
@@ -147,6 +116,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type
     ):: std.prune(a={
       type: type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_vault+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_vault+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

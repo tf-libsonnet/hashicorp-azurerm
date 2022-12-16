@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_id: subscription_id,
     timeouts: timeouts,
   }),
-  withSubscriptionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group_subscription_association+: {
-        [resourceLabel]+: {
-          subscription_id: value,
-        },
-      },
-    },
-  },
   withManagementGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_management_group_subscription_association+: {
         [resourceLabel]+: {
           management_group_id: value,
+        },
+      },
+    },
+  },
+  withSubscriptionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group_subscription_association+: {
+        [resourceLabel]+: {
+          subscription_id: value,
         },
       },
     },
@@ -53,13 +53,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

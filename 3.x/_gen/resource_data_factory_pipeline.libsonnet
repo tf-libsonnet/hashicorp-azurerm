@@ -2,60 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    data_factory_id,
-    folder=null,
+    annotations=null,
     parameters=null,
+    description=null,
     moniter_metrics_after_duration=null,
     variables=null,
-    description=null,
+    data_factory_id,
+    folder=null,
     activities_json=null,
-    annotations=null,
     concurrency=null,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_pipeline', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    data_factory_id=data_factory_id,
-    folder=folder,
+    annotations=annotations,
     parameters=parameters,
+    description=description,
     moniter_metrics_after_duration=moniter_metrics_after_duration,
     variables=variables,
-    description=description,
+    data_factory_id=data_factory_id,
+    folder=folder,
     activities_json=activities_json,
-    annotations=annotations,
     concurrency=concurrency,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     data_factory_id,
+    folder=null,
+    activities_json=null,
+    concurrency=null,
+    moniter_metrics_after_duration=null,
+    name,
     parameters=null,
     variables=null,
     annotations=null,
-    concurrency=null,
     description=null,
-    folder=null,
-    moniter_metrics_after_duration=null,
-    activities_json=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     data_factory_id: data_factory_id,
+    folder: folder,
+    activities_json: activities_json,
+    concurrency: concurrency,
+    moniter_metrics_after_duration: moniter_metrics_after_duration,
+    name: name,
     parameters: parameters,
     variables: variables,
     annotations: annotations,
-    concurrency: concurrency,
     description: description,
-    folder: folder,
-    moniter_metrics_after_duration: moniter_metrics_after_duration,
-    activities_json: activities_json,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
+  withFolder(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          description: value,
+          folder: value,
+        },
+      },
+    },
+  },
+  withConcurrency(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          concurrency: value,
         },
       },
     },
@@ -78,29 +87,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withConcurrency(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          concurrency: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withMoniterMetricsAfterDuration(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          moniter_metrics_after_duration: value,
+          name: value,
         },
       },
     },
@@ -114,20 +105,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          name: value,
+          data_factory_id: value,
         },
       },
     },
   },
-  withFolder(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          folder: value,
+          description: value,
+        },
+      },
+    },
+  },
+  withMoniterMetricsAfterDuration(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          moniter_metrics_after_duration: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

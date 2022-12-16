@@ -2,50 +2,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
-    location,
     name,
     network_watcher_id,
     notes=null,
     output_workspace_resource_ids=null,
-    endpoint=null,
+    tags=null,
+    location,
     test_configuration=null,
     test_group=null,
-    timeouts=null
+    timeouts=null,
+    endpoint=null
   ):: tf.withResource(type='azurerm_network_connection_monitor', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    location=location,
     name=name,
     network_watcher_id=network_watcher_id,
     notes=notes,
     output_workspace_resource_ids=output_workspace_resource_ids,
-    endpoint=endpoint,
+    tags=tags,
+    location=location,
     test_configuration=test_configuration,
     test_group=test_group,
-    timeouts=timeouts
+    timeouts=timeouts,
+    endpoint=endpoint
   )),
   newAttrs(
-    location,
-    name,
-    network_watcher_id,
     notes=null,
     output_workspace_resource_ids=null,
     tags=null,
-    timeouts=null,
-    endpoint=null,
+    location,
+    name,
+    network_watcher_id,
     test_configuration=null,
-    test_group=null
+    test_group=null,
+    timeouts=null,
+    endpoint=null
   ):: std.prune(a={
-    location: location,
-    name: name,
-    network_watcher_id: network_watcher_id,
     notes: notes,
     output_workspace_resource_ids: output_workspace_resource_ids,
     tags: tags,
-    timeouts: timeouts,
-    endpoint: endpoint,
+    location: location,
+    name: name,
+    network_watcher_id: network_watcher_id,
     test_configuration: test_configuration,
     test_group: test_group,
+    timeouts: timeouts,
+    endpoint: endpoint,
   }),
   withName(resourceLabel, value):: {
     resource+: {
@@ -101,6 +101,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTestGroup(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_connection_monitor+: {
+        [resourceLabel]+: {
+          test_group: value,
+        },
+      },
+    },
+  },
+  withTestGroupMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_connection_monitor+: {
+        [resourceLabel]+: {
+          test_group+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  test_group:: {
+    new(
+      test_configuration_names,
+      destination_endpoints,
+      enabled=null,
+      name,
+      source_endpoints
+    ):: std.prune(a={
+      test_configuration_names: test_configuration_names,
+      destination_endpoints: destination_endpoints,
+      enabled: enabled,
+      name: name,
+      source_endpoints: source_endpoints,
+    }),
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_network_connection_monitor+: {
@@ -152,22 +185,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   endpoint:: {
     new(
-      target_resource_type=null,
-      address=null,
       coverage_level=null,
       excluded_ip_addresses=null,
       included_ip_addresses=null,
       name,
       target_resource_id=null,
+      target_resource_type=null,
+      address=null,
       filter=null
     ):: std.prune(a={
-      target_resource_type: target_resource_type,
-      address: address,
       coverage_level: coverage_level,
       excluded_ip_addresses: excluded_ip_addresses,
       included_ip_addresses: included_ip_addresses,
       name: name,
       target_resource_id: target_resource_id,
+      target_resource_type: target_resource_type,
+      address: address,
       filter: filter,
     }),
     filter:: {
@@ -209,23 +242,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   test_configuration:: {
     new(
+      test_frequency_in_seconds=null,
       name,
       preferred_ip_version=null,
       protocol,
-      test_frequency_in_seconds=null,
-      tcp_configuration=null,
-      http_configuration=null,
       icmp_configuration=null,
-      success_threshold=null
+      success_threshold=null,
+      tcp_configuration=null,
+      http_configuration=null
     ):: std.prune(a={
+      test_frequency_in_seconds: test_frequency_in_seconds,
       name: name,
       preferred_ip_version: preferred_ip_version,
       protocol: protocol,
-      test_frequency_in_seconds: test_frequency_in_seconds,
-      tcp_configuration: tcp_configuration,
-      http_configuration: http_configuration,
       icmp_configuration: icmp_configuration,
       success_threshold: success_threshold,
+      tcp_configuration: tcp_configuration,
+      http_configuration: http_configuration,
     }),
     success_threshold:: {
       new(
@@ -238,38 +271,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     tcp_configuration:: {
       new(
+        destination_port_behavior=null,
         port,
-        trace_route_enabled=null,
-        destination_port_behavior=null
+        trace_route_enabled=null
       ):: std.prune(a={
+        destination_port_behavior: destination_port_behavior,
         port: port,
         trace_route_enabled: trace_route_enabled,
-        destination_port_behavior: destination_port_behavior,
       }),
     },
     http_configuration:: {
       new(
+        prefer_https=null,
         valid_status_code_ranges=null,
         method=null,
         path=null,
         port=null,
-        prefer_https=null,
         request_header=null
       ):: std.prune(a={
+        prefer_https: prefer_https,
         valid_status_code_ranges: valid_status_code_ranges,
         method: method,
         path: path,
         port: port,
-        prefer_https: prefer_https,
         request_header: request_header,
       }),
       request_header:: {
         new(
-          value,
-          name
+          name,
+          value
         ):: std.prune(a={
-          value: value,
           name: name,
+          value: value,
         }),
       },
     },
@@ -280,38 +313,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         trace_route_enabled: trace_route_enabled,
       }),
     },
-  },
-  withTestGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_connection_monitor+: {
-        [resourceLabel]+: {
-          test_group: value,
-        },
-      },
-    },
-  },
-  withTestGroupMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_connection_monitor+: {
-        [resourceLabel]+: {
-          test_group+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  test_group:: {
-    new(
-      test_configuration_names,
-      destination_endpoints,
-      enabled=null,
-      name,
-      source_endpoints
-    ):: std.prune(a={
-      test_configuration_names: test_configuration_names,
-      destination_endpoints: destination_endpoints,
-      enabled: enabled,
-      name: name,
-      source_endpoints: source_endpoints,
-    }),
   },
 }

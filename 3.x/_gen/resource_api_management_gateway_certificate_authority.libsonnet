@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    gateway_name,
-    is_trusted=null,
     api_management_id,
     certificate_name,
+    gateway_name,
+    is_trusted=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_gateway_certificate_authority', label=resourceLabel, attrs=self.newAttrs(
-    gateway_name=gateway_name,
-    is_trusted=is_trusted,
     api_management_id=api_management_id,
     certificate_name=certificate_name,
+    gateway_name=gateway_name,
+    is_trusted=is_trusted,
     timeouts=timeouts
   )),
   newAttrs(
-    is_trusted=null,
     api_management_id,
     certificate_name,
     gateway_name,
+    is_trusted=null,
     timeouts=null
   ):: std.prune(a={
-    is_trusted: is_trusted,
     api_management_id: api_management_id,
     certificate_name: certificate_name,
     gateway_name: gateway_name,
+    is_trusted: is_trusted,
     timeouts: timeouts,
   }),
   withApiManagementId(resourceLabel, value):: {

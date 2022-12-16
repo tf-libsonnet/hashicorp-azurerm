@@ -2,46 +2,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    enabled=null,
     name,
     resource_group_name,
     tags=null,
     description=null,
-    enabled=null,
-    scope=null,
     suppression=null,
     timeouts=null,
-    condition=null
+    condition=null,
+    scope=null
   ):: tf.withResource(type='azurerm_monitor_action_rule_suppression', label=resourceLabel, attrs=self.newAttrs(
+    enabled=enabled,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
     description=description,
-    enabled=enabled,
-    scope=scope,
     suppression=suppression,
     timeouts=timeouts,
-    condition=condition
+    condition=condition,
+    scope=scope
   )),
   newAttrs(
+    enabled=null,
+    name,
     resource_group_name,
     tags=null,
     description=null,
-    enabled=null,
-    name,
-    condition=null,
-    scope=null,
     suppression=null,
-    timeouts=null
+    timeouts=null,
+    condition=null,
+    scope=null
   ):: std.prune(a={
+    enabled: enabled,
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     description: description,
-    enabled: enabled,
-    name: name,
-    condition: condition,
-    scope: scope,
     suppression: suppression,
     timeouts: timeouts,
+    condition: condition,
+    scope: scope,
   }),
   withTags(resourceLabel, value):: {
     resource+: {
@@ -108,22 +108,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   condition:: {
     new(
+      severity=null,
       target_resource_type=null,
       alert_context=null,
       alert_rule_id=null,
       description=null,
       monitor=null,
-      monitor_service=null,
-      severity=null
+      monitor_service=null
     ):: std.prune(a={
+      severity: severity,
       target_resource_type: target_resource_type,
       alert_context: alert_context,
       alert_rule_id: alert_rule_id,
       description: description,
       monitor: monitor,
       monitor_service: monitor_service,
-      severity: severity,
     }),
+    monitor_service:: {
+      new(
+        values,
+        operator
+      ):: std.prune(a={
+        values: values,
+        operator: operator,
+      }),
+    },
     severity:: {
       new(
         operator,
@@ -153,11 +162,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     alert_rule_id:: {
       new(
-        values,
-        operator
+        operator,
+        values
       ):: std.prune(a={
-        values: values,
         operator: operator,
+        values: values,
       }),
     },
     description:: {
@@ -171,20 +180,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     monitor:: {
       new(
-        values,
-        operator
+        operator,
+        values
       ):: std.prune(a={
-        values: values,
         operator: operator,
-      }),
-    },
-    monitor_service:: {
-      new(
-        values,
-        operator
-      ):: std.prune(a={
         values: values,
-        operator: operator,
       }),
     },
   },
@@ -243,15 +243,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     schedule:: {
       new(
-        recurrence_weekly=null,
         start_date_utc,
         end_date_utc,
-        recurrence_monthly=null
+        recurrence_monthly=null,
+        recurrence_weekly=null
       ):: std.prune(a={
-        recurrence_weekly: recurrence_weekly,
         start_date_utc: start_date_utc,
         end_date_utc: end_date_utc,
         recurrence_monthly: recurrence_monthly,
+        recurrence_weekly: recurrence_weekly,
       }),
     },
   },
@@ -275,15 +275,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

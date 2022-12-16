@@ -2,175 +2,112 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    metrics_advisor_aad_tenant_id=null,
-    name,
-    custom_question_answering_search_service_key=null,
-    public_network_access_enabled=null,
+    outbound_network_access_restricted=null,
     metrics_advisor_super_user_name=null,
-    resource_group_name,
     local_auth_enabled=null,
-    custom_question_answering_search_service_id=null,
+    dynamic_throttling_enabled=null,
+    name,
     fqdns=null,
+    kind,
+    location,
+    metrics_advisor_aad_client_id=null,
+    tags=null,
+    qna_runtime_endpoint=null,
+    public_network_access_enabled=null,
+    custom_question_answering_search_service_key=null,
     sku_name,
+    custom_question_answering_search_service_id=null,
+    metrics_advisor_website_name=null,
+    custom_subdomain_name=null,
+    metrics_advisor_aad_tenant_id=null,
+    resource_group_name,
+    storage=null,
+    timeouts=null,
+    customer_managed_key=null,
+    identity=null,
+    network_acls=null
+  ):: tf.withResource(type='azurerm_cognitive_account', label=resourceLabel, attrs=self.newAttrs(
+    outbound_network_access_restricted=outbound_network_access_restricted,
+    metrics_advisor_super_user_name=metrics_advisor_super_user_name,
+    local_auth_enabled=local_auth_enabled,
+    dynamic_throttling_enabled=dynamic_throttling_enabled,
+    name=name,
+    fqdns=fqdns,
+    kind=kind,
+    location=location,
+    metrics_advisor_aad_client_id=metrics_advisor_aad_client_id,
+    tags=tags,
+    qna_runtime_endpoint=qna_runtime_endpoint,
+    public_network_access_enabled=public_network_access_enabled,
+    custom_question_answering_search_service_key=custom_question_answering_search_service_key,
+    sku_name=sku_name,
+    custom_question_answering_search_service_id=custom_question_answering_search_service_id,
+    metrics_advisor_website_name=metrics_advisor_website_name,
+    custom_subdomain_name=custom_subdomain_name,
+    metrics_advisor_aad_tenant_id=metrics_advisor_aad_tenant_id,
+    resource_group_name=resource_group_name,
+    storage=storage,
+    timeouts=timeouts,
+    customer_managed_key=customer_managed_key,
+    identity=identity,
+    network_acls=network_acls
+  )),
+  newAttrs(
+    dynamic_throttling_enabled=null,
+    custom_question_answering_search_service_key=null,
+    metrics_advisor_super_user_name=null,
+    local_auth_enabled=null,
+    location,
+    custom_subdomain_name=null,
+    metrics_advisor_aad_tenant_id=null,
+    sku_name,
+    outbound_network_access_restricted=null,
+    public_network_access_enabled=null,
+    fqdns=null,
+    qna_runtime_endpoint=null,
     metrics_advisor_website_name=null,
     metrics_advisor_aad_client_id=null,
     kind,
-    location,
-    outbound_network_access_restricted=null,
-    qna_runtime_endpoint=null,
-    custom_subdomain_name=null,
-    dynamic_throttling_enabled=null,
+    resource_group_name,
+    custom_question_answering_search_service_id=null,
     tags=null,
+    name,
     customer_managed_key=null,
     identity=null,
     network_acls=null,
     storage=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_cognitive_account', label=resourceLabel, attrs=self.newAttrs(
-    metrics_advisor_aad_tenant_id=metrics_advisor_aad_tenant_id,
-    name=name,
-    custom_question_answering_search_service_key=custom_question_answering_search_service_key,
-    public_network_access_enabled=public_network_access_enabled,
-    metrics_advisor_super_user_name=metrics_advisor_super_user_name,
-    resource_group_name=resource_group_name,
-    local_auth_enabled=local_auth_enabled,
-    custom_question_answering_search_service_id=custom_question_answering_search_service_id,
-    fqdns=fqdns,
-    sku_name=sku_name,
-    metrics_advisor_website_name=metrics_advisor_website_name,
-    metrics_advisor_aad_client_id=metrics_advisor_aad_client_id,
-    kind=kind,
-    location=location,
-    outbound_network_access_restricted=outbound_network_access_restricted,
-    qna_runtime_endpoint=qna_runtime_endpoint,
-    custom_subdomain_name=custom_subdomain_name,
-    dynamic_throttling_enabled=dynamic_throttling_enabled,
-    tags=tags,
-    customer_managed_key=customer_managed_key,
-    identity=identity,
-    network_acls=network_acls,
-    storage=storage,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    public_network_access_enabled=null,
-    metrics_advisor_aad_client_id=null,
-    fqdns=null,
-    qna_runtime_endpoint=null,
-    sku_name,
-    dynamic_throttling_enabled=null,
-    custom_question_answering_search_service_key=null,
-    outbound_network_access_restricted=null,
-    metrics_advisor_website_name=null,
-    local_auth_enabled=null,
-    custom_question_answering_search_service_id=null,
-    custom_subdomain_name=null,
-    metrics_advisor_super_user_name=null,
-    tags=null,
-    kind,
-    location,
-    metrics_advisor_aad_tenant_id=null,
-    name,
-    resource_group_name,
-    timeouts=null,
-    customer_managed_key=null,
-    identity=null,
-    network_acls=null,
-    storage=null
   ):: std.prune(a={
-    public_network_access_enabled: public_network_access_enabled,
-    metrics_advisor_aad_client_id: metrics_advisor_aad_client_id,
-    fqdns: fqdns,
-    qna_runtime_endpoint: qna_runtime_endpoint,
-    sku_name: sku_name,
     dynamic_throttling_enabled: dynamic_throttling_enabled,
     custom_question_answering_search_service_key: custom_question_answering_search_service_key,
-    outbound_network_access_restricted: outbound_network_access_restricted,
-    metrics_advisor_website_name: metrics_advisor_website_name,
-    local_auth_enabled: local_auth_enabled,
-    custom_question_answering_search_service_id: custom_question_answering_search_service_id,
-    custom_subdomain_name: custom_subdomain_name,
     metrics_advisor_super_user_name: metrics_advisor_super_user_name,
-    tags: tags,
-    kind: kind,
+    local_auth_enabled: local_auth_enabled,
     location: location,
+    custom_subdomain_name: custom_subdomain_name,
     metrics_advisor_aad_tenant_id: metrics_advisor_aad_tenant_id,
-    name: name,
+    sku_name: sku_name,
+    outbound_network_access_restricted: outbound_network_access_restricted,
+    public_network_access_enabled: public_network_access_enabled,
+    fqdns: fqdns,
+    qna_runtime_endpoint: qna_runtime_endpoint,
+    metrics_advisor_website_name: metrics_advisor_website_name,
+    metrics_advisor_aad_client_id: metrics_advisor_aad_client_id,
+    kind: kind,
     resource_group_name: resource_group_name,
-    timeouts: timeouts,
+    custom_question_answering_search_service_id: custom_question_answering_search_service_id,
+    tags: tags,
+    name: name,
     customer_managed_key: customer_managed_key,
     identity: identity,
     network_acls: network_acls,
     storage: storage,
+    timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
+  withCustomQuestionAnsweringSearchServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withKind(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          kind: value,
-        },
-      },
-    },
-  },
-  withOutboundNetworkAccessRestricted(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          outbound_network_access_restricted: value,
-        },
-      },
-    },
-  },
-  withMetricsAdvisorWebsiteName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          metrics_advisor_website_name: value,
-        },
-      },
-    },
-  },
-  withCustomSubdomainName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          custom_subdomain_name: value,
-        },
-      },
-    },
-  },
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withFqdns(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          fqdns: value,
+          custom_question_answering_search_service_id: value,
         },
       },
     },
@@ -184,20 +121,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withQnaRuntimeEndpoint(resourceLabel, value):: {
-    resource+: {
-      azurerm_cognitive_account+: {
-        [resourceLabel]+: {
-          qna_runtime_endpoint: value,
+          sku_name: value,
         },
       },
     },
@@ -211,6 +139,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withMetricsAdvisorAadClientId(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
@@ -220,11 +157,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCustomQuestionAnsweringSearchServiceKey(resourceLabel, value):: {
+  withMetricsAdvisorSuperUserName(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
         [resourceLabel]+: {
-          custom_question_answering_search_service_key: value,
+          metrics_advisor_super_user_name: value,
+        },
+      },
+    },
+  },
+  withMetricsAdvisorWebsiteName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          metrics_advisor_website_name: value,
         },
       },
     },
@@ -238,20 +184,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCustomQuestionAnsweringSearchServiceId(resourceLabel, value):: {
+  withQnaRuntimeEndpoint(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
         [resourceLabel]+: {
-          custom_question_answering_search_service_id: value,
+          qna_runtime_endpoint: value,
         },
       },
     },
   },
-  withSkuName(resourceLabel, value):: {
+  withFqdns(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
         [resourceLabel]+: {
-          sku_name: value,
+          fqdns: value,
+        },
+      },
+    },
+  },
+  withCustomSubdomainName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          custom_subdomain_name: value,
+        },
+      },
+    },
+  },
+  withCustomQuestionAnsweringSearchServiceKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          custom_question_answering_search_service_key: value,
+        },
+      },
+    },
+  },
+  withOutboundNetworkAccessRestricted(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          outbound_network_access_restricted: value,
+        },
+      },
+    },
+  },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
+  withKind(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          kind: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cognitive_account+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -265,11 +265,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMetricsAdvisorSuperUserName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_cognitive_account+: {
         [resourceLabel]+: {
-          metrics_advisor_super_user_name: value,
+          name: value,
         },
       },
     },
@@ -294,15 +294,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
   withCustomerManagedKey(resourceLabel, value):: {
@@ -352,11 +352,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
     }),
   },
   withNetworkAcls(resourceLabel, value):: {
@@ -389,11 +389,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     virtual_network_rules:: {
       new(
-        ignore_missing_vnet_service_endpoint=null,
-        subnet_id
+        subnet_id,
+        ignore_missing_vnet_service_endpoint=null
       ):: std.prune(a={
-        ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
         subnet_id: subnet_id,
+        ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
       }),
     },
   },
@@ -417,11 +417,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage:: {
     new(
-      storage_account_id,
-      identity_client_id=null
+      identity_client_id=null,
+      storage_account_id
     ):: std.prune(a={
-      storage_account_id: storage_account_id,
       identity_client_id: identity_client_id,
+      storage_account_id: storage_account_id,
     }),
   },
 }

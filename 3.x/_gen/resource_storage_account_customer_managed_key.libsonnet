@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    user_assigned_identity_id=null,
-    key_name,
     key_vault_id,
     key_version=null,
     storage_account_id,
+    user_assigned_identity_id=null,
+    key_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_account_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(
-    user_assigned_identity_id=user_assigned_identity_id,
-    key_name=key_name,
     key_vault_id=key_vault_id,
     key_version=key_version,
     storage_account_id=storage_account_id,
+    user_assigned_identity_id=user_assigned_identity_id,
+    key_name=key_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

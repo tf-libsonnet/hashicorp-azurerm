@@ -2,65 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    amount,
+    etag=null,
     name,
     subscription_id,
     time_grain=null,
-    amount,
-    etag=null,
-    notification=null,
-    time_period=null,
-    timeouts=null,
-    filter=null
-  ):: tf.withResource(type='azurerm_consumption_budget_subscription', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    subscription_id=subscription_id,
-    time_grain=time_grain,
-    amount=amount,
-    etag=etag,
-    notification=notification,
-    time_period=time_period,
-    timeouts=timeouts,
-    filter=filter
-  )),
-  newAttrs(
-    name,
-    subscription_id,
-    time_grain=null,
-    amount,
-    etag=null,
     filter=null,
     notification=null,
     time_period=null,
     timeouts=null
+  ):: tf.withResource(type='azurerm_consumption_budget_subscription', label=resourceLabel, attrs=self.newAttrs(
+    amount=amount,
+    etag=etag,
+    name=name,
+    subscription_id=subscription_id,
+    time_grain=time_grain,
+    filter=filter,
+    notification=notification,
+    time_period=time_period,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    amount,
+    etag=null,
+    name,
+    subscription_id,
+    time_grain=null,
+    timeouts=null,
+    filter=null,
+    notification=null,
+    time_period=null
   ):: std.prune(a={
+    amount: amount,
+    etag: etag,
     name: name,
     subscription_id: subscription_id,
     time_grain: time_grain,
-    amount: amount,
-    etag: etag,
+    timeouts: timeouts,
     filter: filter,
     notification: notification,
     time_period: time_period,
-    timeouts: timeouts,
   }),
-  withTimeGrain(resourceLabel, value):: {
-    resource+: {
-      azurerm_consumption_budget_subscription+: {
-        [resourceLabel]+: {
-          time_grain: value,
-        },
-      },
-    },
-  },
-  withAmount(resourceLabel, value):: {
-    resource+: {
-      azurerm_consumption_budget_subscription+: {
-        [resourceLabel]+: {
-          amount: value,
-        },
-      },
-    },
-  },
   withEtag(resourceLabel, value):: {
     resource+: {
       azurerm_consumption_budget_subscription+: {
@@ -86,6 +68,106 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           subscription_id: value,
         },
       },
+    },
+  },
+  withTimeGrain(resourceLabel, value):: {
+    resource+: {
+      azurerm_consumption_budget_subscription+: {
+        [resourceLabel]+: {
+          time_grain: value,
+        },
+      },
+    },
+  },
+  withAmount(resourceLabel, value):: {
+    resource+: {
+      azurerm_consumption_budget_subscription+: {
+        [resourceLabel]+: {
+          amount: value,
+        },
+      },
+    },
+  },
+  withFilter(resourceLabel, value):: {
+    resource+: {
+      azurerm_consumption_budget_subscription+: {
+        [resourceLabel]+: {
+          filter: value,
+        },
+      },
+    },
+  },
+  withFilterMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_consumption_budget_subscription+: {
+        [resourceLabel]+: {
+          filter+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  filter:: {
+    new(
+      tag=null,
+      dimension=null,
+      not=null
+    ):: std.prune(a={
+      tag: tag,
+      dimension: dimension,
+      not: not,
+    }),
+    dimension:: {
+      new(
+        operator=null,
+        values,
+        name
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+        name: name,
+      }),
+    },
+    not:: {
+      new(
+        dimension=null,
+        tag=null
+      ):: std.prune(a={
+        dimension: dimension,
+        tag: tag,
+      }),
+      dimension:: {
+        new(
+          values,
+          name,
+          operator=null
+        ):: std.prune(a={
+          values: values,
+          name: name,
+          operator: operator,
+        }),
+      },
+      tag:: {
+        new(
+          name,
+          operator=null,
+          values
+        ):: std.prune(a={
+          name: name,
+          operator: operator,
+          values: values,
+        }),
+      },
+    },
+    tag:: {
+      new(
+        name,
+        operator=null,
+        values
+      ):: std.prune(a={
+        name: name,
+        operator: operator,
+        values: values,
+      }),
     },
   },
   withNotification(resourceLabel, value):: {
@@ -182,87 +264,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       create: create,
       delete: delete,
     }),
-  },
-  withFilter(resourceLabel, value):: {
-    resource+: {
-      azurerm_consumption_budget_subscription+: {
-        [resourceLabel]+: {
-          filter: value,
-        },
-      },
-    },
-  },
-  withFilterMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_consumption_budget_subscription+: {
-        [resourceLabel]+: {
-          filter+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  filter:: {
-    new(
-      not=null,
-      tag=null,
-      dimension=null
-    ):: std.prune(a={
-      not: not,
-      tag: tag,
-      dimension: dimension,
-    }),
-    dimension:: {
-      new(
-        name,
-        operator=null,
-        values
-      ):: std.prune(a={
-        name: name,
-        operator: operator,
-        values: values,
-      }),
-    },
-    not:: {
-      new(
-        dimension=null,
-        tag=null
-      ):: std.prune(a={
-        dimension: dimension,
-        tag: tag,
-      }),
-      dimension:: {
-        new(
-          values,
-          name,
-          operator=null
-        ):: std.prune(a={
-          values: values,
-          name: name,
-          operator: operator,
-        }),
-      },
-      tag:: {
-        new(
-          name,
-          operator=null,
-          values
-        ):: std.prune(a={
-          name: name,
-          operator: operator,
-          values: values,
-        }),
-      },
-    },
-    tag:: {
-      new(
-        values,
-        name,
-        operator=null
-      ):: std.prune(a={
-        values: values,
-        name: name,
-        operator: operator,
-      }),
-    },
   },
 }

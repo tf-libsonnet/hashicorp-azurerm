@@ -6,30 +6,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     priority=null,
     vpn_server_configuration_id,
-    policy=null,
-    timeouts=null
+    timeouts=null,
+    policy=null
   ):: tf.withResource(type='azurerm_vpn_server_configuration_policy_group', label=resourceLabel, attrs=self.newAttrs(
     is_default=is_default,
     name=name,
     priority=priority,
     vpn_server_configuration_id=vpn_server_configuration_id,
-    policy=policy,
-    timeouts=timeouts
+    timeouts=timeouts,
+    policy=policy
   )),
   newAttrs(
-    name,
     priority=null,
     vpn_server_configuration_id,
     is_default=null,
-    timeouts=null,
-    policy=null
+    name,
+    policy=null,
+    timeouts=null
   ):: std.prune(a={
-    name: name,
     priority: priority,
     vpn_server_configuration_id: vpn_server_configuration_id,
     is_default: is_default,
-    timeouts: timeouts,
+    name: name,
     policy: policy,
+    timeouts: timeouts,
   }),
   withVpnServerConfigurationId(resourceLabel, value):: {
     resource+: {
@@ -67,6 +67,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration_policy_group+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration_policy_group+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration_policy_group+: {
@@ -94,37 +125,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type: type,
       value: value,
       name: name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration_policy_group+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration_policy_group+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
     }),
   },
 }

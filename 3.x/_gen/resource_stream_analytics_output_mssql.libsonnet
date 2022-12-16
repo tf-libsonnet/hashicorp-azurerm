@@ -3,90 +3,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     authentication_mode=null,
-    password=null,
-    server,
-    user=null,
     stream_analytics_job_name,
     table,
-    max_writer_count=null,
-    name,
     resource_group_name,
+    server,
     database,
     max_batch_count=null,
+    max_writer_count=null,
+    name,
+    user=null,
+    password=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_mssql', label=resourceLabel, attrs=self.newAttrs(
     authentication_mode=authentication_mode,
-    password=password,
-    server=server,
-    user=user,
     stream_analytics_job_name=stream_analytics_job_name,
     table=table,
-    max_writer_count=max_writer_count,
-    name=name,
     resource_group_name=resource_group_name,
+    server=server,
     database=database,
     max_batch_count=max_batch_count,
+    max_writer_count=max_writer_count,
+    name=name,
+    user=user,
+    password=password,
     timeouts=timeouts
   )),
   newAttrs(
+    authentication_mode=null,
+    stream_analytics_job_name,
+    server,
     database,
-    password=null,
-    resource_group_name,
     max_writer_count=null,
     name,
-    user=null,
     table,
-    authentication_mode=null,
+    user=null,
+    password=null,
+    resource_group_name,
     max_batch_count=null,
-    server,
-    stream_analytics_job_name,
     timeouts=null
   ):: std.prune(a={
+    authentication_mode: authentication_mode,
+    stream_analytics_job_name: stream_analytics_job_name,
+    server: server,
     database: database,
-    password: password,
-    resource_group_name: resource_group_name,
     max_writer_count: max_writer_count,
     name: name,
-    user: user,
     table: table,
-    authentication_mode: authentication_mode,
+    user: user,
+    password: password,
+    resource_group_name: resource_group_name,
     max_batch_count: max_batch_count,
-    server: server,
-    stream_analytics_job_name: stream_analytics_job_name,
     timeouts: timeouts,
   }),
-  withMaxWriterCount(resourceLabel, value):: {
+  withTable(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_mssql+: {
         [resourceLabel]+: {
-          max_writer_count: value,
-        },
-      },
-    },
-  },
-  withStreamAnalyticsJobName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_mssql+: {
-        [resourceLabel]+: {
-          stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_mssql+: {
-        [resourceLabel]+: {
-          password: value,
-        },
-      },
-    },
-  },
-  withMaxBatchCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_mssql+: {
-        [resourceLabel]+: {
-          max_batch_count: value,
+          table: value,
         },
       },
     },
@@ -100,38 +73,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDatabase(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_mssql+: {
+        [resourceLabel]+: {
+          database: value,
+        },
+      },
+    },
+  },
+  withMaxBatchCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_mssql+: {
+        [resourceLabel]+: {
+          max_batch_count: value,
+        },
+      },
+    },
+  },
+  withMaxWriterCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_mssql+: {
+        [resourceLabel]+: {
+          max_writer_count: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_mssql+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_mssql+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withUser(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_mssql+: {
-        [resourceLabel]+: {
-          user: value,
-        },
-      },
-    },
-  },
-  withTable(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_mssql+: {
-        [resourceLabel]+: {
-          table: value,
         },
       },
     },
@@ -145,11 +118,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatabase(resourceLabel, value):: {
+  withUser(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_mssql+: {
         [resourceLabel]+: {
-          database: value,
+          user: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_mssql+: {
+        [resourceLabel]+: {
+          password: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_mssql+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStreamAnalyticsJobName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_mssql+: {
+        [resourceLabel]+: {
+          stream_analytics_job_name: value,
         },
       },
     },
@@ -174,15 +174,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

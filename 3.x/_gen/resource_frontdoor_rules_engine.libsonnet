@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    frontdoor_name,
     name,
     resource_group_name,
     enabled=null,
-    timeouts=null,
-    rule=null
+    frontdoor_name,
+    rule=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_frontdoor_rules_engine', label=resourceLabel, attrs=self.newAttrs(
-    frontdoor_name=frontdoor_name,
     name=name,
     resource_group_name=resource_group_name,
     enabled=enabled,
-    timeouts=timeouts,
-    rule=rule
+    frontdoor_name=frontdoor_name,
+    rule=rule,
+    timeouts=timeouts
   )),
   newAttrs(
     enabled=null,
     frontdoor_name,
     name,
     resource_group_name,
-    timeouts=null,
-    rule=null
+    rule=null,
+    timeouts=null
   ):: std.prune(a={
     enabled: enabled,
     frontdoor_name: frontdoor_name,
     name: name,
     resource_group_name: resource_group_name,
-    timeouts: timeouts,
     rule: rule,
+    timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_frontdoor_rules_engine+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_frontdoor_rules_engine+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_frontdoor_rules_engine+: {
         [resourceLabel]+: {
           frontdoor_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_frontdoor_rules_engine+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -97,13 +97,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       action: action,
       match_condition: match_condition,
     }),
+    match_condition:: {
+      new(
+        selector=null,
+        transform=null,
+        value=null,
+        variable=null,
+        negate_condition=null,
+        operator
+      ):: std.prune(a={
+        selector: selector,
+        transform: transform,
+        value: value,
+        variable: variable,
+        negate_condition: negate_condition,
+        operator: operator,
+      }),
+    },
     action:: {
       new(
-        request_header=null,
-        response_header=null
+        response_header=null,
+        request_header=null
       ):: std.prune(a={
-        request_header: request_header,
         response_header: response_header,
+        request_header: request_header,
       }),
       request_header:: {
         new(
@@ -128,23 +145,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         }),
       },
     },
-    match_condition:: {
-      new(
-        variable=null,
-        negate_condition=null,
-        operator,
-        selector=null,
-        transform=null,
-        value=null
-      ):: std.prune(a={
-        variable: variable,
-        negate_condition: negate_condition,
-        operator: operator,
-        selector: selector,
-        transform: transform,
-        value: value,
-      }),
-    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -166,15 +166,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

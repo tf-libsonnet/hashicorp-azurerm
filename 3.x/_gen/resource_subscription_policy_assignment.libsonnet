@@ -2,72 +2,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    display_name=null,
-    name,
     metadata=null,
     not_scopes=null,
+    location=null,
+    name,
     parameters=null,
+    policy_definition_id,
+    display_name=null,
     description=null,
     enforce=null,
-    policy_definition_id,
     subscription_id,
-    location=null,
+    identity=null,
     non_compliance_message=null,
-    timeouts=null,
-    identity=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_subscription_policy_assignment', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    name=name,
     metadata=metadata,
     not_scopes=not_scopes,
+    location=location,
+    name=name,
     parameters=parameters,
+    policy_definition_id=policy_definition_id,
+    display_name=display_name,
     description=description,
     enforce=enforce,
-    policy_definition_id=policy_definition_id,
     subscription_id=subscription_id,
-    location=location,
+    identity=identity,
     non_compliance_message=non_compliance_message,
-    timeouts=timeouts,
-    identity=identity
+    timeouts=timeouts
   )),
   newAttrs(
-    not_scopes=null,
-    description=null,
-    policy_definition_id,
     name,
-    metadata=null,
-    parameters=null,
+    policy_definition_id,
     display_name=null,
+    metadata=null,
     enforce=null,
-    subscription_id,
+    parameters=null,
     location=null,
+    not_scopes=null,
+    subscription_id,
+    description=null,
     identity=null,
     non_compliance_message=null,
     timeouts=null
   ):: std.prune(a={
-    not_scopes: not_scopes,
-    description: description,
-    policy_definition_id: policy_definition_id,
     name: name,
-    metadata: metadata,
-    parameters: parameters,
+    policy_definition_id: policy_definition_id,
     display_name: display_name,
+    metadata: metadata,
     enforce: enforce,
-    subscription_id: subscription_id,
+    parameters: parameters,
     location: location,
+    not_scopes: not_scopes,
+    subscription_id: subscription_id,
+    description: description,
     identity: identity,
     non_compliance_message: non_compliance_message,
     timeouts: timeouts,
   }),
-  withEnforce(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_policy_assignment+: {
-        [resourceLabel]+: {
-          enforce: value,
-        },
-      },
-    },
-  },
   withMetadata(resourceLabel, value):: {
     resource+: {
       azurerm_subscription_policy_assignment+: {
@@ -86,11 +77,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_subscription_policy_assignment+: {
         [resourceLabel]+: {
-          parameters: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withPolicyDefinitionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_policy_assignment+: {
+        [resourceLabel]+: {
+          policy_definition_id: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_policy_assignment+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -104,11 +113,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withEnforce(resourceLabel, value):: {
     resource+: {
       azurerm_subscription_policy_assignment+: {
         [resourceLabel]+: {
-          description: value,
+          enforce: value,
         },
       },
     },
@@ -131,23 +140,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPolicyDefinitionId(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_subscription_policy_assignment+: {
         [resourceLabel]+: {
-          policy_definition_id: value,
+          parameters: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_subscription_policy_assignment+: {
         [resourceLabel]+: {
-          name: value,
+          identity: value,
         },
       },
     },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_policy_assignment+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      identity_ids=null,
+      type
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
   },
   withNonComplianceMessage(resourceLabel, value):: {
     resource+: {
@@ -169,11 +196,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   non_compliance_message:: {
     new(
-      policy_definition_reference_id=null,
-      content
+      content,
+      policy_definition_reference_id=null
     ):: std.prune(a={
-      policy_definition_reference_id: policy_definition_reference_id,
       content: content,
+      policy_definition_reference_id: policy_definition_reference_id,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -205,33 +232,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_policy_assignment+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_policy_assignment+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
     }),
   },
 }

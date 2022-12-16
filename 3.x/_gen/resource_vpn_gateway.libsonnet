@@ -2,56 +2,92 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    scale_unit=null,
-    tags=null,
     virtual_hub_id,
     location,
-    bgp_route_translation_for_nat_enabled=null,
-    resource_group_name,
     name,
+    tags=null,
+    bgp_route_translation_for_nat_enabled=null,
     routing_preference=null,
+    scale_unit=null,
+    resource_group_name,
     bgp_settings=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_vpn_gateway', label=resourceLabel, attrs=self.newAttrs(
-    scale_unit=scale_unit,
-    tags=tags,
     virtual_hub_id=virtual_hub_id,
     location=location,
-    bgp_route_translation_for_nat_enabled=bgp_route_translation_for_nat_enabled,
-    resource_group_name=resource_group_name,
     name=name,
+    tags=tags,
+    bgp_route_translation_for_nat_enabled=bgp_route_translation_for_nat_enabled,
     routing_preference=routing_preference,
+    scale_unit=scale_unit,
+    resource_group_name=resource_group_name,
     bgp_settings=bgp_settings,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
+    resource_group_name,
+    virtual_hub_id,
+    bgp_route_translation_for_nat_enabled=null,
     routing_preference=null,
     scale_unit=null,
     tags=null,
-    virtual_hub_id,
     location,
-    bgp_route_translation_for_nat_enabled=null,
-    resource_group_name,
+    name,
     bgp_settings=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
+    resource_group_name: resource_group_name,
+    virtual_hub_id: virtual_hub_id,
+    bgp_route_translation_for_nat_enabled: bgp_route_translation_for_nat_enabled,
     routing_preference: routing_preference,
     scale_unit: scale_unit,
     tags: tags,
-    virtual_hub_id: virtual_hub_id,
     location: location,
-    bgp_route_translation_for_nat_enabled: bgp_route_translation_for_nat_enabled,
-    resource_group_name: resource_group_name,
+    name: name,
     bgp_settings: bgp_settings,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withBgpRouteTranslationForNatEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
           bgp_route_translation_for_nat_enabled: value,
+        },
+      },
+    },
+  },
+  withRoutingPreference(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway+: {
+        [resourceLabel]+: {
+          routing_preference: value,
+        },
+      },
+    },
+  },
+  withScaleUnit(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway+: {
+        [resourceLabel]+: {
+          scale_unit: value,
         },
       },
     },
@@ -79,42 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withRoutingPreference(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway+: {
-        [resourceLabel]+: {
-          routing_preference: value,
-        },
-      },
-    },
-  },
-  withScaleUnit(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway+: {
-        [resourceLabel]+: {
-          scale_unit: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },

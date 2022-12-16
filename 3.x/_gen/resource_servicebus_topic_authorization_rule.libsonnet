@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    send=null,
+    topic_id,
     listen=null,
     manage=null,
     name,
-    topic_id,
+    send=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_topic_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    send=send,
+    topic_id=topic_id,
     listen=listen,
     manage=manage,
     name=name,
-    topic_id=topic_id,
+    send=send,
     timeouts=timeouts
   )),
   newAttrs(
-    send=null,
-    listen=null,
     manage=null,
     name,
     topic_id,
+    listen=null,
+    send=null,
     timeouts=null
   ):: std.prune(a={
-    send: send,
-    listen: listen,
     manage: manage,
     name: name,
     topic_id: topic_id,
+    listen: listen,
+    send: send,
     timeouts: timeouts,
   }),
+  withTopicId(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_topic_authorization_rule+: {
+        [resourceLabel]+: {
+          topic_id: value,
+        },
+      },
+    },
+  },
+  withListen(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_topic_authorization_rule+: {
+        [resourceLabel]+: {
+          listen: value,
+        },
+      },
+    },
+  },
   withManage(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_topic_authorization_rule+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withListen(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_topic_authorization_rule+: {
-        [resourceLabel]+: {
-          listen: value,
-        },
-      },
-    },
-  },
-  withTopicId(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_topic_authorization_rule+: {
-        [resourceLabel]+: {
-          topic_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_topic_authorization_rule+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

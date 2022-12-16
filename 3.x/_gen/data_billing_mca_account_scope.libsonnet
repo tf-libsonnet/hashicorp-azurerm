@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     billing_account_name: billing_account_name,
     timeouts: timeouts,
   }),
+  withInvoiceSectionName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_billing_mca_account_scope+: {
+        [dataSrcLabel]+: {
+          invoice_section_name: value,
+        },
+      },
+    },
+  },
   withBillingAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_billing_mca_account_scope+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_billing_mca_account_scope+: {
         [dataSrcLabel]+: {
           billing_profile_name: value,
-        },
-      },
-    },
-  },
-  withInvoiceSectionName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_billing_mca_account_scope+: {
-        [dataSrcLabel]+: {
-          invoice_section_name: value,
         },
       },
     },

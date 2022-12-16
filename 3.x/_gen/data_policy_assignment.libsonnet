@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    scope_id,
     name,
+    scope_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_policy_assignment', label=dataSrcLabel, attrs=self.newAttrs(scope_id=scope_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_policy_assignment', label=dataSrcLabel, attrs=self.newAttrs(name=name, scope_id=scope_id, timeouts=timeouts)),
   newAttrs(
-    name,
     scope_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     scope_id: scope_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_policy_assignment+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withScopeId(dataSrcLabel, value):: {
     data+: {
       azurerm_policy_assignment+: {
         [dataSrcLabel]+: {
           scope_id: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_policy_assignment+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

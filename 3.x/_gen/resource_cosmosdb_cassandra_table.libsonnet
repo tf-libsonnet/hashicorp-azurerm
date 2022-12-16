@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    analytical_storage_ttl=null,
-    cassandra_keyspace_id,
     default_ttl=null,
     name,
     throughput=null,
+    analytical_storage_ttl=null,
+    cassandra_keyspace_id,
     autoscale_settings=null,
     schema=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_cassandra_table', label=resourceLabel, attrs=self.newAttrs(
-    analytical_storage_ttl=analytical_storage_ttl,
-    cassandra_keyspace_id=cassandra_keyspace_id,
     default_ttl=default_ttl,
     name=name,
     throughput=throughput,
+    analytical_storage_ttl=analytical_storage_ttl,
+    cassandra_keyspace_id=cassandra_keyspace_id,
     autoscale_settings=autoscale_settings,
     schema=schema,
     timeouts=timeouts
@@ -39,24 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     schema: schema,
     timeouts: timeouts,
   }),
-  withDefaultTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_table+: {
-        [resourceLabel]+: {
-          default_ttl: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_table+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withThroughput(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_table+: {
@@ -80,6 +62,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_cassandra_table+: {
         [resourceLabel]+: {
           cassandra_keyspace_id: value,
+        },
+      },
+    },
+  },
+  withDefaultTtl(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_table+: {
+        [resourceLabel]+: {
+          default_ttl: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_table+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -129,23 +129,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   schema:: {
     new(
+      cluster_key=null,
       column=null,
-      partition_key=null,
-      cluster_key=null
+      partition_key=null
     ):: std.prune(a={
+      cluster_key: cluster_key,
       column: column,
       partition_key: partition_key,
-      cluster_key: cluster_key,
     }),
-    column:: {
-      new(
-        name,
-        type
-      ):: std.prune(a={
-        name: name,
-        type: type,
-      }),
-    },
     partition_key:: {
       new(
         name
@@ -160,6 +151,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       ):: std.prune(a={
         name: name,
         order_by: order_by,
+      }),
+    },
+    column:: {
+      new(
+        name,
+        type
+      ):: std.prune(a={
+        name: name,
+        type: type,
       }),
     },
   },

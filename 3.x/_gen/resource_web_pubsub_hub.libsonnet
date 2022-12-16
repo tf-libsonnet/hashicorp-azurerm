@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    anonymous_connections_enabled=null,
     name,
     web_pubsub_id,
-    anonymous_connections_enabled=null,
-    event_handler=null,
-    timeouts=null
+    timeouts=null,
+    event_handler=null
   ):: tf.withResource(type='azurerm_web_pubsub_hub', label=resourceLabel, attrs=self.newAttrs(
+    anonymous_connections_enabled=anonymous_connections_enabled,
     name=name,
     web_pubsub_id=web_pubsub_id,
-    anonymous_connections_enabled=anonymous_connections_enabled,
-    event_handler=event_handler,
-    timeouts=timeouts
+    timeouts=timeouts,
+    event_handler=event_handler
   )),
   newAttrs(
     anonymous_connections_enabled=null,
@@ -74,14 +74,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   event_handler:: {
     new(
-      system_events=null,
       url_template,
       user_event_pattern=null,
+      system_events=null,
       auth=null
     ):: std.prune(a={
-      system_events: system_events,
       url_template: url_template,
       user_event_pattern: user_event_pattern,
+      system_events: system_events,
       auth: auth,
     }),
     auth:: {
@@ -112,15 +112,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

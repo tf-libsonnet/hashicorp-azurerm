@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    peer_peering_id,
     peering_id,
     address_prefix_ipv4,
     address_prefix_ipv6=null,
     authorization_key=null,
     name,
-    peer_peering_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_express_route_circuit_connection', label=resourceLabel, attrs=self.newAttrs(
+    peer_peering_id=peer_peering_id,
     peering_id=peering_id,
     address_prefix_ipv4=address_prefix_ipv4,
     address_prefix_ipv6=address_prefix_ipv6,
     authorization_key=authorization_key,
     name=name,
-    peer_peering_id=peer_peering_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,33 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     authorization_key: authorization_key,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_connection+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPeerPeeringId(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_connection+: {
-        [resourceLabel]+: {
-          peer_peering_id: value,
-        },
-      },
-    },
-  },
-  withPeeringId(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_connection+: {
-        [resourceLabel]+: {
-          peering_id: value,
-        },
-      },
-    },
-  },
   withAddressPrefixIpv4(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit_connection+: {
@@ -89,6 +62,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_connection+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPeerPeeringId(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_connection+: {
+        [resourceLabel]+: {
+          peer_peering_id: value,
+        },
+      },
+    },
+  },
+  withPeeringId(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_connection+: {
+        [resourceLabel]+: {
+          peering_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit_connection+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    destination_identity_resolution_type,
     location,
     medtech_service_id,
     name,
     destination_fhir_mapping_json,
     destination_fhir_service_id,
-    destination_identity_resolution_type,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_medtech_service_fhir_destination', label=resourceLabel, attrs=self.newAttrs(
+    destination_identity_resolution_type=destination_identity_resolution_type,
     location=location,
     medtech_service_id=medtech_service_id,
     name=name,
     destination_fhir_mapping_json=destination_fhir_mapping_json,
     destination_fhir_service_id=destination_fhir_service_id,
-    destination_identity_resolution_type=destination_identity_resolution_type,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    destination_fhir_mapping_json,
     destination_fhir_service_id,
     destination_identity_resolution_type,
     location,
     medtech_service_id,
-    name,
-    destination_fhir_mapping_json,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    destination_fhir_mapping_json: destination_fhir_mapping_json,
     destination_fhir_service_id: destination_fhir_service_id,
     destination_identity_resolution_type: destination_identity_resolution_type,
     location: location,
     medtech_service_id: medtech_service_id,
-    name: name,
-    destination_fhir_mapping_json: destination_fhir_mapping_json,
     timeouts: timeouts,
   }),
-  withDestinationFhirMappingJson(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service_fhir_destination+: {
-        [resourceLabel]+: {
-          destination_fhir_mapping_json: value,
-        },
-      },
-    },
-  },
   withDestinationFhirServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service_fhir_destination+: {
@@ -85,6 +76,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_healthcare_medtech_service_fhir_destination+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withDestinationFhirMappingJson(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service_fhir_destination+: {
+        [resourceLabel]+: {
+          destination_fhir_mapping_json: value,
         },
       },
     },

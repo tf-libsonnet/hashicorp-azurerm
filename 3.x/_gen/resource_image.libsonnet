@@ -2,51 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
+    name,
+    resource_group_name,
     source_virtual_machine_id=null,
     tags=null,
     zone_resilient=null,
     hyper_v_generation=null,
-    location,
-    name,
-    resource_group_name,
-    os_disk=null,
     timeouts=null,
-    data_disk=null
+    data_disk=null,
+    os_disk=null
   ):: tf.withResource(type='azurerm_image', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
+    name=name,
+    resource_group_name=resource_group_name,
     source_virtual_machine_id=source_virtual_machine_id,
     tags=tags,
     zone_resilient=zone_resilient,
     hyper_v_generation=hyper_v_generation,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    os_disk=os_disk,
     timeouts=timeouts,
-    data_disk=data_disk
+    data_disk=data_disk,
+    os_disk=os_disk
   )),
   newAttrs(
+    zone_resilient=null,
     hyper_v_generation=null,
     location,
     name,
     resource_group_name,
     source_virtual_machine_id=null,
     tags=null,
-    zone_resilient=null,
-    timeouts=null,
     data_disk=null,
-    os_disk=null
+    os_disk=null,
+    timeouts=null
   ):: std.prune(a={
+    zone_resilient: zone_resilient,
     hyper_v_generation: hyper_v_generation,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     source_virtual_machine_id: source_virtual_machine_id,
     tags: tags,
-    zone_resilient: zone_resilient,
-    timeouts: timeouts,
     data_disk: data_disk,
     os_disk: os_disk,
+    timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_image+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_image+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withSourceVirtualMachineId(resourceLabel, value):: {
     resource+: {
       azurerm_image+: {
@@ -92,24 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_image+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_image+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withDataDisk(resourceLabel, value):: {
     resource+: {
       azurerm_image+: {
@@ -130,17 +130,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   data_disk:: {
     new(
+      caching=null,
       lun=null,
       managed_disk_id=null,
       size_gb=null,
-      blob_uri=null,
-      caching=null
+      blob_uri=null
     ):: std.prune(a={
+      caching: caching,
       lun: lun,
       managed_disk_id: managed_disk_id,
       size_gb: size_gb,
       blob_uri: blob_uri,
-      caching: caching,
     }),
   },
   withOsDisk(resourceLabel, value):: {
@@ -163,19 +163,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   os_disk:: {
     new(
+      caching=null,
       managed_disk_id=null,
       os_state=null,
       os_type=null,
       size_gb=null,
-      blob_uri=null,
-      caching=null
+      blob_uri=null
     ):: std.prune(a={
+      caching: caching,
       managed_disk_id: managed_disk_id,
       os_state: os_state,
       os_type: os_type,
       size_gb: size_gb,
       blob_uri: blob_uri,
-      caching: caching,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -198,15 +198,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

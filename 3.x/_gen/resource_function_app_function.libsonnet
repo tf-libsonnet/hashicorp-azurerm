@@ -2,48 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    enabled=null,
-    name,
-    config_json,
-    language=null,
-    function_app_id,
     test_data=null,
+    name,
+    language=null,
+    enabled=null,
+    function_app_id,
+    config_json,
     file=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_function_app_function', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    name=name,
-    config_json=config_json,
-    language=language,
-    function_app_id=function_app_id,
     test_data=test_data,
+    name=name,
+    language=language,
+    enabled=enabled,
+    function_app_id=function_app_id,
+    config_json=config_json,
     file=file,
     timeouts=timeouts
   )),
   newAttrs(
-    test_data=null,
-    enabled=null,
+    language=null,
     name,
     config_json,
-    language=null,
+    enabled=null,
     function_app_id,
+    test_data=null,
     file=null,
     timeouts=null
   ):: std.prune(a={
-    test_data: test_data,
-    enabled: enabled,
+    language: language,
     name: name,
     config_json: config_json,
-    language: language,
+    enabled: enabled,
     function_app_id: function_app_id,
+    test_data: test_data,
     file: file,
     timeouts: timeouts,
   }),
-  withEnabled(resourceLabel, value):: {
+  withTestData(resourceLabel, value):: {
     resource+: {
       azurerm_function_app_function+: {
         [resourceLabel]+: {
-          enabled: value,
+          test_data: value,
+        },
+      },
+    },
+  },
+  withLanguage(resourceLabel, value):: {
+    resource+: {
+      azurerm_function_app_function+: {
+        [resourceLabel]+: {
+          language: value,
         },
       },
     },
@@ -66,11 +75,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLanguage(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_function_app_function+: {
         [resourceLabel]+: {
-          language: value,
+          enabled: value,
         },
       },
     },
@@ -80,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_function_app_function+: {
         [resourceLabel]+: {
           function_app_id: value,
-        },
-      },
-    },
-  },
-  withTestData(resourceLabel, value):: {
-    resource+: {
-      azurerm_function_app_function+: {
-        [resourceLabel]+: {
-          test_data: value,
         },
       },
     },
@@ -113,11 +113,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   file:: {
     new(
-      content,
-      name
+      name,
+      content
     ):: std.prune(a={
-      content: content,
       name: name,
+      content: content,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -140,15 +140,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

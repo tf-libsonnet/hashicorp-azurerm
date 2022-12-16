@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name=null,
     role_definition_id=null,
     scope=null,
+    name=null,
     timeouts=null
   ):: tf.withData(type='azurerm_role_definition', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
     role_definition_id=role_definition_id,
     scope=scope,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    name=null,
     role_definition_id=null,
     scope=null,
+    name=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     role_definition_id: role_definition_id,
     scope: scope,
+    name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_role_definition+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withRoleDefinitionId(dataSrcLabel, value):: {
     data+: {
       azurerm_role_definition+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_role_definition+: {
         [dataSrcLabel]+: {
           scope: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_role_definition+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

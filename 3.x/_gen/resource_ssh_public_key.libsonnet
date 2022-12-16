@@ -17,38 +17,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
+    tags=null,
     location,
     name,
     public_key,
-    resource_group_name,
-    tags=null,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
+    tags: tags,
     location: location,
     name: name,
     public_key: public_key,
-    resource_group_name: resource_group_name,
-    tags: tags,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_ssh_public_key+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_ssh_public_key+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_ssh_public_key+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_ssh_public_key+: {
         [resourceLabel]+: {
           public_key: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_ssh_public_key+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_ssh_public_key+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

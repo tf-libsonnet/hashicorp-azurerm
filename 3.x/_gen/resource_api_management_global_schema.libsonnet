@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    schema_id,
     type,
     value,
     api_management_name,
     description=null,
     resource_group_name,
-    schema_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_global_schema', label=resourceLabel, attrs=self.newAttrs(
+    schema_id=schema_id,
     type=type,
     value=value,
     api_management_name=api_management_name,
     description=description,
     resource_group_name=resource_group_name,
-    schema_id=schema_id,
     timeouts=timeouts
   )),
   newAttrs(
+    api_management_name,
+    description=null,
     resource_group_name,
     schema_id,
     type,
     value,
-    api_management_name,
-    description=null,
     timeouts=null
   ):: std.prune(a={
+    api_management_name: api_management_name,
+    description: description,
     resource_group_name: resource_group_name,
     schema_id: schema_id,
     type: type,
     value: value,
-    api_management_name: api_management_name,
-    description: description,
     timeouts: timeouts,
   }),
   withApiManagementName(resourceLabel, value):: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    api_management_name,
-    buffered=null,
-    description=null,
     name,
     resource_group_name,
     resource_id=null,
+    api_management_name,
+    buffered=null,
+    description=null,
+    application_insights=null,
     eventhub=null,
-    timeouts=null,
-    application_insights=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_api_management_logger', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    buffered=buffered,
-    description=description,
     name=name,
     resource_group_name=resource_group_name,
     resource_id=resource_id,
+    api_management_name=api_management_name,
+    buffered=buffered,
+    description=description,
+    application_insights=application_insights,
     eventhub=eventhub,
-    timeouts=timeouts,
-    application_insights=application_insights
+    timeouts=timeouts
   )),
   newAttrs(
     name,
@@ -43,6 +43,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     eventhub: eventhub,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_logger+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_logger+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_logger+: {
+        [resourceLabel]+: {
+          resource_id: value,
+        },
+      },
+    },
+  },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_logger+: {
@@ -70,32 +97,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withApplicationInsights(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_logger+: {
         [resourceLabel]+: {
-          name: value,
+          application_insights: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withApplicationInsightsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_logger+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          application_insights+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_logger+: {
-        [resourceLabel]+: {
-          resource_id: value,
-        },
-      },
-    },
+  application_insights:: {
+    new(
+      instrumentation_key
+    ):: std.prune(a={
+      instrumentation_key: instrumentation_key,
+    }),
   },
   withEventhub(resourceLabel, value):: {
     resource+: {
@@ -144,40 +169,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
-    }),
-  },
-  withApplicationInsights(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_logger+: {
-        [resourceLabel]+: {
-          application_insights: value,
-        },
-      },
-    },
-  },
-  withApplicationInsightsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_logger+: {
-        [resourceLabel]+: {
-          application_insights+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  application_insights:: {
-    new(
-      instrumentation_key
-    ):: std.prune(a={
-      instrumentation_key: instrumentation_key,
+      update: update,
     }),
   },
 }

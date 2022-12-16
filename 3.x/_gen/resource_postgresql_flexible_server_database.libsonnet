@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     collation: collation,
     timeouts: timeouts,
   }),
-  withCharset(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server_database+: {
-        [resourceLabel]+: {
-          charset: value,
-        },
-      },
-    },
-  },
-  withCollation(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server_database+: {
-        [resourceLabel]+: {
-          collation: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server_database+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_postgresql_flexible_server_database+: {
         [resourceLabel]+: {
           server_id: value,
+        },
+      },
+    },
+  },
+  withCharset(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server_database+: {
+        [resourceLabel]+: {
+          charset: value,
+        },
+      },
+    },
+  },
+  withCollation(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server_database+: {
+        [resourceLabel]+: {
+          collation: value,
         },
       },
     },

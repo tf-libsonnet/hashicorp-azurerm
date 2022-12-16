@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    spring_cloud_service_id,
-    build_pack_group=null,
-    stack=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_builder', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    spring_cloud_service_id=spring_cloud_service_id,
-    build_pack_group=build_pack_group,
-    stack=stack,
-    timeouts=timeouts
-  )),
-  newAttrs(
     spring_cloud_service_id,
     name,
     stack=null,
     timeouts=null,
     build_pack_group=null
+  ):: tf.withResource(type='azurerm_spring_cloud_builder', label=resourceLabel, attrs=self.newAttrs(
+    spring_cloud_service_id=spring_cloud_service_id,
+    name=name,
+    stack=stack,
+    timeouts=timeouts,
+    build_pack_group=build_pack_group
+  )),
+  newAttrs(
+    name,
+    spring_cloud_service_id,
+    build_pack_group=null,
+    stack=null,
+    timeouts=null
   ):: std.prune(a={
-    spring_cloud_service_id: spring_cloud_service_id,
     name: name,
+    spring_cloud_service_id: spring_cloud_service_id,
+    build_pack_group: build_pack_group,
     stack: stack,
     timeouts: timeouts,
-    build_pack_group: build_pack_group,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_builder+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withSpringCloudServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_builder+: {
         [resourceLabel]+: {
           spring_cloud_service_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_builder+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

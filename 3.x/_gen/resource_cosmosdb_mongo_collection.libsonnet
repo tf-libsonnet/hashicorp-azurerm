@@ -2,26 +2,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    throughput=null,
+    shard_key=null,
     account_name,
+    analytical_storage_ttl=null,
     database_name,
     default_ttl_seconds=null,
-    analytical_storage_ttl=null,
     name,
-    shard_key=null,
     resource_group_name,
-    throughput=null,
     autoscale_settings=null,
     index=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_mongo_collection', label=resourceLabel, attrs=self.newAttrs(
+    throughput=throughput,
+    shard_key=shard_key,
     account_name=account_name,
+    analytical_storage_ttl=analytical_storage_ttl,
     database_name=database_name,
     default_ttl_seconds=default_ttl_seconds,
-    analytical_storage_ttl=analytical_storage_ttl,
     name=name,
-    shard_key=shard_key,
     resource_group_name=resource_group_name,
-    throughput=throughput,
     autoscale_settings=autoscale_settings,
     index=index,
     timeouts=timeouts
@@ -29,11 +29,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   newAttrs(
     throughput=null,
     account_name,
-    name,
-    shard_key=null,
     analytical_storage_ttl=null,
     database_name,
     default_ttl_seconds=null,
+    shard_key=null,
+    name,
     resource_group_name,
     autoscale_settings=null,
     index=null,
@@ -41,30 +41,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   ):: std.prune(a={
     throughput: throughput,
     account_name: account_name,
-    name: name,
-    shard_key: shard_key,
     analytical_storage_ttl: analytical_storage_ttl,
     database_name: database_name,
     default_ttl_seconds: default_ttl_seconds,
+    shard_key: shard_key,
+    name: name,
     resource_group_name: resource_group_name,
     autoscale_settings: autoscale_settings,
     index: index,
     timeouts: timeouts,
   }),
-  withThroughput(resourceLabel, value):: {
+  withAnalyticalStorageTtl(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_mongo_collection+: {
         [resourceLabel]+: {
-          throughput: value,
-        },
-      },
-    },
-  },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_collection+: {
-        [resourceLabel]+: {
-          account_name: value,
+          analytical_storage_ttl: value,
         },
       },
     },
@@ -87,6 +78,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_collection+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_mongo_collection+: {
@@ -96,20 +96,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAnalyticalStorageTtl(resourceLabel, value):: {
+  withThroughput(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_mongo_collection+: {
         [resourceLabel]+: {
-          analytical_storage_ttl: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_collection+: {
-        [resourceLabel]+: {
-          name: value,
+          throughput: value,
         },
       },
     },
@@ -122,6 +113,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_collection+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_collection+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_collection+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
+    }),
   },
   withAutoscaleSettings(resourceLabel, value):: {
     resource+: {
@@ -168,42 +199,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   index:: {
     new(
-      keys,
-      unique=null
+      unique=null,
+      keys
     ):: std.prune(a={
-      keys: keys,
       unique: unique,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_collection+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_collection+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
+      keys: keys,
     }),
   },
 }

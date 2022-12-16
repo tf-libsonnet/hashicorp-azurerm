@@ -2,38 +2,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    tags=null,
     location,
     name,
+    resource_group_name,
+    tags=null,
     identity=null,
     storage_account=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_video_analyzer', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
     location=location,
     name=name,
+    resource_group_name=resource_group_name,
+    tags=tags,
     identity=identity,
     storage_account=storage_account,
     timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
     location,
     name,
     resource_group_name,
-    storage_account=null,
+    tags=null,
     timeouts=null,
-    identity=null
+    identity=null,
+    storage_account=null
   ):: std.prune(a={
-    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    storage_account: storage_account,
+    tags: tags,
     timeouts: timeouts,
     identity: identity,
+    storage_account: storage_account,
   }),
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
@@ -70,31 +70,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withStorageAccount(resourceLabel, value):: {
-    resource+: {
-      azurerm_video_analyzer+: {
-        [resourceLabel]+: {
-          storage_account: value,
-        },
-      },
-    },
-  },
-  withStorageAccountMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_video_analyzer+: {
-        [resourceLabel]+: {
-          storage_account+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  storage_account:: {
-    new(
-      user_assigned_identity_id
-    ):: std.prune(a={
-      user_assigned_identity_id: user_assigned_identity_id,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -152,6 +127,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       identity_ids: identity_ids,
       type: type,
+    }),
+  },
+  withStorageAccount(resourceLabel, value):: {
+    resource+: {
+      azurerm_video_analyzer+: {
+        [resourceLabel]+: {
+          storage_account: value,
+        },
+      },
+    },
+  },
+  withStorageAccountMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_video_analyzer+: {
+        [resourceLabel]+: {
+          storage_account+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  storage_account:: {
+    new(
+      user_assigned_identity_id
+    ):: std.prune(a={
+      user_assigned_identity_id: user_assigned_identity_id,
     }),
   },
 }

@@ -17,29 +17,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    request_message=null,
     subresource_name,
     target_resource_id,
     web_pubsub_id,
     name,
+    request_message=null,
     timeouts=null
   ):: std.prune(a={
-    request_message: request_message,
     subresource_name: subresource_name,
     target_resource_id: target_resource_id,
     web_pubsub_id: web_pubsub_id,
     name: name,
+    request_message: request_message,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_pubsub_shared_private_link_resource+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withRequestMessage(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_shared_private_link_resource+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_pubsub_shared_private_link_resource+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_shared_private_link_resource+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

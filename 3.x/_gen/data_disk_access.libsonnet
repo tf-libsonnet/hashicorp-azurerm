@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     resource_group_name,
     tags=null,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_disk_access', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(

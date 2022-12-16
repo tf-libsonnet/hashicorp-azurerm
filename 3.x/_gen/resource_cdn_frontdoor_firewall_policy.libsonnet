@@ -2,118 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    mode,
-    name,
-    enabled=null,
-    sku_name,
-    tags=null,
+    custom_block_response_body=null,
     custom_block_response_status_code=null,
+    enabled=null,
+    mode,
     redirect_url=null,
     resource_group_name,
-    custom_block_response_body=null,
+    name,
+    tags=null,
+    sku_name,
     managed_rule=null,
     timeouts=null,
     custom_rule=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_firewall_policy', label=resourceLabel, attrs=self.newAttrs(
-    mode=mode,
-    name=name,
-    enabled=enabled,
-    sku_name=sku_name,
-    tags=tags,
+    custom_block_response_body=custom_block_response_body,
     custom_block_response_status_code=custom_block_response_status_code,
+    enabled=enabled,
+    mode=mode,
     redirect_url=redirect_url,
     resource_group_name=resource_group_name,
-    custom_block_response_body=custom_block_response_body,
+    name=name,
+    tags=tags,
+    sku_name=sku_name,
     managed_rule=managed_rule,
     timeouts=timeouts,
     custom_rule=custom_rule
   )),
   newAttrs(
-    name,
-    sku_name,
-    tags=null,
-    enabled=null,
     mode,
     custom_block_response_body=null,
     custom_block_response_status_code=null,
+    name,
+    sku_name,
     redirect_url=null,
     resource_group_name,
+    tags=null,
+    enabled=null,
+    timeouts=null,
     custom_rule=null,
-    managed_rule=null,
-    timeouts=null
+    managed_rule=null
   ):: std.prune(a={
-    name: name,
-    sku_name: sku_name,
-    tags: tags,
-    enabled: enabled,
     mode: mode,
     custom_block_response_body: custom_block_response_body,
     custom_block_response_status_code: custom_block_response_status_code,
+    name: name,
+    sku_name: sku_name,
     redirect_url: redirect_url,
     resource_group_name: resource_group_name,
+    tags: tags,
+    enabled: enabled,
+    timeouts: timeouts,
     custom_rule: custom_rule,
     managed_rule: managed_rule,
-    timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withCustomBlockResponseBody(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [resourceLabel]+: {
-          custom_block_response_body: value,
-        },
-      },
-    },
-  },
   withCustomBlockResponseStatusCode(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_firewall_policy+: {
         [resourceLabel]+: {
           custom_block_response_status_code: value,
-        },
-      },
-    },
-  },
-  withRedirectUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [resourceLabel]+: {
-          redirect_url: value,
-        },
-      },
-    },
-  },
-  withMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [resourceLabel]+: {
-          mode: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -127,6 +73,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_firewall_policy+: {
@@ -136,36 +91,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withMode(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_firewall_policy+: {
         [resourceLabel]+: {
-          timeouts: value,
+          mode: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_firewall_policy+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withCustomBlockResponseBody(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [resourceLabel]+: {
+          custom_block_response_body: value,
+        },
+      },
+    },
+  },
+  withRedirectUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [resourceLabel]+: {
+          redirect_url: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withCustomRule(resourceLabel, value):: {
     resource+: {
@@ -289,28 +258,59 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
       rule:: {
         new(
+          rule_id,
           action,
           enabled=null,
-          rule_id,
           exclusion=null
         ):: std.prune(a={
+          rule_id: rule_id,
           action: action,
           enabled: enabled,
-          rule_id: rule_id,
           exclusion: exclusion,
         }),
         exclusion:: {
           new(
-            selector,
             match_variable,
-            operator
+            operator,
+            selector
           ):: std.prune(a={
-            selector: selector,
             match_variable: match_variable,
             operator: operator,
+            selector: selector,
           }),
         },
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
+    }),
   },
 }

@@ -2,111 +2,75 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    forward_dead_lettered_messages_to=null,
-    forward_to=null,
     default_message_ttl=null,
-    lock_duration=null,
     enable_batched_operations=null,
-    max_delivery_count,
     dead_lettering_on_message_expiration=null,
-    auto_delete_on_idle=null,
-    dead_lettering_on_filter_evaluation_error=null,
-    client_scoped_subscription_enabled=null,
-    name,
+    max_delivery_count,
     requires_session=null,
+    lock_duration=null,
     status=null,
     topic_id,
+    auto_delete_on_idle=null,
+    forward_to=null,
+    client_scoped_subscription_enabled=null,
+    dead_lettering_on_filter_evaluation_error=null,
+    name,
+    forward_dead_lettered_messages_to=null,
     client_scoped_subscription=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_subscription', label=resourceLabel, attrs=self.newAttrs(
-    forward_dead_lettered_messages_to=forward_dead_lettered_messages_to,
-    forward_to=forward_to,
     default_message_ttl=default_message_ttl,
-    lock_duration=lock_duration,
     enable_batched_operations=enable_batched_operations,
-    max_delivery_count=max_delivery_count,
     dead_lettering_on_message_expiration=dead_lettering_on_message_expiration,
-    auto_delete_on_idle=auto_delete_on_idle,
-    dead_lettering_on_filter_evaluation_error=dead_lettering_on_filter_evaluation_error,
-    client_scoped_subscription_enabled=client_scoped_subscription_enabled,
-    name=name,
+    max_delivery_count=max_delivery_count,
     requires_session=requires_session,
+    lock_duration=lock_duration,
     status=status,
     topic_id=topic_id,
+    auto_delete_on_idle=auto_delete_on_idle,
+    forward_to=forward_to,
+    client_scoped_subscription_enabled=client_scoped_subscription_enabled,
+    dead_lettering_on_filter_evaluation_error=dead_lettering_on_filter_evaluation_error,
+    name=name,
+    forward_dead_lettered_messages_to=forward_dead_lettered_messages_to,
     client_scoped_subscription=client_scoped_subscription,
     timeouts=timeouts
   )),
   newAttrs(
     requires_session=null,
-    status=null,
-    topic_id,
-    max_delivery_count,
-    name,
-    forward_to=null,
-    enable_batched_operations=null,
-    dead_lettering_on_message_expiration=null,
-    default_message_ttl=null,
     dead_lettering_on_filter_evaluation_error=null,
-    auto_delete_on_idle=null,
-    lock_duration=null,
     client_scoped_subscription_enabled=null,
+    dead_lettering_on_message_expiration=null,
+    lock_duration=null,
+    forward_to=null,
+    status=null,
+    auto_delete_on_idle=null,
+    topic_id,
+    name,
+    default_message_ttl=null,
     forward_dead_lettered_messages_to=null,
+    max_delivery_count,
+    enable_batched_operations=null,
     client_scoped_subscription=null,
     timeouts=null
   ):: std.prune(a={
     requires_session: requires_session,
-    status: status,
-    topic_id: topic_id,
-    max_delivery_count: max_delivery_count,
-    name: name,
-    forward_to: forward_to,
-    enable_batched_operations: enable_batched_operations,
-    dead_lettering_on_message_expiration: dead_lettering_on_message_expiration,
-    default_message_ttl: default_message_ttl,
     dead_lettering_on_filter_evaluation_error: dead_lettering_on_filter_evaluation_error,
-    auto_delete_on_idle: auto_delete_on_idle,
-    lock_duration: lock_duration,
     client_scoped_subscription_enabled: client_scoped_subscription_enabled,
+    dead_lettering_on_message_expiration: dead_lettering_on_message_expiration,
+    lock_duration: lock_duration,
+    forward_to: forward_to,
+    status: status,
+    auto_delete_on_idle: auto_delete_on_idle,
+    topic_id: topic_id,
+    name: name,
+    default_message_ttl: default_message_ttl,
     forward_dead_lettered_messages_to: forward_dead_lettered_messages_to,
+    max_delivery_count: max_delivery_count,
+    enable_batched_operations: enable_batched_operations,
     client_scoped_subscription: client_scoped_subscription,
     timeouts: timeouts,
   }),
-  withDeadLetteringOnFilterEvaluationError(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription+: {
-        [resourceLabel]+: {
-          dead_lettering_on_filter_evaluation_error: value,
-        },
-      },
-    },
-  },
-  withStatus(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription+: {
-        [resourceLabel]+: {
-          status: value,
-        },
-      },
-    },
-  },
-  withAutoDeleteOnIdle(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription+: {
-        [resourceLabel]+: {
-          auto_delete_on_idle: value,
-        },
-      },
-    },
-  },
-  withDefaultMessageTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription+: {
-        [resourceLabel]+: {
-          default_message_ttl: value,
-        },
-      },
-    },
-  },
   withRequiresSession(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription+: {
@@ -116,29 +80,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withClientScopedSubscriptionEnabled(resourceLabel, value):: {
+  withDeadLetteringOnMessageExpiration(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription+: {
         [resourceLabel]+: {
-          client_scoped_subscription_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withMaxDeliveryCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription+: {
-        [resourceLabel]+: {
-          max_delivery_count: value,
+          dead_lettering_on_message_expiration: value,
         },
       },
     },
@@ -161,11 +107,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnableBatchedOperations(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription+: {
         [resourceLabel]+: {
-          enable_batched_operations: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withStatus(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription+: {
+        [resourceLabel]+: {
+          status: value,
         },
       },
     },
@@ -179,11 +134,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeadLetteringOnMessageExpiration(resourceLabel, value):: {
+  withClientScopedSubscriptionEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription+: {
         [resourceLabel]+: {
-          dead_lettering_on_message_expiration: value,
+          client_scoped_subscription_enabled: value,
+        },
+      },
+    },
+  },
+  withEnableBatchedOperations(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription+: {
+        [resourceLabel]+: {
+          enable_batched_operations: value,
+        },
+      },
+    },
+  },
+  withMaxDeliveryCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription+: {
+        [resourceLabel]+: {
+          max_delivery_count: value,
         },
       },
     },
@@ -197,32 +170,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withClientScopedSubscription(resourceLabel, value):: {
+  withDeadLetteringOnFilterEvaluationError(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription+: {
         [resourceLabel]+: {
-          client_scoped_subscription: value,
+          dead_lettering_on_filter_evaluation_error: value,
         },
       },
     },
   },
-  withClientScopedSubscriptionMixin(resourceLabel, value):: {
+  withDefaultMessageTtl(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription+: {
         [resourceLabel]+: {
-          client_scoped_subscription+: if std.isArray(v=value) then value else [value],
+          default_message_ttl: value,
         },
       },
     },
   },
-  client_scoped_subscription:: {
-    new(
-      is_client_scoped_subscription_shareable=null,
-      client_id=null
-    ):: std.prune(a={
-      is_client_scoped_subscription_shareable: is_client_scoped_subscription_shareable,
-      client_id: client_id,
-    }),
+  withAutoDeleteOnIdle(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription+: {
+        [resourceLabel]+: {
+          auto_delete_on_idle: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -244,15 +217,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
+    }),
+  },
+  withClientScopedSubscription(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription+: {
+        [resourceLabel]+: {
+          client_scoped_subscription: value,
+        },
+      },
+    },
+  },
+  withClientScopedSubscriptionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription+: {
+        [resourceLabel]+: {
+          client_scoped_subscription+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  client_scoped_subscription:: {
+    new(
+      client_id=null,
+      is_client_scoped_subscription_shareable=null
+    ):: std.prune(a={
+      client_id: client_id,
+      is_client_scoped_subscription_shareable: is_client_scoped_subscription_shareable,
     }),
   },
 }

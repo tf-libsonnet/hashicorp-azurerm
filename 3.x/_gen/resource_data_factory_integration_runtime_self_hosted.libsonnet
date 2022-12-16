@@ -5,37 +5,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     name,
     data_factory_id,
-    timeouts=null,
-    rbac_authorization=null
+    rbac_authorization=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_integration_runtime_self_hosted', label=resourceLabel, attrs=self.newAttrs(
     description=description,
     name=name,
     data_factory_id=data_factory_id,
-    timeouts=timeouts,
-    rbac_authorization=rbac_authorization
+    rbac_authorization=rbac_authorization,
+    timeouts=timeouts
   )),
   newAttrs(
     data_factory_id,
     description=null,
     name,
-    rbac_authorization=null,
-    timeouts=null
+    timeouts=null,
+    rbac_authorization=null
   ):: std.prune(a={
     data_factory_id: data_factory_id,
     description: description,
     name: name,
-    rbac_authorization: rbac_authorization,
     timeouts: timeouts,
+    rbac_authorization: rbac_authorization,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_self_hosted+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_self_hosted+: {
@@ -50,6 +41,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_integration_runtime_self_hosted+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_self_hosted+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

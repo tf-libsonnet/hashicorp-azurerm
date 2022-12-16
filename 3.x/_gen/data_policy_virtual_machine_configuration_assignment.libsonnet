@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    virtual_machine_name,
     resource_group_name,
+    virtual_machine_name,
     name,
     timeouts=null
   ):: tf.withData(type='azurerm_policy_virtual_machine_configuration_assignment', label=dataSrcLabel, attrs=self.newAttrs(
-    virtual_machine_name=virtual_machine_name,
     resource_group_name=resource_group_name,
+    virtual_machine_name=virtual_machine_name,
     name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     virtual_machine_name,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     virtual_machine_name: virtual_machine_name,
-    name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_policy_virtual_machine_configuration_assignment+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_policy_virtual_machine_configuration_assignment+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_policy_virtual_machine_configuration_assignment+: {
         [dataSrcLabel]+: {
           virtual_machine_name: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_policy_virtual_machine_configuration_assignment+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

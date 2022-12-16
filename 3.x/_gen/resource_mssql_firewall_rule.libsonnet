@@ -15,18 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     server_id,
     start_ip_address,
     end_ip_address,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     server_id: server_id,
     start_ip_address: start_ip_address,
     end_ip_address: end_ip_address,
-    name: name,
     timeouts: timeouts,
   }),
+  withEndIpAddress(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_firewall_rule+: {
+        [resourceLabel]+: {
+          end_ip_address: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_firewall_rule+: {
@@ -50,15 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_firewall_rule+: {
         [resourceLabel]+: {
           start_ip_address: value,
-        },
-      },
-    },
-  },
-  withEndIpAddress(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_firewall_rule+: {
-        [resourceLabel]+: {
-          end_ip_address: value,
         },
       },
     },

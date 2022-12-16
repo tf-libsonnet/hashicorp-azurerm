@@ -2,123 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    service_uri,
     custom_headers=null,
-    name,
     tags=null,
-    location,
-    status=null,
-    registry_name,
+    service_uri,
     actions,
     resource_group_name,
     scope=null,
+    status=null,
+    location,
+    name,
+    registry_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_webhook', label=resourceLabel, attrs=self.newAttrs(
-    service_uri=service_uri,
     custom_headers=custom_headers,
-    name=name,
     tags=tags,
-    location=location,
-    status=status,
-    registry_name=registry_name,
+    service_uri=service_uri,
     actions=actions,
     resource_group_name=resource_group_name,
     scope=scope,
+    status=status,
+    location=location,
+    name=name,
+    registry_name=registry_name,
     timeouts=timeouts
   )),
   newAttrs(
-    actions,
-    status=null,
-    registry_name,
-    tags=null,
-    name,
+    custom_headers=null,
     location,
+    registry_name,
     resource_group_name,
     scope=null,
+    tags=null,
+    name,
+    actions,
+    status=null,
     service_uri,
-    custom_headers=null,
     timeouts=null
   ):: std.prune(a={
-    actions: actions,
-    status: status,
-    registry_name: registry_name,
-    tags: tags,
-    name: name,
+    custom_headers: custom_headers,
     location: location,
+    registry_name: registry_name,
     resource_group_name: resource_group_name,
     scope: scope,
+    tags: tags,
+    name: name,
+    actions: actions,
+    status: status,
     service_uri: service_uri,
-    custom_headers: custom_headers,
     timeouts: timeouts,
   }),
-  withStatus(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          status: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_webhook+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withScope(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          scope: value,
-        },
-      },
-    },
-  },
-  withRegistryName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          registry_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withServiceUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          service_uri: value,
-        },
-      },
-    },
-  },
-  withActions(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          actions: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -132,11 +69,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withServiceUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          service_uri: value,
+        },
+      },
+    },
+  },
+  withRegistryName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          registry_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withActions(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          actions: value,
+        },
+      },
+    },
+  },
   withCustomHeaders(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_webhook+: {
         [resourceLabel]+: {
           custom_headers: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withScope(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          scope: value,
+        },
+      },
+    },
+  },
+  withStatus(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          status: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

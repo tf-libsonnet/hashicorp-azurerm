@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     share_id: share_id,
     timeouts: timeouts,
   }),
-  withShareId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_data_share_dataset_kusto_database+: {
-        [dataSrcLabel]+: {
-          share_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_data_share_dataset_kusto_database+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withShareId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_data_share_dataset_kusto_database+: {
+        [dataSrcLabel]+: {
+          share_id: value,
         },
       },
     },

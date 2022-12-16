@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    terms=null,
     account_id,
     description=null,
     kind,
     name,
-    timeouts=null,
-    snapshot_schedule=null
+    terms=null,
+    snapshot_schedule=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_share', label=resourceLabel, attrs=self.newAttrs(
-    terms=terms,
     account_id=account_id,
     description=description,
     kind=kind,
     name=name,
-    timeouts=timeouts,
-    snapshot_schedule=snapshot_schedule
+    terms=terms,
+    snapshot_schedule=snapshot_schedule,
+    timeouts=timeouts
   )),
   newAttrs(
-    kind,
-    name,
     terms=null,
     account_id,
     description=null,
-    timeouts=null,
-    snapshot_schedule=null
+    kind,
+    name,
+    snapshot_schedule=null,
+    timeouts=null
   ):: std.prune(a={
-    kind: kind,
-    name: name,
     terms: terms,
     account_id: account_id,
     description: description,
-    timeouts: timeouts,
+    kind: kind,
+    name: name,
     snapshot_schedule: snapshot_schedule,
+    timeouts: timeouts,
   }),
+  withTerms(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share+: {
+        [resourceLabel]+: {
+          terms: value,
+        },
+      },
+    },
+  },
   withAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_data_share+: {
@@ -71,15 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTerms(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share+: {
-        [resourceLabel]+: {
-          terms: value,
-        },
-      },
-    },
-  },
   withSnapshotSchedule(resourceLabel, value):: {
     resource+: {
       azurerm_data_share+: {
@@ -100,13 +100,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   snapshot_schedule:: {
     new(
+      recurrence,
       start_time,
-      name,
-      recurrence
+      name
     ):: std.prune(a={
+      recurrence: recurrence,
       start_time: start_time,
       name: name,
-      recurrence: recurrence,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -129,15 +129,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

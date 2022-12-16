@@ -2,48 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
     name,
-    tags=null,
-    workspace_id,
-    eventhub_name,
-    eventhub_namespace_name,
     device_mapping_json,
     eventhub_consumer_group_name,
-    location,
+    eventhub_name,
+    tags=null,
+    workspace_id,
+    eventhub_namespace_name,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_medtech_service', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
     name=name,
-    tags=tags,
-    workspace_id=workspace_id,
-    eventhub_name=eventhub_name,
-    eventhub_namespace_name=eventhub_namespace_name,
     device_mapping_json=device_mapping_json,
     eventhub_consumer_group_name=eventhub_consumer_group_name,
-    location=location,
+    eventhub_name=eventhub_name,
+    tags=tags,
+    workspace_id=workspace_id,
+    eventhub_namespace_name=eventhub_namespace_name,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
     eventhub_name,
-    eventhub_consumer_group_name,
-    location,
-    device_mapping_json,
     eventhub_namespace_name,
+    location,
     name,
     tags=null,
     workspace_id,
+    device_mapping_json,
+    eventhub_consumer_group_name,
     identity=null,
     timeouts=null
   ):: std.prune(a={
     eventhub_name: eventhub_name,
-    eventhub_consumer_group_name: eventhub_consumer_group_name,
-    location: location,
-    device_mapping_json: device_mapping_json,
     eventhub_namespace_name: eventhub_namespace_name,
+    location: location,
     name: name,
     tags: tags,
     workspace_id: workspace_id,
+    device_mapping_json: device_mapping_json,
+    eventhub_consumer_group_name: eventhub_consumer_group_name,
     identity: identity,
     timeouts: timeouts,
   }),
@@ -61,6 +61,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_healthcare_medtech_service+: {
         [resourceLabel]+: {
           eventhub_consumer_group_name: value,
+        },
+      },
+    },
+  },
+  withEventhubName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          eventhub_name: value,
+        },
+      },
+    },
+  },
+  withEventhubNamespaceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          eventhub_namespace_name: value,
         },
       },
     },
@@ -101,23 +119,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEventhubName(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
         [resourceLabel]+: {
-          eventhub_name: value,
+          timeouts: value,
         },
       },
     },
   },
-  withEventhubNamespaceName(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
         [resourceLabel]+: {
-          eventhub_namespace_name: value,
+          timeouts+: value,
         },
       },
     },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -142,37 +173,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type
     ):: std.prune(a={
       type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
     }),
   },
 }

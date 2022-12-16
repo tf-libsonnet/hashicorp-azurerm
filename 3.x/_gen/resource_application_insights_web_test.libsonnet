@@ -2,126 +2,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    timeout=null,
+    configuration,
+    description=null,
+    frequency=null,
+    geo_locations,
+    tags=null,
+    location,
+    name,
+    resource_group_name,
     application_insights_id,
     enabled=null,
-    geo_locations,
-    name,
-    configuration,
-    location,
-    frequency=null,
     kind,
     retry_enabled=null,
-    tags=null,
-    description=null,
-    timeout=null,
-    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_web_test', label=resourceLabel, attrs=self.newAttrs(
+    timeout=timeout,
+    configuration=configuration,
+    description=description,
+    frequency=frequency,
+    geo_locations=geo_locations,
+    tags=tags,
+    location=location,
+    name=name,
+    resource_group_name=resource_group_name,
     application_insights_id=application_insights_id,
     enabled=enabled,
-    geo_locations=geo_locations,
-    name=name,
-    configuration=configuration,
-    location=location,
-    frequency=frequency,
     kind=kind,
     retry_enabled=retry_enabled,
-    tags=tags,
-    description=description,
-    timeout=timeout,
-    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    frequency=null,
-    application_insights_id,
-    location,
-    resource_group_name,
-    tags=null,
     configuration,
-    name,
-    retry_enabled=null,
-    description=null,
     timeout=null,
-    enabled=null,
+    resource_group_name,
     geo_locations,
+    location,
     kind,
+    tags=null,
+    description=null,
+    name,
+    application_insights_id,
+    enabled=null,
+    frequency=null,
+    retry_enabled=null,
     timeouts=null
   ):: std.prune(a={
-    frequency: frequency,
-    application_insights_id: application_insights_id,
-    location: location,
-    resource_group_name: resource_group_name,
-    tags: tags,
     configuration: configuration,
-    name: name,
-    retry_enabled: retry_enabled,
-    description: description,
     timeout: timeout,
-    enabled: enabled,
+    resource_group_name: resource_group_name,
     geo_locations: geo_locations,
+    location: location,
     kind: kind,
+    tags: tags,
+    description: description,
+    name: name,
+    application_insights_id: application_insights_id,
+    enabled: enabled,
+    frequency: frequency,
+    retry_enabled: retry_enabled,
     timeouts: timeouts,
   }),
-  withApplicationInsightsId(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          application_insights_id: value,
-        },
-      },
-    },
-  },
-  withConfiguration(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          configuration: value,
-        },
-      },
-    },
-  },
-  withRetryEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          retry_enabled: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_web_test+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          frequency: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          enabled: value,
         },
       },
     },
@@ -144,11 +90,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_web_test+: {
         [resourceLabel]+: {
-          description: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRetryEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          retry_enabled: value,
         },
       },
     },
@@ -162,20 +117,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKind(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_web_test+: {
-        [resourceLabel]+: {
-          kind: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_web_test+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withConfiguration(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          configuration: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withApplicationInsightsId(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          application_insights_id: value,
+        },
+      },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withFrequency(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          frequency: value,
+        },
+      },
+    },
+  },
+  withKind(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_web_test+: {
+        [resourceLabel]+: {
+          kind: value,
         },
       },
     },

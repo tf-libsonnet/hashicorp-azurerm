@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    path_pattern,
-    storage_account_name,
     storage_account_key,
-    name,
-    resource_group_name,
-    stream_analytics_job_name,
-    date_format,
-    storage_container_name,
     time_format,
+    storage_account_name,
+    stream_analytics_job_name,
+    path_pattern,
+    resource_group_name,
+    date_format,
+    name,
+    storage_container_name,
     serialization=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_stream_input_blob', label=resourceLabel, attrs=self.newAttrs(
-    path_pattern=path_pattern,
-    storage_account_name=storage_account_name,
     storage_account_key=storage_account_key,
-    name=name,
-    resource_group_name=resource_group_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    date_format=date_format,
-    storage_container_name=storage_container_name,
     time_format=time_format,
+    storage_account_name=storage_account_name,
+    stream_analytics_job_name=stream_analytics_job_name,
+    path_pattern=path_pattern,
+    resource_group_name=resource_group_name,
+    date_format=date_format,
+    name=name,
+    storage_container_name=storage_container_name,
     serialization=serialization,
     timeouts=timeouts
   )),
   newAttrs(
+    storage_account_key,
     stream_analytics_job_name,
+    date_format,
+    name,
     storage_account_name,
+    path_pattern,
+    resource_group_name,
     storage_container_name,
     time_format,
-    name,
-    resource_group_name,
-    storage_account_key,
-    date_format,
-    path_pattern,
     serialization=null,
     timeouts=null
   ):: std.prune(a={
+    storage_account_key: storage_account_key,
     stream_analytics_job_name: stream_analytics_job_name,
+    date_format: date_format,
+    name: name,
     storage_account_name: storage_account_name,
+    path_pattern: path_pattern,
+    resource_group_name: resource_group_name,
     storage_container_name: storage_container_name,
     time_format: time_format,
-    name: name,
-    resource_group_name: resource_group_name,
-    storage_account_key: storage_account_key,
-    date_format: date_format,
-    path_pattern: path_pattern,
     serialization: serialization,
     timeouts: timeouts,
   }),
@@ -56,15 +56,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_stream_input_blob+: {
         [resourceLabel]+: {
           path_pattern: value,
-        },
-      },
-    },
-  },
-  withStorageContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_blob+: {
-        [resourceLabel]+: {
-          storage_container_name: value,
         },
       },
     },
@@ -78,11 +69,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDateFormat(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_blob+: {
+        [resourceLabel]+: {
+          date_format: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_blob+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_blob+: {
+        [resourceLabel]+: {
+          storage_account_key: value,
         },
       },
     },
@@ -105,11 +114,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDateFormat(resourceLabel, value):: {
+  withStorageContainerName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_blob+: {
         [resourceLabel]+: {
-          date_format: value,
+          storage_container_name: value,
         },
       },
     },
@@ -119,15 +128,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_stream_input_blob+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withStorageAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_blob+: {
-        [resourceLabel]+: {
-          storage_account_key: value,
         },
       },
     },
@@ -152,13 +152,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   serialization:: {
     new(
-      type,
       encoding=null,
-      field_delimiter=null
+      field_delimiter=null,
+      type
     ):: std.prune(a={
-      type: type,
       encoding: encoding,
       field_delimiter: field_delimiter,
+      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {

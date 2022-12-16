@@ -2,130 +2,76 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    automation_account_name,
-    resource_group_name,
-    runbook_type,
-    content=null,
-    description=null,
-    log_verbose,
-    tags=null,
     log_progress,
-    job_schedule=null,
-    log_activity_trace_level=null,
-    name,
+    log_verbose,
+    resource_group_name,
+    tags=null,
+    automation_account_name,
+    content=null,
     location,
-    draft=null,
+    log_activity_trace_level=null,
+    job_schedule=null,
+    name,
+    runbook_type,
+    description=null,
     publish_content_link=null,
-    timeouts=null
+    timeouts=null,
+    draft=null
   ):: tf.withResource(type='azurerm_automation_runbook', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    resource_group_name=resource_group_name,
-    runbook_type=runbook_type,
-    content=content,
-    description=description,
-    log_verbose=log_verbose,
-    tags=tags,
     log_progress=log_progress,
-    job_schedule=job_schedule,
-    log_activity_trace_level=log_activity_trace_level,
-    name=name,
+    log_verbose=log_verbose,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    automation_account_name=automation_account_name,
+    content=content,
     location=location,
-    draft=draft,
+    log_activity_trace_level=log_activity_trace_level,
+    job_schedule=job_schedule,
+    name=name,
+    runbook_type=runbook_type,
+    description=description,
     publish_content_link=publish_content_link,
-    timeouts=timeouts
+    timeouts=timeouts,
+    draft=draft
   )),
   newAttrs(
-    log_activity_trace_level=null,
-    resource_group_name,
-    content=null,
-    description=null,
     log_progress,
-    automation_account_name,
-    tags=null,
-    location,
-    runbook_type,
-    job_schedule=null,
     log_verbose,
+    resource_group_name,
+    tags=null,
+    job_schedule=null,
+    runbook_type,
+    description=null,
     name,
+    automation_account_name,
+    content=null,
+    log_activity_trace_level=null,
+    location,
+    timeouts=null,
     draft=null,
-    publish_content_link=null,
-    timeouts=null
+    publish_content_link=null
   ):: std.prune(a={
-    log_activity_trace_level: log_activity_trace_level,
-    resource_group_name: resource_group_name,
-    content: content,
-    description: description,
     log_progress: log_progress,
-    automation_account_name: automation_account_name,
-    tags: tags,
-    location: location,
-    runbook_type: runbook_type,
-    job_schedule: job_schedule,
     log_verbose: log_verbose,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    job_schedule: job_schedule,
+    runbook_type: runbook_type,
+    description: description,
     name: name,
+    automation_account_name: automation_account_name,
+    content: content,
+    log_activity_trace_level: log_activity_trace_level,
+    location: location,
+    timeouts: timeouts,
     draft: draft,
     publish_content_link: publish_content_link,
-    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLogActivityTraceLevel(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          log_activity_trace_level: value,
-        },
-      },
-    },
-  },
-  withLogVerbose(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          log_verbose: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_runbook+: {
         [resourceLabel]+: {
           automation_account_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withRunbookType(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          runbook_type: value,
         },
       },
     },
@@ -139,15 +85,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withJobSchedule(resourceLabel, value):: {
     resource+: {
       azurerm_automation_runbook+: {
@@ -157,11 +94,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withLogVerbose(resourceLabel, value):: {
     resource+: {
       azurerm_automation_runbook+: {
         [resourceLabel]+: {
-          name: value,
+          log_verbose: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withLogActivityTraceLevel(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          log_activity_trace_level: value,
+        },
+      },
+    },
+  },
+  withRunbookType(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          runbook_type: value,
         },
       },
     },
@@ -171,6 +162,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_automation_runbook+: {
         [resourceLabel]+: {
           log_progress: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -195,49 +195,49 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   draft:: {
     new(
-      edit_mode_enabled=null,
       output_types=null,
+      edit_mode_enabled=null,
       content_link=null,
       parameters=null
     ):: std.prune(a={
-      edit_mode_enabled: edit_mode_enabled,
       output_types: output_types,
+      edit_mode_enabled: edit_mode_enabled,
       content_link: content_link,
       parameters: parameters,
     }),
     content_link:: {
       new(
-        version=null,
         uri,
+        version=null,
         hash=null
       ):: std.prune(a={
-        version: version,
         uri: uri,
+        version: version,
         hash: hash,
       }),
       hash:: {
         new(
-          algorithm,
-          value
+          value,
+          algorithm
         ):: std.prune(a={
-          algorithm: algorithm,
           value: value,
+          algorithm: algorithm,
         }),
       },
     },
     parameters:: {
       new(
+        default_value=null,
         key,
         mandatory=null,
         position=null,
-        type,
-        default_value=null
+        type
       ):: std.prune(a={
+        default_value: default_value,
         key: key,
         mandatory: mandatory,
         position: position,
         type: type,
-        default_value: default_value,
       }),
     },
   },
@@ -261,12 +261,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   publish_content_link:: {
     new(
-      uri,
       version=null,
+      uri,
       hash=null
     ):: std.prune(a={
-      uri: uri,
       version: version,
+      uri: uri,
       hash: hash,
     }),
     hash:: {
@@ -299,15 +299,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

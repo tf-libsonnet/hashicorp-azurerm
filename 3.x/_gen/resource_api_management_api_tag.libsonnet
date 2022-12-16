@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    api_id,
     name,
+    api_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_api_tag', label=resourceLabel, attrs=self.newAttrs(api_id=api_id, name=name, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_api_management_api_tag', label=resourceLabel, attrs=self.newAttrs(name=name, api_id=api_id, timeouts=timeouts)),
   newAttrs(
-    api_id,
     name,
+    api_id,
     timeouts=null
   ):: std.prune(a={
-    api_id: api_id,
     name: name,
+    api_id: api_id,
     timeouts: timeouts,
   }),
   withApiId(resourceLabel, value):: {
@@ -53,13 +53,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

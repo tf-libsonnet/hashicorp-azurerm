@@ -14,13 +14,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   )),
   newAttrs(
     min_tls_version=null,
-    resource_group_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
     min_tls_version: min_tls_version,
-    resource_group_name: resource_group_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

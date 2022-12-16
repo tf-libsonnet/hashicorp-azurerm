@@ -6,40 +6,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     location,
     name,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_digital_twins_instance', label=resourceLabel, attrs=self.newAttrs(
     resource_group_name=resource_group_name,
     tags=tags,
     location=location,
     name=name,
-    timeouts=timeouts,
-    identity=identity
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
+    location,
     name,
     resource_group_name,
     tags=null,
-    location,
     timeouts=null,
     identity=null
   ):: std.prune(a={
+    location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    location: location,
     timeouts: timeouts,
     identity: identity,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_digital_twins_instance+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_digital_twins_instance+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_digital_twins_instance+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_digital_twins_instance+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

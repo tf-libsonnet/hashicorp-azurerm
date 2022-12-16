@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    virtual_machine_id,
     location,
     maintenance_configuration_id,
-    virtual_machine_id,
     timeouts=null
   ):: std.prune(a={
+    virtual_machine_id: virtual_machine_id,
     location: location,
     maintenance_configuration_id: maintenance_configuration_id,
-    virtual_machine_id: virtual_machine_id,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_assignment_virtual_machine+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withMaintenanceConfigurationId(resourceLabel, value):: {
     resource+: {
       azurerm_maintenance_assignment_virtual_machine+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_maintenance_assignment_virtual_machine+: {
         [resourceLabel]+: {
           virtual_machine_id: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_assignment_virtual_machine+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },

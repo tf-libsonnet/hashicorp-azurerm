@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    share_id,
     storage_account_id,
     file_path=null,
     file_system_name,
     folder_path=null,
     name,
-    share_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_data_lake_gen2', label=resourceLabel, attrs=self.newAttrs(
+    share_id=share_id,
     storage_account_id=storage_account_id,
     file_path=file_path,
     file_system_name=file_system_name,
     folder_path=folder_path,
     name=name,
-    share_id=share_id,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_id,
-    file_path=null,
-    file_system_name,
     folder_path=null,
     name,
     share_id,
+    storage_account_id,
+    file_path=null,
+    file_system_name,
     timeouts=null
   ):: std.prune(a={
-    storage_account_id: storage_account_id,
-    file_path: file_path,
-    file_system_name: file_system_name,
     folder_path: folder_path,
     name: name,
     share_id: share_id,
+    storage_account_id: storage_account_id,
+    file_path: file_path,
+    file_system_name: file_system_name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_data_lake_gen2+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withShareId(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_data_lake_gen2+: {
@@ -89,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_data_lake_gen2+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_data_lake_gen2+: {
@@ -109,13 +109,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

@@ -2,65 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    policy_set_name,
     evaluator_type,
-    name,
-    resource_group_name,
-    threshold,
     lab_name,
     tags=null,
+    description=null,
+    policy_set_name,
+    resource_group_name,
     fact_data=null,
+    name,
+    threshold,
     timeouts=null
   ):: tf.withResource(type='azurerm_dev_test_policy', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    policy_set_name=policy_set_name,
     evaluator_type=evaluator_type,
-    name=name,
-    resource_group_name=resource_group_name,
-    threshold=threshold,
     lab_name=lab_name,
     tags=tags,
+    description=description,
+    policy_set_name=policy_set_name,
+    resource_group_name=resource_group_name,
     fact_data=fact_data,
+    name=name,
+    threshold=threshold,
     timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
-    policy_set_name,
+    evaluator_type,
     threshold,
+    resource_group_name,
     description=null,
     fact_data=null,
     name,
+    tags=null,
     lab_name,
-    resource_group_name,
-    evaluator_type,
+    policy_set_name,
     timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    policy_set_name: policy_set_name,
+    evaluator_type: evaluator_type,
     threshold: threshold,
+    resource_group_name: resource_group_name,
     description: description,
     fact_data: fact_data,
     name: name,
+    tags: tags,
     lab_name: lab_name,
-    resource_group_name: resource_group_name,
-    evaluator_type: evaluator_type,
+    policy_set_name: policy_set_name,
     timeouts: timeouts,
   }),
-  withPolicySetName(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_policy+: {
         [resourceLabel]+: {
-          policy_set_name: value,
+          description: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withLabName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_policy+: {
         [resourceLabel]+: {
-          name: value,
+          lab_name: value,
         },
       },
     },
@@ -101,11 +101,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLabName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_policy+: {
         [resourceLabel]+: {
-          lab_name: value,
+          name: value,
         },
       },
     },
@@ -119,11 +119,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withPolicySetName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_policy+: {
         [resourceLabel]+: {
-          description: value,
+          policy_set_name: value,
         },
       },
     },

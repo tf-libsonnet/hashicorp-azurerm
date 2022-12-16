@@ -2,41 +2,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
-    tags=null,
     name,
+    tags=null,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_databricks_workspace', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
     name=name,
+    tags=tags,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     name,
     tags=null,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     name: name,
     tags: tags,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_databricks_workspace+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_databricks_workspace+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withTags(dataSrcLabel, value):: {
+    data+: {
+      azurerm_databricks_workspace+: {
+        [dataSrcLabel]+: {
+          tags: value,
         },
       },
     },

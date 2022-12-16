@@ -2,13 +2,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     name,
+    resource_group_name,
     service_name,
     timeouts=null
   ):: tf.withData(type='azurerm_spring_cloud_app', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     name=name,
+    resource_group_name=resource_group_name,
     service_name=service_name,
     timeouts=timeouts
   )),
@@ -32,20 +32,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withServiceName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_spring_cloud_app+: {
-        [dataSrcLabel]+: {
-          service_name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_spring_cloud_app+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withServiceName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_spring_cloud_app+: {
+        [dataSrcLabel]+: {
+          service_name: value,
         },
       },
     },

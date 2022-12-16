@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    metadata=null,
     name,
     storage_account_name,
-    metadata=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_queue', label=resourceLabel, attrs=self.newAttrs(
+    metadata=metadata,
     name=name,
     storage_account_name=storage_account_name,
-    metadata=metadata,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_name,
     metadata=null,
     name,
+    storage_account_name,
     timeouts=null
   ):: std.prune(a={
-    storage_account_name: storage_account_name,
     metadata: metadata,
     name: name,
+    storage_account_name: storage_account_name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

@@ -21,23 +21,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    default_content_key_policy_name=null,
-    media_services_account_name,
     name,
     resource_group_name,
-    no_encryption_enabled_protocols=null,
-    timeouts=null,
+    default_content_key_policy_name=null,
+    media_services_account_name,
     common_encryption_cbcs=null,
-    common_encryption_cenc=null
+    common_encryption_cenc=null,
+    no_encryption_enabled_protocols=null,
+    timeouts=null
   ):: std.prune(a={
-    default_content_key_policy_name: default_content_key_policy_name,
-    media_services_account_name: media_services_account_name,
     name: name,
     resource_group_name: resource_group_name,
-    no_encryption_enabled_protocols: no_encryption_enabled_protocols,
-    timeouts: timeouts,
+    default_content_key_policy_name: default_content_key_policy_name,
+    media_services_account_name: media_services_account_name,
     common_encryption_cbcs: common_encryption_cbcs,
     common_encryption_cenc: common_encryption_cenc,
+    no_encryption_enabled_protocols: no_encryption_enabled_protocols,
+    timeouts: timeouts,
   }),
   withDefaultContentKeyPolicyName(resourceLabel, value):: {
     resource+: {
@@ -75,95 +75,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
-  withCommonEncryptionCbcs(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          common_encryption_cbcs: value,
-        },
-      },
-    },
-  },
-  withCommonEncryptionCbcsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          common_encryption_cbcs+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  common_encryption_cbcs:: {
-    new(
-      default_content_key=null,
-      drm_fairplay=null,
-      enabled_protocols=null
-    ):: std.prune(a={
-      default_content_key: default_content_key,
-      drm_fairplay: drm_fairplay,
-      enabled_protocols: enabled_protocols,
-    }),
-    default_content_key:: {
-      new(
-        label=null,
-        policy_name=null
-      ):: std.prune(a={
-        label: label,
-        policy_name: policy_name,
-      }),
-    },
-    drm_fairplay:: {
-      new(
-        allow_persistent_license=null,
-        custom_license_acquisition_url_template=null
-      ):: std.prune(a={
-        allow_persistent_license: allow_persistent_license,
-        custom_license_acquisition_url_template: custom_license_acquisition_url_template,
-      }),
-    },
-    enabled_protocols:: {
-      new(
-        hls=null,
-        smooth_streaming=null,
-        dash=null,
-        download=null
-      ):: std.prune(a={
-        hls: hls,
-        smooth_streaming: smooth_streaming,
-        dash: dash,
-        download: download,
-      }),
-    },
-  },
   withCommonEncryptionCenc(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_policy+: {
@@ -185,22 +96,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   common_encryption_cenc:: {
     new(
       drm_widevine_custom_license_acquisition_url_template=null,
+      enabled_protocols=null,
       default_content_key=null,
-      drm_playready=null,
-      enabled_protocols=null
+      drm_playready=null
     ):: std.prune(a={
       drm_widevine_custom_license_acquisition_url_template: drm_widevine_custom_license_acquisition_url_template,
+      enabled_protocols: enabled_protocols,
       default_content_key: default_content_key,
       drm_playready: drm_playready,
-      enabled_protocols: enabled_protocols,
     }),
     default_content_key:: {
       new(
-        policy_name=null,
-        label=null
+        label=null,
+        policy_name=null
       ):: std.prune(a={
-        policy_name: policy_name,
         label: label,
+        policy_name: policy_name,
       }),
     },
     drm_playready:: {
@@ -256,5 +167,94 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       hls: hls,
       smooth_streaming: smooth_streaming,
     }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
+  withCommonEncryptionCbcs(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          common_encryption_cbcs: value,
+        },
+      },
+    },
+  },
+  withCommonEncryptionCbcsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          common_encryption_cbcs+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  common_encryption_cbcs:: {
+    new(
+      enabled_protocols=null,
+      default_content_key=null,
+      drm_fairplay=null
+    ):: std.prune(a={
+      enabled_protocols: enabled_protocols,
+      default_content_key: default_content_key,
+      drm_fairplay: drm_fairplay,
+    }),
+    default_content_key:: {
+      new(
+        label=null,
+        policy_name=null
+      ):: std.prune(a={
+        label: label,
+        policy_name: policy_name,
+      }),
+    },
+    drm_fairplay:: {
+      new(
+        custom_license_acquisition_url_template=null,
+        allow_persistent_license=null
+      ):: std.prune(a={
+        custom_license_acquisition_url_template: custom_license_acquisition_url_template,
+        allow_persistent_license: allow_persistent_license,
+      }),
+    },
+    enabled_protocols:: {
+      new(
+        smooth_streaming=null,
+        dash=null,
+        download=null,
+        hls=null
+      ):: std.prune(a={
+        smooth_streaming: smooth_streaming,
+        dash: dash,
+        download: download,
+        hls: hls,
+      }),
+    },
   },
 }

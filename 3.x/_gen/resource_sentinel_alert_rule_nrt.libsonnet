@@ -2,78 +2,78 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tactics=null,
-    display_name,
-    enabled=null,
-    name,
-    suppression_duration=null,
     alert_rule_template_guid=null,
-    alert_rule_template_version=null,
-    description=null,
+    severity,
+    name,
+    custom_details=null,
+    suppression_duration=null,
+    suppression_enabled=null,
     query,
+    tactics=null,
+    alert_rule_template_version=null,
+    display_name,
+    description=null,
     techniques=null,
     log_analytics_workspace_id,
-    severity,
-    custom_details=null,
-    suppression_enabled=null,
-    alert_details_override=null,
-    entity_mapping=null,
+    enabled=null,
     incident=null,
-    timeouts=null
+    timeouts=null,
+    alert_details_override=null,
+    entity_mapping=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_nrt', label=resourceLabel, attrs=self.newAttrs(
-    tactics=tactics,
-    display_name=display_name,
-    enabled=enabled,
-    name=name,
-    suppression_duration=suppression_duration,
     alert_rule_template_guid=alert_rule_template_guid,
-    alert_rule_template_version=alert_rule_template_version,
-    description=description,
+    severity=severity,
+    name=name,
+    custom_details=custom_details,
+    suppression_duration=suppression_duration,
+    suppression_enabled=suppression_enabled,
     query=query,
+    tactics=tactics,
+    alert_rule_template_version=alert_rule_template_version,
+    display_name=display_name,
+    description=description,
     techniques=techniques,
     log_analytics_workspace_id=log_analytics_workspace_id,
-    severity=severity,
-    custom_details=custom_details,
-    suppression_enabled=suppression_enabled,
-    alert_details_override=alert_details_override,
-    entity_mapping=entity_mapping,
+    enabled=enabled,
     incident=incident,
-    timeouts=timeouts
+    timeouts=timeouts,
+    alert_details_override=alert_details_override,
+    entity_mapping=entity_mapping
   )),
   newAttrs(
-    alert_rule_template_version=null,
-    display_name,
-    alert_rule_template_guid=null,
     description=null,
-    techniques=null,
     name,
-    suppression_duration=null,
     custom_details=null,
-    tactics=null,
-    suppression_enabled=null,
-    log_analytics_workspace_id,
-    severity,
-    enabled=null,
     query,
+    alert_rule_template_version=null,
+    suppression_enabled=null,
+    suppression_duration=null,
+    log_analytics_workspace_id,
+    enabled=null,
+    tactics=null,
+    techniques=null,
+    alert_rule_template_guid=null,
+    severity,
+    display_name,
     alert_details_override=null,
     entity_mapping=null,
     incident=null,
     timeouts=null
   ):: std.prune(a={
-    alert_rule_template_version: alert_rule_template_version,
-    display_name: display_name,
-    alert_rule_template_guid: alert_rule_template_guid,
     description: description,
-    techniques: techniques,
     name: name,
-    suppression_duration: suppression_duration,
     custom_details: custom_details,
-    tactics: tactics,
-    suppression_enabled: suppression_enabled,
-    log_analytics_workspace_id: log_analytics_workspace_id,
-    severity: severity,
-    enabled: enabled,
     query: query,
+    alert_rule_template_version: alert_rule_template_version,
+    suppression_enabled: suppression_enabled,
+    suppression_duration: suppression_duration,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    enabled: enabled,
+    tactics: tactics,
+    techniques: techniques,
+    alert_rule_template_guid: alert_rule_template_guid,
+    severity: severity,
+    display_name: display_name,
     alert_details_override: alert_details_override,
     entity_mapping: entity_mapping,
     incident: incident,
@@ -88,20 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+  withSuppressionDuration(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          display_name: value,
+          suppression_duration: value,
         },
       },
     },
@@ -115,29 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSuppressionEnabled(resourceLabel, value):: {
+  withSeverity(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          suppression_enabled: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withCustomDetails(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          custom_details: value,
+          severity: value,
         },
       },
     },
@@ -160,20 +133,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTechniques(resourceLabel, value):: {
+  withSuppressionEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          techniques: value,
+          suppression_enabled: value,
         },
       },
     },
   },
-  withSuppressionDuration(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          suppression_duration: value,
+          display_name: value,
         },
       },
     },
@@ -196,76 +169,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSeverity(resourceLabel, value):: {
+  withTechniques(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          severity: value,
+          techniques: value,
         },
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          timeouts: value,
+          log_analytics_workspace_id: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          enabled: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withAlertDetailsOverride(resourceLabel, value):: {
+  withCustomDetails(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          alert_details_override: value,
+          custom_details: value,
         },
       },
     },
-  },
-  withAlertDetailsOverrideMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          alert_details_override+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  alert_details_override:: {
-    new(
-      description_format=null,
-      display_name_format=null,
-      severity_column_name=null,
-      tactics_column_name=null
-    ):: std.prune(a={
-      description_format: description_format,
-      display_name_format: display_name_format,
-      severity_column_name: severity_column_name,
-      tactics_column_name: tactics_column_name,
-    }),
   },
   withEntityMapping(resourceLabel, value):: {
     resource+: {
@@ -348,5 +286,67 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         by_custom_details: by_custom_details,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
+    }),
+  },
+  withAlertDetailsOverride(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          alert_details_override: value,
+        },
+      },
+    },
+  },
+  withAlertDetailsOverrideMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          alert_details_override+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  alert_details_override:: {
+    new(
+      description_format=null,
+      display_name_format=null,
+      severity_column_name=null,
+      tactics_column_name=null
+    ):: std.prune(a={
+      description_format: description_format,
+      display_name_format: display_name_format,
+      severity_column_name: severity_column_name,
+      tactics_column_name: tactics_column_name,
+    }),
   },
 }

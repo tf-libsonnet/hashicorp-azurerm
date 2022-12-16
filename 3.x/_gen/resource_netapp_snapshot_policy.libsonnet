@@ -2,82 +2,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    account_name,
     enabled,
     location,
     name,
     resource_group_name,
     tags=null,
-    account_name,
-    timeouts=null,
     weekly_schedule=null,
     daily_schedule=null,
     hourly_schedule=null,
-    monthly_schedule=null
+    monthly_schedule=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_netapp_snapshot_policy', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
     enabled=enabled,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    account_name=account_name,
-    timeouts=timeouts,
     weekly_schedule=weekly_schedule,
     daily_schedule=daily_schedule,
     hourly_schedule=hourly_schedule,
-    monthly_schedule=monthly_schedule
+    monthly_schedule=monthly_schedule,
+    timeouts=timeouts
   )),
   newAttrs(
-    enabled,
     location,
     name,
     resource_group_name,
     tags=null,
     account_name,
+    enabled,
     hourly_schedule=null,
     monthly_schedule=null,
     timeouts=null,
     weekly_schedule=null,
     daily_schedule=null
   ):: std.prune(a={
-    enabled: enabled,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     account_name: account_name,
+    enabled: enabled,
     hourly_schedule: hourly_schedule,
     monthly_schedule: monthly_schedule,
     timeouts: timeouts,
     weekly_schedule: weekly_schedule,
     daily_schedule: daily_schedule,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_snapshot_policy+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_snapshot_policy+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_snapshot_policy+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_snapshot_policy+: {
@@ -101,6 +74,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_netapp_snapshot_policy+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_snapshot_policy+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_snapshot_policy+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_snapshot_policy+: {
+        [resourceLabel]+: {
+          enabled: value,
         },
       },
     },
@@ -152,15 +152,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   monthly_schedule:: {
     new(
-      snapshots_to_keep,
-      days_of_month,
       hour,
-      minute
+      minute,
+      snapshots_to_keep,
+      days_of_month
     ):: std.prune(a={
-      snapshots_to_keep: snapshots_to_keep,
-      days_of_month: days_of_month,
       hour: hour,
       minute: minute,
+      snapshots_to_keep: snapshots_to_keep,
+      days_of_month: days_of_month,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -214,15 +214,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   weekly_schedule:: {
     new(
+      minute,
       snapshots_to_keep,
       days_of_week,
-      hour,
-      minute
+      hour
     ):: std.prune(a={
+      minute: minute,
       snapshots_to_keep: snapshots_to_keep,
       days_of_week: days_of_week,
       hour: hour,
-      minute: minute,
     }),
   },
   withDailySchedule(resourceLabel, value):: {
@@ -245,13 +245,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   daily_schedule:: {
     new(
-      hour,
       minute,
-      snapshots_to_keep
+      snapshots_to_keep,
+      hour
     ):: std.prune(a={
-      hour: hour,
       minute: minute,
       snapshots_to_keep: snapshots_to_keep,
+      hour: hour,
     }),
   },
 }

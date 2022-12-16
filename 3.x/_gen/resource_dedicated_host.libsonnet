@@ -3,46 +3,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     auto_replace_on_failure=null,
-    dedicated_host_group_id,
-    sku_name,
-    tags=null,
     license_type=null,
     location,
     name,
     platform_fault_domain,
+    sku_name,
+    tags=null,
+    dedicated_host_group_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_dedicated_host', label=resourceLabel, attrs=self.newAttrs(
     auto_replace_on_failure=auto_replace_on_failure,
-    dedicated_host_group_id=dedicated_host_group_id,
-    sku_name=sku_name,
-    tags=tags,
     license_type=license_type,
     location=location,
     name=name,
     platform_fault_domain=platform_fault_domain,
+    sku_name=sku_name,
+    tags=tags,
+    dedicated_host_group_id=dedicated_host_group_id,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    dedicated_host_group_id,
+    platform_fault_domain,
     sku_name,
     tags=null,
+    auto_replace_on_failure=null,
     license_type=null,
     location,
-    name,
-    platform_fault_domain,
-    auto_replace_on_failure=null,
-    dedicated_host_group_id,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    dedicated_host_group_id: dedicated_host_group_id,
+    platform_fault_domain: platform_fault_domain,
     sku_name: sku_name,
     tags: tags,
+    auto_replace_on_failure: auto_replace_on_failure,
     license_type: license_type,
     location: location,
-    name: name,
-    platform_fault_domain: platform_fault_domain,
-    auto_replace_on_failure: auto_replace_on_failure,
-    dedicated_host_group_id: dedicated_host_group_id,
     timeouts: timeouts,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dedicated_host+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withDedicatedHostGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_dedicated_host+: {
@@ -52,20 +61,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSkuName(resourceLabel, value):: {
+  withAutoReplaceOnFailure(resourceLabel, value):: {
     resource+: {
       azurerm_dedicated_host+: {
         [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_dedicated_host+: {
-        [resourceLabel]+: {
-          tags: value,
+          auto_replace_on_failure: value,
         },
       },
     },
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutoReplaceOnFailure(resourceLabel, value):: {
+  withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_dedicated_host+: {
         [resourceLabel]+: {
-          auto_replace_on_failure: value,
+          sku_name: value,
         },
       },
     },

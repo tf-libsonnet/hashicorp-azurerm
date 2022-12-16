@@ -7,28 +7,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withData(type='azurerm_data_share', label=dataSrcLabel, attrs=self.newAttrs(name=name, account_id=account_id, timeouts=timeouts)),
   newAttrs(
-    name,
     account_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     account_id: account_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_data_share+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withAccountId(dataSrcLabel, value):: {
     data+: {
       azurerm_data_share+: {
         [dataSrcLabel]+: {
           account_id: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_data_share+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    display_name=null,
     log_analytics_workspace_id,
     name=null,
-    display_name=null,
     timeouts=null
   ):: tf.withData(type='azurerm_sentinel_alert_rule_template', label=dataSrcLabel, attrs=self.newAttrs(
+    display_name=display_name,
     log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
-    display_name=display_name,
     timeouts=timeouts
   )),
   newAttrs(
+    display_name=null,
     log_analytics_workspace_id,
     name=null,
-    display_name=null,
     timeouts=null
   ):: std.prune(a={
+    display_name: display_name,
     log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
-    display_name: display_name,
     timeouts: timeouts,
   }),
   withDisplayName(dataSrcLabel, value):: {

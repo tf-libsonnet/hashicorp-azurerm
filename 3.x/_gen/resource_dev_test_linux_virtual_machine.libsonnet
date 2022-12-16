@@ -2,106 +2,97 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    password=null,
-    username,
-    size,
-    lab_subnet_name,
-    name,
     disallow_public_ip_address=null,
-    location,
-    ssh_key=null,
-    tags=null,
     allow_claim=null,
+    notes=null,
+    lab_virtual_network_id,
+    resource_group_name,
+    name,
     storage_type,
     lab_name,
-    lab_virtual_network_id,
-    notes=null,
-    resource_group_name,
-    timeouts=null,
+    location,
+    tags=null,
+    lab_subnet_name,
+    password=null,
+    size,
+    ssh_key=null,
+    username,
     gallery_image_reference=null,
-    inbound_nat_rule=null
+    inbound_nat_rule=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_dev_test_linux_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
-    password=password,
-    username=username,
-    size=size,
-    lab_subnet_name=lab_subnet_name,
-    name=name,
     disallow_public_ip_address=disallow_public_ip_address,
-    location=location,
-    ssh_key=ssh_key,
-    tags=tags,
     allow_claim=allow_claim,
+    notes=notes,
+    lab_virtual_network_id=lab_virtual_network_id,
+    resource_group_name=resource_group_name,
+    name=name,
     storage_type=storage_type,
     lab_name=lab_name,
-    lab_virtual_network_id=lab_virtual_network_id,
-    notes=notes,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
+    location=location,
+    tags=tags,
+    lab_subnet_name=lab_subnet_name,
+    password=password,
+    size=size,
+    ssh_key=ssh_key,
+    username=username,
     gallery_image_reference=gallery_image_reference,
-    inbound_nat_rule=inbound_nat_rule
+    inbound_nat_rule=inbound_nat_rule,
+    timeouts=timeouts
   )),
   newAttrs(
-    size,
-    tags=null,
-    password=null,
-    allow_claim=null,
-    lab_name,
     storage_type,
-    ssh_key=null,
+    notes=null,
+    lab_subnet_name,
+    lab_virtual_network_id,
+    password=null,
     resource_group_name,
+    location,
+    tags=null,
     name,
     username,
     disallow_public_ip_address=null,
-    lab_subnet_name,
-    lab_virtual_network_id,
-    notes=null,
-    location,
+    lab_name,
+    ssh_key=null,
+    allow_claim=null,
+    size,
     gallery_image_reference=null,
     inbound_nat_rule=null,
     timeouts=null
   ):: std.prune(a={
-    size: size,
-    tags: tags,
-    password: password,
-    allow_claim: allow_claim,
-    lab_name: lab_name,
     storage_type: storage_type,
-    ssh_key: ssh_key,
+    notes: notes,
+    lab_subnet_name: lab_subnet_name,
+    lab_virtual_network_id: lab_virtual_network_id,
+    password: password,
     resource_group_name: resource_group_name,
+    location: location,
+    tags: tags,
     name: name,
     username: username,
     disallow_public_ip_address: disallow_public_ip_address,
-    lab_subnet_name: lab_subnet_name,
-    lab_virtual_network_id: lab_virtual_network_id,
-    notes: notes,
-    location: location,
+    lab_name: lab_name,
+    ssh_key: ssh_key,
+    allow_claim: allow_claim,
+    size: size,
     gallery_image_reference: gallery_image_reference,
     inbound_nat_rule: inbound_nat_rule,
     timeouts: timeouts,
   }),
+  withLabName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          lab_name: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_linux_virtual_machine+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withLabSubnetName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          lab_subnet_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -115,83 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisallowPublicIpAddress(resourceLabel, value):: {
+  withLabSubnetName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_linux_virtual_machine+: {
         [resourceLabel]+: {
-          disallow_public_ip_address: value,
-        },
-      },
-    },
-  },
-  withNotes(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          notes: value,
-        },
-      },
-    },
-  },
-  withLabVirtualNetworkId(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          lab_virtual_network_id: value,
-        },
-      },
-    },
-  },
-  withUsername(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          username: value,
-        },
-      },
-    },
-  },
-  withAllowClaim(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          allow_claim: value,
-        },
-      },
-    },
-  },
-  withLabName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          lab_name: value,
-        },
-      },
-    },
-  },
-  withSshKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          ssh_key: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withStorageType(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_linux_virtual_machine+: {
-        [resourceLabel]+: {
-          storage_type: value,
+          lab_subnet_name: value,
         },
       },
     },
@@ -205,11 +124,92 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withNotes(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          notes: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withStorageType(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          storage_type: value,
+        },
+      },
+    },
+  },
+  withDisallowPublicIpAddress(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          disallow_public_ip_address: value,
+        },
+      },
+    },
+  },
+  withAllowClaim(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          allow_claim: value,
+        },
+      },
+    },
+  },
   withPassword(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_linux_virtual_machine+: {
         [resourceLabel]+: {
           password: value,
+        },
+      },
+    },
+  },
+  withLabVirtualNetworkId(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          lab_virtual_network_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withSshKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          ssh_key: value,
+        },
+      },
+    },
+  },
+  withUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_linux_virtual_machine+: {
+        [resourceLabel]+: {
+          username: value,
         },
       },
     },
@@ -234,15 +234,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   gallery_image_reference:: {
     new(
-      version,
-      offer,
       publisher,
-      sku
+      sku,
+      version,
+      offer
     ):: std.prune(a={
-      version: version,
-      offer: offer,
       publisher: publisher,
       sku: sku,
+      version: version,
+      offer: offer,
     }),
   },
   withInboundNatRule(resourceLabel, value):: {

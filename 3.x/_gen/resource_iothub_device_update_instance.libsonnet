@@ -7,16 +7,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     iothub_id,
     name,
     tags=null,
-    diagnostic_storage_account=null,
-    timeouts=null
+    timeouts=null,
+    diagnostic_storage_account=null
   ):: tf.withResource(type='azurerm_iothub_device_update_instance', label=resourceLabel, attrs=self.newAttrs(
     device_update_account_id=device_update_account_id,
     diagnostic_enabled=diagnostic_enabled,
     iothub_id=iothub_id,
     name=name,
     tags=tags,
-    diagnostic_storage_account=diagnostic_storage_account,
-    timeouts=timeouts
+    timeouts=timeouts,
+    diagnostic_storage_account=diagnostic_storage_account
   )),
   newAttrs(
     iothub_id,
@@ -24,26 +24,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     device_update_account_id,
     diagnostic_enabled=null,
-    diagnostic_storage_account=null,
-    timeouts=null
+    timeouts=null,
+    diagnostic_storage_account=null
   ):: std.prune(a={
     iothub_id: iothub_id,
     name: name,
     tags: tags,
     device_update_account_id: device_update_account_id,
     diagnostic_enabled: diagnostic_enabled,
-    diagnostic_storage_account: diagnostic_storage_account,
     timeouts: timeouts,
+    diagnostic_storage_account: diagnostic_storage_account,
   }),
-  withIothubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_device_update_instance+: {
-        [resourceLabel]+: {
-          iothub_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_device_update_instance+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_device_update_instance+: {
         [resourceLabel]+: {
           diagnostic_enabled: value,
+        },
+      },
+    },
+  },
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_device_update_instance+: {
+        [resourceLabel]+: {
+          iothub_id: value,
         },
       },
     },
@@ -125,15 +125,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

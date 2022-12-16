@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     resource_group_name,
     server_name,
     charset,
     collation,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_mariadb_database', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
     charset=charset,
     collation=collation,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    resource_group_name,
     server_name,
     charset,
     collation,
+    name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
     server_name: server_name,
     charset: charset,
     collation: collation,
+    name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_database+: {
-        [resourceLabel]+: {
-          server_name: value,
-        },
-      },
-    },
-  },
   withCharset(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_database+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_database+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_database+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

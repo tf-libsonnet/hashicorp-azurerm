@@ -2,135 +2,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    relative_url=null,
-    request_body=null,
-    annotations=null,
     data_factory_id,
-    additional_properties=null,
-    folder=null,
-    parameters=null,
-    request_method=null,
-    description=null,
     name,
+    description=null,
+    parameters=null,
+    request_body=null,
+    relative_url=null,
+    additional_properties=null,
+    annotations=null,
+    request_method=null,
+    folder=null,
     linked_service_name,
     schema_column=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_http', label=resourceLabel, attrs=self.newAttrs(
-    relative_url=relative_url,
-    request_body=request_body,
-    annotations=annotations,
     data_factory_id=data_factory_id,
-    additional_properties=additional_properties,
-    folder=folder,
-    parameters=parameters,
-    request_method=request_method,
-    description=description,
     name=name,
+    description=description,
+    parameters=parameters,
+    request_body=request_body,
+    relative_url=relative_url,
+    additional_properties=additional_properties,
+    annotations=annotations,
+    request_method=request_method,
+    folder=folder,
     linked_service_name=linked_service_name,
     schema_column=schema_column,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    relative_url=null,
-    additional_properties=null,
-    linked_service_name,
-    data_factory_id,
     description=null,
-    parameters=null,
-    request_body=null,
     request_method=null,
+    relative_url=null,
+    name,
     annotations=null,
+    request_body=null,
+    additional_properties=null,
+    data_factory_id,
     folder=null,
+    linked_service_name,
+    parameters=null,
     schema_column=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    relative_url: relative_url,
-    additional_properties: additional_properties,
-    linked_service_name: linked_service_name,
-    data_factory_id: data_factory_id,
     description: description,
-    parameters: parameters,
-    request_body: request_body,
     request_method: request_method,
+    relative_url: relative_url,
+    name: name,
     annotations: annotations,
+    request_body: request_body,
+    additional_properties: additional_properties,
+    data_factory_id: data_factory_id,
     folder: folder,
+    linked_service_name: linked_service_name,
+    parameters: parameters,
     schema_column: schema_column,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          additional_properties: value,
-        },
-      },
-    },
-  },
-  withFolder(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          folder: value,
-        },
-      },
-    },
-  },
-  withRelativeUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          relative_url: value,
-        },
-      },
-    },
-  },
-  withRequestBody(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          request_body: value,
-        },
-      },
-    },
-  },
-  withLinkedServiceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_http+: {
-        [resourceLabel]+: {
-          linked_service_name: value,
-        },
-      },
-    },
-  },
   withRequestMethod(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_http+: {
@@ -149,11 +77,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withRequestBody(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          request_body: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          additional_properties: value,
+        },
+      },
+    },
+  },
   withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_http+: {
         [resourceLabel]+: {
           data_factory_id: value,
+        },
+      },
+    },
+  },
+  withRelativeUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          relative_url: value,
+        },
+      },
+    },
+  },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          folder: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withLinkedServiceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          linked_service_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_http+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -207,15 +207,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

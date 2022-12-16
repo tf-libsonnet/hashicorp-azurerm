@@ -2,43 +2,70 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    display_name,
-    item_search_key,
     labels=null,
     log_analytics_workspace_id,
     name,
     default_duration=null,
     description=null,
+    display_name,
+    item_search_key,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_watchlist', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    item_search_key=item_search_key,
     labels=labels,
     log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     default_duration=default_duration,
     description=description,
+    display_name=display_name,
+    item_search_key=item_search_key,
     timeouts=timeouts
   )),
   newAttrs(
+    item_search_key,
+    labels=null,
+    log_analytics_workspace_id,
     name,
     default_duration=null,
     description=null,
     display_name,
-    item_search_key,
-    labels=null,
-    log_analytics_workspace_id,
     timeouts=null
   ):: std.prune(a={
+    item_search_key: item_search_key,
+    labels: labels,
+    log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     default_duration: default_duration,
     description: description,
     display_name: display_name,
-    item_search_key: item_search_key,
-    labels: labels,
-    log_analytics_workspace_id: log_analytics_workspace_id,
     timeouts: timeouts,
   }),
+  withLabels(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_watchlist+: {
+        [resourceLabel]+: {
+          labels: value,
+        },
+      },
+    },
+  },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_watchlist+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_watchlist+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withDefaultDuration(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_watchlist+: {
@@ -75,33 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLabels(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_watchlist+: {
-        [resourceLabel]+: {
-          labels: value,
-        },
-      },
-    },
-  },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_watchlist+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_watchlist+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_watchlist+: {
@@ -122,13 +122,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

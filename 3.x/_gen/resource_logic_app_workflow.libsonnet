@@ -2,72 +2,126 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    enabled=null,
     logic_app_integration_account_id=null,
-    workflow_version=null,
     parameters=null,
     workflow_parameters=null,
-    location,
-    name,
-    enabled=null,
-    integration_service_environment_id=null,
-    tags=null,
-    workflow_schema=null,
     resource_group_name,
+    workflow_schema=null,
+    location,
+    workflow_version=null,
+    integration_service_environment_id=null,
+    name,
+    tags=null,
+    access_control=null,
     identity=null,
-    timeouts=null,
-    access_control=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_workflow', label=resourceLabel, attrs=self.newAttrs(
+    enabled=enabled,
     logic_app_integration_account_id=logic_app_integration_account_id,
-    workflow_version=workflow_version,
     parameters=parameters,
     workflow_parameters=workflow_parameters,
-    location=location,
-    name=name,
-    enabled=enabled,
-    integration_service_environment_id=integration_service_environment_id,
-    tags=tags,
-    workflow_schema=workflow_schema,
     resource_group_name=resource_group_name,
+    workflow_schema=workflow_schema,
+    location=location,
+    workflow_version=workflow_version,
+    integration_service_environment_id=integration_service_environment_id,
+    name=name,
+    tags=tags,
+    access_control=access_control,
     identity=identity,
-    timeouts=timeouts,
-    access_control=access_control
+    timeouts=timeouts
   )),
   newAttrs(
+    enabled=null,
+    parameters=null,
+    workflow_version=null,
+    tags=null,
+    workflow_parameters=null,
+    workflow_schema=null,
+    name,
+    resource_group_name,
     location,
     logic_app_integration_account_id=null,
-    tags=null,
-    workflow_schema=null,
-    workflow_version=null,
-    parameters=null,
-    workflow_parameters=null,
-    resource_group_name,
     integration_service_environment_id=null,
-    enabled=null,
-    name,
     access_control=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
+    enabled: enabled,
+    parameters: parameters,
+    workflow_version: workflow_version,
+    tags: tags,
+    workflow_parameters: workflow_parameters,
+    workflow_schema: workflow_schema,
+    name: name,
+    resource_group_name: resource_group_name,
     location: location,
     logic_app_integration_account_id: logic_app_integration_account_id,
-    tags: tags,
-    workflow_schema: workflow_schema,
-    workflow_version: workflow_version,
-    parameters: parameters,
-    workflow_parameters: workflow_parameters,
-    resource_group_name: resource_group_name,
     integration_service_environment_id: integration_service_environment_id,
-    enabled: enabled,
-    name: name,
     access_control: access_control,
     identity: identity,
     timeouts: timeouts,
   }),
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withWorkflowParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          workflow_parameters: value,
+        },
+      },
+    },
+  },
+  withWorkflowVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          workflow_version: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          enabled: value,
         },
       },
     },
@@ -90,56 +144,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkflowParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          workflow_parameters: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withIntegrationServiceEnvironmentId(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
           integration_service_environment_id: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withWorkflowVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          workflow_version: value,
         },
       },
     },
@@ -153,14 +162,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_workflow+: {
         [resourceLabel]+: {
-          parameters: value,
+          timeouts: value,
         },
       },
     },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_workflow+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withAccessControl(resourceLabel, value):: {
     resource+: {
@@ -182,15 +213,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   access_control:: {
     new(
-      content=null,
-      trigger=null,
       workflow_management=null,
-      action=null
+      action=null,
+      content=null,
+      trigger=null
     ):: std.prune(a={
-      content: content,
-      trigger: trigger,
       workflow_management: workflow_management,
       action: action,
+      content: content,
+      trigger: trigger,
     }),
     content:: {
       new(
@@ -266,37 +297,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       identity_ids: identity_ids,
       type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_workflow+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

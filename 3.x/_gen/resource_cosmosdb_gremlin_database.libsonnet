@@ -2,19 +2,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     resource_group_name,
     throughput=null,
     account_name,
-    autoscale_settings=null,
-    timeouts=null
+    name,
+    timeouts=null,
+    autoscale_settings=null
   ):: tf.withResource(type='azurerm_cosmosdb_gremlin_database', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     resource_group_name=resource_group_name,
     throughput=throughput,
     account_name=account_name,
-    autoscale_settings=autoscale_settings,
-    timeouts=timeouts
+    name=name,
+    timeouts=timeouts,
+    autoscale_settings=autoscale_settings
   )),
   newAttrs(
     throughput=null,

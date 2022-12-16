@@ -2,83 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    type,
-    default_desktop_display_name=null,
-    host_pool_id,
-    tags=null,
+    description=null,
     friendly_name=null,
     name,
+    type,
+    location,
+    tags=null,
     resource_group_name,
-    description=null,
+    default_desktop_display_name=null,
+    host_pool_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_desktop_application_group', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    type=type,
-    default_desktop_display_name=default_desktop_display_name,
-    host_pool_id=host_pool_id,
-    tags=tags,
+    description=description,
     friendly_name=friendly_name,
     name=name,
+    type=type,
+    location=location,
+    tags=tags,
     resource_group_name=resource_group_name,
-    description=description,
+    default_desktop_display_name=default_desktop_display_name,
+    host_pool_id=host_pool_id,
     timeouts=timeouts
   )),
   newAttrs(
-    friendly_name=null,
-    host_pool_id,
-    location,
-    type,
-    resource_group_name,
-    name,
     tags=null,
+    type,
     default_desktop_display_name=null,
     description=null,
+    location,
+    host_pool_id,
+    name,
+    resource_group_name,
+    friendly_name=null,
     timeouts=null
   ):: std.prune(a={
-    friendly_name: friendly_name,
-    host_pool_id: host_pool_id,
-    location: location,
-    type: type,
-    resource_group_name: resource_group_name,
-    name: name,
     tags: tags,
+    type: type,
     default_desktop_display_name: default_desktop_display_name,
     description: description,
+    location: location,
+    host_pool_id: host_pool_id,
+    name: name,
+    resource_group_name: resource_group_name,
+    friendly_name: friendly_name,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_application_group+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withDefaultDesktopDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_application_group+: {
-        [resourceLabel]+: {
-          default_desktop_display_name: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_application_group+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withHostPoolId(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application_group+: {
         [resourceLabel]+: {
           host_pool_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_application_group+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -110,6 +92,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_application_group+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_application_group+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withType(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application_group+: {
@@ -119,11 +119,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withDefaultDesktopDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_application_group+: {
         [resourceLabel]+: {
-          location: value,
+          default_desktop_display_name: value,
         },
       },
     },
@@ -148,15 +148,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

@@ -2,82 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    resource_group_name,
-    tags=null,
-    allow_classic_operations=null,
-    express_route_port_id=null,
-    location,
-    service_provider_name=null,
-    peering_location=null,
     bandwidth_in_gbps=null,
+    location,
+    resource_group_name,
+    allow_classic_operations=null,
     bandwidth_in_mbps=null,
+    service_provider_name=null,
+    express_route_port_id=null,
+    name,
+    tags=null,
+    peering_location=null,
     timeouts=null,
     sku=null
   ):: tf.withResource(type='azurerm_express_route_circuit', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    allow_classic_operations=allow_classic_operations,
-    express_route_port_id=express_route_port_id,
-    location=location,
-    service_provider_name=service_provider_name,
-    peering_location=peering_location,
     bandwidth_in_gbps=bandwidth_in_gbps,
+    location=location,
+    resource_group_name=resource_group_name,
+    allow_classic_operations=allow_classic_operations,
     bandwidth_in_mbps=bandwidth_in_mbps,
+    service_provider_name=service_provider_name,
+    express_route_port_id=express_route_port_id,
+    name=name,
+    tags=tags,
+    peering_location=peering_location,
     timeouts=timeouts,
     sku=sku
   )),
   newAttrs(
-    resource_group_name,
-    allow_classic_operations=null,
-    bandwidth_in_mbps=null,
-    location,
-    tags=null,
     service_provider_name=null,
+    allow_classic_operations=null,
     bandwidth_in_gbps=null,
     express_route_port_id=null,
     name,
+    bandwidth_in_mbps=null,
     peering_location=null,
+    location,
+    resource_group_name,
+    tags=null,
     sku=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    allow_classic_operations: allow_classic_operations,
-    bandwidth_in_mbps: bandwidth_in_mbps,
-    location: location,
-    tags: tags,
     service_provider_name: service_provider_name,
+    allow_classic_operations: allow_classic_operations,
     bandwidth_in_gbps: bandwidth_in_gbps,
     express_route_port_id: express_route_port_id,
     name: name,
+    bandwidth_in_mbps: bandwidth_in_mbps,
     peering_location: peering_location,
+    location: location,
+    resource_group_name: resource_group_name,
+    tags: tags,
     sku: sku,
     timeouts: timeouts,
   }),
-  withPeeringLocation(resourceLabel, value):: {
+  withServiceProviderName(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
-          peering_location: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          name: value,
+          service_provider_name: value,
         },
       },
     },
@@ -91,29 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withServiceProviderName(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          service_provider_name: value,
+          name: value,
         },
       },
     },
@@ -136,11 +100,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withBandwidthInMbps(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
           bandwidth_in_mbps: value,
+        },
+      },
+    },
+  },
+  withPeeringLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          peering_location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -192,15 +192,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

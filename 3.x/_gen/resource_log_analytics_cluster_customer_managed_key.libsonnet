@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_cluster_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_id=key_vault_key_id, log_analytics_cluster_id=log_analytics_cluster_id, timeouts=timeouts)),
   newAttrs(
-    log_analytics_cluster_id,
     key_vault_key_id,
+    log_analytics_cluster_id,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_cluster_id: log_analytics_cluster_id,
     key_vault_key_id: key_vault_key_id,
+    log_analytics_cluster_id: log_analytics_cluster_id,
     timeouts: timeouts,
   }),
   withKeyVaultKeyId(resourceLabel, value):: {

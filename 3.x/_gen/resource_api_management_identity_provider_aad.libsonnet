@@ -35,6 +35,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withAllowedTenants(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_identity_provider_aad+: {
+        [resourceLabel]+: {
+          allowed_tenants: value,
+        },
+      },
+    },
+  },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_identity_provider_aad+: {
@@ -80,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAllowedTenants(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_identity_provider_aad+: {
-        [resourceLabel]+: {
-          allowed_tenants: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_identity_provider_aad+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

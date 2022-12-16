@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    remediation_description=null,
     threats=null,
-    description,
+    user_impact=null,
+    categories=null,
     display_name,
     implementation_effort=null,
-    categories=null,
-    remediation_description=null,
     severity=null,
-    user_impact=null,
+    description,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_assessment_policy', label=resourceLabel, attrs=self.newAttrs(
+    remediation_description=remediation_description,
     threats=threats,
-    description=description,
+    user_impact=user_impact,
+    categories=categories,
     display_name=display_name,
     implementation_effort=implementation_effort,
-    categories=categories,
-    remediation_description=remediation_description,
     severity=severity,
-    user_impact=user_impact,
+    description=description,
     timeouts=timeouts
   )),
   newAttrs(
-    remediation_description=null,
-    severity=null,
     user_impact=null,
-    description,
+    categories=null,
     display_name,
     implementation_effort=null,
+    severity=null,
+    description,
+    remediation_description=null,
     threats=null,
-    categories=null,
     timeouts=null
   ):: std.prune(a={
-    remediation_description: remediation_description,
-    severity: severity,
     user_impact: user_impact,
-    description: description,
+    categories: categories,
     display_name: display_name,
     implementation_effort: implementation_effort,
+    severity: severity,
+    description: description,
+    remediation_description: remediation_description,
     threats: threats,
-    categories: categories,
     timeouts: timeouts,
   }),
   withDisplayName(resourceLabel, value):: {
@@ -61,20 +61,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withThreats(resourceLabel, value):: {
+  withSeverity(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_assessment_policy+: {
         [resourceLabel]+: {
-          threats: value,
+          severity: value,
         },
       },
     },
   },
-  withCategories(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_assessment_policy+: {
         [resourceLabel]+: {
-          categories: value,
+          description: value,
         },
       },
     },
@@ -88,11 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSeverity(resourceLabel, value):: {
+  withThreats(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_assessment_policy+: {
         [resourceLabel]+: {
-          severity: value,
+          threats: value,
         },
       },
     },
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withCategories(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_assessment_policy+: {
         [resourceLabel]+: {
-          description: value,
+          categories: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

@@ -2,74 +2,75 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    auto_learn_private_ranges_enabled=null,
-    sql_redirect_allowed=null,
-    resource_group_name,
-    threat_intelligence_mode=null,
     sku=null,
-    tags=null,
-    name,
-    private_ip_ranges=null,
     base_policy_id=null,
+    threat_intelligence_mode=null,
     location,
-    threat_intelligence_allowlist=null,
-    timeouts=null,
-    tls_certificate=null,
+    name,
+    auto_learn_private_ranges_enabled=null,
+    tags=null,
+    resource_group_name,
+    sql_redirect_allowed=null,
+    private_ip_ranges=null,
     dns=null,
-    explicit_proxy=null,
-    identity=null,
-    insights=null,
-    intrusion_detection=null
-  ):: tf.withResource(type='azurerm_firewall_policy', label=resourceLabel, attrs=self.newAttrs(
-    auto_learn_private_ranges_enabled=auto_learn_private_ranges_enabled,
-    sql_redirect_allowed=sql_redirect_allowed,
-    resource_group_name=resource_group_name,
-    threat_intelligence_mode=threat_intelligence_mode,
-    sku=sku,
-    tags=tags,
-    name=name,
-    private_ip_ranges=private_ip_ranges,
-    base_policy_id=base_policy_id,
-    location=location,
-    threat_intelligence_allowlist=threat_intelligence_allowlist,
-    timeouts=timeouts,
-    tls_certificate=tls_certificate,
-    dns=dns,
-    explicit_proxy=explicit_proxy,
-    identity=identity,
-    insights=insights,
-    intrusion_detection=intrusion_detection
-  )),
-  newAttrs(
-    resource_group_name,
-    auto_learn_private_ranges_enabled=null,
-    sql_redirect_allowed=null,
-    private_ip_ranges=null,
-    tags=null,
-    location,
-    name,
-    sku=null,
-    base_policy_id=null,
-    threat_intelligence_mode=null,
     explicit_proxy=null,
     identity=null,
     insights=null,
     intrusion_detection=null,
     threat_intelligence_allowlist=null,
     timeouts=null,
-    tls_certificate=null,
-    dns=null
+    tls_certificate=null
+  ):: tf.withResource(type='azurerm_firewall_policy', label=resourceLabel, attrs=self.newAttrs(
+    sku=sku,
+    base_policy_id=base_policy_id,
+    threat_intelligence_mode=threat_intelligence_mode,
+    location=location,
+    name=name,
+    auto_learn_private_ranges_enabled=auto_learn_private_ranges_enabled,
+    tags=tags,
+    resource_group_name=resource_group_name,
+    sql_redirect_allowed=sql_redirect_allowed,
+    private_ip_ranges=private_ip_ranges,
+    dns=dns,
+    explicit_proxy=explicit_proxy,
+    identity=identity,
+    insights=insights,
+    intrusion_detection=intrusion_detection,
+    threat_intelligence_allowlist=threat_intelligence_allowlist,
+    timeouts=timeouts,
+    tls_certificate=tls_certificate
+  )),
+  newAttrs(
+    private_ip_ranges=null,
+    resource_group_name,
+    sql_redirect_allowed=null,
+    auto_learn_private_ranges_enabled=null,
+    threat_intelligence_mode=null,
+    base_policy_id=null,
+    tags=null,
+    location,
+    name,
+    sku=null,
+    dns=null,
+    explicit_proxy=null,
+    identity=null,
+    insights=null,
+    intrusion_detection=null,
+    threat_intelligence_allowlist=null,
+    timeouts=null,
+    tls_certificate=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    auto_learn_private_ranges_enabled: auto_learn_private_ranges_enabled,
-    sql_redirect_allowed: sql_redirect_allowed,
     private_ip_ranges: private_ip_ranges,
+    resource_group_name: resource_group_name,
+    sql_redirect_allowed: sql_redirect_allowed,
+    auto_learn_private_ranges_enabled: auto_learn_private_ranges_enabled,
+    threat_intelligence_mode: threat_intelligence_mode,
+    base_policy_id: base_policy_id,
     tags: tags,
     location: location,
     name: name,
     sku: sku,
-    base_policy_id: base_policy_id,
-    threat_intelligence_mode: threat_intelligence_mode,
+    dns: dns,
     explicit_proxy: explicit_proxy,
     identity: identity,
     insights: insights,
@@ -77,7 +78,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     threat_intelligence_allowlist: threat_intelligence_allowlist,
     timeouts: timeouts,
     tls_certificate: tls_certificate,
-    dns: dns,
   }),
   withLocation(resourceLabel, value):: {
     resource+: {
@@ -97,29 +97,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withSqlRedirectAllowed(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_policy+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withBasePolicyId(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_policy+: {
-        [resourceLabel]+: {
-          base_policy_id: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_policy+: {
-        [resourceLabel]+: {
-          sku: value,
+          sql_redirect_allowed: value,
         },
       },
     },
@@ -133,11 +115,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withThreatIntelligenceMode(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_policy+: {
         [resourceLabel]+: {
-          threat_intelligence_mode: value,
+          name: value,
         },
       },
     },
@@ -160,13 +142,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSqlRedirectAllowed(resourceLabel, value):: {
+  withSku(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_policy+: {
         [resourceLabel]+: {
-          sql_redirect_allowed: value,
+          sku: value,
         },
       },
+    },
+  },
+  withBasePolicyId(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_policy+: {
+        [resourceLabel]+: {
+          base_policy_id: value,
+        },
+      },
+    },
+  },
+  withThreatIntelligenceMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_policy+: {
+        [resourceLabel]+: {
+          threat_intelligence_mode: value,
+        },
+      },
+    },
+  },
+  withInsights(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_policy+: {
+        [resourceLabel]+: {
+          insights: value,
+        },
+      },
+    },
+  },
+  withInsightsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_policy+: {
+        [resourceLabel]+: {
+          insights+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  insights:: {
+    new(
+      retention_in_days=null,
+      default_log_analytics_workspace_id,
+      enabled,
+      log_analytics_workspace=null
+    ):: std.prune(a={
+      retention_in_days: retention_in_days,
+      default_log_analytics_workspace_id: default_log_analytics_workspace_id,
+      enabled: enabled,
+      log_analytics_workspace: log_analytics_workspace,
+    }),
+    log_analytics_workspace:: {
+      new(
+        firewall_location
+      ):: std.prune(a={
+        firewall_location: firewall_location,
+      }),
     },
   },
   withIntrusionDetection(resourceLabel, value):: {
@@ -199,6 +237,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       signature_overrides: signature_overrides,
       traffic_bypass: traffic_bypass,
     }),
+    signature_overrides:: {
+      new(
+        state=null
+      ):: std.prune(a={
+        state: state,
+      }),
+    },
     traffic_bypass:: {
       new(
         source_ip_groups=null,
@@ -218,13 +263,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         name: name,
         protocol: protocol,
         source_addresses: source_addresses,
-      }),
-    },
-    signature_overrides:: {
-      new(
-        state=null
-      ):: std.prune(a={
-        state: state,
       }),
     },
   },
@@ -275,15 +313,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
   withTlsCertificate(resourceLabel, value):: {
@@ -360,19 +398,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   explicit_proxy:: {
     new(
-      enable_pac_file=null,
-      enabled=null,
-      http_port=null,
       https_port=null,
       pac_file=null,
-      pac_file_port=null
+      pac_file_port=null,
+      enable_pac_file=null,
+      enabled=null,
+      http_port=null
     ):: std.prune(a={
-      enable_pac_file: enable_pac_file,
-      enabled: enabled,
-      http_port: http_port,
       https_port: https_port,
       pac_file: pac_file,
       pac_file_port: pac_file_port,
+      enable_pac_file: enable_pac_file,
+      enabled: enabled,
+      http_port: http_port,
     }),
   },
   withIdentity(resourceLabel, value):: {
@@ -401,43 +439,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       identity_ids: identity_ids,
       type: type,
     }),
-  },
-  withInsights(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_policy+: {
-        [resourceLabel]+: {
-          insights: value,
-        },
-      },
-    },
-  },
-  withInsightsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_policy+: {
-        [resourceLabel]+: {
-          insights+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  insights:: {
-    new(
-      default_log_analytics_workspace_id,
-      enabled,
-      retention_in_days=null,
-      log_analytics_workspace=null
-    ):: std.prune(a={
-      default_log_analytics_workspace_id: default_log_analytics_workspace_id,
-      enabled: enabled,
-      retention_in_days: retention_in_days,
-      log_analytics_workspace: log_analytics_workspace,
-    }),
-    log_analytics_workspace:: {
-      new(
-        firewall_location
-      ):: std.prune(a={
-        firewall_location: firewall_location,
-      }),
-    },
   },
 }

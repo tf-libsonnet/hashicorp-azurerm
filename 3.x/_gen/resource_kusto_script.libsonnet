@@ -2,43 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    url=null,
     continue_on_errors_enabled=null,
     database_id,
     force_an_update_when_value_changed=null,
     name,
     sas_token=null,
     script_content=null,
-    url=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_script', label=resourceLabel, attrs=self.newAttrs(
+    url=url,
     continue_on_errors_enabled=continue_on_errors_enabled,
     database_id=database_id,
     force_an_update_when_value_changed=force_an_update_when_value_changed,
     name=name,
     sas_token=sas_token,
     script_content=script_content,
-    url=url,
     timeouts=timeouts
   )),
   newAttrs(
+    database_id,
     force_an_update_when_value_changed=null,
     name,
     sas_token=null,
     script_content=null,
     url=null,
     continue_on_errors_enabled=null,
-    database_id,
     timeouts=null
   ):: std.prune(a={
+    database_id: database_id,
     force_an_update_when_value_changed: force_an_update_when_value_changed,
     name: name,
     sas_token: sas_token,
     script_content: script_content,
     url: url,
     continue_on_errors_enabled: continue_on_errors_enabled,
-    database_id: database_id,
     timeouts: timeouts,
   }),
+  withSasToken(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_script+: {
+        [resourceLabel]+: {
+          sas_token: value,
+        },
+      },
+    },
+  },
+  withScriptContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_script+: {
+        [resourceLabel]+: {
+          script_content: value,
+        },
+      },
+    },
+  },
   withUrl(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_script+: {
@@ -80,24 +98,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_kusto_script+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withSasToken(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_script+: {
-        [resourceLabel]+: {
-          sas_token: value,
-        },
-      },
-    },
-  },
-  withScriptContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_script+: {
-        [resourceLabel]+: {
-          script_content: value,
         },
       },
     },

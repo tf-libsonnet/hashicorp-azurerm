@@ -2,27 +2,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     api_management_id,
     display_name=null,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_tag', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     api_management_id=api_management_id,
     display_name=display_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    display_name=null,
     name,
     api_management_id,
-    display_name=null,
     timeouts=null
   ):: std.prune(a={
+    display_name: display_name,
     name: name,
     api_management_id: api_management_id,
-    display_name: display_name,
     timeouts: timeouts,
   }),
+  withApiManagementId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_tag+: {
+        [resourceLabel]+: {
+          api_management_id: value,
+        },
+      },
+    },
+  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_tag+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_tag+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withApiManagementId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_tag+: {
-        [resourceLabel]+: {
-          api_management_id: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

@@ -2,70 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    send=null,
-    listen=null,
-    manage=null,
-    namespace_name,
-    name,
-    notification_hub_name,
     resource_group_name,
+    listen=null,
+    namespace_name,
+    notification_hub_name,
+    send=null,
+    manage=null,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_notification_hub_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    send=send,
-    listen=listen,
-    manage=manage,
-    namespace_name=namespace_name,
-    name=name,
-    notification_hub_name=notification_hub_name,
     resource_group_name=resource_group_name,
+    listen=listen,
+    namespace_name=namespace_name,
+    notification_hub_name=notification_hub_name,
+    send=send,
+    manage=manage,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    send=null,
-    listen=null,
     manage=null,
     name,
+    send=null,
+    listen=null,
+    namespace_name,
     notification_hub_name,
     resource_group_name,
-    namespace_name,
     timeouts=null
   ):: std.prune(a={
-    send: send,
-    listen: listen,
     manage: manage,
     name: name,
+    send: send,
+    listen: listen,
+    namespace_name: namespace_name,
     notification_hub_name: notification_hub_name,
     resource_group_name: resource_group_name,
-    namespace_name: namespace_name,
     timeouts: timeouts,
   }),
-  withListen(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub_authorization_rule+: {
-        [resourceLabel]+: {
-          listen: value,
-        },
-      },
-    },
-  },
-  withManage(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub_authorization_rule+: {
-        [resourceLabel]+: {
-          manage: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub_authorization_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withNotificationHubName(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub_authorization_rule+: {
@@ -84,11 +57,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSend(resourceLabel, value):: {
+  withListen(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub_authorization_rule+: {
         [resourceLabel]+: {
-          send: value,
+          listen: value,
         },
       },
     },
@@ -98,6 +71,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_notification_hub_authorization_rule+: {
         [resourceLabel]+: {
           namespace_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub_authorization_rule+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withSend(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub_authorization_rule+: {
+        [resourceLabel]+: {
+          send: value,
+        },
+      },
+    },
+  },
+  withManage(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub_authorization_rule+: {
+        [resourceLabel]+: {
+          manage: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

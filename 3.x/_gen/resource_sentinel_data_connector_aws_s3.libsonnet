@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    sqs_urls,
-    aws_role_arn,
     destination_table,
     log_analytics_workspace_id,
     name,
+    sqs_urls,
+    aws_role_arn,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_aws_s3', label=resourceLabel, attrs=self.newAttrs(
-    sqs_urls=sqs_urls,
-    aws_role_arn=aws_role_arn,
     destination_table=destination_table,
     log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
+    sqs_urls=sqs_urls,
+    aws_role_arn=aws_role_arn,
     timeouts=timeouts
   )),
   newAttrs(
-    aws_role_arn,
-    destination_table,
     log_analytics_workspace_id,
     name,
     sqs_urls,
+    aws_role_arn,
+    destination_table,
     timeouts=null
   ):: std.prune(a={
-    aws_role_arn: aws_role_arn,
-    destination_table: destination_table,
     log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     sqs_urls: sqs_urls,
+    aws_role_arn: aws_role_arn,
+    destination_table: destination_table,
     timeouts: timeouts,
   }),
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_aws_s3+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_aws_s3+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSqsUrls(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_aws_s3+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_aws_s3+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_aws_s3+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_aws_s3+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

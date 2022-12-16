@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    ip_configuration_name,
     nat_rule_id,
     network_interface_id,
-    ip_configuration_name,
     timeouts=null
   ):: std.prune(a={
+    ip_configuration_name: ip_configuration_name,
     nat_rule_id: nat_rule_id,
     network_interface_id: network_interface_id,
-    ip_configuration_name: ip_configuration_name,
     timeouts: timeouts,
   }),
   withIpConfigurationName(resourceLabel, value):: {

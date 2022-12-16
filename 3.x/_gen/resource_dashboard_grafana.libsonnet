@@ -2,59 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    api_key_enabled=null,
-    tags=null,
+    location,
     deterministic_outbound_ip_enabled=null,
-    public_network_access_enabled=null,
-    auto_generated_domain_name_label_scope=null,
-    resource_group_name,
     sku=null,
+    tags=null,
+    api_key_enabled=null,
+    auto_generated_domain_name_label_scope=null,
+    public_network_access_enabled=null,
     name,
     zone_redundancy_enabled=null,
-    location,
+    resource_group_name,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dashboard_grafana', label=resourceLabel, attrs=self.newAttrs(
-    api_key_enabled=api_key_enabled,
-    tags=tags,
+    location=location,
     deterministic_outbound_ip_enabled=deterministic_outbound_ip_enabled,
-    public_network_access_enabled=public_network_access_enabled,
-    auto_generated_domain_name_label_scope=auto_generated_domain_name_label_scope,
-    resource_group_name=resource_group_name,
     sku=sku,
+    tags=tags,
+    api_key_enabled=api_key_enabled,
+    auto_generated_domain_name_label_scope=auto_generated_domain_name_label_scope,
+    public_network_access_enabled=public_network_access_enabled,
     name=name,
     zone_redundancy_enabled=zone_redundancy_enabled,
-    location=location,
+    resource_group_name=resource_group_name,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    deterministic_outbound_ip_enabled=null,
+    tags=null,
     zone_redundancy_enabled=null,
+    location,
     public_network_access_enabled=null,
-    resource_group_name,
+    auto_generated_domain_name_label_scope=null,
+    deterministic_outbound_ip_enabled=null,
+    name,
     sku=null,
     api_key_enabled=null,
-    location,
-    tags=null,
-    name,
-    auto_generated_domain_name_label_scope=null,
-    identity=null,
-    timeouts=null
+    resource_group_name,
+    timeouts=null,
+    identity=null
   ):: std.prune(a={
-    deterministic_outbound_ip_enabled: deterministic_outbound_ip_enabled,
+    tags: tags,
     zone_redundancy_enabled: zone_redundancy_enabled,
+    location: location,
     public_network_access_enabled: public_network_access_enabled,
-    resource_group_name: resource_group_name,
+    auto_generated_domain_name_label_scope: auto_generated_domain_name_label_scope,
+    deterministic_outbound_ip_enabled: deterministic_outbound_ip_enabled,
+    name: name,
     sku: sku,
     api_key_enabled: api_key_enabled,
-    location: location,
-    tags: tags,
-    name: name,
-    auto_generated_domain_name_label_scope: auto_generated_domain_name_label_scope,
-    identity: identity,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
+    identity: identity,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dashboard_grafana+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSku(resourceLabel, value):: {
     resource+: {
       azurerm_dashboard_grafana+: {
@@ -73,11 +82,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_dashboard_grafana+: {
         [resourceLabel]+: {
-          name: value,
+          public_network_access_enabled: value,
         },
       },
     },
@@ -109,29 +118,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dashboard_grafana+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_dashboard_grafana+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_dashboard_grafana+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dashboard_grafana+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -144,6 +144,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_dashboard_grafana+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dashboard_grafana+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -168,37 +199,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type
     ):: std.prune(a={
       type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_dashboard_grafana+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_dashboard_grafana+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
     }),
   },
 }

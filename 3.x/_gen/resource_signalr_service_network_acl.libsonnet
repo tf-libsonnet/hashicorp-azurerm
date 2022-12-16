@@ -92,11 +92,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   public_network:: {
     new(
-      allowed_request_types=null,
-      denied_request_types=null
+      denied_request_types=null,
+      allowed_request_types=null
     ):: std.prune(a={
-      allowed_request_types: allowed_request_types,
       denied_request_types: denied_request_types,
+      allowed_request_types: allowed_request_types,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -119,15 +119,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

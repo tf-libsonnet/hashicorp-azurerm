@@ -4,88 +4,79 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     database_name,
     default_ttl=null,
-    name,
+    partition_key_version=null,
+    throughput=null,
+    analytical_storage_ttl=null,
     partition_key_path,
     resource_group_name,
     account_name,
-    throughput=null,
-    analytical_storage_ttl=null,
-    partition_key_version=null,
+    name,
+    conflict_resolution_policy=null,
+    indexing_policy=null,
     timeouts=null,
     unique_key=null,
-    autoscale_settings=null,
-    conflict_resolution_policy=null,
-    indexing_policy=null
+    autoscale_settings=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_container', label=resourceLabel, attrs=self.newAttrs(
     database_name=database_name,
     default_ttl=default_ttl,
-    name=name,
+    partition_key_version=partition_key_version,
+    throughput=throughput,
+    analytical_storage_ttl=analytical_storage_ttl,
     partition_key_path=partition_key_path,
     resource_group_name=resource_group_name,
     account_name=account_name,
-    throughput=throughput,
-    analytical_storage_ttl=analytical_storage_ttl,
-    partition_key_version=partition_key_version,
+    name=name,
+    conflict_resolution_policy=conflict_resolution_policy,
+    indexing_policy=indexing_policy,
     timeouts=timeouts,
     unique_key=unique_key,
-    autoscale_settings=autoscale_settings,
-    conflict_resolution_policy=conflict_resolution_policy,
-    indexing_policy=indexing_policy
+    autoscale_settings=autoscale_settings
   )),
   newAttrs(
     account_name,
-    partition_key_version=null,
-    resource_group_name,
-    throughput=null,
-    default_ttl=null,
-    analytical_storage_ttl=null,
-    name,
-    partition_key_path,
     database_name,
+    default_ttl=null,
+    name,
+    resource_group_name,
+    partition_key_version=null,
+    throughput=null,
+    analytical_storage_ttl=null,
+    partition_key_path,
+    indexing_policy=null,
     timeouts=null,
     unique_key=null,
     autoscale_settings=null,
-    conflict_resolution_policy=null,
-    indexing_policy=null
+    conflict_resolution_policy=null
   ):: std.prune(a={
     account_name: account_name,
-    partition_key_version: partition_key_version,
-    resource_group_name: resource_group_name,
-    throughput: throughput,
-    default_ttl: default_ttl,
-    analytical_storage_ttl: analytical_storage_ttl,
-    name: name,
-    partition_key_path: partition_key_path,
     database_name: database_name,
+    default_ttl: default_ttl,
+    name: name,
+    resource_group_name: resource_group_name,
+    partition_key_version: partition_key_version,
+    throughput: throughput,
+    analytical_storage_ttl: analytical_storage_ttl,
+    partition_key_path: partition_key_path,
+    indexing_policy: indexing_policy,
     timeouts: timeouts,
     unique_key: unique_key,
     autoscale_settings: autoscale_settings,
     conflict_resolution_policy: conflict_resolution_policy,
-    indexing_policy: indexing_policy,
   }),
+  withDefaultTtl(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          default_ttl: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_container+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withDatabaseName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          database_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -108,11 +99,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDefaultTtl(resourceLabel, value):: {
+  withDatabaseName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_container+: {
         [resourceLabel]+: {
-          default_ttl: value,
+          database_name: value,
+        },
+      },
+    },
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          account_name: value,
         },
       },
     },
@@ -126,11 +126,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAccountName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_container+: {
         [resourceLabel]+: {
-          account_name: value,
+          name: value,
         },
       },
     },
@@ -189,13 +189,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   conflict_resolution_policy:: {
     new(
+      conflict_resolution_procedure=null,
       mode,
-      conflict_resolution_path=null,
-      conflict_resolution_procedure=null
+      conflict_resolution_path=null
     ):: std.prune(a={
+      conflict_resolution_procedure: conflict_resolution_procedure,
       mode: mode,
       conflict_resolution_path: conflict_resolution_path,
-      conflict_resolution_procedure: conflict_resolution_procedure,
     }),
   },
   withIndexingPolicy(resourceLabel, value):: {
@@ -219,17 +219,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   indexing_policy:: {
     new(
       indexing_mode=null,
-      composite_index=null,
-      excluded_path=null,
       included_path=null,
-      spatial_index=null
+      spatial_index=null,
+      composite_index=null,
+      excluded_path=null
     ):: std.prune(a={
       indexing_mode: indexing_mode,
-      composite_index: composite_index,
-      excluded_path: excluded_path,
       included_path: included_path,
       spatial_index: spatial_index,
+      composite_index: composite_index,
+      excluded_path: excluded_path,
     }),
+    spatial_index:: {
+      new(
+        path
+      ):: std.prune(a={
+        path: path,
+      }),
+    },
     composite_index:: {
       new(
         index=null
@@ -260,13 +267,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         path: path,
       }),
     },
-    spatial_index:: {
-      new(
-        path
-      ):: std.prune(a={
-        path: path,
-      }),
-    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -288,15 +288,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
   withUniqueKey(resourceLabel, value):: {

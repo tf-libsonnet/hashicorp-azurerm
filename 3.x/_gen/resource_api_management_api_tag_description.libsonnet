@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    external_documentation_description=null,
     external_documentation_url=null,
     api_tag_id,
+    description=null,
+    external_documentation_description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_api_tag_description', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    external_documentation_description=external_documentation_description,
     external_documentation_url=external_documentation_url,
     api_tag_id=api_tag_id,
+    description=description,
+    external_documentation_description=external_documentation_description,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     external_documentation_url: external_documentation_url,
     timeouts: timeouts,
   }),
+  withExternalDocumentationUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_tag_description+: {
+        [resourceLabel]+: {
+          external_documentation_url: value,
+        },
+      },
+    },
+  },
   withApiTagId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_tag_description+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withExternalDocumentationUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_tag_description+: {
-        [resourceLabel]+: {
-          external_documentation_url: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_tag_description+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

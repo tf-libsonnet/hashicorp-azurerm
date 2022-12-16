@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    name,
-    tags=null,
-    location,
-    dns_servers=null,
-    enable_ip_forwarding=null,
-    internal_dns_name_label=null,
     edge_zone=null,
     enable_accelerated_networking=null,
-    ip_configuration=null,
-    timeouts=null
+    name,
+    location,
+    resource_group_name,
+    enable_ip_forwarding=null,
+    tags=null,
+    dns_servers=null,
+    internal_dns_name_label=null,
+    timeouts=null,
+    ip_configuration=null
   ):: tf.withResource(type='azurerm_network_interface', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    name=name,
-    tags=tags,
-    location=location,
-    dns_servers=dns_servers,
-    enable_ip_forwarding=enable_ip_forwarding,
-    internal_dns_name_label=internal_dns_name_label,
     edge_zone=edge_zone,
     enable_accelerated_networking=enable_accelerated_networking,
-    ip_configuration=ip_configuration,
-    timeouts=timeouts
+    name=name,
+    location=location,
+    resource_group_name=resource_group_name,
+    enable_ip_forwarding=enable_ip_forwarding,
+    tags=tags,
+    dns_servers=dns_servers,
+    internal_dns_name_label=internal_dns_name_label,
+    timeouts=timeouts,
+    ip_configuration=ip_configuration
   )),
   newAttrs(
-    edge_zone=null,
-    enable_ip_forwarding=null,
-    tags=null,
-    dns_servers=null,
     location,
+    edge_zone=null,
     enable_accelerated_networking=null,
-    resource_group_name,
-    internal_dns_name_label=null,
+    enable_ip_forwarding=null,
+    dns_servers=null,
     name,
+    internal_dns_name_label=null,
+    resource_group_name,
+    tags=null,
     ip_configuration=null,
     timeouts=null
   ):: std.prune(a={
-    edge_zone: edge_zone,
-    enable_ip_forwarding: enable_ip_forwarding,
-    tags: tags,
-    dns_servers: dns_servers,
     location: location,
+    edge_zone: edge_zone,
     enable_accelerated_networking: enable_accelerated_networking,
-    resource_group_name: resource_group_name,
-    internal_dns_name_label: internal_dns_name_label,
+    enable_ip_forwarding: enable_ip_forwarding,
+    dns_servers: dns_servers,
     name: name,
+    internal_dns_name_label: internal_dns_name_label,
+    resource_group_name: resource_group_name,
+    tags: tags,
     ip_configuration: ip_configuration,
     timeouts: timeouts,
   }),
@@ -56,24 +56,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_interface+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -87,29 +69,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withInternalDnsNameLabel(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_network_interface+: {
         [resourceLabel]+: {
-          internal_dns_name_label: value,
-        },
-      },
-    },
-  },
-  withEnableAcceleratedNetworking(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface+: {
-        [resourceLabel]+: {
-          enable_accelerated_networking: value,
-        },
-      },
-    },
-  },
-  withDnsServers(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface+: {
-        [resourceLabel]+: {
-          dns_servers: value,
+          resource_group_name: value,
         },
       },
     },
@@ -123,11 +87,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEnableAcceleratedNetworking(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface+: {
+        [resourceLabel]+: {
+          enable_accelerated_networking: value,
+        },
+      },
+    },
+  },
   withEnableIpForwarding(resourceLabel, value):: {
     resource+: {
       azurerm_network_interface+: {
         [resourceLabel]+: {
           enable_ip_forwarding: value,
+        },
+      },
+    },
+  },
+  withDnsServers(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface+: {
+        [resourceLabel]+: {
+          dns_servers: value,
+        },
+      },
+    },
+  },
+  withInternalDnsNameLabel(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface+: {
+        [resourceLabel]+: {
+          internal_dns_name_label: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -152,15 +152,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ip_configuration:: {
     new(
+      private_ip_address=null,
       private_ip_address_allocation,
       private_ip_address_version=null,
       public_ip_address_id=null,
       subnet_id=null,
       gateway_load_balancer_frontend_ip_configuration_id=null,
       name,
-      primary=null,
-      private_ip_address=null
+      primary=null
     ):: std.prune(a={
+      private_ip_address: private_ip_address,
       private_ip_address_allocation: private_ip_address_allocation,
       private_ip_address_version: private_ip_address_version,
       public_ip_address_id: public_ip_address_id,
@@ -168,7 +169,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       gateway_load_balancer_frontend_ip_configuration_id: gateway_load_balancer_frontend_ip_configuration_id,
       name: name,
       primary: primary,
-      private_ip_address: private_ip_address,
     }),
   },
   withTimeouts(resourceLabel, value):: {

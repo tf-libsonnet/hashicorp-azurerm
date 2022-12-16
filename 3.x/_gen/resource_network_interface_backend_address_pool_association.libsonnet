@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    network_interface_id,
     backend_address_pool_id,
     ip_configuration_name,
+    network_interface_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_network_interface_backend_address_pool_association', label=resourceLabel, attrs=self.newAttrs(
-    network_interface_id=network_interface_id,
     backend_address_pool_id=backend_address_pool_id,
     ip_configuration_name=ip_configuration_name,
+    network_interface_id=network_interface_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     network_interface_id: network_interface_id,
     timeouts: timeouts,
   }),
+  withNetworkInterfaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface_backend_address_pool_association+: {
+        [resourceLabel]+: {
+          network_interface_id: value,
+        },
+      },
+    },
+  },
   withBackendAddressPoolId(resourceLabel, value):: {
     resource+: {
       azurerm_network_interface_backend_address_pool_association+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_interface_backend_address_pool_association+: {
         [resourceLabel]+: {
           ip_configuration_name: value,
-        },
-      },
-    },
-  },
-  withNetworkInterfaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface_backend_address_pool_association+: {
-        [resourceLabel]+: {
-          network_interface_id: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

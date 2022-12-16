@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    target_resource_id,
     data_collection_endpoint_id=null,
     data_collection_rule_id=null,
     description=null,
     name=null,
-    target_resource_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_data_collection_rule_association', label=resourceLabel, attrs=self.newAttrs(
+    target_resource_id=target_resource_id,
     data_collection_endpoint_id=data_collection_endpoint_id,
     data_collection_rule_id=data_collection_rule_id,
     description=description,
     name=name,
-    target_resource_id=target_resource_id,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
     name=null,
     target_resource_id,
     data_collection_endpoint_id=null,
     data_collection_rule_id=null,
+    description=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
     name: name,
     target_resource_id: target_resource_id,
     data_collection_endpoint_id: data_collection_endpoint_id,
     data_collection_rule_id: data_collection_rule_id,
+    description: description,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

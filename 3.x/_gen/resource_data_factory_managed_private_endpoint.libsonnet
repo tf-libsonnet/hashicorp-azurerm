@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    data_factory_id,
+    fqdns=null,
     name,
     subresource_name=null,
     target_resource_id,
-    data_factory_id,
-    fqdns=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    data_factory_id=data_factory_id,
+    fqdns=fqdns,
     name=name,
     subresource_name=subresource_name,
     target_resource_id=target_resource_id,
-    data_factory_id=data_factory_id,
-    fqdns=fqdns,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     subresource_name=null,
     target_resource_id,
     data_factory_id,
     fqdns=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     subresource_name: subresource_name,
     target_resource_id: target_resource_id,
     data_factory_id: data_factory_id,
     fqdns: fqdns,
+    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {

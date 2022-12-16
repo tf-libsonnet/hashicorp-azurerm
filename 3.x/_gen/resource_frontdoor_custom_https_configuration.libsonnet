@@ -13,15 +13,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    custom_https_provisioning_enabled,
     frontend_endpoint_id,
-    custom_https_configuration=null,
-    timeouts=null
+    custom_https_provisioning_enabled,
+    timeouts=null,
+    custom_https_configuration=null
   ):: std.prune(a={
-    custom_https_provisioning_enabled: custom_https_provisioning_enabled,
     frontend_endpoint_id: frontend_endpoint_id,
-    custom_https_configuration: custom_https_configuration,
+    custom_https_provisioning_enabled: custom_https_provisioning_enabled,
     timeouts: timeouts,
+    custom_https_configuration: custom_https_configuration,
   }),
   withCustomHttpsProvisioningEnabled(resourceLabel, value):: {
     resource+: {
@@ -40,6 +40,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_frontdoor_custom_https_configuration+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_frontdoor_custom_https_configuration+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withCustomHttpsConfiguration(resourceLabel, value):: {
     resource+: {
@@ -70,37 +101,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       certificate_source: certificate_source,
       azure_key_vault_certificate_secret_name: azure_key_vault_certificate_secret_name,
       azure_key_vault_certificate_secret_version: azure_key_vault_certificate_secret_version,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_frontdoor_custom_https_configuration+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_frontdoor_custom_https_configuration+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

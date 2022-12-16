@@ -2,46 +2,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    resource_group_name,
     server_name,
     tags=null,
     databases=null,
-    name,
-    resource_group_name,
-    timeouts=null,
-    partner_servers=null,
     read_write_endpoint_failover_policy=null,
-    readonly_endpoint_failover_policy=null
+    readonly_endpoint_failover_policy=null,
+    timeouts=null,
+    partner_servers=null
   ):: tf.withResource(type='azurerm_sql_failover_group', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    resource_group_name=resource_group_name,
     server_name=server_name,
     tags=tags,
     databases=databases,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    partner_servers=partner_servers,
     read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
-    readonly_endpoint_failover_policy=readonly_endpoint_failover_policy
+    readonly_endpoint_failover_policy=readonly_endpoint_failover_policy,
+    timeouts=timeouts,
+    partner_servers=partner_servers
   )),
   newAttrs(
+    name,
     resource_group_name,
     server_name,
     tags=null,
     databases=null,
-    name,
+    readonly_endpoint_failover_policy=null,
     timeouts=null,
     partner_servers=null,
-    read_write_endpoint_failover_policy=null,
-    readonly_endpoint_failover_policy=null
+    read_write_endpoint_failover_policy=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
     tags: tags,
     databases: databases,
-    name: name,
+    readonly_endpoint_failover_policy: readonly_endpoint_failover_policy,
     timeouts: timeouts,
     partner_servers: partner_servers,
     read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
-    readonly_endpoint_failover_policy: readonly_endpoint_failover_policy,
   }),
   withServerName(resourceLabel, value):: {
     resource+: {
@@ -131,11 +131,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   read_write_endpoint_failover_policy:: {
     new(
-      mode,
-      grace_minutes=null
+      grace_minutes=null,
+      mode
     ):: std.prune(a={
-      mode: mode,
       grace_minutes: grace_minutes,
+      mode: mode,
     }),
   },
   withReadonlyEndpointFailoverPolicy(resourceLabel, value):: {
@@ -183,15 +183,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

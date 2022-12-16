@@ -2,43 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    routing_weight=null,
     authorization_key=null,
     enable_internet_security=null,
     express_route_circuit_peering_id,
     express_route_gateway_id,
     name,
+    routing_weight=null,
     routing=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_express_route_connection', label=resourceLabel, attrs=self.newAttrs(
-    routing_weight=routing_weight,
     authorization_key=authorization_key,
     enable_internet_security=enable_internet_security,
     express_route_circuit_peering_id=express_route_circuit_peering_id,
     express_route_gateway_id=express_route_gateway_id,
     name=name,
+    routing_weight=routing_weight,
     routing=routing,
     timeouts=timeouts
   )),
   newAttrs(
+    express_route_circuit_peering_id,
     express_route_gateway_id,
     name,
     routing_weight=null,
     authorization_key=null,
     enable_internet_security=null,
-    express_route_circuit_peering_id,
     routing=null,
     timeouts=null
   ):: std.prune(a={
+    express_route_circuit_peering_id: express_route_circuit_peering_id,
     express_route_gateway_id: express_route_gateway_id,
     name: name,
     routing_weight: routing_weight,
     authorization_key: authorization_key,
     enable_internet_security: enable_internet_security,
-    express_route_circuit_peering_id: express_route_circuit_peering_id,
     routing: routing,
     timeouts: timeouts,
   }),
+  withRoutingWeight(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_connection+: {
+        [resourceLabel]+: {
+          routing_weight: value,
+        },
+      },
+    },
+  },
+  withAuthorizationKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_connection+: {
+        [resourceLabel]+: {
+          authorization_key: value,
+        },
+      },
+    },
+  },
   withEnableInternetSecurity(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_connection+: {
@@ -71,24 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_express_route_connection+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withRoutingWeight(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_connection+: {
-        [resourceLabel]+: {
-          routing_weight: value,
-        },
-      },
-    },
-  },
-  withAuthorizationKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_connection+: {
-        [resourceLabel]+: {
-          authorization_key: value,
         },
       },
     },
@@ -149,15 +149,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

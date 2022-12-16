@@ -2,57 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    location,
     name,
     resource_group_name,
     tags=null,
+    description=null,
+    location,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_load_test', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    description=description,
+    location=location,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
     location,
     name,
     resource_group_name,
     tags=null,
+    description=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
+    description: description,
     identity: identity,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_load_test+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_load_test+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_load_test+: {
@@ -80,30 +62,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIdentity(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_load_test+: {
         [resourceLabel]+: {
-          identity: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withIdentityMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_load_test+: {
         [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
+          tags: value,
         },
       },
     },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -134,6 +109,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_load_test+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_load_test+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
     }),
   },
 }

@@ -2,47 +2,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    media_services_account_name,
     name,
     priority=null,
     resource_group_name,
     transform_name,
     description=null,
-    media_services_account_name,
+    input_asset=null,
     output_asset=null,
-    timeouts=null,
-    input_asset=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_media_job', label=resourceLabel, attrs=self.newAttrs(
+    media_services_account_name=media_services_account_name,
     name=name,
     priority=priority,
     resource_group_name=resource_group_name,
     transform_name=transform_name,
     description=description,
-    media_services_account_name=media_services_account_name,
+    input_asset=input_asset,
     output_asset=output_asset,
-    timeouts=timeouts,
-    input_asset=input_asset
+    timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    transform_name,
     description=null,
     media_services_account_name,
     name,
     priority=null,
+    resource_group_name,
+    transform_name,
+    timeouts=null,
     input_asset=null,
-    output_asset=null,
-    timeouts=null
+    output_asset=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    transform_name: transform_name,
     description: description,
     media_services_account_name: media_services_account_name,
     name: name,
     priority: priority,
+    resource_group_name: resource_group_name,
+    transform_name: transform_name,
+    timeouts: timeouts,
     input_asset: input_asset,
     output_asset: output_asset,
-    timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_job+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPriority(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_job+: {
+        [resourceLabel]+: {
+          priority: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_job+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTransformName(resourceLabel, value):: {
     resource+: {
       azurerm_media_job+: {
@@ -70,32 +97,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_media_job+: {
         [resourceLabel]+: {
-          name: value,
+          timeouts: value,
         },
       },
     },
   },
-  withPriority(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_media_job+: {
         [resourceLabel]+: {
-          priority: value,
+          timeouts+: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_job+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
+    }),
   },
   withInputAsset(resourceLabel, value):: {
     resource+: {
@@ -149,37 +180,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       label: label,
       name: name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_job+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_job+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
     }),
   },
 }

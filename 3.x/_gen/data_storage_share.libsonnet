@@ -15,15 +15,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_name,
     metadata=null,
     name,
+    storage_account_name,
     acl=null,
     timeouts=null
   ):: std.prune(a={
-    storage_account_name: storage_account_name,
     metadata: metadata,
     name: name,
+    storage_account_name: storage_account_name,
     acl: acl,
     timeouts: timeouts,
   }),
@@ -54,29 +54,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAcl(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_share+: {
-        [dataSrcLabel]+: {
-          acl: value,
-        },
-      },
-    },
-  },
-  withAclMixin(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_share+: {
-        [dataSrcLabel]+: {
-          acl+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  acl:: {
-    new(
-
-    ):: std.prune(a={}),
-  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_share+: {
@@ -101,5 +78,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       read: read,
     }),
+  },
+  withAcl(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_share+: {
+        [dataSrcLabel]+: {
+          acl: value,
+        },
+      },
+    },
+  },
+  withAclMixin(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_share+: {
+        [dataSrcLabel]+: {
+          acl+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  acl:: {
+    new(
+
+    ):: std.prune(a={}),
   },
 }

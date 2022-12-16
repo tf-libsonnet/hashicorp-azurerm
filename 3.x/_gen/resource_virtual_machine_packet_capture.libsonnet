@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    maximum_capture_duration_in_seconds=null,
     name,
     network_watcher_id,
     virtual_machine_id,
     maximum_bytes_per_packet=null,
     maximum_bytes_per_session=null,
-    timeouts=null,
+    maximum_capture_duration_in_seconds=null,
     filter=null,
-    storage_location=null
+    storage_location=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_virtual_machine_packet_capture', label=resourceLabel, attrs=self.newAttrs(
-    maximum_capture_duration_in_seconds=maximum_capture_duration_in_seconds,
     name=name,
     network_watcher_id=network_watcher_id,
     virtual_machine_id=virtual_machine_id,
     maximum_bytes_per_packet=maximum_bytes_per_packet,
     maximum_bytes_per_session=maximum_bytes_per_session,
-    timeouts=timeouts,
+    maximum_capture_duration_in_seconds=maximum_capture_duration_in_seconds,
     filter=filter,
-    storage_location=storage_location
+    storage_location=storage_location,
+    timeouts=timeouts
   )),
   newAttrs(
     maximum_capture_duration_in_seconds=null,
@@ -43,15 +43,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_location: storage_location,
     timeouts: timeouts,
   }),
-  withVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_packet_capture+: {
-        [resourceLabel]+: {
-          virtual_machine_id: value,
-        },
-      },
-    },
-  },
   withMaximumBytesPerPacket(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_packet_capture+: {
@@ -97,6 +88,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_packet_capture+: {
+        [resourceLabel]+: {
+          virtual_machine_id: value,
+        },
+      },
+    },
+  },
   withFilter(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_packet_capture+: {
@@ -117,17 +117,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   filter:: {
     new(
+      local_ip_address=null,
+      local_port=null,
       protocol,
       remote_ip_address=null,
-      remote_port=null,
-      local_ip_address=null,
-      local_port=null
+      remote_port=null
     ):: std.prune(a={
+      local_ip_address: local_ip_address,
+      local_port: local_port,
       protocol: protocol,
       remote_ip_address: remote_ip_address,
       remote_port: remote_port,
-      local_ip_address: local_ip_address,
-      local_port: local_port,
     }),
   },
   withStorageLocation(resourceLabel, value):: {
@@ -150,11 +150,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage_location:: {
     new(
-      storage_account_id=null,
-      file_path=null
+      file_path=null,
+      storage_account_id=null
     ):: std.prune(a={
-      storage_account_id: storage_account_id,
       file_path: file_path,
+      storage_account_id: storage_account_id,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -177,13 +177,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

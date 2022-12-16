@@ -2,163 +2,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    throughput_in_mibps=null,
-    volume_path,
-    pool_name,
-    account_name,
-    location,
-    tags=null,
-    name,
-    create_from_snapshot_resource_id=null,
-    storage_quota_in_gb,
-    azure_vmware_data_store_enabled=null,
-    snapshot_directory_visible=null,
     resource_group_name,
+    throughput_in_mibps=null,
+    location,
+    create_from_snapshot_resource_id=null,
     subnet_id,
-    network_features=null,
-    protocols=null,
-    security_style=null,
+    account_name,
+    storage_quota_in_gb,
+    name,
     service_level,
+    pool_name,
+    azure_vmware_data_store_enabled=null,
+    network_features=null,
+    snapshot_directory_visible=null,
+    protocols=null,
+    tags=null,
+    volume_path,
+    security_style=null,
+    data_protection_snapshot_policy=null,
     export_policy_rule=null,
     timeouts=null,
-    data_protection_replication=null,
-    data_protection_snapshot_policy=null
+    data_protection_replication=null
   ):: tf.withResource(type='azurerm_netapp_volume', label=resourceLabel, attrs=self.newAttrs(
-    throughput_in_mibps=throughput_in_mibps,
-    volume_path=volume_path,
-    pool_name=pool_name,
-    account_name=account_name,
-    location=location,
-    tags=tags,
-    name=name,
-    create_from_snapshot_resource_id=create_from_snapshot_resource_id,
-    storage_quota_in_gb=storage_quota_in_gb,
-    azure_vmware_data_store_enabled=azure_vmware_data_store_enabled,
-    snapshot_directory_visible=snapshot_directory_visible,
     resource_group_name=resource_group_name,
+    throughput_in_mibps=throughput_in_mibps,
+    location=location,
+    create_from_snapshot_resource_id=create_from_snapshot_resource_id,
     subnet_id=subnet_id,
-    network_features=network_features,
-    protocols=protocols,
-    security_style=security_style,
+    account_name=account_name,
+    storage_quota_in_gb=storage_quota_in_gb,
+    name=name,
     service_level=service_level,
+    pool_name=pool_name,
+    azure_vmware_data_store_enabled=azure_vmware_data_store_enabled,
+    network_features=network_features,
+    snapshot_directory_visible=snapshot_directory_visible,
+    protocols=protocols,
+    tags=tags,
+    volume_path=volume_path,
+    security_style=security_style,
+    data_protection_snapshot_policy=data_protection_snapshot_policy,
     export_policy_rule=export_policy_rule,
     timeouts=timeouts,
-    data_protection_replication=data_protection_replication,
-    data_protection_snapshot_policy=data_protection_snapshot_policy
+    data_protection_replication=data_protection_replication
   )),
   newAttrs(
-    azure_vmware_data_store_enabled=null,
-    volume_path,
-    name,
-    create_from_snapshot_resource_id=null,
-    network_features=null,
-    security_style=null,
-    service_level,
-    resource_group_name,
-    storage_quota_in_gb,
-    location,
-    snapshot_directory_visible=null,
-    throughput_in_mibps=null,
-    account_name,
-    subnet_id,
-    pool_name,
-    tags=null,
     protocols=null,
-    export_policy_rule=null,
+    tags=null,
+    throughput_in_mibps=null,
+    network_features=null,
+    name,
+    service_level,
+    snapshot_directory_visible=null,
+    location,
+    volume_path,
+    resource_group_name,
+    azure_vmware_data_store_enabled=null,
+    security_style=null,
+    subnet_id,
+    storage_quota_in_gb,
+    create_from_snapshot_resource_id=null,
+    account_name,
+    pool_name,
     timeouts=null,
     data_protection_replication=null,
-    data_protection_snapshot_policy=null
+    data_protection_snapshot_policy=null,
+    export_policy_rule=null
   ):: std.prune(a={
-    azure_vmware_data_store_enabled: azure_vmware_data_store_enabled,
-    volume_path: volume_path,
-    name: name,
-    create_from_snapshot_resource_id: create_from_snapshot_resource_id,
-    network_features: network_features,
-    security_style: security_style,
-    service_level: service_level,
-    resource_group_name: resource_group_name,
-    storage_quota_in_gb: storage_quota_in_gb,
-    location: location,
-    snapshot_directory_visible: snapshot_directory_visible,
-    throughput_in_mibps: throughput_in_mibps,
-    account_name: account_name,
-    subnet_id: subnet_id,
-    pool_name: pool_name,
-    tags: tags,
     protocols: protocols,
-    export_policy_rule: export_policy_rule,
+    tags: tags,
+    throughput_in_mibps: throughput_in_mibps,
+    network_features: network_features,
+    name: name,
+    service_level: service_level,
+    snapshot_directory_visible: snapshot_directory_visible,
+    location: location,
+    volume_path: volume_path,
+    resource_group_name: resource_group_name,
+    azure_vmware_data_store_enabled: azure_vmware_data_store_enabled,
+    security_style: security_style,
+    subnet_id: subnet_id,
+    storage_quota_in_gb: storage_quota_in_gb,
+    create_from_snapshot_resource_id: create_from_snapshot_resource_id,
+    account_name: account_name,
+    pool_name: pool_name,
     timeouts: timeouts,
     data_protection_replication: data_protection_replication,
     data_protection_snapshot_policy: data_protection_snapshot_policy,
+    export_policy_rule: export_policy_rule,
   }),
-  withLocation(resourceLabel, value):: {
+  withProtocols(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_volume+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          subnet_id: value,
-        },
-      },
-    },
-  },
-  withNetworkFeatures(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          network_features: value,
-        },
-      },
-    },
-  },
-  withCreateFromSnapshotResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          create_from_snapshot_resource_id: value,
-        },
-      },
-    },
-  },
-  withServiceLevel(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          service_level: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withThroughputInMibps(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          throughput_in_mibps: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_netapp_volume+: {
-        [resourceLabel]+: {
-          name: value,
+          protocols: value,
         },
       },
     },
@@ -172,11 +109,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageQuotaInGb(resourceLabel, value):: {
+  withThroughputInMibps(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_volume+: {
         [resourceLabel]+: {
-          storage_quota_in_gb: value,
+          throughput_in_mibps: value,
+        },
+      },
+    },
+  },
+  withAzureVmwareDataStoreEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          azure_vmware_data_store_enabled: value,
         },
       },
     },
@@ -199,11 +145,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVolumePath(resourceLabel, value):: {
+  withCreateFromSnapshotResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_volume+: {
         [resourceLabel]+: {
-          volume_path: value,
+          create_from_snapshot_resource_id: value,
         },
       },
     },
@@ -217,11 +163,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withProtocols(resourceLabel, value):: {
+  withSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_volume+: {
         [resourceLabel]+: {
-          protocols: value,
+          subnet_id: value,
         },
       },
     },
@@ -235,11 +181,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAzureVmwareDataStoreEnabled(resourceLabel, value):: {
+  withStorageQuotaInGb(resourceLabel, value):: {
     resource+: {
       azurerm_netapp_volume+: {
         [resourceLabel]+: {
-          azure_vmware_data_store_enabled: value,
+          storage_quota_in_gb: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withServiceLevel(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          service_level: value,
+        },
+      },
+    },
+  },
+  withNetworkFeatures(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          network_features: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withVolumePath(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          volume_path: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_netapp_volume+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -289,19 +289,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   export_policy_rule:: {
     new(
-      allowed_clients,
-      protocols_enabled=null,
       root_access_enabled=null,
       rule_index,
       unix_read_only=null,
-      unix_read_write=null
+      unix_read_write=null,
+      allowed_clients,
+      protocols_enabled=null
     ):: std.prune(a={
-      allowed_clients: allowed_clients,
-      protocols_enabled: protocols_enabled,
       root_access_enabled: root_access_enabled,
       rule_index: rule_index,
       unix_read_only: unix_read_only,
       unix_read_write: unix_read_write,
+      allowed_clients: allowed_clients,
+      protocols_enabled: protocols_enabled,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -324,15 +324,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
   withDataProtectionReplication(resourceLabel, value):: {
@@ -355,15 +355,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   data_protection_replication:: {
     new(
-      endpoint_type=null,
-      remote_volume_location,
       remote_volume_resource_id,
-      replication_frequency
+      replication_frequency,
+      endpoint_type=null,
+      remote_volume_location
     ):: std.prune(a={
-      endpoint_type: endpoint_type,
-      remote_volume_location: remote_volume_location,
       remote_volume_resource_id: remote_volume_resource_id,
       replication_frequency: replication_frequency,
+      endpoint_type: endpoint_type,
+      remote_volume_location: remote_volume_location,
     }),
   },
 }

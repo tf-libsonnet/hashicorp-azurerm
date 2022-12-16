@@ -2,52 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    send=null,
+    manage=null,
+    namespace_name,
+    resource_group_name,
     hybrid_connection_name,
     listen=null,
     name,
-    namespace_name,
-    manage=null,
-    resource_group_name,
-    send=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_relay_hybrid_connection_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
+    send=send,
+    manage=manage,
+    namespace_name=namespace_name,
+    resource_group_name=resource_group_name,
     hybrid_connection_name=hybrid_connection_name,
     listen=listen,
     name=name,
-    namespace_name=namespace_name,
-    manage=manage,
-    resource_group_name=resource_group_name,
-    send=send,
     timeouts=timeouts
   )),
   newAttrs(
-    send=null,
-    hybrid_connection_name,
     listen=null,
     name,
-    namespace_name,
+    send=null,
     manage=null,
+    namespace_name,
     resource_group_name,
+    hybrid_connection_name,
     timeouts=null
   ):: std.prune(a={
-    send: send,
-    hybrid_connection_name: hybrid_connection_name,
     listen: listen,
     name: name,
-    namespace_name: namespace_name,
+    send: send,
     manage: manage,
+    namespace_name: namespace_name,
     resource_group_name: resource_group_name,
+    hybrid_connection_name: hybrid_connection_name,
     timeouts: timeouts,
   }),
-  withSend(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_hybrid_connection_authorization_rule+: {
-        [resourceLabel]+: {
-          send: value,
-        },
-      },
-    },
-  },
   withManage(resourceLabel, value):: {
     resource+: {
       azurerm_relay_hybrid_connection_authorization_rule+: {
@@ -62,6 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_relay_hybrid_connection_authorization_rule+: {
         [resourceLabel]+: {
           namespace_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_hybrid_connection_authorization_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -93,11 +93,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withSend(resourceLabel, value):: {
     resource+: {
       azurerm_relay_hybrid_connection_authorization_rule+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          send: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

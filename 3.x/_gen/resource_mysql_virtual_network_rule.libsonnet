@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    server_name,
-    subnet_id,
     name,
     resource_group_name,
+    server_name,
+    subnet_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_mysql_virtual_network_rule', label=resourceLabel, attrs=self.newAttrs(
-    server_name=server_name,
-    subnet_id=subnet_id,
     name=name,
     resource_group_name=resource_group_name,
+    server_name=server_name,
+    subnet_id=subnet_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet_id: subnet_id,
     timeouts: timeouts,
   }),
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_virtual_network_rule+: {
+        [resourceLabel]+: {
+          subnet_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_virtual_network_rule+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_virtual_network_rule+: {
-        [resourceLabel]+: {
-          subnet_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_virtual_network_rule+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

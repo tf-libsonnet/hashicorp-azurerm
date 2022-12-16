@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    manage=null,
     send=null,
     name,
-    listen=null,
-    manage=null,
     namespace_name,
     resource_group_name,
+    listen=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
+    manage=manage,
     send=send,
     name=name,
-    listen=listen,
-    manage=manage,
     namespace_name=namespace_name,
     resource_group_name=resource_group_name,
+    listen=listen,
     timeouts=timeouts
   )),
   newAttrs(
     namespace_name,
-    name,
-    resource_group_name,
-    send=null,
     listen=null,
     manage=null,
+    resource_group_name,
+    send=null,
+    name,
     timeouts=null
   ):: std.prune(a={
     namespace_name: namespace_name,
-    name: name,
-    resource_group_name: resource_group_name,
-    send: send,
     listen: listen,
     manage: manage,
+    resource_group_name: resource_group_name,
+    send: send,
+    name: name,
     timeouts: timeouts,
   }),
   withNamespaceName(resourceLabel, value):: {
@@ -44,11 +44,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withListen(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace_authorization_rule+: {
         [resourceLabel]+: {
-          name: value,
+          listen: value,
+        },
+      },
+    },
+  },
+  withManage(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace_authorization_rule+: {
+        [resourceLabel]+: {
+          manage: value,
         },
       },
     },
@@ -71,20 +80,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withListen(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace_authorization_rule+: {
         [resourceLabel]+: {
-          listen: value,
-        },
-      },
-    },
-  },
-  withManage(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace_authorization_rule+: {
-        [resourceLabel]+: {
-          manage: value,
+          name: value,
         },
       },
     },

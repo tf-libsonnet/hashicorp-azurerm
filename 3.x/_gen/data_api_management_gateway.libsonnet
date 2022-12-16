@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     api_management_id: api_management_id,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_api_management_gateway+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withApiManagementId(dataSrcLabel, value):: {
     data+: {
       azurerm_api_management_gateway+: {
         [dataSrcLabel]+: {
           api_management_id: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_api_management_gateway+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

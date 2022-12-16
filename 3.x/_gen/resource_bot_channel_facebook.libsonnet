@@ -7,34 +7,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     facebook_application_secret,
     location,
     resource_group_name,
-    page=null,
-    timeouts=null
+    timeouts=null,
+    page=null
   ):: tf.withResource(type='azurerm_bot_channel_facebook', label=resourceLabel, attrs=self.newAttrs(
     bot_name=bot_name,
     facebook_application_id=facebook_application_id,
     facebook_application_secret=facebook_application_secret,
     location=location,
     resource_group_name=resource_group_name,
-    page=page,
-    timeouts=timeouts
+    timeouts=timeouts,
+    page=page
   )),
   newAttrs(
-    facebook_application_id,
     facebook_application_secret,
     location,
     resource_group_name,
     bot_name,
+    facebook_application_id,
     page=null,
     timeouts=null
   ):: std.prune(a={
-    facebook_application_id: facebook_application_id,
     facebook_application_secret: facebook_application_secret,
     location: location,
     resource_group_name: resource_group_name,
     bot_name: bot_name,
+    facebook_application_id: facebook_application_id,
     page: page,
     timeouts: timeouts,
   }),
+  withBotName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_facebook+: {
+        [resourceLabel]+: {
+          bot_name: value,
+        },
+      },
+    },
+  },
   withFacebookApplicationId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_facebook+: {
@@ -71,14 +80,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBotName(resourceLabel, value):: {
+  withPage(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_facebook+: {
         [resourceLabel]+: {
-          bot_name: value,
+          page: value,
         },
       },
     },
+  },
+  withPageMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_facebook+: {
+        [resourceLabel]+: {
+          page+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  page:: {
+    new(
+      access_token
+    ):: std.prune(a={
+      access_token: access_token,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -109,31 +134,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       create: create,
       delete: delete,
       read: read,
-    }),
-  },
-  withPage(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_facebook+: {
-        [resourceLabel]+: {
-          page: value,
-        },
-      },
-    },
-  },
-  withPageMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_facebook+: {
-        [resourceLabel]+: {
-          page+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  page:: {
-    new(
-      access_token
-    ):: std.prune(a={
-      access_token: access_token,
     }),
   },
 }

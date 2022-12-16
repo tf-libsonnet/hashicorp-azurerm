@@ -2,88 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    virtual_network_subnet_ids,
     name,
+    resource_group_name,
     sku_name=null,
     tags=null,
-    resource_group_name,
-    virtual_network_subnet_ids,
     access_endpoint_type,
     location,
     timeouts=null
   ):: tf.withResource(type='azurerm_integration_service_environment', label=resourceLabel, attrs=self.newAttrs(
+    virtual_network_subnet_ids=virtual_network_subnet_ids,
     name=name,
+    resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    resource_group_name=resource_group_name,
-    virtual_network_subnet_ids=virtual_network_subnet_ids,
     access_endpoint_type=access_endpoint_type,
     location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    location,
-    name,
+    resource_group_name,
     sku_name=null,
     tags=null,
     access_endpoint_type,
-    resource_group_name,
     virtual_network_subnet_ids,
+    location,
+    name,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    name: name,
+    resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
     access_endpoint_type: access_endpoint_type,
-    resource_group_name: resource_group_name,
     virtual_network_subnet_ids: virtual_network_subnet_ids,
+    location: location,
+    name: name,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkSubnetIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          virtual_network_subnet_ids: value,
-        },
-      },
-    },
-  },
-  withAccessEndpointType(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          access_endpoint_type: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_integration_service_environment+: {
@@ -98,6 +53,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_integration_service_environment+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withAccessEndpointType(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          access_endpoint_type: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkSubnetIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          virtual_network_subnet_ids: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

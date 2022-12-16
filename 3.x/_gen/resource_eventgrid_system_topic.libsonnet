@@ -2,70 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    source_arm_resource_id,
     tags=null,
     topic_type,
     location,
     name,
     resource_group_name,
+    source_arm_resource_id,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventgrid_system_topic', label=resourceLabel, attrs=self.newAttrs(
-    source_arm_resource_id=source_arm_resource_id,
     tags=tags,
     topic_type=topic_type,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
+    source_arm_resource_id=source_arm_resource_id,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
+    tags=null,
+    topic_type,
     location,
     name,
     resource_group_name,
     source_arm_resource_id,
-    tags=null,
-    topic_type,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: std.prune(a={
+    tags: tags,
+    topic_type: topic_type,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     source_arm_resource_id: source_arm_resource_id,
-    tags: tags,
-    topic_type: topic_type,
-    timeouts: timeouts,
     identity: identity,
+    timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_system_topic+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_system_topic+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSourceArmResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_system_topic+: {
-        [resourceLabel]+: {
-          source_arm_resource_id: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_system_topic+: {
@@ -89,6 +62,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventgrid_system_topic+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_system_topic+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_system_topic+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSourceArmResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_system_topic+: {
+        [resourceLabel]+: {
+          source_arm_resource_id: value,
         },
       },
     },

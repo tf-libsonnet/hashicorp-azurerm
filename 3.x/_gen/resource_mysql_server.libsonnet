@@ -2,149 +2,104 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    administrator_login=null,
     ssl_minimal_tls_version_enforced=null,
-    create_mode=null,
-    infrastructure_encryption_enabled=null,
-    backup_retention_days=null,
-    location,
-    administrator_login_password=null,
-    name,
-    version,
-    geo_redundant_backup_enabled=null,
-    resource_group_name,
-    sku_name,
-    auto_grow_enabled=null,
-    creation_source_server_id=null,
     public_network_access_enabled=null,
+    location,
+    name,
+    resource_group_name,
+    storage_mb=null,
+    ssl_enforcement_enabled,
+    create_mode=null,
+    auto_grow_enabled=null,
+    backup_retention_days=null,
+    sku_name,
+    administrator_login=null,
+    geo_redundant_backup_enabled=null,
+    version,
+    creation_source_server_id=null,
     tags=null,
     restore_point_in_time=null,
-    ssl_enforcement_enabled,
-    storage_mb=null,
+    administrator_login_password=null,
+    infrastructure_encryption_enabled=null,
+    identity=null,
     threat_detection_policy=null,
-    timeouts=null,
-    identity=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_mysql_server', label=resourceLabel, attrs=self.newAttrs(
-    administrator_login=administrator_login,
     ssl_minimal_tls_version_enforced=ssl_minimal_tls_version_enforced,
-    create_mode=create_mode,
-    infrastructure_encryption_enabled=infrastructure_encryption_enabled,
-    backup_retention_days=backup_retention_days,
-    location=location,
-    administrator_login_password=administrator_login_password,
-    name=name,
-    version=version,
-    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    auto_grow_enabled=auto_grow_enabled,
-    creation_source_server_id=creation_source_server_id,
     public_network_access_enabled=public_network_access_enabled,
+    location=location,
+    name=name,
+    resource_group_name=resource_group_name,
+    storage_mb=storage_mb,
+    ssl_enforcement_enabled=ssl_enforcement_enabled,
+    create_mode=create_mode,
+    auto_grow_enabled=auto_grow_enabled,
+    backup_retention_days=backup_retention_days,
+    sku_name=sku_name,
+    administrator_login=administrator_login,
+    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
+    version=version,
+    creation_source_server_id=creation_source_server_id,
     tags=tags,
     restore_point_in_time=restore_point_in_time,
-    ssl_enforcement_enabled=ssl_enforcement_enabled,
-    storage_mb=storage_mb,
+    administrator_login_password=administrator_login_password,
+    infrastructure_encryption_enabled=infrastructure_encryption_enabled,
+    identity=identity,
     threat_detection_policy=threat_detection_policy,
-    timeouts=timeouts,
-    identity=identity
+    timeouts=timeouts
   )),
   newAttrs(
+    infrastructure_encryption_enabled=null,
+    ssl_enforcement_enabled,
     location,
     name,
-    resource_group_name,
-    restore_point_in_time=null,
-    sku_name,
-    backup_retention_days=null,
-    administrator_login_password=null,
-    creation_source_server_id=null,
-    infrastructure_encryption_enabled=null,
-    storage_mb=null,
-    version,
-    ssl_enforcement_enabled,
-    ssl_minimal_tls_version_enforced=null,
-    tags=null,
     auto_grow_enabled=null,
-    public_network_access_enabled=null,
-    administrator_login=null,
     geo_redundant_backup_enabled=null,
     create_mode=null,
+    resource_group_name,
+    sku_name,
+    ssl_minimal_tls_version_enforced=null,
+    administrator_login=null,
+    storage_mb=null,
+    public_network_access_enabled=null,
+    tags=null,
+    restore_point_in_time=null,
+    administrator_login_password=null,
+    version,
+    backup_retention_days=null,
+    creation_source_server_id=null,
     identity=null,
     threat_detection_policy=null,
     timeouts=null
   ):: std.prune(a={
+    infrastructure_encryption_enabled: infrastructure_encryption_enabled,
+    ssl_enforcement_enabled: ssl_enforcement_enabled,
     location: location,
     name: name,
-    resource_group_name: resource_group_name,
-    restore_point_in_time: restore_point_in_time,
-    sku_name: sku_name,
-    backup_retention_days: backup_retention_days,
-    administrator_login_password: administrator_login_password,
-    creation_source_server_id: creation_source_server_id,
-    infrastructure_encryption_enabled: infrastructure_encryption_enabled,
-    storage_mb: storage_mb,
-    version: version,
-    ssl_enforcement_enabled: ssl_enforcement_enabled,
-    ssl_minimal_tls_version_enforced: ssl_minimal_tls_version_enforced,
-    tags: tags,
     auto_grow_enabled: auto_grow_enabled,
-    public_network_access_enabled: public_network_access_enabled,
-    administrator_login: administrator_login,
     geo_redundant_backup_enabled: geo_redundant_backup_enabled,
     create_mode: create_mode,
+    resource_group_name: resource_group_name,
+    sku_name: sku_name,
+    ssl_minimal_tls_version_enforced: ssl_minimal_tls_version_enforced,
+    administrator_login: administrator_login,
+    storage_mb: storage_mb,
+    public_network_access_enabled: public_network_access_enabled,
+    tags: tags,
+    restore_point_in_time: restore_point_in_time,
+    administrator_login_password: administrator_login_password,
+    version: version,
+    backup_retention_days: backup_retention_days,
+    creation_source_server_id: creation_source_server_id,
     identity: identity,
     threat_detection_policy: threat_detection_policy,
     timeouts: timeouts,
   }),
-  withBackupRetentionDays(resourceLabel, value):: {
+  withCreationSourceServerId(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_server+: {
         [resourceLabel]+: {
-          backup_retention_days: value,
-        },
-      },
-    },
-  },
-  withAutoGrowEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          auto_grow_enabled: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withGeoRedundantBackupEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          geo_redundant_backup_enabled: value,
-        },
-      },
-    },
-  },
-  withSslEnforcementEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          ssl_enforcement_enabled: value,
-        },
-      },
-    },
-  },
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          sku_name: value,
+          creation_source_server_id: value,
         },
       },
     },
@@ -158,20 +113,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdministratorLoginPassword(resourceLabel, value):: {
+  withAutoGrowEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_server+: {
         [resourceLabel]+: {
-          administrator_login_password: value,
-        },
-      },
-    },
-  },
-  withStorageMb(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          storage_mb: value,
+          auto_grow_enabled: value,
         },
       },
     },
@@ -185,38 +131,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+  withGeoRedundantBackupEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_server+: {
         [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          version: value,
-        },
-      },
-    },
-  },
-  withInfrastructureEncryptionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          infrastructure_encryption_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_server+: {
-        [resourceLabel]+: {
-          location: value,
+          geo_redundant_backup_enabled: value,
         },
       },
     },
@@ -239,11 +158,92 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCreationSourceServerId(resourceLabel, value):: {
+  withVersion(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_server+: {
         [resourceLabel]+: {
-          creation_source_server_id: value,
+          version: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withSslEnforcementEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          ssl_enforcement_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withStorageMb(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          storage_mb: value,
+        },
+      },
+    },
+  },
+  withAdministratorLoginPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          administrator_login_password: value,
+        },
+      },
+    },
+  },
+  withInfrastructureEncryptionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          infrastructure_encryption_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_server+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -257,11 +257,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withBackupRetentionDays(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_server+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          backup_retention_days: value,
         },
       },
     },
@@ -311,21 +311,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   threat_detection_policy:: {
     new(
-      email_account_admins=null,
-      email_addresses=null,
       enabled=null,
       retention_days=null,
       storage_account_access_key=null,
       storage_endpoint=null,
-      disabled_alerts=null
+      disabled_alerts=null,
+      email_account_admins=null,
+      email_addresses=null
     ):: std.prune(a={
-      email_account_admins: email_account_admins,
-      email_addresses: email_addresses,
       enabled: enabled,
       retention_days: retention_days,
       storage_account_access_key: storage_account_access_key,
       storage_endpoint: storage_endpoint,
       disabled_alerts: disabled_alerts,
+      email_account_admins: email_account_admins,
+      email_addresses: email_addresses,
     }),
   },
   withTimeouts(resourceLabel, value):: {

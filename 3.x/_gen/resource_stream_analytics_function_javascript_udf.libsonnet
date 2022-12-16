@@ -23,17 +23,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     script,
     stream_analytics_job_name,
-    output=null,
     timeouts=null,
-    input=null
+    input=null,
+    output=null
   ):: std.prune(a={
     name: name,
     resource_group_name: resource_group_name,
     script: script,
     stream_analytics_job_name: stream_analytics_job_name,
-    output: output,
     timeouts: timeouts,
     input: input,
+    output: output,
   }),
   withScript(resourceLabel, value):: {
     resource+: {
@@ -116,15 +116,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
   withInput(resourceLabel, value):: {

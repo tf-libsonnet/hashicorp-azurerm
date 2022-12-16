@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    target_resource_id,
     enabled,
+    target_resource_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_advanced_threat_protection', label=resourceLabel, attrs=self.newAttrs(target_resource_id=target_resource_id, enabled=enabled, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_advanced_threat_protection', label=resourceLabel, attrs=self.newAttrs(enabled=enabled, target_resource_id=target_resource_id, timeouts=timeouts)),
   newAttrs(
     target_resource_id,
     enabled,
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

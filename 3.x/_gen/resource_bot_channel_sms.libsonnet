@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    phone_number,
     resource_group_name,
     sms_channel_account_security_id,
     sms_channel_auth_token,
     bot_name,
     location,
-    phone_number,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_sms', label=resourceLabel, attrs=self.newAttrs(
+    phone_number=phone_number,
     resource_group_name=resource_group_name,
     sms_channel_account_security_id=sms_channel_account_security_id,
     sms_channel_auth_token=sms_channel_auth_token,
     bot_name=bot_name,
     location=location,
-    phone_number=phone_number,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     sms_channel_account_security_id,
     sms_channel_auth_token,
     bot_name,
     location,
     phone_number,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     sms_channel_account_security_id: sms_channel_account_security_id,
     sms_channel_auth_token: sms_channel_auth_token,
     bot_name: bot_name,
     location: location,
     phone_number: phone_number,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withSmsChannelAuthToken(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_sms+: {
-        [resourceLabel]+: {
-          sms_channel_auth_token: value,
-        },
-      },
-    },
-  },
   withBotName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_sms+: {
@@ -89,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSmsChannelAuthToken(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_sms+: {
+        [resourceLabel]+: {
+          sms_channel_auth_token: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_sms+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

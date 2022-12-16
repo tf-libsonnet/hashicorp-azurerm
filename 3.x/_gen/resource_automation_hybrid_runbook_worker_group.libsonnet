@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    credential_name=null,
     name,
     resource_group_name,
     automation_account_name,
+    credential_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_hybrid_runbook_worker_group', label=resourceLabel, attrs=self.newAttrs(
-    credential_name=credential_name,
     name=name,
     resource_group_name=resource_group_name,
     automation_account_name=automation_account_name,
+    credential_name=credential_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_hybrid_runbook_worker_group+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_hybrid_runbook_worker_group+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_hybrid_runbook_worker_group+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_automation_hybrid_runbook_worker_group+: {
         [resourceLabel]+: {
           credential_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_hybrid_runbook_worker_group+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_hybrid_runbook_worker_group+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

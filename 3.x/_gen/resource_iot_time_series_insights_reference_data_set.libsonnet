@@ -7,34 +7,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     tags=null,
     time_series_insights_environment_id,
-    key_property=null,
-    timeouts=null
+    timeouts=null,
+    key_property=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_reference_data_set', label=resourceLabel, attrs=self.newAttrs(
     data_string_comparison_behavior=data_string_comparison_behavior,
     location=location,
     name=name,
     tags=tags,
     time_series_insights_environment_id=time_series_insights_environment_id,
-    key_property=key_property,
-    timeouts=timeouts
+    timeouts=timeouts,
+    key_property=key_property
   )),
   newAttrs(
-    name,
-    tags=null,
     time_series_insights_environment_id,
     data_string_comparison_behavior=null,
     location,
+    name,
+    tags=null,
     key_property=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    tags: tags,
     time_series_insights_environment_id: time_series_insights_environment_id,
     data_string_comparison_behavior: data_string_comparison_behavior,
     location: location,
+    name: name,
+    tags: tags,
     key_property: key_property,
     timeouts: timeouts,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_reference_data_set+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTimeSeriesInsightsEnvironmentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_reference_data_set+: {
+        [resourceLabel]+: {
+          time_series_insights_environment_id: value,
+        },
+      },
+    },
+  },
   withDataStringComparisonBehavior(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_reference_data_set+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iot_time_series_insights_reference_data_set+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_reference_data_set+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withTimeSeriesInsightsEnvironmentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_reference_data_set+: {
-        [resourceLabel]+: {
-          time_series_insights_environment_id: value,
         },
       },
     },
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

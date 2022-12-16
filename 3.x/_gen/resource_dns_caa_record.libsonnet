@@ -19,31 +19,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    resource_group_name,
     tags=null,
     ttl,
     zone_name,
-    name,
-    resource_group_name,
     record=null,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    resource_group_name: resource_group_name,
     tags: tags,
     ttl: ttl,
     zone_name: zone_name,
-    name: name,
-    resource_group_name: resource_group_name,
     record: record,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_caa_record+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_dns_caa_record+: {
@@ -80,34 +71,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRecord(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_dns_caa_record+: {
         [resourceLabel]+: {
-          record: value,
+          resource_group_name: value,
         },
       },
     },
-  },
-  withRecordMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_caa_record+: {
-        [resourceLabel]+: {
-          record+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  record:: {
-    new(
-      tag,
-      value,
-      flags
-    ):: std.prune(a={
-      tag: tag,
-      value: value,
-      flags: flags,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -138,6 +109,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withRecord(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_caa_record+: {
+        [resourceLabel]+: {
+          record: value,
+        },
+      },
+    },
+  },
+  withRecordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_caa_record+: {
+        [resourceLabel]+: {
+          record+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  record:: {
+    new(
+      flags,
+      tag,
+      value
+    ):: std.prune(a={
+      flags: flags,
+      tag: tag,
+      value: value,
     }),
   },
 }

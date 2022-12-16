@@ -2,77 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    activated=null,
+    data_factory_id,
+    ignore_empty_blobs=null,
+    name,
+    events,
+    description=null,
+    additional_properties=null,
+    annotations=null,
+    storage_account_id,
     blob_path_begins_with=null,
     blob_path_ends_with=null,
-    annotations=null,
-    data_factory_id,
-    additional_properties=null,
-    description=null,
-    events,
-    name,
-    storage_account_id,
-    activated=null,
-    ignore_empty_blobs=null,
     timeouts=null,
     pipeline=null
   ):: tf.withResource(type='azurerm_data_factory_trigger_blob_event', label=resourceLabel, attrs=self.newAttrs(
+    activated=activated,
+    data_factory_id=data_factory_id,
+    ignore_empty_blobs=ignore_empty_blobs,
+    name=name,
+    events=events,
+    description=description,
+    additional_properties=additional_properties,
+    annotations=annotations,
+    storage_account_id=storage_account_id,
     blob_path_begins_with=blob_path_begins_with,
     blob_path_ends_with=blob_path_ends_with,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    additional_properties=additional_properties,
-    description=description,
-    events=events,
-    name=name,
-    storage_account_id=storage_account_id,
-    activated=activated,
-    ignore_empty_blobs=ignore_empty_blobs,
     timeouts=timeouts,
     pipeline=pipeline
   )),
   newAttrs(
     name,
+    blob_path_ends_with=null,
+    events,
+    storage_account_id,
+    blob_path_begins_with=null,
+    description=null,
+    activated=null,
+    additional_properties=null,
     annotations=null,
     data_factory_id,
-    blob_path_begins_with=null,
-    events,
-    activated=null,
-    blob_path_ends_with=null,
     ignore_empty_blobs=null,
-    storage_account_id,
-    additional_properties=null,
-    description=null,
-    pipeline=null,
-    timeouts=null
+    timeouts=null,
+    pipeline=null
   ):: std.prune(a={
     name: name,
+    blob_path_ends_with: blob_path_ends_with,
+    events: events,
+    storage_account_id: storage_account_id,
+    blob_path_begins_with: blob_path_begins_with,
+    description: description,
+    activated: activated,
+    additional_properties: additional_properties,
     annotations: annotations,
     data_factory_id: data_factory_id,
-    blob_path_begins_with: blob_path_begins_with,
-    events: events,
-    activated: activated,
-    blob_path_ends_with: blob_path_ends_with,
     ignore_empty_blobs: ignore_empty_blobs,
-    storage_account_id: storage_account_id,
-    additional_properties: additional_properties,
-    description: description,
-    pipeline: pipeline,
     timeouts: timeouts,
+    pipeline: pipeline,
   }),
-  withAnnotations(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withBlobPathEndsWith(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_blob_event+: {
-        [resourceLabel]+: {
-          blob_path_ends_with: value,
+          name: value,
         },
       },
     },
@@ -86,29 +77,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
+  withActivated(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          additional_properties: value,
+          activated: value,
         },
       },
     },
   },
-  withBlobPathBeginsWith(resourceLabel, value):: {
+  withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          blob_path_begins_with: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_blob_event+: {
-        [resourceLabel]+: {
-          description: value,
+          annotations: value,
         },
       },
     },
@@ -122,20 +104,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withBlobPathEndsWith(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          name: value,
+          blob_path_ends_with: value,
         },
       },
     },
   },
-  withActivated(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          activated: value,
+          description: value,
         },
       },
     },
@@ -154,6 +136,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
           ignore_empty_blobs: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_blob_event+: {
+        [resourceLabel]+: {
+          additional_properties: value,
+        },
+      },
+    },
+  },
+  withBlobPathBeginsWith(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_blob_event+: {
+        [resourceLabel]+: {
+          blob_path_begins_with: value,
         },
       },
     },
@@ -205,15 +205,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

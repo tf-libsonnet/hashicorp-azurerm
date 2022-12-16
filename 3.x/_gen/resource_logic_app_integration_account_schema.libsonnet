@@ -19,22 +19,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    content,
-    file_name=null,
-    integration_account_name,
     metadata=null,
     name,
     resource_group_name,
+    content,
+    file_name=null,
+    integration_account_name,
     timeouts=null
   ):: std.prune(a={
-    content: content,
-    file_name: file_name,
-    integration_account_name: integration_account_name,
     metadata: metadata,
     name: name,
     resource_group_name: resource_group_name,
+    content: content,
+    file_name: file_name,
+    integration_account_name: integration_account_name,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_schema+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withContent(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_schema+: {
@@ -76,15 +85,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_logic_app_integration_account_schema+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_schema+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     body,
     container_id,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_function', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     body=body,
     container_id=container_id,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    body,
     container_id,
     name,
-    body,
     timeouts=null
   ):: std.prune(a={
+    body: body,
     container_id: container_id,
     name: name,
-    body: body,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_function+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withBody(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_function+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_sql_function+: {
         [resourceLabel]+: {
           container_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_function+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

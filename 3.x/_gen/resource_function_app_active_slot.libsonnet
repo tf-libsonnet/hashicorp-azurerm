@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     slot_id: slot_id,
     timeouts: timeouts,
   }),
-  withSlotId(resourceLabel, value):: {
-    resource+: {
-      azurerm_function_app_active_slot+: {
-        [resourceLabel]+: {
-          slot_id: value,
-        },
-      },
-    },
-  },
   withOverwriteNetworkConfig(resourceLabel, value):: {
     resource+: {
       azurerm_function_app_active_slot+: {
         [resourceLabel]+: {
           overwrite_network_config: value,
+        },
+      },
+    },
+  },
+  withSlotId(resourceLabel, value):: {
+    resource+: {
+      azurerm_function_app_active_slot+: {
+        [resourceLabel]+: {
+          slot_id: value,
         },
       },
     },
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

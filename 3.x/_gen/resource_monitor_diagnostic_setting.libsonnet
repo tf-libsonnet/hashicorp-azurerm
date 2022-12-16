@@ -2,54 +2,54 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    target_resource_id,
-    eventhub_authorization_rule_id=null,
     log_analytics_workspace_id=null,
-    log_analytics_destination_type=null,
-    name,
-    eventhub_name=null,
     partner_solution_id=null,
     storage_account_id=null,
+    eventhub_authorization_rule_id=null,
+    eventhub_name=null,
+    name,
+    target_resource_id,
+    log_analytics_destination_type=null,
+    metric=null,
+    timeouts=null,
+    log=null
+  ):: tf.withResource(type='azurerm_monitor_diagnostic_setting', label=resourceLabel, attrs=self.newAttrs(
+    log_analytics_workspace_id=log_analytics_workspace_id,
+    partner_solution_id=partner_solution_id,
+    storage_account_id=storage_account_id,
+    eventhub_authorization_rule_id=eventhub_authorization_rule_id,
+    eventhub_name=eventhub_name,
+    name=name,
+    target_resource_id=target_resource_id,
+    log_analytics_destination_type=log_analytics_destination_type,
+    metric=metric,
+    timeouts=timeouts,
+    log=log
+  )),
+  newAttrs(
+    log_analytics_destination_type=null,
+    log_analytics_workspace_id=null,
+    partner_solution_id=null,
+    storage_account_id=null,
+    eventhub_authorization_rule_id=null,
+    eventhub_name=null,
+    name,
+    target_resource_id,
     timeouts=null,
     log=null,
     metric=null
-  ):: tf.withResource(type='azurerm_monitor_diagnostic_setting', label=resourceLabel, attrs=self.newAttrs(
-    target_resource_id=target_resource_id,
-    eventhub_authorization_rule_id=eventhub_authorization_rule_id,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    log_analytics_destination_type=log_analytics_destination_type,
-    name=name,
-    eventhub_name=eventhub_name,
-    partner_solution_id=partner_solution_id,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts,
-    log=log,
-    metric=metric
-  )),
-  newAttrs(
-    partner_solution_id=null,
-    storage_account_id=null,
-    target_resource_id,
-    eventhub_name=null,
-    log_analytics_destination_type=null,
-    name,
-    eventhub_authorization_rule_id=null,
-    log_analytics_workspace_id=null,
-    log=null,
-    metric=null,
-    timeouts=null
   ):: std.prune(a={
+    log_analytics_destination_type: log_analytics_destination_type,
+    log_analytics_workspace_id: log_analytics_workspace_id,
     partner_solution_id: partner_solution_id,
     storage_account_id: storage_account_id,
-    target_resource_id: target_resource_id,
-    eventhub_name: eventhub_name,
-    log_analytics_destination_type: log_analytics_destination_type,
-    name: name,
     eventhub_authorization_rule_id: eventhub_authorization_rule_id,
-    log_analytics_workspace_id: log_analytics_workspace_id,
+    eventhub_name: eventhub_name,
+    name: name,
+    target_resource_id: target_resource_id,
+    timeouts: timeouts,
     log: log,
     metric: metric,
-    timeouts: timeouts,
   }),
   withEventhubAuthorizationRuleId(resourceLabel, value):: {
     resource+: {
@@ -60,11 +60,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogAnalyticsDestinationType(resourceLabel, value):: {
+  withEventhubName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_diagnostic_setting+: {
         [resourceLabel]+: {
-          log_analytics_destination_type: value,
+          eventhub_name: value,
         },
       },
     },
@@ -78,11 +78,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEventhubName(resourceLabel, value):: {
+  withTargetResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_diagnostic_setting+: {
         [resourceLabel]+: {
-          eventhub_name: value,
+          target_resource_id: value,
+        },
+      },
+    },
+  },
+  withLogAnalyticsDestinationType(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_diagnostic_setting+: {
+        [resourceLabel]+: {
+          log_analytics_destination_type: value,
         },
       },
     },
@@ -114,53 +123,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_diagnostic_setting+: {
-        [resourceLabel]+: {
-          target_resource_id: value,
-        },
-      },
-    },
-  },
-  withMetric(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_diagnostic_setting+: {
-        [resourceLabel]+: {
-          metric: value,
-        },
-      },
-    },
-  },
-  withMetricMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_diagnostic_setting+: {
-        [resourceLabel]+: {
-          metric+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  metric:: {
-    new(
-      category,
-      enabled=null,
-      retention_policy=null
-    ):: std.prune(a={
-      category: category,
-      enabled: enabled,
-      retention_policy: retention_policy,
-    }),
-    retention_policy:: {
-      new(
-        days=null,
-        enabled
-      ):: std.prune(a={
-        days: days,
-        enabled: enabled,
-      }),
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_diagnostic_setting+: {
@@ -181,15 +143,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
   withLog(resourceLabel, value):: {
@@ -219,6 +181,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       category: category,
       category_group: category_group,
+      enabled: enabled,
+      retention_policy: retention_policy,
+    }),
+    retention_policy:: {
+      new(
+        days=null,
+        enabled
+      ):: std.prune(a={
+        days: days,
+        enabled: enabled,
+      }),
+    },
+  },
+  withMetric(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_diagnostic_setting+: {
+        [resourceLabel]+: {
+          metric: value,
+        },
+      },
+    },
+  },
+  withMetricMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_diagnostic_setting+: {
+        [resourceLabel]+: {
+          metric+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  metric:: {
+    new(
+      category,
+      enabled=null,
+      retention_policy=null
+    ):: std.prune(a={
+      category: category,
       enabled: enabled,
       retention_policy: retention_policy,
     }),

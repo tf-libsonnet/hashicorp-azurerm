@@ -2,101 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    integration_runtime_name=null,
-    name,
     parameters=null,
+    additional_properties=null,
     annotations=null,
     connection_string,
-    description=null,
-    additional_properties=null,
     data_factory_id,
+    description=null,
+    integration_runtime_name=null,
+    name,
     key_vault_password=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_synapse', label=resourceLabel, attrs=self.newAttrs(
-    integration_runtime_name=integration_runtime_name,
-    name=name,
     parameters=parameters,
+    additional_properties=additional_properties,
     annotations=annotations,
     connection_string=connection_string,
-    description=description,
-    additional_properties=additional_properties,
     data_factory_id=data_factory_id,
+    description=description,
+    integration_runtime_name=integration_runtime_name,
+    name=name,
     key_vault_password=key_vault_password,
     timeouts=timeouts
   )),
   newAttrs(
-    data_factory_id,
-    integration_runtime_name=null,
-    name,
-    parameters=null,
-    annotations=null,
-    connection_string,
-    description=null,
     additional_properties=null,
+    annotations=null,
+    parameters=null,
+    name,
+    connection_string,
+    data_factory_id,
+    description=null,
+    integration_runtime_name=null,
     key_vault_password=null,
     timeouts=null
   ):: std.prune(a={
-    data_factory_id: data_factory_id,
-    integration_runtime_name: integration_runtime_name,
-    name: name,
-    parameters: parameters,
-    annotations: annotations,
-    connection_string: connection_string,
-    description: description,
     additional_properties: additional_properties,
+    annotations: annotations,
+    parameters: parameters,
+    name: name,
+    connection_string: connection_string,
+    data_factory_id: data_factory_id,
+    description: description,
+    integration_runtime_name: integration_runtime_name,
     key_vault_password: key_vault_password,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
           additional_properties: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          parameters: value,
         },
       },
     },
@@ -110,6 +65,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withConnectionString(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
@@ -119,36 +92,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
-          timeouts: value,
+          data_factory_id: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          description: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
   },
   withKeyVaultPassword(resourceLabel, value):: {
     resource+: {
@@ -175,6 +144,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       linked_service_name: linked_service_name,
       secret_name: secret_name,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

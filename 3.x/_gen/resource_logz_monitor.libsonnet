@@ -2,51 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    company_name=null,
     enterprise_app_id=null,
     location,
+    company_name=null,
     resource_group_name,
+    name,
     tags=null,
     enabled=null,
-    name,
+    user=null,
     plan=null,
-    timeouts=null,
-    user=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_logz_monitor', label=resourceLabel, attrs=self.newAttrs(
-    company_name=company_name,
     enterprise_app_id=enterprise_app_id,
     location=location,
+    company_name=company_name,
     resource_group_name=resource_group_name,
+    name=name,
     tags=tags,
     enabled=enabled,
-    name=name,
+    user=user,
     plan=plan,
-    timeouts=timeouts,
-    user=user
+    timeouts=timeouts
   )),
   newAttrs(
+    enterprise_app_id=null,
+    company_name=null,
     resource_group_name,
+    location,
+    name,
     tags=null,
     enabled=null,
-    enterprise_app_id=null,
-    location,
-    company_name=null,
-    name,
     plan=null,
     timeouts=null,
     user=null
   ):: std.prune(a={
+    enterprise_app_id: enterprise_app_id,
+    company_name: company_name,
     resource_group_name: resource_group_name,
+    location: location,
+    name: name,
     tags: tags,
     enabled: enabled,
-    enterprise_app_id: enterprise_app_id,
-    location: location,
-    company_name: company_name,
-    name: name,
     plan: plan,
     timeouts: timeouts,
     user: user,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_monitor+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withCompanyName(resourceLabel, value):: {
     resource+: {
       azurerm_logz_monitor+: {
@@ -56,11 +65,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withEnterpriseAppId(resourceLabel, value):: {
     resource+: {
       azurerm_logz_monitor+: {
         [resourceLabel]+: {
-          name: value,
+          enterprise_app_id: value,
         },
       },
     },
@@ -74,11 +83,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_logz_monitor+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          name: value,
         },
       },
     },
@@ -97,15 +106,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_logz_monitor+: {
         [resourceLabel]+: {
           enabled: value,
-        },
-      },
-    },
-  },
-  withEnterpriseAppId(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_monitor+: {
-        [resourceLabel]+: {
-          enterprise_app_id: value,
         },
       },
     },
@@ -130,15 +130,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   plan:: {
     new(
+      billing_cycle,
       effective_date,
       plan_id=null,
-      usage_type,
-      billing_cycle
+      usage_type
     ):: std.prune(a={
+      billing_cycle: billing_cycle,
       effective_date: effective_date,
       plan_id: plan_id,
       usage_type: usage_type,
-      billing_cycle: billing_cycle,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
   withUser(resourceLabel, value):: {

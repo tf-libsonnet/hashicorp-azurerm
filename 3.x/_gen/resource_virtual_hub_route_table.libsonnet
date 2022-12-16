@@ -2,28 +2,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    virtual_hub_id,
     labels=null,
     name,
+    virtual_hub_id,
     route=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_hub_route_table', label=resourceLabel, attrs=self.newAttrs(
-    virtual_hub_id=virtual_hub_id,
     labels=labels,
     name=name,
+    virtual_hub_id=virtual_hub_id,
     route=route,
     timeouts=timeouts
   )),
   newAttrs(
-    labels=null,
     name,
     virtual_hub_id,
+    labels=null,
     route=null,
     timeouts=null
   ):: std.prune(a={
-    labels: labels,
     name: name,
     virtual_hub_id: virtual_hub_id,
+    labels: labels,
     route: route,
     timeouts: timeouts,
   }),
@@ -53,37 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_route_table+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_route_table+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
   withRoute(resourceLabel, value):: {
     resource+: {
@@ -116,6 +85,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       name: name,
       next_hop: next_hop,
       next_hop_type: next_hop_type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_route_table+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_route_table+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

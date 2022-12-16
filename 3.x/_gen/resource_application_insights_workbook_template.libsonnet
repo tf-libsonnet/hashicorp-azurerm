@@ -2,51 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    priority=null,
     resource_group_name,
-    author=null,
-    name,
     tags=null,
-    template_data,
+    author=null,
     localized=null,
     location,
+    priority=null,
+    template_data,
+    name,
     galleries=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_workbook_template', label=resourceLabel, attrs=self.newAttrs(
-    priority=priority,
     resource_group_name=resource_group_name,
-    author=author,
-    name=name,
     tags=tags,
-    template_data=template_data,
+    author=author,
     localized=localized,
     location=location,
+    priority=priority,
+    template_data=template_data,
+    name=name,
     galleries=galleries,
     timeouts=timeouts
   )),
   newAttrs(
-    localized=null,
+    author=null,
+    template_data,
     location,
     priority=null,
+    localized=null,
+    name,
     resource_group_name,
     tags=null,
-    author=null,
-    name,
-    template_data,
-    galleries=null,
-    timeouts=null
+    timeouts=null,
+    galleries=null
   ):: std.prune(a={
-    localized: localized,
+    author: author,
+    template_data: template_data,
     location: location,
     priority: priority,
+    localized: localized,
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    author: author,
-    name: name,
-    template_data: template_data,
-    galleries: galleries,
     timeouts: timeouts,
+    galleries: galleries,
   }),
+  withTemplateData(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          template_data: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
@@ -56,20 +65,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPriority(resourceLabel, value):: {
+  withLocalized(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
-          priority: value,
-        },
-      },
-    },
-  },
-  withAuthor(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          author: value,
+          localized: value,
         },
       },
     },
@@ -101,20 +101,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTemplateData(resourceLabel, value):: {
+  withAuthor(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
-          template_data: value,
+          author: value,
         },
       },
     },
   },
-  withLocalized(resourceLabel, value):: {
+  withPriority(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
-          localized: value,
+          priority: value,
         },
       },
     },
@@ -139,15 +139,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
   withGalleries(resourceLabel, value):: {
@@ -170,17 +170,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   galleries:: {
     new(
-      category,
       name,
       order=null,
       resource_type=null,
-      type=null
+      type=null,
+      category
     ):: std.prune(a={
-      category: category,
       name: name,
       order: order,
       resource_type: resource_type,
       type: type,
+      category: category,
     }),
   },
 }

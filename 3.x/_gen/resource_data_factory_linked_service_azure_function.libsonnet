@@ -3,90 +3,54 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     integration_runtime_name=null,
-    url,
+    additional_properties=null,
     key=null,
     name,
     parameters=null,
-    additional_properties=null,
     annotations=null,
     data_factory_id,
+    url,
     description=null,
-    timeouts=null,
-    key_vault_key=null
+    key_vault_key=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_function', label=resourceLabel, attrs=self.newAttrs(
     integration_runtime_name=integration_runtime_name,
-    url=url,
+    additional_properties=additional_properties,
     key=key,
     name=name,
     parameters=parameters,
-    additional_properties=additional_properties,
     annotations=annotations,
     data_factory_id=data_factory_id,
+    url=url,
     description=description,
-    timeouts=timeouts,
-    key_vault_key=key_vault_key
+    key_vault_key=key_vault_key,
+    timeouts=timeouts
   )),
   newAttrs(
-    integration_runtime_name=null,
-    data_factory_id,
+    annotations=null,
     description=null,
+    integration_runtime_name=null,
+    parameters=null,
+    data_factory_id,
+    additional_properties=null,
     key=null,
     name,
-    parameters=null,
     url,
-    additional_properties=null,
-    annotations=null,
     key_vault_key=null,
     timeouts=null
   ):: std.prune(a={
-    integration_runtime_name: integration_runtime_name,
-    data_factory_id: data_factory_id,
+    annotations: annotations,
     description: description,
+    integration_runtime_name: integration_runtime_name,
+    parameters: parameters,
+    data_factory_id: data_factory_id,
+    additional_properties: additional_properties,
     key: key,
     name: name,
-    parameters: parameters,
     url: url,
-    additional_properties: additional_properties,
-    annotations: annotations,
     key_vault_key: key_vault_key,
     timeouts: timeouts,
   }),
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_function+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_function+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_function+: {
-        [resourceLabel]+: {
-          additional_properties: value,
-        },
-      },
-    },
-  },
-  withKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_function+: {
-        [resourceLabel]+: {
-          key: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_function+: {
@@ -101,6 +65,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_azure_function+: {
         [resourceLabel]+: {
           url: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_function+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_function+: {
+        [resourceLabel]+: {
+          key: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_function+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -123,45 +114,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withIntegrationRuntimeName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_function+: {
         [resourceLabel]+: {
-          description: value,
+          integration_runtime_name: value,
         },
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_function+: {
         [resourceLabel]+: {
-          timeouts: value,
+          additional_properties: value,
         },
       },
     },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_function+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withKeyVaultKey(resourceLabel, value):: {
     resource+: {
@@ -188,6 +157,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       linked_service_name: linked_service_name,
       secret_name: secret_name,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_function+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_function+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

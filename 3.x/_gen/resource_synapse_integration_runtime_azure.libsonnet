@@ -21,22 +21,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    location,
     name,
     synapse_workspace_id,
     time_to_live_min=null,
     compute_type=null,
     core_count=null,
     description=null,
-    location,
     timeouts=null
   ):: std.prune(a={
+    location: location,
     name: name,
     synapse_workspace_id: synapse_workspace_id,
     time_to_live_min: time_to_live_min,
     compute_type: compute_type,
     core_count: core_count,
     description: description,
-    location: location,
     timeouts: timeouts,
   }),
   withSynapseWorkspaceId(resourceLabel, value):: {

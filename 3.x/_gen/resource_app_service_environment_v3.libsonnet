@@ -3,55 +3,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     dedicated_host_count=null,
-    name,
-    resource_group_name,
     subnet_id,
-    internal_load_balancing_mode=null,
-    zone_redundant=null,
     tags=null,
     allow_new_private_endpoint_connections=null,
+    resource_group_name,
+    zone_redundant=null,
+    internal_load_balancing_mode=null,
+    name,
     cluster_setting=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_environment_v3', label=resourceLabel, attrs=self.newAttrs(
     dedicated_host_count=dedicated_host_count,
-    name=name,
-    resource_group_name=resource_group_name,
     subnet_id=subnet_id,
-    internal_load_balancing_mode=internal_load_balancing_mode,
-    zone_redundant=zone_redundant,
     tags=tags,
     allow_new_private_endpoint_connections=allow_new_private_endpoint_connections,
+    resource_group_name=resource_group_name,
+    zone_redundant=zone_redundant,
+    internal_load_balancing_mode=internal_load_balancing_mode,
+    name=name,
     cluster_setting=cluster_setting,
     timeouts=timeouts
   )),
   newAttrs(
     zone_redundant=null,
-    allow_new_private_endpoint_connections=null,
     dedicated_host_count=null,
-    tags=null,
-    name,
-    resource_group_name,
     internal_load_balancing_mode=null,
+    name,
+    allow_new_private_endpoint_connections=null,
     subnet_id,
-    timeouts=null,
-    cluster_setting=null
+    tags=null,
+    resource_group_name,
+    cluster_setting=null,
+    timeouts=null
   ):: std.prune(a={
     zone_redundant: zone_redundant,
-    allow_new_private_endpoint_connections: allow_new_private_endpoint_connections,
     dedicated_host_count: dedicated_host_count,
-    tags: tags,
-    name: name,
-    resource_group_name: resource_group_name,
     internal_load_balancing_mode: internal_load_balancing_mode,
+    name: name,
+    allow_new_private_endpoint_connections: allow_new_private_endpoint_connections,
     subnet_id: subnet_id,
-    timeouts: timeouts,
+    tags: tags,
+    resource_group_name: resource_group_name,
     cluster_setting: cluster_setting,
+    timeouts: timeouts,
   }),
-  withZoneRedundant(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          zone_redundant: value,
+          tags: value,
         },
       },
     },
@@ -65,20 +65,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDedicatedHostCount(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          dedicated_host_count: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withZoneRedundant(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          tags: value,
+          zone_redundant: value,
+        },
+      },
+    },
+  },
+  withInternalLoadBalancingMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_environment_v3+: {
+        [resourceLabel]+: {
+          internal_load_balancing_mode: value,
         },
       },
     },
@@ -92,20 +101,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withDedicatedHostCount(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment_v3+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withInternalLoadBalancingMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_environment_v3+: {
-        [resourceLabel]+: {
-          internal_load_balancing_mode: value,
+          dedicated_host_count: value,
         },
       },
     },
@@ -139,15 +139,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
   withClusterSetting(resourceLabel, value):: {
@@ -170,11 +170,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   cluster_setting:: {
     new(
-      name,
-      value
+      value,
+      name
     ):: std.prune(a={
-      name: name,
       value: value,
+      name: name,
     }),
   },
 }

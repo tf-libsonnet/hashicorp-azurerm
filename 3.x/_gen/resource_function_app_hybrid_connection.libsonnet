@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    function_app_id,
     port,
+    relay_id,
+    function_app_id,
     send_key_name=null,
     hostname,
-    relay_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_function_app_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(
-    function_app_id=function_app_id,
     port=port,
+    relay_id=relay_id,
+    function_app_id=function_app_id,
     send_key_name=send_key_name,
     hostname=hostname,
-    relay_id=relay_id,
     timeouts=timeouts
   )),
   newAttrs(
+    hostname,
     send_key_name=null,
     function_app_id,
-    relay_id,
-    hostname,
     port,
+    relay_id,
     timeouts=null
   ):: std.prune(a={
+    hostname: hostname,
     send_key_name: send_key_name,
     function_app_id: function_app_id,
-    relay_id: relay_id,
-    hostname: hostname,
     port: port,
+    relay_id: relay_id,
     timeouts: timeouts,
   }),
+  withRelayId(resourceLabel, value):: {
+    resource+: {
+      azurerm_function_app_hybrid_connection+: {
+        [resourceLabel]+: {
+          relay_id: value,
+        },
+      },
+    },
+  },
   withHostname(resourceLabel, value):: {
     resource+: {
       azurerm_function_app_hybrid_connection+: {
@@ -40,11 +49,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRelayId(resourceLabel, value):: {
+  withSendKeyName(resourceLabel, value):: {
     resource+: {
       azurerm_function_app_hybrid_connection+: {
         [resourceLabel]+: {
-          relay_id: value,
+          send_key_name: value,
         },
       },
     },
@@ -63,15 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_function_app_hybrid_connection+: {
         [resourceLabel]+: {
           port: value,
-        },
-      },
-    },
-  },
-  withSendKeyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_function_app_hybrid_connection+: {
-        [resourceLabel]+: {
-          send_key_name: value,
         },
       },
     },
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

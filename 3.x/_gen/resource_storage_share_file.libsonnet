@@ -2,101 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    path=null,
-    content_disposition=null,
-    content_md5=null,
-    content_type=null,
-    storage_share_id,
-    content_encoding=null,
-    metadata=null,
     name,
+    storage_share_id,
+    content_type=null,
+    content_md5=null,
+    path=null,
     source=null,
+    metadata=null,
+    content_encoding=null,
+    content_disposition=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_share_file', label=resourceLabel, attrs=self.newAttrs(
-    path=path,
-    content_disposition=content_disposition,
-    content_md5=content_md5,
-    content_type=content_type,
-    storage_share_id=storage_share_id,
-    content_encoding=content_encoding,
-    metadata=metadata,
     name=name,
+    storage_share_id=storage_share_id,
+    content_type=content_type,
+    content_md5=content_md5,
+    path=path,
     source=source,
+    metadata=metadata,
+    content_encoding=content_encoding,
+    content_disposition=content_disposition,
     timeouts=timeouts
   )),
   newAttrs(
-    content_disposition=null,
-    source=null,
-    metadata=null,
     path=null,
-    content_encoding=null,
     storage_share_id,
-    content_type=null,
     content_md5=null,
     name,
+    content_disposition=null,
+    content_encoding=null,
+    source=null,
+    content_type=null,
+    metadata=null,
     timeouts=null
   ):: std.prune(a={
-    content_disposition: content_disposition,
-    source: source,
-    metadata: metadata,
     path: path,
-    content_encoding: content_encoding,
     storage_share_id: storage_share_id,
-    content_type: content_type,
     content_md5: content_md5,
     name: name,
+    content_disposition: content_disposition,
+    content_encoding: content_encoding,
+    source: source,
+    content_type: content_type,
+    metadata: metadata,
     timeouts: timeouts,
   }),
-  withPath(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share_file+: {
-        [resourceLabel]+: {
-          path: value,
-        },
-      },
-    },
-  },
-  withStorageShareId(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share_file+: {
-        [resourceLabel]+: {
-          storage_share_id: value,
-        },
-      },
-    },
-  },
-  withContentEncoding(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share_file+: {
-        [resourceLabel]+: {
-          content_encoding: value,
-        },
-      },
-    },
-  },
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share_file+: {
-        [resourceLabel]+: {
-          metadata: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_storage_share_file+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withContentDisposition(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_share_file+: {
-        [resourceLabel]+: {
-          content_disposition: value,
         },
       },
     },
@@ -110,6 +65,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share_file+: {
+        [resourceLabel]+: {
+          metadata: value,
+        },
+      },
+    },
+  },
+  withStorageShareId(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share_file+: {
+        [resourceLabel]+: {
+          storage_share_id: value,
+        },
+      },
+    },
+  },
   withSource(resourceLabel, value):: {
     resource+: {
       azurerm_storage_share_file+: {
@@ -119,11 +92,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withContentDisposition(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share_file+: {
+        [resourceLabel]+: {
+          content_disposition: value,
+        },
+      },
+    },
+  },
+  withContentEncoding(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share_file+: {
+        [resourceLabel]+: {
+          content_encoding: value,
+        },
+      },
+    },
+  },
   withContentMd5(resourceLabel, value):: {
     resource+: {
       azurerm_storage_share_file+: {
         [resourceLabel]+: {
           content_md5: value,
+        },
+      },
+    },
+  },
+  withPath(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_share_file+: {
+        [resourceLabel]+: {
+          path: value,
         },
       },
     },

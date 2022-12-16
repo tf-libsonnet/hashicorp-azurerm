@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet_id: subnet_id,
     timeouts: timeouts,
   }),
-  withNatGatewayId(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet_nat_gateway_association+: {
-        [resourceLabel]+: {
-          nat_gateway_id: value,
-        },
-      },
-    },
-  },
   withSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_subnet_nat_gateway_association+: {
         [resourceLabel]+: {
           subnet_id: value,
+        },
+      },
+    },
+  },
+  withNatGatewayId(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet_nat_gateway_association+: {
+        [resourceLabel]+: {
+          nat_gateway_id: value,
         },
       },
     },

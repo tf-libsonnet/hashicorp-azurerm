@@ -3,39 +3,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     account_name,
-    security_style=null,
+    name,
     pool_name,
     resource_group_name,
-    name,
+    security_style=null,
     timeouts=null
   ):: tf.withData(type='azurerm_netapp_volume', label=dataSrcLabel, attrs=self.newAttrs(
     account_name=account_name,
-    security_style=security_style,
+    name=name,
     pool_name=pool_name,
     resource_group_name=resource_group_name,
-    name=name,
+    security_style=security_style,
     timeouts=timeouts
   )),
   newAttrs(
-    account_name,
-    security_style=null,
-    pool_name,
     name,
+    pool_name,
     resource_group_name,
+    security_style=null,
+    account_name,
     timeouts=null
   ):: std.prune(a={
-    account_name: account_name,
-    security_style: security_style,
-    pool_name: pool_name,
     name: name,
+    pool_name: pool_name,
     resource_group_name: resource_group_name,
+    security_style: security_style,
+    account_name: account_name,
     timeouts: timeouts,
   }),
-  withAccountName(dataSrcLabel, value):: {
+  withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_netapp_volume+: {
         [dataSrcLabel]+: {
-          account_name: value,
+          resource_group_name: value,
         },
       },
     },
@@ -49,11 +49,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPoolName(dataSrcLabel, value):: {
+  withAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_netapp_volume+: {
         [dataSrcLabel]+: {
-          pool_name: value,
+          account_name: value,
         },
       },
     },
@@ -67,11 +67,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(dataSrcLabel, value):: {
+  withPoolName(dataSrcLabel, value):: {
     data+: {
       azurerm_netapp_volume+: {
         [dataSrcLabel]+: {
-          resource_group_name: value,
+          pool_name: value,
         },
       },
     },

@@ -2,60 +2,114 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    version_id,
-    lock_mode=null,
-    name,
-    parameter_values=null,
-    location,
     target_subscription_id,
-    resource_groups=null,
-    lock_exclude_actions=null,
     lock_exclude_principals=null,
+    parameter_values=null,
+    lock_mode=null,
+    lock_exclude_actions=null,
+    resource_groups=null,
+    version_id,
+    location,
+    name,
     timeouts=null,
     identity=null
   ):: tf.withResource(type='azurerm_blueprint_assignment', label=resourceLabel, attrs=self.newAttrs(
-    version_id=version_id,
-    lock_mode=lock_mode,
-    name=name,
-    parameter_values=parameter_values,
-    location=location,
     target_subscription_id=target_subscription_id,
-    resource_groups=resource_groups,
-    lock_exclude_actions=lock_exclude_actions,
     lock_exclude_principals=lock_exclude_principals,
+    parameter_values=parameter_values,
+    lock_mode=lock_mode,
+    lock_exclude_actions=lock_exclude_actions,
+    resource_groups=resource_groups,
+    version_id=version_id,
+    location=location,
+    name=name,
     timeouts=timeouts,
     identity=identity
   )),
   newAttrs(
+    lock_mode=null,
     version_id,
-    lock_exclude_actions=null,
-    location,
     target_subscription_id,
+    lock_exclude_actions=null,
     resource_groups=null,
     lock_exclude_principals=null,
-    lock_mode=null,
-    name,
     parameter_values=null,
+    name,
+    location,
     identity=null,
     timeouts=null
   ):: std.prune(a={
+    lock_mode: lock_mode,
     version_id: version_id,
-    lock_exclude_actions: lock_exclude_actions,
-    location: location,
     target_subscription_id: target_subscription_id,
+    lock_exclude_actions: lock_exclude_actions,
     resource_groups: resource_groups,
     lock_exclude_principals: lock_exclude_principals,
-    lock_mode: lock_mode,
-    name: name,
     parameter_values: parameter_values,
+    name: name,
+    location: location,
     identity: identity,
     timeouts: timeouts,
   }),
+  withLockExcludePrincipals(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          lock_exclude_principals: value,
+        },
+      },
+    },
+  },
+  withParameterValues(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          parameter_values: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withLockExcludeActions(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          lock_exclude_actions: value,
+        },
+      },
+    },
+  },
+  withVersionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          version_id: value,
+        },
+      },
+    },
+  },
+  withResourceGroups(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          resource_groups: value,
+        },
+      },
+    },
+  },
+  withLockMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_blueprint_assignment+: {
+        [resourceLabel]+: {
+          lock_mode: value,
         },
       },
     },
@@ -78,59 +132,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameterValues(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
-          parameter_values: value,
+          timeouts: value,
         },
       },
     },
   },
-  withLockExcludeActions(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_blueprint_assignment+: {
         [resourceLabel]+: {
-          lock_exclude_actions: value,
+          timeouts+: value,
         },
       },
     },
   },
-  withResourceGroups(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          resource_groups: value,
-        },
-      },
-    },
-  },
-  withLockExcludePrincipals(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          lock_exclude_principals: value,
-        },
-      },
-    },
-  },
-  withLockMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          lock_mode: value,
-        },
-      },
-    },
-  },
-  withVersionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          version_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
+    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -157,37 +188,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       identity_ids: identity_ids,
       type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_blueprint_assignment+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
     }),
   },
 }

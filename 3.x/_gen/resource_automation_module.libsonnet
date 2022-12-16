@@ -2,15 +2,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    automation_account_name,
     name,
     resource_group_name,
-    automation_account_name,
     module_link=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_module', label=resourceLabel, attrs=self.newAttrs(
+    automation_account_name=automation_account_name,
     name=name,
     resource_group_name=resource_group_name,
-    automation_account_name=automation_account_name,
     module_link=module_link,
     timeouts=timeouts
   )),
@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     module_link: module_link,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_module+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_module+: {
@@ -41,15 +50,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_automation_module+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_module+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

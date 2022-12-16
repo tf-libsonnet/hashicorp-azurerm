@@ -31,6 +31,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     start_ip: start_ip,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_firewall_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withStartIp(resourceLabel, value):: {
     resource+: {
       azurerm_redis_firewall_rule+: {
@@ -63,15 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_redis_firewall_rule+: {
         [resourceLabel]+: {
           redis_cache_name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_firewall_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

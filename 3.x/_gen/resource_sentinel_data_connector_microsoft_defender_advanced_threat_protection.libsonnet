@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tenant_id: tenant_id,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTenantId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection+: {
         [resourceLabel]+: {
           log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     profile_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_cdn_frontdoor_custom_domain', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     profile_name=profile_name,
     resource_group_name=resource_group_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     name,
     profile_name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     name: name,
     profile_name: profile_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withProfileName(dataSrcLabel, value):: {

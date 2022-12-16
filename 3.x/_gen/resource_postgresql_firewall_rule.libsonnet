@@ -17,29 +17,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    server_name,
-    start_ip_address,
     end_ip_address,
     name,
     resource_group_name,
+    server_name,
+    start_ip_address,
     timeouts=null
   ):: std.prune(a={
-    server_name: server_name,
-    start_ip_address: start_ip_address,
     end_ip_address: end_ip_address,
     name: name,
     resource_group_name: resource_group_name,
+    server_name: server_name,
+    start_ip_address: start_ip_address,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_firewall_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withServerName(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_firewall_rule+: {
@@ -72,6 +63,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_postgresql_firewall_rule+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_firewall_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

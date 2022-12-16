@@ -2,88 +2,115 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
+    edge_zone=null,
+    default_local_network_gateway_id=null,
     enable_bgp=null,
+    vpn_type=null,
+    resource_group_name,
     name,
     type,
     active_active=null,
-    location,
-    resource_group_name,
-    vpn_type=null,
-    default_local_network_gateway_id=null,
-    private_ip_address_enabled=null,
-    sku,
     generation=null,
-    edge_zone=null,
-    vpn_client_configuration=null,
-    bgp_settings=null,
-    custom_route=null,
-    ip_configuration=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_network_gateway', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    enable_bgp=enable_bgp,
-    name=name,
-    type=type,
-    active_active=active_active,
-    location=location,
-    resource_group_name=resource_group_name,
-    vpn_type=vpn_type,
-    default_local_network_gateway_id=default_local_network_gateway_id,
-    private_ip_address_enabled=private_ip_address_enabled,
-    sku=sku,
-    generation=generation,
-    edge_zone=edge_zone,
-    vpn_client_configuration=vpn_client_configuration,
-    bgp_settings=bgp_settings,
-    custom_route=custom_route,
-    ip_configuration=ip_configuration,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    resource_group_name,
-    private_ip_address_enabled=null,
-    name,
-    edge_zone=null,
     tags=null,
-    default_local_network_gateway_id=null,
-    enable_bgp=null,
-    active_active=null,
-    generation=null,
+    private_ip_address_enabled=null,
     sku,
-    type,
     location,
-    vpn_type=null,
     timeouts=null,
     vpn_client_configuration=null,
     bgp_settings=null,
     custom_route=null,
     ip_configuration=null
+  ):: tf.withResource(type='azurerm_virtual_network_gateway', label=resourceLabel, attrs=self.newAttrs(
+    edge_zone=edge_zone,
+    default_local_network_gateway_id=default_local_network_gateway_id,
+    enable_bgp=enable_bgp,
+    vpn_type=vpn_type,
+    resource_group_name=resource_group_name,
+    name=name,
+    type=type,
+    active_active=active_active,
+    generation=generation,
+    tags=tags,
+    private_ip_address_enabled=private_ip_address_enabled,
+    sku=sku,
+    location=location,
+    timeouts=timeouts,
+    vpn_client_configuration=vpn_client_configuration,
+    bgp_settings=bgp_settings,
+    custom_route=custom_route,
+    ip_configuration=ip_configuration
+  )),
+  newAttrs(
+    edge_zone=null,
+    enable_bgp=null,
+    vpn_type=null,
+    private_ip_address_enabled=null,
+    resource_group_name,
+    name,
+    type,
+    default_local_network_gateway_id=null,
+    tags=null,
+    sku,
+    active_active=null,
+    generation=null,
+    location,
+    ip_configuration=null,
+    timeouts=null,
+    vpn_client_configuration=null,
+    bgp_settings=null,
+    custom_route=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    private_ip_address_enabled: private_ip_address_enabled,
-    name: name,
     edge_zone: edge_zone,
-    tags: tags,
-    default_local_network_gateway_id: default_local_network_gateway_id,
     enable_bgp: enable_bgp,
+    vpn_type: vpn_type,
+    private_ip_address_enabled: private_ip_address_enabled,
+    resource_group_name: resource_group_name,
+    name: name,
+    type: type,
+    default_local_network_gateway_id: default_local_network_gateway_id,
+    tags: tags,
+    sku: sku,
     active_active: active_active,
     generation: generation,
-    sku: sku,
-    type: type,
     location: location,
-    vpn_type: vpn_type,
+    ip_configuration: ip_configuration,
     timeouts: timeouts,
     vpn_client_configuration: vpn_client_configuration,
     bgp_settings: bgp_settings,
     custom_route: custom_route,
-    ip_configuration: ip_configuration,
   }),
-  withGeneration(resourceLabel, value):: {
+  withActiveActive(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway+: {
         [resourceLabel]+: {
-          generation: value,
+          active_active: value,
+        },
+      },
+    },
+  },
+  withEdgeZone(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway+: {
+        [resourceLabel]+: {
+          edge_zone: value,
+        },
+      },
+    },
+  },
+  withVpnType(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway+: {
+        [resourceLabel]+: {
+          vpn_type: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -106,11 +133,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withGeneration(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway+: {
         [resourceLabel]+: {
-          tags: value,
+          generation: value,
         },
       },
     },
@@ -124,38 +151,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVpnType(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway+: {
         [resourceLabel]+: {
-          vpn_type: value,
-        },
-      },
-    },
-  },
-  withPrivateIpAddressEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway+: {
-        [resourceLabel]+: {
-          private_ip_address_enabled: value,
-        },
-      },
-    },
-  },
-  withActiveActive(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway+: {
-        [resourceLabel]+: {
-          active_active: value,
-        },
-      },
-    },
-  },
-  withEdgeZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway+: {
-        [resourceLabel]+: {
-          edge_zone: value,
+          tags: value,
         },
       },
     },
@@ -178,11 +178,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withPrivateIpAddressEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          private_ip_address_enabled: value,
         },
       },
     },
@@ -216,15 +216,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ip_configuration:: {
     new(
-      public_ip_address_id,
       subnet_id,
       name=null,
-      private_ip_address_allocation=null
+      private_ip_address_allocation=null,
+      public_ip_address_id
     ):: std.prune(a={
-      public_ip_address_id: public_ip_address_id,
       subnet_id: subnet_id,
       name: name,
       private_ip_address_allocation: private_ip_address_allocation,
+      public_ip_address_id: public_ip_address_id,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -247,15 +247,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
   withVpnClientConfiguration(resourceLabel, value):: {
@@ -278,44 +278,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   vpn_client_configuration:: {
     new(
+      aad_issuer=null,
+      aad_tenant=null,
+      address_space,
       radius_server_address=null,
       radius_server_secret=null,
       vpn_auth_types=null,
       vpn_client_protocols=null,
       aad_audience=null,
-      aad_issuer=null,
-      aad_tenant=null,
-      address_space,
       revoked_certificate=null,
       root_certificate=null
     ):: std.prune(a={
+      aad_issuer: aad_issuer,
+      aad_tenant: aad_tenant,
+      address_space: address_space,
       radius_server_address: radius_server_address,
       radius_server_secret: radius_server_secret,
       vpn_auth_types: vpn_auth_types,
       vpn_client_protocols: vpn_client_protocols,
       aad_audience: aad_audience,
-      aad_issuer: aad_issuer,
-      aad_tenant: aad_tenant,
-      address_space: address_space,
       revoked_certificate: revoked_certificate,
       root_certificate: root_certificate,
     }),
-    revoked_certificate:: {
-      new(
-        thumbprint,
-        name
-      ):: std.prune(a={
-        thumbprint: thumbprint,
-        name: name,
-      }),
-    },
     root_certificate:: {
       new(
-        public_cert_data,
-        name
+        name,
+        public_cert_data
       ):: std.prune(a={
-        public_cert_data: public_cert_data,
         name: name,
+        public_cert_data: public_cert_data,
+      }),
+    },
+    revoked_certificate:: {
+      new(
+        name,
+        thumbprint
+      ):: std.prune(a={
+        name: name,
+        thumbprint: thumbprint,
       }),
     },
   },
@@ -339,21 +339,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   bgp_settings:: {
     new(
-      peer_weight=null,
       asn=null,
+      peer_weight=null,
       peering_addresses=null
     ):: std.prune(a={
-      peer_weight: peer_weight,
       asn: asn,
+      peer_weight: peer_weight,
       peering_addresses: peering_addresses,
     }),
     peering_addresses:: {
       new(
-        ip_configuration_name=null,
-        apipa_addresses=null
+        apipa_addresses=null,
+        ip_configuration_name=null
       ):: std.prune(a={
-        ip_configuration_name: ip_configuration_name,
         apipa_addresses: apipa_addresses,
+        ip_configuration_name: ip_configuration_name,
       }),
     },
   },

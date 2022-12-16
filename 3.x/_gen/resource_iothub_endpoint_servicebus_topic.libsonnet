@@ -2,70 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    authentication_type=null,
-    iothub_id,
-    connection_string=null,
-    endpoint_uri=null,
-    entity_path=null,
     identity_id=null,
+    iothub_id,
     name,
     resource_group_name,
+    authentication_type=null,
+    entity_path=null,
+    connection_string=null,
+    endpoint_uri=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_endpoint_servicebus_topic', label=resourceLabel, attrs=self.newAttrs(
-    authentication_type=authentication_type,
-    iothub_id=iothub_id,
-    connection_string=connection_string,
-    endpoint_uri=endpoint_uri,
-    entity_path=entity_path,
     identity_id=identity_id,
+    iothub_id=iothub_id,
     name=name,
     resource_group_name=resource_group_name,
+    authentication_type=authentication_type,
+    entity_path=entity_path,
+    connection_string=connection_string,
+    endpoint_uri=endpoint_uri,
     timeouts=timeouts
   )),
   newAttrs(
-    iothub_id,
     identity_id=null,
+    iothub_id,
     name,
     resource_group_name,
-    authentication_type=null,
-    endpoint_uri=null,
     entity_path=null,
+    authentication_type=null,
     connection_string=null,
+    endpoint_uri=null,
     timeouts=null
   ):: std.prune(a={
-    iothub_id: iothub_id,
     identity_id: identity_id,
+    iothub_id: iothub_id,
     name: name,
     resource_group_name: resource_group_name,
-    authentication_type: authentication_type,
-    endpoint_uri: endpoint_uri,
     entity_path: entity_path,
+    authentication_type: authentication_type,
     connection_string: connection_string,
+    endpoint_uri: endpoint_uri,
     timeouts: timeouts,
   }),
-  withEndpointUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_servicebus_topic+: {
-        [resourceLabel]+: {
-          endpoint_uri: value,
-        },
-      },
-    },
-  },
-  withEntityPath(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_servicebus_topic+: {
-        [resourceLabel]+: {
-          entity_path: value,
-        },
-      },
-    },
-  },
   withIdentityId(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_servicebus_topic+: {
         [resourceLabel]+: {
           identity_id: value,
+        },
+      },
+    },
+  },
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_servicebus_topic+: {
+        [resourceLabel]+: {
+          iothub_id: value,
         },
       },
     },
@@ -88,6 +79,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAuthenticationType(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_servicebus_topic+: {
+        [resourceLabel]+: {
+          authentication_type: value,
+        },
+      },
+    },
+  },
   withConnectionString(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_servicebus_topic+: {
@@ -97,20 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIothubId(resourceLabel, value):: {
+  withEndpointUri(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_servicebus_topic+: {
         [resourceLabel]+: {
-          iothub_id: value,
+          endpoint_uri: value,
         },
       },
     },
   },
-  withAuthenticationType(resourceLabel, value):: {
+  withEntityPath(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_servicebus_topic+: {
         [resourceLabel]+: {
-          authentication_type: value,
+          entity_path: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

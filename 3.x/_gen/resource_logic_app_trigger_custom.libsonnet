@@ -13,25 +13,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     body,
     logic_app_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     body: body,
     logic_app_id: logic_app_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_trigger_custom+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withBody(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_trigger_custom+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_logic_app_trigger_custom+: {
         [resourceLabel]+: {
           logic_app_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_trigger_custom+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

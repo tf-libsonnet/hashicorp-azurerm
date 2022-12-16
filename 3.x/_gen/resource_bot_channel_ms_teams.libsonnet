@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    bot_name,
     calling_web_hook=null,
     enable_calling=null,
     location,
     resource_group_name,
+    bot_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_ms_teams', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
     calling_web_hook=calling_web_hook,
     enable_calling=enable_calling,
     location=location,
     resource_group_name=resource_group_name,
+    bot_name=bot_name,
     timeouts=timeouts
   )),
   newAttrs(
-    enable_calling=null,
-    location,
     resource_group_name,
     bot_name,
     calling_web_hook=null,
+    enable_calling=null,
+    location,
     timeouts=null
   ):: std.prune(a={
-    enable_calling: enable_calling,
-    location: location,
     resource_group_name: resource_group_name,
     bot_name: bot_name,
     calling_web_hook: calling_web_hook,
+    enable_calling: enable_calling,
+    location: location,
     timeouts: timeouts,
   }),
   withBotName(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

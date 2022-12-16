@@ -3,100 +3,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     namespace_id,
-    status=null,
-    dead_lettering_on_message_expiration=null,
-    requires_session=null,
     duplicate_detection_history_time_window=null,
     enable_express=null,
-    max_size_in_megabytes=null,
     max_message_size_in_kilobytes=null,
-    requires_duplicate_detection=null,
-    enable_batched_operations=null,
-    lock_duration=null,
     auto_delete_on_idle=null,
     default_message_ttl=null,
+    requires_session=null,
+    status=null,
     enable_partitioning=null,
-    forward_dead_lettered_messages_to=null,
     max_delivery_count=null,
-    forward_to=null,
     name,
+    lock_duration=null,
+    max_size_in_megabytes=null,
+    requires_duplicate_detection=null,
+    forward_dead_lettered_messages_to=null,
+    forward_to=null,
+    enable_batched_operations=null,
+    dead_lettering_on_message_expiration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_queue', label=resourceLabel, attrs=self.newAttrs(
     namespace_id=namespace_id,
-    status=status,
-    dead_lettering_on_message_expiration=dead_lettering_on_message_expiration,
-    requires_session=requires_session,
     duplicate_detection_history_time_window=duplicate_detection_history_time_window,
     enable_express=enable_express,
-    max_size_in_megabytes=max_size_in_megabytes,
     max_message_size_in_kilobytes=max_message_size_in_kilobytes,
-    requires_duplicate_detection=requires_duplicate_detection,
-    enable_batched_operations=enable_batched_operations,
-    lock_duration=lock_duration,
     auto_delete_on_idle=auto_delete_on_idle,
     default_message_ttl=default_message_ttl,
+    requires_session=requires_session,
+    status=status,
     enable_partitioning=enable_partitioning,
-    forward_dead_lettered_messages_to=forward_dead_lettered_messages_to,
     max_delivery_count=max_delivery_count,
-    forward_to=forward_to,
     name=name,
+    lock_duration=lock_duration,
+    max_size_in_megabytes=max_size_in_megabytes,
+    requires_duplicate_detection=requires_duplicate_detection,
+    forward_dead_lettered_messages_to=forward_dead_lettered_messages_to,
+    forward_to=forward_to,
+    enable_batched_operations=enable_batched_operations,
+    dead_lettering_on_message_expiration=dead_lettering_on_message_expiration,
     timeouts=timeouts
   )),
   newAttrs(
-    max_delivery_count=null,
-    max_size_in_megabytes=null,
     namespace_id,
-    dead_lettering_on_message_expiration=null,
-    requires_duplicate_detection=null,
-    default_message_ttl=null,
-    duplicate_detection_history_time_window=null,
-    enable_express=null,
+    status=null,
+    enable_partitioning=null,
+    max_delivery_count=null,
     forward_to=null,
     lock_duration=null,
-    enable_batched_operations=null,
-    max_message_size_in_kilobytes=null,
     name,
+    requires_duplicate_detection=null,
+    enable_batched_operations=null,
+    default_message_ttl=null,
+    dead_lettering_on_message_expiration=null,
+    duplicate_detection_history_time_window=null,
+    enable_express=null,
+    max_message_size_in_kilobytes=null,
+    max_size_in_megabytes=null,
+    auto_delete_on_idle=null,
     requires_session=null,
     forward_dead_lettered_messages_to=null,
-    auto_delete_on_idle=null,
-    enable_partitioning=null,
-    status=null,
     timeouts=null
   ):: std.prune(a={
-    max_delivery_count: max_delivery_count,
-    max_size_in_megabytes: max_size_in_megabytes,
     namespace_id: namespace_id,
-    dead_lettering_on_message_expiration: dead_lettering_on_message_expiration,
-    requires_duplicate_detection: requires_duplicate_detection,
-    default_message_ttl: default_message_ttl,
-    duplicate_detection_history_time_window: duplicate_detection_history_time_window,
-    enable_express: enable_express,
+    status: status,
+    enable_partitioning: enable_partitioning,
+    max_delivery_count: max_delivery_count,
     forward_to: forward_to,
     lock_duration: lock_duration,
-    enable_batched_operations: enable_batched_operations,
-    max_message_size_in_kilobytes: max_message_size_in_kilobytes,
     name: name,
+    requires_duplicate_detection: requires_duplicate_detection,
+    enable_batched_operations: enable_batched_operations,
+    default_message_ttl: default_message_ttl,
+    dead_lettering_on_message_expiration: dead_lettering_on_message_expiration,
+    duplicate_detection_history_time_window: duplicate_detection_history_time_window,
+    enable_express: enable_express,
+    max_message_size_in_kilobytes: max_message_size_in_kilobytes,
+    max_size_in_megabytes: max_size_in_megabytes,
+    auto_delete_on_idle: auto_delete_on_idle,
     requires_session: requires_session,
     forward_dead_lettered_messages_to: forward_dead_lettered_messages_to,
-    auto_delete_on_idle: auto_delete_on_idle,
-    enable_partitioning: enable_partitioning,
-    status: status,
     timeouts: timeouts,
   }),
-  withMaxMessageSizeInKilobytes(resourceLabel, value):: {
+  withEnableExpress(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
-          max_message_size_in_kilobytes: value,
+          enable_express: value,
         },
       },
     },
   },
-  withDuplicateDetectionHistoryTimeWindow(resourceLabel, value):: {
+  withEnablePartitioning(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
-          duplicate_detection_history_time_window: value,
+          enable_partitioning: value,
         },
       },
     },
@@ -110,56 +110,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRequiresSession(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          requires_session: value,
-        },
-      },
-    },
-  },
-  withDefaultMessageTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          default_message_ttl: value,
-        },
-      },
-    },
-  },
   withForwardDeadLetteredMessagesTo(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
           forward_dead_lettered_messages_to: value,
-        },
-      },
-    },
-  },
-  withEnableExpress(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          enable_express: value,
-        },
-      },
-    },
-  },
-  withMaxSizeInMegabytes(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          max_size_in_megabytes: value,
-        },
-      },
-    },
-  },
-  withNamespaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          namespace_id: value,
         },
       },
     },
@@ -173,29 +128,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeadLetteringOnMessageExpiration(resourceLabel, value):: {
+  withDuplicateDetectionHistoryTimeWindow(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
-          dead_lettering_on_message_expiration: value,
-        },
-      },
-    },
-  },
-  withRequiresDuplicateDetection(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          requires_duplicate_detection: value,
-        },
-      },
-    },
-  },
-  withAutoDeleteOnIdle(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_queue+: {
-        [resourceLabel]+: {
-          auto_delete_on_idle: value,
+          duplicate_detection_history_time_window: value,
         },
       },
     },
@@ -209,11 +146,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEnableBatchedOperations(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          enable_batched_operations: value,
+        },
+      },
+    },
+  },
+  withDeadLetteringOnMessageExpiration(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          dead_lettering_on_message_expiration: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withAutoDeleteOnIdle(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          auto_delete_on_idle: value,
+        },
+      },
+    },
+  },
+  withDefaultMessageTtl(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          default_message_ttl: value,
+        },
+      },
+    },
+  },
+  withMaxMessageSizeInKilobytes(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          max_message_size_in_kilobytes: value,
+        },
+      },
+    },
+  },
+  withMaxSizeInMegabytes(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          max_size_in_megabytes: value,
         },
       },
     },
@@ -227,20 +218,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnableBatchedOperations(resourceLabel, value):: {
+  withNamespaceId(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
-          enable_batched_operations: value,
+          namespace_id: value,
         },
       },
     },
   },
-  withEnablePartitioning(resourceLabel, value):: {
+  withRequiresSession(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_queue+: {
         [resourceLabel]+: {
-          enable_partitioning: value,
+          requires_session: value,
+        },
+      },
+    },
+  },
+  withRequiresDuplicateDetection(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_queue+: {
+        [resourceLabel]+: {
+          requires_duplicate_detection: value,
         },
       },
     },
@@ -265,15 +265,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

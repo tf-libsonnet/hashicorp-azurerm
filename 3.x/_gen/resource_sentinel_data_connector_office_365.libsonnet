@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tenant_id=null,
     exchange_enabled=null,
     log_analytics_workspace_id,
     name,
     sharepoint_enabled=null,
     teams_enabled=null,
-    tenant_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_office_365', label=resourceLabel, attrs=self.newAttrs(
+    tenant_id=tenant_id,
     exchange_enabled=exchange_enabled,
     log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     sharepoint_enabled=sharepoint_enabled,
     teams_enabled=teams_enabled,
-    tenant_id=tenant_id,
     timeouts=timeouts
   )),
   newAttrs(
-    log_analytics_workspace_id,
-    name,
     sharepoint_enabled=null,
     teams_enabled=null,
     tenant_id=null,
     exchange_enabled=null,
+    log_analytics_workspace_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_workspace_id: log_analytics_workspace_id,
-    name: name,
     sharepoint_enabled: sharepoint_enabled,
     teams_enabled: teams_enabled,
     tenant_id: tenant_id,
     exchange_enabled: exchange_enabled,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_office_365+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_office_365+: {
@@ -89,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_office_365+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_office_365+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

@@ -2,61 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    key_vault_id,
-    tenant_id,
-    application_id=null,
-    object_id,
     secret_permissions=null,
     storage_permissions=null,
+    application_id=null,
     certificate_permissions=null,
     key_permissions=null,
+    object_id,
+    tenant_id,
+    key_vault_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    key_vault_id=key_vault_id,
-    tenant_id=tenant_id,
-    application_id=application_id,
-    object_id=object_id,
     secret_permissions=secret_permissions,
     storage_permissions=storage_permissions,
+    application_id=application_id,
     certificate_permissions=certificate_permissions,
     key_permissions=key_permissions,
+    object_id=object_id,
+    tenant_id=tenant_id,
+    key_vault_id=key_vault_id,
     timeouts=timeouts
   )),
   newAttrs(
     application_id=null,
+    certificate_permissions=null,
+    key_permissions=null,
     object_id,
+    key_vault_id,
     secret_permissions=null,
     storage_permissions=null,
     tenant_id,
-    certificate_permissions=null,
-    key_permissions=null,
-    key_vault_id,
     timeouts=null
   ):: std.prune(a={
     application_id: application_id,
+    certificate_permissions: certificate_permissions,
+    key_permissions: key_permissions,
     object_id: object_id,
+    key_vault_id: key_vault_id,
     secret_permissions: secret_permissions,
     storage_permissions: storage_permissions,
     tenant_id: tenant_id,
-    certificate_permissions: certificate_permissions,
-    key_permissions: key_permissions,
-    key_vault_id: key_vault_id,
     timeouts: timeouts,
   }),
-  withApplicationId(resourceLabel, value):: {
+  withKeyVaultId(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_access_policy+: {
         [resourceLabel]+: {
-          application_id: value,
-        },
-      },
-    },
-  },
-  withObjectId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_access_policy+: {
-        [resourceLabel]+: {
-          object_id: value,
+          key_vault_id: value,
         },
       },
     },
@@ -70,11 +61,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKeyVaultId(resourceLabel, value):: {
+  withStoragePermissions(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_access_policy+: {
         [resourceLabel]+: {
-          key_vault_id: value,
+          storage_permissions: value,
+        },
+      },
+    },
+  },
+  withTenantId(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_access_policy+: {
+        [resourceLabel]+: {
+          tenant_id: value,
+        },
+      },
+    },
+  },
+  withApplicationId(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_access_policy+: {
+        [resourceLabel]+: {
+          application_id: value,
         },
       },
     },
@@ -97,20 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStoragePermissions(resourceLabel, value):: {
+  withObjectId(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_access_policy+: {
         [resourceLabel]+: {
-          storage_permissions: value,
-        },
-      },
-    },
-  },
-  withTenantId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_access_policy+: {
-        [resourceLabel]+: {
-          tenant_id: value,
+          object_id: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

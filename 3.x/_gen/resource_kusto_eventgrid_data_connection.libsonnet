@@ -2,111 +2,84 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data_format=null,
-    managed_identity_resource_id=null,
-    eventhub_consumer_group_name,
     name,
-    database_name,
-    database_routing_type=null,
-    mapping_rule_name=null,
-    skip_first_record=null,
-    storage_account_id,
-    blob_storage_event_type=null,
+    data_format=null,
     eventgrid_resource_id=null,
-    resource_group_name,
-    table_name=null,
+    eventhub_consumer_group_name,
     cluster_name,
-    eventhub_id,
+    managed_identity_resource_id=null,
+    table_name=null,
     location,
+    database_name,
+    blob_storage_event_type=null,
+    eventhub_id,
+    mapping_rule_name=null,
+    database_routing_type=null,
+    storage_account_id,
+    resource_group_name,
+    skip_first_record=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_eventgrid_data_connection', label=resourceLabel, attrs=self.newAttrs(
-    data_format=data_format,
-    managed_identity_resource_id=managed_identity_resource_id,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
     name=name,
-    database_name=database_name,
-    database_routing_type=database_routing_type,
-    mapping_rule_name=mapping_rule_name,
-    skip_first_record=skip_first_record,
-    storage_account_id=storage_account_id,
-    blob_storage_event_type=blob_storage_event_type,
+    data_format=data_format,
     eventgrid_resource_id=eventgrid_resource_id,
-    resource_group_name=resource_group_name,
-    table_name=table_name,
+    eventhub_consumer_group_name=eventhub_consumer_group_name,
     cluster_name=cluster_name,
-    eventhub_id=eventhub_id,
+    managed_identity_resource_id=managed_identity_resource_id,
+    table_name=table_name,
     location=location,
+    database_name=database_name,
+    blob_storage_event_type=blob_storage_event_type,
+    eventhub_id=eventhub_id,
+    mapping_rule_name=mapping_rule_name,
+    database_routing_type=database_routing_type,
+    storage_account_id=storage_account_id,
+    resource_group_name=resource_group_name,
+    skip_first_record=skip_first_record,
     timeouts=timeouts
   )),
   newAttrs(
-    eventhub_id,
-    name,
     mapping_rule_name=null,
-    storage_account_id,
-    blob_storage_event_type=null,
-    eventgrid_resource_id=null,
-    table_name=null,
     cluster_name,
-    database_name,
-    database_routing_type=null,
-    location,
+    blob_storage_event_type=null,
     data_format=null,
+    eventhub_id,
+    database_routing_type=null,
     resource_group_name,
-    managed_identity_resource_id=null,
-    eventhub_consumer_group_name,
     skip_first_record=null,
+    managed_identity_resource_id=null,
+    database_name,
+    eventgrid_resource_id=null,
+    name,
+    eventhub_consumer_group_name,
+    storage_account_id,
+    table_name=null,
+    location,
     timeouts=null
   ):: std.prune(a={
-    eventhub_id: eventhub_id,
-    name: name,
     mapping_rule_name: mapping_rule_name,
-    storage_account_id: storage_account_id,
-    blob_storage_event_type: blob_storage_event_type,
-    eventgrid_resource_id: eventgrid_resource_id,
-    table_name: table_name,
     cluster_name: cluster_name,
-    database_name: database_name,
-    database_routing_type: database_routing_type,
-    location: location,
+    blob_storage_event_type: blob_storage_event_type,
     data_format: data_format,
+    eventhub_id: eventhub_id,
+    database_routing_type: database_routing_type,
     resource_group_name: resource_group_name,
-    managed_identity_resource_id: managed_identity_resource_id,
-    eventhub_consumer_group_name: eventhub_consumer_group_name,
     skip_first_record: skip_first_record,
+    managed_identity_resource_id: managed_identity_resource_id,
+    database_name: database_name,
+    eventgrid_resource_id: eventgrid_resource_id,
+    name: name,
+    eventhub_consumer_group_name: eventhub_consumer_group_name,
+    storage_account_id: storage_account_id,
+    table_name: table_name,
+    location: location,
     timeouts: timeouts,
   }),
-  withDatabaseName(resourceLabel, value):: {
+  withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_eventgrid_data_connection+: {
         [resourceLabel]+: {
-          database_name: value,
-        },
-      },
-    },
-  },
-  withTableName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_eventgrid_data_connection+: {
-        [resourceLabel]+: {
-          table_name: value,
-        },
-      },
-    },
-  },
-  withClusterName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_eventgrid_data_connection+: {
-        [resourceLabel]+: {
-          cluster_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_eventgrid_data_connection+: {
-        [resourceLabel]+: {
-          location: value,
+          storage_account_id: value,
         },
       },
     },
@@ -120,20 +93,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBlobStorageEventType(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_eventgrid_data_connection+: {
         [resourceLabel]+: {
-          blob_storage_event_type: value,
+          location: value,
         },
       },
     },
   },
-  withEventhubId(resourceLabel, value):: {
+  withSkipFirstRecord(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_eventgrid_data_connection+: {
         [resourceLabel]+: {
-          eventhub_id: value,
+          skip_first_record: value,
+        },
+      },
+    },
+  },
+  withEventhubConsumerGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_eventgrid_data_connection+: {
+        [resourceLabel]+: {
+          eventhub_consumer_group_name: value,
         },
       },
     },
@@ -156,24 +138,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatabaseRoutingType(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_eventgrid_data_connection+: {
-        [resourceLabel]+: {
-          database_routing_type: value,
-        },
-      },
-    },
-  },
-  withEventhubConsumerGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_eventgrid_data_connection+: {
-        [resourceLabel]+: {
-          eventhub_consumer_group_name: value,
-        },
-      },
-    },
-  },
   withMappingRuleName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_eventgrid_data_connection+: {
@@ -192,20 +156,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountId(resourceLabel, value):: {
+  withClusterName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_eventgrid_data_connection+: {
         [resourceLabel]+: {
-          storage_account_id: value,
+          cluster_name: value,
         },
       },
     },
   },
-  withSkipFirstRecord(resourceLabel, value):: {
+  withBlobStorageEventType(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_eventgrid_data_connection+: {
         [resourceLabel]+: {
-          skip_first_record: value,
+          blob_storage_event_type: value,
+        },
+      },
+    },
+  },
+  withDatabaseRoutingType(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_eventgrid_data_connection+: {
+        [resourceLabel]+: {
+          database_routing_type: value,
         },
       },
     },
@@ -215,6 +188,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_kusto_eventgrid_data_connection+: {
         [resourceLabel]+: {
           eventgrid_resource_id: value,
+        },
+      },
+    },
+  },
+  withEventhubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_eventgrid_data_connection+: {
+        [resourceLabel]+: {
+          eventhub_id: value,
+        },
+      },
+    },
+  },
+  withDatabaseName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_eventgrid_data_connection+: {
+        [resourceLabel]+: {
+          database_name: value,
+        },
+      },
+    },
+  },
+  withTableName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_eventgrid_data_connection+: {
+        [resourceLabel]+: {
+          table_name: value,
         },
       },
     },
@@ -239,15 +239,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

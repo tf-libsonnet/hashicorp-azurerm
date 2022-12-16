@@ -25,29 +25,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     tags=null,
     location,
-    custom_rules=null,
     managed_rules=null,
     policy_settings=null,
-    timeouts=null
+    timeouts=null,
+    custom_rules=null
   ):: std.prune(a={
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     location: location,
-    custom_rules: custom_rules,
     managed_rules: managed_rules,
     policy_settings: policy_settings,
     timeouts: timeouts,
+    custom_rules: custom_rules,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_application_firewall_policy+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_web_application_firewall_policy+: {
@@ -74,6 +65,139 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_application_firewall_policy+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withManagedRules(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_application_firewall_policy+: {
+        [resourceLabel]+: {
+          managed_rules: value,
+        },
+      },
+    },
+  },
+  withManagedRulesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_application_firewall_policy+: {
+        [resourceLabel]+: {
+          managed_rules+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  managed_rules:: {
+    new(
+      exclusion=null,
+      managed_rule_set=null
+    ):: std.prune(a={
+      exclusion: exclusion,
+      managed_rule_set: managed_rule_set,
+    }),
+    exclusion:: {
+      new(
+        selector_match_operator,
+        match_variable,
+        selector,
+        excluded_rule_set=null
+      ):: std.prune(a={
+        selector_match_operator: selector_match_operator,
+        match_variable: match_variable,
+        selector: selector,
+        excluded_rule_set: excluded_rule_set,
+      }),
+      excluded_rule_set:: {
+        new(
+          type=null,
+          version=null,
+          rule_group=null
+        ):: std.prune(a={
+          type: type,
+          version: version,
+          rule_group: rule_group,
+        }),
+        rule_group:: {
+          new(
+            excluded_rules=null,
+            rule_group_name
+          ):: std.prune(a={
+            excluded_rules: excluded_rules,
+            rule_group_name: rule_group_name,
+          }),
+        },
+      },
+    },
+    managed_rule_set:: {
+      new(
+        type=null,
+        version,
+        rule_group_override=null
+      ):: std.prune(a={
+        type: type,
+        version: version,
+        rule_group_override: rule_group_override,
+      }),
+      rule_group_override:: {
+        new(
+          rule_group_name,
+          disabled_rules=null,
+          rule=null
+        ):: std.prune(a={
+          rule_group_name: rule_group_name,
+          disabled_rules: disabled_rules,
+          rule: rule,
+        }),
+        rule:: {
+          new(
+            action=null,
+            enabled=null
+          ):: std.prune(a={
+            action: action,
+            enabled: enabled,
+          }),
+        },
+      },
+    },
+  },
+  withPolicySettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_application_firewall_policy+: {
+        [resourceLabel]+: {
+          policy_settings: value,
+        },
+      },
+    },
+  },
+  withPolicySettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_application_firewall_policy+: {
+        [resourceLabel]+: {
+          policy_settings+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  policy_settings:: {
+    new(
+      file_upload_limit_in_mb=null,
+      max_request_body_size_in_kb=null,
+      mode=null,
+      request_body_check=null,
+      enabled=null
+    ):: std.prune(a={
+      file_upload_limit_in_mb: file_upload_limit_in_mb,
+      max_request_body_size_in_kb: max_request_body_size_in_kb,
+      mode: mode,
+      request_body_check: request_body_check,
+      enabled: enabled,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -126,165 +250,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   custom_rules:: {
     new(
-      action,
       name=null,
       priority,
       rule_type,
+      action,
       match_conditions=null
     ):: std.prune(a={
-      action: action,
       name: name,
       priority: priority,
       rule_type: rule_type,
+      action: action,
       match_conditions: match_conditions,
     }),
     match_conditions:: {
       new(
-        operator,
-        transforms=null,
         match_values,
         negation_condition=null,
+        operator,
+        transforms=null,
         match_variables=null
       ):: std.prune(a={
-        operator: operator,
-        transforms: transforms,
         match_values: match_values,
         negation_condition: negation_condition,
+        operator: operator,
+        transforms: transforms,
         match_variables: match_variables,
       }),
       match_variables:: {
         new(
-          variable_name,
-          selector=null
+          selector=null,
+          variable_name
         ):: std.prune(a={
-          variable_name: variable_name,
           selector: selector,
+          variable_name: variable_name,
         }),
       },
     },
-  },
-  withManagedRules(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_application_firewall_policy+: {
-        [resourceLabel]+: {
-          managed_rules: value,
-        },
-      },
-    },
-  },
-  withManagedRulesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_application_firewall_policy+: {
-        [resourceLabel]+: {
-          managed_rules+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  managed_rules:: {
-    new(
-      managed_rule_set=null,
-      exclusion=null
-    ):: std.prune(a={
-      managed_rule_set: managed_rule_set,
-      exclusion: exclusion,
-    }),
-    managed_rule_set:: {
-      new(
-        version,
-        type=null,
-        rule_group_override=null
-      ):: std.prune(a={
-        version: version,
-        type: type,
-        rule_group_override: rule_group_override,
-      }),
-      rule_group_override:: {
-        new(
-          disabled_rules=null,
-          rule_group_name,
-          rule=null
-        ):: std.prune(a={
-          disabled_rules: disabled_rules,
-          rule_group_name: rule_group_name,
-          rule: rule,
-        }),
-        rule:: {
-          new(
-            action=null,
-            enabled=null
-          ):: std.prune(a={
-            action: action,
-            enabled: enabled,
-          }),
-        },
-      },
-    },
-    exclusion:: {
-      new(
-        match_variable,
-        selector,
-        selector_match_operator,
-        excluded_rule_set=null
-      ):: std.prune(a={
-        match_variable: match_variable,
-        selector: selector,
-        selector_match_operator: selector_match_operator,
-        excluded_rule_set: excluded_rule_set,
-      }),
-      excluded_rule_set:: {
-        new(
-          type=null,
-          version=null,
-          rule_group=null
-        ):: std.prune(a={
-          type: type,
-          version: version,
-          rule_group: rule_group,
-        }),
-        rule_group:: {
-          new(
-            excluded_rules=null,
-            rule_group_name
-          ):: std.prune(a={
-            excluded_rules: excluded_rules,
-            rule_group_name: rule_group_name,
-          }),
-        },
-      },
-    },
-  },
-  withPolicySettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_application_firewall_policy+: {
-        [resourceLabel]+: {
-          policy_settings: value,
-        },
-      },
-    },
-  },
-  withPolicySettingsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_application_firewall_policy+: {
-        [resourceLabel]+: {
-          policy_settings+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  policy_settings:: {
-    new(
-      file_upload_limit_in_mb=null,
-      max_request_body_size_in_kb=null,
-      mode=null,
-      request_body_check=null,
-      enabled=null
-    ):: std.prune(a={
-      file_upload_limit_in_mb: file_upload_limit_in_mb,
-      max_request_body_size_in_kb: max_request_body_size_in_kb,
-      mode: mode,
-      request_body_check: request_body_check,
-      enabled: enabled,
-    }),
   },
 }

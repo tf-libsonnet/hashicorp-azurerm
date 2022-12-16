@@ -2,30 +2,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    device_name,
     resource_group_name,
+    device_name,
+    contact=null,
     shipment_address=null,
-    timeouts=null,
-    contact=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_databox_edge_order', label=resourceLabel, attrs=self.newAttrs(
-    device_name=device_name,
     resource_group_name=resource_group_name,
+    device_name=device_name,
+    contact=contact,
     shipment_address=shipment_address,
-    timeouts=timeouts,
-    contact=contact
+    timeouts=timeouts
   )),
   newAttrs(
     device_name,
     resource_group_name,
+    timeouts=null,
     contact=null,
-    shipment_address=null,
-    timeouts=null
+    shipment_address=null
   ):: std.prune(a={
     device_name: device_name,
     resource_group_name: resource_group_name,
+    timeouts: timeouts,
     contact: contact,
     shipment_address: shipment_address,
-    timeouts: timeouts,
   }),
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
@@ -44,6 +44,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withContact(resourceLabel, value):: {
+    resource+: {
+      azurerm_databox_edge_order+: {
+        [resourceLabel]+: {
+          contact: value,
+        },
+      },
+    },
+  },
+  withContactMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_databox_edge_order+: {
+        [resourceLabel]+: {
+          contact+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  contact:: {
+    new(
+      emails,
+      name,
+      phone_number,
+      company_name
+    ):: std.prune(a={
+      emails: emails,
+      name: name,
+      phone_number: phone_number,
+      company_name: company_name,
+    }),
   },
   withShipmentAddress(resourceLabel, value):: {
     resource+: {
@@ -65,17 +96,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   shipment_address:: {
     new(
+      postal_code,
+      state,
       address,
       city,
-      country,
-      postal_code,
-      state
+      country
     ):: std.prune(a={
+      postal_code: postal_code,
+      state: state,
       address: address,
       city: city,
       country: country,
-      postal_code: postal_code,
-      state: state,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -98,46 +129,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
-    }),
-  },
-  withContact(resourceLabel, value):: {
-    resource+: {
-      azurerm_databox_edge_order+: {
-        [resourceLabel]+: {
-          contact: value,
-        },
-      },
-    },
-  },
-  withContactMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_databox_edge_order+: {
-        [resourceLabel]+: {
-          contact+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  contact:: {
-    new(
-      phone_number,
-      company_name,
-      emails,
-      name
-    ):: std.prune(a={
-      phone_number: phone_number,
-      company_name: company_name,
-      emails: emails,
-      name: name,
+      read: read,
     }),
   },
 }

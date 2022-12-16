@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     automation_account_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_automation_variable_bool', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     automation_account_name=automation_account_name,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(

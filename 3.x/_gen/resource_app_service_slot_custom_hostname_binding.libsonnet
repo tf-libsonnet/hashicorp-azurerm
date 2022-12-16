@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    hostname,
     ssl_state=null,
     thumbprint=null,
     app_service_slot_id,
-    hostname,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_slot_custom_hostname_binding', label=resourceLabel, attrs=self.newAttrs(
+    hostname=hostname,
     ssl_state=ssl_state,
     thumbprint=thumbprint,
     app_service_slot_id=app_service_slot_id,
-    hostname=hostname,
     timeouts=timeouts
   )),
   newAttrs(
-    hostname,
-    ssl_state=null,
     thumbprint=null,
     app_service_slot_id,
+    hostname,
+    ssl_state=null,
     timeouts=null
   ):: std.prune(a={
-    hostname: hostname,
-    ssl_state: ssl_state,
     thumbprint: thumbprint,
     app_service_slot_id: app_service_slot_id,
+    hostname: hostname,
+    ssl_state: ssl_state,
     timeouts: timeouts,
   }),
-  withAppServiceSlotId(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_slot_custom_hostname_binding+: {
-        [resourceLabel]+: {
-          app_service_slot_id: value,
-        },
-      },
-    },
-  },
-  withHostname(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_slot_custom_hostname_binding+: {
-        [resourceLabel]+: {
-          hostname: value,
-        },
-      },
-    },
-  },
   withSslState(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_slot_custom_hostname_binding+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_slot_custom_hostname_binding+: {
         [resourceLabel]+: {
           thumbprint: value,
+        },
+      },
+    },
+  },
+  withAppServiceSlotId(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_slot_custom_hostname_binding+: {
+        [resourceLabel]+: {
+          app_service_slot_id: value,
+        },
+      },
+    },
+  },
+  withHostname(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_slot_custom_hostname_binding+: {
+        [resourceLabel]+: {
+          hostname: value,
         },
       },
     },

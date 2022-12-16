@@ -2,59 +2,77 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
+    public_network_access_enabled=null,
     sku_name,
+    soft_delete_retention_days=null,
     tenant_id,
-    name,
+    admin_object_ids,
     purge_protection_enabled=null,
     tags=null,
-    admin_object_ids,
-    public_network_access_enabled=null,
+    name,
     resource_group_name,
-    soft_delete_retention_days=null,
+    location,
     network_acls=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_managed_hardware_security_module', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
+    public_network_access_enabled=public_network_access_enabled,
     sku_name=sku_name,
+    soft_delete_retention_days=soft_delete_retention_days,
     tenant_id=tenant_id,
-    name=name,
+    admin_object_ids=admin_object_ids,
     purge_protection_enabled=purge_protection_enabled,
     tags=tags,
-    admin_object_ids=admin_object_ids,
-    public_network_access_enabled=public_network_access_enabled,
+    name=name,
     resource_group_name=resource_group_name,
-    soft_delete_retention_days=soft_delete_retention_days,
+    location=location,
     network_acls=network_acls,
     timeouts=timeouts
   )),
   newAttrs(
-    admin_object_ids,
-    tenant_id,
-    public_network_access_enabled=null,
-    resource_group_name,
     sku_name,
     soft_delete_retention_days=null,
+    name,
     tags=null,
     location,
-    name,
+    public_network_access_enabled=null,
+    tenant_id,
+    admin_object_ids,
     purge_protection_enabled=null,
+    resource_group_name,
     network_acls=null,
     timeouts=null
   ):: std.prune(a={
-    admin_object_ids: admin_object_ids,
-    tenant_id: tenant_id,
-    public_network_access_enabled: public_network_access_enabled,
-    resource_group_name: resource_group_name,
     sku_name: sku_name,
     soft_delete_retention_days: soft_delete_retention_days,
+    name: name,
     tags: tags,
     location: location,
-    name: name,
+    public_network_access_enabled: public_network_access_enabled,
+    tenant_id: tenant_id,
+    admin_object_ids: admin_object_ids,
     purge_protection_enabled: purge_protection_enabled,
+    resource_group_name: resource_group_name,
     network_acls: network_acls,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_hardware_security_module+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withPurgeProtectionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_hardware_security_module+: {
+        [resourceLabel]+: {
+          purge_protection_enabled: value,
+        },
+      },
+    },
+  },
   withAdminObjectIds(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_hardware_security_module+: {
@@ -82,11 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_hardware_security_module+: {
         [resourceLabel]+: {
-          public_network_access_enabled: value,
+          name: value,
         },
       },
     },
@@ -100,24 +118,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_hardware_security_module+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPurgeProtectionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_hardware_security_module+: {
-        [resourceLabel]+: {
-          purge_protection_enabled: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_hardware_security_module+: {
@@ -127,11 +127,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_hardware_security_module+: {
         [resourceLabel]+: {
-          location: value,
+          public_network_access_enabled: value,
         },
       },
     },

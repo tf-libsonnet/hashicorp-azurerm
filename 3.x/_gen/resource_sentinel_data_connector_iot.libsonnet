@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    log_analytics_workspace_id,
     name,
     subscription_id=null,
+    log_analytics_workspace_id,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     subscription_id: subscription_id,
+    log_analytics_workspace_id: log_analytics_workspace_id,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_iot+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSubscriptionId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_iot+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_data_connector_iot+: {
         [resourceLabel]+: {
           log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_iot+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },

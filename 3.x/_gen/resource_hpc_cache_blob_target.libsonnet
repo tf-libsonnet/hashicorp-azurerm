@@ -2,66 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_container_id,
-    access_policy_name=null,
     cache_name,
     name,
     namespace_path,
     resource_group_name,
+    storage_container_id,
+    access_policy_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_hpc_cache_blob_target', label=resourceLabel, attrs=self.newAttrs(
-    storage_container_id=storage_container_id,
-    access_policy_name=access_policy_name,
     cache_name=cache_name,
     name=name,
     namespace_path=namespace_path,
     resource_group_name=resource_group_name,
+    storage_container_id=storage_container_id,
+    access_policy_name=access_policy_name,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     storage_container_id,
     access_policy_name=null,
     cache_name,
     name,
     namespace_path,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     storage_container_id: storage_container_id,
     access_policy_name: access_policy_name,
     cache_name: cache_name,
     name: name,
     namespace_path: namespace_path,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withCacheName(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_blob_target+: {
-        [resourceLabel]+: {
-          cache_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_blob_target+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withNamespacePath(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_blob_target+: {
-        [resourceLabel]+: {
-          namespace_path: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_blob_target+: {
@@ -89,6 +62,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCacheName(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_blob_target+: {
+        [resourceLabel]+: {
+          cache_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_blob_target+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withNamespacePath(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_blob_target+: {
+        [resourceLabel]+: {
+          namespace_path: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_blob_target+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

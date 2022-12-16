@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    recovery_vault_name,
     resource_group_name,
     location,
     name,
+    recovery_vault_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_site_recovery_fabric', label=resourceLabel, attrs=self.newAttrs(
-    recovery_vault_name=recovery_vault_name,
     resource_group_name=resource_group_name,
     location=location,
     name=name,
+    recovery_vault_name=recovery_vault_name,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     location,
     name,
     recovery_vault_name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     location: location,
     name: name,
     recovery_vault_name: recovery_vault_name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_fabric+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_fabric+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withRecoveryVaultName(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_fabric+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_site_recovery_fabric+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_fabric+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_fabric+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

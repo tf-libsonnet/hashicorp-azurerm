@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    storage_account_name,
     metadata=null,
     name,
+    storage_account_name,
     timeouts=null
   ):: tf.withData(type='azurerm_storage_container', label=dataSrcLabel, attrs=self.newAttrs(
-    storage_account_name=storage_account_name,
     metadata=metadata,
     name=name,
+    storage_account_name=storage_account_name,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_name,
     metadata=null,
     name,
+    storage_account_name,
     timeouts=null
   ):: std.prune(a={
-    storage_account_name: storage_account_name,
     metadata: metadata,
     name: name,
+    storage_account_name: storage_account_name,
     timeouts: timeouts,
   }),
   withMetadata(dataSrcLabel, value):: {

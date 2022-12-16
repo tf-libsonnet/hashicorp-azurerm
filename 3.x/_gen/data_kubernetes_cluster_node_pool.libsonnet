@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    kubernetes_cluster_name,
-    resource_group_name,
     name,
+    resource_group_name,
+    kubernetes_cluster_name,
     timeouts=null
   ):: tf.withData(type='azurerm_kubernetes_cluster_node_pool', label=dataSrcLabel, attrs=self.newAttrs(
-    kubernetes_cluster_name=kubernetes_cluster_name,
-    resource_group_name=resource_group_name,
     name=name,
+    resource_group_name=resource_group_name,
+    kubernetes_cluster_name=kubernetes_cluster_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     kubernetes_cluster_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     kubernetes_cluster_name: kubernetes_cluster_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_kubernetes_cluster_node_pool+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_kubernetes_cluster_node_pool+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_kubernetes_cluster_node_pool+: {
         [dataSrcLabel]+: {
           kubernetes_cluster_name: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_kubernetes_cluster_node_pool+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

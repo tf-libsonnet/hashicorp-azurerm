@@ -35,15 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_dns_servers: target_dns_servers,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_forwarding_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withDnsForwardingRulesetId(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_forwarding_rule+: {
@@ -80,32 +71,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetDnsServers(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_forwarding_rule+: {
         [resourceLabel]+: {
-          target_dns_servers: value,
+          name: value,
         },
       },
     },
-  },
-  withTargetDnsServersMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_forwarding_rule+: {
-        [resourceLabel]+: {
-          target_dns_servers+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  target_dns_servers:: {
-    new(
-      port=null,
-      ip_address
-    ):: std.prune(a={
-      port: port,
-      ip_address: ip_address,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -136,6 +109,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       read: read,
       update: update,
       create: create,
+    }),
+  },
+  withTargetDnsServers(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_forwarding_rule+: {
+        [resourceLabel]+: {
+          target_dns_servers: value,
+        },
+      },
+    },
+  },
+  withTargetDnsServersMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_forwarding_rule+: {
+        [resourceLabel]+: {
+          target_dns_servers+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  target_dns_servers:: {
+    new(
+      ip_address,
+      port=null
+    ):: std.prune(a={
+      ip_address: ip_address,
+      port: port,
     }),
   },
 }

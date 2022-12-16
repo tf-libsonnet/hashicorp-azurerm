@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    object_id,
-    synapse_workspace_id,
     tenant_id,
     login,
+    object_id,
+    synapse_workspace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_workspace_aad_admin', label=resourceLabel, attrs=self.newAttrs(
-    object_id=object_id,
-    synapse_workspace_id=synapse_workspace_id,
     tenant_id=tenant_id,
     login=login,
+    object_id=object_id,
+    synapse_workspace_id=synapse_workspace_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     synapse_workspace_id: synapse_workspace_id,
     timeouts: timeouts,
   }),
-  withTenantId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_workspace_aad_admin+: {
-        [resourceLabel]+: {
-          tenant_id: value,
-        },
-      },
-    },
-  },
-  withLogin(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_workspace_aad_admin+: {
-        [resourceLabel]+: {
-          login: value,
-        },
-      },
-    },
-  },
   withObjectId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_workspace_aad_admin+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_workspace_aad_admin+: {
         [resourceLabel]+: {
           synapse_workspace_id: value,
+        },
+      },
+    },
+  },
+  withTenantId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_workspace_aad_admin+: {
+        [resourceLabel]+: {
+          tenant_id: value,
+        },
+      },
+    },
+  },
+  withLogin(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_workspace_aad_admin+: {
+        [resourceLabel]+: {
+          login: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

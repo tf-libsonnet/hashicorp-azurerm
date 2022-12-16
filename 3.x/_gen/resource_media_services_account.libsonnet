@@ -2,56 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_authentication_type=null,
-    tags=null,
     location,
     name,
     resource_group_name,
-    key_delivery_access_control=null,
+    storage_authentication_type=null,
+    tags=null,
     storage_account=null,
     timeouts=null,
-    identity=null
+    identity=null,
+    key_delivery_access_control=null
   ):: tf.withResource(type='azurerm_media_services_account', label=resourceLabel, attrs=self.newAttrs(
-    storage_authentication_type=storage_authentication_type,
-    tags=tags,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    key_delivery_access_control=key_delivery_access_control,
+    storage_authentication_type=storage_authentication_type,
+    tags=tags,
     storage_account=storage_account,
     timeouts=timeouts,
-    identity=identity
+    identity=identity,
+    key_delivery_access_control=key_delivery_access_control
   )),
   newAttrs(
-    storage_authentication_type=null,
-    tags=null,
     location,
     name,
     resource_group_name,
-    timeouts=null,
+    storage_authentication_type=null,
+    tags=null,
     identity=null,
     key_delivery_access_control=null,
-    storage_account=null
+    storage_account=null,
+    timeouts=null
   ):: std.prune(a={
-    storage_authentication_type: storage_authentication_type,
-    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    timeouts: timeouts,
+    storage_authentication_type: storage_authentication_type,
+    tags: tags,
     identity: identity,
     key_delivery_access_control: key_delivery_access_control,
     storage_account: storage_account,
+    timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_services_account+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_media_services_account+: {
@@ -84,6 +75,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_media_services_account+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_services_account+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -135,11 +135,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   key_delivery_access_control:: {
     new(
-      ip_allow_list=null,
-      default_action=null
+      default_action=null,
+      ip_allow_list=null
     ):: std.prune(a={
-      ip_allow_list: ip_allow_list,
       default_action: default_action,
+      ip_allow_list: ip_allow_list,
     }),
   },
   withStorageAccount(resourceLabel, value):: {

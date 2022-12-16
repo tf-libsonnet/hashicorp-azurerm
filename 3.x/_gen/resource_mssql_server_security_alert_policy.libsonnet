@@ -2,96 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_endpoint=null,
-    state,
-    disabled_alerts=null,
     server_name,
-    storage_account_access_key=null,
-    resource_group_name,
-    retention_days=null,
+    state,
+    storage_endpoint=null,
     email_account_admins=null,
+    resource_group_name,
     email_addresses=null,
+    storage_account_access_key=null,
+    disabled_alerts=null,
+    retention_days=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_server_security_alert_policy', label=resourceLabel, attrs=self.newAttrs(
-    storage_endpoint=storage_endpoint,
-    state=state,
-    disabled_alerts=disabled_alerts,
     server_name=server_name,
-    storage_account_access_key=storage_account_access_key,
-    resource_group_name=resource_group_name,
-    retention_days=retention_days,
+    state=state,
+    storage_endpoint=storage_endpoint,
     email_account_admins=email_account_admins,
+    resource_group_name=resource_group_name,
     email_addresses=email_addresses,
+    storage_account_access_key=storage_account_access_key,
+    disabled_alerts=disabled_alerts,
+    retention_days=retention_days,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_access_key=null,
-    server_name,
-    disabled_alerts=null,
-    resource_group_name,
-    retention_days=null,
-    email_account_admins=null,
     email_addresses=null,
-    state,
     storage_endpoint=null,
+    retention_days=null,
+    server_name,
+    storage_account_access_key=null,
+    disabled_alerts=null,
+    email_account_admins=null,
+    resource_group_name,
+    state,
     timeouts=null
   ):: std.prune(a={
-    storage_account_access_key: storage_account_access_key,
-    server_name: server_name,
-    disabled_alerts: disabled_alerts,
-    resource_group_name: resource_group_name,
-    retention_days: retention_days,
-    email_account_admins: email_account_admins,
     email_addresses: email_addresses,
-    state: state,
     storage_endpoint: storage_endpoint,
+    retention_days: retention_days,
+    server_name: server_name,
+    storage_account_access_key: storage_account_access_key,
+    disabled_alerts: disabled_alerts,
+    email_account_admins: email_account_admins,
+    resource_group_name: resource_group_name,
+    state: state,
     timeouts: timeouts,
   }),
-  withStorageEndpoint(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_security_alert_policy+: {
-        [resourceLabel]+: {
-          storage_endpoint: value,
-        },
-      },
-    },
-  },
-  withDisabledAlerts(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_security_alert_policy+: {
-        [resourceLabel]+: {
-          disabled_alerts: value,
-        },
-      },
-    },
-  },
-  withStorageAccountAccessKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_security_alert_policy+: {
-        [resourceLabel]+: {
-          storage_account_access_key: value,
-        },
-      },
-    },
-  },
-  withEmailAccountAdmins(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_security_alert_policy+: {
-        [resourceLabel]+: {
-          email_account_admins: value,
-        },
-      },
-    },
-  },
-  withEmailAddresses(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_security_alert_policy+: {
-        [resourceLabel]+: {
-          email_addresses: value,
-        },
-      },
-    },
-  },
   withServerName(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_security_alert_policy+: {
@@ -110,11 +65,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withStorageEndpoint(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_security_alert_policy+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          storage_endpoint: value,
+        },
+      },
+    },
+  },
+  withEmailAccountAdmins(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_security_alert_policy+: {
+        [resourceLabel]+: {
+          email_account_admins: value,
         },
       },
     },
@@ -124,6 +88,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_server_security_alert_policy+: {
         [resourceLabel]+: {
           retention_days: value,
+        },
+      },
+    },
+  },
+  withEmailAddresses(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_security_alert_policy+: {
+        [resourceLabel]+: {
+          email_addresses: value,
+        },
+      },
+    },
+  },
+  withStorageAccountAccessKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_security_alert_policy+: {
+        [resourceLabel]+: {
+          storage_account_access_key: value,
+        },
+      },
+    },
+  },
+  withDisabledAlerts(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_security_alert_policy+: {
+        [resourceLabel]+: {
+          disabled_alerts: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_security_alert_policy+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

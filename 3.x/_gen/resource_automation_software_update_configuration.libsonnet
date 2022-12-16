@@ -2,41 +2,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    duration=null,
+    non_azure_computer_names=null,
     operating_system,
     virtual_machine_ids=null,
-    automation_account_id,
+    duration=null,
     name,
-    non_azure_computer_names=null,
-    post_task=null,
-    pre_task=null,
-    schedule=null,
+    automation_account_id,
     target=null,
     timeouts=null,
     windows=null,
-    linux=null
+    linux=null,
+    post_task=null,
+    pre_task=null,
+    schedule=null
   ):: tf.withResource(type='azurerm_automation_software_update_configuration', label=resourceLabel, attrs=self.newAttrs(
-    duration=duration,
+    non_azure_computer_names=non_azure_computer_names,
     operating_system=operating_system,
     virtual_machine_ids=virtual_machine_ids,
-    automation_account_id=automation_account_id,
+    duration=duration,
     name=name,
-    non_azure_computer_names=non_azure_computer_names,
-    post_task=post_task,
-    pre_task=pre_task,
-    schedule=schedule,
+    automation_account_id=automation_account_id,
     target=target,
     timeouts=timeouts,
     windows=windows,
-    linux=linux
+    linux=linux,
+    post_task=post_task,
+    pre_task=pre_task,
+    schedule=schedule
   )),
   newAttrs(
-    name,
-    non_azure_computer_names=null,
-    duration=null,
     operating_system,
     virtual_machine_ids=null,
+    duration=null,
+    name,
     automation_account_id,
+    non_azure_computer_names=null,
     linux=null,
     post_task=null,
     pre_task=null,
@@ -45,12 +45,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null,
     windows=null
   ):: std.prune(a={
-    name: name,
-    non_azure_computer_names: non_azure_computer_names,
-    duration: duration,
     operating_system: operating_system,
     virtual_machine_ids: virtual_machine_ids,
+    duration: duration,
+    name: name,
     automation_account_id: automation_account_id,
+    non_azure_computer_names: non_azure_computer_names,
     linux: linux,
     post_task: post_task,
     pre_task: pre_task,
@@ -59,38 +59,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts: timeouts,
     windows: windows,
   }),
-  withDuration(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_software_update_configuration+: {
-        [resourceLabel]+: {
-          duration: value,
-        },
-      },
-    },
-  },
   withNonAzureComputerNames(resourceLabel, value):: {
     resource+: {
       azurerm_automation_software_update_configuration+: {
         [resourceLabel]+: {
           non_azure_computer_names: value,
-        },
-      },
-    },
-  },
-  withAutomationAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_software_update_configuration+: {
-        [resourceLabel]+: {
-          automation_account_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_software_update_configuration+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -113,6 +86,91 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDuration(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_software_update_configuration+: {
+        [resourceLabel]+: {
+          duration: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_software_update_configuration+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withAutomationAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_software_update_configuration+: {
+        [resourceLabel]+: {
+          automation_account_id: value,
+        },
+      },
+    },
+  },
+  withTarget(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_software_update_configuration+: {
+        [resourceLabel]+: {
+          target: value,
+        },
+      },
+    },
+  },
+  withTargetMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_software_update_configuration+: {
+        [resourceLabel]+: {
+          target+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  target:: {
+    new(
+      azure_query=null,
+      non_azure_query=null
+    ):: std.prune(a={
+      azure_query: azure_query,
+      non_azure_query: non_azure_query,
+    }),
+    azure_query:: {
+      new(
+        locations=null,
+        scope=null,
+        tag_filter=null,
+        tags=null
+      ):: std.prune(a={
+        locations: locations,
+        scope: scope,
+        tag_filter: tag_filter,
+        tags: tags,
+      }),
+      tags:: {
+        new(
+          values,
+          tag
+        ):: std.prune(a={
+          values: values,
+          tag: tag,
+        }),
+      },
+    },
+    non_azure_query:: {
+      new(
+        function_alias=null,
+        workspace_id=null
+      ):: std.prune(a={
+        function_alias: function_alias,
+        workspace_id: workspace_id,
+      }),
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_automation_software_update_configuration+: {
@@ -133,15 +191,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
   withWindows(resourceLabel, value):: {
@@ -164,17 +222,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   windows:: {
     new(
+      classifications_included=null,
       excluded_knowledge_base_numbers=null,
       included_knowledge_base_numbers=null,
       reboot=null,
-      classification_included=null,
-      classifications_included=null
+      classification_included=null
     ):: std.prune(a={
+      classifications_included: classifications_included,
       excluded_knowledge_base_numbers: excluded_knowledge_base_numbers,
       included_knowledge_base_numbers: included_knowledge_base_numbers,
       reboot: reboot,
       classification_included: classification_included,
-      classifications_included: classifications_included,
     }),
   },
   withLinux(resourceLabel, value):: {
@@ -197,15 +255,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   linux:: {
     new(
+      reboot=null,
       classification_included=null,
       excluded_packages=null,
-      included_packages=null,
-      reboot=null
+      included_packages=null
     ):: std.prune(a={
+      reboot: reboot,
       classification_included: classification_included,
       excluded_packages: excluded_packages,
       included_packages: included_packages,
-      reboot: reboot,
     }),
   },
   withPostTask(resourceLabel, value):: {
@@ -283,33 +341,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   schedule:: {
     new(
       is_enabled=null,
-      interval=null,
+      expiry_time=null,
+      start_time=null,
       expiry_time_offset_minutes=null,
       next_run=null,
       advanced_week_days=null,
-      description=null,
-      next_run_offset_minutes=null,
       start_time_offset_minutes=null,
-      advanced_month_days=null,
-      expiry_time=null,
       time_zone=null,
+      advanced_month_days=null,
+      next_run_offset_minutes=null,
+      description=null,
       frequency=null,
-      start_time=null,
+      interval=null,
       monthly_occurrence=null
     ):: std.prune(a={
       is_enabled: is_enabled,
-      interval: interval,
+      expiry_time: expiry_time,
+      start_time: start_time,
       expiry_time_offset_minutes: expiry_time_offset_minutes,
       next_run: next_run,
       advanced_week_days: advanced_week_days,
-      description: description,
-      next_run_offset_minutes: next_run_offset_minutes,
       start_time_offset_minutes: start_time_offset_minutes,
-      advanced_month_days: advanced_month_days,
-      expiry_time: expiry_time,
       time_zone: time_zone,
+      advanced_month_days: advanced_month_days,
+      next_run_offset_minutes: next_run_offset_minutes,
+      description: description,
       frequency: frequency,
-      start_time: start_time,
+      interval: interval,
       monthly_occurrence: monthly_occurrence,
     }),
     monthly_occurrence:: {
@@ -319,64 +377,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       ):: std.prune(a={
         day: day,
         occurrence: occurrence,
-      }),
-    },
-  },
-  withTarget(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_software_update_configuration+: {
-        [resourceLabel]+: {
-          target: value,
-        },
-      },
-    },
-  },
-  withTargetMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_software_update_configuration+: {
-        [resourceLabel]+: {
-          target+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  target:: {
-    new(
-      azure_query=null,
-      non_azure_query=null
-    ):: std.prune(a={
-      azure_query: azure_query,
-      non_azure_query: non_azure_query,
-    }),
-    azure_query:: {
-      new(
-        locations=null,
-        scope=null,
-        tag_filter=null,
-        tags=null
-      ):: std.prune(a={
-        locations: locations,
-        scope: scope,
-        tag_filter: tag_filter,
-        tags: tags,
-      }),
-      tags:: {
-        new(
-          values,
-          tag
-        ):: std.prune(a={
-          values: values,
-          tag: tag,
-        }),
-      },
-    },
-    non_azure_query:: {
-      new(
-        workspace_id=null,
-        function_alias=null
-      ):: std.prune(a={
-        workspace_id: workspace_id,
-        function_alias: function_alias,
       }),
     },
   },

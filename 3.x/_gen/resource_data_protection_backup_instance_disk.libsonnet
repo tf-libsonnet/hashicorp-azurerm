@@ -2,66 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    vault_id,
-    backup_policy_id,
-    disk_id,
     location,
     name,
     snapshot_resource_group_name,
+    vault_id,
+    backup_policy_id,
+    disk_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_instance_disk', label=resourceLabel, attrs=self.newAttrs(
-    vault_id=vault_id,
-    backup_policy_id=backup_policy_id,
-    disk_id=disk_id,
     location=location,
     name=name,
     snapshot_resource_group_name=snapshot_resource_group_name,
+    vault_id=vault_id,
+    backup_policy_id=backup_policy_id,
+    disk_id=disk_id,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    snapshot_resource_group_name,
-    vault_id,
     backup_policy_id,
     disk_id,
     location,
+    name,
+    snapshot_resource_group_name,
+    vault_id,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    snapshot_resource_group_name: snapshot_resource_group_name,
-    vault_id: vault_id,
     backup_policy_id: backup_policy_id,
     disk_id: disk_id,
     location: location,
+    name: name,
+    snapshot_resource_group_name: snapshot_resource_group_name,
+    vault_id: vault_id,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_disk+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_disk+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSnapshotResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_disk+: {
-        [resourceLabel]+: {
-          snapshot_resource_group_name: value,
-        },
-      },
-    },
-  },
   withVaultId(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_instance_disk+: {
@@ -85,6 +58,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_protection_backup_instance_disk+: {
         [resourceLabel]+: {
           disk_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_disk+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_disk+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withSnapshotResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_disk+: {
+        [resourceLabel]+: {
+          snapshot_resource_group_name: value,
         },
       },
     },

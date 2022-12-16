@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    log_analytics_workspace_id,
     name,
     tenant_id=null,
+    log_analytics_workspace_id,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     tenant_id: tenant_id,
+    log_analytics_workspace_id: log_analytics_workspace_id,
     timeouts: timeouts,
   }),
   withTenantId(resourceLabel, value):: {

@@ -3,73 +3,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     tags=null,
-    name,
-    subnet_id,
-    custom_network_interface_name=null,
-    location,
     resource_group_name,
-    private_service_connection=null,
-    timeouts=null,
-    ip_configuration=null,
-    private_dns_zone_group=null
-  ):: tf.withResource(type='azurerm_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    name=name,
-    subnet_id=subnet_id,
-    custom_network_interface_name=custom_network_interface_name,
-    location=location,
-    resource_group_name=resource_group_name,
-    private_service_connection=private_service_connection,
-    timeouts=timeouts,
-    ip_configuration=ip_configuration,
-    private_dns_zone_group=private_dns_zone_group
-  )),
-  newAttrs(
     custom_network_interface_name=null,
     location,
     name,
-    resource_group_name,
-    tags=null,
     subnet_id,
     ip_configuration=null,
     private_dns_zone_group=null,
     private_service_connection=null,
     timeouts=null
+  ):: tf.withResource(type='azurerm_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    tags=tags,
+    resource_group_name=resource_group_name,
+    custom_network_interface_name=custom_network_interface_name,
+    location=location,
+    name=name,
+    subnet_id=subnet_id,
+    ip_configuration=ip_configuration,
+    private_dns_zone_group=private_dns_zone_group,
+    private_service_connection=private_service_connection,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    location,
+    resource_group_name,
+    name,
+    subnet_id,
+    tags=null,
+    custom_network_interface_name=null,
+    private_dns_zone_group=null,
+    private_service_connection=null,
+    timeouts=null,
+    ip_configuration=null
   ):: std.prune(a={
-    custom_network_interface_name: custom_network_interface_name,
     location: location,
-    name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
+    name: name,
     subnet_id: subnet_id,
-    ip_configuration: ip_configuration,
+    tags: tags,
+    custom_network_interface_name: custom_network_interface_name,
     private_dns_zone_group: private_dns_zone_group,
     private_service_connection: private_service_connection,
     timeouts: timeouts,
+    ip_configuration: ip_configuration,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_endpoint+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_private_endpoint+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_endpoint+: {
-        [resourceLabel]+: {
-          subnet_id: value,
         },
       },
     },
@@ -92,11 +74,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_endpoint+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_endpoint+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_endpoint+: {
+        [resourceLabel]+: {
+          subnet_id: value,
         },
       },
     },
@@ -121,15 +121,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ip_configuration:: {
     new(
-      subresource_name,
       member_name=null,
       name,
-      private_ip_address
+      private_ip_address,
+      subresource_name
     ):: std.prune(a={
-      subresource_name: subresource_name,
       member_name: member_name,
       name: name,
       private_ip_address: private_ip_address,
+      subresource_name: subresource_name,
     }),
   },
   withPrivateDnsZoneGroup(resourceLabel, value):: {
@@ -179,19 +179,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   private_service_connection:: {
     new(
+      private_connection_resource_alias=null,
       private_connection_resource_id=null,
       request_message=null,
       subresource_names=null,
       is_manual_connection,
-      name,
-      private_connection_resource_alias=null
+      name
     ):: std.prune(a={
+      private_connection_resource_alias: private_connection_resource_alias,
       private_connection_resource_id: private_connection_resource_id,
       request_message: request_message,
       subresource_names: subresource_names,
       is_manual_connection: is_manual_connection,
       name: name,
-      private_connection_resource_alias: private_connection_resource_alias,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -214,15 +214,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

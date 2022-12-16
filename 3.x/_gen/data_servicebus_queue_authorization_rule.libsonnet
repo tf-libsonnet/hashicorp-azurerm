@@ -17,18 +17,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    queue_id=null,
+    namespace_name=null,
     name,
     queue_name=null,
     resource_group_name=null,
-    namespace_name=null,
-    queue_id=null,
     timeouts=null
   ):: std.prune(a={
+    queue_id: queue_id,
+    namespace_name: namespace_name,
     name: name,
     queue_name: queue_name,
     resource_group_name: resource_group_name,
-    namespace_name: namespace_name,
-    queue_id: queue_id,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {
@@ -36,15 +36,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_servicebus_queue_authorization_rule+: {
         [dataSrcLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_queue_authorization_rule+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -58,11 +49,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withQueueId(dataSrcLabel, value):: {
+  withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_queue_authorization_rule+: {
         [dataSrcLabel]+: {
-          queue_id: value,
+          resource_group_name: value,
         },
       },
     },
@@ -72,6 +63,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_servicebus_queue_authorization_rule+: {
         [dataSrcLabel]+: {
           namespace_name: value,
+        },
+      },
+    },
+  },
+  withQueueId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_queue_authorization_rule+: {
+        [dataSrcLabel]+: {
+          queue_id: value,
         },
       },
     },

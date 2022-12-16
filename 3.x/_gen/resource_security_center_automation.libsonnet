@@ -2,50 +2,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    enabled=null,
-    location,
     name,
     resource_group_name,
     scopes,
     tags=null,
     description=null,
-    action=null,
+    enabled=null,
+    location,
     source=null,
-    timeouts=null
+    timeouts=null,
+    action=null
   ):: tf.withResource(type='azurerm_security_center_automation', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    location=location,
     name=name,
     resource_group_name=resource_group_name,
     scopes=scopes,
     tags=tags,
     description=description,
-    action=action,
+    enabled=enabled,
+    location=location,
     source=source,
-    timeouts=timeouts
+    timeouts=timeouts,
+    action=action
   )),
   newAttrs(
-    description=null,
-    enabled=null,
     location,
     name,
     resource_group_name,
     scopes,
     tags=null,
-    timeouts=null,
+    description=null,
+    enabled=null,
     action=null,
-    source=null
+    source=null,
+    timeouts=null
   ):: std.prune(a={
-    description: description,
-    enabled: enabled,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     scopes: scopes,
     tags: tags,
-    timeouts: timeouts,
+    description: description,
+    enabled: enabled,
     action: action,
     source: source,
+    timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
     resource+: {
@@ -109,37 +109,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_automation+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_automation+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withAction(resourceLabel, value):: {
     resource+: {
@@ -206,17 +175,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
       rule:: {
         new(
-          expected_value,
           operator,
           property_path,
-          property_type
+          property_type,
+          expected_value
         ):: std.prune(a={
-          expected_value: expected_value,
           operator: operator,
           property_path: property_path,
           property_type: property_type,
+          expected_value: expected_value,
         }),
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_automation+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_automation+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
 }

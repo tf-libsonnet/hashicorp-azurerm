@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    active=null,
+    name,
     recurrence_period_end_date,
     recurrence_period_start_date,
     recurrence_type,
     subscription_id,
-    active=null,
-    name,
+    export_data_options=null,
     export_data_storage_location=null,
-    timeouts=null,
-    export_data_options=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_subscription_cost_management_export', label=resourceLabel, attrs=self.newAttrs(
+    active=active,
+    name=name,
     recurrence_period_end_date=recurrence_period_end_date,
     recurrence_period_start_date=recurrence_period_start_date,
     recurrence_type=recurrence_type,
     subscription_id=subscription_id,
-    active=active,
-    name=name,
+    export_data_options=export_data_options,
     export_data_storage_location=export_data_storage_location,
-    timeouts=timeouts,
-    export_data_options=export_data_options
+    timeouts=timeouts
   )),
   newAttrs(
     name,
@@ -29,9 +29,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     recurrence_type,
     subscription_id,
     active=null,
+    export_data_options=null,
     export_data_storage_location=null,
-    timeouts=null,
-    export_data_options=null
+    timeouts=null
   ):: std.prune(a={
     name: name,
     recurrence_period_end_date: recurrence_period_end_date,
@@ -39,28 +39,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     recurrence_type: recurrence_type,
     subscription_id: subscription_id,
     active: active,
+    export_data_options: export_data_options,
     export_data_storage_location: export_data_storage_location,
     timeouts: timeouts,
-    export_data_options: export_data_options,
   }),
-  withRecurrencePeriodStartDate(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_cost_management_export+: {
-        [resourceLabel]+: {
-          recurrence_period_start_date: value,
-        },
-      },
-    },
-  },
-  withRecurrenceType(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_cost_management_export+: {
-        [resourceLabel]+: {
-          recurrence_type: value,
-        },
-      },
-    },
-  },
   withSubscriptionId(resourceLabel, value):: {
     resource+: {
       azurerm_subscription_cost_management_export+: {
@@ -96,6 +78,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withRecurrencePeriodStartDate(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_cost_management_export+: {
+        [resourceLabel]+: {
+          recurrence_period_start_date: value,
+        },
+      },
+    },
+  },
+  withRecurrenceType(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_cost_management_export+: {
+        [resourceLabel]+: {
+          recurrence_type: value,
+        },
+      },
+    },
+  },
+  withExportDataOptions(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_cost_management_export+: {
+        [resourceLabel]+: {
+          export_data_options: value,
+        },
+      },
+    },
+  },
+  withExportDataOptionsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription_cost_management_export+: {
+        [resourceLabel]+: {
+          export_data_options+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  export_data_options:: {
+    new(
+      time_frame,
+      type
+    ):: std.prune(a={
+      time_frame: time_frame,
+      type: type,
+    }),
   },
   withExportDataStorageLocation(resourceLabel, value):: {
     resource+: {
@@ -144,42 +171,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
-    }),
-  },
-  withExportDataOptions(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_cost_management_export+: {
-        [resourceLabel]+: {
-          export_data_options: value,
-        },
-      },
-    },
-  },
-  withExportDataOptionsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription_cost_management_export+: {
-        [resourceLabel]+: {
-          export_data_options+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  export_data_options:: {
-    new(
-      time_frame,
-      type
-    ):: std.prune(a={
-      time_frame: time_frame,
-      type: type,
+      update: update,
     }),
   },
 }

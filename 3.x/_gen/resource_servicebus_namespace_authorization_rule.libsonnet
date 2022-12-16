@@ -2,49 +2,49 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    send=null,
-    namespace_id,
     name,
+    send=null,
     listen=null,
+    namespace_id,
     manage=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_namespace_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    send=send,
-    namespace_id=namespace_id,
     name=name,
+    send=send,
     listen=listen,
+    namespace_id=namespace_id,
     manage=manage,
     timeouts=timeouts
   )),
   newAttrs(
+    listen=null,
+    namespace_id,
+    manage=null,
     name,
     send=null,
-    namespace_id,
-    listen=null,
-    manage=null,
     timeouts=null
   ):: std.prune(a={
+    listen: listen,
+    namespace_id: namespace_id,
+    manage: manage,
     name: name,
     send: send,
-    namespace_id: namespace_id,
-    listen: listen,
-    manage: manage,
     timeouts: timeouts,
   }),
-  withManage(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace_authorization_rule+: {
-        [resourceLabel]+: {
-          manage: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_authorization_rule+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withListen(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace_authorization_rule+: {
+        [resourceLabel]+: {
+          listen: value,
         },
       },
     },
@@ -67,11 +67,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withListen(resourceLabel, value):: {
+  withManage(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_authorization_rule+: {
         [resourceLabel]+: {
-          listen: value,
+          manage: value,
         },
       },
     },
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

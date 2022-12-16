@@ -2,57 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    timestamp_property_name=null,
+    location,
     namespace_name,
     shared_access_key,
-    consumer_group_name,
-    timestamp_property_name=null,
-    tags=null,
     event_source_resource_id,
     eventhub_name,
-    environment_id,
-    location,
+    consumer_group_name,
     name,
     shared_access_key_name,
+    tags=null,
+    environment_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_event_source_eventhub', label=resourceLabel, attrs=self.newAttrs(
+    timestamp_property_name=timestamp_property_name,
+    location=location,
     namespace_name=namespace_name,
     shared_access_key=shared_access_key,
-    consumer_group_name=consumer_group_name,
-    timestamp_property_name=timestamp_property_name,
-    tags=tags,
     event_source_resource_id=event_source_resource_id,
     eventhub_name=eventhub_name,
-    environment_id=environment_id,
-    location=location,
+    consumer_group_name=consumer_group_name,
     name=name,
     shared_access_key_name=shared_access_key_name,
+    tags=tags,
+    environment_id=environment_id,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     consumer_group_name,
+    location,
     environment_id,
     event_source_resource_id,
     eventhub_name,
-    timestamp_property_name=null,
-    tags=null,
     shared_access_key,
+    timestamp_property_name=null,
     shared_access_key_name,
-    location,
+    tags=null,
     namespace_name,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     consumer_group_name: consumer_group_name,
+    location: location,
     environment_id: environment_id,
     event_source_resource_id: event_source_resource_id,
     eventhub_name: eventhub_name,
-    timestamp_property_name: timestamp_property_name,
-    tags: tags,
     shared_access_key: shared_access_key,
+    timestamp_property_name: timestamp_property_name,
     shared_access_key_name: shared_access_key_name,
-    location: location,
+    tags: tags,
     namespace_name: namespace_name,
-    name: name,
     timeouts: timeouts,
   }),
   withNamespaceName(resourceLabel, value):: {
@@ -73,29 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTimestampPropertyName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_eventhub+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_eventhub+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withEnvironmentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_eventhub+: {
-        [resourceLabel]+: {
-          environment_id: value,
+          timestamp_property_name: value,
         },
       },
     },
@@ -136,11 +118,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimestampPropertyName(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_eventhub+: {
         [resourceLabel]+: {
-          timestamp_property_name: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withEnvironmentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_eventhub+: {
+        [resourceLabel]+: {
+          environment_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_eventhub+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -174,15 +174,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

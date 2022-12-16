@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    event_log_name,
+    event_types,
     name,
     resource_group_name,
     workspace_name,
-    event_log_name,
-    event_types,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_datasource_windows_event', label=resourceLabel, attrs=self.newAttrs(
+    event_log_name=event_log_name,
+    event_types=event_types,
     name=name,
     resource_group_name=resource_group_name,
     workspace_name=workspace_name,
-    event_log_name=event_log_name,
-    event_types=event_types,
     timeouts=timeouts
   )),
   newAttrs(
+    event_log_name,
     event_types,
     name,
     resource_group_name,
     workspace_name,
-    event_log_name,
     timeouts=null
   ):: std.prune(a={
+    event_log_name: event_log_name,
     event_types: event_types,
     name: name,
     resource_group_name: resource_group_name,
     workspace_name: workspace_name,
-    event_log_name: event_log_name,
     timeouts: timeouts,
   }),
+  withEventLogName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_datasource_windows_event+: {
+        [resourceLabel]+: {
+          event_log_name: value,
+        },
+      },
+    },
+  },
+  withEventTypes(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_datasource_windows_event+: {
+        [resourceLabel]+: {
+          event_types: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_event+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEventLogName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_datasource_windows_event+: {
-        [resourceLabel]+: {
-          event_log_name: value,
-        },
-      },
-    },
-  },
-  withEventTypes(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_datasource_windows_event+: {
-        [resourceLabel]+: {
-          event_types: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_event+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

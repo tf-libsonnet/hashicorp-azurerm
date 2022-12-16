@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_account_ids,
-    workspace_resource_id,
     data_source_type,
     resource_group_name,
+    storage_account_ids,
+    workspace_resource_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_linked_storage_account', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_ids=storage_account_ids,
-    workspace_resource_id=workspace_resource_id,
     data_source_type=data_source_type,
     resource_group_name=resource_group_name,
+    storage_account_ids=storage_account_ids,
+    workspace_resource_id=workspace_resource_id,
     timeouts=timeouts
   )),
   newAttrs(
+    data_source_type,
     resource_group_name,
     storage_account_ids,
     workspace_resource_id,
-    data_source_type,
     timeouts=null
   ):: std.prune(a={
+    data_source_type: data_source_type,
     resource_group_name: resource_group_name,
     storage_account_ids: storage_account_ids,
     workspace_resource_id: workspace_resource_id,
-    data_source_type: data_source_type,
     timeouts: timeouts,
   }),
-  withStorageAccountIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_linked_storage_account+: {
-        [resourceLabel]+: {
-          storage_account_ids: value,
-        },
-      },
-    },
-  },
-  withWorkspaceResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_linked_storage_account+: {
-        [resourceLabel]+: {
-          workspace_resource_id: value,
-        },
-      },
-    },
-  },
   withDataSourceType(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_linked_storage_account+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_log_analytics_linked_storage_account+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_linked_storage_account+: {
+        [resourceLabel]+: {
+          storage_account_ids: value,
+        },
+      },
+    },
+  },
+  withWorkspaceResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_linked_storage_account+: {
+        [resourceLabel]+: {
+          workspace_resource_id: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

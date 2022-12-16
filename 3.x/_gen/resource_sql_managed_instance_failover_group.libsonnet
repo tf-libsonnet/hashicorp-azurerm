@@ -2,57 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     partner_managed_instance_id,
     readonly_endpoint_failover_policy_enabled=null,
-    resource_group_name,
     managed_instance_name,
+    resource_group_name,
     location,
+    name,
     read_write_endpoint_failover_policy=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sql_managed_instance_failover_group', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     partner_managed_instance_id=partner_managed_instance_id,
     readonly_endpoint_failover_policy_enabled=readonly_endpoint_failover_policy_enabled,
-    resource_group_name=resource_group_name,
     managed_instance_name=managed_instance_name,
+    resource_group_name=resource_group_name,
     location=location,
+    name=name,
     read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
     timeouts=timeouts
   )),
   newAttrs(
+    partner_managed_instance_id,
+    readonly_endpoint_failover_policy_enabled=null,
+    managed_instance_name,
+    resource_group_name,
     location,
     name,
-    partner_managed_instance_id,
-    managed_instance_name,
-    readonly_endpoint_failover_policy_enabled=null,
-    resource_group_name,
     timeouts=null,
     read_write_endpoint_failover_policy=null
   ):: std.prune(a={
+    partner_managed_instance_id: partner_managed_instance_id,
+    readonly_endpoint_failover_policy_enabled: readonly_endpoint_failover_policy_enabled,
+    managed_instance_name: managed_instance_name,
+    resource_group_name: resource_group_name,
     location: location,
     name: name,
-    partner_managed_instance_id: partner_managed_instance_id,
-    managed_instance_name: managed_instance_name,
-    readonly_endpoint_failover_policy_enabled: readonly_endpoint_failover_policy_enabled,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
     read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
   }),
-  withManagedInstanceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_managed_instance_failover_group+: {
-        [resourceLabel]+: {
-          managed_instance_name: value,
-        },
-      },
-    },
-  },
   withReadonlyEndpointFailoverPolicyEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_sql_managed_instance_failover_group+: {
         [resourceLabel]+: {
           readonly_endpoint_failover_policy_enabled: value,
+        },
+      },
+    },
+  },
+  withManagedInstanceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_managed_instance_failover_group+: {
+        [resourceLabel]+: {
+          managed_instance_name: value,
         },
       },
     },
@@ -93,6 +93,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_managed_instance_failover_group+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_managed_instance_failover_group+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
+    }),
+  },
   withReadWriteEndpointFailoverPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_sql_managed_instance_failover_group+: {
@@ -118,37 +149,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       grace_minutes: grace_minutes,
       mode: mode,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_managed_instance_failover_group+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_managed_instance_failover_group+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
     }),
   },
 }

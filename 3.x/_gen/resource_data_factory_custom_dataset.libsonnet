@@ -3,58 +3,67 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     folder=null,
-    type,
-    type_properties_json,
-    schema_json=null,
-    data_factory_id,
     name,
-    additional_properties=null,
+    type,
     annotations=null,
-    description=null,
     parameters=null,
+    data_factory_id,
+    type_properties_json,
+    description=null,
+    schema_json=null,
+    additional_properties=null,
     linked_service=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_custom_dataset', label=resourceLabel, attrs=self.newAttrs(
     folder=folder,
-    type=type,
-    type_properties_json=type_properties_json,
-    schema_json=schema_json,
-    data_factory_id=data_factory_id,
     name=name,
-    additional_properties=additional_properties,
+    type=type,
     annotations=annotations,
-    description=description,
     parameters=parameters,
+    data_factory_id=data_factory_id,
+    type_properties_json=type_properties_json,
+    description=description,
+    schema_json=schema_json,
+    additional_properties=additional_properties,
     linked_service=linked_service,
     timeouts=timeouts
   )),
   newAttrs(
-    type_properties_json,
-    folder=null,
-    description=null,
-    additional_properties=null,
-    annotations=null,
     name,
     type,
-    data_factory_id,
+    folder=null,
+    additional_properties=null,
+    description=null,
     parameters=null,
     schema_json=null,
+    type_properties_json,
+    annotations=null,
+    data_factory_id,
     linked_service=null,
     timeouts=null
   ):: std.prune(a={
-    type_properties_json: type_properties_json,
-    folder: folder,
-    description: description,
-    additional_properties: additional_properties,
-    annotations: annotations,
     name: name,
     type: type,
-    data_factory_id: data_factory_id,
+    folder: folder,
+    additional_properties: additional_properties,
+    description: description,
     parameters: parameters,
     schema_json: schema_json,
+    type_properties_json: type_properties_json,
+    annotations: annotations,
+    data_factory_id: data_factory_id,
     linked_service: linked_service,
     timeouts: timeouts,
   }),
+  withTypePropertiesJson(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_custom_dataset+: {
+        [resourceLabel]+: {
+          type_properties_json: value,
+        },
+      },
+    },
+  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_custom_dataset+: {
@@ -64,11 +73,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_custom_dataset+: {
         [resourceLabel]+: {
-          parameters: value,
+          description: value,
+        },
+      },
+    },
+  },
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_custom_dataset+: {
+        [resourceLabel]+: {
+          type: value,
         },
       },
     },
@@ -82,11 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_custom_dataset+: {
         [resourceLabel]+: {
-          description: value,
+          parameters: value,
         },
       },
     },
@@ -127,24 +145,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_custom_dataset+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withTypePropertiesJson(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_custom_dataset+: {
-        [resourceLabel]+: {
-          type_properties_json: value,
-        },
-      },
-    },
-  },
   withLinkedService(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_custom_dataset+: {
@@ -165,11 +165,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   linked_service:: {
     new(
-      parameters=null,
-      name
+      name,
+      parameters=null
     ):: std.prune(a={
-      parameters: parameters,
       name: name,
+      parameters: parameters,
     }),
   },
   withTimeouts(resourceLabel, value):: {

@@ -8,9 +8,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     tags=null,
     action_group_id,
+    condition=null,
     scope=null,
-    timeouts=null,
-    condition=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_monitor_action_rule_action_group', label=resourceLabel, attrs=self.newAttrs(
     description=description,
     enabled=enabled,
@@ -18,9 +18,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name=resource_group_name,
     tags=tags,
     action_group_id=action_group_id,
+    condition=condition,
     scope=scope,
-    timeouts=timeouts,
-    condition=condition
+    timeouts=timeouts
   )),
   newAttrs(
     action_group_id,
@@ -29,9 +29,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     tags=null,
+    timeouts=null,
     condition=null,
-    scope=null,
-    timeouts=null
+    scope=null
   ):: std.prune(a={
     action_group_id: action_group_id,
     description: description,
@@ -39,19 +39,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
+    timeouts: timeouts,
     condition: condition,
     scope: scope,
-    timeouts: timeouts,
   }),
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_rule_action_group+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_action_rule_action_group+: {
@@ -95,6 +86,115 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           description: value,
         },
       },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_rule_action_group+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withCondition(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_rule_action_group+: {
+        [resourceLabel]+: {
+          condition: value,
+        },
+      },
+    },
+  },
+  withConditionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_action_rule_action_group+: {
+        [resourceLabel]+: {
+          condition+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  condition:: {
+    new(
+      alert_context=null,
+      alert_rule_id=null,
+      description=null,
+      monitor=null,
+      monitor_service=null,
+      severity=null,
+      target_resource_type=null
+    ):: std.prune(a={
+      alert_context: alert_context,
+      alert_rule_id: alert_rule_id,
+      description: description,
+      monitor: monitor,
+      monitor_service: monitor_service,
+      severity: severity,
+      target_resource_type: target_resource_type,
+    }),
+    monitor:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    monitor_service:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    severity:: {
+      new(
+        values,
+        operator
+      ):: std.prune(a={
+        values: values,
+        operator: operator,
+      }),
+    },
+    target_resource_type:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    alert_context:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    alert_rule_id:: {
+      new(
+        operator,
+        values
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+      }),
+    },
+    description:: {
+      new(
+        values,
+        operator
+      ):: std.prune(a={
+        values: values,
+        operator: operator,
+      }),
     },
   },
   withScope(resourceLabel, value):: {
@@ -144,115 +244,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
-  },
-  withCondition(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_rule_action_group+: {
-        [resourceLabel]+: {
-          condition: value,
-        },
-      },
-    },
-  },
-  withConditionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_action_rule_action_group+: {
-        [resourceLabel]+: {
-          condition+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  condition:: {
-    new(
-      severity=null,
-      target_resource_type=null,
-      alert_context=null,
-      alert_rule_id=null,
-      description=null,
-      monitor=null,
-      monitor_service=null
-    ):: std.prune(a={
-      severity: severity,
-      target_resource_type: target_resource_type,
-      alert_context: alert_context,
-      alert_rule_id: alert_rule_id,
-      description: description,
-      monitor: monitor,
-      monitor_service: monitor_service,
-    }),
-    description:: {
-      new(
-        values,
-        operator
-      ):: std.prune(a={
-        values: values,
-        operator: operator,
-      }),
-    },
-    monitor:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    monitor_service:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    severity:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    target_resource_type:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    alert_context:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
-    alert_rule_id:: {
-      new(
-        operator,
-        values
-      ):: std.prune(a={
-        operator: operator,
-        values: values,
-      }),
-    },
   },
 }

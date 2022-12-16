@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    domain_service_id,
     location,
     subnet_id,
+    domain_service_id,
     timeouts=null
   ):: std.prune(a={
-    domain_service_id: domain_service_id,
     location: location,
     subnet_id: subnet_id,
+    domain_service_id: domain_service_id,
     timeouts: timeouts,
   }),
+  withDomainServiceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service_replica_set+: {
+        [resourceLabel]+: {
+          domain_service_id: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service_replica_set+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_active_directory_domain_service_replica_set+: {
         [resourceLabel]+: {
           subnet_id: value,
-        },
-      },
-    },
-  },
-  withDomainServiceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service_replica_set+: {
-        [resourceLabel]+: {
-          domain_service_id: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

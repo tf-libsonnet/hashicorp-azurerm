@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_setting', label=resourceLabel, attrs=self.newAttrs(enabled=enabled, setting_name=setting_name, timeouts=timeouts)),
   newAttrs(
-    enabled,
     setting_name,
+    enabled,
     timeouts=null
   ):: std.prune(a={
-    enabled: enabled,
     setting_name: setting_name,
+    enabled: enabled,
     timeouts: timeouts,
   }),
   withEnabled(resourceLabel, value):: {

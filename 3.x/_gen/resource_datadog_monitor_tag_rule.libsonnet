@@ -2,31 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    datadog_monitor_id,
     name=null,
+    datadog_monitor_id,
+    log=null,
     metric=null,
-    timeouts=null,
-    log=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_datadog_monitor_tag_rule', label=resourceLabel, attrs=self.newAttrs(
-    datadog_monitor_id=datadog_monitor_id,
     name=name,
+    datadog_monitor_id=datadog_monitor_id,
+    log=log,
     metric=metric,
-    timeouts=timeouts,
-    log=log
+    timeouts=timeouts
   )),
   newAttrs(
-    datadog_monitor_id,
     name=null,
+    datadog_monitor_id,
+    log=null,
     metric=null,
-    timeouts=null,
-    log=null
+    timeouts=null
   ):: std.prune(a={
-    datadog_monitor_id: datadog_monitor_id,
     name: name,
+    datadog_monitor_id: datadog_monitor_id,
+    log: log,
     metric: metric,
     timeouts: timeouts,
-    log: log,
   }),
+  withDatadogMonitorId(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor_tag_rule+: {
+        [resourceLabel]+: {
+          datadog_monitor_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_datadog_monitor_tag_rule+: {
@@ -36,14 +45,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatadogMonitorId(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_datadog_monitor_tag_rule+: {
         [resourceLabel]+: {
-          datadog_monitor_id: value,
+          timeouts: value,
         },
       },
     },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor_tag_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withLog(resourceLabel, value):: {
     resource+: {
@@ -65,25 +96,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   log:: {
     new(
+      aad_log_enabled=null,
       resource_log_enabled=null,
       subscription_log_enabled=null,
-      aad_log_enabled=null,
       filter=null
     ):: std.prune(a={
+      aad_log_enabled: aad_log_enabled,
       resource_log_enabled: resource_log_enabled,
       subscription_log_enabled: subscription_log_enabled,
-      aad_log_enabled: aad_log_enabled,
       filter: filter,
     }),
     filter:: {
       new(
-        action,
         name,
-        value
+        value,
+        action
       ):: std.prune(a={
-        action: action,
         name: name,
         value: value,
+        action: action,
       }),
     },
   },
@@ -122,36 +153,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         value: value,
       }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor_tag_rule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor_tag_rule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

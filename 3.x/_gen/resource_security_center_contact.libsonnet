@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    email,
     name=null,
     phone=null,
     alert_notifications,
     alerts_to_admins,
-    email,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_contact', label=resourceLabel, attrs=self.newAttrs(
+    email=email,
     name=name,
     phone=phone,
     alert_notifications=alert_notifications,
     alerts_to_admins=alerts_to_admins,
-    email=email,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,15 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     phone: phone,
     timeouts: timeouts,
   }),
-  withEmail(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_contact+: {
-        [resourceLabel]+: {
-          email: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_contact+: {
@@ -72,6 +63,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_security_center_contact+: {
         [resourceLabel]+: {
           alerts_to_admins: value,
+        },
+      },
+    },
+  },
+  withEmail(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_contact+: {
+        [resourceLabel]+: {
+          email: value,
         },
       },
     },

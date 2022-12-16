@@ -2,51 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    expiration=null,
     log_analytics_workspace_id,
     name,
     order,
     display_name,
     enabled=null,
-    expiration=null,
     action_incident=null,
     action_playbook=null,
     condition=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_automation_rule', label=resourceLabel, attrs=self.newAttrs(
+    expiration=expiration,
     log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     order=order,
     display_name=display_name,
     enabled=enabled,
-    expiration=expiration,
     action_incident=action_incident,
     action_playbook=action_playbook,
     condition=condition,
     timeouts=timeouts
   )),
   newAttrs(
-    display_name,
-    enabled=null,
-    expiration=null,
     log_analytics_workspace_id,
     name,
     order,
+    display_name,
+    enabled=null,
+    expiration=null,
     action_incident=null,
     action_playbook=null,
     condition=null,
     timeouts=null
   ):: std.prune(a={
-    display_name: display_name,
-    enabled: enabled,
-    expiration: expiration,
     log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
     order: order,
+    display_name: display_name,
+    enabled: enabled,
+    expiration: expiration,
     action_incident: action_incident,
     action_playbook: action_playbook,
     condition: condition,
     timeouts: timeouts,
   }),
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_automation_rule+: {
+        [resourceLabel]+: {
+          display_name: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_automation_rule+: {
@@ -92,46 +101,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_automation_rule+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_automation_rule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_automation_rule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
   withActionIncident(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_automation_rule+: {
@@ -152,21 +121,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   action_incident:: {
     new(
-      status=null,
       classification=null,
       classification_comment=null,
       labels=null,
       order,
       owner_id=null,
-      severity=null
+      severity=null,
+      status=null
     ):: std.prune(a={
-      status: status,
       classification: classification,
       classification_comment: classification_comment,
       labels: labels,
       order: order,
       owner_id: owner_id,
       severity: severity,
+      status: status,
     }),
   },
   withActionPlaybook(resourceLabel, value):: {
@@ -189,13 +158,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   action_playbook:: {
     new(
+      tenant_id=null,
       logic_app_id,
-      order,
-      tenant_id=null
+      order
     ):: std.prune(a={
+      tenant_id: tenant_id,
       logic_app_id: logic_app_id,
       order: order,
-      tenant_id: tenant_id,
     }),
   },
   withCondition(resourceLabel, value):: {
@@ -225,6 +194,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       operator: operator,
       property: property,
       values: values,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_automation_rule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_automation_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

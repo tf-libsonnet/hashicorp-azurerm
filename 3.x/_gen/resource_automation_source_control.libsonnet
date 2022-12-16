@@ -4,58 +4,58 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     repository_url,
     automatic_sync=null,
-    description=null,
     name,
-    folder_path,
     publish_runbook_enabled=null,
-    automation_account_id,
     branch=null,
+    description=null,
+    folder_path,
     source_control_type,
-    security=null,
-    timeouts=null
+    automation_account_id,
+    timeouts=null,
+    security=null
   ):: tf.withResource(type='azurerm_automation_source_control', label=resourceLabel, attrs=self.newAttrs(
     repository_url=repository_url,
     automatic_sync=automatic_sync,
-    description=description,
     name=name,
-    folder_path=folder_path,
     publish_runbook_enabled=publish_runbook_enabled,
-    automation_account_id=automation_account_id,
     branch=branch,
+    description=description,
+    folder_path=folder_path,
     source_control_type=source_control_type,
-    security=security,
-    timeouts=timeouts
+    automation_account_id=automation_account_id,
+    timeouts=timeouts,
+    security=security
   )),
   newAttrs(
+    branch=null,
+    source_control_type,
+    folder_path,
+    name,
+    publish_runbook_enabled=null,
+    repository_url,
     automatic_sync=null,
     automation_account_id,
-    source_control_type,
-    publish_runbook_enabled=null,
-    folder_path,
-    repository_url,
-    branch=null,
     description=null,
-    name,
     security=null,
     timeouts=null
   ):: std.prune(a={
+    branch: branch,
+    source_control_type: source_control_type,
+    folder_path: folder_path,
+    name: name,
+    publish_runbook_enabled: publish_runbook_enabled,
+    repository_url: repository_url,
     automatic_sync: automatic_sync,
     automation_account_id: automation_account_id,
-    source_control_type: source_control_type,
-    publish_runbook_enabled: publish_runbook_enabled,
-    folder_path: folder_path,
-    repository_url: repository_url,
-    branch: branch,
     description: description,
-    name: name,
     security: security,
     timeouts: timeouts,
   }),
-  withAutomationAccountId(resourceLabel, value):: {
+  withAutomaticSync(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
         [resourceLabel]+: {
-          automation_account_id: value,
+          automatic_sync: value,
         },
       },
     },
@@ -69,11 +69,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublishRunbookEnabled(resourceLabel, value):: {
+  withFolderPath(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
         [resourceLabel]+: {
-          publish_runbook_enabled: value,
+          folder_path: value,
         },
       },
     },
@@ -96,20 +96,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFolderPath(resourceLabel, value):: {
+  withAutomationAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
         [resourceLabel]+: {
-          folder_path: value,
-        },
-      },
-    },
-  },
-  withBranch(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_source_control+: {
-        [resourceLabel]+: {
-          branch: value,
+          automation_account_id: value,
         },
       },
     },
@@ -123,11 +114,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutomaticSync(resourceLabel, value):: {
+  withPublishRunbookEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
         [resourceLabel]+: {
-          automatic_sync: value,
+          publish_runbook_enabled: value,
+        },
+      },
+    },
+  },
+  withBranch(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_source_control+: {
+        [resourceLabel]+: {
+          branch: value,
         },
       },
     },
@@ -181,15 +181,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

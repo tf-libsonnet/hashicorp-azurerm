@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_web_app_active_slot', label=resourceLabel, attrs=self.newAttrs(overwrite_network_config=overwrite_network_config, slot_id=slot_id, timeouts=timeouts)),
   newAttrs(
-    slot_id,
     overwrite_network_config=null,
+    slot_id,
     timeouts=null
   ):: std.prune(a={
-    slot_id: slot_id,
     overwrite_network_config: overwrite_network_config,
+    slot_id: slot_id,
     timeouts: timeouts,
   }),
   withOverwriteNetworkConfig(resourceLabel, value):: {
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

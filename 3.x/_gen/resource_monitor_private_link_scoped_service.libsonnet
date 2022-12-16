@@ -15,36 +15,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    linked_resource_id,
-    name,
     resource_group_name,
     scope_name,
+    linked_resource_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    linked_resource_id: linked_resource_id,
-    name: name,
     resource_group_name: resource_group_name,
     scope_name: scope_name,
+    linked_resource_id: linked_resource_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_private_link_scoped_service+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withScopeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_private_link_scoped_service+: {
-        [resourceLabel]+: {
-          scope_name: value,
-        },
-      },
-    },
-  },
   withLinkedResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_private_link_scoped_service+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_monitor_private_link_scoped_service+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_private_link_scoped_service+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withScopeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_private_link_scoped_service+: {
+        [resourceLabel]+: {
+          scope_name: value,
         },
       },
     },

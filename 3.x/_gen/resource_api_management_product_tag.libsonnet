@@ -15,36 +15,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     api_management_name,
     api_management_product_id,
     name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     api_management_name: api_management_name,
     api_management_product_id: api_management_product_id,
     name: name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_product_tag+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
-  withApiManagementProductId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_product_tag+: {
-        [resourceLabel]+: {
-          api_management_product_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_product_tag+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_product_tag+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_product_tag+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
+  withApiManagementProductId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_product_tag+: {
+        [resourceLabel]+: {
+          api_management_product_id: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

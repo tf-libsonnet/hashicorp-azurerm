@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     recovery_vault_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_backup_policy_file_share', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     recovery_vault_name=recovery_vault_name,
     resource_group_name=resource_group_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     recovery_vault_name,
     resource_group_name,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     recovery_vault_name: recovery_vault_name,
     resource_group_name: resource_group_name,
+    name: name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_backup_policy_file_share+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_backup_policy_file_share+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_backup_policy_file_share+: {
         [dataSrcLabel]+: {
           recovery_vault_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_backup_policy_file_share+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

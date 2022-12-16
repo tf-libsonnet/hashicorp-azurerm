@@ -2,39 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    body,
-    container_name,
     database_name,
     name,
     resource_group_name,
     account_name,
+    body,
+    container_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_stored_procedure', label=resourceLabel, attrs=self.newAttrs(
-    body=body,
-    container_name=container_name,
     database_name=database_name,
     name=name,
     resource_group_name=resource_group_name,
     account_name=account_name,
+    body=body,
+    container_name=container_name,
     timeouts=timeouts
   )),
   newAttrs(
-    account_name,
-    body,
-    container_name,
     database_name,
     name,
     resource_group_name,
+    account_name,
+    body,
+    container_name,
     timeouts=null
   ):: std.prune(a={
-    account_name: account_name,
-    body: body,
-    container_name: container_name,
     database_name: database_name,
     name: name,
     resource_group_name: resource_group_name,
+    account_name: account_name,
+    body: body,
+    container_name: container_name,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_stored_procedure+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_stored_procedure+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_stored_procedure+: {
@@ -71,24 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_stored_procedure+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_stored_procedure+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_stored_procedure+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

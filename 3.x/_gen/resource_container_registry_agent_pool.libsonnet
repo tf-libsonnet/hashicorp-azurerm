@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    tags=null,
-    tier=null,
     virtual_network_subnet_id=null,
-    instance_count=null,
+    name,
+    tier=null,
     resource_group_name,
+    tags=null,
     container_registry_name,
+    instance_count=null,
     location,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_agent_pool', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    tags=tags,
-    tier=tier,
     virtual_network_subnet_id=virtual_network_subnet_id,
-    instance_count=instance_count,
+    name=name,
+    tier=tier,
     resource_group_name=resource_group_name,
+    tags=tags,
     container_registry_name=container_registry_name,
+    instance_count=instance_count,
     location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     container_registry_name,
+    instance_count=null,
     location,
+    resource_group_name,
     name,
-    tags=null,
     tier=null,
     virtual_network_subnet_id=null,
-    instance_count=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     container_registry_name: container_registry_name,
+    instance_count: instance_count,
     location: location,
+    resource_group_name: resource_group_name,
     name: name,
-    tags: tags,
     tier: tier,
     virtual_network_subnet_id: virtual_network_subnet_id,
-    instance_count: instance_count,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  withVirtualNetworkSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_agent_pool+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          virtual_network_subnet_id: value,
         },
       },
     },
@@ -61,6 +61,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withInstanceCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_agent_pool+: {
+        [resourceLabel]+: {
+          instance_count: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_agent_pool+: {
@@ -70,11 +79,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_agent_pool+: {
         [resourceLabel]+: {
-          name: value,
+          resource_group_name: value,
         },
       },
     },
@@ -88,29 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_agent_pool+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTier(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_agent_pool+: {
         [resourceLabel]+: {
           tier: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_agent_pool+: {
-        [resourceLabel]+: {
-          virtual_network_subnet_id: value,
-        },
-      },
-    },
-  },
-  withInstanceCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_agent_pool+: {
-        [resourceLabel]+: {
-          instance_count: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

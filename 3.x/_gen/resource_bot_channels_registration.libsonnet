@@ -2,124 +2,88 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    icon_url=null,
-    resource_group_name,
-    tags=null,
-    name,
-    streaming_endpoint_enabled=null,
-    endpoint=null,
-    description=null,
-    public_network_access_enabled=null,
-    isolated_network_enabled=null,
     microsoft_app_id,
-    sku,
     cmk_key_vault_url=null,
     display_name=null,
-    location,
+    description=null,
+    sku,
     developer_app_insights_api_key=null,
-    developer_app_insights_application_id=null,
+    resource_group_name,
+    isolated_network_enabled=null,
+    public_network_access_enabled=null,
     developer_app_insights_key=null,
+    name,
+    developer_app_insights_application_id=null,
+    streaming_endpoint_enabled=null,
+    tags=null,
+    endpoint=null,
+    icon_url=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channels_registration', label=resourceLabel, attrs=self.newAttrs(
-    icon_url=icon_url,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    name=name,
-    streaming_endpoint_enabled=streaming_endpoint_enabled,
-    endpoint=endpoint,
-    description=description,
-    public_network_access_enabled=public_network_access_enabled,
-    isolated_network_enabled=isolated_network_enabled,
     microsoft_app_id=microsoft_app_id,
-    sku=sku,
     cmk_key_vault_url=cmk_key_vault_url,
     display_name=display_name,
-    location=location,
+    description=description,
+    sku=sku,
     developer_app_insights_api_key=developer_app_insights_api_key,
-    developer_app_insights_application_id=developer_app_insights_application_id,
+    resource_group_name=resource_group_name,
+    isolated_network_enabled=isolated_network_enabled,
+    public_network_access_enabled=public_network_access_enabled,
     developer_app_insights_key=developer_app_insights_key,
+    name=name,
+    developer_app_insights_application_id=developer_app_insights_application_id,
+    streaming_endpoint_enabled=streaming_endpoint_enabled,
+    tags=tags,
+    endpoint=endpoint,
+    icon_url=icon_url,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    public_network_access_enabled=null,
-    sku,
-    cmk_key_vault_url=null,
-    developer_app_insights_api_key=null,
     developer_app_insights_application_id=null,
-    name,
-    developer_app_insights_key=null,
-    microsoft_app_id,
-    endpoint=null,
-    icon_url=null,
-    tags=null,
     display_name=null,
-    location,
+    icon_url=null,
     description=null,
-    isolated_network_enabled=null,
-    resource_group_name,
+    microsoft_app_id,
     streaming_endpoint_enabled=null,
+    developer_app_insights_api_key=null,
+    tags=null,
+    endpoint=null,
+    name,
+    public_network_access_enabled=null,
+    cmk_key_vault_url=null,
+    isolated_network_enabled=null,
+    sku,
+    developer_app_insights_key=null,
+    resource_group_name,
+    location,
     timeouts=null
   ):: std.prune(a={
-    public_network_access_enabled: public_network_access_enabled,
-    sku: sku,
-    cmk_key_vault_url: cmk_key_vault_url,
-    developer_app_insights_api_key: developer_app_insights_api_key,
     developer_app_insights_application_id: developer_app_insights_application_id,
-    name: name,
-    developer_app_insights_key: developer_app_insights_key,
-    microsoft_app_id: microsoft_app_id,
-    endpoint: endpoint,
-    icon_url: icon_url,
-    tags: tags,
     display_name: display_name,
-    location: location,
+    icon_url: icon_url,
     description: description,
-    isolated_network_enabled: isolated_network_enabled,
-    resource_group_name: resource_group_name,
+    microsoft_app_id: microsoft_app_id,
     streaming_endpoint_enabled: streaming_endpoint_enabled,
+    developer_app_insights_api_key: developer_app_insights_api_key,
+    tags: tags,
+    endpoint: endpoint,
+    name: name,
+    public_network_access_enabled: public_network_access_enabled,
+    cmk_key_vault_url: cmk_key_vault_url,
+    isolated_network_enabled: isolated_network_enabled,
+    sku: sku,
+    developer_app_insights_key: developer_app_insights_key,
+    resource_group_name: resource_group_name,
+    location: location,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channels_registration+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withDeveloperAppInsightsApiKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          developer_app_insights_api_key: value,
-        },
-      },
-    },
-  },
-  withDeveloperAppInsightsApplicationId(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          developer_app_insights_application_id: value,
+          public_network_access_enabled: value,
         },
       },
     },
@@ -133,11 +97,101 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channels_registration+: {
         [resourceLabel]+: {
-          description: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withStreamingEndpointEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          streaming_endpoint_enabled: value,
+        },
+      },
+    },
+  },
+  withDeveloperAppInsightsApiKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          developer_app_insights_api_key: value,
+        },
+      },
+    },
+  },
+  withDeveloperAppInsightsKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          developer_app_insights_key: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withCmkKeyVaultUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          cmk_key_vault_url: value,
+        },
+      },
+    },
+  },
+  withDeveloperAppInsightsApplicationId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          developer_app_insights_application_id: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withEndpoint(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          endpoint: value,
+        },
+      },
+    },
+  },
+  withIconUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          icon_url: value,
         },
       },
     },
@@ -147,6 +201,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bot_channels_registration+: {
         [resourceLabel]+: {
           isolated_network_enabled: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channels_registration+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -165,69 +228,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bot_channels_registration+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withIconUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          icon_url: value,
-        },
-      },
-    },
-  },
-  withStreamingEndpointEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          streaming_endpoint_enabled: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withCmkKeyVaultUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          cmk_key_vault_url: value,
-        },
-      },
-    },
-  },
-  withEndpoint(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          endpoint: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withDeveloperAppInsightsKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channels_registration+: {
-        [resourceLabel]+: {
-          developer_app_insights_key: value,
         },
       },
     },

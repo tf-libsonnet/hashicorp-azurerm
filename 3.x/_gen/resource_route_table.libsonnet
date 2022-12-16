@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    disable_bgp_route_propagation=null,
     location,
     name,
     resource_group_name,
     route=null,
     tags=null,
-    disable_bgp_route_propagation=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_route_table', label=resourceLabel, attrs=self.newAttrs(
+    disable_bgp_route_propagation=disable_bgp_route_propagation,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     route=route,
     tags=tags,
-    disable_bgp_route_propagation=disable_bgp_route_propagation,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,24 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     disable_bgp_route_propagation: disable_bgp_route_propagation,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_table+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withRoute(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_table+: {
-        [resourceLabel]+: {
-          route: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_route_table+: {
@@ -85,6 +67,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_route_table+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_table+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRoute(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_table+: {
+        [resourceLabel]+: {
+          route: value,
         },
       },
     },

@@ -2,39 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
     target_host_name,
     usage_model,
     cache_name,
     name,
-    resource_group_name,
     namespace_junction=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_hpc_cache_nfs_target', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
     target_host_name=target_host_name,
     usage_model=usage_model,
     cache_name=cache_name,
     name=name,
-    resource_group_name=resource_group_name,
     namespace_junction=namespace_junction,
     timeouts=timeouts
   )),
   newAttrs(
-    cache_name,
-    name,
     resource_group_name,
     target_host_name,
     usage_model,
+    cache_name,
+    name,
     timeouts=null,
     namespace_junction=null
   ):: std.prune(a={
-    cache_name: cache_name,
-    name: name,
     resource_group_name: resource_group_name,
     target_host_name: target_host_name,
     usage_model: usage_model,
+    cache_name: cache_name,
+    name: name,
     timeouts: timeouts,
     namespace_junction: namespace_junction,
   }),
+  withCacheName(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_nfs_target+: {
+        [resourceLabel]+: {
+          cache_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_nfs_target+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_nfs_target+: {
@@ -62,23 +80,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCacheName(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_nfs_target+: {
         [resourceLabel]+: {
-          cache_name: value,
+          timeouts: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_nfs_target+: {
         [resourceLabel]+: {
-          name: value,
+          timeouts+: value,
         },
       },
     },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
+    }),
   },
   withNamespaceJunction(resourceLabel, value):: {
     resource+: {
@@ -109,37 +140,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       namespace_path: namespace_path,
       nfs_export: nfs_export,
       target_path: target_path,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_nfs_target+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_nfs_target+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

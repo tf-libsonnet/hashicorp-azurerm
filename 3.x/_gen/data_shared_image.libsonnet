@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     gallery_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_shared_image', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     gallery_name=gallery_name,
     resource_group_name=resource_group_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withGalleryName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_shared_image+: {
+        [dataSrcLabel]+: {
+          gallery_name: value,
+        },
+      },
+    },
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_shared_image+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_shared_image+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withGalleryName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_shared_image+: {
-        [dataSrcLabel]+: {
-          gallery_name: value,
         },
       },
     },

@@ -2,78 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    routing_preference_internet_enabled=null,
-    tags=null,
-    vpn_server_configuration_id,
-    virtual_hub_id,
-    dns_servers=null,
     name,
-    resource_group_name,
+    vpn_server_configuration_id,
+    tags=null,
     scale_unit,
+    dns_servers=null,
+    resource_group_name,
+    routing_preference_internet_enabled=null,
+    location,
+    virtual_hub_id,
     connection_configuration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_point_to_site_vpn_gateway', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    routing_preference_internet_enabled=routing_preference_internet_enabled,
-    tags=tags,
-    vpn_server_configuration_id=vpn_server_configuration_id,
-    virtual_hub_id=virtual_hub_id,
-    dns_servers=dns_servers,
     name=name,
-    resource_group_name=resource_group_name,
+    vpn_server_configuration_id=vpn_server_configuration_id,
+    tags=tags,
     scale_unit=scale_unit,
+    dns_servers=dns_servers,
+    resource_group_name=resource_group_name,
+    routing_preference_internet_enabled=routing_preference_internet_enabled,
+    location=location,
+    virtual_hub_id=virtual_hub_id,
     connection_configuration=connection_configuration,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     routing_preference_internet_enabled=null,
-    scale_unit,
     tags=null,
-    virtual_hub_id,
+    dns_servers=null,
     location,
     name,
-    resource_group_name,
+    scale_unit,
+    virtual_hub_id,
     vpn_server_configuration_id,
-    dns_servers=null,
-    timeouts=null,
-    connection_configuration=null
+    connection_configuration=null,
+    timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     routing_preference_internet_enabled: routing_preference_internet_enabled,
-    scale_unit: scale_unit,
     tags: tags,
-    virtual_hub_id: virtual_hub_id,
+    dns_servers: dns_servers,
     location: location,
     name: name,
-    resource_group_name: resource_group_name,
+    scale_unit: scale_unit,
+    virtual_hub_id: virtual_hub_id,
     vpn_server_configuration_id: vpn_server_configuration_id,
-    dns_servers: dns_servers,
-    timeouts: timeouts,
     connection_configuration: connection_configuration,
+    timeouts: timeouts,
   }),
-  withVpnServerConfigurationId(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_point_to_site_vpn_gateway+: {
         [resourceLabel]+: {
-          vpn_server_configuration_id: value,
-        },
-      },
-    },
-  },
-  withDnsServers(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          dns_servers: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          location: value,
+          name: value,
         },
       },
     },
@@ -87,29 +69,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withScaleUnit(resourceLabel, value):: {
     resource+: {
       azurerm_point_to_site_vpn_gateway+: {
         [resourceLabel]+: {
           scale_unit: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -123,11 +96,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDnsServers(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          dns_servers: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withVirtualHubId(resourceLabel, value):: {
     resource+: {
       azurerm_point_to_site_vpn_gateway+: {
         [resourceLabel]+: {
           virtual_hub_id: value,
+        },
+      },
+    },
+  },
+  withVpnServerConfigurationId(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          vpn_server_configuration_id: value,
         },
       },
     },
@@ -162,13 +162,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       route: route,
       vpn_client_address_pool: vpn_client_address_pool,
     }),
-    vpn_client_address_pool:: {
-      new(
-        address_prefixes
-      ):: std.prune(a={
-        address_prefixes: address_prefixes,
-      }),
-    },
     route:: {
       new(
         inbound_route_map_id=null,
@@ -183,13 +176,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
       propagated_route_table:: {
         new(
-          labels=null,
-          ids
+          ids,
+          labels=null
         ):: std.prune(a={
-          labels: labels,
           ids: ids,
+          labels: labels,
         }),
       },
+    },
+    vpn_client_address_pool:: {
+      new(
+        address_prefixes
+      ):: std.prune(a={
+        address_prefixes: address_prefixes,
+      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -212,15 +212,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

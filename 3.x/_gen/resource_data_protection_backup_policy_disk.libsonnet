@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    backup_repeating_time_intervals,
-    default_retention_duration,
     name,
     vault_id,
+    backup_repeating_time_intervals,
+    default_retention_duration,
     retention_rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_policy_disk', label=resourceLabel, attrs=self.newAttrs(
-    backup_repeating_time_intervals=backup_repeating_time_intervals,
-    default_retention_duration=default_retention_duration,
     name=name,
     vault_id=vault_id,
+    backup_repeating_time_intervals=backup_repeating_time_intervals,
+    default_retention_duration=default_retention_duration,
     retention_rule=retention_rule,
     timeouts=timeouts
   )),
@@ -31,6 +31,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts: timeouts,
     retention_rule: retention_rule,
   }),
+  withBackupRepeatingTimeIntervals(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_policy_disk+: {
+        [resourceLabel]+: {
+          backup_repeating_time_intervals: value,
+        },
+      },
+    },
+  },
   withDefaultRetentionDuration(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_policy_disk+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_protection_backup_policy_disk+: {
         [resourceLabel]+: {
           vault_id: value,
-        },
-      },
-    },
-  },
-  withBackupRepeatingTimeIntervals(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_policy_disk+: {
-        [resourceLabel]+: {
-          backup_repeating_time_intervals: value,
         },
       },
     },
@@ -125,15 +125,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

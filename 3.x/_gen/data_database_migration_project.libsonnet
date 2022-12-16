@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    service_name,
     name,
     resource_group_name,
+    service_name,
     timeouts=null
   ):: tf.withData(type='azurerm_database_migration_project', label=dataSrcLabel, attrs=self.newAttrs(
-    service_name=service_name,
     name=name,
     resource_group_name=resource_group_name,
+    service_name=service_name,
     timeouts=timeouts
   )),
   newAttrs(

@@ -2,71 +2,80 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    r_services_enabled=null,
     sql_connectivity_update_password=null,
-    sql_connectivity_update_username=null,
     sql_license_type,
     tags=null,
-    r_services_enabled=null,
     sql_connectivity_port=null,
-    virtual_machine_id,
     sql_connectivity_type=null,
+    sql_connectivity_update_username=null,
+    virtual_machine_id,
+    key_vault_credential=null,
     sql_instance=null,
     storage_configuration=null,
     timeouts=null,
     assessment=null,
     auto_backup=null,
-    auto_patching=null,
-    key_vault_credential=null
+    auto_patching=null
   ):: tf.withResource(type='azurerm_mssql_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
+    r_services_enabled=r_services_enabled,
     sql_connectivity_update_password=sql_connectivity_update_password,
-    sql_connectivity_update_username=sql_connectivity_update_username,
     sql_license_type=sql_license_type,
     tags=tags,
-    r_services_enabled=r_services_enabled,
     sql_connectivity_port=sql_connectivity_port,
-    virtual_machine_id=virtual_machine_id,
     sql_connectivity_type=sql_connectivity_type,
+    sql_connectivity_update_username=sql_connectivity_update_username,
+    virtual_machine_id=virtual_machine_id,
+    key_vault_credential=key_vault_credential,
     sql_instance=sql_instance,
     storage_configuration=storage_configuration,
     timeouts=timeouts,
     assessment=assessment,
     auto_backup=auto_backup,
-    auto_patching=auto_patching,
-    key_vault_credential=key_vault_credential
+    auto_patching=auto_patching
   )),
   newAttrs(
     sql_connectivity_update_username=null,
-    sql_license_type,
-    tags=null,
-    r_services_enabled=null,
-    sql_connectivity_port=null,
     virtual_machine_id,
     sql_connectivity_type=null,
     sql_connectivity_update_password=null,
-    sql_instance=null,
-    storage_configuration=null,
-    timeouts=null,
+    sql_license_type,
+    tags=null,
+    sql_connectivity_port=null,
+    r_services_enabled=null,
     assessment=null,
     auto_backup=null,
     auto_patching=null,
-    key_vault_credential=null
+    key_vault_credential=null,
+    sql_instance=null,
+    storage_configuration=null,
+    timeouts=null
   ):: std.prune(a={
     sql_connectivity_update_username: sql_connectivity_update_username,
-    sql_license_type: sql_license_type,
-    tags: tags,
-    r_services_enabled: r_services_enabled,
-    sql_connectivity_port: sql_connectivity_port,
     virtual_machine_id: virtual_machine_id,
     sql_connectivity_type: sql_connectivity_type,
     sql_connectivity_update_password: sql_connectivity_update_password,
-    sql_instance: sql_instance,
-    storage_configuration: storage_configuration,
-    timeouts: timeouts,
+    sql_license_type: sql_license_type,
+    tags: tags,
+    sql_connectivity_port: sql_connectivity_port,
+    r_services_enabled: r_services_enabled,
     assessment: assessment,
     auto_backup: auto_backup,
     auto_patching: auto_patching,
     key_vault_credential: key_vault_credential,
+    sql_instance: sql_instance,
+    storage_configuration: storage_configuration,
+    timeouts: timeouts,
   }),
+  withSqlConnectivityUpdatePassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_virtual_machine+: {
+        [resourceLabel]+: {
+          sql_connectivity_update_password: value,
+        },
+      },
+    },
+  },
   withSqlLicenseType(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_virtual_machine+: {
@@ -85,29 +94,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRServicesEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_virtual_machine+: {
-        [resourceLabel]+: {
-          r_services_enabled: value,
-        },
-      },
-    },
-  },
   withSqlConnectivityPort(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_virtual_machine+: {
         [resourceLabel]+: {
           sql_connectivity_port: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_virtual_machine+: {
-        [resourceLabel]+: {
-          virtual_machine_id: value,
         },
       },
     },
@@ -121,20 +112,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSqlConnectivityUpdatePassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_virtual_machine+: {
-        [resourceLabel]+: {
-          sql_connectivity_update_password: value,
-        },
-      },
-    },
-  },
   withSqlConnectivityUpdateUsername(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_virtual_machine+: {
         [resourceLabel]+: {
           sql_connectivity_update_username: value,
+        },
+      },
+    },
+  },
+  withVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_virtual_machine+: {
+        [resourceLabel]+: {
+          virtual_machine_id: value,
+        },
+      },
+    },
+  },
+  withRServicesEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_virtual_machine+: {
+        [resourceLabel]+: {
+          r_services_enabled: value,
         },
       },
     },
@@ -201,35 +201,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   auto_backup:: {
     new(
-      encryption_enabled=null,
-      encryption_password=null,
-      retention_period_in_days,
       storage_account_access_key,
       storage_blob_endpoint,
       system_databases_backup_enabled=null,
+      encryption_enabled=null,
+      encryption_password=null,
+      retention_period_in_days,
       manual_schedule=null
     ):: std.prune(a={
-      encryption_enabled: encryption_enabled,
-      encryption_password: encryption_password,
-      retention_period_in_days: retention_period_in_days,
       storage_account_access_key: storage_account_access_key,
       storage_blob_endpoint: storage_blob_endpoint,
       system_databases_backup_enabled: system_databases_backup_enabled,
+      encryption_enabled: encryption_enabled,
+      encryption_password: encryption_password,
+      retention_period_in_days: retention_period_in_days,
       manual_schedule: manual_schedule,
     }),
     manual_schedule:: {
       new(
-        log_backup_frequency_in_minutes,
         days_of_week=null,
         full_backup_frequency,
         full_backup_start_hour,
-        full_backup_window_in_hours
+        full_backup_window_in_hours,
+        log_backup_frequency_in_minutes
       ):: std.prune(a={
-        log_backup_frequency_in_minutes: log_backup_frequency_in_minutes,
         days_of_week: days_of_week,
         full_backup_frequency: full_backup_frequency,
         full_backup_start_hour: full_backup_start_hour,
         full_backup_window_in_hours: full_backup_window_in_hours,
+        log_backup_frequency_in_minutes: log_backup_frequency_in_minutes,
       }),
     },
   },
@@ -282,15 +282,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   key_vault_credential:: {
     new(
-      service_principal_secret,
       key_vault_url,
       name,
-      service_principal_name
+      service_principal_name,
+      service_principal_secret
     ):: std.prune(a={
-      service_principal_secret: service_principal_secret,
       key_vault_url: key_vault_url,
       name: name,
       service_principal_name: service_principal_name,
+      service_principal_secret: service_principal_secret,
     }),
   },
   withSqlInstance(resourceLabel, value):: {
@@ -313,21 +313,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sql_instance:: {
     new(
+      max_server_memory_mb=null,
+      min_server_memory_mb=null,
+      adhoc_workloads_optimization_enabled=null,
       collation=null,
       instant_file_initialization_enabled=null,
       lock_pages_in_memory_enabled=null,
-      max_dop=null,
-      max_server_memory_mb=null,
-      min_server_memory_mb=null,
-      adhoc_workloads_optimization_enabled=null
+      max_dop=null
     ):: std.prune(a={
+      max_server_memory_mb: max_server_memory_mb,
+      min_server_memory_mb: min_server_memory_mb,
+      adhoc_workloads_optimization_enabled: adhoc_workloads_optimization_enabled,
       collation: collation,
       instant_file_initialization_enabled: instant_file_initialization_enabled,
       lock_pages_in_memory_enabled: lock_pages_in_memory_enabled,
       max_dop: max_dop,
-      max_server_memory_mb: max_server_memory_mb,
-      min_server_memory_mb: min_server_memory_mb,
-      adhoc_workloads_optimization_enabled: adhoc_workloads_optimization_enabled,
     }),
   },
   withStorageConfiguration(resourceLabel, value):: {
@@ -350,16 +350,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage_configuration:: {
     new(
-      system_db_on_data_disk_enabled=null,
       disk_type,
       storage_workload_type,
+      system_db_on_data_disk_enabled=null,
       data_settings=null,
       log_settings=null,
       temp_db_settings=null
     ):: std.prune(a={
-      system_db_on_data_disk_enabled: system_db_on_data_disk_enabled,
       disk_type: disk_type,
       storage_workload_type: storage_workload_type,
+      system_db_on_data_disk_enabled: system_db_on_data_disk_enabled,
       data_settings: data_settings,
       log_settings: log_settings,
       temp_db_settings: temp_db_settings,
@@ -375,30 +375,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     log_settings:: {
       new(
-        luns,
-        default_file_path
+        default_file_path,
+        luns
       ):: std.prune(a={
-        luns: luns,
         default_file_path: default_file_path,
+        luns: luns,
       }),
     },
     temp_db_settings:: {
       new(
-        data_file_count=null,
         data_file_growth_in_mb=null,
         data_file_size_mb=null,
         default_file_path,
         log_file_growth_mb=null,
         log_file_size_mb=null,
-        luns
+        luns,
+        data_file_count=null
       ):: std.prune(a={
-        data_file_count: data_file_count,
         data_file_growth_in_mb: data_file_growth_in_mb,
         data_file_size_mb: data_file_size_mb,
         default_file_path: default_file_path,
         log_file_growth_mb: log_file_growth_mb,
         log_file_size_mb: log_file_size_mb,
         luns: luns,
+        data_file_count: data_file_count,
       }),
     },
   },
@@ -422,15 +422,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

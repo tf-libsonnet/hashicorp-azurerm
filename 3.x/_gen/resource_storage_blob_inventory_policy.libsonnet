@@ -24,58 +24,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRules(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob_inventory_policy+: {
-        [resourceLabel]+: {
-          rules: value,
-        },
-      },
-    },
-  },
-  withRulesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob_inventory_policy+: {
-        [resourceLabel]+: {
-          rules+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  rules:: {
-    new(
-      storage_container_name,
-      format,
-      name,
-      schedule,
-      schema_fields,
-      scope,
-      filter=null
-    ):: std.prune(a={
-      storage_container_name: storage_container_name,
-      format: format,
-      name: name,
-      schedule: schedule,
-      schema_fields: schema_fields,
-      scope: scope,
-      filter: filter,
-    }),
-    filter:: {
-      new(
-        include_snapshots=null,
-        prefix_match=null,
-        blob_types,
-        include_blob_versions=null,
-        include_deleted=null
-      ):: std.prune(a={
-        include_snapshots: include_snapshots,
-        prefix_match: prefix_match,
-        blob_types: blob_types,
-        include_blob_versions: include_blob_versions,
-        include_deleted: include_deleted,
-      }),
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_storage_blob_inventory_policy+: {
@@ -106,5 +54,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       read: read,
       update: update,
     }),
+  },
+  withRules(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob_inventory_policy+: {
+        [resourceLabel]+: {
+          rules: value,
+        },
+      },
+    },
+  },
+  withRulesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob_inventory_policy+: {
+        [resourceLabel]+: {
+          rules+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  rules:: {
+    new(
+      format,
+      name,
+      schedule,
+      schema_fields,
+      scope,
+      storage_container_name,
+      filter=null
+    ):: std.prune(a={
+      format: format,
+      name: name,
+      schedule: schedule,
+      schema_fields: schema_fields,
+      scope: scope,
+      storage_container_name: storage_container_name,
+      filter: filter,
+    }),
+    filter:: {
+      new(
+        prefix_match=null,
+        blob_types,
+        include_blob_versions=null,
+        include_deleted=null,
+        include_snapshots=null
+      ):: std.prune(a={
+        prefix_match: prefix_match,
+        blob_types: blob_types,
+        include_blob_versions: include_blob_versions,
+        include_deleted: include_deleted,
+        include_snapshots: include_snapshots,
+      }),
+    },
   },
 }

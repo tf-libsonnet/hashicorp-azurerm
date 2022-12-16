@@ -2,28 +2,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    url,
     api_management_name,
-    name,
-    resource_group_name,
     title=null,
-    description=null,
-    protocol,
+    url,
     resource_id=null,
+    description=null,
+    name,
+    protocol,
+    resource_group_name,
     credentials=null,
     proxy=null,
     service_fabric_cluster=null,
     timeouts=null,
     tls=null
   ):: tf.withResource(type='azurerm_api_management_backend', label=resourceLabel, attrs=self.newAttrs(
-    url=url,
     api_management_name=api_management_name,
-    name=name,
-    resource_group_name=resource_group_name,
     title=title,
-    description=description,
-    protocol=protocol,
+    url=url,
     resource_id=resource_id,
+    description=description,
+    name=name,
+    protocol=protocol,
+    resource_group_name=resource_group_name,
     credentials=credentials,
     proxy=proxy,
     service_fabric_cluster=service_fabric_cluster,
@@ -31,84 +31,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tls=tls
   )),
   newAttrs(
-    url,
     api_management_name,
-    name,
-    resource_group_name,
     title=null,
+    url,
     description=null,
+    name,
     protocol,
+    resource_group_name,
     resource_id=null,
+    credentials=null,
+    proxy=null,
     service_fabric_cluster=null,
     timeouts=null,
-    tls=null,
-    credentials=null,
-    proxy=null
+    tls=null
   ):: std.prune(a={
-    url: url,
     api_management_name: api_management_name,
-    name: name,
-    resource_group_name: resource_group_name,
     title: title,
+    url: url,
     description: description,
+    name: name,
     protocol: protocol,
+    resource_group_name: resource_group_name,
     resource_id: resource_id,
+    credentials: credentials,
+    proxy: proxy,
     service_fabric_cluster: service_fabric_cluster,
     timeouts: timeouts,
     tls: tls,
-    credentials: credentials,
-    proxy: proxy,
   }),
-  withProtocol(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          protocol: value,
-        },
-      },
-    },
-  },
-  withResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          resource_id: value,
-        },
-      },
-    },
-  },
-  withUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          url: value,
-        },
-      },
-    },
-  },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
           api_management_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -122,11 +77,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          url: value,
+        },
+      },
+    },
+  },
+  withProtocol(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          protocol: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          resource_id: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -151,18 +151,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   service_fabric_cluster:: {
     new(
-      management_endpoints,
       max_partition_resolution_retries,
       server_certificate_thumbprints=null,
       client_certificate_id=null,
       client_certificate_thumbprint=null,
+      management_endpoints,
       server_x509_name=null
     ):: std.prune(a={
-      management_endpoints: management_endpoints,
       max_partition_resolution_retries: max_partition_resolution_retries,
       server_certificate_thumbprints: server_certificate_thumbprints,
       client_certificate_id: client_certificate_id,
       client_certificate_thumbprint: client_certificate_thumbprint,
+      management_endpoints: management_endpoints,
       server_x509_name: server_x509_name,
     }),
     server_x509_name:: {
@@ -195,15 +195,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
   withTls(resourceLabel, value):: {
@@ -265,11 +265,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     authorization:: {
       new(
-        scheme=null,
-        parameter=null
+        parameter=null,
+        scheme=null
       ):: std.prune(a={
-        scheme: scheme,
         parameter: parameter,
+        scheme: scheme,
       }),
     },
   },
@@ -293,13 +293,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   proxy:: {
     new(
-      password=null,
       url,
-      username
+      username,
+      password=null
     ):: std.prune(a={
-      password: password,
       url: url,
       username: username,
+      password: password,
     }),
   },
 }

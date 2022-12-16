@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    tags=null,
-    template_spec_version_id=null,
-    debug_level=null,
-    template_content=null,
-    deployment_mode,
     name,
     parameters_content=null,
+    resource_group_name,
+    template_content=null,
+    template_spec_version_id=null,
+    deployment_mode,
+    debug_level=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_group_template_deployment', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
-    template_spec_version_id=template_spec_version_id,
-    debug_level=debug_level,
-    template_content=template_content,
-    deployment_mode=deployment_mode,
     name=name,
     parameters_content=parameters_content,
+    resource_group_name=resource_group_name,
+    template_content=template_content,
+    template_spec_version_id=template_spec_version_id,
+    deployment_mode=deployment_mode,
+    debug_level=debug_level,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    parameters_content=null,
     resource_group_name,
+    debug_level=null,
     tags=null,
-    deployment_mode,
     template_content=null,
     template_spec_version_id=null,
-    debug_level=null,
+    deployment_mode,
     name,
+    parameters_content=null,
     timeouts=null
   ):: std.prune(a={
-    parameters_content: parameters_content,
     resource_group_name: resource_group_name,
+    debug_level: debug_level,
     tags: tags,
-    deployment_mode: deployment_mode,
     template_content: template_content,
     template_spec_version_id: template_spec_version_id,
-    debug_level: debug_level,
+    deployment_mode: deployment_mode,
     name: name,
+    parameters_content: parameters_content,
     timeouts: timeouts,
   }),
   withDeploymentMode(resourceLabel, value):: {
@@ -57,6 +57,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_resource_group_template_deployment+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withDebugLevel(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_template_deployment+: {
+        [resourceLabel]+: {
+          debug_level: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_template_deployment+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -79,11 +97,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withTemplateContent(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_template_deployment+: {
         [resourceLabel]+: {
-          tags: value,
+          template_content: value,
         },
       },
     },
@@ -93,24 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_resource_group_template_deployment+: {
         [resourceLabel]+: {
           template_spec_version_id: value,
-        },
-      },
-    },
-  },
-  withDebugLevel(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_template_deployment+: {
-        [resourceLabel]+: {
-          debug_level: value,
-        },
-      },
-    },
-  },
-  withTemplateContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_template_deployment+: {
-        [resourceLabel]+: {
-          template_content: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

@@ -2,114 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    create_option,
-    disk_size_gb=null,
-    location,
     name,
+    resource_group_name,
+    source_resource_id=null,
+    source_uri=null,
     storage_account_id=null,
     tags=null,
-    source_resource_id=null,
-    resource_group_name,
-    source_uri=null,
-    timeouts=null,
-    encryption_settings=null
+    disk_size_gb=null,
+    create_option,
+    location,
+    encryption_settings=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_snapshot', label=resourceLabel, attrs=self.newAttrs(
-    create_option=create_option,
-    disk_size_gb=disk_size_gb,
-    location=location,
     name=name,
+    resource_group_name=resource_group_name,
+    source_resource_id=source_resource_id,
+    source_uri=source_uri,
     storage_account_id=storage_account_id,
     tags=tags,
-    source_resource_id=source_resource_id,
-    resource_group_name=resource_group_name,
-    source_uri=source_uri,
-    timeouts=timeouts,
-    encryption_settings=encryption_settings
+    disk_size_gb=disk_size_gb,
+    create_option=create_option,
+    location=location,
+    encryption_settings=encryption_settings,
+    timeouts=timeouts
   )),
   newAttrs(
+    name,
     location,
     resource_group_name,
+    source_resource_id=null,
+    create_option,
+    source_uri=null,
     storage_account_id=null,
     tags=null,
     disk_size_gb=null,
-    create_option,
-    name,
-    source_uri=null,
-    source_resource_id=null,
     encryption_settings=null,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     location: location,
     resource_group_name: resource_group_name,
+    source_resource_id: source_resource_id,
+    create_option: create_option,
+    source_uri: source_uri,
     storage_account_id: storage_account_id,
     tags: tags,
     disk_size_gb: disk_size_gb,
-    create_option: create_option,
-    name: name,
-    source_uri: source_uri,
-    source_resource_id: source_resource_id,
     encryption_settings: encryption_settings,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_snapshot+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSourceUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_snapshot+: {
-        [resourceLabel]+: {
-          source_uri: value,
-        },
-      },
-    },
-  },
   withDiskSizeGb(resourceLabel, value):: {
     resource+: {
       azurerm_snapshot+: {
         [resourceLabel]+: {
           disk_size_gb: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_snapshot+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_snapshot+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withCreateOption(resourceLabel, value):: {
-    resource+: {
-      azurerm_snapshot+: {
-        [resourceLabel]+: {
-          create_option: value,
-        },
-      },
-    },
-  },
-  withSourceResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_snapshot+: {
-        [resourceLabel]+: {
-          source_resource_id: value,
         },
       },
     },
@@ -123,11 +69,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_snapshot+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_snapshot+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSourceResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_snapshot+: {
+        [resourceLabel]+: {
+          source_resource_id: value,
+        },
+      },
+    },
+  },
+  withSourceUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_snapshot+: {
+        [resourceLabel]+: {
+          source_uri: value,
+        },
+      },
+    },
+  },
   withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_snapshot+: {
         [resourceLabel]+: {
           storage_account_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_snapshot+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withCreateOption(resourceLabel, value):: {
+    resource+: {
+      azurerm_snapshot+: {
+        [resourceLabel]+: {
+          create_option: value,
         },
       },
     },
@@ -153,12 +153,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   encryption_settings:: {
     new(
       enabled=null,
-      key_encryption_key=null,
-      disk_encryption_key=null
+      disk_encryption_key=null,
+      key_encryption_key=null
     ):: std.prune(a={
       enabled: enabled,
-      key_encryption_key: key_encryption_key,
       disk_encryption_key: disk_encryption_key,
+      key_encryption_key: key_encryption_key,
     }),
     disk_encryption_key:: {
       new(
@@ -199,15 +199,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

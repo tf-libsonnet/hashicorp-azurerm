@@ -2,31 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    binding_type=null,
-    name,
-    spring_cloud_builder_id,
-    timeouts=null,
-    launch=null
-  ):: tf.withResource(type='azurerm_spring_cloud_build_pack_binding', label=resourceLabel, attrs=self.newAttrs(
-    binding_type=binding_type,
-    name=name,
-    spring_cloud_builder_id=spring_cloud_builder_id,
-    timeouts=timeouts,
-    launch=launch
-  )),
-  newAttrs(
     spring_cloud_builder_id,
     binding_type=null,
     name,
     launch=null,
     timeouts=null
+  ):: tf.withResource(type='azurerm_spring_cloud_build_pack_binding', label=resourceLabel, attrs=self.newAttrs(
+    spring_cloud_builder_id=spring_cloud_builder_id,
+    binding_type=binding_type,
+    name=name,
+    launch=launch,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    name,
+    spring_cloud_builder_id,
+    binding_type=null,
+    launch=null,
+    timeouts=null
   ):: std.prune(a={
+    name: name,
     spring_cloud_builder_id: spring_cloud_builder_id,
     binding_type: binding_type,
-    name: name,
     launch: launch,
     timeouts: timeouts,
   }),
+  withBindingType(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_build_pack_binding+: {
+        [resourceLabel]+: {
+          binding_type: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_build_pack_binding+: {
@@ -44,46 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withBindingType(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_build_pack_binding+: {
-        [resourceLabel]+: {
-          binding_type: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_build_pack_binding+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_build_pack_binding+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withLaunch(resourceLabel, value):: {
     resource+: {
@@ -105,11 +74,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   launch:: {
     new(
-      secrets=null,
-      properties=null
+      properties=null,
+      secrets=null
     ):: std.prune(a={
-      secrets: secrets,
       properties: properties,
+      secrets: secrets,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_build_pack_binding+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_build_pack_binding+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

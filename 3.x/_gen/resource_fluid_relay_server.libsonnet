@@ -3,43 +3,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     location,
-    tags=null,
     storage_sku=null,
+    tags=null,
     name,
     resource_group_name,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_fluid_relay_server', label=resourceLabel, attrs=self.newAttrs(
     location=location,
-    tags=tags,
     storage_sku=storage_sku,
+    tags=tags,
     name=name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    identity=identity
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
-    location,
-    resource_group_name,
-    storage_sku=null,
     name,
+    resource_group_name,
+    location,
+    storage_sku=null,
+    tags=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    location: location,
-    resource_group_name: resource_group_name,
-    storage_sku: storage_sku,
     name: name,
+    resource_group_name: resource_group_name,
+    location: location,
+    storage_sku: storage_sku,
+    tags: tags,
     identity: identity,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_fluid_relay_server+: {
         [resourceLabel]+: {
-          tags: value,
+          location: value,
         },
       },
     },
@@ -71,14 +71,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_fluid_relay_server+: {
         [resourceLabel]+: {
-          location: value,
+          tags: value,
         },
       },
     },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_fluid_relay_server+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_fluid_relay_server+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -109,33 +136,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_fluid_relay_server+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_fluid_relay_server+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
     }),
   },
 }

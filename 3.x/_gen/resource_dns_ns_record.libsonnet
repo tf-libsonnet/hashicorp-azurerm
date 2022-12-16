@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
+    tags=null,
     ttl,
     zone_name,
     name,
     records,
-    resource_group_name,
-    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dns_ns_record', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
+    tags=tags,
     ttl=ttl,
     zone_name=zone_name,
     name=name,
     records=records,
-    resource_group_name=resource_group_name,
-    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

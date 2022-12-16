@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    listen=null,
     name,
     resource_group_name,
-    listen=null,
     send=null,
     namespace_name,
     manage=null,
     eventhub_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
+    listen=listen,
     name=name,
     resource_group_name=resource_group_name,
-    listen=listen,
     send=send,
     namespace_name=namespace_name,
     manage=manage,
@@ -21,65 +21,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    send=null,
     manage=null,
-    eventhub_name,
-    name,
-    listen=null,
     resource_group_name,
+    send=null,
+    eventhub_name,
+    listen=null,
+    name,
     namespace_name,
     timeouts=null
   ):: std.prune(a={
-    send: send,
     manage: manage,
-    eventhub_name: eventhub_name,
-    name: name,
-    listen: listen,
     resource_group_name: resource_group_name,
+    send: send,
+    eventhub_name: eventhub_name,
+    listen: listen,
+    name: name,
     namespace_name: namespace_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_authorization_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withNamespaceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_authorization_rule+: {
-        [resourceLabel]+: {
-          namespace_name: value,
-        },
-      },
-    },
-  },
-  withSend(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_authorization_rule+: {
-        [resourceLabel]+: {
-          send: value,
-        },
-      },
-    },
-  },
-  withManage(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_authorization_rule+: {
-        [resourceLabel]+: {
-          manage: value,
-        },
-      },
-    },
-  },
   withEventhubName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_authorization_rule+: {
         [resourceLabel]+: {
           eventhub_name: value,
+        },
+      },
+    },
+  },
+  withListen(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_authorization_rule+: {
+        [resourceLabel]+: {
+          listen: value,
         },
       },
     },
@@ -93,11 +66,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withListen(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_authorization_rule+: {
         [resourceLabel]+: {
-          listen: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSend(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_authorization_rule+: {
+        [resourceLabel]+: {
+          send: value,
+        },
+      },
+    },
+  },
+  withNamespaceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_authorization_rule+: {
+        [resourceLabel]+: {
+          namespace_name: value,
+        },
+      },
+    },
+  },
+  withManage(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_authorization_rule+: {
+        [resourceLabel]+: {
+          manage: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

@@ -2,121 +2,76 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    integration_runtime_name=null,
-    parameters=null,
     adb_domain,
-    existing_cluster_id=null,
+    data_factory_id,
     description=null,
-    access_token=null,
-    msi_work_space_resource_id=null,
     name,
+    parameters=null,
+    existing_cluster_id=null,
+    integration_runtime_name=null,
+    msi_work_space_resource_id=null,
     additional_properties=null,
     annotations=null,
-    data_factory_id,
+    access_token=null,
     key_vault_password=null,
     new_cluster_config=null,
     timeouts=null,
     instance_pool=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_databricks', label=resourceLabel, attrs=self.newAttrs(
-    integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
     adb_domain=adb_domain,
-    existing_cluster_id=existing_cluster_id,
+    data_factory_id=data_factory_id,
     description=description,
-    access_token=access_token,
-    msi_work_space_resource_id=msi_work_space_resource_id,
     name=name,
+    parameters=parameters,
+    existing_cluster_id=existing_cluster_id,
+    integration_runtime_name=integration_runtime_name,
+    msi_work_space_resource_id=msi_work_space_resource_id,
     additional_properties=additional_properties,
     annotations=annotations,
-    data_factory_id=data_factory_id,
+    access_token=access_token,
     key_vault_password=key_vault_password,
     new_cluster_config=new_cluster_config,
     timeouts=timeouts,
     instance_pool=instance_pool
   )),
   newAttrs(
+    additional_properties=null,
     integration_runtime_name=null,
-    existing_cluster_id=null,
-    name,
-    parameters=null,
+    access_token=null,
+    annotations=null,
     data_factory_id,
     description=null,
-    msi_work_space_resource_id=null,
     adb_domain,
-    additional_properties=null,
-    annotations=null,
-    access_token=null,
-    key_vault_password=null,
+    existing_cluster_id=null,
+    msi_work_space_resource_id=null,
+    parameters=null,
+    name,
     new_cluster_config=null,
     timeouts=null,
-    instance_pool=null
+    instance_pool=null,
+    key_vault_password=null
   ):: std.prune(a={
+    additional_properties: additional_properties,
     integration_runtime_name: integration_runtime_name,
-    existing_cluster_id: existing_cluster_id,
-    name: name,
-    parameters: parameters,
+    access_token: access_token,
+    annotations: annotations,
     data_factory_id: data_factory_id,
     description: description,
-    msi_work_space_resource_id: msi_work_space_resource_id,
     adb_domain: adb_domain,
-    additional_properties: additional_properties,
-    annotations: annotations,
-    access_token: access_token,
-    key_vault_password: key_vault_password,
+    existing_cluster_id: existing_cluster_id,
+    msi_work_space_resource_id: msi_work_space_resource_id,
+    parameters: parameters,
+    name: name,
     new_cluster_config: new_cluster_config,
     timeouts: timeouts,
     instance_pool: instance_pool,
+    key_vault_password: key_vault_password,
   }),
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withMsiWorkSpaceResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          msi_work_space_resource_id: value,
-        },
-      },
-    },
-  },
-  withAdbDomain(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          adb_domain: value,
-        },
-      },
-    },
-  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_databricks+: {
         [resourceLabel]+: {
           additional_properties: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAccessToken(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          access_token: value,
         },
       },
     },
@@ -130,20 +85,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withMsiWorkSpaceResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_databricks+: {
         [resourceLabel]+: {
-          description: value,
+          msi_work_space_resource_id: value,
         },
       },
     },
   },
-  withExistingClusterId(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_databricks+: {
         [resourceLabel]+: {
-          existing_cluster_id: value,
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withAccessToken(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          access_token: value,
         },
       },
     },
@@ -157,6 +121,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withExistingClusterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          existing_cluster_id: value,
+        },
+      },
+    },
+  },
+  withAdbDomain(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          adb_domain: value,
+        },
+      },
+    },
+  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_databricks+: {
@@ -165,6 +156,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withKeyVaultPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          key_vault_password: value,
+        },
+      },
+    },
+  },
+  withKeyVaultPasswordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_databricks+: {
+        [resourceLabel]+: {
+          key_vault_password+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  key_vault_password:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
   },
   withNewClusterConfig(resourceLabel, value):: {
     resource+: {
@@ -186,27 +213,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   new_cluster_config:: {
     new(
-      driver_node_type=null,
+      custom_tags=null,
+      spark_config=null,
+      init_scripts=null,
       log_destination=null,
-      max_number_of_workers=null,
+      cluster_version,
+      driver_node_type=null,
+      min_number_of_workers=null,
       node_type,
       spark_environment_variables=null,
-      cluster_version,
-      min_number_of_workers=null,
-      spark_config=null,
-      custom_tags=null,
-      init_scripts=null
+      max_number_of_workers=null
     ):: std.prune(a={
-      driver_node_type: driver_node_type,
+      custom_tags: custom_tags,
+      spark_config: spark_config,
+      init_scripts: init_scripts,
       log_destination: log_destination,
-      max_number_of_workers: max_number_of_workers,
+      cluster_version: cluster_version,
+      driver_node_type: driver_node_type,
+      min_number_of_workers: min_number_of_workers,
       node_type: node_type,
       spark_environment_variables: spark_environment_variables,
-      cluster_version: cluster_version,
-      min_number_of_workers: min_number_of_workers,
-      spark_config: spark_config,
-      custom_tags: custom_tags,
-      init_scripts: init_scripts,
+      max_number_of_workers: max_number_of_workers,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -229,15 +256,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
   withInstancePool(resourceLabel, value):: {
@@ -269,33 +296,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       instance_pool_id: instance_pool_id,
       max_number_of_workers: max_number_of_workers,
       min_number_of_workers: min_number_of_workers,
-    }),
-  },
-  withKeyVaultPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          key_vault_password: value,
-        },
-      },
-    },
-  },
-  withKeyVaultPasswordMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_databricks+: {
-        [resourceLabel]+: {
-          key_vault_password+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  key_vault_password:: {
-    new(
-      secret_name,
-      linked_service_name
-    ):: std.prune(a={
-      secret_name: secret_name,
-      linked_service_name: linked_service_name,
     }),
   },
 }

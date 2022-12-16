@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
     name,
     password,
     resource_group_name,
     username,
     automation_account_name,
+    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_credential', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
     name=name,
     password=password,
     resource_group_name=resource_group_name,
     username=username,
     automation_account_name=automation_account_name,
+    description=description,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    password,
     resource_group_name,
     username,
     automation_account_name,
     description=null,
-    name,
-    password,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    password: password,
     resource_group_name: resource_group_name,
     username: username,
     automation_account_name: automation_account_name,
     description: description,
-    name: name,
-    password: password,
     timeouts: timeouts,
   }),
   withDescription(resourceLabel, value):: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

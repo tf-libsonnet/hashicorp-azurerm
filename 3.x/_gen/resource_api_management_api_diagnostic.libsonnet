@@ -2,34 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    identifier,
     resource_group_name,
-    log_client_ip=null,
+    verbosity=null,
     api_management_name,
     http_correlation_protocol=null,
-    identifier,
+    api_management_logger_id,
     api_name,
-    operation_name_format=null,
+    log_client_ip=null,
     sampling_percentage=null,
     always_log_errors=null,
-    api_management_logger_id,
-    verbosity=null,
+    operation_name_format=null,
     backend_request=null,
     backend_response=null,
     frontend_request=null,
     frontend_response=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_api_diagnostic', label=resourceLabel, attrs=self.newAttrs(
+    identifier=identifier,
     resource_group_name=resource_group_name,
-    log_client_ip=log_client_ip,
+    verbosity=verbosity,
     api_management_name=api_management_name,
     http_correlation_protocol=http_correlation_protocol,
-    identifier=identifier,
+    api_management_logger_id=api_management_logger_id,
     api_name=api_name,
-    operation_name_format=operation_name_format,
+    log_client_ip=log_client_ip,
     sampling_percentage=sampling_percentage,
     always_log_errors=always_log_errors,
-    api_management_logger_id=api_management_logger_id,
-    verbosity=verbosity,
+    operation_name_format=operation_name_format,
     backend_request=backend_request,
     backend_response=backend_response,
     frontend_request=frontend_request,
@@ -37,76 +37,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    http_correlation_protocol=null,
-    operation_name_format=null,
-    sampling_percentage=null,
     always_log_errors=null,
     identifier,
-    verbosity=null,
-    api_management_logger_id,
+    operation_name_format=null,
+    resource_group_name,
     api_management_name,
     api_name,
     log_client_ip=null,
-    resource_group_name,
-    backend_response=null,
+    sampling_percentage=null,
+    verbosity=null,
+    api_management_logger_id,
+    http_correlation_protocol=null,
     frontend_request=null,
     frontend_response=null,
     timeouts=null,
-    backend_request=null
+    backend_request=null,
+    backend_response=null
   ):: std.prune(a={
-    http_correlation_protocol: http_correlation_protocol,
-    operation_name_format: operation_name_format,
-    sampling_percentage: sampling_percentage,
     always_log_errors: always_log_errors,
     identifier: identifier,
-    verbosity: verbosity,
-    api_management_logger_id: api_management_logger_id,
+    operation_name_format: operation_name_format,
+    resource_group_name: resource_group_name,
     api_management_name: api_management_name,
     api_name: api_name,
     log_client_ip: log_client_ip,
-    resource_group_name: resource_group_name,
-    backend_response: backend_response,
+    sampling_percentage: sampling_percentage,
+    verbosity: verbosity,
+    api_management_logger_id: api_management_logger_id,
+    http_correlation_protocol: http_correlation_protocol,
     frontend_request: frontend_request,
     frontend_response: frontend_response,
     timeouts: timeouts,
     backend_request: backend_request,
+    backend_response: backend_response,
   }),
-  withVerbosity(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_diagnostic+: {
-        [resourceLabel]+: {
-          verbosity: value,
-        },
-      },
-    },
-  },
-  withLogClientIp(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_diagnostic+: {
-        [resourceLabel]+: {
-          log_client_ip: value,
-        },
-      },
-    },
-  },
-  withOperationNameFormat(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_diagnostic+: {
-        [resourceLabel]+: {
-          operation_name_format: value,
-        },
-      },
-    },
-  },
-  withAlwaysLogErrors(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_diagnostic+: {
-        [resourceLabel]+: {
-          always_log_errors: value,
-        },
-      },
-    },
-  },
   withApiManagementLoggerId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_diagnostic+: {
@@ -125,29 +89,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHttpCorrelationProtocol(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_diagnostic+: {
-        [resourceLabel]+: {
-          http_correlation_protocol: value,
-        },
-      },
-    },
-  },
-  withSamplingPercentage(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_diagnostic+: {
-        [resourceLabel]+: {
-          sampling_percentage: value,
-        },
-      },
-    },
-  },
   withApiName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_diagnostic+: {
         [resourceLabel]+: {
           api_name: value,
+        },
+      },
+    },
+  },
+  withAlwaysLogErrors(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_diagnostic+: {
+        [resourceLabel]+: {
+          always_log_errors: value,
         },
       },
     },
@@ -161,11 +116,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withOperationNameFormat(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_diagnostic+: {
+        [resourceLabel]+: {
+          operation_name_format: value,
+        },
+      },
+    },
+  },
+  withLogClientIp(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_diagnostic+: {
+        [resourceLabel]+: {
+          log_client_ip: value,
+        },
+      },
+    },
+  },
+  withSamplingPercentage(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_diagnostic+: {
+        [resourceLabel]+: {
+          sampling_percentage: value,
+        },
+      },
+    },
+  },
+  withHttpCorrelationProtocol(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_diagnostic+: {
+        [resourceLabel]+: {
+          http_correlation_protocol: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_diagnostic+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withVerbosity(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_diagnostic+: {
+        [resourceLabel]+: {
+          verbosity: value,
         },
       },
     },
@@ -206,7 +206,7 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         headers: headers,
         query_params: query_params,
       }),
-      headers:: {
+      query_params:: {
         new(
           mode,
           value
@@ -215,13 +215,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           value: value,
         }),
       },
-      query_params:: {
+      headers:: {
         new(
-          value,
-          mode
+          mode,
+          value
         ):: std.prune(a={
-          value: value,
           mode: mode,
+          value: value,
         }),
       },
     },
@@ -246,15 +246,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
   withBackendRequest(resourceLabel, value):: {
@@ -333,12 +333,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   backend_response:: {
     new(
-      headers_to_log=null,
       body_bytes=null,
+      headers_to_log=null,
       data_masking=null
     ):: std.prune(a={
-      headers_to_log: headers_to_log,
       body_bytes: body_bytes,
+      headers_to_log: headers_to_log,
       data_masking: data_masking,
     }),
     data_masking:: {
@@ -389,12 +389,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   frontend_request:: {
     new(
-      body_bytes=null,
       headers_to_log=null,
+      body_bytes=null,
       data_masking=null
     ):: std.prune(a={
-      body_bytes: body_bytes,
       headers_to_log: headers_to_log,
+      body_bytes: body_bytes,
       data_masking: data_masking,
     }),
     data_masking:: {

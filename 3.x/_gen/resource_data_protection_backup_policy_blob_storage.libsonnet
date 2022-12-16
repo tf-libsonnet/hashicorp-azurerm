@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     retention_duration,
     vault_id,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_policy_blob_storage', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     retention_duration=retention_duration,
     vault_id=vault_id,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     retention_duration,
     vault_id,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     retention_duration: retention_duration,
     vault_id: vault_id,
-    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

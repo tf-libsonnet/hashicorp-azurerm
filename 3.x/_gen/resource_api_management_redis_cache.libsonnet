@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    connection_string,
+    description=null,
     name,
     redis_cache_id=null,
     api_management_id,
     cache_location=null,
-    connection_string,
-    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_redis_cache', label=resourceLabel, attrs=self.newAttrs(
+    connection_string=connection_string,
+    description=description,
     name=name,
     redis_cache_id=redis_cache_id,
     api_management_id=api_management_id,
     cache_location=cache_location,
-    connection_string=connection_string,
-    description=description,
     timeouts=timeouts
   )),
   newAttrs(
+    redis_cache_id=null,
     api_management_id,
     cache_location=null,
     connection_string,
     description=null,
     name,
-    redis_cache_id=null,
     timeouts=null
   ):: std.prune(a={
+    redis_cache_id: redis_cache_id,
     api_management_id: api_management_id,
     cache_location: cache_location,
     connection_string: connection_string,
     description: description,
     name: name,
-    redis_cache_id: redis_cache_id,
     timeouts: timeouts,
   }),
-  withConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_redis_cache+: {
-        [resourceLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_redis_cache+: {
@@ -89,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_redis_cache+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_redis_cache+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

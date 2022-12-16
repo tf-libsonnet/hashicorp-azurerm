@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    workspace_id,
     name,
+    workspace_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_healthcare_dicom_service', label=dataSrcLabel, attrs=self.newAttrs(workspace_id=workspace_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_healthcare_dicom_service', label=dataSrcLabel, attrs=self.newAttrs(name=name, workspace_id=workspace_id, timeouts=timeouts)),
   newAttrs(
     name,
     workspace_id,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     workspace_id: workspace_id,
     timeouts: timeouts,
   }),
-  withWorkspaceId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_healthcare_dicom_service+: {
-        [dataSrcLabel]+: {
-          workspace_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_healthcare_dicom_service+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withWorkspaceId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_healthcare_dicom_service+: {
+        [dataSrcLabel]+: {
+          workspace_id: value,
         },
       },
     },

@@ -2,12 +2,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     resource_group_name,
     tags=null,
     vpn_authentication_types,
     vpn_protocols=null,
     location,
-    name,
     radius=null,
     timeouts=null,
     azure_active_directory_authentication=null,
@@ -15,12 +15,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     client_root_certificate=null,
     ipsec_policy=null
   ):: tf.withResource(type='azurerm_vpn_server_configuration', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
     vpn_authentication_types=vpn_authentication_types,
     vpn_protocols=vpn_protocols,
     location=location,
-    name=name,
     radius=radius,
     timeouts=timeouts,
     azure_active_directory_authentication=azure_active_directory_authentication,
@@ -35,12 +35,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     tags=null,
-    azure_active_directory_authentication=null,
-    client_revoked_certificate=null,
-    client_root_certificate=null,
     ipsec_policy=null,
     radius=null,
-    timeouts=null
+    timeouts=null,
+    azure_active_directory_authentication=null,
+    client_revoked_certificate=null,
+    client_root_certificate=null
   ):: std.prune(a={
     vpn_authentication_types: vpn_authentication_types,
     vpn_protocols: vpn_protocols,
@@ -48,13 +48,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    azure_active_directory_authentication: azure_active_directory_authentication,
-    client_revoked_certificate: client_revoked_certificate,
-    client_root_certificate: client_root_certificate,
     ipsec_policy: ipsec_policy,
     radius: radius,
     timeouts: timeouts,
+    azure_active_directory_authentication: azure_active_directory_authentication,
+    client_revoked_certificate: client_revoked_certificate,
+    client_root_certificate: client_root_certificate,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withVpnAuthenticationTypes(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          vpn_authentication_types: value,
+        },
+      },
+    },
+  },
   withVpnProtocols(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
@@ -91,23 +109,94 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withRadius(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
         [resourceLabel]+: {
-          tags: value,
+          radius: value,
         },
       },
     },
   },
-  withVpnAuthenticationTypes(resourceLabel, value):: {
+  withRadiusMixin(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
         [resourceLabel]+: {
-          vpn_authentication_types: value,
+          radius+: if std.isArray(v=value) then value else [value],
         },
       },
     },
+  },
+  radius:: {
+    new(
+      client_root_certificate=null,
+      server=null,
+      server_root_certificate=null
+    ):: std.prune(a={
+      client_root_certificate: client_root_certificate,
+      server: server,
+      server_root_certificate: server_root_certificate,
+    }),
+    client_root_certificate:: {
+      new(
+        name,
+        thumbprint
+      ):: std.prune(a={
+        name: name,
+        thumbprint: thumbprint,
+      }),
+    },
+    server:: {
+      new(
+        address,
+        score,
+        secret
+      ):: std.prune(a={
+        address: address,
+        score: score,
+        secret: secret,
+      }),
+    },
+    server_root_certificate:: {
+      new(
+        public_cert_data,
+        name
+      ):: std.prune(a={
+        public_cert_data: public_cert_data,
+        name: name,
+      }),
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAzureActiveDirectoryAuthentication(resourceLabel, value):: {
     resource+: {
@@ -129,13 +218,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   azure_active_directory_authentication:: {
     new(
-      tenant,
       audience,
-      issuer
+      issuer,
+      tenant
     ):: std.prune(a={
-      tenant: tenant,
       audience: audience,
       issuer: issuer,
+      tenant: tenant,
     }),
   },
   withClientRevokedCertificate(resourceLabel, value):: {
@@ -158,11 +247,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   client_revoked_certificate:: {
     new(
-      thumbprint,
-      name
+      name,
+      thumbprint
     ):: std.prune(a={
-      thumbprint: thumbprint,
       name: name,
+      thumbprint: thumbprint,
     }),
   },
   withClientRootCertificate(resourceLabel, value):: {
@@ -212,112 +301,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ipsec_policy:: {
     new(
-      sa_data_size_kilobytes,
-      sa_lifetime_seconds,
       dh_group,
       ike_encryption,
       ike_integrity,
       ipsec_encryption,
       ipsec_integrity,
-      pfs_group
+      pfs_group,
+      sa_data_size_kilobytes,
+      sa_lifetime_seconds
     ):: std.prune(a={
-      sa_data_size_kilobytes: sa_data_size_kilobytes,
-      sa_lifetime_seconds: sa_lifetime_seconds,
       dh_group: dh_group,
       ike_encryption: ike_encryption,
       ike_integrity: ike_integrity,
       ipsec_encryption: ipsec_encryption,
       ipsec_integrity: ipsec_integrity,
       pfs_group: pfs_group,
-    }),
-  },
-  withRadius(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          radius: value,
-        },
-      },
-    },
-  },
-  withRadiusMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          radius+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  radius:: {
-    new(
-      client_root_certificate=null,
-      server=null,
-      server_root_certificate=null
-    ):: std.prune(a={
-      client_root_certificate: client_root_certificate,
-      server: server,
-      server_root_certificate: server_root_certificate,
-    }),
-    client_root_certificate:: {
-      new(
-        thumbprint,
-        name
-      ):: std.prune(a={
-        thumbprint: thumbprint,
-        name: name,
-      }),
-    },
-    server:: {
-      new(
-        address,
-        score,
-        secret
-      ):: std.prune(a={
-        address: address,
-        score: score,
-        secret: secret,
-      }),
-    },
-    server_root_certificate:: {
-      new(
-        name,
-        public_cert_data
-      ):: std.prune(a={
-        name: name,
-        public_cert_data: public_cert_data,
-      }),
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
+      sa_data_size_kilobytes: sa_data_size_kilobytes,
+      sa_lifetime_seconds: sa_lifetime_seconds,
     }),
   },
 }

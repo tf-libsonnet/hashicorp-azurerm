@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    virtual_network_id=null,
     backend_address_ip_configuration_id=null,
     backend_address_pool_id,
     ip_address=null,
     name,
-    virtual_network_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_lb_backend_address_pool_address', label=resourceLabel, attrs=self.newAttrs(
+    virtual_network_id=virtual_network_id,
     backend_address_ip_configuration_id=backend_address_ip_configuration_id,
     backend_address_pool_id=backend_address_pool_id,
     ip_address=ip_address,
     name=name,
-    virtual_network_id=virtual_network_id,
     timeouts=timeouts
   )),
   newAttrs(
-    ip_address=null,
-    name,
     virtual_network_id=null,
     backend_address_ip_configuration_id=null,
     backend_address_pool_id,
+    ip_address=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    ip_address: ip_address,
-    name: name,
     virtual_network_id: virtual_network_id,
     backend_address_ip_configuration_id: backend_address_ip_configuration_id,
     backend_address_pool_id: backend_address_pool_id,
+    ip_address: ip_address,
+    name: name,
     timeouts: timeouts,
   }),
+  withBackendAddressIpConfigurationId(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_backend_address_pool_address+: {
+        [resourceLabel]+: {
+          backend_address_ip_configuration_id: value,
+        },
+      },
+    },
+  },
+  withBackendAddressPoolId(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_backend_address_pool_address+: {
+        [resourceLabel]+: {
+          backend_address_pool_id: value,
+        },
+      },
+    },
+  },
   withIpAddress(resourceLabel, value):: {
     resource+: {
       azurerm_lb_backend_address_pool_address+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBackendAddressIpConfigurationId(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_backend_address_pool_address+: {
-        [resourceLabel]+: {
-          backend_address_ip_configuration_id: value,
-        },
-      },
-    },
-  },
-  withBackendAddressPoolId(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_backend_address_pool_address+: {
-        [resourceLabel]+: {
-          backend_address_pool_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_lb_backend_address_pool_address+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

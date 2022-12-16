@@ -2,86 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    time_zone_id,
-    lab_name,
-    name,
-    tags=null,
-    location,
-    resource_group_name,
     status=null,
+    tags=null,
+    time_zone_id,
     task_type,
-    weekly_recurrence=null,
+    location,
+    name,
+    resource_group_name,
+    lab_name,
     daily_recurrence=null,
     hourly_recurrence=null,
     notification_settings=null,
-    timeouts=null
+    timeouts=null,
+    weekly_recurrence=null
   ):: tf.withResource(type='azurerm_dev_test_schedule', label=resourceLabel, attrs=self.newAttrs(
-    time_zone_id=time_zone_id,
-    lab_name=lab_name,
-    name=name,
-    tags=tags,
-    location=location,
-    resource_group_name=resource_group_name,
     status=status,
+    tags=tags,
+    time_zone_id=time_zone_id,
     task_type=task_type,
-    weekly_recurrence=weekly_recurrence,
+    location=location,
+    name=name,
+    resource_group_name=resource_group_name,
+    lab_name=lab_name,
     daily_recurrence=daily_recurrence,
     hourly_recurrence=hourly_recurrence,
     notification_settings=notification_settings,
-    timeouts=timeouts
+    timeouts=timeouts,
+    weekly_recurrence=weekly_recurrence
   )),
   newAttrs(
-    name,
-    tags=null,
     location,
+    name,
     resource_group_name,
-    status=null,
     task_type,
+    status=null,
+    tags=null,
     time_zone_id,
     lab_name,
+    daily_recurrence=null,
+    hourly_recurrence=null,
     notification_settings=null,
     timeouts=null,
-    weekly_recurrence=null,
-    daily_recurrence=null,
-    hourly_recurrence=null
+    weekly_recurrence=null
   ):: std.prune(a={
-    name: name,
-    tags: tags,
     location: location,
+    name: name,
     resource_group_name: resource_group_name,
-    status: status,
     task_type: task_type,
+    status: status,
+    tags: tags,
     time_zone_id: time_zone_id,
     lab_name: lab_name,
+    daily_recurrence: daily_recurrence,
+    hourly_recurrence: hourly_recurrence,
     notification_settings: notification_settings,
     timeouts: timeouts,
     weekly_recurrence: weekly_recurrence,
-    daily_recurrence: daily_recurrence,
-    hourly_recurrence: hourly_recurrence,
   }),
-  withName(resourceLabel, value):: {
+  withLabName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_schedule+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTaskType(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_schedule+: {
-        [resourceLabel]+: {
-          task_type: value,
-        },
-      },
-    },
-  },
-  withTimeZoneId(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_schedule+: {
-        [resourceLabel]+: {
-          time_zone_id: value,
+          lab_name: value,
         },
       },
     },
@@ -95,11 +77,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_schedule+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_schedule+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTaskType(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_schedule+: {
+        [resourceLabel]+: {
+          task_type: value,
         },
       },
     },
@@ -122,14 +122,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLabName(resourceLabel, value):: {
+  withTimeZoneId(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_schedule+: {
         [resourceLabel]+: {
-          lab_name: value,
+          time_zone_id: value,
         },
       },
     },
+  },
+  withDailyRecurrence(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_schedule+: {
+        [resourceLabel]+: {
+          daily_recurrence: value,
+        },
+      },
+    },
+  },
+  withDailyRecurrenceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_schedule+: {
+        [resourceLabel]+: {
+          daily_recurrence+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  daily_recurrence:: {
+    new(
+      time
+    ):: std.prune(a={
+      time: time,
+    }),
   },
   withHourlyRecurrence(resourceLabel, value):: {
     resource+: {
@@ -205,15 +230,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
   withWeeklyRecurrence(resourceLabel, value):: {
@@ -241,31 +266,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       time: time,
       week_days: week_days,
-    }),
-  },
-  withDailyRecurrence(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_schedule+: {
-        [resourceLabel]+: {
-          daily_recurrence: value,
-        },
-      },
-    },
-  },
-  withDailyRecurrenceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_schedule+: {
-        [resourceLabel]+: {
-          daily_recurrence+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  daily_recurrence:: {
-    new(
-      time
-    ):: std.prune(a={
-      time: time,
     }),
   },
 }

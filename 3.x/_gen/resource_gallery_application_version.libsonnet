@@ -2,55 +2,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    exclude_from_latest=null,
     gallery_application_id,
     location,
     name,
     tags=null,
     enable_health_check=null,
     end_of_life_date=null,
-    exclude_from_latest=null,
-    target_region=null,
     timeouts=null,
     manage_action=null,
-    source=null
+    source=null,
+    target_region=null
   ):: tf.withResource(type='azurerm_gallery_application_version', label=resourceLabel, attrs=self.newAttrs(
+    exclude_from_latest=exclude_from_latest,
     gallery_application_id=gallery_application_id,
     location=location,
     name=name,
     tags=tags,
     enable_health_check=enable_health_check,
     end_of_life_date=end_of_life_date,
-    exclude_from_latest=exclude_from_latest,
-    target_region=target_region,
     timeouts=timeouts,
     manage_action=manage_action,
-    source=source
+    source=source,
+    target_region=target_region
   )),
   newAttrs(
+    end_of_life_date=null,
+    exclude_from_latest=null,
     gallery_application_id,
     location,
     name,
     tags=null,
     enable_health_check=null,
-    end_of_life_date=null,
-    exclude_from_latest=null,
+    source=null,
     target_region=null,
     timeouts=null,
-    manage_action=null,
-    source=null
+    manage_action=null
   ):: std.prune(a={
+    end_of_life_date: end_of_life_date,
+    exclude_from_latest: exclude_from_latest,
     gallery_application_id: gallery_application_id,
     location: location,
     name: name,
     tags: tags,
     enable_health_check: enable_health_check,
-    end_of_life_date: end_of_life_date,
-    exclude_from_latest: exclude_from_latest,
+    source: source,
     target_region: target_region,
     timeouts: timeouts,
     manage_action: manage_action,
-    source: source,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withEnableHealthCheck(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application_version+: {
@@ -92,24 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_gallery_application_version+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application_version+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -163,15 +163,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
   withManageAction(resourceLabel, value):: {
@@ -194,13 +194,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   manage_action:: {
     new(
+      update=null,
       install,
-      remove,
-      update=null
+      remove
     ):: std.prune(a={
+      update: update,
       install: install,
       remove: remove,
-      update: update,
     }),
   },
   withSource(resourceLabel, value):: {

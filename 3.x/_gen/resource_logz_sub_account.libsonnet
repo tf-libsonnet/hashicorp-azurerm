@@ -2,34 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    enabled=null,
+    logz_monitor_id,
+    name,
+    tags=null,
+    timeouts=null,
+    user=null
+  ):: tf.withResource(type='azurerm_logz_sub_account', label=resourceLabel, attrs=self.newAttrs(
+    enabled=enabled,
+    logz_monitor_id=logz_monitor_id,
+    name=name,
+    tags=tags,
+    timeouts=timeouts,
+    user=user
+  )),
+  newAttrs(
     logz_monitor_id,
     name,
     tags=null,
     enabled=null,
     timeouts=null,
     user=null
-  ):: tf.withResource(type='azurerm_logz_sub_account', label=resourceLabel, attrs=self.newAttrs(
-    logz_monitor_id=logz_monitor_id,
-    name=name,
-    tags=tags,
-    enabled=enabled,
-    timeouts=timeouts,
-    user=user
-  )),
-  newAttrs(
-    tags=null,
-    enabled=null,
-    logz_monitor_id,
-    name,
-    user=null,
-    timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    enabled: enabled,
     logz_monitor_id: logz_monitor_id,
     name: name,
-    user: user,
+    tags: tags,
+    enabled: enabled,
     timeouts: timeouts,
+    user: user,
   }),
   withLogzMonitorId(resourceLabel, value):: {
     resource+: {
@@ -87,15 +87,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
   withUser(resourceLabel, value):: {
@@ -118,15 +118,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   user:: {
     new(
-      first_name,
-      last_name,
       phone_number,
-      email
+      email,
+      first_name,
+      last_name
     ):: std.prune(a={
-      first_name: first_name,
-      last_name: last_name,
       phone_number: phone_number,
       email: email,
+      first_name: first_name,
+      last_name: last_name,
     }),
   },
 }

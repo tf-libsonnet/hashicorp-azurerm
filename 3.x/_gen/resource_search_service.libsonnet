@@ -2,91 +2,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    allowed_ips=null,
-    public_network_access_enabled=null,
     location,
+    replica_count=null,
+    public_network_access_enabled=null,
     partition_count=null,
     sku,
-    replica_count=null,
     resource_group_name,
-    name,
+    allowed_ips=null,
     tags=null,
+    name,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_search_service', label=resourceLabel, attrs=self.newAttrs(
-    allowed_ips=allowed_ips,
-    public_network_access_enabled=public_network_access_enabled,
     location=location,
+    replica_count=replica_count,
+    public_network_access_enabled=public_network_access_enabled,
     partition_count=partition_count,
     sku=sku,
-    replica_count=replica_count,
     resource_group_name=resource_group_name,
-    name=name,
+    allowed_ips=allowed_ips,
     tags=tags,
+    name=name,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    replica_count=null,
-    resource_group_name,
+    tags=null,
+    partition_count=null,
     public_network_access_enabled=null,
+    sku,
+    resource_group_name,
     allowed_ips=null,
     location,
+    replica_count=null,
     name,
-    partition_count=null,
-    sku,
-    tags=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    replica_count: replica_count,
-    resource_group_name: resource_group_name,
+    tags: tags,
+    partition_count: partition_count,
     public_network_access_enabled: public_network_access_enabled,
+    sku: sku,
+    resource_group_name: resource_group_name,
     allowed_ips: allowed_ips,
     location: location,
+    replica_count: replica_count,
     name: name,
-    partition_count: partition_count,
-    sku: sku,
-    tags: tags,
     identity: identity,
     timeouts: timeouts,
   }),
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withAllowedIps(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          allowed_ips: value,
-        },
-      },
-    },
-  },
-  withPartitionCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          partition_count: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_search_service+: {
@@ -105,11 +69,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withReplicaCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          replica_count: value,
+        },
+      },
+    },
+  },
+  withAllowedIps(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          allowed_ips: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_search_service+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -123,11 +123,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withReplicaCount(resourceLabel, value):: {
+  withPartitionCount(resourceLabel, value):: {
     resource+: {
       azurerm_search_service+: {
         [resourceLabel]+: {
-          replica_count: value,
+          partition_count: value,
         },
       },
     },

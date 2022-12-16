@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
     tags=null,
     location,
     name,
-    resource_group_name,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_account', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
     tags=tags,
     location=location,
     name=name,
-    resource_group_name=resource_group_name,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
     location,
     name,
+    resource_group_name,
+    tags=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
     location: location,
     name: name,
+    resource_group_name: resource_group_name,
+    tags: tags,
     identity: identity,
     timeouts: timeouts,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_account+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_account+: {
@@ -58,14 +67,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_account+: {
         [resourceLabel]+: {
-          tags: value,
+          identity: value,
         },
       },
     },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_account+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -96,31 +121,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_account+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_account+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
     }),
   },
 }

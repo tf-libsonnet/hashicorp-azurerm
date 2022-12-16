@@ -39,33 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_key: storage_account_key,
     timeouts: timeouts,
   }),
-  withStorageAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_storage_account+: {
-        [resourceLabel]+: {
-          storage_account_key: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_storage_account+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withKeyVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_managed_storage_account+: {
-        [resourceLabel]+: {
-          key_vault_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_storage_account+: {
@@ -102,6 +75,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_storage_account+: {
+        [resourceLabel]+: {
+          storage_account_key: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_storage_account+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withKeyVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_managed_storage_account+: {
+        [resourceLabel]+: {
+          key_vault_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_managed_storage_account+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

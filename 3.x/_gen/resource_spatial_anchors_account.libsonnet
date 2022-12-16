@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
     name,
     resource_group_name,
     tags=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_spatial_anchors_account', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
+    tags=null,
     location,
     name,
     resource_group_name,
-    tags=null,
     timeouts=null
   ):: std.prune(a={
+    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spatial_anchors_account+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_spatial_anchors_account+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_spatial_anchors_account+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spatial_anchors_account+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spatial_anchors_account+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_spatial_anchors_account+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

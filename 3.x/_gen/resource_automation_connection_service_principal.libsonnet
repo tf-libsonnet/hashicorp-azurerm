@@ -2,47 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    application_id,
+    certificate_thumbprint,
     description=null,
     name,
     resource_group_name,
+    automation_account_name,
     subscription_id,
     tenant_id,
-    application_id,
-    certificate_thumbprint,
-    automation_account_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_connection_service_principal', label=resourceLabel, attrs=self.newAttrs(
+    application_id=application_id,
+    certificate_thumbprint=certificate_thumbprint,
     description=description,
     name=name,
     resource_group_name=resource_group_name,
+    automation_account_name=automation_account_name,
     subscription_id=subscription_id,
     tenant_id=tenant_id,
-    application_id=application_id,
-    certificate_thumbprint=certificate_thumbprint,
-    automation_account_name=automation_account_name,
     timeouts=timeouts
   )),
   newAttrs(
-    application_id,
+    subscription_id,
+    tenant_id,
     automation_account_name,
+    certificate_thumbprint,
     description=null,
     name,
     resource_group_name,
-    certificate_thumbprint,
-    subscription_id,
-    tenant_id,
+    application_id,
     timeouts=null
   ):: std.prune(a={
-    application_id: application_id,
+    subscription_id: subscription_id,
+    tenant_id: tenant_id,
     automation_account_name: automation_account_name,
+    certificate_thumbprint: certificate_thumbprint,
     description: description,
     name: name,
     resource_group_name: resource_group_name,
-    certificate_thumbprint: certificate_thumbprint,
-    subscription_id: subscription_id,
-    tenant_id: tenant_id,
+    application_id: application_id,
     timeouts: timeouts,
   }),
+  withCertificateThumbprint(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_service_principal+: {
+        [resourceLabel]+: {
+          certificate_thumbprint: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_service_principal+: {
@@ -61,11 +70,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_service_principal+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          automation_account_name: value,
         },
       },
     },
@@ -88,29 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_service_principal+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withApplicationId(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_service_principal+: {
         [resourceLabel]+: {
           application_id: value,
-        },
-      },
-    },
-  },
-  withCertificateThumbprint(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_service_principal+: {
-        [resourceLabel]+: {
-          certificate_thumbprint: value,
-        },
-      },
-    },
-  },
-  withAutomationAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_service_principal+: {
-        [resourceLabel]+: {
-          automation_account_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

@@ -17,17 +17,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    integration_account_name,
     metadata=null,
     name,
+    resource_group_name,
+    integration_account_name,
     business_identity=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    integration_account_name: integration_account_name,
     metadata: metadata,
     name: name,
+    resource_group_name: resource_group_name,
+    integration_account_name: integration_account_name,
     business_identity: business_identity,
     timeouts: timeouts,
   }),

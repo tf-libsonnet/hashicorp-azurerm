@@ -2,86 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    internet_query_enabled=null,
-    reservation_capacity_in_gb_per_day=null,
-    allow_resource_only_permissions=null,
-    name,
+    resource_group_name,
     tags=null,
     location,
+    name,
+    allow_resource_only_permissions=null,
     sku=null,
+    daily_quota_gb=null,
+    internet_query_enabled=null,
     internet_ingestion_enabled=null,
-    resource_group_name,
+    reservation_capacity_in_gb_per_day=null,
     cmk_for_query_forced=null,
     retention_in_days=null,
-    daily_quota_gb=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_workspace', label=resourceLabel, attrs=self.newAttrs(
-    internet_query_enabled=internet_query_enabled,
-    reservation_capacity_in_gb_per_day=reservation_capacity_in_gb_per_day,
-    allow_resource_only_permissions=allow_resource_only_permissions,
-    name=name,
+    resource_group_name=resource_group_name,
     tags=tags,
     location=location,
+    name=name,
+    allow_resource_only_permissions=allow_resource_only_permissions,
     sku=sku,
+    daily_quota_gb=daily_quota_gb,
+    internet_query_enabled=internet_query_enabled,
     internet_ingestion_enabled=internet_ingestion_enabled,
-    resource_group_name=resource_group_name,
+    reservation_capacity_in_gb_per_day=reservation_capacity_in_gb_per_day,
     cmk_for_query_forced=cmk_for_query_forced,
     retention_in_days=retention_in_days,
-    daily_quota_gb=daily_quota_gb,
     timeouts=timeouts
   )),
   newAttrs(
-    internet_query_enabled=null,
     reservation_capacity_in_gb_per_day=null,
-    cmk_for_query_forced=null,
-    daily_quota_gb=null,
+    retention_in_days=null,
+    internet_ingestion_enabled=null,
     location,
     name,
     tags=null,
-    internet_ingestion_enabled=null,
-    retention_in_days=null,
-    sku=null,
     allow_resource_only_permissions=null,
+    cmk_for_query_forced=null,
+    sku=null,
+    daily_quota_gb=null,
+    internet_query_enabled=null,
     resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    internet_query_enabled: internet_query_enabled,
     reservation_capacity_in_gb_per_day: reservation_capacity_in_gb_per_day,
-    cmk_for_query_forced: cmk_for_query_forced,
-    daily_quota_gb: daily_quota_gb,
+    retention_in_days: retention_in_days,
+    internet_ingestion_enabled: internet_ingestion_enabled,
     location: location,
     name: name,
     tags: tags,
-    internet_ingestion_enabled: internet_ingestion_enabled,
-    retention_in_days: retention_in_days,
-    sku: sku,
     allow_resource_only_permissions: allow_resource_only_permissions,
+    cmk_for_query_forced: cmk_for_query_forced,
+    sku: sku,
+    daily_quota_gb: daily_quota_gb,
+    internet_query_enabled: internet_query_enabled,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withDailyQuotaGb(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          daily_quota_gb: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          sku: value,
         },
       },
     },
@@ -95,38 +77,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDailyQuotaGb(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withRetentionInDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          retention_in_days: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withInternetIngestionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          internet_ingestion_enabled: value,
+          daily_quota_gb: value,
         },
       },
     },
@@ -140,15 +95,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withReservationCapacityInGbPerDay(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          reservation_capacity_in_gb_per_day: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
@@ -158,11 +104,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withInternetIngestionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          internet_ingestion_enabled: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withReservationCapacityInGbPerDay(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          reservation_capacity_in_gb_per_day: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withCmkForQueryForced(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
         [resourceLabel]+: {
           cmk_for_query_forced: value,
+        },
+      },
+    },
+  },
+  withRetentionInDays(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          retention_in_days: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          sku: value,
         },
       },
     },
@@ -187,15 +187,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

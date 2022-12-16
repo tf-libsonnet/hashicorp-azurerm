@@ -2,38 +2,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    dns_service_enabled=null,
-    resource_group_name,
-    upgrade_wave=null,
-    username=null,
-    client_connection_port,
-    location,
     name,
-    dns_name=null,
+    resource_group_name,
     http_gateway_port,
-    sku=null,
-    password=null,
     tags=null,
+    username=null,
+    dns_service_enabled=null,
+    password=null,
     backup_service_enabled=null,
+    location,
+    client_connection_port,
+    upgrade_wave=null,
+    sku=null,
+    dns_name=null,
     custom_fabric_setting=null,
     lb_rule=null,
     node_type=null,
     timeouts=null,
     authentication=null
   ):: tf.withResource(type='azurerm_service_fabric_managed_cluster', label=resourceLabel, attrs=self.newAttrs(
-    dns_service_enabled=dns_service_enabled,
-    resource_group_name=resource_group_name,
-    upgrade_wave=upgrade_wave,
-    username=username,
-    client_connection_port=client_connection_port,
-    location=location,
     name=name,
-    dns_name=dns_name,
+    resource_group_name=resource_group_name,
     http_gateway_port=http_gateway_port,
-    sku=sku,
-    password=password,
     tags=tags,
+    username=username,
+    dns_service_enabled=dns_service_enabled,
+    password=password,
     backup_service_enabled=backup_service_enabled,
+    location=location,
+    client_connection_port=client_connection_port,
+    upgrade_wave=upgrade_wave,
+    sku=sku,
+    dns_name=dns_name,
     custom_fabric_setting=custom_fabric_setting,
     lb_rule=lb_rule,
     node_type=node_type,
@@ -41,38 +41,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     authentication=authentication
   )),
   newAttrs(
+    backup_service_enabled=null,
+    location,
+    tags=null,
     dns_name=null,
     dns_service_enabled=null,
     username=null,
-    http_gateway_port,
-    tags=null,
-    client_connection_port,
-    location,
-    resource_group_name,
-    upgrade_wave=null,
-    sku=null,
-    backup_service_enabled=null,
     name,
     password=null,
+    resource_group_name,
+    client_connection_port,
+    http_gateway_port,
+    sku=null,
+    upgrade_wave=null,
     authentication=null,
     custom_fabric_setting=null,
     lb_rule=null,
     node_type=null,
     timeouts=null
   ):: std.prune(a={
+    backup_service_enabled: backup_service_enabled,
+    location: location,
+    tags: tags,
     dns_name: dns_name,
     dns_service_enabled: dns_service_enabled,
     username: username,
-    http_gateway_port: http_gateway_port,
-    tags: tags,
-    client_connection_port: client_connection_port,
-    location: location,
-    resource_group_name: resource_group_name,
-    upgrade_wave: upgrade_wave,
-    sku: sku,
-    backup_service_enabled: backup_service_enabled,
     name: name,
     password: password,
+    resource_group_name: resource_group_name,
+    client_connection_port: client_connection_port,
+    http_gateway_port: http_gateway_port,
+    sku: sku,
+    upgrade_wave: upgrade_wave,
     authentication: authentication,
     custom_fabric_setting: custom_fabric_setting,
     lb_rule: lb_rule,
@@ -88,11 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDnsServiceEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_service_fabric_managed_cluster+: {
         [resourceLabel]+: {
-          name: value,
+          dns_service_enabled: value,
         },
       },
     },
@@ -102,6 +102,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_service_fabric_managed_cluster+: {
         [resourceLabel]+: {
           username: value,
+        },
+      },
+    },
+  },
+  withDnsName(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_fabric_managed_cluster+: {
+        [resourceLabel]+: {
+          dns_name: value,
         },
       },
     },
@@ -124,11 +133,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_fabric_managed_cluster+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_fabric_managed_cluster+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withPassword(resourceLabel, value):: {
     resource+: {
       azurerm_service_fabric_managed_cluster+: {
         [resourceLabel]+: {
           password: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_fabric_managed_cluster+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -142,47 +178,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_fabric_managed_cluster+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withUpgradeWave(resourceLabel, value):: {
     resource+: {
       azurerm_service_fabric_managed_cluster+: {
         [resourceLabel]+: {
           upgrade_wave: value,
-        },
-      },
-    },
-  },
-  withDnsName(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_fabric_managed_cluster+: {
-        [resourceLabel]+: {
-          dns_name: value,
-        },
-      },
-    },
-  },
-  withDnsServiceEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_fabric_managed_cluster+: {
-        [resourceLabel]+: {
-          dns_service_enabled: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_fabric_managed_cluster+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -245,17 +245,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   lb_rule:: {
     new(
+      backend_port,
+      frontend_port,
       probe_protocol,
       probe_request_path=null,
-      protocol,
-      backend_port,
-      frontend_port
+      protocol
     ):: std.prune(a={
+      backend_port: backend_port,
+      frontend_port: frontend_port,
       probe_protocol: probe_protocol,
       probe_request_path: probe_request_path,
       protocol: protocol,
-      backend_port: backend_port,
-      frontend_port: frontend_port,
     }),
   },
   withNodeType(resourceLabel, value):: {
@@ -278,40 +278,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   node_type:: {
     new(
-      data_disk_type=null,
-      placement_properties=null,
-      ephemeral_port_range,
-      vm_image_offer,
-      vm_image_version,
-      name,
-      vm_image_publisher,
-      vm_size,
-      stateless=null,
-      capacities=null,
-      vm_image_sku,
-      primary=null,
       data_disk_size_gb,
       vm_instance_count,
-      application_port_range,
       multiple_placement_groups_enabled=null,
+      primary=null,
+      vm_image_publisher,
+      ephemeral_port_range,
+      name,
+      vm_size,
+      vm_image_version,
+      vm_image_sku,
+      data_disk_type=null,
+      placement_properties=null,
+      stateless=null,
+      application_port_range,
+      vm_image_offer,
+      capacities=null,
       vm_secrets=null
     ):: std.prune(a={
-      data_disk_type: data_disk_type,
-      placement_properties: placement_properties,
-      ephemeral_port_range: ephemeral_port_range,
-      vm_image_offer: vm_image_offer,
-      vm_image_version: vm_image_version,
-      name: name,
-      vm_image_publisher: vm_image_publisher,
-      vm_size: vm_size,
-      stateless: stateless,
-      capacities: capacities,
-      vm_image_sku: vm_image_sku,
-      primary: primary,
       data_disk_size_gb: data_disk_size_gb,
       vm_instance_count: vm_instance_count,
-      application_port_range: application_port_range,
       multiple_placement_groups_enabled: multiple_placement_groups_enabled,
+      primary: primary,
+      vm_image_publisher: vm_image_publisher,
+      ephemeral_port_range: ephemeral_port_range,
+      name: name,
+      vm_size: vm_size,
+      vm_image_version: vm_image_version,
+      vm_image_sku: vm_image_sku,
+      data_disk_type: data_disk_type,
+      placement_properties: placement_properties,
+      stateless: stateless,
+      application_port_range: application_port_range,
+      vm_image_offer: vm_image_offer,
+      capacities: capacities,
       vm_secrets: vm_secrets,
     }),
     vm_secrets:: {
@@ -390,6 +390,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       active_directory: active_directory,
       certificate: certificate,
     }),
+    certificate:: {
+      new(
+        type,
+        common_name=null,
+        thumbprint
+      ):: std.prune(a={
+        type: type,
+        common_name: common_name,
+        thumbprint: thumbprint,
+      }),
+    },
     active_directory:: {
       new(
         client_application_id,
@@ -399,17 +410,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         client_application_id: client_application_id,
         cluster_application_id: cluster_application_id,
         tenant_id: tenant_id,
-      }),
-    },
-    certificate:: {
-      new(
-        common_name=null,
-        thumbprint,
-        type
-      ):: std.prune(a={
-        common_name: common_name,
-        thumbprint: thumbprint,
-        type: type,
       }),
     },
   },

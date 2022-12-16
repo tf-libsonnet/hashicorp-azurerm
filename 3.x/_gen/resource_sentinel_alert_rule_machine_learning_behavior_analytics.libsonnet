@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    enabled=null,
     log_analytics_workspace_id,
     name,
     alert_rule_template_guid,
+    enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_machine_learning_behavior_analytics', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
     log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     alert_rule_template_guid=alert_rule_template_guid,
+    enabled=enabled,
     timeouts=timeouts
   )),
   newAttrs(
-    log_analytics_workspace_id,
-    name,
     alert_rule_template_guid,
     enabled=null,
+    log_analytics_workspace_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_workspace_id: log_analytics_workspace_id,
-    name: name,
     alert_rule_template_guid: alert_rule_template_guid,
     enabled: enabled,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
