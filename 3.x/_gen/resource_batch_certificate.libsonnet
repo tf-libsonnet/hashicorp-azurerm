@@ -1,44 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    format,
-    password=null,
-    resource_group_name,
-    thumbprint_algorithm,
     account_name,
-    thumbprint,
     certificate,
+    format,
+    resourceLabel,
+    resource_group_name,
+    thumbprint,
+    thumbprint_algorithm,
+    password=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_batch_certificate', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
+    certificate=certificate,
     format=format,
     password=password,
     resource_group_name=resource_group_name,
-    thumbprint_algorithm=thumbprint_algorithm,
-    account_name=account_name,
     thumbprint=thumbprint,
-    certificate=certificate,
+    thumbprint_algorithm=thumbprint_algorithm,
     timeouts=timeouts
   )),
   newAttrs(
-    format,
-    password=null,
-    resource_group_name,
-    thumbprint_algorithm,
     account_name,
-    thumbprint,
     certificate,
+    format,
+    resource_group_name,
+    thumbprint,
+    thumbprint_algorithm,
+    password=null,
     timeouts=null
   ):: std.prune(a={
+    account_name: account_name,
+    certificate: certificate,
     format: format,
     password: password,
     resource_group_name: resource_group_name,
-    thumbprint_algorithm: thumbprint_algorithm,
-    account_name: account_name,
     thumbprint: thumbprint,
-    certificate: certificate,
+    thumbprint_algorithm: thumbprint_algorithm,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_certificate+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
+  withCertificate(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_certificate+: {
+        [resourceLabel]+: {
+          certificate: value,
+        },
+      },
+    },
+  },
+  withFormat(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_certificate+: {
+        [resourceLabel]+: {
+          format: value,
+        },
+      },
+    },
+  },
   withPassword(resourceLabel, value):: {
     resource+: {
       azurerm_batch_certificate+: {
@@ -57,33 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withThumbprintAlgorithm(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_certificate+: {
-        [resourceLabel]+: {
-          thumbprint_algorithm: value,
-        },
-      },
-    },
-  },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_certificate+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
-  withFormat(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_certificate+: {
-        [resourceLabel]+: {
-          format: value,
-        },
-      },
-    },
-  },
   withThumbprint(resourceLabel, value):: {
     resource+: {
       azurerm_batch_certificate+: {
@@ -93,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCertificate(resourceLabel, value):: {
+  withThumbprintAlgorithm(resourceLabel, value):: {
     resource+: {
       azurerm_batch_certificate+: {
         [resourceLabel]+: {
-          certificate: value,
+          thumbprint_algorithm: value,
         },
       },
     },
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

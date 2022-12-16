@@ -2,27 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     namespace_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_eventhub_namespace_authorization_rule', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     namespace_name=namespace_name,
     resource_group_name=resource_group_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
     name,
-    resource_group_name,
     namespace_name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
     name: name,
-    resource_group_name: resource_group_name,
     namespace_name: namespace_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_eventhub_namespace_authorization_rule+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withNamespaceName(dataSrcLabel, value):: {
     data+: {
       azurerm_eventhub_namespace_authorization_rule+: {
@@ -37,15 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventhub_namespace_authorization_rule+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_eventhub_namespace_authorization_rule+: {
-        [dataSrcLabel]+: {
-          name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

@@ -1,84 +1,70 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    enabled=null,
-    runbook_name,
-    parameters=null,
+    automation_account_name,
     expiry_time,
     name,
+    resourceLabel,
     resource_group_name,
+    runbook_name,
+    enabled=null,
+    parameters=null,
     run_on_worker_group=null,
-    automation_account_name,
-    uri=null,
-    timeouts=null
+    timeouts=null,
+    uri=null
   ):: tf.withResource(type='azurerm_automation_webhook', label=resourceLabel, attrs=self.newAttrs(
+    automation_account_name=automation_account_name,
     enabled=enabled,
-    runbook_name=runbook_name,
-    parameters=parameters,
     expiry_time=expiry_time,
     name=name,
+    parameters=parameters,
     resource_group_name=resource_group_name,
     run_on_worker_group=run_on_worker_group,
-    automation_account_name=automation_account_name,
-    uri=uri,
-    timeouts=timeouts
+    runbook_name=runbook_name,
+    timeouts=timeouts,
+    uri=uri
   )),
   newAttrs(
-    enabled=null,
+    automation_account_name,
     expiry_time,
     name,
     resource_group_name,
-    parameters=null,
-    uri=null,
     runbook_name,
-    automation_account_name,
+    enabled=null,
+    parameters=null,
     run_on_worker_group=null,
-    timeouts=null
+    timeouts=null,
+    uri=null
   ):: std.prune(a={
+    automation_account_name: automation_account_name,
     enabled: enabled,
     expiry_time: expiry_time,
     name: name,
-    resource_group_name: resource_group_name,
     parameters: parameters,
-    uri: uri,
-    runbook_name: runbook_name,
-    automation_account_name: automation_account_name,
+    resource_group_name: resource_group_name,
     run_on_worker_group: run_on_worker_group,
+    runbook_name: runbook_name,
     timeouts: timeouts,
+    uri: uri,
   }),
-  withRunOnWorkerGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          run_on_worker_group: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withRunbookName(resourceLabel, value):: {
+  withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
         [resourceLabel]+: {
-          runbook_name: value,
-        },
-      },
-    },
-  },
-  withUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          uri: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          parameters: value,
+          automation_account_name: value,
         },
       },
     },
@@ -110,6 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
@@ -119,11 +114,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutomationAccountName(resourceLabel, value):: {
+  withRunOnWorkerGroup(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
         [resourceLabel]+: {
-          automation_account_name: value,
+          run_on_worker_group: value,
+        },
+      },
+    },
+  },
+  withRunbookName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          runbook_name: value,
         },
       },
     },
@@ -146,17 +150,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          uri: value,
+        },
+      },
+    },
   },
 }

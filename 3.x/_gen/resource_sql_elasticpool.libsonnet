@@ -1,88 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    db_dtu_max=null,
-    edition,
-    name,
-    tags=null,
     dtu,
-    pool_size=null,
-    resource_group_name,
-    db_dtu_min=null,
+    edition,
     location,
+    name,
+    resourceLabel,
+    resource_group_name,
     server_name,
+    db_dtu_max=null,
+    db_dtu_min=null,
+    pool_size=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sql_elasticpool', label=resourceLabel, attrs=self.newAttrs(
     db_dtu_max=db_dtu_max,
-    edition=edition,
-    name=name,
-    tags=tags,
+    db_dtu_min=db_dtu_min,
     dtu=dtu,
+    edition=edition,
+    location=location,
+    name=name,
     pool_size=pool_size,
     resource_group_name=resource_group_name,
-    db_dtu_min=db_dtu_min,
-    location=location,
     server_name=server_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    edition,
-    resource_group_name,
-    tags=null,
-    db_dtu_max=null,
     dtu,
+    edition,
     location,
-    pool_size=null,
-    server_name,
     name,
+    resource_group_name,
+    server_name,
+    db_dtu_max=null,
     db_dtu_min=null,
+    pool_size=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    edition: edition,
-    resource_group_name: resource_group_name,
-    tags: tags,
     db_dtu_max: db_dtu_max,
-    dtu: dtu,
-    location: location,
-    pool_size: pool_size,
-    server_name: server_name,
-    name: name,
     db_dtu_min: db_dtu_min,
+    dtu: dtu,
+    edition: edition,
+    location: location,
+    name: name,
+    pool_size: pool_size,
+    resource_group_name: resource_group_name,
+    server_name: server_name,
+    tags: tags,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDbDtuMax(resourceLabel, value):: {
     resource+: {
       azurerm_sql_elasticpool+: {
         [resourceLabel]+: {
           db_dtu_max: value,
-        },
-      },
-    },
-  },
-  withEdition(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_elasticpool+: {
-        [resourceLabel]+: {
-          edition: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_elasticpool+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_elasticpool+: {
-        [resourceLabel]+: {
-          server_name: value,
         },
       },
     },
@@ -105,11 +91,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEdition(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_elasticpool+: {
+        [resourceLabel]+: {
+          edition: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_sql_elasticpool+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_elasticpool+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -123,20 +127,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_elasticpool+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_elasticpool+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_sql_elasticpool+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_elasticpool+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

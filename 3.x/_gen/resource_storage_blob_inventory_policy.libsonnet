@@ -5,42 +5,49 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id,
     rules=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_storage_blob_inventory_policy', label=resourceLabel, attrs=self.newAttrs(storage_account_id=storage_account_id, rules=rules, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_storage_blob_inventory_policy', label=resourceLabel, attrs=self.newAttrs(rules=rules, storage_account_id=storage_account_id, timeouts=timeouts)),
   newAttrs(
     storage_account_id,
     rules=null,
     timeouts=null
   ):: std.prune(a={
-    storage_account_id: storage_account_id,
     rules: rules,
+    storage_account_id: storage_account_id,
     timeouts: timeouts,
   }),
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob_inventory_policy+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
+  rules:: {
+    filter:: {
+      new(
+        blob_types,
+        include_blob_versions=null,
+        include_deleted=null,
+        include_snapshots=null,
+        prefix_match=null
+      ):: std.prune(a={
+        blob_types: blob_types,
+        include_blob_versions: include_blob_versions,
+        include_deleted: include_deleted,
+        include_snapshots: include_snapshots,
+        prefix_match: prefix_match,
+      }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob_inventory_policy+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_blob_inventory_policy+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
+    new(
+      format,
+      name,
+      schedule,
+      schema_fields,
+      scope,
+      storage_container_name,
+      filter=null
+    ):: std.prune(a={
+      filter: filter,
+      format: format,
+      name: name,
+      schedule: schedule,
+      schema_fields: schema_fields,
+      scope: scope,
+      storage_container_name: storage_container_name,
+    }),
   },
   timeouts:: {
     new(
@@ -73,38 +80,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  rules:: {
-    new(
-      format,
-      name,
-      schedule,
-      schema_fields,
-      scope,
-      storage_container_name,
-      filter=null
-    ):: std.prune(a={
-      format: format,
-      name: name,
-      schedule: schedule,
-      schema_fields: schema_fields,
-      scope: scope,
-      storage_container_name: storage_container_name,
-      filter: filter,
-    }),
-    filter:: {
-      new(
-        prefix_match=null,
-        blob_types,
-        include_blob_versions=null,
-        include_deleted=null,
-        include_snapshots=null
-      ):: std.prune(a={
-        prefix_match: prefix_match,
-        blob_types: blob_types,
-        include_blob_versions: include_blob_versions,
-        include_deleted: include_deleted,
-        include_snapshots: include_snapshots,
-      }),
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob_inventory_policy+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob_inventory_policy+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_blob_inventory_policy+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
     },
   },
 }

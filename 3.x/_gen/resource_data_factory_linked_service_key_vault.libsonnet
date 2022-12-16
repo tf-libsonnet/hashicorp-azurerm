@@ -1,65 +1,60 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    data_factory_id,
+    key_vault_id,
     name,
-    parameters=null,
+    resourceLabel,
     additional_properties=null,
     annotations=null,
-    data_factory_id,
     description=null,
     integration_runtime_name=null,
-    key_vault_id,
+    parameters=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_key_vault', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    parameters=parameters,
     additional_properties=additional_properties,
     annotations=annotations,
     data_factory_id=data_factory_id,
     description=description,
     integration_runtime_name=integration_runtime_name,
     key_vault_id=key_vault_id,
+    name=name,
+    parameters=parameters,
     timeouts=timeouts
   )),
   newAttrs(
-    annotations=null,
     data_factory_id,
-    description=null,
     key_vault_id,
-    integration_runtime_name=null,
     name,
-    parameters=null,
     additional_properties=null,
+    annotations=null,
+    description=null,
+    integration_runtime_name=null,
+    parameters=null,
     timeouts=null
   ):: std.prune(a={
+    additional_properties: additional_properties,
     annotations: annotations,
     data_factory_id: data_factory_id,
     description: description,
-    key_vault_id: key_vault_id,
     integration_runtime_name: integration_runtime_name,
+    key_vault_id: key_vault_id,
     name: name,
     parameters: parameters,
-    additional_properties: additional_properties,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_key_vault+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_key_vault+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
@@ -75,15 +70,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_key_vault+: {
         [resourceLabel]+: {
           annotations: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_key_vault+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
         },
       },
     },
@@ -106,11 +92,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_key_vault+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
   withKeyVaultId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_key_vault+: {
         [resourceLabel]+: {
           key_vault_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_key_vault+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_key_vault+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -132,18 +145,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

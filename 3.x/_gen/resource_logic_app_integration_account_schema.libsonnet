@@ -1,48 +1,52 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    content,
+    integration_account_name,
+    name,
     resourceLabel,
     resource_group_name,
-    content,
     file_name=null,
-    integration_account_name,
     metadata=null,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_schema', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     content=content,
     file_name=file_name,
     integration_account_name=integration_account_name,
     metadata=metadata,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    metadata=null,
+    content,
+    integration_account_name,
     name,
     resource_group_name,
-    content,
     file_name=null,
-    integration_account_name,
+    metadata=null,
     timeouts=null
   ):: std.prune(a={
-    metadata: metadata,
-    name: name,
-    resource_group_name: resource_group_name,
     content: content,
     file_name: file_name,
     integration_account_name: integration_account_name,
+    metadata: metadata,
+    name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_schema+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withContent(resourceLabel, value):: {
     resource+: {
@@ -89,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_schema+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_schema+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

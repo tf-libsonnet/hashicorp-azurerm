@@ -2,65 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    queue_name=null,
-    topic_name=null,
-    topic_id=null,
     name,
     namespace_name=null,
+    queue_name=null,
     resource_group_name=null,
-    timeouts=null
+    timeouts=null,
+    topic_id=null,
+    topic_name=null
   ):: tf.withData(type='azurerm_servicebus_topic_authorization_rule', label=dataSrcLabel, attrs=self.newAttrs(
-    queue_name=queue_name,
-    topic_name=topic_name,
-    topic_id=topic_id,
     name=name,
     namespace_name=namespace_name,
+    queue_name=queue_name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    topic_id=topic_id,
+    topic_name=topic_name
   )),
   newAttrs(
     name,
     namespace_name=null,
-    topic_name=null,
     queue_name=null,
-    topic_id=null,
     resource_group_name=null,
-    timeouts=null
+    timeouts=null,
+    topic_id=null,
+    topic_name=null
   ):: std.prune(a={
     name: name,
     namespace_name: namespace_name,
-    topic_name: topic_name,
     queue_name: queue_name,
-    topic_id: topic_id,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
+    topic_id: topic_id,
+    topic_name: topic_name,
   }),
-  withQueueName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_topic_authorization_rule+: {
-        [dataSrcLabel]+: {
-          queue_name: value,
-        },
-      },
-    },
-  },
-  withTopicName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_topic_authorization_rule+: {
-        [dataSrcLabel]+: {
-          topic_name: value,
-        },
-      },
-    },
-  },
-  withTopicId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_topic_authorization_rule+: {
-        [dataSrcLabel]+: {
-          topic_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -76,6 +56,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_servicebus_topic_authorization_rule+: {
         [dataSrcLabel]+: {
           namespace_name: value,
+        },
+      },
+    },
+  },
+  withQueueName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_topic_authorization_rule+: {
+        [dataSrcLabel]+: {
+          queue_name: value,
         },
       },
     },
@@ -107,11 +96,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withTopicId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_topic_authorization_rule+: {
+        [dataSrcLabel]+: {
+          topic_id: value,
+        },
+      },
+    },
+  },
+  withTopicName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_topic_authorization_rule+: {
+        [dataSrcLabel]+: {
+          topic_name: value,
+        },
+      },
+    },
   },
 }

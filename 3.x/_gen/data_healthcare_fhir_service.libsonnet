@@ -2,41 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    tags=null,
     name,
     workspace_id,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_healthcare_fhir_service', label=dataSrcLabel, attrs=self.newAttrs(
-    tags=tags,
     name=name,
-    workspace_id=workspace_id,
-    timeouts=timeouts
+    tags=tags,
+    timeouts=timeouts,
+    workspace_id=workspace_id
   )),
   newAttrs(
-    tags=null,
     name,
     workspace_id,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    tags: tags,
     name: name,
-    workspace_id: workspace_id,
+    tags: tags,
     timeouts: timeouts,
+    workspace_id: workspace_id,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_healthcare_fhir_service+: {
         [dataSrcLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withWorkspaceId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_healthcare_fhir_service+: {
-        [dataSrcLabel]+: {
-          workspace_id: value,
         },
       },
     },
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withWorkspaceId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_healthcare_fhir_service+: {
+        [dataSrcLabel]+: {
+          workspace_id: value,
+        },
+      },
+    },
   },
 }

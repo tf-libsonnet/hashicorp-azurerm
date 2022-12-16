@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
     algorithm,
-    encrypted_data=null,
+    dataSrcLabel,
     key_vault_key_id,
+    encrypted_data=null,
     plain_text_value=null,
     timeouts=null
   ):: tf.withData(type='azurerm_key_vault_encrypted_value', label=dataSrcLabel, attrs=self.newAttrs(
@@ -15,35 +15,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    key_vault_key_id,
-    plain_text_value=null,
     algorithm,
+    key_vault_key_id,
     encrypted_data=null,
+    plain_text_value=null,
     timeouts=null
   ):: std.prune(a={
-    key_vault_key_id: key_vault_key_id,
-    plain_text_value: plain_text_value,
     algorithm: algorithm,
     encrypted_data: encrypted_data,
+    key_vault_key_id: key_vault_key_id,
+    plain_text_value: plain_text_value,
     timeouts: timeouts,
   }),
-  withKeyVaultKeyId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_key_vault_encrypted_value+: {
-        [dataSrcLabel]+: {
-          key_vault_key_id: value,
-        },
-      },
-    },
-  },
-  withPlainTextValue(dataSrcLabel, value):: {
-    data+: {
-      azurerm_key_vault_encrypted_value+: {
-        [dataSrcLabel]+: {
-          plain_text_value: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withAlgorithm(dataSrcLabel, value):: {
     data+: {
@@ -59,6 +48,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_encrypted_value+: {
         [dataSrcLabel]+: {
           encrypted_data: value,
+        },
+      },
+    },
+  },
+  withKeyVaultKeyId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_key_vault_encrypted_value+: {
+        [dataSrcLabel]+: {
+          key_vault_key_id: value,
+        },
+      },
+    },
+  },
+  withPlainTextValue(dataSrcLabel, value):: {
+    data+: {
+      azurerm_key_vault_encrypted_value+: {
+        [dataSrcLabel]+: {
+          plain_text_value: value,
         },
       },
     },
@@ -80,12 +87,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

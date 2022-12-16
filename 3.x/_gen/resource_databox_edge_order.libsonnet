@@ -1,49 +1,72 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  contact:: {
+    new(
+      company_name,
+      emails,
+      name,
+      phone_number
+    ):: std.prune(a={
+      company_name: company_name,
+      emails: emails,
+      name: name,
+      phone_number: phone_number,
+    }),
+  },
   new(
+    device_name,
     resourceLabel,
     resource_group_name,
-    device_name,
     contact=null,
     shipment_address=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_databox_edge_order', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    device_name=device_name,
     contact=contact,
+    device_name=device_name,
+    resource_group_name=resource_group_name,
     shipment_address=shipment_address,
     timeouts=timeouts
   )),
   newAttrs(
     device_name,
     resource_group_name,
-    timeouts=null,
     contact=null,
-    shipment_address=null
+    shipment_address=null,
+    timeouts=null
   ):: std.prune(a={
+    contact: contact,
     device_name: device_name,
     resource_group_name: resource_group_name,
-    timeouts: timeouts,
-    contact: contact,
     shipment_address: shipment_address,
+    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_databox_edge_order+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  shipment_address:: {
+    new(
+      address,
+      city,
+      country,
+      postal_code,
+      state
+    ):: std.prune(a={
+      address: address,
+      city: city,
+      country: country,
+      postal_code: postal_code,
+      state: state,
+    }),
   },
-  withDeviceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_databox_edge_order+: {
-        [resourceLabel]+: {
-          device_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withContact(resourceLabel, value):: {
     resource+: {
@@ -63,18 +86,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  contact:: {
-    new(
-      emails,
-      name,
-      phone_number,
-      company_name
-    ):: std.prune(a={
-      emails: emails,
-      name: name,
-      phone_number: phone_number,
-      company_name: company_name,
-    }),
+  withDeviceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_databox_edge_order+: {
+        [resourceLabel]+: {
+          device_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_databox_edge_order+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
   },
   withShipmentAddress(resourceLabel, value):: {
     resource+: {
@@ -94,21 +122,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  shipment_address:: {
-    new(
-      postal_code,
-      state,
-      address,
-      city,
-      country
-    ):: std.prune(a={
-      postal_code: postal_code,
-      state: state,
-      address: address,
-      city: city,
-      country: country,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_databox_edge_order+: {
@@ -126,18 +139,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

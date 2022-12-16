@@ -1,40 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    spring_cloud_app_id,
-    username,
     database_name,
     mysql_server_id,
     name,
     password,
+    resourceLabel,
+    spring_cloud_app_id,
+    username,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_app_mysql_association', label=resourceLabel, attrs=self.newAttrs(
-    spring_cloud_app_id=spring_cloud_app_id,
-    username=username,
     database_name=database_name,
     mysql_server_id=mysql_server_id,
     name=name,
     password=password,
-    timeouts=timeouts
+    spring_cloud_app_id=spring_cloud_app_id,
+    timeouts=timeouts,
+    username=username
   )),
   newAttrs(
+    database_name,
+    mysql_server_id,
     name,
     password,
     spring_cloud_app_id,
     username,
-    database_name,
-    mysql_server_id,
     timeouts=null
   ):: std.prune(a={
+    database_name: database_name,
+    mysql_server_id: mysql_server_id,
     name: name,
     password: password,
     spring_cloud_app_id: spring_cloud_app_id,
-    username: username,
-    database_name: database_name,
-    mysql_server_id: mysql_server_id,
     timeouts: timeouts,
+    username: username,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withDatabaseName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_mysql_association+: {
+        [resourceLabel]+: {
+          database_name: value,
+        },
+      },
+    },
+  },
   withMysqlServerId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_mysql_association+: {
@@ -71,24 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUsername(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_mysql_association+: {
-        [resourceLabel]+: {
-          username: value,
-        },
-      },
-    },
-  },
-  withDatabaseName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_mysql_association+: {
-        [resourceLabel]+: {
-          database_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_mysql_association+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_mysql_association+: {
+        [resourceLabel]+: {
+          username: value,
+        },
+      },
+    },
   },
 }

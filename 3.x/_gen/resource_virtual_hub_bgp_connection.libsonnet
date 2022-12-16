@@ -1,36 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    virtual_network_connection_id=null,
     name,
     peer_asn,
     peer_ip,
+    resourceLabel,
     virtual_hub_id,
-    timeouts=null
+    timeouts=null,
+    virtual_network_connection_id=null
   ):: tf.withResource(type='azurerm_virtual_hub_bgp_connection', label=resourceLabel, attrs=self.newAttrs(
-    virtual_network_connection_id=virtual_network_connection_id,
     name=name,
     peer_asn=peer_asn,
     peer_ip=peer_ip,
+    timeouts=timeouts,
     virtual_hub_id=virtual_hub_id,
-    timeouts=timeouts
+    virtual_network_connection_id=virtual_network_connection_id
   )),
   newAttrs(
-    virtual_hub_id,
-    virtual_network_connection_id=null,
     name,
     peer_asn,
     peer_ip,
-    timeouts=null
+    virtual_hub_id,
+    timeouts=null,
+    virtual_network_connection_id=null
   ):: std.prune(a={
-    virtual_hub_id: virtual_hub_id,
-    virtual_network_connection_id: virtual_network_connection_id,
     name: name,
     peer_asn: peer_asn,
     peer_ip: peer_ip,
     timeouts: timeouts,
+    virtual_hub_id: virtual_hub_id,
+    virtual_network_connection_id: virtual_network_connection_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_bgp_connection+: {
@@ -58,24 +71,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualHubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_bgp_connection+: {
-        [resourceLabel]+: {
-          virtual_hub_id: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkConnectionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub_bgp_connection+: {
-        [resourceLabel]+: {
-          virtual_network_connection_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub_bgp_connection+: {
@@ -94,17 +89,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVirtualHubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_bgp_connection+: {
+        [resourceLabel]+: {
+          virtual_hub_id: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkConnectionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub_bgp_connection+: {
+        [resourceLabel]+: {
+          virtual_network_connection_id: value,
+        },
+      },
+    },
   },
 }

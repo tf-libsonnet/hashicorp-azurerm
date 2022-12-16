@@ -2,35 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name=null,
     resource_group_name,
     zone_name,
+    name=null,
     timeouts=null
   ):: tf.withData(type='azurerm_dns_mx_record', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
     resource_group_name=resource_group_name,
-    zone_name=zone_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    zone_name=zone_name
   )),
   newAttrs(
+    resource_group_name,
     zone_name,
     name=null,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    zone_name: zone_name,
     name: name,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
+    zone_name: zone_name,
   }),
-  withZoneName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_dns_mx_record+: {
-        [dataSrcLabel]+: {
-          zone_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withZoneName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_dns_mx_record+: {
+        [dataSrcLabel]+: {
+          zone_name: value,
+        },
+      },
+    },
   },
 }

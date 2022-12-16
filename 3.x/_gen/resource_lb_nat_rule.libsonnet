@@ -1,68 +1,81 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    resource_group_name,
-    enable_tcp_reset=null,
+    backend_port,
     frontend_ip_configuration_name,
-    frontend_port_end=null,
-    idle_timeout_in_minutes=null,
-    enable_floating_ip=null,
-    frontend_port=null,
-    backend_address_pool_id=null,
     loadbalancer_id,
     name,
-    backend_port,
-    frontend_port_start=null,
     protocol,
+    resourceLabel,
+    resource_group_name,
+    backend_address_pool_id=null,
+    enable_floating_ip=null,
+    enable_tcp_reset=null,
+    frontend_port=null,
+    frontend_port_end=null,
+    frontend_port_start=null,
+    idle_timeout_in_minutes=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_lb_nat_rule', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
+    backend_address_pool_id=backend_address_pool_id,
+    backend_port=backend_port,
+    enable_floating_ip=enable_floating_ip,
     enable_tcp_reset=enable_tcp_reset,
     frontend_ip_configuration_name=frontend_ip_configuration_name,
-    frontend_port_end=frontend_port_end,
-    idle_timeout_in_minutes=idle_timeout_in_minutes,
-    enable_floating_ip=enable_floating_ip,
     frontend_port=frontend_port,
-    backend_address_pool_id=backend_address_pool_id,
+    frontend_port_end=frontend_port_end,
+    frontend_port_start=frontend_port_start,
+    idle_timeout_in_minutes=idle_timeout_in_minutes,
     loadbalancer_id=loadbalancer_id,
     name=name,
-    backend_port=backend_port,
-    frontend_port_start=frontend_port_start,
     protocol=protocol,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    backend_port,
+    frontend_ip_configuration_name,
     loadbalancer_id,
     name,
-    frontend_port_start=null,
     protocol,
-    idle_timeout_in_minutes=null,
-    enable_floating_ip=null,
     resource_group_name,
-    backend_port,
-    enable_tcp_reset=null,
-    frontend_port_end=null,
-    frontend_ip_configuration_name,
-    frontend_port=null,
     backend_address_pool_id=null,
+    enable_floating_ip=null,
+    enable_tcp_reset=null,
+    frontend_port=null,
+    frontend_port_end=null,
+    frontend_port_start=null,
+    idle_timeout_in_minutes=null,
     timeouts=null
   ):: std.prune(a={
-    loadbalancer_id: loadbalancer_id,
-    name: name,
-    frontend_port_start: frontend_port_start,
-    protocol: protocol,
-    idle_timeout_in_minutes: idle_timeout_in_minutes,
-    enable_floating_ip: enable_floating_ip,
-    resource_group_name: resource_group_name,
+    backend_address_pool_id: backend_address_pool_id,
     backend_port: backend_port,
+    enable_floating_ip: enable_floating_ip,
     enable_tcp_reset: enable_tcp_reset,
-    frontend_port_end: frontend_port_end,
     frontend_ip_configuration_name: frontend_ip_configuration_name,
     frontend_port: frontend_port,
-    backend_address_pool_id: backend_address_pool_id,
+    frontend_port_end: frontend_port_end,
+    frontend_port_start: frontend_port_start,
+    idle_timeout_in_minutes: idle_timeout_in_minutes,
+    loadbalancer_id: loadbalancer_id,
+    name: name,
+    protocol: protocol,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withBackendAddressPoolId(resourceLabel, value):: {
     resource+: {
       azurerm_lb_nat_rule+: {
@@ -72,20 +85,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withBackendPort(resourceLabel, value):: {
     resource+: {
       azurerm_lb_nat_rule+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          backend_port: value,
         },
       },
     },
   },
-  withProtocol(resourceLabel, value):: {
+  withEnableFloatingIp(resourceLabel, value):: {
     resource+: {
       azurerm_lb_nat_rule+: {
         [resourceLabel]+: {
-          protocol: value,
+          enable_floating_ip: value,
         },
       },
     },
@@ -95,15 +108,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_lb_nat_rule+: {
         [resourceLabel]+: {
           enable_tcp_reset: value,
-        },
-      },
-    },
-  },
-  withFrontendPortStart(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_nat_rule+: {
-        [resourceLabel]+: {
-          frontend_port_start: value,
         },
       },
     },
@@ -126,6 +130,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withFrontendPortEnd(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_nat_rule+: {
+        [resourceLabel]+: {
+          frontend_port_end: value,
+        },
+      },
+    },
+  },
+  withFrontendPortStart(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_nat_rule+: {
+        [resourceLabel]+: {
+          frontend_port_start: value,
+        },
+      },
+    },
+  },
+  withIdleTimeoutInMinutes(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_nat_rule+: {
+        [resourceLabel]+: {
+          idle_timeout_in_minutes: value,
+        },
+      },
+    },
+  },
   withLoadbalancerId(resourceLabel, value):: {
     resource+: {
       azurerm_lb_nat_rule+: {
@@ -144,38 +175,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBackendPort(resourceLabel, value):: {
+  withProtocol(resourceLabel, value):: {
     resource+: {
       azurerm_lb_nat_rule+: {
         [resourceLabel]+: {
-          backend_port: value,
+          protocol: value,
         },
       },
     },
   },
-  withFrontendPortEnd(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_lb_nat_rule+: {
         [resourceLabel]+: {
-          frontend_port_end: value,
-        },
-      },
-    },
-  },
-  withIdleTimeoutInMinutes(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_nat_rule+: {
-        [resourceLabel]+: {
-          idle_timeout_in_minutes: value,
-        },
-      },
-    },
-  },
-  withEnableFloatingIp(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_nat_rule+: {
-        [resourceLabel]+: {
-          enable_floating_ip: value,
+          resource_group_name: value,
         },
       },
     },
@@ -197,18 +210,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

@@ -1,66 +1,52 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    value=null,
     automation_account_name,
+    name,
+    resourceLabel,
+    resource_group_name,
     description=null,
     encrypted=null,
-    name,
-    resource_group_name,
-    timeouts=null
+    timeouts=null,
+    value=null
   ):: tf.withResource(type='azurerm_automation_variable_int', label=resourceLabel, attrs=self.newAttrs(
-    value=value,
     automation_account_name=automation_account_name,
     description=description,
     encrypted=encrypted,
     name=name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    value=value
   )),
   newAttrs(
-    description=null,
-    encrypted=null,
+    automation_account_name,
     name,
     resource_group_name,
-    value=null,
-    automation_account_name,
-    timeouts=null
+    description=null,
+    encrypted=null,
+    timeouts=null,
+    value=null
   ):: std.prune(a={
+    automation_account_name: automation_account_name,
     description: description,
     encrypted: encrypted,
     name: name,
     resource_group_name: resource_group_name,
-    value: value,
-    automation_account_name: automation_account_name,
     timeouts: timeouts,
+    value: value,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_variable_int+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_variable_int+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_variable_int+: {
-        [resourceLabel]+: {
-          value: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
@@ -89,6 +75,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_variable_int+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_variable_int+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_automation_variable_int+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_variable_int+: {
+        [resourceLabel]+: {
+          value: value,
+        },
+      },
+    },
   },
 }

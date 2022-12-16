@@ -23,6 +23,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_cdn_frontdoor_custom_domain+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withProfileName(dataSrcLabel, value):: {
     data+: {
       azurerm_cdn_frontdoor_custom_domain+: {
@@ -37,15 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cdn_frontdoor_custom_domain+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_cdn_frontdoor_custom_domain+: {
-        [dataSrcLabel]+: {
-          name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

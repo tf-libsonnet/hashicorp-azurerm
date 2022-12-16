@@ -1,36 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    bot_name,
+    location,
     resourceLabel,
+    resource_group_name,
     calling_web_hook=null,
     enable_calling=null,
-    location,
-    resource_group_name,
-    bot_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_ms_teams', label=resourceLabel, attrs=self.newAttrs(
+    bot_name=bot_name,
     calling_web_hook=calling_web_hook,
     enable_calling=enable_calling,
     location=location,
     resource_group_name=resource_group_name,
-    bot_name=bot_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     bot_name,
+    location,
+    resource_group_name,
     calling_web_hook=null,
     enable_calling=null,
-    location,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     bot_name: bot_name,
     calling_web_hook: calling_web_hook,
     enable_calling: enable_calling,
     location: location,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withBotName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_ms_teams+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

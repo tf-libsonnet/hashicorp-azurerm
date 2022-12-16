@@ -1,79 +1,89 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  nat_ip_configuration:: {
+    new(
+      name,
+      primary,
+      subnet_id,
+      private_ip_address=null,
+      private_ip_address_version=null
+    ):: std.prune(a={
+      name: name,
+      primary: primary,
+      private_ip_address: private_ip_address,
+      private_ip_address_version: private_ip_address_version,
+      subnet_id: subnet_id,
+    }),
+  },
   new(
-    resourceLabel,
-    name,
     load_balancer_frontend_ip_configuration_ids,
-    tags=null,
-    visibility_subscription_ids=null,
+    location,
+    name,
+    resourceLabel,
+    resource_group_name,
     auto_approval_subscription_ids=null,
     enable_proxy_protocol=null,
     fqdns=null,
-    location,
-    resource_group_name,
     nat_ip_configuration=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    visibility_subscription_ids=null
   ):: tf.withResource(type='azurerm_private_link_service', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    load_balancer_frontend_ip_configuration_ids=load_balancer_frontend_ip_configuration_ids,
-    tags=tags,
-    visibility_subscription_ids=visibility_subscription_ids,
     auto_approval_subscription_ids=auto_approval_subscription_ids,
     enable_proxy_protocol=enable_proxy_protocol,
     fqdns=fqdns,
+    load_balancer_frontend_ip_configuration_ids=load_balancer_frontend_ip_configuration_ids,
     location=location,
-    resource_group_name=resource_group_name,
+    name=name,
     nat_ip_configuration=nat_ip_configuration,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    visibility_subscription_ids=visibility_subscription_ids
   )),
   newAttrs(
     load_balancer_frontend_ip_configuration_ids,
-    fqdns=null,
     location,
+    name,
     resource_group_name,
-    tags=null,
-    visibility_subscription_ids=null,
     auto_approval_subscription_ids=null,
     enable_proxy_protocol=null,
-    name,
+    fqdns=null,
+    nat_ip_configuration=null,
+    tags=null,
     timeouts=null,
-    nat_ip_configuration=null
+    visibility_subscription_ids=null
   ):: std.prune(a={
-    load_balancer_frontend_ip_configuration_ids: load_balancer_frontend_ip_configuration_ids,
-    fqdns: fqdns,
-    location: location,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    visibility_subscription_ids: visibility_subscription_ids,
     auto_approval_subscription_ids: auto_approval_subscription_ids,
     enable_proxy_protocol: enable_proxy_protocol,
+    fqdns: fqdns,
+    load_balancer_frontend_ip_configuration_ids: load_balancer_frontend_ip_configuration_ids,
+    location: location,
     name: name,
-    timeouts: timeouts,
     nat_ip_configuration: nat_ip_configuration,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    timeouts: timeouts,
+    visibility_subscription_ids: visibility_subscription_ids,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withAutoApprovalSubscriptionIds(resourceLabel, value):: {
     resource+: {
       azurerm_private_link_service+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          tags: value,
+          auto_approval_subscription_ids: value,
         },
       },
     },
@@ -96,24 +106,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withVisibilitySubscriptionIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_link_service+: {
-        [resourceLabel]+: {
-          visibility_subscription_ids: value,
-        },
-      },
-    },
-  },
   withLoadBalancerFrontendIpConfigurationIds(resourceLabel, value):: {
     resource+: {
       azurerm_private_link_service+: {
@@ -123,11 +115,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutoApprovalSubscriptionIds(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_private_link_service+: {
         [resourceLabel]+: {
-          auto_approval_subscription_ids: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -150,20 +151,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  nat_ip_configuration:: {
-    new(
-      primary,
-      private_ip_address=null,
-      private_ip_address_version=null,
-      subnet_id,
-      name
-    ):: std.prune(a={
-      primary: primary,
-      private_ip_address: private_ip_address,
-      private_ip_address_version: private_ip_address_version,
-      subnet_id: subnet_id,
-      name: name,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -183,17 +187,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVisibilitySubscriptionIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_link_service+: {
+        [resourceLabel]+: {
+          visibility_subscription_ids: value,
+        },
+      },
+    },
   },
 }

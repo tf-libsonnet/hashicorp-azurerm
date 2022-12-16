@@ -1,53 +1,48 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    backup_policy_id,
     location,
     name,
+    resourceLabel,
     storage_account_id,
     vault_id,
-    backup_policy_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_instance_blob_storage', label=resourceLabel, attrs=self.newAttrs(
+    backup_policy_id=backup_policy_id,
     location=location,
     name=name,
     storage_account_id=storage_account_id,
-    vault_id=vault_id,
-    backup_policy_id=backup_policy_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    vault_id=vault_id
   )),
   newAttrs(
+    backup_policy_id,
+    location,
     name,
     storage_account_id,
     vault_id,
-    backup_policy_id,
-    location,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    storage_account_id: storage_account_id,
-    vault_id: vault_id,
     backup_policy_id: backup_policy_id,
     location: location,
+    name: name,
+    storage_account_id: storage_account_id,
     timeouts: timeouts,
+    vault_id: vault_id,
   }),
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_blob_storage+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_blob_storage+: {
-        [resourceLabel]+: {
-          vault_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBackupPolicyId(resourceLabel, value):: {
     resource+: {
@@ -76,6 +71,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_blob_storage+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_instance_blob_storage+: {
@@ -94,17 +98,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_blob_storage+: {
+        [resourceLabel]+: {
+          vault_id: value,
+        },
+      },
+    },
   },
 }

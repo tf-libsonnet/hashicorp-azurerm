@@ -23,14 +23,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_site_recovery_fabric+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -46,6 +44,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_site_recovery_fabric+: {
         [dataSrcLabel]+: {
           recovery_vault_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_site_recovery_fabric+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

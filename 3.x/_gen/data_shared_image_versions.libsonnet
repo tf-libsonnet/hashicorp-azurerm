@@ -27,6 +27,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags_filter: tags_filter,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withGalleryName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_shared_image_versions+: {
+        [dataSrcLabel]+: {
+          gallery_name: value,
+        },
+      },
+    },
+  },
   withImageName(dataSrcLabel, value):: {
     data+: {
       azurerm_shared_image_versions+: {
@@ -54,15 +70,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGalleryName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_shared_image_versions+: {
-        [dataSrcLabel]+: {
-          gallery_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_shared_image_versions+: {
@@ -80,12 +87,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

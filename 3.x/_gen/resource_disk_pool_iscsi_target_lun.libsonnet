@@ -1,15 +1,15 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
     disk_pool_managed_disk_attachment_id,
     iscsi_target_id,
+    name,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_disk_pool_iscsi_target_lun', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     disk_pool_managed_disk_attachment_id=disk_pool_managed_disk_attachment_id,
     iscsi_target_id=iscsi_target_id,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
+  withDiskPoolManagedDiskAttachmentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_pool_iscsi_target_lun+: {
+        [resourceLabel]+: {
+          disk_pool_managed_disk_attachment_id: value,
+        },
+      },
+    },
+  },
   withIscsiTargetId(resourceLabel, value):: {
     resource+: {
       azurerm_disk_pool_iscsi_target_lun+: {
@@ -37,15 +57,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_disk_pool_iscsi_target_lun+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withDiskPoolManagedDiskAttachmentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_pool_iscsi_target_lun+: {
-        [resourceLabel]+: {
-          disk_pool_managed_disk_attachment_id: value,
         },
       },
     },
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

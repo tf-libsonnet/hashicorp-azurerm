@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     allowed_tenants,
     api_management_name,
     client_id,
     client_secret,
+    resourceLabel,
     resource_group_name,
     signin_tenant=null,
     timeouts=null
@@ -19,22 +19,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    signin_tenant=null,
     allowed_tenants,
     api_management_name,
     client_id,
     client_secret,
     resource_group_name,
+    signin_tenant=null,
     timeouts=null
   ):: std.prune(a={
-    signin_tenant: signin_tenant,
     allowed_tenants: allowed_tenants,
     api_management_name: api_management_name,
     client_id: client_id,
     client_secret: client_secret,
     resource_group_name: resource_group_name,
+    signin_tenant: signin_tenant,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAllowedTenants(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_identity_provider_aad+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

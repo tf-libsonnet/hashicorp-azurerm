@@ -1,50 +1,70 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  hub_profile:: {
+    new(
+      dns_prefix
+    ):: std.prune(a={
+      dns_prefix: dns_prefix,
+    }),
+  },
   new(
-    resourceLabel,
     location,
     name,
+    resourceLabel,
     resource_group_name,
+    hub_profile=null,
     tags=null,
-    timeouts=null,
-    hub_profile=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_kubernetes_fleet_manager', label=resourceLabel, attrs=self.newAttrs(
+    hub_profile=hub_profile,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    timeouts=timeouts,
-    hub_profile=hub_profile
+    timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
     location,
     name,
     resource_group_name,
-    timeouts=null,
-    hub_profile=null
+    hub_profile=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    tags: tags,
+    hub_profile: hub_profile,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
-    hub_profile: hub_profile,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withHubProfile(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          hub_profile: value,
         },
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withHubProfileMixin(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
         [resourceLabel]+: {
-          tags: value,
+          hub_profile+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -67,30 +87,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHubProfile(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
         [resourceLabel]+: {
-          hub_profile: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withHubProfileMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_kubernetes_fleet_manager+: {
         [resourceLabel]+: {
-          hub_profile+: if std.isArray(v=value) then value else [value],
+          tags: value,
         },
       },
     },
-  },
-  hub_profile:: {
-    new(
-      dns_prefix
-    ):: std.prune(a={
-      dns_prefix: dns_prefix,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -109,18 +122,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

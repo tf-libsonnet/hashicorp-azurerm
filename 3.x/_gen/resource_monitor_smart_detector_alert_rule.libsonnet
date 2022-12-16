@@ -1,65 +1,143 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  action_group:: {
+    new(
+      ids,
+      email_subject=null,
+      webhook_payload=null
+    ):: std.prune(a={
+      email_subject: email_subject,
+      ids: ids,
+      webhook_payload: webhook_payload,
+    }),
+  },
   new(
-    resourceLabel,
-    description=null,
-    enabled=null,
-    resource_group_name,
-    scope_resource_ids,
-    throttling_duration=null,
-    tags=null,
-    severity,
     detector_type,
     frequency,
     name,
+    resourceLabel,
+    resource_group_name,
+    scope_resource_ids,
+    severity,
     action_group=null,
+    description=null,
+    enabled=null,
+    tags=null,
+    throttling_duration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_smart_detector_alert_rule', label=resourceLabel, attrs=self.newAttrs(
+    action_group=action_group,
     description=description,
-    enabled=enabled,
-    resource_group_name=resource_group_name,
-    scope_resource_ids=scope_resource_ids,
-    throttling_duration=throttling_duration,
-    tags=tags,
-    severity=severity,
     detector_type=detector_type,
+    enabled=enabled,
     frequency=frequency,
     name=name,
-    action_group=action_group,
+    resource_group_name=resource_group_name,
+    scope_resource_ids=scope_resource_ids,
+    severity=severity,
+    tags=tags,
+    throttling_duration=throttling_duration,
     timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
-    enabled=null,
+    detector_type,
+    frequency,
+    name,
+    resource_group_name,
     scope_resource_ids,
     severity,
+    action_group=null,
     description=null,
-    frequency,
-    resource_group_name,
+    enabled=null,
+    tags=null,
     throttling_duration=null,
-    detector_type,
-    name,
-    timeouts=null,
-    action_group=null
+    timeouts=null
   ):: std.prune(a={
-    tags: tags,
+    action_group: action_group,
+    description: description,
+    detector_type: detector_type,
     enabled: enabled,
+    frequency: frequency,
+    name: name,
+    resource_group_name: resource_group_name,
     scope_resource_ids: scope_resource_ids,
     severity: severity,
-    description: description,
-    frequency: frequency,
-    resource_group_name: resource_group_name,
+    tags: tags,
     throttling_duration: throttling_duration,
-    detector_type: detector_type,
-    name: name,
     timeouts: timeouts,
-    action_group: action_group,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withActionGroup(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          action_group: value,
+        },
+      },
+    },
+  },
+  withActionGroupMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          action_group+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withDetectorType(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_smart_detector_alert_rule+: {
         [resourceLabel]+: {
           detector_type: value,
+        },
+      },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withFrequency(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          frequency: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -91,15 +169,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_smart_detector_alert_rule+: {
@@ -109,38 +178,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withThrottlingDuration(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_smart_detector_alert_rule+: {
         [resourceLabel]+: {
           throttling_duration: value,
-        },
-      },
-    },
-  },
-  withFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          frequency: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -162,47 +204,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
-  withActionGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          action_group: value,
-        },
-      },
-    },
-  },
-  withActionGroupMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          action_group+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  action_group:: {
-    new(
-      email_subject=null,
-      ids,
-      webhook_payload=null
-    ):: std.prune(a={
-      email_subject: email_subject,
-      ids: ids,
-      webhook_payload: webhook_payload,
-    }),
   },
 }

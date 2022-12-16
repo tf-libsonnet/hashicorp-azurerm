@@ -1,76 +1,71 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     api_management_name,
-    key_vault_identity_client_id=null,
-    password=null,
-    data=null,
-    key_vault_secret_id=null,
     name,
+    resourceLabel,
     resource_group_name,
+    data=null,
+    key_vault_identity_client_id=null,
+    key_vault_secret_id=null,
+    password=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_certificate', label=resourceLabel, attrs=self.newAttrs(
     api_management_name=api_management_name,
-    key_vault_identity_client_id=key_vault_identity_client_id,
-    password=password,
     data=data,
+    key_vault_identity_client_id=key_vault_identity_client_id,
     key_vault_secret_id=key_vault_secret_id,
     name=name,
+    password=password,
     resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    key_vault_secret_id=null,
-    password=null,
-    data=null,
-    key_vault_identity_client_id=null,
+    api_management_name,
     name,
     resource_group_name,
-    api_management_name,
+    data=null,
+    key_vault_identity_client_id=null,
+    key_vault_secret_id=null,
+    password=null,
     timeouts=null
   ):: std.prune(a={
-    key_vault_secret_id: key_vault_secret_id,
-    password: password,
+    api_management_name: api_management_name,
     data: data,
     key_vault_identity_client_id: key_vault_identity_client_id,
+    key_vault_secret_id: key_vault_secret_id,
     name: name,
+    password: password,
     resource_group_name: resource_group_name,
-    api_management_name: api_management_name,
     timeouts: timeouts,
   }),
-  withData(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_certificate+: {
-        [resourceLabel]+: {
-          data: value,
-        },
-      },
-    },
-  },
-  withKeyVaultSecretId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_certificate+: {
-        [resourceLabel]+: {
-          key_vault_secret_id: value,
-        },
-      },
-    },
-  },
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_certificate+: {
-        [resourceLabel]+: {
-          password: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_certificate+: {
         [resourceLabel]+: {
           api_management_name: value,
+        },
+      },
+    },
+  },
+  withData(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_certificate+: {
+        [resourceLabel]+: {
+          data: value,
         },
       },
     },
@@ -84,11 +79,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withKeyVaultSecretId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_certificate+: {
+        [resourceLabel]+: {
+          key_vault_secret_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_certificate+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_certificate+: {
+        [resourceLabel]+: {
+          password: value,
         },
       },
     },
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     api_management_id,
     email,
     notification_type,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_notification_recipient_email', label=resourceLabel, attrs=self.newAttrs(
     api_management_id=api_management_id,
@@ -23,6 +23,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     notification_type: notification_type,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withApiManagementId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_notification_recipient_email+: {
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

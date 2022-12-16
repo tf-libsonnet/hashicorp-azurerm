@@ -13,16 +13,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     profile_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     profile_name: profile_name,
     resource_group_name: resource_group_name,
-    name: name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_cdn_frontdoor_rule_set+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withProfileName(dataSrcLabel, value):: {
     data+: {
       azurerm_cdn_frontdoor_rule_set+: {
@@ -37,15 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cdn_frontdoor_rule_set+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_cdn_frontdoor_rule_set+: {
-        [dataSrcLabel]+: {
-          name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

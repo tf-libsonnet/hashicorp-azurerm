@@ -1,36 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     asset_id,
-    first_quality_bitrate=null,
     name,
-    track_selection=null,
+    resourceLabel,
+    first_quality_bitrate=null,
     presentation_time_range=null,
-    timeouts=null
+    timeouts=null,
+    track_selection=null
   ):: tf.withResource(type='azurerm_media_asset_filter', label=resourceLabel, attrs=self.newAttrs(
     asset_id=asset_id,
     first_quality_bitrate=first_quality_bitrate,
     name=name,
-    track_selection=track_selection,
     presentation_time_range=presentation_time_range,
-    timeouts=timeouts
+    timeouts=timeouts,
+    track_selection=track_selection
   )),
   newAttrs(
     asset_id,
-    first_quality_bitrate=null,
     name,
+    first_quality_bitrate=null,
+    presentation_time_range=null,
     timeouts=null,
-    track_selection=null,
-    presentation_time_range=null
+    track_selection=null
   ):: std.prune(a={
     asset_id: asset_id,
     first_quality_bitrate: first_quality_bitrate,
     name: name,
+    presentation_time_range: presentation_time_range,
     timeouts: timeouts,
     track_selection: track_selection,
-    presentation_time_range: presentation_time_range,
   }),
+  presentation_time_range:: {
+    new(
+      end_in_units=null,
+      force_end=null,
+      live_backoff_in_units=null,
+      presentation_window_in_units=null,
+      start_in_units=null,
+      unit_timescale_in_miliseconds=null
+    ):: std.prune(a={
+      end_in_units: end_in_units,
+      force_end: force_end,
+      live_backoff_in_units: live_backoff_in_units,
+      presentation_window_in_units: presentation_window_in_units,
+      start_in_units: start_in_units,
+      unit_timescale_in_miliseconds: unit_timescale_in_miliseconds,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  track_selection:: {
+    condition:: {
+      new(
+        operation=null,
+        property=null,
+        value=null
+      ):: std.prune(a={
+        operation: operation,
+        property: property,
+        value: value,
+      }),
+    },
+    new(
+      condition=null
+    ):: std.prune(a={
+      condition: condition,
+    }),
+  },
   withAssetId(resourceLabel, value):: {
     resource+: {
       azurerm_media_asset_filter+: {
@@ -76,23 +124,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  presentation_time_range:: {
-    new(
-      start_in_units=null,
-      unit_timescale_in_miliseconds=null,
-      end_in_units=null,
-      force_end=null,
-      live_backoff_in_units=null,
-      presentation_window_in_units=null
-    ):: std.prune(a={
-      start_in_units: start_in_units,
-      unit_timescale_in_miliseconds: unit_timescale_in_miliseconds,
-      end_in_units: end_in_units,
-      force_end: force_end,
-      live_backoff_in_units: live_backoff_in_units,
-      presentation_window_in_units: presentation_window_in_units,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_media_asset_filter+: {
@@ -111,19 +142,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withTrackSelection(resourceLabel, value):: {
     resource+: {
       azurerm_media_asset_filter+: {
@@ -140,24 +158,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           track_selection+: if std.isArray(v=value) then value else [value],
         },
       },
-    },
-  },
-  track_selection:: {
-    new(
-      condition=null
-    ):: std.prune(a={
-      condition: condition,
-    }),
-    condition:: {
-      new(
-        operation=null,
-        property=null,
-        value=null
-      ):: std.prune(a={
-        operation: operation,
-        property: property,
-        value: value,
-      }),
     },
   },
 }

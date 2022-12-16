@@ -2,27 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     namespace_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_notification_hub', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     namespace_name=namespace_name,
     resource_group_name=resource_group_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     name,
     namespace_name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     name: name,
     namespace_name: namespace_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_notification_hub+: {
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

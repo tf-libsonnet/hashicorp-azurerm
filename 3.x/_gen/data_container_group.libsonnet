@@ -2,27 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    zones=null,
     name,
     resource_group_name,
-    timeouts=null
+    timeouts=null,
+    zones=null
   ):: tf.withData(type='azurerm_container_group', label=dataSrcLabel, attrs=self.newAttrs(
-    zones=zones,
     name=name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    zones=zones
   )),
   newAttrs(
     name,
     resource_group_name,
-    zones=null,
-    timeouts=null
+    timeouts=null,
+    zones=null
   ):: std.prune(a={
     name: name,
     resource_group_name: resource_group_name,
-    zones: zones,
     timeouts: timeouts,
+    zones: zones,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_container_group+: {
@@ -37,15 +44,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_container_group+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withZones(dataSrcLabel, value):: {
-    data+: {
-      azurerm_container_group+: {
-        [dataSrcLabel]+: {
-          zones: value,
         },
       },
     },
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withZones(dataSrcLabel, value):: {
+    data+: {
+      azurerm_container_group+: {
+        [dataSrcLabel]+: {
+          zones: value,
+        },
+      },
+    },
   },
 }

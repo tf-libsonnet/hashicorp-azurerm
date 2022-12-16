@@ -1,50 +1,63 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    send_key_name=null,
+    hostname,
     port,
     relay_id,
+    resourceLabel,
     web_app_id,
-    hostname,
+    send_key_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_web_app_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(
-    send_key_name=send_key_name,
+    hostname=hostname,
     port=port,
     relay_id=relay_id,
-    web_app_id=web_app_id,
-    hostname=hostname,
-    timeouts=timeouts
+    send_key_name=send_key_name,
+    timeouts=timeouts,
+    web_app_id=web_app_id
   )),
   newAttrs(
-    port,
-    send_key_name=null,
     hostname,
+    port,
     relay_id,
     web_app_id,
+    send_key_name=null,
     timeouts=null
   ):: std.prune(a={
-    port: port,
-    send_key_name: send_key_name,
     hostname: hostname,
+    port: port,
     relay_id: relay_id,
-    web_app_id: web_app_id,
+    send_key_name: send_key_name,
     timeouts: timeouts,
+    web_app_id: web_app_id,
   }),
-  withSendKeyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_app_hybrid_connection+: {
-        [resourceLabel]+: {
-          send_key_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withHostname(resourceLabel, value):: {
     resource+: {
       azurerm_web_app_hybrid_connection+: {
         [resourceLabel]+: {
           hostname: value,
+        },
+      },
+    },
+  },
+  withPort(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_app_hybrid_connection+: {
+        [resourceLabel]+: {
+          port: value,
         },
       },
     },
@@ -58,20 +71,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWebAppId(resourceLabel, value):: {
+  withSendKeyName(resourceLabel, value):: {
     resource+: {
       azurerm_web_app_hybrid_connection+: {
         [resourceLabel]+: {
-          web_app_id: value,
-        },
-      },
-    },
-  },
-  withPort(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_app_hybrid_connection+: {
-        [resourceLabel]+: {
-          port: value,
+          send_key_name: value,
         },
       },
     },
@@ -94,17 +98,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withWebAppId(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_app_hybrid_connection+: {
+        [resourceLabel]+: {
+          web_app_id: value,
+        },
+      },
+    },
   },
 }

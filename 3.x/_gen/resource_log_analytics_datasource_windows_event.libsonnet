@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     event_log_name,
     event_types,
     name,
+    resourceLabel,
     resource_group_name,
     workspace_name,
     timeouts=null
@@ -13,8 +13,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     event_types=event_types,
     name=name,
     resource_group_name=resource_group_name,
-    workspace_name=workspace_name,
-    timeouts=timeouts
+    timeouts=timeouts,
+    workspace_name=workspace_name
   )),
   newAttrs(
     event_log_name,
@@ -28,9 +28,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     event_types: event_types,
     name: name,
     resource_group_name: resource_group_name,
-    workspace_name: workspace_name,
     timeouts: timeouts,
+    workspace_name: workspace_name,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withEventLogName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_event+: {
@@ -67,15 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkspaceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_datasource_windows_event+: {
-        [resourceLabel]+: {
-          workspace_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_event+: {
@@ -94,17 +98,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withWorkspaceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_datasource_windows_event+: {
+        [resourceLabel]+: {
+          workspace_name: value,
+        },
+      },
+    },
   },
 }

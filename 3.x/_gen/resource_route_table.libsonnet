@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    disable_bgp_route_propagation=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
+    disable_bgp_route_propagation=null,
     route=null,
     tags=null,
     timeouts=null
@@ -22,27 +22,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     name,
     resource_group_name,
+    disable_bgp_route_propagation=null,
     route=null,
     tags=null,
-    disable_bgp_route_propagation=null,
     timeouts=null
   ):: std.prune(a={
+    disable_bgp_route_propagation: disable_bgp_route_propagation,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     route: route,
     tags: tags,
-    disable_bgp_route_propagation: disable_bgp_route_propagation,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_table+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDisableBgpRoutePropagation(resourceLabel, value):: {
     resource+: {
@@ -89,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_table+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_route_table+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

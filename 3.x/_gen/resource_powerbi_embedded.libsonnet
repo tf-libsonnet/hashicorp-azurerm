@@ -1,44 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    administrators,
     location,
-    mode=null,
     name,
+    resourceLabel,
     resource_group_name,
     sku_name,
+    mode=null,
     tags=null,
-    administrators,
     timeouts=null
   ):: tf.withResource(type='azurerm_powerbi_embedded', label=resourceLabel, attrs=self.newAttrs(
+    administrators=administrators,
     location=location,
     mode=mode,
     name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    administrators=administrators,
     timeouts=timeouts
   )),
   newAttrs(
-    mode=null,
+    administrators,
+    location,
     name,
     resource_group_name,
     sku_name,
+    mode=null,
     tags=null,
-    administrators,
-    location,
     timeouts=null
   ):: std.prune(a={
+    administrators: administrators,
+    location: location,
     mode: mode,
     name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
-    administrators: administrators,
-    location: location,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAdministrators(resourceLabel, value):: {
+    resource+: {
+      azurerm_powerbi_embedded+: {
+        [resourceLabel]+: {
+          administrators: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_powerbi_embedded+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_powerbi_embedded+: {
+        [resourceLabel]+: {
+          mode: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_powerbi_embedded+: {
@@ -75,33 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdministrators(resourceLabel, value):: {
-    resource+: {
-      azurerm_powerbi_embedded+: {
-        [resourceLabel]+: {
-          administrators: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_powerbi_embedded+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_powerbi_embedded+: {
-        [resourceLabel]+: {
-          mode: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_powerbi_embedded+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

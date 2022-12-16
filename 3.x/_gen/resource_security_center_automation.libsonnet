@@ -1,84 +1,121 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  action:: {
+    new(
+      resource_id,
+      type,
+      connection_string=null,
+      trigger_url=null
+    ):: std.prune(a={
+      connection_string: connection_string,
+      resource_id: resource_id,
+      trigger_url: trigger_url,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
+    location,
     name,
+    resourceLabel,
     resource_group_name,
     scopes,
-    tags=null,
+    action=null,
     description=null,
     enabled=null,
-    location,
     source=null,
-    timeouts=null,
-    action=null
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_security_center_automation', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    scopes=scopes,
-    tags=tags,
+    action=action,
     description=description,
     enabled=enabled,
     location=location,
+    name=name,
+    resource_group_name=resource_group_name,
+    scopes=scopes,
     source=source,
-    timeouts=timeouts,
-    action=action
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
     location,
     name,
     resource_group_name,
     scopes,
-    tags=null,
+    action=null,
     description=null,
     enabled=null,
-    action=null,
     source=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    action: action,
+    description: description,
+    enabled: enabled,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     scopes: scopes,
-    tags: tags,
-    description: description,
-    enabled: enabled,
-    action: action,
     source: source,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
+  source:: {
+    new(
+      event_source,
+      rule_set=null
+    ):: std.prune(a={
+      event_source: event_source,
+      rule_set: rule_set,
+    }),
+    rule_set:: {
+      new(
+        rule=null
+      ):: std.prune(a={
+        rule: rule,
+      }),
+      rule:: {
+        new(
+          expected_value,
+          operator,
+          property_path,
+          property_type
+        ):: std.prune(a={
+          expected_value: expected_value,
+          operator: operator,
+          property_path: property_path,
+          property_type: property_type,
+        }),
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAction(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_automation+: {
         [resourceLabel]+: {
-          name: value,
+          action: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withActionMixin(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_automation+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withScopes(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_automation+: {
-        [resourceLabel]+: {
-          scopes: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_automation+: {
-        [resourceLabel]+: {
-          tags: value,
+          action+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -110,36 +147,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAction(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_automation+: {
         [resourceLabel]+: {
-          action: value,
+          name: value,
         },
       },
     },
   },
-  withActionMixin(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_automation+: {
         [resourceLabel]+: {
-          action+: if std.isArray(v=value) then value else [value],
+          resource_group_name: value,
         },
       },
     },
   },
-  action:: {
-    new(
-      connection_string=null,
-      resource_id,
-      trigger_url=null,
-      type
-    ):: std.prune(a={
-      connection_string: connection_string,
-      resource_id: resource_id,
-      trigger_url: trigger_url,
-      type: type,
-    }),
+  withScopes(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_automation+: {
+        [resourceLabel]+: {
+          scopes: value,
+        },
+      },
+    },
   },
   withSource(resourceLabel, value):: {
     resource+: {
@@ -159,32 +192,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  source:: {
-    new(
-      event_source,
-      rule_set=null
-    ):: std.prune(a={
-      event_source: event_source,
-      rule_set: rule_set,
-    }),
-    rule_set:: {
-      new(
-        rule=null
-      ):: std.prune(a={
-        rule: rule,
-      }),
-      rule:: {
-        new(
-          operator,
-          property_path,
-          property_type,
-          expected_value
-        ):: std.prune(a={
-          operator: operator,
-          property_path: property_path,
-          property_type: property_type,
-          expected_value: expected_value,
-        }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_automation+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
       },
     },
   },
@@ -205,18 +218,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

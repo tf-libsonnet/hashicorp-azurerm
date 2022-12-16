@@ -1,28 +1,48 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    resource_group_name,
     account_name,
     name,
+    resourceLabel,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_notebook_workspace', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     account_name=account_name,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    account_name,
     name,
     resource_group_name,
-    account_name,
     timeouts=null
   ):: std.prune(a={
+    account_name: account_name,
     name: name,
     resource_group_name: resource_group_name,
-    account_name: account_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_notebook_workspace+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_notebook_workspace+: {
@@ -37,15 +57,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_notebook_workspace+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_notebook_workspace+: {
-        [resourceLabel]+: {
-          account_name: value,
         },
       },
     },
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

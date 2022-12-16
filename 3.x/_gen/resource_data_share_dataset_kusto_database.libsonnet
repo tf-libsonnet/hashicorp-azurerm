@@ -1,28 +1,39 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    share_id,
     kusto_database_id,
+    name,
+    resourceLabel,
+    share_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_kusto_database', label=resourceLabel, attrs=self.newAttrs(
+    kusto_database_id=kusto_database_id,
     name=name,
     share_id=share_id,
-    kusto_database_id=kusto_database_id,
     timeouts=timeouts
   )),
   newAttrs(
+    kusto_database_id,
     name,
     share_id,
-    kusto_database_id,
     timeouts=null
   ):: std.prune(a={
+    kusto_database_id: kusto_database_id,
     name: name,
     share_id: share_id,
-    kusto_database_id: kusto_database_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withKustoDatabaseId(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_kusto_database+: {
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

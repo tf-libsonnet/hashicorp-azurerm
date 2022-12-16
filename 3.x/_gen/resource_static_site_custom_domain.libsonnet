@@ -1,28 +1,41 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    domain_name,
     resourceLabel,
     static_site_id,
-    validation_type=null,
-    domain_name,
-    timeouts=null
+    timeouts=null,
+    validation_type=null
   ):: tf.withResource(type='azurerm_static_site_custom_domain', label=resourceLabel, attrs=self.newAttrs(
-    static_site_id=static_site_id,
-    validation_type=validation_type,
     domain_name=domain_name,
-    timeouts=timeouts
+    static_site_id=static_site_id,
+    timeouts=timeouts,
+    validation_type=validation_type
   )),
   newAttrs(
-    validation_type=null,
     domain_name,
     static_site_id,
-    timeouts=null
+    timeouts=null,
+    validation_type=null
   ):: std.prune(a={
-    validation_type: validation_type,
     domain_name: domain_name,
     static_site_id: static_site_id,
     timeouts: timeouts,
+    validation_type: validation_type,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDomainName(resourceLabel, value):: {
     resource+: {
       azurerm_static_site_custom_domain+: {
@@ -37,15 +50,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_static_site_custom_domain+: {
         [resourceLabel]+: {
           static_site_id: value,
-        },
-      },
-    },
-  },
-  withValidationType(resourceLabel, value):: {
-    resource+: {
-      azurerm_static_site_custom_domain+: {
-        [resourceLabel]+: {
-          validation_type: value,
         },
       },
     },
@@ -68,17 +72,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withValidationType(resourceLabel, value):: {
+    resource+: {
+      azurerm_static_site_custom_domain+: {
+        [resourceLabel]+: {
+          validation_type: value,
+        },
+      },
+    },
   },
 }

@@ -1,78 +1,91 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    resource_group_name,
-    tags=null,
     location,
     name,
+    resourceLabel,
+    resource_group_name,
     allow_resource_only_permissions=null,
-    sku=null,
-    daily_quota_gb=null,
-    internet_query_enabled=null,
-    internet_ingestion_enabled=null,
-    reservation_capacity_in_gb_per_day=null,
     cmk_for_query_forced=null,
+    daily_quota_gb=null,
+    internet_ingestion_enabled=null,
+    internet_query_enabled=null,
+    reservation_capacity_in_gb_per_day=null,
     retention_in_days=null,
+    sku=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_workspace', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
+    allow_resource_only_permissions=allow_resource_only_permissions,
+    cmk_for_query_forced=cmk_for_query_forced,
+    daily_quota_gb=daily_quota_gb,
+    internet_ingestion_enabled=internet_ingestion_enabled,
+    internet_query_enabled=internet_query_enabled,
     location=location,
     name=name,
-    allow_resource_only_permissions=allow_resource_only_permissions,
-    sku=sku,
-    daily_quota_gb=daily_quota_gb,
-    internet_query_enabled=internet_query_enabled,
-    internet_ingestion_enabled=internet_ingestion_enabled,
     reservation_capacity_in_gb_per_day=reservation_capacity_in_gb_per_day,
-    cmk_for_query_forced=cmk_for_query_forced,
+    resource_group_name=resource_group_name,
     retention_in_days=retention_in_days,
+    sku=sku,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    reservation_capacity_in_gb_per_day=null,
-    retention_in_days=null,
-    internet_ingestion_enabled=null,
     location,
     name,
-    tags=null,
+    resource_group_name,
     allow_resource_only_permissions=null,
     cmk_for_query_forced=null,
-    sku=null,
     daily_quota_gb=null,
+    internet_ingestion_enabled=null,
     internet_query_enabled=null,
-    resource_group_name,
+    reservation_capacity_in_gb_per_day=null,
+    retention_in_days=null,
+    sku=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    reservation_capacity_in_gb_per_day: reservation_capacity_in_gb_per_day,
-    retention_in_days: retention_in_days,
-    internet_ingestion_enabled: internet_ingestion_enabled,
-    location: location,
-    name: name,
-    tags: tags,
     allow_resource_only_permissions: allow_resource_only_permissions,
     cmk_for_query_forced: cmk_for_query_forced,
-    sku: sku,
     daily_quota_gb: daily_quota_gb,
+    internet_ingestion_enabled: internet_ingestion_enabled,
     internet_query_enabled: internet_query_enabled,
+    location: location,
+    name: name,
+    reservation_capacity_in_gb_per_day: reservation_capacity_in_gb_per_day,
     resource_group_name: resource_group_name,
+    retention_in_days: retention_in_days,
+    sku: sku,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAllowResourceOnlyPermissions(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
         [resourceLabel]+: {
           allow_resource_only_permissions: value,
+        },
+      },
+    },
+  },
+  withCmkForQueryForced(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          cmk_for_query_forced: value,
         },
       },
     },
@@ -86,6 +99,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withInternetIngestionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          internet_ingestion_enabled: value,
+        },
+      },
+    },
+  },
   withInternetQueryEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
@@ -95,20 +117,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withInternetIngestionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          internet_ingestion_enabled: value,
+          location: value,
         },
       },
     },
@@ -131,20 +144,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withCmkForQueryForced(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_workspace+: {
-        [resourceLabel]+: {
-          cmk_for_query_forced: value,
+          resource_group_name: value,
         },
       },
     },
@@ -167,6 +171,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_workspace+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_workspace+: {
@@ -184,18 +197,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

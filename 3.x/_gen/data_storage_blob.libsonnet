@@ -2,45 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    metadata=null,
+    name,
     storage_account_name,
     storage_container_name,
-    name,
+    metadata=null,
     timeouts=null
   ):: tf.withData(type='azurerm_storage_blob', label=dataSrcLabel, attrs=self.newAttrs(
     metadata=metadata,
+    name=name,
     storage_account_name=storage_account_name,
     storage_container_name=storage_container_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    metadata=null,
+    name,
     storage_account_name,
     storage_container_name,
-    name,
+    metadata=null,
     timeouts=null
   ):: std.prune(a={
     metadata: metadata,
+    name: name,
     storage_account_name: storage_account_name,
     storage_container_name: storage_container_name,
-    name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_blob+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withMetadata(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_blob+: {
         [dataSrcLabel]+: {
           metadata: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_blob+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },
@@ -80,12 +87,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

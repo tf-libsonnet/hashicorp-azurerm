@@ -12,6 +12,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_id: resource_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withResourceId(dataSrcLabel, value):: {
     data+: {
       azurerm_monitor_diagnostic_categories+: {
@@ -38,12 +45,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

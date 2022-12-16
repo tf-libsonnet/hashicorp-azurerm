@@ -1,69 +1,82 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    batch_frequency_in_seconds=null,
-    identity_id=null,
-    iothub_id,
-    connection_string=null,
     container_name,
+    iothub_id,
+    name,
+    resourceLabel,
+    resource_group_name,
+    authentication_type=null,
+    batch_frequency_in_seconds=null,
+    connection_string=null,
     encoding=null,
     endpoint_uri=null,
-    name,
-    authentication_type=null,
     file_name_format=null,
+    identity_id=null,
     max_chunk_size_in_bytes=null,
-    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_endpoint_storage_container', label=resourceLabel, attrs=self.newAttrs(
+    authentication_type=authentication_type,
     batch_frequency_in_seconds=batch_frequency_in_seconds,
-    identity_id=identity_id,
-    iothub_id=iothub_id,
     connection_string=connection_string,
     container_name=container_name,
     encoding=encoding,
     endpoint_uri=endpoint_uri,
-    name=name,
-    authentication_type=authentication_type,
     file_name_format=file_name_format,
+    identity_id=identity_id,
+    iothub_id=iothub_id,
     max_chunk_size_in_bytes=max_chunk_size_in_bytes,
+    name=name,
     resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    file_name_format=null,
-    endpoint_uri=null,
-    identity_id=null,
-    batch_frequency_in_seconds=null,
+    container_name,
+    iothub_id,
     name,
     resource_group_name,
     authentication_type=null,
-    max_chunk_size_in_bytes=null,
-    encoding=null,
-    iothub_id,
+    batch_frequency_in_seconds=null,
     connection_string=null,
-    container_name,
+    encoding=null,
+    endpoint_uri=null,
+    file_name_format=null,
+    identity_id=null,
+    max_chunk_size_in_bytes=null,
     timeouts=null
   ):: std.prune(a={
-    file_name_format: file_name_format,
-    endpoint_uri: endpoint_uri,
-    identity_id: identity_id,
-    batch_frequency_in_seconds: batch_frequency_in_seconds,
-    name: name,
-    resource_group_name: resource_group_name,
     authentication_type: authentication_type,
-    max_chunk_size_in_bytes: max_chunk_size_in_bytes,
-    encoding: encoding,
-    iothub_id: iothub_id,
+    batch_frequency_in_seconds: batch_frequency_in_seconds,
     connection_string: connection_string,
     container_name: container_name,
+    encoding: encoding,
+    endpoint_uri: endpoint_uri,
+    file_name_format: file_name_format,
+    identity_id: identity_id,
+    iothub_id: iothub_id,
+    max_chunk_size_in_bytes: max_chunk_size_in_bytes,
+    name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withIothubId(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAuthenticationType(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_storage_container+: {
         [resourceLabel]+: {
-          iothub_id: value,
+          authentication_type: value,
         },
       },
     },
@@ -77,11 +90,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
   withContainerName(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_storage_container+: {
         [resourceLabel]+: {
           container_name: value,
+        },
+      },
+    },
+  },
+  withEncoding(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          encoding: value,
         },
       },
     },
@@ -104,20 +135,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMaxChunkSizeInBytes(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          max_chunk_size_in_bytes: value,
-        },
-      },
-    },
-  },
   withIdentityId(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_storage_container+: {
         [resourceLabel]+: {
           identity_id: value,
+        },
+      },
+    },
+  },
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          iothub_id: value,
+        },
+      },
+    },
+  },
+  withMaxChunkSizeInBytes(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          max_chunk_size_in_bytes: value,
         },
       },
     },
@@ -140,33 +180,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAuthenticationType(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          authentication_type: value,
-        },
-      },
-    },
-  },
-  withConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
-  withEncoding(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          encoding: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_storage_container+: {
@@ -184,18 +197,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

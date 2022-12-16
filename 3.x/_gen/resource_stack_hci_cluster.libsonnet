@@ -1,40 +1,53 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    client_id,
+    location,
+    name,
     resourceLabel,
     resource_group_name,
     tags=null,
     tenant_id=null,
-    client_id,
-    location,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stack_hci_cluster', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
-    tenant_id=tenant_id,
     client_id=client_id,
     location=location,
     name=name,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    tenant_id=tenant_id,
     timeouts=timeouts
   )),
   newAttrs(
+    client_id,
     location,
     name,
     resource_group_name,
     tags=null,
     tenant_id=null,
-    client_id,
     timeouts=null
   ):: std.prune(a={
+    client_id: client_id,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     tenant_id: tenant_id,
-    client_id: client_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withClientId(resourceLabel, value):: {
     resource+: {
       azurerm_stack_hci_cluster+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

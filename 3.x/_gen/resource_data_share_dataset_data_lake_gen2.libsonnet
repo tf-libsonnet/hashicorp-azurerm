@@ -1,57 +1,50 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    file_system_name,
+    name,
     resourceLabel,
     share_id,
     storage_account_id,
     file_path=null,
-    file_system_name,
     folder_path=null,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_data_lake_gen2', label=resourceLabel, attrs=self.newAttrs(
-    share_id=share_id,
-    storage_account_id=storage_account_id,
     file_path=file_path,
     file_system_name=file_system_name,
     folder_path=folder_path,
     name=name,
+    share_id=share_id,
+    storage_account_id=storage_account_id,
     timeouts=timeouts
   )),
   newAttrs(
-    folder_path=null,
+    file_system_name,
     name,
     share_id,
     storage_account_id,
     file_path=null,
-    file_system_name,
+    folder_path=null,
     timeouts=null
   ):: std.prune(a={
+    file_path: file_path,
+    file_system_name: file_system_name,
     folder_path: folder_path,
     name: name,
     share_id: share_id,
     storage_account_id: storage_account_id,
-    file_path: file_path,
-    file_system_name: file_system_name,
     timeouts: timeouts,
   }),
-  withShareId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_data_lake_gen2+: {
-        [resourceLabel]+: {
-          share_id: value,
-        },
-      },
-    },
-  },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_data_lake_gen2+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withFilePath(resourceLabel, value):: {
     resource+: {
@@ -89,6 +82,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withShareId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_data_lake_gen2+: {
+        [resourceLabel]+: {
+          share_id: value,
+        },
+      },
+    },
+  },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_data_lake_gen2+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_data_lake_gen2+: {
@@ -106,16 +117,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

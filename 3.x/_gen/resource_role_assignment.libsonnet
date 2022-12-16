@@ -1,97 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    principal_id,
     resourceLabel,
+    scope,
+    condition=null,
     condition_version=null,
     delegated_managed_identity_resource_id=null,
     description=null,
-    skip_service_principal_aad_check=null,
-    condition=null,
     name=null,
     role_definition_id=null,
-    scope,
     role_definition_name=null,
-    principal_id,
+    skip_service_principal_aad_check=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_role_assignment', label=resourceLabel, attrs=self.newAttrs(
+    condition=condition,
     condition_version=condition_version,
     delegated_managed_identity_resource_id=delegated_managed_identity_resource_id,
     description=description,
-    skip_service_principal_aad_check=skip_service_principal_aad_check,
-    condition=condition,
     name=name,
-    role_definition_id=role_definition_id,
-    scope=scope,
-    role_definition_name=role_definition_name,
     principal_id=principal_id,
+    role_definition_id=role_definition_id,
+    role_definition_name=role_definition_name,
+    scope=scope,
+    skip_service_principal_aad_check=skip_service_principal_aad_check,
     timeouts=timeouts
   )),
   newAttrs(
     principal_id,
-    description=null,
-    role_definition_id=null,
+    scope,
     condition=null,
-    name=null,
     condition_version=null,
     delegated_managed_identity_resource_id=null,
+    description=null,
+    name=null,
+    role_definition_id=null,
     role_definition_name=null,
-    scope,
     skip_service_principal_aad_check=null,
     timeouts=null
   ):: std.prune(a={
-    principal_id: principal_id,
-    description: description,
-    role_definition_id: role_definition_id,
     condition: condition,
-    name: name,
     condition_version: condition_version,
     delegated_managed_identity_resource_id: delegated_managed_identity_resource_id,
+    description: description,
+    name: name,
+    principal_id: principal_id,
+    role_definition_id: role_definition_id,
     role_definition_name: role_definition_name,
     scope: scope,
     skip_service_principal_aad_check: skip_service_principal_aad_check,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_assignment+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withSkipServicePrincipalAadCheck(resourceLabel, value):: {
+  withCondition(resourceLabel, value):: {
     resource+: {
       azurerm_role_assignment+: {
         [resourceLabel]+: {
-          skip_service_principal_aad_check: value,
-        },
-      },
-    },
-  },
-  withRoleDefinitionName(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_assignment+: {
-        [resourceLabel]+: {
-          role_definition_name: value,
-        },
-      },
-    },
-  },
-  withScope(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_assignment+: {
-        [resourceLabel]+: {
-          scope: value,
-        },
-      },
-    },
-  },
-  withRoleDefinitionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_assignment+: {
-        [resourceLabel]+: {
-          role_definition_id: value,
+          condition: value,
         },
       },
     },
@@ -114,20 +91,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPrincipalId(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_role_assignment+: {
         [resourceLabel]+: {
-          principal_id: value,
-        },
-      },
-    },
-  },
-  withCondition(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_assignment+: {
-        [resourceLabel]+: {
-          condition: value,
+          description: value,
         },
       },
     },
@@ -137,6 +105,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_role_assignment+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPrincipalId(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_assignment+: {
+        [resourceLabel]+: {
+          principal_id: value,
+        },
+      },
+    },
+  },
+  withRoleDefinitionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_assignment+: {
+        [resourceLabel]+: {
+          role_definition_id: value,
+        },
+      },
+    },
+  },
+  withRoleDefinitionName(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_assignment+: {
+        [resourceLabel]+: {
+          role_definition_name: value,
+        },
+      },
+    },
+  },
+  withScope(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_assignment+: {
+        [resourceLabel]+: {
+          scope: value,
+        },
+      },
+    },
+  },
+  withSkipServicePrincipalAadCheck(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_assignment+: {
+        [resourceLabel]+: {
+          skip_service_principal_aad_check: value,
         },
       },
     },
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

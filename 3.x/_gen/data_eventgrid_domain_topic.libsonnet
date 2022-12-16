@@ -2,35 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     domain_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_eventgrid_domain_topic', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     domain_name=domain_name,
     name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     domain_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     domain_name: domain_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_eventgrid_domain_topic+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withDomainName(dataSrcLabel, value):: {
     data+: {
@@ -46,6 +44,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventgrid_domain_topic+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_eventgrid_domain_topic+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

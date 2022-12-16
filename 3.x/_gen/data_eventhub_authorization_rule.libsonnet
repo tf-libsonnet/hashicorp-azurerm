@@ -2,43 +2,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    eventhub_name,
     name,
     namespace_name,
-    listen=null,
-    send=null,
-    eventhub_name,
     resource_group_name,
+    listen=null,
     manage=null,
+    send=null,
     timeouts=null
   ):: tf.withData(type='azurerm_eventhub_authorization_rule', label=dataSrcLabel, attrs=self.newAttrs(
+    eventhub_name=eventhub_name,
+    listen=listen,
+    manage=manage,
     name=name,
     namespace_name=namespace_name,
-    listen=listen,
-    send=send,
-    eventhub_name=eventhub_name,
     resource_group_name=resource_group_name,
-    manage=manage,
+    send=send,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    manage=null,
+    eventhub_name,
     name,
     namespace_name,
+    resource_group_name,
     listen=null,
+    manage=null,
     send=null,
-    eventhub_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
+    eventhub_name: eventhub_name,
+    listen: listen,
     manage: manage,
     name: name,
     namespace_name: namespace_name,
-    listen: listen,
+    resource_group_name: resource_group_name,
     send: send,
-    eventhub_name: eventhub_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withEventhubName(dataSrcLabel, value):: {
     data+: {
       azurerm_eventhub_authorization_rule+: {
@@ -48,11 +55,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(dataSrcLabel, value):: {
+  withListen(dataSrcLabel, value):: {
     data+: {
       azurerm_eventhub_authorization_rule+: {
         [dataSrcLabel]+: {
-          resource_group_name: value,
+          listen: value,
         },
       },
     },
@@ -84,11 +91,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withListen(dataSrcLabel, value):: {
+  withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_eventhub_authorization_rule+: {
         [dataSrcLabel]+: {
-          listen: value,
+          resource_group_name: value,
         },
       },
     },
@@ -119,12 +126,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

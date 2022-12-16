@@ -1,65 +1,78 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    maximum_elastic_worker_count=null,
     location,
     name,
-    tags=null,
-    app_service_environment_id=null,
     os_type,
-    zone_balancing_enabled=null,
-    per_site_scaling_enabled=null,
-    sku_name,
+    resourceLabel,
     resource_group_name,
+    sku_name,
+    app_service_environment_id=null,
+    maximum_elastic_worker_count=null,
+    per_site_scaling_enabled=null,
+    tags=null,
+    timeouts=null,
     worker_count=null,
-    timeouts=null
+    zone_balancing_enabled=null
   ):: tf.withResource(type='azurerm_service_plan', label=resourceLabel, attrs=self.newAttrs(
-    maximum_elastic_worker_count=maximum_elastic_worker_count,
-    location=location,
-    name=name,
-    tags=tags,
     app_service_environment_id=app_service_environment_id,
+    location=location,
+    maximum_elastic_worker_count=maximum_elastic_worker_count,
+    name=name,
     os_type=os_type,
-    zone_balancing_enabled=zone_balancing_enabled,
     per_site_scaling_enabled=per_site_scaling_enabled,
-    sku_name=sku_name,
     resource_group_name=resource_group_name,
+    sku_name=sku_name,
+    tags=tags,
+    timeouts=timeouts,
     worker_count=worker_count,
-    timeouts=timeouts
+    zone_balancing_enabled=zone_balancing_enabled
   )),
   newAttrs(
-    zone_balancing_enabled=null,
-    per_site_scaling_enabled=null,
-    name,
-    sku_name,
-    tags=null,
-    worker_count=null,
-    app_service_environment_id=null,
     location,
+    name,
     os_type,
     resource_group_name,
+    sku_name,
+    app_service_environment_id=null,
     maximum_elastic_worker_count=null,
-    timeouts=null
+    per_site_scaling_enabled=null,
+    tags=null,
+    timeouts=null,
+    worker_count=null,
+    zone_balancing_enabled=null
   ):: std.prune(a={
-    zone_balancing_enabled: zone_balancing_enabled,
-    per_site_scaling_enabled: per_site_scaling_enabled,
-    name: name,
-    sku_name: sku_name,
-    tags: tags,
-    worker_count: worker_count,
     app_service_environment_id: app_service_environment_id,
     location: location,
-    os_type: os_type,
-    resource_group_name: resource_group_name,
     maximum_elastic_worker_count: maximum_elastic_worker_count,
+    name: name,
+    os_type: os_type,
+    per_site_scaling_enabled: per_site_scaling_enabled,
+    resource_group_name: resource_group_name,
+    sku_name: sku_name,
+    tags: tags,
     timeouts: timeouts,
+    worker_count: worker_count,
+    zone_balancing_enabled: zone_balancing_enabled,
   }),
-  withPerSiteScalingEnabled(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAppServiceEnvironmentId(resourceLabel, value):: {
     resource+: {
       azurerm_service_plan+: {
         [resourceLabel]+: {
-          per_site_scaling_enabled: value,
+          app_service_environment_id: value,
         },
       },
     },
@@ -73,47 +86,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withMaximumElasticWorkerCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          maximum_elastic_worker_count: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_service_plan+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withWorkerCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          worker_count: value,
-        },
-      },
-    },
-  },
-  withAppServiceEnvironmentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          app_service_environment_id: value,
         },
       },
     },
@@ -127,11 +113,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withZoneBalancingEnabled(resourceLabel, value):: {
+  withPerSiteScalingEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_service_plan+: {
         [resourceLabel]+: {
-          zone_balancing_enabled: value,
+          per_site_scaling_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -145,11 +140,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMaximumElasticWorkerCount(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_service_plan+: {
         [resourceLabel]+: {
-          maximum_elastic_worker_count: value,
+          tags: value,
         },
       },
     },
@@ -172,17 +167,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withWorkerCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          worker_count: value,
+        },
+      },
+    },
+  },
+  withZoneBalancingEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          zone_balancing_enabled: value,
+        },
+      },
+    },
   },
 }

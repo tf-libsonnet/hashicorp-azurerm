@@ -1,54 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    size_gb=null,
-    tags=null,
     location,
     name,
+    resourceLabel,
     resource_group_name,
     identity=null,
+    size_gb=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_cluster', label=resourceLabel, attrs=self.newAttrs(
-    size_gb=size_gb,
-    tags=tags,
+    identity=identity,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    identity=identity,
+    size_gb=size_gb,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
     location,
     name,
     resource_group_name,
+    identity=null,
     size_gb=null,
     tags=null,
-    identity=null,
     timeouts=null
   ):: std.prune(a={
+    identity: identity,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     size_gb: size_gb,
     tags: tags,
-    identity: identity,
     timeouts: timeouts,
   }),
-  withSizeGb(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_cluster+: {
         [resourceLabel]+: {
-          size_gb: value,
+          identity: value,
         },
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withIdentityMixin(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_cluster+: {
         [resourceLabel]+: {
-          tags: value,
+          identity+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -80,30 +100,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIdentity(resourceLabel, value):: {
+  withSizeGb(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_cluster+: {
         [resourceLabel]+: {
-          identity: value,
+          size_gb: value,
         },
       },
     },
   },
-  withIdentityMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_cluster+: {
         [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
+          tags: value,
         },
       },
     },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -122,18 +135,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

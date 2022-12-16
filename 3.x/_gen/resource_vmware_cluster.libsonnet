@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     cluster_node_count,
     name,
+    resourceLabel,
     sku_name,
     vmware_cloud_id,
     timeouts=null
@@ -11,22 +11,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     cluster_node_count=cluster_node_count,
     name=name,
     sku_name=sku_name,
-    vmware_cloud_id=vmware_cloud_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    vmware_cloud_id=vmware_cloud_id
   )),
   newAttrs(
+    cluster_node_count,
     name,
     sku_name,
     vmware_cloud_id,
-    cluster_node_count,
     timeouts=null
   ):: std.prune(a={
+    cluster_node_count: cluster_node_count,
     name: name,
     sku_name: sku_name,
-    vmware_cloud_id: vmware_cloud_id,
-    cluster_node_count: cluster_node_count,
     timeouts: timeouts,
+    vmware_cloud_id: vmware_cloud_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withClusterNodeCount(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_cluster+: {
@@ -54,15 +67,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVmwareCloudId(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_cluster+: {
-        [resourceLabel]+: {
-          vmware_cloud_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_cluster+: {
@@ -81,17 +85,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withVmwareCloudId(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_cluster+: {
+        [resourceLabel]+: {
+          vmware_cloud_id: value,
+        },
+      },
+    },
   },
 }

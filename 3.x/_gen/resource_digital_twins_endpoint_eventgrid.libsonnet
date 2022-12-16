@@ -1,48 +1,52 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    dead_letter_storage_secret=null,
     digital_twins_id,
     eventgrid_topic_endpoint,
     eventgrid_topic_primary_access_key,
     eventgrid_topic_secondary_access_key,
+    name,
+    resourceLabel,
+    dead_letter_storage_secret=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_digital_twins_endpoint_eventgrid', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     dead_letter_storage_secret=dead_letter_storage_secret,
     digital_twins_id=digital_twins_id,
     eventgrid_topic_endpoint=eventgrid_topic_endpoint,
     eventgrid_topic_primary_access_key=eventgrid_topic_primary_access_key,
     eventgrid_topic_secondary_access_key=eventgrid_topic_secondary_access_key,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    digital_twins_id,
     eventgrid_topic_endpoint,
     eventgrid_topic_primary_access_key,
     eventgrid_topic_secondary_access_key,
     name,
     dead_letter_storage_secret=null,
-    digital_twins_id,
     timeouts=null
   ):: std.prune(a={
+    dead_letter_storage_secret: dead_letter_storage_secret,
+    digital_twins_id: digital_twins_id,
     eventgrid_topic_endpoint: eventgrid_topic_endpoint,
     eventgrid_topic_primary_access_key: eventgrid_topic_primary_access_key,
     eventgrid_topic_secondary_access_key: eventgrid_topic_secondary_access_key,
     name: name,
-    dead_letter_storage_secret: dead_letter_storage_secret,
-    digital_twins_id: digital_twins_id,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_digital_twins_endpoint_eventgrid+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDeadLetterStorageSecret(resourceLabel, value):: {
     resource+: {
@@ -89,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_digital_twins_endpoint_eventgrid+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_digital_twins_endpoint_eventgrid+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

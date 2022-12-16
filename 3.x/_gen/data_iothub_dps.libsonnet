@@ -3,13 +3,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     name,
-    tags=null,
     resource_group_name,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_iothub_dps', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
-    tags=tags,
     resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,14 +23,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags: tags,
     timeouts: timeouts,
   }),
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_iothub_dps+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -46,6 +44,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_dps+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(dataSrcLabel, value):: {
+    data+: {
+      azurerm_iothub_dps+: {
+        [dataSrcLabel]+: {
+          tags: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

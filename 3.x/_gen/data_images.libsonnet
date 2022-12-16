@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags_filter: tags_filter,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_images+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

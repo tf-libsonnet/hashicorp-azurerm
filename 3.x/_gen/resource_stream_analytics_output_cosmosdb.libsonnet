@@ -1,14 +1,14 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     container_name,
     cosmosdb_account_key,
     cosmosdb_sql_database_id,
-    document_id=null,
     name,
-    partition_key=null,
+    resourceLabel,
     stream_analytics_job_id,
+    document_id=null,
+    partition_key=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_cosmosdb', label=resourceLabel, attrs=self.newAttrs(
     container_name=container_name,
@@ -21,24 +21,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    partition_key=null,
-    stream_analytics_job_id,
     container_name,
     cosmosdb_account_key,
     cosmosdb_sql_database_id,
-    document_id=null,
     name,
+    stream_analytics_job_id,
+    document_id=null,
+    partition_key=null,
     timeouts=null
   ):: std.prune(a={
-    partition_key: partition_key,
-    stream_analytics_job_id: stream_analytics_job_id,
     container_name: container_name,
     cosmosdb_account_key: cosmosdb_account_key,
     cosmosdb_sql_database_id: cosmosdb_sql_database_id,
     document_id: document_id,
     name: name,
+    partition_key: partition_key,
+    stream_analytics_job_id: stream_analytics_job_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_cosmosdb+: {
+        [resourceLabel]+: {
+          container_name: value,
+        },
+      },
+    },
+  },
+  withCosmosdbAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_cosmosdb+: {
+        [resourceLabel]+: {
+          cosmosdb_account_key: value,
+        },
+      },
+    },
+  },
   withCosmosdbSqlDatabaseId(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_cosmosdb+: {
@@ -84,24 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_cosmosdb+: {
-        [resourceLabel]+: {
-          container_name: value,
-        },
-      },
-    },
-  },
-  withCosmosdbAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_cosmosdb+: {
-        [resourceLabel]+: {
-          cosmosdb_account_key: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_cosmosdb+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

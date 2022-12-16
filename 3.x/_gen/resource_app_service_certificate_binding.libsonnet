@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     certificate_id,
     hostname_binding_id,
+    resourceLabel,
     ssl_state,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_certificate_binding', label=resourceLabel, attrs=self.newAttrs(
@@ -23,14 +23,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ssl_state: ssl_state,
     timeouts: timeouts,
   }),
-  withSslState(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_certificate_binding+: {
-        [resourceLabel]+: {
-          ssl_state: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withCertificateId(resourceLabel, value):: {
     resource+: {
@@ -46,6 +48,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_certificate_binding+: {
         [resourceLabel]+: {
           hostname_binding_id: value,
+        },
+      },
+    },
+  },
+  withSslState(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_certificate_binding+: {
+        [resourceLabel]+: {
+          ssl_state: value,
         },
       },
     },
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

@@ -1,19 +1,19 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
     resourceLabel,
+    resource_group_name,
     server_name,
     subnet_id,
     ignore_missing_vnet_service_endpoint=null,
-    name,
-    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_postgresql_virtual_network_rule', label=resourceLabel, attrs=self.newAttrs(
-    server_name=server_name,
-    subnet_id=subnet_id,
     ignore_missing_vnet_service_endpoint=ignore_missing_vnet_service_endpoint,
     name=name,
     resource_group_name=resource_group_name,
+    server_name=server_name,
+    subnet_id=subnet_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -24,30 +24,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ignore_missing_vnet_service_endpoint=null,
     timeouts=null
   ):: std.prune(a={
+    ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
     subnet_id: subnet_id,
-    ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
     timeouts: timeouts,
   }),
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_virtual_network_rule+: {
-        [resourceLabel]+: {
-          server_name: value,
-        },
-      },
-    },
-  },
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_virtual_network_rule+: {
-        [resourceLabel]+: {
-          subnet_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withIgnoreMissingVnetServiceEndpoint(resourceLabel, value):: {
     resource+: {
@@ -76,6 +71,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_virtual_network_rule+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_virtual_network_rule+: {
+        [resourceLabel]+: {
+          subnet_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_virtual_network_rule+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

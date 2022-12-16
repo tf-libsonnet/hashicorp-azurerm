@@ -1,57 +1,127 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    sso_validation_enabled=null,
-    filters=null,
     name,
+    resourceLabel,
+    spring_cloud_gateway_id,
+    filters=null,
+    open_api=null,
     predicates=null,
     protocol=null,
-    spring_cloud_app_id=null,
-    spring_cloud_gateway_id,
-    open_api=null,
     route=null,
+    spring_cloud_app_id=null,
+    sso_validation_enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_gateway_route_config', label=resourceLabel, attrs=self.newAttrs(
-    sso_validation_enabled=sso_validation_enabled,
     filters=filters,
     name=name,
+    open_api=open_api,
     predicates=predicates,
     protocol=protocol,
+    route=route,
     spring_cloud_app_id=spring_cloud_app_id,
     spring_cloud_gateway_id=spring_cloud_gateway_id,
-    open_api=open_api,
-    route=route,
+    sso_validation_enabled=sso_validation_enabled,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    spring_cloud_gateway_id,
+    filters=null,
+    open_api=null,
     predicates=null,
     protocol=null,
-    spring_cloud_app_id=null,
-    spring_cloud_gateway_id,
-    sso_validation_enabled=null,
-    filters=null,
-    name,
-    open_api=null,
     route=null,
+    spring_cloud_app_id=null,
+    sso_validation_enabled=null,
     timeouts=null
   ):: std.prune(a={
-    predicates: predicates,
-    protocol: protocol,
-    spring_cloud_app_id: spring_cloud_app_id,
-    spring_cloud_gateway_id: spring_cloud_gateway_id,
-    sso_validation_enabled: sso_validation_enabled,
     filters: filters,
     name: name,
     open_api: open_api,
+    predicates: predicates,
+    protocol: protocol,
     route: route,
+    spring_cloud_app_id: spring_cloud_app_id,
+    spring_cloud_gateway_id: spring_cloud_gateway_id,
+    sso_validation_enabled: sso_validation_enabled,
     timeouts: timeouts,
   }),
+  open_api:: {
+    new(
+      uri=null
+    ):: std.prune(a={
+      uri: uri,
+    }),
+  },
+  route:: {
+    new(
+      order,
+      classification_tags=null,
+      description=null,
+      filters=null,
+      predicates=null,
+      sso_validation_enabled=null,
+      title=null,
+      token_relay=null,
+      uri=null
+    ):: std.prune(a={
+      classification_tags: classification_tags,
+      description: description,
+      filters: filters,
+      order: order,
+      predicates: predicates,
+      sso_validation_enabled: sso_validation_enabled,
+      title: title,
+      token_relay: token_relay,
+      uri: uri,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withFilters(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          filters: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_gateway_route_config+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withOpenApi(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          open_api: value,
+        },
+      },
+    },
+  },
+  withOpenApiMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          open_api+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -70,6 +140,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_gateway_route_config+: {
         [resourceLabel]+: {
           protocol: value,
+        },
+      },
+    },
+  },
+  withRoute(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          route: value,
+        },
+      },
+    },
+  },
+  withRouteMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          route+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -101,56 +189,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFilters(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          filters: value,
-        },
-      },
-    },
-  },
-  withRoute(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          route: value,
-        },
-      },
-    },
-  },
-  withRouteMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          route+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  route:: {
-    new(
-      order,
-      title=null,
-      sso_validation_enabled=null,
-      classification_tags=null,
-      description=null,
-      token_relay=null,
-      uri=null,
-      filters=null,
-      predicates=null
-    ):: std.prune(a={
-      order: order,
-      title: title,
-      sso_validation_enabled: sso_validation_enabled,
-      classification_tags: classification_tags,
-      description: description,
-      token_relay: token_relay,
-      uri: uri,
-      filters: filters,
-      predicates: predicates,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_gateway_route_config+: {
@@ -168,43 +206,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withOpenApi(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          open_api: value,
-        },
-      },
-    },
-  },
-  withOpenApiMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          open_api+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  open_api:: {
-    new(
-      uri=null
-    ):: std.prune(a={
-      uri: uri,
-    }),
   },
 }

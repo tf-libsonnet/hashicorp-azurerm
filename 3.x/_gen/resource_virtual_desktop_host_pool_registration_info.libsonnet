@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     expiration_date,
     hostpool_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_desktop_host_pool_registration_info', label=resourceLabel, attrs=self.newAttrs(expiration_date=expiration_date, hostpool_id=hostpool_id, timeouts=timeouts)),
   newAttrs(
@@ -15,6 +15,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     hostpool_id: hostpool_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withExpirationDate(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_host_pool_registration_info+: {
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

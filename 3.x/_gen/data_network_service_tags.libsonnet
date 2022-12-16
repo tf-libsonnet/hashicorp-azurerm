@@ -3,8 +3,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     location,
-    location_filter=null,
     service,
+    location_filter=null,
     timeouts=null
   ):: tf.withData(type='azurerm_network_service_tags', label=dataSrcLabel, attrs=self.newAttrs(
     location=location,
@@ -13,24 +13,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    location_filter=null,
-    service,
     location,
+    service,
+    location_filter=null,
     timeouts=null
   ):: std.prune(a={
+    location: location,
     location_filter: location_filter,
     service: service,
-    location: location,
     timeouts: timeouts,
   }),
-  withService(dataSrcLabel, value):: {
-    data+: {
-      azurerm_network_service_tags+: {
-        [dataSrcLabel]+: {
-          service: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withLocation(dataSrcLabel, value):: {
     data+: {
@@ -46,6 +44,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_service_tags+: {
         [dataSrcLabel]+: {
           location_filter: value,
+        },
+      },
+    },
+  },
+  withService(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          service: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

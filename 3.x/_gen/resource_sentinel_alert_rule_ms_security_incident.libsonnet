@@ -1,70 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    display_name_exclude_filter=null,
-    product_filter,
-    severity_filter,
-    alert_rule_template_guid=null,
-    display_name_filter=null,
-    name,
     display_name,
     log_analytics_workspace_id,
+    name,
+    product_filter,
+    resourceLabel,
+    severity_filter,
+    alert_rule_template_guid=null,
     description=null,
+    display_name_exclude_filter=null,
+    display_name_filter=null,
     enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_ms_security_incident', label=resourceLabel, attrs=self.newAttrs(
+    alert_rule_template_guid=alert_rule_template_guid,
+    description=description,
+    display_name=display_name,
     display_name_exclude_filter=display_name_exclude_filter,
+    display_name_filter=display_name_filter,
+    enabled=enabled,
+    log_analytics_workspace_id=log_analytics_workspace_id,
+    name=name,
     product_filter=product_filter,
     severity_filter=severity_filter,
-    alert_rule_template_guid=alert_rule_template_guid,
-    display_name_filter=display_name_filter,
-    name=name,
-    display_name=display_name,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    description=description,
-    enabled=enabled,
     timeouts=timeouts
   )),
   newAttrs(
-    severity_filter,
+    display_name,
+    log_analytics_workspace_id,
     name,
+    product_filter,
+    severity_filter,
     alert_rule_template_guid=null,
-    enabled=null,
     description=null,
     display_name_exclude_filter=null,
-    log_analytics_workspace_id,
-    product_filter,
-    display_name,
     display_name_filter=null,
+    enabled=null,
     timeouts=null
   ):: std.prune(a={
-    severity_filter: severity_filter,
-    name: name,
     alert_rule_template_guid: alert_rule_template_guid,
-    enabled: enabled,
     description: description,
-    display_name_exclude_filter: display_name_exclude_filter,
-    log_analytics_workspace_id: log_analytics_workspace_id,
-    product_filter: product_filter,
     display_name: display_name,
+    display_name_exclude_filter: display_name_exclude_filter,
     display_name_filter: display_name_filter,
+    enabled: enabled,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    name: name,
+    product_filter: product_filter,
+    severity_filter: severity_filter,
     timeouts: timeouts,
   }),
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_ms_security_incident+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withSeverityFilter(resourceLabel, value):: {
+  withAlertRuleTemplateGuid(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_ms_security_incident+: {
         [resourceLabel]+: {
-          severity_filter: value,
+          alert_rule_template_guid: value,
         },
       },
     },
@@ -78,29 +82,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisplayNameExcludeFilter(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_ms_security_incident+: {
-        [resourceLabel]+: {
-          display_name_exclude_filter: value,
-        },
-      },
-    },
-  },
-  withProductFilter(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_ms_security_incident+: {
-        [resourceLabel]+: {
-          product_filter: value,
-        },
-      },
-    },
-  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_ms_security_incident+: {
         [resourceLabel]+: {
           display_name: value,
+        },
+      },
+    },
+  },
+  withDisplayNameExcludeFilter(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_ms_security_incident+: {
+        [resourceLabel]+: {
+          display_name_exclude_filter: value,
         },
       },
     },
@@ -114,20 +109,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_ms_security_incident+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withAlertRuleTemplateGuid(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_ms_security_incident+: {
-        [resourceLabel]+: {
-          alert_rule_template_guid: value,
+          enabled: value,
         },
       },
     },
@@ -137,6 +123,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_alert_rule_ms_security_incident+: {
         [resourceLabel]+: {
           log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_ms_security_incident+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withProductFilter(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_ms_security_incident+: {
+        [resourceLabel]+: {
+          product_filter: value,
+        },
+      },
+    },
+  },
+  withSeverityFilter(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_ms_security_incident+: {
+        [resourceLabel]+: {
+          severity_filter: value,
         },
       },
     },
@@ -158,18 +171,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

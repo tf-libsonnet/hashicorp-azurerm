@@ -2,31 +2,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     eventhub_name,
     name,
     namespace_name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_eventhub_consumer_group', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     eventhub_name=eventhub_name,
     name=name,
     namespace_name=namespace_name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    eventhub_name,
     name,
     namespace_name,
     resource_group_name,
-    eventhub_name,
     timeouts=null
   ):: std.prune(a={
+    eventhub_name: eventhub_name,
     name: name,
     namespace_name: namespace_name,
     resource_group_name: resource_group_name,
-    eventhub_name: eventhub_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withEventhubName(dataSrcLabel, value):: {
     data+: {
       azurerm_eventhub_consumer_group+: {
@@ -80,12 +87,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

@@ -1,78 +1,64 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    policy_type,
-    management_group_id=null,
-    name,
-    mode,
-    policy_rule=null,
     display_name,
+    mode,
+    name,
+    policy_type,
+    resourceLabel,
+    description=null,
+    management_group_id=null,
     metadata=null,
     parameters=null,
-    description=null,
+    policy_rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_policy_definition', label=resourceLabel, attrs=self.newAttrs(
-    policy_type=policy_type,
-    management_group_id=management_group_id,
-    name=name,
-    mode=mode,
-    policy_rule=policy_rule,
-    display_name=display_name,
-    metadata=metadata,
-    parameters=parameters,
     description=description,
+    display_name=display_name,
+    management_group_id=management_group_id,
+    metadata=metadata,
+    mode=mode,
+    name=name,
+    parameters=parameters,
+    policy_rule=policy_rule,
+    policy_type=policy_type,
     timeouts=timeouts
   )),
   newAttrs(
     display_name,
-    policy_rule=null,
-    policy_type,
-    management_group_id=null,
-    name,
-    description=null,
-    parameters=null,
     mode,
+    name,
+    policy_type,
+    description=null,
+    management_group_id=null,
     metadata=null,
+    parameters=null,
+    policy_rule=null,
     timeouts=null
   ):: std.prune(a={
+    description: description,
     display_name: display_name,
+    management_group_id: management_group_id,
+    metadata: metadata,
+    mode: mode,
+    name: name,
+    parameters: parameters,
     policy_rule: policy_rule,
     policy_type: policy_type,
-    management_group_id: management_group_id,
-    name: name,
-    description: description,
-    parameters: parameters,
-    mode: mode,
-    metadata: metadata,
     timeouts: timeouts,
   }),
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_definition+: {
-        [resourceLabel]+: {
-          metadata: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_definition+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_definition+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDescription(resourceLabel, value):: {
     resource+: {
@@ -92,11 +78,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPolicyType(resourceLabel, value):: {
+  withManagementGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_policy_definition+: {
         [resourceLabel]+: {
-          policy_type: value,
+          management_group_id: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_definition+: {
+        [resourceLabel]+: {
+          metadata: value,
         },
       },
     },
@@ -110,6 +105,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_definition+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_definition+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
   withPolicyRule(resourceLabel, value):: {
     resource+: {
       azurerm_policy_definition+: {
@@ -119,11 +132,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withManagementGroupId(resourceLabel, value):: {
+  withPolicyType(resourceLabel, value):: {
     resource+: {
       azurerm_policy_definition+: {
         [resourceLabel]+: {
-          management_group_id: value,
+          policy_type: value,
         },
       },
     },
@@ -145,18 +158,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

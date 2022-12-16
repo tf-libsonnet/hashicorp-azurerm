@@ -1,36 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    storage_account_name,
-    table_name,
     entity,
     partition_key,
+    resourceLabel,
     row_key,
+    storage_account_name,
+    table_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_table_entity', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_name=storage_account_name,
-    table_name=table_name,
     entity=entity,
     partition_key=partition_key,
     row_key=row_key,
+    storage_account_name=storage_account_name,
+    table_name=table_name,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_name,
-    table_name,
     entity,
     partition_key,
     row_key,
+    storage_account_name,
+    table_name,
     timeouts=null
   ):: std.prune(a={
-    storage_account_name: storage_account_name,
-    table_name: table_name,
     entity: entity,
     partition_key: partition_key,
     row_key: row_key,
+    storage_account_name: storage_account_name,
+    table_name: table_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withEntity(resourceLabel, value):: {
     resource+: {
       azurerm_storage_table_entity+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,87 +1,132 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  initial_replica_set:: {
+    new(
+      subnet_id
+    ):: std.prune(a={
+      subnet_id: subnet_id,
+    }),
+  },
   new(
+    domain_name,
+    location,
+    name,
     resourceLabel,
-    sku,
-    tags=null,
-    domain_name,
     resource_group_name,
-    filtered_sync_enabled=null,
-    name,
-    domain_configuration_type=null,
-    location,
-    notifications=null,
-    secure_ldap=null,
-    security=null,
-    timeouts=null,
-    initial_replica_set=null
-  ):: tf.withResource(type='azurerm_active_directory_domain_service', label=resourceLabel, attrs=self.newAttrs(
-    sku=sku,
-    tags=tags,
-    domain_name=domain_name,
-    resource_group_name=resource_group_name,
-    filtered_sync_enabled=filtered_sync_enabled,
-    name=name,
-    domain_configuration_type=domain_configuration_type,
-    location=location,
-    notifications=notifications,
-    secure_ldap=secure_ldap,
-    security=security,
-    timeouts=timeouts,
-    initial_replica_set=initial_replica_set
-  )),
-  newAttrs(
     sku,
-    tags=null,
     domain_configuration_type=null,
-    resource_group_name,
-    domain_name,
     filtered_sync_enabled=null,
-    name,
-    location,
-    timeouts=null,
     initial_replica_set=null,
     notifications=null,
     secure_ldap=null,
-    security=null
+    security=null,
+    tags=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_active_directory_domain_service', label=resourceLabel, attrs=self.newAttrs(
+    domain_configuration_type=domain_configuration_type,
+    domain_name=domain_name,
+    filtered_sync_enabled=filtered_sync_enabled,
+    initial_replica_set=initial_replica_set,
+    location=location,
+    name=name,
+    notifications=notifications,
+    resource_group_name=resource_group_name,
+    secure_ldap=secure_ldap,
+    security=security,
+    sku=sku,
+    tags=tags,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    domain_name,
+    location,
+    name,
+    resource_group_name,
+    sku,
+    domain_configuration_type=null,
+    filtered_sync_enabled=null,
+    initial_replica_set=null,
+    notifications=null,
+    secure_ldap=null,
+    security=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    sku: sku,
-    tags: tags,
     domain_configuration_type: domain_configuration_type,
-    resource_group_name: resource_group_name,
     domain_name: domain_name,
     filtered_sync_enabled: filtered_sync_enabled,
-    name: name,
-    location: location,
-    timeouts: timeouts,
     initial_replica_set: initial_replica_set,
+    location: location,
+    name: name,
     notifications: notifications,
+    resource_group_name: resource_group_name,
     secure_ldap: secure_ldap,
     security: security,
+    sku: sku,
+    tags: tags,
+    timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
+  notifications:: {
+    new(
+      additional_recipients=null,
+      notify_dc_admins=null,
+      notify_global_admins=null
+    ):: std.prune(a={
+      additional_recipients: additional_recipients,
+      notify_dc_admins: notify_dc_admins,
+      notify_global_admins: notify_global_admins,
+    }),
   },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
+  secure_ldap:: {
+    new(
+      enabled,
+      pfx_certificate,
+      pfx_certificate_password,
+      external_access_enabled=null
+    ):: std.prune(a={
+      enabled: enabled,
+      external_access_enabled: external_access_enabled,
+      pfx_certificate: pfx_certificate,
+      pfx_certificate_password: pfx_certificate_password,
+    }),
   },
-  withTags(resourceLabel, value):: {
+  security:: {
+    new(
+      kerberos_armoring_enabled=null,
+      kerberos_rc4_encryption_enabled=null,
+      ntlm_v1_enabled=null,
+      sync_kerberos_passwords=null,
+      sync_ntlm_passwords=null,
+      sync_on_prem_passwords=null,
+      tls_v1_enabled=null
+    ):: std.prune(a={
+      kerberos_armoring_enabled: kerberos_armoring_enabled,
+      kerberos_rc4_encryption_enabled: kerberos_rc4_encryption_enabled,
+      ntlm_v1_enabled: ntlm_v1_enabled,
+      sync_kerberos_passwords: sync_kerberos_passwords,
+      sync_ntlm_passwords: sync_ntlm_passwords,
+      sync_on_prem_passwords: sync_on_prem_passwords,
+      tls_v1_enabled: tls_v1_enabled,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withDomainConfigurationType(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service+: {
         [resourceLabel]+: {
-          tags: value,
+          domain_configuration_type: value,
         },
       },
     },
@@ -95,38 +140,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withFilteredSyncEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service+: {
         [resourceLabel]+: {
           filtered_sync_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withDomainConfigurationType(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service+: {
-        [resourceLabel]+: {
-          domain_configuration_type: value,
         },
       },
     },
@@ -149,12 +167,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  initial_replica_set:: {
-    new(
-      subnet_id
-    ):: std.prune(a={
-      subnet_id: subnet_id,
-    }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
   },
   withNotifications(resourceLabel, value):: {
     resource+: {
@@ -174,16 +203,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  notifications:: {
-    new(
-      additional_recipients=null,
-      notify_dc_admins=null,
-      notify_global_admins=null
-    ):: std.prune(a={
-      additional_recipients: additional_recipients,
-      notify_dc_admins: notify_dc_admins,
-      notify_global_admins: notify_global_admins,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
   },
   withSecureLdap(resourceLabel, value):: {
     resource+: {
@@ -203,19 +230,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  secure_ldap:: {
-    new(
-      enabled,
-      external_access_enabled=null,
-      pfx_certificate,
-      pfx_certificate_password
-    ):: std.prune(a={
-      enabled: enabled,
-      external_access_enabled: external_access_enabled,
-      pfx_certificate: pfx_certificate,
-      pfx_certificate_password: pfx_certificate_password,
-    }),
-  },
   withSecurity(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service+: {
@@ -234,24 +248,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  security:: {
-    new(
-      sync_kerberos_passwords=null,
-      sync_ntlm_passwords=null,
-      sync_on_prem_passwords=null,
-      tls_v1_enabled=null,
-      kerberos_armoring_enabled=null,
-      kerberos_rc4_encryption_enabled=null,
-      ntlm_v1_enabled=null
-    ):: std.prune(a={
-      sync_kerberos_passwords: sync_kerberos_passwords,
-      sync_ntlm_passwords: sync_ntlm_passwords,
-      sync_on_prem_passwords: sync_on_prem_passwords,
-      tls_v1_enabled: tls_v1_enabled,
-      kerberos_armoring_enabled: kerberos_armoring_enabled,
-      kerberos_rc4_encryption_enabled: kerberos_rc4_encryption_enabled,
-      ntlm_v1_enabled: ntlm_v1_enabled,
-    }),
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -270,18 +283,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

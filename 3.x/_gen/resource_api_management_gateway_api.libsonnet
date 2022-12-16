@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     api_id,
     gateway_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_gateway_api', label=resourceLabel, attrs=self.newAttrs(api_id=api_id, gateway_id=gateway_id, timeouts=timeouts)),
   newAttrs(
@@ -15,6 +15,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     gateway_id: gateway_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withApiId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_gateway_api+: {
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

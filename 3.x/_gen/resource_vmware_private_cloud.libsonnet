@@ -1,124 +1,81 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  management_cluster:: {
+    new(
+      size
+    ):: std.prune(a={
+      size: size,
+    }),
+  },
   new(
-    resourceLabel,
-    name,
-    resource_group_name,
-    tags=null,
-    sku_name,
-    vcenter_password=null,
-    network_subnet_cidr,
-    nsxt_password=null,
-    internet_connection_enabled=null,
     location,
+    name,
+    network_subnet_cidr,
+    resourceLabel,
+    resource_group_name,
+    sku_name,
+    internet_connection_enabled=null,
     management_cluster=null,
-    timeouts=null
+    nsxt_password=null,
+    tags=null,
+    timeouts=null,
+    vcenter_password=null
   ):: tf.withResource(type='azurerm_vmware_private_cloud', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    sku_name=sku_name,
-    vcenter_password=vcenter_password,
-    network_subnet_cidr=network_subnet_cidr,
-    nsxt_password=nsxt_password,
     internet_connection_enabled=internet_connection_enabled,
     location=location,
     management_cluster=management_cluster,
-    timeouts=timeouts
+    name=name,
+    network_subnet_cidr=network_subnet_cidr,
+    nsxt_password=nsxt_password,
+    resource_group_name=resource_group_name,
+    sku_name=sku_name,
+    tags=tags,
+    timeouts=timeouts,
+    vcenter_password=vcenter_password
   )),
   newAttrs(
-    sku_name,
-    nsxt_password=null,
-    name,
-    vcenter_password=null,
-    internet_connection_enabled=null,
-    network_subnet_cidr,
     location,
+    name,
+    network_subnet_cidr,
     resource_group_name,
-    tags=null,
+    sku_name,
+    internet_connection_enabled=null,
     management_cluster=null,
-    timeouts=null
+    nsxt_password=null,
+    tags=null,
+    timeouts=null,
+    vcenter_password=null
   ):: std.prune(a={
-    sku_name: sku_name,
-    nsxt_password: nsxt_password,
-    name: name,
-    vcenter_password: vcenter_password,
     internet_connection_enabled: internet_connection_enabled,
-    network_subnet_cidr: network_subnet_cidr,
     location: location,
-    resource_group_name: resource_group_name,
-    tags: tags,
     management_cluster: management_cluster,
+    name: name,
+    network_subnet_cidr: network_subnet_cidr,
+    nsxt_password: nsxt_password,
+    resource_group_name: resource_group_name,
+    sku_name: sku_name,
+    tags: tags,
     timeouts: timeouts,
+    vcenter_password: vcenter_password,
   }),
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withVcenterPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          vcenter_password: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withInternetConnectionEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_private_cloud+: {
         [resourceLabel]+: {
           internet_connection_enabled: value,
-        },
-      },
-    },
-  },
-  withNetworkSubnetCidr(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          network_subnet_cidr: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withNsxtPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          nsxt_password: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_private_cloud+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -150,12 +107,59 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  management_cluster:: {
-    new(
-      size
-    ):: std.prune(a={
-      size: size,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withNetworkSubnetCidr(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          network_subnet_cidr: value,
+        },
+      },
+    },
+  },
+  withNsxtPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          nsxt_password: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -175,17 +179,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withVcenterPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_private_cloud+: {
+        [resourceLabel]+: {
+          vcenter_password: value,
+        },
+      },
+    },
   },
 }

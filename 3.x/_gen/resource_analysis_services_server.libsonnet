@@ -1,79 +1,85 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  ipv4_firewall_rule:: {
+    new(
+      name,
+      range_end,
+      range_start
+    ):: std.prune(a={
+      name: name,
+      range_end: range_end,
+      range_start: range_start,
+    }),
+  },
   new(
-    resourceLabel,
     location,
+    name,
+    resourceLabel,
     resource_group_name,
-    enable_power_bi_service=null,
-    tags=null,
+    sku,
     admin_users=null,
     backup_blob_container_uri=null,
-    name,
-    querypool_connection_mode=null,
-    sku,
+    enable_power_bi_service=null,
     ipv4_firewall_rule=null,
+    querypool_connection_mode=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_analysis_services_server', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    resource_group_name=resource_group_name,
-    enable_power_bi_service=enable_power_bi_service,
-    tags=tags,
     admin_users=admin_users,
     backup_blob_container_uri=backup_blob_container_uri,
+    enable_power_bi_service=enable_power_bi_service,
+    ipv4_firewall_rule=ipv4_firewall_rule,
+    location=location,
     name=name,
     querypool_connection_mode=querypool_connection_mode,
+    resource_group_name=resource_group_name,
     sku=sku,
-    ipv4_firewall_rule=ipv4_firewall_rule,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    name,
-    enable_power_bi_service=null,
     location,
-    querypool_connection_mode=null,
-    tags=null,
+    name,
+    resource_group_name,
+    sku,
     admin_users=null,
     backup_blob_container_uri=null,
-    sku,
+    enable_power_bi_service=null,
     ipv4_firewall_rule=null,
+    querypool_connection_mode=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    name: name,
-    enable_power_bi_service: enable_power_bi_service,
-    location: location,
-    querypool_connection_mode: querypool_connection_mode,
-    tags: tags,
     admin_users: admin_users,
     backup_blob_container_uri: backup_blob_container_uri,
-    sku: sku,
+    enable_power_bi_service: enable_power_bi_service,
     ipv4_firewall_rule: ipv4_firewall_rule,
+    location: location,
+    name: name,
+    querypool_connection_mode: querypool_connection_mode,
+    resource_group_name: resource_group_name,
+    sku: sku,
+    tags: tags,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAdminUsers(resourceLabel, value):: {
     resource+: {
       azurerm_analysis_services_server+: {
         [resourceLabel]+: {
           admin_users: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          sku: value,
         },
       },
     },
@@ -87,47 +93,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withQuerypoolConnectionMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          querypool_connection_mode: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withEnablePowerBiService(resourceLabel, value):: {
     resource+: {
       azurerm_analysis_services_server+: {
         [resourceLabel]+: {
           enable_power_bi_service: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -150,16 +120,59 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  ipv4_firewall_rule:: {
-    new(
-      name,
-      range_end,
-      range_start
-    ):: std.prune(a={
-      name: name,
-      range_end: range_end,
-      range_start: range_start,
-    }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withQuerypoolConnectionMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          querypool_connection_mode: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -178,18 +191,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

@@ -23,14 +23,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     service_name: service_name,
     timeouts: timeouts,
   }),
-  withServiceName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_database_migration_project+: {
-        [dataSrcLabel]+: {
-          service_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -46,6 +44,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_database_migration_project+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withServiceName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_database_migration_project+: {
+        [dataSrcLabel]+: {
+          service_name: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

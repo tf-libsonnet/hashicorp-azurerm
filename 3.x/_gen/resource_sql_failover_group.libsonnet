@@ -1,65 +1,81 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     resource_group_name,
     server_name,
-    tags=null,
     databases=null,
+    partner_servers=null,
     read_write_endpoint_failover_policy=null,
     readonly_endpoint_failover_policy=null,
-    timeouts=null,
-    partner_servers=null
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_sql_failover_group', label=resourceLabel, attrs=self.newAttrs(
+    databases=databases,
     name=name,
+    partner_servers=partner_servers,
+    read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
+    readonly_endpoint_failover_policy=readonly_endpoint_failover_policy,
     resource_group_name=resource_group_name,
     server_name=server_name,
     tags=tags,
-    databases=databases,
-    read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
-    readonly_endpoint_failover_policy=readonly_endpoint_failover_policy,
-    timeouts=timeouts,
-    partner_servers=partner_servers
+    timeouts=timeouts
   )),
   newAttrs(
     name,
     resource_group_name,
     server_name,
-    tags=null,
     databases=null,
-    readonly_endpoint_failover_policy=null,
-    timeouts=null,
     partner_servers=null,
-    read_write_endpoint_failover_policy=null
+    read_write_endpoint_failover_policy=null,
+    readonly_endpoint_failover_policy=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
+    databases: databases,
     name: name,
+    partner_servers: partner_servers,
+    read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
+    readonly_endpoint_failover_policy: readonly_endpoint_failover_policy,
     resource_group_name: resource_group_name,
     server_name: server_name,
     tags: tags,
-    databases: databases,
-    readonly_endpoint_failover_policy: readonly_endpoint_failover_policy,
     timeouts: timeouts,
-    partner_servers: partner_servers,
-    read_write_endpoint_failover_policy: read_write_endpoint_failover_policy,
   }),
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_failover_group+: {
-        [resourceLabel]+: {
-          server_name: value,
-        },
-      },
-    },
+  partner_servers:: {
+    new(
+
+    ):: std.prune(a={}),
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_failover_group+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  read_write_endpoint_failover_policy:: {
+    new(
+      mode,
+      grace_minutes=null
+    ):: std.prune(a={
+      grace_minutes: grace_minutes,
+      mode: mode,
+    }),
+  },
+  readonly_endpoint_failover_policy:: {
+    new(
+      mode
+    ):: std.prune(a={
+      mode: mode,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDatabases(resourceLabel, value):: {
     resource+: {
@@ -75,15 +91,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sql_failover_group+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_failover_group+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -106,11 +113,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  partner_servers:: {
-    new(
-
-    ):: std.prune(a={}),
-  },
   withReadWriteEndpointFailoverPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_sql_failover_group+: {
@@ -128,15 +130,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  read_write_endpoint_failover_policy:: {
-    new(
-      grace_minutes=null,
-      mode
-    ):: std.prune(a={
-      grace_minutes: grace_minutes,
-      mode: mode,
-    }),
   },
   withReadonlyEndpointFailoverPolicy(resourceLabel, value):: {
     resource+: {
@@ -156,12 +149,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  readonly_endpoint_failover_policy:: {
-    new(
-      mode
-    ):: std.prune(a={
-      mode: mode,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_failover_group+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_failover_group+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_failover_group+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -180,18 +193,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

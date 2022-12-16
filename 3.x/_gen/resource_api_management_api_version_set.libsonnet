@@ -1,53 +1,66 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    display_name,
-    versioning_scheme,
     api_management_name,
+    display_name,
     name,
+    resourceLabel,
     resource_group_name,
-    version_header_name=null,
-    version_query_name=null,
+    versioning_scheme,
     description=null,
-    timeouts=null
+    timeouts=null,
+    version_header_name=null,
+    version_query_name=null
   ):: tf.withResource(type='azurerm_api_management_api_version_set', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    versioning_scheme=versioning_scheme,
     api_management_name=api_management_name,
+    description=description,
+    display_name=display_name,
     name=name,
     resource_group_name=resource_group_name,
+    timeouts=timeouts,
     version_header_name=version_header_name,
     version_query_name=version_query_name,
-    description=description,
-    timeouts=timeouts
+    versioning_scheme=versioning_scheme
   )),
   newAttrs(
-    version_query_name=null,
-    description=null,
-    display_name,
-    versioning_scheme,
     api_management_name,
+    display_name,
     name,
     resource_group_name,
+    versioning_scheme,
+    description=null,
+    timeouts=null,
     version_header_name=null,
-    timeouts=null
+    version_query_name=null
   ):: std.prune(a={
-    version_query_name: version_query_name,
+    api_management_name: api_management_name,
     description: description,
     display_name: display_name,
-    versioning_scheme: versioning_scheme,
-    api_management_name: api_management_name,
     name: name,
     resource_group_name: resource_group_name,
-    version_header_name: version_header_name,
     timeouts: timeouts,
+    version_header_name: version_header_name,
+    version_query_name: version_query_name,
+    versioning_scheme: versioning_scheme,
   }),
-  withVersionHeaderName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_version_set+: {
         [resourceLabel]+: {
-          version_header_name: value,
+          api_management_name: value,
         },
       },
     },
@@ -66,33 +79,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_api_version_set+: {
         [resourceLabel]+: {
           display_name: value,
-        },
-      },
-    },
-  },
-  withVersionQueryName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_version_set+: {
-        [resourceLabel]+: {
-          version_query_name: value,
-        },
-      },
-    },
-  },
-  withVersioningScheme(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_version_set+: {
-        [resourceLabel]+: {
-          versioning_scheme: value,
-        },
-      },
-    },
-  },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_version_set+: {
-        [resourceLabel]+: {
-          api_management_name: value,
         },
       },
     },
@@ -133,17 +119,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withVersionHeaderName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_version_set+: {
+        [resourceLabel]+: {
+          version_header_name: value,
+        },
+      },
+    },
+  },
+  withVersionQueryName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_version_set+: {
+        [resourceLabel]+: {
+          version_query_name: value,
+        },
+      },
+    },
+  },
+  withVersioningScheme(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_version_set+: {
+        [resourceLabel]+: {
+          versioning_scheme: value,
+        },
+      },
+    },
   },
 }

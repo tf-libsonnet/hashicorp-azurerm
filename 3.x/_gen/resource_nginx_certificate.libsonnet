@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     certificate_virtual_path,
     key_vault_secret_id,
     key_virtual_path,
     name,
     nginx_deployment_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_nginx_certificate', label=resourceLabel, attrs=self.newAttrs(
     certificate_virtual_path=certificate_virtual_path,
@@ -31,6 +31,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     nginx_deployment_id: nginx_deployment_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withCertificateVirtualPath(resourceLabel, value):: {
     resource+: {
       azurerm_nginx_certificate+: {
@@ -93,16 +104,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     end_ip,
     name,
     redis_cache_name,
+    resourceLabel,
     resource_group_name,
     start_ip,
     timeouts=null
@@ -31,23 +31,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     start_ip: start_ip,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_firewall_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withStartIp(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_firewall_rule+: {
-        [resourceLabel]+: {
-          start_ip: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withEndIp(resourceLabel, value):: {
     resource+: {
@@ -76,6 +71,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_firewall_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStartIp(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_firewall_rule+: {
+        [resourceLabel]+: {
+          start_ip: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_redis_firewall_rule+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

@@ -12,6 +12,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id: storage_account_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withStorageAccountId(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_management_policy+: {
@@ -38,12 +45,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

@@ -1,48 +1,112 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  links:: {
+    new(
+      bandwidth_mhz,
+      center_frequency_mhz,
+      direction,
+      name,
+      polarization
+    ):: std.prune(a={
+      bandwidth_mhz: bandwidth_mhz,
+      center_frequency_mhz: center_frequency_mhz,
+      direction: direction,
+      name: name,
+      polarization: polarization,
+    }),
+  },
   new(
-    resourceLabel,
-    two_line_elements,
     location,
     name,
     norad_id,
+    resourceLabel,
     resource_group_name,
-    tags=null,
     title_line,
+    two_line_elements,
     links=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_orbital_spacecraft', label=resourceLabel, attrs=self.newAttrs(
-    two_line_elements=two_line_elements,
+    links=links,
     location=location,
     name=name,
     norad_id=norad_id,
     resource_group_name=resource_group_name,
     tags=tags,
+    timeouts=timeouts,
     title_line=title_line,
-    links=links,
-    timeouts=timeouts
+    two_line_elements=two_line_elements
   )),
   newAttrs(
     location,
     name,
     norad_id,
     resource_group_name,
-    tags=null,
     title_line,
     two_line_elements,
     links=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    links: links,
     location: location,
     name: name,
     norad_id: norad_id,
     resource_group_name: resource_group_name,
     tags: tags,
+    timeouts: timeouts,
     title_line: title_line,
     two_line_elements: two_line_elements,
-    links: links,
-    timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withLinks(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          links: value,
+        },
+      },
+    },
+  },
+  withLinksMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          links+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withNoradId(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_spacecraft+: {
@@ -70,75 +134,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTitleLine(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          title_line: value,
-        },
-      },
-    },
-  },
-  withTwoLineElements(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          two_line_elements: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withLinks(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          links: value,
-        },
-      },
-    },
-  },
-  withLinksMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          links+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  links:: {
-    new(
-      bandwidth_mhz,
-      center_frequency_mhz,
-      direction,
-      name,
-      polarization
-    ):: std.prune(a={
-      bandwidth_mhz: bandwidth_mhz,
-      center_frequency_mhz: center_frequency_mhz,
-      direction: direction,
-      name: name,
-      polarization: polarization,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_spacecraft+: {
@@ -157,17 +152,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withTitleLine(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          title_line: value,
+        },
+      },
+    },
+  },
+  withTwoLineElements(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          two_line_elements: value,
+        },
+      },
+    },
   },
 }

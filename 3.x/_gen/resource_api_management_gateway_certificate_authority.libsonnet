@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     api_management_id,
     certificate_name,
     gateway_name,
+    resourceLabel,
     is_trusted=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_gateway_certificate_authority', label=resourceLabel, attrs=self.newAttrs(
@@ -27,6 +27,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     is_trusted: is_trusted,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withApiManagementId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_gateway_certificate_authority+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

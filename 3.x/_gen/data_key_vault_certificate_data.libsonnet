@@ -2,27 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
-    version=null,
     key_vault_id,
-    timeouts=null
+    name,
+    timeouts=null,
+    version=null
   ):: tf.withData(type='azurerm_key_vault_certificate_data', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    version=version,
     key_vault_id=key_vault_id,
-    timeouts=timeouts
+    name=name,
+    timeouts=timeouts,
+    version=version
   )),
   newAttrs(
     key_vault_id,
-    version=null,
     name,
-    timeouts=null
+    timeouts=null,
+    version=null
   ):: std.prune(a={
     key_vault_id: key_vault_id,
-    version: version,
     name: name,
     timeouts: timeouts,
+    version: version,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withKeyVaultId(dataSrcLabel, value):: {
     data+: {
       azurerm_key_vault_certificate_data+: {
@@ -37,15 +44,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_certificate_data+: {
         [dataSrcLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withVersion(dataSrcLabel, value):: {
-    data+: {
-      azurerm_key_vault_certificate_data+: {
-        [dataSrcLabel]+: {
-          version: value,
         },
       },
     },
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_key_vault_certificate_data+: {
+        [dataSrcLabel]+: {
+          version: value,
+        },
+      },
+    },
   },
 }

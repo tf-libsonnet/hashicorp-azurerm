@@ -8,25 +8,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_web_pubsub_network_acl', label=resourceLabel, attrs=self.newAttrs(
-    web_pubsub_id=web_pubsub_id,
     default_action=default_action,
     private_endpoint=private_endpoint,
     public_network=public_network,
-    timeouts=timeouts
+    timeouts=timeouts,
+    web_pubsub_id=web_pubsub_id
   )),
   newAttrs(
-    default_action=null,
     web_pubsub_id,
+    default_action=null,
+    private_endpoint=null,
     public_network=null,
-    timeouts=null,
-    private_endpoint=null
+    timeouts=null
   ):: std.prune(a={
     default_action: default_action,
-    web_pubsub_id: web_pubsub_id,
+    private_endpoint: private_endpoint,
     public_network: public_network,
     timeouts: timeouts,
-    private_endpoint: private_endpoint,
+    web_pubsub_id: web_pubsub_id,
   }),
+  private_endpoint:: {
+    new(
+      allowed_request_types=null,
+      denied_request_types=null
+    ):: std.prune(a={
+      allowed_request_types: allowed_request_types,
+      denied_request_types: denied_request_types,
+    }),
+  },
+  public_network:: {
+    new(
+      allowed_request_types=null,
+      denied_request_types=null
+    ):: std.prune(a={
+      allowed_request_types: allowed_request_types,
+      denied_request_types: denied_request_types,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDefaultAction(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_network_acl+: {
@@ -36,11 +67,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWebPubsubId(resourceLabel, value):: {
+  withPrivateEndpoint(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_network_acl+: {
         [resourceLabel]+: {
-          web_pubsub_id: value,
+          private_endpoint: value,
+        },
+      },
+    },
+  },
+  withPrivateEndpointMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_pubsub_network_acl+: {
+        [resourceLabel]+: {
+          private_endpoint+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -63,15 +103,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  public_network:: {
-    new(
-      allowed_request_types=null,
-      denied_request_types=null
-    ):: std.prune(a={
-      allowed_request_types: allowed_request_types,
-      denied_request_types: denied_request_types,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_network_acl+: {
@@ -90,44 +121,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withPrivateEndpoint(resourceLabel, value):: {
+  withWebPubsubId(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_network_acl+: {
         [resourceLabel]+: {
-          private_endpoint: value,
+          web_pubsub_id: value,
         },
       },
     },
-  },
-  withPrivateEndpointMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_pubsub_network_acl+: {
-        [resourceLabel]+: {
-          private_endpoint+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  private_endpoint:: {
-    new(
-      allowed_request_types=null,
-      denied_request_types=null
-    ):: std.prune(a={
-      allowed_request_types: allowed_request_types,
-      denied_request_types: denied_request_types,
-    }),
   },
 }

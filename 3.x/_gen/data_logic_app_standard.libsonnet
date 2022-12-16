@@ -4,37 +4,89 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     name,
     resource_group_name,
-    tags=null,
     site_config=null,
+    tags=null,
     timeouts=null
   ):: tf.withData(type='azurerm_logic_app_standard', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
     resource_group_name=resource_group_name,
-    tags=tags,
     site_config=site_config,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
     name,
+    resource_group_name,
     site_config=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
     name: name,
+    resource_group_name: resource_group_name,
     site_config: site_config,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_logic_app_standard+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
+  site_config:: {
+    cors:: {
+      new(
+        allowed_origins,
+        support_credentials=null
+      ):: std.prune(a={
+        allowed_origins: allowed_origins,
+        support_credentials: support_credentials,
+      }),
     },
+    new(
+      always_on=null,
+      app_scale_limit=null,
+      cors=null,
+      dotnet_framework_version=null,
+      elastic_instance_minimum=null,
+      ftps_state=null,
+      health_check_path=null,
+      http2_enabled=null,
+      ip_restriction=null,
+      linux_fx_version=null,
+      min_tls_version=null,
+      pre_warmed_instance_count=null,
+      runtime_scale_monitoring_enabled=null,
+      scm_ip_restriction=null,
+      scm_min_tls_version=null,
+      scm_type=null,
+      scm_use_main_ip_restriction=null,
+      use_32_bit_worker_process=null,
+      vnet_route_all_enabled=null,
+      websockets_enabled=null
+    ):: std.prune(a={
+      always_on: always_on,
+      app_scale_limit: app_scale_limit,
+      cors: cors,
+      dotnet_framework_version: dotnet_framework_version,
+      elastic_instance_minimum: elastic_instance_minimum,
+      ftps_state: ftps_state,
+      health_check_path: health_check_path,
+      http2_enabled: http2_enabled,
+      ip_restriction: ip_restriction,
+      linux_fx_version: linux_fx_version,
+      min_tls_version: min_tls_version,
+      pre_warmed_instance_count: pre_warmed_instance_count,
+      runtime_scale_monitoring_enabled: runtime_scale_monitoring_enabled,
+      scm_ip_restriction: scm_ip_restriction,
+      scm_min_tls_version: scm_min_tls_version,
+      scm_type: scm_type,
+      scm_use_main_ip_restriction: scm_use_main_ip_restriction,
+      use_32_bit_worker_process: use_32_bit_worker_process,
+      vnet_route_all_enabled: vnet_route_all_enabled,
+      websockets_enabled: websockets_enabled,
+    }),
+  },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -72,58 +124,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  site_config:: {
-    new(
-      ftps_state=null,
-      min_tls_version=null,
-      scm_min_tls_version=null,
-      health_check_path=null,
-      elastic_instance_minimum=null,
-      linux_fx_version=null,
-      always_on=null,
-      scm_ip_restriction=null,
-      scm_type=null,
-      use_32_bit_worker_process=null,
-      http2_enabled=null,
-      pre_warmed_instance_count=null,
-      app_scale_limit=null,
-      runtime_scale_monitoring_enabled=null,
-      scm_use_main_ip_restriction=null,
-      dotnet_framework_version=null,
-      websockets_enabled=null,
-      vnet_route_all_enabled=null,
-      ip_restriction=null,
-      cors=null
-    ):: std.prune(a={
-      ftps_state: ftps_state,
-      min_tls_version: min_tls_version,
-      scm_min_tls_version: scm_min_tls_version,
-      health_check_path: health_check_path,
-      elastic_instance_minimum: elastic_instance_minimum,
-      linux_fx_version: linux_fx_version,
-      always_on: always_on,
-      scm_ip_restriction: scm_ip_restriction,
-      scm_type: scm_type,
-      use_32_bit_worker_process: use_32_bit_worker_process,
-      http2_enabled: http2_enabled,
-      pre_warmed_instance_count: pre_warmed_instance_count,
-      app_scale_limit: app_scale_limit,
-      runtime_scale_monitoring_enabled: runtime_scale_monitoring_enabled,
-      scm_use_main_ip_restriction: scm_use_main_ip_restriction,
-      dotnet_framework_version: dotnet_framework_version,
-      websockets_enabled: websockets_enabled,
-      vnet_route_all_enabled: vnet_route_all_enabled,
-      ip_restriction: ip_restriction,
-      cors: cors,
-    }),
-    cors:: {
-      new(
-        allowed_origins,
-        support_credentials=null
-      ):: std.prune(a={
-        allowed_origins: allowed_origins,
-        support_credentials: support_credentials,
-      }),
+  withTags(dataSrcLabel, value):: {
+    data+: {
+      azurerm_logic_app_standard+: {
+        [dataSrcLabel]+: {
+          tags: value,
+        },
+      },
     },
   },
   withTimeouts(dataSrcLabel, value):: {
@@ -143,12 +150,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

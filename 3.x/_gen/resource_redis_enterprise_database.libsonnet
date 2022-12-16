@@ -1,56 +1,78 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  module:: {
+    new(
+      name,
+      args=null
+    ):: std.prune(a={
+      args: args,
+      name: name,
+    }),
+  },
   new(
-    resourceLabel,
-    linked_database_group_nickname=null,
-    resource_group_name=null,
-    clustering_policy=null,
-    linked_database_id=null,
-    port=null,
-    name=null,
-    client_protocol=null,
     cluster_id,
+    resourceLabel,
+    client_protocol=null,
+    clustering_policy=null,
     eviction_policy=null,
-    timeouts=null,
-    module=null
+    linked_database_group_nickname=null,
+    linked_database_id=null,
+    module=null,
+    name=null,
+    port=null,
+    resource_group_name=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_redis_enterprise_database', label=resourceLabel, attrs=self.newAttrs(
-    linked_database_group_nickname=linked_database_group_nickname,
-    resource_group_name=resource_group_name,
-    clustering_policy=clustering_policy,
-    linked_database_id=linked_database_id,
-    port=port,
-    name=name,
     client_protocol=client_protocol,
     cluster_id=cluster_id,
+    clustering_policy=clustering_policy,
     eviction_policy=eviction_policy,
-    timeouts=timeouts,
-    module=module
+    linked_database_group_nickname=linked_database_group_nickname,
+    linked_database_id=linked_database_id,
+    module=module,
+    name=name,
+    port=port,
+    resource_group_name=resource_group_name,
+    timeouts=timeouts
   )),
   newAttrs(
-    port=null,
-    name=null,
-    resource_group_name=null,
-    client_protocol=null,
-    linked_database_id=null,
-    linked_database_group_nickname=null,
     cluster_id,
+    client_protocol=null,
     clustering_policy=null,
     eviction_policy=null,
-    timeouts=null,
-    module=null
+    linked_database_group_nickname=null,
+    linked_database_id=null,
+    module=null,
+    name=null,
+    port=null,
+    resource_group_name=null,
+    timeouts=null
   ):: std.prune(a={
-    port: port,
-    name: name,
-    resource_group_name: resource_group_name,
     client_protocol: client_protocol,
-    linked_database_id: linked_database_id,
-    linked_database_group_nickname: linked_database_group_nickname,
     cluster_id: cluster_id,
     clustering_policy: clustering_policy,
     eviction_policy: eviction_policy,
-    timeouts: timeouts,
+    linked_database_group_nickname: linked_database_group_nickname,
+    linked_database_id: linked_database_id,
     module: module,
+    name: name,
+    port: port,
+    resource_group_name: resource_group_name,
+    timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withClientProtocol(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_database+: {
@@ -65,51 +87,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_redis_enterprise_database+: {
         [resourceLabel]+: {
           cluster_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withLinkedDatabaseGroupNickname(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          linked_database_group_nickname: value,
-        },
-      },
-    },
-  },
-  withPort(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          port: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLinkedDatabaseId(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          linked_database_id: value,
         },
       },
     },
@@ -132,6 +109,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLinkedDatabaseGroupNickname(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          linked_database_group_nickname: value,
+        },
+      },
+    },
+  },
+  withLinkedDatabaseId(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          linked_database_id: value,
+        },
+      },
+    },
+  },
   withModule(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_database+: {
@@ -150,14 +145,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  module:: {
-    new(
-      args=null,
-      name
-    ):: std.prune(a={
-      args: args,
-      name: name,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPort(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          port: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -176,18 +189,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

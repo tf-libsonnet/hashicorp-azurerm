@@ -1,26 +1,26 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    resource_group_name,
-    tags=null,
     location,
     name,
+    resourceLabel,
+    resource_group_name,
     policy_signing_certificate_data=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_attestation_provider', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
     location=location,
     name=name,
     policy_signing_certificate_data=policy_signing_certificate_data,
+    resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
     location,
     name,
-    policy_signing_certificate_data=null,
     resource_group_name,
+    policy_signing_certificate_data=null,
     tags=null,
     timeouts=null
   ):: std.prune(a={
@@ -31,6 +31,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags: tags,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_attestation_provider+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

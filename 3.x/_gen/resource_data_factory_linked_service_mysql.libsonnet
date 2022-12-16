@@ -1,53 +1,75 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     connection_string,
     data_factory_id,
-    integration_runtime_name=null,
-    parameters=null,
+    name,
+    resourceLabel,
     additional_properties=null,
     annotations=null,
     description=null,
-    name,
+    integration_runtime_name=null,
+    parameters=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_mysql', label=resourceLabel, attrs=self.newAttrs(
-    connection_string=connection_string,
-    data_factory_id=data_factory_id,
-    integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
     additional_properties=additional_properties,
     annotations=annotations,
+    connection_string=connection_string,
+    data_factory_id=data_factory_id,
     description=description,
+    integration_runtime_name=integration_runtime_name,
     name=name,
+    parameters=parameters,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     connection_string,
     data_factory_id,
-    integration_runtime_name=null,
-    parameters=null,
+    name,
     additional_properties=null,
     annotations=null,
     description=null,
+    integration_runtime_name=null,
+    parameters=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    connection_string: connection_string,
-    data_factory_id: data_factory_id,
-    integration_runtime_name: integration_runtime_name,
-    parameters: parameters,
     additional_properties: additional_properties,
     annotations: annotations,
+    connection_string: connection_string,
+    data_factory_id: data_factory_id,
     description: description,
+    integration_runtime_name: integration_runtime_name,
+    name: name,
+    parameters: parameters,
     timeouts: timeouts,
   }),
-  withDescription(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_mysql+: {
         [resourceLabel]+: {
-          description: value,
+          additional_properties: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_mysql+: {
+        [resourceLabel]+: {
+          annotations: value,
         },
       },
     },
@@ -70,20 +92,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_mysql+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withIntegrationRuntimeName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_mysql+: {
         [resourceLabel]+: {
           integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_mysql+: {
-        [resourceLabel]+: {
-          parameters: value,
         },
       },
     },
@@ -97,20 +119,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_mysql+: {
         [resourceLabel]+: {
-          additional_properties: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_mysql+: {
-        [resourceLabel]+: {
-          annotations: value,
+          parameters: value,
         },
       },
     },
@@ -132,18 +145,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

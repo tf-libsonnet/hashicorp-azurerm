@@ -1,112 +1,157 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  autoscale_settings:: {
+    new(
+      max_throughput=null
+    ):: std.prune(a={
+      max_throughput: max_throughput,
+    }),
+  },
+  conflict_resolution_policy:: {
+    new(
+      mode,
+      conflict_resolution_path=null,
+      conflict_resolution_procedure=null
+    ):: std.prune(a={
+      conflict_resolution_path: conflict_resolution_path,
+      conflict_resolution_procedure: conflict_resolution_procedure,
+      mode: mode,
+    }),
+  },
+  indexing_policy:: {
+    composite_index:: {
+      index:: {
+        new(
+          order,
+          path
+        ):: std.prune(a={
+          order: order,
+          path: path,
+        }),
+      },
+      new(
+        index=null
+      ):: std.prune(a={
+        index: index,
+      }),
+    },
+    excluded_path:: {
+      new(
+        path
+      ):: std.prune(a={
+        path: path,
+      }),
+    },
+    included_path:: {
+      new(
+        path
+      ):: std.prune(a={
+        path: path,
+      }),
+    },
+    new(
+      composite_index=null,
+      excluded_path=null,
+      included_path=null,
+      indexing_mode=null,
+      spatial_index=null
+    ):: std.prune(a={
+      composite_index: composite_index,
+      excluded_path: excluded_path,
+      included_path: included_path,
+      indexing_mode: indexing_mode,
+      spatial_index: spatial_index,
+    }),
+    spatial_index:: {
+      new(
+        path
+      ):: std.prune(a={
+        path: path,
+      }),
+    },
+  },
   new(
-    resourceLabel,
+    account_name,
     database_name,
+    name,
+    partition_key_path,
+    resourceLabel,
+    resource_group_name,
+    analytical_storage_ttl=null,
+    autoscale_settings=null,
+    conflict_resolution_policy=null,
     default_ttl=null,
+    indexing_policy=null,
     partition_key_version=null,
     throughput=null,
-    analytical_storage_ttl=null,
-    partition_key_path,
-    resource_group_name,
-    account_name,
-    name,
-    conflict_resolution_policy=null,
-    indexing_policy=null,
     timeouts=null,
-    unique_key=null,
-    autoscale_settings=null
+    unique_key=null
   ):: tf.withResource(type='azurerm_cosmosdb_sql_container', label=resourceLabel, attrs=self.newAttrs(
+    account_name=account_name,
+    analytical_storage_ttl=analytical_storage_ttl,
+    autoscale_settings=autoscale_settings,
+    conflict_resolution_policy=conflict_resolution_policy,
     database_name=database_name,
     default_ttl=default_ttl,
-    partition_key_version=partition_key_version,
-    throughput=throughput,
-    analytical_storage_ttl=analytical_storage_ttl,
-    partition_key_path=partition_key_path,
-    resource_group_name=resource_group_name,
-    account_name=account_name,
-    name=name,
-    conflict_resolution_policy=conflict_resolution_policy,
     indexing_policy=indexing_policy,
+    name=name,
+    partition_key_path=partition_key_path,
+    partition_key_version=partition_key_version,
+    resource_group_name=resource_group_name,
+    throughput=throughput,
     timeouts=timeouts,
-    unique_key=unique_key,
-    autoscale_settings=autoscale_settings
+    unique_key=unique_key
   )),
   newAttrs(
     account_name,
     database_name,
-    default_ttl=null,
     name,
+    partition_key_path,
     resource_group_name,
+    analytical_storage_ttl=null,
+    autoscale_settings=null,
+    conflict_resolution_policy=null,
+    default_ttl=null,
+    indexing_policy=null,
     partition_key_version=null,
     throughput=null,
-    analytical_storage_ttl=null,
-    partition_key_path,
-    indexing_policy=null,
     timeouts=null,
-    unique_key=null,
-    autoscale_settings=null,
-    conflict_resolution_policy=null
+    unique_key=null
   ):: std.prune(a={
     account_name: account_name,
-    database_name: database_name,
-    default_ttl: default_ttl,
-    name: name,
-    resource_group_name: resource_group_name,
-    partition_key_version: partition_key_version,
-    throughput: throughput,
     analytical_storage_ttl: analytical_storage_ttl,
-    partition_key_path: partition_key_path,
-    indexing_policy: indexing_policy,
-    timeouts: timeouts,
-    unique_key: unique_key,
     autoscale_settings: autoscale_settings,
     conflict_resolution_policy: conflict_resolution_policy,
+    database_name: database_name,
+    default_ttl: default_ttl,
+    indexing_policy: indexing_policy,
+    name: name,
+    partition_key_path: partition_key_path,
+    partition_key_version: partition_key_version,
+    resource_group_name: resource_group_name,
+    throughput: throughput,
+    timeouts: timeouts,
+    unique_key: unique_key,
   }),
-  withDefaultTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          default_ttl: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withAnalyticalStorageTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          analytical_storage_ttl: value,
-        },
-      },
-    },
-  },
-  withPartitionKeyVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          partition_key_version: value,
-        },
-      },
-    },
-  },
-  withDatabaseName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          database_name: value,
-        },
-      },
-    },
+  unique_key:: {
+    new(
+      paths
+    ):: std.prune(a={
+      paths: paths,
+    }),
   },
   withAccountName(resourceLabel, value):: {
     resource+: {
@@ -117,29 +162,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPartitionKeyPath(resourceLabel, value):: {
+  withAnalyticalStorageTtl(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_container+: {
         [resourceLabel]+: {
-          partition_key_path: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withThroughput(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_container+: {
-        [resourceLabel]+: {
-          throughput: value,
+          analytical_storage_ttl: value,
         },
       },
     },
@@ -162,13 +189,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  autoscale_settings:: {
-    new(
-      max_throughput=null
-    ):: std.prune(a={
-      max_throughput: max_throughput,
-    }),
-  },
   withConflictResolutionPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_container+: {
@@ -187,16 +207,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  conflict_resolution_policy:: {
-    new(
-      conflict_resolution_procedure=null,
-      mode,
-      conflict_resolution_path=null
-    ):: std.prune(a={
-      conflict_resolution_procedure: conflict_resolution_procedure,
-      mode: mode,
-      conflict_resolution_path: conflict_resolution_path,
-    }),
+  withDatabaseName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          database_name: value,
+        },
+      },
+    },
+  },
+  withDefaultTtl(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          default_ttl: value,
+        },
+      },
+    },
   },
   withIndexingPolicy(resourceLabel, value):: {
     resource+: {
@@ -216,56 +243,49 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  indexing_policy:: {
-    new(
-      indexing_mode=null,
-      included_path=null,
-      spatial_index=null,
-      composite_index=null,
-      excluded_path=null
-    ):: std.prune(a={
-      indexing_mode: indexing_mode,
-      included_path: included_path,
-      spatial_index: spatial_index,
-      composite_index: composite_index,
-      excluded_path: excluded_path,
-    }),
-    spatial_index:: {
-      new(
-        path
-      ):: std.prune(a={
-        path: path,
-      }),
-    },
-    composite_index:: {
-      new(
-        index=null
-      ):: std.prune(a={
-        index: index,
-      }),
-      index:: {
-        new(
-          order,
-          path
-        ):: std.prune(a={
-          order: order,
-          path: path,
-        }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          name: value,
+        },
       },
     },
-    excluded_path:: {
-      new(
-        path
-      ):: std.prune(a={
-        path: path,
-      }),
+  },
+  withPartitionKeyPath(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          partition_key_path: value,
+        },
+      },
     },
-    included_path:: {
-      new(
-        path
-      ):: std.prune(a={
-        path: path,
-      }),
+  },
+  withPartitionKeyVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          partition_key_version: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withThroughput(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_container+: {
+        [resourceLabel]+: {
+          throughput: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -286,19 +306,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
   withUniqueKey(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_container+: {
@@ -316,12 +323,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  unique_key:: {
-    new(
-      paths
-    ):: std.prune(a={
-      paths: paths,
-    }),
   },
 }

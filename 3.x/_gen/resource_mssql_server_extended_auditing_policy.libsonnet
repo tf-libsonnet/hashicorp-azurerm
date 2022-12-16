@@ -2,47 +2,78 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    server_id,
+    enabled=null,
+    log_monitoring_enabled=null,
+    retention_in_days=null,
     storage_account_access_key=null,
     storage_account_access_key_is_secondary=null,
     storage_account_subscription_id=null,
     storage_endpoint=null,
-    enabled=null,
-    log_monitoring_enabled=null,
-    retention_in_days=null,
-    server_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_server_extended_auditing_policy', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_access_key=storage_account_access_key,
-    storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
-    storage_account_subscription_id=storage_account_subscription_id,
-    storage_endpoint=storage_endpoint,
     enabled=enabled,
     log_monitoring_enabled=log_monitoring_enabled,
     retention_in_days=retention_in_days,
     server_id=server_id,
+    storage_account_access_key=storage_account_access_key,
+    storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
+    storage_account_subscription_id=storage_account_subscription_id,
+    storage_endpoint=storage_endpoint,
     timeouts=timeouts
   )),
   newAttrs(
+    server_id,
+    enabled=null,
+    log_monitoring_enabled=null,
+    retention_in_days=null,
     storage_account_access_key=null,
     storage_account_access_key_is_secondary=null,
     storage_account_subscription_id=null,
     storage_endpoint=null,
-    enabled=null,
-    log_monitoring_enabled=null,
-    retention_in_days=null,
-    server_id,
     timeouts=null
   ):: std.prune(a={
-    storage_account_access_key: storage_account_access_key,
-    storage_account_access_key_is_secondary: storage_account_access_key_is_secondary,
-    storage_account_subscription_id: storage_account_subscription_id,
-    storage_endpoint: storage_endpoint,
     enabled: enabled,
     log_monitoring_enabled: log_monitoring_enabled,
     retention_in_days: retention_in_days,
     server_id: server_id,
+    storage_account_access_key: storage_account_access_key,
+    storage_account_access_key_is_secondary: storage_account_access_key_is_secondary,
+    storage_account_subscription_id: storage_account_subscription_id,
+    storage_endpoint: storage_endpoint,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_extended_auditing_policy+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withLogMonitoringEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_server_extended_auditing_policy+: {
+        [resourceLabel]+: {
+          log_monitoring_enabled: value,
+        },
+      },
+    },
+  },
   withRetentionInDays(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_extended_auditing_policy+: {
@@ -97,24 +128,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_extended_auditing_policy+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withLogMonitoringEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_server_extended_auditing_policy+: {
-        [resourceLabel]+: {
-          log_monitoring_enabled: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_server_extended_auditing_policy+: {
@@ -132,18 +145,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

@@ -1,80 +1,111 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  external_mapping:: {
+    new(
+      address_space,
+      port_range=null
+    ):: std.prune(a={
+      address_space: address_space,
+      port_range: port_range,
+    }),
+  },
+  internal_mapping:: {
+    new(
+      address_space,
+      port_range=null
+    ):: std.prune(a={
+      address_space: address_space,
+      port_range: port_range,
+    }),
+  },
   new(
+    name,
     resourceLabel,
+    resource_group_name,
     virtual_network_gateway_id,
+    external_mapping=null,
+    internal_mapping=null,
     ip_configuration_id=null,
     mode=null,
-    name,
-    resource_group_name,
-    type=null,
     timeouts=null,
-    external_mapping=null,
-    internal_mapping=null
+    type=null
   ):: tf.withResource(type='azurerm_virtual_network_gateway_nat_rule', label=resourceLabel, attrs=self.newAttrs(
-    virtual_network_gateway_id=virtual_network_gateway_id,
+    external_mapping=external_mapping,
+    internal_mapping=internal_mapping,
     ip_configuration_id=ip_configuration_id,
     mode=mode,
     name=name,
     resource_group_name=resource_group_name,
-    type=type,
     timeouts=timeouts,
-    external_mapping=external_mapping,
-    internal_mapping=internal_mapping
+    type=type,
+    virtual_network_gateway_id=virtual_network_gateway_id
   )),
   newAttrs(
-    resource_group_name,
-    type=null,
-    virtual_network_gateway_id,
-    ip_configuration_id=null,
-    mode=null,
     name,
+    resource_group_name,
+    virtual_network_gateway_id,
     external_mapping=null,
     internal_mapping=null,
-    timeouts=null
+    ip_configuration_id=null,
+    mode=null,
+    timeouts=null,
+    type=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    type: type,
-    virtual_network_gateway_id: virtual_network_gateway_id,
+    external_mapping: external_mapping,
+    internal_mapping: internal_mapping,
     ip_configuration_id: ip_configuration_id,
     mode: mode,
     name: name,
-    external_mapping: external_mapping,
-    internal_mapping: internal_mapping,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
+    type: type,
+    virtual_network_gateway_id: virtual_network_gateway_id,
   }),
-  withName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withExternalMapping(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          name: value,
+          external_mapping: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withExternalMappingMixin(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          external_mapping+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withType(resourceLabel, value):: {
+  withInternalMapping(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          type: value,
+          internal_mapping: value,
         },
       },
     },
   },
-  withVirtualNetworkGatewayId(resourceLabel, value):: {
+  withInternalMappingMixin(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          virtual_network_gateway_id: value,
+          internal_mapping+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -97,59 +128,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withExternalMapping(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_mapping: value,
+          name: value,
         },
       },
     },
   },
-  withExternalMappingMixin(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_mapping+: if std.isArray(v=value) then value else [value],
+          resource_group_name: value,
         },
       },
     },
-  },
-  external_mapping:: {
-    new(
-      port_range=null,
-      address_space
-    ):: std.prune(a={
-      port_range: port_range,
-      address_space: address_space,
-    }),
-  },
-  withInternalMapping(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          internal_mapping: value,
-        },
-      },
-    },
-  },
-  withInternalMappingMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          internal_mapping+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  internal_mapping:: {
-    new(
-      address_space,
-      port_range=null
-    ):: std.prune(a={
-      address_space: address_space,
-      port_range: port_range,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -169,17 +164,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkGatewayId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          virtual_network_gateway_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,145 +1,130 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  authentication:: {
+    new(
+      audience,
+      authority,
+      smart_proxy_enabled=null
+    ):: std.prune(a={
+      audience: audience,
+      authority: authority,
+      smart_proxy_enabled: smart_proxy_enabled,
+    }),
+  },
+  cors:: {
+    new(
+      allowed_headers,
+      allowed_methods,
+      allowed_origins,
+      credentials_allowed=null,
+      max_age_in_seconds=null
+    ):: std.prune(a={
+      allowed_headers: allowed_headers,
+      allowed_methods: allowed_methods,
+      allowed_origins: allowed_origins,
+      credentials_allowed: credentials_allowed,
+      max_age_in_seconds: max_age_in_seconds,
+    }),
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
+  },
   new(
+    location,
+    name,
     resourceLabel,
     resource_group_name,
-    location,
-    name,
-    tags=null,
     workspace_id,
     access_policy_object_ids=null,
-    container_registry_login_server_url=null,
-    kind=null,
-    configuration_export_storage_account_name=null,
     authentication=null,
+    configuration_export_storage_account_name=null,
+    container_registry_login_server_url=null,
     cors=null,
     identity=null,
+    kind=null,
     oci_artifact=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_fhir_service', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    location=location,
-    name=name,
-    tags=tags,
-    workspace_id=workspace_id,
     access_policy_object_ids=access_policy_object_ids,
-    container_registry_login_server_url=container_registry_login_server_url,
-    kind=kind,
-    configuration_export_storage_account_name=configuration_export_storage_account_name,
     authentication=authentication,
+    configuration_export_storage_account_name=configuration_export_storage_account_name,
+    container_registry_login_server_url=container_registry_login_server_url,
     cors=cors,
     identity=identity,
+    kind=kind,
+    location=location,
+    name=name,
     oci_artifact=oci_artifact,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    workspace_id=workspace_id
   )),
   newAttrs(
-    tags=null,
     location,
-    configuration_export_storage_account_name=null,
     name,
-    container_registry_login_server_url=null,
-    kind=null,
     resource_group_name,
-    access_policy_object_ids=null,
     workspace_id,
+    access_policy_object_ids=null,
+    authentication=null,
+    configuration_export_storage_account_name=null,
+    container_registry_login_server_url=null,
     cors=null,
     identity=null,
+    kind=null,
     oci_artifact=null,
-    timeouts=null,
-    authentication=null
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    location: location,
-    configuration_export_storage_account_name: configuration_export_storage_account_name,
-    name: name,
-    container_registry_login_server_url: container_registry_login_server_url,
-    kind: kind,
-    resource_group_name: resource_group_name,
     access_policy_object_ids: access_policy_object_ids,
-    workspace_id: workspace_id,
+    authentication: authentication,
+    configuration_export_storage_account_name: configuration_export_storage_account_name,
+    container_registry_login_server_url: container_registry_login_server_url,
     cors: cors,
     identity: identity,
+    kind: kind,
+    location: location,
+    name: name,
     oci_artifact: oci_artifact,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
-    authentication: authentication,
+    workspace_id: workspace_id,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  oci_artifact:: {
+    new(
+      login_server,
+      digest=null,
+      image_name=null
+    ):: std.prune(a={
+      digest: digest,
+      image_name: image_name,
+      login_server: login_server,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAccessPolicyObjectIds(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_fhir_service+: {
         [resourceLabel]+: {
           access_policy_object_ids: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withKind(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          kind: value,
-        },
-      },
-    },
-  },
-  withConfigurationExportStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          configuration_export_storage_account_name: value,
-        },
-      },
-    },
-  },
-  withWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          workspace_id: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withContainerRegistryLoginServerUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_fhir_service+: {
-        [resourceLabel]+: {
-          container_registry_login_server_url: value,
         },
       },
     },
@@ -162,16 +147,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  authentication:: {
-    new(
-      audience,
-      authority,
-      smart_proxy_enabled=null
-    ):: std.prune(a={
-      audience: audience,
-      authority: authority,
-      smart_proxy_enabled: smart_proxy_enabled,
-    }),
+  withConfigurationExportStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          configuration_export_storage_account_name: value,
+        },
+      },
+    },
+  },
+  withContainerRegistryLoginServerUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          container_registry_login_server_url: value,
+        },
+      },
+    },
   },
   withCors(resourceLabel, value):: {
     resource+: {
@@ -191,21 +183,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  cors:: {
-    new(
-      credentials_allowed=null,
-      max_age_in_seconds=null,
-      allowed_headers,
-      allowed_methods,
-      allowed_origins
-    ):: std.prune(a={
-      credentials_allowed: credentials_allowed,
-      max_age_in_seconds: max_age_in_seconds,
-      allowed_headers: allowed_headers,
-      allowed_methods: allowed_methods,
-      allowed_origins: allowed_origins,
-    }),
-  },
   withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_fhir_service+: {
@@ -224,12 +201,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
+  withKind(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          kind: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
   },
   withOciArtifact(resourceLabel, value):: {
     resource+: {
@@ -249,16 +246,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  oci_artifact:: {
-    new(
-      image_name=null,
-      login_server,
-      digest=null
-    ):: std.prune(a={
-      image_name: image_name,
-      login_server: login_server,
-      digest: digest,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -278,17 +282,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_fhir_service+: {
+        [resourceLabel]+: {
+          workspace_id: value,
+        },
+      },
+    },
   },
 }

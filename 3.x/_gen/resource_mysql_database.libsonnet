@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     charset,
     collation,
     name,
+    resourceLabel,
     resource_group_name,
     server_name,
     timeouts=null
@@ -17,20 +17,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    charset,
     collation,
     name,
     resource_group_name,
     server_name,
-    charset,
     timeouts=null
   ):: std.prune(a={
+    charset: charset,
     collation: collation,
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
-    charset: charset,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withCharset(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_database+: {
+        [resourceLabel]+: {
+          charset: value,
+        },
+      },
+    },
+  },
+  withCollation(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_database+: {
+        [resourceLabel]+: {
+          collation: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_database+: {
@@ -58,24 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCharset(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_database+: {
-        [resourceLabel]+: {
-          charset: value,
-        },
-      },
-    },
-  },
-  withCollation(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_database+: {
-        [resourceLabel]+: {
-          collation: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_database+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

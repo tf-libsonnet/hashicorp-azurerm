@@ -1,18 +1,42 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  configuration:: {
+    new(
+      assignment_type=null,
+      content_hash=null,
+      content_uri=null,
+      parameter=null,
+      version=null
+    ):: std.prune(a={
+      assignment_type: assignment_type,
+      content_hash: content_hash,
+      content_uri: content_uri,
+      parameter: parameter,
+      version: version,
+    }),
+    parameter:: {
+      new(
+        name,
+        value
+      ):: std.prune(a={
+        name: name,
+        value: value,
+      }),
+    },
+  },
   new(
-    resourceLabel,
     location,
     name,
+    resourceLabel,
     virtual_machine_id,
     configuration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_policy_virtual_machine_configuration_assignment', label=resourceLabel, attrs=self.newAttrs(
+    configuration=configuration,
     location=location,
     name=name,
-    virtual_machine_id=virtual_machine_id,
-    configuration=configuration,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_machine_id=virtual_machine_id
   )),
   newAttrs(
     location,
@@ -21,38 +45,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     configuration=null,
     timeouts=null
   ):: std.prune(a={
+    configuration: configuration,
     location: location,
     name: name,
-    virtual_machine_id: virtual_machine_id,
-    configuration: configuration,
     timeouts: timeouts,
+    virtual_machine_id: virtual_machine_id,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_virtual_machine_configuration_assignment+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_virtual_machine_configuration_assignment+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_virtual_machine_configuration_assignment+: {
-        [resourceLabel]+: {
-          virtual_machine_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withConfiguration(resourceLabel, value):: {
     resource+: {
@@ -72,28 +82,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  configuration:: {
-    new(
-      assignment_type=null,
-      content_hash=null,
-      content_uri=null,
-      version=null,
-      parameter=null
-    ):: std.prune(a={
-      assignment_type: assignment_type,
-      content_hash: content_hash,
-      content_uri: content_uri,
-      version: version,
-      parameter: parameter,
-    }),
-    parameter:: {
-      new(
-        value,
-        name
-      ):: std.prune(a={
-        value: value,
-        name: name,
-      }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_virtual_machine_configuration_assignment+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_virtual_machine_configuration_assignment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -114,17 +118,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_virtual_machine_configuration_assignment+: {
+        [resourceLabel]+: {
+          virtual_machine_id: value,
+        },
+      },
+    },
   },
 }

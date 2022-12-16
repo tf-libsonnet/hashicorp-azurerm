@@ -1,51 +1,46 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    xml_link=null,
     api_management_id,
+    resourceLabel,
+    timeouts=null,
     xml_content=null,
-    timeouts=null
+    xml_link=null
   ):: tf.withResource(type='azurerm_api_management_policy', label=resourceLabel, attrs=self.newAttrs(
-    xml_link=xml_link,
     api_management_id=api_management_id,
+    timeouts=timeouts,
     xml_content=xml_content,
-    timeouts=timeouts
+    xml_link=xml_link
   )),
   newAttrs(
-    xml_content=null,
-    xml_link=null,
     api_management_id,
-    timeouts=null
+    timeouts=null,
+    xml_content=null,
+    xml_link=null
   ):: std.prune(a={
-    xml_content: xml_content,
-    xml_link: xml_link,
     api_management_id: api_management_id,
     timeouts: timeouts,
+    xml_content: xml_content,
+    xml_link: xml_link,
   }),
-  withXmlLink(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_policy+: {
-        [resourceLabel]+: {
-          xml_link: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withApiManagementId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_policy+: {
         [resourceLabel]+: {
           api_management_id: value,
-        },
-      },
-    },
-  },
-  withXmlContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_policy+: {
-        [resourceLabel]+: {
-          xml_content: value,
         },
       },
     },
@@ -68,17 +63,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withXmlContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_policy+: {
+        [resourceLabel]+: {
+          xml_content: value,
+        },
+      },
+    },
+  },
+  withXmlLink(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_policy+: {
+        [resourceLabel]+: {
+          xml_link: value,
+        },
+      },
+    },
   },
 }

@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     display_name_prefix: display_name_prefix,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withDisplayNameContains(dataSrcLabel, value):: {
     data+: {
       azurerm_subscriptions+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

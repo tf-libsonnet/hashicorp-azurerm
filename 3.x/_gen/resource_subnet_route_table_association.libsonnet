@@ -15,6 +15,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet_id: subnet_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withRouteTableId(resourceLabel, value):: {
     resource+: {
       azurerm_subnet_route_table_association+: {
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

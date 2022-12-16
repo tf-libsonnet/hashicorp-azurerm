@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     data_source_type,
+    resourceLabel,
     resource_group_name,
     storage_account_ids,
     workspace_resource_id,
@@ -11,8 +11,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     data_source_type=data_source_type,
     resource_group_name=resource_group_name,
     storage_account_ids=storage_account_ids,
-    workspace_resource_id=workspace_resource_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    workspace_resource_id=workspace_resource_id
   )),
   newAttrs(
     data_source_type,
@@ -24,9 +24,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     data_source_type: data_source_type,
     resource_group_name: resource_group_name,
     storage_account_ids: storage_account_ids,
-    workspace_resource_id: workspace_resource_id,
     timeouts: timeouts,
+    workspace_resource_id: workspace_resource_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDataSourceType(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_linked_storage_account+: {
@@ -54,15 +67,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWorkspaceResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_linked_storage_account+: {
-        [resourceLabel]+: {
-          workspace_resource_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_linked_storage_account+: {
@@ -81,17 +85,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withWorkspaceResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_linked_storage_account+: {
+        [resourceLabel]+: {
+          workspace_resource_id: value,
+        },
+      },
+    },
   },
 }

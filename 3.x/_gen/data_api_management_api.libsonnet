@@ -1,32 +1,39 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
-    resource_group_name,
     api_management_name,
+    dataSrcLabel,
     name,
+    resource_group_name,
     revision,
     timeouts=null
   ):: tf.withData(type='azurerm_api_management_api', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     api_management_name=api_management_name,
     name=name,
+    resource_group_name=resource_group_name,
     revision=revision,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     api_management_name,
-    revision,
+    name,
     resource_group_name,
+    revision,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     api_management_name: api_management_name,
-    revision: revision,
+    name: name,
     resource_group_name: resource_group_name,
+    revision: revision,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withApiManagementName(dataSrcLabel, value):: {
     data+: {
       azurerm_api_management_api+: {
@@ -45,20 +52,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRevision(dataSrcLabel, value):: {
-    data+: {
-      azurerm_api_management_api+: {
-        [dataSrcLabel]+: {
-          revision: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_api_management_api+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRevision(dataSrcLabel, value):: {
+    data+: {
+      azurerm_api_management_api+: {
+        [dataSrcLabel]+: {
+          revision: value,
         },
       },
     },
@@ -80,12 +87,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

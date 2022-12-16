@@ -1,40 +1,71 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    servicebus_rule_id=null,
-    storage_account_id=null,
     categories,
     locations,
+    name,
+    resourceLabel,
     retention_policy=null,
+    servicebus_rule_id=null,
+    storage_account_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_log_profile', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    servicebus_rule_id=servicebus_rule_id,
-    storage_account_id=storage_account_id,
     categories=categories,
     locations=locations,
+    name=name,
     retention_policy=retention_policy,
+    servicebus_rule_id=servicebus_rule_id,
+    storage_account_id=storage_account_id,
     timeouts=timeouts
   )),
   newAttrs(
-    servicebus_rule_id=null,
-    storage_account_id=null,
     categories,
     locations,
     name,
     retention_policy=null,
+    servicebus_rule_id=null,
+    storage_account_id=null,
     timeouts=null
   ):: std.prune(a={
-    servicebus_rule_id: servicebus_rule_id,
-    storage_account_id: storage_account_id,
     categories: categories,
     locations: locations,
     name: name,
     retention_policy: retention_policy,
+    servicebus_rule_id: servicebus_rule_id,
+    storage_account_id: storage_account_id,
     timeouts: timeouts,
   }),
+  retention_policy:: {
+    new(
+      enabled,
+      days=null
+    ):: std.prune(a={
+      days: days,
+      enabled: enabled,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withCategories(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_log_profile+: {
+        [resourceLabel]+: {
+          categories: value,
+        },
+      },
+    },
+  },
   withLocations(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_log_profile+: {
@@ -49,33 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_monitor_log_profile+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withServicebusRuleId(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_log_profile+: {
-        [resourceLabel]+: {
-          servicebus_rule_id: value,
-        },
-      },
-    },
-  },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_log_profile+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withCategories(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_log_profile+: {
-        [resourceLabel]+: {
-          categories: value,
         },
       },
     },
@@ -98,14 +102,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  retention_policy:: {
-    new(
-      days=null,
-      enabled
-    ):: std.prune(a={
-      days: days,
-      enabled: enabled,
-    }),
+  withServicebusRuleId(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_log_profile+: {
+        [resourceLabel]+: {
+          servicebus_rule_id: value,
+        },
+      },
+    },
+  },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_log_profile+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -124,18 +137,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

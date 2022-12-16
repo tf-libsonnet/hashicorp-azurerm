@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     storage_sync_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_sync_group', label=resourceLabel, attrs=self.newAttrs(name=name, storage_sync_id=storage_sync_id, timeouts=timeouts)),
@@ -15,20 +15,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_sync_id: storage_sync_id,
     timeouts: timeouts,
   }),
-  withStorageSyncId(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_sync_group+: {
-        [resourceLabel]+: {
-          storage_sync_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_storage_sync_group+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withStorageSyncId(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_sync_group+: {
+        [resourceLabel]+: {
+          storage_sync_id: value,
         },
       },
     },
@@ -50,16 +61,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      create: create,
-      delete: delete,
-    }),
   },
 }

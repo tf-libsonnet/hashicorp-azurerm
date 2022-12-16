@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     backup_policy_id,
+    recovery_vault_name,
+    resourceLabel,
+    resource_group_name,
     exclude_disk_luns=null,
     include_disk_luns=null,
-    recovery_vault_name,
-    resource_group_name,
     source_vm_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_backup_protected_vm', label=resourceLabel, attrs=self.newAttrs(
@@ -19,39 +19,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    source_vm_id=null,
     backup_policy_id,
-    exclude_disk_luns=null,
-    include_disk_luns=null,
     recovery_vault_name,
     resource_group_name,
+    exclude_disk_luns=null,
+    include_disk_luns=null,
+    source_vm_id=null,
     timeouts=null
   ):: std.prune(a={
-    source_vm_id: source_vm_id,
     backup_policy_id: backup_policy_id,
     exclude_disk_luns: exclude_disk_luns,
     include_disk_luns: include_disk_luns,
     recovery_vault_name: recovery_vault_name,
     resource_group_name: resource_group_name,
+    source_vm_id: source_vm_id,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_protected_vm+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSourceVmId(resourceLabel, value):: {
-    resource+: {
-      azurerm_backup_protected_vm+: {
-        [resourceLabel]+: {
-          source_vm_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBackupPolicyId(resourceLabel, value):: {
     resource+: {
@@ -89,6 +84,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_protected_vm+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSourceVmId(resourceLabel, value):: {
+    resource+: {
+      azurerm_backup_protected_vm+: {
+        [resourceLabel]+: {
+          source_vm_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_backup_protected_vm+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

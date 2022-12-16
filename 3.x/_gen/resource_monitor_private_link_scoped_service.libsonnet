@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     linked_resource_id,
     name,
+    resourceLabel,
     resource_group_name,
     scope_name,
     timeouts=null
@@ -15,18 +15,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    scope_name,
     linked_resource_id,
     name,
+    resource_group_name,
+    scope_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    scope_name: scope_name,
     linked_resource_id: linked_resource_id,
     name: name,
+    resource_group_name: resource_group_name,
+    scope_name: scope_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLinkedResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_private_link_scoped_service+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

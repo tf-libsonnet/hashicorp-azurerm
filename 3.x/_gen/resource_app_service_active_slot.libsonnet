@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     app_service_name,
     app_service_slot_name,
+    resourceLabel,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_active_slot', label=resourceLabel, attrs=self.newAttrs(
@@ -13,16 +13,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    app_service_name,
     app_service_slot_name,
     resource_group_name,
-    app_service_name,
     timeouts=null
   ):: std.prune(a={
+    app_service_name: app_service_name,
     app_service_slot_name: app_service_slot_name,
     resource_group_name: resource_group_name,
-    app_service_name: app_service_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAppServiceName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_active_slot+: {
@@ -67,18 +80,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

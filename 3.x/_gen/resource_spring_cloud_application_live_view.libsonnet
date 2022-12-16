@@ -1,20 +1,31 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     spring_cloud_service_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_application_live_view', label=resourceLabel, attrs=self.newAttrs(name=name, spring_cloud_service_id=spring_cloud_service_id, timeouts=timeouts)),
   newAttrs(
-    spring_cloud_service_id,
     name,
+    spring_cloud_service_id,
     timeouts=null
   ):: std.prune(a={
-    spring_cloud_service_id: spring_cloud_service_id,
     name: name,
+    spring_cloud_service_id: spring_cloud_service_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_application_live_view+: {
@@ -50,16 +61,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
 }

@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     active,
     customer_managed_key_name,
-    customer_managed_key_versionless_id=null,
+    resourceLabel,
     synapse_workspace_id,
+    customer_managed_key_versionless_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_workspace_key', label=resourceLabel, attrs=self.newAttrs(
     active=active,
@@ -15,26 +15,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    customer_managed_key_versionless_id=null,
-    synapse_workspace_id,
     active,
     customer_managed_key_name,
+    synapse_workspace_id,
+    customer_managed_key_versionless_id=null,
     timeouts=null
   ):: std.prune(a={
-    customer_managed_key_versionless_id: customer_managed_key_versionless_id,
-    synapse_workspace_id: synapse_workspace_id,
     active: active,
     customer_managed_key_name: customer_managed_key_name,
+    customer_managed_key_versionless_id: customer_managed_key_versionless_id,
+    synapse_workspace_id: synapse_workspace_id,
     timeouts: timeouts,
   }),
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_workspace_key+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withActive(resourceLabel, value):: {
     resource+: {
@@ -63,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_workspace_key+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_workspace_key+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,22 +1,22 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    location,
-    name,
-    snapshot_resource_group_name,
-    vault_id,
     backup_policy_id,
     disk_id,
+    location,
+    name,
+    resourceLabel,
+    snapshot_resource_group_name,
+    vault_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_instance_disk', label=resourceLabel, attrs=self.newAttrs(
+    backup_policy_id=backup_policy_id,
+    disk_id=disk_id,
     location=location,
     name=name,
     snapshot_resource_group_name=snapshot_resource_group_name,
-    vault_id=vault_id,
-    backup_policy_id=backup_policy_id,
-    disk_id=disk_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    vault_id=vault_id
   )),
   newAttrs(
     backup_policy_id,
@@ -32,17 +32,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location: location,
     name: name,
     snapshot_resource_group_name: snapshot_resource_group_name,
-    vault_id: vault_id,
     timeouts: timeouts,
+    vault_id: vault_id,
   }),
-  withVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_disk+: {
-        [resourceLabel]+: {
-          vault_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withBackupPolicyId(resourceLabel, value):: {
     resource+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_disk+: {
+        [resourceLabel]+: {
+          vault_id: value,
+        },
+      },
+    },
   },
 }

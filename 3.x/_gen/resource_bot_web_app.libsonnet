@@ -1,100 +1,86 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    sku,
-    name,
-    luis_app_ids=null,
-    endpoint=null,
-    microsoft_app_id,
-    tags=null,
-    developer_app_insights_application_id=null,
     location,
-    luis_key=null,
+    microsoft_app_id,
+    name,
+    resourceLabel,
+    resource_group_name,
+    sku,
     developer_app_insights_api_key=null,
+    developer_app_insights_application_id=null,
     developer_app_insights_key=null,
     display_name=null,
-    resource_group_name,
+    endpoint=null,
+    luis_app_ids=null,
+    luis_key=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_web_app', label=resourceLabel, attrs=self.newAttrs(
-    sku=sku,
-    name=name,
-    luis_app_ids=luis_app_ids,
-    endpoint=endpoint,
-    microsoft_app_id=microsoft_app_id,
-    tags=tags,
-    developer_app_insights_application_id=developer_app_insights_application_id,
-    location=location,
-    luis_key=luis_key,
     developer_app_insights_api_key=developer_app_insights_api_key,
+    developer_app_insights_application_id=developer_app_insights_application_id,
     developer_app_insights_key=developer_app_insights_key,
     display_name=display_name,
+    endpoint=endpoint,
+    location=location,
+    luis_app_ids=luis_app_ids,
+    luis_key=luis_key,
+    microsoft_app_id=microsoft_app_id,
+    name=name,
     resource_group_name=resource_group_name,
+    sku=sku,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
     location,
-    luis_key=null,
+    microsoft_app_id,
+    name,
     resource_group_name,
-    developer_app_insights_application_id=null,
     sku,
-    tags=null,
+    developer_app_insights_api_key=null,
+    developer_app_insights_application_id=null,
+    developer_app_insights_key=null,
     display_name=null,
     endpoint=null,
-    name,
-    developer_app_insights_api_key=null,
     luis_app_ids=null,
-    microsoft_app_id,
-    developer_app_insights_key=null,
+    luis_key=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    luis_key: luis_key,
-    resource_group_name: resource_group_name,
+    developer_app_insights_api_key: developer_app_insights_api_key,
     developer_app_insights_application_id: developer_app_insights_application_id,
-    sku: sku,
-    tags: tags,
+    developer_app_insights_key: developer_app_insights_key,
     display_name: display_name,
     endpoint: endpoint,
-    name: name,
-    developer_app_insights_api_key: developer_app_insights_api_key,
+    location: location,
     luis_app_ids: luis_app_ids,
+    luis_key: luis_key,
     microsoft_app_id: microsoft_app_id,
-    developer_app_insights_key: developer_app_insights_key,
+    name: name,
+    resource_group_name: resource_group_name,
+    sku: sku,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_web_app+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
-  withLuisAppIds(resourceLabel, value):: {
+  withDeveloperAppInsightsApiKey(resourceLabel, value):: {
     resource+: {
       azurerm_bot_web_app+: {
         [resourceLabel]+: {
-          luis_app_ids: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_web_app+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_web_app+: {
-        [resourceLabel]+: {
-          sku: value,
+          developer_app_insights_api_key: value,
         },
       },
     },
@@ -108,29 +94,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withDeveloperAppInsightsKey(resourceLabel, value):: {
     resource+: {
       azurerm_bot_web_app+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withLuisKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_web_app+: {
-        [resourceLabel]+: {
-          luis_key: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_web_app+: {
-        [resourceLabel]+: {
-          name: value,
+          developer_app_insights_key: value,
         },
       },
     },
@@ -153,6 +121,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_web_app+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withLuisAppIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_web_app+: {
+        [resourceLabel]+: {
+          luis_app_ids: value,
+        },
+      },
+    },
+  },
+  withLuisKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_web_app+: {
+        [resourceLabel]+: {
+          luis_key: value,
+        },
+      },
+    },
+  },
   withMicrosoftAppId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_web_app+: {
@@ -162,20 +157,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeveloperAppInsightsApiKey(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_web_app+: {
         [resourceLabel]+: {
-          developer_app_insights_api_key: value,
+          name: value,
         },
       },
     },
   },
-  withDeveloperAppInsightsKey(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_web_app+: {
         [resourceLabel]+: {
-          developer_app_insights_key: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_web_app+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_web_app+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -197,18 +210,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

@@ -1,92 +1,91 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  github_action_configuration:: {
+    code_configuration:: {
+      new(
+        runtime_stack,
+        runtime_version
+      ):: std.prune(a={
+        runtime_stack: runtime_stack,
+        runtime_version: runtime_version,
+      }),
+    },
+    container_configuration:: {
+      new(
+        image_name,
+        registry_url,
+        registry_password=null,
+        registry_username=null
+      ):: std.prune(a={
+        image_name: image_name,
+        registry_password: registry_password,
+        registry_url: registry_url,
+        registry_username: registry_username,
+      }),
+    },
+    new(
+      code_configuration=null,
+      container_configuration=null,
+      generate_workflow_file=null
+    ):: std.prune(a={
+      code_configuration: code_configuration,
+      container_configuration: container_configuration,
+      generate_workflow_file: generate_workflow_file,
+    }),
+  },
   new(
-    resourceLabel,
-    repo_url=null,
-    use_local_git=null,
-    use_mercurial=null,
     app_id,
-    rollback_enabled=null,
-    use_manual_integration=null,
+    resourceLabel,
     branch=null,
     github_action_configuration=null,
-    timeouts=null
+    repo_url=null,
+    rollback_enabled=null,
+    timeouts=null,
+    use_local_git=null,
+    use_manual_integration=null,
+    use_mercurial=null
   ):: tf.withResource(type='azurerm_app_service_source_control', label=resourceLabel, attrs=self.newAttrs(
-    repo_url=repo_url,
-    use_local_git=use_local_git,
-    use_mercurial=use_mercurial,
     app_id=app_id,
-    rollback_enabled=rollback_enabled,
-    use_manual_integration=use_manual_integration,
     branch=branch,
     github_action_configuration=github_action_configuration,
-    timeouts=timeouts
+    repo_url=repo_url,
+    rollback_enabled=rollback_enabled,
+    timeouts=timeouts,
+    use_local_git=use_local_git,
+    use_manual_integration=use_manual_integration,
+    use_mercurial=use_mercurial
   )),
   newAttrs(
-    rollback_enabled=null,
-    use_manual_integration=null,
     app_id,
-    use_local_git=null,
-    use_mercurial=null,
     branch=null,
-    repo_url=null,
     github_action_configuration=null,
-    timeouts=null
+    repo_url=null,
+    rollback_enabled=null,
+    timeouts=null,
+    use_local_git=null,
+    use_manual_integration=null,
+    use_mercurial=null
   ):: std.prune(a={
-    rollback_enabled: rollback_enabled,
-    use_manual_integration: use_manual_integration,
     app_id: app_id,
-    use_local_git: use_local_git,
-    use_mercurial: use_mercurial,
     branch: branch,
-    repo_url: repo_url,
     github_action_configuration: github_action_configuration,
+    repo_url: repo_url,
+    rollback_enabled: rollback_enabled,
     timeouts: timeouts,
+    use_local_git: use_local_git,
+    use_manual_integration: use_manual_integration,
+    use_mercurial: use_mercurial,
   }),
-  withBranch(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control+: {
-        [resourceLabel]+: {
-          branch: value,
-        },
-      },
-    },
-  },
-  withRepoUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control+: {
-        [resourceLabel]+: {
-          repo_url: value,
-        },
-      },
-    },
-  },
-  withUseLocalGit(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control+: {
-        [resourceLabel]+: {
-          use_local_git: value,
-        },
-      },
-    },
-  },
-  withUseMercurial(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control+: {
-        [resourceLabel]+: {
-          use_mercurial: value,
-        },
-      },
-    },
-  },
-  withUseManualIntegration(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control+: {
-        [resourceLabel]+: {
-          use_manual_integration: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withAppId(resourceLabel, value):: {
     resource+: {
@@ -97,11 +96,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRollbackEnabled(resourceLabel, value):: {
+  withBranch(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_source_control+: {
         [resourceLabel]+: {
-          rollback_enabled: value,
+          branch: value,
         },
       },
     },
@@ -124,37 +123,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  github_action_configuration:: {
-    new(
-      generate_workflow_file=null,
-      code_configuration=null,
-      container_configuration=null
-    ):: std.prune(a={
-      generate_workflow_file: generate_workflow_file,
-      code_configuration: code_configuration,
-      container_configuration: container_configuration,
-    }),
-    container_configuration:: {
-      new(
-        registry_username=null,
-        image_name,
-        registry_password=null,
-        registry_url
-      ):: std.prune(a={
-        registry_username: registry_username,
-        image_name: image_name,
-        registry_password: registry_password,
-        registry_url: registry_url,
-      }),
+  withRepoUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control+: {
+        [resourceLabel]+: {
+          repo_url: value,
+        },
+      },
     },
-    code_configuration:: {
-      new(
-        runtime_stack,
-        runtime_version
-      ):: std.prune(a={
-        runtime_stack: runtime_stack,
-        runtime_version: runtime_version,
-      }),
+  },
+  withRollbackEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control+: {
+        [resourceLabel]+: {
+          rollback_enabled: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -175,15 +159,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
+  withUseLocalGit(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control+: {
+        [resourceLabel]+: {
+          use_local_git: value,
+        },
+      },
+    },
+  },
+  withUseManualIntegration(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control+: {
+        [resourceLabel]+: {
+          use_manual_integration: value,
+        },
+      },
+    },
+  },
+  withUseMercurial(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control+: {
+        [resourceLabel]+: {
+          use_mercurial: value,
+        },
+      },
+    },
   },
 }

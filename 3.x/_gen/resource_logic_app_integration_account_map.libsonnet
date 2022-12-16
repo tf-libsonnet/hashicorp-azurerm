@@ -1,13 +1,13 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     content,
     integration_account_name,
     map_type,
-    metadata=null,
     name,
+    resourceLabel,
     resource_group_name,
+    metadata=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_map', label=resourceLabel, attrs=self.newAttrs(
     content=content,
@@ -19,22 +19,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    content,
     integration_account_name,
     map_type,
-    metadata=null,
     name,
     resource_group_name,
-    content,
+    metadata=null,
     timeouts=null
   ):: std.prune(a={
+    content: content,
     integration_account_name: integration_account_name,
     map_type: map_type,
     metadata: metadata,
     name: name,
     resource_group_name: resource_group_name,
-    content: content,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_map+: {
+        [resourceLabel]+: {
+          content: value,
+        },
+      },
+    },
+  },
   withIntegrationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_map+: {
@@ -80,15 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_map+: {
-        [resourceLabel]+: {
-          content: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_map+: {
@@ -106,18 +119,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

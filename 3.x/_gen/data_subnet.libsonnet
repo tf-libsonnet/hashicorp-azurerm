@@ -2,15 +2,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     resource_group_name,
     virtual_network_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_subnet', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    virtual_network_name=virtual_network_name,
     name=name,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    timeouts=timeouts,
+    virtual_network_name=virtual_network_name
   )),
   newAttrs(
     name,
@@ -20,23 +20,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   ):: std.prune(a={
     name: name,
     resource_group_name: resource_group_name,
-    virtual_network_name: virtual_network_name,
     timeouts: timeouts,
+    virtual_network_name: virtual_network_name,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_subnet+: {
         [dataSrcLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_subnet+: {
-        [dataSrcLabel]+: {
-          virtual_network_name: value,
         },
       },
     },
@@ -68,11 +66,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withVirtualNetworkName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_subnet+: {
+        [dataSrcLabel]+: {
+          virtual_network_name: value,
+        },
+      },
+    },
   },
 }

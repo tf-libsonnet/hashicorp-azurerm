@@ -1,83 +1,85 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  ddos_protection_plan:: {
+    new(
+      enable
+    ):: std.prune(a={
+      enable: enable,
+    }),
+  },
   new(
+    address_space,
+    location,
+    name,
     resourceLabel,
     resource_group_name,
-    subnet=null,
-    edge_zone=null,
-    dns_servers=null,
-    flow_timeout_in_minutes=null,
-    location,
-    address_space,
-    tags=null,
     bgp_community=null,
-    name,
     ddos_protection_plan=null,
+    dns_servers=null,
+    edge_zone=null,
+    flow_timeout_in_minutes=null,
+    subnet=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_network', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    subnet=subnet,
-    edge_zone=edge_zone,
+    address_space=address_space,
+    bgp_community=bgp_community,
+    ddos_protection_plan=ddos_protection_plan,
     dns_servers=dns_servers,
+    edge_zone=edge_zone,
     flow_timeout_in_minutes=flow_timeout_in_minutes,
     location=location,
-    address_space=address_space,
-    tags=tags,
-    bgp_community=bgp_community,
     name=name,
-    ddos_protection_plan=ddos_protection_plan,
+    resource_group_name=resource_group_name,
+    subnet=subnet,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    dns_servers=null,
     address_space,
-    flow_timeout_in_minutes=null,
-    name,
-    bgp_community=null,
-    tags=null,
-    edge_zone=null,
     location,
+    name,
     resource_group_name,
+    bgp_community=null,
+    ddos_protection_plan=null,
+    dns_servers=null,
+    edge_zone=null,
+    flow_timeout_in_minutes=null,
     subnet=null,
-    timeouts=null,
-    ddos_protection_plan=null
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    dns_servers: dns_servers,
     address_space: address_space,
-    flow_timeout_in_minutes: flow_timeout_in_minutes,
-    name: name,
     bgp_community: bgp_community,
-    tags: tags,
+    ddos_protection_plan: ddos_protection_plan,
+    dns_servers: dns_servers,
     edge_zone: edge_zone,
+    flow_timeout_in_minutes: flow_timeout_in_minutes,
     location: location,
+    name: name,
     resource_group_name: resource_group_name,
     subnet: subnet,
+    tags: tags,
     timeouts: timeouts,
-    ddos_protection_plan: ddos_protection_plan,
   }),
-  withSubnet(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network+: {
-        [resourceLabel]+: {
-          subnet: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAddressSpace(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
           address_space: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -91,29 +93,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDdosProtectionPlan(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          name: value,
+          ddos_protection_plan: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withDdosProtectionPlanMixin(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network+: {
-        [resourceLabel]+: {
-          location: value,
+          ddos_protection_plan+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -145,30 +138,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDdosProtectionPlan(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          ddos_protection_plan: value,
+          location: value,
         },
       },
     },
   },
-  withDdosProtectionPlanMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          ddos_protection_plan+: if std.isArray(v=value) then value else [value],
+          name: value,
         },
       },
     },
   },
-  ddos_protection_plan:: {
-    new(
-      enable
-    ):: std.prune(a={
-      enable: enable,
-    }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSubnet(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network+: {
+        [resourceLabel]+: {
+          subnet: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -187,18 +200,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,36 +1,49 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    location,
+    name,
     resourceLabel,
     resource_group_name,
     sku,
     tags=null,
-    location,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_profile', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
+    name=name,
     resource_group_name=resource_group_name,
     sku=sku,
     tags=tags,
-    location=location,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
     name,
     resource_group_name,
     sku,
     tags=null,
-    location,
     timeouts=null
   ):: std.prune(a={
+    location: location,
     name: name,
     resource_group_name: resource_group_name,
     sku: sku,
     tags: tags,
-    location: location,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_profile+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

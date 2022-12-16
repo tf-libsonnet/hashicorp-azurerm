@@ -1,135 +1,103 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    local_authentication_disabled=null,
     application_type,
-    daily_data_cap_in_gb=null,
-    disable_ip_masking=null,
-    tags=null,
-    resource_group_name,
-    workspace_id=null,
-    internet_ingestion_enabled=null,
-    internet_query_enabled=null,
-    sampling_percentage=null,
-    force_customer_storage_for_profiler=null,
-    daily_data_cap_notifications_disabled=null,
     location,
     name,
+    resourceLabel,
+    resource_group_name,
+    daily_data_cap_in_gb=null,
+    daily_data_cap_notifications_disabled=null,
+    disable_ip_masking=null,
+    force_customer_storage_for_profiler=null,
+    internet_ingestion_enabled=null,
+    internet_query_enabled=null,
+    local_authentication_disabled=null,
     retention_in_days=null,
-    timeouts=null
+    sampling_percentage=null,
+    tags=null,
+    timeouts=null,
+    workspace_id=null
   ):: tf.withResource(type='azurerm_application_insights', label=resourceLabel, attrs=self.newAttrs(
-    local_authentication_disabled=local_authentication_disabled,
     application_type=application_type,
     daily_data_cap_in_gb=daily_data_cap_in_gb,
+    daily_data_cap_notifications_disabled=daily_data_cap_notifications_disabled,
     disable_ip_masking=disable_ip_masking,
-    tags=tags,
-    resource_group_name=resource_group_name,
-    workspace_id=workspace_id,
+    force_customer_storage_for_profiler=force_customer_storage_for_profiler,
     internet_ingestion_enabled=internet_ingestion_enabled,
     internet_query_enabled=internet_query_enabled,
-    sampling_percentage=sampling_percentage,
-    force_customer_storage_for_profiler=force_customer_storage_for_profiler,
-    daily_data_cap_notifications_disabled=daily_data_cap_notifications_disabled,
+    local_authentication_disabled=local_authentication_disabled,
     location=location,
     name=name,
+    resource_group_name=resource_group_name,
     retention_in_days=retention_in_days,
-    timeouts=timeouts
+    sampling_percentage=sampling_percentage,
+    tags=tags,
+    timeouts=timeouts,
+    workspace_id=workspace_id
   )),
   newAttrs(
+    application_type,
+    location,
     name,
+    resource_group_name,
+    daily_data_cap_in_gb=null,
+    daily_data_cap_notifications_disabled=null,
     disable_ip_masking=null,
     force_customer_storage_for_profiler=null,
-    daily_data_cap_notifications_disabled=null,
-    internet_query_enabled=null,
-    resource_group_name,
-    application_type,
-    daily_data_cap_in_gb=null,
     internet_ingestion_enabled=null,
-    location,
-    workspace_id=null,
-    retention_in_days=null,
+    internet_query_enabled=null,
     local_authentication_disabled=null,
-    tags=null,
+    retention_in_days=null,
     sampling_percentage=null,
-    timeouts=null
+    tags=null,
+    timeouts=null,
+    workspace_id=null
   ):: std.prune(a={
-    name: name,
-    disable_ip_masking: disable_ip_masking,
-    force_customer_storage_for_profiler: force_customer_storage_for_profiler,
-    daily_data_cap_notifications_disabled: daily_data_cap_notifications_disabled,
-    internet_query_enabled: internet_query_enabled,
-    resource_group_name: resource_group_name,
     application_type: application_type,
     daily_data_cap_in_gb: daily_data_cap_in_gb,
+    daily_data_cap_notifications_disabled: daily_data_cap_notifications_disabled,
+    disable_ip_masking: disable_ip_masking,
+    force_customer_storage_for_profiler: force_customer_storage_for_profiler,
     internet_ingestion_enabled: internet_ingestion_enabled,
-    location: location,
-    workspace_id: workspace_id,
-    retention_in_days: retention_in_days,
+    internet_query_enabled: internet_query_enabled,
     local_authentication_disabled: local_authentication_disabled,
-    tags: tags,
+    location: location,
+    name: name,
+    resource_group_name: resource_group_name,
+    retention_in_days: retention_in_days,
     sampling_percentage: sampling_percentage,
+    tags: tags,
     timeouts: timeouts,
+    workspace_id: workspace_id,
   }),
-  withDisableIpMasking(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withApplicationType(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          disable_ip_masking: value,
+          application_type: value,
         },
       },
     },
   },
-  withInternetQueryEnabled(resourceLabel, value):: {
+  withDailyDataCapInGb(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          internet_query_enabled: value,
-        },
-      },
-    },
-  },
-  withInternetIngestionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights+: {
-        [resourceLabel]+: {
-          internet_ingestion_enabled: value,
-        },
-      },
-    },
-  },
-  withRetentionInDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights+: {
-        [resourceLabel]+: {
-          retention_in_days: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withForceCustomerStorageForProfiler(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights+: {
-        [resourceLabel]+: {
-          force_customer_storage_for_profiler: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          daily_data_cap_in_gb: value,
         },
       },
     },
@@ -143,38 +111,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withDisableIpMasking(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          tags: value,
+          disable_ip_masking: value,
         },
       },
     },
   },
-  withWorkspaceId(resourceLabel, value):: {
+  withForceCustomerStorageForProfiler(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          workspace_id: value,
+          force_customer_storage_for_profiler: value,
         },
       },
     },
   },
-  withApplicationType(resourceLabel, value):: {
+  withInternetIngestionEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          application_type: value,
+          internet_ingestion_enabled: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withInternetQueryEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          name: value,
+          internet_query_enabled: value,
         },
       },
     },
@@ -188,6 +156,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRetentionInDays(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights+: {
+        [resourceLabel]+: {
+          retention_in_days: value,
+        },
+      },
+    },
+  },
   withSamplingPercentage(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
@@ -197,11 +201,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDailyDataCapInGb(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights+: {
         [resourceLabel]+: {
-          daily_data_cap_in_gb: value,
+          tags: value,
         },
       },
     },
@@ -224,17 +228,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights+: {
+        [resourceLabel]+: {
+          workspace_id: value,
+        },
+      },
+    },
   },
 }

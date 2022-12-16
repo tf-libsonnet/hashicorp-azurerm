@@ -1,15 +1,15 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    subscription_id=null,
     log_analytics_workspace_id,
+    name,
+    resourceLabel,
+    subscription_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_azure_security_center', label=resourceLabel, attrs=self.newAttrs(
+    log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     subscription_id=subscription_id,
-    log_analytics_workspace_id=log_analytics_workspace_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_id: subscription_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withLogAnalyticsWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_azure_security_center+: {
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      create: create,
-      delete: delete,
-    }),
   },
 }

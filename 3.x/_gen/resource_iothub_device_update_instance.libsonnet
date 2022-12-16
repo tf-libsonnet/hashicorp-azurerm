@@ -1,57 +1,59 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  diagnostic_storage_account:: {
+    new(
+      connection_string
+    ):: std.prune(a={
+      connection_string: connection_string,
+    }),
+  },
   new(
-    resourceLabel,
     device_update_account_id,
-    diagnostic_enabled=null,
     iothub_id,
     name,
+    resourceLabel,
+    diagnostic_enabled=null,
+    diagnostic_storage_account=null,
     tags=null,
-    timeouts=null,
-    diagnostic_storage_account=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_iothub_device_update_instance', label=resourceLabel, attrs=self.newAttrs(
     device_update_account_id=device_update_account_id,
     diagnostic_enabled=diagnostic_enabled,
+    diagnostic_storage_account=diagnostic_storage_account,
     iothub_id=iothub_id,
     name=name,
     tags=tags,
-    timeouts=timeouts,
-    diagnostic_storage_account=diagnostic_storage_account
+    timeouts=timeouts
   )),
   newAttrs(
+    device_update_account_id,
     iothub_id,
     name,
-    tags=null,
-    device_update_account_id,
     diagnostic_enabled=null,
-    timeouts=null,
-    diagnostic_storage_account=null
+    diagnostic_storage_account=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
+    device_update_account_id: device_update_account_id,
+    diagnostic_enabled: diagnostic_enabled,
+    diagnostic_storage_account: diagnostic_storage_account,
     iothub_id: iothub_id,
     name: name,
     tags: tags,
-    device_update_account_id: device_update_account_id,
-    diagnostic_enabled: diagnostic_enabled,
     timeouts: timeouts,
-    diagnostic_storage_account: diagnostic_storage_account,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_device_update_instance+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_device_update_instance+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDeviceUpdateAccountId(resourceLabel, value):: {
     resource+: {
@@ -67,15 +69,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_device_update_instance+: {
         [resourceLabel]+: {
           diagnostic_enabled: value,
-        },
-      },
-    },
-  },
-  withIothubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_device_update_instance+: {
-        [resourceLabel]+: {
-          iothub_id: value,
         },
       },
     },
@@ -98,12 +91,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  diagnostic_storage_account:: {
-    new(
-      connection_string
-    ):: std.prune(a={
-      connection_string: connection_string,
-    }),
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_device_update_instance+: {
+        [resourceLabel]+: {
+          iothub_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_device_update_instance+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_device_update_instance+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -122,18 +135,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

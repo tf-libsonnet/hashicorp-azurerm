@@ -1,48 +1,61 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    resource_group_name,
-    tags=null,
-    description=null,
     lab_name,
     name,
+    resourceLabel,
+    resource_group_name,
+    description=null,
     subnet=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dev_test_virtual_network', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
     description=description,
     lab_name=lab_name,
     name=name,
+    resource_group_name=resource_group_name,
     subnet=subnet,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
-    description=null,
     lab_name,
     name,
     resource_group_name,
-    timeouts=null,
-    subnet=null
+    description=null,
+    subnet=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    tags: tags,
     description: description,
     lab_name: lab_name,
     name: name,
     resource_group_name: resource_group_name,
-    timeouts: timeouts,
     subnet: subnet,
+    tags: tags,
+    timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_virtual_network+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  subnet:: {
+    new(
+      use_in_virtual_machine_creation=null,
+      use_public_ip_address=null
+    ):: std.prune(a={
+      use_in_virtual_machine_creation: use_in_virtual_machine_creation,
+      use_public_ip_address: use_public_ip_address,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDescription(resourceLabel, value):: {
     resource+: {
@@ -80,37 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_virtual_network+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_virtual_network+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withSubnet(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_virtual_network+: {
@@ -129,13 +111,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  subnet:: {
-    new(
-      use_in_virtual_machine_creation=null,
-      use_public_ip_address=null
-    ):: std.prune(a={
-      use_in_virtual_machine_creation: use_in_virtual_machine_creation,
-      use_public_ip_address: use_public_ip_address,
-    }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_virtual_network+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_virtual_network+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_virtual_network+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
   },
 }

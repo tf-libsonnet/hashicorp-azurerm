@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     filter_by_resource_groups: filter_by_resource_groups,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withFilterByCategory(dataSrcLabel, value):: {
     data+: {
       azurerm_advisor_recommendations+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

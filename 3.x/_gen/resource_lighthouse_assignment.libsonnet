@@ -1,28 +1,39 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    lighthouse_definition_id,
     resourceLabel,
     scope,
-    lighthouse_definition_id,
     name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_lighthouse_assignment', label=resourceLabel, attrs=self.newAttrs(
-    scope=scope,
     lighthouse_definition_id=lighthouse_definition_id,
     name=name,
+    scope=scope,
     timeouts=timeouts
   )),
   newAttrs(
-    scope,
     lighthouse_definition_id,
+    scope,
     name=null,
     timeouts=null
   ):: std.prune(a={
-    scope: scope,
     lighthouse_definition_id: lighthouse_definition_id,
     name: name,
+    scope: scope,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withLighthouseDefinitionId(resourceLabel, value):: {
     resource+: {
       azurerm_lighthouse_assignment+: {
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

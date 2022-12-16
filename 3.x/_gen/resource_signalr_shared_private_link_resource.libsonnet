@@ -1,27 +1,27 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    name,
     resourceLabel,
-    request_message=null,
     signalr_service_id,
     sub_resource_name,
     target_resource_id,
-    name,
+    request_message=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_signalr_shared_private_link_resource', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     request_message=request_message,
     signalr_service_id=signalr_service_id,
     sub_resource_name=sub_resource_name,
     target_resource_id=target_resource_id,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
     name,
-    request_message=null,
     signalr_service_id,
     sub_resource_name,
     target_resource_id,
+    request_message=null,
     timeouts=null
   ):: std.prune(a={
     name: name,
@@ -31,6 +31,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_resource_id: target_resource_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_signalr_shared_private_link_resource+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

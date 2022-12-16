@@ -1,61 +1,103 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    repository_url,
-    automatic_sync=null,
+    automation_account_id,
+    folder_path,
     name,
-    publish_runbook_enabled=null,
+    repository_url,
+    resourceLabel,
+    source_control_type,
+    automatic_sync=null,
     branch=null,
     description=null,
-    folder_path,
-    source_control_type,
-    automation_account_id,
-    timeouts=null,
-    security=null
+    publish_runbook_enabled=null,
+    security=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_automation_source_control', label=resourceLabel, attrs=self.newAttrs(
-    repository_url=repository_url,
     automatic_sync=automatic_sync,
-    name=name,
-    publish_runbook_enabled=publish_runbook_enabled,
+    automation_account_id=automation_account_id,
     branch=branch,
     description=description,
     folder_path=folder_path,
+    name=name,
+    publish_runbook_enabled=publish_runbook_enabled,
+    repository_url=repository_url,
+    security=security,
     source_control_type=source_control_type,
-    automation_account_id=automation_account_id,
-    timeouts=timeouts,
-    security=security
+    timeouts=timeouts
   )),
   newAttrs(
-    branch=null,
-    source_control_type,
+    automation_account_id,
     folder_path,
     name,
-    publish_runbook_enabled=null,
     repository_url,
+    source_control_type,
     automatic_sync=null,
-    automation_account_id,
+    branch=null,
     description=null,
+    publish_runbook_enabled=null,
     security=null,
     timeouts=null
   ):: std.prune(a={
+    automatic_sync: automatic_sync,
+    automation_account_id: automation_account_id,
     branch: branch,
-    source_control_type: source_control_type,
+    description: description,
     folder_path: folder_path,
     name: name,
     publish_runbook_enabled: publish_runbook_enabled,
     repository_url: repository_url,
-    automatic_sync: automatic_sync,
-    automation_account_id: automation_account_id,
-    description: description,
     security: security,
+    source_control_type: source_control_type,
     timeouts: timeouts,
   }),
+  security:: {
+    new(
+      token,
+      token_type,
+      refresh_token=null
+    ):: std.prune(a={
+      refresh_token: refresh_token,
+      token: token,
+      token_type: token_type,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAutomaticSync(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
         [resourceLabel]+: {
           automatic_sync: value,
+        },
+      },
+    },
+  },
+  withAutomationAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_source_control+: {
+        [resourceLabel]+: {
+          automation_account_id: value,
+        },
+      },
+    },
+  },
+  withBranch(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_source_control+: {
+        [resourceLabel]+: {
+          branch: value,
         },
       },
     },
@@ -78,33 +120,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRepositoryUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_source_control+: {
-        [resourceLabel]+: {
-          repository_url: value,
-        },
-      },
-    },
-  },
-  withSourceControlType(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_source_control+: {
-        [resourceLabel]+: {
-          source_control_type: value,
-        },
-      },
-    },
-  },
-  withAutomationAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_source_control+: {
-        [resourceLabel]+: {
-          automation_account_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
@@ -123,11 +138,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBranch(resourceLabel, value):: {
+  withRepositoryUrl(resourceLabel, value):: {
     resource+: {
       azurerm_automation_source_control+: {
         [resourceLabel]+: {
-          branch: value,
+          repository_url: value,
         },
       },
     },
@@ -150,16 +165,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  security:: {
-    new(
-      refresh_token=null,
-      token,
-      token_type
-    ):: std.prune(a={
-      refresh_token: refresh_token,
-      token: token,
-      token_type: token_type,
-    }),
+  withSourceControlType(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_source_control+: {
+        [resourceLabel]+: {
+          source_control_type: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -178,18 +191,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

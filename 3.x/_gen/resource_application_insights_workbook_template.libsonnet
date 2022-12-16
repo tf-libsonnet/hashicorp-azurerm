@@ -1,66 +1,103 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  galleries:: {
+    new(
+      category,
+      name,
+      order=null,
+      resource_type=null,
+      type=null
+    ):: std.prune(a={
+      category: category,
+      name: name,
+      order: order,
+      resource_type: resource_type,
+      type: type,
+    }),
+  },
   new(
+    location,
+    name,
     resourceLabel,
     resource_group_name,
-    tags=null,
-    author=null,
-    localized=null,
-    location,
-    priority=null,
     template_data,
-    name,
+    author=null,
     galleries=null,
+    localized=null,
+    priority=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_workbook_template', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
     author=author,
+    galleries=galleries,
     localized=localized,
     location=location,
-    priority=priority,
-    template_data=template_data,
     name=name,
-    galleries=galleries,
+    priority=priority,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    template_data=template_data,
     timeouts=timeouts
   )),
   newAttrs(
-    author=null,
-    template_data,
     location,
-    priority=null,
-    localized=null,
     name,
     resource_group_name,
+    template_data,
+    author=null,
+    galleries=null,
+    localized=null,
+    priority=null,
     tags=null,
-    timeouts=null,
-    galleries=null
+    timeouts=null
   ):: std.prune(a={
     author: author,
-    template_data: template_data,
-    location: location,
-    priority: priority,
+    galleries: galleries,
     localized: localized,
+    location: location,
     name: name,
+    priority: priority,
     resource_group_name: resource_group_name,
     tags: tags,
+    template_data: template_data,
     timeouts: timeouts,
-    galleries: galleries,
   }),
-  withTemplateData(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAuthor(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
-          template_data: value,
+          author: value,
         },
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withGalleries(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
-          location: value,
+          galleries: value,
+        },
+      },
+    },
+  },
+  withGalleriesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          galleries+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -74,11 +111,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPriority(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          priority: value,
         },
       },
     },
@@ -101,20 +156,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAuthor(resourceLabel, value):: {
+  withTemplateData(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
-          author: value,
-        },
-      },
-    },
-  },
-  withPriority(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          priority: value,
+          template_data: value,
         },
       },
     },
@@ -136,51 +182,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
-  },
-  withGalleries(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          galleries: value,
-        },
-      },
-    },
-  },
-  withGalleriesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          galleries+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  galleries:: {
-    new(
-      name,
-      order=null,
-      resource_type=null,
-      type=null,
-      category
-    ):: std.prune(a={
-      name: name,
-      order: order,
-      resource_type: resource_type,
-      type: type,
-      category: category,
-    }),
   },
 }

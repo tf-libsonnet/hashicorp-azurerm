@@ -1,17 +1,17 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    login,
     object_id,
+    resourceLabel,
     synapse_workspace_id,
     tenant_id,
-    login,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_workspace_sql_aad_admin', label=resourceLabel, attrs=self.newAttrs(
+    login=login,
     object_id=object_id,
     synapse_workspace_id=synapse_workspace_id,
     tenant_id=tenant_id,
-    login=login,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,6 +27,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tenant_id: tenant_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLogin(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_workspace_sql_aad_admin+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

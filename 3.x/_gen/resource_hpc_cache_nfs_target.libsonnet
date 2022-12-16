@@ -1,40 +1,66 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  namespace_junction:: {
+    new(
+      namespace_path,
+      nfs_export,
+      access_policy_name=null,
+      target_path=null
+    ):: std.prune(a={
+      access_policy_name: access_policy_name,
+      namespace_path: namespace_path,
+      nfs_export: nfs_export,
+      target_path: target_path,
+    }),
+  },
   new(
+    cache_name,
+    name,
     resourceLabel,
     resource_group_name,
     target_host_name,
     usage_model,
-    cache_name,
-    name,
     namespace_junction=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_hpc_cache_nfs_target', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    target_host_name=target_host_name,
-    usage_model=usage_model,
     cache_name=cache_name,
     name=name,
     namespace_junction=namespace_junction,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    target_host_name=target_host_name,
+    timeouts=timeouts,
+    usage_model=usage_model
   )),
   newAttrs(
+    cache_name,
+    name,
     resource_group_name,
     target_host_name,
     usage_model,
-    cache_name,
-    name,
-    timeouts=null,
-    namespace_junction=null
+    namespace_junction=null,
+    timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    target_host_name: target_host_name,
-    usage_model: usage_model,
     cache_name: cache_name,
     name: name,
-    timeouts: timeouts,
     namespace_junction: namespace_junction,
+    resource_group_name: resource_group_name,
+    target_host_name: target_host_name,
+    timeouts: timeouts,
+    usage_model: usage_model,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withCacheName(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_nfs_target+: {
@@ -49,6 +75,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_hpc_cache_nfs_target+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withNamespaceJunction(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_nfs_target+: {
+        [resourceLabel]+: {
+          namespace_junction: value,
+        },
+      },
+    },
+  },
+  withNamespaceJunctionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_nfs_target+: {
+        [resourceLabel]+: {
+          namespace_junction+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -71,15 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUsageModel(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_nfs_target+: {
-        [resourceLabel]+: {
-          usage_model: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_nfs_target+: {
@@ -98,48 +133,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withNamespaceJunction(resourceLabel, value):: {
+  withUsageModel(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_nfs_target+: {
         [resourceLabel]+: {
-          namespace_junction: value,
+          usage_model: value,
         },
       },
     },
-  },
-  withNamespaceJunctionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_nfs_target+: {
-        [resourceLabel]+: {
-          namespace_junction+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  namespace_junction:: {
-    new(
-      access_policy_name=null,
-      namespace_path,
-      nfs_export,
-      target_path=null
-    ):: std.prune(a={
-      access_policy_name: access_policy_name,
-      namespace_path: namespace_path,
-      nfs_export: nfs_export,
-      target_path: target_path,
-    }),
   },
 }

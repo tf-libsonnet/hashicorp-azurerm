@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     dedicated_host_id,
     location,
     maintenance_configuration_id,
+    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_maintenance_assignment_dedicated_host', label=resourceLabel, attrs=self.newAttrs(
     dedicated_host_id=dedicated_host_id,
@@ -13,16 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    maintenance_configuration_id,
     dedicated_host_id,
     location,
+    maintenance_configuration_id,
     timeouts=null
   ):: std.prune(a={
-    maintenance_configuration_id: maintenance_configuration_id,
     dedicated_host_id: dedicated_host_id,
     location: location,
+    maintenance_configuration_id: maintenance_configuration_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withDedicatedHostId(resourceLabel, value):: {
     resource+: {
       azurerm_maintenance_assignment_dedicated_host+: {
@@ -67,16 +78,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      create: create,
-      delete: delete,
-    }),
   },
 }

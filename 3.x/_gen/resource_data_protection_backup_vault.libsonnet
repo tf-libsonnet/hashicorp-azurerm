@@ -1,44 +1,91 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    tags=null,
     datastore_type,
     location,
     name,
     redundancy,
+    resourceLabel,
     resource_group_name,
-    timeouts=null,
-    identity=null
+    identity=null,
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_vault', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
     datastore_type=datastore_type,
+    identity=identity,
     location=location,
     name=name,
     redundancy=redundancy,
     resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    identity=identity
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
+    datastore_type,
+    location,
     name,
     redundancy,
     resource_group_name,
-    tags=null,
-    datastore_type,
-    location,
     identity=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    datastore_type: datastore_type,
+    identity: identity,
+    location: location,
     name: name,
     redundancy: redundancy,
     resource_group_name: resource_group_name,
     tags: tags,
-    datastore_type: datastore_type,
-    location: location,
-    identity: identity,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withDatastoreType(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_vault+: {
+        [resourceLabel]+: {
+          datastore_type: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_vault+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_vault+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_vault+: {
@@ -84,40 +131,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatastoreType(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_vault+: {
-        [resourceLabel]+: {
-          datastore_type: value,
-        },
-      },
-    },
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_vault+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_vault+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_vault+: {
@@ -135,18 +148,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

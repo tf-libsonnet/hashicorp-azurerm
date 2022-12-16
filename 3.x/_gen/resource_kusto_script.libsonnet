@@ -1,70 +1,56 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    url=null,
-    continue_on_errors_enabled=null,
     database_id,
-    force_an_update_when_value_changed=null,
     name,
+    resourceLabel,
+    continue_on_errors_enabled=null,
+    force_an_update_when_value_changed=null,
     sas_token=null,
     script_content=null,
-    timeouts=null
+    timeouts=null,
+    url=null
   ):: tf.withResource(type='azurerm_kusto_script', label=resourceLabel, attrs=self.newAttrs(
-    url=url,
     continue_on_errors_enabled=continue_on_errors_enabled,
     database_id=database_id,
     force_an_update_when_value_changed=force_an_update_when_value_changed,
     name=name,
     sas_token=sas_token,
     script_content=script_content,
-    timeouts=timeouts
+    timeouts=timeouts,
+    url=url
   )),
   newAttrs(
     database_id,
-    force_an_update_when_value_changed=null,
     name,
+    continue_on_errors_enabled=null,
+    force_an_update_when_value_changed=null,
     sas_token=null,
     script_content=null,
-    url=null,
-    continue_on_errors_enabled=null,
-    timeouts=null
+    timeouts=null,
+    url=null
   ):: std.prune(a={
+    continue_on_errors_enabled: continue_on_errors_enabled,
     database_id: database_id,
     force_an_update_when_value_changed: force_an_update_when_value_changed,
     name: name,
     sas_token: sas_token,
     script_content: script_content,
-    url: url,
-    continue_on_errors_enabled: continue_on_errors_enabled,
     timeouts: timeouts,
+    url: url,
   }),
-  withSasToken(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_script+: {
-        [resourceLabel]+: {
-          sas_token: value,
-        },
-      },
-    },
-  },
-  withScriptContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_script+: {
-        [resourceLabel]+: {
-          script_content: value,
-        },
-      },
-    },
-  },
-  withUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_script+: {
-        [resourceLabel]+: {
-          url: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withContinueOnErrorsEnabled(resourceLabel, value):: {
     resource+: {
@@ -102,6 +88,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSasToken(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_script+: {
+        [resourceLabel]+: {
+          sas_token: value,
+        },
+      },
+    },
+  },
+  withScriptContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_script+: {
+        [resourceLabel]+: {
+          script_content: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_script+: {
@@ -120,17 +124,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_script+: {
+        [resourceLabel]+: {
+          url: value,
+        },
+      },
+    },
   },
 }

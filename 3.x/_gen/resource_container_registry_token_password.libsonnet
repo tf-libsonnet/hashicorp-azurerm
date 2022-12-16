@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     container_registry_token_id,
+    resourceLabel,
     password1=null,
     password2=null,
     timeouts=null
@@ -23,6 +23,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     password2: password2,
     timeouts: timeouts,
   }),
+  password1:: {
+    new(
+      expiry=null
+    ):: std.prune(a={
+      expiry: expiry,
+    }),
+  },
+  password2:: {
+    new(
+      expiry=null
+    ):: std.prune(a={
+      expiry: expiry,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withContainerRegistryTokenId(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token_password+: {
@@ -50,13 +77,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  password1:: {
-    new(
-      expiry=null
-    ):: std.prune(a={
-      expiry: expiry,
-    }),
-  },
   withPassword2(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token_password+: {
@@ -75,13 +95,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  password2:: {
-    new(
-      expiry=null
-    ):: std.prune(a={
-      expiry: expiry,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token_password+: {
@@ -99,18 +112,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

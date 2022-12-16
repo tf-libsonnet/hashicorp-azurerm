@@ -1,15 +1,15 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    cluster_name,
     dataSrcLabel,
     name,
     resource_group_name,
-    cluster_name,
     timeouts=null
   ):: tf.withData(type='azurerm_kusto_database', label=dataSrcLabel, attrs=self.newAttrs(
+    cluster_name=cluster_name,
     name=name,
     resource_group_name=resource_group_name,
-    cluster_name=cluster_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withClusterName(dataSrcLabel, value):: {
     data+: {
       azurerm_kusto_database+: {
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

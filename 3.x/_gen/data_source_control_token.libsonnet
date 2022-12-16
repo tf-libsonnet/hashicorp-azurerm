@@ -4,22 +4,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     type,
     timeouts=null
-  ):: tf.withData(type='azurerm_source_control_token', label=dataSrcLabel, attrs=self.newAttrs(type=type, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_source_control_token', label=dataSrcLabel, attrs=self.newAttrs(timeouts=timeouts, type=type)),
   newAttrs(
     type,
     timeouts=null
   ):: std.prune(a={
-    type: type,
     timeouts: timeouts,
+    type: type,
   }),
-  withType(dataSrcLabel, value):: {
-    data+: {
-      azurerm_source_control_token+: {
-        [dataSrcLabel]+: {
-          type: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
@@ -39,11 +37,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
+  withType(dataSrcLabel, value):: {
+    data+: {
+      azurerm_source_control_token+: {
+        [dataSrcLabel]+: {
+          type: value,
+        },
+      },
+    },
   },
 }

@@ -1,44 +1,84 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    location,
+    name,
+    namespace_type,
     resourceLabel,
     resource_group_name,
     sku_name,
-    tags=null,
-    location,
-    namespace_type,
-    name,
     enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_notification_hub_namespace', label=resourceLabel, attrs=self.newAttrs(
+    enabled=enabled,
+    location=location,
+    name=name,
+    namespace_type=namespace_type,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    location=location,
-    namespace_type=namespace_type,
-    name=name,
-    enabled=enabled,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
+    name,
+    namespace_type,
     resource_group_name,
     sku_name,
     enabled=null,
-    name,
     tags=null,
-    location,
-    namespace_type,
     timeouts=null
   ):: std.prune(a={
+    enabled: enabled,
+    location: location,
+    name: name,
+    namespace_type: namespace_type,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
-    enabled: enabled,
-    name: name,
     tags: tags,
-    location: location,
-    namespace_type: namespace_type,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub_namespace+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub_namespace+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_notification_hub_namespace+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withNamespaceType(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub_namespace+: {
@@ -53,24 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_notification_hub_namespace+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub_namespace+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub_namespace+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -93,15 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_notification_hub_namespace+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_notification_hub_namespace+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

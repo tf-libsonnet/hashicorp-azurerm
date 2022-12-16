@@ -1,20 +1,33 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    app_service_id,
     resourceLabel,
     subnet_id,
-    app_service_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_virtual_network_swift_connection', label=resourceLabel, attrs=self.newAttrs(subnet_id=subnet_id, app_service_id=app_service_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_app_service_virtual_network_swift_connection', label=resourceLabel, attrs=self.newAttrs(app_service_id=app_service_id, subnet_id=subnet_id, timeouts=timeouts)),
   newAttrs(
-    subnet_id,
     app_service_id,
+    subnet_id,
     timeouts=null
   ):: std.prune(a={
-    subnet_id: subnet_id,
     app_service_id: app_service_id,
+    subnet_id: subnet_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAppServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_virtual_network_swift_connection+: {
@@ -50,18 +63,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

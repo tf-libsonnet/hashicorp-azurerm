@@ -1,28 +1,41 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  feature:: {
+    new(
+      name,
+      registered
+    ):: std.prune(a={
+      name: name,
+      registered: registered,
+    }),
+  },
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     feature=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_resource_provider_registration', label=resourceLabel, attrs=self.newAttrs(name=name, feature=feature, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_resource_provider_registration', label=resourceLabel, attrs=self.newAttrs(feature=feature, name=name, timeouts=timeouts)),
   newAttrs(
     name,
     feature=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     feature: feature,
+    name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_provider_registration+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withFeature(resourceLabel, value):: {
     resource+: {
@@ -42,14 +55,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  feature:: {
-    new(
-      name,
-      registered
-    ):: std.prune(a={
-      name: name,
-      registered: registered,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_provider_registration+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -68,18 +81,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     logz_sub_account_id,
+    resourceLabel,
     send_aad_logs=null,
     send_activity_logs=null,
     send_subscription_logs=null,
@@ -17,20 +17,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    logz_sub_account_id,
     send_aad_logs=null,
     send_activity_logs=null,
     send_subscription_logs=null,
-    logz_sub_account_id,
     tag_filter=null,
     timeouts=null
   ):: std.prune(a={
+    logz_sub_account_id: logz_sub_account_id,
     send_aad_logs: send_aad_logs,
     send_activity_logs: send_activity_logs,
     send_subscription_logs: send_subscription_logs,
-    logz_sub_account_id: logz_sub_account_id,
     tag_filter: tag_filter,
     timeouts: timeouts,
   }),
+  tag_filter:: {
+    new(
+      action,
+      name,
+      value=null
+    ):: std.prune(a={
+      action: action,
+      name: name,
+      value: value,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withLogzSubAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account_tag_rule+: {
@@ -85,17 +109,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  tag_filter:: {
-    new(
-      action,
-      name,
-      value=null
-    ):: std.prune(a={
-      action: action,
-      name: name,
-      value: value,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account_tag_rule+: {
@@ -113,18 +126,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

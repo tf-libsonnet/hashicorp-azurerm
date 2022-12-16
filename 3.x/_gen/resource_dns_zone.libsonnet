@@ -1,40 +1,67 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     resource_group_name,
-    tags=null,
     soa_record=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dns_zone', label=resourceLabel, attrs=self.newAttrs(
     name=name,
     resource_group_name=resource_group_name,
-    tags=tags,
     soa_record=soa_record,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
     name,
+    resource_group_name,
     soa_record=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
     name: name,
+    resource_group_name: resource_group_name,
     soa_record: soa_record,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_zone+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  soa_record:: {
+    new(
+      email,
+      host_name,
+      expire_time=null,
+      minimum_ttl=null,
+      refresh_time=null,
+      retry_time=null,
+      serial_number=null,
+      tags=null,
+      ttl=null
+    ):: std.prune(a={
+      email: email,
+      expire_time: expire_time,
+      host_name: host_name,
+      minimum_ttl: minimum_ttl,
+      refresh_time: refresh_time,
+      retry_time: retry_time,
+      serial_number: serial_number,
+      tags: tags,
+      ttl: ttl,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withName(resourceLabel, value):: {
     resource+: {
@@ -72,28 +99,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  soa_record:: {
-    new(
-      serial_number=null,
-      tags=null,
-      ttl=null,
-      host_name,
-      minimum_ttl=null,
-      email,
-      retry_time=null,
-      refresh_time=null,
-      expire_time=null
-    ):: std.prune(a={
-      serial_number: serial_number,
-      tags: tags,
-      ttl: ttl,
-      host_name: host_name,
-      minimum_ttl: minimum_ttl,
-      email: email,
-      retry_time: retry_time,
-      refresh_time: refresh_time,
-      expire_time: expire_time,
-    }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_zone+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -112,18 +125,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

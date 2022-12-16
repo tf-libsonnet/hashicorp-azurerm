@@ -1,44 +1,48 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    location,
     name,
+    resourceLabel,
     resource_group_name,
     sku_name,
     tags=null,
-    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_databox_edge_device', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
     name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
     location,
     name,
     resource_group_name,
     sku_name,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_databox_edge_device+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withLocation(resourceLabel, value):: {
     resource+: {
@@ -76,6 +80,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_databox_edge_device+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_databox_edge_device+: {
@@ -93,18 +106,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

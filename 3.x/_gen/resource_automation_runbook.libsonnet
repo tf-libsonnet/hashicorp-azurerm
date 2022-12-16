@@ -1,72 +1,153 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  draft:: {
+    content_link:: {
+      hash:: {
+        new(
+          algorithm,
+          value
+        ):: std.prune(a={
+          algorithm: algorithm,
+          value: value,
+        }),
+      },
+      new(
+        uri,
+        hash=null,
+        version=null
+      ):: std.prune(a={
+        hash: hash,
+        uri: uri,
+        version: version,
+      }),
+    },
+    new(
+      content_link=null,
+      edit_mode_enabled=null,
+      output_types=null,
+      parameters=null
+    ):: std.prune(a={
+      content_link: content_link,
+      edit_mode_enabled: edit_mode_enabled,
+      output_types: output_types,
+      parameters: parameters,
+    }),
+    parameters:: {
+      new(
+        key,
+        type,
+        default_value=null,
+        mandatory=null,
+        position=null
+      ):: std.prune(a={
+        default_value: default_value,
+        key: key,
+        mandatory: mandatory,
+        position: position,
+        type: type,
+      }),
+    },
+  },
   new(
-    resourceLabel,
+    automation_account_name,
+    location,
     log_progress,
     log_verbose,
-    resource_group_name,
-    tags=null,
-    automation_account_name,
-    content=null,
-    location,
-    log_activity_trace_level=null,
-    job_schedule=null,
     name,
+    resourceLabel,
+    resource_group_name,
     runbook_type,
+    content=null,
     description=null,
+    draft=null,
+    job_schedule=null,
+    log_activity_trace_level=null,
     publish_content_link=null,
-    timeouts=null,
-    draft=null
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_automation_runbook', label=resourceLabel, attrs=self.newAttrs(
-    log_progress=log_progress,
-    log_verbose=log_verbose,
-    resource_group_name=resource_group_name,
-    tags=tags,
     automation_account_name=automation_account_name,
     content=content,
+    description=description,
+    draft=draft,
+    job_schedule=job_schedule,
     location=location,
     log_activity_trace_level=log_activity_trace_level,
-    job_schedule=job_schedule,
+    log_progress=log_progress,
+    log_verbose=log_verbose,
     name=name,
-    runbook_type=runbook_type,
-    description=description,
     publish_content_link=publish_content_link,
-    timeouts=timeouts,
-    draft=draft
+    resource_group_name=resource_group_name,
+    runbook_type=runbook_type,
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
+    automation_account_name,
+    location,
     log_progress,
     log_verbose,
-    resource_group_name,
-    tags=null,
-    job_schedule=null,
-    runbook_type,
-    description=null,
     name,
-    automation_account_name,
+    resource_group_name,
+    runbook_type,
     content=null,
-    log_activity_trace_level=null,
-    location,
-    timeouts=null,
+    description=null,
     draft=null,
-    publish_content_link=null
+    job_schedule=null,
+    log_activity_trace_level=null,
+    publish_content_link=null,
+    tags=null,
+    timeouts=null
   ):: std.prune(a={
-    log_progress: log_progress,
-    log_verbose: log_verbose,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    job_schedule: job_schedule,
-    runbook_type: runbook_type,
-    description: description,
-    name: name,
     automation_account_name: automation_account_name,
     content: content,
-    log_activity_trace_level: log_activity_trace_level,
-    location: location,
-    timeouts: timeouts,
+    description: description,
     draft: draft,
+    job_schedule: job_schedule,
+    location: location,
+    log_activity_trace_level: log_activity_trace_level,
+    log_progress: log_progress,
+    log_verbose: log_verbose,
+    name: name,
     publish_content_link: publish_content_link,
+    resource_group_name: resource_group_name,
+    runbook_type: runbook_type,
+    tags: tags,
+    timeouts: timeouts,
   }),
+  publish_content_link:: {
+    hash:: {
+      new(
+        algorithm,
+        value
+      ):: std.prune(a={
+        algorithm: algorithm,
+        value: value,
+      }),
+    },
+    new(
+      uri,
+      hash=null,
+      version=null
+    ):: std.prune(a={
+      hash: hash,
+      uri: uri,
+      version: version,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_runbook+: {
@@ -85,92 +166,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withJobSchedule(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          job_schedule: value,
-        },
-      },
-    },
-  },
-  withLogVerbose(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          log_verbose: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_automation_runbook+: {
         [resourceLabel]+: {
           description: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withLogActivityTraceLevel(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          log_activity_trace_level: value,
-        },
-      },
-    },
-  },
-  withRunbookType(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          runbook_type: value,
-        },
-      },
-    },
-  },
-  withLogProgress(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          log_progress: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_runbook+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -193,52 +193,58 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  draft:: {
-    new(
-      output_types=null,
-      edit_mode_enabled=null,
-      content_link=null,
-      parameters=null
-    ):: std.prune(a={
-      output_types: output_types,
-      edit_mode_enabled: edit_mode_enabled,
-      content_link: content_link,
-      parameters: parameters,
-    }),
-    content_link:: {
-      new(
-        uri,
-        version=null,
-        hash=null
-      ):: std.prune(a={
-        uri: uri,
-        version: version,
-        hash: hash,
-      }),
-      hash:: {
-        new(
-          value,
-          algorithm
-        ):: std.prune(a={
-          value: value,
-          algorithm: algorithm,
-        }),
+  withJobSchedule(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          job_schedule: value,
+        },
       },
     },
-    parameters:: {
-      new(
-        default_value=null,
-        key,
-        mandatory=null,
-        position=null,
-        type
-      ):: std.prune(a={
-        default_value: default_value,
-        key: key,
-        mandatory: mandatory,
-        position: position,
-        type: type,
-      }),
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withLogActivityTraceLevel(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          log_activity_trace_level: value,
+        },
+      },
+    },
+  },
+  withLogProgress(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          log_progress: value,
+        },
+      },
+    },
+  },
+  withLogVerbose(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          log_verbose: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
     },
   },
   withPublishContentLink(resourceLabel, value):: {
@@ -259,24 +265,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  publish_content_link:: {
-    new(
-      version=null,
-      uri,
-      hash=null
-    ):: std.prune(a={
-      version: version,
-      uri: uri,
-      hash: hash,
-    }),
-    hash:: {
-      new(
-        algorithm,
-        value
-      ):: std.prune(a={
-        algorithm: algorithm,
-        value: value,
-      }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRunbookType(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          runbook_type: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_runbook+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -296,18 +309,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
 }

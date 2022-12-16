@@ -1,24 +1,24 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    name,
-    resource_group_name,
     automation_account_name,
+    name,
+    resourceLabel,
+    resource_group_name,
     credential_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_hybrid_runbook_worker_group', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
     automation_account_name=automation_account_name,
     credential_name=credential_name,
+    name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
     automation_account_name,
-    credential_name=null,
     name,
     resource_group_name,
+    credential_name=null,
     timeouts=null
   ):: std.prune(a={
     automation_account_name: automation_account_name,
@@ -27,6 +27,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_hybrid_runbook_worker_group+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

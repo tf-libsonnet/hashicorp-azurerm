@@ -1,28 +1,35 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    container_registry_name,
     dataSrcLabel,
     name,
     resource_group_name,
-    container_registry_name,
     timeouts=null
   ):: tf.withData(type='azurerm_container_registry_scope_map', label=dataSrcLabel, attrs=self.newAttrs(
+    container_registry_name=container_registry_name,
     name=name,
     resource_group_name=resource_group_name,
-    container_registry_name=container_registry_name,
     timeouts=timeouts
   )),
   newAttrs(
+    container_registry_name,
     name,
     resource_group_name,
-    container_registry_name,
     timeouts=null
   ):: std.prune(a={
+    container_registry_name: container_registry_name,
     name: name,
     resource_group_name: resource_group_name,
-    container_registry_name: container_registry_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withContainerRegistryName(dataSrcLabel, value):: {
     data+: {
       azurerm_container_registry_scope_map+: {
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

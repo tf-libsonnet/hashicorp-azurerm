@@ -1,28 +1,44 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    configuration_store_id,
     dataSrcLabel,
     key,
     label=null,
-    configuration_store_id,
     timeouts=null
   ):: tf.withData(type='azurerm_app_configuration_key', label=dataSrcLabel, attrs=self.newAttrs(
+    configuration_store_id=configuration_store_id,
     key=key,
     label=label,
-    configuration_store_id=configuration_store_id,
     timeouts=timeouts
   )),
   newAttrs(
+    configuration_store_id,
     key,
     label=null,
-    configuration_store_id,
     timeouts=null
   ):: std.prune(a={
+    configuration_store_id: configuration_store_id,
     key: key,
     label: label,
-    configuration_store_id: configuration_store_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  withConfigurationStoreId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_app_configuration_key+: {
+        [dataSrcLabel]+: {
+          configuration_store_id: value,
+        },
+      },
+    },
+  },
   withKey(dataSrcLabel, value):: {
     data+: {
       azurerm_app_configuration_key+: {
@@ -37,15 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_configuration_key+: {
         [dataSrcLabel]+: {
           label: value,
-        },
-      },
-    },
-  },
-  withConfigurationStoreId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_app_configuration_key+: {
-        [dataSrcLabel]+: {
-          configuration_store_id: value,
         },
       },
     },
@@ -67,12 +74,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

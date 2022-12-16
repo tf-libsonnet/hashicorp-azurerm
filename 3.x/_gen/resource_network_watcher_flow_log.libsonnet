@@ -1,92 +1,102 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    enabled,
+    name,
+    network_security_group_id,
+    network_watcher_name,
     resourceLabel,
     resource_group_name,
-    tags=null,
-    name,
-    network_watcher_name,
-    version=null,
-    enabled,
-    location=null,
-    network_security_group_id,
     storage_account_id,
+    location=null,
     retention_policy=null,
+    tags=null,
     timeouts=null,
-    traffic_analytics=null
+    traffic_analytics=null,
+    version=null
   ):: tf.withResource(type='azurerm_network_watcher_flow_log', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
-    name=name,
-    network_watcher_name=network_watcher_name,
-    version=version,
     enabled=enabled,
     location=location,
+    name=name,
     network_security_group_id=network_security_group_id,
-    storage_account_id=storage_account_id,
+    network_watcher_name=network_watcher_name,
+    resource_group_name=resource_group_name,
     retention_policy=retention_policy,
+    storage_account_id=storage_account_id,
+    tags=tags,
     timeouts=timeouts,
-    traffic_analytics=traffic_analytics
+    traffic_analytics=traffic_analytics,
+    version=version
   )),
   newAttrs(
     enabled,
-    network_security_group_id,
-    version=null,
-    network_watcher_name,
-    storage_account_id,
-    tags=null,
     name,
-    location=null,
+    network_security_group_id,
+    network_watcher_name,
     resource_group_name,
+    storage_account_id,
+    location=null,
     retention_policy=null,
+    tags=null,
     timeouts=null,
-    traffic_analytics=null
+    traffic_analytics=null,
+    version=null
   ):: std.prune(a={
     enabled: enabled,
-    network_security_group_id: network_security_group_id,
-    version: version,
-    network_watcher_name: network_watcher_name,
-    storage_account_id: storage_account_id,
-    tags: tags,
-    name: name,
     location: location,
+    name: name,
+    network_security_group_id: network_security_group_id,
+    network_watcher_name: network_watcher_name,
     resource_group_name: resource_group_name,
     retention_policy: retention_policy,
+    storage_account_id: storage_account_id,
+    tags: tags,
     timeouts: timeouts,
     traffic_analytics: traffic_analytics,
+    version: version,
   }),
-  withVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          version: value,
-        },
-      },
-    },
+  retention_policy:: {
+    new(
+      days,
+      enabled
+    ):: std.prune(a={
+      days: days,
+      enabled: enabled,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  traffic_analytics:: {
+    new(
+      enabled,
+      workspace_id,
+      workspace_region,
+      workspace_resource_id,
+      interval_in_minutes=null
+    ):: std.prune(a={
+      enabled: enabled,
+      interval_in_minutes: interval_in_minutes,
+      workspace_id: workspace_id,
+      workspace_region: workspace_region,
+      workspace_resource_id: workspace_resource_id,
+    }),
   },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
         [resourceLabel]+: {
           enabled: value,
-        },
-      },
-    },
-  },
-  withNetworkWatcherName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          network_watcher_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -100,24 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withNetworkSecurityGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          network_security_group_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
@@ -127,11 +119,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountId(resourceLabel, value):: {
+  withNetworkSecurityGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
         [resourceLabel]+: {
-          storage_account_id: value,
+          network_security_group_id: value,
+        },
+      },
+    },
+  },
+  withNetworkWatcherName(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          network_watcher_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -154,14 +164,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  retention_policy:: {
-    new(
-      days,
-      enabled
-    ):: std.prune(a={
-      days: days,
-      enabled: enabled,
-    }),
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -181,19 +200,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
   withTrafficAnalytics(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
@@ -212,19 +218,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  traffic_analytics:: {
-    new(
-      interval_in_minutes=null,
-      workspace_id,
-      workspace_region,
-      workspace_resource_id,
-      enabled
-    ):: std.prune(a={
-      interval_in_minutes: interval_in_minutes,
-      workspace_id: workspace_id,
-      workspace_region: workspace_region,
-      workspace_resource_id: workspace_resource_id,
-      enabled: enabled,
-    }),
+  withVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          version: value,
+        },
+      },
+    },
   },
 }

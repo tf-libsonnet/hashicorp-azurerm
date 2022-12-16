@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    account_id,
     dataSrcLabel,
     name,
-    account_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_data_share', label=dataSrcLabel, attrs=self.newAttrs(name=name, account_id=account_id, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_data_share', label=dataSrcLabel, attrs=self.newAttrs(account_id=account_id, name=name, timeouts=timeouts)),
   newAttrs(
     account_id,
     name,
@@ -15,6 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withAccountId(dataSrcLabel, value):: {
     data+: {
       azurerm_data_share+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

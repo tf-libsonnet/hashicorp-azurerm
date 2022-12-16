@@ -1,40 +1,62 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    api_management_name,
     api_name,
     operation_id,
+    resourceLabel,
     resource_group_name,
+    timeouts=null,
     xml_content=null,
-    xml_link=null,
-    api_management_name,
-    timeouts=null
+    xml_link=null
   ):: tf.withResource(type='azurerm_api_management_api_operation_policy', label=resourceLabel, attrs=self.newAttrs(
+    api_management_name=api_management_name,
     api_name=api_name,
     operation_id=operation_id,
     resource_group_name=resource_group_name,
+    timeouts=timeouts,
     xml_content=xml_content,
-    xml_link=xml_link,
-    api_management_name=api_management_name,
-    timeouts=timeouts
+    xml_link=xml_link
   )),
   newAttrs(
-    xml_link=null,
     api_management_name,
     api_name,
     operation_id,
     resource_group_name,
+    timeouts=null,
     xml_content=null,
-    timeouts=null
+    xml_link=null
   ):: std.prune(a={
-    xml_link: xml_link,
     api_management_name: api_management_name,
     api_name: api_name,
     operation_id: operation_id,
     resource_group_name: resource_group_name,
-    xml_content: xml_content,
     timeouts: timeouts,
+    xml_content: xml_content,
+    xml_link: xml_link,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_operation_policy+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
   withApiName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_operation_policy+: {
@@ -62,33 +84,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withXmlContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_operation_policy+: {
-        [resourceLabel]+: {
-          xml_content: value,
-        },
-      },
-    },
-  },
-  withXmlLink(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_operation_policy+: {
-        [resourceLabel]+: {
-          xml_link: value,
-        },
-      },
-    },
-  },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_operation_policy+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_operation_policy+: {
@@ -107,17 +102,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withXmlContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_operation_policy+: {
+        [resourceLabel]+: {
+          xml_content: value,
+        },
+      },
+    },
+  },
+  withXmlLink(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_operation_policy+: {
+        [resourceLabel]+: {
+          xml_link: value,
+        },
+      },
+    },
   },
 }

@@ -1,25 +1,34 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    description=null,
-    local_auth_enabled=null,
     location,
     machine_learning_workspace_id,
     name,
+    resourceLabel,
     synapse_spark_pool_id,
-    tags=null,
+    description=null,
     identity=null,
+    local_auth_enabled=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_machine_learning_synapse_spark', label=resourceLabel, attrs=self.newAttrs(
     description=description,
+    identity=identity,
     local_auth_enabled=local_auth_enabled,
     location=location,
     machine_learning_workspace_id=machine_learning_workspace_id,
     name=name,
     synapse_spark_pool_id=synapse_spark_pool_id,
     tags=tags,
-    identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,22 +36,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     machine_learning_workspace_id,
     name,
     synapse_spark_pool_id,
-    tags=null,
     description=null,
-    local_auth_enabled=null,
     identity=null,
+    local_auth_enabled=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
+    description: description,
+    identity: identity,
+    local_auth_enabled: local_auth_enabled,
     location: location,
     machine_learning_workspace_id: machine_learning_workspace_id,
     name: name,
     synapse_spark_pool_id: synapse_spark_pool_id,
     tags: tags,
-    description: description,
-    local_auth_enabled: local_auth_enabled,
-    identity: identity,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_synapse_spark+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_synapse_spark+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_synapse_spark+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_synapse_spark+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_synapse_spark+: {
@@ -88,51 +144,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_synapse_spark+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_synapse_spark+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_synapse_spark+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_synapse_spark+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_synapse_spark+: {
@@ -150,16 +161,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

@@ -7,14 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withData(type='azurerm_consumption_budget_resource_group', label=dataSrcLabel, attrs=self.newAttrs(name=name, resource_group_id=resource_group_id, timeouts=timeouts)),
   newAttrs(
-    resource_group_id,
     name,
+    resource_group_id,
     timeouts=null
   ):: std.prune(a={
-    resource_group_id: resource_group_id,
     name: name,
+    resource_group_id: resource_group_id,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_consumption_budget_resource_group+: {
@@ -50,12 +57,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

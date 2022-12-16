@@ -1,8 +1,17 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  input:: {
+    new(
+      type,
+      configuration_parameter=null
+    ):: std.prune(a={
+      configuration_parameter: configuration_parameter,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
     name,
+    resourceLabel,
     resource_group_name,
     script,
     stream_analytics_job_name,
@@ -10,12 +19,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     output=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_function_javascript_udf', label=resourceLabel, attrs=self.newAttrs(
+    input=input,
     name=name,
+    output=output,
     resource_group_name=resource_group_name,
     script=script,
     stream_analytics_job_name=stream_analytics_job_name,
-    input=input,
-    output=output,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,96 +32,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     script,
     stream_analytics_job_name,
-    timeouts=null,
     input=null,
-    output=null
+    output=null,
+    timeouts=null
   ):: std.prune(a={
+    input: input,
     name: name,
+    output: output,
     resource_group_name: resource_group_name,
     script: script,
     stream_analytics_job_name: stream_analytics_job_name,
     timeouts: timeouts,
-    input: input,
-    output: output,
   }),
-  withScript(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          script: value,
-        },
-      },
-    },
-  },
-  withStreamAnalyticsJobName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withOutput(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          output: value,
-        },
-      },
-    },
-  },
-  withOutputMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          output+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
   output:: {
     new(
       type
     ):: std.prune(a={
       type: type,
     }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
   },
   timeouts:: {
     new(
@@ -145,13 +82,76 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  input:: {
-    new(
-      configuration_parameter=null,
-      type
-    ):: std.prune(a={
-      configuration_parameter: configuration_parameter,
-      type: type,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withOutput(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          output: value,
+        },
+      },
+    },
+  },
+  withOutputMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          output+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withScript(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          script: value,
+        },
+      },
+    },
+  },
+  withStreamAnalyticsJobName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          stream_analytics_job_name: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
   },
 }

@@ -1,40 +1,53 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
+    backup_policy_id,
+    database_id,
     location,
     name,
+    resourceLabel,
     vault_id,
-    backup_policy_id,
     database_credential_key_vault_secret_id=null,
-    database_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_instance_postgresql', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    vault_id=vault_id,
     backup_policy_id=backup_policy_id,
     database_credential_key_vault_secret_id=database_credential_key_vault_secret_id,
     database_id=database_id,
-    timeouts=timeouts
+    location=location,
+    name=name,
+    timeouts=timeouts,
+    vault_id=vault_id
   )),
   newAttrs(
+    backup_policy_id,
     database_id,
     location,
     name,
     vault_id,
-    backup_policy_id,
     database_credential_key_vault_secret_id=null,
     timeouts=null
   ):: std.prune(a={
+    backup_policy_id: backup_policy_id,
+    database_credential_key_vault_secret_id: database_credential_key_vault_secret_id,
     database_id: database_id,
     location: location,
     name: name,
-    vault_id: vault_id,
-    backup_policy_id: backup_policy_id,
-    database_credential_key_vault_secret_id: database_credential_key_vault_secret_id,
     timeouts: timeouts,
+    vault_id: vault_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withBackupPolicyId(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_instance_postgresql+: {
@@ -80,15 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_postgresql+: {
-        [resourceLabel]+: {
-          vault_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_instance_postgresql+: {
@@ -107,17 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_postgresql+: {
+        [resourceLabel]+: {
+          vault_id: value,
+        },
+      },
+    },
   },
 }

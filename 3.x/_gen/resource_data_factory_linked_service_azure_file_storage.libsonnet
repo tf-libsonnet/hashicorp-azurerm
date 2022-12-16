@@ -1,73 +1,104 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  key_vault_password:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
+  },
   new(
-    resourceLabel,
+    connection_string,
+    data_factory_id,
     name,
+    resourceLabel,
+    additional_properties=null,
+    annotations=null,
+    description=null,
     file_share=null,
     host=null,
-    additional_properties=null,
-    connection_string,
     integration_runtime_name=null,
+    key_vault_password=null,
     parameters=null,
     password=null,
-    annotations=null,
-    data_factory_id,
-    description=null,
-    user_id=null,
-    key_vault_password=null,
-    timeouts=null
+    timeouts=null,
+    user_id=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_file_storage', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    file_share=file_share,
-    host=host,
     additional_properties=additional_properties,
-    connection_string=connection_string,
-    integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
-    password=password,
     annotations=annotations,
+    connection_string=connection_string,
     data_factory_id=data_factory_id,
     description=description,
-    user_id=user_id,
+    file_share=file_share,
+    host=host,
+    integration_runtime_name=integration_runtime_name,
     key_vault_password=key_vault_password,
-    timeouts=timeouts
+    name=name,
+    parameters=parameters,
+    password=password,
+    timeouts=timeouts,
+    user_id=user_id
   )),
   newAttrs(
     connection_string,
+    data_factory_id,
+    name,
+    additional_properties=null,
+    annotations=null,
+    description=null,
+    file_share=null,
+    host=null,
+    integration_runtime_name=null,
+    key_vault_password=null,
     parameters=null,
     password=null,
-    annotations=null,
-    file_share=null,
-    integration_runtime_name=null,
-    name,
-    user_id=null,
-    additional_properties=null,
-    data_factory_id,
-    description=null,
-    host=null,
-    key_vault_password=null,
-    timeouts=null
+    timeouts=null,
+    user_id=null
   ):: std.prune(a={
-    connection_string: connection_string,
-    parameters: parameters,
-    password: password,
-    annotations: annotations,
-    file_share: file_share,
-    integration_runtime_name: integration_runtime_name,
-    name: name,
-    user_id: user_id,
     additional_properties: additional_properties,
+    annotations: annotations,
+    connection_string: connection_string,
     data_factory_id: data_factory_id,
     description: description,
+    file_share: file_share,
     host: host,
+    integration_runtime_name: integration_runtime_name,
     key_vault_password: key_vault_password,
+    name: name,
+    parameters: parameters,
+    password: password,
     timeouts: timeouts,
+    user_id: user_id,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_file_storage+: {
         [resourceLabel]+: {
           additional_properties: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          annotations: value,
         },
       },
     },
@@ -99,6 +130,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withFileShare(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          file_share: value,
+        },
+      },
+    },
+  },
   withHost(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_file_storage+: {
@@ -113,60 +153,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_azure_file_storage+: {
         [resourceLabel]+: {
           integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withUserId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          user_id: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withFileShare(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          file_share: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_file_storage+: {
-        [resourceLabel]+: {
-          password: value,
         },
       },
     },
@@ -189,14 +175,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  key_vault_password:: {
-    new(
-      linked_service_name,
-      secret_name
-    ):: std.prune(a={
-      linked_service_name: linked_service_name,
-      secret_name: secret_name,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          password: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -216,17 +220,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withUserId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          user_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,84 +1,145 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  dns_config:: {
+    new(
+      relative_name,
+      ttl
+    ):: std.prune(a={
+      relative_name: relative_name,
+      ttl: ttl,
+    }),
+  },
+  monitor_config:: {
+    custom_header:: {
+      new(
+        name,
+        value
+      ):: std.prune(a={
+        name: name,
+        value: value,
+      }),
+    },
+    new(
+      port,
+      protocol,
+      custom_header=null,
+      expected_status_code_ranges=null,
+      interval_in_seconds=null,
+      path=null,
+      timeout_in_seconds=null,
+      tolerated_number_of_failures=null
+    ):: std.prune(a={
+      custom_header: custom_header,
+      expected_status_code_ranges: expected_status_code_ranges,
+      interval_in_seconds: interval_in_seconds,
+      path: path,
+      port: port,
+      protocol: protocol,
+      timeout_in_seconds: timeout_in_seconds,
+      tolerated_number_of_failures: tolerated_number_of_failures,
+    }),
+  },
   new(
+    name,
     resourceLabel,
     resource_group_name,
-    tags=null,
     traffic_routing_method,
-    name,
-    profile_status=null,
-    traffic_view_enabled=null,
+    dns_config=null,
     max_return=null,
     monitor_config=null,
+    profile_status=null,
+    tags=null,
     timeouts=null,
-    dns_config=null
+    traffic_view_enabled=null
   ):: tf.withResource(type='azurerm_traffic_manager_profile', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
-    traffic_routing_method=traffic_routing_method,
-    name=name,
-    profile_status=profile_status,
-    traffic_view_enabled=traffic_view_enabled,
+    dns_config=dns_config,
     max_return=max_return,
     monitor_config=monitor_config,
+    name=name,
+    profile_status=profile_status,
+    resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts,
-    dns_config=dns_config
+    traffic_routing_method=traffic_routing_method,
+    traffic_view_enabled=traffic_view_enabled
   )),
   newAttrs(
-    max_return=null,
-    resource_group_name,
-    tags=null,
-    profile_status=null,
     name,
+    resource_group_name,
     traffic_routing_method,
-    traffic_view_enabled=null,
     dns_config=null,
+    max_return=null,
     monitor_config=null,
-    timeouts=null
+    profile_status=null,
+    tags=null,
+    timeouts=null,
+    traffic_view_enabled=null
   ):: std.prune(a={
+    dns_config: dns_config,
     max_return: max_return,
+    monitor_config: monitor_config,
+    name: name,
+    profile_status: profile_status,
     resource_group_name: resource_group_name,
     tags: tags,
-    profile_status: profile_status,
-    name: name,
+    timeouts: timeouts,
     traffic_routing_method: traffic_routing_method,
     traffic_view_enabled: traffic_view_enabled,
-    dns_config: dns_config,
-    monitor_config: monitor_config,
-    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withDnsConfig(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_profile+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          dns_config: value,
         },
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withDnsConfigMixin(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_profile+: {
         [resourceLabel]+: {
-          tags: value,
+          dns_config+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  withTrafficRoutingMethod(resourceLabel, value):: {
+  withMaxReturn(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_profile+: {
         [resourceLabel]+: {
-          traffic_routing_method: value,
+          max_return: value,
         },
       },
     },
   },
-  withTrafficViewEnabled(resourceLabel, value):: {
+  withMonitorConfig(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_profile+: {
         [resourceLabel]+: {
-          traffic_view_enabled: value,
+          monitor_config: value,
+        },
+      },
+    },
+  },
+  withMonitorConfigMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_profile+: {
+        [resourceLabel]+: {
+          monitor_config+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -101,88 +162,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMaxReturn(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_profile+: {
         [resourceLabel]+: {
-          max_return: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withDnsConfig(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_profile+: {
         [resourceLabel]+: {
-          dns_config: value,
+          tags: value,
         },
       },
-    },
-  },
-  withDnsConfigMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_profile+: {
-        [resourceLabel]+: {
-          dns_config+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  dns_config:: {
-    new(
-      relative_name,
-      ttl
-    ):: std.prune(a={
-      relative_name: relative_name,
-      ttl: ttl,
-    }),
-  },
-  withMonitorConfig(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_profile+: {
-        [resourceLabel]+: {
-          monitor_config: value,
-        },
-      },
-    },
-  },
-  withMonitorConfigMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_profile+: {
-        [resourceLabel]+: {
-          monitor_config+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  monitor_config:: {
-    new(
-      protocol,
-      timeout_in_seconds=null,
-      tolerated_number_of_failures=null,
-      expected_status_code_ranges=null,
-      interval_in_seconds=null,
-      path=null,
-      port,
-      custom_header=null
-    ):: std.prune(a={
-      protocol: protocol,
-      timeout_in_seconds: timeout_in_seconds,
-      tolerated_number_of_failures: tolerated_number_of_failures,
-      expected_status_code_ranges: expected_status_code_ranges,
-      interval_in_seconds: interval_in_seconds,
-      path: path,
-      port: port,
-      custom_header: custom_header,
-    }),
-    custom_header:: {
-      new(
-        name,
-        value
-      ):: std.prune(a={
-        name: name,
-        value: value,
-      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -203,17 +198,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withTrafficRoutingMethod(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_profile+: {
+        [resourceLabel]+: {
+          traffic_routing_method: value,
+        },
+      },
+    },
+  },
+  withTrafficViewEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_profile+: {
+        [resourceLabel]+: {
+          traffic_view_enabled: value,
+        },
+      },
+    },
   },
 }

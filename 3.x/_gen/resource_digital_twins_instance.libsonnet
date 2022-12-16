@@ -1,36 +1,74 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    resource_group_name,
-    tags=null,
     location,
     name,
+    resourceLabel,
+    resource_group_name,
     identity=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_digital_twins_instance', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
+    identity=identity,
     location=location,
     name=name,
-    identity=identity,
+    resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
     location,
     name,
     resource_group_name,
+    identity=null,
     tags=null,
-    timeouts=null,
-    identity=null
+    timeouts=null
   ):: std.prune(a={
+    identity: identity,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     timeouts: timeouts,
-    identity: identity,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_digital_twins_instance+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_digital_twins_instance+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_digital_twins_instance+: {
@@ -67,31 +105,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_digital_twins_instance+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_digital_twins_instance+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_digital_twins_instance+: {
@@ -109,18 +122,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

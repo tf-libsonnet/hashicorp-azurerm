@@ -1,89 +1,75 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    address_prefix=null,
     location,
     name,
+    resourceLabel,
+    resource_group_name,
+    address_prefix=null,
+    route=null,
     sku=null,
     tags=null,
-    resource_group_name,
-    virtual_wan_id=null,
-    route=null,
-    timeouts=null
+    timeouts=null,
+    virtual_wan_id=null
   ):: tf.withResource(type='azurerm_virtual_hub', label=resourceLabel, attrs=self.newAttrs(
     address_prefix=address_prefix,
     location=location,
     name=name,
+    resource_group_name=resource_group_name,
+    route=route,
     sku=sku,
     tags=tags,
-    resource_group_name=resource_group_name,
-    virtual_wan_id=virtual_wan_id,
-    route=route,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_wan_id=virtual_wan_id
   )),
   newAttrs(
-    address_prefix=null,
     location,
     name,
-    sku=null,
     resource_group_name,
-    virtual_wan_id=null,
-    tags=null,
+    address_prefix=null,
     route=null,
-    timeouts=null
+    sku=null,
+    tags=null,
+    timeouts=null,
+    virtual_wan_id=null
   ):: std.prune(a={
     address_prefix: address_prefix,
     location: location,
     name: name,
-    sku: sku,
     resource_group_name: resource_group_name,
-    virtual_wan_id: virtual_wan_id,
-    tags: tags,
     route: route,
+    sku: sku,
+    tags: tags,
     timeouts: timeouts,
+    virtual_wan_id: virtual_wan_id,
   }),
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
+  route:: {
+    new(
+      address_prefixes,
+      next_hop_ip_address
+    ):: std.prune(a={
+      address_prefixes: address_prefixes,
+      next_hop_ip_address: next_hop_ip_address,
+    }),
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAddressPrefix(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub+: {
         [resourceLabel]+: {
           address_prefix: value,
-        },
-      },
-    },
-  },
-  withVirtualWanId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub+: {
-        [resourceLabel]+: {
-          virtual_wan_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_hub+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -106,6 +92,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withRoute(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_hub+: {
@@ -124,14 +119,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  route:: {
-    new(
-      address_prefixes,
-      next_hop_ip_address
-    ):: std.prune(a={
-      address_prefixes: address_prefixes,
-      next_hop_ip_address: next_hop_ip_address,
-    }),
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -151,17 +155,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withVirtualWanId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_hub+: {
+        [resourceLabel]+: {
+          virtual_wan_id: value,
+        },
+      },
+    },
   },
 }

@@ -1,5 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  logs:: {
+    new(
+
+    ):: std.prune(a={}),
+  },
   new(
     dataSrcLabel,
     name,
@@ -7,39 +12,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     logs=null,
     timeouts=null
   ):: tf.withData(type='azurerm_elastic_cloud_elasticsearch', label=dataSrcLabel, attrs=self.newAttrs(
+    logs=logs,
     name=name,
     resource_group_name=resource_group_name,
-    logs=logs,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     name,
+    resource_group_name,
     logs=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    name: name,
     logs: logs,
+    name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withLogs(dataSrcLabel, value):: {
     data+: {
@@ -59,10 +53,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  logs:: {
-    new(
-
-    ):: std.prune(a={}),
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
   },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
@@ -81,12 +88,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

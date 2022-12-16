@@ -1,36 +1,92 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  autoscale_settings:: {
+    new(
+      max_throughput=null
+    ):: std.prune(a={
+      max_throughput: max_throughput,
+    }),
+  },
   new(
-    resourceLabel,
     account_name,
     name,
+    resourceLabel,
     resource_group_name,
+    autoscale_settings=null,
     throughput=null,
-    timeouts=null,
-    autoscale_settings=null
+    timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_mongo_database', label=resourceLabel, attrs=self.newAttrs(
     account_name=account_name,
+    autoscale_settings=autoscale_settings,
     name=name,
     resource_group_name=resource_group_name,
     throughput=throughput,
-    timeouts=timeouts,
-    autoscale_settings=autoscale_settings
+    timeouts=timeouts
   )),
   newAttrs(
     account_name,
     name,
     resource_group_name,
+    autoscale_settings=null,
     throughput=null,
-    timeouts=null,
-    autoscale_settings=null
+    timeouts=null
   ):: std.prune(a={
     account_name: account_name,
+    autoscale_settings: autoscale_settings,
     name: name,
     resource_group_name: resource_group_name,
     throughput: throughput,
     timeouts: timeouts,
-    autoscale_settings: autoscale_settings,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
+  withAutoscaleSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          autoscale_settings: value,
+        },
+      },
+    },
+  },
+  withAutoscaleSettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          autoscale_settings+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_mongo_database+: {
@@ -45,24 +101,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_mongo_database+: {
         [resourceLabel]+: {
           throughput: value,
-        },
-      },
-    },
-  },
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -84,43 +122,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withAutoscaleSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          autoscale_settings: value,
-        },
-      },
-    },
-  },
-  withAutoscaleSettingsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          autoscale_settings+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  autoscale_settings:: {
-    new(
-      max_throughput=null
-    ):: std.prune(a={
-      max_throughput: max_throughput,
-    }),
   },
 }

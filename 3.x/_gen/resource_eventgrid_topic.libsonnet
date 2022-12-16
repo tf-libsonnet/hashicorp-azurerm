@@ -1,150 +1,95 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
+  input_mapping_default_values:: {
+    new(
+      data_version=null,
+      event_type=null,
+      subject=null
+    ):: std.prune(a={
+      data_version: data_version,
+      event_type: event_type,
+      subject: subject,
+    }),
+  },
+  input_mapping_fields:: {
+    new(
+      data_version=null,
+      event_time=null,
+      event_type=null,
+      subject=null,
+      topic=null
+    ):: std.prune(a={
+      data_version: data_version,
+      event_time: event_time,
+      event_type: event_type,
+      subject: subject,
+      topic: topic,
+    }),
+  },
   new(
-    resourceLabel,
-    tags=null,
     location,
+    name,
+    resourceLabel,
     resource_group_name,
+    identity=null,
     inbound_ip_rule=null,
+    input_mapping_default_values=null,
+    input_mapping_fields=null,
     input_schema=null,
     local_auth_enabled=null,
-    name,
     public_network_access_enabled=null,
-    input_mapping_fields=null,
-    timeouts=null,
-    identity=null,
-    input_mapping_default_values=null
+    tags=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_eventgrid_topic', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    location=location,
-    resource_group_name=resource_group_name,
+    identity=identity,
     inbound_ip_rule=inbound_ip_rule,
+    input_mapping_default_values=input_mapping_default_values,
+    input_mapping_fields=input_mapping_fields,
     input_schema=input_schema,
     local_auth_enabled=local_auth_enabled,
+    location=location,
     name=name,
     public_network_access_enabled=public_network_access_enabled,
-    input_mapping_fields=input_mapping_fields,
-    timeouts=timeouts,
-    identity=identity,
-    input_mapping_default_values=input_mapping_default_values
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts
   )),
   newAttrs(
     location,
+    name,
     resource_group_name,
+    identity=null,
     inbound_ip_rule=null,
+    input_mapping_default_values=null,
+    input_mapping_fields=null,
     input_schema=null,
     local_auth_enabled=null,
-    name,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null,
-    identity=null,
-    input_mapping_default_values=null,
-    input_mapping_fields=null
+    timeouts=null
   ):: std.prune(a={
-    location: location,
-    resource_group_name: resource_group_name,
-    inbound_ip_rule: inbound_ip_rule,
-    input_schema: input_schema,
-    local_auth_enabled: local_auth_enabled,
-    name: name,
-    public_network_access_enabled: public_network_access_enabled,
-    tags: tags,
-    timeouts: timeouts,
     identity: identity,
+    inbound_ip_rule: inbound_ip_rule,
     input_mapping_default_values: input_mapping_default_values,
     input_mapping_fields: input_mapping_fields,
+    input_schema: input_schema,
+    local_auth_enabled: local_auth_enabled,
+    location: location,
+    name: name,
+    public_network_access_enabled: public_network_access_enabled,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withInboundIpRule(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          inbound_ip_rule: value,
-        },
-      },
-    },
-  },
-  withInputSchema(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          input_schema: value,
-        },
-      },
-    },
-  },
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
   timeouts:: {
     new(
       create=null,
@@ -176,14 +121,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
+  withInboundIpRule(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          inbound_ip_rule: value,
+        },
+      },
+    },
   },
   withInputMappingDefaultValues(resourceLabel, value):: {
     resource+: {
@@ -203,17 +148,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  input_mapping_default_values:: {
-    new(
-      data_version=null,
-      event_type=null,
-      subject=null
-    ):: std.prune(a={
-      data_version: data_version,
-      event_type: event_type,
-      subject: subject,
-    }),
-  },
   withInputMappingFields(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_topic+: {
@@ -232,19 +166,85 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  input_mapping_fields:: {
-    new(
-      event_type=null,
-      subject=null,
-      topic=null,
-      data_version=null,
-      event_time=null
-    ):: std.prune(a={
-      event_type: event_type,
-      subject: subject,
-      topic: topic,
-      data_version: data_version,
-      event_time: event_time,
-    }),
+  withInputSchema(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          input_schema: value,
+        },
+      },
+    },
+  },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
   },
 }

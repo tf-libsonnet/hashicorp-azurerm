@@ -1,149 +1,108 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  key_vault_connection_string:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
+  },
+  key_vault_password:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
+  },
   new(
-    resourceLabel,
-    service_principal_id=null,
-    parameters=null,
-    use_managed_identity=null,
+    data_factory_id,
     name,
+    resourceLabel,
+    additional_properties=null,
     annotations=null,
     connection_string=null,
-    data_factory_id,
-    tenant_id=null,
-    additional_properties=null,
-    integration_runtime_name=null,
-    service_principal_key=null,
     description=null,
+    integration_runtime_name=null,
     key_vault_connection_string=null,
     key_vault_password=null,
-    timeouts=null
+    parameters=null,
+    service_principal_id=null,
+    service_principal_key=null,
+    tenant_id=null,
+    timeouts=null,
+    use_managed_identity=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_sql_database', label=resourceLabel, attrs=self.newAttrs(
-    service_principal_id=service_principal_id,
-    parameters=parameters,
-    use_managed_identity=use_managed_identity,
-    name=name,
+    additional_properties=additional_properties,
     annotations=annotations,
     connection_string=connection_string,
     data_factory_id=data_factory_id,
-    tenant_id=tenant_id,
-    additional_properties=additional_properties,
-    integration_runtime_name=integration_runtime_name,
-    service_principal_key=service_principal_key,
     description=description,
+    integration_runtime_name=integration_runtime_name,
     key_vault_connection_string=key_vault_connection_string,
     key_vault_password=key_vault_password,
-    timeouts=timeouts
+    name=name,
+    parameters=parameters,
+    service_principal_id=service_principal_id,
+    service_principal_key=service_principal_key,
+    tenant_id=tenant_id,
+    timeouts=timeouts,
+    use_managed_identity=use_managed_identity
   )),
   newAttrs(
     data_factory_id,
-    integration_runtime_name=null,
-    use_managed_identity=null,
-    tenant_id=null,
-    additional_properties=null,
-    connection_string=null,
     name,
-    service_principal_id=null,
-    description=null,
-    parameters=null,
-    service_principal_key=null,
+    additional_properties=null,
     annotations=null,
+    connection_string=null,
+    description=null,
+    integration_runtime_name=null,
     key_vault_connection_string=null,
     key_vault_password=null,
-    timeouts=null
+    parameters=null,
+    service_principal_id=null,
+    service_principal_key=null,
+    tenant_id=null,
+    timeouts=null,
+    use_managed_identity=null
   ):: std.prune(a={
-    data_factory_id: data_factory_id,
-    integration_runtime_name: integration_runtime_name,
-    use_managed_identity: use_managed_identity,
-    tenant_id: tenant_id,
     additional_properties: additional_properties,
-    connection_string: connection_string,
-    name: name,
-    service_principal_id: service_principal_id,
-    description: description,
-    parameters: parameters,
-    service_principal_key: service_principal_key,
     annotations: annotations,
+    connection_string: connection_string,
+    data_factory_id: data_factory_id,
+    description: description,
+    integration_runtime_name: integration_runtime_name,
     key_vault_connection_string: key_vault_connection_string,
     key_vault_password: key_vault_password,
+    name: name,
+    parameters: parameters,
+    service_principal_id: service_principal_id,
+    service_principal_key: service_principal_key,
+    tenant_id: tenant_id,
     timeouts: timeouts,
+    use_managed_identity: use_managed_identity,
   }),
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTenantId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          tenant_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_sql_database+: {
         [resourceLabel]+: {
           additional_properties: value,
-        },
-      },
-    },
-  },
-  withServicePrincipalKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          service_principal_key: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withServicePrincipalId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          service_principal_id: value,
         },
       },
     },
@@ -166,11 +125,110 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUseManagedIdentity(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_sql_database+: {
         [resourceLabel]+: {
-          use_managed_identity: value,
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  withKeyVaultConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          key_vault_connection_string: value,
+        },
+      },
+    },
+  },
+  withKeyVaultConnectionStringMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          key_vault_connection_string+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withKeyVaultPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          key_vault_password: value,
+        },
+      },
+    },
+  },
+  withKeyVaultPasswordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          key_vault_password+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withServicePrincipalId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          service_principal_id: value,
+        },
+      },
+    },
+  },
+  withServicePrincipalKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          service_principal_key: value,
+        },
+      },
+    },
+  },
+  withTenantId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_sql_database+: {
+        [resourceLabel]+: {
+          tenant_id: value,
         },
       },
     },
@@ -193,71 +251,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withKeyVaultConnectionString(resourceLabel, value):: {
+  withUseManagedIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_sql_database+: {
         [resourceLabel]+: {
-          key_vault_connection_string: value,
+          use_managed_identity: value,
         },
       },
     },
-  },
-  withKeyVaultConnectionStringMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          key_vault_connection_string+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  key_vault_connection_string:: {
-    new(
-      linked_service_name,
-      secret_name
-    ):: std.prune(a={
-      linked_service_name: linked_service_name,
-      secret_name: secret_name,
-    }),
-  },
-  withKeyVaultPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          key_vault_password: value,
-        },
-      },
-    },
-  },
-  withKeyVaultPasswordMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_sql_database+: {
-        [resourceLabel]+: {
-          key_vault_password+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  key_vault_password:: {
-    new(
-      linked_service_name,
-      secret_name
-    ):: std.prune(a={
-      linked_service_name: linked_service_name,
-      secret_name: secret_name,
-    }),
   },
 }

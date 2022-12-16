@@ -1,48 +1,61 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    container_name,
+    data_share_id,
+    name,
     resourceLabel,
     file_path=null,
     folder_path=null,
-    name,
-    container_name,
-    data_share_id,
-    timeouts=null,
-    storage_account=null
+    storage_account=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_blob_storage', label=resourceLabel, attrs=self.newAttrs(
+    container_name=container_name,
+    data_share_id=data_share_id,
     file_path=file_path,
     folder_path=folder_path,
     name=name,
-    container_name=container_name,
-    data_share_id=data_share_id,
-    timeouts=timeouts,
-    storage_account=storage_account
+    storage_account=storage_account,
+    timeouts=timeouts
   )),
   newAttrs(
-    name,
     container_name,
     data_share_id,
+    name,
     file_path=null,
     folder_path=null,
     storage_account=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     container_name: container_name,
     data_share_id: data_share_id,
     file_path: file_path,
     folder_path: folder_path,
+    name: name,
     storage_account: storage_account,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_blob_storage+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
+  storage_account:: {
+    new(
+      name,
+      resource_group_name,
+      subscription_id
+    ):: std.prune(a={
+      name: name,
+      resource_group_name: resource_group_name,
+      subscription_id: subscription_id,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withContainerName(resourceLabel, value):: {
     resource+: {
@@ -80,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_blob_storage+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withStorageAccount(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_blob_storage+: {
@@ -98,17 +120,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  storage_account:: {
-    new(
-      resource_group_name,
-      subscription_id,
-      name
-    ):: std.prune(a={
-      resource_group_name: resource_group_name,
-      subscription_id: subscription_id,
-      name: name,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_blob_storage+: {
@@ -126,16 +137,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

@@ -1,32 +1,45 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    enterprise_application_id,
-    name=null,
-    single_sign_on_enabled,
     datadog_monitor_id,
+    enterprise_application_id,
+    resourceLabel,
+    single_sign_on_enabled,
+    name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_datadog_monitor_sso_configuration', label=resourceLabel, attrs=self.newAttrs(
+    datadog_monitor_id=datadog_monitor_id,
     enterprise_application_id=enterprise_application_id,
     name=name,
     single_sign_on_enabled=single_sign_on_enabled,
-    datadog_monitor_id=datadog_monitor_id,
     timeouts=timeouts
   )),
   newAttrs(
-    name=null,
-    single_sign_on_enabled,
     datadog_monitor_id,
     enterprise_application_id,
+    single_sign_on_enabled,
+    name=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    single_sign_on_enabled: single_sign_on_enabled,
     datadog_monitor_id: datadog_monitor_id,
     enterprise_application_id: enterprise_application_id,
+    name: name,
+    single_sign_on_enabled: single_sign_on_enabled,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withDatadogMonitorId(resourceLabel, value):: {
     resource+: {
       azurerm_datadog_monitor_sso_configuration+: {
@@ -80,18 +93,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

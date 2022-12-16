@@ -1,61 +1,69 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
     daily_recurrence_time,
-    enabled=null,
     location,
-    tags=null,
+    resourceLabel,
     timezone,
     virtual_machine_id,
+    enabled=null,
     notification_settings=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dev_test_global_vm_shutdown_schedule', label=resourceLabel, attrs=self.newAttrs(
     daily_recurrence_time=daily_recurrence_time,
     enabled=enabled,
     location=location,
-    tags=tags,
-    timezone=timezone,
-    virtual_machine_id=virtual_machine_id,
     notification_settings=notification_settings,
-    timeouts=timeouts
+    tags=tags,
+    timeouts=timeouts,
+    timezone=timezone,
+    virtual_machine_id=virtual_machine_id
   )),
   newAttrs(
+    daily_recurrence_time,
     location,
-    tags=null,
     timezone,
     virtual_machine_id,
-    daily_recurrence_time,
     enabled=null,
     notification_settings=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    tags: tags,
-    timezone: timezone,
-    virtual_machine_id: virtual_machine_id,
     daily_recurrence_time: daily_recurrence_time,
     enabled: enabled,
+    location: location,
     notification_settings: notification_settings,
+    tags: tags,
     timeouts: timeouts,
+    timezone: timezone,
+    virtual_machine_id: virtual_machine_id,
   }),
-  withTimezone(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_global_vm_shutdown_schedule+: {
-        [resourceLabel]+: {
-          timezone: value,
-        },
-      },
-    },
+  notification_settings:: {
+    new(
+      enabled,
+      email=null,
+      time_in_minutes=null,
+      webhook_url=null
+    ):: std.prune(a={
+      email: email,
+      enabled: enabled,
+      time_in_minutes: time_in_minutes,
+      webhook_url: webhook_url,
+    }),
   },
-  withVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_global_vm_shutdown_schedule+: {
-        [resourceLabel]+: {
-          virtual_machine_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDailyRecurrenceTime(resourceLabel, value):: {
     resource+: {
@@ -80,6 +88,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_dev_test_global_vm_shutdown_schedule+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withNotificationSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_global_vm_shutdown_schedule+: {
+        [resourceLabel]+: {
+          notification_settings: value,
+        },
+      },
+    },
+  },
+  withNotificationSettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_global_vm_shutdown_schedule+: {
+        [resourceLabel]+: {
+          notification_settings+: if std.isArray(v=value) then value else [value],
         },
       },
     },
@@ -111,48 +137,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
-  withNotificationSettings(resourceLabel, value):: {
+  withTimezone(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_global_vm_shutdown_schedule+: {
         [resourceLabel]+: {
-          notification_settings: value,
+          timezone: value,
         },
       },
     },
   },
-  withNotificationSettingsMixin(resourceLabel, value):: {
+  withVirtualMachineId(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_global_vm_shutdown_schedule+: {
         [resourceLabel]+: {
-          notification_settings+: if std.isArray(v=value) then value else [value],
+          virtual_machine_id: value,
         },
       },
     },
-  },
-  notification_settings:: {
-    new(
-      email=null,
-      enabled,
-      time_in_minutes=null,
-      webhook_url=null
-    ):: std.prune(a={
-      email: email,
-      enabled: enabled,
-      time_in_minutes: time_in_minutes,
-      webhook_url: webhook_url,
-    }),
   },
 }

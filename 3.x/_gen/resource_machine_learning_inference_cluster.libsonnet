@@ -1,52 +1,125 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
+  },
   new(
-    resourceLabel,
-    cluster_purpose=null,
-    description=null,
     kubernetes_cluster_id,
     location,
     machine_learning_workspace_id,
     name,
-    tags=null,
+    resourceLabel,
+    cluster_purpose=null,
+    description=null,
     identity=null,
     ssl=null,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_machine_learning_inference_cluster', label=resourceLabel, attrs=self.newAttrs(
     cluster_purpose=cluster_purpose,
     description=description,
+    identity=identity,
     kubernetes_cluster_id=kubernetes_cluster_id,
     location=location,
     machine_learning_workspace_id=machine_learning_workspace_id,
     name=name,
-    tags=tags,
-    identity=identity,
     ssl=ssl,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    machine_learning_workspace_id,
-    name,
-    tags=null,
-    cluster_purpose=null,
-    description=null,
     kubernetes_cluster_id,
     location,
+    machine_learning_workspace_id,
+    name,
+    cluster_purpose=null,
+    description=null,
     identity=null,
     ssl=null,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    machine_learning_workspace_id: machine_learning_workspace_id,
-    name: name,
-    tags: tags,
     cluster_purpose: cluster_purpose,
     description: description,
+    identity: identity,
     kubernetes_cluster_id: kubernetes_cluster_id,
     location: location,
-    identity: identity,
+    machine_learning_workspace_id: machine_learning_workspace_id,
+    name: name,
     ssl: ssl,
+    tags: tags,
     timeouts: timeouts,
   }),
+  ssl:: {
+    new(
+      cert=null,
+      cname=null,
+      key=null,
+      leaf_domain_label=null,
+      overwrite_existing_domain=null
+    ):: std.prune(a={
+      cert: cert,
+      cname: cname,
+      key: key,
+      leaf_domain_label: leaf_domain_label,
+      overwrite_existing_domain: overwrite_existing_domain,
+    }),
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withClusterPurpose(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          cluster_purpose: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   withKubernetesClusterId(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_inference_cluster+: {
@@ -83,33 +156,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withClusterPurpose(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          cluster_purpose: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withSsl(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_inference_cluster+: {
@@ -128,20 +174,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  ssl:: {
-    new(
-      overwrite_existing_domain=null,
-      cert=null,
-      cname=null,
-      key=null,
-      leaf_domain_label=null
-    ):: std.prune(a={
-      overwrite_existing_domain: overwrite_existing_domain,
-      cert: cert,
-      cname: cname,
-      key: key,
-      leaf_domain_label: leaf_domain_label,
-    }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -160,45 +200,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
-    }),
   },
 }

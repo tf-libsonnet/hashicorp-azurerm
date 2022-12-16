@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    dataSrcLabel,
     account_name,
+    dataSrcLabel,
     name,
     pool_name,
     resource_group_name,
@@ -17,37 +17,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    account_name,
     name,
     pool_name,
     resource_group_name,
     security_style=null,
-    account_name,
     timeouts=null
   ):: std.prune(a={
+    account_name: account_name,
     name: name,
     pool_name: pool_name,
     resource_group_name: resource_group_name,
     security_style: security_style,
-    account_name: account_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_netapp_volume+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSecurityStyle(dataSrcLabel, value):: {
-    data+: {
-      azurerm_netapp_volume+: {
-        [dataSrcLabel]+: {
-          security_style: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withAccountName(dataSrcLabel, value):: {
     data+: {
@@ -76,6 +65,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_netapp_volume+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSecurityStyle(dataSrcLabel, value):: {
+    data+: {
+      azurerm_netapp_volume+: {
+        [dataSrcLabel]+: {
+          security_style: value,
+        },
+      },
+    },
+  },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
       azurerm_netapp_volume+: {
@@ -93,12 +100,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

@@ -1,44 +1,57 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    resource_group_name,
     name,
     recovery_fabric_name,
     recovery_replication_policy_id,
     recovery_source_protection_container_name,
     recovery_target_protection_container_id,
     recovery_vault_name,
+    resourceLabel,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_site_recovery_protection_container_mapping', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     name=name,
     recovery_fabric_name=recovery_fabric_name,
     recovery_replication_policy_id=recovery_replication_policy_id,
     recovery_source_protection_container_name=recovery_source_protection_container_name,
     recovery_target_protection_container_id=recovery_target_protection_container_id,
     recovery_vault_name=recovery_vault_name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    recovery_target_protection_container_id,
-    recovery_vault_name,
-    resource_group_name,
     name,
     recovery_fabric_name,
     recovery_replication_policy_id,
     recovery_source_protection_container_name,
+    recovery_target_protection_container_id,
+    recovery_vault_name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    recovery_target_protection_container_id: recovery_target_protection_container_id,
-    recovery_vault_name: recovery_vault_name,
-    resource_group_name: resource_group_name,
     name: name,
     recovery_fabric_name: recovery_fabric_name,
     recovery_replication_policy_id: recovery_replication_policy_id,
     recovery_source_protection_container_name: recovery_source_protection_container_name,
+    recovery_target_protection_container_id: recovery_target_protection_container_id,
+    recovery_vault_name: recovery_vault_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_protection_container_mapping+: {
@@ -119,18 +132,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
 }

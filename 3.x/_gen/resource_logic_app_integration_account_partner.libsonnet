@@ -1,90 +1,45 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
+  business_identity:: {
+    new(
+      qualifier,
+      value
+    ):: std.prune(a={
+      qualifier: qualifier,
+      value: value,
+    }),
+  },
   new(
-    resourceLabel,
     integration_account_name,
-    metadata=null,
     name,
+    resourceLabel,
     resource_group_name,
     business_identity=null,
+    metadata=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_partner', label=resourceLabel, attrs=self.newAttrs(
+    business_identity=business_identity,
     integration_account_name=integration_account_name,
     metadata=metadata,
     name=name,
     resource_group_name=resource_group_name,
-    business_identity=business_identity,
     timeouts=timeouts
   )),
   newAttrs(
-    metadata=null,
+    integration_account_name,
     name,
     resource_group_name,
-    integration_account_name,
     business_identity=null,
+    metadata=null,
     timeouts=null
   ):: std.prune(a={
+    business_identity: business_identity,
+    integration_account_name: integration_account_name,
     metadata: metadata,
     name: name,
     resource_group_name: resource_group_name,
-    integration_account_name: integration_account_name,
-    business_identity: business_identity,
     timeouts: timeouts,
   }),
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_partner+: {
-        [resourceLabel]+: {
-          metadata: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_partner+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_partner+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withIntegrationAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_partner+: {
-        [resourceLabel]+: {
-          integration_account_name: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_partner+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_partner+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
   timeouts:: {
     new(
       create=null,
@@ -116,13 +71,58 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  business_identity:: {
-    new(
-      qualifier,
-      value
-    ):: std.prune(a={
-      qualifier: qualifier,
-      value: value,
-    }),
+  withIntegrationAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_partner+: {
+        [resourceLabel]+: {
+          integration_account_name: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_partner+: {
+        [resourceLabel]+: {
+          metadata: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_partner+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_partner+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_partner+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_partner+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
   },
 }

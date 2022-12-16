@@ -1,49 +1,44 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    resourceLabel,
-    metadata=null,
-    name,
-    virtual_network_id,
     dns_forwarding_ruleset_id,
+    name,
+    resourceLabel,
+    virtual_network_id,
+    metadata=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_resolver_virtual_network_link', label=resourceLabel, attrs=self.newAttrs(
+    dns_forwarding_ruleset_id=dns_forwarding_ruleset_id,
     metadata=metadata,
     name=name,
-    virtual_network_id=virtual_network_id,
-    dns_forwarding_ruleset_id=dns_forwarding_ruleset_id,
-    timeouts=timeouts
+    timeouts=timeouts,
+    virtual_network_id=virtual_network_id
   )),
   newAttrs(
     dns_forwarding_ruleset_id,
-    metadata=null,
     name,
     virtual_network_id,
+    metadata=null,
     timeouts=null
   ):: std.prune(a={
     dns_forwarding_ruleset_id: dns_forwarding_ruleset_id,
     metadata: metadata,
     name: name,
-    virtual_network_id: virtual_network_id,
     timeouts: timeouts,
+    virtual_network_id: virtual_network_id,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_virtual_network_link+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkId(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_virtual_network_link+: {
-        [resourceLabel]+: {
-          virtual_network_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withDnsForwardingRulesetId(resourceLabel, value):: {
     resource+: {
@@ -59,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_private_dns_resolver_virtual_network_link+: {
         [resourceLabel]+: {
           metadata: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_virtual_network_link+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -81,17 +85,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withVirtualNetworkId(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_virtual_network_link+: {
+        [resourceLabel]+: {
+          virtual_network_id: value,
+        },
+      },
+    },
   },
 }

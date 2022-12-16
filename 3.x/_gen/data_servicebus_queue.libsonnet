@@ -2,39 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    namespace_id=null,
     name,
-    resource_group_name=null,
+    namespace_id=null,
     namespace_name=null,
+    resource_group_name=null,
     timeouts=null
   ):: tf.withData(type='azurerm_servicebus_queue', label=dataSrcLabel, attrs=self.newAttrs(
-    namespace_id=namespace_id,
     name=name,
-    resource_group_name=resource_group_name,
+    namespace_id=namespace_id,
     namespace_name=namespace_name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name=null,
-    namespace_name=null,
-    namespace_id=null,
     name,
+    namespace_id=null,
+    namespace_name=null,
+    resource_group_name=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    namespace_name: namespace_name,
-    namespace_id: namespace_id,
     name: name,
+    namespace_id: namespace_id,
+    namespace_name: namespace_name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withNamespaceId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_servicebus_queue+: {
-        [dataSrcLabel]+: {
-          namespace_id: value,
-        },
-      },
-    },
+  timeouts:: {
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
   },
   withName(dataSrcLabel, value):: {
     data+: {
@@ -45,11 +43,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(dataSrcLabel, value):: {
+  withNamespaceId(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_queue+: {
         [dataSrcLabel]+: {
-          resource_group_name: value,
+          namespace_id: value,
         },
       },
     },
@@ -59,6 +57,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_servicebus_queue+: {
         [dataSrcLabel]+: {
           namespace_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_servicebus_queue+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -80,12 +87,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null
-    ):: std.prune(a={
-      read: read,
-    }),
   },
 }

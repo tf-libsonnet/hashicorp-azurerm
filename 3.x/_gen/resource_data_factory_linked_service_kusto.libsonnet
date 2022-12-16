@@ -1,68 +1,81 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    data_factory_id,
+    kusto_database_name,
+    kusto_endpoint,
+    name,
     resourceLabel,
+    additional_properties=null,
     annotations=null,
     description=null,
-    service_principal_key=null,
-    additional_properties=null,
-    kusto_endpoint,
-    tenant=null,
-    parameters=null,
-    use_managed_identity=null,
-    kusto_database_name,
-    service_principal_id=null,
     integration_runtime_name=null,
-    data_factory_id,
-    name,
-    timeouts=null
+    parameters=null,
+    service_principal_id=null,
+    service_principal_key=null,
+    tenant=null,
+    timeouts=null,
+    use_managed_identity=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_kusto', label=resourceLabel, attrs=self.newAttrs(
-    annotations=annotations,
-    description=description,
-    service_principal_key=service_principal_key,
     additional_properties=additional_properties,
-    kusto_endpoint=kusto_endpoint,
-    tenant=tenant,
-    parameters=parameters,
-    use_managed_identity=use_managed_identity,
-    kusto_database_name=kusto_database_name,
-    service_principal_id=service_principal_id,
-    integration_runtime_name=integration_runtime_name,
+    annotations=annotations,
     data_factory_id=data_factory_id,
+    description=description,
+    integration_runtime_name=integration_runtime_name,
+    kusto_database_name=kusto_database_name,
+    kusto_endpoint=kusto_endpoint,
     name=name,
-    timeouts=timeouts
+    parameters=parameters,
+    service_principal_id=service_principal_id,
+    service_principal_key=service_principal_key,
+    tenant=tenant,
+    timeouts=timeouts,
+    use_managed_identity=use_managed_identity
   )),
   newAttrs(
-    integration_runtime_name=null,
-    name,
-    annotations=null,
-    kusto_endpoint,
-    service_principal_id=null,
-    additional_properties=null,
-    kusto_database_name,
-    tenant=null,
     data_factory_id,
-    parameters=null,
-    service_principal_key=null,
-    use_managed_identity=null,
+    kusto_database_name,
+    kusto_endpoint,
+    name,
+    additional_properties=null,
+    annotations=null,
     description=null,
-    timeouts=null
+    integration_runtime_name=null,
+    parameters=null,
+    service_principal_id=null,
+    service_principal_key=null,
+    tenant=null,
+    timeouts=null,
+    use_managed_identity=null
   ):: std.prune(a={
-    integration_runtime_name: integration_runtime_name,
-    name: name,
-    annotations: annotations,
-    kusto_endpoint: kusto_endpoint,
-    service_principal_id: service_principal_id,
     additional_properties: additional_properties,
-    kusto_database_name: kusto_database_name,
-    tenant: tenant,
+    annotations: annotations,
     data_factory_id: data_factory_id,
-    parameters: parameters,
-    service_principal_key: service_principal_key,
-    use_managed_identity: use_managed_identity,
     description: description,
+    integration_runtime_name: integration_runtime_name,
+    kusto_database_name: kusto_database_name,
+    kusto_endpoint: kusto_endpoint,
+    name: name,
+    parameters: parameters,
+    service_principal_id: service_principal_id,
+    service_principal_key: service_principal_key,
+    tenant: tenant,
     timeouts: timeouts,
+    use_managed_identity: use_managed_identity,
   }),
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_kusto+: {
@@ -72,11 +85,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_kusto+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_kusto+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_kusto+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_kusto+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
         },
       },
     },
@@ -99,65 +139,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_kusto+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_kusto+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withServicePrincipalKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_kusto+: {
-        [resourceLabel]+: {
-          service_principal_key: value,
-        },
-      },
-    },
-  },
-  withUseManagedIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_kusto+: {
-        [resourceLabel]+: {
-          use_managed_identity: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_kusto+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_kusto+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withTenant(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_kusto+: {
-        [resourceLabel]+: {
-          tenant: value,
         },
       },
     },
@@ -180,6 +166,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withServicePrincipalKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_kusto+: {
+        [resourceLabel]+: {
+          service_principal_key: value,
+        },
+      },
+    },
+  },
+  withTenant(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_kusto+: {
+        [resourceLabel]+: {
+          tenant: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_kusto+: {
@@ -198,17 +202,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withUseManagedIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_kusto+: {
+        [resourceLabel]+: {
+          use_managed_identity: value,
+        },
+      },
+    },
   },
 }
