@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     container_name,
     cosmosdb_account_key,
     cosmosdb_sql_database_id,
     name,
-    resourceLabel,
     stream_analytics_job_id,
     document_id=null,
     partition_key=null,

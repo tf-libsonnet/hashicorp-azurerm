@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     exemption_category,
     management_group_id,
     name,
     policy_assignment_id,
-    resourceLabel,
     description=null,
     display_name=null,
     expires_on=null,

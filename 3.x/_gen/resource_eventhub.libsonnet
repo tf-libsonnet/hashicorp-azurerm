@@ -31,11 +31,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     message_retention,
     name,
     namespace_name,
     partition_count,
-    resourceLabel,
     resource_group_name,
     capture_description=null,
     status=null,

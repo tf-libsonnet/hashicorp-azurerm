@@ -39,10 +39,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     kind,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     sku_name,
     custom_question_answering_search_service_id=null,

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     alert_rule_template_guid,
     log_analytics_workspace_id,
     name,
-    resourceLabel,
     enabled=null,
     source=null,
     timeouts=null

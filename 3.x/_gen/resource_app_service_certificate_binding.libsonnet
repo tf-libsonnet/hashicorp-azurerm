@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     certificate_id,
     hostname_binding_id,
-    resourceLabel,
     ssl_state,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_certificate_binding', label=resourceLabel, attrs=self.newAttrs(

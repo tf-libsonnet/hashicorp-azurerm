@@ -55,9 +55,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     storage_data_lake_gen2_filesystem_id,
     aad_admin=null,

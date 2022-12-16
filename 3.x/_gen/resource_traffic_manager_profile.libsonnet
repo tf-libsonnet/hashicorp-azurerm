@@ -40,8 +40,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     resource_group_name,
     traffic_routing_method,
     dns_config=null,

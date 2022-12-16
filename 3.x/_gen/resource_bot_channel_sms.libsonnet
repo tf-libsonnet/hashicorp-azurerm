@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     bot_name,
     location,
     phone_number,
-    resourceLabel,
     resource_group_name,
     sms_channel_account_security_id,
     sms_channel_auth_token,

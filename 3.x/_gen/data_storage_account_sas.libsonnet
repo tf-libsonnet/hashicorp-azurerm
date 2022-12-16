@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    connection_string,
     dataSrcLabel,
+    connection_string,
     expiry,
     start,
     https_only=null,

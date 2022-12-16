@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     dataset,
     group_id,
     group_name,
     name,
-    resourceLabel,
     stream_analytics_job_id,
     table,
     timeouts=null,

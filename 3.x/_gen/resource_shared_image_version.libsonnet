@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     gallery_name,
     image_name,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     blob_uri=null,
     end_of_life_date=null,

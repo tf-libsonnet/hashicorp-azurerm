@@ -148,11 +148,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     account_replication_type,
     account_tier,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     access_tier=null,
     account_kind=null,

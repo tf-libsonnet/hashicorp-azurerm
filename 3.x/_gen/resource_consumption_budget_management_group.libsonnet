@@ -65,10 +65,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     amount,
     management_group_id,
     name,
-    resourceLabel,
     etag=null,
     filter=null,
     notification=null,

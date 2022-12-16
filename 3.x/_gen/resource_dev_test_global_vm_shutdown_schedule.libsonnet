@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     daily_recurrence_time,
     location,
-    resourceLabel,
     timezone,
     virtual_machine_id,
     enabled=null,

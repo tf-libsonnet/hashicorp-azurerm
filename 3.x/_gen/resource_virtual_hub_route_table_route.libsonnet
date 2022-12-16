@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     destinations,
     destinations_type,
     name,
     next_hop,
-    resourceLabel,
     route_table_id,
     next_hop_type=null,
     timeouts=null

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     api_id,
     name,
-    resourceLabel,
     notes=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_api_release', label=resourceLabel, attrs=self.newAttrs(

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     recovery_fabric_name,
     recovery_vault_name,
-    resourceLabel,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_site_recovery_protection_container', label=resourceLabel, attrs=self.newAttrs(

@@ -16,10 +16,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
     norad_id,
-    resourceLabel,
     resource_group_name,
     title_line,
     two_line_elements,

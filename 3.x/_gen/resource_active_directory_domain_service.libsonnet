@@ -8,10 +8,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     domain_name,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     sku,
     domain_configuration_type=null,

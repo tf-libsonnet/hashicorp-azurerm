@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     backend_address_pool_id,
     name,
-    resourceLabel,
     backend_address_ip_configuration_id=null,
     ip_address=null,
     timeouts=null,

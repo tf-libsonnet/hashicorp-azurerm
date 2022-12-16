@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     location,
     management_group_id,
     name,
-    resourceLabel,
     debug_level=null,
     parameters_content=null,
     tags=null,

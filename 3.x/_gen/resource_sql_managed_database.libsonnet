@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     sql_managed_instance_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_sql_managed_database', label=resourceLabel, attrs=self.newAttrs(

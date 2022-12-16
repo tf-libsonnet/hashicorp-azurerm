@@ -21,10 +21,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     data_source_id,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     authorized_resource_ids=null,
     criteria=null,

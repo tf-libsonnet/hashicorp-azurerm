@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     log_analytics_workspace_id,
     name,
-    resourceLabel,
     tenant_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_office_365_project', label=resourceLabel, attrs=self.newAttrs(

@@ -46,12 +46,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     admin_password,
     admin_username,
     location,
     name,
     network_interface_ids,
-    resourceLabel,
     resource_group_name,
     size,
     additional_capabilities=null,

@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     backup_policy_id,
     location,
     name,
-    resourceLabel,
     storage_account_id,
     vault_id,
     timeouts=null

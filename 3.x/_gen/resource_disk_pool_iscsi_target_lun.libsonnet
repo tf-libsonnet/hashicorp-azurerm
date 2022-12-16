@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     disk_pool_managed_disk_attachment_id,
     iscsi_target_id,
     name,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_disk_pool_iscsi_target_lun', label=resourceLabel, attrs=self.newAttrs(
     disk_pool_managed_disk_attachment_id=disk_pool_managed_disk_attachment_id,

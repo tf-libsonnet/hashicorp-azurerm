@@ -120,10 +120,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     firewall_policy_id,
     name,
     priority,
-    resourceLabel,
     application_rule_collection=null,
     nat_rule_collection=null,
     network_rule_collection=null,

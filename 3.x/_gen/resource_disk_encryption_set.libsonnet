@@ -10,10 +10,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     key_vault_key_id,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     auto_key_rotation_enabled=null,
     encryption_type=null,

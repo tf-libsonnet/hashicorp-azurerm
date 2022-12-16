@@ -255,8 +255,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     scope,
     advanced_filter=null,
     advanced_filtering_on_arrays_enabled=null,

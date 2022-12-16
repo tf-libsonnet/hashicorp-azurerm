@@ -44,12 +44,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     auto_tracking,
     location,
     minimum_variable_contact_duration,
     name,
     network_configuration_subnet_id,
-    resourceLabel,
     resource_group_name,
     event_hub_uri=null,
     links=null,

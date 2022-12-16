@@ -10,11 +10,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     display_name,
     iothub_ids,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     additional_workspace=null,
     disabled_data_sources=null,

@@ -8,11 +8,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     backend_address_pool_id,
     loadbalancer_id,
     name,
     protocol,
-    resourceLabel,
     allocated_outbound_ports=null,
     enable_tcp_reset=null,
     frontend_ip_configuration=null,

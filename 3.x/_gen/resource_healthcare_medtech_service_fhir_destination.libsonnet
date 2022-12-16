@@ -1,13 +1,13 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     destination_fhir_mapping_json,
     destination_fhir_service_id,
     destination_identity_resolution_type,
     location,
     medtech_service_id,
     name,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_medtech_service_fhir_destination', label=resourceLabel, attrs=self.newAttrs(
     destination_fhir_mapping_json=destination_fhir_mapping_json,

@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     function_app_id,
     hostname,
     port,
     relay_id,
-    resourceLabel,
     send_key_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_function_app_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(

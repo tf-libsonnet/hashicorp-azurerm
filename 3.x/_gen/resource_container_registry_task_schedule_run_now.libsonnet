@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    container_registry_task_id,
     resourceLabel,
+    container_registry_task_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_task_schedule_run_now', label=resourceLabel, attrs=self.newAttrs(container_registry_task_id=container_registry_task_id, timeouts=timeouts)),
   newAttrs(

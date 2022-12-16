@@ -21,10 +21,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     ledger_type,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     azuread_based_service_principal=null,
     certificate_based_security_principal=null,

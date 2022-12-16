@@ -14,10 +14,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     key_vault_id,
     name,
     provider_name,
-    resourceLabel,
     account_id=null,
     admin=null,
     org_id=null,

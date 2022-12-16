@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     event_log_name,
     event_types,
     name,
-    resourceLabel,
     resource_group_name,
     workspace_name,
     timeouts=null

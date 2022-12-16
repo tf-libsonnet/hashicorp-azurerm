@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    recovery_vault_name,
     resourceLabel,
+    recovery_vault_name,
     resource_group_name,
     storage_account_id,
     timeouts=null

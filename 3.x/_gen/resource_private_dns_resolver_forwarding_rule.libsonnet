@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     dns_forwarding_ruleset_id,
     domain_name,
     name,
-    resourceLabel,
     enabled=null,
     metadata=null,
     target_dns_servers=null,

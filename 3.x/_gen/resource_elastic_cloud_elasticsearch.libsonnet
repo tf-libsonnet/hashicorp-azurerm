@@ -25,10 +25,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     elastic_cloud_email_address,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     sku_name,
     logs=null,

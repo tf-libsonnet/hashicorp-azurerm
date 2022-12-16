@@ -1,6 +1,7 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     api_management_name,
     authorization_endpoint,
     authorization_methods,
@@ -9,7 +10,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     display_name,
     grant_types,
     name,
-    resourceLabel,
     resource_group_name,
     bearer_token_sending_methods=null,
     client_authentication_method=null,

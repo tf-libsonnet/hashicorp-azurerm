@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     mssql_server_id,
     name,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_server_dns_alias', label=resourceLabel, attrs=self.newAttrs(mssql_server_id=mssql_server_id, name=name, timeouts=timeouts)),
   newAttrs(

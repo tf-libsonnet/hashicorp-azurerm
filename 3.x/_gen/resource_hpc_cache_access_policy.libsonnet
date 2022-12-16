@@ -22,9 +22,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     hpc_cache_id,
     name,
-    resourceLabel,
     access_rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_hpc_cache_access_policy', label=resourceLabel, attrs=self.newAttrs(

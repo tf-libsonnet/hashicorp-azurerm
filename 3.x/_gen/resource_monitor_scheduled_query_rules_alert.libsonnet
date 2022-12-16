@@ -12,12 +12,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     data_source_id,
     frequency,
     location,
     name,
     query,
-    resourceLabel,
     resource_group_name,
     time_window,
     action=null,

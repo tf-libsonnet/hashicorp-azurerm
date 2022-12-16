@@ -28,9 +28,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     virtual_hub_id,
     bgp_route_translation_for_nat_enabled=null,

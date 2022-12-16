@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cassandra_cluster_id,
     delegated_management_subnet_id,
     location,
     name,
-    resourceLabel,
     availability_zones_enabled=null,
     backup_storage_customer_key_uri=null,
     base64_encoded_yaml_fragment=null,

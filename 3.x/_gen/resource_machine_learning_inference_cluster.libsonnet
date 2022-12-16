@@ -10,11 +10,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     kubernetes_cluster_id,
     location,
     machine_learning_workspace_id,
     name,
-    resourceLabel,
     cluster_purpose=null,
     description=null,
     identity=null,

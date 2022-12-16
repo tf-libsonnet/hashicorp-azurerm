@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     data_factory_id,
     kusto_database_name,
     kusto_endpoint,
     name,
-    resourceLabel,
     additional_properties=null,
     annotations=null,
     description=null,

@@ -220,9 +220,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     app_service_id,
     name,
-    resourceLabel,
     app_settings=null,
     auth_settings=null,
     backup=null,

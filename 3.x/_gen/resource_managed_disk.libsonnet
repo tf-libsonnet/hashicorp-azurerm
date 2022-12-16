@@ -30,10 +30,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     create_option,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     storage_account_type,
     disk_access_id=null,

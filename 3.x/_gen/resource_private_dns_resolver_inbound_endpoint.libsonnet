@@ -10,10 +10,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
     private_dns_resolver_id,
-    resourceLabel,
     ip_configurations=null,
     tags=null,
     timeouts=null

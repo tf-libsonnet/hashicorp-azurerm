@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     digital_twins_id,
     name,
-    resourceLabel,
     servicebus_primary_connection_string,
     servicebus_secondary_connection_string,
     dead_letter_storage_secret=null,

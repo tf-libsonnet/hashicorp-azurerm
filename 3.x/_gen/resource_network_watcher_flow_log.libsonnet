@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     enabled,
     name,
     network_security_group_id,
     network_watcher_name,
-    resourceLabel,
     resource_group_name,
     storage_account_id,
     location=null,

@@ -23,11 +23,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     data_factory_id,
     location,
     name,
     node_size,
-    resourceLabel,
     catalog_info=null,
     custom_setup_script=null,
     description=null,

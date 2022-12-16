@@ -160,10 +160,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     location,
     name,
     platform_fault_domain_count,
-    resourceLabel,
     resource_group_name,
     additional_capabilities=null,
     automatic_instance_repair=null,

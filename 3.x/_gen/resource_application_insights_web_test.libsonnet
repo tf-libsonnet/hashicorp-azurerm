@@ -1,13 +1,13 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     application_insights_id,
     configuration,
     geo_locations,
     kind,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     description=null,
     enabled=null,

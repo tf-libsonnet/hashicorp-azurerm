@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     loadbalancer_id,
     name,
-    resourceLabel,
     timeouts=null,
     tunnel_interface=null
   ):: tf.withResource(type='azurerm_lb_backend_address_pool', label=resourceLabel, attrs=self.newAttrs(

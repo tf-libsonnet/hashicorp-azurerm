@@ -1,13 +1,13 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cluster_name,
     database_name,
     eventhub_consumer_group_name,
     eventhub_id,
     location,
     name,
-    resourceLabel,
     resource_group_name,
     storage_account_id,
     blob_storage_event_type=null,

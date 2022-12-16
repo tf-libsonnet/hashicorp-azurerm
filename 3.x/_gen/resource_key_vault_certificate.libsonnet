@@ -105,9 +105,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     key_vault_id,
     name,
-    resourceLabel,
     certificate=null,
     certificate_policy=null,
     tags=null,

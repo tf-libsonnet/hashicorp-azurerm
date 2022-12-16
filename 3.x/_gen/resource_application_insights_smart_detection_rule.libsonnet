@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     application_insights_id,
     name,
-    resourceLabel,
     additional_email_recipients=null,
     enabled=null,
     send_emails_to_subscription_owners=null,

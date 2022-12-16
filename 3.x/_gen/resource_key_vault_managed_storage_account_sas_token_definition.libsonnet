@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     managed_storage_account_id,
     name,
-    resourceLabel,
     sas_template_uri,
     sas_type,
     validity_period,

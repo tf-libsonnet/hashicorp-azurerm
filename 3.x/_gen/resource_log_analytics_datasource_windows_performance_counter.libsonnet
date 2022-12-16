@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     counter_name,
     instance_name,
     interval_seconds,
     name,
     object_name,
-    resourceLabel,
     resource_group_name,
     workspace_name,
     timeouts=null

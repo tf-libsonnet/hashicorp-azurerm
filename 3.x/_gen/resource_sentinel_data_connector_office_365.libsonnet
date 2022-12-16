@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     log_analytics_workspace_id,
     name,
-    resourceLabel,
     exchange_enabled=null,
     sharepoint_enabled=null,
     teams_enabled=null,

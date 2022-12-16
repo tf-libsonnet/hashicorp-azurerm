@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     build_result_id,
     name,
-    resourceLabel,
     spring_cloud_app_id,
     addon_json=null,
     environment_variables=null,

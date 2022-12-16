@@ -54,8 +54,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    api_management_id,
     resourceLabel,
+    api_management_id,
     developer_portal=null,
     gateway=null,
     management=null,

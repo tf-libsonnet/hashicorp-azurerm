@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     database_name,
     mysql_server_id,
     name,
     password,
-    resourceLabel,
     spring_cloud_app_id,
     username,
     timeouts=null

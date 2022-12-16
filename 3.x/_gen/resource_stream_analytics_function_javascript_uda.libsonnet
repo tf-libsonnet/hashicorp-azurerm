@@ -10,8 +10,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     script,
     stream_analytics_job_id,
     input=null,

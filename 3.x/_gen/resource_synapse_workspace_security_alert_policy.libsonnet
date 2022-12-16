@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    policy_state,
     resourceLabel,
+    policy_state,
     synapse_workspace_id,
     disabled_alerts=null,
     email_account_admins_enabled=null,

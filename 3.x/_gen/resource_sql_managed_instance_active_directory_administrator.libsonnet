@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     login,
     managed_instance_name,
     object_id,
-    resourceLabel,
     resource_group_name,
     tenant_id,
     azuread_authentication_only=null,

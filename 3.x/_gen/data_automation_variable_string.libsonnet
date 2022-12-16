@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    automation_account_name,
     dataSrcLabel,
+    automation_account_name,
     name,
     resource_group_name,
     timeouts=null

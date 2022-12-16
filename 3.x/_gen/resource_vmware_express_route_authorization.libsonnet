@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     private_cloud_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_vmware_express_route_authorization', label=resourceLabel, attrs=self.newAttrs(name=name, private_cloud_id=private_cloud_id, timeouts=timeouts)),
   newAttrs(

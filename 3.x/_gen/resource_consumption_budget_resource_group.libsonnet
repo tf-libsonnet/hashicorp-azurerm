@@ -65,9 +65,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     amount,
     name,
-    resourceLabel,
     resource_group_id,
     etag=null,
     filter=null,

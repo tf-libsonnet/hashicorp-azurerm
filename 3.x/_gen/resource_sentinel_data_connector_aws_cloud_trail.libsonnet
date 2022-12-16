@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     aws_role_arn,
     log_analytics_workspace_id,
     name,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_aws_cloud_trail', label=resourceLabel, attrs=self.newAttrs(
     aws_role_arn=aws_role_arn,

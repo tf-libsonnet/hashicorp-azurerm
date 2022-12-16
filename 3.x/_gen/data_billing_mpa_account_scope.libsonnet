@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    dataSrcLabel,
     billing_account_name,
     customer_name,
-    dataSrcLabel,
     timeouts=null
   ):: tf.withData(type='azurerm_billing_mpa_account_scope', label=dataSrcLabel, attrs=self.newAttrs(billing_account_name=billing_account_name, customer_name=customer_name, timeouts=timeouts)),
   newAttrs(

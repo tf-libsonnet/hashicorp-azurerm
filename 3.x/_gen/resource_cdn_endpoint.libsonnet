@@ -392,10 +392,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     location,
     name,
     profile_name,
-    resourceLabel,
     resource_group_name,
     content_types_to_compress=null,
     delivery_rule=null,

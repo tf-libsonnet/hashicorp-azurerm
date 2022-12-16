@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     application_security_group_id,
     network_interface_id,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_network_interface_application_security_group_association', label=resourceLabel, attrs=self.newAttrs(application_security_group_id=application_security_group_id, network_interface_id=network_interface_id, timeouts=timeouts)),
   newAttrs(

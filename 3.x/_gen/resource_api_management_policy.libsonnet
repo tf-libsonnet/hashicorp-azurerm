@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    api_management_id,
     resourceLabel,
+    api_management_id,
     timeouts=null,
     xml_content=null,
     xml_link=null

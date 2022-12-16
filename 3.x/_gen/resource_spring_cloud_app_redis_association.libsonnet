@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     name,
     redis_access_key,
     redis_cache_id,
-    resourceLabel,
     spring_cloud_app_id,
     ssl_enabled=null,
     timeouts=null

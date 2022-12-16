@@ -14,12 +14,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     cdn_frontdoor_endpoint_id,
     cdn_frontdoor_origin_group_id,
     cdn_frontdoor_origin_ids,
     name,
     patterns_to_match,
-    resourceLabel,
     supported_protocols,
     cache=null,
     cdn_frontdoor_custom_domain_ids=null,

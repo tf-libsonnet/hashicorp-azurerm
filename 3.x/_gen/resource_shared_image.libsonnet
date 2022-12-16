@@ -12,11 +12,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     gallery_name,
     location,
     name,
     os_type,
-    resourceLabel,
     resource_group_name,
     accelerated_network_support_enabled=null,
     architecture=null,

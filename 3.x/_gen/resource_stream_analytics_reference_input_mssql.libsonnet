@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     database,
     full_snapshot_query,
     name,
     password,
     refresh_type,
-    resourceLabel,
     resource_group_name,
     server,
     stream_analytics_job_name,

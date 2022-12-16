@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     backup_repeating_time_intervals,
     default_retention_duration,
     name,
-    resourceLabel,
     vault_id,
     retention_rule=null,
     timeouts=null

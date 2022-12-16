@@ -42,10 +42,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     data_factory_id,
     linked_service_name,
     name,
-    resourceLabel,
     additional_properties=null,
     annotations=null,
     azure_blob_storage_location=null,

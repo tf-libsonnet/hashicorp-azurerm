@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cdn_frontdoor_profile_id,
     name,
-    resourceLabel,
     enabled=null,
     tags=null,
     timeouts=null

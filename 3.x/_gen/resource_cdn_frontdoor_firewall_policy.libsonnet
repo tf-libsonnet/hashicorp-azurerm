@@ -111,9 +111,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     mode,
     name,
-    resourceLabel,
     resource_group_name,
     sku_name,
     custom_block_response_body=null,

@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     eventhub_name,
     name,
-    resourceLabel,
     resource_group_name,
     servicebus_namespace,
     stream_analytics_job_name,

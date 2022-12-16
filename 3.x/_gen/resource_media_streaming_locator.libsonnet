@@ -16,10 +16,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     asset_name,
     media_services_account_name,
     name,
-    resourceLabel,
     resource_group_name,
     streaming_policy_name,
     alternative_media_id=null,

@@ -211,10 +211,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     account_name,
     name,
     node_agent_sku_id,
-    resourceLabel,
     resource_group_name,
     vm_size,
     auto_scale=null,

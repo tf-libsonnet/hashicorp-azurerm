@@ -12,10 +12,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     detector_type,
     frequency,
     name,
-    resourceLabel,
     resource_group_name,
     scope_resource_ids,
     severity,

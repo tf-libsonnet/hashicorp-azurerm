@@ -1,11 +1,11 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     address_prefix_ipv4,
     name,
     peer_peering_id,
     peering_id,
-    resourceLabel,
     address_prefix_ipv6=null,
     authorization_key=null,
     timeouts=null

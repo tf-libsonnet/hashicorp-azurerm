@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     bot_name,
     location,
-    resourceLabel,
     resource_group_name,
     calling_web_hook=null,
     enable_calling=null,

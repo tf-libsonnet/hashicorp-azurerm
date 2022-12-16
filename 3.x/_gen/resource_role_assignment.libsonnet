@@ -1,8 +1,8 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
-    principal_id,
     resourceLabel,
+    principal_id,
     scope,
     condition=null,
     condition_version=null,

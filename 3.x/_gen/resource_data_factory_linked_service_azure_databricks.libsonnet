@@ -23,10 +23,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     adb_domain,
     data_factory_id,
     name,
-    resourceLabel,
     access_token=null,
     additional_properties=null,
     annotations=null,

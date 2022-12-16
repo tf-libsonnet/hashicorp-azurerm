@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     alert_notifications,
     alerts_to_admins,
     email,
-    resourceLabel,
     name=null,
     phone=null,
     timeouts=null

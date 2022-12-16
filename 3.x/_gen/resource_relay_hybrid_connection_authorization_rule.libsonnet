@@ -1,10 +1,10 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     hybrid_connection_name,
     name,
     namespace_name,
-    resourceLabel,
     resource_group_name,
     listen=null,
     manage=null,

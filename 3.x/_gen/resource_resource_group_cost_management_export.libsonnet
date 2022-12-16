@@ -19,11 +19,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     name,
     recurrence_period_end_date,
     recurrence_period_start_date,
     recurrence_type,
-    resourceLabel,
     resource_group_id,
     active=null,
     export_data_options=null,

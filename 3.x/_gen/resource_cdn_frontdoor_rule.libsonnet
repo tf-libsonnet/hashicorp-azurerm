@@ -363,10 +363,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   new(
+    resourceLabel,
     cdn_frontdoor_rule_set_id,
     name,
     order,
-    resourceLabel,
     actions=null,
     behavior_on_match=null,
     conditions=null,

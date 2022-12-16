@@ -1,12 +1,12 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     digital_twins_id,
     eventgrid_topic_endpoint,
     eventgrid_topic_primary_access_key,
     eventgrid_topic_secondary_access_key,
     name,
-    resourceLabel,
     dead_letter_storage_secret=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_digital_twins_endpoint_eventgrid', label=resourceLabel, attrs=self.newAttrs(

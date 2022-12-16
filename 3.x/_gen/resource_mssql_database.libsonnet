@@ -33,8 +33,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
-    name,
     resourceLabel,
+    name,
     server_id,
     auto_pause_delay_in_minutes=null,
     collation=null,

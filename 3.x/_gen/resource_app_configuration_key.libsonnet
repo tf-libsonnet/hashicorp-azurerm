@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     configuration_store_id,
     key,
-    resourceLabel,
     content_type=null,
     etag=null,
     label=null,

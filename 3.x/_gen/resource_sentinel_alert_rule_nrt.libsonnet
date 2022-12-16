@@ -60,11 +60,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     display_name,
     log_analytics_workspace_id,
     name,
     query,
-    resourceLabel,
     severity,
     alert_details_override=null,
     alert_rule_template_guid=null,

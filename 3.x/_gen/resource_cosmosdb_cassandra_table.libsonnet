@@ -8,9 +8,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     cassandra_keyspace_id,
     name,
-    resourceLabel,
     analytical_storage_ttl=null,
     autoscale_settings=null,
     default_ttl=null,

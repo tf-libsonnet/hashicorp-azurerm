@@ -12,10 +12,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
   },
   new(
+    resourceLabel,
     cdn_endpoint_id,
     host_name,
     name,
-    resourceLabel,
     cdn_managed_https=null,
     timeouts=null,
     user_managed_https=null

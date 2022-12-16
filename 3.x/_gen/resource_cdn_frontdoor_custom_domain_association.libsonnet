@@ -1,9 +1,9 @@
 local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
+    resourceLabel,
     cdn_frontdoor_custom_domain_id,
     cdn_frontdoor_route_ids,
-    resourceLabel,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_custom_domain_association', label=resourceLabel, attrs=self.newAttrs(cdn_frontdoor_custom_domain_id=cdn_frontdoor_custom_domain_id, cdn_frontdoor_route_ids=cdn_frontdoor_route_ids, timeouts=timeouts)),
   newAttrs(
