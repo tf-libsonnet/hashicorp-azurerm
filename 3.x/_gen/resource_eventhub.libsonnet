@@ -8,8 +8,8 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     namespace_name,
     partition_count,
-    capture_description=null,
-    timeouts=null
+    timeouts=null,
+    capture_description=null
   ):: tf.withResource(type='azurerm_eventhub', label=resourceLabel, attrs=self.newAttrs(
     resource_group_name=resource_group_name,
     status=status,
@@ -17,46 +17,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name=name,
     namespace_name=namespace_name,
     partition_count=partition_count,
-    capture_description=capture_description,
-    timeouts=timeouts
+    timeouts=timeouts,
+    capture_description=capture_description
   )),
   newAttrs(
+    status=null,
     message_retention,
     name,
     namespace_name,
     partition_count,
     resource_group_name,
-    status=null,
     capture_description=null,
     timeouts=null
   ):: std.prune(a={
+    status: status,
     message_retention: message_retention,
     name: name,
     namespace_name: namespace_name,
     partition_count: partition_count,
     resource_group_name: resource_group_name,
-    status: status,
     capture_description: capture_description,
     timeouts: timeouts,
   }),
-  withNamespaceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub+: {
-        [resourceLabel]+: {
-          namespace_name: value,
-        },
-      },
-    },
-  },
-  withPartitionCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub+: {
-        [resourceLabel]+: {
-          partition_count: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub+: {
@@ -93,36 +75,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withNamespaceName(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub+: {
         [resourceLabel]+: {
-          timeouts: value,
+          namespace_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withPartitionCount(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          partition_count: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withCaptureDescription(resourceLabel, value):: {
     resource+: {
@@ -144,32 +113,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   capture_description:: {
     new(
+      enabled,
+      encoding,
       interval_in_seconds=null,
       size_limit_in_bytes=null,
       skip_empty_archives=null,
-      enabled,
-      encoding,
       destination=null
     ):: std.prune(a={
+      enabled: enabled,
+      encoding: encoding,
       interval_in_seconds: interval_in_seconds,
       size_limit_in_bytes: size_limit_in_bytes,
       skip_empty_archives: skip_empty_archives,
-      enabled: enabled,
-      encoding: encoding,
       destination: destination,
     }),
     destination:: {
       new(
-        blob_container_name,
-        name,
         storage_account_id,
-        archive_name_format
+        archive_name_format,
+        blob_container_name,
+        name
       ):: std.prune(a={
-        blob_container_name: blob_container_name,
-        name: name,
         storage_account_id: storage_account_id,
         archive_name_format: archive_name_format,
+        blob_container_name: blob_container_name,
+        name: name,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
+    }),
   },
 }

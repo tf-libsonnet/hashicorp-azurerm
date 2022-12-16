@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    express_route_circuit_name,
     name,
     resource_group_name,
-    express_route_circuit_name,
     timeouts=null
   ):: std.prune(a={
+    express_route_circuit_name: express_route_circuit_name,
     name: name,
     resource_group_name: resource_group_name,
-    express_route_circuit_name: express_route_circuit_name,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_authorization+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withExpressRouteCircuitName(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit_authorization+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_express_route_circuit_authorization+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_authorization+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

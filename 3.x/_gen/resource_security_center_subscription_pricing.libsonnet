@@ -2,27 +2,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_type=null,
     subplan=null,
     tier,
-    resource_type=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_security_center_subscription_pricing', label=resourceLabel, attrs=self.newAttrs(
+    resource_type=resource_type,
     subplan=subplan,
     tier=tier,
-    resource_type=resource_type,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_type=null,
     subplan=null,
     tier,
+    resource_type=null,
     timeouts=null
   ):: std.prune(a={
-    resource_type: resource_type,
     subplan: subplan,
     tier: tier,
+    resource_type: resource_type,
     timeouts: timeouts,
   }),
+  withResourceType(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_subscription_pricing+: {
+        [resourceLabel]+: {
+          resource_type: value,
+        },
+      },
+    },
+  },
   withSubplan(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_subscription_pricing+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_security_center_subscription_pricing+: {
         [resourceLabel]+: {
           tier: value,
-        },
-      },
-    },
-  },
-  withResourceType(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_subscription_pricing+: {
-        [resourceLabel]+: {
-          resource_type: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

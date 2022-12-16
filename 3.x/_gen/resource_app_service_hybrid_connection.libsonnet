@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    relay_id,
-    send_key_name=null,
-    hostname,
     port,
+    relay_id,
     app_service_name,
+    hostname,
+    resource_group_name,
+    send_key_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    relay_id=relay_id,
-    send_key_name=send_key_name,
-    hostname=hostname,
     port=port,
+    relay_id=relay_id,
     app_service_name=app_service_name,
+    hostname=hostname,
+    resource_group_name=resource_group_name,
+    send_key_name=send_key_name,
     timeouts=timeouts
   )),
   newAttrs(
     send_key_name=null,
-    app_service_name,
-    resource_group_name,
-    hostname,
     port,
     relay_id,
+    app_service_name,
+    hostname,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
     send_key_name: send_key_name,
-    app_service_name: app_service_name,
-    resource_group_name: resource_group_name,
-    hostname: hostname,
     port: port,
     relay_id: relay_id,
+    app_service_name: app_service_name,
+    hostname: hostname,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withAppServiceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_hybrid_connection+: {
+        [resourceLabel]+: {
+          app_service_name: value,
+        },
+      },
+    },
+  },
   withHostname(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_hybrid_connection+: {
@@ -62,29 +71,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSendKeyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_hybrid_connection+: {
-        [resourceLabel]+: {
-          send_key_name: value,
-        },
-      },
-    },
-  },
-  withAppServiceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_hybrid_connection+: {
-        [resourceLabel]+: {
-          app_service_name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_hybrid_connection+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSendKeyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_hybrid_connection+: {
+        [resourceLabel]+: {
+          send_key_name: value,
         },
       },
     },
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

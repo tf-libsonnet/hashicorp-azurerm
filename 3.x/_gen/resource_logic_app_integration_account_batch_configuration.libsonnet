@@ -2,19 +2,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    batch_group_name,
+    integration_account_name,
     metadata=null,
     name,
     resource_group_name,
-    batch_group_name,
-    integration_account_name,
     release_criteria=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_batch_configuration', label=resourceLabel, attrs=self.newAttrs(
+    batch_group_name=batch_group_name,
+    integration_account_name=integration_account_name,
     metadata=metadata,
     name=name,
     resource_group_name=resource_group_name,
-    batch_group_name=batch_group_name,
-    integration_account_name=integration_account_name,
     release_criteria=release_criteria,
     timeouts=timeouts
   )),
@@ -35,24 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     release_criteria: release_criteria,
     timeouts: timeouts,
   }),
-  withBatchGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_batch_configuration+: {
-        [resourceLabel]+: {
-          batch_group_name: value,
-        },
-      },
-    },
-  },
-  withIntegrationAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_batch_configuration+: {
-        [resourceLabel]+: {
-          integration_account_name: value,
-        },
-      },
-    },
-  },
   withMetadata(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_batch_configuration+: {
@@ -80,6 +62,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withBatchGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_batch_configuration+: {
+        [resourceLabel]+: {
+          batch_group_name: value,
+        },
+      },
+    },
+  },
+  withIntegrationAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_batch_configuration+: {
+        [resourceLabel]+: {
+          integration_account_name: value,
+        },
+      },
+    },
+  },
   withReleaseCriteria(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_batch_configuration+: {
@@ -100,28 +100,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   release_criteria:: {
     new(
-      batch_size=null,
       message_count=null,
+      batch_size=null,
       recurrence=null
     ):: std.prune(a={
-      batch_size: batch_size,
       message_count: message_count,
+      batch_size: batch_size,
       recurrence: recurrence,
     }),
     recurrence:: {
       new(
-        time_zone=null,
         end_time=null,
         frequency,
         interval,
         start_time=null,
+        time_zone=null,
         schedule=null
       ):: std.prune(a={
-        time_zone: time_zone,
         end_time: end_time,
         frequency: frequency,
         interval: interval,
         start_time: start_time,
+        time_zone: time_zone,
         schedule: schedule,
       }),
       schedule:: {
@@ -170,15 +170,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

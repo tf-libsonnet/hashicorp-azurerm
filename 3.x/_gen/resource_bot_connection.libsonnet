@@ -2,78 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    parameters=null,
-    name,
-    client_secret,
     client_id,
-    bot_name,
     scopes=null,
-    service_provider_name,
     tags=null,
-    location,
+    client_secret,
+    name,
     resource_group_name,
+    service_provider_name,
+    bot_name,
+    parameters=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_connection', label=resourceLabel, attrs=self.newAttrs(
-    parameters=parameters,
-    name=name,
-    client_secret=client_secret,
     client_id=client_id,
-    bot_name=bot_name,
     scopes=scopes,
-    service_provider_name=service_provider_name,
     tags=tags,
-    location=location,
+    client_secret=client_secret,
+    name=name,
     resource_group_name=resource_group_name,
+    service_provider_name=service_provider_name,
+    bot_name=bot_name,
+    parameters=parameters,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    service_provider_name,
-    bot_name,
-    client_secret,
     location,
     scopes=null,
-    tags=null,
-    client_id,
+    client_secret,
+    name,
     parameters=null,
     resource_group_name,
+    service_provider_name,
+    bot_name,
+    client_id,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    service_provider_name: service_provider_name,
-    bot_name: bot_name,
-    client_secret: client_secret,
     location: location,
     scopes: scopes,
-    tags: tags,
-    client_id: client_id,
+    client_secret: client_secret,
+    name: name,
     parameters: parameters,
     resource_group_name: resource_group_name,
+    service_provider_name: service_provider_name,
+    bot_name: bot_name,
+    client_id: client_id,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_connection+: {
         [resourceLabel]+: {
-          tags: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withClientSecret(resourceLabel, value):: {
+  withServiceProviderName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_connection+: {
         [resourceLabel]+: {
-          client_secret: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_connection+: {
-        [resourceLabel]+: {
-          parameters: value,
+          service_provider_name: value,
         },
       },
     },
@@ -87,15 +78,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_connection+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withScopes(resourceLabel, value):: {
     resource+: {
       azurerm_bot_connection+: {
@@ -105,20 +87,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withClientId(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_bot_connection+: {
         [resourceLabel]+: {
-          client_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_connection+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          tags: value,
         },
       },
     },
@@ -132,11 +105,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withServiceProviderName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_connection+: {
         [resourceLabel]+: {
-          service_provider_name: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_connection+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withClientSecret(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_connection+: {
+        [resourceLabel]+: {
+          client_secret: value,
+        },
+      },
+    },
+  },
+  withClientId(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_connection+: {
+        [resourceLabel]+: {
+          client_id: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_policy_blob_storage+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withRetentionDuration(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_policy_blob_storage+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_protection_backup_policy_blob_storage+: {
         [resourceLabel]+: {
           vault_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_policy_blob_storage+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

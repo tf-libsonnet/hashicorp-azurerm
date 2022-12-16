@@ -2,94 +2,67 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    service_principal_key=null,
-    storage_account_key=null,
-    url,
-    additional_properties=null,
-    data_factory_id,
-    parameters=null,
     annotations=null,
-    service_principal_id=null,
-    name,
-    use_managed_identity=null,
-    tenant=null,
+    data_factory_id,
     description=null,
     integration_runtime_name=null,
+    service_principal_key=null,
+    tenant=null,
+    use_managed_identity=null,
+    name,
+    additional_properties=null,
+    storage_account_key=null,
+    url,
+    service_principal_id=null,
+    parameters=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_data_lake_storage_gen2', label=resourceLabel, attrs=self.newAttrs(
-    service_principal_key=service_principal_key,
-    storage_account_key=storage_account_key,
-    url=url,
-    additional_properties=additional_properties,
-    data_factory_id=data_factory_id,
-    parameters=parameters,
     annotations=annotations,
-    service_principal_id=service_principal_id,
-    name=name,
-    use_managed_identity=use_managed_identity,
-    tenant=tenant,
+    data_factory_id=data_factory_id,
     description=description,
     integration_runtime_name=integration_runtime_name,
+    service_principal_key=service_principal_key,
+    tenant=tenant,
+    use_managed_identity=use_managed_identity,
+    name=name,
+    additional_properties=additional_properties,
+    storage_account_key=storage_account_key,
+    url=url,
+    service_principal_id=service_principal_id,
+    parameters=parameters,
     timeouts=timeouts
   )),
   newAttrs(
-    use_managed_identity=null,
     additional_properties=null,
-    parameters=null,
-    annotations=null,
+    url,
     integration_runtime_name=null,
     tenant=null,
-    service_principal_key=null,
-    storage_account_key=null,
-    url,
+    annotations=null,
     description=null,
+    storage_account_key=null,
     service_principal_id=null,
-    name,
+    parameters=null,
+    service_principal_key=null,
+    use_managed_identity=null,
     data_factory_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    use_managed_identity: use_managed_identity,
     additional_properties: additional_properties,
-    parameters: parameters,
-    annotations: annotations,
+    url: url,
     integration_runtime_name: integration_runtime_name,
     tenant: tenant,
-    service_principal_key: service_principal_key,
-    storage_account_key: storage_account_key,
-    url: url,
+    annotations: annotations,
     description: description,
+    storage_account_key: storage_account_key,
     service_principal_id: service_principal_id,
-    name: name,
+    parameters: parameters,
+    service_principal_key: service_principal_key,
+    use_managed_identity: use_managed_identity,
     data_factory_id: data_factory_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withServicePrincipalId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          service_principal_id: value,
-        },
-      },
-    },
-  },
   withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
@@ -99,47 +72,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withParameters(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
         [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withUseManagedIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          use_managed_identity: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withTenant(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          tenant: value,
-        },
-      },
-    },
-  },
-  withServicePrincipalKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
-        [resourceLabel]+: {
-          service_principal_key: value,
+          name: value,
         },
       },
     },
@@ -153,11 +90,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withServicePrincipalId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
         [resourceLabel]+: {
-          name: value,
+          service_principal_id: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withTenant(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          tenant: value,
+        },
+      },
+    },
+  },
+  withUseManagedIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          use_managed_identity: value,
+        },
+      },
+    },
+  },
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          annotations: value,
         },
       },
     },
@@ -176,6 +149,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
         [resourceLabel]+: {
           url: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  withServicePrincipalKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          service_principal_key: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_data_lake_storage_gen2+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -200,15 +200,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

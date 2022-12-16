@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    share_id,
     kusto_cluster_id,
     name,
+    share_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_kusto_cluster', label=resourceLabel, attrs=self.newAttrs(
-    share_id=share_id,
     kusto_cluster_id=kusto_cluster_id,
     name=name,
+    share_id=share_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     share_id: share_id,
     timeouts: timeouts,
   }),
-  withKustoClusterId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_kusto_cluster+: {
-        [resourceLabel]+: {
-          kusto_cluster_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_kusto_cluster+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_share_dataset_kusto_cluster+: {
         [resourceLabel]+: {
           share_id: value,
+        },
+      },
+    },
+  },
+  withKustoClusterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_kusto_cluster+: {
+        [resourceLabel]+: {
+          kusto_cluster_id: value,
         },
       },
     },
@@ -70,13 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

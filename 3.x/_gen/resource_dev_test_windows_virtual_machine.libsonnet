@@ -2,169 +2,79 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    lab_name,
-    resource_group_name,
-    size,
-    username,
-    lab_subnet_name,
     lab_virtual_network_id,
-    name,
-    allow_claim=null,
-    storage_type,
-    disallow_public_ip_address=null,
-    location,
-    tags=null,
-    notes=null,
     password,
+    name,
+    tags=null,
+    size,
+    allow_claim=null,
+    lab_subnet_name,
+    username,
+    resource_group_name,
+    disallow_public_ip_address=null,
+    notes=null,
+    storage_type,
+    location,
+    lab_name,
     gallery_image_reference=null,
     inbound_nat_rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dev_test_windows_virtual_machine', label=resourceLabel, attrs=self.newAttrs(
-    lab_name=lab_name,
-    resource_group_name=resource_group_name,
-    size=size,
-    username=username,
-    lab_subnet_name=lab_subnet_name,
     lab_virtual_network_id=lab_virtual_network_id,
-    name=name,
-    allow_claim=allow_claim,
-    storage_type=storage_type,
-    disallow_public_ip_address=disallow_public_ip_address,
-    location=location,
-    tags=tags,
-    notes=notes,
     password=password,
+    name=name,
+    tags=tags,
+    size=size,
+    allow_claim=allow_claim,
+    lab_subnet_name=lab_subnet_name,
+    username=username,
+    resource_group_name=resource_group_name,
+    disallow_public_ip_address=disallow_public_ip_address,
+    notes=notes,
+    storage_type=storage_type,
+    location=location,
+    lab_name=lab_name,
     gallery_image_reference=gallery_image_reference,
     inbound_nat_rule=inbound_nat_rule,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    password,
-    allow_claim=null,
-    storage_type,
-    location,
-    tags=null,
-    lab_name,
-    username,
     lab_virtual_network_id,
-    resource_group_name,
-    size,
-    lab_subnet_name,
     notes=null,
+    tags=null,
+    name,
+    lab_name,
+    resource_group_name,
     disallow_public_ip_address=null,
-    timeouts=null,
+    size,
+    allow_claim=null,
+    location,
+    storage_type,
+    lab_subnet_name,
+    username,
+    password,
     gallery_image_reference=null,
-    inbound_nat_rule=null
+    inbound_nat_rule=null,
+    timeouts=null
   ):: std.prune(a={
-    name: name,
-    password: password,
-    allow_claim: allow_claim,
-    storage_type: storage_type,
-    location: location,
-    tags: tags,
-    lab_name: lab_name,
-    username: username,
     lab_virtual_network_id: lab_virtual_network_id,
-    resource_group_name: resource_group_name,
-    size: size,
-    lab_subnet_name: lab_subnet_name,
     notes: notes,
+    tags: tags,
+    name: name,
+    lab_name: lab_name,
+    resource_group_name: resource_group_name,
     disallow_public_ip_address: disallow_public_ip_address,
-    timeouts: timeouts,
+    size: size,
+    allow_claim: allow_claim,
+    location: location,
+    storage_type: storage_type,
+    lab_subnet_name: lab_subnet_name,
+    username: username,
+    password: password,
     gallery_image_reference: gallery_image_reference,
     inbound_nat_rule: inbound_nat_rule,
+    timeouts: timeouts,
   }),
-  withLabVirtualNetworkId(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          lab_virtual_network_id: value,
-        },
-      },
-    },
-  },
-  withStorageType(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          storage_type: value,
-        },
-      },
-    },
-  },
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          password: value,
-        },
-      },
-    },
-  },
-  withNotes(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          notes: value,
-        },
-      },
-    },
-  },
-  withLabName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          lab_name: value,
-        },
-      },
-    },
-  },
-  withSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          size: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withLabSubnetName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          lab_subnet_name: value,
-        },
-      },
-    },
-  },
-  withAllowClaim(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          allow_claim: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_windows_virtual_machine+: {
@@ -174,11 +84,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withLabVirtualNetworkId(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_windows_virtual_machine+: {
         [resourceLabel]+: {
-          tags: value,
+          lab_virtual_network_id: value,
         },
       },
     },
@@ -192,6 +102,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageType(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          storage_type: value,
+        },
+      },
+    },
+  },
   withUsername(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_windows_virtual_machine+: {
@@ -200,6 +119,118 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          size: value,
+        },
+      },
+    },
+  },
+  withAllowClaim(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          allow_claim: value,
+        },
+      },
+    },
+  },
+  withNotes(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          notes: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withLabName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          lab_name: value,
+        },
+      },
+    },
+  },
+  withLabSubnetName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          lab_subnet_name: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          password: value,
+        },
+      },
+    },
+  },
+  withGalleryImageReference(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          gallery_image_reference: value,
+        },
+      },
+    },
+  },
+  withGalleryImageReferenceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_windows_virtual_machine+: {
+        [resourceLabel]+: {
+          gallery_image_reference+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  gallery_image_reference:: {
+    new(
+      version,
+      offer,
+      publisher,
+      sku
+    ):: std.prune(a={
+      version: version,
+      offer: offer,
+      publisher: publisher,
+      sku: sku,
+    }),
   },
   withInboundNatRule(resourceLabel, value):: {
     resource+: {
@@ -257,37 +288,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withGalleryImageReference(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          gallery_image_reference: value,
-        },
-      },
-    },
-  },
-  withGalleryImageReferenceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_windows_virtual_machine+: {
-        [resourceLabel]+: {
-          gallery_image_reference+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  gallery_image_reference:: {
-    new(
-      offer,
-      publisher,
-      sku,
-      version
-    ):: std.prune(a={
-      offer: offer,
-      publisher: publisher,
-      sku: sku,
-      version: version,
     }),
   },
 }

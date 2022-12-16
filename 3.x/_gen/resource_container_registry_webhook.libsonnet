@@ -2,60 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    status=null,
-    custom_headers=null,
-    registry_name,
-    name,
-    location,
-    tags=null,
-    scope=null,
     service_uri,
+    custom_headers=null,
+    name,
+    tags=null,
+    location,
+    status=null,
+    registry_name,
     actions,
     resource_group_name,
+    scope=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_webhook', label=resourceLabel, attrs=self.newAttrs(
-    status=status,
-    custom_headers=custom_headers,
-    registry_name=registry_name,
-    name=name,
-    location=location,
-    tags=tags,
-    scope=scope,
     service_uri=service_uri,
+    custom_headers=custom_headers,
+    name=name,
+    tags=tags,
+    location=location,
+    status=status,
+    registry_name=registry_name,
     actions=actions,
     resource_group_name=resource_group_name,
+    scope=scope,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    service_uri,
+    actions,
     status=null,
+    registry_name,
     tags=null,
     name,
-    scope=null,
-    actions,
-    custom_headers=null,
-    registry_name,
     location,
+    resource_group_name,
+    scope=null,
+    service_uri,
+    custom_headers=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    service_uri: service_uri,
+    actions: actions,
     status: status,
+    registry_name: registry_name,
     tags: tags,
     name: name,
-    scope: scope,
-    actions: actions,
-    custom_headers: custom_headers,
-    registry_name: registry_name,
     location: location,
+    resource_group_name: resource_group_name,
+    scope: scope,
+    service_uri: service_uri,
+    custom_headers: custom_headers,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
+  withStatus(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_webhook+: {
         [resourceLabel]+: {
-          tags: value,
+          status: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -65,15 +74,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_container_registry_webhook+: {
         [resourceLabel]+: {
           scope: value,
-        },
-      },
-    },
-  },
-  withServiceUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          service_uri: value,
         },
       },
     },
@@ -96,11 +96,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStatus(resourceLabel, value):: {
+  withServiceUri(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_webhook+: {
         [resourceLabel]+: {
-          status: value,
+          service_uri: value,
         },
       },
     },
@@ -114,15 +114,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCustomHeaders(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_webhook+: {
-        [resourceLabel]+: {
-          custom_headers: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_webhook+: {
@@ -132,11 +123,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_webhook+: {
         [resourceLabel]+: {
-          location: value,
+          tags: value,
+        },
+      },
+    },
+  },
+  withCustomHeaders(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_webhook+: {
+        [resourceLabel]+: {
+          custom_headers: value,
         },
       },
     },

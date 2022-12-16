@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     zone_name,
+    resource_group_name,
     name=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     zone_name: zone_name,
+    resource_group_name: resource_group_name,
     name: name,
     timeouts: timeouts,
   }),
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_private_dns_soa_record+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_private_dns_soa_record+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_private_dns_soa_record+: {
         [dataSrcLabel]+: {
           zone_name: value,
-        },
-      },
-    },
-  },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_private_dns_soa_record+: {
-        [dataSrcLabel]+: {
-          name: value,
         },
       },
     },

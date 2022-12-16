@@ -3,55 +3,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     name,
-    pricing_tier=null,
-    tags=null,
-    allowed_user_ip_cidrs=null,
-    front_end_scale_factor=null,
-    internal_load_balancing_mode=null,
-    resource_group_name,
     subnet_id,
-    timeouts=null,
-    cluster_setting=null
+    front_end_scale_factor=null,
+    tags=null,
+    pricing_tier=null,
+    resource_group_name,
+    allowed_user_ip_cidrs=null,
+    internal_load_balancing_mode=null,
+    cluster_setting=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_app_service_environment', label=resourceLabel, attrs=self.newAttrs(
     name=name,
-    pricing_tier=pricing_tier,
-    tags=tags,
-    allowed_user_ip_cidrs=allowed_user_ip_cidrs,
-    front_end_scale_factor=front_end_scale_factor,
-    internal_load_balancing_mode=internal_load_balancing_mode,
-    resource_group_name=resource_group_name,
     subnet_id=subnet_id,
-    timeouts=timeouts,
-    cluster_setting=cluster_setting
+    front_end_scale_factor=front_end_scale_factor,
+    tags=tags,
+    pricing_tier=pricing_tier,
+    resource_group_name=resource_group_name,
+    allowed_user_ip_cidrs=allowed_user_ip_cidrs,
+    internal_load_balancing_mode=internal_load_balancing_mode,
+    cluster_setting=cluster_setting,
+    timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    allowed_user_ip_cidrs=null,
+    internal_load_balancing_mode=null,
+    subnet_id,
     front_end_scale_factor=null,
+    tags=null,
     name,
     pricing_tier=null,
-    tags=null,
-    subnet_id,
-    internal_load_balancing_mode=null,
-    timeouts=null,
-    cluster_setting=null
+    resource_group_name,
+    allowed_user_ip_cidrs=null,
+    cluster_setting=null,
+    timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    allowed_user_ip_cidrs: allowed_user_ip_cidrs,
+    internal_load_balancing_mode: internal_load_balancing_mode,
+    subnet_id: subnet_id,
     front_end_scale_factor: front_end_scale_factor,
+    tags: tags,
     name: name,
     pricing_tier: pricing_tier,
-    tags: tags,
-    subnet_id: subnet_id,
-    internal_load_balancing_mode: internal_load_balancing_mode,
-    timeouts: timeouts,
+    resource_group_name: resource_group_name,
+    allowed_user_ip_cidrs: allowed_user_ip_cidrs,
     cluster_setting: cluster_setting,
+    timeouts: timeouts,
   }),
-  withSubnetId(resourceLabel, value):: {
+  withInternalLoadBalancingMode(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment+: {
         [resourceLabel]+: {
-          subnet_id: value,
+          internal_load_balancing_mode: value,
         },
       },
     },
@@ -74,11 +74,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment+: {
         [resourceLabel]+: {
-          tags: value,
+          resource_group_name: value,
         },
       },
     },
@@ -92,29 +92,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_environment+: {
+        [resourceLabel]+: {
+          subnet_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_environment+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withFrontEndScaleFactor(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_environment+: {
         [resourceLabel]+: {
           front_end_scale_factor: value,
-        },
-      },
-    },
-  },
-  withInternalLoadBalancingMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_environment+: {
-        [resourceLabel]+: {
-          internal_load_balancing_mode: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_environment+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

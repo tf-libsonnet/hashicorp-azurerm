@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    partition_key,
     row_key,
     storage_account_name,
     table_name,
+    partition_key,
     timeouts=null
   ):: tf.withData(type='azurerm_storage_table_entity', label=dataSrcLabel, attrs=self.newAttrs(
-    partition_key=partition_key,
     row_key=row_key,
     storage_account_name=storage_account_name,
     table_name=table_name,
+    partition_key=partition_key,
     timeouts=timeouts
   )),
   newAttrs(

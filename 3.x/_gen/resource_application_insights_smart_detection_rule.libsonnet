@@ -17,18 +17,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    enabled=null,
-    name,
     send_emails_to_subscription_owners=null,
     additional_email_recipients=null,
     application_insights_id,
+    enabled=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    enabled: enabled,
-    name: name,
     send_emails_to_subscription_owners: send_emails_to_subscription_owners,
     additional_email_recipients: additional_email_recipients,
     application_insights_id: application_insights_id,
+    enabled: enabled,
+    name: name,
     timeouts: timeouts,
   }),
   withSendEmailsToSubscriptionOwners(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

@@ -2,60 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
     sku,
-    tags=null,
-    admin_users=null,
-    enable_power_bi_service=null,
-    name,
     querypool_connection_mode=null,
     resource_group_name,
-    location,
     backup_blob_container_uri=null,
+    tags=null,
+    name,
+    admin_users=null,
+    enable_power_bi_service=null,
     timeouts=null,
     ipv4_firewall_rule=null
   ):: tf.withResource(type='azurerm_analysis_services_server', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
     sku=sku,
-    tags=tags,
-    admin_users=admin_users,
-    enable_power_bi_service=enable_power_bi_service,
-    name=name,
     querypool_connection_mode=querypool_connection_mode,
     resource_group_name=resource_group_name,
-    location=location,
     backup_blob_container_uri=backup_blob_container_uri,
+    tags=tags,
+    name=name,
+    admin_users=admin_users,
+    enable_power_bi_service=enable_power_bi_service,
     timeouts=timeouts,
     ipv4_firewall_rule=ipv4_firewall_rule
   )),
   newAttrs(
-    resource_group_name,
-    backup_blob_container_uri=null,
     tags=null,
     querypool_connection_mode=null,
+    resource_group_name,
+    name,
     admin_users=null,
+    backup_blob_container_uri=null,
     enable_power_bi_service=null,
     location,
-    name,
     sku,
     ipv4_firewall_rule=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    backup_blob_container_uri: backup_blob_container_uri,
     tags: tags,
     querypool_connection_mode: querypool_connection_mode,
+    resource_group_name: resource_group_name,
+    name: name,
     admin_users: admin_users,
+    backup_blob_container_uri: backup_blob_container_uri,
     enable_power_bi_service: enable_power_bi_service,
     location: location,
-    name: name,
     sku: sku,
     ipv4_firewall_rule: ipv4_firewall_rule,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
+  withSku(resourceLabel, value):: {
     resource+: {
       azurerm_analysis_services_server+: {
         [resourceLabel]+: {
-          name: value,
+          sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -78,20 +87,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_analysis_services_server+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withAdminUsers(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          admin_users: value,
+          name: value,
         },
       },
     },
@@ -105,29 +105,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAdminUsers(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          admin_users: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_analysis_services_server+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_analysis_services_server+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_analysis_services_server+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -152,13 +152,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ipv4_firewall_rule:: {
     new(
-      range_start,
       name,
-      range_end
+      range_end,
+      range_start
     ):: std.prune(a={
-      range_start: range_start,
       name: name,
       range_end: range_end,
+      range_start: range_start,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -181,15 +181,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

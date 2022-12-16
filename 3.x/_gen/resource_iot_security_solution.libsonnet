@@ -2,71 +2,71 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    disabled_data_sources=null,
-    name,
-    display_name,
-    enabled=null,
-    resource_group_name,
-    log_unmasked_ips_enabled=null,
-    tags=null,
-    query_for_resources=null,
-    events_to_export=null,
     location,
-    log_analytics_workspace_id=null,
-    query_subscription_ids=null,
+    query_for_resources=null,
+    display_name,
     iothub_ids,
-    timeouts=null,
+    tags=null,
+    name,
+    disabled_data_sources=null,
+    resource_group_name,
+    enabled=null,
+    log_unmasked_ips_enabled=null,
+    query_subscription_ids=null,
+    events_to_export=null,
+    log_analytics_workspace_id=null,
     additional_workspace=null,
-    recommendations_enabled=null
+    recommendations_enabled=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_iot_security_solution', label=resourceLabel, attrs=self.newAttrs(
-    disabled_data_sources=disabled_data_sources,
-    name=name,
-    display_name=display_name,
-    enabled=enabled,
-    resource_group_name=resource_group_name,
-    log_unmasked_ips_enabled=log_unmasked_ips_enabled,
-    tags=tags,
-    query_for_resources=query_for_resources,
-    events_to_export=events_to_export,
     location=location,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    query_subscription_ids=query_subscription_ids,
+    query_for_resources=query_for_resources,
+    display_name=display_name,
     iothub_ids=iothub_ids,
-    timeouts=timeouts,
+    tags=tags,
+    name=name,
+    disabled_data_sources=disabled_data_sources,
+    resource_group_name=resource_group_name,
+    enabled=enabled,
+    log_unmasked_ips_enabled=log_unmasked_ips_enabled,
+    query_subscription_ids=query_subscription_ids,
+    events_to_export=events_to_export,
+    log_analytics_workspace_id=log_analytics_workspace_id,
     additional_workspace=additional_workspace,
-    recommendations_enabled=recommendations_enabled
+    recommendations_enabled=recommendations_enabled,
+    timeouts=timeouts
   )),
   newAttrs(
-    log_unmasked_ips_enabled=null,
-    iothub_ids,
     disabled_data_sources=null,
-    events_to_export=null,
-    query_subscription_ids=null,
-    resource_group_name,
-    tags=null,
-    display_name,
-    enabled=null,
-    query_for_resources=null,
     location,
+    events_to_export=null,
     log_analytics_workspace_id=null,
+    display_name,
+    query_for_resources=null,
+    query_subscription_ids=null,
+    log_unmasked_ips_enabled=null,
     name,
+    resource_group_name,
+    enabled=null,
+    iothub_ids,
+    tags=null,
     additional_workspace=null,
     recommendations_enabled=null,
     timeouts=null
   ):: std.prune(a={
-    log_unmasked_ips_enabled: log_unmasked_ips_enabled,
-    iothub_ids: iothub_ids,
     disabled_data_sources: disabled_data_sources,
-    events_to_export: events_to_export,
-    query_subscription_ids: query_subscription_ids,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    display_name: display_name,
-    enabled: enabled,
-    query_for_resources: query_for_resources,
     location: location,
+    events_to_export: events_to_export,
     log_analytics_workspace_id: log_analytics_workspace_id,
+    display_name: display_name,
+    query_for_resources: query_for_resources,
+    query_subscription_ids: query_subscription_ids,
+    log_unmasked_ips_enabled: log_unmasked_ips_enabled,
     name: name,
+    resource_group_name: resource_group_name,
+    enabled: enabled,
+    iothub_ids: iothub_ids,
+    tags: tags,
     additional_workspace: additional_workspace,
     recommendations_enabled: recommendations_enabled,
     timeouts: timeouts,
@@ -80,38 +80,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withQueryForResources(resourceLabel, value):: {
+  withIothubIds(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_solution+: {
         [resourceLabel]+: {
-          query_for_resources: value,
-        },
-      },
-    },
-  },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_solution+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_solution+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withEventsToExport(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_solution+: {
-        [resourceLabel]+: {
-          events_to_export: value,
+          iothub_ids: value,
         },
       },
     },
@@ -125,20 +98,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIothubIds(resourceLabel, value):: {
+  withQuerySubscriptionIds(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_solution+: {
         [resourceLabel]+: {
-          iothub_ids: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_solution+: {
-        [resourceLabel]+: {
-          display_name: value,
+          query_subscription_ids: value,
         },
       },
     },
@@ -152,20 +116,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEventsToExport(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_solution+: {
+        [resourceLabel]+: {
+          events_to_export: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_solution+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withQuerySubscriptionIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_security_solution+: {
-        [resourceLabel]+: {
-          query_subscription_ids: value,
         },
       },
     },
@@ -179,6 +143,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_solution+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
   withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_solution+: {
@@ -188,32 +161,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalWorkspace(resourceLabel, value):: {
+  withQueryForResources(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_solution+: {
         [resourceLabel]+: {
-          additional_workspace: value,
+          query_for_resources: value,
         },
       },
     },
   },
-  withAdditionalWorkspaceMixin(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_security_solution+: {
         [resourceLabel]+: {
-          additional_workspace+: if std.isArray(v=value) then value else [value],
+          resource_group_name: value,
         },
       },
     },
   },
-  additional_workspace:: {
-    new(
-      data_types,
-      workspace_id
-    ):: std.prune(a={
-      data_types: data_types,
-      workspace_id: workspace_id,
-    }),
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_solution+: {
+        [resourceLabel]+: {
+          display_name: value,
+        },
+      },
+    },
   },
   withRecommendationsEnabled(resourceLabel, value):: {
     resource+: {
@@ -235,39 +208,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   recommendations_enabled:: {
     new(
-      edge_hub_mem_optimize=null,
-      ip_filter_permissive_rule=null,
+      permissive_output_firewall_rules=null,
       shared_credentials=null,
-      permissive_input_firewall_rules=null,
-      ip_filter_deny_all=null,
       acr_authentication=null,
-      privileged_docker_options=null,
-      vulnerable_tls_cipher_suite=null,
-      open_ports=null,
-      edge_logging_option=null,
-      permissive_firewall_policy=null,
-      agent_send_unutilized_msg=null,
-      inconsistent_module_settings=null,
       install_agent=null,
+      edge_logging_option=null,
+      ip_filter_permissive_rule=null,
+      edge_hub_mem_optimize=null,
+      permissive_firewall_policy=null,
+      ip_filter_deny_all=null,
+      permissive_input_firewall_rules=null,
+      privileged_docker_options=null,
+      inconsistent_module_settings=null,
+      vulnerable_tls_cipher_suite=null,
       baseline=null,
-      permissive_output_firewall_rules=null
+      open_ports=null,
+      agent_send_unutilized_msg=null
     ):: std.prune(a={
-      edge_hub_mem_optimize: edge_hub_mem_optimize,
-      ip_filter_permissive_rule: ip_filter_permissive_rule,
-      shared_credentials: shared_credentials,
-      permissive_input_firewall_rules: permissive_input_firewall_rules,
-      ip_filter_deny_all: ip_filter_deny_all,
-      acr_authentication: acr_authentication,
-      privileged_docker_options: privileged_docker_options,
-      vulnerable_tls_cipher_suite: vulnerable_tls_cipher_suite,
-      open_ports: open_ports,
-      edge_logging_option: edge_logging_option,
-      permissive_firewall_policy: permissive_firewall_policy,
-      agent_send_unutilized_msg: agent_send_unutilized_msg,
-      inconsistent_module_settings: inconsistent_module_settings,
-      install_agent: install_agent,
-      baseline: baseline,
       permissive_output_firewall_rules: permissive_output_firewall_rules,
+      shared_credentials: shared_credentials,
+      acr_authentication: acr_authentication,
+      install_agent: install_agent,
+      edge_logging_option: edge_logging_option,
+      ip_filter_permissive_rule: ip_filter_permissive_rule,
+      edge_hub_mem_optimize: edge_hub_mem_optimize,
+      permissive_firewall_policy: permissive_firewall_policy,
+      ip_filter_deny_all: ip_filter_deny_all,
+      permissive_input_firewall_rules: permissive_input_firewall_rules,
+      privileged_docker_options: privileged_docker_options,
+      inconsistent_module_settings: inconsistent_module_settings,
+      vulnerable_tls_cipher_suite: vulnerable_tls_cipher_suite,
+      baseline: baseline,
+      open_ports: open_ports,
+      agent_send_unutilized_msg: agent_send_unutilized_msg,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -299,6 +272,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withAdditionalWorkspace(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_solution+: {
+        [resourceLabel]+: {
+          additional_workspace: value,
+        },
+      },
+    },
+  },
+  withAdditionalWorkspaceMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_security_solution+: {
+        [resourceLabel]+: {
+          additional_workspace+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  additional_workspace:: {
+    new(
+      data_types,
+      workspace_id
+    ):: std.prune(a={
+      data_types: data_types,
+      workspace_id: workspace_id,
     }),
   },
 }

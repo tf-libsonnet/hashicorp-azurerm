@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
     description=null,
     media_services_account_name,
     name,
-    resource_group_name,
     output=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_media_transform', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
     description=description,
     media_services_account_name=media_services_account_name,
     name=name,
-    resource_group_name=resource_group_name,
     output=output,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     description=null,
     media_services_account_name,
     name,
+    resource_group_name,
     output=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     description: description,
     media_services_account_name: media_services_account_name,
     name: name,
+    resource_group_name: resource_group_name,
     output: output,
     timeouts: timeouts,
   }),
-  withMediaServicesAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_transform+: {
-        [resourceLabel]+: {
-          media_services_account_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_transform+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_media_transform+: {
@@ -63,6 +45,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_media_transform+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withMediaServicesAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_transform+: {
+        [resourceLabel]+: {
+          media_services_account_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_transform+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -89,27 +89,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     new(
       on_error_action=null,
       relative_priority=null,
-      audio_analyzer_preset=null,
-      builtin_preset=null,
       face_detector_preset=null,
-      video_analyzer_preset=null
+      video_analyzer_preset=null,
+      audio_analyzer_preset=null,
+      builtin_preset=null
     ):: std.prune(a={
       on_error_action: on_error_action,
       relative_priority: relative_priority,
-      audio_analyzer_preset: audio_analyzer_preset,
-      builtin_preset: builtin_preset,
       face_detector_preset: face_detector_preset,
       video_analyzer_preset: video_analyzer_preset,
+      audio_analyzer_preset: audio_analyzer_preset,
+      builtin_preset: builtin_preset,
     }),
-    audio_analyzer_preset:: {
-      new(
-        audio_analysis_mode=null,
-        audio_language=null
-      ):: std.prune(a={
-        audio_analysis_mode: audio_analysis_mode,
-        audio_language: audio_language,
-      }),
-    },
     builtin_preset:: {
       new(
         preset_name
@@ -126,13 +117,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     video_analyzer_preset:: {
       new(
+        insights_type=null,
         audio_analysis_mode=null,
-        audio_language=null,
-        insights_type=null
+        audio_language=null
+      ):: std.prune(a={
+        insights_type: insights_type,
+        audio_analysis_mode: audio_analysis_mode,
+        audio_language: audio_language,
+      }),
+    },
+    audio_analyzer_preset:: {
+      new(
+        audio_analysis_mode=null,
+        audio_language=null
       ):: std.prune(a={
         audio_analysis_mode: audio_analysis_mode,
         audio_language: audio_language,
-        insights_type: insights_type,
       }),
     },
   },

@@ -67,6 +67,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_mongo_database+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withAutoscaleSettings(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_mongo_database+: {
@@ -90,37 +121,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       max_throughput=null
     ):: std.prune(a={
       max_throughput: max_throughput,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_mongo_database+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
     }),
   },
 }

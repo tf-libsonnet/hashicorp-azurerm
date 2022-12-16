@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_sync+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_sync+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_sync+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

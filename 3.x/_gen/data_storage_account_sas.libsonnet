@@ -2,78 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    https_only=null,
     ip_addresses=null,
     signed_version=null,
     start,
     connection_string,
     expiry,
-    https_only=null,
-    timeouts=null,
     permissions=null,
     resource_types=null,
-    services=null
+    services=null,
+    timeouts=null
   ):: tf.withData(type='azurerm_storage_account_sas', label=dataSrcLabel, attrs=self.newAttrs(
+    https_only=https_only,
     ip_addresses=ip_addresses,
     signed_version=signed_version,
     start=start,
     connection_string=connection_string,
     expiry=expiry,
-    https_only=https_only,
-    timeouts=timeouts,
     permissions=permissions,
     resource_types=resource_types,
-    services=services
+    services=services,
+    timeouts=timeouts
   )),
   newAttrs(
+    https_only=null,
     ip_addresses=null,
     signed_version=null,
     start,
     connection_string,
     expiry,
-    https_only=null,
+    permissions=null,
     resource_types=null,
     services=null,
-    timeouts=null,
-    permissions=null
+    timeouts=null
   ):: std.prune(a={
+    https_only: https_only,
     ip_addresses: ip_addresses,
     signed_version: signed_version,
     start: start,
     connection_string: connection_string,
     expiry: expiry,
-    https_only: https_only,
+    permissions: permissions,
     resource_types: resource_types,
     services: services,
     timeouts: timeouts,
-    permissions: permissions,
   }),
-  withConnectionString(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
-  withExpiry(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          expiry: value,
-        },
-      },
-    },
-  },
-  withHttpsOnly(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_account_sas+: {
-        [dataSrcLabel]+: {
-          https_only: value,
-        },
-      },
-    },
-  },
   withIpAddresses(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
@@ -101,36 +74,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withServices(dataSrcLabel, value):: {
+  withConnectionString(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
         [dataSrcLabel]+: {
-          services: value,
+          connection_string: value,
         },
       },
     },
   },
-  withServicesMixin(dataSrcLabel, value):: {
+  withExpiry(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account_sas+: {
         [dataSrcLabel]+: {
-          services+: if std.isArray(v=value) then value else [value],
+          expiry: value,
         },
       },
     },
   },
-  services:: {
-    new(
-      table,
-      blob,
-      file,
-      queue
-    ):: std.prune(a={
-      table: table,
-      blob: blob,
-      file: file,
-      queue: queue,
-    }),
+  withHttpsOnly(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          https_only: value,
+        },
+      },
+    },
   },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
@@ -177,27 +146,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   permissions:: {
     new(
-      add,
       tag,
-      write,
-      read,
-      delete,
-      list,
-      create,
-      update,
+      add,
       filter,
-      process
+      write,
+      create,
+      process,
+      read,
+      update,
+      delete,
+      list
     ):: std.prune(a={
-      add: add,
       tag: tag,
+      add: add,
+      filter: filter,
       write: write,
+      create: create,
+      process: process,
       read: read,
+      update: update,
       delete: delete,
       list: list,
-      create: create,
-      update: update,
-      filter: filter,
-      process: process,
     }),
   },
   withResourceTypes(dataSrcLabel, value):: {
@@ -220,13 +189,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   resource_types:: {
     new(
+      object,
       service,
-      container,
-      object
+      container
     ):: std.prune(a={
+      object: object,
       service: service,
       container: container,
-      object: object,
+    }),
+  },
+  withServices(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          services: value,
+        },
+      },
+    },
+  },
+  withServicesMixin(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_account_sas+: {
+        [dataSrcLabel]+: {
+          services+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  services:: {
+    new(
+      table,
+      blob,
+      file,
+      queue
+    ):: std.prune(a={
+      table: table,
+      blob: blob,
+      file: file,
+      queue: queue,
     }),
   },
 }

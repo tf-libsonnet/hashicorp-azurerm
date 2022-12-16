@@ -15,18 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    target_resource_id,
     additional_data=null,
     assessment_policy_id,
-    status=null,
-    timeouts=null
+    target_resource_id,
+    timeouts=null,
+    status=null
   ):: std.prune(a={
-    target_resource_id: target_resource_id,
     additional_data: additional_data,
     assessment_policy_id: assessment_policy_id,
-    status: status,
+    target_resource_id: target_resource_id,
     timeouts: timeouts,
+    status: status,
   }),
+  withTargetResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_assessment+: {
+        [resourceLabel]+: {
+          target_resource_id: value,
+        },
+      },
+    },
+  },
   withAdditionalData(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_assessment+: {
@@ -45,14 +54,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetResourceId(resourceLabel, value):: {
+  withStatus(resourceLabel, value):: {
     resource+: {
       azurerm_security_center_assessment+: {
         [resourceLabel]+: {
-          target_resource_id: value,
+          status: value,
         },
       },
     },
+  },
+  withStatusMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_security_center_assessment+: {
+        [resourceLabel]+: {
+          status+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  status:: {
+    new(
+      description=null,
+      cause=null,
+      code
+    ):: std.prune(a={
+      description: description,
+      cause: cause,
+      code: code,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -83,35 +112,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withStatus(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_assessment+: {
-        [resourceLabel]+: {
-          status: value,
-        },
-      },
-    },
-  },
-  withStatusMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_security_center_assessment+: {
-        [resourceLabel]+: {
-          status+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  status:: {
-    new(
-      cause=null,
-      code,
-      description=null
-    ):: std.prune(a={
-      cause: cause,
-      code: code,
-      description: description,
     }),
   },
 }

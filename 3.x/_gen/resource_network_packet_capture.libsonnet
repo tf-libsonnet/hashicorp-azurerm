@@ -2,69 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
+    target_resource_id,
     maximum_bytes_per_packet=null,
     maximum_bytes_per_session=null,
     maximum_capture_duration=null,
     name,
     network_watcher_name,
-    resource_group_name,
-    target_resource_id,
+    timeouts=null,
     filter=null,
-    storage_location=null,
-    timeouts=null
+    storage_location=null
   ):: tf.withResource(type='azurerm_network_packet_capture', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
+    target_resource_id=target_resource_id,
     maximum_bytes_per_packet=maximum_bytes_per_packet,
     maximum_bytes_per_session=maximum_bytes_per_session,
     maximum_capture_duration=maximum_capture_duration,
     name=name,
     network_watcher_name=network_watcher_name,
-    resource_group_name=resource_group_name,
-    target_resource_id=target_resource_id,
+    timeouts=timeouts,
     filter=filter,
-    storage_location=storage_location,
-    timeouts=timeouts
+    storage_location=storage_location
   )),
   newAttrs(
-    resource_group_name,
-    target_resource_id,
-    maximum_bytes_per_packet=null,
     maximum_bytes_per_session=null,
     maximum_capture_duration=null,
     name,
     network_watcher_name,
-    filter=null,
+    resource_group_name,
+    target_resource_id,
+    maximum_bytes_per_packet=null,
     storage_location=null,
-    timeouts=null
+    timeouts=null,
+    filter=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    target_resource_id: target_resource_id,
-    maximum_bytes_per_packet: maximum_bytes_per_packet,
     maximum_bytes_per_session: maximum_bytes_per_session,
     maximum_capture_duration: maximum_capture_duration,
     name: name,
     network_watcher_name: network_watcher_name,
-    filter: filter,
+    resource_group_name: resource_group_name,
+    target_resource_id: target_resource_id,
+    maximum_bytes_per_packet: maximum_bytes_per_packet,
     storage_location: storage_location,
     timeouts: timeouts,
+    filter: filter,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_packet_capture+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withNetworkWatcherName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_packet_capture+: {
-        [resourceLabel]+: {
-          network_watcher_name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_network_packet_capture+: {
@@ -106,6 +88,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_packet_capture+: {
         [resourceLabel]+: {
           maximum_capture_duration: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_packet_capture+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withNetworkWatcherName(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_packet_capture+: {
+        [resourceLabel]+: {
+          network_watcher_name: value,
         },
       },
     },

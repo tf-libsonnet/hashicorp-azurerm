@@ -2,139 +2,166 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    access_key_metadata_writes_enabled=null,
-    tags=null,
-    analytical_storage_enabled=null,
-    public_network_access_enabled=null,
-    resource_group_name,
-    mongo_server_version=null,
-    network_acl_bypass_ids=null,
-    network_acl_bypass_for_azure_services=null,
-    offer_type,
-    kind=null,
+    ip_range_filter=null,
     name,
+    default_identity_type=null,
     enable_free_tier=null,
     location,
-    local_authentication_disabled=null,
-    create_mode=null,
-    ip_range_filter=null,
     key_vault_key_id=null,
-    default_identity_type=null,
+    tags=null,
     enable_multiple_write_locations=null,
     is_virtual_network_filter_enabled=null,
+    resource_group_name,
+    offer_type,
+    public_network_access_enabled=null,
+    local_authentication_disabled=null,
+    mongo_server_version=null,
+    create_mode=null,
+    network_acl_bypass_for_azure_services=null,
+    access_key_metadata_writes_enabled=null,
+    kind=null,
+    analytical_storage_enabled=null,
     enable_automatic_failover=null,
-    cors_rule=null,
-    identity=null,
-    timeouts=null,
-    geo_location=null,
+    network_acl_bypass_ids=null,
+    consistency_policy=null,
+    backup=null,
     analytical_storage=null,
+    geo_location=null,
+    identity=null,
+    cors_rule=null,
+    timeouts=null,
+    virtual_network_rule=null,
     capabilities=null,
     capacity=null,
-    consistency_policy=null,
-    restore=null,
-    backup=null,
-    virtual_network_rule=null
+    restore=null
   ):: tf.withResource(type='azurerm_cosmosdb_account', label=resourceLabel, attrs=self.newAttrs(
-    access_key_metadata_writes_enabled=access_key_metadata_writes_enabled,
-    tags=tags,
-    analytical_storage_enabled=analytical_storage_enabled,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    mongo_server_version=mongo_server_version,
-    network_acl_bypass_ids=network_acl_bypass_ids,
-    network_acl_bypass_for_azure_services=network_acl_bypass_for_azure_services,
-    offer_type=offer_type,
-    kind=kind,
+    ip_range_filter=ip_range_filter,
     name=name,
+    default_identity_type=default_identity_type,
     enable_free_tier=enable_free_tier,
     location=location,
-    local_authentication_disabled=local_authentication_disabled,
-    create_mode=create_mode,
-    ip_range_filter=ip_range_filter,
     key_vault_key_id=key_vault_key_id,
-    default_identity_type=default_identity_type,
+    tags=tags,
     enable_multiple_write_locations=enable_multiple_write_locations,
     is_virtual_network_filter_enabled=is_virtual_network_filter_enabled,
+    resource_group_name=resource_group_name,
+    offer_type=offer_type,
+    public_network_access_enabled=public_network_access_enabled,
+    local_authentication_disabled=local_authentication_disabled,
+    mongo_server_version=mongo_server_version,
+    create_mode=create_mode,
+    network_acl_bypass_for_azure_services=network_acl_bypass_for_azure_services,
+    access_key_metadata_writes_enabled=access_key_metadata_writes_enabled,
+    kind=kind,
+    analytical_storage_enabled=analytical_storage_enabled,
     enable_automatic_failover=enable_automatic_failover,
-    cors_rule=cors_rule,
-    identity=identity,
-    timeouts=timeouts,
-    geo_location=geo_location,
+    network_acl_bypass_ids=network_acl_bypass_ids,
+    consistency_policy=consistency_policy,
+    backup=backup,
     analytical_storage=analytical_storage,
+    geo_location=geo_location,
+    identity=identity,
+    cors_rule=cors_rule,
+    timeouts=timeouts,
+    virtual_network_rule=virtual_network_rule,
     capabilities=capabilities,
     capacity=capacity,
-    consistency_policy=consistency_policy,
-    restore=restore,
-    backup=backup,
-    virtual_network_rule=virtual_network_rule
+    restore=restore
   )),
   newAttrs(
-    offer_type,
-    default_identity_type=null,
-    location,
-    is_virtual_network_filter_enabled=null,
-    local_authentication_disabled=null,
-    name,
-    ip_range_filter=null,
     network_acl_bypass_ids=null,
-    enable_automatic_failover=null,
-    analytical_storage_enabled=null,
-    key_vault_key_id=null,
-    kind=null,
+    name,
+    location,
     public_network_access_enabled=null,
+    analytical_storage_enabled=null,
+    mongo_server_version=null,
+    resource_group_name,
+    offer_type,
+    ip_range_filter=null,
+    key_vault_key_id=null,
+    default_identity_type=null,
+    tags=null,
+    local_authentication_disabled=null,
+    create_mode=null,
     network_acl_bypass_for_azure_services=null,
     access_key_metadata_writes_enabled=null,
-    mongo_server_version=null,
     enable_free_tier=null,
-    tags=null,
-    resource_group_name,
-    create_mode=null,
+    kind=null,
+    enable_automatic_failover=null,
     enable_multiple_write_locations=null,
+    is_virtual_network_filter_enabled=null,
+    backup=null,
     cors_rule=null,
-    identity=null,
+    timeouts=null,
     virtual_network_rule=null,
     analytical_storage=null,
     geo_location=null,
+    identity=null,
     restore=null,
     capabilities=null,
     capacity=null,
-    consistency_policy=null,
-    timeouts=null,
-    backup=null
+    consistency_policy=null
   ):: std.prune(a={
-    offer_type: offer_type,
-    default_identity_type: default_identity_type,
-    location: location,
-    is_virtual_network_filter_enabled: is_virtual_network_filter_enabled,
-    local_authentication_disabled: local_authentication_disabled,
-    name: name,
-    ip_range_filter: ip_range_filter,
     network_acl_bypass_ids: network_acl_bypass_ids,
-    enable_automatic_failover: enable_automatic_failover,
-    analytical_storage_enabled: analytical_storage_enabled,
-    key_vault_key_id: key_vault_key_id,
-    kind: kind,
+    name: name,
+    location: location,
     public_network_access_enabled: public_network_access_enabled,
+    analytical_storage_enabled: analytical_storage_enabled,
+    mongo_server_version: mongo_server_version,
+    resource_group_name: resource_group_name,
+    offer_type: offer_type,
+    ip_range_filter: ip_range_filter,
+    key_vault_key_id: key_vault_key_id,
+    default_identity_type: default_identity_type,
+    tags: tags,
+    local_authentication_disabled: local_authentication_disabled,
+    create_mode: create_mode,
     network_acl_bypass_for_azure_services: network_acl_bypass_for_azure_services,
     access_key_metadata_writes_enabled: access_key_metadata_writes_enabled,
-    mongo_server_version: mongo_server_version,
     enable_free_tier: enable_free_tier,
-    tags: tags,
-    resource_group_name: resource_group_name,
-    create_mode: create_mode,
+    kind: kind,
+    enable_automatic_failover: enable_automatic_failover,
     enable_multiple_write_locations: enable_multiple_write_locations,
+    is_virtual_network_filter_enabled: is_virtual_network_filter_enabled,
+    backup: backup,
     cors_rule: cors_rule,
-    identity: identity,
+    timeouts: timeouts,
     virtual_network_rule: virtual_network_rule,
     analytical_storage: analytical_storage,
     geo_location: geo_location,
+    identity: identity,
     restore: restore,
     capabilities: capabilities,
     capacity: capacity,
     consistency_policy: consistency_policy,
-    timeouts: timeouts,
-    backup: backup,
   }),
+  withLocalAuthenticationDisabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          local_authentication_disabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withIpRangeFilter(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          ip_range_filter: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
@@ -144,11 +171,101 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAnalyticalStorageEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          analytical_storage_enabled: value,
+        },
+      },
+    },
+  },
+  withNetworkAclBypassIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          network_acl_bypass_ids: value,
+        },
+      },
+    },
+  },
+  withDefaultIdentityType(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          default_identity_type: value,
+        },
+      },
+    },
+  },
+  withAccessKeyMetadataWritesEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          access_key_metadata_writes_enabled: value,
+        },
+      },
+    },
+  },
+  withKind(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          kind: value,
+        },
+      },
+    },
+  },
+  withEnableAutomaticFailover(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          enable_automatic_failover: value,
+        },
+      },
+    },
+  },
+  withEnableMultipleWriteLocations(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          enable_multiple_write_locations: value,
+        },
+      },
+    },
+  },
   withIsVirtualNetworkFilterEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
           is_virtual_network_filter_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withEnableFreeTier(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          enable_free_tier: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
         },
       },
     },
@@ -171,42 +288,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withIpRangeFilter(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          ip_range_filter: value,
-        },
-      },
-    },
-  },
-  withNetworkAclBypassForAzureServices(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          network_acl_bypass_for_azure_services: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withMongoServerVersion(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
@@ -216,74 +297,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnableMultipleWriteLocations(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
-          enable_multiple_write_locations: value,
-        },
-      },
-    },
-  },
-  withLocalAuthenticationDisabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          local_authentication_disabled: value,
-        },
-      },
-    },
-  },
-  withKind(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          kind: value,
-        },
-      },
-    },
-  },
-  withEnableFreeTier(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          enable_free_tier: value,
-        },
-      },
-    },
-  },
-  withEnableAutomaticFailover(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          enable_automatic_failover: value,
-        },
-      },
-    },
-  },
-  withDefaultIdentityType(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          default_identity_type: value,
-        },
-      },
-    },
-  },
-  withNetworkAclBypassIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          network_acl_bypass_ids: value,
-        },
-      },
-    },
-  },
-  withAccessKeyMetadataWritesEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          access_key_metadata_writes_enabled: value,
+          name: value,
         },
       },
     },
@@ -297,32 +315,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAnalyticalStorageEnabled(resourceLabel, value):: {
+  withNetworkAclBypassForAzureServices(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
-          analytical_storage_enabled: value,
+          network_acl_bypass_for_azure_services: value,
         },
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
-          public_network_access_enabled: value,
+          timeouts: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          timeouts+: value,
         },
       },
     },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withBackup(resourceLabel, value):: {
     resource+: {
@@ -344,96 +375,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   backup:: {
     new(
+      interval_in_minutes=null,
       retention_in_hours=null,
       storage_redundancy=null,
-      type,
-      interval_in_minutes=null
+      type
     ):: std.prune(a={
+      interval_in_minutes: interval_in_minutes,
       retention_in_hours: retention_in_hours,
       storage_redundancy: storage_redundancy,
       type: type,
-      interval_in_minutes: interval_in_minutes,
-    }),
-  },
-  withCapabilities(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          capabilities: value,
-        },
-      },
-    },
-  },
-  withCapabilitiesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          capabilities+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  capabilities:: {
-    new(
-      name
-    ):: std.prune(a={
-      name: name,
-    }),
-  },
-  withConsistencyPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          consistency_policy: value,
-        },
-      },
-    },
-  },
-  withConsistencyPolicyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          consistency_policy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  consistency_policy:: {
-    new(
-      max_interval_in_seconds=null,
-      max_staleness_prefix=null,
-      consistency_level
-    ):: std.prune(a={
-      max_interval_in_seconds: max_interval_in_seconds,
-      max_staleness_prefix: max_staleness_prefix,
-      consistency_level: consistency_level,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
     }),
   },
   withRestore(resourceLabel, value):: {
@@ -474,6 +424,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
     },
   },
+  withCapacity(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          capacity: value,
+        },
+      },
+    },
+  },
+  withCapacityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          capacity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  capacity:: {
+    new(
+      total_throughput_limit
+    ):: std.prune(a={
+      total_throughput_limit: total_throughput_limit,
+    }),
+  },
+  withConsistencyPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          consistency_policy: value,
+        },
+      },
+    },
+  },
+  withConsistencyPolicyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          consistency_policy+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  consistency_policy:: {
+    new(
+      consistency_level,
+      max_interval_in_seconds=null,
+      max_staleness_prefix=null
+    ):: std.prune(a={
+      consistency_level: consistency_level,
+      max_interval_in_seconds: max_interval_in_seconds,
+      max_staleness_prefix: max_staleness_prefix,
+    }),
+  },
   withVirtualNetworkRule(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
@@ -497,6 +501,62 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       ignore_missing_vnet_service_endpoint=null
     ):: std.prune(a={
       ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
+    }),
+  },
+  withGeoLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          geo_location: value,
+        },
+      },
+    },
+  },
+  withGeoLocationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          geo_location+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  geo_location:: {
+    new(
+      location,
+      zone_redundant=null,
+      failover_priority
+    ):: std.prune(a={
+      location: location,
+      zone_redundant: zone_redundant,
+      failover_priority: failover_priority,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_account+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
     }),
   },
   withAnalyticalStorage(resourceLabel, value):: {
@@ -524,60 +584,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       schema_type: schema_type,
     }),
   },
-  withTimeouts(resourceLabel, value):: {
+  withCapabilities(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
-          timeouts: value,
+          capabilities: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withCapabilitiesMixin(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_account+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          capabilities+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  timeouts:: {
+  capabilities:: {
     new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
+      name
     ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
-  withCapacity(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          capacity: value,
-        },
-      },
-    },
-  },
-  withCapacityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          capacity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  capacity:: {
-    new(
-      total_throughput_limit
-    ):: std.prune(a={
-      total_throughput_limit: total_throughput_limit,
+      name: name,
     }),
   },
   withCorsRule(resourceLabel, value):: {
@@ -600,46 +629,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   cors_rule:: {
     new(
-      max_age_in_seconds,
       allowed_headers,
       allowed_methods,
       allowed_origins,
-      exposed_headers
+      exposed_headers,
+      max_age_in_seconds
     ):: std.prune(a={
-      max_age_in_seconds: max_age_in_seconds,
       allowed_headers: allowed_headers,
       allowed_methods: allowed_methods,
       allowed_origins: allowed_origins,
       exposed_headers: exposed_headers,
-    }),
-  },
-  withGeoLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          geo_location: value,
-        },
-      },
-    },
-  },
-  withGeoLocationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_account+: {
-        [resourceLabel]+: {
-          geo_location+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  geo_location:: {
-    new(
-      zone_redundant=null,
-      failover_priority,
-      location
-    ):: std.prune(a={
-      zone_redundant: zone_redundant,
-      failover_priority: failover_priority,
-      location: location,
+      max_age_in_seconds: max_age_in_seconds,
     }),
   },
 }

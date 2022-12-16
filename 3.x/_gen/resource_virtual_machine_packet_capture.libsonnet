@@ -2,47 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    maximum_bytes_per_session=null,
     maximum_capture_duration_in_seconds=null,
     name,
     network_watcher_id,
     virtual_machine_id,
     maximum_bytes_per_packet=null,
+    maximum_bytes_per_session=null,
+    timeouts=null,
     filter=null,
-    storage_location=null,
-    timeouts=null
+    storage_location=null
   ):: tf.withResource(type='azurerm_virtual_machine_packet_capture', label=resourceLabel, attrs=self.newAttrs(
-    maximum_bytes_per_session=maximum_bytes_per_session,
     maximum_capture_duration_in_seconds=maximum_capture_duration_in_seconds,
     name=name,
     network_watcher_id=network_watcher_id,
     virtual_machine_id=virtual_machine_id,
     maximum_bytes_per_packet=maximum_bytes_per_packet,
+    maximum_bytes_per_session=maximum_bytes_per_session,
+    timeouts=timeouts,
     filter=filter,
-    storage_location=storage_location,
-    timeouts=timeouts
+    storage_location=storage_location
   )),
   newAttrs(
+    maximum_capture_duration_in_seconds=null,
+    name,
     network_watcher_id,
     virtual_machine_id,
     maximum_bytes_per_packet=null,
     maximum_bytes_per_session=null,
-    maximum_capture_duration_in_seconds=null,
-    name,
     filter=null,
     storage_location=null,
     timeouts=null
   ):: std.prune(a={
+    maximum_capture_duration_in_seconds: maximum_capture_duration_in_seconds,
+    name: name,
     network_watcher_id: network_watcher_id,
     virtual_machine_id: virtual_machine_id,
     maximum_bytes_per_packet: maximum_bytes_per_packet,
     maximum_bytes_per_session: maximum_bytes_per_session,
-    maximum_capture_duration_in_seconds: maximum_capture_duration_in_seconds,
-    name: name,
     filter: filter,
     storage_location: storage_location,
     timeouts: timeouts,
   }),
+  withVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_packet_capture+: {
+        [resourceLabel]+: {
+          virtual_machine_id: value,
+        },
+      },
+    },
+  },
+  withMaximumBytesPerPacket(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_packet_capture+: {
+        [resourceLabel]+: {
+          maximum_bytes_per_packet: value,
+        },
+      },
+    },
+  },
   withMaximumBytesPerSession(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_packet_capture+: {
@@ -79,23 +97,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualMachineId(resourceLabel, value):: {
+  withFilter(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_packet_capture+: {
         [resourceLabel]+: {
-          virtual_machine_id: value,
+          filter: value,
         },
       },
     },
   },
-  withMaximumBytesPerPacket(resourceLabel, value):: {
+  withFilterMixin(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_packet_capture+: {
         [resourceLabel]+: {
-          maximum_bytes_per_packet: value,
+          filter+: if std.isArray(v=value) then value else [value],
         },
       },
     },
+  },
+  filter:: {
+    new(
+      protocol,
+      remote_ip_address=null,
+      remote_port=null,
+      local_ip_address=null,
+      local_port=null
+    ):: std.prune(a={
+      protocol: protocol,
+      remote_ip_address: remote_ip_address,
+      remote_port: remote_port,
+      local_ip_address: local_ip_address,
+      local_port: local_port,
+    }),
   },
   withStorageLocation(resourceLabel, value):: {
     resource+: {
@@ -144,46 +177,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
-    }),
-  },
-  withFilter(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_packet_capture+: {
-        [resourceLabel]+: {
-          filter: value,
-        },
-      },
-    },
-  },
-  withFilterMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_packet_capture+: {
-        [resourceLabel]+: {
-          filter+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  filter:: {
-    new(
-      local_port=null,
-      protocol,
-      remote_ip_address=null,
-      remote_port=null,
-      local_ip_address=null
-    ):: std.prune(a={
-      local_port: local_port,
-      protocol: protocol,
-      remote_ip_address: remote_ip_address,
-      remote_port: remote_port,
-      local_ip_address: local_ip_address,
+      read: read,
     }),
   },
 }

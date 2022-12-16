@@ -2,88 +2,97 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
-    auto_grow_enabled=null,
-    ssl_enforcement_enabled,
-    create_mode=null,
     storage_mb=null,
-    administrator_login_password=null,
-    backup_retention_days=null,
     restore_point_in_time=null,
-    geo_redundant_backup_enabled=null,
-    version,
+    auto_grow_enabled=null,
+    backup_retention_days=null,
+    create_mode=null,
     public_network_access_enabled=null,
-    sku_name,
     administrator_login=null,
-    location,
+    ssl_enforcement_enabled,
+    administrator_login_password=null,
+    geo_redundant_backup_enabled=null,
+    tags=null,
+    creation_source_server_id=null,
     resource_group_name,
     name,
-    creation_source_server_id=null,
+    location,
+    sku_name,
+    version,
     timeouts=null
   ):: tf.withResource(type='azurerm_mariadb_server', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    auto_grow_enabled=auto_grow_enabled,
-    ssl_enforcement_enabled=ssl_enforcement_enabled,
-    create_mode=create_mode,
     storage_mb=storage_mb,
-    administrator_login_password=administrator_login_password,
-    backup_retention_days=backup_retention_days,
     restore_point_in_time=restore_point_in_time,
-    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
-    version=version,
+    auto_grow_enabled=auto_grow_enabled,
+    backup_retention_days=backup_retention_days,
+    create_mode=create_mode,
     public_network_access_enabled=public_network_access_enabled,
-    sku_name=sku_name,
     administrator_login=administrator_login,
-    location=location,
+    ssl_enforcement_enabled=ssl_enforcement_enabled,
+    administrator_login_password=administrator_login_password,
+    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
+    tags=tags,
+    creation_source_server_id=creation_source_server_id,
     resource_group_name=resource_group_name,
     name=name,
-    creation_source_server_id=creation_source_server_id,
+    location=location,
+    sku_name=sku_name,
+    version=version,
     timeouts=timeouts
   )),
   newAttrs(
-    creation_source_server_id=null,
-    backup_retention_days=null,
-    administrator_login=null,
-    public_network_access_enabled=null,
-    resource_group_name,
-    create_mode=null,
-    geo_redundant_backup_enabled=null,
+    ssl_enforcement_enabled,
     storage_mb=null,
     auto_grow_enabled=null,
-    tags=null,
+    geo_redundant_backup_enabled=null,
+    backup_retention_days=null,
+    create_mode=null,
+    public_network_access_enabled=null,
+    creation_source_server_id=null,
     restore_point_in_time=null,
-    name,
+    administrator_login=null,
     version,
     administrator_login_password=null,
-    location,
-    ssl_enforcement_enabled,
+    tags=null,
+    resource_group_name,
     sku_name,
+    name,
+    location,
     timeouts=null
   ):: std.prune(a={
-    creation_source_server_id: creation_source_server_id,
-    backup_retention_days: backup_retention_days,
-    administrator_login: administrator_login,
-    public_network_access_enabled: public_network_access_enabled,
-    resource_group_name: resource_group_name,
-    create_mode: create_mode,
-    geo_redundant_backup_enabled: geo_redundant_backup_enabled,
+    ssl_enforcement_enabled: ssl_enforcement_enabled,
     storage_mb: storage_mb,
     auto_grow_enabled: auto_grow_enabled,
-    tags: tags,
+    geo_redundant_backup_enabled: geo_redundant_backup_enabled,
+    backup_retention_days: backup_retention_days,
+    create_mode: create_mode,
+    public_network_access_enabled: public_network_access_enabled,
+    creation_source_server_id: creation_source_server_id,
     restore_point_in_time: restore_point_in_time,
-    name: name,
+    administrator_login: administrator_login,
     version: version,
     administrator_login_password: administrator_login_password,
-    location: location,
-    ssl_enforcement_enabled: ssl_enforcement_enabled,
+    tags: tags,
+    resource_group_name: resource_group_name,
     sku_name: sku_name,
+    name: name,
+    location: location,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_server+: {
         [resourceLabel]+: {
-          location: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withAutoGrowEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          auto_grow_enabled: value,
         },
       },
     },
@@ -97,65 +106,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBackupRetentionDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          backup_retention_days: value,
-        },
-      },
-    },
-  },
-  withCreateMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          create_mode: value,
-        },
-      },
-    },
-  },
-  withAdministratorLogin(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          administrator_login: value,
-        },
-      },
-    },
-  },
-  withVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          version: value,
-        },
-      },
-    },
-  },
-  withCreationSourceServerId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          creation_source_server_id: value,
-        },
-      },
-    },
-  },
-  withRestorePointInTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          restore_point_in_time: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_server+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withGeoRedundantBackupEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          geo_redundant_backup_enabled: value,
         },
       },
     },
@@ -178,38 +142,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withBackupRetentionDays(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_server+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          backup_retention_days: value,
         },
       },
     },
   },
-  withStorageMb(resourceLabel, value):: {
+  withVersion(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_server+: {
         [resourceLabel]+: {
-          storage_mb: value,
-        },
-      },
-    },
-  },
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withAutoGrowEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_mariadb_server+: {
-        [resourceLabel]+: {
-          auto_grow_enabled: value,
+          version: value,
         },
       },
     },
@@ -223,11 +169,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGeoRedundantBackupEnabled(resourceLabel, value):: {
+  withCreationSourceServerId(resourceLabel, value):: {
     resource+: {
       azurerm_mariadb_server+: {
         [resourceLabel]+: {
-          geo_redundant_backup_enabled: value,
+          creation_source_server_id: value,
+        },
+      },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withAdministratorLogin(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          administrator_login: value,
+        },
+      },
+    },
+  },
+  withCreateMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          create_mode: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withStorageMb(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          storage_mb: value,
+        },
+      },
+    },
+  },
+  withRestorePointInTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_mariadb_server+: {
+        [resourceLabel]+: {
+          restore_point_in_time: value,
         },
       },
     },
@@ -252,15 +252,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

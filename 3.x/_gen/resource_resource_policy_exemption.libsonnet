@@ -2,56 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    display_name=null,
-    expires_on=null,
-    metadata=null,
-    policy_assignment_id,
     exemption_category,
+    description=null,
+    expires_on=null,
+    policy_assignment_id,
+    policy_definition_reference_ids=null,
+    display_name=null,
     name,
     resource_id,
-    description=null,
-    policy_definition_reference_ids=null,
+    metadata=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_policy_exemption', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    expires_on=expires_on,
-    metadata=metadata,
-    policy_assignment_id=policy_assignment_id,
     exemption_category=exemption_category,
+    description=description,
+    expires_on=expires_on,
+    policy_assignment_id=policy_assignment_id,
+    policy_definition_reference_ids=policy_definition_reference_ids,
+    display_name=display_name,
     name=name,
     resource_id=resource_id,
-    description=description,
-    policy_definition_reference_ids=policy_definition_reference_ids,
+    metadata=metadata,
     timeouts=timeouts
   )),
   newAttrs(
-    expires_on=null,
-    policy_assignment_id,
-    policy_definition_reference_ids=null,
     display_name=null,
     exemption_category,
-    description=null,
+    expires_on=null,
+    policy_definition_reference_ids=null,
     metadata=null,
-    name,
     resource_id,
+    policy_assignment_id,
+    description=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    expires_on: expires_on,
-    policy_assignment_id: policy_assignment_id,
-    policy_definition_reference_ids: policy_definition_reference_ids,
     display_name: display_name,
     exemption_category: exemption_category,
-    description: description,
+    expires_on: expires_on,
+    policy_definition_reference_ids: policy_definition_reference_ids,
     metadata: metadata,
-    name: name,
     resource_id: resource_id,
+    policy_assignment_id: policy_assignment_id,
+    description: description,
+    name: name,
     timeouts: timeouts,
   }),
-  withPolicyAssignmentId(resourceLabel, value):: {
+  withPolicyDefinitionReferenceIds(resourceLabel, value):: {
     resource+: {
       azurerm_resource_policy_exemption+: {
         [resourceLabel]+: {
-          policy_assignment_id: value,
+          policy_definition_reference_ids: value,
         },
       },
     },
@@ -74,11 +74,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_resource_policy_exemption+: {
         [resourceLabel]+: {
-          name: value,
+          description: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_policy_exemption+: {
+        [resourceLabel]+: {
+          metadata: value,
         },
       },
     },
@@ -92,20 +101,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPolicyDefinitionReferenceIds(resourceLabel, value):: {
+  withPolicyAssignmentId(resourceLabel, value):: {
     resource+: {
       azurerm_resource_policy_exemption+: {
         [resourceLabel]+: {
-          policy_definition_reference_ids: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_policy_exemption+: {
-        [resourceLabel]+: {
-          description: value,
+          policy_assignment_id: value,
         },
       },
     },
@@ -119,11 +119,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMetadata(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_resource_policy_exemption+: {
         [resourceLabel]+: {
-          metadata: value,
+          name: value,
         },
       },
     },
@@ -148,15 +148,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

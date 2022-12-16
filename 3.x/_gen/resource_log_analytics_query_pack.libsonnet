@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    name,
     resource_group_name,
     tags=null,
+    location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_query_pack', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags: tags,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_query_pack+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_query_pack+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_query_pack+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_log_analytics_query_pack+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_query_pack+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_query_pack+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

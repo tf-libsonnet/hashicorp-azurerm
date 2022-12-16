@@ -3,79 +3,142 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     tags=null,
-    validate_environment=null,
-    custom_rdp_properties=null,
-    location,
-    resource_group_name,
     type,
+    resource_group_name,
+    custom_rdp_properties=null,
     start_vm_on_connect=null,
     friendly_name=null,
-    description=null,
-    name,
-    preferred_app_group_type=null,
-    maximum_sessions_allowed=null,
     personal_desktop_assignment_type=null,
+    location,
     load_balancer_type,
-    scheduled_agent_updates=null,
-    timeouts=null
+    maximum_sessions_allowed=null,
+    name,
+    description=null,
+    preferred_app_group_type=null,
+    validate_environment=null,
+    timeouts=null,
+    scheduled_agent_updates=null
   ):: tf.withResource(type='azurerm_virtual_desktop_host_pool', label=resourceLabel, attrs=self.newAttrs(
     tags=tags,
-    validate_environment=validate_environment,
-    custom_rdp_properties=custom_rdp_properties,
-    location=location,
-    resource_group_name=resource_group_name,
     type=type,
+    resource_group_name=resource_group_name,
+    custom_rdp_properties=custom_rdp_properties,
     start_vm_on_connect=start_vm_on_connect,
     friendly_name=friendly_name,
-    description=description,
-    name=name,
-    preferred_app_group_type=preferred_app_group_type,
-    maximum_sessions_allowed=maximum_sessions_allowed,
     personal_desktop_assignment_type=personal_desktop_assignment_type,
+    location=location,
     load_balancer_type=load_balancer_type,
-    scheduled_agent_updates=scheduled_agent_updates,
-    timeouts=timeouts
+    maximum_sessions_allowed=maximum_sessions_allowed,
+    name=name,
+    description=description,
+    preferred_app_group_type=preferred_app_group_type,
+    validate_environment=validate_environment,
+    timeouts=timeouts,
+    scheduled_agent_updates=scheduled_agent_updates
   )),
   newAttrs(
-    maximum_sessions_allowed=null,
-    personal_desktop_assignment_type=null,
-    validate_environment=null,
     custom_rdp_properties=null,
+    load_balancer_type,
     name,
+    start_vm_on_connect=null,
     preferred_app_group_type=null,
-    tags=null,
-    type,
+    location,
+    personal_desktop_assignment_type=null,
+    maximum_sessions_allowed=null,
+    validate_environment=null,
     description=null,
     friendly_name=null,
-    location,
     resource_group_name,
-    load_balancer_type,
-    start_vm_on_connect=null,
+    tags=null,
+    type,
     scheduled_agent_updates=null,
     timeouts=null
   ):: std.prune(a={
-    maximum_sessions_allowed: maximum_sessions_allowed,
-    personal_desktop_assignment_type: personal_desktop_assignment_type,
-    validate_environment: validate_environment,
     custom_rdp_properties: custom_rdp_properties,
+    load_balancer_type: load_balancer_type,
     name: name,
+    start_vm_on_connect: start_vm_on_connect,
     preferred_app_group_type: preferred_app_group_type,
-    tags: tags,
-    type: type,
+    location: location,
+    personal_desktop_assignment_type: personal_desktop_assignment_type,
+    maximum_sessions_allowed: maximum_sessions_allowed,
+    validate_environment: validate_environment,
     description: description,
     friendly_name: friendly_name,
-    location: location,
     resource_group_name: resource_group_name,
-    load_balancer_type: load_balancer_type,
-    start_vm_on_connect: start_vm_on_connect,
+    tags: tags,
+    type: type,
     scheduled_agent_updates: scheduled_agent_updates,
     timeouts: timeouts,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
+  },
+  withCustomRdpProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          custom_rdp_properties: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withMaximumSessionsAllowed(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          maximum_sessions_allowed: value,
+        },
+      },
+    },
+  },
   withFriendlyName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_host_pool+: {
         [resourceLabel]+: {
           friendly_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withStartVmOnConnect(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          start_vm_on_connect: value,
         },
       },
     },
@@ -98,38 +161,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStartVmOnConnect(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          start_vm_on_connect: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_desktop_host_pool+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          description: value,
         },
       },
     },
@@ -160,73 +196,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withCustomRdpProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          custom_rdp_properties: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withMaximumSessionsAllowed(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          maximum_sessions_allowed: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_desktop_host_pool+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
   withScheduledAgentUpdates(resourceLabel, value):: {
     resource+: {
@@ -267,5 +236,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         hour_of_day: hour_of_day,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_desktop_host_pool+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
 }

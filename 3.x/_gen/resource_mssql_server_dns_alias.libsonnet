@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_server_dns_alias', label=resourceLabel, attrs=self.newAttrs(mssql_server_id=mssql_server_id, name=name, timeouts=timeouts)),
   newAttrs(
-    name,
     mssql_server_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     mssql_server_id: mssql_server_id,
+    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -53,13 +53,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

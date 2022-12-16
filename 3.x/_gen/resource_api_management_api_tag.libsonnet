@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_api_tag', label=resourceLabel, attrs=self.newAttrs(api_id=api_id, name=name, timeouts=timeouts)),
   newAttrs(
-    name,
     api_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     api_id: api_id,
+    name: name,
     timeouts: timeouts,
   }),
   withApiId(resourceLabel, value):: {

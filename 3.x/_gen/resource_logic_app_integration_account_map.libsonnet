@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    integration_account_name,
+    map_type,
     metadata=null,
     name,
     resource_group_name,
     content,
-    integration_account_name,
-    map_type,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_map', label=resourceLabel, attrs=self.newAttrs(
+    integration_account_name=integration_account_name,
+    map_type=map_type,
     metadata=metadata,
     name=name,
     resource_group_name=resource_group_name,
     content=content,
-    integration_account_name=integration_account_name,
-    map_type=map_type,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    resource_group_name,
     content,
     integration_account_name,
     map_type,
     metadata=null,
+    name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
     content: content,
     integration_account_name: integration_account_name,
     map_type: map_type,
     metadata: metadata,
+    name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_map+: {
-        [resourceLabel]+: {
-          content: value,
-        },
-      },
-    },
-  },
   withIntegrationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_map+: {
@@ -85,6 +76,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_logic_app_integration_account_map+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_map+: {
+        [resourceLabel]+: {
+          content: value,
         },
       },
     },

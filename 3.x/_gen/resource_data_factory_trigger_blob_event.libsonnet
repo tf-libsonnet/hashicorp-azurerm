@@ -2,81 +2,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_account_id,
-    activated=null,
-    additional_properties=null,
-    annotations=null,
-    ignore_empty_blobs=null,
-    name,
-    events,
     blob_path_begins_with=null,
     blob_path_ends_with=null,
+    annotations=null,
     data_factory_id,
+    additional_properties=null,
     description=null,
+    events,
+    name,
+    storage_account_id,
+    activated=null,
+    ignore_empty_blobs=null,
     timeouts=null,
     pipeline=null
   ):: tf.withResource(type='azurerm_data_factory_trigger_blob_event', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_id=storage_account_id,
-    activated=activated,
-    additional_properties=additional_properties,
-    annotations=annotations,
-    ignore_empty_blobs=ignore_empty_blobs,
-    name=name,
-    events=events,
     blob_path_begins_with=blob_path_begins_with,
     blob_path_ends_with=blob_path_ends_with,
+    annotations=annotations,
     data_factory_id=data_factory_id,
+    additional_properties=additional_properties,
     description=description,
+    events=events,
+    name=name,
+    storage_account_id=storage_account_id,
+    activated=activated,
+    ignore_empty_blobs=ignore_empty_blobs,
     timeouts=timeouts,
     pipeline=pipeline
   )),
   newAttrs(
+    name,
+    annotations=null,
+    data_factory_id,
+    blob_path_begins_with=null,
     events,
     activated=null,
-    blob_path_begins_with=null,
     blob_path_ends_with=null,
     ignore_empty_blobs=null,
-    name,
     storage_account_id,
-    annotations=null,
-    description=null,
-    data_factory_id,
     additional_properties=null,
+    description=null,
     pipeline=null,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    annotations: annotations,
+    data_factory_id: data_factory_id,
+    blob_path_begins_with: blob_path_begins_with,
     events: events,
     activated: activated,
-    blob_path_begins_with: blob_path_begins_with,
     blob_path_ends_with: blob_path_ends_with,
     ignore_empty_blobs: ignore_empty_blobs,
-    name: name,
     storage_account_id: storage_account_id,
-    annotations: annotations,
-    description: description,
-    data_factory_id: data_factory_id,
     additional_properties: additional_properties,
+    description: description,
     pipeline: pipeline,
     timeouts: timeouts,
   }),
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_blob_event+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_blob_event+: {
-        [resourceLabel]+: {
-          additional_properties: value,
-        },
-      },
-    },
-  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
@@ -95,20 +77,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          description: value,
+          storage_account_id: value,
         },
       },
     },
   },
-  withIgnoreEmptyBlobs(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          ignore_empty_blobs: value,
+          additional_properties: value,
         },
       },
     },
@@ -122,20 +104,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withActivated(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_blob_event+: {
-        [resourceLabel]+: {
-          activated: value,
+          description: value,
         },
       },
     },
@@ -158,36 +131,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withActivated(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          timeouts: value,
+          activated: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_blob_event+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          data_factory_id: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withIgnoreEmptyBlobs(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_blob_event+: {
+        [resourceLabel]+: {
+          ignore_empty_blobs: value,
+        },
+      },
+    },
   },
   withPipeline(resourceLabel, value):: {
     resource+: {
@@ -214,6 +183,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       name: name,
       parameters: parameters,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_blob_event+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_blob_event+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

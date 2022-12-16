@@ -2,43 +2,79 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    access_endpoint_type,
-    location,
-    resource_group_name,
     name,
     sku_name=null,
     tags=null,
+    resource_group_name,
     virtual_network_subnet_ids,
+    access_endpoint_type,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_integration_service_environment', label=resourceLabel, attrs=self.newAttrs(
-    access_endpoint_type=access_endpoint_type,
-    location=location,
-    resource_group_name=resource_group_name,
     name=name,
     sku_name=sku_name,
     tags=tags,
+    resource_group_name=resource_group_name,
     virtual_network_subnet_ids=virtual_network_subnet_ids,
+    access_endpoint_type=access_endpoint_type,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    access_endpoint_type,
     location,
-    virtual_network_subnet_ids,
     name,
     sku_name=null,
     tags=null,
+    access_endpoint_type,
+    resource_group_name,
+    virtual_network_subnet_ids,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    access_endpoint_type: access_endpoint_type,
     location: location,
-    virtual_network_subnet_ids: virtual_network_subnet_ids,
     name: name,
     sku_name: sku_name,
     tags: tags,
+    access_endpoint_type: access_endpoint_type,
+    resource_group_name: resource_group_name,
+    virtual_network_subnet_ids: virtual_network_subnet_ids,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkSubnetIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          virtual_network_subnet_ids: value,
+        },
+      },
+    },
+  },
+  withAccessEndpointType(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          access_endpoint_type: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_integration_service_environment+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_integration_service_environment+: {
@@ -66,42 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualNetworkSubnetIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          virtual_network_subnet_ids: value,
-        },
-      },
-    },
-  },
-  withAccessEndpointType(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          access_endpoint_type: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_integration_service_environment+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_integration_service_environment+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

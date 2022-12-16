@@ -15,18 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    end_ip_address,
-    name,
     start_ip_address,
     synapse_workspace_id,
+    end_ip_address,
+    name,
     timeouts=null
   ):: std.prune(a={
-    end_ip_address: end_ip_address,
-    name: name,
     start_ip_address: start_ip_address,
     synapse_workspace_id: synapse_workspace_id,
+    end_ip_address: end_ip_address,
+    name: name,
     timeouts: timeouts,
   }),
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_firewall_rule+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
+        },
+      },
+    },
+  },
   withEndIpAddress(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_firewall_rule+: {
@@ -50,15 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_firewall_rule+: {
         [resourceLabel]+: {
           start_ip_address: value,
-        },
-      },
-    },
-  },
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_firewall_rule+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
         },
       },
     },

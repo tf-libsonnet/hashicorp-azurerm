@@ -2,77 +2,59 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    activated=null,
-    additional_properties=null,
     events,
-    subject_ends_with=null,
-    annotations=null,
-    description=null,
     subject_begins_with=null,
+    annotations=null,
     data_factory_id,
+    description=null,
+    activated=null,
+    subject_ends_with=null,
+    additional_properties=null,
+    name,
     eventgrid_topic_id,
     pipeline=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_trigger_custom_event', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    activated=activated,
-    additional_properties=additional_properties,
     events=events,
-    subject_ends_with=subject_ends_with,
-    annotations=annotations,
-    description=description,
     subject_begins_with=subject_begins_with,
+    annotations=annotations,
     data_factory_id=data_factory_id,
+    description=description,
+    activated=activated,
+    subject_ends_with=subject_ends_with,
+    additional_properties=additional_properties,
+    name=name,
     eventgrid_topic_id=eventgrid_topic_id,
     pipeline=pipeline,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    annotations=null,
+    additional_properties=null,
     description=null,
     subject_begins_with=null,
     subject_ends_with=null,
+    annotations=null,
     data_factory_id,
+    name,
+    activated=null,
     eventgrid_topic_id,
     events,
-    activated=null,
-    additional_properties=null,
     pipeline=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    annotations: annotations,
+    additional_properties: additional_properties,
     description: description,
     subject_begins_with: subject_begins_with,
     subject_ends_with: subject_ends_with,
+    annotations: annotations,
     data_factory_id: data_factory_id,
+    name: name,
+    activated: activated,
     eventgrid_topic_id: eventgrid_topic_id,
     events: events,
-    activated: activated,
-    additional_properties: additional_properties,
     pipeline: pipeline,
     timeouts: timeouts,
   }),
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_custom_event+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withEventgridTopicId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_custom_event+: {
-        [resourceLabel]+: {
-          eventgrid_topic_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_custom_event+: {
@@ -91,11 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withActivated(resourceLabel, value):: {
+  withSubjectEndsWith(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_custom_event+: {
         [resourceLabel]+: {
-          activated: value,
+          subject_ends_with: value,
         },
       },
     },
@@ -109,15 +91,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_trigger_custom_event+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_custom_event+: {
@@ -127,11 +100,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubjectEndsWith(resourceLabel, value):: {
+  withActivated(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_trigger_custom_event+: {
         [resourceLabel]+: {
-          subject_ends_with: value,
+          activated: value,
+        },
+      },
+    },
+  },
+  withEventgridTopicId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_custom_event+: {
+        [resourceLabel]+: {
+          eventgrid_topic_id: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_custom_event+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_trigger_custom_event+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
         },
       },
     },
@@ -165,11 +165,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   pipeline:: {
     new(
-      parameters=null,
-      name
+      name,
+      parameters=null
     ):: std.prune(a={
-      parameters: parameters,
       name: name,
+      parameters: parameters,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -192,15 +192,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

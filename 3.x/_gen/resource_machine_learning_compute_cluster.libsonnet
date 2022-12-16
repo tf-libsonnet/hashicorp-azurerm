@@ -2,62 +2,62 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    local_auth_enabled=null,
-    tags=null,
-    description=null,
-    ssh_public_access_enabled=null,
-    machine_learning_workspace_id,
-    subnet_resource_id=null,
-    vm_priority,
-    vm_size,
     location,
     name,
-    timeouts=null,
+    tags=null,
+    vm_priority,
+    subnet_resource_id=null,
+    description=null,
+    ssh_public_access_enabled=null,
+    vm_size,
+    local_auth_enabled=null,
+    machine_learning_workspace_id,
     identity=null,
     scale_settings=null,
-    ssh=null
+    ssh=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_machine_learning_compute_cluster', label=resourceLabel, attrs=self.newAttrs(
-    local_auth_enabled=local_auth_enabled,
-    tags=tags,
-    description=description,
-    ssh_public_access_enabled=ssh_public_access_enabled,
-    machine_learning_workspace_id=machine_learning_workspace_id,
-    subnet_resource_id=subnet_resource_id,
-    vm_priority=vm_priority,
-    vm_size=vm_size,
     location=location,
     name=name,
-    timeouts=timeouts,
+    tags=tags,
+    vm_priority=vm_priority,
+    subnet_resource_id=subnet_resource_id,
+    description=description,
+    ssh_public_access_enabled=ssh_public_access_enabled,
+    vm_size=vm_size,
+    local_auth_enabled=local_auth_enabled,
+    machine_learning_workspace_id=machine_learning_workspace_id,
     identity=identity,
     scale_settings=scale_settings,
-    ssh=ssh
+    ssh=ssh,
+    timeouts=timeouts
   )),
   newAttrs(
-    name,
     ssh_public_access_enabled=null,
-    description=null,
-    location,
-    machine_learning_workspace_id,
     subnet_resource_id=null,
     tags=null,
     vm_priority,
-    vm_size,
+    name,
+    location,
+    machine_learning_workspace_id,
+    description=null,
     local_auth_enabled=null,
+    vm_size,
     identity=null,
     scale_settings=null,
     ssh=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     ssh_public_access_enabled: ssh_public_access_enabled,
-    description: description,
-    location: location,
-    machine_learning_workspace_id: machine_learning_workspace_id,
     subnet_resource_id: subnet_resource_id,
     tags: tags,
     vm_priority: vm_priority,
-    vm_size: vm_size,
+    name: name,
+    location: location,
+    machine_learning_workspace_id: machine_learning_workspace_id,
+    description: description,
     local_auth_enabled: local_auth_enabled,
+    vm_size: vm_size,
     identity: identity,
     scale_settings: scale_settings,
     ssh: ssh,
@@ -72,11 +72,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
   withVmPriority(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_compute_cluster+: {
         [resourceLabel]+: {
           vm_priority: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withSshPublicAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          ssh_public_access_enabled: value,
+        },
+      },
+    },
+  },
+  withSubnetResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          subnet_resource_id: value,
         },
       },
     },
@@ -99,33 +144,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withSubnetResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          subnet_resource_id: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withVmSize(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_compute_cluster+: {
@@ -134,53 +152,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSshPublicAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          ssh_public_access_enabled: value,
-        },
-      },
-    },
-  },
-  withScaleSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          scale_settings: value,
-        },
-      },
-    },
-  },
-  withScaleSettingsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_compute_cluster+: {
-        [resourceLabel]+: {
-          scale_settings+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  scale_settings:: {
-    new(
-      max_node_count,
-      min_node_count,
-      scale_down_nodes_after_idle_duration
-    ):: std.prune(a={
-      max_node_count: max_node_count,
-      min_node_count: min_node_count,
-      scale_down_nodes_after_idle_duration: scale_down_nodes_after_idle_duration,
-    }),
   },
   withSsh(resourceLabel, value):: {
     resource+: {
@@ -202,13 +173,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ssh:: {
     new(
+      admin_password=null,
       admin_username,
-      key_value=null,
-      admin_password=null
+      key_value=null
     ):: std.prune(a={
+      admin_password: admin_password,
       admin_username: admin_username,
       key_value: key_value,
-      admin_password: admin_password,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -231,13 +202,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
   withIdentity(resourceLabel, value):: {
@@ -260,11 +231,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      type,
-      identity_ids=null
+      identity_ids=null,
+      type
     ):: std.prune(a={
-      type: type,
       identity_ids: identity_ids,
+      type: type,
+    }),
+  },
+  withScaleSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          scale_settings: value,
+        },
+      },
+    },
+  },
+  withScaleSettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_compute_cluster+: {
+        [resourceLabel]+: {
+          scale_settings+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  scale_settings:: {
+    new(
+      scale_down_nodes_after_idle_duration,
+      max_node_count,
+      min_node_count
+    ):: std.prune(a={
+      scale_down_nodes_after_idle_duration: scale_down_nodes_after_idle_duration,
+      max_node_count: max_node_count,
+      min_node_count: min_node_count,
     }),
   },
 }

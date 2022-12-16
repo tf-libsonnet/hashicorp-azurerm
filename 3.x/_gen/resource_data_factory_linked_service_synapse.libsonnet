@@ -2,92 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
     integration_runtime_name=null,
     name,
     parameters=null,
     annotations=null,
     connection_string,
+    description=null,
     additional_properties=null,
     data_factory_id,
     key_vault_password=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_synapse', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
     integration_runtime_name=integration_runtime_name,
     name=name,
     parameters=parameters,
     annotations=annotations,
     connection_string=connection_string,
+    description=description,
     additional_properties=additional_properties,
     data_factory_id=data_factory_id,
     key_vault_password=key_vault_password,
     timeouts=timeouts
   )),
   newAttrs(
-    connection_string,
+    data_factory_id,
     integration_runtime_name=null,
     name,
     parameters=null,
-    additional_properties=null,
-    data_factory_id,
-    description=null,
     annotations=null,
-    timeouts=null,
-    key_vault_password=null
+    connection_string,
+    description=null,
+    additional_properties=null,
+    key_vault_password=null,
+    timeouts=null
   ):: std.prune(a={
-    connection_string: connection_string,
+    data_factory_id: data_factory_id,
     integration_runtime_name: integration_runtime_name,
     name: name,
     parameters: parameters,
-    additional_properties: additional_properties,
-    data_factory_id: data_factory_id,
-    description: description,
     annotations: annotations,
-    timeouts: timeouts,
+    connection_string: connection_string,
+    description: description,
+    additional_properties: additional_properties,
     key_vault_password: key_vault_password,
+    timeouts: timeouts,
   }),
-  withIntegrationRuntimeName(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          annotations: value,
-        },
-      },
-    },
-  },
-  withConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_synapse+: {
-        [resourceLabel]+: {
-          parameters: value,
+          description: value,
         },
       },
     },
@@ -110,41 +74,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withIntegrationRuntimeName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
-          description: value,
+          integration_runtime_name: value,
         },
       },
     },
   },
-  withKeyVaultPassword(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
-          key_vault_password: value,
+          name: value,
         },
       },
     },
   },
-  withKeyVaultPasswordMixin(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_synapse+: {
         [resourceLabel]+: {
-          key_vault_password+: if std.isArray(v=value) then value else [value],
+          parameters: value,
         },
       },
     },
   },
-  key_vault_password:: {
-    new(
-      linked_service_name,
-      secret_name
-    ):: std.prune(a={
-      linked_service_name: linked_service_name,
-      secret_name: secret_name,
-    }),
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -175,6 +148,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withKeyVaultPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          key_vault_password: value,
+        },
+      },
+    },
+  },
+  withKeyVaultPasswordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_synapse+: {
+        [resourceLabel]+: {
+          key_vault_password+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  key_vault_password:: {
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
     }),
   },
 }

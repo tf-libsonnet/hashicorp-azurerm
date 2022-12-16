@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    zones=null,
     resource_group_name,
     name,
+    zones=null,
     timeouts=null
   ):: tf.withData(type='azurerm_container_group', label=dataSrcLabel, attrs=self.newAttrs(
-    zones=zones,
     resource_group_name=resource_group_name,
     name=name,
+    zones=zones,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,11 +23,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withZones(dataSrcLabel, value):: {
+  withName(dataSrcLabel, value):: {
     data+: {
       azurerm_container_group+: {
         [dataSrcLabel]+: {
-          zones: value,
+          name: value,
         },
       },
     },
@@ -41,11 +41,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
+  withZones(dataSrcLabel, value):: {
     data+: {
       azurerm_container_group+: {
         [dataSrcLabel]+: {
-          name: value,
+          zones: value,
         },
       },
     },

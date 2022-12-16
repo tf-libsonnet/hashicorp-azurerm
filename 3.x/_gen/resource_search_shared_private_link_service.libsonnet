@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    search_service_id,
     subresource_name,
     target_resource_id,
     name,
     request_message=null,
+    search_service_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_search_shared_private_link_service', label=resourceLabel, attrs=self.newAttrs(
-    search_service_id=search_service_id,
     subresource_name=subresource_name,
     target_resource_id=target_resource_id,
     name=name,
     request_message=request_message,
+    search_service_id=search_service_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,6 +31,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     search_service_id: search_service_id,
     timeouts: timeouts,
   }),
+  withSubresourceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_shared_private_link_service+: {
+        [resourceLabel]+: {
+          subresource_name: value,
+        },
+      },
+    },
+  },
+  withTargetResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_shared_private_link_service+: {
+        [resourceLabel]+: {
+          target_resource_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_search_shared_private_link_service+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubresourceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_shared_private_link_service+: {
-        [resourceLabel]+: {
-          subresource_name: value,
-        },
-      },
-    },
-  },
-  withTargetResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_shared_private_link_service+: {
-        [resourceLabel]+: {
-          target_resource_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_search_shared_private_link_service+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

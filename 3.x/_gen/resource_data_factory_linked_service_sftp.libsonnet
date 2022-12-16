@@ -2,76 +2,76 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    authentication_type,
-    annotations=null,
-    integration_runtime_name=null,
-    port,
-    name,
     username,
     additional_properties=null,
+    host_key_fingerprint=null,
+    port,
+    name,
+    parameters=null,
+    integration_runtime_name=null,
     password,
     skip_host_key_validation=null,
-    parameters=null,
-    host,
-    host_key_fingerprint=null,
-    data_factory_id,
+    annotations=null,
+    authentication_type,
     description=null,
+    data_factory_id,
+    host,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_sftp', label=resourceLabel, attrs=self.newAttrs(
-    authentication_type=authentication_type,
-    annotations=annotations,
-    integration_runtime_name=integration_runtime_name,
-    port=port,
-    name=name,
     username=username,
     additional_properties=additional_properties,
+    host_key_fingerprint=host_key_fingerprint,
+    port=port,
+    name=name,
+    parameters=parameters,
+    integration_runtime_name=integration_runtime_name,
     password=password,
     skip_host_key_validation=skip_host_key_validation,
-    parameters=parameters,
-    host=host,
-    host_key_fingerprint=host_key_fingerprint,
-    data_factory_id=data_factory_id,
+    annotations=annotations,
+    authentication_type=authentication_type,
     description=description,
+    data_factory_id=data_factory_id,
+    host=host,
     timeouts=timeouts
   )),
   newAttrs(
     additional_properties=null,
+    host_key_fingerprint=null,
     integration_runtime_name=null,
-    parameters=null,
-    port,
-    description=null,
+    data_factory_id,
+    username,
     host,
     skip_host_key_validation=null,
-    name,
-    authentication_type,
     annotations=null,
-    data_factory_id,
-    host_key_fingerprint=null,
+    description=null,
+    port,
     password,
-    username,
+    parameters=null,
+    authentication_type,
+    name,
     timeouts=null
   ):: std.prune(a={
     additional_properties: additional_properties,
+    host_key_fingerprint: host_key_fingerprint,
     integration_runtime_name: integration_runtime_name,
-    parameters: parameters,
-    port: port,
-    description: description,
+    data_factory_id: data_factory_id,
+    username: username,
     host: host,
     skip_host_key_validation: skip_host_key_validation,
-    name: name,
-    authentication_type: authentication_type,
     annotations: annotations,
-    data_factory_id: data_factory_id,
-    host_key_fingerprint: host_key_fingerprint,
+    description: description,
+    port: port,
     password: password,
-    username: username,
+    parameters: parameters,
+    authentication_type: authentication_type,
+    name: name,
     timeouts: timeouts,
   }),
-  withUsername(resourceLabel, value):: {
+  withHost(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_sftp+: {
         [resourceLabel]+: {
-          username: value,
+          host: value,
         },
       },
     },
@@ -94,51 +94,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPort(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_sftp+: {
-        [resourceLabel]+: {
-          port: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_sftp+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_sftp+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_sftp+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_sftp+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_sftp+: {
@@ -148,20 +103,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHost(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_sftp+: {
         [resourceLabel]+: {
-          host: value,
-        },
-      },
-    },
-  },
-  withHostKeyFingerprint(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_sftp+: {
-        [resourceLabel]+: {
-          host_key_fingerprint: value,
+          additional_properties: value,
         },
       },
     },
@@ -175,6 +121,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_sftp+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withPort(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_sftp+: {
+        [resourceLabel]+: {
+          port: value,
+        },
+      },
+    },
+  },
   withSkipHostKeyValidation(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_sftp+: {
@@ -184,11 +148,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdditionalProperties(resourceLabel, value):: {
+  withUsername(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_sftp+: {
         [resourceLabel]+: {
-          additional_properties: value,
+          username: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_sftp+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_sftp+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  withHostKeyFingerprint(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_sftp+: {
+        [resourceLabel]+: {
+          host_key_fingerprint: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_sftp+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -213,15 +213,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

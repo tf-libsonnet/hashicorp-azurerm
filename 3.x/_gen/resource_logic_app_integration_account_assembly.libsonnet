@@ -2,70 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    assembly_name,
-    metadata=null,
-    content_link_uri=null,
-    assembly_version=null,
-    content=null,
     integration_account_name,
+    metadata=null,
+    content=null,
+    content_link_uri=null,
+    resource_group_name,
     name,
+    assembly_name,
+    assembly_version=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_assembly', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    assembly_name=assembly_name,
-    metadata=metadata,
-    content_link_uri=content_link_uri,
-    assembly_version=assembly_version,
-    content=content,
     integration_account_name=integration_account_name,
+    metadata=metadata,
+    content=content,
+    content_link_uri=content_link_uri,
+    resource_group_name=resource_group_name,
     name=name,
+    assembly_name=assembly_name,
+    assembly_version=assembly_version,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    assembly_name,
     assembly_version=null,
-    content=null,
     integration_account_name,
-    content_link_uri=null,
     metadata=null,
+    content=null,
+    content_link_uri=null,
+    resource_group_name,
     name,
+    assembly_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    assembly_name: assembly_name,
     assembly_version: assembly_version,
-    content: content,
     integration_account_name: integration_account_name,
-    content_link_uri: content_link_uri,
     metadata: metadata,
+    content: content,
+    content_link_uri: content_link_uri,
+    resource_group_name: resource_group_name,
     name: name,
+    assembly_name: assembly_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_assembly+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withContentLinkUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_assembly+: {
-        [resourceLabel]+: {
-          content_link_uri: value,
-        },
-      },
-    },
-  },
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_assembly+: {
-        [resourceLabel]+: {
-          metadata: value,
+          name: value,
         },
       },
     },
@@ -88,15 +70,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_assembly+: {
-        [resourceLabel]+: {
-          content: value,
-        },
-      },
-    },
-  },
   withIntegrationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_assembly+: {
@@ -106,11 +79,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_assembly+: {
         [resourceLabel]+: {
-          name: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_assembly+: {
+        [resourceLabel]+: {
+          content: value,
+        },
+      },
+    },
+  },
+  withContentLinkUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_assembly+: {
+        [resourceLabel]+: {
+          content_link_uri: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_assembly+: {
+        [resourceLabel]+: {
+          metadata: value,
         },
       },
     },

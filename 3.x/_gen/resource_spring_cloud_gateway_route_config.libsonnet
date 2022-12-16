@@ -2,51 +2,78 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    spring_cloud_app_id=null,
-    spring_cloud_gateway_id,
     sso_validation_enabled=null,
     filters=null,
     name,
     predicates=null,
     protocol=null,
+    spring_cloud_app_id=null,
+    spring_cloud_gateway_id,
     open_api=null,
     route=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_gateway_route_config', label=resourceLabel, attrs=self.newAttrs(
-    spring_cloud_app_id=spring_cloud_app_id,
-    spring_cloud_gateway_id=spring_cloud_gateway_id,
     sso_validation_enabled=sso_validation_enabled,
     filters=filters,
     name=name,
     predicates=predicates,
     protocol=protocol,
+    spring_cloud_app_id=spring_cloud_app_id,
+    spring_cloud_gateway_id=spring_cloud_gateway_id,
     open_api=open_api,
     route=route,
     timeouts=timeouts
   )),
   newAttrs(
-    sso_validation_enabled=null,
-    filters=null,
-    name,
     predicates=null,
     protocol=null,
     spring_cloud_app_id=null,
     spring_cloud_gateway_id,
+    sso_validation_enabled=null,
+    filters=null,
+    name,
     open_api=null,
     route=null,
     timeouts=null
   ):: std.prune(a={
-    sso_validation_enabled: sso_validation_enabled,
-    filters: filters,
-    name: name,
     predicates: predicates,
     protocol: protocol,
     spring_cloud_app_id: spring_cloud_app_id,
     spring_cloud_gateway_id: spring_cloud_gateway_id,
+    sso_validation_enabled: sso_validation_enabled,
+    filters: filters,
+    name: name,
     open_api: open_api,
     route: route,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPredicates(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          predicates: value,
+        },
+      },
+    },
+  },
+  withProtocol(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_gateway_route_config+: {
+        [resourceLabel]+: {
+          protocol: value,
+        },
+      },
+    },
+  },
   withSpringCloudAppId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_gateway_route_config+: {
@@ -79,33 +106,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_gateway_route_config+: {
         [resourceLabel]+: {
           filters: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPredicates(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          predicates: value,
-        },
-      },
-    },
-  },
-  withProtocol(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_gateway_route_config+: {
-        [resourceLabel]+: {
-          protocol: value,
         },
       },
     },
@@ -155,25 +155,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   route:: {
     new(
-      token_relay=null,
-      uri=null,
+      description=null,
+      title=null,
       filters=null,
       order,
+      uri=null,
       classification_tags=null,
-      description=null,
-      sso_validation_enabled=null,
       predicates=null,
-      title=null
+      sso_validation_enabled=null,
+      token_relay=null
     ):: std.prune(a={
-      token_relay: token_relay,
-      uri: uri,
+      description: description,
+      title: title,
       filters: filters,
       order: order,
+      uri: uri,
       classification_tags: classification_tags,
-      description: description,
-      sso_validation_enabled: sso_validation_enabled,
       predicates: predicates,
-      title: title,
+      sso_validation_enabled: sso_validation_enabled,
+      token_relay: token_relay,
     }),
   },
   withTimeouts(resourceLabel, value):: {

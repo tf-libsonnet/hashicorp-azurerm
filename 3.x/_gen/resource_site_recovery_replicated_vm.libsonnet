@@ -2,125 +2,89 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    recovery_vault_name,
-    name,
     managed_disk=null,
-    target_availability_set_id=null,
-    target_network_id=null,
+    name,
+    target_recovery_protection_container_id,
+    target_zone=null,
     source_recovery_protection_container_name,
     source_vm_id,
     target_recovery_fabric_id,
-    target_recovery_protection_container_id,
+    target_network_id=null,
+    resource_group_name,
     target_resource_group_id,
     network_interface=null,
+    recovery_vault_name,
+    target_availability_set_id=null,
     recovery_replication_policy_id,
     source_recovery_fabric_name,
-    target_zone=null,
-    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_site_recovery_replicated_vm', label=resourceLabel, attrs=self.newAttrs(
-    recovery_vault_name=recovery_vault_name,
-    name=name,
     managed_disk=managed_disk,
-    target_availability_set_id=target_availability_set_id,
-    target_network_id=target_network_id,
+    name=name,
+    target_recovery_protection_container_id=target_recovery_protection_container_id,
+    target_zone=target_zone,
     source_recovery_protection_container_name=source_recovery_protection_container_name,
     source_vm_id=source_vm_id,
     target_recovery_fabric_id=target_recovery_fabric_id,
-    target_recovery_protection_container_id=target_recovery_protection_container_id,
+    target_network_id=target_network_id,
+    resource_group_name=resource_group_name,
     target_resource_group_id=target_resource_group_id,
     network_interface=network_interface,
+    recovery_vault_name=recovery_vault_name,
+    target_availability_set_id=target_availability_set_id,
     recovery_replication_policy_id=recovery_replication_policy_id,
     source_recovery_fabric_name=source_recovery_fabric_name,
-    target_zone=target_zone,
-    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    target_resource_group_id,
     source_recovery_fabric_name,
-    network_interface=null,
-    target_recovery_fabric_id,
-    target_availability_set_id=null,
-    managed_disk=null,
-    recovery_vault_name,
-    resource_group_name,
-    target_network_id=null,
-    source_recovery_protection_container_name,
     target_recovery_protection_container_id,
+    target_availability_set_id=null,
     target_zone=null,
+    resource_group_name,
+    source_recovery_protection_container_name,
+    target_resource_group_id,
+    recovery_vault_name,
+    network_interface=null,
     recovery_replication_policy_id,
+    target_recovery_fabric_id,
+    managed_disk=null,
+    target_network_id=null,
     name,
     source_vm_id,
     timeouts=null
   ):: std.prune(a={
-    target_resource_group_id: target_resource_group_id,
     source_recovery_fabric_name: source_recovery_fabric_name,
-    network_interface: network_interface,
-    target_recovery_fabric_id: target_recovery_fabric_id,
-    target_availability_set_id: target_availability_set_id,
-    managed_disk: managed_disk,
-    recovery_vault_name: recovery_vault_name,
-    resource_group_name: resource_group_name,
-    target_network_id: target_network_id,
-    source_recovery_protection_container_name: source_recovery_protection_container_name,
     target_recovery_protection_container_id: target_recovery_protection_container_id,
+    target_availability_set_id: target_availability_set_id,
     target_zone: target_zone,
+    resource_group_name: resource_group_name,
+    source_recovery_protection_container_name: source_recovery_protection_container_name,
+    target_resource_group_id: target_resource_group_id,
+    recovery_vault_name: recovery_vault_name,
+    network_interface: network_interface,
     recovery_replication_policy_id: recovery_replication_policy_id,
+    target_recovery_fabric_id: target_recovery_fabric_id,
+    managed_disk: managed_disk,
+    target_network_id: target_network_id,
     name: name,
     source_vm_id: source_vm_id,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_replicated_vm+: {
         [resourceLabel]+: {
-          name: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withSourceRecoveryProtectionContainerName(resourceLabel, value):: {
+  withTargetRecoveryFabricId(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_replicated_vm+: {
         [resourceLabel]+: {
-          source_recovery_protection_container_name: value,
-        },
-      },
-    },
-  },
-  withTargetResourceGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          target_resource_group_id: value,
-        },
-      },
-    },
-  },
-  withTargetRecoveryProtectionContainerId(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          target_recovery_protection_container_id: value,
-        },
-      },
-    },
-  },
-  withTargetAvailabilitySetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          target_availability_set_id: value,
-        },
-      },
-    },
-  },
-  withTargetZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          target_zone: value,
+          target_recovery_fabric_id: value,
         },
       },
     },
@@ -143,33 +107,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSourceVmId(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          source_vm_id: value,
-        },
-      },
-    },
-  },
-  withRecoveryReplicationPolicyId(resourceLabel, value):: {
-    resource+: {
-      azurerm_site_recovery_replicated_vm+: {
-        [resourceLabel]+: {
-          recovery_replication_policy_id: value,
-        },
-      },
-    },
-  },
   withManagedDisk(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_replicated_vm+: {
@@ -179,11 +116,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTargetRecoveryFabricId(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_replicated_vm+: {
         [resourceLabel]+: {
-          target_recovery_fabric_id: value,
+          name: value,
         },
       },
     },
@@ -197,11 +134,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTargetZone(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          target_zone: value,
+        },
+      },
+    },
+  },
+  withTargetResourceGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          target_resource_group_id: value,
+        },
+      },
+    },
+  },
+  withRecoveryReplicationPolicyId(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          recovery_replication_policy_id: value,
+        },
+      },
+    },
+  },
+  withTargetRecoveryProtectionContainerId(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          target_recovery_protection_container_id: value,
+        },
+      },
+    },
+  },
+  withSourceRecoveryProtectionContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          source_recovery_protection_container_name: value,
+        },
+      },
+    },
+  },
+  withSourceVmId(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          source_vm_id: value,
+        },
+      },
+    },
+  },
   withTargetNetworkId(resourceLabel, value):: {
     resource+: {
       azurerm_site_recovery_replicated_vm+: {
         [resourceLabel]+: {
           target_network_id: value,
+        },
+      },
+    },
+  },
+  withTargetAvailabilitySetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_site_recovery_replicated_vm+: {
+        [resourceLabel]+: {
+          target_availability_set_id: value,
         },
       },
     },
@@ -226,15 +226,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

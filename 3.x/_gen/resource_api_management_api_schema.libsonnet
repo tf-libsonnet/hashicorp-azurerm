@@ -2,61 +2,70 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    content_type,
+    resource_group_name,
+    schema_id,
+    api_management_name,
+    definitions=null,
     value=null,
     api_name,
-    resource_group_name,
-    content_type,
-    definitions=null,
-    api_management_name,
     components=null,
-    schema_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_api_schema', label=resourceLabel, attrs=self.newAttrs(
+    content_type=content_type,
+    resource_group_name=resource_group_name,
+    schema_id=schema_id,
+    api_management_name=api_management_name,
+    definitions=definitions,
     value=value,
     api_name=api_name,
-    resource_group_name=resource_group_name,
-    content_type=content_type,
-    definitions=definitions,
-    api_management_name=api_management_name,
     components=components,
-    schema_id=schema_id,
     timeouts=timeouts
   )),
   newAttrs(
-    schema_id,
+    api_management_name,
+    definitions=null,
     value=null,
     api_name,
     components=null,
     content_type,
-    definitions=null,
-    api_management_name,
     resource_group_name,
+    schema_id,
     timeouts=null
   ):: std.prune(a={
-    schema_id: schema_id,
+    api_management_name: api_management_name,
+    definitions: definitions,
     value: value,
     api_name: api_name,
     components: components,
     content_type: content_type,
-    definitions: definitions,
-    api_management_name: api_management_name,
     resource_group_name: resource_group_name,
+    schema_id: schema_id,
     timeouts: timeouts,
   }),
-  withValue(resourceLabel, value):: {
+  withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_schema+: {
         [resourceLabel]+: {
-          value: value,
+          api_management_name: value,
         },
       },
     },
   },
-  withApiName(resourceLabel, value):: {
+  withDefinitions(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_schema+: {
         [resourceLabel]+: {
-          api_name: value,
+          definitions: value,
+        },
+      },
+    },
+  },
+  withContentType(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_schema+: {
+        [resourceLabel]+: {
+          content_type: value,
         },
       },
     },
@@ -79,20 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDefinitions(resourceLabel, value):: {
+  withApiName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_schema+: {
         [resourceLabel]+: {
-          definitions: value,
-        },
-      },
-    },
-  },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_schema+: {
-        [resourceLabel]+: {
-          api_management_name: value,
+          api_name: value,
         },
       },
     },
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContentType(resourceLabel, value):: {
+  withValue(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_schema+: {
         [resourceLabel]+: {
-          content_type: value,
+          value: value,
         },
       },
     },

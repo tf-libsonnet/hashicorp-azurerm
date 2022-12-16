@@ -21,51 +21,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    resource,
     storage_account_id,
     filesystem_name,
     group=null,
     owner=null,
     path,
-    resource,
     ace=null,
     timeouts=null
   ):: std.prune(a={
+    resource: resource,
     storage_account_id: storage_account_id,
     filesystem_name: filesystem_name,
     group: group,
     owner: owner,
     path: path,
-    resource: resource,
     ace: ace,
     timeouts: timeouts,
   }),
-  withOwner(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          owner: value,
-        },
-      },
-    },
-  },
-  withPath(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          path: value,
-        },
-      },
-    },
-  },
-  withResource(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_data_lake_gen2_path+: {
-        [resourceLabel]+: {
-          resource: value,
-        },
-      },
-    },
-  },
   withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_storage_data_lake_gen2_path+: {
@@ -93,6 +66,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withOwner(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          owner: value,
+        },
+      },
+    },
+  },
+  withPath(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          path: value,
+        },
+      },
+    },
+  },
+  withResource(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_data_lake_gen2_path+: {
+        [resourceLabel]+: {
+          resource: value,
+        },
+      },
+    },
+  },
   withAce(resourceLabel, value):: {
     resource+: {
       azurerm_storage_data_lake_gen2_path+: {
@@ -113,13 +113,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ace:: {
     new(
-      permissions,
       scope=null,
-      type
+      type,
+      permissions
     ):: std.prune(a={
-      permissions: permissions,
       scope: scope,
       type: type,
+      permissions: permissions,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -142,15 +142,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

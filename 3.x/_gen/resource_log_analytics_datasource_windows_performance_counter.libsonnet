@@ -2,52 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    counter_name,
     instance_name,
     interval_seconds,
     name,
     object_name,
     resource_group_name,
     workspace_name,
+    counter_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_datasource_windows_performance_counter', label=resourceLabel, attrs=self.newAttrs(
-    counter_name=counter_name,
     instance_name=instance_name,
     interval_seconds=interval_seconds,
     name=name,
     object_name=object_name,
     resource_group_name=resource_group_name,
     workspace_name=workspace_name,
+    counter_name=counter_name,
     timeouts=timeouts
   )),
   newAttrs(
-    interval_seconds,
-    name,
-    object_name,
     resource_group_name,
     workspace_name,
     counter_name,
     instance_name,
+    interval_seconds,
+    name,
+    object_name,
     timeouts=null
   ):: std.prune(a={
-    interval_seconds: interval_seconds,
-    name: name,
-    object_name: object_name,
     resource_group_name: resource_group_name,
     workspace_name: workspace_name,
     counter_name: counter_name,
     instance_name: instance_name,
+    interval_seconds: interval_seconds,
+    name: name,
+    object_name: object_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_datasource_windows_performance_counter+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withWorkspaceName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_performance_counter+: {
@@ -102,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_datasource_windows_performance_counter+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_performance_counter+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

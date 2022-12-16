@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
     name,
     resource_group_name,
     rule=null,
     tags=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_route_filter', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
     name=name,
     resource_group_name=resource_group_name,
     rule=rule,
     tags=tags,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,6 +31,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_filter+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_filter+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_route_filter+: {
@@ -54,24 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_route_filter+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_filter+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_filter+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },

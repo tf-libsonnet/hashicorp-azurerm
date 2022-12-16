@@ -2,39 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    ttl,
     zone_name,
     name=null,
     resource_group_name,
     tags=null,
+    ttl,
     record=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dns_mx_record', label=resourceLabel, attrs=self.newAttrs(
-    ttl=ttl,
     zone_name=zone_name,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    ttl=ttl,
     record=record,
     timeouts=timeouts
   )),
   newAttrs(
-    zone_name,
     name=null,
     resource_group_name,
     tags=null,
     ttl,
-    record=null,
-    timeouts=null
+    zone_name,
+    timeouts=null,
+    record=null
   ):: std.prune(a={
-    zone_name: zone_name,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     ttl: ttl,
-    record: record,
+    zone_name: zone_name,
     timeouts: timeouts,
+    record: record,
   }),
+  withTtl(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_mx_record+: {
+        [resourceLabel]+: {
+          ttl: value,
+        },
+      },
+    },
+  },
+  withZoneName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_mx_record+: {
+        [resourceLabel]+: {
+          zone_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_dns_mx_record+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_dns_mx_record+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_mx_record+: {
-        [resourceLabel]+: {
-          ttl: value,
-        },
-      },
-    },
-  },
-  withZoneName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_mx_record+: {
-        [resourceLabel]+: {
-          zone_name: value,
         },
       },
     },
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

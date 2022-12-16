@@ -3,46 +3,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     description=null,
-    subscription_id,
-    certificate_thumbprint,
     name,
     resource_group_name,
+    subscription_id,
     tenant_id,
     application_id,
+    certificate_thumbprint,
     automation_account_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_connection_service_principal', label=resourceLabel, attrs=self.newAttrs(
     description=description,
-    subscription_id=subscription_id,
-    certificate_thumbprint=certificate_thumbprint,
     name=name,
     resource_group_name=resource_group_name,
+    subscription_id=subscription_id,
     tenant_id=tenant_id,
     application_id=application_id,
+    certificate_thumbprint=certificate_thumbprint,
     automation_account_name=automation_account_name,
     timeouts=timeouts
   )),
   newAttrs(
-    tenant_id,
     application_id,
     automation_account_name,
     description=null,
-    subscription_id,
-    certificate_thumbprint,
     name,
     resource_group_name,
+    certificate_thumbprint,
+    subscription_id,
+    tenant_id,
     timeouts=null
   ):: std.prune(a={
-    tenant_id: tenant_id,
     application_id: application_id,
     automation_account_name: automation_account_name,
     description: description,
-    subscription_id: subscription_id,
-    certificate_thumbprint: certificate_thumbprint,
     name: name,
     resource_group_name: resource_group_name,
+    certificate_thumbprint: certificate_thumbprint,
+    subscription_id: subscription_id,
+    tenant_id: tenant_id,
     timeouts: timeouts,
   }),
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_service_principal+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_service_principal+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_service_principal+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withSubscriptionId(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_service_principal+: {
@@ -70,33 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutomationAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_service_principal+: {
-        [resourceLabel]+: {
-          automation_account_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_service_principal+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_service_principal+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withCertificateThumbprint(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_service_principal+: {
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_service_principal+: {
         [resourceLabel]+: {
-          description: value,
+          automation_account_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

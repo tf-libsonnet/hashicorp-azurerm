@@ -2,39 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
     subject,
     audience,
     issuer,
     name,
     parent_id,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_federated_identity_credential', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     subject=subject,
     audience=audience,
     issuer=issuer,
     name=name,
     parent_id=parent_id,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    parent_id,
-    resource_group_name,
     subject,
     audience,
     issuer,
+    name,
+    parent_id,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    parent_id: parent_id,
-    resource_group_name: resource_group_name,
     subject: subject,
     audience: audience,
     issuer: issuer,
+    name: name,
+    parent_id: parent_id,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withAudience(resourceLabel, value):: {
+    resource+: {
+      azurerm_federated_identity_credential+: {
+        [resourceLabel]+: {
+          audience: value,
+        },
+      },
+    },
+  },
+  withIssuer(resourceLabel, value):: {
+    resource+: {
+      azurerm_federated_identity_credential+: {
+        [resourceLabel]+: {
+          issuer: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_federated_identity_credential+: {
@@ -71,24 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAudience(resourceLabel, value):: {
-    resource+: {
-      azurerm_federated_identity_credential+: {
-        [resourceLabel]+: {
-          audience: value,
-        },
-      },
-    },
-  },
-  withIssuer(resourceLabel, value):: {
-    resource+: {
-      azurerm_federated_identity_credential+: {
-        [resourceLabel]+: {
-          issuer: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_federated_identity_credential+: {
@@ -109,13 +109,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
-      read=null,
-      create=null
+      read=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
-      create: create,
     }),
   },
 }

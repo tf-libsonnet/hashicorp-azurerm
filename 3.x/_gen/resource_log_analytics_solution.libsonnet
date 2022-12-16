@@ -39,24 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     plan: plan,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_solution+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withWorkspaceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_solution+: {
-        [resourceLabel]+: {
-          workspace_name: value,
-        },
-      },
-    },
-  },
   withWorkspaceResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_solution+: {
@@ -89,6 +71,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_log_analytics_solution+: {
         [resourceLabel]+: {
           solution_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_solution+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withWorkspaceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_solution+: {
+        [resourceLabel]+: {
+          workspace_name: value,
         },
       },
     },

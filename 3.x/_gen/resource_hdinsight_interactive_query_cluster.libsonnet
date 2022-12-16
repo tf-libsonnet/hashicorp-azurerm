@@ -2,118 +2,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     location,
+    resource_group_name,
+    tags=null,
     tier,
     tls_min_version=null,
     cluster_version,
-    resource_group_name,
-    name,
-    tags=null,
     encryption_in_transit_enabled=null,
-    storage_account=null,
+    timeouts=null,
+    component_version=null,
+    extension=null,
     storage_account_gen2=null,
-    disk_encryption=null,
-    gateway=null,
     roles=null,
     security_profile=null,
     compute_isolation=null,
-    extension=null,
+    gateway=null,
+    monitor=null,
+    storage_account=null,
     metastores=null,
     network=null,
-    component_version=null,
-    monitor=null,
-    timeouts=null
+    disk_encryption=null
   ):: tf.withResource(type='azurerm_hdinsight_interactive_query_cluster', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     location=location,
+    resource_group_name=resource_group_name,
+    tags=tags,
     tier=tier,
     tls_min_version=tls_min_version,
     cluster_version=cluster_version,
-    resource_group_name=resource_group_name,
-    name=name,
-    tags=tags,
     encryption_in_transit_enabled=encryption_in_transit_enabled,
-    storage_account=storage_account,
+    timeouts=timeouts,
+    component_version=component_version,
+    extension=extension,
     storage_account_gen2=storage_account_gen2,
-    disk_encryption=disk_encryption,
-    gateway=gateway,
     roles=roles,
     security_profile=security_profile,
     compute_isolation=compute_isolation,
-    extension=extension,
+    gateway=gateway,
+    monitor=monitor,
+    storage_account=storage_account,
     metastores=metastores,
     network=network,
-    component_version=component_version,
-    monitor=monitor,
-    timeouts=timeouts
+    disk_encryption=disk_encryption
   )),
   newAttrs(
     encryption_in_transit_enabled=null,
-    location,
     name,
-    tags=null,
     cluster_version,
     resource_group_name,
+    tags=null,
     tier,
     tls_min_version=null,
-    extension=null,
-    monitor=null,
-    storage_account_gen2=null,
-    gateway=null,
+    location,
     timeouts=null,
+    component_version=null,
+    network=null,
+    security_profile=null,
+    compute_isolation=null,
+    disk_encryption=null,
+    monitor=null,
+    storage_account=null,
+    extension=null,
     metastores=null,
     roles=null,
-    security_profile=null,
-    storage_account=null,
-    component_version=null,
-    disk_encryption=null,
-    network=null,
-    compute_isolation=null
+    storage_account_gen2=null,
+    gateway=null
   ):: std.prune(a={
     encryption_in_transit_enabled: encryption_in_transit_enabled,
-    location: location,
     name: name,
-    tags: tags,
     cluster_version: cluster_version,
     resource_group_name: resource_group_name,
+    tags: tags,
     tier: tier,
     tls_min_version: tls_min_version,
-    extension: extension,
-    monitor: monitor,
-    storage_account_gen2: storage_account_gen2,
-    gateway: gateway,
+    location: location,
     timeouts: timeouts,
+    component_version: component_version,
+    network: network,
+    security_profile: security_profile,
+    compute_isolation: compute_isolation,
+    disk_encryption: disk_encryption,
+    monitor: monitor,
+    storage_account: storage_account,
+    extension: extension,
     metastores: metastores,
     roles: roles,
-    security_profile: security_profile,
-    storage_account: storage_account,
-    component_version: component_version,
-    disk_encryption: disk_encryption,
-    network: network,
-    compute_isolation: compute_isolation,
+    storage_account_gen2: storage_account_gen2,
+    gateway: gateway,
   }),
-  withTags(resourceLabel, value):: {
+  withTier(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withEncryptionInTransitEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          encryption_in_transit_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          location: value,
+          tier: value,
         },
       },
     },
@@ -127,11 +109,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTier(resourceLabel, value):: {
+  withClusterVersion(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          tier: value,
+          cluster_version: value,
+        },
+      },
+    },
+  },
+  withEncryptionInTransitEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          encryption_in_transit_enabled: value,
         },
       },
     },
@@ -145,11 +136,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withClusterVersion(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          cluster_version: value,
+          location: value,
         },
       },
     },
@@ -163,319 +154,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGateway(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          gateway: value,
+          tags: value,
         },
       },
     },
-  },
-  withGatewayMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          gateway+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  gateway:: {
-    new(
-      password,
-      username
-    ):: std.prune(a={
-      password: password,
-      username: username,
-    }),
-  },
-  withRoles(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          roles: value,
-        },
-      },
-    },
-  },
-  withRolesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          roles+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  roles:: {
-    new(
-      worker_node=null,
-      zookeeper_node=null,
-      head_node=null
-    ):: std.prune(a={
-      worker_node: worker_node,
-      zookeeper_node: zookeeper_node,
-      head_node: head_node,
-    }),
-    head_node:: {
-      new(
-        virtual_network_id=null,
-        vm_size,
-        password=null,
-        ssh_keys=null,
-        subnet_id=null,
-        username,
-        script_actions=null
-      ):: std.prune(a={
-        virtual_network_id: virtual_network_id,
-        vm_size: vm_size,
-        password: password,
-        ssh_keys: ssh_keys,
-        subnet_id: subnet_id,
-        username: username,
-        script_actions: script_actions,
-      }),
-      script_actions:: {
-        new(
-          parameters=null,
-          uri,
-          name
-        ):: std.prune(a={
-          parameters: parameters,
-          uri: uri,
-          name: name,
-        }),
-      },
-    },
-    worker_node:: {
-      new(
-        subnet_id=null,
-        target_instance_count,
-        username,
-        virtual_network_id=null,
-        vm_size,
-        password=null,
-        ssh_keys=null,
-        autoscale=null,
-        script_actions=null
-      ):: std.prune(a={
-        subnet_id: subnet_id,
-        target_instance_count: target_instance_count,
-        username: username,
-        virtual_network_id: virtual_network_id,
-        vm_size: vm_size,
-        password: password,
-        ssh_keys: ssh_keys,
-        autoscale: autoscale,
-        script_actions: script_actions,
-      }),
-      autoscale:: {
-        new(
-          capacity=null,
-          recurrence=null
-        ):: std.prune(a={
-          capacity: capacity,
-          recurrence: recurrence,
-        }),
-        capacity:: {
-          new(
-            min_instance_count,
-            max_instance_count
-          ):: std.prune(a={
-            min_instance_count: min_instance_count,
-            max_instance_count: max_instance_count,
-          }),
-        },
-        recurrence:: {
-          new(
-            timezone,
-            schedule=null
-          ):: std.prune(a={
-            timezone: timezone,
-            schedule: schedule,
-          }),
-          schedule:: {
-            new(
-              time,
-              days,
-              target_instance_count
-            ):: std.prune(a={
-              time: time,
-              days: days,
-              target_instance_count: target_instance_count,
-            }),
-          },
-        },
-      },
-      script_actions:: {
-        new(
-          name,
-          parameters=null,
-          uri
-        ):: std.prune(a={
-          name: name,
-          parameters: parameters,
-          uri: uri,
-        }),
-      },
-    },
-    zookeeper_node:: {
-      new(
-        username,
-        virtual_network_id=null,
-        vm_size,
-        password=null,
-        ssh_keys=null,
-        subnet_id=null,
-        script_actions=null
-      ):: std.prune(a={
-        username: username,
-        virtual_network_id: virtual_network_id,
-        vm_size: vm_size,
-        password: password,
-        ssh_keys: ssh_keys,
-        subnet_id: subnet_id,
-        script_actions: script_actions,
-      }),
-      script_actions:: {
-        new(
-          parameters=null,
-          uri,
-          name
-        ):: std.prune(a={
-          parameters: parameters,
-          uri: uri,
-          name: name,
-        }),
-      },
-    },
-  },
-  withMetastores(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          metastores: value,
-        },
-      },
-    },
-  },
-  withMetastoresMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          metastores+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  metastores:: {
-    new(
-      ambari=null,
-      hive=null,
-      oozie=null
-    ):: std.prune(a={
-      ambari: ambari,
-      hive: hive,
-      oozie: oozie,
-    }),
-    ambari:: {
-      new(
-        database_name,
-        password,
-        server,
-        username
-      ):: std.prune(a={
-        database_name: database_name,
-        password: password,
-        server: server,
-        username: username,
-      }),
-    },
-    hive:: {
-      new(
-        username,
-        database_name,
-        password,
-        server
-      ):: std.prune(a={
-        username: username,
-        database_name: database_name,
-        password: password,
-        server: server,
-      }),
-    },
-    oozie:: {
-      new(
-        username,
-        database_name,
-        password,
-        server
-      ):: std.prune(a={
-        username: username,
-        database_name: database_name,
-        password: password,
-        server: server,
-      }),
-    },
-  },
-  withMonitor(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          monitor: value,
-        },
-      },
-    },
-  },
-  withMonitorMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          monitor+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  monitor:: {
-    new(
-      log_analytics_workspace_id,
-      primary_key
-    ):: std.prune(a={
-      log_analytics_workspace_id: log_analytics_workspace_id,
-      primary_key: primary_key,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
   },
   withComponentVersion(resourceLabel, value):: {
     resource+: {
@@ -500,6 +186,153 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       interactive_hive
     ):: std.prune(a={
       interactive_hive: interactive_hive,
+    }),
+  },
+  withExtension(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          extension: value,
+        },
+      },
+    },
+  },
+  withExtensionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          extension+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  extension:: {
+    new(
+      log_analytics_workspace_id,
+      primary_key
+    ):: std.prune(a={
+      log_analytics_workspace_id: log_analytics_workspace_id,
+      primary_key: primary_key,
+    }),
+  },
+  withStorageAccount(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          storage_account: value,
+        },
+      },
+    },
+  },
+  withStorageAccountMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          storage_account+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  storage_account:: {
+    new(
+      is_default,
+      storage_account_key,
+      storage_container_id,
+      storage_resource_id=null
+    ):: std.prune(a={
+      is_default: is_default,
+      storage_account_key: storage_account_key,
+      storage_container_id: storage_container_id,
+      storage_resource_id: storage_resource_id,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withStorageAccountGen2(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          storage_account_gen2: value,
+        },
+      },
+    },
+  },
+  withStorageAccountGen2Mixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          storage_account_gen2+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  storage_account_gen2:: {
+    new(
+      managed_identity_resource_id,
+      storage_resource_id,
+      filesystem_id,
+      is_default
+    ):: std.prune(a={
+      managed_identity_resource_id: managed_identity_resource_id,
+      storage_resource_id: storage_resource_id,
+      filesystem_id: filesystem_id,
+      is_default: is_default,
+    }),
+  },
+  withComputeIsolation(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          compute_isolation: value,
+        },
+      },
+    },
+  },
+  withComputeIsolationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          compute_isolation+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  compute_isolation:: {
+    new(
+      compute_isolation_enabled=null,
+      host_sku=null
+    ):: std.prune(a={
+      compute_isolation_enabled: compute_isolation_enabled,
+      host_sku: host_sku,
     }),
   },
   withDiskEncryption(resourceLabel, value):: {
@@ -553,12 +386,173 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   network:: {
     new(
-      private_link_enabled=null,
-      connection_direction=null
+      connection_direction=null,
+      private_link_enabled=null
     ):: std.prune(a={
-      private_link_enabled: private_link_enabled,
       connection_direction: connection_direction,
+      private_link_enabled: private_link_enabled,
     }),
+  },
+  withRoles(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          roles: value,
+        },
+      },
+    },
+  },
+  withRolesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hdinsight_interactive_query_cluster+: {
+        [resourceLabel]+: {
+          roles+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  roles:: {
+    new(
+      head_node=null,
+      worker_node=null,
+      zookeeper_node=null
+    ):: std.prune(a={
+      head_node: head_node,
+      worker_node: worker_node,
+      zookeeper_node: zookeeper_node,
+    }),
+    worker_node:: {
+      new(
+        virtual_network_id=null,
+        vm_size,
+        password=null,
+        ssh_keys=null,
+        subnet_id=null,
+        target_instance_count,
+        username,
+        autoscale=null,
+        script_actions=null
+      ):: std.prune(a={
+        virtual_network_id: virtual_network_id,
+        vm_size: vm_size,
+        password: password,
+        ssh_keys: ssh_keys,
+        subnet_id: subnet_id,
+        target_instance_count: target_instance_count,
+        username: username,
+        autoscale: autoscale,
+        script_actions: script_actions,
+      }),
+      script_actions:: {
+        new(
+          name,
+          parameters=null,
+          uri
+        ):: std.prune(a={
+          name: name,
+          parameters: parameters,
+          uri: uri,
+        }),
+      },
+      autoscale:: {
+        new(
+          capacity=null,
+          recurrence=null
+        ):: std.prune(a={
+          capacity: capacity,
+          recurrence: recurrence,
+        }),
+        capacity:: {
+          new(
+            max_instance_count,
+            min_instance_count
+          ):: std.prune(a={
+            max_instance_count: max_instance_count,
+            min_instance_count: min_instance_count,
+          }),
+        },
+        recurrence:: {
+          new(
+            timezone,
+            schedule=null
+          ):: std.prune(a={
+            timezone: timezone,
+            schedule: schedule,
+          }),
+          schedule:: {
+            new(
+              days,
+              target_instance_count,
+              time
+            ):: std.prune(a={
+              days: days,
+              target_instance_count: target_instance_count,
+              time: time,
+            }),
+          },
+        },
+      },
+    },
+    zookeeper_node:: {
+      new(
+        ssh_keys=null,
+        subnet_id=null,
+        username,
+        virtual_network_id=null,
+        vm_size,
+        password=null,
+        script_actions=null
+      ):: std.prune(a={
+        ssh_keys: ssh_keys,
+        subnet_id: subnet_id,
+        username: username,
+        virtual_network_id: virtual_network_id,
+        vm_size: vm_size,
+        password: password,
+        script_actions: script_actions,
+      }),
+      script_actions:: {
+        new(
+          uri,
+          name,
+          parameters=null
+        ):: std.prune(a={
+          uri: uri,
+          name: name,
+          parameters: parameters,
+        }),
+      },
+    },
+    head_node:: {
+      new(
+        password=null,
+        ssh_keys=null,
+        subnet_id=null,
+        username,
+        virtual_network_id=null,
+        vm_size,
+        script_actions=null
+      ):: std.prune(a={
+        password: password,
+        ssh_keys: ssh_keys,
+        subnet_id: subnet_id,
+        username: username,
+        virtual_network_id: virtual_network_id,
+        vm_size: vm_size,
+        script_actions: script_actions,
+      }),
+      script_actions:: {
+        new(
+          name,
+          parameters=null,
+          uri
+        ):: std.prune(a={
+          name: name,
+          parameters: parameters,
+          uri: uri,
+        }),
+      },
+    },
   },
   withSecurityProfile(resourceLabel, value):: {
     resource+: {
@@ -597,83 +591,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       msi_resource_id: msi_resource_id,
     }),
   },
-  withStorageAccount(resourceLabel, value):: {
+  withGateway(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          storage_account: value,
+          gateway: value,
         },
       },
     },
   },
-  withStorageAccountMixin(resourceLabel, value):: {
+  withGatewayMixin(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          storage_account+: if std.isArray(v=value) then value else [value],
+          gateway+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  storage_account:: {
+  gateway:: {
     new(
-      is_default,
-      storage_account_key,
-      storage_container_id,
-      storage_resource_id=null
+      password,
+      username
     ):: std.prune(a={
-      is_default: is_default,
-      storage_account_key: storage_account_key,
-      storage_container_id: storage_container_id,
-      storage_resource_id: storage_resource_id,
+      password: password,
+      username: username,
     }),
   },
-  withComputeIsolation(resourceLabel, value):: {
+  withMonitor(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          compute_isolation: value,
+          monitor: value,
         },
       },
     },
   },
-  withComputeIsolationMixin(resourceLabel, value):: {
+  withMonitorMixin(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          compute_isolation+: if std.isArray(v=value) then value else [value],
+          monitor+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  compute_isolation:: {
-    new(
-      compute_isolation_enabled=null,
-      host_sku=null
-    ):: std.prune(a={
-      compute_isolation_enabled: compute_isolation_enabled,
-      host_sku: host_sku,
-    }),
-  },
-  withExtension(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          extension: value,
-        },
-      },
-    },
-  },
-  withExtensionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hdinsight_interactive_query_cluster+: {
-        [resourceLabel]+: {
-          extension+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  extension:: {
+  monitor:: {
     new(
       primary_key,
       log_analytics_workspace_id
@@ -682,35 +645,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       log_analytics_workspace_id: log_analytics_workspace_id,
     }),
   },
-  withStorageAccountGen2(resourceLabel, value):: {
+  withMetastores(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          storage_account_gen2: value,
+          metastores: value,
         },
       },
     },
   },
-  withStorageAccountGen2Mixin(resourceLabel, value):: {
+  withMetastoresMixin(resourceLabel, value):: {
     resource+: {
       azurerm_hdinsight_interactive_query_cluster+: {
         [resourceLabel]+: {
-          storage_account_gen2+: if std.isArray(v=value) then value else [value],
+          metastores+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  storage_account_gen2:: {
+  metastores:: {
     new(
-      filesystem_id,
-      is_default,
-      managed_identity_resource_id,
-      storage_resource_id
+      ambari=null,
+      hive=null,
+      oozie=null
     ):: std.prune(a={
-      filesystem_id: filesystem_id,
-      is_default: is_default,
-      managed_identity_resource_id: managed_identity_resource_id,
-      storage_resource_id: storage_resource_id,
+      ambari: ambari,
+      hive: hive,
+      oozie: oozie,
     }),
+    oozie:: {
+      new(
+        server,
+        username,
+        database_name,
+        password
+      ):: std.prune(a={
+        server: server,
+        username: username,
+        database_name: database_name,
+        password: password,
+      }),
+    },
+    ambari:: {
+      new(
+        database_name,
+        password,
+        server,
+        username
+      ):: std.prune(a={
+        database_name: database_name,
+        password: password,
+        server: server,
+        username: username,
+      }),
+    },
+    hive:: {
+      new(
+        password,
+        server,
+        username,
+        database_name
+      ):: std.prune(a={
+        password: password,
+        server: server,
+        username: username,
+        database_name: database_name,
+      }),
+    },
   },
 }

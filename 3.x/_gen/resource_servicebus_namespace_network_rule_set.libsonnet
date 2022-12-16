@@ -2,19 +2,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    namespace_id,
     public_network_access_enabled=null,
     trusted_services_allowed=null,
     default_action=null,
     ip_rules=null,
-    namespace_id,
     network_rules=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_namespace_network_rule_set', label=resourceLabel, attrs=self.newAttrs(
+    namespace_id=namespace_id,
     public_network_access_enabled=public_network_access_enabled,
     trusted_services_allowed=trusted_services_allowed,
     default_action=default_action,
     ip_rules=ip_rules,
-    namespace_id=namespace_id,
     network_rules=network_rules,
     timeouts=timeouts
   )),
@@ -35,24 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     network_rules: network_rules,
     timeouts: timeouts,
   }),
-  withNamespaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace_network_rule_set+: {
-        [resourceLabel]+: {
-          namespace_id: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace_network_rule_set+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
   withTrustedServicesAllowed(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_network_rule_set+: {
@@ -80,6 +62,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withNamespaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace_network_rule_set+: {
+        [resourceLabel]+: {
+          namespace_id: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace_network_rule_set+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
   withNetworkRules(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace_network_rule_set+: {
@@ -100,11 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   network_rules:: {
     new(
-      ignore_missing_vnet_service_endpoint=null,
-      subnet_id
+      subnet_id,
+      ignore_missing_vnet_service_endpoint=null
     ):: std.prune(a={
-      ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
       subnet_id: subnet_id,
+      ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

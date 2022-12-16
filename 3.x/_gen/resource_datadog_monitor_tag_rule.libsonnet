@@ -4,15 +4,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     datadog_monitor_id,
     name=null,
-    log=null,
     metric=null,
-    timeouts=null
+    timeouts=null,
+    log=null
   ):: tf.withResource(type='azurerm_datadog_monitor_tag_rule', label=resourceLabel, attrs=self.newAttrs(
     datadog_monitor_id=datadog_monitor_id,
     name=name,
-    log=log,
     metric=metric,
-    timeouts=timeouts
+    timeouts=timeouts,
+    log=log
   )),
   newAttrs(
     datadog_monitor_id,
@@ -44,37 +44,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor_tag_rule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_datadog_monitor_tag_rule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withLog(resourceLabel, value):: {
     resource+: {
@@ -108,13 +77,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     filter:: {
       new(
-        value,
         action,
-        name
+        name,
+        value
       ):: std.prune(a={
-        value: value,
         action: action,
         name: name,
+        value: value,
       }),
     },
   },
@@ -153,5 +122,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         value: value,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor_tag_rule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_datadog_monitor_tag_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
+    }),
   },
 }

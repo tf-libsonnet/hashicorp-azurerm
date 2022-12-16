@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    route_table_id,
     subnet_id,
+    route_table_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_subnet_route_table_association', label=resourceLabel, attrs=self.newAttrs(route_table_id=route_table_id, subnet_id=subnet_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_subnet_route_table_association', label=resourceLabel, attrs=self.newAttrs(subnet_id=subnet_id, route_table_id=route_table_id, timeouts=timeouts)),
   newAttrs(
-    route_table_id,
     subnet_id,
+    route_table_id,
     timeouts=null
   ):: std.prune(a={
-    route_table_id: route_table_id,
     subnet_id: subnet_id,
+    route_table_id: route_table_id,
     timeouts: timeouts,
   }),
   withRouteTableId(resourceLabel, value):: {

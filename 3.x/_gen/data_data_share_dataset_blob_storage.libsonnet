@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    data_share_id,
     name,
+    data_share_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_data_share_dataset_blob_storage', label=dataSrcLabel, attrs=self.newAttrs(data_share_id=data_share_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_data_share_dataset_blob_storage', label=dataSrcLabel, attrs=self.newAttrs(name=name, data_share_id=data_share_id, timeouts=timeouts)),
   newAttrs(
     name,
     data_share_id,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     data_share_id: data_share_id,
     timeouts: timeouts,
   }),
-  withDataShareId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_data_share_dataset_blob_storage+: {
-        [dataSrcLabel]+: {
-          data_share_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_data_share_dataset_blob_storage+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withDataShareId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_data_share_dataset_blob_storage+: {
+        [dataSrcLabel]+: {
+          data_share_id: value,
         },
       },
     },

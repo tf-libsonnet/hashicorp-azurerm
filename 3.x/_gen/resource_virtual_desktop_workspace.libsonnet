@@ -2,37 +2,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
+    tags=null,
     description=null,
     friendly_name=null,
     location,
     name,
-    resource_group_name,
-    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_desktop_workspace', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
+    tags=tags,
     description=description,
     friendly_name=friendly_name,
     location=location,
     name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    resource_group_name,
-    tags=null,
     description=null,
     friendly_name=null,
     location,
+    name,
+    resource_group_name,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
-    tags: tags,
     description: description,
     friendly_name: friendly_name,
     location: location,
+    name: name,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
   }),
   withTags(resourceLabel, value):: {

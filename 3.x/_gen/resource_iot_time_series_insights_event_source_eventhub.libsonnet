@@ -2,64 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    shared_access_key_name,
-    event_source_resource_id,
-    location,
     namespace_name,
-    timestamp_property_name=null,
-    consumer_group_name,
-    environment_id,
-    eventhub_name,
-    name,
     shared_access_key,
+    consumer_group_name,
+    timestamp_property_name=null,
     tags=null,
+    event_source_resource_id,
+    eventhub_name,
+    environment_id,
+    location,
+    name,
+    shared_access_key_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_event_source_eventhub', label=resourceLabel, attrs=self.newAttrs(
-    shared_access_key_name=shared_access_key_name,
-    event_source_resource_id=event_source_resource_id,
-    location=location,
     namespace_name=namespace_name,
-    timestamp_property_name=timestamp_property_name,
-    consumer_group_name=consumer_group_name,
-    environment_id=environment_id,
-    eventhub_name=eventhub_name,
-    name=name,
     shared_access_key=shared_access_key,
+    consumer_group_name=consumer_group_name,
+    timestamp_property_name=timestamp_property_name,
     tags=tags,
+    event_source_resource_id=event_source_resource_id,
+    eventhub_name=eventhub_name,
+    environment_id=environment_id,
+    location=location,
+    name=name,
+    shared_access_key_name=shared_access_key_name,
     timeouts=timeouts
   )),
   newAttrs(
+    consumer_group_name,
+    environment_id,
     event_source_resource_id,
     eventhub_name,
-    location,
-    name,
-    namespace_name,
-    shared_access_key,
-    tags=null,
-    consumer_group_name,
     timestamp_property_name=null,
+    tags=null,
+    shared_access_key,
     shared_access_key_name,
-    environment_id,
+    location,
+    namespace_name,
+    name,
     timeouts=null
   ):: std.prune(a={
+    consumer_group_name: consumer_group_name,
+    environment_id: environment_id,
     event_source_resource_id: event_source_resource_id,
     eventhub_name: eventhub_name,
-    location: location,
-    name: name,
-    namespace_name: namespace_name,
-    shared_access_key: shared_access_key,
-    tags: tags,
-    consumer_group_name: consumer_group_name,
     timestamp_property_name: timestamp_property_name,
+    tags: tags,
+    shared_access_key: shared_access_key,
     shared_access_key_name: shared_access_key_name,
-    environment_id: environment_id,
+    location: location,
+    namespace_name: namespace_name,
+    name: name,
     timeouts: timeouts,
   }),
-  withConsumerGroupName(resourceLabel, value):: {
+  withNamespaceName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_eventhub+: {
         [resourceLabel]+: {
-          consumer_group_name: value,
+          namespace_name: value,
         },
       },
     },
@@ -73,38 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withNamespaceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_eventhub+: {
-        [resourceLabel]+: {
-          namespace_name: value,
-        },
-      },
-    },
-  },
-  withTimestampPropertyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_eventhub+: {
-        [resourceLabel]+: {
-          timestamp_property_name: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_eventhub+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_event_source_eventhub+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -145,11 +118,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_eventhub+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSharedAccessKeyName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_event_source_eventhub+: {
         [resourceLabel]+: {
           shared_access_key_name: value,
+        },
+      },
+    },
+  },
+  withTimestampPropertyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_eventhub+: {
+        [resourceLabel]+: {
+          timestamp_property_name: value,
+        },
+      },
+    },
+  },
+  withConsumerGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_event_source_eventhub+: {
+        [resourceLabel]+: {
+          consumer_group_name: value,
         },
       },
     },

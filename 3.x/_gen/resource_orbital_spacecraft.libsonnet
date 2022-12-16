@@ -2,74 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    two_line_elements,
-    location,
-    name,
     norad_id,
     resource_group_name,
     tags=null,
     title_line,
+    two_line_elements,
+    location,
+    name,
     links=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_orbital_spacecraft', label=resourceLabel, attrs=self.newAttrs(
-    two_line_elements=two_line_elements,
-    location=location,
-    name=name,
     norad_id=norad_id,
     resource_group_name=resource_group_name,
     tags=tags,
     title_line=title_line,
+    two_line_elements=two_line_elements,
+    location=location,
+    name=name,
     links=links,
     timeouts=timeouts
   )),
   newAttrs(
+    title_line,
     two_line_elements,
     location,
     name,
     norad_id,
     resource_group_name,
     tags=null,
-    title_line,
     links=null,
     timeouts=null
   ):: std.prune(a={
+    title_line: title_line,
     two_line_elements: two_line_elements,
     location: location,
     name: name,
     norad_id: norad_id,
     resource_group_name: resource_group_name,
     tags: tags,
-    title_line: title_line,
     links: links,
     timeouts: timeouts,
   }),
-  withTwoLineElements(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          two_line_elements: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_spacecraft+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withNoradId(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_spacecraft+: {
@@ -106,36 +79,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withTwoLineElements(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_spacecraft+: {
         [resourceLabel]+: {
-          timeouts: value,
+          two_line_elements: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_spacecraft+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          location: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
   },
   withLinks(resourceLabel, value):: {
     resource+: {
@@ -157,17 +126,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   links:: {
     new(
-      name,
-      polarization,
       bandwidth_mhz,
       center_frequency_mhz,
-      direction
+      direction,
+      name,
+      polarization
     ):: std.prune(a={
-      name: name,
-      polarization: polarization,
       bandwidth_mhz: bandwidth_mhz,
       center_frequency_mhz: center_frequency_mhz,
       direction: direction,
+      name: name,
+      polarization: polarization,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_spacecraft+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

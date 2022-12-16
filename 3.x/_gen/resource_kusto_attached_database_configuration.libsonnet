@@ -3,46 +3,82 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     default_principal_modification_kind=null,
+    location,
+    name,
+    resource_group_name,
     cluster_name,
     cluster_resource_id,
     database_name,
-    name,
-    location,
-    resource_group_name,
-    sharing=null,
-    timeouts=null
+    timeouts=null,
+    sharing=null
   ):: tf.withResource(type='azurerm_kusto_attached_database_configuration', label=resourceLabel, attrs=self.newAttrs(
     default_principal_modification_kind=default_principal_modification_kind,
+    location=location,
+    name=name,
+    resource_group_name=resource_group_name,
     cluster_name=cluster_name,
     cluster_resource_id=cluster_resource_id,
     database_name=database_name,
-    name=name,
-    location=location,
-    resource_group_name=resource_group_name,
-    sharing=sharing,
-    timeouts=timeouts
+    timeouts=timeouts,
+    sharing=sharing
   )),
   newAttrs(
-    database_name,
-    name,
     location,
+    name,
+    database_name,
     resource_group_name,
-    default_principal_modification_kind=null,
     cluster_name,
     cluster_resource_id,
+    default_principal_modification_kind=null,
     sharing=null,
     timeouts=null
   ):: std.prune(a={
-    database_name: database_name,
-    name: name,
     location: location,
+    name: name,
+    database_name: database_name,
     resource_group_name: resource_group_name,
-    default_principal_modification_kind: default_principal_modification_kind,
     cluster_name: cluster_name,
     cluster_resource_id: cluster_resource_id,
+    default_principal_modification_kind: default_principal_modification_kind,
     sharing: sharing,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_attached_database_configuration+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_attached_database_configuration+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_attached_database_configuration+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withDatabaseName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_attached_database_configuration+: {
+        [resourceLabel]+: {
+          database_name: value,
+        },
+      },
+    },
+  },
   withClusterName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_attached_database_configuration+: {
@@ -61,24 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatabaseName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_attached_database_configuration+: {
-        [resourceLabel]+: {
-          database_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_attached_database_configuration+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withDefaultPrincipalModificationKind(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_attached_database_configuration+: {
@@ -88,23 +106,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_attached_database_configuration+: {
         [resourceLabel]+: {
-          location: value,
+          timeouts: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_attached_database_configuration+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          timeouts+: value,
         },
       },
     },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withSharing(resourceLabel, value):: {
     resource+: {
@@ -139,37 +170,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       external_tables_to_include: external_tables_to_include,
       materialized_views_to_exclude: materialized_views_to_exclude,
       materialized_views_to_include: materialized_views_to_include,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_attached_database_configuration+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_attached_database_configuration+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

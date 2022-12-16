@@ -2,30 +2,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    customer_managed_key_identity_id=null,
-    tags=null,
     managed_virtual_network_enabled=null,
-    location,
-    public_network_enabled=null,
-    name,
     purview_id=null,
     customer_managed_key_id=null,
+    name,
+    public_network_enabled=null,
+    tags=null,
+    customer_managed_key_identity_id=null,
+    resource_group_name,
+    location,
     github_configuration=null,
     global_parameter=null,
     identity=null,
     timeouts=null,
     vsts_configuration=null
   ):: tf.withResource(type='azurerm_data_factory', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    customer_managed_key_identity_id=customer_managed_key_identity_id,
-    tags=tags,
     managed_virtual_network_enabled=managed_virtual_network_enabled,
-    location=location,
-    public_network_enabled=public_network_enabled,
-    name=name,
     purview_id=purview_id,
     customer_managed_key_id=customer_managed_key_id,
+    name=name,
+    public_network_enabled=public_network_enabled,
+    tags=tags,
+    customer_managed_key_identity_id=customer_managed_key_identity_id,
+    resource_group_name=resource_group_name,
+    location=location,
     github_configuration=github_configuration,
     global_parameter=global_parameter,
     identity=identity,
@@ -33,68 +33,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     vsts_configuration=vsts_configuration
   )),
   newAttrs(
-    purview_id=null,
+    customer_managed_key_identity_id=null,
+    managed_virtual_network_enabled=null,
     tags=null,
-    customer_managed_key_id=null,
     location,
     name,
-    managed_virtual_network_enabled=null,
     public_network_enabled=null,
+    purview_id=null,
     resource_group_name,
-    customer_managed_key_identity_id=null,
+    customer_managed_key_id=null,
+    timeouts=null,
+    vsts_configuration=null,
     github_configuration=null,
     global_parameter=null,
-    identity=null,
-    timeouts=null,
-    vsts_configuration=null
+    identity=null
   ):: std.prune(a={
-    purview_id: purview_id,
+    customer_managed_key_identity_id: customer_managed_key_identity_id,
+    managed_virtual_network_enabled: managed_virtual_network_enabled,
     tags: tags,
-    customer_managed_key_id: customer_managed_key_id,
     location: location,
     name: name,
-    managed_virtual_network_enabled: managed_virtual_network_enabled,
     public_network_enabled: public_network_enabled,
+    purview_id: purview_id,
     resource_group_name: resource_group_name,
-    customer_managed_key_identity_id: customer_managed_key_identity_id,
+    customer_managed_key_id: customer_managed_key_id,
+    timeouts: timeouts,
+    vsts_configuration: vsts_configuration,
     github_configuration: github_configuration,
     global_parameter: global_parameter,
     identity: identity,
-    timeouts: timeouts,
-    vsts_configuration: vsts_configuration,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withPurviewId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory+: {
         [resourceLabel]+: {
           purview_id: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory+: {
+        [resourceLabel]+: {
+          public_network_enabled: value,
         },
       },
     },
@@ -117,11 +99,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkEnabled(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory+: {
         [resourceLabel]+: {
-          public_network_enabled: value,
+          resource_group_name: value,
         },
       },
     },
@@ -131,6 +113,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory+: {
         [resourceLabel]+: {
           customer_managed_key_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -164,19 +164,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   vsts_configuration:: {
     new(
-      account_name,
-      branch_name,
-      project_name,
       repository_name,
       root_folder,
-      tenant_id
+      tenant_id,
+      account_name,
+      branch_name,
+      project_name
     ):: std.prune(a={
-      account_name: account_name,
-      branch_name: branch_name,
-      project_name: project_name,
       repository_name: repository_name,
       root_folder: root_folder,
       tenant_id: tenant_id,
+      account_name: account_name,
+      branch_name: branch_name,
+      project_name: project_name,
     }),
   },
   withGithubConfiguration(resourceLabel, value):: {
@@ -199,17 +199,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   github_configuration:: {
     new(
-      branch_name,
-      git_url,
       repository_name,
       root_folder,
-      account_name
+      account_name,
+      branch_name,
+      git_url
     ):: std.prune(a={
-      branch_name: branch_name,
-      git_url: git_url,
       repository_name: repository_name,
       root_folder: root_folder,
       account_name: account_name,
+      branch_name: branch_name,
+      git_url: git_url,
     }),
   },
   withGlobalParameter(resourceLabel, value):: {
@@ -232,13 +232,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   global_parameter:: {
     new(
+      name,
       type,
-      value,
-      name
+      value
     ):: std.prune(a={
+      name: name,
       type: type,
       value: value,
-      name: name,
     }),
   },
   withIdentity(resourceLabel, value):: {
@@ -288,15 +288,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

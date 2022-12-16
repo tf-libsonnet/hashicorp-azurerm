@@ -2,96 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    public_network_access_enabled=null,
-    sku,
-    tags=null,
-    location,
-    resource_group_name,
     allowed_ips=null,
-    name,
+    public_network_access_enabled=null,
+    location,
     partition_count=null,
+    sku,
     replica_count=null,
-    timeouts=null,
-    identity=null
+    resource_group_name,
+    name,
+    tags=null,
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_search_service', label=resourceLabel, attrs=self.newAttrs(
-    public_network_access_enabled=public_network_access_enabled,
-    sku=sku,
-    tags=tags,
-    location=location,
-    resource_group_name=resource_group_name,
     allowed_ips=allowed_ips,
-    name=name,
+    public_network_access_enabled=public_network_access_enabled,
+    location=location,
     partition_count=partition_count,
+    sku=sku,
     replica_count=replica_count,
-    timeouts=timeouts,
-    identity=identity
+    resource_group_name=resource_group_name,
+    name=name,
+    tags=tags,
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
+    replica_count=null,
+    resource_group_name,
+    public_network_access_enabled=null,
+    allowed_ips=null,
     location,
     name,
-    allowed_ips=null,
-    public_network_access_enabled=null,
-    replica_count=null,
-    tags=null,
-    resource_group_name,
-    sku,
     partition_count=null,
+    sku,
+    tags=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
+    replica_count: replica_count,
+    resource_group_name: resource_group_name,
+    public_network_access_enabled: public_network_access_enabled,
+    allowed_ips: allowed_ips,
     location: location,
     name: name,
-    allowed_ips: allowed_ips,
-    public_network_access_enabled: public_network_access_enabled,
-    replica_count: replica_count,
-    tags: tags,
-    resource_group_name: resource_group_name,
-    sku: sku,
     partition_count: partition_count,
+    sku: sku,
+    tags: tags,
     identity: identity,
     timeouts: timeouts,
   }),
-  withReplicaCount(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_search_service+: {
         [resourceLabel]+: {
-          replica_count: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withPartitionCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          partition_count: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          sku: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          tags: value,
+          public_network_access_enabled: value,
         },
       },
     },
@@ -105,11 +69,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withPartitionCount(resourceLabel, value):: {
     resource+: {
       azurerm_search_service+: {
         [resourceLabel]+: {
-          name: value,
+          partition_count: value,
         },
       },
     },
@@ -123,14 +87,75 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_search_service+: {
         [resourceLabel]+: {
-          public_network_access_enabled: value,
+          tags: value,
         },
       },
     },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withReplicaCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          replica_count: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -161,31 +186,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_search_service+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
     }),
   },
 }

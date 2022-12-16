@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    resource_group_name,
     streaming_capacity,
     tags=null,
     location,
-    name,
-    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_cluster', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    resource_group_name=resource_group_name,
     streaming_capacity=streaming_capacity,
     tags=tags,
     location=location,
-    name=name,
-    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    streaming_capacity,
     tags=null,
     location,
     name,
     resource_group_name,
-    streaming_capacity,
     timeouts=null
   ):: std.prune(a={
+    streaming_capacity: streaming_capacity,
     tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    streaming_capacity: streaming_capacity,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_cluster+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_cluster+: {
@@ -72,6 +63,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_cluster+: {
         [resourceLabel]+: {
           streaming_capacity: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_cluster+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

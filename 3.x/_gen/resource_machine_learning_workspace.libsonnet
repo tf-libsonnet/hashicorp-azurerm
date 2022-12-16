@@ -2,177 +2,96 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    application_insights_id,
-    high_business_impact=null,
-    key_vault_id,
     primary_user_assigned_identity=null,
-    public_network_access_enabled=null,
+    v1_legacy_mode_enabled=null,
+    high_business_impact=null,
     storage_account_id,
-    container_registry_id=null,
-    friendly_name=null,
-    resource_group_name,
-    image_build_compute_name=null,
     location,
+    container_registry_id=null,
+    image_build_compute_name=null,
     sku_name=null,
     tags=null,
+    friendly_name=null,
     name,
-    v1_legacy_mode_enabled=null,
+    application_insights_id,
+    public_network_access_enabled=null,
     description=null,
+    key_vault_id,
+    resource_group_name,
     public_access_behind_virtual_network_enabled=null,
+    timeouts=null,
     encryption=null,
-    identity=null,
-    timeouts=null
+    identity=null
   ):: tf.withResource(type='azurerm_machine_learning_workspace', label=resourceLabel, attrs=self.newAttrs(
-    application_insights_id=application_insights_id,
-    high_business_impact=high_business_impact,
-    key_vault_id=key_vault_id,
     primary_user_assigned_identity=primary_user_assigned_identity,
-    public_network_access_enabled=public_network_access_enabled,
+    v1_legacy_mode_enabled=v1_legacy_mode_enabled,
+    high_business_impact=high_business_impact,
     storage_account_id=storage_account_id,
-    container_registry_id=container_registry_id,
-    friendly_name=friendly_name,
-    resource_group_name=resource_group_name,
-    image_build_compute_name=image_build_compute_name,
     location=location,
+    container_registry_id=container_registry_id,
+    image_build_compute_name=image_build_compute_name,
     sku_name=sku_name,
     tags=tags,
+    friendly_name=friendly_name,
     name=name,
-    v1_legacy_mode_enabled=v1_legacy_mode_enabled,
+    application_insights_id=application_insights_id,
+    public_network_access_enabled=public_network_access_enabled,
     description=description,
+    key_vault_id=key_vault_id,
+    resource_group_name=resource_group_name,
     public_access_behind_virtual_network_enabled=public_access_behind_virtual_network_enabled,
+    timeouts=timeouts,
     encryption=encryption,
-    identity=identity,
-    timeouts=timeouts
+    identity=identity
   )),
   newAttrs(
+    primary_user_assigned_identity=null,
+    public_network_access_enabled=null,
     name,
-    image_build_compute_name=null,
-    description=null,
-    storage_account_id,
-    resource_group_name,
+    sku_name=null,
     tags=null,
-    friendly_name=null,
+    high_business_impact=null,
     public_access_behind_virtual_network_enabled=null,
+    container_registry_id=null,
+    friendly_name=null,
+    description=null,
     key_vault_id,
     application_insights_id,
-    public_network_access_enabled=null,
+    image_build_compute_name=null,
+    storage_account_id,
+    resource_group_name,
     location,
-    primary_user_assigned_identity=null,
     v1_legacy_mode_enabled=null,
-    container_registry_id=null,
-    high_business_impact=null,
-    sku_name=null,
     identity=null,
     timeouts=null,
     encryption=null
   ):: std.prune(a={
+    primary_user_assigned_identity: primary_user_assigned_identity,
+    public_network_access_enabled: public_network_access_enabled,
     name: name,
-    image_build_compute_name: image_build_compute_name,
-    description: description,
-    storage_account_id: storage_account_id,
-    resource_group_name: resource_group_name,
+    sku_name: sku_name,
     tags: tags,
-    friendly_name: friendly_name,
+    high_business_impact: high_business_impact,
     public_access_behind_virtual_network_enabled: public_access_behind_virtual_network_enabled,
+    container_registry_id: container_registry_id,
+    friendly_name: friendly_name,
+    description: description,
     key_vault_id: key_vault_id,
     application_insights_id: application_insights_id,
-    public_network_access_enabled: public_network_access_enabled,
+    image_build_compute_name: image_build_compute_name,
+    storage_account_id: storage_account_id,
+    resource_group_name: resource_group_name,
     location: location,
-    primary_user_assigned_identity: primary_user_assigned_identity,
     v1_legacy_mode_enabled: v1_legacy_mode_enabled,
-    container_registry_id: container_registry_id,
-    high_business_impact: high_business_impact,
-    sku_name: sku_name,
     identity: identity,
     timeouts: timeouts,
     encryption: encryption,
   }),
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withHighBusinessImpact(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          high_business_impact: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withPrimaryUserAssignedIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          primary_user_assigned_identity: value,
-        },
-      },
-    },
-  },
-  withV1LegacyModeEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          v1_legacy_mode_enabled: value,
-        },
-      },
-    },
-  },
   withApplicationInsightsId(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_workspace+: {
         [resourceLabel]+: {
           application_insights_id: value,
-        },
-      },
-    },
-  },
-  withContainerRegistryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          container_registry_id: value,
         },
       },
     },
@@ -186,20 +105,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withHighBusinessImpact(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          high_business_impact: value,
+        },
+      },
+    },
+  },
+  withContainerRegistryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          container_registry_id: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_workspace+: {
         [resourceLabel]+: {
           description: value,
-        },
-      },
-    },
-  },
-  withFriendlyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          friendly_name: value,
         },
       },
     },
@@ -213,20 +159,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withV1LegacyModeEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          v1_legacy_mode_enabled: value,
+        },
+      },
+    },
+  },
   withPublicAccessBehindVirtualNetworkEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_workspace+: {
         [resourceLabel]+: {
           public_access_behind_virtual_network_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_workspace+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -240,36 +195,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_workspace+: {
         [resourceLabel]+: {
-          timeouts: value,
+          storage_account_id: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_workspace+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          tags: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withFriendlyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          friendly_name: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withPrimaryUserAssignedIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          primary_user_assigned_identity: value,
+        },
+      },
+    },
   },
   withEncryption(resourceLabel, value):: {
     resource+: {
@@ -320,11 +289,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_workspace+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

@@ -2,63 +2,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cassandra_cluster_id,
-    disk_count=null,
     backup_storage_customer_key_uri=null,
     delegated_management_subnet_id,
-    disk_sku=null,
-    name,
+    disk_count=null,
     node_count=null,
-    base64_encoded_yaml_fragment=null,
     managed_disk_customer_key_uri=null,
-    sku_name=null,
+    cassandra_cluster_id,
+    base64_encoded_yaml_fragment=null,
+    disk_sku=null,
     location,
+    name,
     availability_zones_enabled=null,
+    sku_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_cassandra_datacenter', label=resourceLabel, attrs=self.newAttrs(
-    cassandra_cluster_id=cassandra_cluster_id,
-    disk_count=disk_count,
     backup_storage_customer_key_uri=backup_storage_customer_key_uri,
     delegated_management_subnet_id=delegated_management_subnet_id,
-    disk_sku=disk_sku,
-    name=name,
+    disk_count=disk_count,
     node_count=node_count,
-    base64_encoded_yaml_fragment=base64_encoded_yaml_fragment,
     managed_disk_customer_key_uri=managed_disk_customer_key_uri,
-    sku_name=sku_name,
+    cassandra_cluster_id=cassandra_cluster_id,
+    base64_encoded_yaml_fragment=base64_encoded_yaml_fragment,
+    disk_sku=disk_sku,
     location=location,
+    name=name,
     availability_zones_enabled=availability_zones_enabled,
+    sku_name=sku_name,
     timeouts=timeouts
   )),
   newAttrs(
     disk_count=null,
     location,
-    delegated_management_subnet_id,
-    disk_sku=null,
-    managed_disk_customer_key_uri=null,
-    node_count=null,
-    sku_name=null,
     availability_zones_enabled=null,
-    base64_encoded_yaml_fragment=null,
+    node_count=null,
     cassandra_cluster_id,
+    disk_sku=null,
     name,
     backup_storage_customer_key_uri=null,
+    base64_encoded_yaml_fragment=null,
+    sku_name=null,
+    managed_disk_customer_key_uri=null,
+    delegated_management_subnet_id,
     timeouts=null
   ):: std.prune(a={
     disk_count: disk_count,
     location: location,
-    delegated_management_subnet_id: delegated_management_subnet_id,
-    disk_sku: disk_sku,
-    managed_disk_customer_key_uri: managed_disk_customer_key_uri,
-    node_count: node_count,
-    sku_name: sku_name,
     availability_zones_enabled: availability_zones_enabled,
-    base64_encoded_yaml_fragment: base64_encoded_yaml_fragment,
+    node_count: node_count,
     cassandra_cluster_id: cassandra_cluster_id,
+    disk_sku: disk_sku,
     name: name,
     backup_storage_customer_key_uri: backup_storage_customer_key_uri,
+    base64_encoded_yaml_fragment: base64_encoded_yaml_fragment,
+    sku_name: sku_name,
+    managed_disk_customer_key_uri: managed_disk_customer_key_uri,
+    delegated_management_subnet_id: delegated_management_subnet_id,
     timeouts: timeouts,
   }),
+  withNodeCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_datacenter+: {
+        [resourceLabel]+: {
+          node_count: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_datacenter+: {
@@ -68,11 +77,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBase64EncodedYamlFragment(resourceLabel, value):: {
+  withAvailabilityZonesEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_datacenter+: {
         [resourceLabel]+: {
-          base64_encoded_yaml_fragment: value,
+          availability_zones_enabled: value,
+        },
+      },
+    },
+  },
+  withBackupStorageCustomerKeyUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_datacenter+: {
+        [resourceLabel]+: {
+          backup_storage_customer_key_uri: value,
         },
       },
     },
@@ -95,38 +113,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_datacenter+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withBackupStorageCustomerKeyUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_datacenter+: {
-        [resourceLabel]+: {
-          backup_storage_customer_key_uri: value,
-        },
-      },
-    },
-  },
-  withDelegatedManagementSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_datacenter+: {
-        [resourceLabel]+: {
-          delegated_management_subnet_id: value,
-        },
-      },
-    },
-  },
   withManagedDiskCustomerKeyUri(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_datacenter+: {
         [resourceLabel]+: {
           managed_disk_customer_key_uri: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_datacenter+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -140,11 +140,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAvailabilityZonesEnabled(resourceLabel, value):: {
+  withBase64EncodedYamlFragment(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_datacenter+: {
         [resourceLabel]+: {
-          availability_zones_enabled: value,
+          base64_encoded_yaml_fragment: value,
+        },
+      },
+    },
+  },
+  withDelegatedManagementSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_datacenter+: {
+        [resourceLabel]+: {
+          delegated_management_subnet_id: value,
         },
       },
     },
@@ -154,15 +163,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_cassandra_datacenter+: {
         [resourceLabel]+: {
           disk_sku: value,
-        },
-      },
-    },
-  },
-  withNodeCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_datacenter+: {
-        [resourceLabel]+: {
-          node_count: value,
         },
       },
     },
@@ -187,15 +187,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

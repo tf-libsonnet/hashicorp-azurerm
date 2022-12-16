@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_desktop_workspace_application_group_association', label=resourceLabel, attrs=self.newAttrs(application_group_id=application_group_id, workspace_id=workspace_id, timeouts=timeouts)),
   newAttrs(
-    workspace_id,
     application_group_id,
+    workspace_id,
     timeouts=null
   ):: std.prune(a={
-    workspace_id: workspace_id,
     application_group_id: application_group_id,
+    workspace_id: workspace_id,
     timeouts: timeouts,
   }),
   withApplicationGroupId(resourceLabel, value):: {
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

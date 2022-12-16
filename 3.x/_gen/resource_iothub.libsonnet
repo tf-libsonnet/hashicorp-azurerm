@@ -2,88 +2,97 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    event_hub_retention_in_days=null,
     enrichment=null,
-    event_hub_partition_count=null,
     resource_group_name,
-    tags=null,
+    event_hub_partition_count=null,
     min_tls_version=null,
-    route=null,
     name,
     endpoint=null,
-    event_hub_retention_in_days=null,
-    location,
+    tags=null,
     public_network_access_enabled=null,
-    file_upload=null,
-    identity=null,
+    location,
+    route=null,
     network_rule_set=null,
     sku=null,
     timeouts=null,
     cloud_to_device=null,
-    fallback_route=null
+    fallback_route=null,
+    file_upload=null,
+    identity=null
   ):: tf.withResource(type='azurerm_iothub', label=resourceLabel, attrs=self.newAttrs(
+    event_hub_retention_in_days=event_hub_retention_in_days,
     enrichment=enrichment,
-    event_hub_partition_count=event_hub_partition_count,
     resource_group_name=resource_group_name,
-    tags=tags,
+    event_hub_partition_count=event_hub_partition_count,
     min_tls_version=min_tls_version,
-    route=route,
     name=name,
     endpoint=endpoint,
-    event_hub_retention_in_days=event_hub_retention_in_days,
-    location=location,
+    tags=tags,
     public_network_access_enabled=public_network_access_enabled,
-    file_upload=file_upload,
-    identity=identity,
+    location=location,
+    route=route,
     network_rule_set=network_rule_set,
     sku=sku,
     timeouts=timeouts,
     cloud_to_device=cloud_to_device,
-    fallback_route=fallback_route
+    fallback_route=fallback_route,
+    file_upload=file_upload,
+    identity=identity
   )),
   newAttrs(
-    min_tls_version=null,
-    resource_group_name,
-    route=null,
-    location,
-    tags=null,
     endpoint=null,
-    event_hub_partition_count=null,
-    enrichment=null,
+    resource_group_name,
+    location,
     name,
     event_hub_retention_in_days=null,
+    tags=null,
+    enrichment=null,
     public_network_access_enabled=null,
+    event_hub_partition_count=null,
+    min_tls_version=null,
+    route=null,
+    timeouts=null,
+    cloud_to_device=null,
+    fallback_route=null,
     file_upload=null,
     identity=null,
     network_rule_set=null,
-    sku=null,
-    timeouts=null,
-    cloud_to_device=null,
-    fallback_route=null
+    sku=null
   ):: std.prune(a={
-    min_tls_version: min_tls_version,
-    resource_group_name: resource_group_name,
-    route: route,
-    location: location,
-    tags: tags,
     endpoint: endpoint,
-    event_hub_partition_count: event_hub_partition_count,
-    enrichment: enrichment,
+    resource_group_name: resource_group_name,
+    location: location,
     name: name,
     event_hub_retention_in_days: event_hub_retention_in_days,
+    tags: tags,
+    enrichment: enrichment,
     public_network_access_enabled: public_network_access_enabled,
+    event_hub_partition_count: event_hub_partition_count,
+    min_tls_version: min_tls_version,
+    route: route,
+    timeouts: timeouts,
+    cloud_to_device: cloud_to_device,
+    fallback_route: fallback_route,
     file_upload: file_upload,
     identity: identity,
     network_rule_set: network_rule_set,
     sku: sku,
-    timeouts: timeouts,
-    cloud_to_device: cloud_to_device,
-    fallback_route: fallback_route,
   }),
-  withEnrichment(resourceLabel, value):: {
+  withMinTlsVersion(resourceLabel, value):: {
     resource+: {
       azurerm_iothub+: {
         [resourceLabel]+: {
-          enrichment: value,
+          min_tls_version: value,
+        },
+      },
+    },
+  },
+  withRoute(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub+: {
+        [resourceLabel]+: {
+          route: value,
         },
       },
     },
@@ -106,24 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withEventHubRetentionInDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub+: {
-        [resourceLabel]+: {
-          event_hub_retention_in_days: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_iothub+: {
@@ -133,29 +124,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMinTlsVersion(resourceLabel, value):: {
+  withEventHubRetentionInDays(resourceLabel, value):: {
     resource+: {
       azurerm_iothub+: {
         [resourceLabel]+: {
-          min_tls_version: value,
-        },
-      },
-    },
-  },
-  withRoute(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub+: {
-        [resourceLabel]+: {
-          route: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          event_hub_retention_in_days: value,
         },
       },
     },
@@ -178,6 +151,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withEnrichment(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub+: {
+        [resourceLabel]+: {
+          enrichment: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
+  },
   withNetworkRuleSet(resourceLabel, value):: {
     resource+: {
       azurerm_iothub+: {
@@ -198,12 +225,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   network_rule_set:: {
     new(
-      apply_to_builtin_eventhub_endpoint=null,
       default_action=null,
+      apply_to_builtin_eventhub_endpoint=null,
       ip_rule=null
     ):: std.prune(a={
-      apply_to_builtin_eventhub_endpoint: apply_to_builtin_eventhub_endpoint,
       default_action: default_action,
+      apply_to_builtin_eventhub_endpoint: apply_to_builtin_eventhub_endpoint,
       ip_rule: ip_rule,
     }),
     ip_rule:: {
@@ -238,11 +265,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sku:: {
     new(
-      name,
-      capacity
+      capacity,
+      name
     ):: std.prune(a={
-      name: name,
       capacity: capacity,
+      name: name,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -336,15 +363,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   fallback_route:: {
     new(
-      source=null,
-      condition=null,
       enabled=null,
-      endpoint_names=null
+      endpoint_names=null,
+      source=null,
+      condition=null
     ):: std.prune(a={
-      source: source,
-      condition: condition,
       enabled: enabled,
       endpoint_names: endpoint_names,
+      source: source,
+      condition: condition,
     }),
   },
   withFileUpload(resourceLabel, value):: {
@@ -367,52 +394,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   file_upload:: {
     new(
-      notifications=null,
-      sas_ttl=null,
-      container_name,
-      default_ttl=null,
-      authentication_type=null,
-      identity_id=null,
-      lock_duration=null,
       max_delivery_count=null,
-      connection_string
+      authentication_type=null,
+      lock_duration=null,
+      sas_ttl=null,
+      identity_id=null,
+      notifications=null,
+      container_name,
+      connection_string,
+      default_ttl=null
     ):: std.prune(a={
-      notifications: notifications,
-      sas_ttl: sas_ttl,
-      container_name: container_name,
-      default_ttl: default_ttl,
-      authentication_type: authentication_type,
-      identity_id: identity_id,
-      lock_duration: lock_duration,
       max_delivery_count: max_delivery_count,
+      authentication_type: authentication_type,
+      lock_duration: lock_duration,
+      sas_ttl: sas_ttl,
+      identity_id: identity_id,
+      notifications: notifications,
+      container_name: container_name,
       connection_string: connection_string,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
+      default_ttl: default_ttl,
     }),
   },
 }

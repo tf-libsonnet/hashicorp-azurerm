@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
     location,
     name,
     resource_group_name,
     tags=null,
+    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_shared_image_gallery', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    description=description,
     timeouts=timeouts
   )),
   newAttrs(
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

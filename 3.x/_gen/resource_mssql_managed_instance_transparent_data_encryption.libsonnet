@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    key_vault_key_id=null,
     managed_instance_id,
     auto_rotation_enabled=null,
+    key_vault_key_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_managed_instance_transparent_data_encryption', label=resourceLabel, attrs=self.newAttrs(
-    key_vault_key_id=key_vault_key_id,
     managed_instance_id=managed_instance_id,
     auto_rotation_enabled=auto_rotation_enabled,
+    key_vault_key_id=key_vault_key_id,
     timeouts=timeouts
   )),
   newAttrs(
+    auto_rotation_enabled=null,
     key_vault_key_id=null,
     managed_instance_id,
-    auto_rotation_enabled=null,
     timeouts=null
   ):: std.prune(a={
+    auto_rotation_enabled: auto_rotation_enabled,
     key_vault_key_id: key_vault_key_id,
     managed_instance_id: managed_instance_id,
-    auto_rotation_enabled: auto_rotation_enabled,
     timeouts: timeouts,
   }),
   withAutoRotationEnabled(resourceLabel, value):: {
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

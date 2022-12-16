@@ -2,56 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_id,
+    active=null,
     name,
     recurrence_period_end_date,
     recurrence_period_start_date,
     recurrence_type,
-    resource_group_id,
-    active=null,
-    timeouts=null,
     export_data_options=null,
-    export_data_storage_location=null
+    export_data_storage_location=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_resource_group_cost_management_export', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_id=resource_group_id,
+    active=active,
     name=name,
     recurrence_period_end_date=recurrence_period_end_date,
     recurrence_period_start_date=recurrence_period_start_date,
     recurrence_type=recurrence_type,
-    resource_group_id=resource_group_id,
-    active=active,
-    timeouts=timeouts,
     export_data_options=export_data_options,
-    export_data_storage_location=export_data_storage_location
+    export_data_storage_location=export_data_storage_location,
+    timeouts=timeouts
   )),
   newAttrs(
+    recurrence_period_start_date,
     recurrence_type,
     resource_group_id,
     active=null,
     name,
     recurrence_period_end_date,
-    recurrence_period_start_date,
-    timeouts=null,
     export_data_options=null,
-    export_data_storage_location=null
+    export_data_storage_location=null,
+    timeouts=null
   ):: std.prune(a={
+    recurrence_period_start_date: recurrence_period_start_date,
     recurrence_type: recurrence_type,
     resource_group_id: resource_group_id,
     active: active,
     name: name,
     recurrence_period_end_date: recurrence_period_end_date,
-    recurrence_period_start_date: recurrence_period_start_date,
-    timeouts: timeouts,
     export_data_options: export_data_options,
     export_data_storage_location: export_data_storage_location,
+    timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_cost_management_export+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withRecurrencePeriodEndDate(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_cost_management_export+: {
@@ -93,6 +84,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_resource_group_cost_management_export+: {
         [resourceLabel]+: {
           active: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_cost_management_export+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -171,15 +171,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

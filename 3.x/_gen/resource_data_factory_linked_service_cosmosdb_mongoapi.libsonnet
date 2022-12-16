@@ -2,55 +2,91 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    integration_runtime_name=null,
     parameters=null,
     database=null,
-    integration_runtime_name=null,
     server_version_is_32_or_higher=null,
-    additional_properties=null,
-    annotations=null,
     connection_string=null,
-    name,
     data_factory_id,
     description=null,
+    name,
+    additional_properties=null,
+    annotations=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_cosmosdb_mongoapi', label=resourceLabel, attrs=self.newAttrs(
+    integration_runtime_name=integration_runtime_name,
     parameters=parameters,
     database=database,
-    integration_runtime_name=integration_runtime_name,
     server_version_is_32_or_higher=server_version_is_32_or_higher,
-    additional_properties=additional_properties,
-    annotations=annotations,
     connection_string=connection_string,
-    name=name,
     data_factory_id=data_factory_id,
     description=description,
+    name=name,
+    additional_properties=additional_properties,
+    annotations=annotations,
     timeouts=timeouts
   )),
   newAttrs(
-    integration_runtime_name=null,
-    server_version_is_32_or_higher=null,
+    database=null,
     description=null,
-    parameters=null,
+    connection_string=null,
+    data_factory_id,
+    integration_runtime_name=null,
     annotations=null,
     name,
+    parameters=null,
+    server_version_is_32_or_higher=null,
     additional_properties=null,
-    data_factory_id,
-    connection_string=null,
-    database=null,
     timeouts=null
   ):: std.prune(a={
-    integration_runtime_name: integration_runtime_name,
-    server_version_is_32_or_higher: server_version_is_32_or_higher,
+    database: database,
     description: description,
-    parameters: parameters,
+    connection_string: connection_string,
+    data_factory_id: data_factory_id,
+    integration_runtime_name: integration_runtime_name,
     annotations: annotations,
     name: name,
+    parameters: parameters,
+    server_version_is_32_or_higher: server_version_is_32_or_higher,
     additional_properties: additional_properties,
-    data_factory_id: data_factory_id,
-    connection_string: connection_string,
-    database: database,
     timeouts: timeouts,
   }),
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withDatabase(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
+        [resourceLabel]+: {
+          database: value,
+        },
+      },
+    },
+  },
   withServerVersionIs32OrHigher(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
@@ -69,38 +105,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
         [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
-        [resourceLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
-  withDatabase(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
-        [resourceLabel]+: {
-          database: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
-        [resourceLabel]+: {
-          name: value,
+          annotations: value,
         },
       },
     },
@@ -119,15 +128,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
         [resourceLabel]+: {
           integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withAnnotations(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_cosmosdb_mongoapi+: {
-        [resourceLabel]+: {
-          annotations: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

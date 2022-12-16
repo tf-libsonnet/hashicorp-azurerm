@@ -15,16 +15,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    api_management_name,
     api_management_product_id,
     name,
     resource_group_name,
-    api_management_name,
     timeouts=null
   ):: std.prune(a={
+    api_management_name: api_management_name,
     api_management_product_id: api_management_product_id,
     name: name,
     resource_group_name: resource_group_name,
-    api_management_name: api_management_name,
     timeouts: timeouts,
   }),
   withApiManagementName(resourceLabel, value):: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

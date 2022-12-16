@@ -2,93 +2,84 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    scopes,
-    target_resource_location=null,
+    resource_group_name,
     tags=null,
+    target_resource_location=null,
     target_resource_type=null,
+    description=null,
+    window_size=null,
+    name,
+    severity=null,
+    scopes,
     auto_mitigate=null,
     enabled=null,
-    name,
-    resource_group_name,
-    description=null,
     frequency=null,
-    severity=null,
-    window_size=null,
+    criteria=null,
     dynamic_criteria=null,
     timeouts=null,
     action=null,
-    application_insights_web_test_location_availability_criteria=null,
-    criteria=null
+    application_insights_web_test_location_availability_criteria=null
   ):: tf.withResource(type='azurerm_monitor_metric_alert', label=resourceLabel, attrs=self.newAttrs(
-    scopes=scopes,
-    target_resource_location=target_resource_location,
+    resource_group_name=resource_group_name,
     tags=tags,
+    target_resource_location=target_resource_location,
     target_resource_type=target_resource_type,
+    description=description,
+    window_size=window_size,
+    name=name,
+    severity=severity,
+    scopes=scopes,
     auto_mitigate=auto_mitigate,
     enabled=enabled,
-    name=name,
-    resource_group_name=resource_group_name,
-    description=description,
     frequency=frequency,
-    severity=severity,
-    window_size=window_size,
+    criteria=criteria,
     dynamic_criteria=dynamic_criteria,
     timeouts=timeouts,
     action=action,
-    application_insights_web_test_location_availability_criteria=application_insights_web_test_location_availability_criteria,
-    criteria=criteria
+    application_insights_web_test_location_availability_criteria=application_insights_web_test_location_availability_criteria
   )),
   newAttrs(
     window_size=null,
-    name,
     resource_group_name,
     scopes,
-    auto_mitigate=null,
-    tags=null,
-    description=null,
-    frequency=null,
-    severity=null,
     target_resource_location=null,
-    target_resource_type=null,
+    auto_mitigate=null,
     enabled=null,
-    dynamic_criteria=null,
-    timeouts=null,
+    frequency=null,
+    name,
+    severity=null,
+    tags=null,
+    target_resource_type=null,
+    description=null,
     action=null,
     application_insights_web_test_location_availability_criteria=null,
-    criteria=null
+    criteria=null,
+    dynamic_criteria=null,
+    timeouts=null
   ):: std.prune(a={
     window_size: window_size,
-    name: name,
     resource_group_name: resource_group_name,
     scopes: scopes,
-    auto_mitigate: auto_mitigate,
-    tags: tags,
-    description: description,
-    frequency: frequency,
-    severity: severity,
     target_resource_location: target_resource_location,
-    target_resource_type: target_resource_type,
+    auto_mitigate: auto_mitigate,
     enabled: enabled,
-    dynamic_criteria: dynamic_criteria,
-    timeouts: timeouts,
+    frequency: frequency,
+    name: name,
+    severity: severity,
+    tags: tags,
+    target_resource_type: target_resource_type,
+    description: description,
     action: action,
     application_insights_web_test_location_availability_criteria: application_insights_web_test_location_availability_criteria,
     criteria: criteria,
+    dynamic_criteria: dynamic_criteria,
+    timeouts: timeouts,
   }),
-  withWindowSize(resourceLabel, value):: {
+  withFrequency(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_metric_alert+: {
         [resourceLabel]+: {
-          window_size: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          name: value,
+          frequency: value,
         },
       },
     },
@@ -111,6 +102,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSeverity(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          severity: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withWindowSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          window_size: value,
+        },
+      },
+    },
+  },
   withAutoMitigate(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_metric_alert+: {
@@ -129,29 +147,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_metric_alert+: {
         [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withFrequency(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          frequency: value,
-        },
-      },
-    },
-  },
-  withSeverity(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          severity: value,
+          name: value,
         },
       },
     },
@@ -181,6 +181,108 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           description: value,
         },
       },
+    },
+  },
+  withCriteria(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          criteria: value,
+        },
+      },
+    },
+  },
+  withCriteriaMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          criteria+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  criteria:: {
+    new(
+      metric_namespace,
+      operator,
+      skip_metric_validation=null,
+      threshold,
+      aggregation,
+      metric_name,
+      dimension=null
+    ):: std.prune(a={
+      metric_namespace: metric_namespace,
+      operator: operator,
+      skip_metric_validation: skip_metric_validation,
+      threshold: threshold,
+      aggregation: aggregation,
+      metric_name: metric_name,
+      dimension: dimension,
+    }),
+    dimension:: {
+      new(
+        operator,
+        values,
+        name
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+        name: name,
+      }),
+    },
+  },
+  withDynamicCriteria(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          dynamic_criteria: value,
+        },
+      },
+    },
+  },
+  withDynamicCriteriaMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_metric_alert+: {
+        [resourceLabel]+: {
+          dynamic_criteria+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  dynamic_criteria:: {
+    new(
+      skip_metric_validation=null,
+      aggregation,
+      operator,
+      ignore_data_before=null,
+      evaluation_total_count=null,
+      metric_name,
+      metric_namespace,
+      alert_sensitivity,
+      evaluation_failure_count=null,
+      dimension=null
+    ):: std.prune(a={
+      skip_metric_validation: skip_metric_validation,
+      aggregation: aggregation,
+      operator: operator,
+      ignore_data_before: ignore_data_before,
+      evaluation_total_count: evaluation_total_count,
+      metric_name: metric_name,
+      metric_namespace: metric_namespace,
+      alert_sensitivity: alert_sensitivity,
+      evaluation_failure_count: evaluation_failure_count,
+      dimension: dimension,
+    }),
+    dimension:: {
+      new(
+        name,
+        operator,
+        values
+      ):: std.prune(a={
+        name: name,
+        operator: operator,
+        values: values,
+      }),
     },
   },
   withTimeouts(resourceLabel, value):: {
@@ -234,11 +336,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   action:: {
     new(
-      action_group_id,
-      webhook_properties=null
+      webhook_properties=null,
+      action_group_id
     ):: std.prune(a={
-      action_group_id: action_group_id,
       webhook_properties: webhook_properties,
+      action_group_id: action_group_id,
     }),
   },
   withApplicationInsightsWebTestLocationAvailabilityCriteria(resourceLabel, value):: {
@@ -269,107 +371,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       web_test_id: web_test_id,
       component_id: component_id,
     }),
-  },
-  withCriteria(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          criteria: value,
-        },
-      },
-    },
-  },
-  withCriteriaMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          criteria+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  criteria:: {
-    new(
-      operator,
-      skip_metric_validation=null,
-      threshold,
-      aggregation,
-      metric_name,
-      metric_namespace,
-      dimension=null
-    ):: std.prune(a={
-      operator: operator,
-      skip_metric_validation: skip_metric_validation,
-      threshold: threshold,
-      aggregation: aggregation,
-      metric_name: metric_name,
-      metric_namespace: metric_namespace,
-      dimension: dimension,
-    }),
-    dimension:: {
-      new(
-        values,
-        name,
-        operator
-      ):: std.prune(a={
-        values: values,
-        name: name,
-        operator: operator,
-      }),
-    },
-  },
-  withDynamicCriteria(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          dynamic_criteria: value,
-        },
-      },
-    },
-  },
-  withDynamicCriteriaMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_metric_alert+: {
-        [resourceLabel]+: {
-          dynamic_criteria+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  dynamic_criteria:: {
-    new(
-      operator,
-      aggregation,
-      skip_metric_validation=null,
-      evaluation_failure_count=null,
-      ignore_data_before=null,
-      metric_name,
-      alert_sensitivity,
-      evaluation_total_count=null,
-      metric_namespace,
-      dimension=null
-    ):: std.prune(a={
-      operator: operator,
-      aggregation: aggregation,
-      skip_metric_validation: skip_metric_validation,
-      evaluation_failure_count: evaluation_failure_count,
-      ignore_data_before: ignore_data_before,
-      metric_name: metric_name,
-      alert_sensitivity: alert_sensitivity,
-      evaluation_total_count: evaluation_total_count,
-      metric_namespace: metric_namespace,
-      dimension: dimension,
-    }),
-    dimension:: {
-      new(
-        values,
-        name,
-        operator
-      ):: std.prune(a={
-        values: values,
-        name: name,
-        operator: operator,
-      }),
-    },
   },
 }

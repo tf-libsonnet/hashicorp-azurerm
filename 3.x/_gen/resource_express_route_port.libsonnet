@@ -2,69 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    peering_location,
+    encapsulation,
     name,
-    resource_group_name,
     tags=null,
     bandwidth_in_gbps,
-    encapsulation,
     location,
+    peering_location,
+    resource_group_name,
+    link2=null,
     timeouts=null,
     identity=null,
-    link1=null,
-    link2=null
+    link1=null
   ):: tf.withResource(type='azurerm_express_route_port', label=resourceLabel, attrs=self.newAttrs(
-    peering_location=peering_location,
+    encapsulation=encapsulation,
     name=name,
-    resource_group_name=resource_group_name,
     tags=tags,
     bandwidth_in_gbps=bandwidth_in_gbps,
-    encapsulation=encapsulation,
     location=location,
+    peering_location=peering_location,
+    resource_group_name=resource_group_name,
+    link2=link2,
     timeouts=timeouts,
     identity=identity,
-    link1=link1,
-    link2=link2
+    link1=link1
   )),
   newAttrs(
     bandwidth_in_gbps,
-    encapsulation,
     location,
-    peering_location,
-    name,
-    resource_group_name,
     tags=null,
-    identity=null,
+    encapsulation,
+    name,
+    peering_location,
+    resource_group_name,
     link1=null,
     link2=null,
-    timeouts=null
+    timeouts=null,
+    identity=null
   ):: std.prune(a={
     bandwidth_in_gbps: bandwidth_in_gbps,
-    encapsulation: encapsulation,
     location: location,
-    peering_location: peering_location,
-    name: name,
-    resource_group_name: resource_group_name,
     tags: tags,
-    identity: identity,
+    encapsulation: encapsulation,
+    name: name,
+    peering_location: peering_location,
+    resource_group_name: resource_group_name,
     link1: link1,
     link2: link2,
     timeouts: timeouts,
+    identity: identity,
   }),
   withBandwidthInGbps(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_port+: {
         [resourceLabel]+: {
           bandwidth_in_gbps: value,
-        },
-      },
-    },
-  },
-  withEncapsulation(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_port+: {
-        [resourceLabel]+: {
-          encapsulation: value,
         },
       },
     },
@@ -87,11 +78,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEncapsulation(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_port+: {
+        [resourceLabel]+: {
+          encapsulation: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_port+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPeeringLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_port+: {
+        [resourceLabel]+: {
+          peering_location: value,
         },
       },
     },
@@ -105,14 +114,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPeeringLocation(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_port+: {
         [resourceLabel]+: {
-          peering_location: value,
+          timeouts: value,
         },
       },
     },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_port+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -161,15 +192,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   link1:: {
     new(
-      macsec_cak_keyvault_secret_id=null,
-      macsec_cipher=null,
       macsec_ckn_keyvault_secret_id=null,
-      admin_enabled=null
+      admin_enabled=null,
+      macsec_cak_keyvault_secret_id=null,
+      macsec_cipher=null
     ):: std.prune(a={
-      macsec_cak_keyvault_secret_id: macsec_cak_keyvault_secret_id,
-      macsec_cipher: macsec_cipher,
       macsec_ckn_keyvault_secret_id: macsec_ckn_keyvault_secret_id,
       admin_enabled: admin_enabled,
+      macsec_cak_keyvault_secret_id: macsec_cak_keyvault_secret_id,
+      macsec_cipher: macsec_cipher,
     }),
   },
   withLink2(resourceLabel, value):: {
@@ -192,46 +223,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   link2:: {
     new(
+      macsec_cak_keyvault_secret_id=null,
       macsec_ckn_keyvault_secret_id=null,
-      macsec_cipher=null,
       admin_enabled=null,
-      macsec_cak_keyvault_secret_id=null
+      macsec_cipher=null
     ):: std.prune(a={
-      macsec_ckn_keyvault_secret_id: macsec_ckn_keyvault_secret_id,
-      macsec_cipher: macsec_cipher,
-      admin_enabled: admin_enabled,
       macsec_cak_keyvault_secret_id: macsec_cak_keyvault_secret_id,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_port+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_port+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
+      macsec_ckn_keyvault_secret_id: macsec_ckn_keyvault_secret_id,
+      admin_enabled: admin_enabled,
+      macsec_cipher: macsec_cipher,
     }),
   },
 }

@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     recovery_vault_name,
     resource_group_name,
     location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_site_recovery_fabric', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     recovery_vault_name=recovery_vault_name,
     resource_group_name=resource_group_name,
     location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(

@@ -2,66 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    username,
-    automation_account_name,
     description=null,
     name,
     password,
+    resource_group_name,
+    username,
+    automation_account_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_credential', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    username=username,
-    automation_account_name=automation_account_name,
     description=description,
     name=name,
     password=password,
+    resource_group_name=resource_group_name,
+    username=username,
+    automation_account_name=automation_account_name,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     username,
     automation_account_name,
     description=null,
     name,
     password,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     username: username,
     automation_account_name: automation_account_name,
     description: description,
     name: name,
     password: password,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_credential+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withUsername(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_credential+: {
-        [resourceLabel]+: {
-          username: value,
-        },
-      },
-    },
-  },
-  withAutomationAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_credential+: {
-        [resourceLabel]+: {
-          automation_account_name: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_automation_credential+: {
@@ -89,6 +62,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_credential+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_credential+: {
+        [resourceLabel]+: {
+          username: value,
+        },
+      },
+    },
+  },
+  withAutomationAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_credential+: {
+        [resourceLabel]+: {
+          automation_account_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_automation_credential+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

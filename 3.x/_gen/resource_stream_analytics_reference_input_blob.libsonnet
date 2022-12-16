@@ -2,100 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_account_key,
-    authentication_mode=null,
-    stream_analytics_job_name,
     date_format,
-    path_pattern,
-    resource_group_name,
-    time_format,
     name,
+    path_pattern,
     storage_account_name,
+    time_format,
+    stream_analytics_job_name,
+    storage_account_key,
     storage_container_name,
+    authentication_mode=null,
+    resource_group_name,
     serialization=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_reference_input_blob', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_key=storage_account_key,
-    authentication_mode=authentication_mode,
-    stream_analytics_job_name=stream_analytics_job_name,
     date_format=date_format,
-    path_pattern=path_pattern,
-    resource_group_name=resource_group_name,
-    time_format=time_format,
     name=name,
+    path_pattern=path_pattern,
     storage_account_name=storage_account_name,
+    time_format=time_format,
+    stream_analytics_job_name=stream_analytics_job_name,
+    storage_account_key=storage_account_key,
     storage_container_name=storage_container_name,
+    authentication_mode=authentication_mode,
+    resource_group_name=resource_group_name,
     serialization=serialization,
     timeouts=timeouts
   )),
   newAttrs(
-    authentication_mode=null,
-    date_format,
-    path_pattern,
-    storage_container_name,
     storage_account_key,
-    resource_group_name,
-    time_format,
-    storage_account_name,
+    storage_container_name,
     stream_analytics_job_name,
     name,
+    date_format,
+    storage_account_name,
+    time_format,
+    authentication_mode=null,
+    path_pattern,
+    resource_group_name,
     serialization=null,
     timeouts=null
   ):: std.prune(a={
-    authentication_mode: authentication_mode,
-    date_format: date_format,
-    path_pattern: path_pattern,
-    storage_container_name: storage_container_name,
     storage_account_key: storage_account_key,
-    resource_group_name: resource_group_name,
-    time_format: time_format,
-    storage_account_name: storage_account_name,
+    storage_container_name: storage_container_name,
     stream_analytics_job_name: stream_analytics_job_name,
     name: name,
+    date_format: date_format,
+    storage_account_name: storage_account_name,
+    time_format: time_format,
+    authentication_mode: authentication_mode,
+    path_pattern: path_pattern,
+    resource_group_name: resource_group_name,
     serialization: serialization,
     timeouts: timeouts,
   }),
-  withAuthenticationMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          authentication_mode: value,
-        },
-      },
-    },
-  },
-  withDateFormat(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          date_format: value,
-        },
-      },
-    },
-  },
-  withStorageAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          storage_account_key: value,
-        },
-      },
-    },
-  },
   withStreamAnalyticsJobName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_reference_input_blob+: {
         [resourceLabel]+: {
           stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_reference_input_blob+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -109,6 +73,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDateFormat(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          date_format: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
   withTimeFormat(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_reference_input_blob+: {
@@ -118,11 +109,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageContainerName(resourceLabel, value):: {
+  withAuthenticationMode(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_reference_input_blob+: {
         [resourceLabel]+: {
-          storage_container_name: value,
+          authentication_mode: value,
         },
       },
     },
@@ -136,11 +127,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountName(resourceLabel, value):: {
+  withStorageAccountKey(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_reference_input_blob+: {
         [resourceLabel]+: {
-          storage_account_name: value,
+          storage_account_key: value,
+        },
+      },
+    },
+  },
+  withStorageContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_reference_input_blob+: {
+        [resourceLabel]+: {
+          storage_container_name: value,
         },
       },
     },
@@ -165,13 +165,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   serialization:: {
     new(
+      encoding=null,
       field_delimiter=null,
-      type,
-      encoding=null
+      type
     ):: std.prune(a={
+      encoding: encoding,
       field_delimiter: field_delimiter,
       type: type,
-      encoding: encoding,
     }),
   },
   withTimeouts(resourceLabel, value):: {

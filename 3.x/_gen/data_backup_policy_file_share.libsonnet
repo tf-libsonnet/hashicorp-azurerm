@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    recovery_vault_name,
     resource_group_name,
     name,
-    recovery_vault_name,
     timeouts=null
   ):: tf.withData(type='azurerm_backup_policy_file_share', label=dataSrcLabel, attrs=self.newAttrs(
+    recovery_vault_name=recovery_vault_name,
     resource_group_name=resource_group_name,
     name=name,
-    recovery_vault_name=recovery_vault_name,
     timeouts=timeouts
   )),
   newAttrs(

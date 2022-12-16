@@ -2,70 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    location,
     public_network_access_enabled=null,
-    kind=null,
-    name,
     resource_group_name,
+    kind=null,
+    location,
+    name,
     tags=null,
+    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_data_collection_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    location=location,
     public_network_access_enabled=public_network_access_enabled,
-    kind=kind,
-    name=name,
     resource_group_name=resource_group_name,
+    kind=kind,
+    location=location,
+    name=name,
     tags=tags,
+    description=description,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
     location,
-    public_network_access_enabled=null,
-    kind=null,
     name,
     resource_group_name,
+    kind=null,
+    description=null,
+    public_network_access_enabled=null,
     tags=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
     location: location,
-    public_network_access_enabled: public_network_access_enabled,
-    kind: kind,
     name: name,
     resource_group_name: resource_group_name,
+    kind: kind,
+    description: description,
+    public_network_access_enabled: public_network_access_enabled,
     tags: tags,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_data_collection_endpoint+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_data_collection_endpoint+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withKind(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_data_collection_endpoint+: {
-        [resourceLabel]+: {
-          kind: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_data_collection_endpoint+: {
@@ -84,6 +57,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_data_collection_endpoint+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_data_collection_endpoint+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_data_collection_endpoint+: {
@@ -93,11 +84,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withKind(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_data_collection_endpoint+: {
         [resourceLabel]+: {
-          description: value,
+          kind: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_data_collection_endpoint+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

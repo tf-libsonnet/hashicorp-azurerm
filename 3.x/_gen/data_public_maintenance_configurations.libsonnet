@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    location=null,
     recur_every=null,
     scope=null,
-    location=null,
     timeouts=null
   ):: std.prune(a={
+    location: location,
     recur_every: recur_every,
     scope: scope,
-    location: location,
     timeouts: timeouts,
   }),
   withLocation(dataSrcLabel, value):: {

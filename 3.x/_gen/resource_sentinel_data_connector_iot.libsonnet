@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_id: subscription_id,
     timeouts: timeouts,
   }),
+  withSubscriptionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_iot+: {
+        [resourceLabel]+: {
+          subscription_id: value,
+        },
+      },
+    },
+  },
   withLogAnalyticsWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_iot+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_data_connector_iot+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withSubscriptionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_iot+: {
-        [resourceLabel]+: {
-          subscription_id: value,
         },
       },
     },

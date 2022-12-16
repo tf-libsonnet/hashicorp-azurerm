@@ -2,133 +2,88 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    custom_details=null,
-    severity,
-    alert_rule_template_guid=null,
-    enabled=null,
-    suppression_duration=null,
-    alert_rule_template_version=null,
-    query,
-    description=null,
-    techniques=null,
-    name,
-    display_name,
-    suppression_enabled=null,
-    log_analytics_workspace_id,
     tactics=null,
+    display_name,
+    enabled=null,
+    name,
+    suppression_duration=null,
+    alert_rule_template_guid=null,
+    alert_rule_template_version=null,
+    description=null,
+    query,
+    techniques=null,
+    log_analytics_workspace_id,
+    severity,
+    custom_details=null,
+    suppression_enabled=null,
     alert_details_override=null,
     entity_mapping=null,
     incident=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_nrt', label=resourceLabel, attrs=self.newAttrs(
-    custom_details=custom_details,
-    severity=severity,
-    alert_rule_template_guid=alert_rule_template_guid,
-    enabled=enabled,
-    suppression_duration=suppression_duration,
-    alert_rule_template_version=alert_rule_template_version,
-    query=query,
-    description=description,
-    techniques=techniques,
-    name=name,
-    display_name=display_name,
-    suppression_enabled=suppression_enabled,
-    log_analytics_workspace_id=log_analytics_workspace_id,
     tactics=tactics,
+    display_name=display_name,
+    enabled=enabled,
+    name=name,
+    suppression_duration=suppression_duration,
+    alert_rule_template_guid=alert_rule_template_guid,
+    alert_rule_template_version=alert_rule_template_version,
+    description=description,
+    query=query,
+    techniques=techniques,
+    log_analytics_workspace_id=log_analytics_workspace_id,
+    severity=severity,
+    custom_details=custom_details,
+    suppression_enabled=suppression_enabled,
     alert_details_override=alert_details_override,
     entity_mapping=entity_mapping,
     incident=incident,
     timeouts=timeouts
   )),
   newAttrs(
-    enabled=null,
-    suppression_enabled=null,
     alert_rule_template_version=null,
-    name,
-    severity,
-    query,
-    log_analytics_workspace_id,
     display_name,
     alert_rule_template_guid=null,
-    tactics=null,
     description=null,
+    techniques=null,
+    name,
     suppression_duration=null,
     custom_details=null,
-    techniques=null,
+    tactics=null,
+    suppression_enabled=null,
+    log_analytics_workspace_id,
+    severity,
+    enabled=null,
+    query,
     alert_details_override=null,
     entity_mapping=null,
     incident=null,
     timeouts=null
   ):: std.prune(a={
-    enabled: enabled,
-    suppression_enabled: suppression_enabled,
     alert_rule_template_version: alert_rule_template_version,
-    name: name,
-    severity: severity,
-    query: query,
-    log_analytics_workspace_id: log_analytics_workspace_id,
     display_name: display_name,
     alert_rule_template_guid: alert_rule_template_guid,
-    tactics: tactics,
     description: description,
+    techniques: techniques,
+    name: name,
     suppression_duration: suppression_duration,
     custom_details: custom_details,
-    techniques: techniques,
+    tactics: tactics,
+    suppression_enabled: suppression_enabled,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    severity: severity,
+    enabled: enabled,
+    query: query,
     alert_details_override: alert_details_override,
     entity_mapping: entity_mapping,
     incident: incident,
     timeouts: timeouts,
   }),
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withSuppressionDuration(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          suppression_duration: value,
-        },
-      },
-    },
-  },
   withAlertRuleTemplateGuid(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
           alert_rule_template_guid: value,
-        },
-      },
-    },
-  },
-  withAlertRuleTemplateVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          alert_rule_template_version: value,
-        },
-      },
-    },
-  },
-  withCustomDetails(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          custom_details: value,
-        },
-      },
-    },
-  },
-  withSeverity(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          severity: value,
         },
       },
     },
@@ -142,11 +97,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTactics(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          tactics: value,
+          display_name: value,
         },
       },
     },
@@ -169,11 +124,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withCustomDetails(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          custom_details: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTactics(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          tactics: value,
+        },
+      },
+    },
+  },
   withTechniques(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
           techniques: value,
+        },
+      },
+    },
+  },
+  withSuppressionDuration(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          suppression_duration: value,
+        },
+      },
+    },
+  },
+  withAlertRuleTemplateVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_nrt+: {
+        [resourceLabel]+: {
+          alert_rule_template_version: value,
         },
       },
     },
@@ -187,20 +196,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisplayName(resourceLabel, value):: {
+  withSeverity(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_nrt+: {
         [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_nrt+: {
-        [resourceLabel]+: {
-          name: value,
+          severity: value,
         },
       },
     },
@@ -256,15 +256,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   alert_details_override:: {
     new(
-      tactics_column_name=null,
       description_format=null,
       display_name_format=null,
-      severity_column_name=null
+      severity_column_name=null,
+      tactics_column_name=null
     ):: std.prune(a={
-      tactics_column_name: tactics_column_name,
       description_format: description_format,
       display_name_format: display_name_format,
       severity_column_name: severity_column_name,
+      tactics_column_name: tactics_column_name,
     }),
   },
   withEntityMapping(resourceLabel, value):: {
@@ -295,11 +295,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     field_mapping:: {
       new(
-        identifier,
-        column_name
+        column_name,
+        identifier
       ):: std.prune(a={
-        identifier: identifier,
         column_name: column_name,
+        identifier: identifier,
       }),
     },
   },

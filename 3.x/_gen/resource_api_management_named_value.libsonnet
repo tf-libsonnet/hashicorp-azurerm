@@ -23,44 +23,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     value_from_key_vault=value_from_key_vault
   )),
   newAttrs(
-    tags=null,
-    value=null,
-    api_management_name,
     display_name,
     name,
     resource_group_name,
     secret=null,
+    tags=null,
+    value=null,
+    api_management_name,
     timeouts=null,
     value_from_key_vault=null
   ):: std.prune(a={
-    tags: tags,
-    value: value,
-    api_management_name: api_management_name,
     display_name: display_name,
     name: name,
     resource_group_name: resource_group_name,
     secret: secret,
+    tags: tags,
+    value: value,
+    api_management_name: api_management_name,
     timeouts: timeouts,
     value_from_key_vault: value_from_key_vault,
   }),
-  withValue(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_named_value+: {
-        [resourceLabel]+: {
-          value: value,
-        },
-      },
-    },
-  },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_named_value+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_named_value+: {
@@ -106,6 +88,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withValue(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_named_value+: {
+        [resourceLabel]+: {
+          value: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_named_value+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_named_value+: {
@@ -126,15 +126,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
   withValueFromKeyVault(resourceLabel, value):: {

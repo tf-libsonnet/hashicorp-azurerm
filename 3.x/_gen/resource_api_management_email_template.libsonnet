@@ -17,20 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     subject,
     template_name,
     api_management_name,
     body,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     subject: subject,
     template_name: template_name,
     api_management_name: api_management_name,
     body: body,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withBody(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_email_template+: {
+        [resourceLabel]+: {
+          body: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_email_template+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBody(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_email_template+: {
-        [resourceLabel]+: {
-          body: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_email_template+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

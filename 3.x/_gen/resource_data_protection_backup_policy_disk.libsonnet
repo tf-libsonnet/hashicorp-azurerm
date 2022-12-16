@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    vault_id,
     backup_repeating_time_intervals,
     default_retention_duration,
     name,
+    vault_id,
     retention_rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_backup_policy_disk', label=resourceLabel, attrs=self.newAttrs(
-    vault_id=vault_id,
     backup_repeating_time_intervals=backup_repeating_time_intervals,
     default_retention_duration=default_retention_duration,
     name=name,
+    vault_id=vault_id,
     retention_rule=retention_rule,
     timeouts=timeouts
   )),
   newAttrs(
+    default_retention_duration,
     name,
     vault_id,
     backup_repeating_time_intervals,
-    default_retention_duration,
-    retention_rule=null,
-    timeouts=null
+    timeouts=null,
+    retention_rule=null
   ):: std.prune(a={
+    default_retention_duration: default_retention_duration,
     name: name,
     vault_id: vault_id,
     backup_repeating_time_intervals: backup_repeating_time_intervals,
-    default_retention_duration: default_retention_duration,
-    retention_rule: retention_rule,
     timeouts: timeouts,
+    retention_rule: retention_rule,
   }),
-  withBackupRepeatingTimeIntervals(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_policy_disk+: {
-        [resourceLabel]+: {
-          backup_repeating_time_intervals: value,
-        },
-      },
-    },
-  },
   withDefaultRetentionDuration(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_policy_disk+: {
@@ -67,6 +58,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withBackupRepeatingTimeIntervals(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_policy_disk+: {
+        [resourceLabel]+: {
+          backup_repeating_time_intervals: value,
+        },
+      },
+    },
+  },
   withRetentionRule(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_policy_disk+: {
@@ -87,14 +87,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   retention_rule:: {
     new(
-      name,
       priority,
       duration,
+      name,
       criteria=null
     ):: std.prune(a={
-      name: name,
       priority: priority,
       duration: duration,
+      name: name,
       criteria: criteria,
     }),
     criteria:: {

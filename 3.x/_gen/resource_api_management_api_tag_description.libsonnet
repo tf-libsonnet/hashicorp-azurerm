@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     external_documentation_url: external_documentation_url,
     timeouts: timeouts,
   }),
-  withExternalDocumentationDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_tag_description+: {
-        [resourceLabel]+: {
-          external_documentation_description: value,
-        },
-      },
-    },
-  },
-  withExternalDocumentationUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api_tag_description+: {
-        [resourceLabel]+: {
-          external_documentation_url: value,
-        },
-      },
-    },
-  },
   withApiTagId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api_tag_description+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_api_tag_description+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  withExternalDocumentationDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_tag_description+: {
+        [resourceLabel]+: {
+          external_documentation_description: value,
+        },
+      },
+    },
+  },
+  withExternalDocumentationUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api_tag_description+: {
+        [resourceLabel]+: {
+          external_documentation_url: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

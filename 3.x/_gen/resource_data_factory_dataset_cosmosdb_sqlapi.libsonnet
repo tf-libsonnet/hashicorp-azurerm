@@ -2,87 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    collection_name=null,
-    description=null,
-    folder=null,
     data_factory_id,
+    parameters=null,
+    description=null,
+    linked_service_name,
     name,
     annotations=null,
-    linked_service_name,
-    parameters=null,
+    collection_name=null,
+    folder=null,
     additional_properties=null,
-    timeouts=null,
-    schema_column=null
+    schema_column=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_cosmosdb_sqlapi', label=resourceLabel, attrs=self.newAttrs(
-    collection_name=collection_name,
-    description=description,
-    folder=folder,
     data_factory_id=data_factory_id,
+    parameters=parameters,
+    description=description,
+    linked_service_name=linked_service_name,
     name=name,
     annotations=annotations,
-    linked_service_name=linked_service_name,
-    parameters=parameters,
+    collection_name=collection_name,
+    folder=folder,
     additional_properties=additional_properties,
-    timeouts=timeouts,
-    schema_column=schema_column
+    schema_column=schema_column,
+    timeouts=timeouts
   )),
   newAttrs(
-    additional_properties=null,
-    linked_service_name,
-    annotations=null,
     collection_name=null,
     data_factory_id,
-    description=null,
-    folder=null,
-    name,
+    linked_service_name,
     parameters=null,
+    folder=null,
+    annotations=null,
+    description=null,
+    name,
+    additional_properties=null,
     schema_column=null,
     timeouts=null
   ):: std.prune(a={
-    additional_properties: additional_properties,
-    linked_service_name: linked_service_name,
-    annotations: annotations,
     collection_name: collection_name,
     data_factory_id: data_factory_id,
-    description: description,
-    folder: folder,
-    name: name,
+    linked_service_name: linked_service_name,
     parameters: parameters,
+    folder: folder,
+    annotations: annotations,
+    description: description,
+    name: name,
+    additional_properties: additional_properties,
     schema_column: schema_column,
     timeouts: timeouts,
   }),
-  withCollectionName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
-        [resourceLabel]+: {
-          collection_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
   withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
           additional_properties: value,
-        },
-      },
-    },
-  },
-  withLinkedServiceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
-        [resourceLabel]+: {
-          linked_service_name: value,
         },
       },
     },
@@ -96,6 +69,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLinkedServiceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
+        [resourceLabel]+: {
+          linked_service_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
@@ -105,11 +87,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
+  withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
-          data_factory_id: value,
+          annotations: value,
         },
       },
     },
@@ -123,11 +105,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAnnotations(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
         [resourceLabel]+: {
-          annotations: value,
+          parameters: value,
+        },
+      },
+    },
+  },
+  withCollectionName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
+        [resourceLabel]+: {
+          collection_name: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_cosmosdb_sqlapi+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
         },
       },
     },
@@ -181,15 +181,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

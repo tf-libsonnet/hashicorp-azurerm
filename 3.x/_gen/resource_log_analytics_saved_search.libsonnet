@@ -2,47 +2,92 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    query,
+    display_name,
+    function_parameters=null,
+    name,
     tags=null,
     category,
-    display_name,
     function_alias=null,
-    function_parameters=null,
     log_analytics_workspace_id,
-    name,
-    query,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_saved_search', label=resourceLabel, attrs=self.newAttrs(
+    query=query,
+    display_name=display_name,
+    function_parameters=function_parameters,
+    name=name,
     tags=tags,
     category=category,
-    display_name=display_name,
     function_alias=function_alias,
-    function_parameters=function_parameters,
     log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    query=query,
     timeouts=timeouts
   )),
   newAttrs(
-    log_analytics_workspace_id,
     category,
-    display_name,
+    function_alias=null,
     name,
+    display_name,
+    function_parameters=null,
+    log_analytics_workspace_id,
     query,
     tags=null,
-    function_alias=null,
-    function_parameters=null,
     timeouts=null
   ):: std.prune(a={
-    log_analytics_workspace_id: log_analytics_workspace_id,
     category: category,
-    display_name: display_name,
+    function_alias: function_alias,
     name: name,
+    display_name: display_name,
+    function_parameters: function_parameters,
+    log_analytics_workspace_id: log_analytics_workspace_id,
     query: query,
     tags: tags,
-    function_alias: function_alias,
-    function_parameters: function_parameters,
     timeouts: timeouts,
   }),
+  withFunctionParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_saved_search+: {
+        [resourceLabel]+: {
+          function_parameters: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_saved_search+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withCategory(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_saved_search+: {
+        [resourceLabel]+: {
+          category: value,
+        },
+      },
+    },
+  },
+  withFunctionAlias(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_saved_search+: {
+        [resourceLabel]+: {
+          function_alias: value,
+        },
+      },
+    },
+  },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_saved_search+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
+        },
+      },
+    },
+  },
   withQuery(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_saved_search+: {
@@ -61,56 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFunctionAlias(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_saved_search+: {
-        [resourceLabel]+: {
-          function_alias: value,
-        },
-      },
-    },
-  },
-  withFunctionParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_saved_search+: {
-        [resourceLabel]+: {
-          function_parameters: value,
-        },
-      },
-    },
-  },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_saved_search+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withCategory(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_saved_search+: {
-        [resourceLabel]+: {
-          category: value,
-        },
-      },
-    },
-  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_saved_search+: {
         [resourceLabel]+: {
           display_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_saved_search+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

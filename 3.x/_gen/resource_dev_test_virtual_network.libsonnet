@@ -2,23 +2,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    resource_group_name,
-    tags=null,
-    description=null,
-    lab_name,
-    timeouts=null,
-    subnet=null
-  ):: tf.withResource(type='azurerm_dev_test_virtual_network', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    description=description,
-    lab_name=lab_name,
-    timeouts=timeouts,
-    subnet=subnet
-  )),
-  newAttrs(
     description=null,
     lab_name,
     name,
@@ -26,15 +9,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     subnet=null,
     timeouts=null
+  ):: tf.withResource(type='azurerm_dev_test_virtual_network', label=resourceLabel, attrs=self.newAttrs(
+    description=description,
+    lab_name=lab_name,
+    name=name,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    subnet=subnet,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    lab_name,
+    name,
+    resource_group_name,
+    tags=null,
+    description=null,
+    subnet=null,
+    timeouts=null
   ):: std.prune(a={
-    description: description,
     lab_name: lab_name,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
+    description: description,
     subnet: subnet,
     timeouts: timeouts,
   }),
+  withLabName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_virtual_network+: {
+        [resourceLabel]+: {
+          lab_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_virtual_network+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_virtual_network+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_dev_test_virtual_network+: {
         [resourceLabel]+: {
           description: value,
-        },
-      },
-    },
-  },
-  withLabName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_virtual_network+: {
-        [resourceLabel]+: {
-          lab_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_virtual_network+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

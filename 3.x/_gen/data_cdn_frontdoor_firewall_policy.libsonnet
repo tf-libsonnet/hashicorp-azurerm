@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_cdn_frontdoor_firewall_policy+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_cdn_frontdoor_firewall_policy+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_cdn_frontdoor_firewall_policy+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

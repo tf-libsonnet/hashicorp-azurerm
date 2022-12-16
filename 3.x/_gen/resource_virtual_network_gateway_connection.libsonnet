@@ -2,111 +2,120 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    express_route_circuit_id=null,
-    dpd_timeout_seconds=null,
-    resource_group_name,
-    authorization_key=null,
-    egress_nat_rule_ids=null,
-    location,
-    peer_virtual_network_gateway_id=null,
     virtual_network_gateway_id,
-    express_route_gateway_bypass=null,
-    use_policy_based_traffic_selectors=null,
-    connection_protocol=null,
-    local_network_gateway_id=null,
-    local_azure_ip_address_enabled=null,
-    shared_key=null,
-    ingress_nat_rule_ids=null,
+    enable_bgp=null,
+    authorization_key=null,
     routing_weight=null,
     type,
-    connection_mode=null,
-    enable_bgp=null,
+    connection_protocol=null,
+    ingress_nat_rule_ids=null,
+    peer_virtual_network_gateway_id=null,
+    location,
     name,
+    shared_key=null,
+    connection_mode=null,
+    express_route_gateway_bypass=null,
+    local_network_gateway_id=null,
+    dpd_timeout_seconds=null,
+    express_route_circuit_id=null,
+    local_azure_ip_address_enabled=null,
+    use_policy_based_traffic_selectors=null,
+    resource_group_name,
     tags=null,
-    custom_bgp_addresses=null,
+    egress_nat_rule_ids=null,
     ipsec_policy=null,
     timeouts=null,
-    traffic_selector_policy=null
+    traffic_selector_policy=null,
+    custom_bgp_addresses=null
   ):: tf.withResource(type='azurerm_virtual_network_gateway_connection', label=resourceLabel, attrs=self.newAttrs(
-    express_route_circuit_id=express_route_circuit_id,
-    dpd_timeout_seconds=dpd_timeout_seconds,
-    resource_group_name=resource_group_name,
-    authorization_key=authorization_key,
-    egress_nat_rule_ids=egress_nat_rule_ids,
-    location=location,
-    peer_virtual_network_gateway_id=peer_virtual_network_gateway_id,
     virtual_network_gateway_id=virtual_network_gateway_id,
-    express_route_gateway_bypass=express_route_gateway_bypass,
-    use_policy_based_traffic_selectors=use_policy_based_traffic_selectors,
-    connection_protocol=connection_protocol,
-    local_network_gateway_id=local_network_gateway_id,
-    local_azure_ip_address_enabled=local_azure_ip_address_enabled,
-    shared_key=shared_key,
-    ingress_nat_rule_ids=ingress_nat_rule_ids,
+    enable_bgp=enable_bgp,
+    authorization_key=authorization_key,
     routing_weight=routing_weight,
     type=type,
-    connection_mode=connection_mode,
-    enable_bgp=enable_bgp,
+    connection_protocol=connection_protocol,
+    ingress_nat_rule_ids=ingress_nat_rule_ids,
+    peer_virtual_network_gateway_id=peer_virtual_network_gateway_id,
+    location=location,
     name=name,
+    shared_key=shared_key,
+    connection_mode=connection_mode,
+    express_route_gateway_bypass=express_route_gateway_bypass,
+    local_network_gateway_id=local_network_gateway_id,
+    dpd_timeout_seconds=dpd_timeout_seconds,
+    express_route_circuit_id=express_route_circuit_id,
+    local_azure_ip_address_enabled=local_azure_ip_address_enabled,
+    use_policy_based_traffic_selectors=use_policy_based_traffic_selectors,
+    resource_group_name=resource_group_name,
     tags=tags,
-    custom_bgp_addresses=custom_bgp_addresses,
+    egress_nat_rule_ids=egress_nat_rule_ids,
     ipsec_policy=ipsec_policy,
     timeouts=timeouts,
-    traffic_selector_policy=traffic_selector_policy
+    traffic_selector_policy=traffic_selector_policy,
+    custom_bgp_addresses=custom_bgp_addresses
   )),
   newAttrs(
-    express_route_circuit_id=null,
     tags=null,
-    express_route_gateway_bypass=null,
-    egress_nat_rule_ids=null,
     ingress_nat_rule_ids=null,
-    peer_virtual_network_gateway_id=null,
+    local_network_gateway_id=null,
+    express_route_circuit_id=null,
     resource_group_name,
     shared_key=null,
-    connection_mode=null,
-    enable_bgp=null,
-    authorization_key=null,
-    type,
-    use_policy_based_traffic_selectors=null,
-    routing_weight=null,
-    location,
-    connection_protocol=null,
-    dpd_timeout_seconds=null,
-    local_network_gateway_id=null,
     local_azure_ip_address_enabled=null,
     name,
+    type,
+    connection_mode=null,
+    peer_virtual_network_gateway_id=null,
+    authorization_key=null,
+    dpd_timeout_seconds=null,
+    use_policy_based_traffic_selectors=null,
+    egress_nat_rule_ids=null,
+    routing_weight=null,
+    express_route_gateway_bypass=null,
     virtual_network_gateway_id,
+    location,
+    connection_protocol=null,
+    enable_bgp=null,
     ipsec_policy=null,
     timeouts=null,
     traffic_selector_policy=null,
     custom_bgp_addresses=null
   ):: std.prune(a={
-    express_route_circuit_id: express_route_circuit_id,
     tags: tags,
-    express_route_gateway_bypass: express_route_gateway_bypass,
-    egress_nat_rule_ids: egress_nat_rule_ids,
     ingress_nat_rule_ids: ingress_nat_rule_ids,
-    peer_virtual_network_gateway_id: peer_virtual_network_gateway_id,
+    local_network_gateway_id: local_network_gateway_id,
+    express_route_circuit_id: express_route_circuit_id,
     resource_group_name: resource_group_name,
     shared_key: shared_key,
-    connection_mode: connection_mode,
-    enable_bgp: enable_bgp,
-    authorization_key: authorization_key,
-    type: type,
-    use_policy_based_traffic_selectors: use_policy_based_traffic_selectors,
-    routing_weight: routing_weight,
-    location: location,
-    connection_protocol: connection_protocol,
-    dpd_timeout_seconds: dpd_timeout_seconds,
-    local_network_gateway_id: local_network_gateway_id,
     local_azure_ip_address_enabled: local_azure_ip_address_enabled,
     name: name,
+    type: type,
+    connection_mode: connection_mode,
+    peer_virtual_network_gateway_id: peer_virtual_network_gateway_id,
+    authorization_key: authorization_key,
+    dpd_timeout_seconds: dpd_timeout_seconds,
+    use_policy_based_traffic_selectors: use_policy_based_traffic_selectors,
+    egress_nat_rule_ids: egress_nat_rule_ids,
+    routing_weight: routing_weight,
+    express_route_gateway_bypass: express_route_gateway_bypass,
     virtual_network_gateway_id: virtual_network_gateway_id,
+    location: location,
+    connection_protocol: connection_protocol,
+    enable_bgp: enable_bgp,
     ipsec_policy: ipsec_policy,
     timeouts: timeouts,
     traffic_selector_policy: traffic_selector_policy,
     custom_bgp_addresses: custom_bgp_addresses,
   }),
+  withEnableBgp(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          enable_bgp: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_connection+: {
@@ -116,38 +125,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withConnectionMode(resourceLabel, value):: {
+  withExpressRouteGatewayBypass(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_connection+: {
         [resourceLabel]+: {
-          connection_mode: value,
-        },
-      },
-    },
-  },
-  withPeerVirtualNetworkGatewayId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          peer_virtual_network_gateway_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withIngressNatRuleIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          ingress_nat_rule_ids: value,
+          express_route_gateway_bypass: value,
         },
       },
     },
@@ -161,47 +143,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUsePolicyBasedTrafficSelectors(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_connection+: {
         [resourceLabel]+: {
-          use_policy_based_traffic_selectors: value,
-        },
-      },
-    },
-  },
-  withEgressNatRuleIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          egress_nat_rule_ids: value,
-        },
-      },
-    },
-  },
-  withEnableBgp(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          enable_bgp: value,
-        },
-      },
-    },
-  },
-  withExpressRouteCircuitId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          express_route_circuit_id: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          type: value,
+          location: value,
         },
       },
     },
@@ -215,11 +161,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withConnectionProtocol(resourceLabel, value):: {
+  withConnectionMode(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_connection+: {
         [resourceLabel]+: {
-          connection_protocol: value,
+          connection_mode: value,
         },
       },
     },
@@ -233,20 +179,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withEgressNatRuleIds(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_connection+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withRoutingWeight(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_connection+: {
-        [resourceLabel]+: {
-          routing_weight: value,
+          egress_nat_rule_ids: value,
         },
       },
     },
@@ -278,11 +215,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withExpressRouteGatewayBypass(resourceLabel, value):: {
+  withIngressNatRuleIds(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_connection+: {
         [resourceLabel]+: {
-          express_route_gateway_bypass: value,
+          ingress_nat_rule_ids: value,
+        },
+      },
+    },
+  },
+  withPeerVirtualNetworkGatewayId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          peer_virtual_network_gateway_id: value,
+        },
+      },
+    },
+  },
+  withConnectionProtocol(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          connection_protocol: value,
+        },
+      },
+    },
+  },
+  withUsePolicyBasedTrafficSelectors(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          use_policy_based_traffic_selectors: value,
+        },
+      },
+    },
+  },
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withRoutingWeight(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          routing_weight: value,
+        },
+      },
+    },
+  },
+  withExpressRouteCircuitId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_connection+: {
+        [resourceLabel]+: {
+          express_route_circuit_id: value,
         },
       },
     },
@@ -343,23 +343,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ipsec_policy:: {
     new(
-      ike_encryption,
-      ike_integrity,
-      ipsec_encryption,
       ipsec_integrity,
       pfs_group,
       sa_datasize=null,
       sa_lifetime=null,
-      dh_group
+      dh_group,
+      ike_encryption,
+      ike_integrity,
+      ipsec_encryption
     ):: std.prune(a={
-      ike_encryption: ike_encryption,
-      ike_integrity: ike_integrity,
-      ipsec_encryption: ipsec_encryption,
       ipsec_integrity: ipsec_integrity,
       pfs_group: pfs_group,
       sa_datasize: sa_datasize,
       sa_lifetime: sa_lifetime,
       dh_group: dh_group,
+      ike_encryption: ike_encryption,
+      ike_integrity: ike_integrity,
+      ipsec_encryption: ipsec_encryption,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -382,15 +382,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
   withTrafficSelectorPolicy(resourceLabel, value):: {
@@ -413,11 +413,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   traffic_selector_policy:: {
     new(
-      remote_address_cidrs,
-      local_address_cidrs
+      local_address_cidrs,
+      remote_address_cidrs
     ):: std.prune(a={
-      remote_address_cidrs: remote_address_cidrs,
       local_address_cidrs: local_address_cidrs,
+      remote_address_cidrs: remote_address_cidrs,
     }),
   },
 }

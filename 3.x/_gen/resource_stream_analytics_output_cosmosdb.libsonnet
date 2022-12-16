@@ -2,52 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    partition_key=null,
     stream_analytics_job_id,
     container_name,
     cosmosdb_account_key,
     cosmosdb_sql_database_id,
     document_id=null,
     name,
+    partition_key=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_cosmosdb', label=resourceLabel, attrs=self.newAttrs(
-    partition_key=partition_key,
     stream_analytics_job_id=stream_analytics_job_id,
     container_name=container_name,
     cosmosdb_account_key=cosmosdb_account_key,
     cosmosdb_sql_database_id=cosmosdb_sql_database_id,
     document_id=document_id,
     name=name,
+    partition_key=partition_key,
     timeouts=timeouts
   )),
   newAttrs(
+    stream_analytics_job_id,
+    container_name,
+    cosmosdb_account_key,
     cosmosdb_sql_database_id,
     document_id=null,
     name,
     partition_key=null,
-    stream_analytics_job_id,
-    container_name,
-    cosmosdb_account_key,
     timeouts=null
   ):: std.prune(a={
+    stream_analytics_job_id: stream_analytics_job_id,
+    container_name: container_name,
+    cosmosdb_account_key: cosmosdb_account_key,
     cosmosdb_sql_database_id: cosmosdb_sql_database_id,
     document_id: document_id,
     name: name,
     partition_key: partition_key,
-    stream_analytics_job_id: stream_analytics_job_id,
-    container_name: container_name,
-    cosmosdb_account_key: cosmosdb_account_key,
     timeouts: timeouts,
   }),
-  withStreamAnalyticsJobId(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_cosmosdb+: {
-        [resourceLabel]+: {
-          stream_analytics_job_id: value,
-        },
-      },
-    },
-  },
   withContainerName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_cosmosdb+: {
@@ -102,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStreamAnalyticsJobId(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_cosmosdb+: {
+        [resourceLabel]+: {
+          stream_analytics_job_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_cosmosdb+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

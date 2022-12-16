@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    spring_cloud_service_id,
     name,
+    spring_cloud_service_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_accelerator', label=resourceLabel, attrs=self.newAttrs(spring_cloud_service_id=spring_cloud_service_id, name=name, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_spring_cloud_accelerator', label=resourceLabel, attrs=self.newAttrs(name=name, spring_cloud_service_id=spring_cloud_service_id, timeouts=timeouts)),
   newAttrs(
     name,
     spring_cloud_service_id,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     spring_cloud_service_id: spring_cloud_service_id,
     timeouts: timeouts,
   }),
-  withSpringCloudServiceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_accelerator+: {
-        [resourceLabel]+: {
-          spring_cloud_service_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_accelerator+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withSpringCloudServiceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_accelerator+: {
+        [resourceLabel]+: {
+          spring_cloud_service_id: value,
         },
       },
     },

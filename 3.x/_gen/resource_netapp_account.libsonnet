@@ -2,32 +2,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    tags=null,
     location,
     name,
-    active_directory=null,
-    timeouts=null
+    resource_group_name,
+    tags=null,
+    timeouts=null,
+    active_directory=null
   ):: tf.withResource(type='azurerm_netapp_account', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    tags=tags,
     location=location,
     name=name,
-    active_directory=active_directory,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    tags=tags,
+    timeouts=timeouts,
+    active_directory=active_directory
   )),
   newAttrs(
+    tags=null,
     location,
     name,
     resource_group_name,
-    tags=null,
     active_directory=null,
     timeouts=null
   ):: std.prune(a={
+    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
     active_directory: active_directory,
     timeouts: timeouts,
   }),
@@ -87,19 +87,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   active_directory:: {
     new(
+      organizational_unit=null,
+      password,
       smb_server_name,
       username,
       dns_servers,
-      domain,
-      organizational_unit=null,
-      password
+      domain
     ):: std.prune(a={
+      organizational_unit: organizational_unit,
+      password: password,
       smb_server_name: smb_server_name,
       username: username,
       dns_servers: dns_servers,
       domain: domain,
-      organizational_unit: organizational_unit,
-      password: password,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

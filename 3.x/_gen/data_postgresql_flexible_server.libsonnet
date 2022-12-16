@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     resource_group_name,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_postgresql_flexible_server', label=dataSrcLabel, attrs=self.newAttrs(name=name, resource_group_name=resource_group_name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_postgresql_flexible_server', label=dataSrcLabel, attrs=self.newAttrs(resource_group_name=resource_group_name, name=name, timeouts=timeouts)),
   newAttrs(
-    resource_group_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

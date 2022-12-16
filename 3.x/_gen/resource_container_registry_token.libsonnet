@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    container_registry_name,
-    enabled=null,
     name,
     resource_group_name,
     scope_map_id,
+    container_registry_name,
+    enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_container_registry_token', label=resourceLabel, attrs=self.newAttrs(
-    container_registry_name=container_registry_name,
-    enabled=enabled,
     name=name,
     resource_group_name=resource_group_name,
     scope_map_id=scope_map_id,
+    container_registry_name=container_registry_name,
+    enabled=enabled,
     timeouts=timeouts
   )),
   newAttrs(
-    enabled=null,
     name,
     resource_group_name,
     scope_map_id,
     container_registry_name,
+    enabled=null,
     timeouts=null
   ):: std.prune(a={
-    enabled: enabled,
     name: name,
     resource_group_name: resource_group_name,
     scope_map_id: scope_map_id,
     container_registry_name: container_registry_name,
+    enabled: enabled,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_token+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_token+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry_token+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

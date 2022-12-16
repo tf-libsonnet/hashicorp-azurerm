@@ -2,78 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    profile_id,
+    name,
+    target,
+    weight=null,
+    enabled=null,
     endpoint_location=null,
     geo_mappings=null,
-    name,
     priority=null,
-    weight=null,
-    profile_id,
-    target,
-    enabled=null,
     custom_header=null,
     subnet=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_traffic_manager_external_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    profile_id=profile_id,
+    name=name,
+    target=target,
+    weight=weight,
+    enabled=enabled,
     endpoint_location=endpoint_location,
     geo_mappings=geo_mappings,
-    name=name,
     priority=priority,
-    weight=weight,
-    profile_id=profile_id,
-    target=target,
-    enabled=enabled,
     custom_header=custom_header,
     subnet=subnet,
     timeouts=timeouts
   )),
   newAttrs(
-    target,
-    weight=null,
-    enabled=null,
-    endpoint_location=null,
-    geo_mappings=null,
     name,
+    geo_mappings=null,
     priority=null,
     profile_id,
+    enabled=null,
+    endpoint_location=null,
+    target,
+    weight=null,
+    timeouts=null,
     custom_header=null,
-    subnet=null,
-    timeouts=null
+    subnet=null
   ):: std.prune(a={
-    target: target,
-    weight: weight,
-    enabled: enabled,
-    endpoint_location: endpoint_location,
-    geo_mappings: geo_mappings,
     name: name,
+    geo_mappings: geo_mappings,
     priority: priority,
     profile_id: profile_id,
+    enabled: enabled,
+    endpoint_location: endpoint_location,
+    target: target,
+    weight: weight,
+    timeouts: timeouts,
     custom_header: custom_header,
     subnet: subnet,
-    timeouts: timeouts,
   }),
-  withPriority(resourceLabel, value):: {
+  withWeight(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_external_endpoint+: {
         [resourceLabel]+: {
-          priority: value,
-        },
-      },
-    },
-  },
-  withProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_external_endpoint+: {
-        [resourceLabel]+: {
-          profile_id: value,
-        },
-      },
-    },
-  },
-  withTarget(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_external_endpoint+: {
-        [resourceLabel]+: {
-          target: value,
+          weight: value,
         },
       },
     },
@@ -83,15 +65,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_traffic_manager_external_endpoint+: {
         [resourceLabel]+: {
           enabled: value,
-        },
-      },
-    },
-  },
-  withWeight(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_external_endpoint+: {
-        [resourceLabel]+: {
-          weight: value,
         },
       },
     },
@@ -114,6 +87,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withPriority(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_external_endpoint+: {
+        [resourceLabel]+: {
+          priority: value,
+        },
+      },
+    },
+  },
+  withProfileId(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_external_endpoint+: {
+        [resourceLabel]+: {
+          profile_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_external_endpoint+: {
@@ -122,6 +113,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withTarget(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_external_endpoint+: {
+        [resourceLabel]+: {
+          target: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_external_endpoint+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_external_endpoint+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withCustomHeader(resourceLabel, value):: {
     resource+: {
@@ -143,11 +174,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   custom_header:: {
     new(
-      value,
-      name
+      name,
+      value
     ):: std.prune(a={
-      value: value,
       name: name,
+      value: value,
     }),
   },
   withSubnet(resourceLabel, value):: {
@@ -177,37 +208,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       scope: scope,
       first: first,
       last: last,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_external_endpoint+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_external_endpoint+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
     }),
   },
 }

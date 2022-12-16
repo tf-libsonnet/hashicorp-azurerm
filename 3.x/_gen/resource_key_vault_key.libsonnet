@@ -2,78 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    key_vault_id,
-    curve=null,
-    not_before_date=null,
-    tags=null,
-    key_opts,
-    name,
     key_size=null,
+    not_before_date=null,
+    curve=null,
     expiration_date=null,
     key_type,
+    tags=null,
+    key_vault_id,
+    name,
+    key_opts,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_key', label=resourceLabel, attrs=self.newAttrs(
-    key_vault_id=key_vault_id,
-    curve=curve,
-    not_before_date=not_before_date,
-    tags=tags,
-    key_opts=key_opts,
-    name=name,
     key_size=key_size,
+    not_before_date=not_before_date,
+    curve=curve,
     expiration_date=expiration_date,
     key_type=key_type,
+    tags=tags,
+    key_vault_id=key_vault_id,
+    name=name,
+    key_opts=key_opts,
     timeouts=timeouts
   )),
   newAttrs(
-    expiration_date=null,
-    key_type,
+    key_vault_id,
     name,
+    expiration_date=null,
+    key_opts,
     curve=null,
     key_size=null,
+    key_type,
     tags=null,
-    key_opts,
-    key_vault_id,
     not_before_date=null,
     timeouts=null
   ):: std.prune(a={
-    expiration_date: expiration_date,
-    key_type: key_type,
+    key_vault_id: key_vault_id,
     name: name,
+    expiration_date: expiration_date,
+    key_opts: key_opts,
     curve: curve,
     key_size: key_size,
+    key_type: key_type,
     tags: tags,
-    key_opts: key_opts,
-    key_vault_id: key_vault_id,
     not_before_date: not_before_date,
     timeouts: timeouts,
   }),
-  withNotBeforeDate(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_key+: {
-        [resourceLabel]+: {
-          not_before_date: value,
-        },
-      },
-    },
-  },
-  withCurve(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_key+: {
-        [resourceLabel]+: {
-          curve: value,
-        },
-      },
-    },
-  },
-  withExpirationDate(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_key+: {
-        [resourceLabel]+: {
-          expiration_date: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_key+: {
@@ -92,11 +65,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withKeySize(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
-          name: value,
+          key_size: value,
         },
       },
     },
@@ -110,11 +83,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKeySize(resourceLabel, value):: {
+  withCurve(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
-          key_size: value,
+          curve: value,
         },
       },
     },
@@ -124,6 +97,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_key_vault_key+: {
         [resourceLabel]+: {
           key_type: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_key+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withNotBeforeDate(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_key+: {
+        [resourceLabel]+: {
+          not_before_date: value,
+        },
+      },
+    },
+  },
+  withExpirationDate(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_key+: {
+        [resourceLabel]+: {
+          expiration_date: value,
         },
       },
     },
@@ -148,15 +148,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

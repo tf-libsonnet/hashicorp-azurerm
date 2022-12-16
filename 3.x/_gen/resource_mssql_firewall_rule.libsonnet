@@ -15,16 +15,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     server_id,
     start_ip_address,
     end_ip_address,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     server_id: server_id,
     start_ip_address: start_ip_address,
     end_ip_address: end_ip_address,
+    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

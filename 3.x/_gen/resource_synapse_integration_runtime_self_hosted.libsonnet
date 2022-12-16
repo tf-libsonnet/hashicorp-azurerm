@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    description=null,
     name,
     synapse_workspace_id,
-    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_integration_runtime_self_hosted', label=resourceLabel, attrs=self.newAttrs(
+    description=description,
     name=name,
     synapse_workspace_id=synapse_workspace_id,
-    description=description,
     timeouts=timeouts
   )),
   newAttrs(

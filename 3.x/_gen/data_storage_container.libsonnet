@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    storage_account_name,
     metadata=null,
     name,
-    storage_account_name,
     timeouts=null
   ):: std.prune(a={
+    storage_account_name: storage_account_name,
     metadata: metadata,
     name: name,
-    storage_account_name: storage_account_name,
     timeouts: timeouts,
   }),
   withMetadata(dataSrcLabel, value):: {

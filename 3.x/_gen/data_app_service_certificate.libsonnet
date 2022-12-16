@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     resource_group_name,
     tags=null,
+    name,
     timeouts=null
   ):: tf.withData(type='azurerm_app_service_certificate', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -32,20 +32,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_app_service_certificate+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_app_service_certificate+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withTags(dataSrcLabel, value):: {
+    data+: {
+      azurerm_app_service_certificate+: {
+        [dataSrcLabel]+: {
+          tags: value,
         },
       },
     },

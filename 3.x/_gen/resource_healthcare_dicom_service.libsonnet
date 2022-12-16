@@ -4,51 +4,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     location,
     name,
-    public_network_access_enabled=null,
     tags=null,
+    public_network_access_enabled=null,
     workspace_id,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_dicom_service', label=resourceLabel, attrs=self.newAttrs(
     location=location,
     name=name,
-    public_network_access_enabled=public_network_access_enabled,
     tags=tags,
+    public_network_access_enabled=public_network_access_enabled,
     workspace_id=workspace_id,
-    timeouts=timeouts,
-    identity=identity
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
     name,
-    public_network_access_enabled=null,
     tags=null,
+    public_network_access_enabled=null,
     workspace_id,
     location,
     identity=null,
     timeouts=null
   ):: std.prune(a={
     name: name,
-    public_network_access_enabled: public_network_access_enabled,
     tags: tags,
+    public_network_access_enabled: public_network_access_enabled,
     workspace_id: workspace_id,
     location: location,
     identity: identity,
     timeouts: timeouts,
   }),
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_dicom_service+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_dicom_service+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_dicom_service+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
         },
       },
     },
@@ -62,20 +62,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_dicom_service+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
   withWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_dicom_service+: {
         [resourceLabel]+: {
           workspace_id: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_dicom_service+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     name,
     recovery_vault_name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_site_recovery_replication_policy', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     name=name,
     recovery_vault_name=recovery_vault_name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     name,
     recovery_vault_name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     name: name,
     recovery_vault_name: recovery_vault_name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_site_recovery_replication_policy+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_site_recovery_replication_policy+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_site_recovery_replication_policy+: {
         [dataSrcLabel]+: {
           recovery_vault_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_site_recovery_replication_policy+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

@@ -2,56 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    loadbalancer_id,
-    name,
-    protocol,
     allocated_outbound_ports=null,
     backend_address_pool_id,
     enable_tcp_reset=null,
     idle_timeout_in_minutes=null,
-    frontend_ip_configuration=null,
-    timeouts=null
+    loadbalancer_id,
+    name,
+    protocol,
+    timeouts=null,
+    frontend_ip_configuration=null
   ):: tf.withResource(type='azurerm_lb_outbound_rule', label=resourceLabel, attrs=self.newAttrs(
-    loadbalancer_id=loadbalancer_id,
-    name=name,
-    protocol=protocol,
     allocated_outbound_ports=allocated_outbound_ports,
     backend_address_pool_id=backend_address_pool_id,
     enable_tcp_reset=enable_tcp_reset,
     idle_timeout_in_minutes=idle_timeout_in_minutes,
-    frontend_ip_configuration=frontend_ip_configuration,
-    timeouts=timeouts
+    loadbalancer_id=loadbalancer_id,
+    name=name,
+    protocol=protocol,
+    timeouts=timeouts,
+    frontend_ip_configuration=frontend_ip_configuration
   )),
   newAttrs(
+    backend_address_pool_id,
+    enable_tcp_reset=null,
     idle_timeout_in_minutes=null,
     loadbalancer_id,
     name,
     protocol,
     allocated_outbound_ports=null,
-    backend_address_pool_id,
-    enable_tcp_reset=null,
     frontend_ip_configuration=null,
     timeouts=null
   ):: std.prune(a={
+    backend_address_pool_id: backend_address_pool_id,
+    enable_tcp_reset: enable_tcp_reset,
     idle_timeout_in_minutes: idle_timeout_in_minutes,
     loadbalancer_id: loadbalancer_id,
     name: name,
     protocol: protocol,
     allocated_outbound_ports: allocated_outbound_ports,
-    backend_address_pool_id: backend_address_pool_id,
-    enable_tcp_reset: enable_tcp_reset,
     frontend_ip_configuration: frontend_ip_configuration,
     timeouts: timeouts,
   }),
-  withIdleTimeoutInMinutes(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_outbound_rule+: {
-        [resourceLabel]+: {
-          idle_timeout_in_minutes: value,
-        },
-      },
-    },
-  },
   withLoadbalancerId(resourceLabel, value):: {
     resource+: {
       azurerm_lb_outbound_rule+: {
@@ -106,6 +97,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withIdleTimeoutInMinutes(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_outbound_rule+: {
+        [resourceLabel]+: {
+          idle_timeout_in_minutes: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_outbound_rule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_lb_outbound_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withFrontendIpConfiguration(resourceLabel, value):: {
     resource+: {
       azurerm_lb_outbound_rule+: {
@@ -129,37 +160,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       name
     ):: std.prune(a={
       name: name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_outbound_rule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_lb_outbound_rule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

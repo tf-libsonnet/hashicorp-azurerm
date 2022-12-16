@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
+    resource_group_name,
     public_ip_address_ids=null,
     public_ip_prefix_ids=null,
-    resource_group_name,
+    name,
     timeouts=null
   ):: tf.withData(type='azurerm_nat_gateway', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
+    resource_group_name=resource_group_name,
     public_ip_address_ids=public_ip_address_ids,
     public_ip_prefix_ids=public_ip_prefix_ids,
-    resource_group_name=resource_group_name,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_ip_prefix_ids: public_ip_prefix_ids,
     timeouts: timeouts,
   }),
-  withPublicIpPrefixIds(dataSrcLabel, value):: {
-    data+: {
-      azurerm_nat_gateway+: {
-        [dataSrcLabel]+: {
-          public_ip_prefix_ids: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_nat_gateway+: {
@@ -45,20 +36,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_nat_gateway+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPublicIpAddressIds(dataSrcLabel, value):: {
     data+: {
       azurerm_nat_gateway+: {
         [dataSrcLabel]+: {
           public_ip_address_ids: value,
+        },
+      },
+    },
+  },
+  withPublicIpPrefixIds(dataSrcLabel, value):: {
+    data+: {
+      azurerm_nat_gateway+: {
+        [dataSrcLabel]+: {
+          public_ip_prefix_ids: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_nat_gateway+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

@@ -6,48 +6,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     default_content_key_policy_name=null,
     media_services_account_name,
-    no_encryption_enabled_protocols=null,
-    timeouts=null,
     common_encryption_cbcs=null,
-    common_encryption_cenc=null
+    common_encryption_cenc=null,
+    no_encryption_enabled_protocols=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_media_streaming_policy', label=resourceLabel, attrs=self.newAttrs(
     name=name,
     resource_group_name=resource_group_name,
     default_content_key_policy_name=default_content_key_policy_name,
     media_services_account_name=media_services_account_name,
-    no_encryption_enabled_protocols=no_encryption_enabled_protocols,
-    timeouts=timeouts,
     common_encryption_cbcs=common_encryption_cbcs,
-    common_encryption_cenc=common_encryption_cenc
+    common_encryption_cenc=common_encryption_cenc,
+    no_encryption_enabled_protocols=no_encryption_enabled_protocols,
+    timeouts=timeouts
   )),
   newAttrs(
-    name,
-    resource_group_name,
     default_content_key_policy_name=null,
     media_services_account_name,
-    common_encryption_cbcs=null,
-    common_encryption_cenc=null,
+    name,
+    resource_group_name,
     no_encryption_enabled_protocols=null,
-    timeouts=null
+    timeouts=null,
+    common_encryption_cbcs=null,
+    common_encryption_cenc=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
     default_content_key_policy_name: default_content_key_policy_name,
     media_services_account_name: media_services_account_name,
-    common_encryption_cbcs: common_encryption_cbcs,
-    common_encryption_cenc: common_encryption_cenc,
+    name: name,
+    resource_group_name: resource_group_name,
     no_encryption_enabled_protocols: no_encryption_enabled_protocols,
     timeouts: timeouts,
+    common_encryption_cbcs: common_encryption_cbcs,
+    common_encryption_cenc: common_encryption_cenc,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withDefaultContentKeyPolicyName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_policy+: {
@@ -75,6 +66,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_policy+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+    }),
+  },
   withCommonEncryptionCbcs(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_policy+: {
@@ -95,14 +124,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   common_encryption_cbcs:: {
     new(
+      default_content_key=null,
       drm_fairplay=null,
-      enabled_protocols=null,
-      default_content_key=null
+      enabled_protocols=null
     ):: std.prune(a={
+      default_content_key: default_content_key,
       drm_fairplay: drm_fairplay,
       enabled_protocols: enabled_protocols,
-      default_content_key: default_content_key,
     }),
+    default_content_key:: {
+      new(
+        label=null,
+        policy_name=null
+      ):: std.prune(a={
+        label: label,
+        policy_name: policy_name,
+      }),
+    },
     drm_fairplay:: {
       new(
         allow_persistent_license=null,
@@ -114,24 +152,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     enabled_protocols:: {
       new(
-        dash=null,
-        download=null,
         hls=null,
-        smooth_streaming=null
+        smooth_streaming=null,
+        dash=null,
+        download=null
       ):: std.prune(a={
-        dash: dash,
-        download: download,
         hls: hls,
         smooth_streaming: smooth_streaming,
-      }),
-    },
-    default_content_key:: {
-      new(
-        policy_name=null,
-        label=null
-      ):: std.prune(a={
-        policy_name: policy_name,
-        label: label,
+        dash: dash,
+        download: download,
       }),
     },
   },
@@ -156,14 +185,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   common_encryption_cenc:: {
     new(
       drm_widevine_custom_license_acquisition_url_template=null,
-      enabled_protocols=null,
       default_content_key=null,
-      drm_playready=null
+      drm_playready=null,
+      enabled_protocols=null
     ):: std.prune(a={
       drm_widevine_custom_license_acquisition_url_template: drm_widevine_custom_license_acquisition_url_template,
-      enabled_protocols: enabled_protocols,
       default_content_key: default_content_key,
       drm_playready: drm_playready,
+      enabled_protocols: enabled_protocols,
     }),
     default_content_key:: {
       new(
@@ -185,15 +214,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     enabled_protocols:: {
       new(
-        dash=null,
-        download=null,
         hls=null,
-        smooth_streaming=null
+        smooth_streaming=null,
+        dash=null,
+        download=null
       ):: std.prune(a={
-        dash: dash,
-        download: download,
         hls: hls,
         smooth_streaming: smooth_streaming,
+        dash: dash,
+        download: download,
       }),
     },
   },
@@ -217,44 +246,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   no_encryption_enabled_protocols:: {
     new(
-      smooth_streaming=null,
       dash=null,
       download=null,
-      hls=null
+      hls=null,
+      smooth_streaming=null
     ):: std.prune(a={
-      smooth_streaming: smooth_streaming,
       dash: dash,
       download: download,
       hls: hls,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_policy+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
+      smooth_streaming: smooth_streaming,
     }),
   },
 }

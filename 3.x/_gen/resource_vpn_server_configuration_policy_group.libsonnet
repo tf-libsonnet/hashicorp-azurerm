@@ -17,20 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    is_default=null,
     name,
     priority=null,
     vpn_server_configuration_id,
-    policy=null,
-    timeouts=null
+    is_default=null,
+    timeouts=null,
+    policy=null
   ):: std.prune(a={
-    is_default: is_default,
     name: name,
     priority: priority,
     vpn_server_configuration_id: vpn_server_configuration_id,
-    policy: policy,
+    is_default: is_default,
     timeouts: timeouts,
+    policy: policy,
   }),
+  withVpnServerConfigurationId(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration_policy_group+: {
+        [resourceLabel]+: {
+          vpn_server_configuration_id: value,
+        },
+      },
+    },
+  },
   withIsDefault(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration_policy_group+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_vpn_server_configuration_policy_group+: {
         [resourceLabel]+: {
           priority: value,
-        },
-      },
-    },
-  },
-  withVpnServerConfigurationId(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration_policy_group+: {
-        [resourceLabel]+: {
-          vpn_server_configuration_id: value,
         },
       },
     },
@@ -116,15 +116,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

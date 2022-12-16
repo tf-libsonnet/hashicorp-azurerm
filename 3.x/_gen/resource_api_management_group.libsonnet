@@ -2,22 +2,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
+    type=null,
     api_management_name,
     description=null,
     display_name,
     external_id=null,
     name,
-    resource_group_name,
-    type=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_group', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
+    type=type,
     api_management_name=api_management_name,
     description=description,
     display_name=display_name,
     external_id=external_id,
     name=name,
-    resource_group_name=resource_group_name,
-    type=type,
     timeouts=timeouts
   )),
   newAttrs(
@@ -39,24 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_group+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_group+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_group+: {
@@ -102,6 +84,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_group+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_group+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_group+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

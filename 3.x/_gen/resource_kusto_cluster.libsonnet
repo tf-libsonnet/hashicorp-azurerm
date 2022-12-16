@@ -2,126 +2,108 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    purge_enabled=null,
-    streaming_ingestion_enabled=null,
-    language_extensions=null,
     resource_group_name,
+    tags=null,
+    engine=null,
+    name,
+    allowed_ip_ranges=null,
+    public_network_access_enabled=null,
+    trusted_external_tenants=null,
+    outbound_network_access_restricted=null,
+    streaming_ingestion_enabled=null,
     zones=null,
+    allowed_fqdns=null,
+    purge_enabled=null,
+    language_extensions=null,
+    double_encryption_enabled=null,
+    disk_encryption_enabled=null,
+    location,
     public_ip_type=null,
     auto_stop_enabled=null,
-    disk_encryption_enabled=null,
-    allowed_fqdns=null,
-    name,
-    double_encryption_enabled=null,
-    trusted_external_tenants=null,
-    engine=null,
-    tags=null,
-    allowed_ip_ranges=null,
-    outbound_network_access_restricted=null,
-    public_network_access_enabled=null,
-    timeouts=null,
-    virtual_network_configuration=null,
     identity=null,
     optimized_auto_scale=null,
-    sku=null
+    sku=null,
+    timeouts=null,
+    virtual_network_configuration=null
   ):: tf.withResource(type='azurerm_kusto_cluster', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    purge_enabled=purge_enabled,
-    streaming_ingestion_enabled=streaming_ingestion_enabled,
-    language_extensions=language_extensions,
     resource_group_name=resource_group_name,
+    tags=tags,
+    engine=engine,
+    name=name,
+    allowed_ip_ranges=allowed_ip_ranges,
+    public_network_access_enabled=public_network_access_enabled,
+    trusted_external_tenants=trusted_external_tenants,
+    outbound_network_access_restricted=outbound_network_access_restricted,
+    streaming_ingestion_enabled=streaming_ingestion_enabled,
     zones=zones,
+    allowed_fqdns=allowed_fqdns,
+    purge_enabled=purge_enabled,
+    language_extensions=language_extensions,
+    double_encryption_enabled=double_encryption_enabled,
+    disk_encryption_enabled=disk_encryption_enabled,
+    location=location,
     public_ip_type=public_ip_type,
     auto_stop_enabled=auto_stop_enabled,
-    disk_encryption_enabled=disk_encryption_enabled,
-    allowed_fqdns=allowed_fqdns,
-    name=name,
-    double_encryption_enabled=double_encryption_enabled,
-    trusted_external_tenants=trusted_external_tenants,
-    engine=engine,
-    tags=tags,
-    allowed_ip_ranges=allowed_ip_ranges,
-    outbound_network_access_restricted=outbound_network_access_restricted,
-    public_network_access_enabled=public_network_access_enabled,
-    timeouts=timeouts,
-    virtual_network_configuration=virtual_network_configuration,
     identity=identity,
     optimized_auto_scale=optimized_auto_scale,
-    sku=sku
+    sku=sku,
+    timeouts=timeouts,
+    virtual_network_configuration=virtual_network_configuration
   )),
   newAttrs(
-    public_ip_type=null,
-    tags=null,
-    outbound_network_access_restricted=null,
+    allowed_ip_ranges=null,
+    public_network_access_enabled=null,
     streaming_ingestion_enabled=null,
-    zones=null,
-    purge_enabled=null,
-    trusted_external_tenants=null,
-    engine=null,
-    resource_group_name,
+    allowed_fqdns=null,
     language_extensions=null,
     auto_stop_enabled=null,
-    disk_encryption_enabled=null,
-    public_network_access_enabled=null,
-    name,
     double_encryption_enabled=null,
+    resource_group_name,
+    zones=null,
     location,
-    allowed_fqdns=null,
-    allowed_ip_ranges=null,
+    name,
+    outbound_network_access_restricted=null,
+    disk_encryption_enabled=null,
+    tags=null,
+    public_ip_type=null,
+    engine=null,
+    purge_enabled=null,
+    trusted_external_tenants=null,
     timeouts=null,
     virtual_network_configuration=null,
     identity=null,
     optimized_auto_scale=null,
     sku=null
   ):: std.prune(a={
-    public_ip_type: public_ip_type,
-    tags: tags,
-    outbound_network_access_restricted: outbound_network_access_restricted,
+    allowed_ip_ranges: allowed_ip_ranges,
+    public_network_access_enabled: public_network_access_enabled,
     streaming_ingestion_enabled: streaming_ingestion_enabled,
-    zones: zones,
-    purge_enabled: purge_enabled,
-    trusted_external_tenants: trusted_external_tenants,
-    engine: engine,
-    resource_group_name: resource_group_name,
+    allowed_fqdns: allowed_fqdns,
     language_extensions: language_extensions,
     auto_stop_enabled: auto_stop_enabled,
-    disk_encryption_enabled: disk_encryption_enabled,
-    public_network_access_enabled: public_network_access_enabled,
-    name: name,
     double_encryption_enabled: double_encryption_enabled,
+    resource_group_name: resource_group_name,
+    zones: zones,
     location: location,
-    allowed_fqdns: allowed_fqdns,
-    allowed_ip_ranges: allowed_ip_ranges,
+    name: name,
+    outbound_network_access_restricted: outbound_network_access_restricted,
+    disk_encryption_enabled: disk_encryption_enabled,
+    tags: tags,
+    public_ip_type: public_ip_type,
+    engine: engine,
+    purge_enabled: purge_enabled,
+    trusted_external_tenants: trusted_external_tenants,
     timeouts: timeouts,
     virtual_network_configuration: virtual_network_configuration,
     identity: identity,
     optimized_auto_scale: optimized_auto_scale,
     sku: sku,
   }),
-  withPublicIpType(resourceLabel, value):: {
+  withPurgeEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          public_ip_type: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          name: value,
+          purge_enabled: value,
         },
       },
     },
@@ -135,38 +117,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPurgeEnabled(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          purge_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withOutboundNetworkAccessRestricted(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          outbound_network_access_restricted: value,
-        },
-      },
-    },
-  },
-  withLanguageExtensions(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          language_extensions: value,
+          tags: value,
         },
       },
     },
@@ -180,38 +135,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDiskEncryptionEnabled(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          disk_encryption_enabled: value,
+          public_network_access_enabled: value,
         },
       },
     },
   },
-  withZones(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          zones: value,
-        },
-      },
-    },
-  },
-  withAutoStopEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          auto_stop_enabled: value,
-        },
-      },
-    },
-  },
-  withDoubleEncryptionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          double_encryption_enabled: value,
+          location: value,
         },
       },
     },
@@ -225,29 +162,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withLanguageExtensions(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          tags: value,
+          language_extensions: value,
         },
       },
     },
   },
-  withStreamingIngestionEnabled(resourceLabel, value):: {
+  withPublicIpType(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          streaming_ingestion_enabled: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          public_ip_type: value,
         },
       },
     },
@@ -261,34 +189,77 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualNetworkConfiguration(resourceLabel, value):: {
+  withOutboundNetworkAccessRestricted(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          virtual_network_configuration: value,
+          outbound_network_access_restricted: value,
         },
       },
     },
   },
-  withVirtualNetworkConfigurationMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster+: {
         [resourceLabel]+: {
-          virtual_network_configuration+: if std.isArray(v=value) then value else [value],
+          name: value,
         },
       },
     },
   },
-  virtual_network_configuration:: {
-    new(
-      data_management_public_ip_id,
-      engine_public_ip_id,
-      subnet_id
-    ):: std.prune(a={
-      data_management_public_ip_id: data_management_public_ip_id,
-      engine_public_ip_id: engine_public_ip_id,
-      subnet_id: subnet_id,
-    }),
+  withDoubleEncryptionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          double_encryption_enabled: value,
+        },
+      },
+    },
+  },
+  withAutoStopEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          auto_stop_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withStreamingIngestionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          streaming_ingestion_enabled: value,
+        },
+      },
+    },
+  },
+  withZones(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          zones: value,
+        },
+      },
+    },
+  },
+  withDiskEncryptionEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          disk_encryption_enabled: value,
+        },
+      },
+    },
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -310,11 +281,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      type,
-      identity_ids=null
+      identity_ids=null,
+      type
     ):: std.prune(a={
-      type: type,
       identity_ids: identity_ids,
+      type: type,
     }),
   },
   withOptimizedAutoScale(resourceLabel, value):: {
@@ -400,6 +371,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withVirtualNetworkConfiguration(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          virtual_network_configuration: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkConfigurationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster+: {
+        [resourceLabel]+: {
+          virtual_network_configuration+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  virtual_network_configuration:: {
+    new(
+      data_management_public_ip_id,
+      engine_public_ip_id,
+      subnet_id
+    ):: std.prune(a={
+      data_management_public_ip_id: data_management_public_ip_id,
+      engine_public_ip_id: engine_public_ip_id,
+      subnet_id: subnet_id,
     }),
   },
 }

@@ -17,29 +17,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    bot_name,
-    calling_web_hook=null,
     enable_calling=null,
     location,
     resource_group_name,
+    bot_name,
+    calling_web_hook=null,
     timeouts=null
   ):: std.prune(a={
-    bot_name: bot_name,
-    calling_web_hook: calling_web_hook,
     enable_calling: enable_calling,
     location: location,
     resource_group_name: resource_group_name,
+    bot_name: bot_name,
+    calling_web_hook: calling_web_hook,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_ms_teams+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withBotName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_ms_teams+: {
@@ -72,6 +63,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bot_channel_ms_teams+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_ms_teams+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

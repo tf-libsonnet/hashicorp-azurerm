@@ -15,18 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    container_access_type=null,
     metadata=null,
     name,
     storage_account_name,
-    container_access_type=null,
     timeouts=null
   ):: std.prune(a={
+    container_access_type: container_access_type,
     metadata: metadata,
     name: name,
     storage_account_name: storage_account_name,
-    container_access_type: container_access_type,
     timeouts: timeouts,
   }),
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_container+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
   withContainerAccessType(resourceLabel, value):: {
     resource+: {
       azurerm_storage_container+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_container+: {
-        [resourceLabel]+: {
-          storage_account_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_storage_container+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

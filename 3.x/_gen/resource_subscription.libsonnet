@@ -2,66 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    subscription_name,
     tags=null,
     workload=null,
     alias=null,
     billing_scope_id=null,
     subscription_id=null,
+    subscription_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_subscription', label=resourceLabel, attrs=self.newAttrs(
-    subscription_name=subscription_name,
     tags=tags,
     workload=workload,
     alias=alias,
     billing_scope_id=billing_scope_id,
     subscription_id=subscription_id,
+    subscription_name=subscription_name,
     timeouts=timeouts
   )),
   newAttrs(
-    alias=null,
     billing_scope_id=null,
     subscription_id=null,
     subscription_name,
     tags=null,
     workload=null,
+    alias=null,
     timeouts=null
   ):: std.prune(a={
-    alias: alias,
     billing_scope_id: billing_scope_id,
     subscription_id: subscription_id,
     subscription_name: subscription_name,
     tags: tags,
     workload: workload,
+    alias: alias,
     timeouts: timeouts,
   }),
-  withSubscriptionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription+: {
-        [resourceLabel]+: {
-          subscription_id: value,
-        },
-      },
-    },
-  },
-  withSubscriptionName(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription+: {
-        [resourceLabel]+: {
-          subscription_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_subscription+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withWorkload(resourceLabel, value):: {
     resource+: {
       azurerm_subscription+: {
@@ -89,6 +62,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSubscriptionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription+: {
+        [resourceLabel]+: {
+          subscription_id: value,
+        },
+      },
+    },
+  },
+  withSubscriptionName(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription+: {
+        [resourceLabel]+: {
+          subscription_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_subscription+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_subscription+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

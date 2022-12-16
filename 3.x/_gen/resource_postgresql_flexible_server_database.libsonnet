@@ -15,16 +15,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     server_id,
     charset=null,
     collation=null,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     server_id: server_id,
     charset: charset,
     collation: collation,
-    name: name,
     timeouts: timeouts,
   }),
   withCharset(resourceLabel, value):: {

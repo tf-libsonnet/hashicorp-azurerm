@@ -2,51 +2,78 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     tags=null,
-    device_mapping_json,
     workspace_id,
-    eventhub_consumer_group_name,
     eventhub_name,
     eventhub_namespace_name,
+    device_mapping_json,
+    eventhub_consumer_group_name,
     location,
-    name,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthcare_medtech_service', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     tags=tags,
-    device_mapping_json=device_mapping_json,
     workspace_id=workspace_id,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
     eventhub_name=eventhub_name,
     eventhub_namespace_name=eventhub_namespace_name,
+    device_mapping_json=device_mapping_json,
+    eventhub_consumer_group_name=eventhub_consumer_group_name,
     location=location,
-    name=name,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
+    eventhub_name,
+    eventhub_consumer_group_name,
+    location,
+    device_mapping_json,
+    eventhub_namespace_name,
     name,
     tags=null,
-    device_mapping_json,
-    eventhub_consumer_group_name,
-    eventhub_name,
-    eventhub_namespace_name,
-    location,
     workspace_id,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: std.prune(a={
+    eventhub_name: eventhub_name,
+    eventhub_consumer_group_name: eventhub_consumer_group_name,
+    location: location,
+    device_mapping_json: device_mapping_json,
+    eventhub_namespace_name: eventhub_namespace_name,
     name: name,
     tags: tags,
-    device_mapping_json: device_mapping_json,
-    eventhub_consumer_group_name: eventhub_consumer_group_name,
-    eventhub_name: eventhub_name,
-    eventhub_namespace_name: eventhub_namespace_name,
-    location: location,
     workspace_id: workspace_id,
-    timeouts: timeouts,
     identity: identity,
+    timeouts: timeouts,
   }),
+  withDeviceMappingJson(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          device_mapping_json: value,
+        },
+      },
+    },
+  },
+  withEventhubConsumerGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          eventhub_consumer_group_name: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthcare_medtech_service+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
@@ -74,24 +101,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeviceMappingJson(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          device_mapping_json: value,
-        },
-      },
-    },
-  },
-  withEventhubConsumerGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          eventhub_consumer_group_name: value,
-        },
-      },
-    },
-  },
   withEventhubName(resourceLabel, value):: {
     resource+: {
       azurerm_healthcare_medtech_service+: {
@@ -106,15 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_healthcare_medtech_service+: {
         [resourceLabel]+: {
           eventhub_namespace_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthcare_medtech_service+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -164,15 +164,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

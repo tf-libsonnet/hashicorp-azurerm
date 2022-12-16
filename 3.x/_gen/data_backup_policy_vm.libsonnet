@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     name,
     recovery_vault_name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_backup_policy_vm', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     name=name,
     recovery_vault_name=recovery_vault_name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_backup_policy_vm+: {
+        [dataSrcLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withRecoveryVaultName(dataSrcLabel, value):: {
     data+: {
       azurerm_backup_policy_vm+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_backup_policy_vm+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_backup_policy_vm+: {
-        [dataSrcLabel]+: {
-          name: value,
         },
       },
     },

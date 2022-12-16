@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    certificate_id,
     hostname_binding_id,
     ssl_state,
-    certificate_id,
     timeouts=null
   ):: std.prune(a={
+    certificate_id: certificate_id,
     hostname_binding_id: hostname_binding_id,
     ssl_state: ssl_state,
-    certificate_id: certificate_id,
     timeouts: timeouts,
   }),
+  withCertificateId(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_certificate_binding+: {
+        [resourceLabel]+: {
+          certificate_id: value,
+        },
+      },
+    },
+  },
   withHostnameBindingId(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_certificate_binding+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_certificate_binding+: {
         [resourceLabel]+: {
           ssl_state: value,
-        },
-      },
-    },
-  },
-  withCertificateId(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_certificate_binding+: {
-        [resourceLabel]+: {
-          certificate_id: value,
         },
       },
     },
@@ -70,13 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

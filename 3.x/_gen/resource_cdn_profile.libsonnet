@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tags=null,
+    location,
     name,
     resource_group_name,
     sku,
-    tags=null,
-    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_profile', label=resourceLabel, attrs=self.newAttrs(
+    tags=tags,
+    location=location,
     name=name,
     resource_group_name=resource_group_name,
     sku=sku,
-    tags=tags,
-    location=location,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,24 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_profile+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_profile+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_profile+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cdn_profile+: {
         [resourceLabel]+: {
           sku: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_profile+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_profile+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },

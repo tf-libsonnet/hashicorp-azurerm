@@ -2,65 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tags=null,
+    name,
     subnet_id,
     custom_network_interface_name=null,
-    name,
     location,
-    tags=null,
     resource_group_name,
-    private_dns_zone_group=null,
     private_service_connection=null,
     timeouts=null,
-    ip_configuration=null
+    ip_configuration=null,
+    private_dns_zone_group=null
   ):: tf.withResource(type='azurerm_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    tags=tags,
+    name=name,
     subnet_id=subnet_id,
     custom_network_interface_name=custom_network_interface_name,
-    name=name,
     location=location,
-    tags=tags,
     resource_group_name=resource_group_name,
-    private_dns_zone_group=private_dns_zone_group,
     private_service_connection=private_service_connection,
     timeouts=timeouts,
-    ip_configuration=ip_configuration
+    ip_configuration=ip_configuration,
+    private_dns_zone_group=private_dns_zone_group
   )),
   newAttrs(
-    resource_group_name,
-    subnet_id,
     custom_network_interface_name=null,
-    tags=null,
     location,
     name,
+    resource_group_name,
+    tags=null,
+    subnet_id,
     ip_configuration=null,
     private_dns_zone_group=null,
     private_service_connection=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    subnet_id: subnet_id,
     custom_network_interface_name: custom_network_interface_name,
-    tags: tags,
     location: location,
     name: name,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    subnet_id: subnet_id,
     ip_configuration: ip_configuration,
     private_dns_zone_group: private_dns_zone_group,
     private_service_connection: private_service_connection,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_endpoint+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_private_endpoint+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_endpoint+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -83,15 +83,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_endpoint+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_private_endpoint+: {
@@ -101,36 +92,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_endpoint+: {
         [resourceLabel]+: {
-          timeouts: value,
+          name: value,
         },
       },
     },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_endpoint+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withIpConfiguration(resourceLabel, value):: {
     resource+: {
@@ -210,19 +179,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   private_service_connection:: {
     new(
+      private_connection_resource_id=null,
       request_message=null,
       subresource_names=null,
       is_manual_connection,
       name,
-      private_connection_resource_alias=null,
-      private_connection_resource_id=null
+      private_connection_resource_alias=null
     ):: std.prune(a={
+      private_connection_resource_id: private_connection_resource_id,
       request_message: request_message,
       subresource_names: subresource_names,
       is_manual_connection: is_manual_connection,
       name: name,
       private_connection_resource_alias: private_connection_resource_alias,
-      private_connection_resource_id: private_connection_resource_id,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_endpoint+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_endpoint+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

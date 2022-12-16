@@ -15,16 +15,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_key,
     storage_account_name,
     name,
     spring_cloud_service_id,
+    storage_account_key,
     timeouts=null
   ):: std.prune(a={
-    storage_account_key: storage_account_key,
     storage_account_name: storage_account_name,
     name: name,
     spring_cloud_service_id: spring_cloud_service_id,
+    storage_account_key: storage_account_key,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

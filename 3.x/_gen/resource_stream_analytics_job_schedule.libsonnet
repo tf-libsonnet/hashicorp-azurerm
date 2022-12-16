@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    start_mode,
     start_time=null,
     stream_analytics_job_id,
+    start_mode,
     timeouts=null
   ):: std.prune(a={
-    start_mode: start_mode,
     start_time: start_time,
     stream_analytics_job_id: stream_analytics_job_id,
+    start_mode: start_mode,
     timeouts: timeouts,
   }),
+  withStartTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job_schedule+: {
+        [resourceLabel]+: {
+          start_time: value,
+        },
+      },
+    },
+  },
   withStreamAnalyticsJobId(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_job_schedule+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_job_schedule+: {
         [resourceLabel]+: {
           start_mode: value,
-        },
-      },
-    },
-  },
-  withStartTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job_schedule+: {
-        [resourceLabel]+: {
-          start_time: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

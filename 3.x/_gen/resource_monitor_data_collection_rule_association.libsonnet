@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    data_collection_endpoint_id=null,
+    data_collection_rule_id=null,
     description=null,
     name=null,
     target_resource_id,
-    data_collection_endpoint_id=null,
-    data_collection_rule_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_monitor_data_collection_rule_association', label=resourceLabel, attrs=self.newAttrs(
+    data_collection_endpoint_id=data_collection_endpoint_id,
+    data_collection_rule_id=data_collection_rule_id,
     description=description,
     name=name,
     target_resource_id=target_resource_id,
-    data_collection_endpoint_id=data_collection_endpoint_id,
-    data_collection_rule_id=data_collection_rule_id,
     timeouts=timeouts
   )),
   newAttrs(
-    data_collection_endpoint_id=null,
-    data_collection_rule_id=null,
     description=null,
     name=null,
     target_resource_id,
+    data_collection_endpoint_id=null,
+    data_collection_rule_id=null,
     timeouts=null
   ):: std.prune(a={
-    data_collection_endpoint_id: data_collection_endpoint_id,
-    data_collection_rule_id: data_collection_rule_id,
     description: description,
     name: name,
     target_resource_id: target_resource_id,
+    data_collection_endpoint_id: data_collection_endpoint_id,
+    data_collection_rule_id: data_collection_rule_id,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

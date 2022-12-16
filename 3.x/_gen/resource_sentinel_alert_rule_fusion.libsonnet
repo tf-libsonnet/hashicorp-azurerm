@@ -2,34 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     alert_rule_template_guid,
     enabled=null,
     log_analytics_workspace_id,
-    name,
-    source=null,
-    timeouts=null
+    timeouts=null,
+    source=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_fusion', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     alert_rule_template_guid=alert_rule_template_guid,
     enabled=enabled,
     log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    source=source,
-    timeouts=timeouts
+    timeouts=timeouts,
+    source=source
   )),
   newAttrs(
-    alert_rule_template_guid,
-    enabled=null,
     log_analytics_workspace_id,
     name,
-    timeouts=null,
-    source=null
+    alert_rule_template_guid,
+    enabled=null,
+    source=null,
+    timeouts=null
   ):: std.prune(a={
-    alert_rule_template_guid: alert_rule_template_guid,
-    enabled: enabled,
     log_analytics_workspace_id: log_analytics_workspace_id,
     name: name,
-    timeouts: timeouts,
+    alert_rule_template_guid: alert_rule_template_guid,
+    enabled: enabled,
     source: source,
+    timeouts: timeouts,
   }),
   withAlertRuleTemplateGuid(resourceLabel, value):: {
     resource+: {
@@ -67,37 +67,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_fusion+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_fusion+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
   withSource(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_fusion+: {
@@ -118,12 +87,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   source:: {
     new(
-      enabled=null,
       name,
+      enabled=null,
       sub_type=null
     ):: std.prune(a={
-      enabled: enabled,
       name: name,
+      enabled: enabled,
       sub_type: sub_type,
     }),
     sub_type:: {
@@ -137,5 +106,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         severities_allowed: severities_allowed,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_fusion+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_fusion+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
 }

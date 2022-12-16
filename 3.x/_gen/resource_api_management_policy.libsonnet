@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    api_management_id,
     xml_content=null,
     xml_link=null,
+    api_management_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_policy', label=resourceLabel, attrs=self.newAttrs(
-    api_management_id=api_management_id,
     xml_content=xml_content,
     xml_link=xml_link,
+    api_management_id=api_management_id,
     timeouts=timeouts
   )),
   newAttrs(

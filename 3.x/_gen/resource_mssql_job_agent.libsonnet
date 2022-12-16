@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    name,
     tags=null,
     database_id,
+    location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_job_agent', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
     tags=tags,
     database_id=database_id,
+    location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location: location,
     timeouts: timeouts,
   }),
-  withDatabaseId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_job_agent+: {
-        [resourceLabel]+: {
-          database_id: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_job_agent+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_job_agent+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_job_agent+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withDatabaseId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_job_agent+: {
+        [resourceLabel]+: {
+          database_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_job_agent+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

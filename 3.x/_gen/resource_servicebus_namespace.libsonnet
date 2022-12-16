@@ -2,77 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    tags=null,
-    resource_group_name,
-    sku,
-    zone_redundant=null,
     capacity=null,
+    tags=null,
     local_auth_enabled=null,
     minimum_tls_version=null,
-    name,
+    resource_group_name,
+    location,
     public_network_access_enabled=null,
+    zone_redundant=null,
+    name,
+    sku,
     customer_managed_key=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_namespace', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    tags=tags,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    zone_redundant=zone_redundant,
     capacity=capacity,
+    tags=tags,
     local_auth_enabled=local_auth_enabled,
     minimum_tls_version=minimum_tls_version,
-    name=name,
+    resource_group_name=resource_group_name,
+    location=location,
     public_network_access_enabled=public_network_access_enabled,
+    zone_redundant=zone_redundant,
+    name=name,
+    sku=sku,
     customer_managed_key=customer_managed_key,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    capacity=null,
+    resource_group_name,
     local_auth_enabled=null,
     zone_redundant=null,
-    name,
-    minimum_tls_version=null,
-    tags=null,
-    location,
-    public_network_access_enabled=null,
-    resource_group_name,
     sku,
+    tags=null,
+    public_network_access_enabled=null,
+    location,
+    name,
+    capacity=null,
+    minimum_tls_version=null,
     customer_managed_key=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    capacity: capacity,
+    resource_group_name: resource_group_name,
     local_auth_enabled: local_auth_enabled,
     zone_redundant: zone_redundant,
-    name: name,
-    minimum_tls_version: minimum_tls_version,
-    tags: tags,
-    location: location,
-    public_network_access_enabled: public_network_access_enabled,
-    resource_group_name: resource_group_name,
     sku: sku,
+    tags: tags,
+    public_network_access_enabled: public_network_access_enabled,
+    location: location,
+    name: name,
+    capacity: capacity,
+    minimum_tls_version: minimum_tls_version,
     customer_managed_key: customer_managed_key,
     identity: identity,
     timeouts: timeouts,
   }),
-  withLocalAuthEnabled(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace+: {
         [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withZoneRedundant(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          zone_redundant: value,
+          tags: value,
         },
       },
     },
@@ -95,24 +86,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withSku(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace+: {
@@ -131,15 +104,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_namespace+: {
@@ -148,6 +112,98 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withZoneRedundant(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          zone_redundant: value,
+        },
+      },
+    },
+  },
+  withLocalAuthEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          local_auth_enabled: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withCustomerManagedKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          customer_managed_key: value,
+        },
+      },
+    },
+  },
+  withCustomerManagedKeyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          customer_managed_key+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  customer_managed_key:: {
+    new(
+      identity_id,
+      infrastructure_encryption_enabled=null,
+      key_vault_key_id
+    ):: std.prune(a={
+      identity_id: identity_id,
+      infrastructure_encryption_enabled: infrastructure_encryption_enabled,
+      key_vault_key_id: key_vault_key_id,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_namespace+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      identity_ids=null,
+      type
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -178,62 +234,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withCustomerManagedKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          customer_managed_key: value,
-        },
-      },
-    },
-  },
-  withCustomerManagedKeyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          customer_managed_key+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  customer_managed_key:: {
-    new(
-      key_vault_key_id,
-      identity_id,
-      infrastructure_encryption_enabled=null
-    ):: std.prune(a={
-      key_vault_key_id: key_vault_key_id,
-      identity_id: identity_id,
-      infrastructure_encryption_enabled: infrastructure_encryption_enabled,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_namespace+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      type,
-      identity_ids=null
-    ):: std.prune(a={
-      type: type,
-      identity_ids: identity_ids,
     }),
   },
 }

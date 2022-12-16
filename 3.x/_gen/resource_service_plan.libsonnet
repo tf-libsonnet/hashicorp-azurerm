@@ -2,136 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    app_service_environment_id=null,
-    per_site_scaling_enabled=null,
-    zone_balancing_enabled=null,
+    name,
     resource_group_name,
     location,
-    tags=null,
-    os_type,
-    sku_name,
     maximum_elastic_worker_count=null,
-    name,
+    per_site_scaling_enabled=null,
+    tags=null,
+    zone_balancing_enabled=null,
+    app_service_environment_id=null,
     worker_count=null,
+    sku_name,
+    os_type,
     timeouts=null
   ):: tf.withResource(type='azurerm_service_plan', label=resourceLabel, attrs=self.newAttrs(
-    app_service_environment_id=app_service_environment_id,
-    per_site_scaling_enabled=per_site_scaling_enabled,
-    zone_balancing_enabled=zone_balancing_enabled,
+    name=name,
     resource_group_name=resource_group_name,
     location=location,
-    tags=tags,
-    os_type=os_type,
-    sku_name=sku_name,
     maximum_elastic_worker_count=maximum_elastic_worker_count,
-    name=name,
+    per_site_scaling_enabled=per_site_scaling_enabled,
+    tags=tags,
+    zone_balancing_enabled=zone_balancing_enabled,
+    app_service_environment_id=app_service_environment_id,
     worker_count=worker_count,
+    sku_name=sku_name,
+    os_type=os_type,
     timeouts=timeouts
   )),
   newAttrs(
-    maximum_elastic_worker_count=null,
     name,
-    os_type,
-    app_service_environment_id=null,
-    per_site_scaling_enabled=null,
-    zone_balancing_enabled=null,
-    resource_group_name,
-    location,
-    sku_name,
-    tags=null,
     worker_count=null,
+    resource_group_name,
+    maximum_elastic_worker_count=null,
+    zone_balancing_enabled=null,
+    per_site_scaling_enabled=null,
+    sku_name,
+    app_service_environment_id=null,
+    os_type,
+    location,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    maximum_elastic_worker_count: maximum_elastic_worker_count,
     name: name,
-    os_type: os_type,
-    app_service_environment_id: app_service_environment_id,
-    per_site_scaling_enabled: per_site_scaling_enabled,
-    zone_balancing_enabled: zone_balancing_enabled,
-    resource_group_name: resource_group_name,
-    location: location,
-    sku_name: sku_name,
-    tags: tags,
     worker_count: worker_count,
+    resource_group_name: resource_group_name,
+    maximum_elastic_worker_count: maximum_elastic_worker_count,
+    zone_balancing_enabled: zone_balancing_enabled,
+    per_site_scaling_enabled: per_site_scaling_enabled,
+    sku_name: sku_name,
+    app_service_environment_id: app_service_environment_id,
+    os_type: os_type,
+    location: location,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withMaximumElasticWorkerCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          maximum_elastic_worker_count: value,
-        },
-      },
-    },
-  },
   withAppServiceEnvironmentId(resourceLabel, value):: {
     resource+: {
       azurerm_service_plan+: {
         [resourceLabel]+: {
           app_service_environment_id: value,
-        },
-      },
-    },
-  },
-  withPerSiteScalingEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          per_site_scaling_enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withOsType(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          os_type: value,
-        },
-      },
-    },
-  },
-  withWorkerCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          worker_count: value,
-        },
-      },
-    },
-  },
-  withZoneBalancingEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_service_plan+: {
-        [resourceLabel]+: {
-          zone_balancing_enabled: value,
         },
       },
     },
@@ -145,11 +73,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withWorkerCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          worker_count: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withMaximumElasticWorkerCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          maximum_elastic_worker_count: value,
+        },
+      },
+    },
+  },
+  withPerSiteScalingEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          per_site_scaling_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withZoneBalancingEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          zone_balancing_enabled: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_service_plan+: {
         [resourceLabel]+: {
           sku_name: value,
+        },
+      },
+    },
+  },
+  withOsType(resourceLabel, value):: {
+    resource+: {
+      azurerm_service_plan+: {
+        [resourceLabel]+: {
+          os_type: value,
         },
       },
     },

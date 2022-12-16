@@ -2,70 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_account_access_key=null,
-    storage_endpoint=null,
-    email_account_admins_enabled=null,
-    policy_state,
-    retention_days=null,
-    synapse_workspace_id,
     disabled_alerts=null,
+    email_account_admins_enabled=null,
+    retention_days=null,
+    storage_account_access_key=null,
     email_addresses=null,
+    policy_state,
+    storage_endpoint=null,
+    synapse_workspace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_workspace_security_alert_policy', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_access_key=storage_account_access_key,
-    storage_endpoint=storage_endpoint,
-    email_account_admins_enabled=email_account_admins_enabled,
-    policy_state=policy_state,
-    retention_days=retention_days,
-    synapse_workspace_id=synapse_workspace_id,
     disabled_alerts=disabled_alerts,
+    email_account_admins_enabled=email_account_admins_enabled,
+    retention_days=retention_days,
+    storage_account_access_key=storage_account_access_key,
     email_addresses=email_addresses,
+    policy_state=policy_state,
+    storage_endpoint=storage_endpoint,
+    synapse_workspace_id=synapse_workspace_id,
     timeouts=timeouts
   )),
   newAttrs(
-    policy_state,
-    retention_days=null,
-    synapse_workspace_id,
     disabled_alerts=null,
-    email_addresses=null,
+    email_account_admins_enabled=null,
+    retention_days=null,
     storage_account_access_key=null,
     storage_endpoint=null,
-    email_account_admins_enabled=null,
+    synapse_workspace_id,
+    email_addresses=null,
+    policy_state,
     timeouts=null
   ):: std.prune(a={
-    policy_state: policy_state,
-    retention_days: retention_days,
-    synapse_workspace_id: synapse_workspace_id,
     disabled_alerts: disabled_alerts,
-    email_addresses: email_addresses,
+    email_account_admins_enabled: email_account_admins_enabled,
+    retention_days: retention_days,
     storage_account_access_key: storage_account_access_key,
     storage_endpoint: storage_endpoint,
-    email_account_admins_enabled: email_account_admins_enabled,
+    synapse_workspace_id: synapse_workspace_id,
+    email_addresses: email_addresses,
+    policy_state: policy_state,
     timeouts: timeouts,
   }),
-  withPolicyState(resourceLabel, value):: {
+  withDisabledAlerts(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_workspace_security_alert_policy+: {
         [resourceLabel]+: {
-          policy_state: value,
-        },
-      },
-    },
-  },
-  withRetentionDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_workspace_security_alert_policy+: {
-        [resourceLabel]+: {
-          retention_days: value,
-        },
-      },
-    },
-  },
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_workspace_security_alert_policy+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
+          disabled_alerts: value,
         },
       },
     },
@@ -75,6 +57,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_workspace_security_alert_policy+: {
         [resourceLabel]+: {
           email_account_admins_enabled: value,
+        },
+      },
+    },
+  },
+  withRetentionDays(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_workspace_security_alert_policy+: {
+        [resourceLabel]+: {
+          retention_days: value,
         },
       },
     },
@@ -97,11 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisabledAlerts(resourceLabel, value):: {
+  withSynapseWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_workspace_security_alert_policy+: {
         [resourceLabel]+: {
-          disabled_alerts: value,
+          synapse_workspace_id: value,
         },
       },
     },
@@ -111,6 +102,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_workspace_security_alert_policy+: {
         [resourceLabel]+: {
           email_addresses: value,
+        },
+      },
+    },
+  },
+  withPolicyState(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_workspace_security_alert_policy+: {
+        [resourceLabel]+: {
+          policy_state: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

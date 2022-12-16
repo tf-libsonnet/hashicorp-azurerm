@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     acl: acl,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_share+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withStorageAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_share+: {
@@ -50,6 +41,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_storage_share+: {
         [dataSrcLabel]+: {
           metadata: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_share+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

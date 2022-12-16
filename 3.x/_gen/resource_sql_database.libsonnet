@@ -2,91 +2,91 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
+    resource_group_name,
     source_database_id=null,
     create_mode=null,
-    source_database_deletion_date=null,
+    restore_point_in_time=null,
+    tags=null,
     zone_redundant=null,
-    location,
-    requested_service_objective_id=null,
-    max_size_gb=null,
     read_scale=null,
     requested_service_objective_name=null,
-    server_name,
-    restore_point_in_time=null,
-    resource_group_name,
-    max_size_bytes=null,
-    tags=null,
     edition=null,
     name,
-    collation=null,
+    source_database_deletion_date=null,
+    requested_service_objective_id=null,
+    max_size_gb=null,
     elastic_pool_name=null,
+    collation=null,
+    max_size_bytes=null,
+    server_name,
     import_=null,
     threat_detection_policy=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_sql_database', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
+    resource_group_name=resource_group_name,
     source_database_id=source_database_id,
     create_mode=create_mode,
-    source_database_deletion_date=source_database_deletion_date,
+    restore_point_in_time=restore_point_in_time,
+    tags=tags,
     zone_redundant=zone_redundant,
-    location=location,
-    requested_service_objective_id=requested_service_objective_id,
-    max_size_gb=max_size_gb,
     read_scale=read_scale,
     requested_service_objective_name=requested_service_objective_name,
-    server_name=server_name,
-    restore_point_in_time=restore_point_in_time,
-    resource_group_name=resource_group_name,
-    max_size_bytes=max_size_bytes,
-    tags=tags,
     edition=edition,
     name=name,
-    collation=collation,
+    source_database_deletion_date=source_database_deletion_date,
+    requested_service_objective_id=requested_service_objective_id,
+    max_size_gb=max_size_gb,
     elastic_pool_name=elastic_pool_name,
+    collation=collation,
+    max_size_bytes=max_size_bytes,
+    server_name=server_name,
     import_=import_,
     threat_detection_policy=threat_detection_policy,
     timeouts=timeouts
   )),
   newAttrs(
-    max_size_gb=null,
-    create_mode=null,
+    requested_service_objective_name=null,
+    restore_point_in_time=null,
     source_database_deletion_date=null,
     server_name,
-    source_database_id=null,
-    zone_redundant=null,
-    location,
-    requested_service_objective_name=null,
-    name,
-    requested_service_objective_id=null,
-    tags=null,
     read_scale=null,
-    resource_group_name,
-    collation=null,
     edition=null,
     elastic_pool_name=null,
-    restore_point_in_time=null,
+    name,
     max_size_bytes=null,
+    resource_group_name,
+    location,
+    source_database_id=null,
+    requested_service_objective_id=null,
+    zone_redundant=null,
+    max_size_gb=null,
+    collation=null,
+    create_mode=null,
+    tags=null,
     threat_detection_policy=null,
     timeouts=null,
     import_=null
   ):: std.prune(a={
-    max_size_gb: max_size_gb,
-    create_mode: create_mode,
+    requested_service_objective_name: requested_service_objective_name,
+    restore_point_in_time: restore_point_in_time,
     source_database_deletion_date: source_database_deletion_date,
     server_name: server_name,
-    source_database_id: source_database_id,
-    zone_redundant: zone_redundant,
-    location: location,
-    requested_service_objective_name: requested_service_objective_name,
-    name: name,
-    requested_service_objective_id: requested_service_objective_id,
-    tags: tags,
     read_scale: read_scale,
-    resource_group_name: resource_group_name,
-    collation: collation,
     edition: edition,
     elastic_pool_name: elastic_pool_name,
-    restore_point_in_time: restore_point_in_time,
+    name: name,
     max_size_bytes: max_size_bytes,
+    resource_group_name: resource_group_name,
+    location: location,
+    source_database_id: source_database_id,
+    requested_service_objective_id: requested_service_objective_id,
+    zone_redundant: zone_redundant,
+    max_size_gb: max_size_gb,
+    collation: collation,
+    create_mode: create_mode,
+    tags: tags,
     threat_detection_policy: threat_detection_policy,
     timeouts: timeouts,
     'import': import_,
@@ -109,56 +109,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCollation(resourceLabel, value):: {
+  withServerName(resourceLabel, value):: {
     resource+: {
       azurerm_sql_database+: {
         [resourceLabel]+: {
-          collation: value,
-        },
-      },
-    },
-  },
-  withMaxSizeBytes(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          max_size_bytes: value,
-        },
-      },
-    },
-  },
-  withCreateMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          create_mode: value,
-        },
-      },
-    },
-  },
-  withElasticPoolName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          elastic_pool_name: value,
-        },
-      },
-    },
-  },
-  withEdition(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          edition: value,
-        },
-      },
-    },
-  },
-  withSourceDatabaseId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          source_database_id: value,
+          server_name: value,
         },
       },
     },
@@ -168,6 +123,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sql_database+: {
         [resourceLabel]+: {
           zone_redundant: value,
+        },
+      },
+    },
+  },
+  withRestorePointInTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          restore_point_in_time: value,
+        },
+      },
+    },
+  },
+  withElasticPoolName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          elastic_pool_name: value,
         },
       },
     },
@@ -190,6 +163,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCreateMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          create_mode: value,
+        },
+      },
+    },
+  },
+  withMaxSizeGb(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          max_size_gb: value,
+        },
+      },
+    },
+  },
   withReadScale(resourceLabel, value):: {
     resource+: {
       azurerm_sql_database+: {
@@ -199,20 +190,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRestorePointInTime(resourceLabel, value):: {
+  withEdition(resourceLabel, value):: {
     resource+: {
       azurerm_sql_database+: {
         [resourceLabel]+: {
-          restore_point_in_time: value,
-        },
-      },
-    },
-  },
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          server_name: value,
+          edition: value,
         },
       },
     },
@@ -235,6 +217,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withMaxSizeBytes(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          max_size_bytes: value,
+        },
+      },
+    },
+  },
   withRequestedServiceObjectiveId(resourceLabel, value):: {
     resource+: {
       azurerm_sql_database+: {
@@ -244,51 +235,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMaxSizeGb(resourceLabel, value):: {
+  withSourceDatabaseId(resourceLabel, value):: {
     resource+: {
       azurerm_sql_database+: {
         [resourceLabel]+: {
-          max_size_gb: value,
+          source_database_id: value,
         },
       },
     },
   },
-  withImport(resourceLabel, value):: {
+  withCollation(resourceLabel, value):: {
     resource+: {
       azurerm_sql_database+: {
         [resourceLabel]+: {
-          import_: value,
+          collation: value,
         },
       },
     },
-  },
-  withImportMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_database+: {
-        [resourceLabel]+: {
-          'import'+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  'import':: {
-    new(
-      administrator_login,
-      administrator_login_password,
-      authentication_type,
-      operation_mode=null,
-      storage_key,
-      storage_key_type,
-      storage_uri
-    ):: std.prune(a={
-      administrator_login: administrator_login,
-      administrator_login_password: administrator_login_password,
-      authentication_type: authentication_type,
-      operation_mode: operation_mode,
-      storage_key: storage_key,
-      storage_key_type: storage_key_type,
-      storage_uri: storage_uri,
-    }),
   },
   withThreatDetectionPolicy(resourceLabel, value):: {
     resource+: {
@@ -347,15 +310,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
+    }),
+  },
+  withImport(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          import_: value,
+        },
+      },
+    },
+  },
+  withImportMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_database+: {
+        [resourceLabel]+: {
+          'import'+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  'import':: {
+    new(
+      storage_uri,
+      administrator_login,
+      administrator_login_password,
+      authentication_type,
+      operation_mode=null,
+      storage_key,
+      storage_key_type
+    ):: std.prune(a={
+      storage_uri: storage_uri,
+      administrator_login: administrator_login,
+      administrator_login_password: administrator_login_password,
+      authentication_type: authentication_type,
+      operation_mode: operation_mode,
+      storage_key: storage_key,
+      storage_key_type: storage_key_type,
     }),
   },
 }

@@ -19,22 +19,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    application_live_view_enabled=null,
-    name,
     public_network_access_enabled=null,
     spring_cloud_service_id,
     application_accelerator_enabled=null,
+    application_live_view_enabled=null,
+    name,
     sso=null,
     timeouts=null
   ):: std.prune(a={
-    application_live_view_enabled: application_live_view_enabled,
-    name: name,
     public_network_access_enabled: public_network_access_enabled,
     spring_cloud_service_id: spring_cloud_service_id,
     application_accelerator_enabled: application_accelerator_enabled,
+    application_live_view_enabled: application_live_view_enabled,
+    name: name,
     sso: sso,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_dev_tool_portal+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_dev_tool_portal+: {
@@ -71,15 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_dev_tool_portal+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withSso(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_dev_tool_portal+: {
@@ -100,15 +100,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sso:: {
     new(
+      client_secret=null,
       metadata_url=null,
       scope=null,
-      client_id=null,
-      client_secret=null
+      client_id=null
     ):: std.prune(a={
+      client_secret: client_secret,
       metadata_url: metadata_url,
       scope: scope,
       client_id: client_id,
-      client_secret: client_secret,
     }),
   },
   withTimeouts(resourceLabel, value):: {

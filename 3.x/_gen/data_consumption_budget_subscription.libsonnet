@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_id: subscription_id,
     timeouts: timeouts,
   }),
-  withSubscriptionId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_consumption_budget_subscription+: {
-        [dataSrcLabel]+: {
-          subscription_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_consumption_budget_subscription+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withSubscriptionId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_consumption_budget_subscription+: {
+        [dataSrcLabel]+: {
+          subscription_id: value,
         },
       },
     },

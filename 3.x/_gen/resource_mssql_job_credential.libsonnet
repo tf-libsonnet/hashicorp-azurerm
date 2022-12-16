@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    username,
     job_agent_id,
     name,
     password,
-    username,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_job_credential', label=resourceLabel, attrs=self.newAttrs(
+    username=username,
     job_agent_id=job_agent_id,
     name=name,
     password=password,
-    username=username,
     timeouts=timeouts
   )),
   newAttrs(
+    username,
     job_agent_id,
     name,
     password,
-    username,
     timeouts=null
   ):: std.prune(a={
+    username: username,
     job_agent_id: job_agent_id,
     name: name,
     password: password,
-    username: username,
     timeouts: timeouts,
   }),
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_job_credential+: {
-        [resourceLabel]+: {
-          password: value,
-        },
-      },
-    },
-  },
-  withUsername(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_job_credential+: {
-        [resourceLabel]+: {
-          username: value,
-        },
-      },
-    },
-  },
   withJobAgentId(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_job_credential+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_job_credential+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_job_credential+: {
+        [resourceLabel]+: {
+          password: value,
+        },
+      },
+    },
+  },
+  withUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_job_credential+: {
+        [resourceLabel]+: {
+          username: value,
         },
       },
     },
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

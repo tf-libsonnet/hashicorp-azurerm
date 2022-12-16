@@ -2,87 +2,69 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    password=null,
+    confirmation=null,
     note=null,
     email,
+    last_name,
+    user_id,
     api_management_name,
+    first_name,
+    password=null,
     resource_group_name,
     state=null,
-    user_id,
-    first_name,
-    last_name,
-    confirmation=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_user', label=resourceLabel, attrs=self.newAttrs(
-    password=password,
+    confirmation=confirmation,
     note=note,
     email=email,
+    last_name=last_name,
+    user_id=user_id,
     api_management_name=api_management_name,
+    first_name=first_name,
+    password=password,
     resource_group_name=resource_group_name,
     state=state,
-    user_id=user_id,
-    first_name=first_name,
-    last_name=last_name,
-    confirmation=confirmation,
     timeouts=timeouts
   )),
   newAttrs(
-    first_name,
+    last_name,
+    api_management_name,
     confirmation=null,
-    password=null,
     resource_group_name,
     state=null,
-    email,
-    last_name,
-    note=null,
     user_id,
-    api_management_name,
+    email,
+    note=null,
+    password=null,
+    first_name,
     timeouts=null
   ):: std.prune(a={
-    first_name: first_name,
+    last_name: last_name,
+    api_management_name: api_management_name,
     confirmation: confirmation,
-    password: password,
     resource_group_name: resource_group_name,
     state: state,
-    email: email,
-    last_name: last_name,
-    note: note,
     user_id: user_id,
-    api_management_name: api_management_name,
+    email: email,
+    note: note,
+    password: password,
+    first_name: first_name,
     timeouts: timeouts,
   }),
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_user+: {
+        [resourceLabel]+: {
+          api_management_name: value,
+        },
+      },
+    },
+  },
   withFirstName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_user+: {
         [resourceLabel]+: {
           first_name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_user+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withEmail(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_user+: {
-        [resourceLabel]+: {
-          email: value,
-        },
-      },
-    },
-  },
-  withLastName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_user+: {
-        [resourceLabel]+: {
-          last_name: value,
         },
       },
     },
@@ -96,20 +78,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_user+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
   withPassword(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_user+: {
         [resourceLabel]+: {
           password: value,
+        },
+      },
+    },
+  },
+  withLastName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_user+: {
+        [resourceLabel]+: {
+          last_name: value,
+        },
+      },
+    },
+  },
+  withConfirmation(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_user+: {
+        [resourceLabel]+: {
+          confirmation: value,
+        },
+      },
+    },
+  },
+  withEmail(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_user+: {
+        [resourceLabel]+: {
+          email: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_user+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -128,15 +137,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_user+: {
         [resourceLabel]+: {
           user_id: value,
-        },
-      },
-    },
-  },
-  withConfirmation(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_user+: {
-        [resourceLabel]+: {
-          confirmation: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

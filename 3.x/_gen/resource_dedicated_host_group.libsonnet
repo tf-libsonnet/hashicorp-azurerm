@@ -2,52 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    platform_fault_domain_count,
-    resource_group_name,
-    tags=null,
     zone=null,
     automatic_placement_enabled=null,
     location,
     name,
+    platform_fault_domain_count,
+    resource_group_name,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dedicated_host_group', label=resourceLabel, attrs=self.newAttrs(
-    platform_fault_domain_count=platform_fault_domain_count,
-    resource_group_name=resource_group_name,
-    tags=tags,
     zone=zone,
     automatic_placement_enabled=automatic_placement_enabled,
     location=location,
     name=name,
+    platform_fault_domain_count=platform_fault_domain_count,
+    resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     platform_fault_domain_count,
     resource_group_name,
     tags=null,
     zone=null,
     automatic_placement_enabled=null,
     location,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     platform_fault_domain_count: platform_fault_domain_count,
     resource_group_name: resource_group_name,
     tags: tags,
     zone: zone,
     automatic_placement_enabled: automatic_placement_enabled,
     location: location,
-    name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dedicated_host_group+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPlatformFaultDomainCount(resourceLabel, value):: {
     resource+: {
       azurerm_dedicated_host_group+: {
@@ -98,6 +89,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_dedicated_host_group+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dedicated_host_group+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

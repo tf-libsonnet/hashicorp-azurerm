@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
-    location,
     name,
     private_dns_resolver_id,
     subnet_id,
+    tags=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_resolver_outbound_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    location=location,
     name=name,
     private_dns_resolver_id=private_dns_resolver_id,
     subnet_id=subnet_id,
+    tags=tags,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
@@ -31,6 +31,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subnet_id: subnet_id,
     timeouts: timeouts,
   }),
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_outbound_endpoint+: {
+        [resourceLabel]+: {
+          subnet_id: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_outbound_endpoint+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_outbound_endpoint+: {
-        [resourceLabel]+: {
-          subnet_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_outbound_endpoint+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

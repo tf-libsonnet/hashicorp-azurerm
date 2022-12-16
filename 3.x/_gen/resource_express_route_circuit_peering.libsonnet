@@ -2,72 +2,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    peer_asn=null,
-    secondary_peer_address_prefix=null,
-    resource_group_name,
-    route_filter_id=null,
-    shared_key=null,
     ipv4_enabled=null,
-    vlan_id,
+    secondary_peer_address_prefix=null,
+    peer_asn=null,
+    route_filter_id=null,
     express_route_circuit_name,
+    resource_group_name,
+    shared_key=null,
     peering_type,
+    vlan_id,
     primary_peer_address_prefix=null,
     ipv6=null,
     microsoft_peering_config=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_express_route_circuit_peering', label=resourceLabel, attrs=self.newAttrs(
-    peer_asn=peer_asn,
-    secondary_peer_address_prefix=secondary_peer_address_prefix,
-    resource_group_name=resource_group_name,
-    route_filter_id=route_filter_id,
-    shared_key=shared_key,
     ipv4_enabled=ipv4_enabled,
-    vlan_id=vlan_id,
+    secondary_peer_address_prefix=secondary_peer_address_prefix,
+    peer_asn=peer_asn,
+    route_filter_id=route_filter_id,
     express_route_circuit_name=express_route_circuit_name,
+    resource_group_name=resource_group_name,
+    shared_key=shared_key,
     peering_type=peering_type,
+    vlan_id=vlan_id,
     primary_peer_address_prefix=primary_peer_address_prefix,
     ipv6=ipv6,
     microsoft_peering_config=microsoft_peering_config,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    route_filter_id=null,
-    peering_type,
     ipv4_enabled=null,
+    resource_group_name,
+    peering_type,
     peer_asn=null,
-    secondary_peer_address_prefix=null,
-    shared_key=null,
-    vlan_id,
+    route_filter_id=null,
     express_route_circuit_name,
+    shared_key=null,
+    secondary_peer_address_prefix=null,
+    vlan_id,
     primary_peer_address_prefix=null,
+    timeouts=null,
     ipv6=null,
-    microsoft_peering_config=null,
-    timeouts=null
+    microsoft_peering_config=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    route_filter_id: route_filter_id,
-    peering_type: peering_type,
     ipv4_enabled: ipv4_enabled,
+    resource_group_name: resource_group_name,
+    peering_type: peering_type,
     peer_asn: peer_asn,
-    secondary_peer_address_prefix: secondary_peer_address_prefix,
-    shared_key: shared_key,
-    vlan_id: vlan_id,
+    route_filter_id: route_filter_id,
     express_route_circuit_name: express_route_circuit_name,
+    shared_key: shared_key,
+    secondary_peer_address_prefix: secondary_peer_address_prefix,
+    vlan_id: vlan_id,
     primary_peer_address_prefix: primary_peer_address_prefix,
+    timeouts: timeouts,
     ipv6: ipv6,
     microsoft_peering_config: microsoft_peering_config,
-    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_peering+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withIpv4Enabled(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit_peering+: {
@@ -77,56 +68,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPeerAsn(resourceLabel, value):: {
+  withPeeringType(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit_peering+: {
         [resourceLabel]+: {
-          peer_asn: value,
-        },
-      },
-    },
-  },
-  withSecondaryPeerAddressPrefix(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_peering+: {
-        [resourceLabel]+: {
-          secondary_peer_address_prefix: value,
-        },
-      },
-    },
-  },
-  withPrimaryPeerAddressPrefix(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_peering+: {
-        [resourceLabel]+: {
-          primary_peer_address_prefix: value,
-        },
-      },
-    },
-  },
-  withVlanId(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_peering+: {
-        [resourceLabel]+: {
-          vlan_id: value,
-        },
-      },
-    },
-  },
-  withRouteFilterId(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_peering+: {
-        [resourceLabel]+: {
-          route_filter_id: value,
-        },
-      },
-    },
-  },
-  withSharedKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit_peering+: {
-        [resourceLabel]+: {
-          shared_key: value,
+          peering_type: value,
         },
       },
     },
@@ -140,11 +86,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPeeringType(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit_peering+: {
         [resourceLabel]+: {
-          peering_type: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSecondaryPeerAddressPrefix(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_peering+: {
+        [resourceLabel]+: {
+          secondary_peer_address_prefix: value,
+        },
+      },
+    },
+  },
+  withVlanId(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_peering+: {
+        [resourceLabel]+: {
+          vlan_id: value,
+        },
+      },
+    },
+  },
+  withPeerAsn(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_peering+: {
+        [resourceLabel]+: {
+          peer_asn: value,
+        },
+      },
+    },
+  },
+  withRouteFilterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_peering+: {
+        [resourceLabel]+: {
+          route_filter_id: value,
+        },
+      },
+    },
+  },
+  withPrimaryPeerAddressPrefix(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_peering+: {
+        [resourceLabel]+: {
+          primary_peer_address_prefix: value,
+        },
+      },
+    },
+  },
+  withSharedKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit_peering+: {
+        [resourceLabel]+: {
+          shared_key: value,
         },
       },
     },
@@ -169,27 +169,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ipv6:: {
     new(
+      primary_peer_address_prefix,
       route_filter_id=null,
       secondary_peer_address_prefix,
       enabled=null,
-      primary_peer_address_prefix,
       microsoft_peering=null
     ):: std.prune(a={
+      primary_peer_address_prefix: primary_peer_address_prefix,
       route_filter_id: route_filter_id,
       secondary_peer_address_prefix: secondary_peer_address_prefix,
       enabled: enabled,
-      primary_peer_address_prefix: primary_peer_address_prefix,
       microsoft_peering: microsoft_peering,
     }),
     microsoft_peering:: {
       new(
+        customer_asn=null,
         routing_registry_name=null,
-        advertised_public_prefixes=null,
-        customer_asn=null
+        advertised_public_prefixes=null
       ):: std.prune(a={
+        customer_asn: customer_asn,
         routing_registry_name: routing_registry_name,
         advertised_public_prefixes: advertised_public_prefixes,
-        customer_asn: customer_asn,
       }),
     },
   },
@@ -213,13 +213,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   microsoft_peering_config:: {
     new(
-      advertised_public_prefixes,
       customer_asn=null,
-      routing_registry_name=null
+      routing_registry_name=null,
+      advertised_public_prefixes
     ):: std.prune(a={
-      advertised_public_prefixes: advertised_public_prefixes,
       customer_asn: customer_asn,
       routing_registry_name: routing_registry_name,
+      advertised_public_prefixes: advertised_public_prefixes,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -242,15 +242,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

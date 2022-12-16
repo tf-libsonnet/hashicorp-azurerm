@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_mysql_flexible_server+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_mysql_flexible_server+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_mysql_flexible_server+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

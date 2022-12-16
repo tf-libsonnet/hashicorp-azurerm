@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    default_action=null,
+    web_pubsub_id,
+    public_network=null,
+    timeouts=null,
+    private_endpoint=null
+  ):: tf.withResource(type='azurerm_web_pubsub_network_acl', label=resourceLabel, attrs=self.newAttrs(
+    default_action=default_action,
+    web_pubsub_id=web_pubsub_id,
+    public_network=public_network,
+    timeouts=timeouts,
+    private_endpoint=private_endpoint
+  )),
+  newAttrs(
     web_pubsub_id,
     default_action=null,
     private_endpoint=null,
     public_network=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_web_pubsub_network_acl', label=resourceLabel, attrs=self.newAttrs(
-    web_pubsub_id=web_pubsub_id,
-    default_action=default_action,
-    private_endpoint=private_endpoint,
-    public_network=public_network,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    web_pubsub_id,
-    default_action=null,
-    timeouts=null,
-    private_endpoint=null,
-    public_network=null
   ):: std.prune(a={
     web_pubsub_id: web_pubsub_id,
     default_action: default_action,
-    timeouts: timeouts,
     private_endpoint: private_endpoint,
     public_network: public_network,
+    timeouts: timeouts,
   }),
-  withDefaultAction(resourceLabel, value):: {
-    resource+: {
-      azurerm_web_pubsub_network_acl+: {
-        [resourceLabel]+: {
-          default_action: value,
-        },
-      },
-    },
-  },
   withWebPubsubId(resourceLabel, value):: {
     resource+: {
       azurerm_web_pubsub_network_acl+: {
         [resourceLabel]+: {
           web_pubsub_id: value,
+        },
+      },
+    },
+  },
+  withDefaultAction(resourceLabel, value):: {
+    resource+: {
+      azurerm_web_pubsub_network_acl+: {
+        [resourceLabel]+: {
+          default_action: value,
         },
       },
     },
@@ -65,11 +65,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   private_endpoint:: {
     new(
-      denied_request_types=null,
-      allowed_request_types=null
+      allowed_request_types=null,
+      denied_request_types=null
     ):: std.prune(a={
-      denied_request_types: denied_request_types,
       allowed_request_types: allowed_request_types,
+      denied_request_types: denied_request_types,
     }),
   },
   withPublicNetwork(resourceLabel, value):: {
@@ -119,15 +119,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

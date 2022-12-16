@@ -4,13 +4,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     virtual_hub_id,
     name,
-    timeouts=null,
-    rule=null
+    rule=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_route_map', label=resourceLabel, attrs=self.newAttrs(
     virtual_hub_id=virtual_hub_id,
     name=name,
-    timeouts=timeouts,
-    rule=rule
+    rule=rule,
+    timeouts=timeouts
   )),
   newAttrs(
     name,
@@ -41,6 +41,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_map+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_map+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withRule(resourceLabel, value):: {
     resource+: {
       azurerm_route_map+: {
@@ -61,13 +92,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   rule:: {
     new(
-      next_step_if_matched=null,
       name,
+      next_step_if_matched=null,
       action=null,
       match_criterion=null
     ):: std.prune(a={
-      next_step_if_matched: next_step_if_matched,
       name: name,
+      next_step_if_matched: next_step_if_matched,
       action: action,
       match_criterion: match_criterion,
     }),
@@ -104,36 +135,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         match_condition: match_condition,
       }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_map+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_map+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

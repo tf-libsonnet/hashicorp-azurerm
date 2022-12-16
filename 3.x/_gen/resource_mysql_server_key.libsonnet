@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    server_id,
     key_vault_key_id,
+    server_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_mysql_server_key', label=resourceLabel, attrs=self.newAttrs(server_id=server_id, key_vault_key_id=key_vault_key_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_mysql_server_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_id=key_vault_key_id, server_id=server_id, timeouts=timeouts)),
   newAttrs(
-    server_id,
     key_vault_key_id,
+    server_id,
     timeouts=null
   ):: std.prune(a={
-    server_id: server_id,
     key_vault_key_id: key_vault_key_id,
+    server_id: server_id,
     timeouts: timeouts,
   }),
   withKeyVaultKeyId(resourceLabel, value):: {

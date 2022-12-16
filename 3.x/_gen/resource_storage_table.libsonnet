@@ -4,13 +4,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     name,
     storage_account_name,
-    acl=null,
-    timeouts=null
+    timeouts=null,
+    acl=null
   ):: tf.withResource(type='azurerm_storage_table', label=resourceLabel, attrs=self.newAttrs(
     name=name,
     storage_account_name=storage_account_name,
-    acl=acl,
-    timeouts=timeouts
+    timeouts=timeouts,
+    acl=acl
   )),
   newAttrs(
     name,
@@ -67,13 +67,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     access_policy:: {
       new(
-        expiry,
         permissions,
-        start
+        start,
+        expiry
       ):: std.prune(a={
-        expiry: expiry,
         permissions: permissions,
         start: start,
+        expiry: expiry,
       }),
     },
   },
@@ -97,15 +97,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

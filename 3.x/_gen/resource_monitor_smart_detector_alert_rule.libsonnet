@@ -2,100 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
+    scope_resource_ids,
+    frequency,
+    throttling_duration=null,
+    name,
+    severity,
+    tags=null,
+    description=null,
     detector_type,
     enabled=null,
-    resource_group_name,
-    description=null,
-    severity,
-    throttling_duration=null,
-    frequency,
-    scope_resource_ids,
-    tags=null,
-    name,
-    action_group=null,
-    timeouts=null
+    timeouts=null,
+    action_group=null
   ):: tf.withResource(type='azurerm_monitor_smart_detector_alert_rule', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
+    scope_resource_ids=scope_resource_ids,
+    frequency=frequency,
+    throttling_duration=throttling_duration,
+    name=name,
+    severity=severity,
+    tags=tags,
+    description=description,
     detector_type=detector_type,
     enabled=enabled,
-    resource_group_name=resource_group_name,
-    description=description,
-    severity=severity,
-    throttling_duration=throttling_duration,
-    frequency=frequency,
-    scope_resource_ids=scope_resource_ids,
-    tags=tags,
-    name=name,
-    action_group=action_group,
-    timeouts=timeouts
+    timeouts=timeouts,
+    action_group=action_group
   )),
   newAttrs(
-    frequency,
-    resource_group_name,
-    tags=null,
-    description=null,
-    name,
-    enabled=null,
-    scope_resource_ids,
     severity,
     throttling_duration=null,
+    name,
+    frequency,
+    resource_group_name,
     detector_type,
-    action_group=null,
-    timeouts=null
+    scope_resource_ids,
+    enabled=null,
+    tags=null,
+    description=null,
+    timeouts=null,
+    action_group=null
   ):: std.prune(a={
-    frequency: frequency,
-    resource_group_name: resource_group_name,
-    tags: tags,
-    description: description,
-    name: name,
-    enabled: enabled,
-    scope_resource_ids: scope_resource_ids,
     severity: severity,
     throttling_duration: throttling_duration,
+    name: name,
+    frequency: frequency,
+    resource_group_name: resource_group_name,
     detector_type: detector_type,
-    action_group: action_group,
+    scope_resource_ids: scope_resource_ids,
+    enabled: enabled,
+    tags: tags,
+    description: description,
     timeouts: timeouts,
+    action_group: action_group,
   }),
-  withSeverity(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          severity: value,
-        },
-      },
-    },
-  },
   withThrottlingDuration(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_smart_detector_alert_rule+: {
         [resourceLabel]+: {
           throttling_duration: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_smart_detector_alert_rule+: {
-        [resourceLabel]+: {
-          description: value,
         },
       },
     },
@@ -109,11 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_smart_detector_alert_rule+: {
         [resourceLabel]+: {
-          tags: value,
+          enabled: value,
         },
       },
     },
@@ -136,11 +100,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withScopeResourceIds(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_smart_detector_alert_rule+: {
         [resourceLabel]+: {
           scope_resource_ids: value,
+        },
+      },
+    },
+  },
+  withSeverity(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_smart_detector_alert_rule+: {
+        [resourceLabel]+: {
+          severity: value,
         },
       },
     },
@@ -194,15 +194,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

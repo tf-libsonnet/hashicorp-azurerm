@@ -19,40 +19,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    disk_id,
-    location,
     name,
     snapshot_resource_group_name,
     vault_id,
     backup_policy_id,
+    disk_id,
+    location,
     timeouts=null
   ):: std.prune(a={
-    disk_id: disk_id,
-    location: location,
     name: name,
     snapshot_resource_group_name: snapshot_resource_group_name,
     vault_id: vault_id,
     backup_policy_id: backup_policy_id,
+    disk_id: disk_id,
+    location: location,
     timeouts: timeouts,
   }),
-  withBackupPolicyId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_disk+: {
-        [resourceLabel]+: {
-          backup_policy_id: value,
-        },
-      },
-    },
-  },
-  withDiskId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_backup_instance_disk+: {
-        [resourceLabel]+: {
-          disk_id: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_instance_disk+: {
@@ -89,6 +71,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withBackupPolicyId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_disk+: {
+        [resourceLabel]+: {
+          backup_policy_id: value,
+        },
+      },
+    },
+  },
+  withDiskId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_backup_instance_disk+: {
+        [resourceLabel]+: {
+          disk_id: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_backup_instance_disk+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

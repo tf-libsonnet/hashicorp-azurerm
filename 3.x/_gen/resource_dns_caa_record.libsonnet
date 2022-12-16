@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tags=null,
+    ttl,
     zone_name,
     name,
     resource_group_name,
-    tags=null,
-    ttl,
     record=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dns_caa_record', label=resourceLabel, attrs=self.newAttrs(
+    tags=tags,
+    ttl=ttl,
     zone_name=zone_name,
     name=name,
     resource_group_name=resource_group_name,
-    tags=tags,
-    ttl=ttl,
     record=record,
     timeouts=timeouts
   )),
   newAttrs(
+    tags=null,
     ttl,
     zone_name,
     name,
     resource_group_name,
-    tags=null,
     record=null,
     timeouts=null
   ):: std.prune(a={
+    tags: tags,
     ttl: ttl,
     zone_name: zone_name,
     name: name,
     resource_group_name: resource_group_name,
-    tags: tags,
     record: record,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_caa_record+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_dns_caa_record+: {
@@ -80,6 +71,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_caa_record+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withRecord(resourceLabel, value):: {
     resource+: {
       azurerm_dns_caa_record+: {
@@ -100,13 +100,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   record:: {
     new(
+      tag,
       value,
-      flags,
-      tag
+      flags
     ):: std.prune(a={
+      tag: tag,
       value: value,
       flags: flags,
-      tag: tag,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -129,15 +129,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

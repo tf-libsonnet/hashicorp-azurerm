@@ -2,46 +2,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    maximum_bytes_per_session=null,
     maximum_capture_duration_in_seconds=null,
     name,
     network_watcher_id,
     virtual_machine_scale_set_id,
     maximum_bytes_per_packet=null,
-    maximum_bytes_per_session=null,
-    machine_scope=null,
     storage_location=null,
     timeouts=null,
-    filter=null
+    filter=null,
+    machine_scope=null
   ):: tf.withResource(type='azurerm_virtual_machine_scale_set_packet_capture', label=resourceLabel, attrs=self.newAttrs(
+    maximum_bytes_per_session=maximum_bytes_per_session,
     maximum_capture_duration_in_seconds=maximum_capture_duration_in_seconds,
     name=name,
     network_watcher_id=network_watcher_id,
     virtual_machine_scale_set_id=virtual_machine_scale_set_id,
     maximum_bytes_per_packet=maximum_bytes_per_packet,
-    maximum_bytes_per_session=maximum_bytes_per_session,
-    machine_scope=machine_scope,
     storage_location=storage_location,
     timeouts=timeouts,
-    filter=filter
+    filter=filter,
+    machine_scope=machine_scope
   )),
   newAttrs(
-    maximum_bytes_per_packet=null,
     maximum_bytes_per_session=null,
     maximum_capture_duration_in_seconds=null,
     name,
     network_watcher_id,
     virtual_machine_scale_set_id,
+    maximum_bytes_per_packet=null,
     storage_location=null,
     timeouts=null,
     filter=null,
     machine_scope=null
   ):: std.prune(a={
-    maximum_bytes_per_packet: maximum_bytes_per_packet,
     maximum_bytes_per_session: maximum_bytes_per_session,
     maximum_capture_duration_in_seconds: maximum_capture_duration_in_seconds,
     name: name,
     network_watcher_id: network_watcher_id,
     virtual_machine_scale_set_id: virtual_machine_scale_set_id,
+    maximum_bytes_per_packet: maximum_bytes_per_packet,
     storage_location: storage_location,
     timeouts: timeouts,
     filter: filter,
@@ -101,39 +101,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withFilter(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_scale_set_packet_capture+: {
-        [resourceLabel]+: {
-          filter: value,
-        },
-      },
-    },
-  },
-  withFilterMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_scale_set_packet_capture+: {
-        [resourceLabel]+: {
-          filter+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  filter:: {
-    new(
-      remote_port=null,
-      local_ip_address=null,
-      local_port=null,
-      protocol,
-      remote_ip_address=null
-    ):: std.prune(a={
-      remote_port: remote_port,
-      local_ip_address: local_ip_address,
-      local_port: local_port,
-      protocol: protocol,
-      remote_ip_address: remote_ip_address,
-    }),
-  },
   withMachineScope(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_scale_set_packet_capture+: {
@@ -154,11 +121,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   machine_scope:: {
     new(
-      include_instance_ids=null,
-      exclude_instance_ids=null
+      exclude_instance_ids=null,
+      include_instance_ids=null
     ):: std.prune(a={
-      include_instance_ids: include_instance_ids,
       exclude_instance_ids: exclude_instance_ids,
+      include_instance_ids: include_instance_ids,
     }),
   },
   withStorageLocation(resourceLabel, value):: {
@@ -181,11 +148,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage_location:: {
     new(
-      file_path=null,
-      storage_account_id=null
+      storage_account_id=null,
+      file_path=null
     ):: std.prune(a={
-      file_path: file_path,
       storage_account_id: storage_account_id,
+      file_path: file_path,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -215,6 +182,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       read: read,
       create: create,
       delete: delete,
+    }),
+  },
+  withFilter(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_scale_set_packet_capture+: {
+        [resourceLabel]+: {
+          filter: value,
+        },
+      },
+    },
+  },
+  withFilterMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_scale_set_packet_capture+: {
+        [resourceLabel]+: {
+          filter+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  filter:: {
+    new(
+      local_port=null,
+      protocol,
+      remote_ip_address=null,
+      remote_port=null,
+      local_ip_address=null
+    ):: std.prune(a={
+      local_port: local_port,
+      protocol: protocol,
+      remote_ip_address: remote_ip_address,
+      remote_port: remote_port,
+      local_ip_address: local_ip_address,
     }),
   },
 }

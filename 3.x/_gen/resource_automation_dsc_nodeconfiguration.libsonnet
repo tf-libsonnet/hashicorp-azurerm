@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    resource_group_name,
     automation_account_name,
     content_embedded,
+    name,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_dsc_nodeconfiguration', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
     automation_account_name=automation_account_name,
     content_embedded=content_embedded,
+    name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    automation_account_name,
     content_embedded,
     name,
     resource_group_name,
-    automation_account_name,
     timeouts=null
   ):: std.prune(a={
+    automation_account_name: automation_account_name,
     content_embedded: content_embedded,
     name: name,
     resource_group_name: resource_group_name,
-    automation_account_name: automation_account_name,
     timeouts: timeouts,
   }),
   withAutomationAccountName(resourceLabel, value):: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

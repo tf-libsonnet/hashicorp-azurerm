@@ -2,32 +2,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    account_name,
-    name,
     resource_group_name,
+    name,
+    account_name,
     timeouts=null
   ):: tf.withData(type='azurerm_batch_pool', label=dataSrcLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    name=name,
     resource_group_name=resource_group_name,
+    name=name,
+    account_name=account_name,
     timeouts=timeouts
   )),
   newAttrs(
-    account_name,
     name,
+    account_name,
     resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    account_name: account_name,
     name: name,
+    account_name: account_name,
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
+  withName(dataSrcLabel, value):: {
     data+: {
       azurerm_batch_pool+: {
         [dataSrcLabel]+: {
-          resource_group_name: value,
+          name: value,
         },
       },
     },
@@ -41,11 +41,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
+  withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_batch_pool+: {
         [dataSrcLabel]+: {
-          name: value,
+          resource_group_name: value,
         },
       },
     },

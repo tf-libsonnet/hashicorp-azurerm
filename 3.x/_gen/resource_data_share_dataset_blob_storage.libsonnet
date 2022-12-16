@@ -19,22 +19,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     container_name,
     data_share_id,
     file_path=null,
     folder_path=null,
-    timeouts=null,
-    storage_account=null
+    name,
+    storage_account=null,
+    timeouts=null
   ):: std.prune(a={
-    name: name,
     container_name: container_name,
     data_share_id: data_share_id,
     file_path: file_path,
     folder_path: folder_path,
-    timeouts: timeouts,
+    name: name,
     storage_account: storage_account,
+    timeouts: timeouts,
   }),
+  withContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_blob_storage+: {
+        [resourceLabel]+: {
+          container_name: value,
+        },
+      },
+    },
+  },
+  withDataShareId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_dataset_blob_storage+: {
+        [resourceLabel]+: {
+          data_share_id: value,
+        },
+      },
+    },
+  },
   withFilePath(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_dataset_blob_storage+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_share_dataset_blob_storage+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_blob_storage+: {
-        [resourceLabel]+: {
-          container_name: value,
-        },
-      },
-    },
-  },
-  withDataShareId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_dataset_blob_storage+: {
-        [resourceLabel]+: {
-          data_share_id: value,
         },
       },
     },
@@ -129,13 +129,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

@@ -2,32 +2,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    tags=null,
     location,
     name,
     resource_group_name,
-    tags=null,
-    timeouts=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_data_share_account', label=resourceLabel, attrs=self.newAttrs(
+    tags=tags,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    identity=identity
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
-    location,
-    name,
     resource_group_name,
     tags=null,
+    location,
+    name,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
+    location: location,
+    name: name,
     identity: identity,
     timeouts: timeouts,
   }),
@@ -67,6 +67,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_account+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_share_account+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_data_share_account+: {
@@ -90,37 +121,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type
     ):: std.prune(a={
       type: type,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_account+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_share_account+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
     }),
   },
 }

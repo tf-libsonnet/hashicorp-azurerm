@@ -2,68 +2,59 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    property_columns=null,
-    shared_access_policy_key,
-    stream_analytics_job_name,
-    name,
-    resource_group_name,
-    servicebus_namespace,
     shared_access_policy_name,
     system_property_columns=null,
     topic_name,
+    servicebus_namespace,
+    property_columns=null,
+    resource_group_name,
     authentication_mode=null,
+    shared_access_policy_key,
+    stream_analytics_job_name,
+    name,
     serialization=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_servicebus_topic', label=resourceLabel, attrs=self.newAttrs(
-    property_columns=property_columns,
-    shared_access_policy_key=shared_access_policy_key,
-    stream_analytics_job_name=stream_analytics_job_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    servicebus_namespace=servicebus_namespace,
     shared_access_policy_name=shared_access_policy_name,
     system_property_columns=system_property_columns,
     topic_name=topic_name,
+    servicebus_namespace=servicebus_namespace,
+    property_columns=property_columns,
+    resource_group_name=resource_group_name,
     authentication_mode=authentication_mode,
+    shared_access_policy_key=shared_access_policy_key,
+    stream_analytics_job_name=stream_analytics_job_name,
+    name=name,
     serialization=serialization,
     timeouts=timeouts
   )),
   newAttrs(
-    servicebus_namespace,
+    property_columns=null,
+    resource_group_name,
     shared_access_policy_key,
-    stream_analytics_job_name,
+    servicebus_namespace,
+    shared_access_policy_name,
     system_property_columns=null,
     topic_name,
-    resource_group_name,
     authentication_mode=null,
+    stream_analytics_job_name,
     name,
-    property_columns=null,
-    shared_access_policy_name,
     serialization=null,
     timeouts=null
   ):: std.prune(a={
-    servicebus_namespace: servicebus_namespace,
+    property_columns: property_columns,
+    resource_group_name: resource_group_name,
     shared_access_policy_key: shared_access_policy_key,
-    stream_analytics_job_name: stream_analytics_job_name,
+    servicebus_namespace: servicebus_namespace,
+    shared_access_policy_name: shared_access_policy_name,
     system_property_columns: system_property_columns,
     topic_name: topic_name,
-    resource_group_name: resource_group_name,
     authentication_mode: authentication_mode,
+    stream_analytics_job_name: stream_analytics_job_name,
     name: name,
-    property_columns: property_columns,
-    shared_access_policy_name: shared_access_policy_name,
     serialization: serialization,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_servicebus_topic+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPropertyColumns(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_servicebus_topic+: {
@@ -78,33 +69,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_output_servicebus_topic+: {
         [resourceLabel]+: {
           shared_access_policy_key: value,
-        },
-      },
-    },
-  },
-  withSharedAccessPolicyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_servicebus_topic+: {
-        [resourceLabel]+: {
-          shared_access_policy_name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_servicebus_topic+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withServicebusNamespace(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_servicebus_topic+: {
-        [resourceLabel]+: {
-          servicebus_namespace: value,
         },
       },
     },
@@ -127,11 +91,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSystemPropertyColumns(resourceLabel, value):: {
+  withServicebusNamespace(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_servicebus_topic+: {
         [resourceLabel]+: {
-          system_property_columns: value,
+          servicebus_namespace: value,
         },
       },
     },
@@ -141,6 +105,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_output_servicebus_topic+: {
         [resourceLabel]+: {
           topic_name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_servicebus_topic+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSharedAccessPolicyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_servicebus_topic+: {
+        [resourceLabel]+: {
+          shared_access_policy_name: value,
+        },
+      },
+    },
+  },
+  withSystemPropertyColumns(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_servicebus_topic+: {
+        [resourceLabel]+: {
+          system_property_columns: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_servicebus_topic+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

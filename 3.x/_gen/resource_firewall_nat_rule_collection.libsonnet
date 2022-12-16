@@ -2,19 +2,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    action,
+    azure_firewall_name,
     name,
     priority,
     resource_group_name,
-    action,
-    azure_firewall_name,
     rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_firewall_nat_rule_collection', label=resourceLabel, attrs=self.newAttrs(
+    action=action,
+    azure_firewall_name=azure_firewall_name,
     name=name,
     priority=priority,
     resource_group_name=resource_group_name,
-    action=action,
-    azure_firewall_name=azure_firewall_name,
     rule=rule,
     timeouts=timeouts
   )),
@@ -35,24 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     rule: rule,
     timeouts: timeouts,
   }),
-  withAzureFirewallName(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_nat_rule_collection+: {
-        [resourceLabel]+: {
-          azure_firewall_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_nat_rule_collection+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPriority(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_nat_rule_collection+: {
@@ -80,36 +62,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withAzureFirewallName(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_nat_rule_collection+: {
         [resourceLabel]+: {
-          timeouts: value,
+          azure_firewall_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_firewall_nat_rule_collection+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          name: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
   withRule(resourceLabel, value):: {
     resource+: {
@@ -131,25 +100,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   rule:: {
     new(
-      name,
       translated_port,
-      description=null,
-      source_ip_groups=null,
-      translated_address,
       destination_addresses,
       source_addresses=null,
+      translated_address,
+      description=null,
       protocols,
-      destination_ports
+      source_ip_groups=null,
+      destination_ports,
+      name
     ):: std.prune(a={
-      name: name,
       translated_port: translated_port,
-      description: description,
-      source_ip_groups: source_ip_groups,
-      translated_address: translated_address,
       destination_addresses: destination_addresses,
       source_addresses: source_addresses,
+      translated_address: translated_address,
+      description: description,
       protocols: protocols,
+      source_ip_groups: source_ip_groups,
       destination_ports: destination_ports,
+      name: name,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_nat_rule_collection+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_nat_rule_collection+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

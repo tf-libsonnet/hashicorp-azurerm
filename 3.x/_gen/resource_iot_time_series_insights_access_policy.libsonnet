@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    time_series_insights_environment_id,
     description=null,
     name,
     principal_object_id,
     roles,
-    time_series_insights_environment_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_access_policy', label=resourceLabel, attrs=self.newAttrs(
+    time_series_insights_environment_id=time_series_insights_environment_id,
     description=description,
     name=name,
     principal_object_id=principal_object_id,
     roles=roles,
-    time_series_insights_environment_id=time_series_insights_environment_id,
     timeouts=timeouts
   )),
   newAttrs(
-    principal_object_id,
-    roles,
     time_series_insights_environment_id,
     description=null,
     name,
+    principal_object_id,
+    roles,
     timeouts=null
   ):: std.prune(a={
-    principal_object_id: principal_object_id,
-    roles: roles,
     time_series_insights_environment_id: time_series_insights_environment_id,
     description: description,
     name: name,
+    principal_object_id: principal_object_id,
+    roles: roles,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_access_policy+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPrincipalObjectId(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_access_policy+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_access_policy+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_access_policy+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

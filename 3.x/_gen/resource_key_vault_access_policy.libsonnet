@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    certificate_permissions=null,
-    object_id,
-    secret_permissions=null,
+    key_vault_id,
     tenant_id,
     application_id=null,
-    key_permissions=null,
-    key_vault_id,
+    object_id,
+    secret_permissions=null,
     storage_permissions=null,
+    certificate_permissions=null,
+    key_permissions=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_key_vault_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    certificate_permissions=certificate_permissions,
-    object_id=object_id,
-    secret_permissions=secret_permissions,
+    key_vault_id=key_vault_id,
     tenant_id=tenant_id,
     application_id=application_id,
-    key_permissions=key_permissions,
-    key_vault_id=key_vault_id,
+    object_id=object_id,
+    secret_permissions=secret_permissions,
     storage_permissions=storage_permissions,
+    certificate_permissions=certificate_permissions,
+    key_permissions=key_permissions,
     timeouts=timeouts
   )),
   newAttrs(
+    application_id=null,
+    object_id,
+    secret_permissions=null,
+    storage_permissions=null,
     tenant_id,
     certificate_permissions=null,
-    object_id,
-    storage_permissions=null,
-    application_id=null,
     key_permissions=null,
     key_vault_id,
-    secret_permissions=null,
     timeouts=null
   ):: std.prune(a={
+    application_id: application_id,
+    object_id: object_id,
+    secret_permissions: secret_permissions,
+    storage_permissions: storage_permissions,
     tenant_id: tenant_id,
     certificate_permissions: certificate_permissions,
-    object_id: object_id,
-    storage_permissions: storage_permissions,
-    application_id: application_id,
     key_permissions: key_permissions,
     key_vault_id: key_vault_id,
-    secret_permissions: secret_permissions,
     timeouts: timeouts,
   }),
   withApplicationId(resourceLabel, value):: {
@@ -52,20 +52,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKeyPermissions(resourceLabel, value):: {
+  withObjectId(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_access_policy+: {
         [resourceLabel]+: {
-          key_permissions: value,
-        },
-      },
-    },
-  },
-  withKeyVaultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_key_vault_access_policy+: {
-        [resourceLabel]+: {
-          key_vault_id: value,
+          object_id: value,
         },
       },
     },
@@ -79,6 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withKeyVaultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_key_vault_access_policy+: {
+        [resourceLabel]+: {
+          key_vault_id: value,
+        },
+      },
+    },
+  },
   withCertificatePermissions(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_access_policy+: {
@@ -88,11 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withObjectId(resourceLabel, value):: {
+  withKeyPermissions(resourceLabel, value):: {
     resource+: {
       azurerm_key_vault_access_policy+: {
         [resourceLabel]+: {
-          object_id: value,
+          key_permissions: value,
         },
       },
     },

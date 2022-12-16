@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    redis_cache_id=null,
     api_management_id,
     cache_location=null,
     connection_string,
     description=null,
-    name,
-    redis_cache_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_redis_cache', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    redis_cache_id=redis_cache_id,
     api_management_id=api_management_id,
     cache_location=cache_location,
     connection_string=connection_string,
     description=description,
-    name=name,
-    redis_cache_id=redis_cache_id,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,15 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     redis_cache_id: redis_cache_id,
     timeouts: timeouts,
   }),
-  withCacheLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_redis_cache+: {
-        [resourceLabel]+: {
-          cache_location: value,
-        },
-      },
-    },
-  },
   withConnectionString(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_redis_cache+: {
@@ -85,6 +76,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_redis_cache+: {
         [resourceLabel]+: {
           api_management_id: value,
+        },
+      },
+    },
+  },
+  withCacheLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_redis_cache+: {
+        [resourceLabel]+: {
+          cache_location: value,
         },
       },
     },

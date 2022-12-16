@@ -70,13 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
-      read=null,
-      create=null
+      read=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
-      create: create,
     }),
   },
 }

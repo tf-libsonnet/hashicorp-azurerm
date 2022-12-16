@@ -2,47 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    debug_level=null,
-    parameters_content=null,
-    template_content=null,
-    template_spec_version_id=null,
-    deployment_mode,
-    name,
     resource_group_name,
     tags=null,
+    template_spec_version_id=null,
+    debug_level=null,
+    template_content=null,
+    deployment_mode,
+    name,
+    parameters_content=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_group_template_deployment', label=resourceLabel, attrs=self.newAttrs(
-    debug_level=debug_level,
-    parameters_content=parameters_content,
-    template_content=template_content,
-    template_spec_version_id=template_spec_version_id,
-    deployment_mode=deployment_mode,
-    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    template_spec_version_id=template_spec_version_id,
+    debug_level=debug_level,
+    template_content=template_content,
+    deployment_mode=deployment_mode,
+    name=name,
+    parameters_content=parameters_content,
     timeouts=timeouts
   )),
   newAttrs(
-    deployment_mode,
     parameters_content=null,
+    resource_group_name,
+    tags=null,
+    deployment_mode,
     template_content=null,
     template_spec_version_id=null,
     debug_level=null,
     name,
-    resource_group_name,
-    tags=null,
     timeouts=null
   ):: std.prune(a={
-    deployment_mode: deployment_mode,
     parameters_content: parameters_content,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    deployment_mode: deployment_mode,
     template_content: template_content,
     template_spec_version_id: template_spec_version_id,
     debug_level: debug_level,
     name: name,
-    resource_group_name: resource_group_name,
-    tags: tags,
     timeouts: timeouts,
   }),
+  withDeploymentMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_template_deployment+: {
+        [resourceLabel]+: {
+          deployment_mode: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_template_deployment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withParametersContent(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_template_deployment+: {
@@ -70,33 +88,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDeploymentMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_template_deployment+: {
-        [resourceLabel]+: {
-          deployment_mode: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_template_deployment+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTemplateContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_template_deployment+: {
-        [resourceLabel]+: {
-          template_content: value,
-        },
-      },
-    },
-  },
   withTemplateSpecVersionId(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_template_deployment+: {
@@ -111,6 +102,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_resource_group_template_deployment+: {
         [resourceLabel]+: {
           debug_level: value,
+        },
+      },
+    },
+  },
+  withTemplateContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_template_deployment+: {
+        [resourceLabel]+: {
+          template_content: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

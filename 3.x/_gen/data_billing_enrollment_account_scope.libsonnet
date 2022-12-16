@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enrollment_account_name: enrollment_account_name,
     timeouts: timeouts,
   }),
-  withEnrollmentAccountName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_billing_enrollment_account_scope+: {
-        [dataSrcLabel]+: {
-          enrollment_account_name: value,
-        },
-      },
-    },
-  },
   withBillingAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_billing_enrollment_account_scope+: {
         [dataSrcLabel]+: {
           billing_account_name: value,
+        },
+      },
+    },
+  },
+  withEnrollmentAccountName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_billing_enrollment_account_scope+: {
+        [dataSrcLabel]+: {
+          enrollment_account_name: value,
         },
       },
     },

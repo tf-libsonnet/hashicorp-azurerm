@@ -3,14 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     container_registry_token_id,
+    timeouts=null,
     password1=null,
-    password2=null,
-    timeouts=null
+    password2=null
   ):: tf.withResource(type='azurerm_container_registry_token_password', label=resourceLabel, attrs=self.newAttrs(
     container_registry_token_id=container_registry_token_id,
+    timeouts=timeouts,
     password1=password1,
-    password2=password2,
-    timeouts=timeouts
+    password2=password2
   )),
   newAttrs(
     container_registry_token_id,
@@ -31,6 +31,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withPassword2(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_token_password+: {
+        [resourceLabel]+: {
+          password2: value,
+        },
+      },
+    },
+  },
+  withPassword2Mixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry_token_password+: {
+        [resourceLabel]+: {
+          password2+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  password2:: {
+    new(
+      expiry=null
+    ):: std.prune(a={
+      expiry: expiry,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -82,31 +107,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
   },
   password1:: {
-    new(
-      expiry=null
-    ):: std.prune(a={
-      expiry: expiry,
-    }),
-  },
-  withPassword2(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_token_password+: {
-        [resourceLabel]+: {
-          password2: value,
-        },
-      },
-    },
-  },
-  withPassword2Mixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry_token_password+: {
-        [resourceLabel]+: {
-          password2+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  password2:: {
     new(
       expiry=null
     ):: std.prune(a={

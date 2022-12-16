@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    sku_name,
     tags=null,
     location,
     name,
+    resource_group_name,
+    sku_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_healthbot', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
     tags=tags,
     location=location,
     name=name,
+    resource_group_name=resource_group_name,
+    sku_name=sku_name,
     timeouts=timeouts
   )),
   newAttrs(
+    sku_name,
+    tags=null,
     location,
     name,
     resource_group_name,
-    sku_name,
-    tags=null,
     timeouts=null
   ):: std.prune(a={
+    sku_name: sku_name,
+    tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    sku_name: sku_name,
-    tags: tags,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthbot+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_healthbot+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_healthbot+: {
@@ -76,6 +58,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthbot+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_healthbot+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_healthbot+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

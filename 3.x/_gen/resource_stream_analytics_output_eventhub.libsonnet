@@ -2,59 +2,86 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    authentication_mode=null,
-    partition_key=null,
-    property_columns=null,
-    eventhub_name,
     name,
-    stream_analytics_job_name,
-    shared_access_policy_key=null,
-    shared_access_policy_name=null,
-    resource_group_name,
     servicebus_namespace,
-    serialization=null,
-    timeouts=null
+    authentication_mode=null,
+    resource_group_name,
+    shared_access_policy_key=null,
+    partition_key=null,
+    stream_analytics_job_name,
+    shared_access_policy_name=null,
+    eventhub_name,
+    property_columns=null,
+    timeouts=null,
+    serialization=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_eventhub', label=resourceLabel, attrs=self.newAttrs(
-    authentication_mode=authentication_mode,
-    partition_key=partition_key,
-    property_columns=property_columns,
-    eventhub_name=eventhub_name,
     name=name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    shared_access_policy_key=shared_access_policy_key,
-    shared_access_policy_name=shared_access_policy_name,
-    resource_group_name=resource_group_name,
     servicebus_namespace=servicebus_namespace,
-    serialization=serialization,
-    timeouts=timeouts
+    authentication_mode=authentication_mode,
+    resource_group_name=resource_group_name,
+    shared_access_policy_key=shared_access_policy_key,
+    partition_key=partition_key,
+    stream_analytics_job_name=stream_analytics_job_name,
+    shared_access_policy_name=shared_access_policy_name,
+    eventhub_name=eventhub_name,
+    property_columns=property_columns,
+    timeouts=timeouts,
+    serialization=serialization
   )),
   newAttrs(
     servicebus_namespace,
-    name,
-    stream_analytics_job_name,
-    authentication_mode=null,
-    partition_key=null,
-    property_columns=null,
-    resource_group_name,
-    shared_access_policy_key=null,
     eventhub_name,
     shared_access_policy_name=null,
+    partition_key=null,
+    name,
+    property_columns=null,
+    stream_analytics_job_name,
+    authentication_mode=null,
+    shared_access_policy_key=null,
+    resource_group_name,
     serialization=null,
     timeouts=null
   ):: std.prune(a={
     servicebus_namespace: servicebus_namespace,
-    name: name,
-    stream_analytics_job_name: stream_analytics_job_name,
-    authentication_mode: authentication_mode,
-    partition_key: partition_key,
-    property_columns: property_columns,
-    resource_group_name: resource_group_name,
-    shared_access_policy_key: shared_access_policy_key,
     eventhub_name: eventhub_name,
     shared_access_policy_name: shared_access_policy_name,
+    partition_key: partition_key,
+    name: name,
+    property_columns: property_columns,
+    stream_analytics_job_name: stream_analytics_job_name,
+    authentication_mode: authentication_mode,
+    shared_access_policy_key: shared_access_policy_key,
+    resource_group_name: resource_group_name,
     serialization: serialization,
     timeouts: timeouts,
   }),
+  withPartitionKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_eventhub+: {
+        [resourceLabel]+: {
+          partition_key: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_eventhub+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_eventhub+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withPropertyColumns(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_eventhub+: {
@@ -73,56 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEventhubName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_eventhub+: {
-        [resourceLabel]+: {
-          eventhub_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_eventhub+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withStreamAnalyticsJobName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_eventhub+: {
         [resourceLabel]+: {
           stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
-  withPartitionKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_eventhub+: {
-        [resourceLabel]+: {
-          partition_key: value,
-        },
-      },
-    },
-  },
-  withSharedAccessPolicyKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_eventhub+: {
-        [resourceLabel]+: {
-          shared_access_policy_key: value,
-        },
-      },
-    },
-  },
-  withSharedAccessPolicyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_eventhub+: {
-        [resourceLabel]+: {
-          shared_access_policy_name: value,
         },
       },
     },
@@ -136,11 +118,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withSharedAccessPolicyKey(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_eventhub+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          shared_access_policy_key: value,
+        },
+      },
+    },
+  },
+  withEventhubName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_eventhub+: {
+        [resourceLabel]+: {
+          eventhub_name: value,
+        },
+      },
+    },
+  },
+  withSharedAccessPolicyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_eventhub+: {
+        [resourceLabel]+: {
+          shared_access_policy_name: value,
         },
       },
     },
@@ -165,15 +165,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   serialization:: {
     new(
+      format=null,
       type,
       encoding=null,
-      field_delimiter=null,
-      format=null
+      field_delimiter=null
     ):: std.prune(a={
+      format: format,
       type: type,
       encoding: encoding,
       field_delimiter: field_delimiter,
-      format: format,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -196,15 +196,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

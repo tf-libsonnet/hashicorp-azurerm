@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    eventhub_namespace_id,
     key_vault_key_ids,
+    eventhub_namespace_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(eventhub_namespace_id=eventhub_namespace_id, key_vault_key_ids=key_vault_key_ids, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_eventhub_namespace_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_ids=key_vault_key_ids, eventhub_namespace_id=eventhub_namespace_id, timeouts=timeouts)),
   newAttrs(
     eventhub_namespace_id,
     key_vault_key_ids,
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

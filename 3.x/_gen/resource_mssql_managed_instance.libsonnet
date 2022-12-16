@@ -2,131 +2,95 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    dns_zone_partner_id=null,
-    name,
-    proxy_override=null,
-    sku_name,
     vcores,
-    storage_account_type=null,
+    sku_name,
+    maintenance_configuration_name=null,
     subnet_id,
     tags=null,
-    location,
-    administrator_login_password,
     license_type,
-    timezone_id=null,
-    collation=null,
-    maintenance_configuration_name=null,
-    storage_size_in_gb,
-    resource_group_name,
-    minimum_tls_version=null,
+    proxy_override=null,
+    administrator_login_password,
     public_data_endpoint_enabled=null,
+    resource_group_name,
+    storage_account_type=null,
     administrator_login,
+    minimum_tls_version=null,
+    location,
+    dns_zone_partner_id=null,
+    collation=null,
+    name,
+    storage_size_in_gb,
+    timezone_id=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_mssql_managed_instance', label=resourceLabel, attrs=self.newAttrs(
-    dns_zone_partner_id=dns_zone_partner_id,
-    name=name,
-    proxy_override=proxy_override,
-    sku_name=sku_name,
     vcores=vcores,
-    storage_account_type=storage_account_type,
+    sku_name=sku_name,
+    maintenance_configuration_name=maintenance_configuration_name,
     subnet_id=subnet_id,
     tags=tags,
-    location=location,
-    administrator_login_password=administrator_login_password,
     license_type=license_type,
-    timezone_id=timezone_id,
-    collation=collation,
-    maintenance_configuration_name=maintenance_configuration_name,
-    storage_size_in_gb=storage_size_in_gb,
-    resource_group_name=resource_group_name,
-    minimum_tls_version=minimum_tls_version,
+    proxy_override=proxy_override,
+    administrator_login_password=administrator_login_password,
     public_data_endpoint_enabled=public_data_endpoint_enabled,
+    resource_group_name=resource_group_name,
+    storage_account_type=storage_account_type,
     administrator_login=administrator_login,
+    minimum_tls_version=minimum_tls_version,
+    location=location,
+    dns_zone_partner_id=dns_zone_partner_id,
+    collation=collation,
+    name=name,
+    storage_size_in_gb=storage_size_in_gb,
+    timezone_id=timezone_id,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_size_in_gb,
-    tags=null,
-    administrator_login_password,
-    storage_account_type=null,
-    timezone_id=null,
-    subnet_id,
     proxy_override=null,
-    dns_zone_partner_id=null,
-    administrator_login,
-    location,
-    name,
-    public_data_endpoint_enabled=null,
-    resource_group_name,
-    vcores,
-    minimum_tls_version=null,
-    sku_name,
     collation=null,
-    maintenance_configuration_name=null,
+    storage_account_type=null,
+    location,
     license_type,
+    tags=null,
+    minimum_tls_version=null,
+    subnet_id,
+    name,
+    resource_group_name,
+    timezone_id=null,
+    vcores,
+    sku_name,
+    dns_zone_partner_id=null,
+    maintenance_configuration_name=null,
+    storage_size_in_gb,
+    administrator_login_password,
+    administrator_login,
+    public_data_endpoint_enabled=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    storage_size_in_gb: storage_size_in_gb,
-    tags: tags,
-    administrator_login_password: administrator_login_password,
-    storage_account_type: storage_account_type,
-    timezone_id: timezone_id,
-    subnet_id: subnet_id,
     proxy_override: proxy_override,
-    dns_zone_partner_id: dns_zone_partner_id,
-    administrator_login: administrator_login,
-    location: location,
-    name: name,
-    public_data_endpoint_enabled: public_data_endpoint_enabled,
-    resource_group_name: resource_group_name,
-    vcores: vcores,
-    minimum_tls_version: minimum_tls_version,
-    sku_name: sku_name,
     collation: collation,
-    maintenance_configuration_name: maintenance_configuration_name,
+    storage_account_type: storage_account_type,
+    location: location,
     license_type: license_type,
+    tags: tags,
+    minimum_tls_version: minimum_tls_version,
+    subnet_id: subnet_id,
+    name: name,
+    resource_group_name: resource_group_name,
+    timezone_id: timezone_id,
+    vcores: vcores,
+    sku_name: sku_name,
+    dns_zone_partner_id: dns_zone_partner_id,
+    maintenance_configuration_name: maintenance_configuration_name,
+    storage_size_in_gb: storage_size_in_gb,
+    administrator_login_password: administrator_login_password,
+    administrator_login: administrator_login,
+    public_data_endpoint_enabled: public_data_endpoint_enabled,
     identity: identity,
     timeouts: timeouts,
   }),
-  withProxyOverride(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          proxy_override: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withMinimumTlsVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          minimum_tls_version: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withAdministratorLogin(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
@@ -145,29 +109,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubnetId(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          subnet_id: value,
+          tags: value,
         },
       },
     },
   },
-  withPublicDataEndpointEnabled(resourceLabel, value):: {
+  withProxyOverride(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          public_data_endpoint_enabled: value,
+          proxy_override: value,
         },
       },
     },
   },
-  withLicenseType(resourceLabel, value):: {
+  withStorageSizeInGb(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          license_type: value,
+          storage_size_in_gb: value,
         },
       },
     },
@@ -177,6 +141,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
           timezone_id: value,
+        },
+      },
+    },
+  },
+  withLicenseType(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          license_type: value,
         },
       },
     },
@@ -199,20 +172,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCollation(resourceLabel, value):: {
+  withMinimumTlsVersion(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          collation: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_managed_instance+: {
-        [resourceLabel]+: {
-          location: value,
+          minimum_tls_version: value,
         },
       },
     },
@@ -226,11 +190,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageSizeInGb(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
-          storage_size_in_gb: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withPublicDataEndpointEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          public_data_endpoint_enabled: value,
+        },
+      },
+    },
+  },
+  withSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          subnet_id: value,
         },
       },
     },
@@ -249,6 +231,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_mssql_managed_instance+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withCollation(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_managed_instance+: {
+        [resourceLabel]+: {
+          collation: value,
         },
       },
     },
@@ -282,11 +282,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      type,
-      identity_ids=null
+      identity_ids=null,
+      type
     ):: std.prune(a={
-      type: type,
       identity_ids: identity_ids,
+      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -309,15 +309,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

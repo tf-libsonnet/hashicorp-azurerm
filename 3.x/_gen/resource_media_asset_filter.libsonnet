@@ -2,34 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     asset_id,
     first_quality_bitrate=null,
+    name,
+    presentation_time_range=null,
+    timeouts=null,
+    track_selection=null
+  ):: tf.withResource(type='azurerm_media_asset_filter', label=resourceLabel, attrs=self.newAttrs(
+    asset_id=asset_id,
+    first_quality_bitrate=first_quality_bitrate,
+    name=name,
+    presentation_time_range=presentation_time_range,
+    timeouts=timeouts,
+    track_selection=track_selection
+  )),
+  newAttrs(
+    asset_id,
+    first_quality_bitrate=null,
+    name,
     timeouts=null,
     track_selection=null,
     presentation_time_range=null
-  ):: tf.withResource(type='azurerm_media_asset_filter', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    asset_id=asset_id,
-    first_quality_bitrate=first_quality_bitrate,
-    timeouts=timeouts,
-    track_selection=track_selection,
-    presentation_time_range=presentation_time_range
-  )),
-  newAttrs(
-    first_quality_bitrate=null,
-    name,
-    asset_id,
-    track_selection=null,
-    presentation_time_range=null,
-    timeouts=null
   ):: std.prune(a={
+    asset_id: asset_id,
     first_quality_bitrate: first_quality_bitrate,
     name: name,
-    asset_id: asset_id,
+    timeouts: timeouts,
     track_selection: track_selection,
     presentation_time_range: presentation_time_range,
-    timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
     resource+: {
@@ -84,13 +84,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     condition:: {
       new(
-        value=null,
         operation=null,
-        property=null
+        property=null,
+        value=null
       ):: std.prune(a={
-        value: value,
         operation: operation,
         property: property,
+        value: value,
       }),
     },
   },
@@ -114,19 +114,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   presentation_time_range:: {
     new(
-      end_in_units=null,
       force_end=null,
       live_backoff_in_units=null,
       presentation_window_in_units=null,
       start_in_units=null,
-      unit_timescale_in_miliseconds=null
+      unit_timescale_in_miliseconds=null,
+      end_in_units=null
     ):: std.prune(a={
-      end_in_units: end_in_units,
       force_end: force_end,
       live_backoff_in_units: live_backoff_in_units,
       presentation_window_in_units: presentation_window_in_units,
       start_in_units: start_in_units,
       unit_timescale_in_miliseconds: unit_timescale_in_miliseconds,
+      end_in_units: end_in_units,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -149,15 +149,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

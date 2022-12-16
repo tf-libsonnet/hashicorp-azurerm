@@ -2,240 +2,240 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    custom_data=null,
-    overprovision=null,
-    secure_boot_enabled=null,
-    single_placement_group=null,
-    host_group_id=null,
-    scale_in_policy=null,
-    eviction_policy=null,
-    provision_vm_agent=null,
-    instances=null,
-    edge_zone=null,
-    capacity_reservation_group_id=null,
-    vtpm_enabled=null,
-    name,
-    upgrade_mode=null,
-    user_data=null,
     admin_password=null,
-    encryption_at_host_enabled=null,
-    platform_fault_domain_count=null,
-    admin_username,
-    sku,
-    extension_operations_enabled=null,
-    disable_password_authentication=null,
-    computer_name_prefix=null,
-    location,
-    priority=null,
-    max_bid_price=null,
-    resource_group_name,
-    source_image_id=null,
-    tags=null,
     do_not_run_extensions_on_overprovisioned_machines=null,
-    health_probe_id=null,
-    proximity_placement_group_id=null,
     zones=null,
-    extensions_time_budget=null,
+    health_probe_id=null,
+    user_data=null,
+    resource_group_name,
+    secure_boot_enabled=null,
     zone_balance=null,
-    rolling_upgrade_policy=null,
-    automatic_os_upgrade_policy=null,
-    extension=null,
-    automatic_instance_repair=null,
-    admin_ssh_key=null,
-    boot_diagnostics=null,
-    secret=null,
-    identity=null,
-    additional_capabilities=null,
-    terminate_notification=null,
-    timeouts=null,
-    scale_in=null,
-    gallery_application=null,
+    admin_username,
+    priority=null,
+    disable_password_authentication=null,
+    location,
+    upgrade_mode=null,
+    capacity_reservation_group_id=null,
+    eviction_policy=null,
+    overprovision=null,
+    platform_fault_domain_count=null,
+    tags=null,
+    name,
+    custom_data=null,
+    edge_zone=null,
+    encryption_at_host_enabled=null,
+    max_bid_price=null,
+    proximity_placement_group_id=null,
+    extensions_time_budget=null,
+    provision_vm_agent=null,
+    vtpm_enabled=null,
+    host_group_id=null,
+    sku,
+    source_image_id=null,
+    extension_operations_enabled=null,
+    single_placement_group=null,
+    computer_name_prefix=null,
+    instances=null,
+    scale_in_policy=null,
     gallery_applications=null,
-    termination_notification=null,
-    data_disk=null,
+    identity=null,
     spot_restore=null,
     source_image_reference=null,
+    terminate_notification=null,
+    termination_notification=null,
+    gallery_application=null,
+    secret=null,
     plan=null,
+    extension=null,
     network_interface=null,
-    os_disk=null
+    admin_ssh_key=null,
+    scale_in=null,
+    automatic_os_upgrade_policy=null,
+    timeouts=null,
+    automatic_instance_repair=null,
+    os_disk=null,
+    additional_capabilities=null,
+    boot_diagnostics=null,
+    rolling_upgrade_policy=null,
+    data_disk=null
   ):: tf.withResource(type='azurerm_linux_virtual_machine_scale_set', label=resourceLabel, attrs=self.newAttrs(
-    custom_data=custom_data,
-    overprovision=overprovision,
-    secure_boot_enabled=secure_boot_enabled,
-    single_placement_group=single_placement_group,
-    host_group_id=host_group_id,
-    scale_in_policy=scale_in_policy,
-    eviction_policy=eviction_policy,
-    provision_vm_agent=provision_vm_agent,
-    instances=instances,
-    edge_zone=edge_zone,
-    capacity_reservation_group_id=capacity_reservation_group_id,
-    vtpm_enabled=vtpm_enabled,
-    name=name,
-    upgrade_mode=upgrade_mode,
-    user_data=user_data,
     admin_password=admin_password,
-    encryption_at_host_enabled=encryption_at_host_enabled,
-    platform_fault_domain_count=platform_fault_domain_count,
-    admin_username=admin_username,
-    sku=sku,
-    extension_operations_enabled=extension_operations_enabled,
-    disable_password_authentication=disable_password_authentication,
-    computer_name_prefix=computer_name_prefix,
-    location=location,
-    priority=priority,
-    max_bid_price=max_bid_price,
-    resource_group_name=resource_group_name,
-    source_image_id=source_image_id,
-    tags=tags,
     do_not_run_extensions_on_overprovisioned_machines=do_not_run_extensions_on_overprovisioned_machines,
-    health_probe_id=health_probe_id,
-    proximity_placement_group_id=proximity_placement_group_id,
     zones=zones,
-    extensions_time_budget=extensions_time_budget,
+    health_probe_id=health_probe_id,
+    user_data=user_data,
+    resource_group_name=resource_group_name,
+    secure_boot_enabled=secure_boot_enabled,
     zone_balance=zone_balance,
-    rolling_upgrade_policy=rolling_upgrade_policy,
-    automatic_os_upgrade_policy=automatic_os_upgrade_policy,
-    extension=extension,
-    automatic_instance_repair=automatic_instance_repair,
-    admin_ssh_key=admin_ssh_key,
-    boot_diagnostics=boot_diagnostics,
-    secret=secret,
-    identity=identity,
-    additional_capabilities=additional_capabilities,
-    terminate_notification=terminate_notification,
-    timeouts=timeouts,
-    scale_in=scale_in,
-    gallery_application=gallery_application,
+    admin_username=admin_username,
+    priority=priority,
+    disable_password_authentication=disable_password_authentication,
+    location=location,
+    upgrade_mode=upgrade_mode,
+    capacity_reservation_group_id=capacity_reservation_group_id,
+    eviction_policy=eviction_policy,
+    overprovision=overprovision,
+    platform_fault_domain_count=platform_fault_domain_count,
+    tags=tags,
+    name=name,
+    custom_data=custom_data,
+    edge_zone=edge_zone,
+    encryption_at_host_enabled=encryption_at_host_enabled,
+    max_bid_price=max_bid_price,
+    proximity_placement_group_id=proximity_placement_group_id,
+    extensions_time_budget=extensions_time_budget,
+    provision_vm_agent=provision_vm_agent,
+    vtpm_enabled=vtpm_enabled,
+    host_group_id=host_group_id,
+    sku=sku,
+    source_image_id=source_image_id,
+    extension_operations_enabled=extension_operations_enabled,
+    single_placement_group=single_placement_group,
+    computer_name_prefix=computer_name_prefix,
+    instances=instances,
+    scale_in_policy=scale_in_policy,
     gallery_applications=gallery_applications,
-    termination_notification=termination_notification,
-    data_disk=data_disk,
+    identity=identity,
     spot_restore=spot_restore,
     source_image_reference=source_image_reference,
+    terminate_notification=terminate_notification,
+    termination_notification=termination_notification,
+    gallery_application=gallery_application,
+    secret=secret,
     plan=plan,
+    extension=extension,
     network_interface=network_interface,
-    os_disk=os_disk
+    admin_ssh_key=admin_ssh_key,
+    scale_in=scale_in,
+    automatic_os_upgrade_policy=automatic_os_upgrade_policy,
+    timeouts=timeouts,
+    automatic_instance_repair=automatic_instance_repair,
+    os_disk=os_disk,
+    additional_capabilities=additional_capabilities,
+    boot_diagnostics=boot_diagnostics,
+    rolling_upgrade_policy=rolling_upgrade_policy,
+    data_disk=data_disk
   )),
   newAttrs(
-    disable_password_authentication=null,
-    resource_group_name,
     extensions_time_budget=null,
-    name,
-    admin_password=null,
-    edge_zone=null,
-    source_image_id=null,
-    priority=null,
-    do_not_run_extensions_on_overprovisioned_machines=null,
-    zone_balance=null,
-    scale_in_policy=null,
-    health_probe_id=null,
-    secure_boot_enabled=null,
-    encryption_at_host_enabled=null,
-    provision_vm_agent=null,
-    instances=null,
-    capacity_reservation_group_id=null,
-    platform_fault_domain_count=null,
-    sku,
     max_bid_price=null,
-    location,
-    eviction_policy=null,
     extension_operations_enabled=null,
-    custom_data=null,
     zones=null,
-    computer_name_prefix=null,
-    upgrade_mode=null,
-    tags=null,
-    vtpm_enabled=null,
-    host_group_id=null,
-    proximity_placement_group_id=null,
-    overprovision=null,
-    user_data=null,
-    single_placement_group=null,
+    instances=null,
+    scale_in_policy=null,
     admin_username,
-    termination_notification=null,
-    data_disk=null,
-    plan=null,
-    admin_ssh_key=null,
-    identity=null,
+    custom_data=null,
+    edge_zone=null,
+    user_data=null,
+    vtpm_enabled=null,
+    location,
+    proximity_placement_group_id=null,
+    encryption_at_host_enabled=null,
+    disable_password_authentication=null,
+    upgrade_mode=null,
+    do_not_run_extensions_on_overprovisioned_machines=null,
+    secure_boot_enabled=null,
+    zone_balance=null,
+    overprovision=null,
+    source_image_id=null,
+    eviction_policy=null,
+    tags=null,
+    platform_fault_domain_count=null,
+    host_group_id=null,
+    health_probe_id=null,
+    computer_name_prefix=null,
+    capacity_reservation_group_id=null,
+    name,
+    provision_vm_agent=null,
+    single_placement_group=null,
+    priority=null,
+    sku,
+    admin_password=null,
+    resource_group_name,
     additional_capabilities=null,
+    boot_diagnostics=null,
+    rolling_upgrade_policy=null,
+    termination_notification=null,
+    admin_ssh_key=null,
+    gallery_applications=null,
+    plan=null,
+    extension=null,
+    network_interface=null,
+    automatic_instance_repair=null,
+    automatic_os_upgrade_policy=null,
+    os_disk=null,
     scale_in=null,
     spot_restore=null,
+    source_image_reference=null,
+    data_disk=null,
     gallery_application=null,
-    gallery_applications=null,
-    secret=null,
-    rolling_upgrade_policy=null,
-    automatic_os_upgrade_policy=null,
-    automatic_instance_repair=null,
-    network_interface=null,
-    boot_diagnostics=null,
     terminate_notification=null,
-    extension=null,
+    identity=null,
     timeouts=null,
-    os_disk=null,
-    source_image_reference=null
+    secret=null
   ):: std.prune(a={
-    disable_password_authentication: disable_password_authentication,
-    resource_group_name: resource_group_name,
     extensions_time_budget: extensions_time_budget,
-    name: name,
-    admin_password: admin_password,
-    edge_zone: edge_zone,
-    source_image_id: source_image_id,
-    priority: priority,
-    do_not_run_extensions_on_overprovisioned_machines: do_not_run_extensions_on_overprovisioned_machines,
-    zone_balance: zone_balance,
-    scale_in_policy: scale_in_policy,
-    health_probe_id: health_probe_id,
-    secure_boot_enabled: secure_boot_enabled,
-    encryption_at_host_enabled: encryption_at_host_enabled,
-    provision_vm_agent: provision_vm_agent,
-    instances: instances,
-    capacity_reservation_group_id: capacity_reservation_group_id,
-    platform_fault_domain_count: platform_fault_domain_count,
-    sku: sku,
     max_bid_price: max_bid_price,
-    location: location,
-    eviction_policy: eviction_policy,
     extension_operations_enabled: extension_operations_enabled,
-    custom_data: custom_data,
     zones: zones,
-    computer_name_prefix: computer_name_prefix,
-    upgrade_mode: upgrade_mode,
-    tags: tags,
-    vtpm_enabled: vtpm_enabled,
-    host_group_id: host_group_id,
-    proximity_placement_group_id: proximity_placement_group_id,
-    overprovision: overprovision,
-    user_data: user_data,
-    single_placement_group: single_placement_group,
+    instances: instances,
+    scale_in_policy: scale_in_policy,
     admin_username: admin_username,
-    termination_notification: termination_notification,
-    data_disk: data_disk,
-    plan: plan,
-    admin_ssh_key: admin_ssh_key,
-    identity: identity,
+    custom_data: custom_data,
+    edge_zone: edge_zone,
+    user_data: user_data,
+    vtpm_enabled: vtpm_enabled,
+    location: location,
+    proximity_placement_group_id: proximity_placement_group_id,
+    encryption_at_host_enabled: encryption_at_host_enabled,
+    disable_password_authentication: disable_password_authentication,
+    upgrade_mode: upgrade_mode,
+    do_not_run_extensions_on_overprovisioned_machines: do_not_run_extensions_on_overprovisioned_machines,
+    secure_boot_enabled: secure_boot_enabled,
+    zone_balance: zone_balance,
+    overprovision: overprovision,
+    source_image_id: source_image_id,
+    eviction_policy: eviction_policy,
+    tags: tags,
+    platform_fault_domain_count: platform_fault_domain_count,
+    host_group_id: host_group_id,
+    health_probe_id: health_probe_id,
+    computer_name_prefix: computer_name_prefix,
+    capacity_reservation_group_id: capacity_reservation_group_id,
+    name: name,
+    provision_vm_agent: provision_vm_agent,
+    single_placement_group: single_placement_group,
+    priority: priority,
+    sku: sku,
+    admin_password: admin_password,
+    resource_group_name: resource_group_name,
     additional_capabilities: additional_capabilities,
+    boot_diagnostics: boot_diagnostics,
+    rolling_upgrade_policy: rolling_upgrade_policy,
+    termination_notification: termination_notification,
+    admin_ssh_key: admin_ssh_key,
+    gallery_applications: gallery_applications,
+    plan: plan,
+    extension: extension,
+    network_interface: network_interface,
+    automatic_instance_repair: automatic_instance_repair,
+    automatic_os_upgrade_policy: automatic_os_upgrade_policy,
+    os_disk: os_disk,
     scale_in: scale_in,
     spot_restore: spot_restore,
-    gallery_application: gallery_application,
-    gallery_applications: gallery_applications,
-    secret: secret,
-    rolling_upgrade_policy: rolling_upgrade_policy,
-    automatic_os_upgrade_policy: automatic_os_upgrade_policy,
-    automatic_instance_repair: automatic_instance_repair,
-    network_interface: network_interface,
-    boot_diagnostics: boot_diagnostics,
-    terminate_notification: terminate_notification,
-    extension: extension,
-    timeouts: timeouts,
-    os_disk: os_disk,
     source_image_reference: source_image_reference,
+    data_disk: data_disk,
+    gallery_application: gallery_application,
+    terminate_notification: terminate_notification,
+    identity: identity,
+    timeouts: timeouts,
+    secret: secret,
   }),
-  withCapacityReservationGroupId(resourceLabel, value):: {
+  withMaxBidPrice(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          capacity_reservation_group_id: value,
+          max_bid_price: value,
         },
       },
     },
@@ -249,218 +249,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEvictionPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          eviction_policy: value,
-        },
-      },
-    },
-  },
-  withHealthProbeId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          health_probe_id: value,
-        },
-      },
-    },
-  },
-  withDisablePasswordAuthentication(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          disable_password_authentication: value,
-        },
-      },
-    },
-  },
-  withComputerNamePrefix(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          computer_name_prefix: value,
-        },
-      },
-    },
-  },
-  withExtensionsTimeBudget(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          extensions_time_budget: value,
-        },
-      },
-    },
-  },
-  withSecureBootEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          secure_boot_enabled: value,
-        },
-      },
-    },
-  },
-  withVtpmEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          vtpm_enabled: value,
-        },
-      },
-    },
-  },
-  withScaleInPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          scale_in_policy: value,
-        },
-      },
-    },
-  },
-  withMaxBidPrice(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          max_bid_price: value,
-        },
-      },
-    },
-  },
-  withUserData(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          user_data: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withAdminUsername(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          admin_username: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSinglePlacementGroup(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          single_placement_group: value,
-        },
-      },
-    },
-  },
-  withExtensionOperationsEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          extension_operations_enabled: value,
-        },
-      },
-    },
-  },
-  withProximityPlacementGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          proximity_placement_group_id: value,
-        },
-      },
-    },
-  },
-  withDoNotRunExtensionsOnOverprovisionedMachines(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          do_not_run_extensions_on_overprovisioned_machines: value,
-        },
-      },
-    },
-  },
-  withEdgeZone(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          edge_zone: value,
-        },
-      },
-    },
-  },
-  withCustomData(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          custom_data: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withInstances(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
           instances: value,
-        },
-      },
-    },
-  },
-  withAdminPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          admin_password: value,
-        },
-      },
-    },
-  },
-  withEncryptionAtHostEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          encryption_at_host_enabled: value,
         },
       },
     },
@@ -474,6 +267,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEncryptionAtHostEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          encryption_at_host_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withPriority(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
@@ -483,20 +303,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withZoneBalance(resourceLabel, value):: {
+  withCapacityReservationGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          zone_balance: value,
-        },
-      },
-    },
-  },
-  withSourceImageId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          source_image_id: value,
+          capacity_reservation_group_id: value,
         },
       },
     },
@@ -519,11 +330,137 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withProximityPlacementGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          proximity_placement_group_id: value,
+        },
+      },
+    },
+  },
+  withExtensionsTimeBudget(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          extensions_time_budget: value,
+        },
+      },
+    },
+  },
+  withDoNotRunExtensionsOnOverprovisionedMachines(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          do_not_run_extensions_on_overprovisioned_machines: value,
+        },
+      },
+    },
+  },
+  withSinglePlacementGroup(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          single_placement_group: value,
+        },
+      },
+    },
+  },
   withUpgradeMode(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
           upgrade_mode: value,
+        },
+      },
+    },
+  },
+  withAdminUsername(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          admin_username: value,
+        },
+      },
+    },
+  },
+  withCustomData(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          custom_data: value,
+        },
+      },
+    },
+  },
+  withSourceImageId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          source_image_id: value,
+        },
+      },
+    },
+  },
+  withDisablePasswordAuthentication(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          disable_password_authentication: value,
+        },
+      },
+    },
+  },
+  withEdgeZone(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          edge_zone: value,
+        },
+      },
+    },
+  },
+  withSecureBootEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          secure_boot_enabled: value,
+        },
+      },
+    },
+  },
+  withVtpmEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          vtpm_enabled: value,
+        },
+      },
+    },
+  },
+  withZoneBalance(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          zone_balance: value,
+        },
+      },
+    },
+  },
+  withHealthProbeId(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          health_probe_id: value,
         },
       },
     },
@@ -546,278 +483,125 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withUserData(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          timeouts: value,
+          user_data: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withAdminPassword(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          admin_password: value,
         },
       },
     },
   },
-  timeouts:: {
+  withComputerNamePrefix(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          computer_name_prefix: value,
+        },
+      },
+    },
+  },
+  withScaleInPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          scale_in_policy: value,
+        },
+      },
+    },
+  },
+  withEvictionPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          eviction_policy: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withExtensionOperationsEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          extension_operations_enabled: value,
+        },
+      },
+    },
+  },
+  withGalleryApplication(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          gallery_application: value,
+        },
+      },
+    },
+  },
+  withGalleryApplicationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          gallery_application+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  gallery_application:: {
     new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
-  },
-  withAutomaticInstanceRepair(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          automatic_instance_repair: value,
-        },
-      },
-    },
-  },
-  withAutomaticInstanceRepairMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          automatic_instance_repair+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  automatic_instance_repair:: {
-    new(
-      grace_period=null,
-      enabled
-    ):: std.prune(a={
-      grace_period: grace_period,
-      enabled: enabled,
-    }),
-  },
-  withGalleryApplications(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          gallery_applications: value,
-        },
-      },
-    },
-  },
-  withGalleryApplicationsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          gallery_applications+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  gallery_applications:: {
-    new(
-      configuration_reference_blob_uri=null,
+      version_id,
+      configuration_blob_uri=null,
       order=null,
-      package_reference_id,
       tag=null
     ):: std.prune(a={
-      configuration_reference_blob_uri: configuration_reference_blob_uri,
+      version_id: version_id,
+      configuration_blob_uri: configuration_blob_uri,
       order: order,
-      package_reference_id: package_reference_id,
       tag: tag,
     }),
   },
-  withOsDisk(resourceLabel, value):: {
+  withSpotRestore(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          os_disk: value,
+          spot_restore: value,
         },
       },
     },
   },
-  withOsDiskMixin(resourceLabel, value):: {
+  withSpotRestoreMixin(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          os_disk+: if std.isArray(v=value) then value else [value],
+          spot_restore+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  os_disk:: {
+  spot_restore:: {
     new(
-      security_encryption_type=null,
-      storage_account_type,
-      write_accelerator_enabled=null,
-      caching,
-      disk_encryption_set_id=null,
-      disk_size_gb=null,
-      secure_vm_disk_encryption_set_id=null,
-      diff_disk_settings=null
-    ):: std.prune(a={
-      security_encryption_type: security_encryption_type,
-      storage_account_type: storage_account_type,
-      write_accelerator_enabled: write_accelerator_enabled,
-      caching: caching,
-      disk_encryption_set_id: disk_encryption_set_id,
-      disk_size_gb: disk_size_gb,
-      secure_vm_disk_encryption_set_id: secure_vm_disk_encryption_set_id,
-      diff_disk_settings: diff_disk_settings,
-    }),
-    diff_disk_settings:: {
-      new(
-        option,
-        placement=null
-      ):: std.prune(a={
-        option: option,
-        placement: placement,
-      }),
-    },
-  },
-  withPlan(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          plan: value,
-        },
-      },
-    },
-  },
-  withPlanMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          plan+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  plan:: {
-    new(
-      product,
-      publisher,
-      name
-    ):: std.prune(a={
-      product: product,
-      publisher: publisher,
-      name: name,
-    }),
-  },
-  withTerminateNotification(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          terminate_notification: value,
-        },
-      },
-    },
-  },
-  withTerminateNotificationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          terminate_notification+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  terminate_notification:: {
-    new(
-      enabled,
+      enabled=null,
       timeout=null
     ):: std.prune(a={
       enabled: enabled,
       timeout: timeout,
-    }),
-  },
-  withExtension(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          extension: value,
-        },
-      },
-    },
-  },
-  withExtensionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          extension+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  extension:: {
-    new(
-      provision_after_extensions=null,
-      force_update_tag=null,
-      publisher,
-      auto_upgrade_minor_version=null,
-      protected_settings=null,
-      settings=null,
-      automatic_upgrade_enabled=null,
-      type,
-      type_handler_version,
-      name,
-      protected_settings_from_key_vault=null
-    ):: std.prune(a={
-      provision_after_extensions: provision_after_extensions,
-      force_update_tag: force_update_tag,
-      publisher: publisher,
-      auto_upgrade_minor_version: auto_upgrade_minor_version,
-      protected_settings: protected_settings,
-      settings: settings,
-      automatic_upgrade_enabled: automatic_upgrade_enabled,
-      type: type,
-      type_handler_version: type_handler_version,
-      name: name,
-      protected_settings_from_key_vault: protected_settings_from_key_vault,
-    }),
-    protected_settings_from_key_vault:: {
-      new(
-        secret_url,
-        source_vault_id
-      ):: std.prune(a={
-        secret_url: secret_url,
-        source_vault_id: source_vault_id,
-      }),
-    },
-  },
-  withScaleIn(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          scale_in: value,
-        },
-      },
-    },
-  },
-  withScaleInMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          scale_in+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  scale_in:: {
-    new(
-      force_deletion_enabled=null,
-      rule=null
-    ):: std.prune(a={
-      force_deletion_enabled: force_deletion_enabled,
-      rule: rule,
     }),
   },
   withRollingUpgradePolicy(resourceLabel, value):: {
@@ -855,87 +639,108 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       pause_time_between_batches: pause_time_between_batches,
     }),
   },
-  withBootDiagnostics(resourceLabel, value):: {
+  withSourceImageReference(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          boot_diagnostics: value,
+          source_image_reference: value,
         },
       },
     },
   },
-  withBootDiagnosticsMixin(resourceLabel, value):: {
+  withSourceImageReferenceMixin(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          boot_diagnostics+: if std.isArray(v=value) then value else [value],
+          source_image_reference+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  boot_diagnostics:: {
+  source_image_reference:: {
     new(
-      storage_account_uri=null
+      version,
+      offer,
+      publisher,
+      sku
     ):: std.prune(a={
-      storage_account_uri: storage_account_uri,
+      version: version,
+      offer: offer,
+      publisher: publisher,
+      sku: sku,
     }),
   },
-  withIdentity(resourceLabel, value):: {
+  withOsDisk(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          identity: value,
+          os_disk: value,
         },
       },
     },
   },
-  withIdentityMixin(resourceLabel, value):: {
+  withOsDiskMixin(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
+          os_disk+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  identity:: {
+  os_disk:: {
     new(
-      identity_ids=null,
-      type
+      caching,
+      disk_encryption_set_id=null,
+      disk_size_gb=null,
+      secure_vm_disk_encryption_set_id=null,
+      security_encryption_type=null,
+      storage_account_type,
+      write_accelerator_enabled=null,
+      diff_disk_settings=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
+      caching: caching,
+      disk_encryption_set_id: disk_encryption_set_id,
+      disk_size_gb: disk_size_gb,
+      secure_vm_disk_encryption_set_id: secure_vm_disk_encryption_set_id,
+      security_encryption_type: security_encryption_type,
+      storage_account_type: storage_account_type,
+      write_accelerator_enabled: write_accelerator_enabled,
+      diff_disk_settings: diff_disk_settings,
     }),
+    diff_disk_settings:: {
+      new(
+        option,
+        placement=null
+      ):: std.prune(a={
+        option: option,
+        placement: placement,
+      }),
+    },
   },
-  withGalleryApplication(resourceLabel, value):: {
+  withAdditionalCapabilities(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          gallery_application: value,
+          additional_capabilities: value,
         },
       },
     },
   },
-  withGalleryApplicationMixin(resourceLabel, value):: {
+  withAdditionalCapabilitiesMixin(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          gallery_application+: if std.isArray(v=value) then value else [value],
+          additional_capabilities+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  gallery_application:: {
+  additional_capabilities:: {
     new(
-      configuration_blob_uri=null,
-      order=null,
-      tag=null,
-      version_id
+      ultra_ssd_enabled=null
     ):: std.prune(a={
-      configuration_blob_uri: configuration_blob_uri,
-      order: order,
-      tag: tag,
-      version_id: version_id,
+      ultra_ssd_enabled: ultra_ssd_enabled,
     }),
   },
   withNetworkInterface(resourceLabel, value):: {
@@ -958,20 +763,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   network_interface:: {
     new(
-      primary=null,
-      dns_servers=null,
-      enable_accelerated_networking=null,
       enable_ip_forwarding=null,
       name,
       network_security_group_id=null,
+      primary=null,
+      dns_servers=null,
+      enable_accelerated_networking=null,
       ip_configuration=null
     ):: std.prune(a={
-      primary: primary,
-      dns_servers: dns_servers,
-      enable_accelerated_networking: enable_accelerated_networking,
       enable_ip_forwarding: enable_ip_forwarding,
       name: name,
       network_security_group_id: network_security_group_id,
+      primary: primary,
+      dns_servers: dns_servers,
+      enable_accelerated_networking: enable_accelerated_networking,
       ip_configuration: ip_configuration,
     }),
     ip_configuration:: {
@@ -998,18 +803,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
       public_ip_address:: {
         new(
+          version=null,
           domain_name_label=null,
           idle_timeout_in_minutes=null,
           name,
           public_ip_prefix_id=null,
-          version=null,
           ip_tag=null
         ):: std.prune(a={
+          version: version,
           domain_name_label: domain_name_label,
           idle_timeout_in_minutes: idle_timeout_in_minutes,
           name: name,
           public_ip_prefix_id: public_ip_prefix_id,
-          version: version,
           ip_tag: ip_tag,
         }),
         ip_tag:: {
@@ -1023,188 +828,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withSourceImageReference(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          source_image_reference: value,
-        },
-      },
-    },
-  },
-  withSourceImageReferenceMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          source_image_reference+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  source_image_reference:: {
-    new(
-      offer,
-      publisher,
-      sku,
-      version
-    ):: std.prune(a={
-      offer: offer,
-      publisher: publisher,
-      sku: sku,
-      version: version,
-    }),
-  },
-  withAdminSshKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          admin_ssh_key: value,
-        },
-      },
-    },
-  },
-  withAdminSshKeyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          admin_ssh_key+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  admin_ssh_key:: {
-    new(
-      public_key,
-      username
-    ):: std.prune(a={
-      public_key: public_key,
-      username: username,
-    }),
-  },
-  withTerminationNotification(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          termination_notification: value,
-        },
-      },
-    },
-  },
-  withTerminationNotificationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          termination_notification+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  termination_notification:: {
-    new(
-      enabled,
-      timeout=null
-    ):: std.prune(a={
-      enabled: enabled,
-      timeout: timeout,
-    }),
-  },
-  withAutomaticOsUpgradePolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          automatic_os_upgrade_policy: value,
-        },
-      },
-    },
-  },
-  withAutomaticOsUpgradePolicyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          automatic_os_upgrade_policy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  automatic_os_upgrade_policy:: {
-    new(
-      disable_automatic_rollback,
-      enable_automatic_os_upgrade
-    ):: std.prune(a={
-      disable_automatic_rollback: disable_automatic_rollback,
-      enable_automatic_os_upgrade: enable_automatic_os_upgrade,
-    }),
-  },
-  withDataDisk(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          data_disk: value,
-        },
-      },
-    },
-  },
-  withDataDiskMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          data_disk+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  data_disk:: {
-    new(
-      create_option=null,
-      name=null,
-      disk_size_gb,
-      storage_account_type,
-      write_accelerator_enabled=null,
-      disk_encryption_set_id=null,
-      ultra_ssd_disk_iops_read_write=null,
-      lun,
-      ultra_ssd_disk_mbps_read_write=null,
-      caching
-    ):: std.prune(a={
-      create_option: create_option,
-      name: name,
-      disk_size_gb: disk_size_gb,
-      storage_account_type: storage_account_type,
-      write_accelerator_enabled: write_accelerator_enabled,
-      disk_encryption_set_id: disk_encryption_set_id,
-      ultra_ssd_disk_iops_read_write: ultra_ssd_disk_iops_read_write,
-      lun: lun,
-      ultra_ssd_disk_mbps_read_write: ultra_ssd_disk_mbps_read_write,
-      caching: caching,
-    }),
-  },
-  withSpotRestore(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          spot_restore: value,
-        },
-      },
-    },
-  },
-  withSpotRestoreMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          spot_restore+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  spot_restore:: {
-    new(
-      enabled=null,
-      timeout=null
-    ):: std.prune(a={
-      enabled: enabled,
-      timeout: timeout,
-    }),
   },
   withSecret(resourceLabel, value):: {
     resource+: {
@@ -1240,29 +863,406 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
     },
   },
-  withAdditionalCapabilities(resourceLabel, value):: {
+  withTerminateNotification(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          additional_capabilities: value,
+          terminate_notification: value,
         },
       },
     },
   },
-  withAdditionalCapabilitiesMixin(resourceLabel, value):: {
+  withTerminateNotificationMixin(resourceLabel, value):: {
     resource+: {
       azurerm_linux_virtual_machine_scale_set+: {
         [resourceLabel]+: {
-          additional_capabilities+: if std.isArray(v=value) then value else [value],
+          terminate_notification+: if std.isArray(v=value) then value else [value],
         },
       },
     },
   },
-  additional_capabilities:: {
+  terminate_notification:: {
     new(
-      ultra_ssd_enabled=null
+      enabled,
+      timeout=null
     ):: std.prune(a={
-      ultra_ssd_enabled: ultra_ssd_enabled,
+      enabled: enabled,
+      timeout: timeout,
     }),
+  },
+  withGalleryApplications(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          gallery_applications: value,
+        },
+      },
+    },
+  },
+  withGalleryApplicationsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          gallery_applications+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  gallery_applications:: {
+    new(
+      order=null,
+      package_reference_id,
+      tag=null,
+      configuration_reference_blob_uri=null
+    ):: std.prune(a={
+      order: order,
+      package_reference_id: package_reference_id,
+      tag: tag,
+      configuration_reference_blob_uri: configuration_reference_blob_uri,
+    }),
+  },
+  withScaleIn(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          scale_in: value,
+        },
+      },
+    },
+  },
+  withScaleInMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          scale_in+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  scale_in:: {
+    new(
+      force_deletion_enabled=null,
+      rule=null
+    ):: std.prune(a={
+      force_deletion_enabled: force_deletion_enabled,
+      rule: rule,
+    }),
+  },
+  withTerminationNotification(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          termination_notification: value,
+        },
+      },
+    },
+  },
+  withTerminationNotificationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          termination_notification+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  termination_notification:: {
+    new(
+      enabled,
+      timeout=null
+    ):: std.prune(a={
+      enabled: enabled,
+      timeout: timeout,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
+  },
+  withBootDiagnostics(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          boot_diagnostics: value,
+        },
+      },
+    },
+  },
+  withBootDiagnosticsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          boot_diagnostics+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  boot_diagnostics:: {
+    new(
+      storage_account_uri=null
+    ):: std.prune(a={
+      storage_account_uri: storage_account_uri,
+    }),
+  },
+  withAdminSshKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          admin_ssh_key: value,
+        },
+      },
+    },
+  },
+  withAdminSshKeyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          admin_ssh_key+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  admin_ssh_key:: {
+    new(
+      username,
+      public_key
+    ):: std.prune(a={
+      username: username,
+      public_key: public_key,
+    }),
+  },
+  withDataDisk(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          data_disk: value,
+        },
+      },
+    },
+  },
+  withDataDiskMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          data_disk+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  data_disk:: {
+    new(
+      create_option=null,
+      lun,
+      ultra_ssd_disk_mbps_read_write=null,
+      disk_encryption_set_id=null,
+      disk_size_gb,
+      name=null,
+      ultra_ssd_disk_iops_read_write=null,
+      write_accelerator_enabled=null,
+      caching,
+      storage_account_type
+    ):: std.prune(a={
+      create_option: create_option,
+      lun: lun,
+      ultra_ssd_disk_mbps_read_write: ultra_ssd_disk_mbps_read_write,
+      disk_encryption_set_id: disk_encryption_set_id,
+      disk_size_gb: disk_size_gb,
+      name: name,
+      ultra_ssd_disk_iops_read_write: ultra_ssd_disk_iops_read_write,
+      write_accelerator_enabled: write_accelerator_enabled,
+      caching: caching,
+      storage_account_type: storage_account_type,
+    }),
+  },
+  withPlan(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          plan: value,
+        },
+      },
+    },
+  },
+  withPlanMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          plan+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  plan:: {
+    new(
+      name,
+      product,
+      publisher
+    ):: std.prune(a={
+      name: name,
+      product: product,
+      publisher: publisher,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withAutomaticInstanceRepair(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          automatic_instance_repair: value,
+        },
+      },
+    },
+  },
+  withAutomaticInstanceRepairMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          automatic_instance_repair+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  automatic_instance_repair:: {
+    new(
+      enabled,
+      grace_period=null
+    ):: std.prune(a={
+      enabled: enabled,
+      grace_period: grace_period,
+    }),
+  },
+  withAutomaticOsUpgradePolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          automatic_os_upgrade_policy: value,
+        },
+      },
+    },
+  },
+  withAutomaticOsUpgradePolicyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          automatic_os_upgrade_policy+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  automatic_os_upgrade_policy:: {
+    new(
+      disable_automatic_rollback,
+      enable_automatic_os_upgrade
+    ):: std.prune(a={
+      disable_automatic_rollback: disable_automatic_rollback,
+      enable_automatic_os_upgrade: enable_automatic_os_upgrade,
+    }),
+  },
+  withExtension(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          extension: value,
+        },
+      },
+    },
+  },
+  withExtensionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          extension+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  extension:: {
+    new(
+      publisher,
+      provision_after_extensions=null,
+      automatic_upgrade_enabled=null,
+      name,
+      protected_settings=null,
+      settings=null,
+      type,
+      auto_upgrade_minor_version=null,
+      force_update_tag=null,
+      type_handler_version,
+      protected_settings_from_key_vault=null
+    ):: std.prune(a={
+      publisher: publisher,
+      provision_after_extensions: provision_after_extensions,
+      automatic_upgrade_enabled: automatic_upgrade_enabled,
+      name: name,
+      protected_settings: protected_settings,
+      settings: settings,
+      type: type,
+      auto_upgrade_minor_version: auto_upgrade_minor_version,
+      force_update_tag: force_update_tag,
+      type_handler_version: type_handler_version,
+      protected_settings_from_key_vault: protected_settings_from_key_vault,
+    }),
+    protected_settings_from_key_vault:: {
+      new(
+        secret_url,
+        source_vault_id
+      ):: std.prune(a={
+        secret_url: secret_url,
+        source_vault_id: source_vault_id,
+      }),
+    },
   },
 }

@@ -2,22 +2,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cluster_name,
     group_id,
     name,
     private_link_resource_id,
     private_link_resource_region=null,
     request_message=null,
     resource_group_name,
+    cluster_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_cluster_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
     group_id=group_id,
     name=name,
     private_link_resource_id=private_link_resource_id,
     private_link_resource_region=private_link_resource_region,
     request_message=request_message,
     resource_group_name=resource_group_name,
+    cluster_name=cluster_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -39,15 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     request_message: request_message,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster_managed_private_endpoint+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withClusterName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_managed_private_endpoint+: {
@@ -102,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster_managed_private_endpoint+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_managed_private_endpoint+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

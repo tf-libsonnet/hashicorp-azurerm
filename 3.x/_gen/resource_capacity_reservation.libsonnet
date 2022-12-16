@@ -21,16 +21,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     capacity_reservation_group_id,
     name,
     tags=null,
-    sku=null,
-    timeouts=null
+    timeouts=null,
+    sku=null
   ):: std.prune(a={
     zone: zone,
     capacity_reservation_group_id: capacity_reservation_group_id,
     name: name,
     tags: tags,
-    sku: sku,
     timeouts: timeouts,
+    sku: sku,
   }),
+  withCapacityReservationGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_capacity_reservation+: {
+        [resourceLabel]+: {
+          capacity_reservation_group_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_capacity_reservation+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation+: {
@@ -49,23 +67,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCapacityReservationGroupId(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation+: {
         [resourceLabel]+: {
-          capacity_reservation_group_id: value,
+          timeouts: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withTimeoutsMixin(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation+: {
         [resourceLabel]+: {
-          name: value,
+          timeouts+: value,
         },
       },
     },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withSku(resourceLabel, value):: {
     resource+: {
@@ -92,37 +123,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       capacity: capacity,
       name: name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_capacity_reservation+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_capacity_reservation+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

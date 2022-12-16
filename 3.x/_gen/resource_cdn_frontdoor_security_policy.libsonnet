@@ -15,13 +15,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   newAttrs(
     cdn_frontdoor_profile_id,
     name,
-    security_policies=null,
-    timeouts=null
+    timeouts=null,
+    security_policies=null
   ):: std.prune(a={
     cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
     name: name,
-    security_policies: security_policies,
     timeouts: timeouts,
+    security_policies: security_policies,
   }),
   withCdnFrontdoorProfileId(resourceLabel, value):: {
     resource+: {
@@ -111,13 +111,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

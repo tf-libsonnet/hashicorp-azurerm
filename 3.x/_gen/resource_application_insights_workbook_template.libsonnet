@@ -2,87 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
     priority=null,
     resource_group_name,
-    localized=null,
-    name,
-    template_data,
-    tags=null,
     author=null,
+    name,
+    tags=null,
+    template_data,
+    localized=null,
+    location,
     galleries=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_insights_workbook_template', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
     priority=priority,
     resource_group_name=resource_group_name,
-    localized=localized,
-    name=name,
-    template_data=template_data,
-    tags=tags,
     author=author,
+    name=name,
+    tags=tags,
+    template_data=template_data,
+    localized=localized,
+    location=location,
     galleries=galleries,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
+    localized=null,
     location,
     priority=null,
     resource_group_name,
     tags=null,
     author=null,
+    name,
     template_data,
-    localized=null,
     galleries=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
+    localized: localized,
     location: location,
     priority: priority,
     resource_group_name: resource_group_name,
     tags: tags,
     author: author,
+    name: name,
     template_data: template_data,
-    localized: localized,
     galleries: galleries,
     timeouts: timeouts,
   }),
-  withLocalized(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          localized: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTemplateData(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          template_data: value,
-        },
-      },
-    },
-  },
-  withAuthor(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_insights_workbook_template+: {
-        [resourceLabel]+: {
-          author: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
@@ -101,6 +65,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAuthor(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          author: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_application_insights_workbook_template+: {
@@ -115,6 +97,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_application_insights_workbook_template+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withTemplateData(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          template_data: value,
+        },
+      },
+    },
+  },
+  withLocalized(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_insights_workbook_template+: {
+        [resourceLabel]+: {
+          localized: value,
         },
       },
     },

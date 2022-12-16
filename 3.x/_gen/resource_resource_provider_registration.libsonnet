@@ -44,11 +44,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   feature:: {
     new(
-      registered,
-      name
+      name,
+      registered
     ):: std.prune(a={
-      registered: registered,
       name: name,
+      registered: registered,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -71,15 +71,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

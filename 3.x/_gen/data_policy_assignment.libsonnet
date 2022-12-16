@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     scope_id,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_policy_assignment', label=dataSrcLabel, attrs=self.newAttrs(name=name, scope_id=scope_id, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_policy_assignment', label=dataSrcLabel, attrs=self.newAttrs(scope_id=scope_id, name=name, timeouts=timeouts)),
   newAttrs(
     name,
     scope_id,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     scope_id: scope_id,
     timeouts: timeouts,
   }),
-  withScopeId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_policy_assignment+: {
-        [dataSrcLabel]+: {
-          scope_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_policy_assignment+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withScopeId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_policy_assignment+: {
+        [dataSrcLabel]+: {
+          scope_id: value,
         },
       },
     },

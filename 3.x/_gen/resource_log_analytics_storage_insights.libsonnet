@@ -2,43 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    table_names=null,
+    workspace_id,
+    blob_container_names=null,
     name,
     resource_group_name,
     storage_account_id,
     storage_account_key,
-    table_names=null,
-    workspace_id,
-    blob_container_names=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_storage_insights', label=resourceLabel, attrs=self.newAttrs(
+    table_names=table_names,
+    workspace_id=workspace_id,
+    blob_container_names=blob_container_names,
     name=name,
     resource_group_name=resource_group_name,
     storage_account_id=storage_account_id,
     storage_account_key=storage_account_key,
-    table_names=table_names,
-    workspace_id=workspace_id,
-    blob_container_names=blob_container_names,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    resource_group_name,
+    storage_account_id,
     storage_account_key,
     table_names=null,
     workspace_id,
     blob_container_names=null,
-    name,
-    resource_group_name,
-    storage_account_id,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    resource_group_name: resource_group_name,
+    storage_account_id: storage_account_id,
     storage_account_key: storage_account_key,
     table_names: table_names,
     workspace_id: workspace_id,
     blob_container_names: blob_container_names,
-    name: name,
-    resource_group_name: resource_group_name,
-    storage_account_id: storage_account_id,
     timeouts: timeouts,
   }),
+  withStorageAccountKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_storage_insights+: {
+        [resourceLabel]+: {
+          storage_account_key: value,
+        },
+      },
+    },
+  },
+  withTableNames(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_storage_insights+: {
+        [resourceLabel]+: {
+          table_names: value,
+        },
+      },
+    },
+  },
   withWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_storage_insights+: {
@@ -84,24 +102,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_storage_insights+: {
-        [resourceLabel]+: {
-          storage_account_key: value,
-        },
-      },
-    },
-  },
-  withTableNames(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_storage_insights+: {
-        [resourceLabel]+: {
-          table_names: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_storage_insights+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

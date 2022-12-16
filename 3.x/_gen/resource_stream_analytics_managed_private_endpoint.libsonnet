@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    stream_analytics_cluster_name,
+    subresource_name,
     target_resource_id,
     name,
     resource_group_name,
-    stream_analytics_cluster_name,
-    subresource_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    stream_analytics_cluster_name=stream_analytics_cluster_name,
+    subresource_name=subresource_name,
     target_resource_id=target_resource_id,
     name=name,
     resource_group_name=resource_group_name,
-    stream_analytics_cluster_name=stream_analytics_cluster_name,
-    subresource_name=subresource_name,
     timeouts=timeouts
   )),
   newAttrs(
-    target_resource_id,
-    name,
     resource_group_name,
     stream_analytics_cluster_name,
     subresource_name,
+    target_resource_id,
+    name,
     timeouts=null
   ):: std.prune(a={
-    target_resource_id: target_resource_id,
-    name: name,
     resource_group_name: resource_group_name,
     stream_analytics_cluster_name: stream_analytics_cluster_name,
     subresource_name: subresource_name,
+    target_resource_id: target_resource_id,
+    name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_managed_private_endpoint+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_managed_private_endpoint+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_managed_private_endpoint+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_managed_private_endpoint+: {
@@ -96,13 +96,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

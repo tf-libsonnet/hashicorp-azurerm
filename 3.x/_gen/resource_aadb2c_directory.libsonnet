@@ -2,41 +2,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
+    sku_name,
+    country_code=null,
     data_residency_location,
+    tags=null,
     display_name=null,
     domain_name,
-    country_code=null,
     resource_group_name,
-    sku_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_aadb2c_directory', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
+    sku_name=sku_name,
+    country_code=country_code,
     data_residency_location=data_residency_location,
+    tags=tags,
     display_name=display_name,
     domain_name=domain_name,
-    country_code=country_code,
     resource_group_name=resource_group_name,
-    sku_name=sku_name,
     timeouts=timeouts
   )),
   newAttrs(
+    data_residency_location,
+    tags=null,
+    sku_name,
     display_name=null,
     domain_name,
-    country_code=null,
     resource_group_name,
-    sku_name,
-    tags=null,
-    data_residency_location,
+    country_code=null,
     timeouts=null
   ):: std.prune(a={
+    data_residency_location: data_residency_location,
+    tags: tags,
+    sku_name: sku_name,
     display_name: display_name,
     domain_name: domain_name,
-    country_code: country_code,
     resource_group_name: resource_group_name,
-    sku_name: sku_name,
-    tags: tags,
-    data_residency_location: data_residency_location,
+    country_code: country_code,
     timeouts: timeouts,
   }),
   withDataResidencyLocation(resourceLabel, value):: {
@@ -48,11 +48,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDisplayName(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_aadb2c_directory+: {
         [resourceLabel]+: {
-          display_name: value,
+          tags: value,
         },
       },
     },
@@ -62,15 +62,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_aadb2c_directory+: {
         [resourceLabel]+: {
           domain_name: value,
-        },
-      },
-    },
-  },
-  withCountryCode(resourceLabel, value):: {
-    resource+: {
-      azurerm_aadb2c_directory+: {
-        [resourceLabel]+: {
-          country_code: value,
         },
       },
     },
@@ -93,11 +84,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_aadb2c_directory+: {
         [resourceLabel]+: {
-          tags: value,
+          display_name: value,
+        },
+      },
+    },
+  },
+  withCountryCode(resourceLabel, value):: {
+    resource+: {
+      azurerm_aadb2c_directory+: {
+        [resourceLabel]+: {
+          country_code: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

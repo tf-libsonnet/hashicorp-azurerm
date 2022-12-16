@@ -7,52 +7,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ip_rules=null,
     storage_account_id,
     virtual_network_subnet_ids=null,
-    private_link_access=null,
-    timeouts=null
+    timeouts=null,
+    private_link_access=null
   ):: tf.withResource(type='azurerm_storage_account_network_rules', label=resourceLabel, attrs=self.newAttrs(
     bypass=bypass,
     default_action=default_action,
     ip_rules=ip_rules,
     storage_account_id=storage_account_id,
     virtual_network_subnet_ids=virtual_network_subnet_ids,
-    private_link_access=private_link_access,
-    timeouts=timeouts
+    timeouts=timeouts,
+    private_link_access=private_link_access
   )),
   newAttrs(
+    storage_account_id,
     virtual_network_subnet_ids=null,
     bypass=null,
     default_action,
     ip_rules=null,
-    storage_account_id,
     private_link_access=null,
     timeouts=null
   ):: std.prune(a={
+    storage_account_id: storage_account_id,
     virtual_network_subnet_ids: virtual_network_subnet_ids,
     bypass: bypass,
     default_action: default_action,
     ip_rules: ip_rules,
-    storage_account_id: storage_account_id,
     private_link_access: private_link_access,
     timeouts: timeouts,
   }),
-  withVirtualNetworkSubnetIds(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_account_network_rules+: {
-        [resourceLabel]+: {
-          virtual_network_subnet_ids: value,
-        },
-      },
-    },
-  },
-  withBypass(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_account_network_rules+: {
-        [resourceLabel]+: {
-          bypass: value,
-        },
-      },
-    },
-  },
   withDefaultAction(resourceLabel, value):: {
     resource+: {
       azurerm_storage_account_network_rules+: {
@@ -76,6 +58,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_storage_account_network_rules+: {
         [resourceLabel]+: {
           storage_account_id: value,
+        },
+      },
+    },
+  },
+  withVirtualNetworkSubnetIds(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_account_network_rules+: {
+        [resourceLabel]+: {
+          virtual_network_subnet_ids: value,
+        },
+      },
+    },
+  },
+  withBypass(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_account_network_rules+: {
+        [resourceLabel]+: {
+          bypass: value,
         },
       },
     },
@@ -127,15 +127,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

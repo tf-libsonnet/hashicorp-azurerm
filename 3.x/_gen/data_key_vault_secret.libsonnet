@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withData(type='azurerm_key_vault_secret', label=dataSrcLabel, attrs=self.newAttrs(key_vault_id=key_vault_id, name=name, timeouts=timeouts)),
   newAttrs(
-    key_vault_id,
     name,
+    key_vault_id,
     timeouts=null
   ):: std.prune(a={
-    key_vault_id: key_vault_id,
     name: name,
+    key_vault_id: key_vault_id,
     timeouts: timeouts,
   }),
   withKeyVaultId(dataSrcLabel, value):: {

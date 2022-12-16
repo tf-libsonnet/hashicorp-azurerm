@@ -25,46 +25,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    weight=null,
-    enabled=null,
     geo_mappings=null,
     name,
     priority=null,
     profile_id,
     target_resource_id,
+    weight=null,
+    enabled=null,
     custom_header=null,
     subnet=null,
     timeouts=null
   ):: std.prune(a={
-    weight: weight,
-    enabled: enabled,
     geo_mappings: geo_mappings,
     name: name,
     priority: priority,
     profile_id: profile_id,
     target_resource_id: target_resource_id,
+    weight: weight,
+    enabled: enabled,
     custom_header: custom_header,
     subnet: subnet,
     timeouts: timeouts,
   }),
-  withPriority(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_azure_endpoint+: {
-        [resourceLabel]+: {
-          priority: value,
-        },
-      },
-    },
-  },
-  withProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_azure_endpoint+: {
-        [resourceLabel]+: {
-          profile_id: value,
-        },
-      },
-    },
-  },
   withTargetResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_azure_endpoint+: {
@@ -106,6 +88,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_traffic_manager_azure_endpoint+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPriority(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_azure_endpoint+: {
+        [resourceLabel]+: {
+          priority: value,
+        },
+      },
+    },
+  },
+  withProfileId(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_azure_endpoint+: {
+        [resourceLabel]+: {
+          profile_id: value,
         },
       },
     },
@@ -157,13 +157,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   subnet:: {
     new(
-      first,
       last=null,
-      scope=null
+      scope=null,
+      first
     ):: std.prune(a={
-      first: first,
       last: last,
       scope: scope,
+      first: first,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -186,15 +186,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

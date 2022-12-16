@@ -13,25 +13,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    container_id,
     name,
     body,
-    container_id,
     timeouts=null
   ):: std.prune(a={
+    container_id: container_id,
     name: name,
     body: body,
-    container_id: container_id,
     timeouts: timeouts,
   }),
-  withContainerId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_sql_function+: {
-        [resourceLabel]+: {
-          container_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_sql_function+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_sql_function+: {
         [resourceLabel]+: {
           body: value,
+        },
+      },
+    },
+  },
+  withContainerId(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_sql_function+: {
+        [resourceLabel]+: {
+          container_id: value,
         },
       },
     },

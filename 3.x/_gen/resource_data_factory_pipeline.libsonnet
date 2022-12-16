@@ -2,78 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    data_factory_id,
+    folder=null,
+    parameters=null,
+    moniter_metrics_after_duration=null,
+    variables=null,
     description=null,
     activities_json=null,
-    data_factory_id,
-    moniter_metrics_after_duration=null,
-    name,
-    concurrency=null,
-    parameters=null,
-    variables=null,
     annotations=null,
-    folder=null,
+    concurrency=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_pipeline', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    data_factory_id=data_factory_id,
+    folder=folder,
+    parameters=parameters,
+    moniter_metrics_after_duration=moniter_metrics_after_duration,
+    variables=variables,
     description=description,
     activities_json=activities_json,
-    data_factory_id=data_factory_id,
-    moniter_metrics_after_duration=moniter_metrics_after_duration,
-    name=name,
-    concurrency=concurrency,
-    parameters=parameters,
-    variables=variables,
     annotations=annotations,
-    folder=folder,
+    concurrency=concurrency,
     timeouts=timeouts
   )),
   newAttrs(
-    moniter_metrics_after_duration=null,
     name,
-    folder=null,
+    data_factory_id,
     parameters=null,
     variables=null,
-    activities_json=null,
-    concurrency=null,
     annotations=null,
+    concurrency=null,
     description=null,
-    data_factory_id,
+    folder=null,
+    moniter_metrics_after_duration=null,
+    activities_json=null,
     timeouts=null
   ):: std.prune(a={
-    moniter_metrics_after_duration: moniter_metrics_after_duration,
     name: name,
-    folder: folder,
+    data_factory_id: data_factory_id,
     parameters: parameters,
     variables: variables,
-    activities_json: activities_json,
-    concurrency: concurrency,
     annotations: annotations,
+    concurrency: concurrency,
     description: description,
-    data_factory_id: data_factory_id,
+    folder: folder,
+    moniter_metrics_after_duration: moniter_metrics_after_duration,
+    activities_json: activities_json,
     timeouts: timeouts,
   }),
-  withParameters(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withFolder(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          folder: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          name: value,
+          description: value,
         },
       },
     },
@@ -87,29 +69,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_pipeline+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
           annotations: value,
+        },
+      },
+    },
+  },
+  withConcurrency(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          concurrency: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
         },
       },
     },
@@ -123,11 +105,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withConcurrency(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_pipeline+: {
         [resourceLabel]+: {
-          concurrency: value,
+          parameters: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_pipeline+: {
+        [resourceLabel]+: {
+          folder: value,
         },
       },
     },

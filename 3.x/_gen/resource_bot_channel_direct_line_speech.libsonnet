@@ -39,15 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     bot_name: bot_name,
     timeouts: timeouts,
   }),
-  withCognitiveServiceLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_direct_line_speech+: {
-        [resourceLabel]+: {
-          cognitive_service_location: value,
-        },
-      },
-    },
-  },
   withCustomSpeechModelId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_direct_line_speech+: {
@@ -102,6 +93,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCognitiveServiceLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_direct_line_speech+: {
+        [resourceLabel]+: {
+          cognitive_service_location: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_direct_line_speech+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

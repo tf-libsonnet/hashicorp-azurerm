@@ -2,61 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
     sku,
-    branch_to_branch_traffic_enabled=null,
     name,
-    tags=null,
-    subnet_id,
-    location,
     public_ip_address_id,
+    resource_group_name,
+    subnet_id,
+    tags=null,
+    branch_to_branch_traffic_enabled=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_route_server', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     sku=sku,
-    branch_to_branch_traffic_enabled=branch_to_branch_traffic_enabled,
     name=name,
-    tags=tags,
-    subnet_id=subnet_id,
-    location=location,
     public_ip_address_id=public_ip_address_id,
+    resource_group_name=resource_group_name,
+    subnet_id=subnet_id,
+    tags=tags,
+    branch_to_branch_traffic_enabled=branch_to_branch_traffic_enabled,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    subnet_id,
-    branch_to_branch_traffic_enabled=null,
-    name,
-    tags=null,
-    location,
     public_ip_address_id,
     resource_group_name,
+    subnet_id,
+    branch_to_branch_traffic_enabled=null,
+    location,
     sku,
+    tags=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    subnet_id: subnet_id,
-    branch_to_branch_traffic_enabled: branch_to_branch_traffic_enabled,
-    name: name,
-    tags: tags,
-    location: location,
     public_ip_address_id: public_ip_address_id,
     resource_group_name: resource_group_name,
+    subnet_id: subnet_id,
+    branch_to_branch_traffic_enabled: branch_to_branch_traffic_enabled,
+    location: location,
     sku: sku,
+    tags: tags,
+    name: name,
     timeouts: timeouts,
   }),
-  withSubnetId(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_route_server+: {
         [resourceLabel]+: {
-          subnet_id: value,
-        },
-      },
-    },
-  },
-  withBranchToBranchTrafficEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_route_server+: {
-        [resourceLabel]+: {
-          branch_to_branch_traffic_enabled: value,
+          tags: value,
         },
       },
     },
@@ -70,11 +61,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withPublicIpAddressId(resourceLabel, value):: {
     resource+: {
       azurerm_route_server+: {
         [resourceLabel]+: {
-          tags: value,
+          public_ip_address_id: value,
         },
       },
     },
@@ -88,11 +79,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicIpAddressId(resourceLabel, value):: {
+  withSku(resourceLabel, value):: {
     resource+: {
       azurerm_route_server+: {
         [resourceLabel]+: {
-          public_ip_address_id: value,
+          sku: value,
+        },
+      },
+    },
+  },
+  withBranchToBranchTrafficEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_route_server+: {
+        [resourceLabel]+: {
+          branch_to_branch_traffic_enabled: value,
         },
       },
     },
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSku(resourceLabel, value):: {
+  withSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_route_server+: {
         [resourceLabel]+: {
-          sku: value,
+          subnet_id: value,
         },
       },
     },

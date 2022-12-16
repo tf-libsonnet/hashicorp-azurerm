@@ -2,74 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    type=null,
     virtual_network_gateway_id,
     ip_configuration_id=null,
     mode=null,
     name,
     resource_group_name,
+    type=null,
     external_mapping=null,
     internal_mapping=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_network_gateway_nat_rule', label=resourceLabel, attrs=self.newAttrs(
-    type=type,
     virtual_network_gateway_id=virtual_network_gateway_id,
     ip_configuration_id=ip_configuration_id,
     mode=mode,
     name=name,
     resource_group_name=resource_group_name,
+    type=type,
     external_mapping=external_mapping,
     internal_mapping=internal_mapping,
     timeouts=timeouts
   )),
   newAttrs(
-    ip_configuration_id=null,
-    mode=null,
-    name,
     resource_group_name,
     type=null,
     virtual_network_gateway_id,
-    timeouts=null,
+    ip_configuration_id=null,
+    mode=null,
+    name,
     external_mapping=null,
-    internal_mapping=null
+    internal_mapping=null,
+    timeouts=null
   ):: std.prune(a={
-    ip_configuration_id: ip_configuration_id,
-    mode: mode,
-    name: name,
     resource_group_name: resource_group_name,
     type: type,
     virtual_network_gateway_id: virtual_network_gateway_id,
-    timeouts: timeouts,
+    ip_configuration_id: ip_configuration_id,
+    mode: mode,
+    name: name,
     external_mapping: external_mapping,
     internal_mapping: internal_mapping,
+    timeouts: timeouts,
   }),
-  withVirtualNetworkGatewayId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          virtual_network_gateway_id: value,
-        },
-      },
-    },
-  },
-  withIpConfigurationId(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          ip_configuration_id: value,
-        },
-      },
-    },
-  },
-  withMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network_gateway_nat_rule+: {
-        [resourceLabel]+: {
-          mode: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
@@ -97,32 +70,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withExternalMapping(resourceLabel, value):: {
+  withVirtualNetworkGatewayId(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_mapping: value,
+          virtual_network_gateway_id: value,
         },
       },
     },
   },
-  withExternalMappingMixin(resourceLabel, value):: {
+  withIpConfigurationId(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network_gateway_nat_rule+: {
         [resourceLabel]+: {
-          external_mapping+: if std.isArray(v=value) then value else [value],
+          ip_configuration_id: value,
         },
       },
     },
   },
-  external_mapping:: {
-    new(
-      address_space,
-      port_range=null
-    ):: std.prune(a={
-      address_space: address_space,
-      port_range: port_range,
-    }),
+  withMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          mode: value,
+        },
+      },
+    },
   },
   withInternalMapping(resourceLabel, value):: {
     resource+: {
@@ -171,15 +144,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
+    }),
+  },
+  withExternalMapping(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          external_mapping: value,
+        },
+      },
+    },
+  },
+  withExternalMappingMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network_gateway_nat_rule+: {
+        [resourceLabel]+: {
+          external_mapping+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  external_mapping:: {
+    new(
+      address_space,
+      port_range=null
+    ):: std.prune(a={
+      address_space: address_space,
+      port_range: port_range,
     }),
   },
 }

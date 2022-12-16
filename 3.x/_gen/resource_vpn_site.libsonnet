@@ -2,31 +2,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    resource_group_name,
+    device_vendor=null,
+    location,
+    tags=null,
     virtual_wan_id,
     address_cidrs=null,
     device_model=null,
-    location,
-    tags=null,
-    device_vendor=null,
-    link=null,
+    name,
+    resource_group_name,
     o365_policy=null,
-    timeouts=null
+    timeouts=null,
+    link=null
   ):: tf.withResource(type='azurerm_vpn_site', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
+    device_vendor=device_vendor,
+    location=location,
+    tags=tags,
     virtual_wan_id=virtual_wan_id,
     address_cidrs=address_cidrs,
     device_model=device_model,
-    location=location,
-    tags=tags,
-    device_vendor=device_vendor,
-    link=link,
+    name=name,
+    resource_group_name=resource_group_name,
     o365_policy=o365_policy,
-    timeouts=timeouts
+    timeouts=timeouts,
+    link=link
   )),
   newAttrs(
+    device_model=null,
     name,
     resource_group_name,
     virtual_wan_id,
@@ -34,11 +35,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     tags=null,
     address_cidrs=null,
-    device_model=null,
     link=null,
     o365_policy=null,
     timeouts=null
   ):: std.prune(a={
+    device_model: device_model,
     name: name,
     resource_group_name: resource_group_name,
     virtual_wan_id: virtual_wan_id,
@@ -46,47 +47,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location: location,
     tags: tags,
     address_cidrs: address_cidrs,
-    device_model: device_model,
     link: link,
     o365_policy: o365_policy,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_site+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withVirtualWanId(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_site+: {
-        [resourceLabel]+: {
-          virtual_wan_id: value,
-        },
-      },
-    },
-  },
-  withDeviceVendor(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_site+: {
-        [resourceLabel]+: {
-          device_vendor: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_site+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_site+: {
@@ -123,36 +87,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_site+: {
         [resourceLabel]+: {
-          timeouts: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withVirtualWanId(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_site+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          virtual_wan_id: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
+  withDeviceVendor(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_site+: {
+        [resourceLabel]+: {
+          device_vendor: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_site+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
   },
   withLink(resourceLabel, value):: {
     resource+: {
@@ -233,5 +202,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         optimize_endpoint_enabled: optimize_endpoint_enabled,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_site+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_site+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
 }

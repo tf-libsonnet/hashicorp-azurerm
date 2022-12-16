@@ -3,9 +3,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     storage_account_id,
-    timeouts=null,
-    rules=null
-  ):: tf.withResource(type='azurerm_storage_blob_inventory_policy', label=resourceLabel, attrs=self.newAttrs(storage_account_id=storage_account_id, timeouts=timeouts, rules=rules)),
+    rules=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_storage_blob_inventory_policy', label=resourceLabel, attrs=self.newAttrs(storage_account_id=storage_account_id, rules=rules, timeouts=timeouts)),
   newAttrs(
     storage_account_id,
     rules=null,
@@ -44,35 +44,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   rules:: {
     new(
-      scope,
       storage_container_name,
       format,
       name,
       schedule,
       schema_fields,
+      scope,
       filter=null
     ):: std.prune(a={
-      scope: scope,
       storage_container_name: storage_container_name,
       format: format,
       name: name,
       schedule: schedule,
       schema_fields: schema_fields,
+      scope: scope,
       filter: filter,
     }),
     filter:: {
       new(
+        include_snapshots=null,
+        prefix_match=null,
         blob_types,
         include_blob_versions=null,
-        include_deleted=null,
-        include_snapshots=null,
-        prefix_match=null
+        include_deleted=null
       ):: std.prune(a={
+        include_snapshots: include_snapshots,
+        prefix_match: prefix_match,
         blob_types: blob_types,
         include_blob_versions: include_blob_versions,
         include_deleted: include_deleted,
-        include_snapshots: include_snapshots,
-        prefix_match: prefix_match,
       }),
     },
   },

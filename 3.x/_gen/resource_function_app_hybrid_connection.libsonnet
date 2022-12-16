@@ -2,62 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    function_app_id,
     port,
     send_key_name=null,
-    function_app_id,
     hostname,
     relay_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_function_app_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(
+    function_app_id=function_app_id,
     port=port,
     send_key_name=send_key_name,
-    function_app_id=function_app_id,
     hostname=hostname,
     relay_id=relay_id,
     timeouts=timeouts
   )),
   newAttrs(
-    port,
     send_key_name=null,
     function_app_id,
-    hostname,
     relay_id,
+    hostname,
+    port,
     timeouts=null
   ):: std.prune(a={
-    port: port,
     send_key_name: send_key_name,
     function_app_id: function_app_id,
-    hostname: hostname,
     relay_id: relay_id,
+    hostname: hostname,
+    port: port,
     timeouts: timeouts,
   }),
-  withPort(resourceLabel, value):: {
-    resource+: {
-      azurerm_function_app_hybrid_connection+: {
-        [resourceLabel]+: {
-          port: value,
-        },
-      },
-    },
-  },
-  withSendKeyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_function_app_hybrid_connection+: {
-        [resourceLabel]+: {
-          send_key_name: value,
-        },
-      },
-    },
-  },
-  withFunctionAppId(resourceLabel, value):: {
-    resource+: {
-      azurerm_function_app_hybrid_connection+: {
-        [resourceLabel]+: {
-          function_app_id: value,
-        },
-      },
-    },
-  },
   withHostname(resourceLabel, value):: {
     resource+: {
       azurerm_function_app_hybrid_connection+: {
@@ -72,6 +45,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_function_app_hybrid_connection+: {
         [resourceLabel]+: {
           relay_id: value,
+        },
+      },
+    },
+  },
+  withFunctionAppId(resourceLabel, value):: {
+    resource+: {
+      azurerm_function_app_hybrid_connection+: {
+        [resourceLabel]+: {
+          function_app_id: value,
+        },
+      },
+    },
+  },
+  withPort(resourceLabel, value):: {
+    resource+: {
+      azurerm_function_app_hybrid_connection+: {
+        [resourceLabel]+: {
+          port: value,
+        },
+      },
+    },
+  },
+  withSendKeyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_function_app_hybrid_connection+: {
+        [resourceLabel]+: {
+          send_key_name: value,
         },
       },
     },

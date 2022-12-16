@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    start_ip_address,
+    end_ip_address,
     name,
     resource_group_name,
     server_name,
-    start_ip_address,
-    end_ip_address,
     timeouts=null
   ):: tf.withResource(type='azurerm_mysql_firewall_rule', label=resourceLabel, attrs=self.newAttrs(
+    start_ip_address=start_ip_address,
+    end_ip_address=end_ip_address,
     name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
-    start_ip_address=start_ip_address,
-    end_ip_address=end_ip_address,
     timeouts=timeouts
   )),
   newAttrs(
+    start_ip_address,
     end_ip_address,
     name,
     resource_group_name,
     server_name,
-    start_ip_address,
     timeouts=null
   ):: std.prune(a={
+    start_ip_address: start_ip_address,
     end_ip_address: end_ip_address,
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
-    start_ip_address: start_ip_address,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {

@@ -2,70 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    tags=null,
-    timezone,
     virtual_machine_id,
     daily_recurrence_time,
     enabled=null,
+    location,
+    tags=null,
+    timezone,
     timeouts=null,
     notification_settings=null
   ):: tf.withResource(type='azurerm_dev_test_global_vm_shutdown_schedule', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    tags=tags,
-    timezone=timezone,
     virtual_machine_id=virtual_machine_id,
     daily_recurrence_time=daily_recurrence_time,
     enabled=enabled,
+    location=location,
+    tags=tags,
+    timezone=timezone,
     timeouts=timeouts,
     notification_settings=notification_settings
   )),
   newAttrs(
-    virtual_machine_id,
-    daily_recurrence_time,
-    enabled=null,
     location,
     tags=null,
     timezone,
+    virtual_machine_id,
+    daily_recurrence_time,
+    enabled=null,
     notification_settings=null,
     timeouts=null
   ):: std.prune(a={
-    virtual_machine_id: virtual_machine_id,
-    daily_recurrence_time: daily_recurrence_time,
-    enabled: enabled,
     location: location,
     tags: tags,
     timezone: timezone,
+    virtual_machine_id: virtual_machine_id,
+    daily_recurrence_time: daily_recurrence_time,
+    enabled: enabled,
     notification_settings: notification_settings,
     timeouts: timeouts,
   }),
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_global_vm_shutdown_schedule+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_global_vm_shutdown_schedule+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_dev_test_global_vm_shutdown_schedule+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withTimezone(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_global_vm_shutdown_schedule+: {
@@ -93,6 +66,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_global_vm_shutdown_schedule+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_global_vm_shutdown_schedule+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dev_test_global_vm_shutdown_schedule+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withNotificationSettings(resourceLabel, value):: {
     resource+: {
       azurerm_dev_test_global_vm_shutdown_schedule+: {
@@ -113,15 +113,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   notification_settings:: {
     new(
-      webhook_url=null,
       email=null,
       enabled,
-      time_in_minutes=null
+      time_in_minutes=null,
+      webhook_url=null
     ):: std.prune(a={
-      webhook_url: webhook_url,
       email: email,
       enabled: enabled,
       time_in_minutes: time_in_minutes,
+      webhook_url: webhook_url,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -144,15 +144,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

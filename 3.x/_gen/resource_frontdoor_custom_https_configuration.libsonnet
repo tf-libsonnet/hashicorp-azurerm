@@ -4,13 +4,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     frontend_endpoint_id,
     custom_https_provisioning_enabled,
-    timeouts=null,
-    custom_https_configuration=null
+    custom_https_configuration=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_frontdoor_custom_https_configuration', label=resourceLabel, attrs=self.newAttrs(
     frontend_endpoint_id=frontend_endpoint_id,
     custom_https_provisioning_enabled=custom_https_provisioning_enabled,
-    timeouts=timeouts,
-    custom_https_configuration=custom_https_configuration
+    custom_https_configuration=custom_https_configuration,
+    timeouts=timeouts
   )),
   newAttrs(
     custom_https_provisioning_enabled,
@@ -23,20 +23,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     custom_https_configuration: custom_https_configuration,
     timeouts: timeouts,
   }),
-  withFrontendEndpointId(resourceLabel, value):: {
-    resource+: {
-      azurerm_frontdoor_custom_https_configuration+: {
-        [resourceLabel]+: {
-          frontend_endpoint_id: value,
-        },
-      },
-    },
-  },
   withCustomHttpsProvisioningEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_frontdoor_custom_https_configuration+: {
         [resourceLabel]+: {
           custom_https_provisioning_enabled: value,
+        },
+      },
+    },
+  },
+  withFrontendEndpointId(resourceLabel, value):: {
+    resource+: {
+      azurerm_frontdoor_custom_https_configuration+: {
+        [resourceLabel]+: {
+          frontend_endpoint_id: value,
         },
       },
     },
@@ -61,15 +61,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   custom_https_configuration:: {
     new(
-      azure_key_vault_certificate_secret_name=null,
-      azure_key_vault_certificate_secret_version=null,
       azure_key_vault_certificate_vault_id=null,
-      certificate_source=null
+      certificate_source=null,
+      azure_key_vault_certificate_secret_name=null,
+      azure_key_vault_certificate_secret_version=null
     ):: std.prune(a={
-      azure_key_vault_certificate_secret_name: azure_key_vault_certificate_secret_name,
-      azure_key_vault_certificate_secret_version: azure_key_vault_certificate_secret_version,
       azure_key_vault_certificate_vault_id: azure_key_vault_certificate_vault_id,
       certificate_source: certificate_source,
+      azure_key_vault_certificate_secret_name: azure_key_vault_certificate_secret_name,
+      azure_key_vault_certificate_secret_version: azure_key_vault_certificate_secret_version,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -92,15 +92,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

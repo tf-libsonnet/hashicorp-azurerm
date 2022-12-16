@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data_factory_id,
-    fqdns=null,
     name,
     subresource_name=null,
     target_resource_id,
+    data_factory_id,
+    fqdns=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    data_factory_id=data_factory_id,
-    fqdns=fqdns,
     name=name,
     subresource_name=subresource_name,
     target_resource_id=target_resource_id,
+    data_factory_id=data_factory_id,
+    fqdns=fqdns,
     timeouts=timeouts
   )),
   newAttrs(
-    data_factory_id,
-    fqdns=null,
     name,
     subresource_name=null,
     target_resource_id,
+    data_factory_id,
+    fqdns=null,
     timeouts=null
   ):: std.prune(a={
-    data_factory_id: data_factory_id,
-    fqdns: fqdns,
     name: name,
     subresource_name: subresource_name,
     target_resource_id: target_resource_id,
+    data_factory_id: data_factory_id,
+    fqdns: fqdns,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_managed_private_endpoint+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSubresourceName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_managed_private_endpoint+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_managed_private_endpoint+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_managed_private_endpoint+: {
@@ -96,13 +96,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
-      read=null,
-      create=null
+      read=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
-      create: create,
     }),
   },
 }

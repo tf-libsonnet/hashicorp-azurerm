@@ -3,72 +3,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     dns_servers=null,
-    name,
-    resource_group_name,
     tags=null,
-    address_space,
+    subnet=null,
     bgp_community=null,
+    edge_zone=null,
     flow_timeout_in_minutes=null,
     location,
-    subnet=null,
-    edge_zone=null,
-    ddos_protection_plan=null,
-    timeouts=null
+    resource_group_name,
+    name,
+    address_space,
+    timeouts=null,
+    ddos_protection_plan=null
   ):: tf.withResource(type='azurerm_virtual_network', label=resourceLabel, attrs=self.newAttrs(
     dns_servers=dns_servers,
-    name=name,
-    resource_group_name=resource_group_name,
     tags=tags,
-    address_space=address_space,
+    subnet=subnet,
     bgp_community=bgp_community,
+    edge_zone=edge_zone,
     flow_timeout_in_minutes=flow_timeout_in_minutes,
     location=location,
-    subnet=subnet,
-    edge_zone=edge_zone,
-    ddos_protection_plan=ddos_protection_plan,
-    timeouts=timeouts
+    resource_group_name=resource_group_name,
+    name=name,
+    address_space=address_space,
+    timeouts=timeouts,
+    ddos_protection_plan=ddos_protection_plan
   )),
   newAttrs(
-    bgp_community=null,
-    flow_timeout_in_minutes=null,
     location,
     tags=null,
-    name,
-    resource_group_name,
     address_space,
-    subnet=null,
-    dns_servers=null,
     edge_zone=null,
+    flow_timeout_in_minutes=null,
+    dns_servers=null,
+    resource_group_name,
+    name,
+    subnet=null,
+    bgp_community=null,
     ddos_protection_plan=null,
     timeouts=null
   ):: std.prune(a={
-    bgp_community: bgp_community,
-    flow_timeout_in_minutes: flow_timeout_in_minutes,
     location: location,
     tags: tags,
-    name: name,
-    resource_group_name: resource_group_name,
     address_space: address_space,
-    subnet: subnet,
-    dns_servers: dns_servers,
     edge_zone: edge_zone,
+    flow_timeout_in_minutes: flow_timeout_in_minutes,
+    dns_servers: dns_servers,
+    resource_group_name: resource_group_name,
+    name: name,
+    subnet: subnet,
+    bgp_community: bgp_community,
     ddos_protection_plan: ddos_protection_plan,
     timeouts: timeouts,
   }),
-  withAddressSpace(resourceLabel, value):: {
+  withBgpCommunity(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          address_space: value,
-        },
-      },
-    },
-  },
-  withFlowTimeoutInMinutes(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_network+: {
-        [resourceLabel]+: {
-          flow_timeout_in_minutes: value,
+          bgp_community: value,
         },
       },
     },
@@ -82,6 +73,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withFlowTimeoutInMinutes(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_network+: {
+        [resourceLabel]+: {
+          flow_timeout_in_minutes: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
@@ -91,20 +91,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withSubnet(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          tags: value,
+          subnet: value,
         },
       },
     },
   },
-  withBgpCommunity(resourceLabel, value):: {
+  withAddressSpace(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          bgp_community: value,
+          address_space: value,
         },
       },
     },
@@ -118,11 +118,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubnet(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_network+: {
         [resourceLabel]+: {
-          subnet: value,
+          tags: value,
         },
       },
     },

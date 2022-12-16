@@ -3,55 +3,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     resource_group_name,
-    client_secret,
-    display_name,
     api_management_name,
     client_id,
-    description=null,
     metadata_endpoint,
+    client_secret,
+    display_name,
+    description=null,
     name,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_openid_connect_provider', label=resourceLabel, attrs=self.newAttrs(
     resource_group_name=resource_group_name,
-    client_secret=client_secret,
-    display_name=display_name,
     api_management_name=api_management_name,
     client_id=client_id,
-    description=description,
     metadata_endpoint=metadata_endpoint,
+    client_secret=client_secret,
+    display_name=display_name,
+    description=description,
     name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     client_secret,
     display_name,
+    name,
+    resource_group_name,
     api_management_name,
     client_id,
     description=null,
     metadata_endpoint,
-    name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     client_secret: client_secret,
     display_name: display_name,
+    name: name,
+    resource_group_name: resource_group_name,
     api_management_name: api_management_name,
     client_id: client_id,
     description: description,
     metadata_endpoint: metadata_endpoint,
-    name: name,
     timeouts: timeouts,
   }),
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_openid_connect_provider+: {
-        [resourceLabel]+: {
-          api_management_name: value,
-        },
-      },
-    },
-  },
   withClientId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_openid_connect_provider+: {
@@ -79,15 +70,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_openid_connect_provider+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withClientSecret(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_openid_connect_provider+: {
@@ -106,11 +88,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_openid_connect_provider+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_openid_connect_provider+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withApiManagementName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_openid_connect_provider+: {
+        [resourceLabel]+: {
+          api_management_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

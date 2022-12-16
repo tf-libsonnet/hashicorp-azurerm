@@ -4,151 +4,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     encoding=null,
     endpoint_uri=null,
-    batch_frequency_in_seconds=null,
     file_name_format=null,
     resource_group_name,
     name,
-    connection_string=null,
-    authentication_type=null,
-    iothub_id,
-    max_chunk_size_in_bytes=null,
     container_name,
     identity_id=null,
+    authentication_type=null,
+    batch_frequency_in_seconds=null,
+    connection_string=null,
+    iothub_id,
+    max_chunk_size_in_bytes=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_endpoint_storage_container', label=resourceLabel, attrs=self.newAttrs(
     encoding=encoding,
     endpoint_uri=endpoint_uri,
-    batch_frequency_in_seconds=batch_frequency_in_seconds,
     file_name_format=file_name_format,
     resource_group_name=resource_group_name,
     name=name,
-    connection_string=connection_string,
-    authentication_type=authentication_type,
-    iothub_id=iothub_id,
-    max_chunk_size_in_bytes=max_chunk_size_in_bytes,
     container_name=container_name,
     identity_id=identity_id,
+    authentication_type=authentication_type,
+    batch_frequency_in_seconds=batch_frequency_in_seconds,
+    connection_string=connection_string,
+    iothub_id=iothub_id,
+    max_chunk_size_in_bytes=max_chunk_size_in_bytes,
     timeouts=timeouts
   )),
   newAttrs(
-    iothub_id,
-    resource_group_name,
-    container_name,
-    endpoint_uri=null,
-    authentication_type=null,
-    file_name_format=null,
     batch_frequency_in_seconds=null,
-    max_chunk_size_in_bytes=null,
     connection_string=null,
     encoding=null,
-    identity_id=null,
+    file_name_format=null,
+    max_chunk_size_in_bytes=null,
+    resource_group_name,
+    container_name,
     name,
+    identity_id=null,
+    authentication_type=null,
+    endpoint_uri=null,
+    iothub_id,
     timeouts=null
   ):: std.prune(a={
-    iothub_id: iothub_id,
-    resource_group_name: resource_group_name,
-    container_name: container_name,
-    endpoint_uri: endpoint_uri,
-    authentication_type: authentication_type,
-    file_name_format: file_name_format,
     batch_frequency_in_seconds: batch_frequency_in_seconds,
-    max_chunk_size_in_bytes: max_chunk_size_in_bytes,
     connection_string: connection_string,
     encoding: encoding,
-    identity_id: identity_id,
+    file_name_format: file_name_format,
+    max_chunk_size_in_bytes: max_chunk_size_in_bytes,
+    resource_group_name: resource_group_name,
+    container_name: container_name,
     name: name,
+    identity_id: identity_id,
+    authentication_type: authentication_type,
+    endpoint_uri: endpoint_uri,
+    iothub_id: iothub_id,
     timeouts: timeouts,
   }),
-  withAuthenticationType(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          authentication_type: value,
-        },
-      },
-    },
-  },
-  withIothubId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          iothub_id: value,
-        },
-      },
-    },
-  },
-  withMaxChunkSizeInBytes(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          max_chunk_size_in_bytes: value,
-        },
-      },
-    },
-  },
-  withIdentityId(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          identity_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withConnectionString(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          connection_string: value,
-        },
-      },
-    },
-  },
-  withContainerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          container_name: value,
-        },
-      },
-    },
-  },
-  withEndpointUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          endpoint_uri: value,
-        },
-      },
-    },
-  },
-  withEncoding(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          encoding: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_endpoint_storage_container+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withBatchFrequencyInSeconds(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_endpoint_storage_container+: {
@@ -163,6 +73,96 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iothub_endpoint_storage_container+: {
         [resourceLabel]+: {
           file_name_format: value,
+        },
+      },
+    },
+  },
+  withMaxChunkSizeInBytes(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          max_chunk_size_in_bytes: value,
+        },
+      },
+    },
+  },
+  withContainerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          container_name: value,
+        },
+      },
+    },
+  },
+  withIdentityId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          identity_id: value,
+        },
+      },
+    },
+  },
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
+  withEncoding(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          encoding: value,
+        },
+      },
+    },
+  },
+  withEndpointUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          endpoint_uri: value,
+        },
+      },
+    },
+  },
+  withIothubId(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          iothub_id: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withAuthenticationType(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_endpoint_storage_container+: {
+        [resourceLabel]+: {
+          authentication_type: value,
         },
       },
     },
@@ -187,15 +187,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

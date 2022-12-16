@@ -2,56 +2,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
+    automation_account_name,
     enabled=null,
     expiry_time,
-    automation_account_name,
-    parameters=null,
-    name,
-    run_on_worker_group=null,
-    runbook_name,
     uri=null,
+    resource_group_name,
+    runbook_name,
+    name,
+    parameters=null,
+    run_on_worker_group=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_webhook', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
+    automation_account_name=automation_account_name,
     enabled=enabled,
     expiry_time=expiry_time,
-    automation_account_name=automation_account_name,
-    parameters=parameters,
-    name=name,
-    run_on_worker_group=run_on_worker_group,
-    runbook_name=runbook_name,
     uri=uri,
+    resource_group_name=resource_group_name,
+    runbook_name=runbook_name,
+    name=name,
+    parameters=parameters,
+    run_on_worker_group=run_on_worker_group,
     timeouts=timeouts
   )),
   newAttrs(
     uri=null,
-    expiry_time,
-    name,
     resource_group_name,
-    enabled=null,
-    automation_account_name,
-    parameters=null,
-    run_on_worker_group=null,
     runbook_name,
+    enabled=null,
+    expiry_time,
+    run_on_worker_group=null,
+    automation_account_name,
+    name,
+    parameters=null,
     timeouts=null
   ):: std.prune(a={
     uri: uri,
-    expiry_time: expiry_time,
-    name: name,
     resource_group_name: resource_group_name,
-    enabled: enabled,
-    automation_account_name: automation_account_name,
-    parameters: parameters,
-    run_on_worker_group: run_on_worker_group,
     runbook_name: runbook_name,
+    enabled: enabled,
+    expiry_time: expiry_time,
+    run_on_worker_group: run_on_worker_group,
+    automation_account_name: automation_account_name,
+    name: name,
+    parameters: parameters,
     timeouts: timeouts,
   }),
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          enabled: value,
+        },
+      },
+    },
+  },
+  withExpiryTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          expiry_time: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_webhook+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -74,29 +101,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
   withAutomationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_automation_webhook+: {
         [resourceLabel]+: {
           automation_account_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          parameters: value,
         },
       },
     },
@@ -115,15 +124,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_automation_webhook+: {
         [resourceLabel]+: {
           uri: value,
-        },
-      },
-    },
-  },
-  withExpiryTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_webhook+: {
-        [resourceLabel]+: {
-          expiry_time: value,
         },
       },
     },

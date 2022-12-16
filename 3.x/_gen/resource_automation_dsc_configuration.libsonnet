@@ -2,61 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    location,
-    log_verbose=null,
     resource_group_name,
-    automation_account_name,
-    name,
     tags=null,
+    automation_account_name,
+    location,
+    name,
     content_embedded,
+    description=null,
+    log_verbose=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_dsc_configuration', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    location=location,
-    log_verbose=log_verbose,
     resource_group_name=resource_group_name,
-    automation_account_name=automation_account_name,
-    name=name,
     tags=tags,
+    automation_account_name=automation_account_name,
+    location=location,
+    name=name,
     content_embedded=content_embedded,
+    description=description,
+    log_verbose=log_verbose,
     timeouts=timeouts
   )),
   newAttrs(
-    automation_account_name,
+    content_embedded,
     location,
-    log_verbose=null,
     resource_group_name,
     tags=null,
-    content_embedded,
+    automation_account_name,
     description=null,
+    log_verbose=null,
     name,
     timeouts=null
   ):: std.prune(a={
-    automation_account_name: automation_account_name,
+    content_embedded: content_embedded,
     location: location,
-    log_verbose: log_verbose,
     resource_group_name: resource_group_name,
     tags: tags,
-    content_embedded: content_embedded,
+    automation_account_name: automation_account_name,
     description: description,
+    log_verbose: log_verbose,
     name: name,
     timeouts: timeouts,
   }),
+  withAutomationAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_dsc_configuration+: {
+        [resourceLabel]+: {
+          automation_account_name: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_automation_dsc_configuration+: {
         [resourceLabel]+: {
           description: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_dsc_configuration+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -88,11 +88,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutomationAccountName(resourceLabel, value):: {
+  withContentEmbedded(resourceLabel, value):: {
     resource+: {
       azurerm_automation_dsc_configuration+: {
         [resourceLabel]+: {
-          automation_account_name: value,
+          content_embedded: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_dsc_configuration+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -102,15 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_automation_dsc_configuration+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withContentEmbedded(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_dsc_configuration+: {
-        [resourceLabel]+: {
-          content_embedded: value,
         },
       },
     },

@@ -31,15 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     trusted_domain_fqdn: trusted_domain_fqdn,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_active_directory_domain_service_trust+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPassword(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service_trust+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_active_directory_domain_service_trust+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_active_directory_domain_service_trust+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

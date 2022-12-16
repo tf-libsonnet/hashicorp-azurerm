@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    subnet_id,
     network_security_group_id,
+    subnet_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_subnet_network_security_group_association', label=resourceLabel, attrs=self.newAttrs(subnet_id=subnet_id, network_security_group_id=network_security_group_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_subnet_network_security_group_association', label=resourceLabel, attrs=self.newAttrs(network_security_group_id=network_security_group_id, subnet_id=subnet_id, timeouts=timeouts)),
   newAttrs(
     network_security_group_id,
     subnet_id,

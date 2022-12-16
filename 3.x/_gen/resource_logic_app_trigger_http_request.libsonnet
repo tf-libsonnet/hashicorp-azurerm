@@ -17,20 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    relative_path=null,
     schema,
     logic_app_id,
     method=null,
     name,
+    relative_path=null,
     timeouts=null
   ):: std.prune(a={
-    relative_path: relative_path,
     schema: schema,
     logic_app_id: logic_app_id,
     method: method,
     name: name,
+    relative_path: relative_path,
     timeouts: timeouts,
   }),
+  withLogicAppId(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_trigger_http_request+: {
+        [resourceLabel]+: {
+          logic_app_id: value,
+        },
+      },
+    },
+  },
   withMethod(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_trigger_http_request+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogicAppId(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_trigger_http_request+: {
-        [resourceLabel]+: {
-          logic_app_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_trigger_http_request+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

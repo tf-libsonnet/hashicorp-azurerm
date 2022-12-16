@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    api_management_name,
     resource_group_name,
+    api_management_name,
     product_id,
     timeouts=null
   ):: tf.withData(type='azurerm_api_management_product', label=dataSrcLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
     resource_group_name=resource_group_name,
+    api_management_name=api_management_name,
     product_id=product_id,
     timeouts=timeouts
   )),
   newAttrs(
-    product_id,
-    resource_group_name,
     api_management_name,
+    resource_group_name,
+    product_id,
     timeouts=null
   ):: std.prune(a={
-    product_id: product_id,
-    resource_group_name: resource_group_name,
     api_management_name: api_management_name,
+    resource_group_name: resource_group_name,
+    product_id: product_id,
     timeouts: timeouts,
   }),
   withProductId(dataSrcLabel, value):: {

@@ -2,42 +2,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    sku,
-    managed_resource_group=null,
-    name,
+    diagnose_support_enabled=null,
     resource_group_name,
     tags=null,
-    diagnose_support_enabled=null,
+    managed_resource_group=null,
     location,
-    identity=null,
-    logging_storage_account=null,
-    network_interface=null,
+    name,
+    sku,
     timeouts=null,
     frontend_private=null,
-    frontend_public=null
+    frontend_public=null,
+    identity=null,
+    logging_storage_account=null,
+    network_interface=null
   ):: tf.withResource(type='azurerm_nginx_deployment', label=resourceLabel, attrs=self.newAttrs(
-    sku=sku,
-    managed_resource_group=managed_resource_group,
-    name=name,
+    diagnose_support_enabled=diagnose_support_enabled,
     resource_group_name=resource_group_name,
     tags=tags,
-    diagnose_support_enabled=diagnose_support_enabled,
+    managed_resource_group=managed_resource_group,
     location=location,
-    identity=identity,
-    logging_storage_account=logging_storage_account,
-    network_interface=network_interface,
+    name=name,
+    sku=sku,
     timeouts=timeouts,
     frontend_private=frontend_private,
-    frontend_public=frontend_public
+    frontend_public=frontend_public,
+    identity=identity,
+    logging_storage_account=logging_storage_account,
+    network_interface=network_interface
   )),
   newAttrs(
-    name,
-    resource_group_name,
-    location,
-    sku,
-    tags=null,
     diagnose_support_enabled=null,
+    location,
+    name,
     managed_resource_group=null,
+    resource_group_name,
+    tags=null,
+    sku,
     timeouts=null,
     frontend_private=null,
     frontend_public=null,
@@ -45,13 +45,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     logging_storage_account=null,
     network_interface=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
-    location: location,
-    sku: sku,
-    tags: tags,
     diagnose_support_enabled: diagnose_support_enabled,
+    location: location,
+    name: name,
     managed_resource_group: managed_resource_group,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    sku: sku,
     timeouts: timeouts,
     frontend_private: frontend_private,
     frontend_public: frontend_public,
@@ -59,29 +59,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     logging_storage_account: logging_storage_account,
     network_interface: network_interface,
   }),
-  withName(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_nginx_deployment+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_deployment+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_deployment+: {
-        [resourceLabel]+: {
-          sku: value,
+          resource_group_name: value,
         },
       },
     },
@@ -95,6 +77,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_deployment+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
   withDiagnoseSupportEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_nginx_deployment+: {
@@ -104,11 +95,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_nginx_deployment+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_deployment+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -121,6 +121,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_deployment+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_deployment+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
+  },
+  withLoggingStorageAccount(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_deployment+: {
+        [resourceLabel]+: {
+          logging_storage_account: value,
+        },
+      },
+    },
+  },
+  withLoggingStorageAccountMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_nginx_deployment+: {
+        [resourceLabel]+: {
+          logging_storage_account+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  logging_storage_account:: {
+    new(
+      container_name=null,
+      name=null
+    ):: std.prune(a={
+      container_name: container_name,
+      name: name,
+    }),
   },
   withNetworkInterface(resourceLabel, value):: {
     resource+: {
@@ -167,15 +221,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
   withFrontendPrivate(resourceLabel, value):: {
@@ -230,60 +284,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       ip_address=null
     ):: std.prune(a={
       ip_address: ip_address,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_deployment+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_deployment+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
-  },
-  withLoggingStorageAccount(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_deployment+: {
-        [resourceLabel]+: {
-          logging_storage_account: value,
-        },
-      },
-    },
-  },
-  withLoggingStorageAccountMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_nginx_deployment+: {
-        [resourceLabel]+: {
-          logging_storage_account+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  logging_storage_account:: {
-    new(
-      container_name=null,
-      name=null
-    ):: std.prune(a={
-      container_name: container_name,
-      name: name,
     }),
   },
 }

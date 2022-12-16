@@ -2,30 +2,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    iotcentral_application_id,
+    apply_to_device=null,
+    default_action=null,
+    ip_rule=null,
+    timeouts=null
+  ):: tf.withResource(type='azurerm_iotcentral_application_network_rule_set', label=resourceLabel, attrs=self.newAttrs(
+    iotcentral_application_id=iotcentral_application_id,
+    apply_to_device=apply_to_device,
+    default_action=default_action,
+    ip_rule=ip_rule,
+    timeouts=timeouts
+  )),
+  newAttrs(
     apply_to_device=null,
     default_action=null,
     iotcentral_application_id,
     ip_rule=null,
     timeouts=null
-  ):: tf.withResource(type='azurerm_iotcentral_application_network_rule_set', label=resourceLabel, attrs=self.newAttrs(
-    apply_to_device=apply_to_device,
-    default_action=default_action,
-    iotcentral_application_id=iotcentral_application_id,
-    ip_rule=ip_rule,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    iotcentral_application_id,
-    apply_to_device=null,
-    default_action=null,
-    timeouts=null,
-    ip_rule=null
   ):: std.prune(a={
-    iotcentral_application_id: iotcentral_application_id,
     apply_to_device: apply_to_device,
     default_action: default_action,
-    timeouts: timeouts,
+    iotcentral_application_id: iotcentral_application_id,
     ip_rule: ip_rule,
+    timeouts: timeouts,
   }),
   withIotcentralApplicationId(resourceLabel, value):: {
     resource+: {
@@ -54,6 +54,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application_network_rule_set+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_iotcentral_application_network_rule_set+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
   withIpRule(resourceLabel, value):: {
     resource+: {
       azurerm_iotcentral_application_network_rule_set+: {
@@ -79,37 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       ip_mask: ip_mask,
       name: name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application_network_rule_set+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_iotcentral_application_network_rule_set+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
     }),
   },
 }

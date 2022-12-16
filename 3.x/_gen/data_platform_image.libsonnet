@@ -31,6 +31,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     publisher: publisher,
     timeouts: timeouts,
   }),
+  withVersion(dataSrcLabel, value):: {
+    data+: {
+      azurerm_platform_image+: {
+        [dataSrcLabel]+: {
+          version: value,
+        },
+      },
+    },
+  },
+  withLocation(dataSrcLabel, value):: {
+    data+: {
+      azurerm_platform_image+: {
+        [dataSrcLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withOffer(dataSrcLabel, value):: {
     data+: {
       azurerm_platform_image+: {
@@ -54,24 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_platform_image+: {
         [dataSrcLabel]+: {
           sku: value,
-        },
-      },
-    },
-  },
-  withVersion(dataSrcLabel, value):: {
-    data+: {
-      azurerm_platform_image+: {
-        [dataSrcLabel]+: {
-          version: value,
-        },
-      },
-    },
-  },
-  withLocation(dataSrcLabel, value):: {
-    data+: {
-      azurerm_platform_image+: {
-        [dataSrcLabel]+: {
-          location: value,
         },
       },
     },

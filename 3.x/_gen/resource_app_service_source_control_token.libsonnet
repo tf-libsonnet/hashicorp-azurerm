@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     token: token,
     timeouts: timeouts,
   }),
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_source_control_token+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
   withToken(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_source_control_token+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_source_control_token+: {
         [resourceLabel]+: {
           token_secret: value,
+        },
+      },
+    },
+  },
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_source_control_token+: {
+        [resourceLabel]+: {
+          type: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

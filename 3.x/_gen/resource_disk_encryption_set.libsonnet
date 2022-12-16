@@ -2,83 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
     name,
+    federated_client_id=null,
+    location,
+    tags=null,
+    resource_group_name,
+    auto_key_rotation_enabled=null,
     encryption_type=null,
     key_vault_key_id,
-    resource_group_name,
-    tags=null,
-    auto_key_rotation_enabled=null,
-    federated_client_id=null,
-    identity=null,
-    timeouts=null
+    timeouts=null,
+    identity=null
   ):: tf.withResource(type='azurerm_disk_encryption_set', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
     name=name,
+    federated_client_id=federated_client_id,
+    location=location,
+    tags=tags,
+    resource_group_name=resource_group_name,
+    auto_key_rotation_enabled=auto_key_rotation_enabled,
     encryption_type=encryption_type,
     key_vault_key_id=key_vault_key_id,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    auto_key_rotation_enabled=auto_key_rotation_enabled,
-    federated_client_id=federated_client_id,
-    identity=identity,
-    timeouts=timeouts
+    timeouts=timeouts,
+    identity=identity
   )),
   newAttrs(
-    resource_group_name,
+    name,
+    federated_client_id=null,
+    location,
     tags=null,
+    resource_group_name,
+    auto_key_rotation_enabled=null,
     encryption_type=null,
     key_vault_key_id,
-    location,
-    name,
-    auto_key_rotation_enabled=null,
-    federated_client_id=null,
     timeouts=null,
     identity=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
+    name: name,
+    federated_client_id: federated_client_id,
+    location: location,
     tags: tags,
+    resource_group_name: resource_group_name,
+    auto_key_rotation_enabled: auto_key_rotation_enabled,
     encryption_type: encryption_type,
     key_vault_key_id: key_vault_key_id,
-    location: location,
-    name: name,
-    auto_key_rotation_enabled: auto_key_rotation_enabled,
-    federated_client_id: federated_client_id,
     timeouts: timeouts,
     identity: identity,
   }),
-  withEncryptionType(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_encryption_set+: {
-        [resourceLabel]+: {
-          encryption_type: value,
-        },
-      },
-    },
-  },
   withKeyVaultKeyId(resourceLabel, value):: {
     resource+: {
       azurerm_disk_encryption_set+: {
         [resourceLabel]+: {
           key_vault_key_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_encryption_set+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_encryption_set+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },
@@ -92,11 +65,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutoKeyRotationEnabled(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_disk_encryption_set+: {
         [resourceLabel]+: {
-          auto_key_rotation_enabled: value,
+          resource_group_name: value,
         },
       },
     },
@@ -119,36 +92,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_disk_encryption_set+: {
         [resourceLabel]+: {
-          timeouts: value,
+          tags: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withAutoKeyRotationEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_disk_encryption_set+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          auto_key_rotation_enabled: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withEncryptionType(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_encryption_set+: {
+        [resourceLabel]+: {
+          encryption_type: value,
+        },
+      },
+    },
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -170,11 +139,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      type,
-      identity_ids=null
+      identity_ids=null,
+      type
     ):: std.prune(a={
-      type: type,
       identity_ids: identity_ids,
+      type: type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_encryption_set+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_encryption_set+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

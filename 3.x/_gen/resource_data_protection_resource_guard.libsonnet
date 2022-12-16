@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    vault_critical_operation_exclusion_list=null,
+    location,
     name,
     resource_group_name,
     tags=null,
-    vault_critical_operation_exclusion_list=null,
-    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_protection_resource_guard', label=resourceLabel, attrs=self.newAttrs(
+    vault_critical_operation_exclusion_list=vault_critical_operation_exclusion_list,
+    location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
-    vault_critical_operation_exclusion_list=vault_critical_operation_exclusion_list,
-    location=location,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
     name,
     resource_group_name,
     tags=null,
     vault_critical_operation_exclusion_list=null,
-    location,
     timeouts=null
   ):: std.prune(a={
+    location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     vault_critical_operation_exclusion_list: vault_critical_operation_exclusion_list,
-    location: location,
     timeouts: timeouts,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_protection_resource_guard+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withVaultCriticalOperationExclusionList(resourceLabel, value):: {
     resource+: {
       azurerm_data_protection_resource_guard+: {
@@ -63,15 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_protection_resource_guard+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_protection_resource_guard+: {
-        [resourceLabel]+: {
-          tags: value,
         },
       },
     },

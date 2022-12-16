@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    target_resource_id,
-    vnet_solution=null,
     client_type=null,
     name,
     spring_cloud_id,
+    target_resource_id,
+    vnet_solution=null,
     authentication=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_connection', label=resourceLabel, attrs=self.newAttrs(
-    target_resource_id=target_resource_id,
-    vnet_solution=vnet_solution,
     client_type=client_type,
     name=name,
     spring_cloud_id=spring_cloud_id,
+    target_resource_id=target_resource_id,
+    vnet_solution=vnet_solution,
     authentication=authentication,
     timeouts=timeouts
   )),
   newAttrs(
+    vnet_solution=null,
+    client_type=null,
     name,
     spring_cloud_id,
     target_resource_id,
-    vnet_solution=null,
-    client_type=null,
-    timeouts=null,
-    authentication=null
+    authentication=null,
+    timeouts=null
   ):: std.prune(a={
+    vnet_solution: vnet_solution,
+    client_type: client_type,
     name: name,
     spring_cloud_id: spring_cloud_id,
     target_resource_id: target_resource_id,
-    vnet_solution: vnet_solution,
-    client_type: client_type,
-    timeouts: timeouts,
     authentication: authentication,
+    timeouts: timeouts,
   }),
-  withVnetSolution(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_connection+: {
-        [resourceLabel]+: {
-          vnet_solution: value,
-        },
-      },
-    },
-  },
   withClientType(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_connection+: {
@@ -76,6 +67,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_connection+: {
         [resourceLabel]+: {
           target_resource_id: value,
+        },
+      },
+    },
+  },
+  withVnetSolution(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_connection+: {
+        [resourceLabel]+: {
+          vnet_solution: value,
         },
       },
     },
@@ -137,15 +137,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

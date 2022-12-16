@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     scope: scope,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_lighthouse_assignment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withScope(resourceLabel, value):: {
     resource+: {
       azurerm_lighthouse_assignment+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_lighthouse_assignment+: {
         [resourceLabel]+: {
           lighthouse_definition_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_lighthouse_assignment+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -70,13 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

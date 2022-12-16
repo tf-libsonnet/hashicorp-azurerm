@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    account_name,
     name,
     resource_group_name,
+    account_name,
     timeouts=null
   ):: tf.withData(type='azurerm_batch_application', label=dataSrcLabel, attrs=self.newAttrs(
-    account_name=account_name,
     name=name,
     resource_group_name=resource_group_name,
+    account_name=account_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  withAccountName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_batch_application+: {
+        [dataSrcLabel]+: {
+          account_name: value,
+        },
+      },
+    },
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_batch_application+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_batch_application+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withAccountName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_batch_application+: {
-        [dataSrcLabel]+: {
-          account_name: value,
         },
       },
     },

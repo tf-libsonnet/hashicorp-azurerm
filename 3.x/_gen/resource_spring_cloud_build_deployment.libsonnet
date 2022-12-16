@@ -2,43 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    environment_variables=null,
     instance_count=null,
     name,
     spring_cloud_app_id,
     addon_json=null,
     build_result_id,
+    environment_variables=null,
     quota=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_build_deployment', label=resourceLabel, attrs=self.newAttrs(
-    environment_variables=environment_variables,
     instance_count=instance_count,
     name=name,
     spring_cloud_app_id=spring_cloud_app_id,
     addon_json=addon_json,
     build_result_id=build_result_id,
+    environment_variables=environment_variables,
     quota=quota,
     timeouts=timeouts
   )),
   newAttrs(
+    build_result_id,
+    environment_variables=null,
     instance_count=null,
     name,
     spring_cloud_app_id,
     addon_json=null,
-    build_result_id,
-    environment_variables=null,
     quota=null,
     timeouts=null
   ):: std.prune(a={
+    build_result_id: build_result_id,
+    environment_variables: environment_variables,
     instance_count: instance_count,
     name: name,
     spring_cloud_app_id: spring_cloud_app_id,
     addon_json: addon_json,
-    build_result_id: build_result_id,
-    environment_variables: environment_variables,
     quota: quota,
     timeouts: timeouts,
   }),
+  withBuildResultId(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_build_deployment+: {
+        [resourceLabel]+: {
+          build_result_id: value,
+        },
+      },
+    },
+  },
+  withEnvironmentVariables(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_build_deployment+: {
+        [resourceLabel]+: {
+          environment_variables: value,
+        },
+      },
+    },
+  },
   withInstanceCount(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_build_deployment+: {
@@ -75,24 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBuildResultId(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_build_deployment+: {
-        [resourceLabel]+: {
-          build_result_id: value,
-        },
-      },
-    },
-  },
-  withEnvironmentVariables(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_build_deployment+: {
-        [resourceLabel]+: {
-          environment_variables: value,
-        },
-      },
-    },
-  },
   withQuota(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_build_deployment+: {
@@ -113,11 +113,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   quota:: {
     new(
-      cpu=null,
-      memory=null
+      memory=null,
+      cpu=null
     ):: std.prune(a={
-      cpu: cpu,
       memory: memory,
+      cpu: cpu,
     }),
   },
   withTimeouts(resourceLabel, value):: {

@@ -2,123 +2,96 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    spark_log_folder=null,
-    cache_size=null,
     spark_version=null,
-    node_count=null,
-    compute_isolation_enabled=null,
-    name,
     min_executors=null,
-    node_size,
-    max_executors=null,
+    cache_size=null,
     synapse_workspace_id,
+    node_size,
     node_size_family,
     spark_events_folder=null,
     tags=null,
-    session_level_packages_enabled=null,
-    dynamic_executor_allocation_enabled=null,
-    auto_pause=null,
-    auto_scale=null,
-    library_requirement=null,
-    spark_config=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_spark_pool', label=resourceLabel, attrs=self.newAttrs(
-    spark_log_folder=spark_log_folder,
-    cache_size=cache_size,
-    spark_version=spark_version,
-    node_count=node_count,
-    compute_isolation_enabled=compute_isolation_enabled,
-    name=name,
-    min_executors=min_executors,
-    node_size=node_size,
-    max_executors=max_executors,
-    synapse_workspace_id=synapse_workspace_id,
-    node_size_family=node_size_family,
-    spark_events_folder=spark_events_folder,
-    tags=tags,
-    session_level_packages_enabled=session_level_packages_enabled,
-    dynamic_executor_allocation_enabled=dynamic_executor_allocation_enabled,
-    auto_pause=auto_pause,
-    auto_scale=auto_scale,
-    library_requirement=library_requirement,
-    spark_config=spark_config,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    session_level_packages_enabled=null,
-    name,
     max_executors=null,
     node_count=null,
-    spark_events_folder=null,
+    name,
+    session_level_packages_enabled=null,
     spark_log_folder=null,
-    synapse_workspace_id,
-    dynamic_executor_allocation_enabled=null,
-    cache_size=null,
-    min_executors=null,
-    spark_version=null,
-    node_size_family,
-    tags=null,
-    node_size,
     compute_isolation_enabled=null,
+    dynamic_executor_allocation_enabled=null,
     spark_config=null,
     timeouts=null,
     auto_pause=null,
     auto_scale=null,
     library_requirement=null
+  ):: tf.withResource(type='azurerm_synapse_spark_pool', label=resourceLabel, attrs=self.newAttrs(
+    spark_version=spark_version,
+    min_executors=min_executors,
+    cache_size=cache_size,
+    synapse_workspace_id=synapse_workspace_id,
+    node_size=node_size,
+    node_size_family=node_size_family,
+    spark_events_folder=spark_events_folder,
+    tags=tags,
+    max_executors=max_executors,
+    node_count=node_count,
+    name=name,
+    session_level_packages_enabled=session_level_packages_enabled,
+    spark_log_folder=spark_log_folder,
+    compute_isolation_enabled=compute_isolation_enabled,
+    dynamic_executor_allocation_enabled=dynamic_executor_allocation_enabled,
+    spark_config=spark_config,
+    timeouts=timeouts,
+    auto_pause=auto_pause,
+    auto_scale=auto_scale,
+    library_requirement=library_requirement
+  )),
+  newAttrs(
+    node_size_family,
+    node_count=null,
+    compute_isolation_enabled=null,
+    spark_events_folder=null,
+    spark_log_folder=null,
+    dynamic_executor_allocation_enabled=null,
+    name,
+    session_level_packages_enabled=null,
+    node_size,
+    synapse_workspace_id,
+    spark_version=null,
+    cache_size=null,
+    min_executors=null,
+    tags=null,
+    max_executors=null,
+    auto_pause=null,
+    auto_scale=null,
+    library_requirement=null,
+    spark_config=null,
+    timeouts=null
   ):: std.prune(a={
-    session_level_packages_enabled: session_level_packages_enabled,
-    name: name,
-    max_executors: max_executors,
+    node_size_family: node_size_family,
     node_count: node_count,
+    compute_isolation_enabled: compute_isolation_enabled,
     spark_events_folder: spark_events_folder,
     spark_log_folder: spark_log_folder,
-    synapse_workspace_id: synapse_workspace_id,
     dynamic_executor_allocation_enabled: dynamic_executor_allocation_enabled,
+    name: name,
+    session_level_packages_enabled: session_level_packages_enabled,
+    node_size: node_size,
+    synapse_workspace_id: synapse_workspace_id,
+    spark_version: spark_version,
     cache_size: cache_size,
     min_executors: min_executors,
-    spark_version: spark_version,
-    node_size_family: node_size_family,
     tags: tags,
-    node_size: node_size,
-    compute_isolation_enabled: compute_isolation_enabled,
-    spark_config: spark_config,
-    timeouts: timeouts,
+    max_executors: max_executors,
     auto_pause: auto_pause,
     auto_scale: auto_scale,
     library_requirement: library_requirement,
+    spark_config: spark_config,
+    timeouts: timeouts,
   }),
-  withNodeSizeFamily(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          node_size_family: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withComputeIsolationEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_spark_pool+: {
         [resourceLabel]+: {
           compute_isolation_enabled: value,
-        },
-      },
-    },
-  },
-  withMaxExecutors(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          max_executors: value,
         },
       },
     },
@@ -132,11 +105,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withNodeSize(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_spark_pool+: {
         [resourceLabel]+: {
-          node_size: value,
+          name: value,
         },
       },
     },
@@ -159,38 +132,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withMaxExecutors(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_spark_pool+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSparkVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          spark_version: value,
-        },
-      },
-    },
-  },
-  withSparkLogFolder(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          spark_log_folder: value,
-        },
-      },
-    },
-  },
-  withCacheSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          cache_size: value,
+          max_executors: value,
         },
       },
     },
@@ -204,11 +150,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCacheSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          cache_size: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withSparkEventsFolder(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_spark_pool+: {
         [resourceLabel]+: {
           spark_events_folder: value,
+        },
+      },
+    },
+  },
+  withSparkLogFolder(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          spark_log_folder: value,
+        },
+      },
+    },
+  },
+  withNodeSizeFamily(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          node_size_family: value,
+        },
+      },
+    },
+  },
+  withSparkVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          spark_version: value,
         },
       },
     },
@@ -221,6 +212,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withNodeSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          node_size: value,
+        },
+      },
+    },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_spark_pool+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withAutoPause(resourceLabel, value):: {
     resource+: {
@@ -267,11 +298,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   auto_scale:: {
     new(
-      max_node_count,
-      min_node_count
+      min_node_count,
+      max_node_count
     ):: std.prune(a={
-      max_node_count: max_node_count,
       min_node_count: min_node_count,
+      max_node_count: max_node_count,
     }),
   },
   withLibraryRequirement(resourceLabel, value):: {
@@ -326,37 +357,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       content: content,
       filename: filename,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_spark_pool+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
     }),
   },
 }

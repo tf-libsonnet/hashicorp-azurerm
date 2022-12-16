@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    service_name,
     certificate_content=null,
     key_vault_certificate_id=null,
     name,
     resource_group_name,
-    service_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_certificate', label=resourceLabel, attrs=self.newAttrs(
+    service_name=service_name,
     certificate_content=certificate_content,
     key_vault_certificate_id=key_vault_certificate_id,
     name=name,
     resource_group_name=resource_group_name,
-    service_name=service_name,
     timeouts=timeouts
   )),
   newAttrs(
+    key_vault_certificate_id=null,
+    name,
     resource_group_name,
     service_name,
     certificate_content=null,
-    key_vault_certificate_id=null,
-    name,
     timeouts=null
   ):: std.prune(a={
+    key_vault_certificate_id: key_vault_certificate_id,
+    name: name,
     resource_group_name: resource_group_name,
     service_name: service_name,
     certificate_content: certificate_content,
-    key_vault_certificate_id: key_vault_certificate_id,
-    name: name,
     timeouts: timeouts,
   }),
+  withServiceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_certificate+: {
+        [resourceLabel]+: {
+          service_name: value,
+        },
+      },
+    },
+  },
+  withCertificateContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_certificate+: {
+        [resourceLabel]+: {
+          certificate_content: value,
+        },
+      },
+    },
+  },
   withKeyVaultCertificateId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_certificate+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withServiceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_certificate+: {
-        [resourceLabel]+: {
-          service_name: value,
-        },
-      },
-    },
-  },
-  withCertificateContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_certificate+: {
-        [resourceLabel]+: {
-          certificate_content: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_certificate+: {
@@ -96,13 +96,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

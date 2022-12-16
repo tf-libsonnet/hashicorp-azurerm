@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    skill_id,
-    bot_name,
     location,
     resource_group_name,
+    skill_id,
+    bot_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_alexa', label=resourceLabel, attrs=self.newAttrs(
-    skill_id=skill_id,
-    bot_name=bot_name,
     location=location,
     resource_group_name=resource_group_name,
+    skill_id=skill_id,
+    bot_name=bot_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location: location,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_alexa+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_alexa+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withSkillId(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_alexa+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bot_channel_alexa+: {
         [resourceLabel]+: {
           bot_name: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_alexa+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_alexa+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

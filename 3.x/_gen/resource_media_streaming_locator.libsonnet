@@ -3,55 +3,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     streaming_locator_id=null,
-    name,
-    alternative_media_id=null,
-    default_content_key_policy_name=null,
     asset_name,
+    streaming_policy_name,
+    name,
     resource_group_name,
     media_services_account_name,
+    default_content_key_policy_name=null,
     start_time=null,
-    streaming_policy_name,
+    alternative_media_id=null,
     end_time=null,
-    timeouts=null,
-    content_key=null
+    content_key=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_media_streaming_locator', label=resourceLabel, attrs=self.newAttrs(
     streaming_locator_id=streaming_locator_id,
-    name=name,
-    alternative_media_id=alternative_media_id,
-    default_content_key_policy_name=default_content_key_policy_name,
     asset_name=asset_name,
+    streaming_policy_name=streaming_policy_name,
+    name=name,
     resource_group_name=resource_group_name,
     media_services_account_name=media_services_account_name,
+    default_content_key_policy_name=default_content_key_policy_name,
     start_time=start_time,
-    streaming_policy_name=streaming_policy_name,
+    alternative_media_id=alternative_media_id,
     end_time=end_time,
-    timeouts=timeouts,
-    content_key=content_key
+    content_key=content_key,
+    timeouts=timeouts
   )),
   newAttrs(
-    end_time=null,
-    start_time=null,
-    asset_name,
-    alternative_media_id=null,
-    default_content_key_policy_name=null,
     media_services_account_name,
+    streaming_locator_id=null,
+    asset_name,
+    default_content_key_policy_name=null,
+    streaming_policy_name,
+    end_time=null,
     name,
     resource_group_name,
-    streaming_locator_id=null,
-    streaming_policy_name,
+    alternative_media_id=null,
+    start_time=null,
     content_key=null,
     timeouts=null
   ):: std.prune(a={
-    end_time: end_time,
-    start_time: start_time,
-    asset_name: asset_name,
-    alternative_media_id: alternative_media_id,
-    default_content_key_policy_name: default_content_key_policy_name,
     media_services_account_name: media_services_account_name,
+    streaming_locator_id: streaming_locator_id,
+    asset_name: asset_name,
+    default_content_key_policy_name: default_content_key_policy_name,
+    streaming_policy_name: streaming_policy_name,
+    end_time: end_time,
     name: name,
     resource_group_name: resource_group_name,
-    streaming_locator_id: streaming_locator_id,
-    streaming_policy_name: streaming_policy_name,
+    alternative_media_id: alternative_media_id,
+    start_time: start_time,
     content_key: content_key,
     timeouts: timeouts,
   }),
@@ -60,51 +60,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
           alternative_media_id: value,
-        },
-      },
-    },
-  },
-  withDefaultContentKeyPolicyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          default_content_key_policy_name: value,
-        },
-      },
-    },
-  },
-  withAssetName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          asset_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withStreamingPolicyName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          streaming_policy_name: value,
-        },
-      },
-    },
-  },
-  withStartTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_streaming_locator+: {
-        [resourceLabel]+: {
-          start_time: value,
         },
       },
     },
@@ -118,11 +73,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStreamingLocatorId(resourceLabel, value):: {
+  withDefaultContentKeyPolicyName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
-          streaming_locator_id: value,
+          default_content_key_policy_name: value,
+        },
+      },
+    },
+  },
+  withStartTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          start_time: value,
         },
       },
     },
@@ -136,6 +100,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStreamingLocatorId(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          streaming_locator_id: value,
+        },
+      },
+    },
+  },
+  withAssetName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          asset_name: value,
+        },
+      },
+    },
+  },
   withMediaServicesAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
@@ -145,34 +127,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withStreamingPolicyName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
-          timeouts: value,
+          streaming_policy_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_media_streaming_locator+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          name: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      create: create,
-    }),
   },
   withContentKey(resourceLabel, value):: {
     resource+: {
@@ -194,17 +165,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   content_key:: {
     new(
-      type=null,
       value=null,
       content_key_id=null,
       label_reference_in_streaming_policy=null,
-      policy_name=null
+      policy_name=null,
+      type=null
     ):: std.prune(a={
-      type: type,
       value: value,
       content_key_id: content_key_id,
       label_reference_in_streaming_policy: label_reference_in_streaming_policy,
       policy_name: policy_name,
+      type: type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_streaming_locator+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      create: create,
+      delete: delete,
     }),
   },
 }

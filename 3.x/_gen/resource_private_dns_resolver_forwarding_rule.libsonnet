@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    dns_forwarding_ruleset_id,
-    domain_name,
     enabled=null,
     metadata=null,
     name,
-    timeouts=null,
-    target_dns_servers=null
+    dns_forwarding_ruleset_id,
+    domain_name,
+    target_dns_servers=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_resolver_forwarding_rule', label=resourceLabel, attrs=self.newAttrs(
-    dns_forwarding_ruleset_id=dns_forwarding_ruleset_id,
-    domain_name=domain_name,
     enabled=enabled,
     metadata=metadata,
     name=name,
-    timeouts=timeouts,
-    target_dns_servers=target_dns_servers
+    dns_forwarding_ruleset_id=dns_forwarding_ruleset_id,
+    domain_name=domain_name,
+    target_dns_servers=target_dns_servers,
+    timeouts=timeouts
   )),
   newAttrs(
-    dns_forwarding_ruleset_id,
     domain_name,
     enabled=null,
     metadata=null,
     name,
+    dns_forwarding_ruleset_id,
     target_dns_servers=null,
     timeouts=null
   ):: std.prune(a={
-    dns_forwarding_ruleset_id: dns_forwarding_ruleset_id,
     domain_name: domain_name,
     enabled: enabled,
     metadata: metadata,
     name: name,
+    dns_forwarding_ruleset_id: dns_forwarding_ruleset_id,
     target_dns_servers: target_dns_servers,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_forwarding_rule+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withDnsForwardingRulesetId(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_forwarding_rule+: {
@@ -71,15 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_forwarding_rule+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTargetDnsServers(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_forwarding_rule+: {
@@ -100,11 +100,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   target_dns_servers:: {
     new(
-      ip_address,
-      port=null
+      port=null,
+      ip_address
     ):: std.prune(a={
-      ip_address: ip_address,
       port: port,
+      ip_address: ip_address,
     }),
   },
   withTimeouts(resourceLabel, value):: {

@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    enabled=null,
     logz_monitor_id,
     name,
     tags=null,
+    enabled=null,
     timeouts=null,
     user=null
   ):: tf.withResource(type='azurerm_logz_sub_account', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
     logz_monitor_id=logz_monitor_id,
     name=name,
     tags=tags,
+    enabled=enabled,
     timeouts=timeouts,
     user=user
   )),
@@ -21,16 +21,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enabled=null,
     logz_monitor_id,
     name,
-    timeouts=null,
-    user=null
+    user=null,
+    timeouts=null
   ):: std.prune(a={
     tags: tags,
     enabled: enabled,
     logz_monitor_id: logz_monitor_id,
     name: name,
-    timeouts: timeouts,
     user: user,
+    timeouts: timeouts,
   }),
+  withLogzMonitorId(resourceLabel, value):: {
+    resource+: {
+      azurerm_logz_sub_account+: {
+        [resourceLabel]+: {
+          logz_monitor_id: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account+: {
@@ -58,15 +67,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogzMonitorId(resourceLabel, value):: {
-    resource+: {
-      azurerm_logz_sub_account+: {
-        [resourceLabel]+: {
-          logz_monitor_id: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_logz_sub_account+: {
@@ -87,15 +87,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
   withUser(resourceLabel, value):: {
@@ -118,15 +118,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   user:: {
     new(
-      email,
       first_name,
       last_name,
-      phone_number
+      phone_number,
+      email
     ):: std.prune(a={
-      email: email,
       first_name: first_name,
       last_name: last_name,
       phone_number: phone_number,
+      email: email,
     }),
   },
 }

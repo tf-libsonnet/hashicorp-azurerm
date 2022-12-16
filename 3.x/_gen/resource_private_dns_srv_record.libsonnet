@@ -2,48 +2,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    resource_group_name,
     tags=null,
     ttl,
     zone_name,
-    name,
-    resource_group_name,
     timeouts=null,
     record=null
   ):: tf.withResource(type='azurerm_private_dns_srv_record', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    resource_group_name=resource_group_name,
     tags=tags,
     ttl=ttl,
     zone_name=zone_name,
-    name=name,
-    resource_group_name=resource_group_name,
     timeouts=timeouts,
     record=record
   )),
   newAttrs(
+    zone_name,
     name,
     resource_group_name,
     tags=null,
     ttl,
-    zone_name,
-    timeouts=null,
-    record=null
+    record=null,
+    timeouts=null
   ):: std.prune(a={
+    zone_name: zone_name,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     ttl: ttl,
-    zone_name: zone_name,
-    timeouts: timeouts,
     record: record,
+    timeouts: timeouts,
   }),
-  withZoneName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_srv_record+: {
-        [resourceLabel]+: {
-          zone_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_srv_record+: {
@@ -80,6 +71,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withZoneName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_srv_record+: {
+        [resourceLabel]+: {
+          zone_name: value,
+        },
+      },
+    },
+  },
   withRecord(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_srv_record+: {
@@ -100,15 +100,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   record:: {
     new(
-      port,
-      priority,
       target,
-      weight
+      weight,
+      port,
+      priority
     ):: std.prune(a={
-      port: port,
-      priority: priority,
       target: target,
       weight: weight,
+      port: port,
+      priority: priority,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -131,15 +131,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

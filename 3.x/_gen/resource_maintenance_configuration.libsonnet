@@ -2,46 +2,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
-    visibility=null,
     location,
     name,
     properties=null,
     resource_group_name,
     scope,
-    timeouts=null,
-    window=null
+    tags=null,
+    visibility=null,
+    window=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_maintenance_configuration', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    visibility=visibility,
     location=location,
     name=name,
     properties=properties,
     resource_group_name=resource_group_name,
     scope=scope,
-    timeouts=timeouts,
-    window=window
+    tags=tags,
+    visibility=visibility,
+    window=window,
+    timeouts=timeouts
   )),
   newAttrs(
+    location,
     name,
     properties=null,
     resource_group_name,
     scope,
     tags=null,
     visibility=null,
-    location,
-    timeouts=null,
-    window=null
+    window=null,
+    timeouts=null
   ):: std.prune(a={
+    location: location,
     name: name,
     properties: properties,
     resource_group_name: resource_group_name,
     scope: scope,
     tags: tags,
     visibility: visibility,
-    location: location,
-    timeouts: timeouts,
     window: window,
+    timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
     resource+: {
@@ -106,39 +106,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withWindow(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_configuration+: {
-        [resourceLabel]+: {
-          window: value,
-        },
-      },
-    },
-  },
-  withWindowMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_configuration+: {
-        [resourceLabel]+: {
-          window+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  window:: {
-    new(
-      recur_every=null,
-      start_date_time,
-      time_zone,
-      duration=null,
-      expiration_date_time=null
-    ):: std.prune(a={
-      recur_every: recur_every,
-      start_date_time: start_date_time,
-      time_zone: time_zone,
-      duration: duration,
-      expiration_date_time: expiration_date_time,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_maintenance_configuration+: {
@@ -168,6 +135,39 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withWindow(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_configuration+: {
+        [resourceLabel]+: {
+          window: value,
+        },
+      },
+    },
+  },
+  withWindowMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_configuration+: {
+        [resourceLabel]+: {
+          window+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  window:: {
+    new(
+      start_date_time,
+      time_zone,
+      duration=null,
+      expiration_date_time=null,
+      recur_every=null
+    ):: std.prune(a={
+      start_date_time: start_date_time,
+      time_zone: time_zone,
+      duration: duration,
+      expiration_date_time: expiration_date_time,
+      recur_every: recur_every,
     }),
   },
 }

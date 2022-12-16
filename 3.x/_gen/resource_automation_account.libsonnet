@@ -2,56 +2,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
+    public_network_access_enabled=null,
+    name,
     resource_group_name,
     sku_name,
     tags=null,
-    name,
-    public_network_access_enabled=null,
     local_authentication_enabled=null,
-    timeouts=null,
+    location,
     encryption=null,
-    identity=null
+    identity=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_automation_account', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
+    public_network_access_enabled=public_network_access_enabled,
+    name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
     local_authentication_enabled=local_authentication_enabled,
-    timeouts=timeouts,
+    location=location,
     encryption=encryption,
-    identity=identity
+    identity=identity,
+    timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
-    name,
-    public_network_access_enabled=null,
-    local_authentication_enabled=null,
-    location,
     resource_group_name,
     sku_name,
+    tags=null,
+    local_authentication_enabled=null,
+    location,
+    public_network_access_enabled=null,
+    name,
+    encryption=null,
     identity=null,
-    timeouts=null,
-    encryption=null
+    timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    name: name,
-    public_network_access_enabled: public_network_access_enabled,
-    local_authentication_enabled: local_authentication_enabled,
-    location: location,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
+    tags: tags,
+    local_authentication_enabled: local_authentication_enabled,
+    location: location,
+    public_network_access_enabled: public_network_access_enabled,
+    name: name,
+    encryption: encryption,
     identity: identity,
     timeouts: timeouts,
-    encryption: encryption,
   }),
+  withLocalAuthenticationEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_account+: {
+        [resourceLabel]+: {
+          local_authentication_enabled: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_automation_account+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_account+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_account+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -83,33 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_account+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_account+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withLocalAuthenticationEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_account+: {
-        [resourceLabel]+: {
-          local_authentication_enabled: value,
-        },
-      },
-    },
-  },
   withEncryption(resourceLabel, value):: {
     resource+: {
       azurerm_automation_account+: {
@@ -130,13 +130,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   encryption:: {
     new(
+      key_source=null,
       key_vault_key_id,
-      user_assigned_identity_id=null,
-      key_source=null
+      user_assigned_identity_id=null
     ):: std.prune(a={
+      key_source: key_source,
       key_vault_key_id: key_vault_key_id,
       user_assigned_identity_id: user_assigned_identity_id,
-      key_source: key_source,
     }),
   },
   withIdentity(resourceLabel, value):: {
@@ -159,11 +159,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      type,
-      identity_ids=null
+      identity_ids=null,
+      type
     ):: std.prune(a={
-      type: type,
       identity_ids: identity_ids,
+      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -186,15 +186,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

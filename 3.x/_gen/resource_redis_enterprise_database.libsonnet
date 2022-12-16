@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    client_protocol=null,
-    linked_database_group_nickname=null,
     name=null,
+    clustering_policy=null,
+    linked_database_group_nickname=null,
+    linked_database_id=null,
+    client_protocol=null,
+    port=null,
     resource_group_name=null,
     cluster_id,
-    clustering_policy=null,
     eviction_policy=null,
-    linked_database_id=null,
-    port=null,
     timeouts=null,
     module=null
   ):: tf.withResource(type='azurerm_redis_enterprise_database', label=resourceLabel, attrs=self.newAttrs(
-    client_protocol=client_protocol,
-    linked_database_group_nickname=linked_database_group_nickname,
     name=name,
+    clustering_policy=clustering_policy,
+    linked_database_group_nickname=linked_database_group_nickname,
+    linked_database_id=linked_database_id,
+    client_protocol=client_protocol,
+    port=port,
     resource_group_name=resource_group_name,
     cluster_id=cluster_id,
-    clustering_policy=clustering_policy,
     eviction_policy=eviction_policy,
-    linked_database_id=linked_database_id,
-    port=port,
     timeouts=timeouts,
     module=module
   )),
   newAttrs(
-    linked_database_group_nickname=null,
     port=null,
-    linked_database_id=null,
     client_protocol=null,
+    linked_database_group_nickname=null,
+    linked_database_id=null,
     cluster_id,
-    resource_group_name=null,
-    eviction_policy=null,
-    name=null,
     clustering_policy=null,
+    resource_group_name=null,
+    name=null,
+    eviction_policy=null,
     module=null,
     timeouts=null
   ):: std.prune(a={
-    linked_database_group_nickname: linked_database_group_nickname,
     port: port,
-    linked_database_id: linked_database_id,
     client_protocol: client_protocol,
+    linked_database_group_nickname: linked_database_group_nickname,
+    linked_database_id: linked_database_id,
     cluster_id: cluster_id,
-    resource_group_name: resource_group_name,
-    eviction_policy: eviction_policy,
-    name: name,
     clustering_policy: clustering_policy,
+    resource_group_name: resource_group_name,
+    name: name,
+    eviction_policy: eviction_policy,
     module: module,
     timeouts: timeouts,
   }),
@@ -56,60 +56,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_redis_enterprise_database+: {
         [resourceLabel]+: {
           port: value,
-        },
-      },
-    },
-  },
-  withEvictionPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          eviction_policy: value,
-        },
-      },
-    },
-  },
-  withClusteringPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          clustering_policy: value,
-        },
-      },
-    },
-  },
-  withClientProtocol(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          client_protocol: value,
-        },
-      },
-    },
-  },
-  withClusterId(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          cluster_id: value,
-        },
-      },
-    },
-  },
-  withLinkedDatabaseId(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          linked_database_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_enterprise_database+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -123,6 +69,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withClusteringPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          clustering_policy: value,
+        },
+      },
+    },
+  },
+  withEvictionPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          eviction_policy: value,
+        },
+      },
+    },
+  },
   withLinkedDatabaseGroupNickname(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_database+: {
@@ -132,36 +96,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withLinkedDatabaseId(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_database+: {
         [resourceLabel]+: {
-          timeouts: value,
+          linked_database_id: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withClientProtocol(resourceLabel, value):: {
     resource+: {
       azurerm_redis_enterprise_database+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          client_protocol: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withClusterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          cluster_id: value,
+        },
+      },
+    },
   },
   withModule(resourceLabel, value):: {
     resource+: {
@@ -183,11 +152,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   module:: {
     new(
-      args=null,
-      name
+      name,
+      args=null
     ):: std.prune(a={
-      args: args,
       name: name,
+      args: args,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_enterprise_database+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

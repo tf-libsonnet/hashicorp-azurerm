@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    user_metadata=null,
-    eventhub_name,
     name,
     namespace_name,
     resource_group_name,
+    user_metadata=null,
+    eventhub_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_consumer_group', label=resourceLabel, attrs=self.newAttrs(
-    user_metadata=user_metadata,
-    eventhub_name=eventhub_name,
     name=name,
     namespace_name=namespace_name,
     resource_group_name=resource_group_name,
+    user_metadata=user_metadata,
+    eventhub_name=eventhub_name,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     user_metadata=null,
     eventhub_name,
     name,
     namespace_name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     user_metadata: user_metadata,
     eventhub_name: eventhub_name,
     name: name,
     namespace_name: namespace_name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withNamespaceName(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

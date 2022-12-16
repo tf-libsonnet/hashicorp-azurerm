@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
     name,
+    resource_group_name,
     timeouts=null
-  ):: tf.withData(type='azurerm_mssql_managed_instance', label=dataSrcLabel, attrs=self.newAttrs(resource_group_name=resource_group_name, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_mssql_managed_instance', label=dataSrcLabel, attrs=self.newAttrs(name=name, resource_group_name=resource_group_name, timeouts=timeouts)),
   newAttrs(
     name,
     resource_group_name,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_mssql_managed_instance+: {
-        [dataSrcLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_mssql_managed_instance+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_mssql_managed_instance+: {
+        [dataSrcLabel]+: {
+          resource_group_name: value,
         },
       },
     },

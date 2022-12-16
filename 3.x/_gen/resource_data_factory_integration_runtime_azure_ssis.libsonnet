@@ -2,52 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    edition=null,
-    data_factory_id,
-    name,
     license_type=null,
-    location,
-    number_of_nodes=null,
+    data_factory_id,
     description=null,
+    edition=null,
+    location,
     node_size,
     max_parallel_executions_per_node=null,
-    vnet_integration=null,
-    catalog_info=null,
-    custom_setup_script=null,
-    express_custom_setup=null,
+    name,
+    number_of_nodes=null,
     express_vnet_integration=null,
     package_store=null,
     proxy=null,
-    timeouts=null
+    timeouts=null,
+    vnet_integration=null,
+    catalog_info=null,
+    custom_setup_script=null,
+    express_custom_setup=null
   ):: tf.withResource(type='azurerm_data_factory_integration_runtime_azure_ssis', label=resourceLabel, attrs=self.newAttrs(
-    edition=edition,
-    data_factory_id=data_factory_id,
-    name=name,
     license_type=license_type,
-    location=location,
-    number_of_nodes=number_of_nodes,
+    data_factory_id=data_factory_id,
     description=description,
+    edition=edition,
+    location=location,
     node_size=node_size,
     max_parallel_executions_per_node=max_parallel_executions_per_node,
-    vnet_integration=vnet_integration,
-    catalog_info=catalog_info,
-    custom_setup_script=custom_setup_script,
-    express_custom_setup=express_custom_setup,
+    name=name,
+    number_of_nodes=number_of_nodes,
     express_vnet_integration=express_vnet_integration,
     package_store=package_store,
     proxy=proxy,
-    timeouts=timeouts
+    timeouts=timeouts,
+    vnet_integration=vnet_integration,
+    catalog_info=catalog_info,
+    custom_setup_script=custom_setup_script,
+    express_custom_setup=express_custom_setup
   )),
   newAttrs(
-    data_factory_id,
-    number_of_nodes=null,
-    description=null,
     edition=null,
-    node_size,
-    max_parallel_executions_per_node=null,
-    name,
-    license_type=null,
     location,
+    number_of_nodes=null,
+    license_type=null,
+    max_parallel_executions_per_node=null,
+    data_factory_id,
+    description=null,
+    name,
+    node_size,
     custom_setup_script=null,
     express_custom_setup=null,
     express_vnet_integration=null,
@@ -57,15 +57,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     vnet_integration=null,
     catalog_info=null
   ):: std.prune(a={
-    data_factory_id: data_factory_id,
-    number_of_nodes: number_of_nodes,
-    description: description,
     edition: edition,
-    node_size: node_size,
-    max_parallel_executions_per_node: max_parallel_executions_per_node,
-    name: name,
-    license_type: license_type,
     location: location,
+    number_of_nodes: number_of_nodes,
+    license_type: license_type,
+    max_parallel_executions_per_node: max_parallel_executions_per_node,
+    data_factory_id: data_factory_id,
+    description: description,
+    name: name,
+    node_size: node_size,
     custom_setup_script: custom_setup_script,
     express_custom_setup: express_custom_setup,
     express_vnet_integration: express_vnet_integration,
@@ -75,24 +75,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     vnet_integration: vnet_integration,
     catalog_info: catalog_info,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withLicenseType(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          license_type: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure_ssis+: {
@@ -102,20 +84,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure_ssis+: {
         [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withMaxParallelExecutionsPerNode(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          max_parallel_executions_per_node: value,
+          name: value,
         },
       },
     },
@@ -147,6 +120,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withMaxParallelExecutionsPerNode(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          max_parallel_executions_per_node: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
   withEdition(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure_ssis+: {
@@ -156,131 +147,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withProxy(resourceLabel, value):: {
+  withLicenseType(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_azure_ssis+: {
         [resourceLabel]+: {
-          proxy: value,
+          license_type: value,
         },
       },
     },
-  },
-  withProxyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          proxy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  proxy:: {
-    new(
-      path=null,
-      self_hosted_integration_runtime_name,
-      staging_storage_linked_service_name
-    ):: std.prune(a={
-      path: path,
-      self_hosted_integration_runtime_name: self_hosted_integration_runtime_name,
-      staging_storage_linked_service_name: staging_storage_linked_service_name,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
-  },
-  withVnetIntegration(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          vnet_integration: value,
-        },
-      },
-    },
-  },
-  withVnetIntegrationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          vnet_integration+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  vnet_integration:: {
-    new(
-      subnet_id=null,
-      subnet_name=null,
-      vnet_id=null,
-      public_ips=null
-    ):: std.prune(a={
-      subnet_id: subnet_id,
-      subnet_name: subnet_name,
-      vnet_id: vnet_id,
-      public_ips: public_ips,
-    }),
-  },
-  withCatalogInfo(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          catalog_info: value,
-        },
-      },
-    },
-  },
-  withCatalogInfoMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_azure_ssis+: {
-        [resourceLabel]+: {
-          catalog_info+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  catalog_info:: {
-    new(
-      administrator_password=null,
-      dual_standby_pair_name=null,
-      elastic_pool_name=null,
-      pricing_tier=null,
-      server_endpoint,
-      administrator_login=null
-    ):: std.prune(a={
-      administrator_password: administrator_password,
-      dual_standby_pair_name: dual_standby_pair_name,
-      elastic_pool_name: elastic_pool_name,
-      pricing_tier: pricing_tier,
-      server_endpoint: server_endpoint,
-      administrator_login: administrator_login,
-    }),
   },
   withCustomSetupScript(resourceLabel, value):: {
     resource+: {
@@ -341,27 +215,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     command_key:: {
       new(
+        password=null,
         target_name,
         user_name,
-        password=null,
         key_vault_password=null
       ):: std.prune(a={
+        password: password,
         target_name: target_name,
         user_name: user_name,
-        password: password,
         key_vault_password: key_vault_password,
       }),
       key_vault_password:: {
         new(
+          linked_service_name,
           parameters=null,
           secret_name,
-          secret_version=null,
-          linked_service_name
+          secret_version=null
         ):: std.prune(a={
+          linked_service_name: linked_service_name,
           parameters: parameters,
           secret_name: secret_name,
           secret_version: secret_version,
-          linked_service_name: linked_service_name,
         }),
       },
     },
@@ -435,11 +309,137 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   package_store:: {
     new(
-      name,
-      linked_service_name
+      linked_service_name,
+      name
     ):: std.prune(a={
-      name: name,
       linked_service_name: linked_service_name,
+      name: name,
+    }),
+  },
+  withProxy(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          proxy: value,
+        },
+      },
+    },
+  },
+  withProxyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          proxy+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  proxy:: {
+    new(
+      staging_storage_linked_service_name,
+      path=null,
+      self_hosted_integration_runtime_name
+    ):: std.prune(a={
+      staging_storage_linked_service_name: staging_storage_linked_service_name,
+      path: path,
+      self_hosted_integration_runtime_name: self_hosted_integration_runtime_name,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  withVnetIntegration(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          vnet_integration: value,
+        },
+      },
+    },
+  },
+  withVnetIntegrationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          vnet_integration+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  vnet_integration:: {
+    new(
+      public_ips=null,
+      subnet_id=null,
+      subnet_name=null,
+      vnet_id=null
+    ):: std.prune(a={
+      public_ips: public_ips,
+      subnet_id: subnet_id,
+      subnet_name: subnet_name,
+      vnet_id: vnet_id,
+    }),
+  },
+  withCatalogInfo(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          catalog_info: value,
+        },
+      },
+    },
+  },
+  withCatalogInfoMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_azure_ssis+: {
+        [resourceLabel]+: {
+          catalog_info+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  catalog_info:: {
+    new(
+      dual_standby_pair_name=null,
+      elastic_pool_name=null,
+      pricing_tier=null,
+      server_endpoint,
+      administrator_login=null,
+      administrator_password=null
+    ):: std.prune(a={
+      dual_standby_pair_name: dual_standby_pair_name,
+      elastic_pool_name: elastic_pool_name,
+      pricing_tier: pricing_tier,
+      server_endpoint: server_endpoint,
+      administrator_login: administrator_login,
+      administrator_password: administrator_password,
     }),
   },
 }

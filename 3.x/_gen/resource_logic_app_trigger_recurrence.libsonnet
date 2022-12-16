@@ -2,43 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    logic_app_id,
     name,
     start_time=null,
     time_zone=null,
     frequency,
     interval,
+    logic_app_id,
     schedule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_trigger_recurrence', label=resourceLabel, attrs=self.newAttrs(
-    logic_app_id=logic_app_id,
     name=name,
     start_time=start_time,
     time_zone=time_zone,
     frequency=frequency,
     interval=interval,
+    logic_app_id=logic_app_id,
     schedule=schedule,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    start_time=null,
-    time_zone=null,
     frequency,
     interval,
     logic_app_id,
+    name,
+    start_time=null,
+    time_zone=null,
     schedule=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    start_time: start_time,
-    time_zone: time_zone,
     frequency: frequency,
     interval: interval,
     logic_app_id: logic_app_id,
+    name: name,
+    start_time: start_time,
+    time_zone: time_zone,
     schedule: schedule,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_trigger_recurrence+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withStartTime(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_trigger_recurrence+: {
@@ -84,46 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_trigger_recurrence+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_trigger_recurrence+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_trigger_recurrence+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
   withSchedule(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_trigger_recurrence+: {
@@ -151,6 +120,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       at_these_minutes: at_these_minutes,
       on_these_days: on_these_days,
       at_these_hours: at_these_hours,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_trigger_recurrence+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_trigger_recurrence+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

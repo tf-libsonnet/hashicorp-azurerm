@@ -2,15 +2,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
     bot_name,
     location,
-    resource_group_name,
     site=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_directline', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
     bot_name=bot_name,
     location=location,
-    resource_group_name=resource_group_name,
     site=site,
     timeouts=timeouts
   )),
@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     site: site,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_bot_channel_directline+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_bot_channel_directline+: {
@@ -50,6 +41,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_bot_channel_directline+: {
         [resourceLabel]+: {
           bot_name: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_bot_channel_directline+: {
+        [resourceLabel]+: {
+          location: value,
         },
       },
     },
@@ -74,19 +74,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   site:: {
     new(
-      trusted_origins=null,
-      v3_allowed=null,
-      name,
-      v1_allowed=null,
       enhanced_authentication_enabled=null,
-      enabled=null
+      enabled=null,
+      name,
+      trusted_origins=null,
+      v1_allowed=null,
+      v3_allowed=null
     ):: std.prune(a={
-      trusted_origins: trusted_origins,
-      v3_allowed: v3_allowed,
-      name: name,
-      v1_allowed: v1_allowed,
       enhanced_authentication_enabled: enhanced_authentication_enabled,
       enabled: enabled,
+      name: name,
+      trusted_origins: trusted_origins,
+      v1_allowed: v1_allowed,
+      v3_allowed: v3_allowed,
     }),
   },
   withTimeouts(resourceLabel, value):: {

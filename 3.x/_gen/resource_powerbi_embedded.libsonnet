@@ -2,61 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    mode=null,
-    name,
-    resource_group_name,
     sku_name,
     tags=null,
     administrators,
     location,
+    mode=null,
+    name,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_powerbi_embedded', label=resourceLabel, attrs=self.newAttrs(
-    mode=mode,
-    name=name,
-    resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
     administrators=administrators,
     location=location,
+    mode=mode,
+    name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
+    mode=null,
+    name,
     resource_group_name,
     sku_name,
     tags=null,
     administrators,
-    location,
-    mode=null,
-    name,
     timeouts=null
   ):: std.prune(a={
+    location: location,
+    mode: mode,
+    name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
     administrators: administrators,
-    location: location,
-    mode: mode,
-    name: name,
     timeouts: timeouts,
   }),
-  withMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_powerbi_embedded+: {
-        [resourceLabel]+: {
-          mode: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_powerbi_embedded+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_powerbi_embedded+: {
@@ -102,6 +84,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_powerbi_embedded+: {
+        [resourceLabel]+: {
+          mode: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_powerbi_embedded+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_powerbi_embedded+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

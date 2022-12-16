@@ -3,103 +3,76 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     url,
+    api_management_name,
     name,
+    resource_group_name,
+    title=null,
+    description=null,
     protocol,
     resource_id=null,
-    title=null,
-    api_management_name,
-    description=null,
-    resource_group_name,
+    credentials=null,
     proxy=null,
     service_fabric_cluster=null,
     timeouts=null,
-    tls=null,
-    credentials=null
+    tls=null
   ):: tf.withResource(type='azurerm_api_management_backend', label=resourceLabel, attrs=self.newAttrs(
     url=url,
+    api_management_name=api_management_name,
     name=name,
+    resource_group_name=resource_group_name,
+    title=title,
+    description=description,
     protocol=protocol,
     resource_id=resource_id,
-    title=title,
-    api_management_name=api_management_name,
-    description=description,
-    resource_group_name=resource_group_name,
+    credentials=credentials,
     proxy=proxy,
     service_fabric_cluster=service_fabric_cluster,
     timeouts=timeouts,
-    tls=tls,
-    credentials=credentials
+    tls=tls
   )),
   newAttrs(
-    title=null,
-    api_management_name,
-    description=null,
-    resource_group_name,
     url,
+    api_management_name,
     name,
+    resource_group_name,
+    title=null,
+    description=null,
     protocol,
     resource_id=null,
-    proxy=null,
     service_fabric_cluster=null,
     timeouts=null,
     tls=null,
-    credentials=null
+    credentials=null,
+    proxy=null
   ):: std.prune(a={
-    title: title,
-    api_management_name: api_management_name,
-    description: description,
-    resource_group_name: resource_group_name,
     url: url,
+    api_management_name: api_management_name,
     name: name,
+    resource_group_name: resource_group_name,
+    title: title,
+    description: description,
     protocol: protocol,
     resource_id: resource_id,
-    proxy: proxy,
     service_fabric_cluster: service_fabric_cluster,
     timeouts: timeouts,
     tls: tls,
     credentials: credentials,
+    proxy: proxy,
   }),
+  withProtocol(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          protocol: value,
+        },
+      },
+    },
+  },
   withResourceId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
           resource_id: value,
-        },
-      },
-    },
-  },
-  withTitle(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          title: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -122,83 +95,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withProtocol(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
-          protocol: value,
+          name: value,
         },
       },
     },
   },
-  withCredentials(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
-          credentials: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withCredentialsMixin(resourceLabel, value):: {
+  withTitle(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
-          credentials+: if std.isArray(v=value) then value else [value],
+          title: value,
         },
       },
     },
   },
-  credentials:: {
-    new(
-      header=null,
-      query=null,
-      certificate=null,
-      authorization=null
-    ):: std.prune(a={
-      header: header,
-      query: query,
-      certificate: certificate,
-      authorization: authorization,
-    }),
-    authorization:: {
-      new(
-        parameter=null,
-        scheme=null
-      ):: std.prune(a={
-        parameter: parameter,
-        scheme: scheme,
-      }),
-    },
-  },
-  withProxy(resourceLabel, value):: {
+  withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_backend+: {
         [resourceLabel]+: {
-          proxy: value,
+          description: value,
         },
       },
     },
-  },
-  withProxyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_backend+: {
-        [resourceLabel]+: {
-          proxy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  proxy:: {
-    new(
-      password=null,
-      url,
-      username
-    ):: std.prune(a={
-      password: password,
-      url: url,
-      username: username,
-    }),
   },
   withServiceFabricCluster(resourceLabel, value):: {
     resource+: {
@@ -220,18 +151,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   service_fabric_cluster:: {
     new(
-      client_certificate_id=null,
-      client_certificate_thumbprint=null,
       management_endpoints,
       max_partition_resolution_retries,
       server_certificate_thumbprints=null,
+      client_certificate_id=null,
+      client_certificate_thumbprint=null,
       server_x509_name=null
     ):: std.prune(a={
-      client_certificate_id: client_certificate_id,
-      client_certificate_thumbprint: client_certificate_thumbprint,
       management_endpoints: management_endpoints,
       max_partition_resolution_retries: max_partition_resolution_retries,
       server_certificate_thumbprints: server_certificate_thumbprints,
+      client_certificate_id: client_certificate_id,
+      client_certificate_thumbprint: client_certificate_thumbprint,
       server_x509_name: server_x509_name,
     }),
     server_x509_name:: {
@@ -264,15 +195,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
   withTls(resourceLabel, value):: {
@@ -300,6 +231,75 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       validate_certificate_chain: validate_certificate_chain,
       validate_certificate_name: validate_certificate_name,
+    }),
+  },
+  withCredentials(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          credentials: value,
+        },
+      },
+    },
+  },
+  withCredentialsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          credentials+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  credentials:: {
+    new(
+      certificate=null,
+      header=null,
+      query=null,
+      authorization=null
+    ):: std.prune(a={
+      certificate: certificate,
+      header: header,
+      query: query,
+      authorization: authorization,
+    }),
+    authorization:: {
+      new(
+        scheme=null,
+        parameter=null
+      ):: std.prune(a={
+        scheme: scheme,
+        parameter: parameter,
+      }),
+    },
+  },
+  withProxy(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          proxy: value,
+        },
+      },
+    },
+  },
+  withProxyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_backend+: {
+        [resourceLabel]+: {
+          proxy+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  proxy:: {
+    new(
+      password=null,
+      url,
+      username
+    ):: std.prune(a={
+      password: password,
+      url: url,
+      username: username,
     }),
   },
 }

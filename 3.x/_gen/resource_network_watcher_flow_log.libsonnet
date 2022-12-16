@@ -2,64 +2,82 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    version=null,
-    enabled,
-    location=null,
+    storage_account_id,
+    network_watcher_name,
     resource_group_name,
+    enabled,
     name,
     network_security_group_id,
-    network_watcher_name,
-    storage_account_id,
+    version=null,
     tags=null,
+    location=null,
     retention_policy=null,
     timeouts=null,
     traffic_analytics=null
   ):: tf.withResource(type='azurerm_network_watcher_flow_log', label=resourceLabel, attrs=self.newAttrs(
-    version=version,
-    enabled=enabled,
-    location=location,
+    storage_account_id=storage_account_id,
+    network_watcher_name=network_watcher_name,
     resource_group_name=resource_group_name,
+    enabled=enabled,
     name=name,
     network_security_group_id=network_security_group_id,
-    network_watcher_name=network_watcher_name,
-    storage_account_id=storage_account_id,
+    version=version,
     tags=tags,
+    location=location,
     retention_policy=retention_policy,
     timeouts=timeouts,
     traffic_analytics=traffic_analytics
   )),
   newAttrs(
-    network_security_group_id,
-    tags=null,
-    network_watcher_name,
-    storage_account_id,
-    enabled,
     location=null,
     name,
+    storage_account_id,
+    enabled,
     resource_group_name,
+    tags=null,
+    network_security_group_id,
     version=null,
-    retention_policy=null,
+    network_watcher_name,
     timeouts=null,
-    traffic_analytics=null
+    traffic_analytics=null,
+    retention_policy=null
   ):: std.prune(a={
-    network_security_group_id: network_security_group_id,
-    tags: tags,
-    network_watcher_name: network_watcher_name,
-    storage_account_id: storage_account_id,
-    enabled: enabled,
     location: location,
     name: name,
+    storage_account_id: storage_account_id,
+    enabled: enabled,
     resource_group_name: resource_group_name,
+    tags: tags,
+    network_security_group_id: network_security_group_id,
     version: version,
-    retention_policy: retention_policy,
+    network_watcher_name: network_watcher_name,
     timeouts: timeouts,
     traffic_analytics: traffic_analytics,
+    retention_policy: retention_policy,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          enabled: value,
         },
       },
     },
@@ -100,33 +118,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
@@ -136,32 +127,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRetentionPolicy(resourceLabel, value):: {
+  withStorageAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_network_watcher_flow_log+: {
         [resourceLabel]+: {
-          retention_policy: value,
+          storage_account_id: value,
         },
       },
     },
-  },
-  withRetentionPolicyMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_watcher_flow_log+: {
-        [resourceLabel]+: {
-          retention_policy+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  retention_policy:: {
-    new(
-      enabled,
-      days
-    ):: std.prune(a={
-      enabled: enabled,
-      days: days,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -183,15 +156,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
   withTrafficAnalytics(resourceLabel, value):: {
@@ -214,17 +187,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   traffic_analytics:: {
     new(
-      workspace_region,
       workspace_resource_id,
       enabled,
       interval_in_minutes=null,
-      workspace_id
+      workspace_id,
+      workspace_region
     ):: std.prune(a={
-      workspace_region: workspace_region,
       workspace_resource_id: workspace_resource_id,
       enabled: enabled,
       interval_in_minutes: interval_in_minutes,
       workspace_id: workspace_id,
+      workspace_region: workspace_region,
+    }),
+  },
+  withRetentionPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          retention_policy: value,
+        },
+      },
+    },
+  },
+  withRetentionPolicyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_watcher_flow_log+: {
+        [resourceLabel]+: {
+          retention_policy+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  retention_policy:: {
+    new(
+      days,
+      enabled
+    ):: std.prune(a={
+      days: days,
+      enabled: enabled,
     }),
   },
 }

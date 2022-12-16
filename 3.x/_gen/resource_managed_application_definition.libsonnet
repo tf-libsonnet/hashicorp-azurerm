@@ -2,81 +2,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    display_name,
+    package_file_uri=null,
+    create_ui_definition=null,
     location,
-    lock_level,
+    main_template=null,
+    tags=null,
     description=null,
+    resource_group_name,
+    lock_level,
     name,
     package_enabled=null,
-    tags=null,
-    create_ui_definition=null,
-    display_name,
-    resource_group_name,
-    main_template=null,
-    package_file_uri=null,
-    authorization=null,
-    timeouts=null
+    timeouts=null,
+    authorization=null
   ):: tf.withResource(type='azurerm_managed_application_definition', label=resourceLabel, attrs=self.newAttrs(
+    display_name=display_name,
+    package_file_uri=package_file_uri,
+    create_ui_definition=create_ui_definition,
     location=location,
-    lock_level=lock_level,
+    main_template=main_template,
+    tags=tags,
     description=description,
+    resource_group_name=resource_group_name,
+    lock_level=lock_level,
     name=name,
     package_enabled=package_enabled,
-    tags=tags,
-    create_ui_definition=create_ui_definition,
-    display_name=display_name,
-    resource_group_name=resource_group_name,
-    main_template=main_template,
-    package_file_uri=package_file_uri,
-    authorization=authorization,
-    timeouts=timeouts
+    timeouts=timeouts,
+    authorization=authorization
   )),
   newAttrs(
+    create_ui_definition=null,
+    display_name,
     package_file_uri=null,
-    tags=null,
+    resource_group_name,
     description=null,
-    lock_level,
     location,
     main_template=null,
     name,
+    tags=null,
+    lock_level,
     package_enabled=null,
-    resource_group_name,
-    create_ui_definition=null,
-    display_name,
     authorization=null,
     timeouts=null
   ):: std.prune(a={
+    create_ui_definition: create_ui_definition,
+    display_name: display_name,
     package_file_uri: package_file_uri,
-    tags: tags,
+    resource_group_name: resource_group_name,
     description: description,
-    lock_level: lock_level,
     location: location,
     main_template: main_template,
     name: name,
+    tags: tags,
+    lock_level: lock_level,
     package_enabled: package_enabled,
-    resource_group_name: resource_group_name,
-    create_ui_definition: create_ui_definition,
-    display_name: display_name,
     authorization: authorization,
     timeouts: timeouts,
   }),
-  withCreateUiDefinition(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application_definition+: {
-        [resourceLabel]+: {
-          create_ui_definition: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application_definition+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application_definition+: {
@@ -95,11 +77,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPackageEnabled(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application_definition+: {
         [resourceLabel]+: {
-          package_enabled: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application_definition+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withCreateUiDefinition(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application_definition+: {
+        [resourceLabel]+: {
+          create_ui_definition: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application_definition+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -122,20 +131,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withPackageEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application_definition+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          package_enabled: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application_definition+: {
         [resourceLabel]+: {
-          name: value,
+          display_name: value,
         },
       },
     },
@@ -149,14 +158,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application_definition+: {
         [resourceLabel]+: {
-          tags: value,
+          timeouts: value,
         },
       },
     },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application_definition+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
+    }),
   },
   withAuthorization(resourceLabel, value):: {
     resource+: {
@@ -183,37 +214,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       role_definition_id: role_definition_id,
       service_principal_id: service_principal_id,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application_definition+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application_definition+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
     }),
   },
 }

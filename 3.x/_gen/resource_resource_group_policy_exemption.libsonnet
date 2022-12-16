@@ -4,103 +4,49 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     policy_assignment_id,
     resource_group_id,
-    metadata=null,
-    description=null,
-    exemption_category,
-    expires_on=null,
-    policy_definition_reference_ids=null,
     display_name=null,
+    expires_on=null,
+    exemption_category,
+    metadata=null,
     name,
+    description=null,
+    policy_definition_reference_ids=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_resource_group_policy_exemption', label=resourceLabel, attrs=self.newAttrs(
     policy_assignment_id=policy_assignment_id,
     resource_group_id=resource_group_id,
-    metadata=metadata,
-    description=description,
-    exemption_category=exemption_category,
-    expires_on=expires_on,
-    policy_definition_reference_ids=policy_definition_reference_ids,
     display_name=display_name,
+    expires_on=expires_on,
+    exemption_category=exemption_category,
+    metadata=metadata,
     name=name,
+    description=description,
+    policy_definition_reference_ids=policy_definition_reference_ids,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    policy_definition_reference_ids=null,
+    expires_on=null,
     exemption_category,
+    metadata=null,
+    name,
+    policy_assignment_id,
+    policy_definition_reference_ids=null,
     resource_group_id,
     display_name=null,
-    policy_assignment_id,
     description=null,
-    expires_on=null,
-    metadata=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    policy_definition_reference_ids: policy_definition_reference_ids,
+    expires_on: expires_on,
     exemption_category: exemption_category,
+    metadata: metadata,
+    name: name,
+    policy_assignment_id: policy_assignment_id,
+    policy_definition_reference_ids: policy_definition_reference_ids,
     resource_group_id: resource_group_id,
     display_name: display_name,
-    policy_assignment_id: policy_assignment_id,
     description: description,
-    expires_on: expires_on,
-    metadata: metadata,
     timeouts: timeouts,
   }),
-  withResourceGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_exemption+: {
-        [resourceLabel]+: {
-          resource_group_id: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_exemption+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withExpiresOn(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_exemption+: {
-        [resourceLabel]+: {
-          expires_on: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_exemption+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_exemption+: {
-        [resourceLabel]+: {
-          metadata: value,
-        },
-      },
-    },
-  },
-  withPolicyAssignmentId(resourceLabel, value):: {
-    resource+: {
-      azurerm_resource_group_policy_exemption+: {
-        [resourceLabel]+: {
-          policy_assignment_id: value,
-        },
-      },
-    },
-  },
   withPolicyDefinitionReferenceIds(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_policy_exemption+: {
@@ -119,11 +65,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_exemption+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_exemption+: {
+        [resourceLabel]+: {
+          metadata: value,
+        },
+      },
+    },
+  },
+  withResourceGroupId(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_exemption+: {
+        [resourceLabel]+: {
+          resource_group_id: value,
+        },
+      },
+    },
+  },
   withExemptionCategory(resourceLabel, value):: {
     resource+: {
       azurerm_resource_group_policy_exemption+: {
         [resourceLabel]+: {
           exemption_category: value,
+        },
+      },
+    },
+  },
+  withPolicyAssignmentId(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_exemption+: {
+        [resourceLabel]+: {
+          policy_assignment_id: value,
+        },
+      },
+    },
+  },
+  withDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_exemption+: {
+        [resourceLabel]+: {
+          display_name: value,
+        },
+      },
+    },
+  },
+  withExpiresOn(resourceLabel, value):: {
+    resource+: {
+      azurerm_resource_group_policy_exemption+: {
+        [resourceLabel]+: {
+          expires_on: value,
         },
       },
     },
@@ -148,15 +148,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

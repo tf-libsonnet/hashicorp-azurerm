@@ -2,105 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    guest_partner_name,
-    host_partner_name,
-    integration_account_name,
-    metadata=null,
-    name,
     content,
-    resource_group_name,
+    host_partner_name,
+    metadata=null,
     agreement_type,
+    integration_account_name,
+    name,
+    resource_group_name,
+    guest_partner_name,
     guest_identity=null,
     host_identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_logic_app_integration_account_agreement', label=resourceLabel, attrs=self.newAttrs(
-    guest_partner_name=guest_partner_name,
-    host_partner_name=host_partner_name,
-    integration_account_name=integration_account_name,
-    metadata=metadata,
-    name=name,
     content=content,
-    resource_group_name=resource_group_name,
+    host_partner_name=host_partner_name,
+    metadata=metadata,
     agreement_type=agreement_type,
+    integration_account_name=integration_account_name,
+    name=name,
+    resource_group_name=resource_group_name,
+    guest_partner_name=guest_partner_name,
     guest_identity=guest_identity,
     host_identity=host_identity,
     timeouts=timeouts
   )),
   newAttrs(
     name,
-    agreement_type,
-    guest_partner_name,
-    content,
     resource_group_name,
-    host_partner_name,
+    guest_partner_name,
     integration_account_name,
+    host_partner_name,
     metadata=null,
+    agreement_type,
+    content,
     guest_identity=null,
     host_identity=null,
     timeouts=null
   ):: std.prune(a={
     name: name,
-    agreement_type: agreement_type,
-    guest_partner_name: guest_partner_name,
-    content: content,
     resource_group_name: resource_group_name,
-    host_partner_name: host_partner_name,
+    guest_partner_name: guest_partner_name,
     integration_account_name: integration_account_name,
+    host_partner_name: host_partner_name,
     metadata: metadata,
+    agreement_type: agreement_type,
+    content: content,
     guest_identity: guest_identity,
     host_identity: host_identity,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_agreement+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withAgreementType(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_agreement+: {
-        [resourceLabel]+: {
-          agreement_type: value,
-        },
-      },
-    },
-  },
-  withGuestPartnerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_agreement+: {
-        [resourceLabel]+: {
-          guest_partner_name: value,
-        },
-      },
-    },
-  },
-  withHostPartnerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_agreement+: {
-        [resourceLabel]+: {
-          host_partner_name: value,
-        },
-      },
-    },
-  },
   withIntegrationAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_agreement+: {
         [resourceLabel]+: {
           integration_account_name: value,
-        },
-      },
-    },
-  },
-  withMetadata(resourceLabel, value):: {
-    resource+: {
-      azurerm_logic_app_integration_account_agreement+: {
-        [resourceLabel]+: {
-          metadata: value,
         },
       },
     },
@@ -114,11 +69,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_agreement+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withGuestPartnerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_agreement+: {
+        [resourceLabel]+: {
+          guest_partner_name: value,
+        },
+      },
+    },
+  },
   withContent(resourceLabel, value):: {
     resource+: {
       azurerm_logic_app_integration_account_agreement+: {
         [resourceLabel]+: {
           content: value,
+        },
+      },
+    },
+  },
+  withHostPartnerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_agreement+: {
+        [resourceLabel]+: {
+          host_partner_name: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_agreement+: {
+        [resourceLabel]+: {
+          metadata: value,
+        },
+      },
+    },
+  },
+  withAgreementType(resourceLabel, value):: {
+    resource+: {
+      azurerm_logic_app_integration_account_agreement+: {
+        [resourceLabel]+: {
+          agreement_type: value,
         },
       },
     },
@@ -143,11 +143,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   guest_identity:: {
     new(
-      qualifier,
-      value
+      value,
+      qualifier
     ):: std.prune(a={
-      qualifier: qualifier,
       value: value,
+      qualifier: qualifier,
     }),
   },
   withHostIdentity(resourceLabel, value):: {
@@ -170,11 +170,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   host_identity:: {
     new(
-      qualifier,
-      value
+      value,
+      qualifier
     ):: std.prune(a={
-      qualifier: qualifier,
       value: value,
+      qualifier: qualifier,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -197,15 +197,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

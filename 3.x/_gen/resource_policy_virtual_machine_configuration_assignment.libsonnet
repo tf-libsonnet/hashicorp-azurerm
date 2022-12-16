@@ -5,14 +5,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     name,
     virtual_machine_id,
-    timeouts=null,
-    configuration=null
+    configuration=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_policy_virtual_machine_configuration_assignment', label=resourceLabel, attrs=self.newAttrs(
     location=location,
     name=name,
     virtual_machine_id=virtual_machine_id,
-    timeouts=timeouts,
-    configuration=configuration
+    configuration=configuration,
+    timeouts=timeouts
   )),
   newAttrs(
     name,
@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     configuration: configuration,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_virtual_machine_configuration_assignment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withVirtualMachineId(resourceLabel, value):: {
     resource+: {
       azurerm_policy_virtual_machine_configuration_assignment+: {
@@ -45,14 +54,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_policy_virtual_machine_configuration_assignment+: {
         [resourceLabel]+: {
-          name: value,
+          timeouts: value,
         },
       },
     },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_policy_virtual_machine_configuration_assignment+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
   withConfiguration(resourceLabel, value):: {
     resource+: {
@@ -95,36 +126,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         name: name,
       }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_virtual_machine_configuration_assignment+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_policy_virtual_machine_configuration_assignment+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
 }

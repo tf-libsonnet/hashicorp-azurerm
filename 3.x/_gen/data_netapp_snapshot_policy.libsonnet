@@ -3,24 +3,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     dataSrcLabel,
     name,
-    account_name,
     resource_group_name,
+    account_name,
     timeouts=null
   ):: tf.withData(type='azurerm_netapp_snapshot_policy', label=dataSrcLabel, attrs=self.newAttrs(
     name=name,
-    account_name=account_name,
     resource_group_name=resource_group_name,
+    account_name=account_name,
     timeouts=timeouts
   )),
   newAttrs(
-    account_name,
-    resource_group_name,
     name,
+    resource_group_name,
+    account_name,
     timeouts=null
   ):: std.prune(a={
-    account_name: account_name,
-    resource_group_name: resource_group_name,
     name: name,
+    resource_group_name: resource_group_name,
+    account_name: account_name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

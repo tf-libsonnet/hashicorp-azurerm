@@ -2,47 +2,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    group_id,
-    name,
     stream_analytics_job_id,
-    token_user_display_name=null,
     token_user_principal_name=null,
-    dataset,
+    group_id,
     group_name,
     table,
+    token_user_display_name=null,
+    dataset,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_powerbi', label=resourceLabel, attrs=self.newAttrs(
-    group_id=group_id,
-    name=name,
     stream_analytics_job_id=stream_analytics_job_id,
-    token_user_display_name=token_user_display_name,
     token_user_principal_name=token_user_principal_name,
-    dataset=dataset,
+    group_id=group_id,
     group_name=group_name,
     table=table,
+    token_user_display_name=token_user_display_name,
+    dataset=dataset,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    stream_analytics_job_id,
-    token_user_display_name=null,
     dataset,
-    group_name,
-    table,
+    name,
+    stream_analytics_job_id,
     token_user_principal_name=null,
     group_id,
-    name,
+    group_name,
+    table,
+    token_user_display_name=null,
     timeouts=null
   ):: std.prune(a={
-    stream_analytics_job_id: stream_analytics_job_id,
-    token_user_display_name: token_user_display_name,
     dataset: dataset,
-    group_name: group_name,
-    table: table,
+    name: name,
+    stream_analytics_job_id: stream_analytics_job_id,
     token_user_principal_name: token_user_principal_name,
     group_id: group_id,
-    name: name,
+    group_name: group_name,
+    table: table,
+    token_user_display_name: token_user_display_name,
     timeouts: timeouts,
   }),
+  withGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_powerbi+: {
+        [resourceLabel]+: {
+          group_name: value,
+        },
+      },
+    },
+  },
+  withTable(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_powerbi+: {
+        [resourceLabel]+: {
+          table: value,
+        },
+      },
+    },
+  },
+  withTokenUserDisplayName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_powerbi+: {
+        [resourceLabel]+: {
+          token_user_display_name: value,
+        },
+      },
+    },
+  },
+  withDataset(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_powerbi+: {
+        [resourceLabel]+: {
+          dataset: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_powerbi+: {
@@ -61,15 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTokenUserDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_powerbi+: {
-        [resourceLabel]+: {
-          token_user_display_name: value,
-        },
-      },
-    },
-  },
   withTokenUserPrincipalName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_powerbi+: {
@@ -84,33 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_output_powerbi+: {
         [resourceLabel]+: {
           group_id: value,
-        },
-      },
-    },
-  },
-  withTable(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_powerbi+: {
-        [resourceLabel]+: {
-          table: value,
-        },
-      },
-    },
-  },
-  withDataset(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_powerbi+: {
-        [resourceLabel]+: {
-          dataset: value,
-        },
-      },
-    },
-  },
-  withGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_powerbi+: {
-        [resourceLabel]+: {
-          group_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

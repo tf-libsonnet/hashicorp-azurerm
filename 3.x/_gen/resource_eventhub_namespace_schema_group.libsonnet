@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     namespace_id,
     schema_compatibility,
     schema_type,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_schema_group', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     namespace_id=namespace_id,
     schema_compatibility=schema_compatibility,
     schema_type=schema_type,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    namespace_id,
     schema_compatibility,
     schema_type,
+    name,
+    namespace_id,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    namespace_id: namespace_id,
     schema_compatibility: schema_compatibility,
     schema_type: schema_type,
+    name: name,
+    namespace_id: namespace_id,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace_schema_group+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withNamespaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventhub_namespace_schema_group+: {
-        [resourceLabel]+: {
-          namespace_id: value,
-        },
-      },
-    },
-  },
   withSchemaCompatibility(resourceLabel, value):: {
     resource+: {
       azurerm_eventhub_namespace_schema_group+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_eventhub_namespace_schema_group+: {
         [resourceLabel]+: {
           schema_type: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace_schema_group+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withNamespaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventhub_namespace_schema_group+: {
+        [resourceLabel]+: {
+          namespace_id: value,
         },
       },
     },
@@ -83,13 +83,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
+      create: create,
     }),
   },
 }

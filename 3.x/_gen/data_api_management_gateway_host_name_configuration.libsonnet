@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     api_management_id,
     gateway_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_api_management_gateway_host_name_configuration', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     api_management_id=api_management_id,
     gateway_name=gateway_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    gateway_name,
     name,
     api_management_id,
-    gateway_name,
     timeouts=null
   ):: std.prune(a={
+    gateway_name: gateway_name,
     name: name,
     api_management_id: api_management_id,
-    gateway_name: gateway_name,
     timeouts: timeouts,
   }),
   withApiManagementId(dataSrcLabel, value):: {
@@ -32,20 +32,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGatewayName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_api_management_gateway_host_name_configuration+: {
-        [dataSrcLabel]+: {
-          gateway_name: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_api_management_gateway_host_name_configuration+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withGatewayName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_api_management_gateway_host_name_configuration+: {
+        [dataSrcLabel]+: {
+          gateway_name: value,
         },
       },
     },

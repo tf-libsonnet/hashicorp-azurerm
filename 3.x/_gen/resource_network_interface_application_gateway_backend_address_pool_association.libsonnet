@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ip_configuration_name: ip_configuration_name,
     timeouts: timeouts,
   }),
-  withIpConfigurationName(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface_application_gateway_backend_address_pool_association+: {
-        [resourceLabel]+: {
-          ip_configuration_name: value,
-        },
-      },
-    },
-  },
   withNetworkInterfaceId(resourceLabel, value):: {
     resource+: {
       azurerm_network_interface_application_gateway_backend_address_pool_association+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_interface_application_gateway_backend_address_pool_association+: {
         [resourceLabel]+: {
           backend_address_pool_id: value,
+        },
+      },
+    },
+  },
+  withIpConfigurationName(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface_application_gateway_backend_address_pool_association+: {
+        [resourceLabel]+: {
+          ip_configuration_name: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

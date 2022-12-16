@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    lab_name,
     name,
     resource_group_name,
-    lab_name,
     timeouts=null
   ):: tf.withData(type='azurerm_dev_test_virtual_network', label=dataSrcLabel, attrs=self.newAttrs(
+    lab_name=lab_name,
     name=name,
     resource_group_name=resource_group_name,
-    lab_name=lab_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     lab_name: lab_name,
     timeouts: timeouts,
   }),
+  withLabName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_dev_test_virtual_network+: {
+        [dataSrcLabel]+: {
+          lab_name: value,
+        },
+      },
+    },
+  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_dev_test_virtual_network+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_dev_test_virtual_network+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withLabName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_dev_test_virtual_network+: {
-        [dataSrcLabel]+: {
-          lab_name: value,
         },
       },
     },

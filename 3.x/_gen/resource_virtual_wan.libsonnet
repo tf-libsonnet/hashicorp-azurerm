@@ -2,70 +2,61 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     office365_local_breakout_category=null,
+    tags=null,
     type=null,
     allow_branch_to_branch_traffic=null,
-    resource_group_name,
-    tags=null,
     disable_vpn_encryption=null,
     location,
+    name,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_virtual_wan', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     office365_local_breakout_category=office365_local_breakout_category,
+    tags=tags,
     type=type,
     allow_branch_to_branch_traffic=allow_branch_to_branch_traffic,
-    resource_group_name=resource_group_name,
-    tags=tags,
     disable_vpn_encryption=disable_vpn_encryption,
     location=location,
+    name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
+    location,
     name,
     office365_local_breakout_category=null,
-    type=null,
-    disable_vpn_encryption=null,
-    location,
-    resource_group_name,
     tags=null,
+    type=null,
     allow_branch_to_branch_traffic=null,
+    disable_vpn_encryption=null,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
+    location: location,
     name: name,
     office365_local_breakout_category: office365_local_breakout_category,
-    type: type,
-    disable_vpn_encryption: disable_vpn_encryption,
-    location: location,
-    resource_group_name: resource_group_name,
     tags: tags,
+    type: type,
     allow_branch_to_branch_traffic: allow_branch_to_branch_traffic,
+    disable_vpn_encryption: disable_vpn_encryption,
     timeouts: timeouts,
   }),
-  withAllowBranchToBranchTraffic(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          allow_branch_to_branch_traffic: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withOffice365LocalBreakoutCategory(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
           office365_local_breakout_category: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -79,20 +70,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withAllowBranchToBranchTraffic(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          allow_branch_to_branch_traffic: value,
+        },
+      },
+    },
+  },
   withDisableVpnEncryption(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
           disable_vpn_encryption: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_wan+: {
-        [resourceLabel]+: {
-          location: value,
         },
       },
     },
@@ -106,11 +97,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_wan+: {
         [resourceLabel]+: {
-          tags: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_wan+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
 }

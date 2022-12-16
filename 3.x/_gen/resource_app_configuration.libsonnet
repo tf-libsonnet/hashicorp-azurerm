@@ -2,64 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    sku=null,
-    soft_delete_retention_days=null,
-    tags=null,
-    public_network_access=null,
-    location,
-    purge_protection_enabled=null,
-    local_auth_enabled=null,
-    name,
     resource_group_name,
+    location,
+    soft_delete_retention_days=null,
+    purge_protection_enabled=null,
+    public_network_access=null,
+    local_auth_enabled=null,
+    sku=null,
+    name,
+    tags=null,
     encryption=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_configuration', label=resourceLabel, attrs=self.newAttrs(
-    sku=sku,
-    soft_delete_retention_days=soft_delete_retention_days,
-    tags=tags,
-    public_network_access=public_network_access,
-    location=location,
-    purge_protection_enabled=purge_protection_enabled,
-    local_auth_enabled=local_auth_enabled,
-    name=name,
     resource_group_name=resource_group_name,
+    location=location,
+    soft_delete_retention_days=soft_delete_retention_days,
+    purge_protection_enabled=purge_protection_enabled,
+    public_network_access=public_network_access,
+    local_auth_enabled=local_auth_enabled,
+    sku=sku,
+    name=name,
+    tags=tags,
     encryption=encryption,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
-    location,
-    public_network_access=null,
-    soft_delete_retention_days=null,
-    local_auth_enabled=null,
-    name,
-    purge_protection_enabled=null,
     sku=null,
-    encryption=null,
+    public_network_access=null,
+    location,
+    purge_protection_enabled=null,
+    name,
+    soft_delete_retention_days=null,
+    tags=null,
+    resource_group_name,
+    local_auth_enabled=null,
     identity=null,
-    timeouts=null
+    timeouts=null,
+    encryption=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
-    location: location,
-    public_network_access: public_network_access,
-    soft_delete_retention_days: soft_delete_retention_days,
-    local_auth_enabled: local_auth_enabled,
-    name: name,
-    purge_protection_enabled: purge_protection_enabled,
     sku: sku,
-    encryption: encryption,
+    public_network_access: public_network_access,
+    location: location,
+    purge_protection_enabled: purge_protection_enabled,
+    name: name,
+    soft_delete_retention_days: soft_delete_retention_days,
+    tags: tags,
+    resource_group_name: resource_group_name,
+    local_auth_enabled: local_auth_enabled,
     identity: identity,
     timeouts: timeouts,
+    encryption: encryption,
   }),
-  withName(resourceLabel, value):: {
+  withLocalAuthEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration+: {
         [resourceLabel]+: {
-          name: value,
+          local_auth_enabled: value,
         },
       },
     },
@@ -73,6 +73,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSoftDeleteRetentionDays(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration+: {
+        [resourceLabel]+: {
+          soft_delete_retention_days: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration+: {
@@ -82,20 +91,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPublicNetworkAccess(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration+: {
         [resourceLabel]+: {
-          public_network_access: value,
-        },
-      },
-    },
-  },
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
+          location: value,
         },
       },
     },
@@ -109,11 +109,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSoftDeleteRetentionDays(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration+: {
         [resourceLabel]+: {
-          soft_delete_retention_days: value,
+          name: value,
         },
       },
     },
@@ -127,11 +127,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withPublicNetworkAccess(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration+: {
         [resourceLabel]+: {
-          location: value,
+          public_network_access: value,
         },
       },
     },
@@ -156,15 +156,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
   withEncryption(resourceLabel, value):: {
@@ -214,11 +214,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
     }),
   },
 }

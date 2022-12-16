@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    name,
     resource_group_name,
     tags=null,
+    location,
+    name,
     identity=null,
     storage_account=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_video_analyzer', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
+    location=location,
+    name=name,
     identity=identity,
     storage_account=storage_account,
     timeouts=timeouts
@@ -23,36 +23,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     name,
     resource_group_name,
-    identity=null,
     storage_account=null,
-    timeouts=null
+    timeouts=null,
+    identity=null
   ):: std.prune(a={
     tags: tags,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
-    identity: identity,
     storage_account: storage_account,
     timeouts: timeouts,
+    identity: identity,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_video_analyzer+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_video_analyzer+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_video_analyzer+: {
@@ -71,32 +53,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIdentity(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_video_analyzer+: {
         [resourceLabel]+: {
-          identity: value,
+          location: value,
         },
       },
     },
   },
-  withIdentityMixin(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_video_analyzer+: {
         [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
+          name: value,
         },
       },
     },
-  },
-  identity:: {
-    new(
-      identity_ids,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
   },
   withStorageAccount(resourceLabel, value):: {
     resource+: {
@@ -143,15 +116,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_video_analyzer+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_video_analyzer+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      identity_ids,
+      type
+    ):: std.prune(a={
+      identity_ids: identity_ids,
+      type: type,
     }),
   },
 }

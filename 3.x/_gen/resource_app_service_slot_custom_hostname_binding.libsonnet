@@ -2,49 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    ssl_state=null,
     thumbprint=null,
     app_service_slot_id,
     hostname,
-    ssl_state=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_slot_custom_hostname_binding', label=resourceLabel, attrs=self.newAttrs(
+    ssl_state=ssl_state,
     thumbprint=thumbprint,
     app_service_slot_id=app_service_slot_id,
     hostname=hostname,
-    ssl_state=ssl_state,
     timeouts=timeouts
   )),
   newAttrs(
-    app_service_slot_id,
     hostname,
     ssl_state=null,
     thumbprint=null,
+    app_service_slot_id,
     timeouts=null
   ):: std.prune(a={
-    app_service_slot_id: app_service_slot_id,
     hostname: hostname,
     ssl_state: ssl_state,
     thumbprint: thumbprint,
+    app_service_slot_id: app_service_slot_id,
     timeouts: timeouts,
   }),
-  withSslState(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_slot_custom_hostname_binding+: {
-        [resourceLabel]+: {
-          ssl_state: value,
-        },
-      },
-    },
-  },
-  withThumbprint(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_slot_custom_hostname_binding+: {
-        [resourceLabel]+: {
-          thumbprint: value,
-        },
-      },
-    },
-  },
   withAppServiceSlotId(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_slot_custom_hostname_binding+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_service_slot_custom_hostname_binding+: {
         [resourceLabel]+: {
           hostname: value,
+        },
+      },
+    },
+  },
+  withSslState(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_slot_custom_hostname_binding+: {
+        [resourceLabel]+: {
+          ssl_state: value,
+        },
+      },
+    },
+  },
+  withThumbprint(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_slot_custom_hostname_binding+: {
+        [resourceLabel]+: {
+          thumbprint: value,
         },
       },
     },

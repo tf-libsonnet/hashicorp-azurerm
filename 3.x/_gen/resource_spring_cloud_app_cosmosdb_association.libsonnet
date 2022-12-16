@@ -2,69 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cosmosdb_gremlin_graph_name=null,
-    cosmosdb_access_key,
-    cosmosdb_account_id,
     cosmosdb_cassandra_keyspace_name=null,
-    api_type,
-    spring_cloud_app_id,
-    cosmosdb_mongo_database_name=null,
     cosmosdb_gremlin_database_name=null,
+    cosmosdb_account_id,
     cosmosdb_sql_database_name=null,
     name,
+    spring_cloud_app_id,
+    api_type,
+    cosmosdb_access_key,
+    cosmosdb_mongo_database_name=null,
+    cosmosdb_gremlin_graph_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_spring_cloud_app_cosmosdb_association', label=resourceLabel, attrs=self.newAttrs(
-    cosmosdb_gremlin_graph_name=cosmosdb_gremlin_graph_name,
-    cosmosdb_access_key=cosmosdb_access_key,
-    cosmosdb_account_id=cosmosdb_account_id,
     cosmosdb_cassandra_keyspace_name=cosmosdb_cassandra_keyspace_name,
-    api_type=api_type,
-    spring_cloud_app_id=spring_cloud_app_id,
-    cosmosdb_mongo_database_name=cosmosdb_mongo_database_name,
     cosmosdb_gremlin_database_name=cosmosdb_gremlin_database_name,
+    cosmosdb_account_id=cosmosdb_account_id,
     cosmosdb_sql_database_name=cosmosdb_sql_database_name,
     name=name,
+    spring_cloud_app_id=spring_cloud_app_id,
+    api_type=api_type,
+    cosmosdb_access_key=cosmosdb_access_key,
+    cosmosdb_mongo_database_name=cosmosdb_mongo_database_name,
+    cosmosdb_gremlin_graph_name=cosmosdb_gremlin_graph_name,
     timeouts=timeouts
   )),
   newAttrs(
-    cosmosdb_account_id,
     cosmosdb_cassandra_keyspace_name=null,
-    cosmosdb_gremlin_graph_name=null,
-    cosmosdb_sql_database_name=null,
+    cosmosdb_mongo_database_name=null,
     name,
     spring_cloud_app_id,
-    cosmosdb_access_key,
-    cosmosdb_mongo_database_name=null,
-    api_type,
+    cosmosdb_gremlin_graph_name=null,
+    cosmosdb_sql_database_name=null,
     cosmosdb_gremlin_database_name=null,
+    api_type,
+    cosmosdb_access_key,
+    cosmosdb_account_id,
     timeouts=null
   ):: std.prune(a={
-    cosmosdb_account_id: cosmosdb_account_id,
     cosmosdb_cassandra_keyspace_name: cosmosdb_cassandra_keyspace_name,
-    cosmosdb_gremlin_graph_name: cosmosdb_gremlin_graph_name,
-    cosmosdb_sql_database_name: cosmosdb_sql_database_name,
+    cosmosdb_mongo_database_name: cosmosdb_mongo_database_name,
     name: name,
     spring_cloud_app_id: spring_cloud_app_id,
-    cosmosdb_access_key: cosmosdb_access_key,
-    cosmosdb_mongo_database_name: cosmosdb_mongo_database_name,
-    api_type: api_type,
+    cosmosdb_gremlin_graph_name: cosmosdb_gremlin_graph_name,
+    cosmosdb_sql_database_name: cosmosdb_sql_database_name,
     cosmosdb_gremlin_database_name: cosmosdb_gremlin_database_name,
+    api_type: api_type,
+    cosmosdb_access_key: cosmosdb_access_key,
+    cosmosdb_account_id: cosmosdb_account_id,
     timeouts: timeouts,
   }),
-  withCosmosdbAccountId(resourceLabel, value):: {
+  withCosmosdbGremlinDatabaseName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_cosmosdb_association+: {
         [resourceLabel]+: {
-          cosmosdb_account_id: value,
-        },
-      },
-    },
-  },
-  withApiType(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_cosmosdb_association+: {
-        [resourceLabel]+: {
-          api_type: value,
+          cosmosdb_gremlin_database_name: value,
         },
       },
     },
@@ -78,6 +69,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withCosmosdbGremlinGraphName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_cosmosdb_association+: {
+        [resourceLabel]+: {
+          cosmosdb_gremlin_graph_name: value,
+        },
+      },
+    },
+  },
+  withSpringCloudAppId(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_cosmosdb_association+: {
+        [resourceLabel]+: {
+          spring_cloud_app_id: value,
+        },
+      },
+    },
+  },
+  withApiType(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_cosmosdb_association+: {
+        [resourceLabel]+: {
+          api_type: value,
+        },
+      },
+    },
+  },
+  withCosmosdbMongoDatabaseName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_app_cosmosdb_association+: {
+        [resourceLabel]+: {
+          cosmosdb_mongo_database_name: value,
+        },
+      },
+    },
+  },
   withCosmosdbCassandraKeyspaceName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_cosmosdb_association+: {
@@ -87,11 +114,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCosmosdbGremlinDatabaseName(resourceLabel, value):: {
+  withCosmosdbAccountId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_app_cosmosdb_association+: {
         [resourceLabel]+: {
-          cosmosdb_gremlin_database_name: value,
+          cosmosdb_account_id: value,
         },
       },
     },
@@ -110,33 +137,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_app_cosmosdb_association+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withSpringCloudAppId(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_cosmosdb_association+: {
-        [resourceLabel]+: {
-          spring_cloud_app_id: value,
-        },
-      },
-    },
-  },
-  withCosmosdbGremlinGraphName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_cosmosdb_association+: {
-        [resourceLabel]+: {
-          cosmosdb_gremlin_graph_name: value,
-        },
-      },
-    },
-  },
-  withCosmosdbMongoDatabaseName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_app_cosmosdb_association+: {
-        [resourceLabel]+: {
-          cosmosdb_mongo_database_name: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      read=null,
       update=null,
       create=null,
-      delete=null,
-      read=null
+      delete=null
     ):: std.prune(a={
+      read: read,
       update: update,
       create: create,
       delete: delete,
-      read: read,
     }),
   },
 }

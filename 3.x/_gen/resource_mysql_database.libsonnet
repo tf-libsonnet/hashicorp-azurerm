@@ -2,18 +2,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    collation,
-    name,
     resource_group_name,
     server_name,
     charset,
+    collation,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_mysql_database', label=resourceLabel, attrs=self.newAttrs(
-    collation=collation,
-    name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
     charset=charset,
+    collation=collation,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(

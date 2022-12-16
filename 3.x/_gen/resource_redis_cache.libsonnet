@@ -2,117 +2,99 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    subnet_id=null,
     replicas_per_primary=null,
-    zones=null,
-    shard_count=null,
-    redis_version=null,
-    enable_non_ssl_port=null,
-    family,
-    replicas_per_master=null,
     tenant_settings=null,
+    enable_non_ssl_port=null,
+    replicas_per_master=null,
     sku_name,
-    private_static_ip_address=null,
-    tags=null,
-    capacity,
     resource_group_name,
+    capacity,
+    family,
+    minimum_tls_version=null,
     public_network_access_enabled=null,
     name,
-    minimum_tls_version=null,
-    timeouts=null,
+    tags=null,
+    redis_version=null,
+    private_static_ip_address=null,
+    location,
+    subnet_id=null,
+    zones=null,
+    shard_count=null,
     identity=null,
     patch_schedule=null,
-    redis_configuration=null
+    redis_configuration=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_redis_cache', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    subnet_id=subnet_id,
     replicas_per_primary=replicas_per_primary,
-    zones=zones,
-    shard_count=shard_count,
-    redis_version=redis_version,
-    enable_non_ssl_port=enable_non_ssl_port,
-    family=family,
-    replicas_per_master=replicas_per_master,
     tenant_settings=tenant_settings,
+    enable_non_ssl_port=enable_non_ssl_port,
+    replicas_per_master=replicas_per_master,
     sku_name=sku_name,
-    private_static_ip_address=private_static_ip_address,
-    tags=tags,
-    capacity=capacity,
     resource_group_name=resource_group_name,
+    capacity=capacity,
+    family=family,
+    minimum_tls_version=minimum_tls_version,
     public_network_access_enabled=public_network_access_enabled,
     name=name,
-    minimum_tls_version=minimum_tls_version,
-    timeouts=timeouts,
+    tags=tags,
+    redis_version=redis_version,
+    private_static_ip_address=private_static_ip_address,
+    location=location,
+    subnet_id=subnet_id,
+    zones=zones,
+    shard_count=shard_count,
     identity=identity,
     patch_schedule=patch_schedule,
-    redis_configuration=redis_configuration
+    redis_configuration=redis_configuration,
+    timeouts=timeouts
   )),
   newAttrs(
-    subnet_id=null,
-    sku_name,
-    replicas_per_primary=null,
-    zones=null,
-    enable_non_ssl_port=null,
-    replicas_per_master=null,
-    minimum_tls_version=null,
-    shard_count=null,
-    private_static_ip_address=null,
-    public_network_access_enabled=null,
     redis_version=null,
-    name,
+    zones=null,
     tenant_settings=null,
-    tags=null,
+    private_static_ip_address=null,
     location,
+    subnet_id=null,
+    enable_non_ssl_port=null,
+    name,
     resource_group_name,
-    family,
     capacity,
+    minimum_tls_version=null,
+    replicas_per_master=null,
+    family,
+    public_network_access_enabled=null,
+    replicas_per_primary=null,
+    shard_count=null,
+    sku_name,
+    tags=null,
     redis_configuration=null,
     timeouts=null,
     identity=null,
     patch_schedule=null
   ):: std.prune(a={
-    subnet_id: subnet_id,
-    sku_name: sku_name,
-    replicas_per_primary: replicas_per_primary,
-    zones: zones,
-    enable_non_ssl_port: enable_non_ssl_port,
-    replicas_per_master: replicas_per_master,
-    minimum_tls_version: minimum_tls_version,
-    shard_count: shard_count,
-    private_static_ip_address: private_static_ip_address,
-    public_network_access_enabled: public_network_access_enabled,
     redis_version: redis_version,
-    name: name,
+    zones: zones,
     tenant_settings: tenant_settings,
-    tags: tags,
+    private_static_ip_address: private_static_ip_address,
     location: location,
+    subnet_id: subnet_id,
+    enable_non_ssl_port: enable_non_ssl_port,
+    name: name,
     resource_group_name: resource_group_name,
-    family: family,
     capacity: capacity,
+    minimum_tls_version: minimum_tls_version,
+    replicas_per_master: replicas_per_master,
+    family: family,
+    public_network_access_enabled: public_network_access_enabled,
+    replicas_per_primary: replicas_per_primary,
+    shard_count: shard_count,
+    sku_name: sku_name,
+    tags: tags,
     redis_configuration: redis_configuration,
     timeouts: timeouts,
     identity: identity,
     patch_schedule: patch_schedule,
   }),
-  withShardCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          shard_count: value,
-        },
-      },
-    },
-  },
-  withEnableNonSslPort(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          enable_non_ssl_port: value,
-        },
-      },
-    },
-  },
   withFamily(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
@@ -122,38 +104,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          tags: value,
+          public_network_access_enabled: value,
         },
       },
     },
   },
-  withTenantSettings(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          tenant_settings: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withZones(resourceLabel, value):: {
+  withCapacity(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          zones: value,
+          capacity: value,
         },
       },
     },
   },
-  withMinimumTlsVersion(resourceLabel, value):: {
+  withSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          minimum_tls_version: value,
+          subnet_id: value,
         },
       },
     },
@@ -176,38 +158,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withTenantSettings(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withRedisVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          redis_version: value,
-        },
-      },
-    },
-  },
-  withReplicasPerMaster(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          replicas_per_master: value,
+          tenant_settings: value,
         },
       },
     },
@@ -221,11 +176,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          tags: value,
+        },
+      },
+    },
+  },
+  withShardCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          shard_count: value,
+        },
+      },
+    },
+  },
+  withEnableNonSslPort(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          enable_non_ssl_port: value,
+        },
+      },
+    },
+  },
+  withReplicasPerMaster(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          replicas_per_master: value,
         },
       },
     },
@@ -239,101 +221,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubnetId(resourceLabel, value):: {
+  withMinimumTlsVersion(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          subnet_id: value,
+          minimum_tls_version: value,
         },
       },
     },
   },
-  withCapacity(resourceLabel, value):: {
+  withRedisVersion(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          capacity: value,
+          redis_version: value,
         },
       },
     },
   },
-  withPatchSchedule(resourceLabel, value):: {
+  withZones(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          patch_schedule: value,
+          zones: value,
         },
       },
     },
   },
-  withPatchScheduleMixin(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_redis_cache+: {
         [resourceLabel]+: {
-          patch_schedule+: if std.isArray(v=value) then value else [value],
+          location: value,
         },
       },
     },
-  },
-  patch_schedule:: {
-    new(
-      start_hour_utc=null,
-      day_of_week,
-      maintenance_window=null
-    ):: std.prune(a={
-      start_hour_utc: start_hour_utc,
-      day_of_week: day_of_week,
-      maintenance_window: maintenance_window,
-    }),
-  },
-  withRedisConfiguration(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          redis_configuration: value,
-        },
-      },
-    },
-  },
-  withRedisConfigurationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_redis_cache+: {
-        [resourceLabel]+: {
-          redis_configuration+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  redis_configuration:: {
-    new(
-      rdb_storage_connection_string=null,
-      aof_backup_enabled=null,
-      maxmemory_reserved=null,
-      enable_authentication=null,
-      maxmemory_delta=null,
-      maxmemory_policy=null,
-      aof_storage_connection_string_0=null,
-      rdb_backup_max_snapshot_count=null,
-      notify_keyspace_events=null,
-      aof_storage_connection_string_1=null,
-      rdb_backup_frequency=null,
-      maxfragmentationmemory_reserved=null,
-      rdb_backup_enabled=null
-    ):: std.prune(a={
-      rdb_storage_connection_string: rdb_storage_connection_string,
-      aof_backup_enabled: aof_backup_enabled,
-      maxmemory_reserved: maxmemory_reserved,
-      enable_authentication: enable_authentication,
-      maxmemory_delta: maxmemory_delta,
-      maxmemory_policy: maxmemory_policy,
-      aof_storage_connection_string_0: aof_storage_connection_string_0,
-      rdb_backup_max_snapshot_count: rdb_backup_max_snapshot_count,
-      notify_keyspace_events: notify_keyspace_events,
-      aof_storage_connection_string_1: aof_storage_connection_string_1,
-      rdb_backup_frequency: rdb_backup_frequency,
-      maxfragmentationmemory_reserved: maxfragmentationmemory_reserved,
-      rdb_backup_enabled: rdb_backup_enabled,
-    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -355,15 +277,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
   withIdentity(resourceLabel, value):: {
@@ -391,6 +313,84 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       identity_ids: identity_ids,
       type: type,
+    }),
+  },
+  withPatchSchedule(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          patch_schedule: value,
+        },
+      },
+    },
+  },
+  withPatchScheduleMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          patch_schedule+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  patch_schedule:: {
+    new(
+      day_of_week,
+      maintenance_window=null,
+      start_hour_utc=null
+    ):: std.prune(a={
+      day_of_week: day_of_week,
+      maintenance_window: maintenance_window,
+      start_hour_utc: start_hour_utc,
+    }),
+  },
+  withRedisConfiguration(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          redis_configuration: value,
+        },
+      },
+    },
+  },
+  withRedisConfigurationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_redis_cache+: {
+        [resourceLabel]+: {
+          redis_configuration+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  redis_configuration:: {
+    new(
+      aof_storage_connection_string_1=null,
+      maxmemory_reserved=null,
+      maxmemory_policy=null,
+      rdb_storage_connection_string=null,
+      enable_authentication=null,
+      maxmemory_delta=null,
+      rdb_backup_frequency=null,
+      notify_keyspace_events=null,
+      rdb_backup_enabled=null,
+      rdb_backup_max_snapshot_count=null,
+      aof_storage_connection_string_0=null,
+      aof_backup_enabled=null,
+      maxfragmentationmemory_reserved=null
+    ):: std.prune(a={
+      aof_storage_connection_string_1: aof_storage_connection_string_1,
+      maxmemory_reserved: maxmemory_reserved,
+      maxmemory_policy: maxmemory_policy,
+      rdb_storage_connection_string: rdb_storage_connection_string,
+      enable_authentication: enable_authentication,
+      maxmemory_delta: maxmemory_delta,
+      rdb_backup_frequency: rdb_backup_frequency,
+      notify_keyspace_events: notify_keyspace_events,
+      rdb_backup_enabled: rdb_backup_enabled,
+      rdb_backup_max_snapshot_count: rdb_backup_max_snapshot_count,
+      aof_storage_connection_string_0: aof_storage_connection_string_0,
+      aof_backup_enabled: aof_backup_enabled,
+      maxfragmentationmemory_reserved: maxfragmentationmemory_reserved,
     }),
   },
 }

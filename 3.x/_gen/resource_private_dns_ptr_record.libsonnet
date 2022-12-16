@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    zone_name,
     name,
     records,
     resource_group_name,
     tags=null,
     ttl,
+    zone_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_ptr_record', label=resourceLabel, attrs=self.newAttrs(
-    zone_name=zone_name,
     name=name,
     records=records,
     resource_group_name=resource_group_name,
     tags=tags,
     ttl=ttl,
+    zone_name=zone_name,
     timeouts=timeouts
   )),
   newAttrs(

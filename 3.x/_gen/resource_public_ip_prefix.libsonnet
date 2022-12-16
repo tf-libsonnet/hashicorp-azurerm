@@ -2,52 +2,97 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    ip_version=null,
     location,
-    prefix_length=null,
-    zones=null,
     name,
-    resource_group_name,
     sku=null,
+    prefix_length=null,
+    resource_group_name,
     tags=null,
+    zones=null,
+    ip_version=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_public_ip_prefix', label=resourceLabel, attrs=self.newAttrs(
-    ip_version=ip_version,
     location=location,
-    prefix_length=prefix_length,
-    zones=zones,
     name=name,
-    resource_group_name=resource_group_name,
     sku=sku,
+    prefix_length=prefix_length,
+    resource_group_name=resource_group_name,
     tags=tags,
+    zones=zones,
+    ip_version=ip_version,
     timeouts=timeouts
   )),
   newAttrs(
+    ip_version=null,
+    location,
+    name,
+    sku=null,
     tags=null,
     zones=null,
-    location,
     prefix_length=null,
-    ip_version=null,
-    name,
     resource_group_name,
-    sku=null,
     timeouts=null
   ):: std.prune(a={
+    ip_version: ip_version,
+    location: location,
+    name: name,
+    sku: sku,
     tags: tags,
     zones: zones,
-    location: location,
     prefix_length: prefix_length,
-    ip_version: ip_version,
-    name: name,
     resource_group_name: resource_group_name,
-    sku: sku,
     timeouts: timeouts,
   }),
+  withPrefixLength(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip_prefix+: {
+        [resourceLabel]+: {
+          prefix_length: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_public_ip_prefix+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withZones(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip_prefix+: {
+        [resourceLabel]+: {
+          zones: value,
+        },
+      },
+    },
+  },
+  withIpVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip_prefix+: {
+        [resourceLabel]+: {
+          ip_version: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip_prefix+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_public_ip_prefix+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -66,51 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_public_ip_prefix+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withZones(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip_prefix+: {
-        [resourceLabel]+: {
-          zones: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip_prefix+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withPrefixLength(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip_prefix+: {
-        [resourceLabel]+: {
-          prefix_length: value,
-        },
-      },
-    },
-  },
-  withIpVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip_prefix+: {
-        [resourceLabel]+: {
-          ip_version: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_public_ip_prefix+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

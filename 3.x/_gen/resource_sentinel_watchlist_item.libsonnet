@@ -13,14 +13,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name=null,
     properties,
     watchlist_id,
-    name=null,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     properties: properties,
     watchlist_id: watchlist_id,
-    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

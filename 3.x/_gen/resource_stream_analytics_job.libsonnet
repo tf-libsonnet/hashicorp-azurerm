@@ -2,182 +2,83 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    events_late_arrival_max_delay_in_seconds=null,
+    content_storage_policy=null,
+    events_out_of_order_max_delay_in_seconds=null,
+    compatibility_level=null,
+    data_locale=null,
+    type=null,
     location,
+    name,
+    stream_analytics_cluster_id=null,
+    output_error_policy=null,
+    streaming_units=null,
+    events_late_arrival_max_delay_in_seconds=null,
+    resource_group_name,
     events_out_of_order_policy=null,
     transformation_query,
-    data_locale=null,
-    resource_group_name,
-    content_storage_policy=null,
-    stream_analytics_cluster_id=null,
-    streaming_units=null,
-    compatibility_level=null,
-    name,
-    type=null,
-    output_error_policy=null,
     tags=null,
-    events_out_of_order_max_delay_in_seconds=null,
     identity=null,
     job_storage_account=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_job', label=resourceLabel, attrs=self.newAttrs(
-    events_late_arrival_max_delay_in_seconds=events_late_arrival_max_delay_in_seconds,
+    content_storage_policy=content_storage_policy,
+    events_out_of_order_max_delay_in_seconds=events_out_of_order_max_delay_in_seconds,
+    compatibility_level=compatibility_level,
+    data_locale=data_locale,
+    type=type,
     location=location,
+    name=name,
+    stream_analytics_cluster_id=stream_analytics_cluster_id,
+    output_error_policy=output_error_policy,
+    streaming_units=streaming_units,
+    events_late_arrival_max_delay_in_seconds=events_late_arrival_max_delay_in_seconds,
+    resource_group_name=resource_group_name,
     events_out_of_order_policy=events_out_of_order_policy,
     transformation_query=transformation_query,
-    data_locale=data_locale,
-    resource_group_name=resource_group_name,
-    content_storage_policy=content_storage_policy,
-    stream_analytics_cluster_id=stream_analytics_cluster_id,
-    streaming_units=streaming_units,
-    compatibility_level=compatibility_level,
-    name=name,
-    type=type,
-    output_error_policy=output_error_policy,
     tags=tags,
-    events_out_of_order_max_delay_in_seconds=events_out_of_order_max_delay_in_seconds,
     identity=identity,
     job_storage_account=job_storage_account,
     timeouts=timeouts
   )),
   newAttrs(
-    type=null,
-    events_late_arrival_max_delay_in_seconds=null,
-    stream_analytics_cluster_id=null,
-    compatibility_level=null,
+    data_locale=null,
     name,
     resource_group_name,
-    streaming_units=null,
-    location,
-    tags=null,
-    events_out_of_order_max_delay_in_seconds=null,
-    content_storage_policy=null,
     events_out_of_order_policy=null,
-    transformation_query,
-    data_locale=null,
+    tags=null,
+    content_storage_policy=null,
+    compatibility_level=null,
+    events_late_arrival_max_delay_in_seconds=null,
     output_error_policy=null,
+    streaming_units=null,
+    transformation_query,
+    events_out_of_order_max_delay_in_seconds=null,
+    stream_analytics_cluster_id=null,
+    type=null,
+    location,
+    identity=null,
     job_storage_account=null,
-    timeouts=null,
-    identity=null
+    timeouts=null
   ):: std.prune(a={
-    type: type,
-    events_late_arrival_max_delay_in_seconds: events_late_arrival_max_delay_in_seconds,
-    stream_analytics_cluster_id: stream_analytics_cluster_id,
-    compatibility_level: compatibility_level,
+    data_locale: data_locale,
     name: name,
     resource_group_name: resource_group_name,
-    streaming_units: streaming_units,
-    location: location,
-    tags: tags,
-    events_out_of_order_max_delay_in_seconds: events_out_of_order_max_delay_in_seconds,
-    content_storage_policy: content_storage_policy,
     events_out_of_order_policy: events_out_of_order_policy,
-    transformation_query: transformation_query,
-    data_locale: data_locale,
+    tags: tags,
+    content_storage_policy: content_storage_policy,
+    compatibility_level: compatibility_level,
+    events_late_arrival_max_delay_in_seconds: events_late_arrival_max_delay_in_seconds,
     output_error_policy: output_error_policy,
+    streaming_units: streaming_units,
+    transformation_query: transformation_query,
+    events_out_of_order_max_delay_in_seconds: events_out_of_order_max_delay_in_seconds,
+    stream_analytics_cluster_id: stream_analytics_cluster_id,
+    type: type,
+    location: location,
+    identity: identity,
     job_storage_account: job_storage_account,
     timeouts: timeouts,
-    identity: identity,
   }),
-  withStreamingUnits(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          streaming_units: value,
-        },
-      },
-    },
-  },
-  withContentStoragePolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          content_storage_policy: value,
-        },
-      },
-    },
-  },
-  withEventsOutOfOrderPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          events_out_of_order_policy: value,
-        },
-      },
-    },
-  },
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
-  withTransformationQuery(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          transformation_query: value,
-        },
-      },
-    },
-  },
-  withOutputErrorPolicy(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          output_error_policy: value,
-        },
-      },
-    },
-  },
-  withEventsOutOfOrderMaxDelayInSeconds(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          events_out_of_order_max_delay_in_seconds: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withStreamAnalyticsClusterId(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          stream_analytics_cluster_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withDataLocale(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          data_locale: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_job+: {
@@ -196,15 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_job+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withEventsLateArrivalMaxDelayInSeconds(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_job+: {
@@ -214,30 +106,113 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIdentity(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_job+: {
         [resourceLabel]+: {
-          identity: value,
+          location: value,
         },
       },
     },
   },
-  withIdentityMixin(resourceLabel, value):: {
+  withOutputErrorPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_job+: {
         [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
+          output_error_policy: value,
         },
       },
     },
   },
-  identity:: {
-    new(
-      type
-    ):: std.prune(a={
-      type: type,
-    }),
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          type: value,
+        },
+      },
+    },
+  },
+  withDataLocale(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          data_locale: value,
+        },
+      },
+    },
+  },
+  withContentStoragePolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          content_storage_policy: value,
+        },
+      },
+    },
+  },
+  withStreamingUnits(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          streaming_units: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withEventsOutOfOrderMaxDelayInSeconds(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          events_out_of_order_max_delay_in_seconds: value,
+        },
+      },
+    },
+  },
+  withEventsOutOfOrderPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          events_out_of_order_policy: value,
+        },
+      },
+    },
+  },
+  withStreamAnalyticsClusterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          stream_analytics_cluster_id: value,
+        },
+      },
+    },
+  },
+  withTransformationQuery(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          transformation_query: value,
+        },
+      },
+    },
   },
   withJobStorageAccount(resourceLabel, value):: {
     resource+: {
@@ -297,6 +272,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_job+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type
+    ):: std.prune(a={
+      type: type,
     }),
   },
 }

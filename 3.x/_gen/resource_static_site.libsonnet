@@ -2,21 +2,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
+    sku_tier=null,
     location,
     name,
     resource_group_name,
+    tags=null,
     sku_size=null,
-    sku_tier=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_static_site', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
+    sku_tier=sku_tier,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
+    tags=tags,
     sku_size=sku_size,
-    sku_tier=sku_tier,
     identity=identity,
     timeouts=timeouts
   )),
@@ -25,19 +25,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     tags=null,
-    sku_size=null,
     sku_tier=null,
-    identity=null,
-    timeouts=null
+    sku_size=null,
+    timeouts=null,
+    identity=null
   ):: std.prune(a={
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    sku_size: sku_size,
     sku_tier: sku_tier,
-    identity: identity,
+    sku_size: sku_size,
     timeouts: timeouts,
+    identity: identity,
   }),
   withTags(resourceLabel, value):: {
     resource+: {
@@ -48,20 +48,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSkuSize(resourceLabel, value):: {
-    resource+: {
-      azurerm_static_site+: {
-        [resourceLabel]+: {
-          sku_size: value,
-        },
-      },
-    },
-  },
   withSkuTier(resourceLabel, value):: {
     resource+: {
       azurerm_static_site+: {
         [resourceLabel]+: {
           sku_tier: value,
+        },
+      },
+    },
+  },
+  withSkuSize(resourceLabel, value):: {
+    resource+: {
+      azurerm_static_site+: {
+        [resourceLabel]+: {
+          sku_size: value,
         },
       },
     },
@@ -113,11 +113,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      type,
-      identity_ids=null
+      identity_ids=null,
+      type
     ):: std.prune(a={
-      type: type,
       identity_ids: identity_ids,
+      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -140,15 +140,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

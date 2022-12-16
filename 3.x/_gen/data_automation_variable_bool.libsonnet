@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     resource_group_name,
     automation_account_name,
+    name,
     timeouts=null
   ):: tf.withData(type='azurerm_automation_variable_bool', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
     resource_group_name=resource_group_name,
     automation_account_name=automation_account_name,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    automation_account_name,
     name,
     resource_group_name,
+    automation_account_name,
     timeouts=null
   ):: std.prune(a={
-    automation_account_name: automation_account_name,
     name: name,
     resource_group_name: resource_group_name,
+    automation_account_name: automation_account_name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

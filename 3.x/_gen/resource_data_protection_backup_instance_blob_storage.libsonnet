@@ -17,18 +17,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    vault_id,
     backup_policy_id,
     location,
     name,
     storage_account_id,
+    vault_id,
     timeouts=null
   ):: std.prune(a={
-    vault_id: vault_id,
     backup_policy_id: backup_policy_id,
     location: location,
     name: name,
     storage_account_id: storage_account_id,
+    vault_id: vault_id,
     timeouts: timeouts,
   }),
   withStorageAccountId(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

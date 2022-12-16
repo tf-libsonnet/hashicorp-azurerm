@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_lb_backend_address_pool+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withLoadbalancerId(dataSrcLabel, value):: {
     data+: {
       azurerm_lb_backend_address_pool+: {
         [dataSrcLabel]+: {
           loadbalancer_id: value,
+        },
+      },
+    },
+  },
+  withName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_lb_backend_address_pool+: {
+        [dataSrcLabel]+: {
+          name: value,
         },
       },
     },

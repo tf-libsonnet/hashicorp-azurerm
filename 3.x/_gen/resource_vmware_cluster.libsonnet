@@ -2,40 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cluster_node_count,
-    name,
     sku_name,
     vmware_cloud_id,
+    cluster_node_count,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_vmware_cluster', label=resourceLabel, attrs=self.newAttrs(
-    cluster_node_count=cluster_node_count,
-    name=name,
     sku_name=sku_name,
     vmware_cloud_id=vmware_cloud_id,
+    cluster_node_count=cluster_node_count,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    cluster_node_count,
-    name,
     sku_name,
     vmware_cloud_id,
+    cluster_node_count,
+    name,
     timeouts=null
   ):: std.prune(a={
-    cluster_node_count: cluster_node_count,
-    name: name,
     sku_name: sku_name,
     vmware_cloud_id: vmware_cloud_id,
+    cluster_node_count: cluster_node_count,
+    name: name,
     timeouts: timeouts,
   }),
-  withClusterNodeCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_vmware_cluster+: {
-        [resourceLabel]+: {
-          cluster_node_count: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_cluster+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withClusterNodeCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_vmware_cluster+: {
+        [resourceLabel]+: {
+          cluster_node_count: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_vmware_cluster+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

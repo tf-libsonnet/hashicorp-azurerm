@@ -2,117 +2,81 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    geo_mappings=null,
+    name,
+    minimum_child_endpoints,
+    minimum_required_child_endpoints_ipv4=null,
+    minimum_required_child_endpoints_ipv6=null,
     priority=null,
     profile_id,
-    minimum_required_child_endpoints_ipv4=null,
-    weight=null,
-    enabled=null,
     endpoint_location=null,
     target_resource_id,
-    minimum_child_endpoints,
-    geo_mappings=null,
-    minimum_required_child_endpoints_ipv6=null,
-    name,
+    enabled=null,
+    weight=null,
     custom_header=null,
     subnet=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_traffic_manager_nested_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    geo_mappings=geo_mappings,
+    name=name,
+    minimum_child_endpoints=minimum_child_endpoints,
+    minimum_required_child_endpoints_ipv4=minimum_required_child_endpoints_ipv4,
+    minimum_required_child_endpoints_ipv6=minimum_required_child_endpoints_ipv6,
     priority=priority,
     profile_id=profile_id,
-    minimum_required_child_endpoints_ipv4=minimum_required_child_endpoints_ipv4,
-    weight=weight,
-    enabled=enabled,
     endpoint_location=endpoint_location,
     target_resource_id=target_resource_id,
-    minimum_child_endpoints=minimum_child_endpoints,
-    geo_mappings=geo_mappings,
-    minimum_required_child_endpoints_ipv6=minimum_required_child_endpoints_ipv6,
-    name=name,
+    enabled=enabled,
+    weight=weight,
     custom_header=custom_header,
     subnet=subnet,
     timeouts=timeouts
   )),
   newAttrs(
-    endpoint_location=null,
-    minimum_required_child_endpoints_ipv6=null,
-    name,
-    profile_id,
+    geo_mappings=null,
     minimum_child_endpoints,
     target_resource_id,
-    priority=null,
     weight=null,
-    enabled=null,
+    endpoint_location=null,
+    profile_id,
     minimum_required_child_endpoints_ipv4=null,
-    geo_mappings=null,
+    minimum_required_child_endpoints_ipv6=null,
+    priority=null,
+    enabled=null,
+    name,
+    timeouts=null,
     custom_header=null,
-    subnet=null,
-    timeouts=null
+    subnet=null
   ):: std.prune(a={
-    endpoint_location: endpoint_location,
-    minimum_required_child_endpoints_ipv6: minimum_required_child_endpoints_ipv6,
-    name: name,
-    profile_id: profile_id,
+    geo_mappings: geo_mappings,
     minimum_child_endpoints: minimum_child_endpoints,
     target_resource_id: target_resource_id,
-    priority: priority,
     weight: weight,
-    enabled: enabled,
+    endpoint_location: endpoint_location,
+    profile_id: profile_id,
     minimum_required_child_endpoints_ipv4: minimum_required_child_endpoints_ipv4,
-    geo_mappings: geo_mappings,
+    minimum_required_child_endpoints_ipv6: minimum_required_child_endpoints_ipv6,
+    priority: priority,
+    enabled: enabled,
+    name: name,
+    timeouts: timeouts,
     custom_header: custom_header,
     subnet: subnet,
-    timeouts: timeouts,
   }),
+  withGeoMappings(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_nested_endpoint+: {
+        [resourceLabel]+: {
+          geo_mappings: value,
+        },
+      },
+    },
+  },
   withMinimumChildEndpoints(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_nested_endpoint+: {
         [resourceLabel]+: {
           minimum_child_endpoints: value,
-        },
-      },
-    },
-  },
-  withMinimumRequiredChildEndpointsIpv4(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_nested_endpoint+: {
-        [resourceLabel]+: {
-          minimum_required_child_endpoints_ipv4: value,
-        },
-      },
-    },
-  },
-  withTargetResourceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_nested_endpoint+: {
-        [resourceLabel]+: {
-          target_resource_id: value,
-        },
-      },
-    },
-  },
-  withPriority(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_nested_endpoint+: {
-        [resourceLabel]+: {
-          priority: value,
-        },
-      },
-    },
-  },
-  withProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_nested_endpoint+: {
-        [resourceLabel]+: {
-          profile_id: value,
-        },
-      },
-    },
-  },
-  withWeight(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_nested_endpoint+: {
-        [resourceLabel]+: {
-          weight: value,
         },
       },
     },
@@ -126,15 +90,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withGeoMappings(resourceLabel, value):: {
-    resource+: {
-      azurerm_traffic_manager_nested_endpoint+: {
-        [resourceLabel]+: {
-          geo_mappings: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_nested_endpoint+: {
@@ -144,11 +99,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEndpointLocation(resourceLabel, value):: {
+  withPriority(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_nested_endpoint+: {
         [resourceLabel]+: {
-          endpoint_location: value,
+          priority: value,
         },
       },
     },
@@ -162,36 +117,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withProfileId(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_nested_endpoint+: {
         [resourceLabel]+: {
-          timeouts: value,
+          profile_id: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withEndpointLocation(resourceLabel, value):: {
     resource+: {
       azurerm_traffic_manager_nested_endpoint+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          endpoint_location: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      delete=null,
-      read=null,
-      update=null,
-      create=null
-    ):: std.prune(a={
-      delete: delete,
-      read: read,
-      update: update,
-      create: create,
-    }),
+  withTargetResourceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_nested_endpoint+: {
+        [resourceLabel]+: {
+          target_resource_id: value,
+        },
+      },
+    },
+  },
+  withWeight(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_nested_endpoint+: {
+        [resourceLabel]+: {
+          weight: value,
+        },
+      },
+    },
+  },
+  withMinimumRequiredChildEndpointsIpv4(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_nested_endpoint+: {
+        [resourceLabel]+: {
+          minimum_required_child_endpoints_ipv4: value,
+        },
+      },
+    },
   },
   withCustomHeader(resourceLabel, value):: {
     resource+: {
@@ -240,13 +209,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   subnet:: {
     new(
-      first,
       last=null,
-      scope=null
+      scope=null,
+      first
     ):: std.prune(a={
-      first: first,
       last: last,
       scope: scope,
+      first: first,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_nested_endpoint+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_traffic_manager_nested_endpoint+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
     }),
   },
 }

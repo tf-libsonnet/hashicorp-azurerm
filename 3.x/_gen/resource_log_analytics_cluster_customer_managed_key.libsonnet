@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_vault_key_id: key_vault_key_id,
     timeouts: timeouts,
   }),
-  withLogAnalyticsClusterId(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_cluster_customer_managed_key+: {
-        [resourceLabel]+: {
-          log_analytics_cluster_id: value,
-        },
-      },
-    },
-  },
   withKeyVaultKeyId(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_cluster_customer_managed_key+: {
         [resourceLabel]+: {
           key_vault_key_id: value,
+        },
+      },
+    },
+  },
+  withLogAnalyticsClusterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_cluster_customer_managed_key+: {
+        [resourceLabel]+: {
+          log_analytics_cluster_id: value,
         },
       },
     },
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

@@ -7,28 +7,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withData(type='azurerm_storage_encryption_scope', label=dataSrcLabel, attrs=self.newAttrs(name=name, storage_account_id=storage_account_id, timeouts=timeouts)),
   newAttrs(
-    storage_account_id,
     name,
+    storage_account_id,
     timeouts=null
   ):: std.prune(a={
-    storage_account_id: storage_account_id,
     name: name,
+    storage_account_id: storage_account_id,
     timeouts: timeouts,
   }),
-  withStorageAccountId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_storage_encryption_scope+: {
-        [dataSrcLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_encryption_scope+: {
         [dataSrcLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withStorageAccountId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_storage_encryption_scope+: {
+        [dataSrcLabel]+: {
+          storage_account_id: value,
         },
       },
     },

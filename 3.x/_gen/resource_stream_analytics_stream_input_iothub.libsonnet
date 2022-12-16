@@ -2,74 +2,65 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    stream_analytics_job_name,
     resource_group_name,
     shared_access_policy_key,
+    stream_analytics_job_name,
+    eventhub_consumer_group_name,
     shared_access_policy_name,
     endpoint,
-    eventhub_consumer_group_name,
-    iothub_namespace,
     name,
+    iothub_namespace,
     serialization=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_stream_input_iothub', label=resourceLabel, attrs=self.newAttrs(
-    stream_analytics_job_name=stream_analytics_job_name,
     resource_group_name=resource_group_name,
     shared_access_policy_key=shared_access_policy_key,
+    stream_analytics_job_name=stream_analytics_job_name,
+    eventhub_consumer_group_name=eventhub_consumer_group_name,
     shared_access_policy_name=shared_access_policy_name,
     endpoint=endpoint,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
-    iothub_namespace=iothub_namespace,
     name=name,
+    iothub_namespace=iothub_namespace,
     serialization=serialization,
     timeouts=timeouts
   )),
   newAttrs(
-    eventhub_consumer_group_name,
+    endpoint,
+    name,
     iothub_namespace,
-    shared_access_policy_name,
     resource_group_name,
     shared_access_policy_key,
-    name,
     stream_analytics_job_name,
-    endpoint,
-    timeouts=null,
-    serialization=null
+    eventhub_consumer_group_name,
+    shared_access_policy_name,
+    serialization=null,
+    timeouts=null
   ):: std.prune(a={
-    eventhub_consumer_group_name: eventhub_consumer_group_name,
+    endpoint: endpoint,
+    name: name,
     iothub_namespace: iothub_namespace,
-    shared_access_policy_name: shared_access_policy_name,
     resource_group_name: resource_group_name,
     shared_access_policy_key: shared_access_policy_key,
-    name: name,
     stream_analytics_job_name: stream_analytics_job_name,
-    endpoint: endpoint,
-    timeouts: timeouts,
+    eventhub_consumer_group_name: eventhub_consumer_group_name,
+    shared_access_policy_name: shared_access_policy_name,
     serialization: serialization,
+    timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_iothub+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withStreamAnalyticsJobName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_stream_input_iothub+: {
-        [resourceLabel]+: {
-          stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
   withEndpoint(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_iothub+: {
         [resourceLabel]+: {
           endpoint: value,
+        },
+      },
+    },
+  },
+  withIothubNamespace(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_iothub+: {
+        [resourceLabel]+: {
+          iothub_namespace: value,
         },
       },
     },
@@ -92,11 +83,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSharedAccessPolicyName(resourceLabel, value):: {
+  withStreamAnalyticsJobName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_iothub+: {
         [resourceLabel]+: {
-          shared_access_policy_name: value,
+          stream_analytics_job_name: value,
         },
       },
     },
@@ -110,11 +101,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withIothubNamespace(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_stream_input_iothub+: {
         [resourceLabel]+: {
-          iothub_namespace: value,
+          name: value,
+        },
+      },
+    },
+  },
+  withSharedAccessPolicyName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_stream_input_iothub+: {
+        [resourceLabel]+: {
+          shared_access_policy_name: value,
         },
       },
     },
@@ -139,13 +139,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   serialization:: {
     new(
-      type,
       encoding=null,
-      field_delimiter=null
+      field_delimiter=null,
+      type
     ):: std.prune(a={
-      type: type,
       encoding: encoding,
       field_delimiter: field_delimiter,
+      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {

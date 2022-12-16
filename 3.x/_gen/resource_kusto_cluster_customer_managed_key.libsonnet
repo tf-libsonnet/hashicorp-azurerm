@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    user_identity=null,
+    cluster_id,
     key_name,
     key_vault_id,
     key_version,
-    user_identity=null,
-    cluster_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_cluster_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(
+    user_identity=user_identity,
+    cluster_id=cluster_id,
     key_name=key_name,
     key_vault_id=key_vault_id,
     key_version=key_version,
-    user_identity=user_identity,
-    cluster_id=cluster_id,
     timeouts=timeouts
   )),
   newAttrs(
-    user_identity=null,
     cluster_id,
     key_name,
     key_vault_id,
     key_version,
+    user_identity=null,
     timeouts=null
   ):: std.prune(a={
-    user_identity: user_identity,
     cluster_id: cluster_id,
     key_name: key_name,
     key_vault_id: key_vault_id,
     key_version: key_version,
+    user_identity: user_identity,
     timeouts: timeouts,
   }),
+  withKeyVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster_customer_managed_key+: {
+        [resourceLabel]+: {
+          key_version: value,
+        },
+      },
+    },
+  },
   withUserIdentity(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_customer_managed_key+: {
@@ -63,15 +72,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_kusto_cluster_customer_managed_key+: {
         [resourceLabel]+: {
           key_vault_id: value,
-        },
-      },
-    },
-  },
-  withKeyVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster_customer_managed_key+: {
-        [resourceLabel]+: {
-          key_version: value,
         },
       },
     },

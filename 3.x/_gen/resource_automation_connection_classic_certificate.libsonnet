@@ -2,61 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    description=null,
+    name,
     resource_group_name,
     subscription_id,
     subscription_name,
     automation_account_name,
     certificate_asset_name,
-    description=null,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_connection_classic_certificate', label=resourceLabel, attrs=self.newAttrs(
+    description=description,
+    name=name,
     resource_group_name=resource_group_name,
     subscription_id=subscription_id,
     subscription_name=subscription_name,
     automation_account_name=automation_account_name,
     certificate_asset_name=certificate_asset_name,
-    description=description,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    subscription_id,
+    subscription_name,
+    automation_account_name,
     certificate_asset_name,
     description=null,
     name,
     resource_group_name,
-    subscription_id,
-    subscription_name,
-    automation_account_name,
     timeouts=null
   ):: std.prune(a={
+    subscription_id: subscription_id,
+    subscription_name: subscription_name,
+    automation_account_name: automation_account_name,
     certificate_asset_name: certificate_asset_name,
     description: description,
     name: name,
     resource_group_name: resource_group_name,
-    subscription_id: subscription_id,
-    subscription_name: subscription_name,
-    automation_account_name: automation_account_name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_classic_certificate+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection_classic_certificate+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withSubscriptionId(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_classic_certificate+: {
@@ -102,6 +84,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_classic_certificate+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection_classic_certificate+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection_classic_certificate+: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

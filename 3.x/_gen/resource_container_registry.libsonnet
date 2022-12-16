@@ -2,177 +2,96 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data_endpoint_enabled=null,
-    tags=null,
-    anonymous_pull_enabled=null,
-    retention_policy=null,
-    resource_group_name,
-    zone_redundancy_enabled=null,
-    encryption=null,
-    quarantine_policy_enabled=null,
-    admin_enabled=null,
-    sku,
-    location,
-    trust_policy=null,
-    public_network_access_enabled=null,
-    network_rule_bypass_option=null,
-    export_policy_enabled=null,
     name,
+    network_rule_bypass_option=null,
+    resource_group_name,
+    location,
+    zone_redundancy_enabled=null,
+    trust_policy=null,
+    sku,
+    anonymous_pull_enabled=null,
+    tags=null,
+    export_policy_enabled=null,
+    admin_enabled=null,
+    data_endpoint_enabled=null,
     network_rule_set=null,
-    georeplications=null,
+    public_network_access_enabled=null,
+    quarantine_policy_enabled=null,
+    encryption=null,
+    retention_policy=null,
     identity=null,
-    timeouts=null
+    timeouts=null,
+    georeplications=null
   ):: tf.withResource(type='azurerm_container_registry', label=resourceLabel, attrs=self.newAttrs(
-    data_endpoint_enabled=data_endpoint_enabled,
-    tags=tags,
-    anonymous_pull_enabled=anonymous_pull_enabled,
-    retention_policy=retention_policy,
-    resource_group_name=resource_group_name,
-    zone_redundancy_enabled=zone_redundancy_enabled,
-    encryption=encryption,
-    quarantine_policy_enabled=quarantine_policy_enabled,
-    admin_enabled=admin_enabled,
-    sku=sku,
-    location=location,
-    trust_policy=trust_policy,
-    public_network_access_enabled=public_network_access_enabled,
-    network_rule_bypass_option=network_rule_bypass_option,
-    export_policy_enabled=export_policy_enabled,
     name=name,
+    network_rule_bypass_option=network_rule_bypass_option,
+    resource_group_name=resource_group_name,
+    location=location,
+    zone_redundancy_enabled=zone_redundancy_enabled,
+    trust_policy=trust_policy,
+    sku=sku,
+    anonymous_pull_enabled=anonymous_pull_enabled,
+    tags=tags,
+    export_policy_enabled=export_policy_enabled,
+    admin_enabled=admin_enabled,
+    data_endpoint_enabled=data_endpoint_enabled,
     network_rule_set=network_rule_set,
-    georeplications=georeplications,
+    public_network_access_enabled=public_network_access_enabled,
+    quarantine_policy_enabled=quarantine_policy_enabled,
+    encryption=encryption,
+    retention_policy=retention_policy,
     identity=identity,
-    timeouts=timeouts
+    timeouts=timeouts,
+    georeplications=georeplications
   )),
   newAttrs(
+    data_endpoint_enabled=null,
+    location,
+    zone_redundancy_enabled=null,
+    export_policy_enabled=null,
+    admin_enabled=null,
+    name,
+    network_rule_bypass_option=null,
     network_rule_set=null,
     tags=null,
-    sku,
-    retention_policy=null,
-    public_network_access_enabled=null,
-    anonymous_pull_enabled=null,
-    data_endpoint_enabled=null,
-    name,
-    zone_redundancy_enabled=null,
     resource_group_name,
-    encryption=null,
-    export_policy_enabled=null,
-    trust_policy=null,
-    location,
-    network_rule_bypass_option=null,
     quarantine_policy_enabled=null,
-    admin_enabled=null,
+    public_network_access_enabled=null,
+    sku,
+    anonymous_pull_enabled=null,
+    encryption=null,
+    retention_policy=null,
+    trust_policy=null,
+    timeouts=null,
     georeplications=null,
-    identity=null,
-    timeouts=null
+    identity=null
   ):: std.prune(a={
+    data_endpoint_enabled: data_endpoint_enabled,
+    location: location,
+    zone_redundancy_enabled: zone_redundancy_enabled,
+    export_policy_enabled: export_policy_enabled,
+    admin_enabled: admin_enabled,
+    name: name,
+    network_rule_bypass_option: network_rule_bypass_option,
     network_rule_set: network_rule_set,
     tags: tags,
-    sku: sku,
-    retention_policy: retention_policy,
-    public_network_access_enabled: public_network_access_enabled,
-    anonymous_pull_enabled: anonymous_pull_enabled,
-    data_endpoint_enabled: data_endpoint_enabled,
-    name: name,
-    zone_redundancy_enabled: zone_redundancy_enabled,
     resource_group_name: resource_group_name,
-    encryption: encryption,
-    export_policy_enabled: export_policy_enabled,
-    trust_policy: trust_policy,
-    location: location,
-    network_rule_bypass_option: network_rule_bypass_option,
     quarantine_policy_enabled: quarantine_policy_enabled,
-    admin_enabled: admin_enabled,
+    public_network_access_enabled: public_network_access_enabled,
+    sku: sku,
+    anonymous_pull_enabled: anonymous_pull_enabled,
+    encryption: encryption,
+    retention_policy: retention_policy,
+    trust_policy: trust_policy,
+    timeouts: timeouts,
     georeplications: georeplications,
     identity: identity,
-    timeouts: timeouts,
   }),
-  withNetworkRuleBypassOption(resourceLabel, value):: {
+  withQuarantinePolicyEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          network_rule_bypass_option: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withAnonymousPullEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          anonymous_pull_enabled: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
-  withZoneRedundancyEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          zone_redundancy_enabled: value,
-        },
-      },
-    },
-  },
-  withAdminEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          admin_enabled: value,
-        },
-      },
-    },
-  },
-  withDataEndpointEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          data_endpoint_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSku(resourceLabel, value):: {
-    resource+: {
-      azurerm_container_registry+: {
-        [resourceLabel]+: {
-          sku: value,
+          quarantine_policy_enabled: value,
         },
       },
     },
@@ -186,38 +105,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withNetworkRuleSet(resourceLabel, value):: {
+  withRetentionPolicy(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          network_rule_set: value,
+          retention_policy: value,
         },
       },
     },
   },
-  withExportPolicyEnabled(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          export_policy_enabled: value,
+          name: value,
         },
       },
     },
   },
-  withQuarantinePolicyEnabled(resourceLabel, value):: {
+  withAdminEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          quarantine_policy_enabled: value,
+          admin_enabled: value,
         },
       },
     },
   },
-  withEncryption(resourceLabel, value):: {
+  withZoneRedundancyEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          encryption: value,
+          zone_redundancy_enabled: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -231,45 +159,86 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRetentionPolicy(resourceLabel, value):: {
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          retention_policy: value,
+          public_network_access_enabled: value,
         },
       },
     },
   },
-  withGeoreplications(resourceLabel, value):: {
+  withAnonymousPullEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          georeplications: value,
+          anonymous_pull_enabled: value,
         },
       },
     },
   },
-  withGeoreplicationsMixin(resourceLabel, value):: {
+  withNetworkRuleBypassOption(resourceLabel, value):: {
     resource+: {
       azurerm_container_registry+: {
         [resourceLabel]+: {
-          georeplications+: if std.isArray(v=value) then value else [value],
+          network_rule_bypass_option: value,
         },
       },
     },
   },
-  georeplications:: {
-    new(
-      zone_redundancy_enabled=null,
-      location,
-      regional_endpoint_enabled=null,
-      tags=null
-    ):: std.prune(a={
-      zone_redundancy_enabled: zone_redundancy_enabled,
-      location: location,
-      regional_endpoint_enabled: regional_endpoint_enabled,
-      tags: tags,
-    }),
+  withNetworkRuleSet(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          network_rule_set: value,
+        },
+      },
+    },
+  },
+  withDataEndpointEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          data_endpoint_enabled: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSku(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          sku: value,
+        },
+      },
+    },
+  },
+  withEncryption(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          encryption: value,
+        },
+      },
+    },
+  },
+  withExportPolicyEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          export_policy_enabled: value,
+        },
+      },
+    },
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -291,11 +260,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -318,15 +287,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
+    }),
+  },
+  withGeoreplications(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          georeplications: value,
+        },
+      },
+    },
+  },
+  withGeoreplicationsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_container_registry+: {
+        [resourceLabel]+: {
+          georeplications+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  georeplications:: {
+    new(
+      regional_endpoint_enabled=null,
+      tags=null,
+      zone_redundancy_enabled=null,
+      location
+    ):: std.prune(a={
+      regional_endpoint_enabled: regional_endpoint_enabled,
+      tags: tags,
+      zone_redundancy_enabled: zone_redundancy_enabled,
+      location: location,
     }),
   },
 }

@@ -2,31 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
-    api_key,
     api_management_name,
     api_secret_key,
+    resource_group_name,
+    api_key,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_identity_provider_twitter', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    api_key=api_key,
     api_management_name=api_management_name,
     api_secret_key=api_secret_key,
+    resource_group_name=resource_group_name,
+    api_key=api_key,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     api_key,
     api_management_name,
     api_secret_key,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     api_key: api_key,
     api_management_name: api_management_name,
     api_secret_key: api_secret_key,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_identity_provider_twitter+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withApiKey(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_identity_provider_twitter+: {
@@ -50,15 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_identity_provider_twitter+: {
         [resourceLabel]+: {
           api_secret_key: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_identity_provider_twitter+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

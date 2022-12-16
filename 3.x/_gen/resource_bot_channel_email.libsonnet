@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    email_password,
     location,
     resource_group_name,
     bot_name,
     email_address,
+    email_password,
     timeouts=null
   ):: tf.withResource(type='azurerm_bot_channel_email', label=resourceLabel, attrs=self.newAttrs(
-    email_password=email_password,
     location=location,
     resource_group_name=resource_group_name,
     bot_name=bot_name,
     email_address=email_address,
+    email_password=email_password,
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     bot_name,
     email_address,
     email_password,
     location,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     bot_name: bot_name,
     email_address: email_address,
     email_password: email_password,
     location: location,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withLocation(resourceLabel, value):: {

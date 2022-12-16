@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    duration_in_seconds,
     managed_disk_id,
     access_level,
-    duration_in_seconds,
     timeouts=null
   ):: tf.withResource(type='azurerm_managed_disk_sas_token', label=resourceLabel, attrs=self.newAttrs(
+    duration_in_seconds=duration_in_seconds,
     managed_disk_id=managed_disk_id,
     access_level=access_level,
-    duration_in_seconds=duration_in_seconds,
     timeouts=timeouts
   )),
   newAttrs(
@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     managed_disk_id: managed_disk_id,
     timeouts: timeouts,
   }),
+  withDurationInSeconds(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_disk_sas_token+: {
+        [resourceLabel]+: {
+          duration_in_seconds: value,
+        },
+      },
+    },
+  },
   withManagedDiskId(resourceLabel, value):: {
     resource+: {
       azurerm_managed_disk_sas_token+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_managed_disk_sas_token+: {
         [resourceLabel]+: {
           access_level: value,
-        },
-      },
-    },
-  },
-  withDurationInSeconds(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_disk_sas_token+: {
-        [resourceLabel]+: {
-          duration_in_seconds: value,
         },
       },
     },

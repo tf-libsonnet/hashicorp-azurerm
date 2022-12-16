@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    virtual_machine_scale_set_id,
     location,
     maintenance_configuration_id,
+    virtual_machine_scale_set_id,
     timeouts=null
   ):: std.prune(a={
-    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
     location: location,
     maintenance_configuration_id: maintenance_configuration_id,
+    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
     timeouts: timeouts,
   }),
+  withVirtualMachineScaleSetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_maintenance_assignment_virtual_machine_scale_set+: {
+        [resourceLabel]+: {
+          virtual_machine_scale_set_id: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_maintenance_assignment_virtual_machine_scale_set+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_maintenance_assignment_virtual_machine_scale_set+: {
         [resourceLabel]+: {
           maintenance_configuration_id: value,
-        },
-      },
-    },
-  },
-  withVirtualMachineScaleSetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_maintenance_assignment_virtual_machine_scale_set+: {
-        [resourceLabel]+: {
-          virtual_machine_scale_set_id: value,
         },
       },
     },
@@ -70,13 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

@@ -2,73 +2,73 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    additional_properties=null,
-    data_factory_id,
     parameters=null,
-    annotations=null,
+    schema_name=null,
+    additional_properties=null,
+    name,
     description=null,
     linked_service_name,
-    folder=null,
-    schema_name=null,
-    name,
     table_name=null,
+    annotations=null,
+    data_factory_id,
+    folder=null,
     timeouts=null,
     schema_column=null
   ):: tf.withResource(type='azurerm_data_factory_dataset_snowflake', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    data_factory_id=data_factory_id,
     parameters=parameters,
-    annotations=annotations,
+    schema_name=schema_name,
+    additional_properties=additional_properties,
+    name=name,
     description=description,
     linked_service_name=linked_service_name,
-    folder=folder,
-    schema_name=schema_name,
-    name=name,
     table_name=table_name,
+    annotations=annotations,
+    data_factory_id=data_factory_id,
+    folder=folder,
     timeouts=timeouts,
     schema_column=schema_column
   )),
   newAttrs(
-    description=null,
-    linked_service_name,
+    schema_name=null,
     table_name=null,
+    description=null,
     additional_properties=null,
     data_factory_id,
-    schema_name=null,
-    name,
     folder=null,
     parameters=null,
     annotations=null,
-    timeouts=null,
-    schema_column=null
+    linked_service_name,
+    name,
+    schema_column=null,
+    timeouts=null
   ):: std.prune(a={
-    description: description,
-    linked_service_name: linked_service_name,
+    schema_name: schema_name,
     table_name: table_name,
+    description: description,
     additional_properties: additional_properties,
     data_factory_id: data_factory_id,
-    schema_name: schema_name,
-    name: name,
     folder: folder,
     parameters: parameters,
     annotations: annotations,
-    timeouts: timeouts,
+    linked_service_name: linked_service_name,
+    name: name,
     schema_column: schema_column,
+    timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_snowflake+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTableName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_snowflake+: {
         [resourceLabel]+: {
           table_name: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_snowflake+: {
+        [resourceLabel]+: {
+          parameters: value,
         },
       },
     },
@@ -82,20 +82,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDataFactoryId(resourceLabel, value):: {
+  withAdditionalProperties(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_snowflake+: {
         [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withLinkedServiceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_snowflake+: {
-        [resourceLabel]+: {
-          linked_service_name: value,
+          additional_properties: value,
         },
       },
     },
@@ -118,6 +109,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLinkedServiceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_snowflake+: {
+        [resourceLabel]+: {
+          linked_service_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_snowflake+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_snowflake+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
   withFolder(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_dataset_snowflake+: {
@@ -126,55 +144,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_snowflake+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_snowflake+: {
-        [resourceLabel]+: {
-          additional_properties: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_snowflake+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_dataset_snowflake+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withSchemaColumn(resourceLabel, value):: {
     resource+: {
@@ -196,15 +165,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   schema_column:: {
     new(
-      name,
       precision=null,
       scale=null,
-      type=null
+      type=null,
+      name
     ):: std.prune(a={
-      name: name,
       precision: precision,
       scale: scale,
       type: type,
+      name: name,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_snowflake+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_dataset_snowflake+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

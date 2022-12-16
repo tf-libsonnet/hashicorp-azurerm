@@ -2,13 +2,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cdn_frontdoor_profile_id,
     name,
+    cdn_frontdoor_profile_id,
     secret=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_secret', label=resourceLabel, attrs=self.newAttrs(
-    cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
     name=name,
+    cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
     secret=secret,
     timeouts=timeouts
   )),
@@ -23,20 +23,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     secret: secret,
     timeouts: timeouts,
   }),
-  withCdnFrontdoorProfileId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_secret+: {
-        [resourceLabel]+: {
-          cdn_frontdoor_profile_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_secret+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withCdnFrontdoorProfileId(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_secret+: {
+        [resourceLabel]+: {
+          cdn_frontdoor_profile_id: value,
         },
       },
     },

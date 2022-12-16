@@ -2,43 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    vpn_gateway_id,
     internet_security_enabled=null,
     name,
     remote_vpn_site_id,
-    routing=null,
-    timeouts=null,
+    vpn_gateway_id,
     traffic_selector_policy=null,
-    vpn_link=null
+    vpn_link=null,
+    routing=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_vpn_gateway_connection', label=resourceLabel, attrs=self.newAttrs(
-    vpn_gateway_id=vpn_gateway_id,
     internet_security_enabled=internet_security_enabled,
     name=name,
     remote_vpn_site_id=remote_vpn_site_id,
-    routing=routing,
-    timeouts=timeouts,
+    vpn_gateway_id=vpn_gateway_id,
     traffic_selector_policy=traffic_selector_policy,
-    vpn_link=vpn_link
+    vpn_link=vpn_link,
+    routing=routing,
+    timeouts=timeouts
   )),
   newAttrs(
+    internet_security_enabled=null,
     name,
     remote_vpn_site_id,
     vpn_gateway_id,
-    internet_security_enabled=null,
-    routing=null,
-    timeouts=null,
     traffic_selector_policy=null,
-    vpn_link=null
+    vpn_link=null,
+    routing=null,
+    timeouts=null
   ):: std.prune(a={
+    internet_security_enabled: internet_security_enabled,
     name: name,
     remote_vpn_site_id: remote_vpn_site_id,
     vpn_gateway_id: vpn_gateway_id,
-    internet_security_enabled: internet_security_enabled,
-    routing: routing,
-    timeouts: timeouts,
     traffic_selector_policy: traffic_selector_policy,
     vpn_link: vpn_link,
+    routing: routing,
+    timeouts: timeouts,
   }),
+  withInternetSecurityEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_gateway_connection+: {
+        [resourceLabel]+: {
+          internet_security_enabled: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_connection+: {
@@ -66,15 +75,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withInternetSecurityEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_gateway_connection+: {
-        [resourceLabel]+: {
-          internet_security_enabled: value,
-        },
-      },
-    },
-  },
   withRouting(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway_connection+: {
@@ -95,23 +95,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   routing:: {
     new(
+      inbound_route_map_id=null,
       outbound_route_map_id=null,
       associated_route_table,
-      inbound_route_map_id=null,
       propagated_route_table=null
     ):: std.prune(a={
+      inbound_route_map_id: inbound_route_map_id,
       outbound_route_map_id: outbound_route_map_id,
       associated_route_table: associated_route_table,
-      inbound_route_map_id: inbound_route_map_id,
       propagated_route_table: propagated_route_table,
     }),
     propagated_route_table:: {
       new(
-        route_table_ids,
-        labels=null
+        labels=null,
+        route_table_ids
       ):: std.prune(a={
-        route_table_ids: route_table_ids,
         labels: labels,
+        route_table_ids: route_table_ids,
       }),
     },
   },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
   withTrafficSelectorPolicy(resourceLabel, value):: {
@@ -166,11 +166,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   traffic_selector_policy:: {
     new(
-      local_address_ranges,
-      remote_address_ranges
+      remote_address_ranges,
+      local_address_ranges
     ):: std.prune(a={
-      local_address_ranges: local_address_ranges,
       remote_address_ranges: remote_address_ranges,
+      local_address_ranges: local_address_ranges,
     }),
   },
   withVpnLink(resourceLabel, value):: {
@@ -193,35 +193,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   vpn_link:: {
     new(
-      vpn_site_link_id,
-      connection_mode=null,
-      egress_nat_rule_ids=null,
-      shared_key=null,
-      name,
       policy_based_traffic_selector_enabled=null,
-      protocol=null,
-      bandwidth_mbps=null,
-      bgp_enabled=null,
-      ingress_nat_rule_ids=null,
       ratelimit_enabled=null,
       local_azure_ip_address_enabled=null,
+      name,
       route_weight=null,
+      shared_key=null,
+      vpn_site_link_id,
+      bandwidth_mbps=null,
+      connection_mode=null,
+      egress_nat_rule_ids=null,
+      ingress_nat_rule_ids=null,
+      protocol=null,
+      bgp_enabled=null,
       custom_bgp_address=null,
       ipsec_policy=null
     ):: std.prune(a={
-      vpn_site_link_id: vpn_site_link_id,
-      connection_mode: connection_mode,
-      egress_nat_rule_ids: egress_nat_rule_ids,
-      shared_key: shared_key,
-      name: name,
       policy_based_traffic_selector_enabled: policy_based_traffic_selector_enabled,
-      protocol: protocol,
-      bandwidth_mbps: bandwidth_mbps,
-      bgp_enabled: bgp_enabled,
-      ingress_nat_rule_ids: ingress_nat_rule_ids,
       ratelimit_enabled: ratelimit_enabled,
       local_azure_ip_address_enabled: local_azure_ip_address_enabled,
+      name: name,
       route_weight: route_weight,
+      shared_key: shared_key,
+      vpn_site_link_id: vpn_site_link_id,
+      bandwidth_mbps: bandwidth_mbps,
+      connection_mode: connection_mode,
+      egress_nat_rule_ids: egress_nat_rule_ids,
+      ingress_nat_rule_ids: ingress_nat_rule_ids,
+      protocol: protocol,
+      bgp_enabled: bgp_enabled,
       custom_bgp_address: custom_bgp_address,
       ipsec_policy: ipsec_policy,
     }),

@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    plan,
     publisher,
     offer,
+    plan,
     timeouts=null
   ):: tf.withResource(type='azurerm_marketplace_agreement', label=resourceLabel, attrs=self.newAttrs(
-    plan=plan,
     publisher=publisher,
     offer=offer,
+    plan=plan,
     timeouts=timeouts
   )),
   newAttrs(
+    offer,
     plan,
     publisher,
-    offer,
     timeouts=null
   ):: std.prune(a={
+    offer: offer,
     plan: plan,
     publisher: publisher,
-    offer: offer,
     timeouts: timeouts,
   }),
-  withPublisher(resourceLabel, value):: {
-    resource+: {
-      azurerm_marketplace_agreement+: {
-        [resourceLabel]+: {
-          publisher: value,
-        },
-      },
-    },
-  },
   withOffer(resourceLabel, value):: {
     resource+: {
       azurerm_marketplace_agreement+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_marketplace_agreement+: {
         [resourceLabel]+: {
           plan: value,
+        },
+      },
+    },
+  },
+  withPublisher(resourceLabel, value):: {
+    resource+: {
+      azurerm_marketplace_agreement+: {
+        [resourceLabel]+: {
+          publisher: value,
         },
       },
     },

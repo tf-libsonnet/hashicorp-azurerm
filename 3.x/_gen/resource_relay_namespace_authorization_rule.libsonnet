@@ -2,44 +2,62 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    send=null,
     name,
-    namespace_name,
-    listen=null,
-    manage=null,
     resource_group_name,
+    manage=null,
+    namespace_name,
+    send=null,
+    listen=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_relay_namespace_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    send=send,
     name=name,
-    namespace_name=namespace_name,
-    listen=listen,
-    manage=manage,
     resource_group_name=resource_group_name,
+    manage=manage,
+    namespace_name=namespace_name,
+    send=send,
+    listen=listen,
     timeouts=timeouts
   )),
   newAttrs(
-    send=null,
-    listen=null,
-    manage=null,
-    resource_group_name,
-    name,
     namespace_name,
+    name,
+    resource_group_name,
+    listen=null,
+    send=null,
+    manage=null,
     timeouts=null
   ):: std.prune(a={
-    send: send,
-    listen: listen,
-    manage: manage,
-    resource_group_name: resource_group_name,
-    name: name,
     namespace_name: namespace_name,
+    name: name,
+    resource_group_name: resource_group_name,
+    listen: listen,
+    send: send,
+    manage: manage,
     timeouts: timeouts,
   }),
+  withManage(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_namespace_authorization_rule+: {
+        [resourceLabel]+: {
+          manage: value,
+        },
+      },
+    },
+  },
   withNamespaceName(resourceLabel, value):: {
     resource+: {
       azurerm_relay_namespace_authorization_rule+: {
         [resourceLabel]+: {
           namespace_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_namespace_authorization_rule+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -53,15 +71,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSend(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_namespace_authorization_rule+: {
-        [resourceLabel]+: {
-          send: value,
-        },
-      },
-    },
-  },
   withListen(resourceLabel, value):: {
     resource+: {
       azurerm_relay_namespace_authorization_rule+: {
@@ -71,20 +80,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withManage(resourceLabel, value):: {
+  withSend(resourceLabel, value):: {
     resource+: {
       azurerm_relay_namespace_authorization_rule+: {
         [resourceLabel]+: {
-          manage: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_namespace_authorization_rule+: {
-        [resourceLabel]+: {
-          name: value,
+          send: value,
         },
       },
     },
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

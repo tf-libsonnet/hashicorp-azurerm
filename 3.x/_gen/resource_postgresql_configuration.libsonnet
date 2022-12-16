@@ -2,31 +2,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    value,
-    name,
     resource_group_name,
     server_name,
+    value,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_postgresql_configuration', label=resourceLabel, attrs=self.newAttrs(
-    value=value,
-    name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
+    value=value,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    value,
     name,
     resource_group_name,
     server_name,
+    value,
     timeouts=null
   ):: std.prune(a={
-    value: value,
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
+    value: value,
     timeouts: timeouts,
   }),
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_configuration+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
   withValue(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_configuration+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_configuration+: {
-        [resourceLabel]+: {
-          server_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_configuration+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

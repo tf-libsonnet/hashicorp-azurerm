@@ -2,33 +2,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
-    resource_group_name=null,
-    namespace_id=null,
     namespace_name=null,
+    resource_group_name=null,
     alias_authorization_rule_id=null,
+    namespace_id=null,
+    name,
     timeouts=null
   ):: tf.withData(type='azurerm_servicebus_namespace_disaster_recovery_config', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    namespace_id=namespace_id,
     namespace_name=namespace_name,
+    resource_group_name=resource_group_name,
     alias_authorization_rule_id=alias_authorization_rule_id,
+    namespace_id=namespace_id,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
     alias_authorization_rule_id=null,
     namespace_id=null,
     namespace_name=null,
-    name,
     resource_group_name=null,
+    name,
     timeouts=null
   ):: std.prune(a={
     alias_authorization_rule_id: alias_authorization_rule_id,
     namespace_id: namespace_id,
     namespace_name: namespace_name,
-    name: name,
     resource_group_name: resource_group_name,
+    name: name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {
@@ -40,11 +40,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(dataSrcLabel, value):: {
+  withAliasAuthorizationRuleId(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_namespace_disaster_recovery_config+: {
         [dataSrcLabel]+: {
-          resource_group_name: value,
+          alias_authorization_rule_id: value,
         },
       },
     },
@@ -67,11 +67,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAliasAuthorizationRuleId(dataSrcLabel, value):: {
+  withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_servicebus_namespace_disaster_recovery_config+: {
         [dataSrcLabel]+: {
-          alias_authorization_rule_id: value,
+          resource_group_name: value,
         },
       },
     },

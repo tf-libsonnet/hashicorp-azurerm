@@ -3,103 +3,67 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     database_name,
-    partition_key_path,
+    default_ttl=null,
     partition_key_version=null,
     resource_group_name,
-    throughput=null,
-    account_name,
-    default_ttl=null,
     name,
-    conflict_resolution_policy=null,
-    index_policy=null,
-    timeouts=null,
-    unique_key=null,
-    autoscale_settings=null
-  ):: tf.withResource(type='azurerm_cosmosdb_gremlin_graph', label=resourceLabel, attrs=self.newAttrs(
-    database_name=database_name,
-    partition_key_path=partition_key_path,
-    partition_key_version=partition_key_version,
-    resource_group_name=resource_group_name,
-    throughput=throughput,
-    account_name=account_name,
-    default_ttl=default_ttl,
-    name=name,
-    conflict_resolution_policy=conflict_resolution_policy,
-    index_policy=index_policy,
-    timeouts=timeouts,
-    unique_key=unique_key,
-    autoscale_settings=autoscale_settings
-  )),
-  newAttrs(
     partition_key_path,
-    partition_key_version=null,
-    resource_group_name,
-    database_name,
-    name,
     throughput=null,
     account_name,
-    default_ttl=null,
-    unique_key=null,
     autoscale_settings=null,
     conflict_resolution_policy=null,
     index_policy=null,
-    timeouts=null
+    timeouts=null,
+    unique_key=null
+  ):: tf.withResource(type='azurerm_cosmosdb_gremlin_graph', label=resourceLabel, attrs=self.newAttrs(
+    database_name=database_name,
+    default_ttl=default_ttl,
+    partition_key_version=partition_key_version,
+    resource_group_name=resource_group_name,
+    name=name,
+    partition_key_path=partition_key_path,
+    throughput=throughput,
+    account_name=account_name,
+    autoscale_settings=autoscale_settings,
+    conflict_resolution_policy=conflict_resolution_policy,
+    index_policy=index_policy,
+    timeouts=timeouts,
+    unique_key=unique_key
+  )),
+  newAttrs(
+    throughput=null,
+    name,
+    database_name,
+    default_ttl=null,
+    partition_key_version=null,
+    resource_group_name,
+    account_name,
+    partition_key_path,
+    autoscale_settings=null,
+    conflict_resolution_policy=null,
+    index_policy=null,
+    timeouts=null,
+    unique_key=null
   ):: std.prune(a={
-    partition_key_path: partition_key_path,
+    throughput: throughput,
+    name: name,
+    database_name: database_name,
+    default_ttl: default_ttl,
     partition_key_version: partition_key_version,
     resource_group_name: resource_group_name,
-    database_name: database_name,
-    name: name,
-    throughput: throughput,
     account_name: account_name,
-    default_ttl: default_ttl,
-    unique_key: unique_key,
+    partition_key_path: partition_key_path,
     autoscale_settings: autoscale_settings,
     conflict_resolution_policy: conflict_resolution_policy,
     index_policy: index_policy,
     timeouts: timeouts,
+    unique_key: unique_key,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_graph+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withThroughput(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_graph+: {
-        [resourceLabel]+: {
-          throughput: value,
-        },
-      },
-    },
-  },
   withAccountName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_graph+: {
         [resourceLabel]+: {
           account_name: value,
-        },
-      },
-    },
-  },
-  withDefaultTtl(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_graph+: {
-        [resourceLabel]+: {
-          default_ttl: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_gremlin_graph+: {
-        [resourceLabel]+: {
-          name: value,
         },
       },
     },
@@ -113,11 +77,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPartitionKeyPath(resourceLabel, value):: {
+  withDefaultTtl(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_graph+: {
         [resourceLabel]+: {
-          partition_key_path: value,
+          default_ttl: value,
         },
       },
     },
@@ -131,55 +95,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUniqueKey(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_graph+: {
         [resourceLabel]+: {
-          unique_key: value,
+          name: value,
         },
       },
     },
   },
-  withUniqueKeyMixin(resourceLabel, value):: {
+  withPartitionKeyPath(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_graph+: {
         [resourceLabel]+: {
-          unique_key+: if std.isArray(v=value) then value else [value],
+          partition_key_path: value,
         },
       },
     },
   },
-  unique_key:: {
-    new(
-      paths
-    ):: std.prune(a={
-      paths: paths,
-    }),
-  },
-  withAutoscaleSettings(resourceLabel, value):: {
+  withThroughput(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_graph+: {
         [resourceLabel]+: {
-          autoscale_settings: value,
+          throughput: value,
         },
       },
     },
   },
-  withAutoscaleSettingsMixin(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_gremlin_graph+: {
         [resourceLabel]+: {
-          autoscale_settings+: if std.isArray(v=value) then value else [value],
+          resource_group_name: value,
         },
       },
     },
-  },
-  autoscale_settings:: {
-    new(
-      max_throughput=null
-    ):: std.prune(a={
-      max_throughput: max_throughput,
-    }),
   },
   withConflictResolutionPolicy(resourceLabel, value):: {
     resource+: {
@@ -252,11 +202,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       }),
       index:: {
         new(
-          path,
-          order
+          order,
+          path
         ):: std.prune(a={
-          path: path,
           order: order,
+          path: path,
         }),
       },
     },
@@ -297,6 +247,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withUniqueKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_graph+: {
+        [resourceLabel]+: {
+          unique_key: value,
+        },
+      },
+    },
+  },
+  withUniqueKeyMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_graph+: {
+        [resourceLabel]+: {
+          unique_key+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  unique_key:: {
+    new(
+      paths
+    ):: std.prune(a={
+      paths: paths,
+    }),
+  },
+  withAutoscaleSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_graph+: {
+        [resourceLabel]+: {
+          autoscale_settings: value,
+        },
+      },
+    },
+  },
+  withAutoscaleSettingsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_gremlin_graph+: {
+        [resourceLabel]+: {
+          autoscale_settings+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  autoscale_settings:: {
+    new(
+      max_throughput=null
+    ):: std.prune(a={
+      max_throughput: max_throughput,
     }),
   },
 }

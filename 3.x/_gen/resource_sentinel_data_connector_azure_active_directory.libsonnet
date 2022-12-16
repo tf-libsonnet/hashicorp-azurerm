@@ -2,36 +2,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    log_analytics_workspace_id,
     name,
     tenant_id=null,
-    log_analytics_workspace_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_sentinel_data_connector_azure_active_directory', label=resourceLabel, attrs=self.newAttrs(
+    log_analytics_workspace_id=log_analytics_workspace_id,
     name=name,
     tenant_id=tenant_id,
-    log_analytics_workspace_id=log_analytics_workspace_id,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     tenant_id=null,
     log_analytics_workspace_id,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     tenant_id: tenant_id,
     log_analytics_workspace_id: log_analytics_workspace_id,
-    name: name,
     timeouts: timeouts,
   }),
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_data_connector_azure_active_directory+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_data_connector_azure_active_directory+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_data_connector_azure_active_directory+: {
         [resourceLabel]+: {
           tenant_id: value,
+        },
+      },
+    },
+  },
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_data_connector_azure_active_directory+: {
+        [resourceLabel]+: {
+          log_analytics_workspace_id: value,
         },
       },
     },
@@ -70,13 +70,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

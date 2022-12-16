@@ -19,22 +19,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    description=null,
+    location,
     name,
     resource_group_name,
     tags=null,
-    description=null,
-    location,
     identity=null,
     timeouts=null
   ):: std.prune(a={
+    description: description,
+    location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    description: description,
-    location: location,
     identity: identity,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_load_test+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_load_test+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_load_test+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_load_test+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -125,15 +125,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

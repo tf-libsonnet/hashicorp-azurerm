@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     key_vault_id,
+    name,
     timeouts=null
-  ):: tf.withData(type='azurerm_key_vault_key', label=dataSrcLabel, attrs=self.newAttrs(name=name, key_vault_id=key_vault_id, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_key_vault_key', label=dataSrcLabel, attrs=self.newAttrs(key_vault_id=key_vault_id, name=name, timeouts=timeouts)),
   newAttrs(
     key_vault_id,
     name,

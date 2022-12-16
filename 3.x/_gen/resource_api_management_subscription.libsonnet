@@ -2,91 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    api_management_name,
-    product_id=null,
-    resource_group_name,
-    secondary_key=null,
     state=null,
-    user_id=null,
-    api_id=null,
-    display_name,
-    primary_key=null,
+    resource_group_name,
     subscription_id=null,
+    user_id=null,
     allow_tracing=null,
+    display_name,
+    secondary_key=null,
+    api_management_name,
+    api_id=null,
+    primary_key=null,
+    product_id=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_subscription', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    product_id=product_id,
-    resource_group_name=resource_group_name,
-    secondary_key=secondary_key,
     state=state,
-    user_id=user_id,
-    api_id=api_id,
-    display_name=display_name,
-    primary_key=primary_key,
+    resource_group_name=resource_group_name,
     subscription_id=subscription_id,
+    user_id=user_id,
     allow_tracing=allow_tracing,
+    display_name=display_name,
+    secondary_key=secondary_key,
+    api_management_name=api_management_name,
+    api_id=api_id,
+    primary_key=primary_key,
+    product_id=product_id,
     timeouts=timeouts
   )),
   newAttrs(
     allow_tracing=null,
     api_management_name,
-    primary_key=null,
+    display_name,
     state=null,
-    product_id=null,
+    primary_key=null,
     resource_group_name,
     subscription_id=null,
-    api_id=null,
-    display_name,
-    secondary_key=null,
     user_id=null,
+    api_id=null,
+    product_id=null,
+    secondary_key=null,
     timeouts=null
   ):: std.prune(a={
     allow_tracing: allow_tracing,
     api_management_name: api_management_name,
-    primary_key: primary_key,
+    display_name: display_name,
     state: state,
-    product_id: product_id,
+    primary_key: primary_key,
     resource_group_name: resource_group_name,
     subscription_id: subscription_id,
-    api_id: api_id,
-    display_name: display_name,
-    secondary_key: secondary_key,
     user_id: user_id,
+    api_id: api_id,
+    product_id: product_id,
+    secondary_key: secondary_key,
     timeouts: timeouts,
   }),
-  withSecondaryKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          secondary_key: value,
-        },
-      },
-    },
-  },
-  withApiId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          api_id: value,
-        },
-      },
-    },
-  },
   withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
         [resourceLabel]+: {
           api_management_name: value,
-        },
-      },
-    },
-  },
-  withProductId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          product_id: value,
         },
       },
     },
@@ -100,11 +73,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withState(resourceLabel, value):: {
+  withSubscriptionId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
         [resourceLabel]+: {
-          state: value,
+          subscription_id: value,
         },
       },
     },
@@ -118,6 +91,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withProductId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          product_id: value,
+        },
+      },
+    },
+  },
+  withSecondaryKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          secondary_key: value,
+        },
+      },
+    },
+  },
+  withState(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          state: value,
+        },
+      },
+    },
+  },
   withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
@@ -127,20 +127,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withApiId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_subscription+: {
+        [resourceLabel]+: {
+          api_id: value,
+        },
+      },
+    },
+  },
   withPrimaryKey(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_subscription+: {
         [resourceLabel]+: {
           primary_key: value,
-        },
-      },
-    },
-  },
-  withSubscriptionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_subscription+: {
-        [resourceLabel]+: {
-          subscription_id: value,
         },
       },
     },
@@ -174,15 +174,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

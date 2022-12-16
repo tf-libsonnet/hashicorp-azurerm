@@ -2,40 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     resource_group_name,
     server_name,
     value,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_mysql_flexible_server_configuration', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
     value=value,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    server_name,
-    value,
     name,
     resource_group_name,
+    server_name,
+    value,
     timeouts=null
   ):: std.prune(a={
-    server_name: server_name,
-    value: value,
     name: name,
     resource_group_name: resource_group_name,
+    server_name: server_name,
+    value: value,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_mysql_flexible_server_configuration+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server_configuration+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_mysql_flexible_server_configuration+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_mysql_flexible_server_configuration+: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

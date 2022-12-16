@@ -2,69 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    product_type=null,
-    tags=null,
     validity_in_years=null,
-    location,
-    distinguished_name=null,
-    auto_renew=null,
-    key_size=null,
     csr=null,
-    resource_group_name,
+    tags=null,
+    location,
     name,
+    product_type=null,
+    key_size=null,
+    resource_group_name,
+    auto_renew=null,
+    distinguished_name=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_service_certificate_order', label=resourceLabel, attrs=self.newAttrs(
-    product_type=product_type,
-    tags=tags,
     validity_in_years=validity_in_years,
-    location=location,
-    distinguished_name=distinguished_name,
-    auto_renew=auto_renew,
-    key_size=key_size,
     csr=csr,
-    resource_group_name=resource_group_name,
+    tags=tags,
+    location=location,
     name=name,
+    product_type=product_type,
+    key_size=key_size,
+    resource_group_name=resource_group_name,
+    auto_renew=auto_renew,
+    distinguished_name=distinguished_name,
     timeouts=timeouts
   )),
   newAttrs(
-    distinguished_name=null,
-    product_type=null,
+    name,
     validity_in_years=null,
     csr=null,
     key_size=null,
-    location,
-    auto_renew=null,
     resource_group_name,
-    name,
+    auto_renew=null,
+    distinguished_name=null,
+    location,
     tags=null,
+    product_type=null,
     timeouts=null
   ):: std.prune(a={
-    distinguished_name: distinguished_name,
-    product_type: product_type,
+    name: name,
     validity_in_years: validity_in_years,
     csr: csr,
     key_size: key_size,
-    location: location,
-    auto_renew: auto_renew,
     resource_group_name: resource_group_name,
-    name: name,
+    auto_renew: auto_renew,
+    distinguished_name: distinguished_name,
+    location: location,
     tags: tags,
+    product_type: product_type,
     timeouts: timeouts,
   }),
-  withDistinguishedName(resourceLabel, value):: {
+  withAutoRenew(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_certificate_order+: {
         [resourceLabel]+: {
-          distinguished_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_service_certificate_order+: {
-        [resourceLabel]+: {
-          tags: value,
+          auto_renew: value,
         },
       },
     },
@@ -87,11 +78,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCsr(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_certificate_order+: {
         [resourceLabel]+: {
-          csr: value,
+          name: value,
         },
       },
     },
@@ -105,11 +96,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withKeySize(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_certificate_order+: {
         [resourceLabel]+: {
-          name: value,
+          key_size: value,
         },
       },
     },
@@ -123,20 +114,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutoRenew(resourceLabel, value):: {
+  withCsr(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_certificate_order+: {
         [resourceLabel]+: {
-          auto_renew: value,
+          csr: value,
         },
       },
     },
   },
-  withKeySize(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_app_service_certificate_order+: {
         [resourceLabel]+: {
-          key_size: value,
+          tags: value,
+        },
+      },
+    },
+  },
+  withDistinguishedName(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_service_certificate_order+: {
+        [resourceLabel]+: {
+          distinguished_name: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

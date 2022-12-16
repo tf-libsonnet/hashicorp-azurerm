@@ -2,47 +2,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    server,
+    user,
     database,
     name,
     password,
-    resource_group_name,
-    server,
-    table,
     stream_analytics_job_name,
-    user,
+    table,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_synapse', label=resourceLabel, attrs=self.newAttrs(
+    server=server,
+    user=user,
     database=database,
     name=name,
     password=password,
-    resource_group_name=resource_group_name,
-    server=server,
-    table=table,
     stream_analytics_job_name=stream_analytics_job_name,
-    user=user,
+    table=table,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    table,
     database,
     name,
-    password,
     resource_group_name,
-    stream_analytics_job_name,
-    user,
     server,
+    user,
+    password,
+    stream_analytics_job_name,
+    table,
     timeouts=null
   ):: std.prune(a={
-    table: table,
     database: database,
     name: name,
-    password: password,
     resource_group_name: resource_group_name,
-    stream_analytics_job_name: stream_analytics_job_name,
-    user: user,
     server: server,
+    user: user,
+    password: password,
+    stream_analytics_job_name: stream_analytics_job_name,
+    table: table,
     timeouts: timeouts,
   }),
+  withServer(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_synapse+: {
+        [resourceLabel]+: {
+          server: value,
+        },
+      },
+    },
+  },
+  withUser(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_synapse+: {
+        [resourceLabel]+: {
+          user: value,
+        },
+      },
+    },
+  },
+  withDatabase(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_synapse+: {
+        [resourceLabel]+: {
+          database: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_synapse+: {
@@ -61,20 +88,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withStreamAnalyticsJobName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_synapse+: {
         [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withServer(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_synapse+: {
-        [resourceLabel]+: {
-          server: value,
+          stream_analytics_job_name: value,
         },
       },
     },
@@ -88,29 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatabase(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_synapse+: {
         [resourceLabel]+: {
-          database: value,
-        },
-      },
-    },
-  },
-  withStreamAnalyticsJobName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_synapse+: {
-        [resourceLabel]+: {
-          stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
-  withUser(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_synapse+: {
-        [resourceLabel]+: {
-          user: value,
+          resource_group_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

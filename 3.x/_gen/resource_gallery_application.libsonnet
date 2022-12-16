@@ -2,96 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    end_of_life_date=null,
     name,
-    privacy_statement_uri=null,
-    location,
+    release_note_uri=null,
+    tags=null,
     supported_os_type,
     eula=null,
     gallery_id,
-    end_of_life_date=null,
-    release_note_uri=null,
-    tags=null,
+    privacy_statement_uri=null,
     description=null,
+    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_gallery_application', label=resourceLabel, attrs=self.newAttrs(
+    end_of_life_date=end_of_life_date,
     name=name,
-    privacy_statement_uri=privacy_statement_uri,
-    location=location,
+    release_note_uri=release_note_uri,
+    tags=tags,
     supported_os_type=supported_os_type,
     eula=eula,
     gallery_id=gallery_id,
-    end_of_life_date=end_of_life_date,
-    release_note_uri=release_note_uri,
-    tags=tags,
+    privacy_statement_uri=privacy_statement_uri,
     description=description,
+    location=location,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    gallery_id,
-    end_of_life_date=null,
-    release_note_uri=null,
     supported_os_type,
-    tags=null,
     eula=null,
-    name,
-    privacy_statement_uri=null,
+    gallery_id,
+    tags=null,
+    description=null,
     location,
+    privacy_statement_uri=null,
+    release_note_uri=null,
+    name,
+    end_of_life_date=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
-    gallery_id: gallery_id,
-    end_of_life_date: end_of_life_date,
-    release_note_uri: release_note_uri,
     supported_os_type: supported_os_type,
-    tags: tags,
     eula: eula,
-    name: name,
-    privacy_statement_uri: privacy_statement_uri,
+    gallery_id: gallery_id,
+    tags: tags,
+    description: description,
     location: location,
+    privacy_statement_uri: privacy_statement_uri,
+    release_note_uri: release_note_uri,
+    name: name,
+    end_of_life_date: end_of_life_date,
     timeouts: timeouts,
   }),
-  withEndOfLifeDate(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application+: {
         [resourceLabel]+: {
-          end_of_life_date: value,
-        },
-      },
-    },
-  },
-  withPrivacyStatementUri(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          privacy_statement_uri: value,
-        },
-      },
-    },
-  },
-  withEula(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          eula: value,
-        },
-      },
-    },
-  },
-  withGalleryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          gallery_id: value,
-        },
-      },
-    },
-  },
-  withSupportedOsType(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          supported_os_type: value,
+          name: value,
         },
       },
     },
@@ -114,15 +78,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_gallery_application+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application+: {
@@ -132,11 +87,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSupportedOsType(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          supported_os_type: value,
+        },
+      },
+    },
+  },
+  withEula(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          eula: value,
+        },
+      },
+    },
+  },
+  withEndOfLifeDate(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          end_of_life_date: value,
+        },
+      },
+    },
+  },
   withReleaseNoteUri(resourceLabel, value):: {
     resource+: {
       azurerm_gallery_application+: {
         [resourceLabel]+: {
           release_note_uri: value,
+        },
+      },
+    },
+  },
+  withGalleryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          gallery_id: value,
+        },
+      },
+    },
+  },
+  withPrivacyStatementUri(resourceLabel, value):: {
+    resource+: {
+      azurerm_gallery_application+: {
+        [resourceLabel]+: {
+          privacy_statement_uri: value,
         },
       },
     },

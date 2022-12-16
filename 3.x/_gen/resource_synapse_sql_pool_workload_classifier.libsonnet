@@ -2,45 +2,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    member_name,
-    name,
-    end_time=null,
-    start_time=null,
-    workload_group_id,
     context=null,
     importance=null,
     label=null,
+    name,
+    start_time=null,
+    workload_group_id,
+    end_time=null,
+    member_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_synapse_sql_pool_workload_classifier', label=resourceLabel, attrs=self.newAttrs(
-    member_name=member_name,
-    name=name,
-    end_time=end_time,
-    start_time=start_time,
-    workload_group_id=workload_group_id,
     context=context,
     importance=importance,
     label=label,
+    name=name,
+    start_time=start_time,
+    workload_group_id=workload_group_id,
+    end_time=end_time,
+    member_name=member_name,
     timeouts=timeouts
   )),
   newAttrs(
-    label=null,
-    member_name,
-    name,
-    context=null,
-    start_time=null,
-    workload_group_id,
     end_time=null,
     importance=null,
+    label=null,
+    name,
+    start_time=null,
+    workload_group_id,
+    context=null,
+    member_name,
     timeouts=null
   ):: std.prune(a={
-    label: label,
-    member_name: member_name,
-    name: name,
-    context: context,
-    start_time: start_time,
-    workload_group_id: workload_group_id,
     end_time: end_time,
     importance: importance,
+    label: label,
+    name: name,
+    start_time: start_time,
+    workload_group_id: workload_group_id,
+    context: context,
+    member_name: member_name,
     timeouts: timeouts,
   }),
   withContext(resourceLabel, value):: {
@@ -48,42 +48,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_sql_pool_workload_classifier+: {
         [resourceLabel]+: {
           context: value,
-        },
-      },
-    },
-  },
-  withStartTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool_workload_classifier+: {
-        [resourceLabel]+: {
-          start_time: value,
-        },
-      },
-    },
-  },
-  withMemberName(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool_workload_classifier+: {
-        [resourceLabel]+: {
-          member_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool_workload_classifier+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withEndTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool_workload_classifier+: {
-        [resourceLabel]+: {
-          end_time: value,
         },
       },
     },
@@ -106,11 +70,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool_workload_classifier+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withStartTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool_workload_classifier+: {
+        [resourceLabel]+: {
+          start_time: value,
+        },
+      },
+    },
+  },
   withWorkloadGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool_workload_classifier+: {
         [resourceLabel]+: {
           workload_group_id: value,
+        },
+      },
+    },
+  },
+  withEndTime(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool_workload_classifier+: {
+        [resourceLabel]+: {
+          end_time: value,
+        },
+      },
+    },
+  },
+  withMemberName(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool_workload_classifier+: {
+        [resourceLabel]+: {
+          member_name: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

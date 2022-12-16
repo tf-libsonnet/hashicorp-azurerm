@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    name,
     resource_group_name,
     iothub_name,
+    name,
     timeouts=null
   ):: tf.withData(type='azurerm_iothub_shared_access_policy', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
     resource_group_name=resource_group_name,
     iothub_name=iothub_name,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     iothub_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     iothub_name: iothub_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withResourceGroupName(dataSrcLabel, value):: {

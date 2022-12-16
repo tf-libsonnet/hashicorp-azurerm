@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    description=null,
+    name,
     role_definition_id=null,
     scope,
     assignable_scopes=null,
-    description=null,
-    name,
     permissions=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_role_definition', label=resourceLabel, attrs=self.newAttrs(
+    description=description,
+    name=name,
     role_definition_id=role_definition_id,
     scope=scope,
     assignable_scopes=assignable_scopes,
-    description=description,
-    name=name,
     permissions=permissions,
     timeouts=timeouts
   )),
   newAttrs(
-    assignable_scopes=null,
     description=null,
     name,
     role_definition_id=null,
     scope,
+    assignable_scopes=null,
     permissions=null,
     timeouts=null
   ):: std.prune(a={
-    assignable_scopes: assignable_scopes,
     description: description,
     name: name,
     role_definition_id: role_definition_id,
     scope: scope,
+    assignable_scopes: assignable_scopes,
     permissions: permissions,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_role_definition+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withRoleDefinitionId(resourceLabel, value):: {
     resource+: {
       azurerm_role_definition+: {
@@ -71,15 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_role_definition+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPermissions(resourceLabel, value):: {
     resource+: {
       azurerm_role_definition+: {
@@ -100,15 +100,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   permissions:: {
     new(
+      not_data_actions=null,
       actions=null,
       data_actions=null,
-      not_actions=null,
-      not_data_actions=null
+      not_actions=null
     ):: std.prune(a={
+      not_data_actions: not_data_actions,
       actions: actions,
       data_actions: data_actions,
       not_actions: not_actions,
-      not_data_actions: not_data_actions,
     }),
   },
   withTimeouts(resourceLabel, value):: {

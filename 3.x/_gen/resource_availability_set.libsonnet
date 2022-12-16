@@ -2,74 +2,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    platform_fault_domain_count=null,
-    resource_group_name,
-    managed=null,
+    tags=null,
+    location,
     name,
     platform_update_domain_count=null,
     proximity_placement_group_id=null,
-    tags=null,
-    location,
+    managed=null,
+    platform_fault_domain_count=null,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_availability_set', label=resourceLabel, attrs=self.newAttrs(
-    platform_fault_domain_count=platform_fault_domain_count,
-    resource_group_name=resource_group_name,
-    managed=managed,
+    tags=tags,
+    location=location,
     name=name,
     platform_update_domain_count=platform_update_domain_count,
     proximity_placement_group_id=proximity_placement_group_id,
-    tags=tags,
-    location=location,
+    managed=managed,
+    platform_fault_domain_count=platform_fault_domain_count,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    proximity_placement_group_id=null,
+    resource_group_name,
     tags=null,
+    location,
     name,
     platform_update_domain_count=null,
-    resource_group_name,
+    proximity_placement_group_id=null,
     managed=null,
-    location,
     platform_fault_domain_count=null,
     timeouts=null
   ):: std.prune(a={
-    proximity_placement_group_id: proximity_placement_group_id,
+    resource_group_name: resource_group_name,
     tags: tags,
+    location: location,
     name: name,
     platform_update_domain_count: platform_update_domain_count,
-    resource_group_name: resource_group_name,
+    proximity_placement_group_id: proximity_placement_group_id,
     managed: managed,
-    location: location,
     platform_fault_domain_count: platform_fault_domain_count,
     timeouts: timeouts,
   }),
-  withPlatformFaultDomainCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_availability_set+: {
-        [resourceLabel]+: {
-          platform_fault_domain_count: value,
-        },
-      },
-    },
-  },
-  withProximityPlacementGroupId(resourceLabel, value):: {
-    resource+: {
-      azurerm_availability_set+: {
-        [resourceLabel]+: {
-          proximity_placement_group_id: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_availability_set+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_availability_set+: {
@@ -88,11 +61,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withProximityPlacementGroupId(resourceLabel, value):: {
     resource+: {
       azurerm_availability_set+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          proximity_placement_group_id: value,
         },
       },
     },
@@ -102,6 +75,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_availability_set+: {
         [resourceLabel]+: {
           managed: value,
+        },
+      },
+    },
+  },
+  withPlatformFaultDomainCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_availability_set+: {
+        [resourceLabel]+: {
+          platform_fault_domain_count: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_availability_set+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_availability_set+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

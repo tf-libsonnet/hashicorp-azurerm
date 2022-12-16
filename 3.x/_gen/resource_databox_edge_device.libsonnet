@@ -17,18 +17,18 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    name,
+    resource_group_name,
     sku_name,
     tags=null,
     location,
-    name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
+    resource_group_name: resource_group_name,
     sku_name: sku_name,
     tags: tags,
     location: location,
-    name: name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withSkuName(resourceLabel, value):: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

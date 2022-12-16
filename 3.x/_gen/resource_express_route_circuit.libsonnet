@@ -2,64 +2,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    service_provider_name=null,
-    allow_classic_operations=null,
-    bandwidth_in_mbps=null,
-    tags=null,
-    express_route_port_id=null,
     name,
-    peering_location=null,
     resource_group_name,
-    bandwidth_in_gbps=null,
-    location,
-    sku=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_circuit', label=resourceLabel, attrs=self.newAttrs(
-    service_provider_name=service_provider_name,
-    allow_classic_operations=allow_classic_operations,
-    bandwidth_in_mbps=bandwidth_in_mbps,
-    tags=tags,
-    express_route_port_id=express_route_port_id,
-    name=name,
-    peering_location=peering_location,
-    resource_group_name=resource_group_name,
-    bandwidth_in_gbps=bandwidth_in_gbps,
-    location=location,
-    sku=sku,
-    timeouts=timeouts
-  )),
-  newAttrs(
+    tags=null,
+    allow_classic_operations=null,
+    express_route_port_id=null,
     location,
     service_provider_name=null,
-    tags=null,
-    bandwidth_in_gbps=null,
-    allow_classic_operations=null,
-    name,
     peering_location=null,
-    resource_group_name,
-    express_route_port_id=null,
+    bandwidth_in_gbps=null,
     bandwidth_in_mbps=null,
     timeouts=null,
     sku=null
+  ):: tf.withResource(type='azurerm_express_route_circuit', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    resource_group_name=resource_group_name,
+    tags=tags,
+    allow_classic_operations=allow_classic_operations,
+    express_route_port_id=express_route_port_id,
+    location=location,
+    service_provider_name=service_provider_name,
+    peering_location=peering_location,
+    bandwidth_in_gbps=bandwidth_in_gbps,
+    bandwidth_in_mbps=bandwidth_in_mbps,
+    timeouts=timeouts,
+    sku=sku
+  )),
+  newAttrs(
+    resource_group_name,
+    allow_classic_operations=null,
+    bandwidth_in_mbps=null,
+    location,
+    tags=null,
+    service_provider_name=null,
+    bandwidth_in_gbps=null,
+    express_route_port_id=null,
+    name,
+    peering_location=null,
+    sku=null,
+    timeouts=null
   ):: std.prune(a={
-    location: location,
-    service_provider_name: service_provider_name,
-    tags: tags,
-    bandwidth_in_gbps: bandwidth_in_gbps,
+    resource_group_name: resource_group_name,
     allow_classic_operations: allow_classic_operations,
+    bandwidth_in_mbps: bandwidth_in_mbps,
+    location: location,
+    tags: tags,
+    service_provider_name: service_provider_name,
+    bandwidth_in_gbps: bandwidth_in_gbps,
+    express_route_port_id: express_route_port_id,
     name: name,
     peering_location: peering_location,
-    resource_group_name: resource_group_name,
-    express_route_port_id: express_route_port_id,
-    bandwidth_in_mbps: bandwidth_in_mbps,
-    timeouts: timeouts,
     sku: sku,
+    timeouts: timeouts,
   }),
-  withExpressRoutePortId(resourceLabel, value):: {
+  withPeeringLocation(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
-          express_route_port_id: value,
+          peering_location: value,
         },
       },
     },
@@ -82,11 +82,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPeeringLocation(resourceLabel, value):: {
+  withExpressRoutePortId(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
-          peering_location: value,
+          express_route_port_id: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -96,15 +105,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withBandwidthInMbps(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          bandwidth_in_mbps: value,
         },
       },
     },
@@ -136,45 +136,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withBandwidthInMbps(resourceLabel, value):: {
     resource+: {
       azurerm_express_route_circuit+: {
         [resourceLabel]+: {
-          tags: value,
+          bandwidth_in_mbps: value,
         },
       },
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_express_route_circuit+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
   withSku(resourceLabel, value):: {
     resource+: {
@@ -196,11 +165,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sku:: {
     new(
-      tier,
-      family
+      family,
+      tier
     ):: std.prune(a={
-      tier: tier,
       family: family,
+      tier: tier,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_express_route_circuit+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

@@ -2,34 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    send_subscription_logs=null,
     logz_monitor_id,
     send_aad_logs=null,
     send_activity_logs=null,
-    send_subscription_logs=null,
-    tag_filter=null,
-    timeouts=null
+    timeouts=null,
+    tag_filter=null
   ):: tf.withResource(type='azurerm_logz_tag_rule', label=resourceLabel, attrs=self.newAttrs(
+    send_subscription_logs=send_subscription_logs,
     logz_monitor_id=logz_monitor_id,
     send_aad_logs=send_aad_logs,
     send_activity_logs=send_activity_logs,
-    send_subscription_logs=send_subscription_logs,
-    tag_filter=tag_filter,
-    timeouts=timeouts
+    timeouts=timeouts,
+    tag_filter=tag_filter
   )),
   newAttrs(
-    logz_monitor_id,
-    send_aad_logs=null,
     send_activity_logs=null,
     send_subscription_logs=null,
-    tag_filter=null,
-    timeouts=null
+    logz_monitor_id,
+    send_aad_logs=null,
+    timeouts=null,
+    tag_filter=null
   ):: std.prune(a={
-    logz_monitor_id: logz_monitor_id,
-    send_aad_logs: send_aad_logs,
     send_activity_logs: send_activity_logs,
     send_subscription_logs: send_subscription_logs,
-    tag_filter: tag_filter,
+    logz_monitor_id: logz_monitor_id,
+    send_aad_logs: send_aad_logs,
     timeouts: timeouts,
+    tag_filter: tag_filter,
   }),
   withLogzMonitorId(resourceLabel, value):: {
     resource+: {
@@ -87,13 +87,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   tag_filter:: {
     new(
+      value=null,
       action,
-      name,
-      value=null
+      name
     ):: std.prune(a={
+      value: value,
       action: action,
       name: name,
-      value: value,
     }),
   },
   withTimeouts(resourceLabel, value):: {

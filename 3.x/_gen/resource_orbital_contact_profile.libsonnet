@@ -2,60 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    network_configuration_subnet_id,
-    tags=null,
-    auto_tracking,
     minimum_elevation_degrees=null,
+    name,
     location,
     event_hub_uri=null,
-    name,
+    network_configuration_subnet_id,
     resource_group_name,
     minimum_variable_contact_duration,
+    tags=null,
+    auto_tracking,
     links=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_orbital_contact_profile', label=resourceLabel, attrs=self.newAttrs(
-    network_configuration_subnet_id=network_configuration_subnet_id,
-    tags=tags,
-    auto_tracking=auto_tracking,
     minimum_elevation_degrees=minimum_elevation_degrees,
+    name=name,
     location=location,
     event_hub_uri=event_hub_uri,
-    name=name,
+    network_configuration_subnet_id=network_configuration_subnet_id,
     resource_group_name=resource_group_name,
     minimum_variable_contact_duration=minimum_variable_contact_duration,
+    tags=tags,
+    auto_tracking=auto_tracking,
     links=links,
     timeouts=timeouts
   )),
   newAttrs(
-    event_hub_uri=null,
-    minimum_variable_contact_duration,
-    network_configuration_subnet_id,
-    tags=null,
-    minimum_elevation_degrees=null,
     auto_tracking,
     location,
-    name,
     resource_group_name,
+    event_hub_uri=null,
+    network_configuration_subnet_id,
+    minimum_elevation_degrees=null,
+    minimum_variable_contact_duration,
+    name,
+    tags=null,
     links=null,
     timeouts=null
   ):: std.prune(a={
-    event_hub_uri: event_hub_uri,
-    minimum_variable_contact_duration: minimum_variable_contact_duration,
-    network_configuration_subnet_id: network_configuration_subnet_id,
-    tags: tags,
-    minimum_elevation_degrees: minimum_elevation_degrees,
     auto_tracking: auto_tracking,
     location: location,
-    name: name,
     resource_group_name: resource_group_name,
+    event_hub_uri: event_hub_uri,
+    network_configuration_subnet_id: network_configuration_subnet_id,
+    minimum_elevation_degrees: minimum_elevation_degrees,
+    minimum_variable_contact_duration: minimum_variable_contact_duration,
+    name: name,
+    tags: tags,
     links: links,
     timeouts: timeouts,
   }),
-  withNetworkConfigurationSubnetId(resourceLabel, value):: {
+  withMinimumElevationDegrees(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_contact_profile+: {
         [resourceLabel]+: {
-          network_configuration_subnet_id: value,
+          minimum_elevation_degrees: value,
         },
       },
     },
@@ -69,47 +69,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_contact_profile+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withAutoTracking(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_contact_profile+: {
-        [resourceLabel]+: {
-          auto_tracking: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_contact_profile+: {
         [resourceLabel]+: {
           tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_contact_profile+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withMinimumVariableContactDuration(resourceLabel, value):: {
-    resource+: {
-      azurerm_orbital_contact_profile+: {
-        [resourceLabel]+: {
-          minimum_variable_contact_duration: value,
         },
       },
     },
@@ -123,11 +87,47 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withMinimumElevationDegrees(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_orbital_contact_profile+: {
         [resourceLabel]+: {
-          minimum_elevation_degrees: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withMinimumVariableContactDuration(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_contact_profile+: {
+        [resourceLabel]+: {
+          minimum_variable_contact_duration: value,
+        },
+      },
+    },
+  },
+  withAutoTracking(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_contact_profile+: {
+        [resourceLabel]+: {
+          auto_tracking: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_contact_profile+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withNetworkConfigurationSubnetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_orbital_contact_profile+: {
+        [resourceLabel]+: {
+          network_configuration_subnet_id: value,
         },
       },
     },
@@ -152,43 +152,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   links:: {
     new(
+      name,
       polarization,
       direction,
-      name,
       channels=null
     ):: std.prune(a={
+      name: name,
       polarization: polarization,
       direction: direction,
-      name: name,
       channels: channels,
     }),
     channels:: {
       new(
+        name,
         bandwidth_mhz,
         center_frequency_mhz,
         demodulation_configuration=null,
         modulation_configuration=null,
-        name,
         end_point=null
       ):: std.prune(a={
+        name: name,
         bandwidth_mhz: bandwidth_mhz,
         center_frequency_mhz: center_frequency_mhz,
         demodulation_configuration: demodulation_configuration,
         modulation_configuration: modulation_configuration,
-        name: name,
         end_point: end_point,
       }),
       end_point:: {
         new(
-          end_point_name,
-          ip_address,
           port,
-          protocol
+          protocol,
+          end_point_name,
+          ip_address
         ):: std.prune(a={
-          end_point_name: end_point_name,
-          ip_address: ip_address,
           port: port,
           protocol: protocol,
+          end_point_name: end_point_name,
+          ip_address: ip_address,
         }),
       },
     },

@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    network_security_group_id,
     network_interface_id,
+    network_security_group_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_network_interface_security_group_association', label=resourceLabel, attrs=self.newAttrs(network_security_group_id=network_security_group_id, network_interface_id=network_interface_id, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_network_interface_security_group_association', label=resourceLabel, attrs=self.newAttrs(network_interface_id=network_interface_id, network_security_group_id=network_security_group_id, timeouts=timeouts)),
   newAttrs(
     network_interface_id,
     network_security_group_id,
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

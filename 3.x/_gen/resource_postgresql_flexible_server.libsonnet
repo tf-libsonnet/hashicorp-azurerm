@@ -2,154 +2,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_mb=null,
-    create_mode=null,
-    delegated_subnet_id=null,
-    tags=null,
-    sku_name=null,
-    backup_retention_days=null,
-    name,
-    zone=null,
-    location,
-    geo_redundant_backup_enabled=null,
-    point_in_time_restore_time_in_utc=null,
-    version=null,
-    administrator_login=null,
-    administrator_password=null,
     private_dns_zone_id=null,
     resource_group_name,
+    version=null,
     source_server_id=null,
-    high_availability=null,
-    maintenance_window=null,
+    geo_redundant_backup_enabled=null,
+    administrator_login=null,
+    point_in_time_restore_time_in_utc=null,
+    sku_name=null,
+    delegated_subnet_id=null,
+    location,
+    administrator_password=null,
+    storage_mb=null,
+    backup_retention_days=null,
+    tags=null,
+    create_mode=null,
+    name,
+    zone=null,
     timeouts=null,
-    authentication=null
+    authentication=null,
+    high_availability=null,
+    maintenance_window=null
   ):: tf.withResource(type='azurerm_postgresql_flexible_server', label=resourceLabel, attrs=self.newAttrs(
-    storage_mb=storage_mb,
-    create_mode=create_mode,
-    delegated_subnet_id=delegated_subnet_id,
-    tags=tags,
-    sku_name=sku_name,
-    backup_retention_days=backup_retention_days,
-    name=name,
-    zone=zone,
-    location=location,
-    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
-    point_in_time_restore_time_in_utc=point_in_time_restore_time_in_utc,
-    version=version,
-    administrator_login=administrator_login,
-    administrator_password=administrator_password,
     private_dns_zone_id=private_dns_zone_id,
     resource_group_name=resource_group_name,
+    version=version,
     source_server_id=source_server_id,
-    high_availability=high_availability,
-    maintenance_window=maintenance_window,
+    geo_redundant_backup_enabled=geo_redundant_backup_enabled,
+    administrator_login=administrator_login,
+    point_in_time_restore_time_in_utc=point_in_time_restore_time_in_utc,
+    sku_name=sku_name,
+    delegated_subnet_id=delegated_subnet_id,
+    location=location,
+    administrator_password=administrator_password,
+    storage_mb=storage_mb,
+    backup_retention_days=backup_retention_days,
+    tags=tags,
+    create_mode=create_mode,
+    name=name,
+    zone=zone,
     timeouts=timeouts,
-    authentication=authentication
+    authentication=authentication,
+    high_availability=high_availability,
+    maintenance_window=maintenance_window
   )),
   newAttrs(
-    private_dns_zone_id=null,
-    resource_group_name,
-    source_server_id=null,
-    geo_redundant_backup_enabled=null,
-    administrator_login=null,
-    administrator_password=null,
-    create_mode=null,
+    location,
     zone=null,
+    delegated_subnet_id=null,
+    private_dns_zone_id=null,
+    storage_mb=null,
+    administrator_password=null,
     backup_retention_days=null,
     sku_name=null,
-    name,
-    location,
-    tags=null,
     version=null,
+    resource_group_name,
+    create_mode=null,
+    administrator_login=null,
+    tags=null,
+    geo_redundant_backup_enabled=null,
     point_in_time_restore_time_in_utc=null,
-    delegated_subnet_id=null,
-    storage_mb=null,
+    name,
+    source_server_id=null,
     authentication=null,
     high_availability=null,
     maintenance_window=null,
     timeouts=null
   ):: std.prune(a={
-    private_dns_zone_id: private_dns_zone_id,
-    resource_group_name: resource_group_name,
-    source_server_id: source_server_id,
-    geo_redundant_backup_enabled: geo_redundant_backup_enabled,
-    administrator_login: administrator_login,
-    administrator_password: administrator_password,
-    create_mode: create_mode,
+    location: location,
     zone: zone,
+    delegated_subnet_id: delegated_subnet_id,
+    private_dns_zone_id: private_dns_zone_id,
+    storage_mb: storage_mb,
+    administrator_password: administrator_password,
     backup_retention_days: backup_retention_days,
     sku_name: sku_name,
-    name: name,
-    location: location,
-    tags: tags,
     version: version,
+    resource_group_name: resource_group_name,
+    create_mode: create_mode,
+    administrator_login: administrator_login,
+    tags: tags,
+    geo_redundant_backup_enabled: geo_redundant_backup_enabled,
     point_in_time_restore_time_in_utc: point_in_time_restore_time_in_utc,
-    delegated_subnet_id: delegated_subnet_id,
-    storage_mb: storage_mb,
+    name: name,
+    source_server_id: source_server_id,
     authentication: authentication,
     high_availability: high_availability,
     maintenance_window: maintenance_window,
     timeouts: timeouts,
   }),
-  withAdministratorPassword(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server+: {
         [resourceLabel]+: {
-          administrator_password: value,
-        },
-      },
-    },
-  },
-  withPrivateDnsZoneId(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          private_dns_zone_id: value,
-        },
-      },
-    },
-  },
-  withCreateMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          create_mode: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withGeoRedundantBackupEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          geo_redundant_backup_enabled: value,
-        },
-      },
-    },
-  },
-  withBackupRetentionDays(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          backup_retention_days: value,
+          name: value,
         },
       },
     },
@@ -172,29 +118,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withZone(resourceLabel, value):: {
+  withAdministratorPassword(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server+: {
         [resourceLabel]+: {
-          zone: value,
+          administrator_password: value,
         },
       },
     },
   },
-  withSkuName(resourceLabel, value):: {
+  withBackupRetentionDays(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server+: {
         [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          name: value,
+          backup_retention_days: value,
         },
       },
     },
@@ -208,11 +145,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdministratorLogin(resourceLabel, value):: {
+  withCreateMode(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server+: {
         [resourceLabel]+: {
-          administrator_login: value,
+          create_mode: value,
         },
       },
     },
@@ -226,6 +163,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageMb(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          storage_mb: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withSourceServerId(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server+: {
@@ -235,14 +190,88 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageMb(resourceLabel, value):: {
+  withZone(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_flexible_server+: {
         [resourceLabel]+: {
-          storage_mb: value,
+          zone: value,
         },
       },
     },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withAdministratorLogin(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          administrator_login: value,
+        },
+      },
+    },
+  },
+  withGeoRedundantBackupEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          geo_redundant_backup_enabled: value,
+        },
+      },
+    },
+  },
+  withPrivateDnsZoneId(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          private_dns_zone_id: value,
+        },
+      },
+    },
+  },
+  withAuthentication(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          authentication: value,
+        },
+      },
+    },
+  },
+  withAuthenticationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_flexible_server+: {
+        [resourceLabel]+: {
+          authentication+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  authentication:: {
+    new(
+      active_directory_auth_enabled=null,
+      password_auth_enabled=null,
+      tenant_id=null
+    ):: std.prune(a={
+      active_directory_auth_enabled: active_directory_auth_enabled,
+      password_auth_enabled: password_auth_enabled,
+      tenant_id: tenant_id,
+    }),
   },
   withHighAvailability(resourceLabel, value):: {
     resource+: {
@@ -320,44 +349,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
-    }),
-  },
-  withAuthentication(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          authentication: value,
-        },
-      },
-    },
-  },
-  withAuthenticationMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_flexible_server+: {
-        [resourceLabel]+: {
-          authentication+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  authentication:: {
-    new(
-      tenant_id=null,
-      active_directory_auth_enabled=null,
-      password_auth_enabled=null
-    ):: std.prune(a={
-      tenant_id: tenant_id,
-      active_directory_auth_enabled: active_directory_auth_enabled,
-      password_auth_enabled: password_auth_enabled,
+      read: read,
     }),
   },
 }

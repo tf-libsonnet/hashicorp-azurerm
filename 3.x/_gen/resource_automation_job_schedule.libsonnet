@@ -2,41 +2,41 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
     run_on=null,
     runbook_name,
     schedule_name,
     automation_account_name,
     job_schedule_id=null,
     parameters=null,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_job_schedule', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     run_on=run_on,
     runbook_name=runbook_name,
     schedule_name=schedule_name,
     automation_account_name=automation_account_name,
     job_schedule_id=job_schedule_id,
     parameters=parameters,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    run_on=null,
-    runbook_name,
-    schedule_name,
     automation_account_name,
     job_schedule_id=null,
     parameters=null,
     resource_group_name,
+    run_on=null,
+    runbook_name,
+    schedule_name,
     timeouts=null
   ):: std.prune(a={
-    run_on: run_on,
-    runbook_name: runbook_name,
-    schedule_name: schedule_name,
     automation_account_name: automation_account_name,
     job_schedule_id: job_schedule_id,
     parameters: parameters,
     resource_group_name: resource_group_name,
+    run_on: run_on,
+    runbook_name: runbook_name,
+    schedule_name: schedule_name,
     timeouts: timeouts,
   }),
   withJobScheduleId(resourceLabel, value):: {
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
-      read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null,
+      read=null
     ):: std.prune(a={
-      delete: delete,
-      read: read,
       update: update,
       create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

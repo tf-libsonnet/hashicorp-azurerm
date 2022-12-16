@@ -3,99 +3,63 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     location,
-    local_auth_enabled=null,
-    name,
     public_network_access_enabled=null,
-    resource_group_name,
     tags=null,
-    inbound_ip_rule=null,
     input_schema=null,
-    input_mapping_fields=null,
-    timeouts=null,
-    identity=null,
-    input_mapping_default_values=null
-  ):: tf.withResource(type='azurerm_eventgrid_topic', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    local_auth_enabled=local_auth_enabled,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    inbound_ip_rule=inbound_ip_rule,
-    input_schema=input_schema,
-    input_mapping_fields=input_mapping_fields,
-    timeouts=timeouts,
-    identity=identity,
-    input_mapping_default_values=input_mapping_default_values
-  )),
-  newAttrs(
     name,
-    public_network_access_enabled=null,
-    inbound_ip_rule=null,
-    input_schema=null,
-    location,
     resource_group_name,
-    tags=null,
+    inbound_ip_rule=null,
     local_auth_enabled=null,
-    identity=null,
     input_mapping_default_values=null,
     input_mapping_fields=null,
-    timeouts=null
+    timeouts=null,
+    identity=null
+  ):: tf.withResource(type='azurerm_eventgrid_topic', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
+    public_network_access_enabled=public_network_access_enabled,
+    tags=tags,
+    input_schema=input_schema,
+    name=name,
+    resource_group_name=resource_group_name,
+    inbound_ip_rule=inbound_ip_rule,
+    local_auth_enabled=local_auth_enabled,
+    input_mapping_default_values=input_mapping_default_values,
+    input_mapping_fields=input_mapping_fields,
+    timeouts=timeouts,
+    identity=identity
+  )),
+  newAttrs(
+    location,
+    name,
+    resource_group_name,
+    input_schema=null,
+    public_network_access_enabled=null,
+    tags=null,
+    inbound_ip_rule=null,
+    local_auth_enabled=null,
+    input_mapping_default_values=null,
+    input_mapping_fields=null,
+    timeouts=null,
+    identity=null
   ):: std.prune(a={
-    name: name,
-    public_network_access_enabled: public_network_access_enabled,
-    inbound_ip_rule: inbound_ip_rule,
-    input_schema: input_schema,
     location: location,
+    name: name,
     resource_group_name: resource_group_name,
+    input_schema: input_schema,
+    public_network_access_enabled: public_network_access_enabled,
     tags: tags,
+    inbound_ip_rule: inbound_ip_rule,
     local_auth_enabled: local_auth_enabled,
-    identity: identity,
     input_mapping_default_values: input_mapping_default_values,
     input_mapping_fields: input_mapping_fields,
     timeouts: timeouts,
+    identity: identity,
   }),
-  withLocation(resourceLabel, value):: {
+  withInputSchema(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_topic+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocalAuthEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          local_auth_enabled: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          name: value,
+          input_schema: value,
         },
       },
     },
@@ -109,6 +73,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withInboundIpRule(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_topic+: {
@@ -118,14 +91,97 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withInputSchema(resourceLabel, value):: {
+  withLocalAuthEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_eventgrid_topic+: {
         [resourceLabel]+: {
-          input_schema: value,
+          local_auth_enabled: value,
         },
       },
     },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
+  },
+  withInputMappingDefaultValues(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          input_mapping_default_values: value,
+        },
+      },
+    },
+  },
+  withInputMappingDefaultValuesMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_eventgrid_topic+: {
+        [resourceLabel]+: {
+          input_mapping_default_values+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  input_mapping_default_values:: {
+    new(
+      subject=null,
+      data_version=null,
+      event_type=null
+    ):: std.prune(a={
+      subject: subject,
+      data_version: data_version,
+      event_type: event_type,
+    }),
   },
   withInputMappingFields(resourceLabel, value):: {
     resource+: {
@@ -180,71 +236,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
-  },
-  withInputMappingDefaultValues(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          input_mapping_default_values: value,
-        },
-      },
-    },
-  },
-  withInputMappingDefaultValuesMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_eventgrid_topic+: {
-        [resourceLabel]+: {
-          input_mapping_default_values+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  input_mapping_default_values:: {
-    new(
-      data_version=null,
-      event_type=null,
-      subject=null
-    ):: std.prune(a={
-      data_version: data_version,
-      event_type: event_type,
-      subject: subject,
+      create: create,
     }),
   },
 }

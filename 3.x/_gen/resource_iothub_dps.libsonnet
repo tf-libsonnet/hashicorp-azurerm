@@ -2,60 +2,78 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
-    location,
-    name,
     public_network_access_enabled=null,
     resource_group_name,
+    tags=null,
     allocation_policy=null,
+    name,
     data_residency_enabled=null,
+    location,
     ip_filter_rule=null,
     linked_hub=null,
     sku=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_dps', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
-    location=location,
-    name=name,
     public_network_access_enabled=public_network_access_enabled,
     resource_group_name=resource_group_name,
+    tags=tags,
     allocation_policy=allocation_policy,
+    name=name,
     data_residency_enabled=data_residency_enabled,
+    location=location,
     ip_filter_rule=ip_filter_rule,
     linked_hub=linked_hub,
     sku=sku,
     timeouts=timeouts
   )),
   newAttrs(
-    data_residency_enabled=null,
-    location,
-    name,
-    public_network_access_enabled=null,
     resource_group_name,
     tags=null,
     allocation_policy=null,
-    ip_filter_rule=null,
+    name,
+    data_residency_enabled=null,
+    location,
+    public_network_access_enabled=null,
     linked_hub=null,
     sku=null,
-    timeouts=null
+    timeouts=null,
+    ip_filter_rule=null
   ):: std.prune(a={
-    data_residency_enabled: data_residency_enabled,
-    location: location,
-    name: name,
-    public_network_access_enabled: public_network_access_enabled,
     resource_group_name: resource_group_name,
     tags: tags,
     allocation_policy: allocation_policy,
-    ip_filter_rule: ip_filter_rule,
+    name: name,
+    data_residency_enabled: data_residency_enabled,
+    location: location,
+    public_network_access_enabled: public_network_access_enabled,
     linked_hub: linked_hub,
     sku: sku,
     timeouts: timeouts,
+    ip_filter_rule: ip_filter_rule,
   }),
-  withDataResidencyEnabled(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_dps+: {
         [resourceLabel]+: {
-          data_residency_enabled: value,
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_dps+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withAllocationPolicy(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_dps+: {
+        [resourceLabel]+: {
+          allocation_policy: value,
         },
       },
     },
@@ -87,32 +105,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withDataResidencyEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_dps+: {
         [resourceLabel]+: {
-          location: value,
+          data_residency_enabled: value,
         },
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withIpFilterRule(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_dps+: {
         [resourceLabel]+: {
-          name: value,
+          ip_filter_rule: value,
         },
       },
     },
   },
-  withAllocationPolicy(resourceLabel, value):: {
+  withIpFilterRuleMixin(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_dps+: {
         [resourceLabel]+: {
-          allocation_policy: value,
+          ip_filter_rule+: if std.isArray(v=value) then value else [value],
         },
       },
     },
+  },
+  ip_filter_rule:: {
+    new(
+      action,
+      ip_mask,
+      name,
+      target=null
+    ):: std.prune(a={
+      action: action,
+      ip_mask: ip_mask,
+      name: name,
+      target: target,
+    }),
   },
   withLinkedHub(resourceLabel, value):: {
     resource+: {
@@ -134,15 +165,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   linked_hub:: {
     new(
-      allocation_weight=null,
-      apply_allocation_policy=null,
       connection_string,
-      location
+      location,
+      allocation_weight=null,
+      apply_allocation_policy=null
     ):: std.prune(a={
-      allocation_weight: allocation_weight,
-      apply_allocation_policy: apply_allocation_policy,
       connection_string: connection_string,
       location: location,
+      allocation_weight: allocation_weight,
+      apply_allocation_policy: apply_allocation_policy,
     }),
   },
   withSku(resourceLabel, value):: {
@@ -165,11 +196,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sku:: {
     new(
-      capacity,
-      name
+      name,
+      capacity
     ):: std.prune(a={
-      capacity: capacity,
       name: name,
+      capacity: capacity,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -192,46 +223,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
-    }),
-  },
-  withIpFilterRule(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_dps+: {
-        [resourceLabel]+: {
-          ip_filter_rule: value,
-        },
-      },
-    },
-  },
-  withIpFilterRuleMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_dps+: {
-        [resourceLabel]+: {
-          ip_filter_rule+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  ip_filter_rule:: {
-    new(
-      ip_mask,
-      name,
-      target=null,
-      action
-    ):: std.prune(a={
-      ip_mask: ip_mask,
-      name: name,
-      target: target,
-      action: action,
+      read: read,
+      update: update,
     }),
   },
 }

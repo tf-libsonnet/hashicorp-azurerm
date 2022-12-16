@@ -2,74 +2,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    routing_preference=null,
     scale_unit=null,
-    location,
     tags=null,
     virtual_hub_id,
+    location,
     bgp_route_translation_for_nat_enabled=null,
     resource_group_name,
     name,
+    routing_preference=null,
     bgp_settings=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_vpn_gateway', label=resourceLabel, attrs=self.newAttrs(
-    routing_preference=routing_preference,
     scale_unit=scale_unit,
-    location=location,
     tags=tags,
     virtual_hub_id=virtual_hub_id,
+    location=location,
     bgp_route_translation_for_nat_enabled=bgp_route_translation_for_nat_enabled,
     resource_group_name=resource_group_name,
     name=name,
+    routing_preference=routing_preference,
     bgp_settings=bgp_settings,
     timeouts=timeouts
   )),
   newAttrs(
-    scale_unit=null,
-    location,
-    tags=null,
-    virtual_hub_id,
-    bgp_route_translation_for_nat_enabled=null,
-    resource_group_name,
     name,
     routing_preference=null,
-    timeouts=null,
-    bgp_settings=null
+    scale_unit=null,
+    tags=null,
+    virtual_hub_id,
+    location,
+    bgp_route_translation_for_nat_enabled=null,
+    resource_group_name,
+    bgp_settings=null,
+    timeouts=null
   ):: std.prune(a={
-    scale_unit: scale_unit,
-    location: location,
-    tags: tags,
-    virtual_hub_id: virtual_hub_id,
-    bgp_route_translation_for_nat_enabled: bgp_route_translation_for_nat_enabled,
-    resource_group_name: resource_group_name,
     name: name,
     routing_preference: routing_preference,
-    timeouts: timeouts,
+    scale_unit: scale_unit,
+    tags: tags,
+    virtual_hub_id: virtual_hub_id,
+    location: location,
+    bgp_route_translation_for_nat_enabled: bgp_route_translation_for_nat_enabled,
+    resource_group_name: resource_group_name,
     bgp_settings: bgp_settings,
+    timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
+  withBgpRouteTranslationForNatEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
-          tags: value,
+          bgp_route_translation_for_nat_enabled: value,
         },
       },
     },
   },
-  withRoutingPreference(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
-          routing_preference: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withScaleUnit(resourceLabel, value):: {
+  withVirtualHubId(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
-          scale_unit: value,
+          virtual_hub_id: value,
         },
       },
     },
@@ -92,29 +92,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualHubId(resourceLabel, value):: {
+  withRoutingPreference(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
-          virtual_hub_id: value,
+          routing_preference: value,
         },
       },
     },
   },
-  withBgpRouteTranslationForNatEnabled(resourceLabel, value):: {
+  withScaleUnit(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
-          bgp_route_translation_for_nat_enabled: value,
+          scale_unit: value,
         },
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_gateway+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          tags: value,
         },
       },
     },
@@ -139,15 +139,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   bgp_settings:: {
     new(
-      peer_weight,
       asn,
-      instance_1_bgp_peering_address=null,
-      instance_0_bgp_peering_address=null
+      peer_weight,
+      instance_0_bgp_peering_address=null,
+      instance_1_bgp_peering_address=null
     ):: std.prune(a={
-      peer_weight: peer_weight,
       asn: asn,
-      instance_1_bgp_peering_address: instance_1_bgp_peering_address,
+      peer_weight: peer_weight,
       instance_0_bgp_peering_address: instance_0_bgp_peering_address,
+      instance_1_bgp_peering_address: instance_1_bgp_peering_address,
     }),
     instance_0_bgp_peering_address:: {
       new(

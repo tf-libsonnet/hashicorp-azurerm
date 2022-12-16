@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     resource_group_name,
     tags=null,
     dashboard_properties=null,
     location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_portal_dashboard', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
     dashboard_properties=dashboard_properties,
     location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     tags=null,
     dashboard_properties=null,
     location,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     dashboard_properties: dashboard_properties,
     location: location,
-    name: name,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_portal_dashboard+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withDashboardProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_portal_dashboard+: {
-        [resourceLabel]+: {
-          dashboard_properties: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_portal_dashboard+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_portal_dashboard+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_portal_dashboard+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withDashboardProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_portal_dashboard+: {
+        [resourceLabel]+: {
+          dashboard_properties: value,
         },
       },
     },

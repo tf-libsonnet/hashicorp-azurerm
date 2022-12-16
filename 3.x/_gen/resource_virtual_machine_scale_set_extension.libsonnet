@@ -2,94 +2,67 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    type,
-    provision_after_extensions=null,
-    type_handler_version,
     auto_upgrade_minor_version=null,
-    failure_suppression_enabled=null,
-    settings=null,
-    publisher,
-    automatic_upgrade_enabled=null,
-    force_update_tag=null,
     name,
     virtual_machine_scale_set_id,
+    automatic_upgrade_enabled=null,
+    settings=null,
+    type,
+    provision_after_extensions=null,
+    publisher,
+    type_handler_version,
+    failure_suppression_enabled=null,
+    force_update_tag=null,
     protected_settings=null,
-    protected_settings_from_key_vault=null,
-    timeouts=null
+    timeouts=null,
+    protected_settings_from_key_vault=null
   ):: tf.withResource(type='azurerm_virtual_machine_scale_set_extension', label=resourceLabel, attrs=self.newAttrs(
-    type=type,
-    provision_after_extensions=provision_after_extensions,
-    type_handler_version=type_handler_version,
     auto_upgrade_minor_version=auto_upgrade_minor_version,
-    failure_suppression_enabled=failure_suppression_enabled,
-    settings=settings,
-    publisher=publisher,
-    automatic_upgrade_enabled=automatic_upgrade_enabled,
-    force_update_tag=force_update_tag,
     name=name,
     virtual_machine_scale_set_id=virtual_machine_scale_set_id,
+    automatic_upgrade_enabled=automatic_upgrade_enabled,
+    settings=settings,
+    type=type,
+    provision_after_extensions=provision_after_extensions,
+    publisher=publisher,
+    type_handler_version=type_handler_version,
+    failure_suppression_enabled=failure_suppression_enabled,
+    force_update_tag=force_update_tag,
     protected_settings=protected_settings,
-    protected_settings_from_key_vault=protected_settings_from_key_vault,
-    timeouts=timeouts
+    timeouts=timeouts,
+    protected_settings_from_key_vault=protected_settings_from_key_vault
   )),
   newAttrs(
-    name,
-    provision_after_extensions=null,
-    automatic_upgrade_enabled=null,
-    virtual_machine_scale_set_id,
-    settings=null,
-    publisher,
-    type,
-    type_handler_version,
-    auto_upgrade_minor_version=null,
-    failure_suppression_enabled=null,
     force_update_tag=null,
+    type_handler_version,
+    virtual_machine_scale_set_id,
+    auto_upgrade_minor_version=null,
+    name,
+    publisher,
+    automatic_upgrade_enabled=null,
+    settings=null,
+    provision_after_extensions=null,
+    type,
+    failure_suppression_enabled=null,
     protected_settings=null,
-    protected_settings_from_key_vault=null,
-    timeouts=null
+    timeouts=null,
+    protected_settings_from_key_vault=null
   ):: std.prune(a={
-    name: name,
-    provision_after_extensions: provision_after_extensions,
-    automatic_upgrade_enabled: automatic_upgrade_enabled,
-    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
-    settings: settings,
-    publisher: publisher,
-    type: type,
-    type_handler_version: type_handler_version,
-    auto_upgrade_minor_version: auto_upgrade_minor_version,
-    failure_suppression_enabled: failure_suppression_enabled,
     force_update_tag: force_update_tag,
+    type_handler_version: type_handler_version,
+    virtual_machine_scale_set_id: virtual_machine_scale_set_id,
+    auto_upgrade_minor_version: auto_upgrade_minor_version,
+    name: name,
+    publisher: publisher,
+    automatic_upgrade_enabled: automatic_upgrade_enabled,
+    settings: settings,
+    provision_after_extensions: provision_after_extensions,
+    type: type,
+    failure_suppression_enabled: failure_suppression_enabled,
     protected_settings: protected_settings,
-    protected_settings_from_key_vault: protected_settings_from_key_vault,
     timeouts: timeouts,
+    protected_settings_from_key_vault: protected_settings_from_key_vault,
   }),
-  withTypeHandlerVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_scale_set_extension+: {
-        [resourceLabel]+: {
-          type_handler_version: value,
-        },
-      },
-    },
-  },
-  withAutomaticUpgradeEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_scale_set_extension+: {
-        [resourceLabel]+: {
-          automatic_upgrade_enabled: value,
-        },
-      },
-    },
-  },
-  withFailureSuppressionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_scale_set_extension+: {
-        [resourceLabel]+: {
-          failure_suppression_enabled: value,
-        },
-      },
-    },
-  },
   withForceUpdateTag(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_scale_set_extension+: {
@@ -99,11 +72,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withVirtualMachineScaleSetId(resourceLabel, value):: {
+  withSettings(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_scale_set_extension+: {
         [resourceLabel]+: {
-          virtual_machine_scale_set_id: value,
+          settings: value,
         },
       },
     },
@@ -113,6 +86,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_virtual_machine_scale_set_extension+: {
         [resourceLabel]+: {
           type: value,
+        },
+      },
+    },
+  },
+  withAutoUpgradeMinorVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_scale_set_extension+: {
+        [resourceLabel]+: {
+          auto_upgrade_minor_version: value,
         },
       },
     },
@@ -135,11 +117,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAutoUpgradeMinorVersion(resourceLabel, value):: {
+  withTypeHandlerVersion(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_scale_set_extension+: {
         [resourceLabel]+: {
-          auto_upgrade_minor_version: value,
+          type_handler_version: value,
+        },
+      },
+    },
+  },
+  withVirtualMachineScaleSetId(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_scale_set_extension+: {
+        [resourceLabel]+: {
+          virtual_machine_scale_set_id: value,
         },
       },
     },
@@ -162,45 +153,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSettings(resourceLabel, value):: {
+  withAutomaticUpgradeEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_scale_set_extension+: {
         [resourceLabel]+: {
-          settings: value,
+          automatic_upgrade_enabled: value,
         },
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withFailureSuppressionEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_scale_set_extension+: {
         [resourceLabel]+: {
-          timeouts: value,
+          failure_suppression_enabled: value,
         },
       },
     },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_scale_set_extension+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      read=null,
-      update=null,
-      create=null,
-      delete=null
-    ):: std.prune(a={
-      read: read,
-      update: update,
-      create: create,
-      delete: delete,
-    }),
   },
   withProtectedSettingsFromKeyVault(resourceLabel, value):: {
     resource+: {
@@ -227,6 +196,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       secret_url: secret_url,
       source_vault_id: source_vault_id,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_scale_set_extension+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_scale_set_extension+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

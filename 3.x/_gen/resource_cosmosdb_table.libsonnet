@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     resource_group_name,
     throughput=null,
     account_name,
-    name,
-    autoscale_settings=null,
-    timeouts=null
+    timeouts=null,
+    autoscale_settings=null
   ):: tf.withResource(type='azurerm_cosmosdb_table', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     throughput=throughput,
     account_name=account_name,
-    name=name,
-    autoscale_settings=autoscale_settings,
-    timeouts=timeouts
+    timeouts=timeouts,
+    autoscale_settings=autoscale_settings
   )),
   newAttrs(
+    account_name,
     name,
     resource_group_name,
     throughput=null,
-    account_name,
     autoscale_settings=null,
     timeouts=null
   ):: std.prune(a={
+    account_name: account_name,
     name: name,
     resource_group_name: resource_group_name,
     throughput: throughput,
-    account_name: account_name,
     autoscale_settings: autoscale_settings,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_table+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withThroughput(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_table+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_table+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_table+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },
@@ -112,15 +112,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

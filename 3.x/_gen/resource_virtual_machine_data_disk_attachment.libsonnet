@@ -19,22 +19,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    managed_disk_id,
-    virtual_machine_id,
-    write_accelerator_enabled=null,
     caching,
     create_option=null,
     lun,
+    managed_disk_id,
+    virtual_machine_id,
+    write_accelerator_enabled=null,
     timeouts=null
   ):: std.prune(a={
-    managed_disk_id: managed_disk_id,
-    virtual_machine_id: virtual_machine_id,
-    write_accelerator_enabled: write_accelerator_enabled,
     caching: caching,
     create_option: create_option,
     lun: lun,
+    managed_disk_id: managed_disk_id,
+    virtual_machine_id: virtual_machine_id,
+    write_accelerator_enabled: write_accelerator_enabled,
     timeouts: timeouts,
   }),
+  withWriteAcceleratorEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_data_disk_attachment+: {
+        [resourceLabel]+: {
+          write_accelerator_enabled: value,
+        },
+      },
+    },
+  },
+  withCaching(resourceLabel, value):: {
+    resource+: {
+      azurerm_virtual_machine_data_disk_attachment+: {
+        [resourceLabel]+: {
+          caching: value,
+        },
+      },
+    },
+  },
   withCreateOption(resourceLabel, value):: {
     resource+: {
       azurerm_virtual_machine_data_disk_attachment+: {
@@ -67,24 +85,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_virtual_machine_data_disk_attachment+: {
         [resourceLabel]+: {
           virtual_machine_id: value,
-        },
-      },
-    },
-  },
-  withWriteAcceleratorEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_data_disk_attachment+: {
-        [resourceLabel]+: {
-          write_accelerator_enabled: value,
-        },
-      },
-    },
-  },
-  withCaching(resourceLabel, value):: {
-    resource+: {
-      azurerm_virtual_machine_data_disk_attachment+: {
-        [resourceLabel]+: {
-          caching: value,
         },
       },
     },

@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    loadbalancer_id,
     name,
+    loadbalancer_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_lb_rule', label=dataSrcLabel, attrs=self.newAttrs(loadbalancer_id=loadbalancer_id, name=name, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_lb_rule', label=dataSrcLabel, attrs=self.newAttrs(name=name, loadbalancer_id=loadbalancer_id, timeouts=timeouts)),
   newAttrs(
-    loadbalancer_id,
     name,
+    loadbalancer_id,
     timeouts=null
   ):: std.prune(a={
-    loadbalancer_id: loadbalancer_id,
     name: name,
+    loadbalancer_id: loadbalancer_id,
     timeouts: timeouts,
   }),
   withLoadbalancerId(dataSrcLabel, value):: {

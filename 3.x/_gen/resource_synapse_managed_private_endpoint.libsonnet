@@ -15,18 +15,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    subresource_name,
     synapse_workspace_id,
     target_resource_id,
     name,
+    subresource_name,
     timeouts=null
   ):: std.prune(a={
-    subresource_name: subresource_name,
     synapse_workspace_id: synapse_workspace_id,
     target_resource_id: target_resource_id,
     name: name,
+    subresource_name: subresource_name,
     timeouts: timeouts,
   }),
+  withSubresourceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_managed_private_endpoint+: {
+        [resourceLabel]+: {
+          subresource_name: value,
+        },
+      },
+    },
+  },
   withSynapseWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_managed_private_endpoint+: {
@@ -54,15 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubresourceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_managed_private_endpoint+: {
-        [resourceLabel]+: {
-          subresource_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_managed_private_endpoint+: {
@@ -83,13 +83,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
-      read=null,
-      create=null
+      read=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
-      create: create,
     }),
   },
 }

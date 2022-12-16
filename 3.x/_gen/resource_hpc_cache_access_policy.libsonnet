@@ -2,13 +2,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    hpc_cache_id,
     name,
+    hpc_cache_id,
     access_rule=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_hpc_cache_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    hpc_cache_id=hpc_cache_id,
     name=name,
+    hpc_cache_id=hpc_cache_id,
     access_rule=access_rule,
     timeouts=timeouts
   )),
@@ -41,45 +41,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAccessRule(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_access_policy+: {
-        [resourceLabel]+: {
-          access_rule: value,
-        },
-      },
-    },
-  },
-  withAccessRuleMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_hpc_cache_access_policy+: {
-        [resourceLabel]+: {
-          access_rule+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  access_rule:: {
-    new(
-      root_squash_enabled=null,
-      scope,
-      submount_access_enabled=null,
-      suid_enabled=null,
-      access,
-      anonymous_gid=null,
-      anonymous_uid=null,
-      filter=null
-    ):: std.prune(a={
-      root_squash_enabled: root_squash_enabled,
-      scope: scope,
-      submount_access_enabled: submount_access_enabled,
-      suid_enabled: suid_enabled,
-      access: access,
-      anonymous_gid: anonymous_gid,
-      anonymous_uid: anonymous_uid,
-      filter: filter,
-    }),
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_hpc_cache_access_policy+: {
@@ -109,6 +70,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
+    }),
+  },
+  withAccessRule(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_access_policy+: {
+        [resourceLabel]+: {
+          access_rule: value,
+        },
+      },
+    },
+  },
+  withAccessRuleMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_hpc_cache_access_policy+: {
+        [resourceLabel]+: {
+          access_rule+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  access_rule:: {
+    new(
+      anonymous_uid=null,
+      filter=null,
+      root_squash_enabled=null,
+      scope,
+      submount_access_enabled=null,
+      suid_enabled=null,
+      access,
+      anonymous_gid=null
+    ):: std.prune(a={
+      anonymous_uid: anonymous_uid,
+      filter: filter,
+      root_squash_enabled: root_squash_enabled,
+      scope: scope,
+      submount_access_enabled: submount_access_enabled,
+      suid_enabled: suid_enabled,
+      access: access,
+      anonymous_gid: anonymous_gid,
     }),
   },
 }

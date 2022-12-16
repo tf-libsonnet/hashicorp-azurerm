@@ -17,20 +17,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    subnet_id,
     ignore_missing_vnet_service_endpoint=null,
     name,
     resource_group_name,
     server_name,
+    subnet_id,
     timeouts=null
   ):: std.prune(a={
-    subnet_id: subnet_id,
     ignore_missing_vnet_service_endpoint: ignore_missing_vnet_service_endpoint,
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
+    subnet_id: subnet_id,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_virtual_network_rule+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withServerName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_virtual_network_rule+: {
+        [resourceLabel]+: {
+          server_name: value,
+        },
+      },
+    },
+  },
   withSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_virtual_network_rule+: {
@@ -58,24 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_virtual_network_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withServerName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_virtual_network_rule+: {
-        [resourceLabel]+: {
-          server_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_virtual_network_rule+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

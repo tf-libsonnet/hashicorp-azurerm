@@ -2,35 +2,53 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    location,
-    name,
     resource_group_name,
     sku_name,
     tags=null,
+    location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_relay_namespace', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     tags=tags,
+    location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
+    tags=null,
     sku_name,
     location,
     name,
-    tags=null,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
+    tags: tags,
     sku_name: sku_name,
     location: location,
     name: name,
-    tags: tags,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_namespace+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_namespace+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_relay_namespace+: {
@@ -45,24 +63,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_relay_namespace+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_namespace+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_namespace+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
         },
       },
     },

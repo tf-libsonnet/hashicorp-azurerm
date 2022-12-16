@@ -2,34 +2,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    virtual_hub_id,
     internet_security_enabled=null,
     name,
     remote_virtual_network_id,
-    virtual_hub_id,
-    timeouts=null,
-    routing=null
+    routing=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_virtual_hub_connection', label=resourceLabel, attrs=self.newAttrs(
+    virtual_hub_id=virtual_hub_id,
     internet_security_enabled=internet_security_enabled,
     name=name,
     remote_virtual_network_id=remote_virtual_network_id,
-    virtual_hub_id=virtual_hub_id,
-    timeouts=timeouts,
-    routing=routing
+    routing=routing,
+    timeouts=timeouts
   )),
   newAttrs(
-    internet_security_enabled=null,
-    name,
     remote_virtual_network_id,
     virtual_hub_id,
-    routing=null,
-    timeouts=null
+    internet_security_enabled=null,
+    name,
+    timeouts=null,
+    routing=null
   ):: std.prune(a={
-    internet_security_enabled: internet_security_enabled,
-    name: name,
     remote_virtual_network_id: remote_virtual_network_id,
     virtual_hub_id: virtual_hub_id,
-    routing: routing,
+    internet_security_enabled: internet_security_enabled,
+    name: name,
     timeouts: timeouts,
+    routing: routing,
   }),
   withInternetSecurityEnabled(resourceLabel, value):: {
     resource+: {
@@ -106,13 +106,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     static_vnet_route:: {
       new(
-        next_hop_ip_address=null,
         address_prefixes=null,
-        name=null
+        name=null,
+        next_hop_ip_address=null
       ):: std.prune(a={
-        next_hop_ip_address: next_hop_ip_address,
         address_prefixes: address_prefixes,
         name: name,
+        next_hop_ip_address: next_hop_ip_address,
       }),
     },
   },

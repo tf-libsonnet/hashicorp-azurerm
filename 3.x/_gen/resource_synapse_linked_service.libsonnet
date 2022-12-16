@@ -2,69 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    type_properties_json,
-    additional_properties=null,
     parameters=null,
+    additional_properties=null,
     synapse_workspace_id,
+    type,
+    type_properties_json,
     annotations=null,
     description=null,
     name,
-    type,
-    timeouts=null,
-    integration_runtime=null
+    integration_runtime=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_synapse_linked_service', label=resourceLabel, attrs=self.newAttrs(
-    type_properties_json=type_properties_json,
-    additional_properties=additional_properties,
     parameters=parameters,
+    additional_properties=additional_properties,
     synapse_workspace_id=synapse_workspace_id,
+    type=type,
+    type_properties_json=type_properties_json,
     annotations=annotations,
     description=description,
     name=name,
-    type=type,
-    timeouts=timeouts,
-    integration_runtime=integration_runtime
+    integration_runtime=integration_runtime,
+    timeouts=timeouts
   )),
   newAttrs(
-    type,
-    type_properties_json,
+    parameters=null,
     annotations=null,
     description=null,
-    parameters=null,
-    synapse_workspace_id,
+    type,
+    type_properties_json,
     additional_properties=null,
+    synapse_workspace_id,
     name,
     integration_runtime=null,
     timeouts=null
   ):: std.prune(a={
-    type: type,
-    type_properties_json: type_properties_json,
+    parameters: parameters,
     annotations: annotations,
     description: description,
-    parameters: parameters,
-    synapse_workspace_id: synapse_workspace_id,
+    type: type,
+    type_properties_json: type_properties_json,
     additional_properties: additional_properties,
+    synapse_workspace_id: synapse_workspace_id,
     name: name,
     integration_runtime: integration_runtime,
     timeouts: timeouts,
   }),
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_linked_service+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_linked_service+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
-        },
-      },
-    },
-  },
   withAnnotations(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_linked_service+: {
@@ -92,6 +74,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_linked_service+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_linked_service+: {
+        [resourceLabel]+: {
+          additional_properties: value,
+        },
+      },
+    },
+  },
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_linked_service+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
+        },
+      },
+    },
+  },
   withType(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_linked_service+: {
@@ -106,15 +115,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_synapse_linked_service+: {
         [resourceLabel]+: {
           type_properties_json: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_linked_service+: {
-        [resourceLabel]+: {
-          additional_properties: value,
         },
       },
     },
@@ -166,15 +166,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

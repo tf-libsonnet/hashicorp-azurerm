@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    storage_account_name,
     table_name,
     entity,
     partition_key,
     row_key,
-    storage_account_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_storage_table_entity', label=resourceLabel, attrs=self.newAttrs(
+    storage_account_name=storage_account_name,
     table_name=table_name,
     entity=entity,
     partition_key=partition_key,
     row_key=row_key,
-    storage_account_name=storage_account_name,
     timeouts=timeouts
   )),
   newAttrs(
+    partition_key,
     row_key,
     storage_account_name,
     table_name,
     entity,
-    partition_key,
     timeouts=null
   ):: std.prune(a={
+    partition_key: partition_key,
     row_key: row_key,
     storage_account_name: storage_account_name,
     table_name: table_name,
     entity: entity,
-    partition_key: partition_key,
     timeouts: timeouts,
   }),
-  withEntity(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_table_entity+: {
-        [resourceLabel]+: {
-          entity: value,
-        },
-      },
-    },
-  },
-  withPartitionKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_storage_table_entity+: {
-        [resourceLabel]+: {
-          partition_key: value,
-        },
-      },
-    },
-  },
   withRowKey(resourceLabel, value):: {
     resource+: {
       azurerm_storage_table_entity+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_storage_table_entity+: {
         [resourceLabel]+: {
           table_name: value,
+        },
+      },
+    },
+  },
+  withEntity(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_table_entity+: {
+        [resourceLabel]+: {
+          entity: value,
+        },
+      },
+    },
+  },
+  withPartitionKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_storage_table_entity+: {
+        [resourceLabel]+: {
+          partition_key: value,
         },
       },
     },

@@ -2,32 +2,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
-    name,
     min_tls_version=null,
+    name,
+    resource_group_name,
     timeouts=null
   ):: tf.withData(type='azurerm_storage_account', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    name=name,
     min_tls_version=min_tls_version,
+    name=name,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     min_tls_version=null,
     resource_group_name,
+    name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     min_tls_version: min_tls_version,
     resource_group_name: resource_group_name,
+    name: name,
     timeouts: timeouts,
   }),
-  withMinTlsVersion(dataSrcLabel, value):: {
+  withName(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account+: {
         [dataSrcLabel]+: {
-          min_tls_version: value,
+          name: value,
         },
       },
     },
@@ -41,11 +41,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(dataSrcLabel, value):: {
+  withMinTlsVersion(dataSrcLabel, value):: {
     data+: {
       azurerm_storage_account+: {
         [dataSrcLabel]+: {
-          name: value,
+          min_tls_version: value,
         },
       },
     },

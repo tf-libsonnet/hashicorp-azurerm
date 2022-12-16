@@ -17,20 +17,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    resource_group_name,
     certificate_content,
     iothub_name,
     is_verified=null,
     name,
-    resource_group_name,
     timeouts=null
   ):: std.prune(a={
+    resource_group_name: resource_group_name,
     certificate_content: certificate_content,
     iothub_name: iothub_name,
     is_verified: is_verified,
     name: name,
-    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withCertificateContent(resourceLabel, value):: {
+    resource+: {
+      azurerm_iothub_certificate+: {
+        [resourceLabel]+: {
+          certificate_content: value,
+        },
+      },
+    },
+  },
   withIothubName(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_certificate+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withCertificateContent(resourceLabel, value):: {
-    resource+: {
-      azurerm_iothub_certificate+: {
-        [resourceLabel]+: {
-          certificate_content: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_iothub_certificate+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

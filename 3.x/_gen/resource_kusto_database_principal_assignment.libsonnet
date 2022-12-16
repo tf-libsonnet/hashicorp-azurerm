@@ -2,61 +2,52 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    cluster_name,
     database_name,
+    name,
     principal_type,
     resource_group_name,
-    cluster_name,
-    name,
-    principal_id,
     role,
+    principal_id,
     tenant_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_database_principal_assignment', label=resourceLabel, attrs=self.newAttrs(
+    cluster_name=cluster_name,
     database_name=database_name,
+    name=name,
     principal_type=principal_type,
     resource_group_name=resource_group_name,
-    cluster_name=cluster_name,
-    name=name,
-    principal_id=principal_id,
     role=role,
+    principal_id=principal_id,
     tenant_id=tenant_id,
     timeouts=timeouts
   )),
   newAttrs(
-    principal_id,
-    role,
-    tenant_id,
     database_name,
+    principal_id,
+    tenant_id,
+    name,
     principal_type,
     resource_group_name,
+    role,
     cluster_name,
-    name,
     timeouts=null
   ):: std.prune(a={
-    principal_id: principal_id,
-    role: role,
-    tenant_id: tenant_id,
     database_name: database_name,
+    principal_id: principal_id,
+    tenant_id: tenant_id,
+    name: name,
     principal_type: principal_type,
     resource_group_name: resource_group_name,
+    role: role,
     cluster_name: cluster_name,
-    name: name,
     timeouts: timeouts,
   }),
-  withPrincipalType(resourceLabel, value):: {
+  withRole(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_database_principal_assignment+: {
         [resourceLabel]+: {
-          principal_type: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_database_principal_assignment+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
+          role: value,
         },
       },
     },
@@ -70,11 +61,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDatabaseName(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_database_principal_assignment+: {
+        [resourceLabel]+: {
+          database_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_database_principal_assignment+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withPrincipalType(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_database_principal_assignment+: {
+        [resourceLabel]+: {
+          principal_type: value,
         },
       },
     },
@@ -88,15 +97,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRole(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_database_principal_assignment+: {
-        [resourceLabel]+: {
-          role: value,
-        },
-      },
-    },
-  },
   withTenantId(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_database_principal_assignment+: {
@@ -106,11 +106,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDatabaseName(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_database_principal_assignment+: {
         [resourceLabel]+: {
-          database_name: value,
+          resource_group_name: value,
         },
       },
     },

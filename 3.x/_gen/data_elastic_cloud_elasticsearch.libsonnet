@@ -4,13 +4,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     resource_group_name,
     name,
-    logs=null,
-    timeouts=null
+    timeouts=null,
+    logs=null
   ):: tf.withData(type='azurerm_elastic_cloud_elasticsearch', label=dataSrcLabel, attrs=self.newAttrs(
     resource_group_name=resource_group_name,
     name=name,
-    logs=logs,
-    timeouts=timeouts
+    timeouts=timeouts,
+    logs=logs
   )),
   newAttrs(
     resource_group_name,
@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     logs: logs,
     timeouts: timeouts,
   }),
-  withName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [dataSrcLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(dataSrcLabel, value):: {
     data+: {
       azurerm_elastic_cloud_elasticsearch+: {
@@ -41,28 +32,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLogs(dataSrcLabel, value):: {
+  withName(dataSrcLabel, value):: {
     data+: {
       azurerm_elastic_cloud_elasticsearch+: {
         [dataSrcLabel]+: {
-          logs: value,
+          name: value,
         },
       },
     },
-  },
-  withLogsMixin(dataSrcLabel, value):: {
-    data+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [dataSrcLabel]+: {
-          logs+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  logs:: {
-    new(
-
-    ):: std.prune(a={}),
   },
   withTimeouts(dataSrcLabel, value):: {
     data+: {
@@ -88,5 +65,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       read: read,
     }),
+  },
+  withLogs(dataSrcLabel, value):: {
+    data+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [dataSrcLabel]+: {
+          logs: value,
+        },
+      },
+    },
+  },
+  withLogsMixin(dataSrcLabel, value):: {
+    data+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [dataSrcLabel]+: {
+          logs+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  logs:: {
+    new(
+
+    ):: std.prune(a={}),
   },
 }

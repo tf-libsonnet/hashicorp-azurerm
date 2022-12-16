@@ -2,78 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     resource_group_name,
     tags=null,
     description=null,
     kind=null,
     location,
-    name,
-    destinations=null,
-    timeouts=null,
     data_flow=null,
-    data_sources=null
+    data_sources=null,
+    destinations=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_monitor_data_collection_rule', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     tags=tags,
     description=description,
     kind=kind,
     location=location,
-    name=name,
-    destinations=destinations,
-    timeouts=timeouts,
     data_flow=data_flow,
-    data_sources=data_sources
+    data_sources=data_sources,
+    destinations=destinations,
+    timeouts=timeouts
   )),
   newAttrs(
-    kind=null,
     location,
     name,
     resource_group_name,
     tags=null,
     description=null,
+    kind=null,
+    timeouts=null,
     data_flow=null,
     data_sources=null,
-    destinations=null,
-    timeouts=null
+    destinations=null
   ):: std.prune(a={
-    kind: kind,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     description: description,
+    kind: kind,
+    timeouts: timeouts,
     data_flow: data_flow,
     data_sources: data_sources,
     destinations: destinations,
-    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_data_collection_rule+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_data_collection_rule+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_data_collection_rule+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
   withKind(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_data_collection_rule+: {
@@ -101,36 +74,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_data_collection_rule+: {
         [resourceLabel]+: {
-          timeouts: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_data_collection_rule+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          tags: value,
         },
       },
     },
   },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_data_collection_rule+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
   },
   withDataFlow(resourceLabel, value):: {
     resource+: {
@@ -189,56 +158,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       extension: extension,
       performance_counter: performance_counter,
     }),
-    performance_counter:: {
-      new(
-        sampling_frequency_in_seconds,
-        streams,
-        counter_specifiers,
-        name
-      ):: std.prune(a={
-        sampling_frequency_in_seconds: sampling_frequency_in_seconds,
-        streams: streams,
-        counter_specifiers: counter_specifiers,
-        name: name,
-      }),
-    },
-    syslog:: {
-      new(
-        streams=null,
-        facility_names,
-        log_levels,
-        name
-      ):: std.prune(a={
-        streams: streams,
-        facility_names: facility_names,
-        log_levels: log_levels,
-        name: name,
-      }),
-    },
-    windows_event_log:: {
-      new(
-        streams,
-        x_path_queries,
-        name
-      ):: std.prune(a={
-        streams: streams,
-        x_path_queries: x_path_queries,
-        name: name,
-      }),
-    },
     extension:: {
       new(
+        input_data_sources=null,
         name,
         streams,
         extension_json=null,
-        extension_name,
-        input_data_sources=null
+        extension_name
       ):: std.prune(a={
+        input_data_sources: input_data_sources,
         name: name,
         streams: streams,
         extension_json: extension_json,
         extension_name: extension_name,
-        input_data_sources: input_data_sources,
+      }),
+    },
+    performance_counter:: {
+      new(
+        counter_specifiers,
+        name,
+        sampling_frequency_in_seconds,
+        streams
+      ):: std.prune(a={
+        counter_specifiers: counter_specifiers,
+        name: name,
+        sampling_frequency_in_seconds: sampling_frequency_in_seconds,
+        streams: streams,
+      }),
+    },
+    syslog:: {
+      new(
+        facility_names,
+        log_levels,
+        name,
+        streams=null
+      ):: std.prune(a={
+        facility_names: facility_names,
+        log_levels: log_levels,
+        name: name,
+        streams: streams,
+      }),
+    },
+    windows_event_log:: {
+      new(
+        name,
+        streams,
+        x_path_queries
+      ):: std.prune(a={
+        name: name,
+        streams: streams,
+        x_path_queries: x_path_queries,
       }),
     },
   },
@@ -262,11 +231,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   destinations:: {
     new(
-      azure_monitor_metrics=null,
-      log_analytics=null
+      log_analytics=null,
+      azure_monitor_metrics=null
     ):: std.prune(a={
-      azure_monitor_metrics: azure_monitor_metrics,
       log_analytics: log_analytics,
+      azure_monitor_metrics: azure_monitor_metrics,
     }),
     azure_monitor_metrics:: {
       new(
@@ -284,5 +253,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         workspace_resource_id: workspace_resource_id,
       }),
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_data_collection_rule+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_data_collection_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
   },
 }

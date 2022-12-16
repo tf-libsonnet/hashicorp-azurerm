@@ -35,24 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts: timeouts,
     input: input,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_udf+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withScript(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_function_javascript_udf+: {
@@ -71,32 +53,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withInput(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_function_javascript_udf+: {
         [resourceLabel]+: {
-          input: value,
+          name: value,
         },
       },
     },
   },
-  withInputMixin(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_function_javascript_udf+: {
         [resourceLabel]+: {
-          input+: if std.isArray(v=value) then value else [value],
+          resource_group_name: value,
         },
       },
     },
-  },
-  input:: {
-    new(
-      type,
-      configuration_parameter=null
-    ):: std.prune(a={
-      type: type,
-      configuration_parameter: configuration_parameter,
-    }),
   },
   withOutput(resourceLabel, value):: {
     resource+: {
@@ -143,15 +116,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
+    }),
+  },
+  withInput(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          input: value,
+        },
+      },
+    },
+  },
+  withInputMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_udf+: {
+        [resourceLabel]+: {
+          input+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  input:: {
+    new(
+      configuration_parameter=null,
+      type
+    ):: std.prune(a={
+      configuration_parameter: configuration_parameter,
+      type: type,
     }),
   },
 }

@@ -2,69 +2,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    kubernetes_cluster_id,
     location,
     machine_learning_workspace_id,
     name,
     tags=null,
     cluster_purpose=null,
+    description=null,
+    kubernetes_cluster_id,
     identity=null,
     ssl=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_machine_learning_inference_cluster', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    kubernetes_cluster_id=kubernetes_cluster_id,
     location=location,
     machine_learning_workspace_id=machine_learning_workspace_id,
     name=name,
     tags=tags,
     cluster_purpose=cluster_purpose,
+    description=description,
+    kubernetes_cluster_id=kubernetes_cluster_id,
     identity=identity,
     ssl=ssl,
     timeouts=timeouts
   )),
   newAttrs(
+    description=null,
     kubernetes_cluster_id,
     location,
     machine_learning_workspace_id,
     name,
     tags=null,
     cluster_purpose=null,
-    description=null,
     identity=null,
     ssl=null,
     timeouts=null
   ):: std.prune(a={
+    description: description,
     kubernetes_cluster_id: kubernetes_cluster_id,
     location: location,
     machine_learning_workspace_id: machine_learning_workspace_id,
     name: name,
     tags: tags,
     cluster_purpose: cluster_purpose,
-    description: description,
     identity: identity,
     ssl: ssl,
     timeouts: timeouts,
   }),
-  withKubernetesClusterId(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          kubernetes_cluster_id: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withMachineLearningWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_machine_learning_inference_cluster+: {
@@ -109,6 +91,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withKubernetesClusterId(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          kubernetes_cluster_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_machine_learning_inference_cluster+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
   },
   withSsl(resourceLabel, value):: {
     resource+: {
@@ -172,33 +199,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          identity: value,
-        },
-      },
-    },
-  },
-  withIdentityMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_machine_learning_inference_cluster+: {
-        [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
     }),
   },
 }

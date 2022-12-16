@@ -35,15 +35,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     record: record,
     timeouts: timeouts,
   }),
-  withZoneName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_txt_record+: {
-        [resourceLabel]+: {
-          zone_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_txt_record+: {
@@ -80,6 +71,40 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withZoneName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_txt_record+: {
+        [resourceLabel]+: {
+          zone_name: value,
+        },
+      },
+    },
+  },
+  withRecord(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_txt_record+: {
+        [resourceLabel]+: {
+          record: value,
+        },
+      },
+    },
+  },
+  withRecordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_txt_record+: {
+        [resourceLabel]+: {
+          record+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  record:: {
+    new(
+      value
+    ):: std.prune(a={
+      value: value,
+    }),
+  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_txt_record+: {
@@ -109,31 +134,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       delete: delete,
       read: read,
       update: update,
-    }),
-  },
-  withRecord(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_txt_record+: {
-        [resourceLabel]+: {
-          record: value,
-        },
-      },
-    },
-  },
-  withRecordMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_txt_record+: {
-        [resourceLabel]+: {
-          record+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  record:: {
-    new(
-      value
-    ):: std.prune(a={
-      value: value,
     }),
   },
 }

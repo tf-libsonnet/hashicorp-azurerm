@@ -23,6 +23,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     thumbprint: thumbprint,
     timeouts: timeouts,
   }),
+  withThumbprint(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal_custom_domain+: {
+        [resourceLabel]+: {
+          thumbprint: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_api_portal_custom_domain+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_spring_cloud_api_portal_custom_domain+: {
         [resourceLabel]+: {
           spring_cloud_api_portal_id: value,
-        },
-      },
-    },
-  },
-  withThumbprint(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal_custom_domain+: {
-        [resourceLabel]+: {
-          thumbprint: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

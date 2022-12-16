@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
-  withEncryption(dataSrcLabel, value):: {
-    data+: {
-      azurerm_batch_account+: {
-        [dataSrcLabel]+: {
-          encryption: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_batch_account+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_batch_account+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withEncryption(dataSrcLabel, value):: {
+    data+: {
+      azurerm_batch_account+: {
+        [dataSrcLabel]+: {
+          encryption: value,
         },
       },
     },

@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    throughput=null,
     account_name,
     name,
     resource_group_name,
+    throughput=null,
     autoscale_settings=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_cassandra_keyspace', label=resourceLabel, attrs=self.newAttrs(
-    throughput=throughput,
     account_name=account_name,
     name=name,
     resource_group_name=resource_group_name,
+    throughput=throughput,
     autoscale_settings=autoscale_settings,
     timeouts=timeouts
   )),
   newAttrs(
-    account_name,
-    name,
     resource_group_name,
     throughput=null,
-    timeouts=null,
-    autoscale_settings=null
+    account_name,
+    name,
+    autoscale_settings=null,
+    timeouts=null
   ):: std.prune(a={
-    account_name: account_name,
-    name: name,
     resource_group_name: resource_group_name,
     throughput: throughput,
-    timeouts: timeouts,
+    account_name: account_name,
+    name: name,
     autoscale_settings: autoscale_settings,
+    timeouts: timeouts,
   }),
-  withAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_keyspace+: {
-        [resourceLabel]+: {
-          account_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_keyspace+: {
@@ -63,6 +54,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cosmosdb_cassandra_keyspace+: {
         [resourceLabel]+: {
           throughput: value,
+        },
+      },
+    },
+  },
+  withAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_keyspace+: {
+        [resourceLabel]+: {
+          account_name: value,
         },
       },
     },
@@ -112,15 +112,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

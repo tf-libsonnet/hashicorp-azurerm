@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    resource_group_name,
     name,
     namespace_name,
     partner_namespace_id,
+    resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_eventhub_namespace_disaster_recovery_config', label=resourceLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
     name=name,
     namespace_name=namespace_name,
     partner_namespace_id=partner_namespace_id,
+    resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     namespace_name,
     partner_namespace_id,
     resource_group_name,
-    name,
     timeouts=null
   ):: std.prune(a={
+    name: name,
     namespace_name: namespace_name,
     partner_namespace_id: partner_namespace_id,
     resource_group_name: resource_group_name,
-    name: name,
     timeouts: timeouts,
   }),
   withName(resourceLabel, value):: {
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

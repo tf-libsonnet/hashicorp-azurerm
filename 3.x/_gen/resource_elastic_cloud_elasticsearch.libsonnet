@@ -3,55 +3,46 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     tags=null,
-    name,
-    resource_group_name,
-    sku_name,
-    monitoring_enabled=null,
     elastic_cloud_email_address,
+    monitoring_enabled=null,
+    resource_group_name,
     location,
+    name,
+    sku_name,
     logs=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_elastic_cloud_elasticsearch', label=resourceLabel, attrs=self.newAttrs(
     tags=tags,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    monitoring_enabled=monitoring_enabled,
     elastic_cloud_email_address=elastic_cloud_email_address,
+    monitoring_enabled=monitoring_enabled,
+    resource_group_name=resource_group_name,
     location=location,
+    name=name,
+    sku_name=sku_name,
     logs=logs,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     sku_name,
+    tags=null,
     monitoring_enabled=null,
     elastic_cloud_email_address,
+    resource_group_name,
     location,
-    tags=null,
     name,
     logs=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     sku_name: sku_name,
+    tags: tags,
     monitoring_enabled: monitoring_enabled,
     elastic_cloud_email_address: elastic_cloud_email_address,
+    resource_group_name: resource_group_name,
     location: location,
-    tags: tags,
     name: name,
     logs: logs,
     timeouts: timeouts,
   }),
-  withMonitoringEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [resourceLabel]+: {
-          monitoring_enabled: value,
-        },
-      },
-    },
-  },
   withElasticCloudEmailAddress(resourceLabel, value):: {
     resource+: {
       azurerm_elastic_cloud_elasticsearch+: {
@@ -61,29 +52,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withLocation(resourceLabel, value):: {
+  withMonitoringEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_elastic_cloud_elasticsearch+: {
         [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_elastic_cloud_elasticsearch+: {
-        [resourceLabel]+: {
-          name: value,
+          monitoring_enabled: value,
         },
       },
     },
@@ -97,11 +70,38 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_elastic_cloud_elasticsearch+: {
         [resourceLabel]+: {
           sku_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_elastic_cloud_elasticsearch+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -126,25 +126,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   logs:: {
     new(
-      send_activity_logs=null,
       send_azuread_logs=null,
       send_subscription_logs=null,
+      send_activity_logs=null,
       filtering_tag=null
     ):: std.prune(a={
-      send_activity_logs: send_activity_logs,
       send_azuread_logs: send_azuread_logs,
       send_subscription_logs: send_subscription_logs,
+      send_activity_logs: send_activity_logs,
       filtering_tag: filtering_tag,
     }),
     filtering_tag:: {
       new(
+        value,
         action,
-        name,
-        value
+        name
       ):: std.prune(a={
+        value: value,
         action: action,
         name: name,
-        value: value,
       }),
     },
   },
@@ -168,15 +168,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

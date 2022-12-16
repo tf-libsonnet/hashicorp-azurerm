@@ -2,57 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    cluster_name,
     resource_group_name,
-    role,
-    name,
-    principal_id,
-    principal_type,
     tenant_id,
+    cluster_name,
+    name,
+    principal_type,
+    role,
+    principal_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_kusto_cluster_principal_assignment', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
     resource_group_name=resource_group_name,
-    role=role,
-    name=name,
-    principal_id=principal_id,
-    principal_type=principal_type,
     tenant_id=tenant_id,
+    cluster_name=cluster_name,
+    name=name,
+    principal_type=principal_type,
+    role=role,
+    principal_id=principal_id,
     timeouts=timeouts
   )),
   newAttrs(
-    principal_id,
-    principal_type,
-    tenant_id,
     cluster_name,
-    resource_group_name,
-    role,
     name,
+    principal_type,
+    role,
+    principal_id,
+    resource_group_name,
+    tenant_id,
     timeouts=null
   ):: std.prune(a={
-    principal_id: principal_id,
-    principal_type: principal_type,
-    tenant_id: tenant_id,
     cluster_name: cluster_name,
-    resource_group_name: resource_group_name,
-    role: role,
     name: name,
+    principal_type: principal_type,
+    role: role,
+    principal_id: principal_id,
+    resource_group_name: resource_group_name,
+    tenant_id: tenant_id,
     timeouts: timeouts,
   }),
-  withPrincipalType(resourceLabel, value):: {
+  withRole(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_principal_assignment+: {
         [resourceLabel]+: {
-          principal_type: value,
-        },
-      },
-    },
-  },
-  withTenantId(resourceLabel, value):: {
-    resource+: {
-      azurerm_kusto_cluster_principal_assignment+: {
-        [resourceLabel]+: {
-          tenant_id: value,
+          role: value,
         },
       },
     },
@@ -66,6 +57,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withPrincipalId(resourceLabel, value):: {
+    resource+: {
+      azurerm_kusto_cluster_principal_assignment+: {
+        [resourceLabel]+: {
+          principal_id: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_principal_assignment+: {
@@ -75,11 +75,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRole(resourceLabel, value):: {
+  withTenantId(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_principal_assignment+: {
         [resourceLabel]+: {
-          role: value,
+          tenant_id: value,
         },
       },
     },
@@ -93,11 +93,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPrincipalId(resourceLabel, value):: {
+  withPrincipalType(resourceLabel, value):: {
     resource+: {
       azurerm_kusto_cluster_principal_assignment+: {
         [resourceLabel]+: {
-          principal_id: value,
+          principal_type: value,
         },
       },
     },
@@ -122,15 +122,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

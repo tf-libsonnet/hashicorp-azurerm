@@ -2,60 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    version,
-    connection_policy=null,
-    tags=null,
-    administrator_login,
-    administrator_login_password,
     location,
-    name,
     resource_group_name,
-    timeouts=null,
+    name,
+    tags=null,
+    version,
+    administrator_login_password,
+    connection_policy=null,
+    administrator_login,
     identity=null,
-    threat_detection_policy=null
+    threat_detection_policy=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_sql_server', label=resourceLabel, attrs=self.newAttrs(
-    version=version,
-    connection_policy=connection_policy,
-    tags=tags,
-    administrator_login=administrator_login,
-    administrator_login_password=administrator_login_password,
     location=location,
-    name=name,
     resource_group_name=resource_group_name,
-    timeouts=timeouts,
+    name=name,
+    tags=tags,
+    version=version,
+    administrator_login_password=administrator_login_password,
+    connection_policy=connection_policy,
+    administrator_login=administrator_login,
     identity=identity,
-    threat_detection_policy=threat_detection_policy
+    threat_detection_policy=threat_detection_policy,
+    timeouts=timeouts
   )),
   newAttrs(
-    administrator_login_password,
-    location,
-    tags=null,
-    administrator_login,
-    name,
     resource_group_name,
+    tags=null,
     version,
+    administrator_login_password,
     connection_policy=null,
+    name,
+    administrator_login,
+    location,
+    threat_detection_policy=null,
     timeouts=null,
-    identity=null,
-    threat_detection_policy=null
+    identity=null
   ):: std.prune(a={
-    administrator_login_password: administrator_login_password,
-    location: location,
-    tags: tags,
-    administrator_login: administrator_login,
-    name: name,
     resource_group_name: resource_group_name,
+    tags: tags,
     version: version,
+    administrator_login_password: administrator_login_password,
     connection_policy: connection_policy,
+    name: name,
+    administrator_login: administrator_login,
+    location: location,
+    threat_detection_policy: threat_detection_policy,
     timeouts: timeouts,
     identity: identity,
-    threat_detection_policy: threat_detection_policy,
   }),
-  withVersion(resourceLabel, value):: {
+  withAdministratorLoginPassword(resourceLabel, value):: {
     resource+: {
       azurerm_sql_server+: {
         [resourceLabel]+: {
-          version: value,
+          administrator_login_password: value,
         },
       },
     },
@@ -69,20 +69,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAdministratorLoginPassword(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_sql_server+: {
         [resourceLabel]+: {
-          administrator_login_password: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_sql_server+: {
-        [resourceLabel]+: {
-          location: value,
+          name: value,
         },
       },
     },
@@ -96,6 +87,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_sql_server+: {
+        [resourceLabel]+: {
+          version: value,
+        },
+      },
+    },
+  },
   withAdministratorLogin(resourceLabel, value):: {
     resource+: {
       azurerm_sql_server+: {
@@ -105,11 +105,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_sql_server+: {
         [resourceLabel]+: {
-          name: value,
+          location: value,
         },
       },
     },
@@ -143,21 +143,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   threat_detection_policy:: {
     new(
+      state=null,
+      storage_account_access_key=null,
+      storage_endpoint=null,
       disabled_alerts=null,
       email_account_admins=null,
       email_addresses=null,
-      retention_days=null,
-      state=null,
-      storage_account_access_key=null,
-      storage_endpoint=null
+      retention_days=null
     ):: std.prune(a={
+      state: state,
+      storage_account_access_key: storage_account_access_key,
+      storage_endpoint: storage_endpoint,
       disabled_alerts: disabled_alerts,
       email_account_admins: email_account_admins,
       email_addresses: email_addresses,
       retention_days: retention_days,
-      state: state,
-      storage_account_access_key: storage_account_access_key,
-      storage_endpoint: storage_endpoint,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -180,15 +180,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
   withIdentity(resourceLabel, value):: {

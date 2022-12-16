@@ -39,24 +39,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts: timeouts,
     validation: validation,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_custom_provider+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_custom_provider+: {
@@ -75,36 +57,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_custom_provider+: {
         [resourceLabel]+: {
-          timeouts: value,
+          resource_group_name: value,
         },
       },
     },
   },
-  withTimeoutsMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_custom_provider+: {
         [resourceLabel]+: {
-          timeouts+: value,
+          tags: value,
         },
       },
     },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withValidation(resourceLabel, value):: {
     resource+: {
@@ -151,11 +120,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   action:: {
     new(
-      endpoint,
-      name
+      name,
+      endpoint
     ):: std.prune(a={
-      endpoint: endpoint,
       name: name,
+      endpoint: endpoint,
     }),
   },
   withResourceType(resourceLabel, value):: {
@@ -178,13 +147,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   resource_type:: {
     new(
+      routing_type=null,
       endpoint,
-      name,
-      routing_type=null
+      name
     ):: std.prune(a={
+      routing_type: routing_type,
       endpoint: endpoint,
       name: name,
-      routing_type: routing_type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_custom_provider+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

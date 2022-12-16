@@ -23,15 +23,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     configuration_store_id: configuration_store_id,
     timeouts: timeouts,
   }),
-  withConfigurationStoreId(dataSrcLabel, value):: {
-    data+: {
-      azurerm_app_configuration_key+: {
-        [dataSrcLabel]+: {
-          configuration_store_id: value,
-        },
-      },
-    },
-  },
   withKey(dataSrcLabel, value):: {
     data+: {
       azurerm_app_configuration_key+: {
@@ -46,6 +37,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_app_configuration_key+: {
         [dataSrcLabel]+: {
           label: value,
+        },
+      },
+    },
+  },
+  withConfigurationStoreId(dataSrcLabel, value):: {
+    data+: {
+      azurerm_app_configuration_key+: {
+        [dataSrcLabel]+: {
+          configuration_store_id: value,
         },
       },
     },

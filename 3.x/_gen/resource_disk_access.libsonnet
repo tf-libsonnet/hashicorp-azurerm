@@ -27,15 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_access+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_disk_access+: {
@@ -59,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_disk_access+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_access+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

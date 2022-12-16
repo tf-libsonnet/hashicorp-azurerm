@@ -8,9 +8,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     scopes,
     tags=null,
+    timeouts=null,
     action=null,
-    criteria=null,
-    timeouts=null
+    criteria=null
   ):: tf.withResource(type='azurerm_monitor_activity_log_alert', label=resourceLabel, attrs=self.newAttrs(
     description=description,
     enabled=enabled,
@@ -18,49 +18,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name=resource_group_name,
     scopes=scopes,
     tags=tags,
+    timeouts=timeouts,
     action=action,
-    criteria=criteria,
-    timeouts=timeouts
+    criteria=criteria
   )),
   newAttrs(
-    tags=null,
-    description=null,
     enabled=null,
     name,
     resource_group_name,
     scopes,
+    tags=null,
+    description=null,
+    action=null,
     criteria=null,
-    timeouts=null,
-    action=null
+    timeouts=null
   ):: std.prune(a={
-    tags: tags,
-    description: description,
     enabled: enabled,
     name: name,
     resource_group_name: resource_group_name,
     scopes: scopes,
+    tags: tags,
+    description: description,
+    action: action,
     criteria: criteria,
     timeouts: timeouts,
-    action: action,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withScopes(resourceLabel, value):: {
-    resource+: {
-      azurerm_monitor_activity_log_alert+: {
-        [resourceLabel]+: {
-          scopes: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_monitor_activity_log_alert+: {
@@ -93,6 +75,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_monitor_activity_log_alert+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withScopes(resourceLabel, value):: {
+    resource+: {
+      azurerm_monitor_activity_log_alert+: {
+        [resourceLabel]+: {
+          scopes: value,
         },
       },
     },
@@ -144,37 +144,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   criteria:: {
     new(
-      resource_provider=null,
-      caller=null,
-      recommendation_category=null,
-      recommendation_impact=null,
       recommendation_type=null,
-      sub_status=null,
-      level=null,
-      resource_id=null,
-      resource_type=null,
-      status=null,
-      category,
-      operation_name=null,
       resource_group=null,
-      service_health=null,
-      resource_health=null
+      category,
+      recommendation_impact=null,
+      resource_type=null,
+      sub_status=null,
+      operation_name=null,
+      recommendation_category=null,
+      resource_id=null,
+      caller=null,
+      resource_provider=null,
+      status=null,
+      level=null,
+      resource_health=null,
+      service_health=null
     ):: std.prune(a={
-      resource_provider: resource_provider,
-      caller: caller,
-      recommendation_category: recommendation_category,
-      recommendation_impact: recommendation_impact,
       recommendation_type: recommendation_type,
-      sub_status: sub_status,
-      level: level,
-      resource_id: resource_id,
-      resource_type: resource_type,
-      status: status,
-      category: category,
-      operation_name: operation_name,
       resource_group: resource_group,
-      service_health: service_health,
+      category: category,
+      recommendation_impact: recommendation_impact,
+      resource_type: resource_type,
+      sub_status: sub_status,
+      operation_name: operation_name,
+      recommendation_category: recommendation_category,
+      resource_id: resource_id,
+      caller: caller,
+      resource_provider: resource_provider,
+      status: status,
+      level: level,
       resource_health: resource_health,
+      service_health: service_health,
     }),
     service_health:: {
       new(
@@ -189,13 +189,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     resource_health:: {
       new(
-        current=null,
         previous=null,
-        reason=null
+        reason=null,
+        current=null
       ):: std.prune(a={
-        current: current,
         previous: previous,
         reason: reason,
+        current: current,
       }),
     },
   },
@@ -219,15 +219,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

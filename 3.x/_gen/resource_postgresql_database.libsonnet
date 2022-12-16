@@ -2,44 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    charset,
+    collation,
     name,
     resource_group_name,
     server_name,
-    charset,
-    collation,
     timeouts=null
   ):: tf.withResource(type='azurerm_postgresql_database', label=resourceLabel, attrs=self.newAttrs(
+    charset=charset,
+    collation=collation,
     name=name,
     resource_group_name=resource_group_name,
     server_name=server_name,
-    charset=charset,
-    collation=collation,
     timeouts=timeouts
   )),
   newAttrs(
+    charset,
+    collation,
     name,
     resource_group_name,
     server_name,
-    charset,
-    collation,
     timeouts=null
   ):: std.prune(a={
+    charset: charset,
+    collation: collation,
     name: name,
     resource_group_name: resource_group_name,
     server_name: server_name,
-    charset: charset,
-    collation: collation,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_postgresql_database+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_postgresql_database+: {
@@ -72,6 +63,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_postgresql_database+: {
         [resourceLabel]+: {
           collation: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_postgresql_database+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

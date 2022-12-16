@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    automation_account_name,
+    description=null,
     name,
     resource_group_name,
     type,
     values,
-    automation_account_name,
-    description=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_automation_connection', label=resourceLabel, attrs=self.newAttrs(
+    automation_account_name=automation_account_name,
+    description=description,
     name=name,
     resource_group_name=resource_group_name,
     type=type,
     values=values,
-    automation_account_name=automation_account_name,
-    description=description,
     timeouts=timeouts
   )),
   newAttrs(
+    values,
+    automation_account_name,
     description=null,
     name,
     resource_group_name,
     type,
-    values,
-    automation_account_name,
     timeouts=null
   ):: std.prune(a={
+    values: values,
+    automation_account_name: automation_account_name,
     description: description,
     name: name,
     resource_group_name: resource_group_name,
     type: type,
-    values: values,
-    automation_account_name: automation_account_name,
     timeouts: timeouts,
   }),
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_automation_connection+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
   withType(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection+: {
@@ -80,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_automation_connection+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_automation_connection+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

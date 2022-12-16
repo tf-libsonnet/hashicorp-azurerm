@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     customer_name: customer_name,
     timeouts: timeouts,
   }),
-  withCustomerName(dataSrcLabel, value):: {
-    data+: {
-      azurerm_billing_mpa_account_scope+: {
-        [dataSrcLabel]+: {
-          customer_name: value,
-        },
-      },
-    },
-  },
   withBillingAccountName(dataSrcLabel, value):: {
     data+: {
       azurerm_billing_mpa_account_scope+: {
         [dataSrcLabel]+: {
           billing_account_name: value,
+        },
+      },
+    },
+  },
+  withCustomerName(dataSrcLabel, value):: {
+    data+: {
+      azurerm_billing_mpa_account_scope+: {
+        [dataSrcLabel]+: {
+          customer_name: value,
         },
       },
     },

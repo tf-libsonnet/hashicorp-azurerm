@@ -21,51 +21,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    instance_count=null,
-    name,
     public_network_access_enabled=null,
     spring_cloud_service_id,
     gateway_ids=null,
     https_only_enabled=null,
+    instance_count=null,
+    name,
     sso=null,
     timeouts=null
   ):: std.prune(a={
-    instance_count: instance_count,
-    name: name,
     public_network_access_enabled: public_network_access_enabled,
     spring_cloud_service_id: spring_cloud_service_id,
     gateway_ids: gateway_ids,
     https_only_enabled: https_only_enabled,
+    instance_count: instance_count,
+    name: name,
     sso: sso,
     timeouts: timeouts,
   }),
-  withInstanceCount(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal+: {
-        [resourceLabel]+: {
-          instance_count: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPublicNetworkAccessEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_spring_cloud_api_portal+: {
-        [resourceLabel]+: {
-          public_network_access_enabled: value,
-        },
-      },
-    },
-  },
   withSpringCloudServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_api_portal+: {
@@ -93,6 +66,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withInstanceCount(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal+: {
+        [resourceLabel]+: {
+          instance_count: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withPublicNetworkAccessEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_spring_cloud_api_portal+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
+        },
+      },
+    },
+  },
   withSso(resourceLabel, value):: {
     resource+: {
       azurerm_spring_cloud_api_portal+: {
@@ -113,15 +113,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   sso:: {
     new(
-      client_secret=null,
       issuer_uri=null,
       scope=null,
-      client_id=null
+      client_id=null,
+      client_secret=null
     ):: std.prune(a={
-      client_secret: client_secret,
       issuer_uri: issuer_uri,
       scope: scope,
       client_id: client_id,
+      client_secret: client_secret,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -144,15 +144,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     peer_asn,
     peer_ip,
     route_server_id,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_route_server_bgp_connection', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     peer_asn=peer_asn,
     peer_ip=peer_ip,
     route_server_id=route_server_id,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    peer_asn,
     peer_ip,
     route_server_id,
+    name,
+    peer_asn,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    peer_asn: peer_asn,
     peer_ip: peer_ip,
     route_server_id: route_server_id,
+    name: name,
+    peer_asn: peer_asn,
     timeouts: timeouts,
   }),
   withRouteServerId(resourceLabel, value):: {

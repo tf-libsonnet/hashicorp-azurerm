@@ -2,17 +2,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
     name,
     private_dns_resolver_id,
     tags=null,
-    location,
     ip_configurations=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_resolver_inbound_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
     name=name,
     private_dns_resolver_id=private_dns_resolver_id,
     tags=tags,
-    location=location,
     ip_configurations=ip_configurations,
     timeouts=timeouts
   )),
@@ -31,24 +31,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ip_configurations: ip_configurations,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_inbound_endpoint+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_inbound_endpoint+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPrivateDnsResolverId(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_inbound_endpoint+: {
@@ -63,6 +45,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_private_dns_resolver_inbound_endpoint+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_inbound_endpoint+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_inbound_endpoint+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -87,11 +87,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ip_configurations:: {
     new(
-      private_ip_allocation_method=null,
-      subnet_id
+      subnet_id,
+      private_ip_allocation_method=null
     ):: std.prune(a={
-      private_ip_allocation_method: private_ip_allocation_method,
       subnet_id: subnet_id,
+      private_ip_allocation_method: private_ip_allocation_method,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -114,15 +114,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

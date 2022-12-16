@@ -2,36 +2,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    device_update_account_id,
+    diagnostic_enabled=null,
     iothub_id,
     name,
     tags=null,
-    device_update_account_id,
-    diagnostic_enabled=null,
     diagnostic_storage_account=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_device_update_instance', label=resourceLabel, attrs=self.newAttrs(
+    device_update_account_id=device_update_account_id,
+    diagnostic_enabled=diagnostic_enabled,
     iothub_id=iothub_id,
     name=name,
     tags=tags,
-    device_update_account_id=device_update_account_id,
-    diagnostic_enabled=diagnostic_enabled,
     diagnostic_storage_account=diagnostic_storage_account,
     timeouts=timeouts
   )),
   newAttrs(
+    iothub_id,
     name,
     tags=null,
     device_update_account_id,
     diagnostic_enabled=null,
-    iothub_id,
     diagnostic_storage_account=null,
     timeouts=null
   ):: std.prune(a={
+    iothub_id: iothub_id,
     name: name,
     tags: tags,
     device_update_account_id: device_update_account_id,
     diagnostic_enabled: diagnostic_enabled,
-    iothub_id: iothub_id,
     diagnostic_storage_account: diagnostic_storage_account,
     timeouts: timeouts,
   }),
@@ -125,15 +125,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

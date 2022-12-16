@@ -2,104 +2,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    management_group_id,
-    description=null,
-    metadata=null,
-    name,
-    parameters=null,
-    enforce=null,
     location=null,
     not_scopes=null,
     policy_definition_id,
+    description=null,
     display_name=null,
-    identity=null,
+    enforce=null,
+    name,
+    parameters=null,
+    management_group_id,
+    metadata=null,
     non_compliance_message=null,
-    timeouts=null
+    timeouts=null,
+    identity=null
   ):: tf.withResource(type='azurerm_management_group_policy_assignment', label=resourceLabel, attrs=self.newAttrs(
-    management_group_id=management_group_id,
-    description=description,
-    metadata=metadata,
-    name=name,
-    parameters=parameters,
-    enforce=enforce,
     location=location,
     not_scopes=not_scopes,
     policy_definition_id=policy_definition_id,
+    description=description,
     display_name=display_name,
-    identity=identity,
+    enforce=enforce,
+    name=name,
+    parameters=parameters,
+    management_group_id=management_group_id,
+    metadata=metadata,
     non_compliance_message=non_compliance_message,
-    timeouts=timeouts
+    timeouts=timeouts,
+    identity=identity
   )),
   newAttrs(
-    enforce=null,
     location=null,
+    display_name=null,
+    enforce=null,
+    description=null,
     metadata=null,
     name,
-    not_scopes=null,
-    display_name=null,
     management_group_id,
+    not_scopes=null,
     policy_definition_id,
     parameters=null,
-    description=null,
-    timeouts=null,
     identity=null,
-    non_compliance_message=null
+    non_compliance_message=null,
+    timeouts=null
   ):: std.prune(a={
-    enforce: enforce,
     location: location,
+    display_name: display_name,
+    enforce: enforce,
+    description: description,
     metadata: metadata,
     name: name,
-    not_scopes: not_scopes,
-    display_name: display_name,
     management_group_id: management_group_id,
+    not_scopes: not_scopes,
     policy_definition_id: policy_definition_id,
     parameters: parameters,
-    description: description,
-    timeouts: timeouts,
     identity: identity,
     non_compliance_message: non_compliance_message,
+    timeouts: timeouts,
   }),
-  withMetadata(resourceLabel, value):: {
+  withEnforce(resourceLabel, value):: {
     resource+: {
       azurerm_management_group_policy_assignment+: {
         [resourceLabel]+: {
-          metadata: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group_policy_assignment+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withNotScopes(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group_policy_assignment+: {
-        [resourceLabel]+: {
-          not_scopes: value,
-        },
-      },
-    },
-  },
-  withDisplayName(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group_policy_assignment+: {
-        [resourceLabel]+: {
-          display_name: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group_policy_assignment+: {
-        [resourceLabel]+: {
-          location: value,
+          enforce: value,
         },
       },
     },
@@ -113,6 +77,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group_policy_assignment+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withMetadata(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group_policy_assignment+: {
+        [resourceLabel]+: {
+          metadata: value,
+        },
+      },
+    },
+  },
   withPolicyDefinitionId(resourceLabel, value):: {
     resource+: {
       azurerm_management_group_policy_assignment+: {
@@ -122,11 +104,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withDescription(resourceLabel, value):: {
+  withDisplayName(resourceLabel, value):: {
     resource+: {
       azurerm_management_group_policy_assignment+: {
         [resourceLabel]+: {
-          description: value,
+          display_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group_policy_assignment+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -140,45 +131,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEnforce(resourceLabel, value):: {
+  withNotScopes(resourceLabel, value):: {
     resource+: {
       azurerm_management_group_policy_assignment+: {
         [resourceLabel]+: {
-          enforce: value,
+          not_scopes: value,
         },
       },
     },
   },
-  withTimeouts(resourceLabel, value):: {
+  withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_management_group_policy_assignment+: {
         [resourceLabel]+: {
-          timeouts: value,
+          location: value,
         },
       },
     },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_management_group_policy_assignment+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      update=null,
-      create=null,
-      delete=null,
-      read=null
-    ):: std.prune(a={
-      update: update,
-      create: create,
-      delete: delete,
-      read: read,
-    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -200,11 +169,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   identity:: {
     new(
-      identity_ids=null,
-      type
+      type,
+      identity_ids=null
     ):: std.prune(a={
-      identity_ids: identity_ids,
       type: type,
+      identity_ids: identity_ids,
     }),
   },
   withNonComplianceMessage(resourceLabel, value):: {
@@ -232,6 +201,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       content: content,
       policy_definition_reference_id: policy_definition_reference_id,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group_policy_assignment+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_management_group_policy_assignment+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

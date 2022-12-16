@@ -19,21 +19,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     network_rule_collection=network_rule_collection
   )),
   newAttrs(
+    priority,
     firewall_policy_id,
     name,
-    priority,
+    application_rule_collection=null,
     nat_rule_collection=null,
     network_rule_collection=null,
-    timeouts=null,
-    application_rule_collection=null
+    timeouts=null
   ):: std.prune(a={
+    priority: priority,
     firewall_policy_id: firewall_policy_id,
     name: name,
-    priority: priority,
+    application_rule_collection: application_rule_collection,
     nat_rule_collection: nat_rule_collection,
     network_rule_collection: network_rule_collection,
     timeouts: timeouts,
-    application_rule_collection: application_rule_collection,
   }),
   withPriority(resourceLabel, value):: {
     resource+: {
@@ -59,73 +59,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         [resourceLabel]+: {
           name: value,
         },
-      },
-    },
-  },
-  withApplicationRuleCollection(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_policy_rule_collection_group+: {
-        [resourceLabel]+: {
-          application_rule_collection: value,
-        },
-      },
-    },
-  },
-  withApplicationRuleCollectionMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_firewall_policy_rule_collection_group+: {
-        [resourceLabel]+: {
-          application_rule_collection+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  application_rule_collection:: {
-    new(
-      priority,
-      action,
-      name,
-      rule=null
-    ):: std.prune(a={
-      priority: priority,
-      action: action,
-      name: name,
-      rule: rule,
-    }),
-    rule:: {
-      new(
-        terminate_tls=null,
-        source_ip_groups=null,
-        destination_fqdns=null,
-        source_addresses=null,
-        destination_urls=null,
-        name,
-        web_categories=null,
-        description=null,
-        destination_addresses=null,
-        destination_fqdn_tags=null,
-        protocols=null
-      ):: std.prune(a={
-        terminate_tls: terminate_tls,
-        source_ip_groups: source_ip_groups,
-        destination_fqdns: destination_fqdns,
-        source_addresses: source_addresses,
-        destination_urls: destination_urls,
-        name: name,
-        web_categories: web_categories,
-        description: description,
-        destination_addresses: destination_addresses,
-        destination_fqdn_tags: destination_fqdn_tags,
-        protocols: protocols,
-      }),
-      protocols:: {
-        new(
-          type,
-          port
-        ):: std.prune(a={
-          type: type,
-          port: port,
-        }),
       },
     },
   },
@@ -161,25 +94,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     rule:: {
       new(
-        translated_port,
-        destination_ports=null,
-        protocols,
-        source_ip_groups=null,
-        translated_fqdn=null,
-        name,
-        translated_address=null,
         destination_address=null,
-        source_addresses=null
+        name,
+        source_addresses=null,
+        source_ip_groups=null,
+        translated_address=null,
+        destination_ports=null,
+        translated_fqdn=null,
+        translated_port,
+        protocols
       ):: std.prune(a={
-        translated_port: translated_port,
-        destination_ports: destination_ports,
-        protocols: protocols,
-        source_ip_groups: source_ip_groups,
-        translated_fqdn: translated_fqdn,
-        name: name,
-        translated_address: translated_address,
         destination_address: destination_address,
+        name: name,
         source_addresses: source_addresses,
+        source_ip_groups: source_ip_groups,
+        translated_address: translated_address,
+        destination_ports: destination_ports,
+        translated_fqdn: translated_fqdn,
+        translated_port: translated_port,
+        protocols: protocols,
       }),
     },
   },
@@ -255,15 +188,82 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
+  },
+  withApplicationRuleCollection(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_policy_rule_collection_group+: {
+        [resourceLabel]+: {
+          application_rule_collection: value,
+        },
+      },
+    },
+  },
+  withApplicationRuleCollectionMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_firewall_policy_rule_collection_group+: {
+        [resourceLabel]+: {
+          application_rule_collection+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  application_rule_collection:: {
+    new(
+      action,
+      name,
+      priority,
+      rule=null
+    ):: std.prune(a={
+      action: action,
+      name: name,
+      priority: priority,
+      rule: rule,
+    }),
+    rule:: {
+      new(
+        description=null,
+        destination_fqdn_tags=null,
+        destination_fqdns=null,
+        name,
+        source_addresses=null,
+        web_categories=null,
+        destination_urls=null,
+        source_ip_groups=null,
+        terminate_tls=null,
+        destination_addresses=null,
+        protocols=null
+      ):: std.prune(a={
+        description: description,
+        destination_fqdn_tags: destination_fqdn_tags,
+        destination_fqdns: destination_fqdns,
+        name: name,
+        source_addresses: source_addresses,
+        web_categories: web_categories,
+        destination_urls: destination_urls,
+        source_ip_groups: source_ip_groups,
+        terminate_tls: terminate_tls,
+        destination_addresses: destination_addresses,
+        protocols: protocols,
+      }),
+      protocols:: {
+        new(
+          port,
+          type
+        ):: std.prune(a={
+          port: port,
+          type: type,
+        }),
+      },
+    },
   },
 }

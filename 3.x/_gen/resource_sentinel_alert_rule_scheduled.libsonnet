@@ -2,108 +2,162 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    display_name,
     tactics=null,
-    techniques=null,
-    trigger_operator=null,
-    query_frequency=null,
-    trigger_threshold=null,
-    description=null,
     suppression_duration=null,
-    alert_rule_template_guid=null,
-    suppression_enabled=null,
-    alert_rule_template_version=null,
-    custom_details=null,
-    enabled=null,
-    name,
-    query,
-    log_analytics_workspace_id,
-    severity,
+    query_frequency=null,
     query_period=null,
-    event_grouping=null,
+    description=null,
+    log_analytics_workspace_id,
+    enabled=null,
+    query,
+    custom_details=null,
+    severity,
+    trigger_operator=null,
+    trigger_threshold=null,
+    suppression_enabled=null,
+    name,
+    alert_rule_template_guid=null,
+    display_name,
+    alert_rule_template_version=null,
+    techniques=null,
     incident_configuration=null,
     timeouts=null,
     alert_details_override=null,
-    entity_mapping=null
+    entity_mapping=null,
+    event_grouping=null
   ):: tf.withResource(type='azurerm_sentinel_alert_rule_scheduled', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
     tactics=tactics,
-    techniques=techniques,
-    trigger_operator=trigger_operator,
-    query_frequency=query_frequency,
-    trigger_threshold=trigger_threshold,
-    description=description,
     suppression_duration=suppression_duration,
-    alert_rule_template_guid=alert_rule_template_guid,
-    suppression_enabled=suppression_enabled,
-    alert_rule_template_version=alert_rule_template_version,
-    custom_details=custom_details,
-    enabled=enabled,
-    name=name,
-    query=query,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    severity=severity,
+    query_frequency=query_frequency,
     query_period=query_period,
-    event_grouping=event_grouping,
+    description=description,
+    log_analytics_workspace_id=log_analytics_workspace_id,
+    enabled=enabled,
+    query=query,
+    custom_details=custom_details,
+    severity=severity,
+    trigger_operator=trigger_operator,
+    trigger_threshold=trigger_threshold,
+    suppression_enabled=suppression_enabled,
+    name=name,
+    alert_rule_template_guid=alert_rule_template_guid,
+    display_name=display_name,
+    alert_rule_template_version=alert_rule_template_version,
+    techniques=techniques,
     incident_configuration=incident_configuration,
     timeouts=timeouts,
     alert_details_override=alert_details_override,
-    entity_mapping=entity_mapping
+    entity_mapping=entity_mapping,
+    event_grouping=event_grouping
   )),
   newAttrs(
-    display_name,
-    tactics=null,
-    severity,
-    query_period=null,
-    trigger_operator=null,
-    trigger_threshold=null,
-    log_analytics_workspace_id,
-    query_frequency=null,
-    suppression_enabled=null,
-    techniques=null,
+    enabled=null,
+    suppression_duration=null,
     alert_rule_template_version=null,
     custom_details=null,
-    enabled=null,
+    severity,
     alert_rule_template_guid=null,
+    display_name,
+    query_frequency=null,
+    techniques=null,
     description=null,
-    name,
+    log_analytics_workspace_id,
+    trigger_operator=null,
+    suppression_enabled=null,
+    trigger_threshold=null,
     query,
-    suppression_duration=null,
+    query_period=null,
+    name,
+    tactics=null,
+    alert_details_override=null,
+    entity_mapping=null,
     event_grouping=null,
     incident_configuration=null,
-    timeouts=null,
-    alert_details_override=null,
-    entity_mapping=null
+    timeouts=null
   ):: std.prune(a={
-    display_name: display_name,
-    tactics: tactics,
-    severity: severity,
-    query_period: query_period,
-    trigger_operator: trigger_operator,
-    trigger_threshold: trigger_threshold,
-    log_analytics_workspace_id: log_analytics_workspace_id,
-    query_frequency: query_frequency,
-    suppression_enabled: suppression_enabled,
-    techniques: techniques,
+    enabled: enabled,
+    suppression_duration: suppression_duration,
     alert_rule_template_version: alert_rule_template_version,
     custom_details: custom_details,
-    enabled: enabled,
+    severity: severity,
     alert_rule_template_guid: alert_rule_template_guid,
+    display_name: display_name,
+    query_frequency: query_frequency,
+    techniques: techniques,
     description: description,
-    name: name,
+    log_analytics_workspace_id: log_analytics_workspace_id,
+    trigger_operator: trigger_operator,
+    suppression_enabled: suppression_enabled,
+    trigger_threshold: trigger_threshold,
     query: query,
-    suppression_duration: suppression_duration,
+    query_period: query_period,
+    name: name,
+    tactics: tactics,
+    alert_details_override: alert_details_override,
+    entity_mapping: entity_mapping,
     event_grouping: event_grouping,
     incident_configuration: incident_configuration,
     timeouts: timeouts,
-    alert_details_override: alert_details_override,
-    entity_mapping: entity_mapping,
   }),
-  withCustomDetails(resourceLabel, value):: {
+  withAlertRuleTemplateGuid(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_scheduled+: {
         [resourceLabel]+: {
-          custom_details: value,
+          alert_rule_template_guid: value,
+        },
+      },
+    },
+  },
+  withAlertRuleTemplateVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          alert_rule_template_version: value,
+        },
+      },
+    },
+  },
+  withQuery(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          query: value,
+        },
+      },
+    },
+  },
+  withSeverity(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          severity: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withTriggerThreshold(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          trigger_threshold: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          description: value,
         },
       },
     },
@@ -117,11 +171,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withQueryPeriod(resourceLabel, value):: {
+  withSuppressionEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_scheduled+: {
         [resourceLabel]+: {
-          query_period: value,
+          suppression_enabled: value,
         },
       },
     },
@@ -131,6 +185,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_sentinel_alert_rule_scheduled+: {
         [resourceLabel]+: {
           display_name: value,
+        },
+      },
+    },
+  },
+  withQueryPeriod(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          query_period: value,
+        },
+      },
+    },
+  },
+  withTactics(resourceLabel, value):: {
+    resource+: {
+      azurerm_sentinel_alert_rule_scheduled+: {
+        [resourceLabel]+: {
+          tactics: value,
         },
       },
     },
@@ -153,15 +225,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTriggerThreshold(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          trigger_threshold: value,
-        },
-      },
-    },
-  },
   withTechniques(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_scheduled+: {
@@ -171,65 +234,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAlertRuleTemplateVersion(resourceLabel, value):: {
+  withCustomDetails(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_scheduled+: {
         [resourceLabel]+: {
-          alert_rule_template_version: value,
-        },
-      },
-    },
-  },
-  withSuppressionEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          suppression_enabled: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withQuery(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          query: value,
-        },
-      },
-    },
-  },
-  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          log_analytics_workspace_id: value,
-        },
-      },
-    },
-  },
-  withSeverity(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          severity: value,
+          custom_details: value,
         },
       },
     },
@@ -243,20 +252,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withAlertRuleTemplateGuid(resourceLabel, value):: {
+  withLogAnalyticsWorkspaceId(resourceLabel, value):: {
     resource+: {
       azurerm_sentinel_alert_rule_scheduled+: {
         [resourceLabel]+: {
-          alert_rule_template_guid: value,
-        },
-      },
-    },
-  },
-  withTactics(resourceLabel, value):: {
-    resource+: {
-      azurerm_sentinel_alert_rule_scheduled+: {
-        [resourceLabel]+: {
-          tactics: value,
+          log_analytics_workspace_id: value,
         },
       },
     },
@@ -289,11 +289,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     field_mapping:: {
       new(
-        column_name,
-        identifier
+        identifier,
+        column_name
       ):: std.prune(a={
-        column_name: column_name,
         identifier: identifier,
+        column_name: column_name,
       }),
     },
   },
@@ -350,21 +350,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     }),
     grouping:: {
       new(
+        entity_matching_method=null,
         group_by_alert_details=null,
         group_by_custom_details=null,
         group_by_entities=null,
         lookback_duration=null,
         reopen_closed_incidents=null,
-        enabled=null,
-        entity_matching_method=null
+        enabled=null
       ):: std.prune(a={
+        entity_matching_method: entity_matching_method,
         group_by_alert_details: group_by_alert_details,
         group_by_custom_details: group_by_custom_details,
         group_by_entities: group_by_entities,
         lookback_duration: lookback_duration,
         reopen_closed_incidents: reopen_closed_incidents,
         enabled: enabled,
-        entity_matching_method: entity_matching_method,
       }),
     },
   },
@@ -419,15 +419,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   alert_details_override:: {
     new(
+      severity_column_name=null,
       tactics_column_name=null,
       description_format=null,
-      display_name_format=null,
-      severity_column_name=null
+      display_name_format=null
     ):: std.prune(a={
+      severity_column_name: severity_column_name,
       tactics_column_name: tactics_column_name,
       description_format: description_format,
       display_name_format: display_name_format,
-      severity_column_name: severity_column_name,
     }),
   },
 }

@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    event_log_name,
-    event_types,
     name,
     resource_group_name,
     workspace_name,
+    event_log_name,
+    event_types,
     timeouts=null
   ):: tf.withResource(type='azurerm_log_analytics_datasource_windows_event', label=resourceLabel, attrs=self.newAttrs(
-    event_log_name=event_log_name,
-    event_types=event_types,
     name=name,
     resource_group_name=resource_group_name,
     workspace_name=workspace_name,
+    event_log_name=event_log_name,
+    event_types=event_types,
     timeouts=timeouts
   )),
   newAttrs(
-    workspace_name,
-    event_log_name,
     event_types,
     name,
     resource_group_name,
+    workspace_name,
+    event_log_name,
     timeouts=null
   ):: std.prune(a={
-    workspace_name: workspace_name,
-    event_log_name: event_log_name,
     event_types: event_types,
     name: name,
     resource_group_name: resource_group_name,
+    workspace_name: workspace_name,
+    event_log_name: event_log_name,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_log_analytics_datasource_windows_event+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_event+: {
@@ -67,15 +76,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_log_analytics_datasource_windows_event+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_log_analytics_datasource_windows_event+: {
@@ -96,15 +96,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
 }

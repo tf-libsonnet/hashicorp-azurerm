@@ -4,43 +4,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     default_action,
     signalr_service_id,
-    private_endpoint=null,
     public_network=null,
-    timeouts=null
+    timeouts=null,
+    private_endpoint=null
   ):: tf.withResource(type='azurerm_signalr_service_network_acl', label=resourceLabel, attrs=self.newAttrs(
     default_action=default_action,
     signalr_service_id=signalr_service_id,
-    private_endpoint=private_endpoint,
     public_network=public_network,
-    timeouts=timeouts
+    timeouts=timeouts,
+    private_endpoint=private_endpoint
   )),
   newAttrs(
     signalr_service_id,
     default_action,
+    timeouts=null,
     private_endpoint=null,
-    public_network=null,
-    timeouts=null
+    public_network=null
   ):: std.prune(a={
     signalr_service_id: signalr_service_id,
     default_action: default_action,
+    timeouts: timeouts,
     private_endpoint: private_endpoint,
     public_network: public_network,
-    timeouts: timeouts,
   }),
-  withDefaultAction(resourceLabel, value):: {
-    resource+: {
-      azurerm_signalr_service_network_acl+: {
-        [resourceLabel]+: {
-          default_action: value,
-        },
-      },
-    },
-  },
   withSignalrServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_signalr_service_network_acl+: {
         [resourceLabel]+: {
           signalr_service_id: value,
+        },
+      },
+    },
+  },
+  withDefaultAction(resourceLabel, value):: {
+    resource+: {
+      azurerm_signalr_service_network_acl+: {
+        [resourceLabel]+: {
+          default_action: value,
         },
       },
     },
@@ -119,15 +119,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

@@ -3,99 +3,54 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     parameters=null,
-    tags=null,
-    name,
-    parameter_values=null,
-    application_definition_id=null,
-    kind,
     managed_resource_group_name,
-    resource_group_name,
+    tags=null,
+    application_definition_id=null,
     location,
-    timeouts=null,
-    plan=null
+    parameter_values=null,
+    name,
+    resource_group_name,
+    kind,
+    plan=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_managed_application', label=resourceLabel, attrs=self.newAttrs(
     parameters=parameters,
-    tags=tags,
-    name=name,
-    parameter_values=parameter_values,
-    application_definition_id=application_definition_id,
-    kind=kind,
     managed_resource_group_name=managed_resource_group_name,
-    resource_group_name=resource_group_name,
+    tags=tags,
+    application_definition_id=application_definition_id,
     location=location,
-    timeouts=timeouts,
-    plan=plan
+    parameter_values=parameter_values,
+    name=name,
+    resource_group_name=resource_group_name,
+    kind=kind,
+    plan=plan,
+    timeouts=timeouts
   )),
   newAttrs(
-    tags=null,
+    parameters=null,
+    name,
+    application_definition_id=null,
     kind,
     location,
-    name,
-    parameters=null,
-    resource_group_name,
-    application_definition_id=null,
-    managed_resource_group_name,
     parameter_values=null,
+    managed_resource_group_name,
+    resource_group_name,
+    tags=null,
     plan=null,
     timeouts=null
   ):: std.prune(a={
-    tags: tags,
+    parameters: parameters,
+    name: name,
+    application_definition_id: application_definition_id,
     kind: kind,
     location: location,
-    name: name,
-    parameters: parameters,
-    resource_group_name: resource_group_name,
-    application_definition_id: application_definition_id,
-    managed_resource_group_name: managed_resource_group_name,
     parameter_values: parameter_values,
+    managed_resource_group_name: managed_resource_group_name,
+    resource_group_name: resource_group_name,
+    tags: tags,
     plan: plan,
     timeouts: timeouts,
   }),
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withParameterValues(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application+: {
-        [resourceLabel]+: {
-          parameter_values: value,
-        },
-      },
-    },
-  },
-  withApplicationDefinitionId(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application+: {
-        [resourceLabel]+: {
-          application_definition_id: value,
-        },
-      },
-    },
-  },
-  withKind(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application+: {
-        [resourceLabel]+: {
-          kind: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_managed_application+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
   withManagedResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application+: {
@@ -105,11 +60,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application+: {
         [resourceLabel]+: {
-          tags: value,
+          parameters: value,
         },
       },
     },
@@ -123,11 +78,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withKind(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application+: {
+        [resourceLabel]+: {
+          kind: value,
+        },
+      },
+    },
+  },
+  withApplicationDefinitionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application+: {
+        [resourceLabel]+: {
+          application_definition_id: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withParameterValues(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application+: {
+        [resourceLabel]+: {
+          parameter_values: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_managed_application+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_managed_application+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },
@@ -185,15 +185,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

@@ -7,12 +7,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null
   ):: tf.withResource(type='azurerm_management_group_subscription_association', label=resourceLabel, attrs=self.newAttrs(management_group_id=management_group_id, subscription_id=subscription_id, timeouts=timeouts)),
   newAttrs(
-    subscription_id,
     management_group_id,
+    subscription_id,
     timeouts=null
   ):: std.prune(a={
-    subscription_id: subscription_id,
     management_group_id: management_group_id,
+    subscription_id: subscription_id,
     timeouts: timeouts,
   }),
   withSubscriptionId(resourceLabel, value):: {

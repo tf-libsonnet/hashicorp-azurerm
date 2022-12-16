@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    kusto_database_id,
     name,
     share_id,
-    kusto_database_id,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_share_dataset_kusto_database', label=resourceLabel, attrs=self.newAttrs(
+    kusto_database_id=kusto_database_id,
     name=name,
     share_id=share_id,
-    kusto_database_id=kusto_database_id,
     timeouts=timeouts
   )),
   newAttrs(
-    share_id,
     kusto_database_id,
     name,
+    share_id,
     timeouts=null
   ):: std.prune(a={
-    share_id: share_id,
     kusto_database_id: kusto_database_id,
     name: name,
+    share_id: share_id,
     timeouts: timeouts,
   }),
   withKustoDatabaseId(resourceLabel, value):: {

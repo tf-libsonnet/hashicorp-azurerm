@@ -2,87 +2,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_account_key,
-    partition_key,
-    storage_account_name,
-    columns_to_remove=null,
-    name,
     stream_analytics_job_name,
     resource_group_name,
-    row_key,
-    batch_size,
+    name,
     table,
+    batch_size,
+    columns_to_remove=null,
+    partition_key,
+    row_key,
+    storage_account_key,
+    storage_account_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_stream_analytics_output_table', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_key=storage_account_key,
-    partition_key=partition_key,
-    storage_account_name=storage_account_name,
-    columns_to_remove=columns_to_remove,
-    name=name,
     stream_analytics_job_name=stream_analytics_job_name,
     resource_group_name=resource_group_name,
-    row_key=row_key,
-    batch_size=batch_size,
+    name=name,
     table=table,
+    batch_size=batch_size,
+    columns_to_remove=columns_to_remove,
+    partition_key=partition_key,
+    row_key=row_key,
+    storage_account_key=storage_account_key,
+    storage_account_name=storage_account_name,
     timeouts=timeouts
   )),
   newAttrs(
-    storage_account_name,
     batch_size,
-    name,
-    partition_key,
-    row_key,
-    stream_analytics_job_name,
-    resource_group_name,
     columns_to_remove=null,
+    partition_key,
+    resource_group_name,
+    row_key,
+    storage_account_name,
+    stream_analytics_job_name,
+    name,
     table,
     storage_account_key,
     timeouts=null
   ):: std.prune(a={
-    storage_account_name: storage_account_name,
     batch_size: batch_size,
-    name: name,
-    partition_key: partition_key,
-    row_key: row_key,
-    stream_analytics_job_name: stream_analytics_job_name,
-    resource_group_name: resource_group_name,
     columns_to_remove: columns_to_remove,
+    partition_key: partition_key,
+    resource_group_name: resource_group_name,
+    row_key: row_key,
+    storage_account_name: storage_account_name,
+    stream_analytics_job_name: stream_analytics_job_name,
+    name: name,
     table: table,
     storage_account_key: storage_account_key,
     timeouts: timeouts,
   }),
-  withPartitionKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_table+: {
-        [resourceLabel]+: {
-          partition_key: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_table+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withRowKey(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_table+: {
         [resourceLabel]+: {
           row_key: value,
-        },
-      },
-    },
-  },
-  withStorageAccountName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_table+: {
-        [resourceLabel]+: {
-          storage_account_name: value,
         },
       },
     },
@@ -105,24 +78,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTable(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_table+: {
-        [resourceLabel]+: {
-          table: value,
-        },
-      },
-    },
-  },
-  withStreamAnalyticsJobName(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_output_table+: {
-        [resourceLabel]+: {
-          stream_analytics_job_name: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_output_table+: {
@@ -137,6 +92,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_output_table+: {
         [resourceLabel]+: {
           storage_account_key: value,
+        },
+      },
+    },
+  },
+  withStorageAccountName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_table+: {
+        [resourceLabel]+: {
+          storage_account_name: value,
+        },
+      },
+    },
+  },
+  withStreamAnalyticsJobName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_table+: {
+        [resourceLabel]+: {
+          stream_analytics_job_name: value,
+        },
+      },
+    },
+  },
+  withPartitionKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_table+: {
+        [resourceLabel]+: {
+          partition_key: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_table+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTable(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_output_table+: {
+        [resourceLabel]+: {
+          table: value,
         },
       },
     },
@@ -161,15 +161,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      delete=null,
       read=null,
       update=null,
-      create=null,
-      delete=null
+      create=null
     ):: std.prune(a={
+      delete: delete,
       read: read,
       update: update,
       create: create,
-      delete: delete,
     }),
   },
 }

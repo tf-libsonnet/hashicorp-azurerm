@@ -9,9 +9,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     zones=null,
     location,
-    timeouts=null,
     management_network_profile=null,
-    network_profile=null
+    network_profile=null,
+    timeouts=null
   ):: tf.withResource(type='azurerm_dedicated_hardware_security_module', label=resourceLabel, attrs=self.newAttrs(
     name=name,
     resource_group_name=resource_group_name,
@@ -20,9 +20,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=tags,
     zones=zones,
     location=location,
-    timeouts=timeouts,
     management_network_profile=management_network_profile,
-    network_profile=network_profile
+    network_profile=network_profile,
+    timeouts=timeouts
   )),
   newAttrs(
     name,
@@ -32,9 +32,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     zones=null,
     location,
-    timeouts=null,
     management_network_profile=null,
-    network_profile=null
+    network_profile=null,
+    timeouts=null
   ):: std.prune(a={
     name: name,
     resource_group_name: resource_group_name,
@@ -43,28 +43,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags: tags,
     zones: zones,
     location: location,
-    timeouts: timeouts,
     management_network_profile: management_network_profile,
     network_profile: network_profile,
+    timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dedicated_hardware_security_module+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withSkuName(resourceLabel, value):: {
-    resource+: {
-      azurerm_dedicated_hardware_security_module+: {
-        [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
   withStampId(resourceLabel, value):: {
     resource+: {
       azurerm_dedicated_hardware_security_module+: {
@@ -109,6 +91,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dedicated_hardware_security_module+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withSkuName(resourceLabel, value):: {
+    resource+: {
+      azurerm_dedicated_hardware_security_module+: {
+        [resourceLabel]+: {
+          sku_name: value,
+        },
+      },
+    },
+  },
+  withManagementNetworkProfile(resourceLabel, value):: {
+    resource+: {
+      azurerm_dedicated_hardware_security_module+: {
+        [resourceLabel]+: {
+          management_network_profile: value,
+        },
+      },
+    },
+  },
+  withManagementNetworkProfileMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_dedicated_hardware_security_module+: {
+        [resourceLabel]+: {
+          management_network_profile+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  management_network_profile:: {
+    new(
+      network_interface_private_ip_addresses,
+      subnet_id
+    ):: std.prune(a={
+      network_interface_private_ip_addresses: network_interface_private_ip_addresses,
+      subnet_id: subnet_id,
+    }),
   },
   withNetworkProfile(resourceLabel, value):: {
     resource+: {
@@ -157,42 +184,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
-    }),
-  },
-  withManagementNetworkProfile(resourceLabel, value):: {
-    resource+: {
-      azurerm_dedicated_hardware_security_module+: {
-        [resourceLabel]+: {
-          management_network_profile: value,
-        },
-      },
-    },
-  },
-  withManagementNetworkProfileMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_dedicated_hardware_security_module+: {
-        [resourceLabel]+: {
-          management_network_profile+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  management_network_profile:: {
-    new(
-      network_interface_private_ip_addresses,
-      subnet_id
-    ):: std.prune(a={
-      network_interface_private_ip_addresses: network_interface_private_ip_addresses,
-      subnet_id: subnet_id,
     }),
   },
 }

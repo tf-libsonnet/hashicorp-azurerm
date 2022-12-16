@@ -2,60 +2,105 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
+    routing_preference_internet_enabled=null,
+    tags=null,
+    vpn_server_configuration_id,
     virtual_hub_id,
-    resource_group_name,
     dns_servers=null,
     name,
-    routing_preference_internet_enabled=null,
-    vpn_server_configuration_id,
+    resource_group_name,
     scale_unit,
-    tags=null,
-    location,
     connection_configuration=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_point_to_site_vpn_gateway', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
+    routing_preference_internet_enabled=routing_preference_internet_enabled,
+    tags=tags,
+    vpn_server_configuration_id=vpn_server_configuration_id,
     virtual_hub_id=virtual_hub_id,
-    resource_group_name=resource_group_name,
     dns_servers=dns_servers,
     name=name,
-    routing_preference_internet_enabled=routing_preference_internet_enabled,
-    vpn_server_configuration_id=vpn_server_configuration_id,
+    resource_group_name=resource_group_name,
     scale_unit=scale_unit,
-    tags=tags,
-    location=location,
     connection_configuration=connection_configuration,
     timeouts=timeouts
   )),
   newAttrs(
-    dns_servers=null,
-    name,
+    routing_preference_internet_enabled=null,
     scale_unit,
     tags=null,
-    vpn_server_configuration_id,
-    location,
-    resource_group_name,
-    routing_preference_internet_enabled=null,
     virtual_hub_id,
-    connection_configuration=null,
-    timeouts=null
+    location,
+    name,
+    resource_group_name,
+    vpn_server_configuration_id,
+    dns_servers=null,
+    timeouts=null,
+    connection_configuration=null
   ):: std.prune(a={
-    dns_servers: dns_servers,
-    name: name,
+    routing_preference_internet_enabled: routing_preference_internet_enabled,
     scale_unit: scale_unit,
     tags: tags,
-    vpn_server_configuration_id: vpn_server_configuration_id,
-    location: location,
-    resource_group_name: resource_group_name,
-    routing_preference_internet_enabled: routing_preference_internet_enabled,
     virtual_hub_id: virtual_hub_id,
-    connection_configuration: connection_configuration,
+    location: location,
+    name: name,
+    resource_group_name: resource_group_name,
+    vpn_server_configuration_id: vpn_server_configuration_id,
+    dns_servers: dns_servers,
     timeouts: timeouts,
+    connection_configuration: connection_configuration,
   }),
+  withVpnServerConfigurationId(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          vpn_server_configuration_id: value,
+        },
+      },
+    },
+  },
+  withDnsServers(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          dns_servers: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withRoutingPreferenceInternetEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          routing_preference_internet_enabled: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_point_to_site_vpn_gateway+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_point_to_site_vpn_gateway+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -78,56 +123,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withRoutingPreferenceInternetEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          routing_preference_internet_enabled: value,
-        },
-      },
-    },
-  },
   withVirtualHubId(resourceLabel, value):: {
     resource+: {
       azurerm_point_to_site_vpn_gateway+: {
         [resourceLabel]+: {
           virtual_hub_id: value,
-        },
-      },
-    },
-  },
-  withVpnServerConfigurationId(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          vpn_server_configuration_id: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withDnsServers(resourceLabel, value):: {
-    resource+: {
-      azurerm_point_to_site_vpn_gateway+: {
-        [resourceLabel]+: {
-          dns_servers: value,
         },
       },
     },
@@ -162,34 +162,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       route: route,
       vpn_client_address_pool: vpn_client_address_pool,
     }),
-    route:: {
-      new(
-        associated_route_table_id,
-        inbound_route_map_id=null,
-        outbound_route_map_id=null,
-        propagated_route_table=null
-      ):: std.prune(a={
-        associated_route_table_id: associated_route_table_id,
-        inbound_route_map_id: inbound_route_map_id,
-        outbound_route_map_id: outbound_route_map_id,
-        propagated_route_table: propagated_route_table,
-      }),
-      propagated_route_table:: {
-        new(
-          ids,
-          labels=null
-        ):: std.prune(a={
-          ids: ids,
-          labels: labels,
-        }),
-      },
-    },
     vpn_client_address_pool:: {
       new(
         address_prefixes
       ):: std.prune(a={
         address_prefixes: address_prefixes,
       }),
+    },
+    route:: {
+      new(
+        inbound_route_map_id=null,
+        outbound_route_map_id=null,
+        associated_route_table_id,
+        propagated_route_table=null
+      ):: std.prune(a={
+        inbound_route_map_id: inbound_route_map_id,
+        outbound_route_map_id: outbound_route_map_id,
+        associated_route_table_id: associated_route_table_id,
+        propagated_route_table: propagated_route_table,
+      }),
+      propagated_route_table:: {
+        new(
+          labels=null,
+          ids
+        ):: std.prune(a={
+          labels: labels,
+          ids: ids,
+        }),
+      },
     },
   },
   withTimeouts(resourceLabel, value):: {

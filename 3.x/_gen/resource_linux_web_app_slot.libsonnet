@@ -2,199 +2,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    key_vault_reference_identity_id=null,
-    tags=null,
-    client_affinity_enabled=null,
     name,
-    client_certificate_enabled=null,
-    virtual_network_subnet_id=null,
+    tags=null,
     https_only=null,
-    zip_deploy_file=null,
     app_service_id,
-    client_certificate_exclusion_paths=null,
-    enabled=null,
+    key_vault_reference_identity_id=null,
     app_settings=null,
     client_certificate_mode=null,
-    backup=null,
-    connection_string=null,
-    identity=null,
+    zip_deploy_file=null,
+    virtual_network_subnet_id=null,
+    client_affinity_enabled=null,
+    client_certificate_enabled=null,
+    client_certificate_exclusion_paths=null,
+    enabled=null,
     logs=null,
     site_config=null,
     storage_account=null,
     timeouts=null,
-    auth_settings=null
+    auth_settings=null,
+    backup=null,
+    connection_string=null,
+    identity=null
   ):: tf.withResource(type='azurerm_linux_web_app_slot', label=resourceLabel, attrs=self.newAttrs(
-    key_vault_reference_identity_id=key_vault_reference_identity_id,
-    tags=tags,
-    client_affinity_enabled=client_affinity_enabled,
     name=name,
-    client_certificate_enabled=client_certificate_enabled,
-    virtual_network_subnet_id=virtual_network_subnet_id,
+    tags=tags,
     https_only=https_only,
-    zip_deploy_file=zip_deploy_file,
     app_service_id=app_service_id,
-    client_certificate_exclusion_paths=client_certificate_exclusion_paths,
-    enabled=enabled,
+    key_vault_reference_identity_id=key_vault_reference_identity_id,
     app_settings=app_settings,
     client_certificate_mode=client_certificate_mode,
-    backup=backup,
-    connection_string=connection_string,
-    identity=identity,
+    zip_deploy_file=zip_deploy_file,
+    virtual_network_subnet_id=virtual_network_subnet_id,
+    client_affinity_enabled=client_affinity_enabled,
+    client_certificate_enabled=client_certificate_enabled,
+    client_certificate_exclusion_paths=client_certificate_exclusion_paths,
+    enabled=enabled,
     logs=logs,
     site_config=site_config,
     storage_account=storage_account,
     timeouts=timeouts,
-    auth_settings=auth_settings
+    auth_settings=auth_settings,
+    backup=backup,
+    connection_string=connection_string,
+    identity=identity
   )),
   newAttrs(
-    virtual_network_subnet_id=null,
     https_only=null,
     app_service_id,
-    app_settings=null,
-    enabled=null,
-    name,
     client_certificate_enabled=null,
     key_vault_reference_identity_id=null,
+    app_settings=null,
     client_certificate_mode=null,
-    tags=null,
-    client_affinity_enabled=null,
-    client_certificate_exclusion_paths=null,
+    name,
+    enabled=null,
     zip_deploy_file=null,
+    virtual_network_subnet_id=null,
+    client_affinity_enabled=null,
+    tags=null,
+    client_certificate_exclusion_paths=null,
+    storage_account=null,
+    timeouts=null,
+    auth_settings=null,
     backup=null,
     connection_string=null,
     identity=null,
     logs=null,
-    site_config=null,
-    storage_account=null,
-    timeouts=null,
-    auth_settings=null
+    site_config=null
   ):: std.prune(a={
-    virtual_network_subnet_id: virtual_network_subnet_id,
     https_only: https_only,
     app_service_id: app_service_id,
-    app_settings: app_settings,
-    enabled: enabled,
-    name: name,
     client_certificate_enabled: client_certificate_enabled,
     key_vault_reference_identity_id: key_vault_reference_identity_id,
+    app_settings: app_settings,
     client_certificate_mode: client_certificate_mode,
-    tags: tags,
-    client_affinity_enabled: client_affinity_enabled,
-    client_certificate_exclusion_paths: client_certificate_exclusion_paths,
+    name: name,
+    enabled: enabled,
     zip_deploy_file: zip_deploy_file,
+    virtual_network_subnet_id: virtual_network_subnet_id,
+    client_affinity_enabled: client_affinity_enabled,
+    tags: tags,
+    client_certificate_exclusion_paths: client_certificate_exclusion_paths,
+    storage_account: storage_account,
+    timeouts: timeouts,
+    auth_settings: auth_settings,
     backup: backup,
     connection_string: connection_string,
     identity: identity,
     logs: logs,
     site_config: site_config,
-    storage_account: storage_account,
-    timeouts: timeouts,
-    auth_settings: auth_settings,
   }),
-  withKeyVaultReferenceIdentityId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          key_vault_reference_identity_id: value,
-        },
-      },
-    },
-  },
-  withAppServiceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          app_service_id: value,
-        },
-      },
-    },
-  },
-  withClientAffinityEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          client_affinity_enabled: value,
-        },
-      },
-    },
-  },
   withClientCertificateExclusionPaths(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
           client_certificate_exclusion_paths: value,
-        },
-      },
-    },
-  },
-  withHttpsOnly(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          https_only: value,
-        },
-      },
-    },
-  },
-  withAppSettings(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          app_settings: value,
-        },
-      },
-    },
-  },
-  withClientCertificateEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          client_certificate_enabled: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          virtual_network_subnet_id: value,
-        },
-      },
-    },
-  },
-  withClientCertificateMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          client_certificate_mode: value,
-        },
-      },
-    },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withZipDeployFile(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          zip_deploy_file: value,
-        },
-      },
-    },
-  },
-  withEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_linux_web_app_slot+: {
-        [resourceLabel]+: {
-          enabled: value,
         },
       },
     },
@@ -208,183 +109,102 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withBackup(resourceLabel, value):: {
+  withHttpsOnly(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          backup: value,
+          https_only: value,
         },
       },
     },
   },
-  withBackupMixin(resourceLabel, value):: {
+  withZipDeployFile(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          backup+: if std.isArray(v=value) then value else [value],
+          zip_deploy_file: value,
         },
       },
     },
   },
-  backup:: {
-    new(
-      name,
-      storage_account_url,
-      enabled=null,
-      schedule=null
-    ):: std.prune(a={
-      name: name,
-      storage_account_url: storage_account_url,
-      enabled: enabled,
-      schedule: schedule,
-    }),
-    schedule:: {
-      new(
-        frequency_interval,
-        frequency_unit,
-        keep_at_least_one_backup=null,
-        retention_period_days=null,
-        start_time=null
-      ):: std.prune(a={
-        frequency_interval: frequency_interval,
-        frequency_unit: frequency_unit,
-        keep_at_least_one_backup: keep_at_least_one_backup,
-        retention_period_days: retention_period_days,
-        start_time: start_time,
-      }),
-    },
-  },
-  withConnectionString(resourceLabel, value):: {
+  withVirtualNetworkSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          connection_string: value,
+          virtual_network_subnet_id: value,
         },
       },
     },
   },
-  withConnectionStringMixin(resourceLabel, value):: {
+  withAppServiceId(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          connection_string+: if std.isArray(v=value) then value else [value],
+          app_service_id: value,
         },
       },
     },
   },
-  connection_string:: {
-    new(
-      name,
-      type,
-      value
-    ):: std.prune(a={
-      name: name,
-      type: type,
-      value: value,
-    }),
-  },
-  withIdentity(resourceLabel, value):: {
+  withKeyVaultReferenceIdentityId(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          identity: value,
+          key_vault_reference_identity_id: value,
         },
       },
     },
   },
-  withIdentityMixin(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          identity+: if std.isArray(v=value) then value else [value],
+          tags: value,
         },
       },
     },
   },
-  identity:: {
-    new(
-      identity_ids=null,
-      type
-    ):: std.prune(a={
-      identity_ids: identity_ids,
-      type: type,
-    }),
-  },
-  withLogs(resourceLabel, value):: {
+  withEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          logs: value,
+          enabled: value,
         },
       },
     },
   },
-  withLogsMixin(resourceLabel, value):: {
+  withClientAffinityEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_linux_web_app_slot+: {
         [resourceLabel]+: {
-          logs+: if std.isArray(v=value) then value else [value],
+          client_affinity_enabled: value,
         },
       },
     },
   },
-  logs:: {
-    new(
-      failed_request_tracing=null,
-      detailed_error_messages=null,
-      application_logs=null,
-      http_logs=null
-    ):: std.prune(a={
-      failed_request_tracing: failed_request_tracing,
-      detailed_error_messages: detailed_error_messages,
-      application_logs: application_logs,
-      http_logs: http_logs,
-    }),
-    http_logs:: {
-      new(
-        azure_blob_storage=null,
-        file_system=null
-      ):: std.prune(a={
-        azure_blob_storage: azure_blob_storage,
-        file_system: file_system,
-      }),
-      file_system:: {
-        new(
-          retention_in_mb,
-          retention_in_days
-        ):: std.prune(a={
-          retention_in_mb: retention_in_mb,
-          retention_in_days: retention_in_days,
-        }),
-      },
-      azure_blob_storage:: {
-        new(
-          retention_in_days=null,
-          sas_url
-        ):: std.prune(a={
-          retention_in_days: retention_in_days,
-          sas_url: sas_url,
-        }),
+  withClientCertificateEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          client_certificate_enabled: value,
+        },
       },
     },
-    application_logs:: {
-      new(
-        file_system_level,
-        azure_blob_storage=null
-      ):: std.prune(a={
-        file_system_level: file_system_level,
-        azure_blob_storage: azure_blob_storage,
-      }),
-      azure_blob_storage:: {
-        new(
-          retention_in_days,
-          sas_url,
-          level
-        ):: std.prune(a={
-          retention_in_days: retention_in_days,
-          sas_url: sas_url,
-          level: level,
-        }),
+  },
+  withAppSettings(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          app_settings: value,
+        },
+      },
+    },
+  },
+  withClientCertificateMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          client_certificate_mode: value,
+        },
       },
     },
   },
@@ -408,93 +228,68 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   site_config:: {
     new(
-      managed_pipeline_mode=null,
-      worker_count=null,
-      health_check_path=null,
-      use_32_bit_worker=null,
-      container_registry_managed_identity_client_id=null,
-      api_definition_url=null,
-      websockets_enabled=null,
+      local_mysql_enabled=null,
       default_documents=null,
-      remote_debugging_enabled=null,
-      api_management_api_id=null,
-      app_command_line=null,
-      scm_use_main_ip_restriction=null,
-      vnet_route_all_enabled=null,
-      always_on=null,
-      load_balancing_mode=null,
       http2_enabled=null,
       scm_minimum_tls_version=null,
-      scm_ip_restriction=null,
+      api_management_api_id=null,
       ip_restriction=null,
-      auto_heal_enabled=null,
-      container_registry_use_managed_identity=null,
-      local_mysql_enabled=null,
-      ftps_state=null,
-      remote_debugging_version=null,
+      always_on=null,
       auto_swap_slot_name=null,
+      scm_ip_restriction=null,
+      container_registry_use_managed_identity=null,
+      remote_debugging_version=null,
+      container_registry_managed_identity_client_id=null,
+      vnet_route_all_enabled=null,
+      ftps_state=null,
       minimum_tls_version=null,
+      managed_pipeline_mode=null,
+      websockets_enabled=null,
+      use_32_bit_worker=null,
+      app_command_line=null,
+      scm_use_main_ip_restriction=null,
+      api_definition_url=null,
       health_check_eviction_time_in_min=null,
+      worker_count=null,
+      load_balancing_mode=null,
+      auto_heal_enabled=null,
+      health_check_path=null,
+      remote_debugging_enabled=null,
+      application_stack=null,
       auto_heal_setting=null,
-      cors=null,
-      application_stack=null
+      cors=null
     ):: std.prune(a={
-      managed_pipeline_mode: managed_pipeline_mode,
-      worker_count: worker_count,
-      health_check_path: health_check_path,
-      use_32_bit_worker: use_32_bit_worker,
-      container_registry_managed_identity_client_id: container_registry_managed_identity_client_id,
-      api_definition_url: api_definition_url,
-      websockets_enabled: websockets_enabled,
+      local_mysql_enabled: local_mysql_enabled,
       default_documents: default_documents,
-      remote_debugging_enabled: remote_debugging_enabled,
-      api_management_api_id: api_management_api_id,
-      app_command_line: app_command_line,
-      scm_use_main_ip_restriction: scm_use_main_ip_restriction,
-      vnet_route_all_enabled: vnet_route_all_enabled,
-      always_on: always_on,
-      load_balancing_mode: load_balancing_mode,
       http2_enabled: http2_enabled,
       scm_minimum_tls_version: scm_minimum_tls_version,
-      scm_ip_restriction: scm_ip_restriction,
+      api_management_api_id: api_management_api_id,
       ip_restriction: ip_restriction,
-      auto_heal_enabled: auto_heal_enabled,
-      container_registry_use_managed_identity: container_registry_use_managed_identity,
-      local_mysql_enabled: local_mysql_enabled,
-      ftps_state: ftps_state,
-      remote_debugging_version: remote_debugging_version,
+      always_on: always_on,
       auto_swap_slot_name: auto_swap_slot_name,
+      scm_ip_restriction: scm_ip_restriction,
+      container_registry_use_managed_identity: container_registry_use_managed_identity,
+      remote_debugging_version: remote_debugging_version,
+      container_registry_managed_identity_client_id: container_registry_managed_identity_client_id,
+      vnet_route_all_enabled: vnet_route_all_enabled,
+      ftps_state: ftps_state,
       minimum_tls_version: minimum_tls_version,
+      managed_pipeline_mode: managed_pipeline_mode,
+      websockets_enabled: websockets_enabled,
+      use_32_bit_worker: use_32_bit_worker,
+      app_command_line: app_command_line,
+      scm_use_main_ip_restriction: scm_use_main_ip_restriction,
+      api_definition_url: api_definition_url,
       health_check_eviction_time_in_min: health_check_eviction_time_in_min,
+      worker_count: worker_count,
+      load_balancing_mode: load_balancing_mode,
+      auto_heal_enabled: auto_heal_enabled,
+      health_check_path: health_check_path,
+      remote_debugging_enabled: remote_debugging_enabled,
+      application_stack: application_stack,
       auto_heal_setting: auto_heal_setting,
       cors: cors,
-      application_stack: application_stack,
     }),
-    application_stack:: {
-      new(
-        python_version=null,
-        docker_image_tag=null,
-        java_server_version=null,
-        node_version=null,
-        java_server=null,
-        java_version=null,
-        php_version=null,
-        ruby_version=null,
-        docker_image=null,
-        dotnet_version=null
-      ):: std.prune(a={
-        python_version: python_version,
-        docker_image_tag: docker_image_tag,
-        java_server_version: java_server_version,
-        node_version: node_version,
-        java_server: java_server,
-        java_version: java_version,
-        php_version: php_version,
-        ruby_version: ruby_version,
-        docker_image: docker_image,
-        dotnet_version: dotnet_version,
-      }),
-    },
     auto_heal_setting:: {
       new(
         action=null,
@@ -514,44 +309,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
       trigger:: {
         new(
+          requests=null,
           slow_request=null,
-          status_code=null,
-          requests=null
+          status_code=null
         ):: std.prune(a={
+          requests: requests,
           slow_request: slow_request,
           status_code: status_code,
-          requests: requests,
         }),
-        slow_request:: {
-          new(
-            interval,
-            path=null,
-            time_taken,
-            count
-          ):: std.prune(a={
-            interval: interval,
-            path: path,
-            time_taken: time_taken,
-            count: count,
-          }),
-        },
-        status_code:: {
-          new(
-            sub_status=null,
-            win32_status=null,
-            count,
-            interval,
-            path=null,
-            status_code_range
-          ):: std.prune(a={
-            sub_status: sub_status,
-            win32_status: win32_status,
-            count: count,
-            interval: interval,
-            path: path,
-            status_code_range: status_code_range,
-          }),
-        },
         requests:: {
           new(
             count,
@@ -559,6 +324,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
           ):: std.prune(a={
             count: count,
             interval: interval,
+          }),
+        },
+        slow_request:: {
+          new(
+            path=null,
+            time_taken,
+            count,
+            interval
+          ):: std.prune(a={
+            path: path,
+            time_taken: time_taken,
+            count: count,
+            interval: interval,
+          }),
+        },
+        status_code:: {
+          new(
+            interval,
+            path=null,
+            status_code_range,
+            sub_status=null,
+            win32_status=null,
+            count
+          ):: std.prune(a={
+            interval: interval,
+            path: path,
+            status_code_range: status_code_range,
+            sub_status: sub_status,
+            win32_status: win32_status,
+            count: count,
           }),
         },
       },
@@ -570,6 +365,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       ):: std.prune(a={
         allowed_origins: allowed_origins,
         support_credentials: support_credentials,
+      }),
+    },
+    application_stack:: {
+      new(
+        java_server_version=null,
+        java_version=null,
+        php_version=null,
+        docker_image=null,
+        ruby_version=null,
+        docker_image_tag=null,
+        java_server=null,
+        node_version=null,
+        dotnet_version=null,
+        python_version=null
+      ):: std.prune(a={
+        java_server_version: java_server_version,
+        java_version: java_version,
+        php_version: php_version,
+        docker_image: docker_image,
+        ruby_version: ruby_version,
+        docker_image_tag: docker_image_tag,
+        java_server: java_server,
+        node_version: node_version,
+        dotnet_version: dotnet_version,
+        python_version: python_version,
       }),
     },
   },
@@ -593,19 +413,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   storage_account:: {
     new(
+      type,
       access_key,
       account_name,
       mount_path=null,
       name,
-      share_name,
-      type
+      share_name
     ):: std.prune(a={
+      type: type,
       access_key: access_key,
       account_name: account_name,
       mount_path: mount_path,
       name: name,
       share_name: share_name,
-      type: type,
     }),
   },
   withTimeouts(resourceLabel, value):: {
@@ -659,38 +479,64 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   auth_settings:: {
     new(
-      allowed_external_redirect_urls=null,
-      default_provider=null,
-      additional_login_parameters=null,
       token_refresh_extension_hours=null,
-      unauthenticated_client_action=null,
-      enabled,
       token_store_enabled=null,
+      unauthenticated_client_action=null,
+      allowed_external_redirect_urls=null,
+      enabled,
       issuer=null,
+      additional_login_parameters=null,
+      default_provider=null,
       runtime_version=null,
-      github=null,
-      google=null,
       microsoft=null,
       twitter=null,
       active_directory=null,
-      facebook=null
+      facebook=null,
+      github=null,
+      google=null
     ):: std.prune(a={
-      allowed_external_redirect_urls: allowed_external_redirect_urls,
-      default_provider: default_provider,
-      additional_login_parameters: additional_login_parameters,
       token_refresh_extension_hours: token_refresh_extension_hours,
-      unauthenticated_client_action: unauthenticated_client_action,
-      enabled: enabled,
       token_store_enabled: token_store_enabled,
+      unauthenticated_client_action: unauthenticated_client_action,
+      allowed_external_redirect_urls: allowed_external_redirect_urls,
+      enabled: enabled,
       issuer: issuer,
+      additional_login_parameters: additional_login_parameters,
+      default_provider: default_provider,
       runtime_version: runtime_version,
-      github: github,
-      google: google,
       microsoft: microsoft,
       twitter: twitter,
       active_directory: active_directory,
       facebook: facebook,
+      github: github,
+      google: google,
     }),
+    facebook:: {
+      new(
+        oauth_scopes=null,
+        app_id,
+        app_secret=null,
+        app_secret_setting_name=null
+      ):: std.prune(a={
+        oauth_scopes: oauth_scopes,
+        app_id: app_id,
+        app_secret: app_secret,
+        app_secret_setting_name: app_secret_setting_name,
+      }),
+    },
+    github:: {
+      new(
+        oauth_scopes=null,
+        client_id,
+        client_secret=null,
+        client_secret_setting_name=null
+      ):: std.prune(a={
+        oauth_scopes: oauth_scopes,
+        client_id: client_id,
+        client_secret: client_secret,
+        client_secret_setting_name: client_secret_setting_name,
+      }),
+    },
     google:: {
       new(
         client_id,
@@ -719,53 +565,207 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     },
     twitter:: {
       new(
-        consumer_secret=null,
         consumer_secret_setting_name=null,
-        consumer_key
+        consumer_key,
+        consumer_secret=null
       ):: std.prune(a={
-        consumer_secret: consumer_secret,
         consumer_secret_setting_name: consumer_secret_setting_name,
         consumer_key: consumer_key,
+        consumer_secret: consumer_secret,
       }),
     },
     active_directory:: {
       new(
-        client_secret=null,
-        client_secret_setting_name=null,
         allowed_audiences=null,
-        client_id
-      ):: std.prune(a={
-        client_secret: client_secret,
-        client_secret_setting_name: client_secret_setting_name,
-        allowed_audiences: allowed_audiences,
-        client_id: client_id,
-      }),
-    },
-    facebook:: {
-      new(
-        oauth_scopes=null,
-        app_id,
-        app_secret=null,
-        app_secret_setting_name=null
-      ):: std.prune(a={
-        oauth_scopes: oauth_scopes,
-        app_id: app_id,
-        app_secret: app_secret,
-        app_secret_setting_name: app_secret_setting_name,
-      }),
-    },
-    github:: {
-      new(
         client_id,
         client_secret=null,
-        client_secret_setting_name=null,
-        oauth_scopes=null
+        client_secret_setting_name=null
       ):: std.prune(a={
+        allowed_audiences: allowed_audiences,
         client_id: client_id,
         client_secret: client_secret,
         client_secret_setting_name: client_secret_setting_name,
-        oauth_scopes: oauth_scopes,
       }),
+    },
+  },
+  withBackup(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          backup: value,
+        },
+      },
+    },
+  },
+  withBackupMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          backup+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  backup:: {
+    new(
+      enabled=null,
+      name,
+      storage_account_url,
+      schedule=null
+    ):: std.prune(a={
+      enabled: enabled,
+      name: name,
+      storage_account_url: storage_account_url,
+      schedule: schedule,
+    }),
+    schedule:: {
+      new(
+        start_time=null,
+        frequency_interval,
+        frequency_unit,
+        keep_at_least_one_backup=null,
+        retention_period_days=null
+      ):: std.prune(a={
+        start_time: start_time,
+        frequency_interval: frequency_interval,
+        frequency_unit: frequency_unit,
+        keep_at_least_one_backup: keep_at_least_one_backup,
+        retention_period_days: retention_period_days,
+      }),
+    },
+  },
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
+  withConnectionStringMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          connection_string+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  connection_string:: {
+    new(
+      name,
+      type,
+      value
+    ):: std.prune(a={
+      name: name,
+      type: type,
+      value: value,
+    }),
+  },
+  withIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          identity: value,
+        },
+      },
+    },
+  },
+  withIdentityMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  identity:: {
+    new(
+      type,
+      identity_ids=null
+    ):: std.prune(a={
+      type: type,
+      identity_ids: identity_ids,
+    }),
+  },
+  withLogs(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          logs: value,
+        },
+      },
+    },
+  },
+  withLogsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_linux_web_app_slot+: {
+        [resourceLabel]+: {
+          logs+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  logs:: {
+    new(
+      detailed_error_messages=null,
+      failed_request_tracing=null,
+      application_logs=null,
+      http_logs=null
+    ):: std.prune(a={
+      detailed_error_messages: detailed_error_messages,
+      failed_request_tracing: failed_request_tracing,
+      application_logs: application_logs,
+      http_logs: http_logs,
+    }),
+    application_logs:: {
+      new(
+        file_system_level,
+        azure_blob_storage=null
+      ):: std.prune(a={
+        file_system_level: file_system_level,
+        azure_blob_storage: azure_blob_storage,
+      }),
+      azure_blob_storage:: {
+        new(
+          retention_in_days,
+          sas_url,
+          level
+        ):: std.prune(a={
+          retention_in_days: retention_in_days,
+          sas_url: sas_url,
+          level: level,
+        }),
+      },
+    },
+    http_logs:: {
+      new(
+        azure_blob_storage=null,
+        file_system=null
+      ):: std.prune(a={
+        azure_blob_storage: azure_blob_storage,
+        file_system: file_system,
+      }),
+      azure_blob_storage:: {
+        new(
+          retention_in_days=null,
+          sas_url
+        ):: std.prune(a={
+          retention_in_days: retention_in_days,
+          sas_url: sas_url,
+        }),
+      },
+      file_system:: {
+        new(
+          retention_in_days,
+          retention_in_mb
+        ):: std.prune(a={
+          retention_in_days: retention_in_days,
+          retention_in_mb: retention_in_mb,
+        }),
+      },
     },
   },
 }

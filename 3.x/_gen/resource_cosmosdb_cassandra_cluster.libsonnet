@@ -3,93 +3,75 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     name,
+    hours_between_backups=null,
     delegated_management_subnet_id,
-    location,
-    repair_enabled=null,
-    tags=null,
     external_gossip_certificate_pems=null,
-    external_seed_node_ip_addresses=null,
     resource_group_name,
+    tags=null,
+    location,
+    default_admin_password,
+    external_seed_node_ip_addresses=null,
+    repair_enabled=null,
     authentication_method=null,
     client_certificate_pems=null,
     version=null,
-    default_admin_password,
-    hours_between_backups=null,
     identity=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cosmosdb_cassandra_cluster', label=resourceLabel, attrs=self.newAttrs(
     name=name,
+    hours_between_backups=hours_between_backups,
     delegated_management_subnet_id=delegated_management_subnet_id,
-    location=location,
-    repair_enabled=repair_enabled,
-    tags=tags,
     external_gossip_certificate_pems=external_gossip_certificate_pems,
-    external_seed_node_ip_addresses=external_seed_node_ip_addresses,
     resource_group_name=resource_group_name,
+    tags=tags,
+    location=location,
+    default_admin_password=default_admin_password,
+    external_seed_node_ip_addresses=external_seed_node_ip_addresses,
+    repair_enabled=repair_enabled,
     authentication_method=authentication_method,
     client_certificate_pems=client_certificate_pems,
     version=version,
-    default_admin_password=default_admin_password,
-    hours_between_backups=hours_between_backups,
     identity=identity,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    external_seed_node_ip_addresses=null,
     name,
-    authentication_method=null,
-    external_gossip_certificate_pems=null,
-    location,
-    repair_enabled=null,
     hours_between_backups=null,
-    client_certificate_pems=null,
+    authentication_method=null,
     delegated_management_subnet_id,
-    tags=null,
-    default_admin_password,
+    external_gossip_certificate_pems=null,
     version=null,
+    resource_group_name,
+    default_admin_password,
+    repair_enabled=null,
+    client_certificate_pems=null,
+    location,
+    tags=null,
+    external_seed_node_ip_addresses=null,
     identity=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    external_seed_node_ip_addresses: external_seed_node_ip_addresses,
     name: name,
-    authentication_method: authentication_method,
-    external_gossip_certificate_pems: external_gossip_certificate_pems,
-    location: location,
-    repair_enabled: repair_enabled,
     hours_between_backups: hours_between_backups,
-    client_certificate_pems: client_certificate_pems,
+    authentication_method: authentication_method,
     delegated_management_subnet_id: delegated_management_subnet_id,
-    tags: tags,
-    default_admin_password: default_admin_password,
+    external_gossip_certificate_pems: external_gossip_certificate_pems,
     version: version,
+    resource_group_name: resource_group_name,
+    default_admin_password: default_admin_password,
+    repair_enabled: repair_enabled,
+    client_certificate_pems: client_certificate_pems,
+    location: location,
+    tags: tags,
+    external_seed_node_ip_addresses: external_seed_node_ip_addresses,
     identity: identity,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
+  withTags(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_cluster+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withAuthenticationMethod(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          authentication_method: value,
-        },
-      },
-    },
-  },
-  withDelegatedManagementSubnetId(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          delegated_management_subnet_id: value,
+          tags: value,
         },
       },
     },
@@ -103,6 +85,51 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withRepairEnabled(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          repair_enabled: value,
+        },
+      },
+    },
+  },
+  withAuthenticationMethod(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          authentication_method: value,
+        },
+      },
+    },
+  },
+  withVersion(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          version: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withDefaultAdminPassword(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_cluster+: {
@@ -112,11 +139,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withHoursBetweenBackups(resourceLabel, value):: {
+  withDelegatedManagementSubnetId(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_cluster+: {
         [resourceLabel]+: {
-          hours_between_backups: value,
+          delegated_management_subnet_id: value,
         },
       },
     },
@@ -139,6 +166,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withHoursBetweenBackups(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          hours_between_backups: value,
+        },
+      },
+    },
+  },
   withClientCertificatePems(resourceLabel, value):: {
     resource+: {
       azurerm_cosmosdb_cassandra_cluster+: {
@@ -147,73 +183,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withRepairEnabled(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          repair_enabled: value,
-        },
-      },
-    },
-  },
-  withVersion(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          version: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_cosmosdb_cassandra_cluster+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withIdentity(resourceLabel, value):: {
     resource+: {
@@ -238,6 +207,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       type
     ):: std.prune(a={
       type: type,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_cosmosdb_cassandra_cluster+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
     }),
   },
 }

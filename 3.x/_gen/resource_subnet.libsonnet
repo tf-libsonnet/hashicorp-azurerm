@@ -3,63 +3,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     service_endpoints=null,
-    virtual_network_name,
-    enforce_private_link_service_network_policies=null,
     address_prefixes,
     enforce_private_link_endpoint_network_policies=null,
-    private_endpoint_network_policies_enabled=null,
+    enforce_private_link_service_network_policies=null,
     private_link_service_network_policies_enabled=null,
-    resource_group_name,
-    service_endpoint_policy_ids=null,
+    private_endpoint_network_policies_enabled=null,
     name,
+    service_endpoint_policy_ids=null,
+    virtual_network_name,
+    resource_group_name,
     delegation=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_subnet', label=resourceLabel, attrs=self.newAttrs(
     service_endpoints=service_endpoints,
-    virtual_network_name=virtual_network_name,
-    enforce_private_link_service_network_policies=enforce_private_link_service_network_policies,
     address_prefixes=address_prefixes,
     enforce_private_link_endpoint_network_policies=enforce_private_link_endpoint_network_policies,
-    private_endpoint_network_policies_enabled=private_endpoint_network_policies_enabled,
+    enforce_private_link_service_network_policies=enforce_private_link_service_network_policies,
     private_link_service_network_policies_enabled=private_link_service_network_policies_enabled,
-    resource_group_name=resource_group_name,
-    service_endpoint_policy_ids=service_endpoint_policy_ids,
+    private_endpoint_network_policies_enabled=private_endpoint_network_policies_enabled,
     name=name,
+    service_endpoint_policy_ids=service_endpoint_policy_ids,
+    virtual_network_name=virtual_network_name,
+    resource_group_name=resource_group_name,
     delegation=delegation,
     timeouts=timeouts
   )),
   newAttrs(
     name,
-    address_prefixes,
     private_endpoint_network_policies_enabled=null,
-    private_link_service_network_policies_enabled=null,
-    enforce_private_link_endpoint_network_policies=null,
     resource_group_name,
-    service_endpoint_policy_ids=null,
     service_endpoints=null,
-    virtual_network_name,
+    address_prefixes,
     enforce_private_link_service_network_policies=null,
-    delegation=null,
-    timeouts=null
+    virtual_network_name,
+    service_endpoint_policy_ids=null,
+    enforce_private_link_endpoint_network_policies=null,
+    private_link_service_network_policies_enabled=null,
+    timeouts=null,
+    delegation=null
   ):: std.prune(a={
     name: name,
-    address_prefixes: address_prefixes,
     private_endpoint_network_policies_enabled: private_endpoint_network_policies_enabled,
-    private_link_service_network_policies_enabled: private_link_service_network_policies_enabled,
-    enforce_private_link_endpoint_network_policies: enforce_private_link_endpoint_network_policies,
     resource_group_name: resource_group_name,
-    service_endpoint_policy_ids: service_endpoint_policy_ids,
     service_endpoints: service_endpoints,
-    virtual_network_name: virtual_network_name,
+    address_prefixes: address_prefixes,
     enforce_private_link_service_network_policies: enforce_private_link_service_network_policies,
-    delegation: delegation,
+    virtual_network_name: virtual_network_name,
+    service_endpoint_policy_ids: service_endpoint_policy_ids,
+    enforce_private_link_endpoint_network_policies: enforce_private_link_endpoint_network_policies,
+    private_link_service_network_policies_enabled: private_link_service_network_policies_enabled,
     timeouts: timeouts,
+    delegation: delegation,
   }),
-  withResourceGroupName(resourceLabel, value):: {
+  withVirtualNetworkName(resourceLabel, value):: {
     resource+: {
       azurerm_subnet+: {
         [resourceLabel]+: {
-          resource_group_name: value,
+          virtual_network_name: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },
@@ -78,6 +87,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_subnet+: {
         [resourceLabel]+: {
           service_endpoints: value,
+        },
+      },
+    },
+  },
+  withEnforcePrivateLinkServiceNetworkPolicies(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet+: {
+        [resourceLabel]+: {
+          enforce_private_link_service_network_policies: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },
@@ -109,33 +136,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withVirtualNetworkName(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet+: {
-        [resourceLabel]+: {
-          virtual_network_name: value,
-        },
-      },
-    },
-  },
-  withEnforcePrivateLinkServiceNetworkPolicies(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet+: {
-        [resourceLabel]+: {
-          enforce_private_link_service_network_policies: value,
-        },
-      },
-    },
-  },
   withPrivateEndpointNetworkPoliciesEnabled(resourceLabel, value):: {
     resource+: {
       azurerm_subnet+: {
@@ -144,6 +144,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_subnet+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withDelegation(resourceLabel, value):: {
     resource+: {
@@ -180,36 +211,5 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         name: name,
       }),
     },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_subnet+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
 }

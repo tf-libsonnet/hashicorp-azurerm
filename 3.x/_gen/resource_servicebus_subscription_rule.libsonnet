@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
+    sql_filter=null,
     subscription_id,
     action=null,
     filter_type,
-    name,
-    sql_filter=null,
     correlation_filter=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_servicebus_subscription_rule', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
+    sql_filter=sql_filter,
     subscription_id=subscription_id,
     action=action,
     filter_type=filter_type,
-    name=name,
-    sql_filter=sql_filter,
     correlation_filter=correlation_filter,
     timeouts=timeouts
   )),
   newAttrs(
+    subscription_id,
     action=null,
     filter_type,
     name,
     sql_filter=null,
-    subscription_id,
     correlation_filter=null,
     timeouts=null
   ):: std.prune(a={
+    subscription_id: subscription_id,
     action: action,
     filter_type: filter_type,
     name: name,
     sql_filter: sql_filter,
-    subscription_id: subscription_id,
     correlation_filter: correlation_filter,
     timeouts: timeouts,
   }),
+  withSubscriptionId(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription_rule+: {
+        [resourceLabel]+: {
+          subscription_id: value,
+        },
+      },
+    },
+  },
   withAction(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription_rule+: {
@@ -71,14 +80,36 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubscriptionId(resourceLabel, value):: {
+  withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_servicebus_subscription_rule+: {
         [resourceLabel]+: {
-          subscription_id: value,
+          timeouts: value,
         },
       },
     },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_servicebus_subscription_rule+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      update=null,
+      create=null,
+      delete=null,
+      read=null
+    ):: std.prune(a={
+      update: update,
+      create: create,
+      delete: delete,
+      read: read,
+    }),
   },
   withCorrelationFilter(resourceLabel, value):: {
     resource+: {
@@ -100,56 +131,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   correlation_filter:: {
     new(
-      message_id=null,
-      reply_to=null,
-      reply_to_session_id=null,
-      content_type=null,
-      label=null,
-      properties=null,
       session_id=null,
       to=null,
-      correlation_id=null
+      properties=null,
+      reply_to_session_id=null,
+      label=null,
+      reply_to=null,
+      content_type=null,
+      correlation_id=null,
+      message_id=null
     ):: std.prune(a={
-      message_id: message_id,
-      reply_to: reply_to,
-      reply_to_session_id: reply_to_session_id,
-      content_type: content_type,
-      label: label,
-      properties: properties,
       session_id: session_id,
       to: to,
+      properties: properties,
+      reply_to_session_id: reply_to_session_id,
+      label: label,
+      reply_to: reply_to,
+      content_type: content_type,
       correlation_id: correlation_id,
-    }),
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription_rule+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_servicebus_subscription_rule+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
+      message_id: message_id,
     }),
   },
 }

@@ -2,29 +2,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data=null,
-    key_vault_identity_client_id=null,
-    api_management_name,
     key_vault_secret_id=null,
     name,
     password=null,
+    api_management_name,
+    data=null,
+    key_vault_identity_client_id=null,
     resource_group_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_api_management_certificate', label=resourceLabel, attrs=self.newAttrs(
-    data=data,
-    key_vault_identity_client_id=key_vault_identity_client_id,
-    api_management_name=api_management_name,
     key_vault_secret_id=key_vault_secret_id,
     name=name,
     password=password,
+    api_management_name=api_management_name,
+    data=data,
+    key_vault_identity_client_id=key_vault_identity_client_id,
     resource_group_name=resource_group_name,
     timeouts=timeouts
   )),
   newAttrs(
     key_vault_secret_id=null,
     name,
-    password=null,
     resource_group_name,
+    password=null,
     api_management_name,
     data=null,
     key_vault_identity_client_id=null,
@@ -32,18 +32,45 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   ):: std.prune(a={
     key_vault_secret_id: key_vault_secret_id,
     name: name,
-    password: password,
     resource_group_name: resource_group_name,
+    password: password,
     api_management_name: api_management_name,
     data: data,
     key_vault_identity_client_id: key_vault_identity_client_id,
     timeouts: timeouts,
   }),
+  withKeyVaultSecretId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_certificate+: {
+        [resourceLabel]+: {
+          key_vault_secret_id: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_certificate+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_certificate+: {
         [resourceLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_certificate+: {
+        [resourceLabel]+: {
+          password: value,
         },
       },
     },
@@ -71,33 +98,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_api_management_certificate+: {
         [resourceLabel]+: {
           key_vault_identity_client_id: value,
-        },
-      },
-    },
-  },
-  withKeyVaultSecretId(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_certificate+: {
-        [resourceLabel]+: {
-          key_vault_secret_id: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_certificate+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withPassword(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_certificate+: {
-        [resourceLabel]+: {
-          password: value,
         },
       },
     },

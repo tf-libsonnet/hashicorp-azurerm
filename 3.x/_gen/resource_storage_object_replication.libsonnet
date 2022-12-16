@@ -61,15 +61,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      delete=null,
       read=null,
       update=null,
-      create=null
+      create=null,
+      delete=null
     ):: std.prune(a={
-      delete: delete,
       read: read,
       update: update,
       create: create,
+      delete: delete,
     }),
   },
   withRules(resourceLabel, value):: {
@@ -92,15 +92,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   rules:: {
     new(
-      copy_blobs_created_after=null,
-      destination_container_name,
       filter_out_blobs_with_prefix=null,
-      source_container_name
+      source_container_name,
+      copy_blobs_created_after=null,
+      destination_container_name
     ):: std.prune(a={
-      copy_blobs_created_after: copy_blobs_created_after,
-      destination_container_name: destination_container_name,
       filter_out_blobs_with_prefix: filter_out_blobs_with_prefix,
       source_container_name: source_container_name,
+      copy_blobs_created_after: copy_blobs_created_after,
+      destination_container_name: destination_container_name,
     }),
   },
 }

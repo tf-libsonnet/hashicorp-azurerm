@@ -2,65 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    recovery_database_id=null,
-    sku_name,
     synapse_workspace_id,
-    tags=null,
     collation=null,
-    create_mode=null,
     data_encrypted=null,
     name,
-    restore=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_sql_pool', label=resourceLabel, attrs=self.newAttrs(
-    recovery_database_id=recovery_database_id,
-    sku_name=sku_name,
-    synapse_workspace_id=synapse_workspace_id,
-    tags=tags,
-    collation=collation,
-    create_mode=create_mode,
-    data_encrypted=data_encrypted,
-    name=name,
-    restore=restore,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    synapse_workspace_id,
+    sku_name,
     tags=null,
-    data_encrypted=null,
-    name,
-    collation=null,
     create_mode=null,
     recovery_database_id=null,
-    sku_name,
     timeouts=null,
     restore=null
+  ):: tf.withResource(type='azurerm_synapse_sql_pool', label=resourceLabel, attrs=self.newAttrs(
+    synapse_workspace_id=synapse_workspace_id,
+    collation=collation,
+    data_encrypted=data_encrypted,
+    name=name,
+    sku_name=sku_name,
+    tags=tags,
+    create_mode=create_mode,
+    recovery_database_id=recovery_database_id,
+    timeouts=timeouts,
+    restore=restore
+  )),
+  newAttrs(
+    recovery_database_id=null,
+    synapse_workspace_id,
+    collation=null,
+    data_encrypted=null,
+    name,
+    sku_name,
+    tags=null,
+    create_mode=null,
+    restore=null,
+    timeouts=null
   ):: std.prune(a={
+    recovery_database_id: recovery_database_id,
     synapse_workspace_id: synapse_workspace_id,
-    tags: tags,
+    collation: collation,
     data_encrypted: data_encrypted,
     name: name,
-    collation: collation,
-    create_mode: create_mode,
-    recovery_database_id: recovery_database_id,
     sku_name: sku_name,
-    timeouts: timeouts,
+    tags: tags,
+    create_mode: create_mode,
     restore: restore,
+    timeouts: timeouts,
   }),
-  withDataEncrypted(resourceLabel, value):: {
+  withSkuName(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool+: {
         [resourceLabel]+: {
-          data_encrypted: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool+: {
-        [resourceLabel]+: {
-          name: value,
+          sku_name: value,
         },
       },
     },
@@ -83,6 +74,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDataEncrypted(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool+: {
+        [resourceLabel]+: {
+          data_encrypted: value,
+        },
+      },
+    },
+  },
+  withSynapseWorkspaceId(resourceLabel, value):: {
+    resource+: {
+      azurerm_synapse_sql_pool+: {
+        [resourceLabel]+: {
+          synapse_workspace_id: value,
+        },
+      },
+    },
+  },
   withCreateMode(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool+: {
@@ -101,20 +110,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSkuName(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_synapse_sql_pool+: {
         [resourceLabel]+: {
-          sku_name: value,
-        },
-      },
-    },
-  },
-  withSynapseWorkspaceId(resourceLabel, value):: {
-    resource+: {
-      azurerm_synapse_sql_pool+: {
-        [resourceLabel]+: {
-          synapse_workspace_id: value,
+          name: value,
         },
       },
     },
@@ -166,15 +166,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

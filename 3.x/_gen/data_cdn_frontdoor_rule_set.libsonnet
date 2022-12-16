@@ -2,14 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    name,
     profile_name,
     resource_group_name,
-    name,
     timeouts=null
   ):: tf.withData(type='azurerm_cdn_frontdoor_rule_set', label=dataSrcLabel, attrs=self.newAttrs(
+    name=name,
     profile_name=profile_name,
     resource_group_name=resource_group_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(

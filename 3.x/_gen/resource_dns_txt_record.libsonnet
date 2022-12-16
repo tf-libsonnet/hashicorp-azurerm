@@ -2,39 +2,48 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_name,
     tags=null,
     ttl,
     zone_name,
     name,
-    resource_group_name,
     record=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_dns_txt_record', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_name=resource_group_name,
     tags=tags,
     ttl=ttl,
     zone_name=zone_name,
     name=name,
-    resource_group_name=resource_group_name,
     record=record,
     timeouts=timeouts
   )),
   newAttrs(
+    name,
     resource_group_name,
     tags=null,
     ttl,
     zone_name,
-    name,
-    record=null,
-    timeouts=null
+    timeouts=null,
+    record=null
   ):: std.prune(a={
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     ttl: ttl,
     zone_name: zone_name,
-    name: name,
-    record: record,
     timeouts: timeouts,
+    record: record,
   }),
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_dns_txt_record+: {
+        [resourceLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
   withTtl(resourceLabel, value):: {
     resource+: {
       azurerm_dns_txt_record+: {
@@ -71,15 +80,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_dns_txt_record+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_dns_txt_record+: {
@@ -100,15 +100,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
-      create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null,
+      create=null
     ):: std.prune(a={
-      update: update,
-      create: create,
       delete: delete,
       read: read,
+      update: update,
+      create: create,
     }),
   },
   withRecord(resourceLabel, value):: {

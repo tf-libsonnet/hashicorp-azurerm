@@ -29,41 +29,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ipsec_policy=ipsec_policy
   )),
   newAttrs(
+    vpn_authentication_types,
     vpn_protocols=null,
     location,
     name,
     resource_group_name,
     tags=null,
-    vpn_authentication_types,
+    azure_active_directory_authentication=null,
+    client_revoked_certificate=null,
     client_root_certificate=null,
     ipsec_policy=null,
     radius=null,
-    timeouts=null,
-    azure_active_directory_authentication=null,
-    client_revoked_certificate=null
+    timeouts=null
   ):: std.prune(a={
+    vpn_authentication_types: vpn_authentication_types,
     vpn_protocols: vpn_protocols,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     tags: tags,
-    vpn_authentication_types: vpn_authentication_types,
+    azure_active_directory_authentication: azure_active_directory_authentication,
+    client_revoked_certificate: client_revoked_certificate,
     client_root_certificate: client_root_certificate,
     ipsec_policy: ipsec_policy,
     radius: radius,
     timeouts: timeouts,
-    azure_active_directory_authentication: azure_active_directory_authentication,
-    client_revoked_certificate: client_revoked_certificate,
   }),
-  withVpnAuthenticationTypes(resourceLabel, value):: {
-    resource+: {
-      azurerm_vpn_server_configuration+: {
-        [resourceLabel]+: {
-          vpn_authentication_types: value,
-        },
-      },
-    },
-  },
   withVpnProtocols(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
@@ -109,6 +100,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withVpnAuthenticationTypes(resourceLabel, value):: {
+    resource+: {
+      azurerm_vpn_server_configuration+: {
+        [resourceLabel]+: {
+          vpn_authentication_types: value,
+        },
+      },
+    },
+  },
   withAzureActiveDirectoryAuthentication(resourceLabel, value):: {
     resource+: {
       azurerm_vpn_server_configuration+: {
@@ -129,13 +129,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   azure_active_directory_authentication:: {
     new(
-      issuer,
       tenant,
-      audience
+      audience,
+      issuer
     ):: std.prune(a={
-      issuer: issuer,
       tenant: tenant,
       audience: audience,
+      issuer: issuer,
     }),
   },
   withClientRevokedCertificate(resourceLabel, value):: {
@@ -158,11 +158,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   client_revoked_certificate:: {
     new(
-      name,
-      thumbprint
+      thumbprint,
+      name
     ):: std.prune(a={
-      name: name,
       thumbprint: thumbprint,
+      name: name,
     }),
   },
   withClientRootCertificate(resourceLabel, value):: {
@@ -185,11 +185,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   client_root_certificate:: {
     new(
-      name,
-      public_cert_data
+      public_cert_data,
+      name
     ):: std.prune(a={
-      name: name,
       public_cert_data: public_cert_data,
+      name: name,
     }),
   },
   withIpsecPolicy(resourceLabel, value):: {
@@ -212,15 +212,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   ipsec_policy:: {
     new(
+      sa_data_size_kilobytes,
       sa_lifetime_seconds,
       dh_group,
       ike_encryption,
       ike_integrity,
       ipsec_encryption,
       ipsec_integrity,
-      pfs_group,
-      sa_data_size_kilobytes
+      pfs_group
     ):: std.prune(a={
+      sa_data_size_kilobytes: sa_data_size_kilobytes,
       sa_lifetime_seconds: sa_lifetime_seconds,
       dh_group: dh_group,
       ike_encryption: ike_encryption,
@@ -228,7 +229,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       ipsec_encryption: ipsec_encryption,
       ipsec_integrity: ipsec_integrity,
       pfs_group: pfs_group,
-      sa_data_size_kilobytes: sa_data_size_kilobytes,
     }),
   },
   withRadius(resourceLabel, value):: {
@@ -251,21 +251,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   radius:: {
     new(
+      client_root_certificate=null,
       server=null,
-      server_root_certificate=null,
-      client_root_certificate=null
+      server_root_certificate=null
     ):: std.prune(a={
+      client_root_certificate: client_root_certificate,
       server: server,
       server_root_certificate: server_root_certificate,
-      client_root_certificate: client_root_certificate,
     }),
     client_root_certificate:: {
       new(
-        name,
-        thumbprint
+        thumbprint,
+        name
       ):: std.prune(a={
-        name: name,
         thumbprint: thumbprint,
+        name: name,
       }),
     },
     server:: {
@@ -309,15 +309,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

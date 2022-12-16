@@ -13,16 +13,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    backend_address_pool_id,
     ip_configuration_name,
     network_interface_id,
-    backend_address_pool_id,
     timeouts=null
   ):: std.prune(a={
+    backend_address_pool_id: backend_address_pool_id,
     ip_configuration_name: ip_configuration_name,
     network_interface_id: network_interface_id,
-    backend_address_pool_id: backend_address_pool_id,
     timeouts: timeouts,
   }),
+  withBackendAddressPoolId(resourceLabel, value):: {
+    resource+: {
+      azurerm_network_interface_backend_address_pool_association+: {
+        [resourceLabel]+: {
+          backend_address_pool_id: value,
+        },
+      },
+    },
+  },
   withIpConfigurationName(resourceLabel, value):: {
     resource+: {
       azurerm_network_interface_backend_address_pool_association+: {
@@ -37,15 +46,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_network_interface_backend_address_pool_association+: {
         [resourceLabel]+: {
           network_interface_id: value,
-        },
-      },
-    },
-  },
-  withBackendAddressPoolId(resourceLabel, value):: {
-    resource+: {
-      azurerm_network_interface_backend_address_pool_association+: {
-        [resourceLabel]+: {
-          backend_address_pool_id: value,
         },
       },
     },
@@ -70,15 +70,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

@@ -21,21 +21,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
+    express_route_gateway_id,
     name,
     routing_weight=null,
     authorization_key=null,
     enable_internet_security=null,
     express_route_circuit_peering_id,
-    express_route_gateway_id,
     routing=null,
     timeouts=null
   ):: std.prune(a={
+    express_route_gateway_id: express_route_gateway_id,
     name: name,
     routing_weight: routing_weight,
     authorization_key: authorization_key,
     enable_internet_security: enable_internet_security,
     express_route_circuit_peering_id: express_route_circuit_peering_id,
-    express_route_gateway_id: express_route_gateway_id,
     routing: routing,
     timeouts: timeouts,
   }),
@@ -149,15 +149,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

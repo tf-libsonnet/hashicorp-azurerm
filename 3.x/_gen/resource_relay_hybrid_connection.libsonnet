@@ -17,38 +17,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    user_metadata=null,
-    name,
     relay_namespace_name,
     requires_client_authorization=null,
     resource_group_name,
+    user_metadata=null,
+    name,
     timeouts=null
   ):: std.prune(a={
-    user_metadata: user_metadata,
-    name: name,
     relay_namespace_name: relay_namespace_name,
     requires_client_authorization: requires_client_authorization,
     resource_group_name: resource_group_name,
+    user_metadata: user_metadata,
+    name: name,
     timeouts: timeouts,
   }),
-  withRelayNamespaceName(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_hybrid_connection+: {
-        [resourceLabel]+: {
-          relay_namespace_name: value,
-        },
-      },
-    },
-  },
-  withRequiresClientAuthorization(resourceLabel, value):: {
-    resource+: {
-      azurerm_relay_hybrid_connection+: {
-        [resourceLabel]+: {
-          requires_client_authorization: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_relay_hybrid_connection+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_relay_hybrid_connection+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withRelayNamespaceName(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_hybrid_connection+: {
+        [resourceLabel]+: {
+          relay_namespace_name: value,
+        },
+      },
+    },
+  },
+  withRequiresClientAuthorization(resourceLabel, value):: {
+    resource+: {
+      azurerm_relay_hybrid_connection+: {
+        [resourceLabel]+: {
+          requires_client_authorization: value,
         },
       },
     },

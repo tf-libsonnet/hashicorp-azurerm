@@ -21,33 +21,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
     ledger_type,
     location,
     name,
+    resource_group_name,
+    tags=null,
+    timeouts=null,
     azuread_based_service_principal=null,
-    certificate_based_security_principal=null,
-    timeouts=null
+    certificate_based_security_principal=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
     ledger_type: ledger_type,
     location: location,
     name: name,
+    resource_group_name: resource_group_name,
+    tags: tags,
+    timeouts: timeouts,
     azuread_based_service_principal: azuread_based_service_principal,
     certificate_based_security_principal: certificate_based_security_principal,
-    timeouts: timeouts,
   }),
-  withLedgerType(resourceLabel, value):: {
-    resource+: {
-      azurerm_confidential_ledger+: {
-        [resourceLabel]+: {
-          ledger_type: value,
-        },
-      },
-    },
-  },
   withLocation(resourceLabel, value):: {
     resource+: {
       azurerm_confidential_ledger+: {
@@ -84,6 +75,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withLedgerType(resourceLabel, value):: {
+    resource+: {
+      azurerm_confidential_ledger+: {
+        [resourceLabel]+: {
+          ledger_type: value,
+        },
+      },
+    },
+  },
   withAzureadBasedServicePrincipal(resourceLabel, value):: {
     resource+: {
       azurerm_confidential_ledger+: {
@@ -104,13 +104,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   azuread_based_service_principal:: {
     new(
+      tenant_id,
       ledger_role_name,
-      principal_id,
-      tenant_id
+      principal_id
     ):: std.prune(a={
+      tenant_id: tenant_id,
       ledger_role_name: ledger_role_name,
       principal_id: principal_id,
-      tenant_id: tenant_id,
     }),
   },
   withCertificateBasedSecurityPrincipal(resourceLabel, value):: {

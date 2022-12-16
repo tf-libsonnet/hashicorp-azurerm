@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    server_id,
     name,
+    server_id,
     timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_outbound_firewall_rule', label=resourceLabel, attrs=self.newAttrs(server_id=server_id, name=name, timeouts=timeouts)),
+  ):: tf.withResource(type='azurerm_mssql_outbound_firewall_rule', label=resourceLabel, attrs=self.newAttrs(name=name, server_id=server_id, timeouts=timeouts)),
   newAttrs(
     name,
     server_id,
@@ -15,20 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     server_id: server_id,
     timeouts: timeouts,
   }),
-  withServerId(resourceLabel, value):: {
-    resource+: {
-      azurerm_mssql_outbound_firewall_rule+: {
-        [resourceLabel]+: {
-          server_id: value,
-        },
-      },
-    },
-  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_mssql_outbound_firewall_rule+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withServerId(resourceLabel, value):: {
+    resource+: {
+      azurerm_mssql_outbound_firewall_rule+: {
+        [resourceLabel]+: {
+          server_id: value,
         },
       },
     },
@@ -53,15 +53,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
       update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null
     ):: std.prune(a={
-      read: read,
       update: update,
       create: create,
       delete: delete,
+      read: read,
     }),
   },
 }

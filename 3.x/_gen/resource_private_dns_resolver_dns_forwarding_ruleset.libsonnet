@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
     private_dns_resolver_outbound_endpoint_ids,
     resource_group_name,
     tags=null,
     location,
+    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_resolver_dns_forwarding_ruleset', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
     private_dns_resolver_outbound_endpoint_ids=private_dns_resolver_outbound_endpoint_ids,
     resource_group_name=resource_group_name,
     tags=tags,
     location=location,
+    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
-    tags=null,
     location,
     name,
     private_dns_resolver_outbound_endpoint_ids,
+    resource_group_name,
+    tags=null,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
-    tags: tags,
     location: location,
     name: name,
     private_dns_resolver_outbound_endpoint_ids: private_dns_resolver_outbound_endpoint_ids,
+    resource_group_name: resource_group_name,
+    tags: tags,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_dns_forwarding_ruleset+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_resolver_dns_forwarding_ruleset+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withPrivateDnsResolverOutboundEndpointIds(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_resolver_dns_forwarding_ruleset+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_private_dns_resolver_dns_forwarding_ruleset+: {
         [resourceLabel]+: {
           tags: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_dns_forwarding_ruleset+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_resolver_dns_forwarding_ruleset+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

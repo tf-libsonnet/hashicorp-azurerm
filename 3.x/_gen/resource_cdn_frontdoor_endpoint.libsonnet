@@ -2,40 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    enabled=null,
     name,
     tags=null,
     cdn_frontdoor_profile_id,
-    enabled=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_cdn_frontdoor_endpoint', label=resourceLabel, attrs=self.newAttrs(
+    enabled=enabled,
     name=name,
     tags=tags,
     cdn_frontdoor_profile_id=cdn_frontdoor_profile_id,
-    enabled=enabled,
     timeouts=timeouts
   )),
   newAttrs(
-    cdn_frontdoor_profile_id,
     enabled=null,
     name,
     tags=null,
+    cdn_frontdoor_profile_id,
     timeouts=null
   ):: std.prune(a={
-    cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
     enabled: enabled,
     name: name,
     tags: tags,
+    cdn_frontdoor_profile_id: cdn_frontdoor_profile_id,
     timeouts: timeouts,
   }),
-  withTags(resourceLabel, value):: {
-    resource+: {
-      azurerm_cdn_frontdoor_endpoint+: {
-        [resourceLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
   withCdnFrontdoorProfileId(resourceLabel, value):: {
     resource+: {
       azurerm_cdn_frontdoor_endpoint+: {
@@ -59,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_cdn_frontdoor_endpoint+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withTags(resourceLabel, value):: {
+    resource+: {
+      azurerm_cdn_frontdoor_endpoint+: {
+        [resourceLabel]+: {
+          tags: value,
         },
       },
     },

@@ -15,14 +15,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name,
     spring_cloud_service_id,
+    name,
     stack=null,
     timeouts=null,
     build_pack_group=null
   ):: std.prune(a={
-    name: name,
     spring_cloud_service_id: spring_cloud_service_id,
+    name: name,
     stack: stack,
     timeouts: timeouts,
     build_pack_group: build_pack_group,

@@ -15,16 +15,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=timeouts
   )),
   newAttrs(
-    name=null,
     required_tags=null,
     resource_group_name=null,
     type=null,
+    name=null,
     timeouts=null
   ):: std.prune(a={
-    name: name,
     required_tags: required_tags,
     resource_group_name: resource_group_name,
     type: type,
+    name: name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    eventhub_endpoint_name,
     iothub_name,
     name,
     resource_group_name,
-    eventhub_endpoint_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_iothub_consumer_group', label=resourceLabel, attrs=self.newAttrs(
+    eventhub_endpoint_name=eventhub_endpoint_name,
     iothub_name=iothub_name,
     name=name,
     resource_group_name=resource_group_name,
-    eventhub_endpoint_name=eventhub_endpoint_name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -83,15 +83,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      read=null,
-      update=null,
       create=null,
-      delete=null
+      delete=null,
+      read=null,
+      update=null
     ):: std.prune(a={
-      read: read,
-      update: update,
       create: create,
       delete: delete,
+      read: read,
+      update: update,
     }),
   },
 }

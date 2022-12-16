@@ -2,20 +2,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     records,
     resource_group_name,
     tags=null,
     ttl,
     zone_name,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_private_dns_aaaa_record', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     records=records,
     resource_group_name=resource_group_name,
     tags=tags,
     ttl=ttl,
     zone_name=zone_name,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
@@ -35,6 +35,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
+  withZoneName(resourceLabel, value):: {
+    resource+: {
+      azurerm_private_dns_aaaa_record+: {
+        [resourceLabel]+: {
+          zone_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_aaaa_record+: {
@@ -80,15 +89,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withZoneName(resourceLabel, value):: {
-    resource+: {
-      azurerm_private_dns_aaaa_record+: {
-        [resourceLabel]+: {
-          zone_name: value,
-        },
-      },
-    },
-  },
   withTimeouts(resourceLabel, value):: {
     resource+: {
       azurerm_private_dns_aaaa_record+: {
@@ -109,15 +109,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
       delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null
     ):: std.prune(a={
-      create: create,
       delete: delete,
       read: read,
       update: update,
+      create: create,
     }),
   },
 }

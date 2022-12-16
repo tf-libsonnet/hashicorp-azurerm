@@ -2,47 +2,74 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    data_retention_time,
-    location,
-    partition_key=null,
     tags=null,
-    name,
+    partition_key=null,
     resource_group_name,
-    sku_name,
+    location,
+    name,
     storage_limit_exceeded_behavior=null,
+    data_retention_time,
+    sku_name,
     timeouts=null
   ):: tf.withResource(type='azurerm_iot_time_series_insights_standard_environment', label=resourceLabel, attrs=self.newAttrs(
-    data_retention_time=data_retention_time,
-    location=location,
-    partition_key=partition_key,
     tags=tags,
-    name=name,
+    partition_key=partition_key,
     resource_group_name=resource_group_name,
-    sku_name=sku_name,
+    location=location,
+    name=name,
     storage_limit_exceeded_behavior=storage_limit_exceeded_behavior,
+    data_retention_time=data_retention_time,
+    sku_name=sku_name,
     timeouts=timeouts
   )),
   newAttrs(
-    name,
-    resource_group_name,
     sku_name,
-    storage_limit_exceeded_behavior=null,
     tags=null,
     data_retention_time,
     location,
+    name,
+    storage_limit_exceeded_behavior=null,
     partition_key=null,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    name: name,
-    resource_group_name: resource_group_name,
     sku_name: sku_name,
-    storage_limit_exceeded_behavior: storage_limit_exceeded_behavior,
     tags: tags,
     data_retention_time: data_retention_time,
     location: location,
+    name: name,
+    storage_limit_exceeded_behavior: storage_limit_exceeded_behavior,
     partition_key: partition_key,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_standard_environment+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  withStorageLimitExceededBehavior(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_standard_environment+: {
+        [resourceLabel]+: {
+          storage_limit_exceeded_behavior: value,
+        },
+      },
+    },
+  },
+  withPartitionKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_iot_time_series_insights_standard_environment+: {
+        [resourceLabel]+: {
+          partition_key: value,
+        },
+      },
+    },
+  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_standard_environment+: {
@@ -61,15 +88,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withStorageLimitExceededBehavior(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_standard_environment+: {
-        [resourceLabel]+: {
-          storage_limit_exceeded_behavior: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_standard_environment+: {
@@ -79,11 +97,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withDataRetentionTime(resourceLabel, value):: {
     resource+: {
       azurerm_iot_time_series_insights_standard_environment+: {
         [resourceLabel]+: {
-          name: value,
+          data_retention_time: value,
         },
       },
     },
@@ -93,24 +111,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_iot_time_series_insights_standard_environment+: {
         [resourceLabel]+: {
           location: value,
-        },
-      },
-    },
-  },
-  withPartitionKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_standard_environment+: {
-        [resourceLabel]+: {
-          partition_key: value,
-        },
-      },
-    },
-  },
-  withDataRetentionTime(resourceLabel, value):: {
-    resource+: {
-      azurerm_iot_time_series_insights_standard_environment+: {
-        [resourceLabel]+: {
-          data_retention_time: value,
         },
       },
     },
@@ -135,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
 }

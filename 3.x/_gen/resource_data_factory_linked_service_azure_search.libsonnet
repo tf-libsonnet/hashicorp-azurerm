@@ -2,56 +2,110 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
     search_service_key,
-    url,
-    data_factory_id,
-    name,
-    annotations=null,
     integration_runtime_name=null,
-    parameters=null,
+    name,
     additional_properties=null,
+    data_factory_id,
+    description=null,
+    parameters=null,
+    url,
+    annotations=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_search', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
     search_service_key=search_service_key,
-    url=url,
-    data_factory_id=data_factory_id,
-    name=name,
-    annotations=annotations,
     integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
+    name=name,
     additional_properties=additional_properties,
+    data_factory_id=data_factory_id,
+    description=description,
+    parameters=parameters,
+    url=url,
+    annotations=annotations,
     timeouts=timeouts
   )),
   newAttrs(
-    description=null,
-    annotations=null,
     name,
-    additional_properties=null,
-    integration_runtime_name=null,
-    data_factory_id,
-    search_service_key,
     url,
+    integration_runtime_name=null,
+    search_service_key,
     parameters=null,
+    additional_properties=null,
+    annotations=null,
+    data_factory_id,
+    description=null,
     timeouts=null
   ):: std.prune(a={
-    description: description,
-    annotations: annotations,
     name: name,
-    additional_properties: additional_properties,
-    integration_runtime_name: integration_runtime_name,
-    data_factory_id: data_factory_id,
-    search_service_key: search_service_key,
     url: url,
+    integration_runtime_name: integration_runtime_name,
+    search_service_key: search_service_key,
     parameters: parameters,
+    additional_properties: additional_properties,
+    annotations: annotations,
+    data_factory_id: data_factory_id,
+    description: description,
     timeouts: timeouts,
   }),
+  withUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_search+: {
+        [resourceLabel]+: {
+          url: value,
+        },
+      },
+    },
+  },
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_search+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_search+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_azure_search+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_search+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_search+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  withSearchServiceKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_search+: {
+        [resourceLabel]+: {
+          search_service_key: value,
         },
       },
     },
@@ -70,60 +124,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_azure_search+: {
         [resourceLabel]+: {
           annotations: value,
-        },
-      },
-    },
-  },
-  withIntegrationRuntimeName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_search+: {
-        [resourceLabel]+: {
-          integration_runtime_name: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_search+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_search+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withDataFactoryId(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_search+: {
-        [resourceLabel]+: {
-          data_factory_id: value,
-        },
-      },
-    },
-  },
-  withSearchServiceKey(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_search+: {
-        [resourceLabel]+: {
-          search_service_key: value,
-        },
-      },
-    },
-  },
-  withUrl(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_azure_search+: {
-        [resourceLabel]+: {
-          url: value,
         },
       },
     },
@@ -148,15 +148,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
 }

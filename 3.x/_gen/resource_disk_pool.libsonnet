@@ -2,52 +2,43 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    name,
     resource_group_name,
     sku_name,
     subnet_id,
     tags=null,
     zones,
     location,
-    name,
     timeouts=null
   ):: tf.withResource(type='azurerm_disk_pool', label=resourceLabel, attrs=self.newAttrs(
+    name=name,
     resource_group_name=resource_group_name,
     sku_name=sku_name,
     subnet_id=subnet_id,
     tags=tags,
     zones=zones,
     location=location,
-    name=name,
     timeouts=timeouts
   )),
   newAttrs(
-    zones,
     location,
     name,
     resource_group_name,
     sku_name,
     subnet_id,
     tags=null,
+    zones,
     timeouts=null
   ):: std.prune(a={
-    zones: zones,
     location: location,
     name: name,
     resource_group_name: resource_group_name,
     sku_name: sku_name,
     subnet_id: subnet_id,
     tags: tags,
+    zones: zones,
     timeouts: timeouts,
   }),
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_disk_pool+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_disk_pool+: {
@@ -98,6 +89,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_disk_pool+: {
         [resourceLabel]+: {
           location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_disk_pool+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

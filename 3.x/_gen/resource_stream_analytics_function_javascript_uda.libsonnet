@@ -2,35 +2,44 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    script,
-    stream_analytics_job_id,
-    output=null,
-    timeouts=null,
-    input=null
-  ):: tf.withResource(type='azurerm_stream_analytics_function_javascript_uda', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    script=script,
-    stream_analytics_job_id=stream_analytics_job_id,
-    output=output,
-    timeouts=timeouts,
-    input=input
-  )),
-  newAttrs(
     stream_analytics_job_id,
     name,
     script,
     input=null,
     output=null,
     timeouts=null
+  ):: tf.withResource(type='azurerm_stream_analytics_function_javascript_uda', label=resourceLabel, attrs=self.newAttrs(
+    stream_analytics_job_id=stream_analytics_job_id,
+    name=name,
+    script=script,
+    input=input,
+    output=output,
+    timeouts=timeouts
+  )),
+  newAttrs(
+    name,
+    script,
+    stream_analytics_job_id,
+    input=null,
+    output=null,
+    timeouts=null
   ):: std.prune(a={
-    stream_analytics_job_id: stream_analytics_job_id,
     name: name,
     script: script,
+    stream_analytics_job_id: stream_analytics_job_id,
     input: input,
     output: output,
     timeouts: timeouts,
   }),
+  withScript(resourceLabel, value):: {
+    resource+: {
+      azurerm_stream_analytics_function_javascript_uda+: {
+        [resourceLabel]+: {
+          script: value,
+        },
+      },
+    },
+  },
   withStreamAnalyticsJobId(resourceLabel, value):: {
     resource+: {
       azurerm_stream_analytics_function_javascript_uda+: {
@@ -45,15 +54,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_stream_analytics_function_javascript_uda+: {
         [resourceLabel]+: {
           name: value,
-        },
-      },
-    },
-  },
-  withScript(resourceLabel, value):: {
-    resource+: {
-      azurerm_stream_analytics_function_javascript_uda+: {
-        [resourceLabel]+: {
-          script: value,
         },
       },
     },

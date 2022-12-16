@@ -2,57 +2,57 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    name,
-    url,
     additional_properties=null,
+    annotations=null,
     data_factory_id,
     integration_runtime_name=null,
-    parameters=null,
-    annotations=null,
+    name,
     authentication_type,
-    description=null,
+    url,
+    parameters=null,
     password=null,
+    description=null,
     username=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_data_factory_linked_service_web', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    url=url,
     additional_properties=additional_properties,
+    annotations=annotations,
     data_factory_id=data_factory_id,
     integration_runtime_name=integration_runtime_name,
-    parameters=parameters,
-    annotations=annotations,
+    name=name,
     authentication_type=authentication_type,
-    description=description,
+    url=url,
+    parameters=parameters,
     password=password,
+    description=description,
     username=username,
     timeouts=timeouts
   )),
   newAttrs(
-    parameters=null,
-    username=null,
-    annotations=null,
-    authentication_type,
     integration_runtime_name=null,
+    parameters=null,
+    password=null,
+    authentication_type,
+    url,
     name,
     additional_properties=null,
-    description=null,
-    password=null,
-    url,
+    annotations=null,
     data_factory_id,
+    description=null,
+    username=null,
     timeouts=null
   ):: std.prune(a={
-    parameters: parameters,
-    username: username,
-    annotations: annotations,
-    authentication_type: authentication_type,
     integration_runtime_name: integration_runtime_name,
+    parameters: parameters,
+    password: password,
+    authentication_type: authentication_type,
+    url: url,
     name: name,
     additional_properties: additional_properties,
-    description: description,
-    password: password,
-    url: url,
+    annotations: annotations,
     data_factory_id: data_factory_id,
+    description: description,
+    username: username,
     timeouts: timeouts,
   }),
   withAnnotations(resourceLabel, value):: {
@@ -60,33 +60,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_data_factory_linked_service_web+: {
         [resourceLabel]+: {
           annotations: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_web+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withParameters(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_web+: {
-        [resourceLabel]+: {
-          parameters: value,
-        },
-      },
-    },
-  },
-  withAdditionalProperties(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_linked_service_web+: {
-        [resourceLabel]+: {
-          additional_properties: value,
         },
       },
     },
@@ -100,11 +73,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPassword(resourceLabel, value):: {
+  withParameters(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_web+: {
         [resourceLabel]+: {
-          password: value,
+          parameters: value,
+        },
+      },
+    },
+  },
+  withUrl(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_web+: {
+        [resourceLabel]+: {
+          url: value,
         },
       },
     },
@@ -136,6 +118,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_web+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
   withIntegrationRuntimeName(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_web+: {
@@ -145,11 +136,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withUrl(resourceLabel, value):: {
+  withPassword(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_linked_service_web+: {
         [resourceLabel]+: {
-          url: value,
+          password: value,
+        },
+      },
+    },
+  },
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_web+: {
+        [resourceLabel]+: {
+          additional_properties: value,
         },
       },
     },
@@ -174,15 +174,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

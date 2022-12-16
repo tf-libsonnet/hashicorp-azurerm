@@ -2,76 +2,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    terms_of_service_url=null,
-    service_url=null,
     api_management_name,
-    protocols=null,
-    revision,
-    subscription_required=null,
-    api_type=null,
-    revision_description=null,
-    version_description=null,
-    display_name=null,
-    version=null,
-    soap_pass_through=null,
-    source_api_id=null,
-    path=null,
-    description=null,
-    name,
-    version_set_id=null,
     resource_group_name,
-    contact=null,
-    import_=null,
-    license=null,
-    oauth2_authorization=null,
-    openid_authentication=null,
-    subscription_key_parameter_names=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_api', label=resourceLabel, attrs=self.newAttrs(
-    terms_of_service_url=terms_of_service_url,
-    service_url=service_url,
-    api_management_name=api_management_name,
-    protocols=protocols,
-    revision=revision,
-    subscription_required=subscription_required,
-    api_type=api_type,
-    revision_description=revision_description,
-    version_description=version_description,
-    display_name=display_name,
-    version=version,
-    soap_pass_through=soap_pass_through,
-    source_api_id=source_api_id,
-    path=path,
-    description=description,
-    name=name,
-    version_set_id=version_set_id,
-    resource_group_name=resource_group_name,
-    contact=contact,
-    import_=import_,
-    license=license,
-    oauth2_authorization=oauth2_authorization,
-    openid_authentication=openid_authentication,
-    subscription_key_parameter_names=subscription_key_parameter_names,
-    timeouts=timeouts
-  )),
-  newAttrs(
-    version=null,
-    api_management_name,
-    soap_pass_through=null,
-    source_api_id=null,
-    revision,
-    api_type=null,
-    description=null,
     version_set_id=null,
-    protocols=null,
-    terms_of_service_url=null,
-    subscription_required=null,
     version_description=null,
-    path=null,
+    revision,
     service_url=null,
-    display_name=null,
-    resource_group_name,
+    version=null,
+    description=null,
     revision_description=null,
+    soap_pass_through=null,
+    path=null,
+    terms_of_service_url=null,
+    api_type=null,
+    display_name=null,
+    protocols=null,
+    subscription_required=null,
+    source_api_id=null,
     name,
     oauth2_authorization=null,
     openid_authentication=null,
@@ -80,47 +27,100 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     contact=null,
     import_=null,
     license=null
+  ):: tf.withResource(type='azurerm_api_management_api', label=resourceLabel, attrs=self.newAttrs(
+    api_management_name=api_management_name,
+    resource_group_name=resource_group_name,
+    version_set_id=version_set_id,
+    version_description=version_description,
+    revision=revision,
+    service_url=service_url,
+    version=version,
+    description=description,
+    revision_description=revision_description,
+    soap_pass_through=soap_pass_through,
+    path=path,
+    terms_of_service_url=terms_of_service_url,
+    api_type=api_type,
+    display_name=display_name,
+    protocols=protocols,
+    subscription_required=subscription_required,
+    source_api_id=source_api_id,
+    name=name,
+    oauth2_authorization=oauth2_authorization,
+    openid_authentication=openid_authentication,
+    subscription_key_parameter_names=subscription_key_parameter_names,
+    timeouts=timeouts,
+    contact=contact,
+    import_=import_,
+    license=license
+  )),
+  newAttrs(
+    subscription_required=null,
+    revision_description=null,
+    path=null,
+    api_type=null,
+    display_name=null,
+    version_description=null,
+    revision,
+    resource_group_name,
+    description=null,
+    service_url=null,
+    soap_pass_through=null,
+    terms_of_service_url=null,
+    protocols=null,
+    version_set_id=null,
+    version=null,
+    source_api_id=null,
+    name,
+    api_management_name,
+    license=null,
+    oauth2_authorization=null,
+    openid_authentication=null,
+    subscription_key_parameter_names=null,
+    timeouts=null,
+    contact=null,
+    import_=null
   ):: std.prune(a={
-    version: version,
-    api_management_name: api_management_name,
-    soap_pass_through: soap_pass_through,
-    source_api_id: source_api_id,
-    revision: revision,
-    api_type: api_type,
-    description: description,
-    version_set_id: version_set_id,
-    protocols: protocols,
-    terms_of_service_url: terms_of_service_url,
     subscription_required: subscription_required,
-    version_description: version_description,
-    path: path,
-    service_url: service_url,
-    display_name: display_name,
-    resource_group_name: resource_group_name,
     revision_description: revision_description,
+    path: path,
+    api_type: api_type,
+    display_name: display_name,
+    version_description: version_description,
+    revision: revision,
+    resource_group_name: resource_group_name,
+    description: description,
+    service_url: service_url,
+    soap_pass_through: soap_pass_through,
+    terms_of_service_url: terms_of_service_url,
+    protocols: protocols,
+    version_set_id: version_set_id,
+    version: version,
+    source_api_id: source_api_id,
     name: name,
+    api_management_name: api_management_name,
+    license: license,
     oauth2_authorization: oauth2_authorization,
     openid_authentication: openid_authentication,
     subscription_key_parameter_names: subscription_key_parameter_names,
     timeouts: timeouts,
     contact: contact,
     'import': import_,
-    license: license,
   }),
+  withSoapPassThrough(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          soap_pass_through: value,
+        },
+      },
+    },
+  },
   withTermsOfServiceUrl(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
           terms_of_service_url: value,
-        },
-      },
-    },
-  },
-  withVersionDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          version_description: value,
         },
       },
     },
@@ -134,38 +134,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withSourceApiId(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          source_api_id: value,
+        },
+      },
+    },
+  },
   withVersionSetId(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
           version_set_id: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withApiType(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          api_type: value,
-        },
-      },
-    },
-  },
-  withApiManagementName(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          api_management_name: value,
         },
       },
     },
@@ -188,38 +170,11 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withName(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withSoapPassThrough(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          soap_pass_through: value,
-        },
-      },
-    },
-  },
-  withDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          description: value,
-        },
-      },
-    },
-  },
-  withRevisionDescription(resourceLabel, value):: {
-    resource+: {
-      azurerm_api_management_api+: {
-        [resourceLabel]+: {
-          revision_description: value,
+          resource_group_name: value,
         },
       },
     },
@@ -233,29 +188,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSubscriptionRequired(resourceLabel, value):: {
+  withName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          subscription_required: value,
+          name: value,
         },
       },
     },
   },
-  withVersion(resourceLabel, value):: {
+  withApiManagementName(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          version: value,
+          api_management_name: value,
         },
       },
     },
   },
-  withSourceApiId(resourceLabel, value):: {
+  withApiType(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          source_api_id: value,
+          api_type: value,
         },
       },
     },
@@ -269,59 +224,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withOauth2Authorization(resourceLabel, value):: {
+  withSubscriptionRequired(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          oauth2_authorization: value,
+          subscription_required: value,
         },
       },
     },
   },
-  withOauth2AuthorizationMixin(resourceLabel, value):: {
+  withRevisionDescription(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          oauth2_authorization+: if std.isArray(v=value) then value else [value],
+          revision_description: value,
         },
       },
     },
   },
-  oauth2_authorization:: {
-    new(
-      authorization_server_name,
-      scope=null
-    ):: std.prune(a={
-      authorization_server_name: authorization_server_name,
-      scope: scope,
-    }),
-  },
-  withOpenidAuthentication(resourceLabel, value):: {
+  withVersionDescription(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          openid_authentication: value,
+          version_description: value,
         },
       },
     },
   },
-  withOpenidAuthenticationMixin(resourceLabel, value):: {
+  withVersion(resourceLabel, value):: {
     resource+: {
       azurerm_api_management_api+: {
         [resourceLabel]+: {
-          openid_authentication+: if std.isArray(v=value) then value else [value],
+          version: value,
         },
       },
     },
   },
-  openid_authentication:: {
-    new(
-      bearer_token_sending_methods=null,
-      openid_provider_name
-    ):: std.prune(a={
-      bearer_token_sending_methods: bearer_token_sending_methods,
-      openid_provider_name: openid_provider_name,
-    }),
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
   },
   withSubscriptionKeyParameterNames(resourceLabel, value):: {
     resource+: {
@@ -370,15 +316,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      update=null,
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
+      update: update,
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
   withContact(resourceLabel, value):: {
@@ -401,13 +347,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   contact:: {
     new(
+      url=null,
       email=null,
-      name=null,
-      url=null
+      name=null
     ):: std.prune(a={
+      url: url,
       email: email,
       name: name,
-      url: url,
     }),
   },
   withImport(resourceLabel, value):: {
@@ -473,6 +419,60 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ):: std.prune(a={
       name: name,
       url: url,
+    }),
+  },
+  withOauth2Authorization(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          oauth2_authorization: value,
+        },
+      },
+    },
+  },
+  withOauth2AuthorizationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          oauth2_authorization+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  oauth2_authorization:: {
+    new(
+      authorization_server_name,
+      scope=null
+    ):: std.prune(a={
+      authorization_server_name: authorization_server_name,
+      scope: scope,
+    }),
+  },
+  withOpenidAuthentication(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          openid_authentication: value,
+        },
+      },
+    },
+  },
+  withOpenidAuthenticationMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_api_management_api+: {
+        [resourceLabel]+: {
+          openid_authentication+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  openid_authentication:: {
+    new(
+      bearer_token_sending_methods=null,
+      openid_provider_name
+    ):: std.prune(a={
+      bearer_token_sending_methods: bearer_token_sending_methods,
+      openid_provider_name: openid_provider_name,
     }),
   },
 }

@@ -2,126 +2,72 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    storage_account_id=null,
-    allowed_authentication_modes=null,
-    encryption=null,
     tags=null,
-    name,
+    allowed_authentication_modes=null,
+    storage_account_id=null,
+    location,
     pool_allocation_mode=null,
     resource_group_name,
-    public_network_access_enabled=null,
     storage_account_authentication_mode=null,
-    location,
+    encryption=null,
+    public_network_access_enabled=null,
     storage_account_node_identity=null,
+    name,
+    timeouts=null,
     identity=null,
-    key_vault_reference=null,
-    timeouts=null
+    key_vault_reference=null
   ):: tf.withResource(type='azurerm_batch_account', label=resourceLabel, attrs=self.newAttrs(
-    storage_account_id=storage_account_id,
-    allowed_authentication_modes=allowed_authentication_modes,
-    encryption=encryption,
     tags=tags,
-    name=name,
+    allowed_authentication_modes=allowed_authentication_modes,
+    storage_account_id=storage_account_id,
+    location=location,
     pool_allocation_mode=pool_allocation_mode,
     resource_group_name=resource_group_name,
-    public_network_access_enabled=public_network_access_enabled,
     storage_account_authentication_mode=storage_account_authentication_mode,
-    location=location,
+    encryption=encryption,
+    public_network_access_enabled=public_network_access_enabled,
     storage_account_node_identity=storage_account_node_identity,
+    name=name,
+    timeouts=timeouts,
     identity=identity,
-    key_vault_reference=key_vault_reference,
-    timeouts=timeouts
+    key_vault_reference=key_vault_reference
   )),
   newAttrs(
-    storage_account_authentication_mode=null,
+    name,
     public_network_access_enabled=null,
     tags=null,
-    allowed_authentication_modes=null,
+    encryption=null,
+    storage_account_authentication_mode=null,
+    storage_account_node_identity=null,
     pool_allocation_mode=null,
     resource_group_name,
-    storage_account_node_identity=null,
-    encryption=null,
+    allowed_authentication_modes=null,
     location,
-    name,
     storage_account_id=null,
-    key_vault_reference=null,
     timeouts=null,
-    identity=null
+    identity=null,
+    key_vault_reference=null
   ):: std.prune(a={
-    storage_account_authentication_mode: storage_account_authentication_mode,
+    name: name,
     public_network_access_enabled: public_network_access_enabled,
     tags: tags,
-    allowed_authentication_modes: allowed_authentication_modes,
+    encryption: encryption,
+    storage_account_authentication_mode: storage_account_authentication_mode,
+    storage_account_node_identity: storage_account_node_identity,
     pool_allocation_mode: pool_allocation_mode,
     resource_group_name: resource_group_name,
-    storage_account_node_identity: storage_account_node_identity,
-    encryption: encryption,
+    allowed_authentication_modes: allowed_authentication_modes,
     location: location,
-    name: name,
     storage_account_id: storage_account_id,
-    key_vault_reference: key_vault_reference,
     timeouts: timeouts,
     identity: identity,
+    key_vault_reference: key_vault_reference,
   }),
-  withAllowedAuthenticationModes(resourceLabel, value):: {
+  withPoolAllocationMode(resourceLabel, value):: {
     resource+: {
       azurerm_batch_account+: {
         [resourceLabel]+: {
-          allowed_authentication_modes: value,
-        },
-      },
-    },
-  },
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_account+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_account+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
-  withStorageAccountAuthenticationMode(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_account+: {
-        [resourceLabel]+: {
-          storage_account_authentication_mode: value,
-        },
-      },
-    },
-  },
-  withStorageAccountId(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_account+: {
-        [resourceLabel]+: {
-          storage_account_id: value,
-        },
-      },
-    },
-  },
-  withStorageAccountNodeIdentity(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_account+: {
-        [resourceLabel]+: {
-          storage_account_node_identity: value,
-        },
-      },
-    },
-  },
-  withEncryption(resourceLabel, value):: {
-    resource+: {
-      azurerm_batch_account+: {
-        [resourceLabel]+: {
-          encryption: value,
+          pool_allocation_mode: value,
         },
       },
     },
@@ -135,6 +81,33 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
+  withStorageAccountAuthenticationMode(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_account+: {
+        [resourceLabel]+: {
+          storage_account_authentication_mode: value,
+        },
+      },
+    },
+  },
+  withStorageAccountNodeIdentity(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_account+: {
+        [resourceLabel]+: {
+          storage_account_node_identity: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_account+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_batch_account+: {
@@ -144,11 +117,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withPoolAllocationMode(resourceLabel, value):: {
+  withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_batch_account+: {
         [resourceLabel]+: {
-          pool_allocation_mode: value,
+          resource_group_name: value,
+        },
+      },
+    },
+  },
+  withAllowedAuthenticationModes(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_account+: {
+        [resourceLabel]+: {
+          allowed_authentication_modes: value,
+        },
+      },
+    },
+  },
+  withEncryption(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_account+: {
+        [resourceLabel]+: {
+          encryption: value,
         },
       },
     },
@@ -158,6 +149,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_batch_account+: {
         [resourceLabel]+: {
           public_network_access_enabled: value,
+        },
+      },
+    },
+  },
+  withStorageAccountId(resourceLabel, value):: {
+    resource+: {
+      azurerm_batch_account+: {
+        [resourceLabel]+: {
+          storage_account_id: value,
         },
       },
     },
@@ -234,15 +234,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      create=null,
-      delete=null,
       read=null,
-      update=null
+      update=null,
+      create=null,
+      delete=null
     ):: std.prune(a={
-      create: create,
-      delete: delete,
       read: read,
       update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

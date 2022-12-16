@@ -2,53 +2,35 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    location,
     name,
     resource_group_name,
     tags=null,
     zones=null,
-    location,
     timeouts=null
   ):: tf.withResource(type='azurerm_capacity_reservation_group', label=resourceLabel, attrs=self.newAttrs(
+    location=location,
     name=name,
     resource_group_name=resource_group_name,
     tags=tags,
     zones=zones,
-    location=location,
     timeouts=timeouts
   )),
   newAttrs(
+    location,
+    name,
     resource_group_name,
     tags=null,
     zones=null,
-    location,
-    name,
     timeouts=null
   ):: std.prune(a={
+    location: location,
+    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
     zones: zones,
-    location: location,
-    name: name,
     timeouts: timeouts,
   }),
-  withLocation(resourceLabel, value):: {
-    resource+: {
-      azurerm_capacity_reservation_group+: {
-        [resourceLabel]+: {
-          location: value,
-        },
-      },
-    },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_capacity_reservation_group+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
   withResourceGroupName(resourceLabel, value):: {
     resource+: {
       azurerm_capacity_reservation_group+: {
@@ -72,6 +54,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_capacity_reservation_group+: {
         [resourceLabel]+: {
           zones: value,
+        },
+      },
+    },
+  },
+  withLocation(resourceLabel, value):: {
+    resource+: {
+      azurerm_capacity_reservation_group+: {
+        [resourceLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_capacity_reservation_group+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

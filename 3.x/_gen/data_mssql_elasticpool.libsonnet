@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
+    server_name,
     name,
     resource_group_name,
-    server_name,
     timeouts=null
   ):: tf.withData(type='azurerm_mssql_elasticpool', label=dataSrcLabel, attrs=self.newAttrs(
+    server_name=server_name,
     name=name,
     resource_group_name=resource_group_name,
-    server_name=server_name,
     timeouts=timeouts
   )),
   newAttrs(
-    resource_group_name,
     server_name,
     name,
+    resource_group_name,
     timeouts=null
   ):: std.prune(a={
-    resource_group_name: resource_group_name,
     server_name: server_name,
     name: name,
+    resource_group_name: resource_group_name,
     timeouts: timeouts,
   }),
   withName(dataSrcLabel, value):: {

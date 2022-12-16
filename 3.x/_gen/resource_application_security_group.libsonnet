@@ -2,40 +2,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    tags=null,
     location,
     name,
     resource_group_name,
+    tags=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_application_security_group', label=resourceLabel, attrs=self.newAttrs(
-    tags=tags,
     location=location,
     name=name,
     resource_group_name=resource_group_name,
+    tags=tags,
     timeouts=timeouts
   )),
   newAttrs(
-    location,
-    name,
     resource_group_name,
     tags=null,
+    location,
+    name,
     timeouts=null
   ):: std.prune(a={
-    location: location,
-    name: name,
     resource_group_name: resource_group_name,
     tags: tags,
+    location: location,
+    name: name,
     timeouts: timeouts,
   }),
-  withResourceGroupName(resourceLabel, value):: {
-    resource+: {
-      azurerm_application_security_group+: {
-        [resourceLabel]+: {
-          resource_group_name: value,
-        },
-      },
-    },
-  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_application_security_group+: {
@@ -59,6 +50,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_application_security_group+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  withResourceGroupName(resourceLabel, value):: {
+    resource+: {
+      azurerm_application_security_group+: {
+        [resourceLabel]+: {
+          resource_group_name: value,
         },
       },
     },

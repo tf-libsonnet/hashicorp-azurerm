@@ -27,6 +27,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     rbac_authorization: rbac_authorization,
     timeouts: timeouts,
   }),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_self_hosted+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
   withDataFactoryId(resourceLabel, value):: {
     resource+: {
       azurerm_data_factory_integration_runtime_self_hosted+: {
@@ -44,46 +53,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         },
       },
     },
-  },
-  withName(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_self_hosted+: {
-        [resourceLabel]+: {
-          name: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_self_hosted+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_data_factory_integration_runtime_self_hosted+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
   },
   withRbacAuthorization(resourceLabel, value):: {
     resource+: {
@@ -108,6 +77,37 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       resource_id
     ):: std.prune(a={
       resource_id: resource_id,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_self_hosted+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_integration_runtime_self_hosted+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      delete=null,
+      read=null,
+      update=null,
+      create=null
+    ):: std.prune(a={
+      delete: delete,
+      read: read,
+      update: update,
+      create: create,
     }),
   },
 }

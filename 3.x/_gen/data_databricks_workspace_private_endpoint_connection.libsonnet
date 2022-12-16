@@ -2,10 +2,10 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    workspace_id,
     private_endpoint_id,
+    workspace_id,
     timeouts=null
-  ):: tf.withData(type='azurerm_databricks_workspace_private_endpoint_connection', label=dataSrcLabel, attrs=self.newAttrs(workspace_id=workspace_id, private_endpoint_id=private_endpoint_id, timeouts=timeouts)),
+  ):: tf.withData(type='azurerm_databricks_workspace_private_endpoint_connection', label=dataSrcLabel, attrs=self.newAttrs(private_endpoint_id=private_endpoint_id, workspace_id=workspace_id, timeouts=timeouts)),
   newAttrs(
     private_endpoint_id,
     workspace_id,

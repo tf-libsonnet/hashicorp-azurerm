@@ -2,47 +2,56 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
+    resource_group_id,
+    time_grain=null,
     amount,
     etag=null,
     name,
-    resource_group_id,
-    time_grain=null,
-    filter=null,
-    notification=null,
     time_period=null,
-    timeouts=null
+    timeouts=null,
+    filter=null,
+    notification=null
   ):: tf.withResource(type='azurerm_consumption_budget_resource_group', label=resourceLabel, attrs=self.newAttrs(
+    resource_group_id=resource_group_id,
+    time_grain=time_grain,
     amount=amount,
     etag=etag,
     name=name,
-    resource_group_id=resource_group_id,
-    time_grain=time_grain,
-    filter=filter,
-    notification=notification,
     time_period=time_period,
-    timeouts=timeouts
+    timeouts=timeouts,
+    filter=filter,
+    notification=notification
   )),
   newAttrs(
-    resource_group_id,
     time_grain=null,
     amount,
     etag=null,
     name,
+    resource_group_id,
+    timeouts=null,
     filter=null,
     notification=null,
-    time_period=null,
-    timeouts=null
+    time_period=null
   ):: std.prune(a={
-    resource_group_id: resource_group_id,
     time_grain: time_grain,
     amount: amount,
     etag: etag,
     name: name,
+    resource_group_id: resource_group_id,
+    timeouts: timeouts,
     filter: filter,
     notification: notification,
     time_period: time_period,
-    timeouts: timeouts,
   }),
+  withEtag(resourceLabel, value):: {
+    resource+: {
+      azurerm_consumption_budget_resource_group+: {
+        [resourceLabel]+: {
+          etag: value,
+        },
+      },
+    },
+  },
   withName(resourceLabel, value):: {
     resource+: {
       azurerm_consumption_budget_resource_group+: {
@@ -79,14 +88,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEtag(resourceLabel, value):: {
+  withTimePeriod(resourceLabel, value):: {
     resource+: {
       azurerm_consumption_budget_resource_group+: {
         [resourceLabel]+: {
-          etag: value,
+          time_period: value,
         },
       },
     },
+  },
+  withTimePeriodMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_consumption_budget_resource_group+: {
+        [resourceLabel]+: {
+          time_period+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  time_period:: {
+    new(
+      start_date,
+      end_date=null
+    ):: std.prune(a={
+      start_date: start_date,
+      end_date: end_date,
+    }),
   },
   withTimeouts(resourceLabel, value):: {
     resource+: {
@@ -108,15 +135,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
-      update=null,
       create=null,
       delete=null,
-      read=null
+      read=null,
+      update=null
     ):: std.prune(a={
-      update: update,
       create: create,
       delete: delete,
       read: read,
+      update: update,
     }),
   },
   withFilter(resourceLabel, value):: {
@@ -139,23 +166,34 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   filter:: {
     new(
+      not=null,
       tag=null,
-      dimension=null,
-      not=null
+      dimension=null
     ):: std.prune(a={
+      not: not,
       tag: tag,
       dimension: dimension,
-      not: not,
     }),
-    dimension:: {
+    tag:: {
       new(
-        values,
         name,
-        operator=null
+        operator=null,
+        values
       ):: std.prune(a={
-        values: values,
         name: name,
         operator: operator,
+        values: values,
+      }),
+    },
+    dimension:: {
+      new(
+        operator=null,
+        values,
+        name
+      ):: std.prune(a={
+        operator: operator,
+        values: values,
+        name: name,
       }),
     },
     not:: {
@@ -189,17 +227,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
         }),
       },
     },
-    tag:: {
-      new(
-        name,
-        operator=null,
-        values
-      ):: std.prune(a={
-        name: name,
-        operator: operator,
-        values: values,
-      }),
-    },
   },
   withNotification(resourceLabel, value):: {
     resource+: {
@@ -221,48 +248,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   notification:: {
     new(
+      contact_emails=null,
+      contact_groups=null,
+      contact_roles=null,
       enabled=null,
       operator,
       threshold,
-      threshold_type=null,
-      contact_emails=null,
-      contact_groups=null,
-      contact_roles=null
+      threshold_type=null
     ):: std.prune(a={
+      contact_emails: contact_emails,
+      contact_groups: contact_groups,
+      contact_roles: contact_roles,
       enabled: enabled,
       operator: operator,
       threshold: threshold,
       threshold_type: threshold_type,
-      contact_emails: contact_emails,
-      contact_groups: contact_groups,
-      contact_roles: contact_roles,
-    }),
-  },
-  withTimePeriod(resourceLabel, value):: {
-    resource+: {
-      azurerm_consumption_budget_resource_group+: {
-        [resourceLabel]+: {
-          time_period: value,
-        },
-      },
-    },
-  },
-  withTimePeriodMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_consumption_budget_resource_group+: {
-        [resourceLabel]+: {
-          time_period+: if std.isArray(v=value) then value else [value],
-        },
-      },
-    },
-  },
-  time_period:: {
-    new(
-      start_date,
-      end_date=null
-    ):: std.prune(a={
-      start_date: start_date,
-      end_date: end_date,
     }),
   },
 }

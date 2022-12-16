@@ -9,9 +9,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     name,
     resource_group_name,
-    data_disk=null,
     os_disk=null,
-    timeouts=null
+    timeouts=null,
+    data_disk=null
   ):: tf.withResource(type='azurerm_image', label=resourceLabel, attrs=self.newAttrs(
     source_virtual_machine_id=source_virtual_machine_id,
     tags=tags,
@@ -20,33 +20,42 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location=location,
     name=name,
     resource_group_name=resource_group_name,
-    data_disk=data_disk,
     os_disk=os_disk,
-    timeouts=timeouts
+    timeouts=timeouts,
+    data_disk=data_disk
   )),
   newAttrs(
+    hyper_v_generation=null,
+    location,
+    name,
     resource_group_name,
     source_virtual_machine_id=null,
     tags=null,
     zone_resilient=null,
-    hyper_v_generation=null,
-    location,
-    name,
+    timeouts=null,
     data_disk=null,
-    os_disk=null,
-    timeouts=null
+    os_disk=null
   ):: std.prune(a={
+    hyper_v_generation: hyper_v_generation,
+    location: location,
+    name: name,
     resource_group_name: resource_group_name,
     source_virtual_machine_id: source_virtual_machine_id,
     tags: tags,
     zone_resilient: zone_resilient,
-    hyper_v_generation: hyper_v_generation,
-    location: location,
-    name: name,
+    timeouts: timeouts,
     data_disk: data_disk,
     os_disk: os_disk,
-    timeouts: timeouts,
   }),
+  withSourceVirtualMachineId(resourceLabel, value):: {
+    resource+: {
+      azurerm_image+: {
+        [resourceLabel]+: {
+          source_virtual_machine_id: value,
+        },
+      },
+    },
+  },
   withTags(resourceLabel, value):: {
     resource+: {
       azurerm_image+: {
@@ -101,46 +110,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withSourceVirtualMachineId(resourceLabel, value):: {
-    resource+: {
-      azurerm_image+: {
-        [resourceLabel]+: {
-          source_virtual_machine_id: value,
-        },
-      },
-    },
-  },
-  withTimeouts(resourceLabel, value):: {
-    resource+: {
-      azurerm_image+: {
-        [resourceLabel]+: {
-          timeouts: value,
-        },
-      },
-    },
-  },
-  withTimeoutsMixin(resourceLabel, value):: {
-    resource+: {
-      azurerm_image+: {
-        [resourceLabel]+: {
-          timeouts+: value,
-        },
-      },
-    },
-  },
-  timeouts:: {
-    new(
-      create=null,
-      delete=null,
-      read=null,
-      update=null
-    ):: std.prune(a={
-      create: create,
-      delete: delete,
-      read: read,
-      update: update,
-    }),
-  },
   withDataDisk(resourceLabel, value):: {
     resource+: {
       azurerm_image+: {
@@ -161,17 +130,17 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   data_disk:: {
     new(
+      lun=null,
+      managed_disk_id=null,
       size_gb=null,
       blob_uri=null,
-      caching=null,
-      lun=null,
-      managed_disk_id=null
+      caching=null
     ):: std.prune(a={
+      lun: lun,
+      managed_disk_id: managed_disk_id,
       size_gb: size_gb,
       blob_uri: blob_uri,
       caching: caching,
-      lun: lun,
-      managed_disk_id: managed_disk_id,
     }),
   },
   withOsDisk(resourceLabel, value):: {
@@ -194,19 +163,50 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   os_disk:: {
     new(
-      blob_uri=null,
-      caching=null,
       managed_disk_id=null,
       os_state=null,
       os_type=null,
-      size_gb=null
+      size_gb=null,
+      blob_uri=null,
+      caching=null
     ):: std.prune(a={
-      blob_uri: blob_uri,
-      caching: caching,
       managed_disk_id: managed_disk_id,
       os_state: os_state,
       os_type: os_type,
       size_gb: size_gb,
+      blob_uri: blob_uri,
+      caching: caching,
+    }),
+  },
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_image+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_image+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  timeouts:: {
+    new(
+      read=null,
+      update=null,
+      create=null,
+      delete=null
+    ):: std.prune(a={
+      read: read,
+      update: update,
+      create: create,
+      delete: delete,
     }),
   },
 }

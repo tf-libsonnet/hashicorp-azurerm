@@ -2,16 +2,16 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     dataSrcLabel,
-    resource_group_name,
-    traffic_view_enabled=null,
     name,
+    resource_group_name,
     tags=null,
+    traffic_view_enabled=null,
     timeouts=null
   ):: tf.withData(type='azurerm_traffic_manager_profile', label=dataSrcLabel, attrs=self.newAttrs(
-    resource_group_name=resource_group_name,
-    traffic_view_enabled=traffic_view_enabled,
     name=name,
+    resource_group_name=resource_group_name,
     tags=tags,
+    traffic_view_enabled=traffic_view_enabled,
     timeouts=timeouts
   )),
   newAttrs(
@@ -27,24 +27,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name: name,
     timeouts: timeouts,
   }),
-  withTags(dataSrcLabel, value):: {
-    data+: {
-      azurerm_traffic_manager_profile+: {
-        [dataSrcLabel]+: {
-          tags: value,
-        },
-      },
-    },
-  },
-  withTrafficViewEnabled(dataSrcLabel, value):: {
-    data+: {
-      azurerm_traffic_manager_profile+: {
-        [dataSrcLabel]+: {
-          traffic_view_enabled: value,
-        },
-      },
-    },
-  },
   withName(dataSrcLabel, value):: {
     data+: {
       azurerm_traffic_manager_profile+: {
@@ -59,6 +41,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_traffic_manager_profile+: {
         [dataSrcLabel]+: {
           resource_group_name: value,
+        },
+      },
+    },
+  },
+  withTags(dataSrcLabel, value):: {
+    data+: {
+      azurerm_traffic_manager_profile+: {
+        [dataSrcLabel]+: {
+          tags: value,
+        },
+      },
+    },
+  },
+  withTrafficViewEnabled(dataSrcLabel, value):: {
+    data+: {
+      azurerm_traffic_manager_profile+: {
+        [dataSrcLabel]+: {
+          traffic_view_enabled: value,
         },
       },
     },

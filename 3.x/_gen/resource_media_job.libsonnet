@@ -2,25 +2,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    description=null,
-    media_services_account_name,
     name,
     priority=null,
     resource_group_name,
     transform_name,
+    description=null,
+    media_services_account_name,
+    output_asset=null,
     timeouts=null,
-    input_asset=null,
-    output_asset=null
+    input_asset=null
   ):: tf.withResource(type='azurerm_media_job', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    media_services_account_name=media_services_account_name,
     name=name,
     priority=priority,
     resource_group_name=resource_group_name,
     transform_name=transform_name,
+    description=description,
+    media_services_account_name=media_services_account_name,
+    output_asset=output_asset,
     timeouts=timeouts,
-    input_asset=input_asset,
-    output_asset=output_asset
+    input_asset=input_asset
   )),
   newAttrs(
     resource_group_name,
@@ -29,9 +29,9 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     media_services_account_name,
     name,
     priority=null,
+    input_asset=null,
     output_asset=null,
-    timeouts=null,
-    input_asset=null
+    timeouts=null
   ):: std.prune(a={
     resource_group_name: resource_group_name,
     transform_name: transform_name,
@@ -39,10 +39,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     media_services_account_name: media_services_account_name,
     name: name,
     priority: priority,
+    input_asset: input_asset,
     output_asset: output_asset,
     timeouts: timeouts,
-    input_asset: input_asset,
   }),
+  withTransformName(resourceLabel, value):: {
+    resource+: {
+      azurerm_media_job+: {
+        [resourceLabel]+: {
+          transform_name: value,
+        },
+      },
+    },
+  },
   withDescription(resourceLabel, value):: {
     resource+: {
       azurerm_media_job+: {
@@ -84,15 +93,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       azurerm_media_job+: {
         [resourceLabel]+: {
           resource_group_name: value,
-        },
-      },
-    },
-  },
-  withTransformName(resourceLabel, value):: {
-    resource+: {
-      azurerm_media_job+: {
-        [resourceLabel]+: {
-          transform_name: value,
         },
       },
     },
@@ -171,15 +171,15 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   },
   timeouts:: {
     new(
+      create=null,
       delete=null,
       read=null,
-      update=null,
-      create=null
+      update=null
     ):: std.prune(a={
+      create: create,
       delete: delete,
       read: read,
       update: update,
-      create: create,
     }),
   },
 }

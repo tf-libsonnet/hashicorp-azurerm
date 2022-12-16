@@ -2,64 +2,55 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 {
   new(
     resourceLabel,
-    configuration_store_id,
     key,
     value=null,
     vault_key_reference=null,
-    content_type=null,
-    type=null,
     etag=null,
+    label=null,
+    type=null,
+    configuration_store_id,
     locked=null,
     tags=null,
-    label=null,
+    content_type=null,
     timeouts=null
   ):: tf.withResource(type='azurerm_app_configuration_key', label=resourceLabel, attrs=self.newAttrs(
-    configuration_store_id=configuration_store_id,
     key=key,
     value=value,
     vault_key_reference=vault_key_reference,
-    content_type=content_type,
-    type=type,
     etag=etag,
+    label=label,
+    type=type,
+    configuration_store_id=configuration_store_id,
     locked=locked,
     tags=tags,
-    label=label,
+    content_type=content_type,
     timeouts=timeouts
   )),
   newAttrs(
     value=null,
+    etag=null,
+    key,
+    type=null,
     content_type=null,
     label=null,
-    type=null,
+    locked=null,
+    tags=null,
     vault_key_reference=null,
     configuration_store_id,
-    key,
-    locked=null,
-    etag=null,
-    tags=null,
     timeouts=null
   ):: std.prune(a={
     value: value,
+    etag: etag,
+    key: key,
+    type: type,
     content_type: content_type,
     label: label,
-    type: type,
+    locked: locked,
+    tags: tags,
     vault_key_reference: vault_key_reference,
     configuration_store_id: configuration_store_id,
-    key: key,
-    locked: locked,
-    etag: etag,
-    tags: tags,
     timeouts: timeouts,
   }),
-  withType(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration_key+: {
-        [resourceLabel]+: {
-          type: value,
-        },
-      },
-    },
-  },
   withValue(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_key+: {
@@ -78,15 +69,6 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withEtag(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration_key+: {
-        [resourceLabel]+: {
-          etag: value,
-        },
-      },
-    },
-  },
   withLocked(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_key+: {
@@ -96,20 +78,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withContentType(resourceLabel, value):: {
-    resource+: {
-      azurerm_app_configuration_key+: {
-        [resourceLabel]+: {
-          content_type: value,
-        },
-      },
-    },
-  },
   withLabel(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_key+: {
         [resourceLabel]+: {
           label: value,
+        },
+      },
+    },
+  },
+  withEtag(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration_key+: {
+        [resourceLabel]+: {
+          etag: value,
+        },
+      },
+    },
+  },
+  withKey(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration_key+: {
+        [resourceLabel]+: {
+          key: value,
         },
       },
     },
@@ -132,11 +123,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
       },
     },
   },
-  withKey(resourceLabel, value):: {
+  withContentType(resourceLabel, value):: {
     resource+: {
       azurerm_app_configuration_key+: {
         [resourceLabel]+: {
-          key: value,
+          content_type: value,
+        },
+      },
+    },
+  },
+  withType(resourceLabel, value):: {
+    resource+: {
+      azurerm_app_configuration_key+: {
+        [resourceLabel]+: {
+          type: value,
         },
       },
     },
