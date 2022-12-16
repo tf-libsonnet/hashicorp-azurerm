@@ -25,18 +25,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     two_line_elements,
     links=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_orbital_spacecraft', label=resourceLabel, attrs=self.newAttrs(
-    links=links,
-    location=location,
-    name=name,
-    norad_id=norad_id,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    title_line=title_line,
-    two_line_elements=two_line_elements
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_orbital_spacecraft',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      links=links,
+      location=location,
+      name=name,
+      norad_id=norad_id,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      title_line=title_line,
+      two_line_elements=two_line_elements
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

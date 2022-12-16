@@ -16,15 +16,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stream_analytics_job_id,
     input=null,
     output=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_function_javascript_uda', label=resourceLabel, attrs=self.newAttrs(
-    input=input,
-    name=name,
-    output=output,
-    script=script,
-    stream_analytics_job_id=stream_analytics_job_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_function_javascript_uda',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      input=input,
+      name=name,
+      output=output,
+      script=script,
+      stream_analytics_job_id=stream_analytics_job_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     script,

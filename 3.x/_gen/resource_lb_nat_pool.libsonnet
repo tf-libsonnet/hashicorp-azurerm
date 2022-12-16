@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     floating_ip_enabled=null,
     idle_timeout_in_minutes=null,
     tcp_reset_enabled=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lb_nat_pool', label=resourceLabel, attrs=self.newAttrs(
-    backend_port=backend_port,
-    floating_ip_enabled=floating_ip_enabled,
-    frontend_ip_configuration_name=frontend_ip_configuration_name,
-    frontend_port_end=frontend_port_end,
-    frontend_port_start=frontend_port_start,
-    idle_timeout_in_minutes=idle_timeout_in_minutes,
-    loadbalancer_id=loadbalancer_id,
-    name=name,
-    protocol=protocol,
-    resource_group_name=resource_group_name,
-    tcp_reset_enabled=tcp_reset_enabled,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb_nat_pool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backend_port=backend_port,
+      floating_ip_enabled=floating_ip_enabled,
+      frontend_ip_configuration_name=frontend_ip_configuration_name,
+      frontend_port_end=frontend_port_end,
+      frontend_port_start=frontend_port_start,
+      idle_timeout_in_minutes=idle_timeout_in_minutes,
+      loadbalancer_id=loadbalancer_id,
+      name=name,
+      protocol=protocol,
+      resource_group_name=resource_group_name,
+      tcp_reset_enabled=tcp_reset_enabled,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backend_port,
     frontend_ip_configuration_name,

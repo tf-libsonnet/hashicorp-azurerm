@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     redis_cache_name,
     resource_group_name,
     start_ip,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_redis_firewall_rule', label=resourceLabel, attrs=self.newAttrs(
-    end_ip=end_ip,
-    name=name,
-    redis_cache_name=redis_cache_name,
-    resource_group_name=resource_group_name,
-    start_ip=start_ip,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_redis_firewall_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      end_ip=end_ip,
+      name=name,
+      redis_cache_name=redis_cache_name,
+      resource_group_name=resource_group_name,
+      start_ip=start_ip,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     end_ip,
     name,

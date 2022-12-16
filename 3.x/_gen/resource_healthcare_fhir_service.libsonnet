@@ -48,23 +48,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     kind=null,
     oci_artifact=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_healthcare_fhir_service', label=resourceLabel, attrs=self.newAttrs(
-    access_policy_object_ids=access_policy_object_ids,
-    authentication=authentication,
-    configuration_export_storage_account_name=configuration_export_storage_account_name,
-    container_registry_login_server_url=container_registry_login_server_url,
-    cors=cors,
-    identity=identity,
-    kind=kind,
-    location=location,
-    name=name,
-    oci_artifact=oci_artifact,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    workspace_id=workspace_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_healthcare_fhir_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_policy_object_ids=access_policy_object_ids,
+      authentication=authentication,
+      configuration_export_storage_account_name=configuration_export_storage_account_name,
+      container_registry_login_server_url=container_registry_login_server_url,
+      cors=cors,
+      identity=identity,
+      kind=kind,
+      location=location,
+      name=name,
+      oci_artifact=oci_artifact,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      workspace_id=workspace_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

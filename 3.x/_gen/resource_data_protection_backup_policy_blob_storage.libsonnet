@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     retention_duration,
     vault_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_protection_backup_policy_blob_storage', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    retention_duration=retention_duration,
-    timeouts=timeouts,
-    vault_id=vault_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_protection_backup_policy_blob_storage',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      retention_duration=retention_duration,
+      timeouts=timeouts,
+      vault_id=vault_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     retention_duration,

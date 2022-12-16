@@ -34,22 +34,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network_access_enabled=null,
     tags=null,
     timeouts=null,
-    zone_redundant=null
-  ):: tf.withResource(type='azurerm_servicebus_namespace', label=resourceLabel, attrs=self.newAttrs(
-    capacity=capacity,
-    customer_managed_key=customer_managed_key,
-    identity=identity,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    minimum_tls_version=minimum_tls_version,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    zone_redundant=zone_redundant
-  )),
+    zone_redundant=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_servicebus_namespace',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      capacity=capacity,
+      customer_managed_key=customer_managed_key,
+      identity=identity,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      minimum_tls_version=minimum_tls_version,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      zone_redundant=zone_redundant
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

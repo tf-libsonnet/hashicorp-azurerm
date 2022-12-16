@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     batch_min_rows=null,
     serialization=null,
     storage_account_key=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_blob', label=resourceLabel, attrs=self.newAttrs(
-    authentication_mode=authentication_mode,
-    batch_max_wait_time=batch_max_wait_time,
-    batch_min_rows=batch_min_rows,
-    date_format=date_format,
-    name=name,
-    path_pattern=path_pattern,
-    resource_group_name=resource_group_name,
-    serialization=serialization,
-    storage_account_key=storage_account_key,
-    storage_account_name=storage_account_name,
-    storage_container_name=storage_container_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    time_format=time_format,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_blob',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication_mode=authentication_mode,
+      batch_max_wait_time=batch_max_wait_time,
+      batch_min_rows=batch_min_rows,
+      date_format=date_format,
+      name=name,
+      path_pattern=path_pattern,
+      resource_group_name=resource_group_name,
+      serialization=serialization,
+      storage_account_key=storage_account_key,
+      storage_account_name=storage_account_name,
+      storage_container_name=storage_container_name,
+      stream_analytics_job_name=stream_analytics_job_name,
+      time_format=time_format,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     date_format,
     name,

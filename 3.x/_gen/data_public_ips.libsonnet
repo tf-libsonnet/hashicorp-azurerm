@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     allocation_type=null,
     attachment_status=null,
     name_prefix=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_public_ips', label=dataSrcLabel, attrs=self.newAttrs(
-    allocation_type=allocation_type,
-    attachment_status=attachment_status,
-    name_prefix=name_prefix,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_public_ips',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      allocation_type=allocation_type,
+      attachment_status=attachment_status,
+      name_prefix=name_prefix,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     resource_group_name,
     allocation_type=null,

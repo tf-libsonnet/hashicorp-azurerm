@@ -23,22 +23,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     start_time=null,
     timeouts=null,
     timezone=null,
-    week_days=null
-  ):: tf.withResource(type='azurerm_automation_schedule', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    description=description,
-    expiry_time=expiry_time,
-    frequency=frequency,
-    interval=interval,
-    month_days=month_days,
-    monthly_occurrence=monthly_occurrence,
-    name=name,
-    resource_group_name=resource_group_name,
-    start_time=start_time,
-    timeouts=timeouts,
-    timezone=timezone,
-    week_days=week_days
-  )),
+    week_days=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_schedule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      description=description,
+      expiry_time=expiry_time,
+      frequency=frequency,
+      interval=interval,
+      month_days=month_days,
+      monthly_occurrence=monthly_occurrence,
+      name=name,
+      resource_group_name=resource_group_name,
+      start_time=start_time,
+      timeouts=timeouts,
+      timezone=timezone,
+      week_days=week_days
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     frequency,

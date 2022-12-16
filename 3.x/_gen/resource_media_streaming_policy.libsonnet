@@ -95,17 +95,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     common_encryption_cenc=null,
     default_content_key_policy_name=null,
     no_encryption_enabled_protocols=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_streaming_policy', label=resourceLabel, attrs=self.newAttrs(
-    common_encryption_cbcs=common_encryption_cbcs,
-    common_encryption_cenc=common_encryption_cenc,
-    default_content_key_policy_name=default_content_key_policy_name,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    no_encryption_enabled_protocols=no_encryption_enabled_protocols,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_streaming_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      common_encryption_cbcs=common_encryption_cbcs,
+      common_encryption_cenc=common_encryption_cenc,
+      default_content_key_policy_name=default_content_key_policy_name,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      no_encryption_enabled_protocols=no_encryption_enabled_protocols,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     media_services_account_name,
     name,

@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_types=null,
     services=null,
     signed_version=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_storage_account_sas', label=dataSrcLabel, attrs=self.newAttrs(
-    connection_string=connection_string,
-    expiry=expiry,
-    https_only=https_only,
-    ip_addresses=ip_addresses,
-    permissions=permissions,
-    resource_types=resource_types,
-    services=services,
-    signed_version=signed_version,
-    start=start,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_storage_account_sas',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      connection_string=connection_string,
+      expiry=expiry,
+      https_only=https_only,
+      ip_addresses=ip_addresses,
+      permissions=permissions,
+      resource_types=resource_types,
+      services=services,
+      signed_version=signed_version,
+      start=start,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     connection_string,
     expiry,

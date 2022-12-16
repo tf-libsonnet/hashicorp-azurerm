@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     offer,
     plan,
     publisher,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_marketplace_agreement', label=resourceLabel, attrs=self.newAttrs(
-    offer=offer,
-    plan=plan,
-    publisher=publisher,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_marketplace_agreement',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      offer=offer,
+      plan=plan,
+      publisher=publisher,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     offer,
     plan,

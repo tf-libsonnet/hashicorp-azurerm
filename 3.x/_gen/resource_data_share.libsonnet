@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     snapshot_schedule=null,
     terms=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_share', label=resourceLabel, attrs=self.newAttrs(
-    account_id=account_id,
-    description=description,
-    kind=kind,
-    name=name,
-    snapshot_schedule=snapshot_schedule,
-    terms=terms,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_share',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_id=account_id,
+      description=description,
+      kind=kind,
+      name=name,
+      snapshot_schedule=snapshot_schedule,
+      terms=terms,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_id,
     kind,

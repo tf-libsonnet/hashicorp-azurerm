@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     moniter_metrics_after_duration=null,
     parameters=null,
     timeouts=null,
-    variables=null
-  ):: tf.withResource(type='azurerm_data_factory_pipeline', label=resourceLabel, attrs=self.newAttrs(
-    activities_json=activities_json,
-    annotations=annotations,
-    concurrency=concurrency,
-    data_factory_id=data_factory_id,
-    description=description,
-    folder=folder,
-    moniter_metrics_after_duration=moniter_metrics_after_duration,
-    name=name,
-    parameters=parameters,
-    timeouts=timeouts,
-    variables=variables
-  )),
+    variables=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_pipeline',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      activities_json=activities_json,
+      annotations=annotations,
+      concurrency=concurrency,
+      data_factory_id=data_factory_id,
+      description=description,
+      folder=folder,
+      moniter_metrics_after_duration=moniter_metrics_after_duration,
+      name=name,
+      parameters=parameters,
+      timeouts=timeouts,
+      variables=variables
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

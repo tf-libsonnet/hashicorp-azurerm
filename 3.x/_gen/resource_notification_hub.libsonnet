@@ -31,17 +31,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     apns_credential=null,
     gcm_credential=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_notification_hub', label=resourceLabel, attrs=self.newAttrs(
-    apns_credential=apns_credential,
-    gcm_credential=gcm_credential,
-    location=location,
-    name=name,
-    namespace_name=namespace_name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_notification_hub',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      apns_credential=apns_credential,
+      gcm_credential=gcm_credential,
+      location=location,
+      name=name,
+      namespace_name=namespace_name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     source,
     condition=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_route', label=resourceLabel, attrs=self.newAttrs(
-    condition=condition,
-    enabled=enabled,
-    endpoint_names=endpoint_names,
-    iothub_name=iothub_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    source=source,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_route',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      condition=condition,
+      enabled=enabled,
+      endpoint_names=endpoint_names,
+      iothub_name=iothub_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      source=source,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     enabled,
     endpoint_names,

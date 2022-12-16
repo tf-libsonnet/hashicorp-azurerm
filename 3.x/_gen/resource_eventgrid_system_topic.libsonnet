@@ -18,17 +18,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     topic_type,
     identity=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_eventgrid_system_topic', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    source_arm_resource_id=source_arm_resource_id,
-    tags=tags,
-    timeouts=timeouts,
-    topic_type=topic_type
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventgrid_system_topic',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      source_arm_resource_id=source_arm_resource_id,
+      tags=tags,
+      timeouts=timeouts,
+      topic_type=topic_type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

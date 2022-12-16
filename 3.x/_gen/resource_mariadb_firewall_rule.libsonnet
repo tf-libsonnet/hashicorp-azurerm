@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     server_name,
     start_ip_address,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mariadb_firewall_rule', label=resourceLabel, attrs=self.newAttrs(
-    end_ip_address=end_ip_address,
-    name=name,
-    resource_group_name=resource_group_name,
-    server_name=server_name,
-    start_ip_address=start_ip_address,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mariadb_firewall_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      end_ip_address=end_ip_address,
+      name=name,
+      resource_group_name=resource_group_name,
+      server_name=server_name,
+      start_ip_address=start_ip_address,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     end_ip_address,
     name,

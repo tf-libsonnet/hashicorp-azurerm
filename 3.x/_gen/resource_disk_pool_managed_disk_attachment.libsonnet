@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     disk_pool_id,
     managed_disk_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_disk_pool_managed_disk_attachment', label=resourceLabel, attrs=self.newAttrs(disk_pool_id=disk_pool_id, managed_disk_id=managed_disk_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_disk_pool_managed_disk_attachment',
+    label=resourceLabel,
+    attrs=self.newAttrs(disk_pool_id=disk_pool_id, managed_disk_id=managed_disk_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     disk_pool_id,
     managed_disk_id,

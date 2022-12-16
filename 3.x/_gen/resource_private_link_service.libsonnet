@@ -27,20 +27,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     nat_ip_configuration=null,
     tags=null,
     timeouts=null,
-    visibility_subscription_ids=null
-  ):: tf.withResource(type='azurerm_private_link_service', label=resourceLabel, attrs=self.newAttrs(
-    auto_approval_subscription_ids=auto_approval_subscription_ids,
-    enable_proxy_protocol=enable_proxy_protocol,
-    fqdns=fqdns,
-    load_balancer_frontend_ip_configuration_ids=load_balancer_frontend_ip_configuration_ids,
-    location=location,
-    name=name,
-    nat_ip_configuration=nat_ip_configuration,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    visibility_subscription_ids=visibility_subscription_ids
-  )),
+    visibility_subscription_ids=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_private_link_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_approval_subscription_ids=auto_approval_subscription_ids,
+      enable_proxy_protocol=enable_proxy_protocol,
+      fqdns=fqdns,
+      load_balancer_frontend_ip_configuration_ids=load_balancer_frontend_ip_configuration_ids,
+      location=location,
+      name=name,
+      nat_ip_configuration=nat_ip_configuration,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      visibility_subscription_ids=visibility_subscription_ids
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     load_balancer_frontend_ip_configuration_ids,
     location,

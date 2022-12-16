@@ -47,20 +47,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     link1=null,
     link2=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_port', label=resourceLabel, attrs=self.newAttrs(
-    bandwidth_in_gbps=bandwidth_in_gbps,
-    encapsulation=encapsulation,
-    identity=identity,
-    link1=link1,
-    link2=link2,
-    location=location,
-    name=name,
-    peering_location=peering_location,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_port',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bandwidth_in_gbps=bandwidth_in_gbps,
+      encapsulation=encapsulation,
+      identity=identity,
+      link1=link1,
+      link2=link2,
+      location=location,
+      name=name,
+      peering_location=peering_location,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bandwidth_in_gbps,
     encapsulation,

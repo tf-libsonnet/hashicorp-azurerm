@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     soa_record=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_dns_zone', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    soa_record=soa_record,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dns_zone',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      soa_record=soa_record,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

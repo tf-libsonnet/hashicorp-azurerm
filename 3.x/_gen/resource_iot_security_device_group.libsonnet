@@ -19,14 +19,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     allow_rule=null,
     range_rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iot_security_device_group', label=resourceLabel, attrs=self.newAttrs(
-    allow_rule=allow_rule,
-    iothub_id=iothub_id,
-    name=name,
-    range_rule=range_rule,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iot_security_device_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_rule=allow_rule,
+      iothub_id=iothub_id,
+      name=name,
+      range_rule=range_rule,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     iothub_id,
     name,

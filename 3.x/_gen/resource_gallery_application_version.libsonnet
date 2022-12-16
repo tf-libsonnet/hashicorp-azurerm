@@ -23,20 +23,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source=null,
     tags=null,
     target_region=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_gallery_application_version', label=resourceLabel, attrs=self.newAttrs(
-    enable_health_check=enable_health_check,
-    end_of_life_date=end_of_life_date,
-    exclude_from_latest=exclude_from_latest,
-    gallery_application_id=gallery_application_id,
-    location=location,
-    manage_action=manage_action,
-    name=name,
-    source=source,
-    tags=tags,
-    target_region=target_region,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_gallery_application_version',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      enable_health_check=enable_health_check,
+      end_of_life_date=end_of_life_date,
+      exclude_from_latest=exclude_from_latest,
+      gallery_application_id=gallery_application_id,
+      location=location,
+      manage_action=manage_action,
+      name=name,
+      source=source,
+      tags=tags,
+      target_region=target_region,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     gallery_application_id,
     location,

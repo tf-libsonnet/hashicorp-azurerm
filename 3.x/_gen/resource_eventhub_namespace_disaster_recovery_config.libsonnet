@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     namespace_name,
     partner_namespace_id,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_eventhub_namespace_disaster_recovery_config', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    namespace_name=namespace_name,
-    partner_namespace_id=partner_namespace_id,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventhub_namespace_disaster_recovery_config',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      namespace_name=namespace_name,
+      partner_namespace_id=partner_namespace_id,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     namespace_name,

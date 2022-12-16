@@ -3,8 +3,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
   new(
     resourceLabel,
     auto_provision,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_security_center_auto_provisioning', label=resourceLabel, attrs=self.newAttrs(auto_provision=auto_provision, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_security_center_auto_provisioning',
+    label=resourceLabel,
+    attrs=self.newAttrs(auto_provision=auto_provision, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     auto_provision,
     timeouts=null

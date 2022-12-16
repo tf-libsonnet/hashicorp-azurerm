@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     start_ip_address,
     synapse_workspace_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_firewall_rule', label=resourceLabel, attrs=self.newAttrs(
-    end_ip_address=end_ip_address,
-    name=name,
-    start_ip_address=start_ip_address,
-    synapse_workspace_id=synapse_workspace_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_firewall_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      end_ip_address=end_ip_address,
+      name=name,
+      start_ip_address=start_ip_address,
+      synapse_workspace_id=synapse_workspace_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     end_ip_address,
     name,

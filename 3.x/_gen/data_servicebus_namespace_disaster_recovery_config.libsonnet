@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     namespace_id=null,
     namespace_name=null,
     resource_group_name=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_servicebus_namespace_disaster_recovery_config', label=dataSrcLabel, attrs=self.newAttrs(
-    alias_authorization_rule_id=alias_authorization_rule_id,
-    name=name,
-    namespace_id=namespace_id,
-    namespace_name=namespace_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_servicebus_namespace_disaster_recovery_config',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      alias_authorization_rule_id=alias_authorization_rule_id,
+      name=name,
+      namespace_id=namespace_id,
+      namespace_name=namespace_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     alias_authorization_rule_id=null,

@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     probe_threshold=null,
     protocol=null,
     request_path=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lb_probe', label=resourceLabel, attrs=self.newAttrs(
-    interval_in_seconds=interval_in_seconds,
-    loadbalancer_id=loadbalancer_id,
-    name=name,
-    number_of_probes=number_of_probes,
-    port=port,
-    probe_threshold=probe_threshold,
-    protocol=protocol,
-    request_path=request_path,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb_probe',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      interval_in_seconds=interval_in_seconds,
+      loadbalancer_id=loadbalancer_id,
+      name=name,
+      number_of_probes=number_of_probes,
+      port=port,
+      probe_threshold=probe_threshold,
+      protocol=protocol,
+      request_path=request_path,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     loadbalancer_id,
     name,

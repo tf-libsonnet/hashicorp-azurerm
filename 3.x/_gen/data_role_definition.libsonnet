@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name=null,
     role_definition_id=null,
     scope=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_role_definition', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    role_definition_id=role_definition_id,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_role_definition',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      role_definition_id=role_definition_id,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name=null,
     role_definition_id=null,

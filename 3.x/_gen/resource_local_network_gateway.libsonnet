@@ -21,18 +21,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     gateway_address=null,
     gateway_fqdn=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_local_network_gateway', label=resourceLabel, attrs=self.newAttrs(
-    address_space=address_space,
-    bgp_settings=bgp_settings,
-    gateway_address=gateway_address,
-    gateway_fqdn=gateway_fqdn,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_local_network_gateway',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_space=address_space,
+      bgp_settings=bgp_settings,
+      gateway_address=gateway_address,
+      gateway_fqdn=gateway_fqdn,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

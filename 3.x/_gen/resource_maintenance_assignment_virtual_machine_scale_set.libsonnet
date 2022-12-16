@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     maintenance_configuration_id,
     virtual_machine_scale_set_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_maintenance_assignment_virtual_machine_scale_set', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    maintenance_configuration_id=maintenance_configuration_id,
-    timeouts=timeouts,
-    virtual_machine_scale_set_id=virtual_machine_scale_set_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_maintenance_assignment_virtual_machine_scale_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      maintenance_configuration_id=maintenance_configuration_id,
+      timeouts=timeouts,
+      virtual_machine_scale_set_id=virtual_machine_scale_set_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     maintenance_configuration_id,

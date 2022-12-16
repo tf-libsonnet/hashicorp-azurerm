@@ -53,22 +53,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     persistent_disk=null,
     public_endpoint_enabled=null,
     timeouts=null,
-    tls_enabled=null
-  ):: tf.withResource(type='azurerm_spring_cloud_app', label=resourceLabel, attrs=self.newAttrs(
-    addon_json=addon_json,
-    custom_persistent_disk=custom_persistent_disk,
-    https_only=https_only,
-    identity=identity,
-    ingress_settings=ingress_settings,
-    is_public=is_public,
-    name=name,
-    persistent_disk=persistent_disk,
-    public_endpoint_enabled=public_endpoint_enabled,
-    resource_group_name=resource_group_name,
-    service_name=service_name,
-    timeouts=timeouts,
-    tls_enabled=tls_enabled
-  )),
+    tls_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_app',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      addon_json=addon_json,
+      custom_persistent_disk=custom_persistent_disk,
+      https_only=https_only,
+      identity=identity,
+      ingress_settings=ingress_settings,
+      is_public=is_public,
+      name=name,
+      persistent_disk=persistent_disk,
+      public_endpoint_enabled=public_endpoint_enabled,
+      resource_group_name=resource_group_name,
+      service_name=service_name,
+      timeouts=timeouts,
+      tls_enabled=tls_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

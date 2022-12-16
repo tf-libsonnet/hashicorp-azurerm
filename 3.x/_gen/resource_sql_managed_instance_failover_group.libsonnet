@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     read_write_endpoint_failover_policy=null,
     readonly_endpoint_failover_policy_enabled=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sql_managed_instance_failover_group', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    managed_instance_name=managed_instance_name,
-    name=name,
-    partner_managed_instance_id=partner_managed_instance_id,
-    read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
-    readonly_endpoint_failover_policy_enabled=readonly_endpoint_failover_policy_enabled,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sql_managed_instance_failover_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      managed_instance_name=managed_instance_name,
+      name=name,
+      partner_managed_instance_id=partner_managed_instance_id,
+      read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
+      readonly_endpoint_failover_policy_enabled=readonly_endpoint_failover_policy_enabled,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     managed_instance_name,

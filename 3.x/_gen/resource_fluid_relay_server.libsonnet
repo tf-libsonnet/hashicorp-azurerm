@@ -17,16 +17,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     identity=null,
     storage_sku=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_fluid_relay_server', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    storage_sku=storage_sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_fluid_relay_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      storage_sku=storage_sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

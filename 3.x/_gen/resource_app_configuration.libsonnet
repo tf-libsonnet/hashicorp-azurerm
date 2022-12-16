@@ -31,21 +31,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     soft_delete_retention_days=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_configuration', label=resourceLabel, attrs=self.newAttrs(
-    encryption=encryption,
-    identity=identity,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    name=name,
-    public_network_access=public_network_access,
-    purge_protection_enabled=purge_protection_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    soft_delete_retention_days=soft_delete_retention_days,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      encryption=encryption,
+      identity=identity,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      name=name,
+      public_network_access=public_network_access,
+      purge_protection_enabled=purge_protection_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      soft_delete_retention_days=soft_delete_retention_days,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

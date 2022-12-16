@@ -21,20 +21,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     host_pool=null,
     schedule=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_desktop_scaling_plan', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    exclusion_tag=exclusion_tag,
-    friendly_name=friendly_name,
-    host_pool=host_pool,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    schedule=schedule,
-    tags=tags,
-    time_zone=time_zone,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_desktop_scaling_plan',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      exclusion_tag=exclusion_tag,
+      friendly_name=friendly_name,
+      host_pool=host_pool,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      schedule=schedule,
+      tags=tags,
+      time_zone=time_zone,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

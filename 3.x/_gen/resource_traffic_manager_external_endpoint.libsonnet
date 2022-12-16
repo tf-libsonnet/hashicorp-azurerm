@@ -21,20 +21,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     priority=null,
     subnet=null,
     timeouts=null,
-    weight=null
-  ):: tf.withResource(type='azurerm_traffic_manager_external_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    custom_header=custom_header,
-    enabled=enabled,
-    endpoint_location=endpoint_location,
-    geo_mappings=geo_mappings,
-    name=name,
-    priority=priority,
-    profile_id=profile_id,
-    subnet=subnet,
-    target=target,
-    timeouts=timeouts,
-    weight=weight
-  )),
+    weight=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_traffic_manager_external_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_header=custom_header,
+      enabled=enabled,
+      endpoint_location=endpoint_location,
+      geo_mappings=geo_mappings,
+      name=name,
+      priority=priority,
+      profile_id=profile_id,
+      subnet=subnet,
+      target=target,
+      timeouts=timeouts,
+      weight=weight
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     profile_id,

@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     auto_replace_on_failure=null,
     license_type=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_dedicated_host', label=resourceLabel, attrs=self.newAttrs(
-    auto_replace_on_failure=auto_replace_on_failure,
-    dedicated_host_group_id=dedicated_host_group_id,
-    license_type=license_type,
-    location=location,
-    name=name,
-    platform_fault_domain=platform_fault_domain,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dedicated_host',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_replace_on_failure=auto_replace_on_failure,
+      dedicated_host_group_id=dedicated_host_group_id,
+      license_type=license_type,
+      location=location,
+      name=name,
+      platform_fault_domain=platform_fault_domain,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     dedicated_host_group_id,
     location,

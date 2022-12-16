@@ -31,19 +31,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_scheduled_query_rules_log', label=resourceLabel, attrs=self.newAttrs(
-    authorized_resource_ids=authorized_resource_ids,
-    criteria=criteria,
-    data_source_id=data_source_id,
-    description=description,
-    enabled=enabled,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_scheduled_query_rules_log',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authorized_resource_ids=authorized_resource_ids,
+      criteria=criteria,
+      data_source_id=data_source_id,
+      description=description,
+      enabled=enabled,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_source_id,
     location,

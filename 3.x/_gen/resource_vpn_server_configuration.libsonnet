@@ -63,21 +63,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     radius=null,
     tags=null,
     timeouts=null,
-    vpn_protocols=null
-  ):: tf.withResource(type='azurerm_vpn_server_configuration', label=resourceLabel, attrs=self.newAttrs(
-    azure_active_directory_authentication=azure_active_directory_authentication,
-    client_revoked_certificate=client_revoked_certificate,
-    client_root_certificate=client_root_certificate,
-    ipsec_policy=ipsec_policy,
-    location=location,
-    name=name,
-    radius=radius,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    vpn_authentication_types=vpn_authentication_types,
-    vpn_protocols=vpn_protocols
-  )),
+    vpn_protocols=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vpn_server_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      azure_active_directory_authentication=azure_active_directory_authentication,
+      client_revoked_certificate=client_revoked_certificate,
+      client_root_certificate=client_root_certificate,
+      ipsec_policy=ipsec_policy,
+      location=location,
+      name=name,
+      radius=radius,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      vpn_authentication_types=vpn_authentication_types,
+      vpn_protocols=vpn_protocols
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -27,22 +27,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target=null,
     timeouts=null,
     virtual_machine_ids=null,
-    windows=null
-  ):: tf.withResource(type='azurerm_automation_software_update_configuration', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_id=automation_account_id,
-    duration=duration,
-    linux=linux,
-    name=name,
-    non_azure_computer_names=non_azure_computer_names,
-    operating_system=operating_system,
-    post_task=post_task,
-    pre_task=pre_task,
-    schedule=schedule,
-    target=target,
-    timeouts=timeouts,
-    virtual_machine_ids=virtual_machine_ids,
-    windows=windows
-  )),
+    windows=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_software_update_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_id=automation_account_id,
+      duration=duration,
+      linux=linux,
+      name=name,
+      non_azure_computer_names=non_azure_computer_names,
+      operating_system=operating_system,
+      post_task=post_task,
+      pre_task=pre_task,
+      schedule=schedule,
+      target=target,
+      timeouts=timeouts,
+      virtual_machine_ids=virtual_machine_ids,
+      windows=windows
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_id,
     name,

@@ -15,14 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     spring_cloud_builder_id,
     binding_type=null,
     launch=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_build_pack_binding', label=resourceLabel, attrs=self.newAttrs(
-    binding_type=binding_type,
-    launch=launch,
-    name=name,
-    spring_cloud_builder_id=spring_cloud_builder_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_build_pack_binding',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      binding_type=binding_type,
+      launch=launch,
+      name=name,
+      spring_cloud_builder_id=spring_cloud_builder_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_builder_id,

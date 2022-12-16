@@ -21,20 +21,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     lock_mode=null,
     parameter_values=null,
     resource_groups=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_blueprint_assignment', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    location=location,
-    lock_exclude_actions=lock_exclude_actions,
-    lock_exclude_principals=lock_exclude_principals,
-    lock_mode=lock_mode,
-    name=name,
-    parameter_values=parameter_values,
-    resource_groups=resource_groups,
-    target_subscription_id=target_subscription_id,
-    timeouts=timeouts,
-    version_id=version_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_blueprint_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      location=location,
+      lock_exclude_actions=lock_exclude_actions,
+      lock_exclude_principals=lock_exclude_principals,
+      lock_mode=lock_mode,
+      name=name,
+      parameter_values=parameter_values,
+      resource_groups=resource_groups,
+      target_subscription_id=target_subscription_id,
+      timeouts=timeouts,
+      version_id=version_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

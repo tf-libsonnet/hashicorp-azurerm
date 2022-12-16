@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_container_id,
     usage_model,
     access_policy_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_hpc_cache_blob_nfs_target', label=resourceLabel, attrs=self.newAttrs(
-    access_policy_name=access_policy_name,
-    cache_name=cache_name,
-    name=name,
-    namespace_path=namespace_path,
-    resource_group_name=resource_group_name,
-    storage_container_id=storage_container_id,
-    timeouts=timeouts,
-    usage_model=usage_model
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_hpc_cache_blob_nfs_target',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_policy_name=access_policy_name,
+      cache_name=cache_name,
+      name=name,
+      namespace_path=namespace_path,
+      resource_group_name=resource_group_name,
+      storage_container_id=storage_container_id,
+      timeouts=timeouts,
+      usage_model=usage_model
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cache_name,
     name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     enabled=null,
     source=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_alert_rule_fusion', label=resourceLabel, attrs=self.newAttrs(
-    alert_rule_template_guid=alert_rule_template_guid,
-    enabled=enabled,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    source=source,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_alert_rule_fusion',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      alert_rule_template_guid=alert_rule_template_guid,
+      enabled=enabled,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      source=source,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     alert_rule_template_guid,
     log_analytics_workspace_id,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     resource_group_name,
     site_names,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_channel_web_chat', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
-    location=location,
-    resource_group_name=resource_group_name,
-    site_names=site_names,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_channel_web_chat',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bot_name=bot_name,
+      location=location,
+      resource_group_name=resource_group_name,
+      site_names=site_names,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bot_name,
     location,

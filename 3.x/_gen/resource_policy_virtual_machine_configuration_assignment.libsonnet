@@ -30,14 +30,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     virtual_machine_id,
     configuration=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_policy_virtual_machine_configuration_assignment', label=resourceLabel, attrs=self.newAttrs(
-    configuration=configuration,
-    location=location,
-    name=name,
-    timeouts=timeouts,
-    virtual_machine_id=virtual_machine_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_policy_virtual_machine_configuration_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      configuration=configuration,
+      location=location,
+      name=name,
+      timeouts=timeouts,
+      virtual_machine_id=virtual_machine_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

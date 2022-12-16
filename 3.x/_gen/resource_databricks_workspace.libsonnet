@@ -44,23 +44,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     network_security_group_rules_required=null,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_databricks_workspace', label=resourceLabel, attrs=self.newAttrs(
-    custom_parameters=custom_parameters,
-    customer_managed_key_enabled=customer_managed_key_enabled,
-    infrastructure_encryption_enabled=infrastructure_encryption_enabled,
-    load_balancer_backend_address_pool_id=load_balancer_backend_address_pool_id,
-    location=location,
-    managed_resource_group_name=managed_resource_group_name,
-    managed_services_cmk_key_vault_key_id=managed_services_cmk_key_vault_key_id,
-    name=name,
-    network_security_group_rules_required=network_security_group_rules_required,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_databricks_workspace',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_parameters=custom_parameters,
+      customer_managed_key_enabled=customer_managed_key_enabled,
+      infrastructure_encryption_enabled=infrastructure_encryption_enabled,
+      load_balancer_backend_address_pool_id=load_balancer_backend_address_pool_id,
+      location=location,
+      managed_resource_group_name=managed_resource_group_name,
+      managed_services_cmk_key_vault_key_id=managed_services_cmk_key_vault_key_id,
+      name=name,
+      network_security_group_rules_required=network_security_group_rules_required,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

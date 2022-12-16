@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     domain_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_aadb2c_directory', label=dataSrcLabel, attrs=self.newAttrs(domain_name=domain_name, resource_group_name=resource_group_name, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_aadb2c_directory',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(domain_name=domain_name, resource_group_name=resource_group_name, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     domain_name,
     resource_group_name,

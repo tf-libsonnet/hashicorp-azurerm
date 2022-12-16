@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     server_name,
     subnet_id,
     ignore_missing_vnet_service_endpoint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_postgresql_virtual_network_rule', label=resourceLabel, attrs=self.newAttrs(
-    ignore_missing_vnet_service_endpoint=ignore_missing_vnet_service_endpoint,
-    name=name,
-    resource_group_name=resource_group_name,
-    server_name=server_name,
-    subnet_id=subnet_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_postgresql_virtual_network_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      ignore_missing_vnet_service_endpoint=ignore_missing_vnet_service_endpoint,
+      name=name,
+      resource_group_name=resource_group_name,
+      server_name=server_name,
+      subnet_id=subnet_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

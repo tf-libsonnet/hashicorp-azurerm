@@ -85,23 +85,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     partition_key_version=null,
     throughput=null,
     timeouts=null,
-    unique_key=null
-  ):: tf.withResource(type='azurerm_cosmosdb_sql_container', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    analytical_storage_ttl=analytical_storage_ttl,
-    autoscale_settings=autoscale_settings,
-    conflict_resolution_policy=conflict_resolution_policy,
-    database_name=database_name,
-    default_ttl=default_ttl,
-    indexing_policy=indexing_policy,
-    name=name,
-    partition_key_path=partition_key_path,
-    partition_key_version=partition_key_version,
-    resource_group_name=resource_group_name,
-    throughput=throughput,
-    timeouts=timeouts,
-    unique_key=unique_key
-  )),
+    unique_key=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_sql_container',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      analytical_storage_ttl=analytical_storage_ttl,
+      autoscale_settings=autoscale_settings,
+      conflict_resolution_policy=conflict_resolution_policy,
+      database_name=database_name,
+      default_ttl=default_ttl,
+      indexing_policy=indexing_policy,
+      name=name,
+      partition_key_path=partition_key_path,
+      partition_key_version=partition_key_version,
+      resource_group_name=resource_group_name,
+      throughput=throughput,
+      timeouts=timeouts,
+      unique_key=unique_key
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     database_name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     requires_client_authorization=null,
     timeouts=null,
-    user_metadata=null
-  ):: tf.withResource(type='azurerm_relay_hybrid_connection', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    relay_namespace_name=relay_namespace_name,
-    requires_client_authorization=requires_client_authorization,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    user_metadata=user_metadata
-  )),
+    user_metadata=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_relay_hybrid_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      relay_namespace_name=relay_namespace_name,
+      requires_client_authorization=requires_client_authorization,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      user_metadata=user_metadata
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     relay_namespace_name,

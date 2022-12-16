@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id,
     infrastructure_encryption_required=null,
     key_vault_key_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_encryption_scope', label=resourceLabel, attrs=self.newAttrs(
-    infrastructure_encryption_required=infrastructure_encryption_required,
-    key_vault_key_id=key_vault_key_id,
-    name=name,
-    source=source,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_encryption_scope',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      infrastructure_encryption_required=infrastructure_encryption_required,
+      key_vault_key_id=key_vault_key_id,
+      name=name,
+      source=source,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     source,

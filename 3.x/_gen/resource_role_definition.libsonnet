@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     permissions=null,
     role_definition_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_role_definition', label=resourceLabel, attrs=self.newAttrs(
-    assignable_scopes=assignable_scopes,
-    description=description,
-    name=name,
-    permissions=permissions,
-    role_definition_id=role_definition_id,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_role_definition',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      assignable_scopes=assignable_scopes,
+      description=description,
+      name=name,
+      permissions=permissions,
+      role_definition_id=role_definition_id,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     scope,

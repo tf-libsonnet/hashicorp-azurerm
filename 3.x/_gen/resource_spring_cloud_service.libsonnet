@@ -111,22 +111,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     trace=null,
-    zone_redundant=null
-  ):: tf.withResource(type='azurerm_spring_cloud_service', label=resourceLabel, attrs=self.newAttrs(
-    build_agent_pool_size=build_agent_pool_size,
-    config_server_git_setting=config_server_git_setting,
-    location=location,
-    log_stream_public_endpoint_enabled=log_stream_public_endpoint_enabled,
-    name=name,
-    network=network,
-    resource_group_name=resource_group_name,
-    service_registry_enabled=service_registry_enabled,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts,
-    trace=trace,
-    zone_redundant=zone_redundant
-  )),
+    zone_redundant=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      build_agent_pool_size=build_agent_pool_size,
+      config_server_git_setting=config_server_git_setting,
+      location=location,
+      log_stream_public_endpoint_enabled=log_stream_public_endpoint_enabled,
+      name=name,
+      network=network,
+      resource_group_name=resource_group_name,
+      service_registry_enabled=service_registry_enabled,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts,
+      trace=trace,
+      zone_redundant=zone_redundant
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -64,24 +64,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     log_activity_trace_level=null,
     publish_content_link=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_runbook', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    content=content,
-    description=description,
-    draft=draft,
-    job_schedule=job_schedule,
-    location=location,
-    log_activity_trace_level=log_activity_trace_level,
-    log_progress=log_progress,
-    log_verbose=log_verbose,
-    name=name,
-    publish_content_link=publish_content_link,
-    resource_group_name=resource_group_name,
-    runbook_type=runbook_type,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_runbook',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      content=content,
+      description=description,
+      draft=draft,
+      job_schedule=job_schedule,
+      location=location,
+      log_activity_trace_level=log_activity_trace_level,
+      log_progress=log_progress,
+      log_verbose=log_verbose,
+      name=name,
+      publish_content_link=publish_content_link,
+      resource_group_name=resource_group_name,
+      runbook_type=runbook_type,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     location,

@@ -19,20 +19,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     nsxt_password=null,
     tags=null,
     timeouts=null,
-    vcenter_password=null
-  ):: tf.withResource(type='azurerm_vmware_private_cloud', label=resourceLabel, attrs=self.newAttrs(
-    internet_connection_enabled=internet_connection_enabled,
-    location=location,
-    management_cluster=management_cluster,
-    name=name,
-    network_subnet_cidr=network_subnet_cidr,
-    nsxt_password=nsxt_password,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts,
-    vcenter_password=vcenter_password
-  )),
+    vcenter_password=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vmware_private_cloud',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      internet_connection_enabled=internet_connection_enabled,
+      location=location,
+      management_cluster=management_cluster,
+      name=name,
+      network_subnet_cidr=network_subnet_cidr,
+      nsxt_password=nsxt_password,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts,
+      vcenter_password=vcenter_password
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

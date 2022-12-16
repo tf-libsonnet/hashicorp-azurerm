@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     email,
     name=null,
     phone=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_security_center_contact', label=resourceLabel, attrs=self.newAttrs(
-    alert_notifications=alert_notifications,
-    alerts_to_admins=alerts_to_admins,
-    email=email,
-    name=name,
-    phone=phone,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_security_center_contact',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      alert_notifications=alert_notifications,
+      alerts_to_admins=alerts_to_admins,
+      email=email,
+      name=name,
+      phone=phone,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     alert_notifications,
     alerts_to_admins,

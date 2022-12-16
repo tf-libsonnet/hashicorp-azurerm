@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     data_collection_rule_id=null,
     description=null,
     name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_data_collection_rule_association', label=resourceLabel, attrs=self.newAttrs(
-    data_collection_endpoint_id=data_collection_endpoint_id,
-    data_collection_rule_id=data_collection_rule_id,
-    description=description,
-    name=name,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_data_collection_rule_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      data_collection_endpoint_id=data_collection_endpoint_id,
+      data_collection_rule_id=data_collection_rule_id,
+      description=description,
+      name=name,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     target_resource_id,
     data_collection_endpoint_id=null,

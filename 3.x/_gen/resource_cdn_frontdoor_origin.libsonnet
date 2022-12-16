@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     priority=null,
     private_link=null,
     timeouts=null,
-    weight=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_origin', label=resourceLabel, attrs=self.newAttrs(
-    cdn_frontdoor_origin_group_id=cdn_frontdoor_origin_group_id,
-    certificate_name_check_enabled=certificate_name_check_enabled,
-    enabled=enabled,
-    health_probes_enabled=health_probes_enabled,
-    host_name=host_name,
-    http_port=http_port,
-    https_port=https_port,
-    name=name,
-    origin_host_header=origin_host_header,
-    priority=priority,
-    private_link=private_link,
-    timeouts=timeouts,
-    weight=weight
-  )),
+    weight=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_origin',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cdn_frontdoor_origin_group_id=cdn_frontdoor_origin_group_id,
+      certificate_name_check_enabled=certificate_name_check_enabled,
+      enabled=enabled,
+      health_probes_enabled=health_probes_enabled,
+      host_name=host_name,
+      http_port=http_port,
+      https_port=https_port,
+      name=name,
+      origin_host_header=origin_host_header,
+      priority=priority,
+      private_link=private_link,
+      timeouts=timeouts,
+      weight=weight
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_frontdoor_origin_group_id,
     certificate_name_check_enabled,

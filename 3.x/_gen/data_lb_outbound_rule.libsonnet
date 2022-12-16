@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     loadbalancer_id,
     name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_lb_outbound_rule', label=dataSrcLabel, attrs=self.newAttrs(loadbalancer_id=loadbalancer_id, name=name, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_lb_outbound_rule',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(loadbalancer_id=loadbalancer_id, name=name, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     loadbalancer_id,
     name,

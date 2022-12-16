@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     importance=null,
     label=null,
     start_time=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_sql_pool_workload_classifier', label=resourceLabel, attrs=self.newAttrs(
-    context=context,
-    end_time=end_time,
-    importance=importance,
-    label=label,
-    member_name=member_name,
-    name=name,
-    start_time=start_time,
-    timeouts=timeouts,
-    workload_group_id=workload_group_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_sql_pool_workload_classifier',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      context=context,
+      end_time=end_time,
+      importance=importance,
+      label=label,
+      member_name=member_name,
+      name=name,
+      start_time=start_time,
+      timeouts=timeouts,
+      workload_group_id=workload_group_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     member_name,
     name,

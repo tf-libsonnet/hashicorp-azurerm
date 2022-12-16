@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     description=null,
     exportable=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_certificate', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    base64=base64,
-    description=description,
-    exportable=exportable,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      base64=base64,
+      description=description,
+      exportable=exportable,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     base64,

@@ -33,18 +33,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     sku_tier=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_lb', label=resourceLabel, attrs=self.newAttrs(
-    edge_zone=edge_zone,
-    frontend_ip_configuration=frontend_ip_configuration,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    sku_tier=sku_tier,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      edge_zone=edge_zone,
+      frontend_ip_configuration=frontend_ip_configuration,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      sku_tier=sku_tier,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

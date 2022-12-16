@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     workspace_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_log_analytics_datasource_windows_event', label=resourceLabel, attrs=self.newAttrs(
-    event_log_name=event_log_name,
-    event_types=event_types,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    workspace_name=workspace_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_datasource_windows_event',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      event_log_name=event_log_name,
+      event_types=event_types,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      workspace_name=workspace_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     event_log_name,
     event_types,

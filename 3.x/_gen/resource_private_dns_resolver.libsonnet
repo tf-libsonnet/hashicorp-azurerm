@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     virtual_network_id,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_private_dns_resolver', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    virtual_network_id=virtual_network_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_private_dns_resolver',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      virtual_network_id=virtual_network_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

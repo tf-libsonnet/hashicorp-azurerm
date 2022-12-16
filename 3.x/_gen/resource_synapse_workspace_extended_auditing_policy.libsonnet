@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_access_key=null,
     storage_account_access_key_is_secondary=null,
     storage_endpoint=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_workspace_extended_auditing_policy', label=resourceLabel, attrs=self.newAttrs(
-    log_monitoring_enabled=log_monitoring_enabled,
-    retention_in_days=retention_in_days,
-    storage_account_access_key=storage_account_access_key,
-    storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
-    storage_endpoint=storage_endpoint,
-    synapse_workspace_id=synapse_workspace_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_workspace_extended_auditing_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      log_monitoring_enabled=log_monitoring_enabled,
+      retention_in_days=retention_in_days,
+      storage_account_access_key=storage_account_access_key,
+      storage_account_access_key_is_secondary=storage_account_access_key_is_secondary,
+      storage_endpoint=storage_endpoint,
+      synapse_workspace_id=synapse_workspace_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     synapse_workspace_id,
     log_monitoring_enabled=null,

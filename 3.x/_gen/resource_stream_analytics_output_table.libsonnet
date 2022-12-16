@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stream_analytics_job_name,
     table,
     columns_to_remove=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_table', label=resourceLabel, attrs=self.newAttrs(
-    batch_size=batch_size,
-    columns_to_remove=columns_to_remove,
-    name=name,
-    partition_key=partition_key,
-    resource_group_name=resource_group_name,
-    row_key=row_key,
-    storage_account_key=storage_account_key,
-    storage_account_name=storage_account_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    table=table,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_table',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      batch_size=batch_size,
+      columns_to_remove=columns_to_remove,
+      name=name,
+      partition_key=partition_key,
+      resource_group_name=resource_group_name,
+      row_key=row_key,
+      storage_account_key=storage_account_key,
+      storage_account_name=storage_account_name,
+      stream_analytics_job_name=stream_analytics_job_name,
+      table=table,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     batch_size,
     name,

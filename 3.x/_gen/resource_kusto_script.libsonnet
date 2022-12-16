@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sas_token=null,
     script_content=null,
     timeouts=null,
-    url=null
-  ):: tf.withResource(type='azurerm_kusto_script', label=resourceLabel, attrs=self.newAttrs(
-    continue_on_errors_enabled=continue_on_errors_enabled,
-    database_id=database_id,
-    force_an_update_when_value_changed=force_an_update_when_value_changed,
-    name=name,
-    sas_token=sas_token,
-    script_content=script_content,
-    timeouts=timeouts,
-    url=url
-  )),
+    url=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_script',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      continue_on_errors_enabled=continue_on_errors_enabled,
+      database_id=database_id,
+      force_an_update_when_value_changed=force_an_update_when_value_changed,
+      name=name,
+      sas_token=sas_token,
+      script_content=script_content,
+      timeouts=timeouts,
+      url=url
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     database_id,
     name,

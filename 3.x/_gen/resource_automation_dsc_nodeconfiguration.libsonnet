@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     content_embedded,
     name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_dsc_nodeconfiguration', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    content_embedded=content_embedded,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_dsc_nodeconfiguration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      content_embedded=content_embedded,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     content_embedded,

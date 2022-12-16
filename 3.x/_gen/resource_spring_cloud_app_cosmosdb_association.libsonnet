@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     cosmosdb_gremlin_graph_name=null,
     cosmosdb_mongo_database_name=null,
     cosmosdb_sql_database_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_app_cosmosdb_association', label=resourceLabel, attrs=self.newAttrs(
-    api_type=api_type,
-    cosmosdb_access_key=cosmosdb_access_key,
-    cosmosdb_account_id=cosmosdb_account_id,
-    cosmosdb_cassandra_keyspace_name=cosmosdb_cassandra_keyspace_name,
-    cosmosdb_gremlin_database_name=cosmosdb_gremlin_database_name,
-    cosmosdb_gremlin_graph_name=cosmosdb_gremlin_graph_name,
-    cosmosdb_mongo_database_name=cosmosdb_mongo_database_name,
-    cosmosdb_sql_database_name=cosmosdb_sql_database_name,
-    name=name,
-    spring_cloud_app_id=spring_cloud_app_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_app_cosmosdb_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_type=api_type,
+      cosmosdb_access_key=cosmosdb_access_key,
+      cosmosdb_account_id=cosmosdb_account_id,
+      cosmosdb_cassandra_keyspace_name=cosmosdb_cassandra_keyspace_name,
+      cosmosdb_gremlin_database_name=cosmosdb_gremlin_database_name,
+      cosmosdb_gremlin_graph_name=cosmosdb_gremlin_graph_name,
+      cosmosdb_mongo_database_name=cosmosdb_mongo_database_name,
+      cosmosdb_sql_database_name=cosmosdb_sql_database_name,
+      name=name,
+      spring_cloud_app_id=spring_cloud_app_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_type,
     cosmosdb_access_key,

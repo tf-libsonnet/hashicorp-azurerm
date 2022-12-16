@@ -45,20 +45,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     monthly_schedule=null,
     tags=null,
     timeouts=null,
-    weekly_schedule=null
-  ):: tf.withResource(type='azurerm_netapp_snapshot_policy', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    daily_schedule=daily_schedule,
-    enabled=enabled,
-    hourly_schedule=hourly_schedule,
-    location=location,
-    monthly_schedule=monthly_schedule,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    weekly_schedule=weekly_schedule
-  )),
+    weekly_schedule=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_netapp_snapshot_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      daily_schedule=daily_schedule,
+      enabled=enabled,
+      hourly_schedule=hourly_schedule,
+      location=location,
+      monthly_schedule=monthly_schedule,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      weekly_schedule=weekly_schedule
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     enabled,

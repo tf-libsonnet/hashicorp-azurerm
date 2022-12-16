@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     core_count=null,
     description=null,
     time_to_live_min=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_integration_runtime_azure', label=resourceLabel, attrs=self.newAttrs(
-    compute_type=compute_type,
-    core_count=core_count,
-    description=description,
-    location=location,
-    name=name,
-    synapse_workspace_id=synapse_workspace_id,
-    time_to_live_min=time_to_live_min,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_integration_runtime_azure',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      compute_type=compute_type,
+      core_count=core_count,
+      description=description,
+      location=location,
+      name=name,
+      synapse_workspace_id=synapse_workspace_id,
+      time_to_live_min=time_to_live_min,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

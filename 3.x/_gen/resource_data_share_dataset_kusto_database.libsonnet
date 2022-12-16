@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     kusto_database_id,
     name,
     share_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_share_dataset_kusto_database', label=resourceLabel, attrs=self.newAttrs(
-    kusto_database_id=kusto_database_id,
-    name=name,
-    share_id=share_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_share_dataset_kusto_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      kusto_database_id=kusto_database_id,
+      name=name,
+      share_id=share_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     kusto_database_id,
     name,

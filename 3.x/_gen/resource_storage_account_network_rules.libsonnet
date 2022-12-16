@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ip_rules=null,
     private_link_access=null,
     timeouts=null,
-    virtual_network_subnet_ids=null
-  ):: tf.withResource(type='azurerm_storage_account_network_rules', label=resourceLabel, attrs=self.newAttrs(
-    bypass=bypass,
-    default_action=default_action,
-    ip_rules=ip_rules,
-    private_link_access=private_link_access,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts,
-    virtual_network_subnet_ids=virtual_network_subnet_ids
-  )),
+    virtual_network_subnet_ids=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_account_network_rules',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bypass=bypass,
+      default_action=default_action,
+      ip_rules=ip_rules,
+      private_link_access=private_link_access,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts,
+      virtual_network_subnet_ids=virtual_network_subnet_ids
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     default_action,
     storage_account_id,

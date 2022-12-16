@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     server_name,
     tenant_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_postgresql_active_directory_administrator', label=resourceLabel, attrs=self.newAttrs(
-    login=login,
-    object_id=object_id,
-    resource_group_name=resource_group_name,
-    server_name=server_name,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_postgresql_active_directory_administrator',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      login=login,
+      object_id=object_id,
+      resource_group_name=resource_group_name,
+      server_name=server_name,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     login,
     object_id,

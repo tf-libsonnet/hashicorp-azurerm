@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_resource_id,
     fqdns=null,
     subresource_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    data_factory_id=data_factory_id,
-    fqdns=fqdns,
-    name=name,
-    subresource_name=subresource_name,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_managed_private_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      data_factory_id=data_factory_id,
+      fqdns=fqdns,
+      name=name,
+      subresource_name=subresource_name,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

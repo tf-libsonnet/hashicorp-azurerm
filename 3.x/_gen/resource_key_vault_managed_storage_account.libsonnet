@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     regenerate_key_automatically=null,
     regeneration_period=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_managed_storage_account', label=resourceLabel, attrs=self.newAttrs(
-    key_vault_id=key_vault_id,
-    name=name,
-    regenerate_key_automatically=regenerate_key_automatically,
-    regeneration_period=regeneration_period,
-    storage_account_id=storage_account_id,
-    storage_account_key=storage_account_key,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_managed_storage_account',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      key_vault_id=key_vault_id,
+      name=name,
+      regenerate_key_automatically=regenerate_key_automatically,
+      regeneration_period=regeneration_period,
+      storage_account_id=storage_account_id,
+      storage_account_key=storage_account_key,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_id,
     name,

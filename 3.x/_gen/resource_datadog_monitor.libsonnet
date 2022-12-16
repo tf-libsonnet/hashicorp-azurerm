@@ -35,19 +35,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     monitoring_enabled=null,
     tags=null,
     timeouts=null,
-    user=null
-  ):: tf.withResource(type='azurerm_datadog_monitor', label=resourceLabel, attrs=self.newAttrs(
-    datadog_organization=datadog_organization,
-    identity=identity,
-    location=location,
-    monitoring_enabled=monitoring_enabled,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts,
-    user=user
-  )),
+    user=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_datadog_monitor',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      datadog_organization=datadog_organization,
+      identity=identity,
+      location=location,
+      monitoring_enabled=monitoring_enabled,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts,
+      user=user
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

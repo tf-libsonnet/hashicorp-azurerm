@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     office365_local_breakout_category=null,
     tags=null,
     timeouts=null,
-    type=null
-  ):: tf.withResource(type='azurerm_virtual_wan', label=resourceLabel, attrs=self.newAttrs(
-    allow_branch_to_branch_traffic=allow_branch_to_branch_traffic,
-    disable_vpn_encryption=disable_vpn_encryption,
-    location=location,
-    name=name,
-    office365_local_breakout_category=office365_local_breakout_category,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    type=type
-  )),
+    type=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_wan',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_branch_to_branch_traffic=allow_branch_to_branch_traffic,
+      disable_vpn_encryption=disable_vpn_encryption,
+      location=location,
+      name=name,
+      office365_local_breakout_category=office365_local_breakout_category,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      type=type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

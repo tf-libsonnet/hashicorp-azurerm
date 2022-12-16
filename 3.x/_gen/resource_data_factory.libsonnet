@@ -50,23 +50,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     purview_id=null,
     tags=null,
     timeouts=null,
-    vsts_configuration=null
-  ):: tf.withResource(type='azurerm_data_factory', label=resourceLabel, attrs=self.newAttrs(
-    customer_managed_key_id=customer_managed_key_id,
-    customer_managed_key_identity_id=customer_managed_key_identity_id,
-    github_configuration=github_configuration,
-    global_parameter=global_parameter,
-    identity=identity,
-    location=location,
-    managed_virtual_network_enabled=managed_virtual_network_enabled,
-    name=name,
-    public_network_enabled=public_network_enabled,
-    purview_id=purview_id,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    vsts_configuration=vsts_configuration
-  )),
+    vsts_configuration=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      customer_managed_key_id=customer_managed_key_id,
+      customer_managed_key_identity_id=customer_managed_key_identity_id,
+      github_configuration=github_configuration,
+      global_parameter=global_parameter,
+      identity=identity,
+      location=location,
+      managed_virtual_network_enabled=managed_virtual_network_enabled,
+      name=name,
+      public_network_enabled=public_network_enabled,
+      purview_id=purview_id,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      vsts_configuration=vsts_configuration
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

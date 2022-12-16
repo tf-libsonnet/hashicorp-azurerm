@@ -20,21 +20,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     timeouts=null,
-    zone_redundancy_enabled=null
-  ):: tf.withResource(type='azurerm_dashboard_grafana', label=resourceLabel, attrs=self.newAttrs(
-    api_key_enabled=api_key_enabled,
-    auto_generated_domain_name_label_scope=auto_generated_domain_name_label_scope,
-    deterministic_outbound_ip_enabled=deterministic_outbound_ip_enabled,
-    identity=identity,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    zone_redundancy_enabled=zone_redundancy_enabled
-  )),
+    zone_redundancy_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dashboard_grafana',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_key_enabled=api_key_enabled,
+      auto_generated_domain_name_label_scope=auto_generated_domain_name_label_scope,
+      deterministic_outbound_ip_enabled=deterministic_outbound_ip_enabled,
+      identity=identity,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      zone_redundancy_enabled=zone_redundancy_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     inbound_ip_rule=null,
     public_network_access_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_eventgrid_domain', label=dataSrcLabel, attrs=self.newAttrs(
-    inbound_ip_rule=inbound_ip_rule,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_eventgrid_domain',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      inbound_ip_rule=inbound_ip_rule,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     function_alias=null,
     function_parameters=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_log_analytics_saved_search', label=resourceLabel, attrs=self.newAttrs(
-    category=category,
-    display_name=display_name,
-    function_alias=function_alias,
-    function_parameters=function_parameters,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    query=query,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_saved_search',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      category=category,
+      display_name=display_name,
+      function_alias=function_alias,
+      function_parameters=function_parameters,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      query=query,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     category,
     display_name,

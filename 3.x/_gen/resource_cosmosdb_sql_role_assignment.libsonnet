@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     role_definition_id,
     scope,
     name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_sql_role_assignment', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    name=name,
-    principal_id=principal_id,
-    resource_group_name=resource_group_name,
-    role_definition_id=role_definition_id,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_sql_role_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      name=name,
+      principal_id=principal_id,
+      resource_group_name=resource_group_name,
+      role_definition_id=role_definition_id,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     principal_id,

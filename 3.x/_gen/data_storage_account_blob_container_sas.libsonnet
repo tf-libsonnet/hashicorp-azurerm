@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     https_only=null,
     ip_address=null,
     permissions=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_storage_account_blob_container_sas', label=dataSrcLabel, attrs=self.newAttrs(
-    cache_control=cache_control,
-    connection_string=connection_string,
-    container_name=container_name,
-    content_disposition=content_disposition,
-    content_encoding=content_encoding,
-    content_language=content_language,
-    content_type=content_type,
-    expiry=expiry,
-    https_only=https_only,
-    ip_address=ip_address,
-    permissions=permissions,
-    start=start,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_storage_account_blob_container_sas',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      cache_control=cache_control,
+      connection_string=connection_string,
+      container_name=container_name,
+      content_disposition=content_disposition,
+      content_encoding=content_encoding,
+      content_language=content_language,
+      content_type=content_type,
+      expiry=expiry,
+      https_only=https_only,
+      ip_address=ip_address,
+      permissions=permissions,
+      start=start,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     connection_string,
     container_name,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     virtual_network_id,
     metadata=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_private_dns_resolver_virtual_network_link', label=resourceLabel, attrs=self.newAttrs(
-    dns_forwarding_ruleset_id=dns_forwarding_ruleset_id,
-    metadata=metadata,
-    name=name,
-    timeouts=timeouts,
-    virtual_network_id=virtual_network_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_private_dns_resolver_virtual_network_link',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dns_forwarding_ruleset_id=dns_forwarding_ruleset_id,
+      metadata=metadata,
+      name=name,
+      timeouts=timeouts,
+      virtual_network_id=virtual_network_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     dns_forwarding_ruleset_id,
     name,

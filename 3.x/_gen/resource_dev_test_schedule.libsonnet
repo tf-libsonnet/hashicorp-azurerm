@@ -28,22 +28,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     status=null,
     tags=null,
     timeouts=null,
-    weekly_recurrence=null
-  ):: tf.withResource(type='azurerm_dev_test_schedule', label=resourceLabel, attrs=self.newAttrs(
-    daily_recurrence=daily_recurrence,
-    hourly_recurrence=hourly_recurrence,
-    lab_name=lab_name,
-    location=location,
-    name=name,
-    notification_settings=notification_settings,
-    resource_group_name=resource_group_name,
-    status=status,
-    tags=tags,
-    task_type=task_type,
-    time_zone_id=time_zone_id,
-    timeouts=timeouts,
-    weekly_recurrence=weekly_recurrence
-  )),
+    weekly_recurrence=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dev_test_schedule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      daily_recurrence=daily_recurrence,
+      hourly_recurrence=hourly_recurrence,
+      lab_name=lab_name,
+      location=location,
+      name=name,
+      notification_settings=notification_settings,
+      resource_group_name=resource_group_name,
+      status=status,
+      tags=tags,
+      task_type=task_type,
+      time_zone_id=time_zone_id,
+      timeouts=timeouts,
+      weekly_recurrence=weekly_recurrence
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     lab_name,
     location,

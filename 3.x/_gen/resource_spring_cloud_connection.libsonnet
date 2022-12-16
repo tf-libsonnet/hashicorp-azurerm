@@ -27,16 +27,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     authentication=null,
     client_type=null,
     timeouts=null,
-    vnet_solution=null
-  ):: tf.withResource(type='azurerm_spring_cloud_connection', label=resourceLabel, attrs=self.newAttrs(
-    authentication=authentication,
-    client_type=client_type,
-    name=name,
-    spring_cloud_id=spring_cloud_id,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts,
-    vnet_solution=vnet_solution
-  )),
+    vnet_solution=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication=authentication,
+      client_type=client_type,
+      name=name,
+      spring_cloud_id=spring_cloud_id,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts,
+      vnet_solution=vnet_solution
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_id,

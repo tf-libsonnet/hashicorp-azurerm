@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     subnet=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_dev_test_virtual_network', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    lab_name=lab_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    subnet=subnet,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dev_test_virtual_network',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      lab_name=lab_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      subnet=subnet,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     lab_name,
     name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     additional_email_recipients=null,
     enabled=null,
     send_emails_to_subscription_owners=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_application_insights_smart_detection_rule', label=resourceLabel, attrs=self.newAttrs(
-    additional_email_recipients=additional_email_recipients,
-    application_insights_id=application_insights_id,
-    enabled=enabled,
-    name=name,
-    send_emails_to_subscription_owners=send_emails_to_subscription_owners,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_application_insights_smart_detection_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_email_recipients=additional_email_recipients,
+      application_insights_id=application_insights_id,
+      enabled=enabled,
+      name=name,
+      send_emails_to_subscription_owners=send_emails_to_subscription_owners,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     application_insights_id,
     name,

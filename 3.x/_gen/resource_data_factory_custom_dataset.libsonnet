@@ -22,21 +22,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     linked_service=null,
     parameters=null,
     schema_json=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_custom_dataset', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    folder=folder,
-    linked_service=linked_service,
-    name=name,
-    parameters=parameters,
-    schema_json=schema_json,
-    timeouts=timeouts,
-    type=type,
-    type_properties_json=type_properties_json
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_custom_dataset',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      folder=folder,
+      linked_service=linked_service,
+      name=name,
+      parameters=parameters,
+      schema_json=schema_json,
+      timeouts=timeouts,
+      type=type,
+      type_properties_json=type_properties_json
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

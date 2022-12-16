@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     server_id,
     auto_rotation_enabled=null,
     key_vault_key_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_server_transparent_data_encryption', label=resourceLabel, attrs=self.newAttrs(
-    auto_rotation_enabled=auto_rotation_enabled,
-    key_vault_key_id=key_vault_key_id,
-    server_id=server_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_server_transparent_data_encryption',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_rotation_enabled=auto_rotation_enabled,
+      key_vault_key_id=key_vault_key_id,
+      server_id=server_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     server_id,
     auto_rotation_enabled=null,

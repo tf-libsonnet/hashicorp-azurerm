@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     backend_address_ip_configuration_id=null,
     ip_address=null,
     timeouts=null,
-    virtual_network_id=null
-  ):: tf.withResource(type='azurerm_lb_backend_address_pool_address', label=resourceLabel, attrs=self.newAttrs(
-    backend_address_ip_configuration_id=backend_address_ip_configuration_id,
-    backend_address_pool_id=backend_address_pool_id,
-    ip_address=ip_address,
-    name=name,
-    timeouts=timeouts,
-    virtual_network_id=virtual_network_id
-  )),
+    virtual_network_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb_backend_address_pool_address',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backend_address_ip_configuration_id=backend_address_ip_configuration_id,
+      backend_address_pool_id=backend_address_pool_id,
+      ip_address=ip_address,
+      name=name,
+      timeouts=timeouts,
+      virtual_network_id=virtual_network_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backend_address_pool_id,
     name,

@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     storage_units,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_maps_creator', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    maps_account_id=maps_account_id,
-    name=name,
-    storage_units=storage_units,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_maps_creator',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      maps_account_id=maps_account_id,
+      name=name,
+      storage_units=storage_units,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     maps_account_id,

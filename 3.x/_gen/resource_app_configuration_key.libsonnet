@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     timeouts=null,
     type=null,
     value=null,
-    vault_key_reference=null
-  ):: tf.withResource(type='azurerm_app_configuration_key', label=resourceLabel, attrs=self.newAttrs(
-    configuration_store_id=configuration_store_id,
-    content_type=content_type,
-    etag=etag,
-    key=key,
-    label=label,
-    locked=locked,
-    tags=tags,
-    timeouts=timeouts,
-    type=type,
-    value=value,
-    vault_key_reference=vault_key_reference
-  )),
+    vault_key_reference=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_configuration_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      configuration_store_id=configuration_store_id,
+      content_type=content_type,
+      etag=etag,
+      key=key,
+      label=label,
+      locked=locked,
+      tags=tags,
+      timeouts=timeouts,
+      type=type,
+      value=value,
+      vault_key_reference=vault_key_reference
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     configuration_store_id,
     key,

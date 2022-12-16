@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     certificate_id,
     hostname_binding_id,
     ssl_state,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_certificate_binding', label=resourceLabel, attrs=self.newAttrs(
-    certificate_id=certificate_id,
-    hostname_binding_id=hostname_binding_id,
-    ssl_state=ssl_state,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_certificate_binding',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      certificate_id=certificate_id,
+      hostname_binding_id=hostname_binding_id,
+      ssl_state=ssl_state,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     certificate_id,
     hostname_binding_id,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     name,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_job_agent', label=resourceLabel, attrs=self.newAttrs(
-    database_id=database_id,
-    location=location,
-    name=name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_job_agent',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      database_id=database_id,
+      location=location,
+      name=name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     database_id,
     location,

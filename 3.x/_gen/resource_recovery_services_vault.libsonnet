@@ -30,20 +30,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     soft_delete_enabled=null,
     storage_mode_type=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_recovery_services_vault', label=resourceLabel, attrs=self.newAttrs(
-    cross_region_restore_enabled=cross_region_restore_enabled,
-    encryption=encryption,
-    identity=identity,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    soft_delete_enabled=soft_delete_enabled,
-    storage_mode_type=storage_mode_type,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_recovery_services_vault',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cross_region_restore_enabled=cross_region_restore_enabled,
+      encryption=encryption,
+      identity=identity,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      soft_delete_enabled=soft_delete_enabled,
+      storage_mode_type=storage_mode_type,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

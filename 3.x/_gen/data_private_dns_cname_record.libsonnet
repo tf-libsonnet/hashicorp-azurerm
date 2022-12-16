@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     zone_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_private_dns_cname_record', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    zone_name=zone_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_private_dns_cname_record',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      zone_name=zone_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

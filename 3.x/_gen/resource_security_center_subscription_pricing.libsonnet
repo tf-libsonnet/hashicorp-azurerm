@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tier,
     resource_type=null,
     subplan=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_security_center_subscription_pricing', label=resourceLabel, attrs=self.newAttrs(
-    resource_type=resource_type,
-    subplan=subplan,
-    tier=tier,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_security_center_subscription_pricing',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      resource_type=resource_type,
+      subplan=subplan,
+      tier=tier,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     tier,
     resource_type=null,

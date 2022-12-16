@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     server_name,
     value,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mysql_flexible_server_configuration', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    server_name=server_name,
-    timeouts=timeouts,
-    value=value
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mysql_flexible_server_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      server_name=server_name,
+      timeouts=timeouts,
+      value=value
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

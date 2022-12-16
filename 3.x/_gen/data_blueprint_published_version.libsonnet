@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     blueprint_name,
     scope_id,
     version,
-    timeouts=null
-  ):: tf.withData(type='azurerm_blueprint_published_version', label=dataSrcLabel, attrs=self.newAttrs(
-    blueprint_name=blueprint_name,
-    scope_id=scope_id,
-    timeouts=timeouts,
-    version=version
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_blueprint_published_version',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      blueprint_name=blueprint_name,
+      scope_id=scope_id,
+      timeouts=timeouts,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     blueprint_name,
     scope_id,

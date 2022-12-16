@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     name,
     workspace_id,
-    timeouts=null
-  ):: tf.withData(type='azurerm_healthcare_medtech_service', label=dataSrcLabel, attrs=self.newAttrs(name=name, timeouts=timeouts, workspace_id=workspace_id)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_healthcare_medtech_service',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(name=name, timeouts=timeouts, workspace_id=workspace_id),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     workspace_id,

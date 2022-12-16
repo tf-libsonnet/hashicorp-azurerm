@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     recovery_point_retention_in_minutes,
     recovery_vault_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_site_recovery_replication_policy', label=resourceLabel, attrs=self.newAttrs(
-    application_consistent_snapshot_frequency_in_minutes=application_consistent_snapshot_frequency_in_minutes,
-    name=name,
-    recovery_point_retention_in_minutes=recovery_point_retention_in_minutes,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_site_recovery_replication_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_consistent_snapshot_frequency_in_minutes=application_consistent_snapshot_frequency_in_minutes,
+      name=name,
+      recovery_point_retention_in_minutes=recovery_point_retention_in_minutes,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     application_consistent_snapshot_frequency_in_minutes,
     name,

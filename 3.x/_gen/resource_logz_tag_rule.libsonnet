@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     send_activity_logs=null,
     send_subscription_logs=null,
     tag_filter=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logz_tag_rule', label=resourceLabel, attrs=self.newAttrs(
-    logz_monitor_id=logz_monitor_id,
-    send_aad_logs=send_aad_logs,
-    send_activity_logs=send_activity_logs,
-    send_subscription_logs=send_subscription_logs,
-    tag_filter=tag_filter,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logz_tag_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      logz_monitor_id=logz_monitor_id,
+      send_aad_logs=send_aad_logs,
+      send_activity_logs=send_activity_logs,
+      send_subscription_logs=send_subscription_logs,
+      tag_filter=tag_filter,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     logz_monitor_id,
     send_aad_logs=null,

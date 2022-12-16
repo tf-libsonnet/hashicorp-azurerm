@@ -26,18 +26,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     eventhub=null,
     resource_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_logger', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    application_insights=application_insights,
-    buffered=buffered,
-    description=description,
-    eventhub=eventhub,
-    name=name,
-    resource_group_name=resource_group_name,
-    resource_id=resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_logger',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      application_insights=application_insights,
+      buffered=buffered,
+      description=description,
+      eventhub=eventhub,
+      name=name,
+      resource_group_name=resource_group_name,
+      resource_id=resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     name,

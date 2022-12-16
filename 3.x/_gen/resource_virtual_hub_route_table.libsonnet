@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     virtual_hub_id,
     labels=null,
     route=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_hub_route_table', label=resourceLabel, attrs=self.newAttrs(
-    labels=labels,
-    name=name,
-    route=route,
-    timeouts=timeouts,
-    virtual_hub_id=virtual_hub_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_hub_route_table',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      labels=labels,
+      name=name,
+      route=route,
+      timeouts=timeouts,
+      virtual_hub_id=virtual_hub_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     virtual_hub_id,

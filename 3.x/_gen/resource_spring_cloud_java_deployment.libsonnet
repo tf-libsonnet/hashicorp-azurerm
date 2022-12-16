@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     jvm_options=null,
     quota=null,
     runtime_version=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_java_deployment', label=resourceLabel, attrs=self.newAttrs(
-    environment_variables=environment_variables,
-    instance_count=instance_count,
-    jvm_options=jvm_options,
-    name=name,
-    quota=quota,
-    runtime_version=runtime_version,
-    spring_cloud_app_id=spring_cloud_app_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_java_deployment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      environment_variables=environment_variables,
+      instance_count=instance_count,
+      jvm_options=jvm_options,
+      name=name,
+      quota=quota,
+      runtime_version=runtime_version,
+      spring_cloud_app_id=spring_cloud_app_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_app_id,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     api_id,
     name,
     notes=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_api_release', label=resourceLabel, attrs=self.newAttrs(
-    api_id=api_id,
-    name=name,
-    notes=notes,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_api_release',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_id=api_id,
+      name=name,
+      notes=notes,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_id,
     name,

@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     registry_read=null,
     registry_write=null,
     service_connect=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_shared_access_policy', label=resourceLabel, attrs=self.newAttrs(
-    device_connect=device_connect,
-    iothub_name=iothub_name,
-    name=name,
-    registry_read=registry_read,
-    registry_write=registry_write,
-    resource_group_name=resource_group_name,
-    service_connect=service_connect,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_shared_access_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      device_connect=device_connect,
+      iothub_name=iothub_name,
+      name=name,
+      registry_read=registry_read,
+      registry_write=registry_write,
+      resource_group_name=resource_group_name,
+      service_connect=service_connect,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     iothub_name,
     name,

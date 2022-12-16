@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     body,
     logic_app_id,
     name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_action_custom', label=resourceLabel, attrs=self.newAttrs(
-    body=body,
-    logic_app_id=logic_app_id,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_action_custom',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      body=body,
+      logic_app_id=logic_app_id,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     body,
     logic_app_id,

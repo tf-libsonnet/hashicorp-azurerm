@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location=null,
     recur_every=null,
     scope=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_public_maintenance_configurations', label=dataSrcLabel, attrs=self.newAttrs(
-    location=location,
-    recur_every=recur_every,
-    scope=scope,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_public_maintenance_configurations',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      location=location,
+      recur_every=recur_every,
+      scope=scope,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location=null,
     recur_every=null,

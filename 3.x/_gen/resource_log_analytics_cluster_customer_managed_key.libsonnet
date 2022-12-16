@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     key_vault_key_id,
     log_analytics_cluster_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_log_analytics_cluster_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(key_vault_key_id=key_vault_key_id, log_analytics_cluster_id=log_analytics_cluster_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_cluster_customer_managed_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(key_vault_key_id=key_vault_key_id, log_analytics_cluster_id=log_analytics_cluster_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_key_id,
     log_analytics_cluster_id,

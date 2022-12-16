@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     routing=null,
     timeouts=null,
     traffic_selector_policy=null,
-    vpn_link=null
-  ):: tf.withResource(type='azurerm_vpn_gateway_connection', label=resourceLabel, attrs=self.newAttrs(
-    internet_security_enabled=internet_security_enabled,
-    name=name,
-    remote_vpn_site_id=remote_vpn_site_id,
-    routing=routing,
-    timeouts=timeouts,
-    traffic_selector_policy=traffic_selector_policy,
-    vpn_gateway_id=vpn_gateway_id,
-    vpn_link=vpn_link
-  )),
+    vpn_link=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_vpn_gateway_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      internet_security_enabled=internet_security_enabled,
+      name=name,
+      remote_vpn_site_id=remote_vpn_site_id,
+      routing=routing,
+      timeouts=timeouts,
+      traffic_selector_policy=traffic_selector_policy,
+      vpn_gateway_id=vpn_gateway_id,
+      vpn_link=vpn_link
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     remote_vpn_site_id,

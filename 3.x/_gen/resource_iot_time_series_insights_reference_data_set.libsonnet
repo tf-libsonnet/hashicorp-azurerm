@@ -17,16 +17,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     data_string_comparison_behavior=null,
     key_property=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iot_time_series_insights_reference_data_set', label=resourceLabel, attrs=self.newAttrs(
-    data_string_comparison_behavior=data_string_comparison_behavior,
-    key_property=key_property,
-    location=location,
-    name=name,
-    tags=tags,
-    time_series_insights_environment_id=time_series_insights_environment_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iot_time_series_insights_reference_data_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      data_string_comparison_behavior=data_string_comparison_behavior,
+      key_property=key_property,
+      location=location,
+      name=name,
+      tags=tags,
+      time_series_insights_environment_id=time_series_insights_environment_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     group_name,
     resource_group_name,
     user_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_group_user', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    group_name=group_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    user_id=user_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_group_user',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      group_name=group_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      user_id=user_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     group_name,

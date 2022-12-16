@@ -114,26 +114,32 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     package_store=null,
     proxy=null,
     timeouts=null,
-    vnet_integration=null
-  ):: tf.withResource(type='azurerm_data_factory_integration_runtime_azure_ssis', label=resourceLabel, attrs=self.newAttrs(
-    catalog_info=catalog_info,
-    custom_setup_script=custom_setup_script,
-    data_factory_id=data_factory_id,
-    description=description,
-    edition=edition,
-    express_custom_setup=express_custom_setup,
-    express_vnet_integration=express_vnet_integration,
-    license_type=license_type,
-    location=location,
-    max_parallel_executions_per_node=max_parallel_executions_per_node,
-    name=name,
-    node_size=node_size,
-    number_of_nodes=number_of_nodes,
-    package_store=package_store,
-    proxy=proxy,
-    timeouts=timeouts,
-    vnet_integration=vnet_integration
-  )),
+    vnet_integration=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_integration_runtime_azure_ssis',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      catalog_info=catalog_info,
+      custom_setup_script=custom_setup_script,
+      data_factory_id=data_factory_id,
+      description=description,
+      edition=edition,
+      express_custom_setup=express_custom_setup,
+      express_vnet_integration=express_vnet_integration,
+      license_type=license_type,
+      location=location,
+      max_parallel_executions_per_node=max_parallel_executions_per_node,
+      name=name,
+      node_size=node_size,
+      number_of_nodes=number_of_nodes,
+      package_store=package_store,
+      proxy=proxy,
+      timeouts=timeouts,
+      vnet_integration=vnet_integration
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     location,

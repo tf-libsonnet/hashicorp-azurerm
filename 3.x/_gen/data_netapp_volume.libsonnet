@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     pool_name,
     resource_group_name,
     security_style=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_netapp_volume', label=dataSrcLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    name=name,
-    pool_name=pool_name,
-    resource_group_name=resource_group_name,
-    security_style=security_style,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_netapp_volume',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      name=name,
+      pool_name=pool_name,
+      resource_group_name=resource_group_name,
+      security_style=security_style,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     name,

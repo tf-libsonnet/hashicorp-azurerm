@@ -20,19 +20,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     integration_runtime_name=null,
     key_vault_password=null,
     parameters=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_snowflake', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    connection_string=connection_string,
-    data_factory_id=data_factory_id,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    key_vault_password=key_vault_password,
-    name=name,
-    parameters=parameters,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_snowflake',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      connection_string=connection_string,
+      data_factory_id=data_factory_id,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      key_vault_password=key_vault_password,
+      name=name,
+      parameters=parameters,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     connection_string,
     data_factory_id,

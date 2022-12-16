@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     listen=null,
     manage=null,
     send=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_servicebus_namespace_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    listen=listen,
-    manage=manage,
-    name=name,
-    namespace_id=namespace_id,
-    send=send,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_servicebus_namespace_authorization_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      listen=listen,
+      manage=manage,
+      name=name,
+      namespace_id=namespace_id,
+      send=send,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     namespace_id,

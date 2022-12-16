@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     traffic_analytics=null,
-    version=null
-  ):: tf.withResource(type='azurerm_network_watcher_flow_log', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    location=location,
-    name=name,
-    network_security_group_id=network_security_group_id,
-    network_watcher_name=network_watcher_name,
-    resource_group_name=resource_group_name,
-    retention_policy=retention_policy,
-    storage_account_id=storage_account_id,
-    tags=tags,
-    timeouts=timeouts,
-    traffic_analytics=traffic_analytics,
-    version=version
-  )),
+    version=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_watcher_flow_log',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      enabled=enabled,
+      location=location,
+      name=name,
+      network_security_group_id=network_security_group_id,
+      network_watcher_name=network_watcher_name,
+      resource_group_name=resource_group_name,
+      retention_policy=retention_policy,
+      storage_account_id=storage_account_id,
+      tags=tags,
+      timeouts=timeouts,
+      traffic_analytics=traffic_analytics,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     enabled,
     name,

@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     application_group_id,
     workspace_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_desktop_workspace_application_group_association', label=resourceLabel, attrs=self.newAttrs(application_group_id=application_group_id, timeouts=timeouts, workspace_id=workspace_id)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_desktop_workspace_application_group_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(application_group_id=application_group_id, timeouts=timeouts, workspace_id=workspace_id),
+    _meta=_meta
+  ),
   newAttrs(
     application_group_id,
     workspace_id,

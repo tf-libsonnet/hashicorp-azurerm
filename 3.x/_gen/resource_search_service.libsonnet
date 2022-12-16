@@ -19,20 +19,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network_access_enabled=null,
     replica_count=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_search_service', label=resourceLabel, attrs=self.newAttrs(
-    allowed_ips=allowed_ips,
-    identity=identity,
-    location=location,
-    name=name,
-    partition_count=partition_count,
-    public_network_access_enabled=public_network_access_enabled,
-    replica_count=replica_count,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_search_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allowed_ips=allowed_ips,
+      identity=identity,
+      location=location,
+      name=name,
+      partition_count=partition_count,
+      public_network_access_enabled=public_network_access_enabled,
+      replica_count=replica_count,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

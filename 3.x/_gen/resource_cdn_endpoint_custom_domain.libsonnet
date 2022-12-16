@@ -18,15 +18,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     cdn_managed_https=null,
     timeouts=null,
-    user_managed_https=null
-  ):: tf.withResource(type='azurerm_cdn_endpoint_custom_domain', label=resourceLabel, attrs=self.newAttrs(
-    cdn_endpoint_id=cdn_endpoint_id,
-    cdn_managed_https=cdn_managed_https,
-    host_name=host_name,
-    name=name,
-    timeouts=timeouts,
-    user_managed_https=user_managed_https
-  )),
+    user_managed_https=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_endpoint_custom_domain',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cdn_endpoint_id=cdn_endpoint_id,
+      cdn_managed_https=cdn_managed_https,
+      host_name=host_name,
+      name=name,
+      timeouts=timeouts,
+      user_managed_https=user_managed_https
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_endpoint_id,
     host_name,

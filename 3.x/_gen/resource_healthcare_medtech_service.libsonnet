@@ -18,19 +18,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     workspace_id,
     identity=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_healthcare_medtech_service', label=resourceLabel, attrs=self.newAttrs(
-    device_mapping_json=device_mapping_json,
-    eventhub_consumer_group_name=eventhub_consumer_group_name,
-    eventhub_name=eventhub_name,
-    eventhub_namespace_name=eventhub_namespace_name,
-    identity=identity,
-    location=location,
-    name=name,
-    tags=tags,
-    timeouts=timeouts,
-    workspace_id=workspace_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_healthcare_medtech_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      device_mapping_json=device_mapping_json,
+      eventhub_consumer_group_name=eventhub_consumer_group_name,
+      eventhub_name=eventhub_name,
+      eventhub_namespace_name=eventhub_namespace_name,
+      identity=identity,
+      location=location,
+      name=name,
+      tags=tags,
+      timeouts=timeouts,
+      workspace_id=workspace_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     device_mapping_json,
     eventhub_consumer_group_name,

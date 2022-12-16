@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     filter_by_category=null,
     filter_by_resource_groups=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_advisor_recommendations', label=dataSrcLabel, attrs=self.newAttrs(filter_by_category=filter_by_category, filter_by_resource_groups=filter_by_resource_groups, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_advisor_recommendations',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(filter_by_category=filter_by_category, filter_by_resource_groups=filter_by_resource_groups, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     filter_by_category=null,
     filter_by_resource_groups=null,

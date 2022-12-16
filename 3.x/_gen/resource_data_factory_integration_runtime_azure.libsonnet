@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     time_to_live_min=null,
     timeouts=null,
-    virtual_network_enabled=null
-  ):: tf.withResource(type='azurerm_data_factory_integration_runtime_azure', label=resourceLabel, attrs=self.newAttrs(
-    cleanup_enabled=cleanup_enabled,
-    compute_type=compute_type,
-    core_count=core_count,
-    data_factory_id=data_factory_id,
-    description=description,
-    location=location,
-    name=name,
-    time_to_live_min=time_to_live_min,
-    timeouts=timeouts,
-    virtual_network_enabled=virtual_network_enabled
-  )),
+    virtual_network_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_integration_runtime_azure',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cleanup_enabled=cleanup_enabled,
+      compute_type=compute_type,
+      core_count=core_count,
+      data_factory_id=data_factory_id,
+      description=description,
+      location=location,
+      name=name,
+      time_to_live_min=time_to_live_min,
+      timeouts=timeouts,
+      virtual_network_enabled=virtual_network_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     location,

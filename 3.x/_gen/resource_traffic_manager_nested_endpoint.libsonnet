@@ -24,23 +24,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     priority=null,
     subnet=null,
     timeouts=null,
-    weight=null
-  ):: tf.withResource(type='azurerm_traffic_manager_nested_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    custom_header=custom_header,
-    enabled=enabled,
-    endpoint_location=endpoint_location,
-    geo_mappings=geo_mappings,
-    minimum_child_endpoints=minimum_child_endpoints,
-    minimum_required_child_endpoints_ipv4=minimum_required_child_endpoints_ipv4,
-    minimum_required_child_endpoints_ipv6=minimum_required_child_endpoints_ipv6,
-    name=name,
-    priority=priority,
-    profile_id=profile_id,
-    subnet=subnet,
-    target_resource_id=target_resource_id,
-    timeouts=timeouts,
-    weight=weight
-  )),
+    weight=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_traffic_manager_nested_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_header=custom_header,
+      enabled=enabled,
+      endpoint_location=endpoint_location,
+      geo_mappings=geo_mappings,
+      minimum_child_endpoints=minimum_child_endpoints,
+      minimum_required_child_endpoints_ipv4=minimum_required_child_endpoints_ipv4,
+      minimum_required_child_endpoints_ipv6=minimum_required_child_endpoints_ipv6,
+      name=name,
+      priority=priority,
+      profile_id=profile_id,
+      subnet=subnet,
+      target_resource_id=target_resource_id,
+      timeouts=timeouts,
+      weight=weight
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     minimum_child_endpoints,
     name,

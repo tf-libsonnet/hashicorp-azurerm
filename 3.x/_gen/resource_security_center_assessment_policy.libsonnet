@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     severity=null,
     threats=null,
     timeouts=null,
-    user_impact=null
-  ):: tf.withResource(type='azurerm_security_center_assessment_policy', label=resourceLabel, attrs=self.newAttrs(
-    categories=categories,
-    description=description,
-    display_name=display_name,
-    implementation_effort=implementation_effort,
-    remediation_description=remediation_description,
-    severity=severity,
-    threats=threats,
-    timeouts=timeouts,
-    user_impact=user_impact
-  )),
+    user_impact=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_security_center_assessment_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      categories=categories,
+      description=description,
+      display_name=display_name,
+      implementation_effort=implementation_effort,
+      remediation_description=remediation_description,
+      severity=severity,
+      threats=threats,
+      timeouts=timeouts,
+      user_impact=user_impact
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     description,
     display_name,

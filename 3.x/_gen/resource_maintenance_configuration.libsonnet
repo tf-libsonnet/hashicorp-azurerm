@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     timeouts=null,
     visibility=null,
-    window=null
-  ):: tf.withResource(type='azurerm_maintenance_configuration', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    properties=properties,
-    resource_group_name=resource_group_name,
-    scope=scope,
-    tags=tags,
-    timeouts=timeouts,
-    visibility=visibility,
-    window=window
-  )),
+    window=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_maintenance_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      properties=properties,
+      resource_group_name=resource_group_name,
+      scope=scope,
+      tags=tags,
+      timeouts=timeouts,
+      visibility=visibility,
+      window=window
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

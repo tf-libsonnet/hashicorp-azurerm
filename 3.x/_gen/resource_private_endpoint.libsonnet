@@ -24,19 +24,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     private_dns_zone_group=null,
     private_service_connection=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    custom_network_interface_name=custom_network_interface_name,
-    ip_configuration=ip_configuration,
-    location=location,
-    name=name,
-    private_dns_zone_group=private_dns_zone_group,
-    private_service_connection=private_service_connection,
-    resource_group_name=resource_group_name,
-    subnet_id=subnet_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_private_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_network_interface_name=custom_network_interface_name,
+      ip_configuration=ip_configuration,
+      location=location,
+      name=name,
+      private_dns_zone_group=private_dns_zone_group,
+      private_service_connection=private_service_connection,
+      resource_group_name=resource_group_name,
+      subnet_id=subnet_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

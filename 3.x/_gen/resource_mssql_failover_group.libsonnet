@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     read_write_endpoint_failover_policy=null,
     readonly_endpoint_failover_policy_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_failover_group', label=resourceLabel, attrs=self.newAttrs(
-    databases=databases,
-    name=name,
-    partner_server=partner_server,
-    read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
-    readonly_endpoint_failover_policy_enabled=readonly_endpoint_failover_policy_enabled,
-    server_id=server_id,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_failover_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      databases=databases,
+      name=name,
+      partner_server=partner_server,
+      read_write_endpoint_failover_policy=read_write_endpoint_failover_policy,
+      readonly_endpoint_failover_policy_enabled=readonly_endpoint_failover_policy_enabled,
+      server_id=server_id,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     server_id,

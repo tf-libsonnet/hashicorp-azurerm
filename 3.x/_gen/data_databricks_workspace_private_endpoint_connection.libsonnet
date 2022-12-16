@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     private_endpoint_id,
     workspace_id,
-    timeouts=null
-  ):: tf.withData(type='azurerm_databricks_workspace_private_endpoint_connection', label=dataSrcLabel, attrs=self.newAttrs(private_endpoint_id=private_endpoint_id, timeouts=timeouts, workspace_id=workspace_id)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_databricks_workspace_private_endpoint_connection',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(private_endpoint_id=private_endpoint_id, timeouts=timeouts, workspace_id=workspace_id),
+    _meta=_meta
+  ),
   newAttrs(
     private_endpoint_id,
     workspace_id,

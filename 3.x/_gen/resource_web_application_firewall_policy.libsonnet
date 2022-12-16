@@ -121,17 +121,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     managed_rules=null,
     policy_settings=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_web_application_firewall_policy', label=resourceLabel, attrs=self.newAttrs(
-    custom_rules=custom_rules,
-    location=location,
-    managed_rules=managed_rules,
-    name=name,
-    policy_settings=policy_settings,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_web_application_firewall_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      custom_rules=custom_rules,
+      location=location,
+      managed_rules=managed_rules,
+      name=name,
+      policy_settings=policy_settings,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

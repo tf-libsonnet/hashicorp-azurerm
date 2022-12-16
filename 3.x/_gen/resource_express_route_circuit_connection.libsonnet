@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     peering_id,
     address_prefix_ipv6=null,
     authorization_key=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_circuit_connection', label=resourceLabel, attrs=self.newAttrs(
-    address_prefix_ipv4=address_prefix_ipv4,
-    address_prefix_ipv6=address_prefix_ipv6,
-    authorization_key=authorization_key,
-    name=name,
-    peer_peering_id=peer_peering_id,
-    peering_id=peering_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_circuit_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      address_prefix_ipv4=address_prefix_ipv4,
+      address_prefix_ipv6=address_prefix_ipv6,
+      authorization_key=authorization_key,
+      name=name,
+      peer_peering_id=peer_peering_id,
+      peering_id=peering_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     address_prefix_ipv4,
     name,

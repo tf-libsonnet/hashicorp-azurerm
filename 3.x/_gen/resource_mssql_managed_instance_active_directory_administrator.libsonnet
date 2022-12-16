@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     object_id,
     tenant_id,
     azuread_authentication_only=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_mssql_managed_instance_active_directory_administrator', label=resourceLabel, attrs=self.newAttrs(
-    azuread_authentication_only=azuread_authentication_only,
-    login_username=login_username,
-    managed_instance_id=managed_instance_id,
-    object_id=object_id,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_mssql_managed_instance_active_directory_administrator',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      azuread_authentication_only=azuread_authentication_only,
+      login_username=login_username,
+      managed_instance_id=managed_instance_id,
+      object_id=object_id,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     login_username,
     managed_instance_id,

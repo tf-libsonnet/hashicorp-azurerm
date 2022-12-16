@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id,
     file_path=null,
     folder_path=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_share_dataset_data_lake_gen2', label=resourceLabel, attrs=self.newAttrs(
-    file_path=file_path,
-    file_system_name=file_system_name,
-    folder_path=folder_path,
-    name=name,
-    share_id=share_id,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_share_dataset_data_lake_gen2',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      file_path=file_path,
+      file_system_name=file_system_name,
+      folder_path=folder_path,
+      name=name,
+      share_id=share_id,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     file_system_name,
     name,

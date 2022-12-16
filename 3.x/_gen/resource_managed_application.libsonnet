@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parameters=null,
     plan=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_managed_application', label=resourceLabel, attrs=self.newAttrs(
-    application_definition_id=application_definition_id,
-    kind=kind,
-    location=location,
-    managed_resource_group_name=managed_resource_group_name,
-    name=name,
-    parameter_values=parameter_values,
-    parameters=parameters,
-    plan=plan,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_managed_application',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      application_definition_id=application_definition_id,
+      kind=kind,
+      location=location,
+      managed_resource_group_name=managed_resource_group_name,
+      name=name,
+      parameter_values=parameter_values,
+      parameters=parameters,
+      plan=plan,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     kind,
     location,

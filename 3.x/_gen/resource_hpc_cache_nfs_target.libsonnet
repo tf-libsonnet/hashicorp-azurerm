@@ -21,16 +21,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     target_host_name,
     usage_model,
     namespace_junction=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_hpc_cache_nfs_target', label=resourceLabel, attrs=self.newAttrs(
-    cache_name=cache_name,
-    name=name,
-    namespace_junction=namespace_junction,
-    resource_group_name=resource_group_name,
-    target_host_name=target_host_name,
-    timeouts=timeouts,
-    usage_model=usage_model
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_hpc_cache_nfs_target',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cache_name=cache_name,
+      name=name,
+      namespace_junction=namespace_junction,
+      resource_group_name=resource_group_name,
+      target_host_name=target_host_name,
+      timeouts=timeouts,
+      usage_model=usage_model
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cache_name,
     name,

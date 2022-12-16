@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     luis_app_ids=null,
     luis_key=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_web_app', label=resourceLabel, attrs=self.newAttrs(
-    developer_app_insights_api_key=developer_app_insights_api_key,
-    developer_app_insights_application_id=developer_app_insights_application_id,
-    developer_app_insights_key=developer_app_insights_key,
-    display_name=display_name,
-    endpoint=endpoint,
-    location=location,
-    luis_app_ids=luis_app_ids,
-    luis_key=luis_key,
-    microsoft_app_id=microsoft_app_id,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_web_app',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      developer_app_insights_api_key=developer_app_insights_api_key,
+      developer_app_insights_application_id=developer_app_insights_application_id,
+      developer_app_insights_key=developer_app_insights_key,
+      display_name=display_name,
+      endpoint=endpoint,
+      location=location,
+      luis_app_ids=luis_app_ids,
+      luis_key=luis_key,
+      microsoft_app_id=microsoft_app_id,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     microsoft_app_id,

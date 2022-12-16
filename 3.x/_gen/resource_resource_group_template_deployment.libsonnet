@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     template_content=null,
     template_spec_version_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_resource_group_template_deployment', label=resourceLabel, attrs=self.newAttrs(
-    debug_level=debug_level,
-    deployment_mode=deployment_mode,
-    name=name,
-    parameters_content=parameters_content,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    template_content=template_content,
-    template_spec_version_id=template_spec_version_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_resource_group_template_deployment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      debug_level=debug_level,
+      deployment_mode=deployment_mode,
+      name=name,
+      parameters_content=parameters_content,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      template_content=template_content,
+      template_spec_version_id=template_spec_version_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     deployment_mode,
     name,

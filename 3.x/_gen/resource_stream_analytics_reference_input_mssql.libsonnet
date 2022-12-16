@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     delta_snapshot_query=null,
     refresh_interval_duration=null,
     table=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_reference_input_mssql', label=resourceLabel, attrs=self.newAttrs(
-    database=database,
-    delta_snapshot_query=delta_snapshot_query,
-    full_snapshot_query=full_snapshot_query,
-    name=name,
-    password=password,
-    refresh_interval_duration=refresh_interval_duration,
-    refresh_type=refresh_type,
-    resource_group_name=resource_group_name,
-    server=server,
-    stream_analytics_job_name=stream_analytics_job_name,
-    table=table,
-    timeouts=timeouts,
-    username=username
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_reference_input_mssql',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      database=database,
+      delta_snapshot_query=delta_snapshot_query,
+      full_snapshot_query=full_snapshot_query,
+      name=name,
+      password=password,
+      refresh_interval_duration=refresh_interval_duration,
+      refresh_type=refresh_type,
+      resource_group_name=resource_group_name,
+      server=server,
+      stream_analytics_job_name=stream_analytics_job_name,
+      table=table,
+      timeouts=timeouts,
+      username=username
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     database,
     full_snapshot_query,

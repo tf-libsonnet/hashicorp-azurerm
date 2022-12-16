@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     log_analytics_workspace_id,
     name,
     sqs_urls,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_data_connector_aws_s3', label=resourceLabel, attrs=self.newAttrs(
-    aws_role_arn=aws_role_arn,
-    destination_table=destination_table,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    sqs_urls=sqs_urls,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_data_connector_aws_s3',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      aws_role_arn=aws_role_arn,
+      destination_table=destination_table,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      sqs_urls=sqs_urls,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     aws_role_arn,
     destination_table,

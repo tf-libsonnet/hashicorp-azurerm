@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     private_link_resource_region=null,
     request_message=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_cluster_managed_private_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
-    group_id=group_id,
-    name=name,
-    private_link_resource_id=private_link_resource_id,
-    private_link_resource_region=private_link_resource_region,
-    request_message=request_message,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_cluster_managed_private_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_name=cluster_name,
+      group_id=group_id,
+      name=name,
+      private_link_resource_id=private_link_resource_id,
+      private_link_resource_region=private_link_resource_region,
+      request_message=request_message,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     group_id,

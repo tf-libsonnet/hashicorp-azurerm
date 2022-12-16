@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parameters=null,
     password=null,
     timeouts=null,
-    username=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_web', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    authentication_type=authentication_type,
-    data_factory_id=data_factory_id,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    name=name,
-    parameters=parameters,
-    password=password,
-    timeouts=timeouts,
-    url=url,
-    username=username
-  )),
+    username=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_web',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      authentication_type=authentication_type,
+      data_factory_id=data_factory_id,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      name=name,
+      parameters=parameters,
+      password=password,
+      timeouts=timeouts,
+      url=url,
+      username=username
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     authentication_type,
     data_factory_id,

@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     vault_id,
     database_credential_key_vault_secret_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_protection_backup_instance_postgresql', label=resourceLabel, attrs=self.newAttrs(
-    backup_policy_id=backup_policy_id,
-    database_credential_key_vault_secret_id=database_credential_key_vault_secret_id,
-    database_id=database_id,
-    location=location,
-    name=name,
-    timeouts=timeouts,
-    vault_id=vault_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_protection_backup_instance_postgresql',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backup_policy_id=backup_policy_id,
+      database_credential_key_vault_secret_id=database_credential_key_vault_secret_id,
+      database_id=database_id,
+      location=location,
+      name=name,
+      timeouts=timeouts,
+      vault_id=vault_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backup_policy_id,
     database_id,

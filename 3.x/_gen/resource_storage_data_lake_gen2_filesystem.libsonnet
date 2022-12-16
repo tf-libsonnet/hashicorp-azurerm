@@ -19,16 +19,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     group=null,
     owner=null,
     properties=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_data_lake_gen2_filesystem', label=resourceLabel, attrs=self.newAttrs(
-    ace=ace,
-    group=group,
-    name=name,
-    owner=owner,
-    properties=properties,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_data_lake_gen2_filesystem',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      ace=ace,
+      group=group,
+      name=name,
+      owner=owner,
+      properties=properties,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     storage_account_id,

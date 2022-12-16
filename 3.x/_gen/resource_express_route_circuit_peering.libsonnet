@@ -51,22 +51,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     route_filter_id=null,
     secondary_peer_address_prefix=null,
     shared_key=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_circuit_peering', label=resourceLabel, attrs=self.newAttrs(
-    express_route_circuit_name=express_route_circuit_name,
-    ipv4_enabled=ipv4_enabled,
-    ipv6=ipv6,
-    microsoft_peering_config=microsoft_peering_config,
-    peer_asn=peer_asn,
-    peering_type=peering_type,
-    primary_peer_address_prefix=primary_peer_address_prefix,
-    resource_group_name=resource_group_name,
-    route_filter_id=route_filter_id,
-    secondary_peer_address_prefix=secondary_peer_address_prefix,
-    shared_key=shared_key,
-    timeouts=timeouts,
-    vlan_id=vlan_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_circuit_peering',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      express_route_circuit_name=express_route_circuit_name,
+      ipv4_enabled=ipv4_enabled,
+      ipv6=ipv6,
+      microsoft_peering_config=microsoft_peering_config,
+      peer_asn=peer_asn,
+      peering_type=peering_type,
+      primary_peer_address_prefix=primary_peer_address_prefix,
+      resource_group_name=resource_group_name,
+      route_filter_id=route_filter_id,
+      secondary_peer_address_prefix=secondary_peer_address_prefix,
+      shared_key=shared_key,
+      timeouts=timeouts,
+      vlan_id=vlan_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     express_route_circuit_name,
     peering_type,

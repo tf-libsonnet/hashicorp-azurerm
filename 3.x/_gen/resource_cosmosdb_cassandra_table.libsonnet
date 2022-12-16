@@ -16,17 +16,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     default_ttl=null,
     schema=null,
     throughput=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_cassandra_table', label=resourceLabel, attrs=self.newAttrs(
-    analytical_storage_ttl=analytical_storage_ttl,
-    autoscale_settings=autoscale_settings,
-    cassandra_keyspace_id=cassandra_keyspace_id,
-    default_ttl=default_ttl,
-    name=name,
-    schema=schema,
-    throughput=throughput,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_cassandra_table',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      analytical_storage_ttl=analytical_storage_ttl,
+      autoscale_settings=autoscale_settings,
+      cassandra_keyspace_id=cassandra_keyspace_id,
+      default_ttl=default_ttl,
+      name=name,
+      schema=schema,
+      throughput=throughput,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cassandra_keyspace_id,
     name,

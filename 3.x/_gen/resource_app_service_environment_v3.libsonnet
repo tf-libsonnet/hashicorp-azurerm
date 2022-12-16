@@ -20,19 +20,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     internal_load_balancing_mode=null,
     tags=null,
     timeouts=null,
-    zone_redundant=null
-  ):: tf.withResource(type='azurerm_app_service_environment_v3', label=resourceLabel, attrs=self.newAttrs(
-    allow_new_private_endpoint_connections=allow_new_private_endpoint_connections,
-    cluster_setting=cluster_setting,
-    dedicated_host_count=dedicated_host_count,
-    internal_load_balancing_mode=internal_load_balancing_mode,
-    name=name,
-    resource_group_name=resource_group_name,
-    subnet_id=subnet_id,
-    tags=tags,
-    timeouts=timeouts,
-    zone_redundant=zone_redundant
-  )),
+    zone_redundant=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_environment_v3',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_new_private_endpoint_connections=allow_new_private_endpoint_connections,
+      cluster_setting=cluster_setting,
+      dedicated_host_count=dedicated_host_count,
+      internal_load_balancing_mode=internal_load_balancing_mode,
+      name=name,
+      resource_group_name=resource_group_name,
+      subnet_id=subnet_id,
+      tags=tags,
+      timeouts=timeouts,
+      zone_redundant=zone_redundant
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

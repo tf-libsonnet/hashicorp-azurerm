@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku_name,
     response_timeout_seconds=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_profile', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    response_timeout_seconds=response_timeout_seconds,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_profile',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      response_timeout_seconds=response_timeout_seconds,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

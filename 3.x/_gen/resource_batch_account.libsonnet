@@ -31,23 +31,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id=null,
     storage_account_node_identity=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_batch_account', label=resourceLabel, attrs=self.newAttrs(
-    allowed_authentication_modes=allowed_authentication_modes,
-    encryption=encryption,
-    identity=identity,
-    key_vault_reference=key_vault_reference,
-    location=location,
-    name=name,
-    pool_allocation_mode=pool_allocation_mode,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    storage_account_authentication_mode=storage_account_authentication_mode,
-    storage_account_id=storage_account_id,
-    storage_account_node_identity=storage_account_node_identity,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_batch_account',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allowed_authentication_modes=allowed_authentication_modes,
+      encryption=encryption,
+      identity=identity,
+      key_vault_reference=key_vault_reference,
+      location=location,
+      name=name,
+      pool_allocation_mode=pool_allocation_mode,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      storage_account_authentication_mode=storage_account_authentication_mode,
+      storage_account_id=storage_account_id,
+      storage_account_node_identity=storage_account_node_identity,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

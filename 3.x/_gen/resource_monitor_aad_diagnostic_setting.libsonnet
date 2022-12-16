@@ -28,16 +28,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     log=null,
     log_analytics_workspace_id=null,
     storage_account_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_monitor_aad_diagnostic_setting', label=resourceLabel, attrs=self.newAttrs(
-    eventhub_authorization_rule_id=eventhub_authorization_rule_id,
-    eventhub_name=eventhub_name,
-    log=log,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    storage_account_id=storage_account_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_monitor_aad_diagnostic_setting',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      eventhub_authorization_rule_id=eventhub_authorization_rule_id,
+      eventhub_name=eventhub_name,
+      log=log,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      storage_account_id=storage_account_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     eventhub_authorization_rule_id=null,

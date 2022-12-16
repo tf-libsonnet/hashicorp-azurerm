@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     server_role,
     target_redis_cache_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_redis_linked_server', label=resourceLabel, attrs=self.newAttrs(
-    linked_redis_cache_id=linked_redis_cache_id,
-    linked_redis_cache_location=linked_redis_cache_location,
-    resource_group_name=resource_group_name,
-    server_role=server_role,
-    target_redis_cache_name=target_redis_cache_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_redis_linked_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      linked_redis_cache_id=linked_redis_cache_id,
+      linked_redis_cache_location=linked_redis_cache_location,
+      resource_group_name=resource_group_name,
+      server_role=server_role,
+      target_redis_cache_name=target_redis_cache_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     linked_redis_cache_id,
     linked_redis_cache_location,

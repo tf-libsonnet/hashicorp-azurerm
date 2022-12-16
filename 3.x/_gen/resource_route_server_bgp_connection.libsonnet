@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     peer_asn,
     peer_ip,
     route_server_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_route_server_bgp_connection', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    peer_asn=peer_asn,
-    peer_ip=peer_ip,
-    route_server_id=route_server_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_route_server_bgp_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      peer_asn=peer_asn,
+      peer_ip=peer_ip,
+      route_server_id=route_server_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     peer_asn,

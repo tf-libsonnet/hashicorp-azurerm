@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     domain_service_id,
     location,
     subnet_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_active_directory_domain_service_replica_set', label=resourceLabel, attrs=self.newAttrs(
-    domain_service_id=domain_service_id,
-    location=location,
-    subnet_id=subnet_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_active_directory_domain_service_replica_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      domain_service_id=domain_service_id,
+      location=location,
+      subnet_id=subnet_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     domain_service_id,
     location,

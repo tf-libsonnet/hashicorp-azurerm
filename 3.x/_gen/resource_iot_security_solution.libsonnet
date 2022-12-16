@@ -26,25 +26,31 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     query_subscription_ids=null,
     recommendations_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iot_security_solution', label=resourceLabel, attrs=self.newAttrs(
-    additional_workspace=additional_workspace,
-    disabled_data_sources=disabled_data_sources,
-    display_name=display_name,
-    enabled=enabled,
-    events_to_export=events_to_export,
-    iothub_ids=iothub_ids,
-    location=location,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    log_unmasked_ips_enabled=log_unmasked_ips_enabled,
-    name=name,
-    query_for_resources=query_for_resources,
-    query_subscription_ids=query_subscription_ids,
-    recommendations_enabled=recommendations_enabled,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iot_security_solution',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_workspace=additional_workspace,
+      disabled_data_sources=disabled_data_sources,
+      display_name=display_name,
+      enabled=enabled,
+      events_to_export=events_to_export,
+      iothub_ids=iothub_ids,
+      location=location,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      log_unmasked_ips_enabled=log_unmasked_ips_enabled,
+      name=name,
+      query_for_resources=query_for_resources,
+      query_subscription_ids=query_subscription_ids,
+      recommendations_enabled=recommendations_enabled,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     display_name,
     iothub_ids,

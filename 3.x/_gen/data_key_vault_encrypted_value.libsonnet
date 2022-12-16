@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_vault_key_id,
     encrypted_data=null,
     plain_text_value=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_key_vault_encrypted_value', label=dataSrcLabel, attrs=self.newAttrs(
-    algorithm=algorithm,
-    encrypted_data=encrypted_data,
-    key_vault_key_id=key_vault_key_id,
-    plain_text_value=plain_text_value,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_key_vault_encrypted_value',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      algorithm=algorithm,
+      encrypted_data=encrypted_data,
+      key_vault_key_id=key_vault_key_id,
+      plain_text_value=plain_text_value,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     algorithm,
     key_vault_key_id,

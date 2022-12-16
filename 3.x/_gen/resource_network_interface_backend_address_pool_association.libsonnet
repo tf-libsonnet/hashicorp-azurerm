@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     backend_address_pool_id,
     ip_configuration_name,
     network_interface_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_network_interface_backend_address_pool_association', label=resourceLabel, attrs=self.newAttrs(
-    backend_address_pool_id=backend_address_pool_id,
-    ip_configuration_name=ip_configuration_name,
-    network_interface_id=network_interface_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_interface_backend_address_pool_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backend_address_pool_id=backend_address_pool_id,
+      ip_configuration_name=ip_configuration_name,
+      network_interface_id=network_interface_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     backend_address_pool_id,
     ip_configuration_name,

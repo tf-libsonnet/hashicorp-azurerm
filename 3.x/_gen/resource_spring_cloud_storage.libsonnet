@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     spring_cloud_service_id,
     storage_account_key,
     storage_account_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_storage', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    spring_cloud_service_id=spring_cloud_service_id,
-    storage_account_key=storage_account_key,
-    storage_account_name=storage_account_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_storage',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      spring_cloud_service_id=spring_cloud_service_id,
+      storage_account_key=storage_account_key,
+      storage_account_name=storage_account_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_service_id,

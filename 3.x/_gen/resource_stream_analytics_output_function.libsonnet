@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stream_analytics_job_name,
     batch_max_count=null,
     batch_max_in_bytes=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_function', label=resourceLabel, attrs=self.newAttrs(
-    api_key=api_key,
-    batch_max_count=batch_max_count,
-    batch_max_in_bytes=batch_max_in_bytes,
-    function_app=function_app,
-    function_name=function_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_function',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_key=api_key,
+      batch_max_count=batch_max_count,
+      batch_max_in_bytes=batch_max_in_bytes,
+      function_app=function_app,
+      function_name=function_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      stream_analytics_job_name=stream_analytics_job_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_key,
     function_app,

@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     fact_data=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_dev_test_policy', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    evaluator_type=evaluator_type,
-    fact_data=fact_data,
-    lab_name=lab_name,
-    name=name,
-    policy_set_name=policy_set_name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    threshold=threshold,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dev_test_policy',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      evaluator_type=evaluator_type,
+      fact_data=fact_data,
+      lab_name=lab_name,
+      name=name,
+      policy_set_name=policy_set_name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      threshold=threshold,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     evaluator_type,
     lab_name,

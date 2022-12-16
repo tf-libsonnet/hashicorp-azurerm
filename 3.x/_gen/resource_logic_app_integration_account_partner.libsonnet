@@ -16,15 +16,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     business_identity=null,
     metadata=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_integration_account_partner', label=resourceLabel, attrs=self.newAttrs(
-    business_identity=business_identity,
-    integration_account_name=integration_account_name,
-    metadata=metadata,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_integration_account_partner',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      business_identity=business_identity,
+      integration_account_name=integration_account_name,
+      metadata=metadata,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     integration_account_name,
     name,

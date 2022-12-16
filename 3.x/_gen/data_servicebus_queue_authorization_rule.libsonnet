@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     queue_id=null,
     queue_name=null,
     resource_group_name=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_servicebus_queue_authorization_rule', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    namespace_name=namespace_name,
-    queue_id=queue_id,
-    queue_name=queue_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_servicebus_queue_authorization_rule',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      namespace_name=namespace_name,
+      queue_id=queue_id,
+      queue_name=queue_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     namespace_name=null,

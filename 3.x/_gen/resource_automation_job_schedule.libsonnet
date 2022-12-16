@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     job_schedule_id=null,
     parameters=null,
     run_on=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_job_schedule', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    job_schedule_id=job_schedule_id,
-    parameters=parameters,
-    resource_group_name=resource_group_name,
-    run_on=run_on,
-    runbook_name=runbook_name,
-    schedule_name=schedule_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_job_schedule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      job_schedule_id=job_schedule_id,
+      parameters=parameters,
+      resource_group_name=resource_group_name,
+      run_on=run_on,
+      runbook_name=runbook_name,
+      schedule_name=schedule_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     resource_group_name,

@@ -25,22 +25,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     timeouts=null,
-    tunneling_enabled=null
-  ):: tf.withResource(type='azurerm_bastion_host', label=resourceLabel, attrs=self.newAttrs(
-    copy_paste_enabled=copy_paste_enabled,
-    file_copy_enabled=file_copy_enabled,
-    ip_configuration=ip_configuration,
-    ip_connect_enabled=ip_connect_enabled,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    scale_units=scale_units,
-    shareable_link_enabled=shareable_link_enabled,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    tunneling_enabled=tunneling_enabled
-  )),
+    tunneling_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bastion_host',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      copy_paste_enabled=copy_paste_enabled,
+      file_copy_enabled=file_copy_enabled,
+      ip_configuration=ip_configuration,
+      ip_connect_enabled=ip_connect_enabled,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      scale_units=scale_units,
+      shareable_link_enabled=shareable_link_enabled,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      tunneling_enabled=tunneling_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

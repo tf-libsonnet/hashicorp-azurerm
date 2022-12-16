@@ -29,17 +29,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     azuread_based_service_principal=null,
     certificate_based_security_principal=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_confidential_ledger', label=resourceLabel, attrs=self.newAttrs(
-    azuread_based_service_principal=azuread_based_service_principal,
-    certificate_based_security_principal=certificate_based_security_principal,
-    ledger_type=ledger_type,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_confidential_ledger',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      azuread_based_service_principal=azuread_based_service_principal,
+      certificate_based_security_principal=certificate_based_security_principal,
+      ledger_type=ledger_type,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     ledger_type,
     location,

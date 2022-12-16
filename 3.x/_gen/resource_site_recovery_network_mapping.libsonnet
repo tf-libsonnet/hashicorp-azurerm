@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source_recovery_fabric_name,
     target_network_id,
     target_recovery_fabric_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_site_recovery_network_mapping', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    recovery_vault_name=recovery_vault_name,
-    resource_group_name=resource_group_name,
-    source_network_id=source_network_id,
-    source_recovery_fabric_name=source_recovery_fabric_name,
-    target_network_id=target_network_id,
-    target_recovery_fabric_name=target_recovery_fabric_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_site_recovery_network_mapping',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      recovery_vault_name=recovery_vault_name,
+      resource_group_name=resource_group_name,
+      source_network_id=source_network_id,
+      source_recovery_fabric_name=source_recovery_fabric_name,
+      target_network_id=target_network_id,
+      target_recovery_fabric_name=target_recovery_fabric_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     recovery_vault_name,

@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     nat_gateway_id,
     public_ip_prefix_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_nat_gateway_public_ip_prefix_association', label=resourceLabel, attrs=self.newAttrs(nat_gateway_id=nat_gateway_id, public_ip_prefix_id=public_ip_prefix_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_nat_gateway_public_ip_prefix_association',
+    label=resourceLabel,
+    attrs=self.newAttrs(nat_gateway_id=nat_gateway_id, public_ip_prefix_id=public_ip_prefix_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     nat_gateway_id,
     public_ip_prefix_id,

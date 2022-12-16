@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     password,
     trusted_domain_dns_ips,
     trusted_domain_fqdn,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_active_directory_domain_service_trust', label=resourceLabel, attrs=self.newAttrs(
-    domain_service_id=domain_service_id,
-    name=name,
-    password=password,
-    timeouts=timeouts,
-    trusted_domain_dns_ips=trusted_domain_dns_ips,
-    trusted_domain_fqdn=trusted_domain_fqdn
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_active_directory_domain_service_trust',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      domain_service_id=domain_service_id,
+      name=name,
+      password=password,
+      timeouts=timeouts,
+      trusted_domain_dns_ips=trusted_domain_dns_ips,
+      trusted_domain_fqdn=trusted_domain_fqdn
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     domain_service_id,
     name,

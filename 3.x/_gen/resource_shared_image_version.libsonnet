@@ -16,24 +16,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id=null,
     tags=null,
     target_region=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_shared_image_version', label=resourceLabel, attrs=self.newAttrs(
-    blob_uri=blob_uri,
-    end_of_life_date=end_of_life_date,
-    exclude_from_latest=exclude_from_latest,
-    gallery_name=gallery_name,
-    image_name=image_name,
-    location=location,
-    managed_image_id=managed_image_id,
-    name=name,
-    os_disk_snapshot_id=os_disk_snapshot_id,
-    replication_mode=replication_mode,
-    resource_group_name=resource_group_name,
-    storage_account_id=storage_account_id,
-    tags=tags,
-    target_region=target_region,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_shared_image_version',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      blob_uri=blob_uri,
+      end_of_life_date=end_of_life_date,
+      exclude_from_latest=exclude_from_latest,
+      gallery_name=gallery_name,
+      image_name=image_name,
+      location=location,
+      managed_image_id=managed_image_id,
+      name=name,
+      os_disk_snapshot_id=os_disk_snapshot_id,
+      replication_mode=replication_mode,
+      resource_group_name=resource_group_name,
+      storage_account_id=storage_account_id,
+      tags=tags,
+      target_region=target_region,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     gallery_name,
     image_name,

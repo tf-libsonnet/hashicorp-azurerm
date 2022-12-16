@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     cosmosdb_account_id,
     instance_count,
     instance_size,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_sql_dedicated_gateway', label=resourceLabel, attrs=self.newAttrs(
-    cosmosdb_account_id=cosmosdb_account_id,
-    instance_count=instance_count,
-    instance_size=instance_size,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_sql_dedicated_gateway',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cosmosdb_account_id=cosmosdb_account_id,
+      instance_count=instance_count,
+      instance_size=instance_size,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cosmosdb_account_id,
     instance_count,

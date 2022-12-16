@@ -33,20 +33,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     internal_dns_name_label=null,
     ip_configuration=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_network_interface', label=resourceLabel, attrs=self.newAttrs(
-    dns_servers=dns_servers,
-    edge_zone=edge_zone,
-    enable_accelerated_networking=enable_accelerated_networking,
-    enable_ip_forwarding=enable_ip_forwarding,
-    internal_dns_name_label=internal_dns_name_label,
-    ip_configuration=ip_configuration,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_network_interface',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dns_servers=dns_servers,
+      edge_zone=edge_zone,
+      enable_accelerated_networking=enable_accelerated_networking,
+      enable_ip_forwarding=enable_ip_forwarding,
+      internal_dns_name_label=internal_dns_name_label,
+      ip_configuration=ip_configuration,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

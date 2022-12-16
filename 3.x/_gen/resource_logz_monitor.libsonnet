@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     plan=null,
     tags=null,
     timeouts=null,
-    user=null
-  ):: tf.withResource(type='azurerm_logz_monitor', label=resourceLabel, attrs=self.newAttrs(
-    company_name=company_name,
-    enabled=enabled,
-    enterprise_app_id=enterprise_app_id,
-    location=location,
-    name=name,
-    plan=plan,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    user=user
-  )),
+    user=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logz_monitor',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      company_name=company_name,
+      enabled=enabled,
+      enterprise_app_id=enterprise_app_id,
+      location=location,
+      name=name,
+      plan=plan,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      user=user
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

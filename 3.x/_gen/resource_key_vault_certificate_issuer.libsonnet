@@ -22,17 +22,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     admin=null,
     org_id=null,
     password=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_certificate_issuer', label=resourceLabel, attrs=self.newAttrs(
-    account_id=account_id,
-    admin=admin,
-    key_vault_id=key_vault_id,
-    name=name,
-    org_id=org_id,
-    password=password,
-    provider_name=provider_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_certificate_issuer',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_id=account_id,
+      admin=admin,
+      key_vault_id=key_vault_id,
+      name=name,
+      org_id=org_id,
+      password=password,
+      provider_name=provider_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     key_vault_id,
     name,

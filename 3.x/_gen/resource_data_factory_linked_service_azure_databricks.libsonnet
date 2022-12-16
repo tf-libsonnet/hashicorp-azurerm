@@ -38,24 +38,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     msi_work_space_resource_id=null,
     new_cluster_config=null,
     parameters=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_azure_databricks', label=resourceLabel, attrs=self.newAttrs(
-    access_token=access_token,
-    adb_domain=adb_domain,
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    existing_cluster_id=existing_cluster_id,
-    instance_pool=instance_pool,
-    integration_runtime_name=integration_runtime_name,
-    key_vault_password=key_vault_password,
-    msi_work_space_resource_id=msi_work_space_resource_id,
-    name=name,
-    new_cluster_config=new_cluster_config,
-    parameters=parameters,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_azure_databricks',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      access_token=access_token,
+      adb_domain=adb_domain,
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      existing_cluster_id=existing_cluster_id,
+      instance_pool=instance_pool,
+      integration_runtime_name=integration_runtime_name,
+      key_vault_password=key_vault_password,
+      msi_work_space_resource_id=msi_work_space_resource_id,
+      name=name,
+      new_cluster_config=new_cluster_config,
+      parameters=parameters,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     adb_domain,
     data_factory_id,

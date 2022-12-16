@@ -18,17 +18,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     file=null,
     language=null,
     test_data=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_function_app_function', label=resourceLabel, attrs=self.newAttrs(
-    config_json=config_json,
-    enabled=enabled,
-    file=file,
-    function_app_id=function_app_id,
-    language=language,
-    name=name,
-    test_data=test_data,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_function_app_function',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      config_json=config_json,
+      enabled=enabled,
+      file=file,
+      function_app_id=function_app_id,
+      language=language,
+      name=name,
+      test_data=test_data,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     config_json,
     function_app_id,

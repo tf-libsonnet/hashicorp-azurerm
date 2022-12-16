@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     disable_bgp_route_propagation=null,
     route=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_route_table', label=resourceLabel, attrs=self.newAttrs(
-    disable_bgp_route_propagation=disable_bgp_route_propagation,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    route=route,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_route_table',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      disable_bgp_route_propagation=disable_bgp_route_propagation,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      route=route,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

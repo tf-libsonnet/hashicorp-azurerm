@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     namespace_name,
     resource_group_name,
-    timeouts=null
-  ):: tf.withData(type='azurerm_eventhub_consumer_group', label=dataSrcLabel, attrs=self.newAttrs(
-    eventhub_name=eventhub_name,
-    name=name,
-    namespace_name=namespace_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_eventhub_consumer_group',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      eventhub_name=eventhub_name,
+      name=name,
+      namespace_name=namespace_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     eventhub_name,
     name,

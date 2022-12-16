@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     display_name_contains=null,
     display_name_prefix=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_subscriptions', label=dataSrcLabel, attrs=self.newAttrs(display_name_contains=display_name_contains, display_name_prefix=display_name_prefix, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_subscriptions',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(display_name_contains=display_name_contains, display_name_prefix=display_name_prefix, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     display_name_contains=null,
     display_name_prefix=null,

@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     requires_duplicate_detection=null,
     status=null,
     support_ordering=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_servicebus_topic', label=resourceLabel, attrs=self.newAttrs(
-    auto_delete_on_idle=auto_delete_on_idle,
-    default_message_ttl=default_message_ttl,
-    duplicate_detection_history_time_window=duplicate_detection_history_time_window,
-    enable_batched_operations=enable_batched_operations,
-    enable_express=enable_express,
-    enable_partitioning=enable_partitioning,
-    max_message_size_in_kilobytes=max_message_size_in_kilobytes,
-    max_size_in_megabytes=max_size_in_megabytes,
-    name=name,
-    namespace_id=namespace_id,
-    requires_duplicate_detection=requires_duplicate_detection,
-    status=status,
-    support_ordering=support_ordering,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_servicebus_topic',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_delete_on_idle=auto_delete_on_idle,
+      default_message_ttl=default_message_ttl,
+      duplicate_detection_history_time_window=duplicate_detection_history_time_window,
+      enable_batched_operations=enable_batched_operations,
+      enable_express=enable_express,
+      enable_partitioning=enable_partitioning,
+      max_message_size_in_kilobytes=max_message_size_in_kilobytes,
+      max_size_in_megabytes=max_size_in_megabytes,
+      name=name,
+      namespace_id=namespace_id,
+      requires_duplicate_detection=requires_duplicate_detection,
+      status=status,
+      support_ordering=support_ordering,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     namespace_id,

@@ -22,21 +22,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     purge_protection_enabled=null,
     soft_delete_retention_days=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_managed_hardware_security_module', label=resourceLabel, attrs=self.newAttrs(
-    admin_object_ids=admin_object_ids,
-    location=location,
-    name=name,
-    network_acls=network_acls,
-    public_network_access_enabled=public_network_access_enabled,
-    purge_protection_enabled=purge_protection_enabled,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    soft_delete_retention_days=soft_delete_retention_days,
-    tags=tags,
-    tenant_id=tenant_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_managed_hardware_security_module',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      admin_object_ids=admin_object_ids,
+      location=location,
+      name=name,
+      network_acls=network_acls,
+      public_network_access_enabled=public_network_access_enabled,
+      purge_protection_enabled=purge_protection_enabled,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      soft_delete_retention_days=soft_delete_retention_days,
+      tags=tags,
+      tenant_id=tenant_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     admin_object_ids,
     location,

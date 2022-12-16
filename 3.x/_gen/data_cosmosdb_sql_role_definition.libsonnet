@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     account_name,
     resource_group_name,
     role_definition_id,
-    timeouts=null
-  ):: tf.withData(type='azurerm_cosmosdb_sql_role_definition', label=dataSrcLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    resource_group_name=resource_group_name,
-    role_definition_id=role_definition_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_cosmosdb_sql_role_definition',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      resource_group_name=resource_group_name,
+      role_definition_id=role_definition_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     resource_group_name,

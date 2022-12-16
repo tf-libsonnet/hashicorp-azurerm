@@ -29,19 +29,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     stamp_id=null,
     tags=null,
     timeouts=null,
-    zones=null
-  ):: tf.withResource(type='azurerm_dedicated_hardware_security_module', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    management_network_profile=management_network_profile,
-    name=name,
-    network_profile=network_profile,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    stamp_id=stamp_id,
-    tags=tags,
-    timeouts=timeouts,
-    zones=zones
-  )),
+    zones=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dedicated_hardware_security_module',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      management_network_profile=management_network_profile,
+      name=name,
+      network_profile=network_profile,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      stamp_id=stamp_id,
+      tags=tags,
+      timeouts=timeouts,
+      zones=zones
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

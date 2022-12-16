@@ -55,20 +55,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     links=null,
     minimum_elevation_degrees=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_orbital_contact_profile', label=resourceLabel, attrs=self.newAttrs(
-    auto_tracking=auto_tracking,
-    event_hub_uri=event_hub_uri,
-    links=links,
-    location=location,
-    minimum_elevation_degrees=minimum_elevation_degrees,
-    minimum_variable_contact_duration=minimum_variable_contact_duration,
-    name=name,
-    network_configuration_subnet_id=network_configuration_subnet_id,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_orbital_contact_profile',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_tracking=auto_tracking,
+      event_hub_uri=event_hub_uri,
+      links=links,
+      location=location,
+      minimum_elevation_degrees=minimum_elevation_degrees,
+      minimum_variable_contact_duration=minimum_variable_contact_duration,
+      name=name,
+      network_configuration_subnet_id=network_configuration_subnet_id,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     auto_tracking,
     location,

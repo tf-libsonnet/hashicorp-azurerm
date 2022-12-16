@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name=null,
     name_regex=null,
     sort_descending=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_image', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    name_regex=name_regex,
-    resource_group_name=resource_group_name,
-    sort_descending=sort_descending,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_image',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      name_regex=name_regex,
+      resource_group_name=resource_group_name,
+      sort_descending=sort_descending,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     resource_group_name,
     name=null,

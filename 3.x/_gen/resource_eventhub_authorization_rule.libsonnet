@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     listen=null,
     manage=null,
     send=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_eventhub_authorization_rule', label=resourceLabel, attrs=self.newAttrs(
-    eventhub_name=eventhub_name,
-    listen=listen,
-    manage=manage,
-    name=name,
-    namespace_name=namespace_name,
-    resource_group_name=resource_group_name,
-    send=send,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_eventhub_authorization_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      eventhub_name=eventhub_name,
+      listen=listen,
+      manage=manage,
+      name=name,
+      namespace_name=namespace_name,
+      resource_group_name=resource_group_name,
+      send=send,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     eventhub_name,
     name,

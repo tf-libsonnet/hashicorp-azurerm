@@ -19,20 +19,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     identity=null,
     tags=null,
     threat_detection_policy=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sql_server', label=resourceLabel, attrs=self.newAttrs(
-    administrator_login=administrator_login,
-    administrator_login_password=administrator_login_password,
-    connection_policy=connection_policy,
-    identity=identity,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    threat_detection_policy=threat_detection_policy,
-    timeouts=timeouts,
-    version=version
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sql_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      administrator_login=administrator_login,
+      administrator_login_password=administrator_login_password,
+      connection_policy=connection_policy,
+      identity=identity,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      threat_detection_policy=threat_detection_policy,
+      timeouts=timeouts,
+      version=version
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     administrator_login,
     administrator_login_password,

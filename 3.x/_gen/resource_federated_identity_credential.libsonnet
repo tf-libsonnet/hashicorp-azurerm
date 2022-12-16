@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parent_id,
     resource_group_name,
     subject,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_federated_identity_credential', label=resourceLabel, attrs=self.newAttrs(
-    audience=audience,
-    issuer=issuer,
-    name=name,
-    parent_id=parent_id,
-    resource_group_name=resource_group_name,
-    subject=subject,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_federated_identity_credential',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      audience=audience,
+      issuer=issuer,
+      name=name,
+      parent_id=parent_id,
+      resource_group_name=resource_group_name,
+      subject=subject,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     audience,
     issuer,

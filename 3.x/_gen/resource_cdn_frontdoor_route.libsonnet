@@ -29,24 +29,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     forwarding_protocol=null,
     https_redirect_enabled=null,
     link_to_default_domain=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_route', label=resourceLabel, attrs=self.newAttrs(
-    cache=cache,
-    cdn_frontdoor_custom_domain_ids=cdn_frontdoor_custom_domain_ids,
-    cdn_frontdoor_endpoint_id=cdn_frontdoor_endpoint_id,
-    cdn_frontdoor_origin_group_id=cdn_frontdoor_origin_group_id,
-    cdn_frontdoor_origin_ids=cdn_frontdoor_origin_ids,
-    cdn_frontdoor_origin_path=cdn_frontdoor_origin_path,
-    cdn_frontdoor_rule_set_ids=cdn_frontdoor_rule_set_ids,
-    enabled=enabled,
-    forwarding_protocol=forwarding_protocol,
-    https_redirect_enabled=https_redirect_enabled,
-    link_to_default_domain=link_to_default_domain,
-    name=name,
-    patterns_to_match=patterns_to_match,
-    supported_protocols=supported_protocols,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_route',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cache=cache,
+      cdn_frontdoor_custom_domain_ids=cdn_frontdoor_custom_domain_ids,
+      cdn_frontdoor_endpoint_id=cdn_frontdoor_endpoint_id,
+      cdn_frontdoor_origin_group_id=cdn_frontdoor_origin_group_id,
+      cdn_frontdoor_origin_ids=cdn_frontdoor_origin_ids,
+      cdn_frontdoor_origin_path=cdn_frontdoor_origin_path,
+      cdn_frontdoor_rule_set_ids=cdn_frontdoor_rule_set_ids,
+      enabled=enabled,
+      forwarding_protocol=forwarding_protocol,
+      https_redirect_enabled=https_redirect_enabled,
+      link_to_default_domain=link_to_default_domain,
+      name=name,
+      patterns_to_match=patterns_to_match,
+      supported_protocols=supported_protocols,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_frontdoor_endpoint_id,
     cdn_frontdoor_origin_group_id,

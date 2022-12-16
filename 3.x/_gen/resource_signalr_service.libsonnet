@@ -34,22 +34,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku=null,
     tags=null,
     timeouts=null,
-    upstream_endpoint=null
-  ):: tf.withResource(type='azurerm_signalr_service', label=resourceLabel, attrs=self.newAttrs(
-    connectivity_logs_enabled=connectivity_logs_enabled,
-    cors=cors,
-    live_trace=live_trace,
-    live_trace_enabled=live_trace_enabled,
-    location=location,
-    messaging_logs_enabled=messaging_logs_enabled,
-    name=name,
-    resource_group_name=resource_group_name,
-    service_mode=service_mode,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    upstream_endpoint=upstream_endpoint
-  )),
+    upstream_endpoint=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_signalr_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      connectivity_logs_enabled=connectivity_logs_enabled,
+      cors=cors,
+      live_trace=live_trace,
+      live_trace_enabled=live_trace_enabled,
+      location=location,
+      messaging_logs_enabled=messaging_logs_enabled,
+      name=name,
+      resource_group_name=resource_group_name,
+      service_mode=service_mode,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      upstream_endpoint=upstream_endpoint
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

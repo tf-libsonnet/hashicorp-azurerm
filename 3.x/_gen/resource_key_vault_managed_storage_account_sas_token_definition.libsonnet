@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sas_type,
     validity_period,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_key_vault_managed_storage_account_sas_token_definition', label=resourceLabel, attrs=self.newAttrs(
-    managed_storage_account_id=managed_storage_account_id,
-    name=name,
-    sas_template_uri=sas_template_uri,
-    sas_type=sas_type,
-    tags=tags,
-    timeouts=timeouts,
-    validity_period=validity_period
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_key_vault_managed_storage_account_sas_token_definition',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      managed_storage_account_id=managed_storage_account_id,
+      name=name,
+      sas_template_uri=sas_template_uri,
+      sas_type=sas_type,
+      tags=tags,
+      timeouts=timeouts,
+      validity_period=validity_period
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     managed_storage_account_id,
     name,

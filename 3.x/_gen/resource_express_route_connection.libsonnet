@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     enable_internet_security=null,
     routing=null,
     routing_weight=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_express_route_connection', label=resourceLabel, attrs=self.newAttrs(
-    authorization_key=authorization_key,
-    enable_internet_security=enable_internet_security,
-    express_route_circuit_peering_id=express_route_circuit_peering_id,
-    express_route_gateway_id=express_route_gateway_id,
-    name=name,
-    routing=routing,
-    routing_weight=routing_weight,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_express_route_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authorization_key=authorization_key,
+      enable_internet_security=enable_internet_security,
+      express_route_circuit_peering_id=express_route_circuit_peering_id,
+      express_route_gateway_id=express_route_gateway_id,
+      name=name,
+      routing=routing,
+      routing_weight=routing_weight,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     express_route_circuit_peering_id,
     express_route_gateway_id,

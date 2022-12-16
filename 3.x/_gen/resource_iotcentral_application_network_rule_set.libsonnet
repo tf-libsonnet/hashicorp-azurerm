@@ -15,14 +15,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     apply_to_device=null,
     default_action=null,
     ip_rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iotcentral_application_network_rule_set', label=resourceLabel, attrs=self.newAttrs(
-    apply_to_device=apply_to_device,
-    default_action=default_action,
-    iotcentral_application_id=iotcentral_application_id,
-    ip_rule=ip_rule,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iotcentral_application_network_rule_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      apply_to_device=apply_to_device,
+      default_action=default_action,
+      iotcentral_application_id=iotcentral_application_id,
+      ip_rule=ip_rule,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     iotcentral_application_id,
     apply_to_device=null,

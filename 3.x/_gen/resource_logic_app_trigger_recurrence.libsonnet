@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     schedule=null,
     start_time=null,
     time_zone=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_logic_app_trigger_recurrence', label=resourceLabel, attrs=self.newAttrs(
-    frequency=frequency,
-    interval=interval,
-    logic_app_id=logic_app_id,
-    name=name,
-    schedule=schedule,
-    start_time=start_time,
-    time_zone=time_zone,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_logic_app_trigger_recurrence',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      frequency=frequency,
+      interval=interval,
+      logic_app_id=logic_app_id,
+      name=name,
+      schedule=schedule,
+      start_time=start_time,
+      time_zone=time_zone,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     frequency,
     interval,

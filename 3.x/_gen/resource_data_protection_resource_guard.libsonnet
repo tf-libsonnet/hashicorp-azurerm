@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     tags=null,
     timeouts=null,
-    vault_critical_operation_exclusion_list=null
-  ):: tf.withResource(type='azurerm_data_protection_resource_guard', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    vault_critical_operation_exclusion_list=vault_critical_operation_exclusion_list
-  )),
+    vault_critical_operation_exclusion_list=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_protection_resource_guard',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      vault_critical_operation_exclusion_list=vault_critical_operation_exclusion_list
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     app_service_id,
     subnet_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_virtual_network_swift_connection', label=resourceLabel, attrs=self.newAttrs(app_service_id=app_service_id, subnet_id=subnet_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_virtual_network_swift_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(app_service_id=app_service_id, subnet_id=subnet_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     app_service_id,
     subnet_id,

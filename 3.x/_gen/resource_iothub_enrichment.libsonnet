@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key,
     resource_group_name,
     value,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_enrichment', label=resourceLabel, attrs=self.newAttrs(
-    endpoint_names=endpoint_names,
-    iothub_name=iothub_name,
-    key=key,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    value=value
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_enrichment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      endpoint_names=endpoint_names,
+      iothub_name=iothub_name,
+      key=key,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      value=value
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     endpoint_names,
     iothub_name,

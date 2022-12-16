@@ -31,21 +31,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     key_vault_password=null,
     parameters=null,
     timeouts=null,
-    user_name=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_sql_server', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    connection_string=connection_string,
-    data_factory_id=data_factory_id,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    key_vault_connection_string=key_vault_connection_string,
-    key_vault_password=key_vault_password,
-    name=name,
-    parameters=parameters,
-    timeouts=timeouts,
-    user_name=user_name
-  )),
+    user_name=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_sql_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      connection_string=connection_string,
+      data_factory_id=data_factory_id,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      key_vault_connection_string=key_vault_connection_string,
+      key_vault_password=key_vault_password,
+      name=name,
+      parameters=parameters,
+      timeouts=timeouts,
+      user_name=user_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

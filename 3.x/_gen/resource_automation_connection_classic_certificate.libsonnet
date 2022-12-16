@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     subscription_id,
     subscription_name,
     description=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_automation_connection_classic_certificate', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    certificate_asset_name=certificate_asset_name,
-    description=description,
-    name=name,
-    resource_group_name=resource_group_name,
-    subscription_id=subscription_id,
-    subscription_name=subscription_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_connection_classic_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      certificate_asset_name=certificate_asset_name,
+      description=description,
+      name=name,
+      resource_group_name=resource_group_name,
+      subscription_id=subscription_id,
+      subscription_name=subscription_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     certificate_asset_name,

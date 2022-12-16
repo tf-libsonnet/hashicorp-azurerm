@@ -17,16 +17,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     network_rules=null,
     public_network_access_enabled=null,
     timeouts=null,
-    trusted_services_allowed=null
-  ):: tf.withResource(type='azurerm_servicebus_namespace_network_rule_set', label=resourceLabel, attrs=self.newAttrs(
-    default_action=default_action,
-    ip_rules=ip_rules,
-    namespace_id=namespace_id,
-    network_rules=network_rules,
-    public_network_access_enabled=public_network_access_enabled,
-    timeouts=timeouts,
-    trusted_services_allowed=trusted_services_allowed
-  )),
+    trusted_services_allowed=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_servicebus_namespace_network_rule_set',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      default_action=default_action,
+      ip_rules=ip_rules,
+      namespace_id=namespace_id,
+      network_rules=network_rules,
+      public_network_access_enabled=public_network_access_enabled,
+      timeouts=timeouts,
+      trusted_services_allowed=trusted_services_allowed
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     namespace_id,
     default_action=null,

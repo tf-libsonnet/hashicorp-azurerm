@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     display_name=null,
     parameter_values=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_connection', label=resourceLabel, attrs=self.newAttrs(
-    display_name=display_name,
-    managed_api_id=managed_api_id,
-    name=name,
-    parameter_values=parameter_values,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_connection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      display_name=display_name,
+      managed_api_id=managed_api_id,
+      name=name,
+      parameter_values=parameter_values,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     managed_api_id,
     name,

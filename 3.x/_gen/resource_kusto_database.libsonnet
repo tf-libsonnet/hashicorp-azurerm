@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     hot_cache_period=null,
     soft_delete_period=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_kusto_database', label=resourceLabel, attrs=self.newAttrs(
-    cluster_name=cluster_name,
-    hot_cache_period=hot_cache_period,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    soft_delete_period=soft_delete_period,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_kusto_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cluster_name=cluster_name,
+      hot_cache_period=hot_cache_period,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      soft_delete_period=soft_delete_period,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cluster_name,
     location,

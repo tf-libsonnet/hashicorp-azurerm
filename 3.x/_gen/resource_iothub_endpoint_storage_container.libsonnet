@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     file_name_format=null,
     identity_id=null,
     max_chunk_size_in_bytes=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_endpoint_storage_container', label=resourceLabel, attrs=self.newAttrs(
-    authentication_type=authentication_type,
-    batch_frequency_in_seconds=batch_frequency_in_seconds,
-    connection_string=connection_string,
-    container_name=container_name,
-    encoding=encoding,
-    endpoint_uri=endpoint_uri,
-    file_name_format=file_name_format,
-    identity_id=identity_id,
-    iothub_id=iothub_id,
-    max_chunk_size_in_bytes=max_chunk_size_in_bytes,
-    name=name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_endpoint_storage_container',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication_type=authentication_type,
+      batch_frequency_in_seconds=batch_frequency_in_seconds,
+      connection_string=connection_string,
+      container_name=container_name,
+      encoding=encoding,
+      endpoint_uri=endpoint_uri,
+      file_name_format=file_name_format,
+      identity_id=identity_id,
+      iothub_id=iothub_id,
+      max_chunk_size_in_bytes=max_chunk_size_in_bytes,
+      name=name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     container_name,
     iothub_id,

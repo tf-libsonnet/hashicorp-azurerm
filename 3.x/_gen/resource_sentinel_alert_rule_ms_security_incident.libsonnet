@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     display_name_exclude_filter=null,
     display_name_filter=null,
     enabled=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_alert_rule_ms_security_incident', label=resourceLabel, attrs=self.newAttrs(
-    alert_rule_template_guid=alert_rule_template_guid,
-    description=description,
-    display_name=display_name,
-    display_name_exclude_filter=display_name_exclude_filter,
-    display_name_filter=display_name_filter,
-    enabled=enabled,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    product_filter=product_filter,
-    severity_filter=severity_filter,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_alert_rule_ms_security_incident',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      alert_rule_template_guid=alert_rule_template_guid,
+      description=description,
+      display_name=display_name,
+      display_name_exclude_filter=display_name_exclude_filter,
+      display_name_filter=display_name_filter,
+      enabled=enabled,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      product_filter=product_filter,
+      severity_filter=severity_filter,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     display_name,
     log_analytics_workspace_id,

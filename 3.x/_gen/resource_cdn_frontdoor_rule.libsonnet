@@ -370,16 +370,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     actions=null,
     behavior_on_match=null,
     conditions=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cdn_frontdoor_rule', label=resourceLabel, attrs=self.newAttrs(
-    actions=actions,
-    behavior_on_match=behavior_on_match,
-    cdn_frontdoor_rule_set_id=cdn_frontdoor_rule_set_id,
-    conditions=conditions,
-    name=name,
-    order=order,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cdn_frontdoor_rule',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      actions=actions,
+      behavior_on_match=behavior_on_match,
+      cdn_frontdoor_rule_set_id=cdn_frontdoor_rule_set_id,
+      conditions=conditions,
+      name=name,
+      order=order,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cdn_frontdoor_rule_set_id,
     name,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     token,
     type,
     timeouts=null,
-    token_secret=null
-  ):: tf.withResource(type='azurerm_source_control_token', label=resourceLabel, attrs=self.newAttrs(
-    timeouts=timeouts,
-    token=token,
-    token_secret=token_secret,
-    type=type
-  )),
+    token_secret=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_source_control_token',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      timeouts=timeouts,
+      token=token,
+      token_secret=token_secret,
+      type=type
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     token,
     type,

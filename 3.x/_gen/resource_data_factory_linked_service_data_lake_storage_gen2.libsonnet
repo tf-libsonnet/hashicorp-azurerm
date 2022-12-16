@@ -15,23 +15,29 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_key=null,
     tenant=null,
     timeouts=null,
-    use_managed_identity=null
-  ):: tf.withResource(type='azurerm_data_factory_linked_service_data_lake_storage_gen2', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    data_factory_id=data_factory_id,
-    description=description,
-    integration_runtime_name=integration_runtime_name,
-    name=name,
-    parameters=parameters,
-    service_principal_id=service_principal_id,
-    service_principal_key=service_principal_key,
-    storage_account_key=storage_account_key,
-    tenant=tenant,
-    timeouts=timeouts,
-    url=url,
-    use_managed_identity=use_managed_identity
-  )),
+    use_managed_identity=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_data_lake_storage_gen2',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      data_factory_id=data_factory_id,
+      description=description,
+      integration_runtime_name=integration_runtime_name,
+      name=name,
+      parameters=parameters,
+      service_principal_id=service_principal_id,
+      service_principal_key=service_principal_key,
+      storage_account_key=storage_account_key,
+      tenant=tenant,
+      timeouts=timeouts,
+      url=url,
+      use_managed_identity=use_managed_identity
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     data_factory_id,
     name,

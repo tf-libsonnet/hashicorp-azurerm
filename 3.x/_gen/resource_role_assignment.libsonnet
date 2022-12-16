@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     role_definition_id=null,
     role_definition_name=null,
     skip_service_principal_aad_check=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_role_assignment', label=resourceLabel, attrs=self.newAttrs(
-    condition=condition,
-    condition_version=condition_version,
-    delegated_managed_identity_resource_id=delegated_managed_identity_resource_id,
-    description=description,
-    name=name,
-    principal_id=principal_id,
-    role_definition_id=role_definition_id,
-    role_definition_name=role_definition_name,
-    scope=scope,
-    skip_service_principal_aad_check=skip_service_principal_aad_check,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_role_assignment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      condition=condition,
+      condition_version=condition_version,
+      delegated_managed_identity_resource_id=delegated_managed_identity_resource_id,
+      description=description,
+      name=name,
+      principal_id=principal_id,
+      role_definition_id=role_definition_id,
+      role_definition_name=role_definition_name,
+      scope=scope,
+      skip_service_principal_aad_check=skip_service_principal_aad_check,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     principal_id,
     scope,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     server_id,
     value,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_postgresql_flexible_server_configuration', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    server_id=server_id,
-    timeouts=timeouts,
-    value=value
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_postgresql_flexible_server_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      server_id=server_id,
+      timeouts=timeouts,
+      value=value
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     server_id,

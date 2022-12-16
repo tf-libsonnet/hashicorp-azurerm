@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     product_type=null,
     tags=null,
     timeouts=null,
-    validity_in_years=null
-  ):: tf.withResource(type='azurerm_app_service_certificate_order', label=resourceLabel, attrs=self.newAttrs(
-    auto_renew=auto_renew,
-    csr=csr,
-    distinguished_name=distinguished_name,
-    key_size=key_size,
-    location=location,
-    name=name,
-    product_type=product_type,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    validity_in_years=validity_in_years
-  )),
+    validity_in_years=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_certificate_order',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      auto_renew=auto_renew,
+      csr=csr,
+      distinguished_name=distinguished_name,
+      key_size=key_size,
+      location=location,
+      name=name,
+      product_type=product_type,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      validity_in_years=validity_in_years
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

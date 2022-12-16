@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     request=null,
     response=null,
     template_parameter=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_api_management_api_operation', label=resourceLabel, attrs=self.newAttrs(
-    api_management_name=api_management_name,
-    api_name=api_name,
-    description=description,
-    display_name=display_name,
-    method=method,
-    operation_id=operation_id,
-    request=request,
-    resource_group_name=resource_group_name,
-    response=response,
-    template_parameter=template_parameter,
-    timeouts=timeouts,
-    url_template=url_template
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_api_management_api_operation',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_management_name=api_management_name,
+      api_name=api_name,
+      description=description,
+      display_name=display_name,
+      method=method,
+      operation_id=operation_id,
+      request=request,
+      resource_group_name=resource_group_name,
+      response=response,
+      template_parameter=template_parameter,
+      timeouts=timeouts,
+      url_template=url_template
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     api_management_name,
     api_name,

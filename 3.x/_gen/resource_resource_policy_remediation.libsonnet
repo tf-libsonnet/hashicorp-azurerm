@@ -12,20 +12,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     policy_definition_reference_id=null,
     resource_count=null,
     resource_discovery_mode=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_resource_policy_remediation', label=resourceLabel, attrs=self.newAttrs(
-    failure_percentage=failure_percentage,
-    location_filters=location_filters,
-    name=name,
-    parallel_deployments=parallel_deployments,
-    policy_assignment_id=policy_assignment_id,
-    policy_definition_id=policy_definition_id,
-    policy_definition_reference_id=policy_definition_reference_id,
-    resource_count=resource_count,
-    resource_discovery_mode=resource_discovery_mode,
-    resource_id=resource_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_resource_policy_remediation',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      failure_percentage=failure_percentage,
+      location_filters=location_filters,
+      name=name,
+      parallel_deployments=parallel_deployments,
+      policy_assignment_id=policy_assignment_id,
+      policy_definition_id=policy_definition_id,
+      policy_definition_reference_id=policy_definition_reference_id,
+      resource_count=resource_count,
+      resource_discovery_mode=resource_discovery_mode,
+      resource_id=resource_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     policy_assignment_id,

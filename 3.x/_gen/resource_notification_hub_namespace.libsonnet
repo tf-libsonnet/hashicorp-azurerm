@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sku_name,
     enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_notification_hub_namespace', label=resourceLabel, attrs=self.newAttrs(
-    enabled=enabled,
-    location=location,
-    name=name,
-    namespace_type=namespace_type,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_notification_hub_namespace',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      enabled=enabled,
+      location=location,
+      name=name,
+      namespace_type=namespace_type,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

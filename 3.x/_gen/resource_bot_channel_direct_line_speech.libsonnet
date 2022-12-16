@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     custom_speech_model_id=null,
     custom_voice_deployment_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_bot_channel_direct_line_speech', label=resourceLabel, attrs=self.newAttrs(
-    bot_name=bot_name,
-    cognitive_service_access_key=cognitive_service_access_key,
-    cognitive_service_location=cognitive_service_location,
-    custom_speech_model_id=custom_speech_model_id,
-    custom_voice_deployment_id=custom_voice_deployment_id,
-    location=location,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_bot_channel_direct_line_speech',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      bot_name=bot_name,
+      cognitive_service_access_key=cognitive_service_access_key,
+      cognitive_service_location=cognitive_service_location,
+      custom_speech_model_id=custom_speech_model_id,
+      custom_voice_deployment_id=custom_voice_deployment_id,
+      location=location,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     bot_name,
     cognitive_service_access_key,

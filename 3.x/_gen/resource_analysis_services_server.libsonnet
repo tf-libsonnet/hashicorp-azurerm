@@ -23,20 +23,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     ipv4_firewall_rule=null,
     querypool_connection_mode=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_analysis_services_server', label=resourceLabel, attrs=self.newAttrs(
-    admin_users=admin_users,
-    backup_blob_container_uri=backup_blob_container_uri,
-    enable_power_bi_service=enable_power_bi_service,
-    ipv4_firewall_rule=ipv4_firewall_rule,
-    location=location,
-    name=name,
-    querypool_connection_mode=querypool_connection_mode,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_analysis_services_server',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      admin_users=admin_users,
+      backup_blob_container_uri=backup_blob_container_uri,
+      enable_power_bi_service=enable_power_bi_service,
+      ipv4_firewall_rule=ipv4_firewall_rule,
+      location=location,
+      name=name,
+      querypool_connection_mode=querypool_connection_mode,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -19,18 +19,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     input_asset=null,
     output_asset=null,
     priority=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_job', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    input_asset=input_asset,
-    media_services_account_name=media_services_account_name,
-    name=name,
-    output_asset=output_asset,
-    priority=priority,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    transform_name=transform_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_job',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      input_asset=input_asset,
+      media_services_account_name=media_services_account_name,
+      name=name,
+      output_asset=output_asset,
+      priority=priority,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      transform_name=transform_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     media_services_account_name,
     name,

@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     dataSrcLabel,
     name,
     storage_account_id,
-    timeouts=null
-  ):: tf.withData(type='azurerm_storage_encryption_scope', label=dataSrcLabel, attrs=self.newAttrs(name=name, storage_account_id=storage_account_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_storage_encryption_scope',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(name=name, storage_account_id=storage_account_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     storage_account_id,

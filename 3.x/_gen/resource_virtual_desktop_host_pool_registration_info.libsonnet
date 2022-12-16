@@ -4,8 +4,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resourceLabel,
     expiration_date,
     hostpool_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_virtual_desktop_host_pool_registration_info', label=resourceLabel, attrs=self.newAttrs(expiration_date=expiration_date, hostpool_id=hostpool_id, timeouts=timeouts)),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_desktop_host_pool_registration_info',
+    label=resourceLabel,
+    attrs=self.newAttrs(expiration_date=expiration_date, hostpool_id=hostpool_id, timeouts=timeouts),
+    _meta=_meta
+  ),
   newAttrs(
     expiration_date,
     hostpool_id,

@@ -18,17 +18,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network_access_enabled=null,
     sku=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_device_update_account', label=resourceLabel, attrs=self.newAttrs(
-    identity=identity,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_device_update_account',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      identity=identity,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

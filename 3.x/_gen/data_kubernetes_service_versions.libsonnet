@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     include_preview=null,
     timeouts=null,
-    version_prefix=null
-  ):: tf.withData(type='azurerm_kubernetes_service_versions', label=dataSrcLabel, attrs=self.newAttrs(
-    include_preview=include_preview,
-    location=location,
-    timeouts=timeouts,
-    version_prefix=version_prefix
-  )),
+    version_prefix=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_kubernetes_service_versions',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      include_preview=include_preview,
+      location=location,
+      timeouts=timeouts,
+      version_prefix=version_prefix
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     include_preview=null,

@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     object_name,
     resource_group_name,
     workspace_name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_log_analytics_datasource_windows_performance_counter', label=resourceLabel, attrs=self.newAttrs(
-    counter_name=counter_name,
-    instance_name=instance_name,
-    interval_seconds=interval_seconds,
-    name=name,
-    object_name=object_name,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    workspace_name=workspace_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_log_analytics_datasource_windows_performance_counter',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      counter_name=counter_name,
+      instance_name=instance_name,
+      interval_seconds=interval_seconds,
+      name=name,
+      object_name=object_name,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      workspace_name=workspace_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     counter_name,
     instance_name,

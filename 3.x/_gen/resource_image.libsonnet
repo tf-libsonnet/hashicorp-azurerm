@@ -26,19 +26,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     source_virtual_machine_id=null,
     tags=null,
     timeouts=null,
-    zone_resilient=null
-  ):: tf.withResource(type='azurerm_image', label=resourceLabel, attrs=self.newAttrs(
-    data_disk=data_disk,
-    hyper_v_generation=hyper_v_generation,
-    location=location,
-    name=name,
-    os_disk=os_disk,
-    resource_group_name=resource_group_name,
-    source_virtual_machine_id=source_virtual_machine_id,
-    tags=tags,
-    timeouts=timeouts,
-    zone_resilient=zone_resilient
-  )),
+    zone_resilient=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_image',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      data_disk=data_disk,
+      hyper_v_generation=hyper_v_generation,
+      location=location,
+      name=name,
+      os_disk=os_disk,
+      resource_group_name=resource_group_name,
+      source_virtual_machine_id=source_virtual_machine_id,
+      tags=tags,
+      timeouts=timeouts,
+      zone_resilient=zone_resilient
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

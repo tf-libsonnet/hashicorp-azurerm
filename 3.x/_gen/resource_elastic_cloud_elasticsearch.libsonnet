@@ -34,18 +34,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     logs=null,
     monitoring_enabled=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_elastic_cloud_elasticsearch', label=resourceLabel, attrs=self.newAttrs(
-    elastic_cloud_email_address=elastic_cloud_email_address,
-    location=location,
-    logs=logs,
-    monitoring_enabled=monitoring_enabled,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_elastic_cloud_elasticsearch',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      elastic_cloud_email_address=elastic_cloud_email_address,
+      location=location,
+      logs=logs,
+      monitoring_enabled=monitoring_enabled,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     elastic_cloud_email_address,
     location,

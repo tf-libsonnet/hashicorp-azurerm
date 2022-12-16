@@ -15,16 +15,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     diagnostic_enabled=null,
     diagnostic_storage_account=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_iothub_device_update_instance', label=resourceLabel, attrs=self.newAttrs(
-    device_update_account_id=device_update_account_id,
-    diagnostic_enabled=diagnostic_enabled,
-    diagnostic_storage_account=diagnostic_storage_account,
-    iothub_id=iothub_id,
-    name=name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iothub_device_update_instance',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      device_update_account_id=device_update_account_id,
+      diagnostic_enabled=diagnostic_enabled,
+      diagnostic_storage_account=diagnostic_storage_account,
+      iothub_id=iothub_id,
+      name=name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     device_update_account_id,
     iothub_id,

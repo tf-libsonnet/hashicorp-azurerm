@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     location,
     name,
     sql_managed_instance_id,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sql_managed_database', label=resourceLabel, attrs=self.newAttrs(
-    location=location,
-    name=name,
-    sql_managed_instance_id=sql_managed_instance_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sql_managed_database',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      location=location,
+      name=name,
+      sql_managed_instance_id=sql_managed_instance_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

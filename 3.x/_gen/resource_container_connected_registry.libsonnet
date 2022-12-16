@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     sync_message_ttl=null,
     sync_schedule=null,
     sync_window=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_container_connected_registry', label=resourceLabel, attrs=self.newAttrs(
-    audit_log_enabled=audit_log_enabled,
-    client_token_ids=client_token_ids,
-    container_registry_id=container_registry_id,
-    log_level=log_level,
-    mode=mode,
-    name=name,
-    notification=notification,
-    parent_registry_id=parent_registry_id,
-    sync_message_ttl=sync_message_ttl,
-    sync_schedule=sync_schedule,
-    sync_token_id=sync_token_id,
-    sync_window=sync_window,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_container_connected_registry',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      audit_log_enabled=audit_log_enabled,
+      client_token_ids=client_token_ids,
+      container_registry_id=container_registry_id,
+      log_level=log_level,
+      mode=mode,
+      name=name,
+      notification=notification,
+      parent_registry_id=parent_registry_id,
+      sync_message_ttl=sync_message_ttl,
+      sync_schedule=sync_schedule,
+      sync_token_id=sync_token_id,
+      sync_window=sync_window,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     container_registry_id,
     name,

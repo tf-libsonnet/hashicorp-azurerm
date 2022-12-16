@@ -13,21 +13,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     property_columns=null,
     serialization=null,
     system_property_columns=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_stream_analytics_output_servicebus_topic', label=resourceLabel, attrs=self.newAttrs(
-    authentication_mode=authentication_mode,
-    name=name,
-    property_columns=property_columns,
-    resource_group_name=resource_group_name,
-    serialization=serialization,
-    servicebus_namespace=servicebus_namespace,
-    shared_access_policy_key=shared_access_policy_key,
-    shared_access_policy_name=shared_access_policy_name,
-    stream_analytics_job_name=stream_analytics_job_name,
-    system_property_columns=system_property_columns,
-    timeouts=timeouts,
-    topic_name=topic_name
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_stream_analytics_output_servicebus_topic',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      authentication_mode=authentication_mode,
+      name=name,
+      property_columns=property_columns,
+      resource_group_name=resource_group_name,
+      serialization=serialization,
+      servicebus_namespace=servicebus_namespace,
+      shared_access_policy_key=shared_access_policy_key,
+      shared_access_policy_name=shared_access_policy_name,
+      stream_analytics_job_name=stream_analytics_job_name,
+      system_property_columns=system_property_columns,
+      timeouts=timeouts,
+      topic_name=topic_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

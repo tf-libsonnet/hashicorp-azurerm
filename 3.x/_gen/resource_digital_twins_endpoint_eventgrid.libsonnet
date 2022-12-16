@@ -8,16 +8,22 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     eventgrid_topic_secondary_access_key,
     name,
     dead_letter_storage_secret=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_digital_twins_endpoint_eventgrid', label=resourceLabel, attrs=self.newAttrs(
-    dead_letter_storage_secret=dead_letter_storage_secret,
-    digital_twins_id=digital_twins_id,
-    eventgrid_topic_endpoint=eventgrid_topic_endpoint,
-    eventgrid_topic_primary_access_key=eventgrid_topic_primary_access_key,
-    eventgrid_topic_secondary_access_key=eventgrid_topic_secondary_access_key,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_digital_twins_endpoint_eventgrid',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dead_letter_storage_secret=dead_letter_storage_secret,
+      digital_twins_id=digital_twins_id,
+      eventgrid_topic_endpoint=eventgrid_topic_endpoint,
+      eventgrid_topic_primary_access_key=eventgrid_topic_primary_access_key,
+      eventgrid_topic_secondary_access_key=eventgrid_topic_secondary_access_key,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     digital_twins_id,
     eventgrid_topic_endpoint,

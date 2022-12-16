@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     default_action=null,
     private_endpoint=null,
     public_network=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_web_pubsub_network_acl', label=resourceLabel, attrs=self.newAttrs(
-    default_action=default_action,
-    private_endpoint=private_endpoint,
-    public_network=public_network,
-    timeouts=timeouts,
-    web_pubsub_id=web_pubsub_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_web_pubsub_network_acl',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      default_action=default_action,
+      private_endpoint=private_endpoint,
+      public_network=public_network,
+      timeouts=timeouts,
+      web_pubsub_id=web_pubsub_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     web_pubsub_id,
     default_action=null,

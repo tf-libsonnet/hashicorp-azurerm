@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     tags=null,
     tier=null,
     timeouts=null,
-    virtual_network_subnet_id=null
-  ):: tf.withResource(type='azurerm_container_registry_agent_pool', label=resourceLabel, attrs=self.newAttrs(
-    container_registry_name=container_registry_name,
-    instance_count=instance_count,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    tier=tier,
-    timeouts=timeouts,
-    virtual_network_subnet_id=virtual_network_subnet_id
-  )),
+    virtual_network_subnet_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_container_registry_agent_pool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      container_registry_name=container_registry_name,
+      instance_count=instance_count,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      tier=tier,
+      timeouts=timeouts,
+      virtual_network_subnet_id=virtual_network_subnet_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     container_registry_name,
     location,

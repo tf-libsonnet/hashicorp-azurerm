@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     password=null,
     pfx_blob=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_app_service_certificate', label=resourceLabel, attrs=self.newAttrs(
-    app_service_plan_id=app_service_plan_id,
-    key_vault_secret_id=key_vault_secret_id,
-    location=location,
-    name=name,
-    password=password,
-    pfx_blob=pfx_blob,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_app_service_certificate',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      app_service_plan_id=app_service_plan_id,
+      key_vault_secret_id=key_vault_secret_id,
+      location=location,
+      name=name,
+      password=password,
+      pfx_blob=pfx_blob,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

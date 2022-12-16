@@ -43,19 +43,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network_access_enabled=null,
     quota=null,
     sso=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_gateway', label=resourceLabel, attrs=self.newAttrs(
-    api_metadata=api_metadata,
-    cors=cors,
-    https_only=https_only,
-    instance_count=instance_count,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    quota=quota,
-    spring_cloud_service_id=spring_cloud_service_id,
-    sso=sso,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_gateway',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      api_metadata=api_metadata,
+      cors=cors,
+      https_only=https_only,
+      instance_count=instance_count,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      quota=quota,
+      spring_cloud_service_id=spring_cloud_service_id,
+      sso=sso,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_service_id,

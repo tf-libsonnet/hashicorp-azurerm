@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     resource_group_name,
     sort_versions_by_semver=null,
-    timeouts=null
-  ):: tf.withData(type='azurerm_shared_image_version', label=dataSrcLabel, attrs=self.newAttrs(
-    gallery_name=gallery_name,
-    image_name=image_name,
-    name=name,
-    resource_group_name=resource_group_name,
-    sort_versions_by_semver=sort_versions_by_semver,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_shared_image_version',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      gallery_name=gallery_name,
+      image_name=image_name,
+      name=name,
+      resource_group_name=resource_group_name,
+      sort_versions_by_semver=sort_versions_by_semver,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     gallery_name,
     image_name,

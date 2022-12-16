@@ -20,19 +20,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     description=null,
     integration_runtime=null,
     parameters=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_synapse_linked_service', label=resourceLabel, attrs=self.newAttrs(
-    additional_properties=additional_properties,
-    annotations=annotations,
-    description=description,
-    integration_runtime=integration_runtime,
-    name=name,
-    parameters=parameters,
-    synapse_workspace_id=synapse_workspace_id,
-    timeouts=timeouts,
-    type=type,
-    type_properties_json=type_properties_json
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_synapse_linked_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      description=description,
+      integration_runtime=integration_runtime,
+      name=name,
+      parameters=parameters,
+      synapse_workspace_id=synapse_workspace_id,
+      timeouts=timeouts,
+      type=type,
+      type_properties_json=type_properties_json
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     synapse_workspace_id,

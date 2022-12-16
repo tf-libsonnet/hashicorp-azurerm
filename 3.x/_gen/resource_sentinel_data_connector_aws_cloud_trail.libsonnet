@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     aws_role_arn,
     log_analytics_workspace_id,
     name,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_sentinel_data_connector_aws_cloud_trail', label=resourceLabel, attrs=self.newAttrs(
-    aws_role_arn=aws_role_arn,
-    log_analytics_workspace_id=log_analytics_workspace_id,
-    name=name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_sentinel_data_connector_aws_cloud_trail',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      aws_role_arn=aws_role_arn,
+      log_analytics_workspace_id=log_analytics_workspace_id,
+      name=name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     aws_role_arn,
     log_analytics_workspace_id,

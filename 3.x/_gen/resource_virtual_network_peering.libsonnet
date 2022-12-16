@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     allow_gateway_transit=null,
     allow_virtual_network_access=null,
     timeouts=null,
-    use_remote_gateways=null
-  ):: tf.withResource(type='azurerm_virtual_network_peering', label=resourceLabel, attrs=self.newAttrs(
-    allow_forwarded_traffic=allow_forwarded_traffic,
-    allow_gateway_transit=allow_gateway_transit,
-    allow_virtual_network_access=allow_virtual_network_access,
-    name=name,
-    remote_virtual_network_id=remote_virtual_network_id,
-    resource_group_name=resource_group_name,
-    timeouts=timeouts,
-    use_remote_gateways=use_remote_gateways,
-    virtual_network_name=virtual_network_name
-  )),
+    use_remote_gateways=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_virtual_network_peering',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      allow_forwarded_traffic=allow_forwarded_traffic,
+      allow_gateway_transit=allow_gateway_transit,
+      allow_virtual_network_access=allow_virtual_network_access,
+      name=name,
+      remote_virtual_network_id=remote_virtual_network_id,
+      resource_group_name=resource_group_name,
+      timeouts=timeouts,
+      use_remote_gateways=use_remote_gateways,
+      virtual_network_name=virtual_network_name
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     remote_virtual_network_id,

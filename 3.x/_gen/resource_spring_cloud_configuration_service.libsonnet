@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     spring_cloud_service_id,
     repository=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_spring_cloud_configuration_service', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    repository=repository,
-    spring_cloud_service_id=spring_cloud_service_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_spring_cloud_configuration_service',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      repository=repository,
+      spring_cloud_service_id=spring_cloud_service_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     spring_cloud_service_id,

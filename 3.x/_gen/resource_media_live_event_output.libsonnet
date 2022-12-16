@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     hls_fragments_per_ts_segment=null,
     manifest_name=null,
     output_snap_time_in_seconds=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_media_live_event_output', label=resourceLabel, attrs=self.newAttrs(
-    archive_window_duration=archive_window_duration,
-    asset_name=asset_name,
-    description=description,
-    hls_fragments_per_ts_segment=hls_fragments_per_ts_segment,
-    live_event_id=live_event_id,
-    manifest_name=manifest_name,
-    name=name,
-    output_snap_time_in_seconds=output_snap_time_in_seconds,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_media_live_event_output',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      archive_window_duration=archive_window_duration,
+      asset_name=asset_name,
+      description=description,
+      hls_fragments_per_ts_segment=hls_fragments_per_ts_segment,
+      live_event_id=live_event_id,
+      manifest_name=manifest_name,
+      name=name,
+      output_snap_time_in_seconds=output_snap_time_in_seconds,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     archive_window_duration,
     asset_name,

@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     cognitive_account_id,
     key_vault_key_id,
     identity_client_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cognitive_account_customer_managed_key', label=resourceLabel, attrs=self.newAttrs(
-    cognitive_account_id=cognitive_account_id,
-    identity_client_id=identity_client_id,
-    key_vault_key_id=key_vault_key_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cognitive_account_customer_managed_key',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      cognitive_account_id=cognitive_account_id,
+      identity_client_id=identity_client_id,
+      key_vault_key_id=key_vault_key_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cognitive_account_id,
     key_vault_key_id,

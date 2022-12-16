@@ -6,14 +6,20 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     resource_group_name,
     tags=null,
     timeouts=null,
-    traffic_view_enabled=null
-  ):: tf.withData(type='azurerm_traffic_manager_profile', label=dataSrcLabel, attrs=self.newAttrs(
-    name=name,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    traffic_view_enabled=traffic_view_enabled
-  )),
+    traffic_view_enabled=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_traffic_manager_profile',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      name=name,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      traffic_view_enabled=traffic_view_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

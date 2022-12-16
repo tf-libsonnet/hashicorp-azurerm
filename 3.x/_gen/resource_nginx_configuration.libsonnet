@@ -16,15 +16,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     config_file=null,
     package_data=null,
     protected_file=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_nginx_configuration', label=resourceLabel, attrs=self.newAttrs(
-    config_file=config_file,
-    nginx_deployment_id=nginx_deployment_id,
-    package_data=package_data,
-    protected_file=protected_file,
-    root_file=root_file,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_nginx_configuration',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      config_file=config_file,
+      nginx_deployment_id=nginx_deployment_id,
+      package_data=package_data,
+      protected_file=protected_file,
+      root_file=root_file,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     nginx_deployment_id,
     root_file,

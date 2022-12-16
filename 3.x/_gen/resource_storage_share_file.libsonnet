@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     metadata=null,
     path=null,
     source=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_share_file', label=resourceLabel, attrs=self.newAttrs(
-    content_disposition=content_disposition,
-    content_encoding=content_encoding,
-    content_md5=content_md5,
-    content_type=content_type,
-    metadata=metadata,
-    name=name,
-    path=path,
-    source=source,
-    storage_share_id=storage_share_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_share_file',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      content_disposition=content_disposition,
+      content_encoding=content_encoding,
+      content_md5=content_md5,
+      content_type=content_type,
+      metadata=metadata,
+      name=name,
+      path=path,
+      source=source,
+      storage_share_id=storage_share_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     storage_share_id,

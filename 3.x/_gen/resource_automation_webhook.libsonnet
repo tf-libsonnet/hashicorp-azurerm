@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parameters=null,
     run_on_worker_group=null,
     timeouts=null,
-    uri=null
-  ):: tf.withResource(type='azurerm_automation_webhook', label=resourceLabel, attrs=self.newAttrs(
-    automation_account_name=automation_account_name,
-    enabled=enabled,
-    expiry_time=expiry_time,
-    name=name,
-    parameters=parameters,
-    resource_group_name=resource_group_name,
-    run_on_worker_group=run_on_worker_group,
-    runbook_name=runbook_name,
-    timeouts=timeouts,
-    uri=uri
-  )),
+    uri=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_automation_webhook',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automation_account_name=automation_account_name,
+      enabled=enabled,
+      expiry_time=expiry_time,
+      name=name,
+      parameters=parameters,
+      resource_group_name=resource_group_name,
+      run_on_worker_group=run_on_worker_group,
+      runbook_name=runbook_name,
+      timeouts=timeouts,
+      uri=uri
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     automation_account_name,
     expiry_time,

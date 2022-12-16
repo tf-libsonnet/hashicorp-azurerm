@@ -38,24 +38,30 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     threat_intel_mode=null,
     timeouts=null,
     virtual_hub=null,
-    zones=null
-  ):: tf.withResource(type='azurerm_firewall', label=resourceLabel, attrs=self.newAttrs(
-    dns_servers=dns_servers,
-    firewall_policy_id=firewall_policy_id,
-    ip_configuration=ip_configuration,
-    location=location,
-    management_ip_configuration=management_ip_configuration,
-    name=name,
-    private_ip_ranges=private_ip_ranges,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    sku_tier=sku_tier,
-    tags=tags,
-    threat_intel_mode=threat_intel_mode,
-    timeouts=timeouts,
-    virtual_hub=virtual_hub,
-    zones=zones
-  )),
+    zones=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_firewall',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      dns_servers=dns_servers,
+      firewall_policy_id=firewall_policy_id,
+      ip_configuration=ip_configuration,
+      location=location,
+      management_ip_configuration=management_ip_configuration,
+      name=name,
+      private_ip_ranges=private_ip_ranges,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      sku_tier=sku_tier,
+      tags=tags,
+      threat_intel_mode=threat_intel_mode,
+      timeouts=timeouts,
+      virtual_hub=virtual_hub,
+      zones=zones
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

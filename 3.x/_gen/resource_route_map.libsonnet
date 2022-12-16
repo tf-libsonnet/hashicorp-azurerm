@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     name,
     virtual_hub_id,
     rule=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_route_map', label=resourceLabel, attrs=self.newAttrs(
-    name=name,
-    rule=rule,
-    timeouts=timeouts,
-    virtual_hub_id=virtual_hub_id
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_route_map',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      name=name,
+      rule=rule,
+      timeouts=timeouts,
+      virtual_hub_id=virtual_hub_id
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     virtual_hub_id,

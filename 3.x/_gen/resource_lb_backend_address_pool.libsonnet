@@ -5,13 +5,19 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     loadbalancer_id,
     name,
     timeouts=null,
-    tunnel_interface=null
-  ):: tf.withResource(type='azurerm_lb_backend_address_pool', label=resourceLabel, attrs=self.newAttrs(
-    loadbalancer_id=loadbalancer_id,
-    name=name,
-    timeouts=timeouts,
-    tunnel_interface=tunnel_interface
-  )),
+    tunnel_interface=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_lb_backend_address_pool',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      loadbalancer_id=loadbalancer_id,
+      name=name,
+      timeouts=timeouts,
+      tunnel_interface=tunnel_interface
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     loadbalancer_id,
     name,

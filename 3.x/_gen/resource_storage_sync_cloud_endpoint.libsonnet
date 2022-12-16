@@ -7,15 +7,21 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage_account_id,
     storage_sync_group_id,
     storage_account_tenant_id=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_storage_sync_cloud_endpoint', label=resourceLabel, attrs=self.newAttrs(
-    file_share_name=file_share_name,
-    name=name,
-    storage_account_id=storage_account_id,
-    storage_account_tenant_id=storage_account_tenant_id,
-    storage_sync_group_id=storage_sync_group_id,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_storage_sync_cloud_endpoint',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      file_share_name=file_share_name,
+      name=name,
+      storage_account_id=storage_account_id,
+      storage_account_tenant_id=storage_account_tenant_id,
+      storage_sync_group_id=storage_sync_group_id,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     file_share_name,
     name,

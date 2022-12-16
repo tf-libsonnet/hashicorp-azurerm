@@ -36,22 +36,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     public_network_access_enabled=null,
     tags=null,
     timeouts=null,
-    tls_client_cert_enabled=null
-  ):: tf.withResource(type='azurerm_web_pubsub', label=resourceLabel, attrs=self.newAttrs(
-    aad_auth_enabled=aad_auth_enabled,
-    capacity=capacity,
-    identity=identity,
-    live_trace=live_trace,
-    local_auth_enabled=local_auth_enabled,
-    location=location,
-    name=name,
-    public_network_access_enabled=public_network_access_enabled,
-    resource_group_name=resource_group_name,
-    sku=sku,
-    tags=tags,
-    timeouts=timeouts,
-    tls_client_cert_enabled=tls_client_cert_enabled
-  )),
+    tls_client_cert_enabled=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_web_pubsub',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      aad_auth_enabled=aad_auth_enabled,
+      capacity=capacity,
+      identity=identity,
+      live_trace=live_trace,
+      local_auth_enabled=local_auth_enabled,
+      location=location,
+      name=name,
+      public_network_access_enabled=public_network_access_enabled,
+      resource_group_name=resource_group_name,
+      sku=sku,
+      tags=tags,
+      timeouts=timeouts,
+      tls_client_cert_enabled=tls_client_cert_enabled
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

@@ -9,17 +9,23 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     automatic_placement_enabled=null,
     tags=null,
     timeouts=null,
-    zone=null
-  ):: tf.withResource(type='azurerm_dedicated_host_group', label=resourceLabel, attrs=self.newAttrs(
-    automatic_placement_enabled=automatic_placement_enabled,
-    location=location,
-    name=name,
-    platform_fault_domain_count=platform_fault_domain_count,
-    resource_group_name=resource_group_name,
-    tags=tags,
-    timeouts=timeouts,
-    zone=zone
-  )),
+    zone=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_dedicated_host_group',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      automatic_placement_enabled=automatic_placement_enabled,
+      location=location,
+      name=name,
+      platform_fault_domain_count=platform_fault_domain_count,
+      resource_group_name=resource_group_name,
+      tags=tags,
+      timeouts=timeouts,
+      zone=zone
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     location,
     name,

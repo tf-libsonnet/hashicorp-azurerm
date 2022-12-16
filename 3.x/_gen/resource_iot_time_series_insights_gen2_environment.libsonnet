@@ -10,18 +10,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     storage=null,
     tags=null,
     timeouts=null,
-    warm_store_data_retention_time=null
-  ):: tf.withResource(type='azurerm_iot_time_series_insights_gen2_environment', label=resourceLabel, attrs=self.newAttrs(
-    id_properties=id_properties,
-    location=location,
-    name=name,
-    resource_group_name=resource_group_name,
-    sku_name=sku_name,
-    storage=storage,
-    tags=tags,
-    timeouts=timeouts,
-    warm_store_data_retention_time=warm_store_data_retention_time
-  )),
+    warm_store_data_retention_time=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_iot_time_series_insights_gen2_environment',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      id_properties=id_properties,
+      location=location,
+      name=name,
+      resource_group_name=resource_group_name,
+      sku_name=sku_name,
+      storage=storage,
+      tags=tags,
+      timeouts=timeouts,
+      warm_store_data_retention_time=warm_store_data_retention_time
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     id_properties,
     location,

@@ -99,21 +99,27 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     load_balancer_enabled=null,
     routing_rule=null,
     tags=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_frontdoor', label=resourceLabel, attrs=self.newAttrs(
-    backend_pool=backend_pool,
-    backend_pool_health_probe=backend_pool_health_probe,
-    backend_pool_load_balancing=backend_pool_load_balancing,
-    backend_pool_settings=backend_pool_settings,
-    friendly_name=friendly_name,
-    frontend_endpoint=frontend_endpoint,
-    load_balancer_enabled=load_balancer_enabled,
-    name=name,
-    resource_group_name=resource_group_name,
-    routing_rule=routing_rule,
-    tags=tags,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_frontdoor',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      backend_pool=backend_pool,
+      backend_pool_health_probe=backend_pool_health_probe,
+      backend_pool_load_balancing=backend_pool_load_balancing,
+      backend_pool_settings=backend_pool_settings,
+      friendly_name=friendly_name,
+      frontend_endpoint=frontend_endpoint,
+      load_balancer_enabled=load_balancer_enabled,
+      name=name,
+      resource_group_name=resource_group_name,
+      routing_rule=routing_rule,
+      tags=tags,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     name,
     resource_group_name,

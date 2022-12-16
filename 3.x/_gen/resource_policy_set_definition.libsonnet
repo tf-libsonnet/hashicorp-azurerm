@@ -11,19 +11,25 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     parameters=null,
     policy_definition_group=null,
     policy_definition_reference=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_policy_set_definition', label=resourceLabel, attrs=self.newAttrs(
-    description=description,
-    display_name=display_name,
-    management_group_id=management_group_id,
-    metadata=metadata,
-    name=name,
-    parameters=parameters,
-    policy_definition_group=policy_definition_group,
-    policy_definition_reference=policy_definition_reference,
-    policy_type=policy_type,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_policy_set_definition',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      description=description,
+      display_name=display_name,
+      management_group_id=management_group_id,
+      metadata=metadata,
+      name=name,
+      parameters=parameters,
+      policy_definition_group=policy_definition_group,
+      policy_definition_reference=policy_definition_reference,
+      policy_type=policy_type,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     display_name,
     name,

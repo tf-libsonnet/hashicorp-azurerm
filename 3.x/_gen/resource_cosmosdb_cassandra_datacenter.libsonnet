@@ -14,22 +14,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     managed_disk_customer_key_uri=null,
     node_count=null,
     sku_name=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_cassandra_datacenter', label=resourceLabel, attrs=self.newAttrs(
-    availability_zones_enabled=availability_zones_enabled,
-    backup_storage_customer_key_uri=backup_storage_customer_key_uri,
-    base64_encoded_yaml_fragment=base64_encoded_yaml_fragment,
-    cassandra_cluster_id=cassandra_cluster_id,
-    delegated_management_subnet_id=delegated_management_subnet_id,
-    disk_count=disk_count,
-    disk_sku=disk_sku,
-    location=location,
-    managed_disk_customer_key_uri=managed_disk_customer_key_uri,
-    name=name,
-    node_count=node_count,
-    sku_name=sku_name,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_cassandra_datacenter',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      availability_zones_enabled=availability_zones_enabled,
+      backup_storage_customer_key_uri=backup_storage_customer_key_uri,
+      base64_encoded_yaml_fragment=base64_encoded_yaml_fragment,
+      cassandra_cluster_id=cassandra_cluster_id,
+      delegated_management_subnet_id=delegated_management_subnet_id,
+      disk_count=disk_count,
+      disk_sku=disk_sku,
+      location=location,
+      managed_disk_customer_key_uri=managed_disk_customer_key_uri,
+      name=name,
+      node_count=node_count,
+      sku_name=sku_name,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     cassandra_cluster_id,
     delegated_management_subnet_id,

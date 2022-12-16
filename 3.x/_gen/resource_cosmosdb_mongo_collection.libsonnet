@@ -28,20 +28,26 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
     index=null,
     shard_key=null,
     throughput=null,
-    timeouts=null
-  ):: tf.withResource(type='azurerm_cosmosdb_mongo_collection', label=resourceLabel, attrs=self.newAttrs(
-    account_name=account_name,
-    analytical_storage_ttl=analytical_storage_ttl,
-    autoscale_settings=autoscale_settings,
-    database_name=database_name,
-    default_ttl_seconds=default_ttl_seconds,
-    index=index,
-    name=name,
-    resource_group_name=resource_group_name,
-    shard_key=shard_key,
-    throughput=throughput,
-    timeouts=timeouts
-  )),
+    timeouts=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_cosmosdb_mongo_collection',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      account_name=account_name,
+      analytical_storage_ttl=analytical_storage_ttl,
+      autoscale_settings=autoscale_settings,
+      database_name=database_name,
+      default_ttl_seconds=default_ttl_seconds,
+      index=index,
+      name=name,
+      resource_group_name=resource_group_name,
+      shard_key=shard_key,
+      throughput=throughput,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
   newAttrs(
     account_name,
     database_name,
