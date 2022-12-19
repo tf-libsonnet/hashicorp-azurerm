@@ -63,7 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `private_link_resource_region` (`string`):  When `null`, the `private_link_resource_region` field will be omitted from the resulting object.
   - `request_message` (`string`):  When `null`, the `request_message` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_managed_private_endpoint.timeouts.new](#fn-kustoclustermanagedprivateendpointtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_managed_private_endpoint.timeouts.new](#fn-kusto_cluster_managed_private_endpointtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `azurerm.kusto_cluster_managed_private_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `kusto_cluster_managed_private_endpoint`
 Terraform resource.
 
-Unlike [azurerm.kusto_cluster_managed_private_endpoint.new](#fn-kustoclustermanagedprivateendpointnew), this function will not inject the `resource`
+Unlike [azurerm.kusto_cluster_managed_private_endpoint.new](#fn-kusto_cluster_managed_private_endpointnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -94,7 +94,7 @@ injecting into a complete block.
   - `private_link_resource_region` (`string`):  When `null`, the `private_link_resource_region` field will be omitted from the resulting object.
   - `request_message` (`string`):  When `null`, the `request_message` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_managed_private_endpoint.timeouts.new](#fn-kustoclustermanagedprivateendpointtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_managed_private_endpoint.timeouts.new](#fn-kusto_cluster_managed_private_endpointtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_cluster_managed_private_endpoint` resource into the root Terraform configuration.

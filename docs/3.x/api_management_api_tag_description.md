@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
   - `external_documentation_description` (`string`):  When `null`, the `external_documentation_description` field will be omitted from the resulting object.
   - `external_documentation_url` (`string`):  When `null`, the `external_documentation_url` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_tag_description.timeouts.new](#fn-apimanagementapitagdescriptiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_tag_description.timeouts.new](#fn-api_management_api_tag_descriptiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.api_management_api_tag_description.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_api_tag_description`
 Terraform resource.
 
-Unlike [azurerm.api_management_api_tag_description.new](#fn-apimanagementapitagdescriptionnew), this function will not inject the `resource`
+Unlike [azurerm.api_management_api_tag_description.new](#fn-api_management_api_tag_descriptionnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
   - `external_documentation_description` (`string`):  When `null`, the `external_documentation_description` field will be omitted from the resulting object.
   - `external_documentation_url` (`string`):  When `null`, the `external_documentation_url` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_tag_description.timeouts.new](#fn-apimanagementapitagdescriptiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_tag_description.timeouts.new](#fn-api_management_api_tag_descriptiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_api_tag_description` resource into the root Terraform configuration.

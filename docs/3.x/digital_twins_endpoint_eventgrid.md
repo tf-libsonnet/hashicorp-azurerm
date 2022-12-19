@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `eventgrid_topic_primary_access_key` (`string`): 
   - `eventgrid_topic_secondary_access_key` (`string`): 
   - `name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.digital_twins_endpoint_eventgrid.timeouts.new](#fn-digitaltwinsendpointeventgridtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.digital_twins_endpoint_eventgrid.timeouts.new](#fn-digital_twins_endpoint_eventgridtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.digital_twins_endpoint_eventgrid.newAttrs` constructs a new object with attributes and blocks configured for the `digital_twins_endpoint_eventgrid`
 Terraform resource.
 
-Unlike [azurerm.digital_twins_endpoint_eventgrid.new](#fn-digitaltwinsendpointeventgridnew), this function will not inject the `resource`
+Unlike [azurerm.digital_twins_endpoint_eventgrid.new](#fn-digital_twins_endpoint_eventgridnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `eventgrid_topic_primary_access_key` (`string`): 
   - `eventgrid_topic_secondary_access_key` (`string`): 
   - `name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.digital_twins_endpoint_eventgrid.timeouts.new](#fn-digitaltwinsendpointeventgridtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.digital_twins_endpoint_eventgrid.timeouts.new](#fn-digital_twins_endpoint_eventgridtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `digital_twins_endpoint_eventgrid` resource into the root Terraform configuration.

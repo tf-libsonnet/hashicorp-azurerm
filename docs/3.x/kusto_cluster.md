@@ -101,11 +101,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `trusted_external_tenants` (`list`):  When `null`, the `trusted_external_tenants` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-kustoclusteridentitynew) constructor.
-  - `optimized_auto_scale` (`list[obj]`):  When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-kustoclusteroptimizedautoscalenew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-kustoclusterskunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-kustoclustertimeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-kustoclustervirtualnetworkconfigurationnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-kusto_clusteridentitynew) constructor.
+  - `optimized_auto_scale` (`list[obj]`):  When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-kusto_clusteroptimized_auto_scalenew) constructor.
+  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-kusto_clusterskunew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-kusto_clustertimeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-kusto_clustervirtual_network_configurationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -121,7 +121,7 @@ newAttrs()
 `azurerm.kusto_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `kusto_cluster`
 Terraform resource.
 
-Unlike [azurerm.kusto_cluster.new](#fn-kustoclusternew), this function will not inject the `resource`
+Unlike [azurerm.kusto_cluster.new](#fn-kusto_clusternew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -147,11 +147,11 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `trusted_external_tenants` (`list`):  When `null`, the `trusted_external_tenants` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-kustoclusteridentitynew) constructor.
-  - `optimized_auto_scale` (`list[obj]`):  When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-kustoclusteroptimizedautoscalenew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-kustoclusterskunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-kustoclustertimeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-kustoclustervirtualnetworkconfigurationnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-kusto_clusteridentitynew) constructor.
+  - `optimized_auto_scale` (`list[obj]`):  When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-kusto_clusteroptimized_auto_scalenew) constructor.
+  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-kusto_clusterskunew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-kusto_clustertimeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-kusto_clustervirtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_cluster` resource into the root Terraform configuration.

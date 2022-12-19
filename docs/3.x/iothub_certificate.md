@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `is_verified` (`bool`):  When `null`, the `is_verified` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_certificate.timeouts.new](#fn-iothubcertificatetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_certificate.timeouts.new](#fn-iothub_certificatetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.iothub_certificate.newAttrs` constructs a new object with attributes and blocks configured for the `iothub_certificate`
 Terraform resource.
 
-Unlike [azurerm.iothub_certificate.new](#fn-iothubcertificatenew), this function will not inject the `resource`
+Unlike [azurerm.iothub_certificate.new](#fn-iothub_certificatenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `is_verified` (`bool`):  When `null`, the `is_verified` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_certificate.timeouts.new](#fn-iothubcertificatetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_certificate.timeouts.new](#fn-iothub_certificatetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iothub_certificate` resource into the root Terraform configuration.

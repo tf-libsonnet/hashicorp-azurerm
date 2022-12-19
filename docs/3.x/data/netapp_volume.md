@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `pool_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `security_style` (`string`):  When `null`, the `security_style` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.netapp_volume.timeouts.new](#fn-netappvolumetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.netapp_volume.timeouts.new](#fn-netapp_volumetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.data.netapp_volume.newAttrs` constructs a new object with attributes and blocks configured for the `netapp_volume`
 Terraform data source.
 
-Unlike [azurerm.data.netapp_volume.new](#fn-netappvolumenew), this function will not inject the `data source`
+Unlike [azurerm.data.netapp_volume.new](#fn-netapp_volumenew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `pool_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `security_style` (`string`):  When `null`, the `security_style` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.netapp_volume.timeouts.new](#fn-netappvolumetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.netapp_volume.timeouts.new](#fn-netapp_volumetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `netapp_volume` data source into the root Terraform configuration.

@@ -85,11 +85,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_id` (`string`):  When `null`, the `resource_id` field will be omitted from the resulting object.
   - `title` (`string`):  When `null`, the `title` field will be omitted from the resulting object.
   - `url` (`string`): 
-  - `credentials` (`list[obj]`):  When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.credentials.new](#fn-apimanagementbackendcredentialsnew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.proxy.new](#fn-apimanagementbackendproxynew) constructor.
-  - `service_fabric_cluster` (`list[obj]`):  When `null`, the `service_fabric_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.new](#fn-apimanagementbackendservicefabricclusternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.timeouts.new](#fn-apimanagementbackendtimeoutsnew) constructor.
-  - `tls` (`list[obj]`):  When `null`, the `tls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.tls.new](#fn-apimanagementbackendtlsnew) constructor.
+  - `credentials` (`list[obj]`):  When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.credentials.new](#fn-api_management_backendcredentialsnew) constructor.
+  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.proxy.new](#fn-api_management_backendproxynew) constructor.
+  - `service_fabric_cluster` (`list[obj]`):  When `null`, the `service_fabric_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.new](#fn-api_management_backendservice_fabric_clusternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.timeouts.new](#fn-api_management_backendtimeoutsnew) constructor.
+  - `tls` (`list[obj]`):  When `null`, the `tls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.tls.new](#fn-api_management_backendtlsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,7 +105,7 @@ newAttrs()
 `azurerm.api_management_backend.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_backend`
 Terraform resource.
 
-Unlike [azurerm.api_management_backend.new](#fn-apimanagementbackendnew), this function will not inject the `resource`
+Unlike [azurerm.api_management_backend.new](#fn-api_management_backendnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -121,11 +121,11 @@ injecting into a complete block.
   - `resource_id` (`string`):  When `null`, the `resource_id` field will be omitted from the resulting object.
   - `title` (`string`):  When `null`, the `title` field will be omitted from the resulting object.
   - `url` (`string`): 
-  - `credentials` (`list[obj]`):  When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.credentials.new](#fn-apimanagementbackendcredentialsnew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.proxy.new](#fn-apimanagementbackendproxynew) constructor.
-  - `service_fabric_cluster` (`list[obj]`):  When `null`, the `service_fabric_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.new](#fn-apimanagementbackendservicefabricclusternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.timeouts.new](#fn-apimanagementbackendtimeoutsnew) constructor.
-  - `tls` (`list[obj]`):  When `null`, the `tls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.tls.new](#fn-apimanagementbackendtlsnew) constructor.
+  - `credentials` (`list[obj]`):  When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.credentials.new](#fn-api_management_backendcredentialsnew) constructor.
+  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.proxy.new](#fn-api_management_backendproxynew) constructor.
+  - `service_fabric_cluster` (`list[obj]`):  When `null`, the `service_fabric_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.new](#fn-api_management_backendservice_fabric_clusternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.timeouts.new](#fn-api_management_backendtimeoutsnew) constructor.
+  - `tls` (`list[obj]`):  When `null`, the `tls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.tls.new](#fn-api_management_backendtlsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_backend` resource into the root Terraform configuration.
@@ -540,7 +540,7 @@ Terraform sub block.
   - `management_endpoints` (`list`): 
   - `max_partition_resolution_retries` (`number`): 
   - `server_certificate_thumbprints` (`list`):  When `null`, the `server_certificate_thumbprints` field will be omitted from the resulting object.
-  - `server_x509_name` (`list[obj]`):  When `null`, the `server_x509_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.server_x509_name.new](#fn-servicefabricclusterserverx509namenew) constructor.
+  - `server_x509_name` (`list[obj]`):  When `null`, the `server_x509_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.server_x509_name.new](#fn-service_fabric_clusterserver_x509_namenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `service_fabric_cluster` sub block.

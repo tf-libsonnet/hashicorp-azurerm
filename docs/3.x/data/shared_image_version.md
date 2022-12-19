@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `sort_versions_by_semver` (`bool`):  When `null`, the `sort_versions_by_semver` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-sharedimageversiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-shared_image_versiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.data.shared_image_version.newAttrs` constructs a new object with attributes and blocks configured for the `shared_image_version`
 Terraform data source.
 
-Unlike [azurerm.data.shared_image_version.new](#fn-sharedimageversionnew), this function will not inject the `data source`
+Unlike [azurerm.data.shared_image_version.new](#fn-shared_image_versionnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `sort_versions_by_semver` (`bool`):  When `null`, the `sort_versions_by_semver` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-sharedimageversiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-shared_image_versiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `shared_image_version` data source into the root Terraform configuration.

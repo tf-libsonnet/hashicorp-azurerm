@@ -91,9 +91,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `trust_policy` (`list`):  When `null`, the `trust_policy` field will be omitted from the resulting object.
   - `zone_redundancy_enabled` (`bool`):  When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.
-  - `georeplications` (`list[obj]`):  When `null`, the `georeplications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.georeplications.new](#fn-containerregistrygeoreplicationsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.identity.new](#fn-containerregistryidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.timeouts.new](#fn-containerregistrytimeoutsnew) constructor.
+  - `georeplications` (`list[obj]`):  When `null`, the `georeplications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.georeplications.new](#fn-container_registrygeoreplicationsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.identity.new](#fn-container_registryidentitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.timeouts.new](#fn-container_registrytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,7 +109,7 @@ newAttrs()
 `azurerm.container_registry.newAttrs` constructs a new object with attributes and blocks configured for the `container_registry`
 Terraform resource.
 
-Unlike [azurerm.container_registry.new](#fn-containerregistrynew), this function will not inject the `resource`
+Unlike [azurerm.container_registry.new](#fn-container_registrynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -134,9 +134,9 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `trust_policy` (`list`):  When `null`, the `trust_policy` field will be omitted from the resulting object.
   - `zone_redundancy_enabled` (`bool`):  When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.
-  - `georeplications` (`list[obj]`):  When `null`, the `georeplications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.georeplications.new](#fn-containerregistrygeoreplicationsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.identity.new](#fn-containerregistryidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.timeouts.new](#fn-containerregistrytimeoutsnew) constructor.
+  - `georeplications` (`list[obj]`):  When `null`, the `georeplications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.georeplications.new](#fn-container_registrygeoreplicationsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.identity.new](#fn-container_registryidentitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry.timeouts.new](#fn-container_registrytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_registry` resource into the root Terraform configuration.

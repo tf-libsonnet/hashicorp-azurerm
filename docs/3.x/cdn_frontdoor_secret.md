@@ -59,8 +59,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `cdn_frontdoor_profile_id` (`string`): 
   - `name` (`string`): 
-  - `secret` (`list[obj]`):  When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.new](#fn-cdnfrontdoorsecretsecretnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.timeouts.new](#fn-cdnfrontdoorsecrettimeoutsnew) constructor.
+  - `secret` (`list[obj]`):  When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.new](#fn-cdn_frontdoor_secretsecretnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.timeouts.new](#fn-cdn_frontdoor_secrettimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,7 +76,7 @@ newAttrs()
 `azurerm.cdn_frontdoor_secret.newAttrs` constructs a new object with attributes and blocks configured for the `cdn_frontdoor_secret`
 Terraform resource.
 
-Unlike [azurerm.cdn_frontdoor_secret.new](#fn-cdnfrontdoorsecretnew), this function will not inject the `resource`
+Unlike [azurerm.cdn_frontdoor_secret.new](#fn-cdn_frontdoor_secretnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -86,8 +86,8 @@ injecting into a complete block.
 **Args**:
   - `cdn_frontdoor_profile_id` (`string`): 
   - `name` (`string`): 
-  - `secret` (`list[obj]`):  When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.new](#fn-cdnfrontdoorsecretsecretnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.timeouts.new](#fn-cdnfrontdoorsecrettimeoutsnew) constructor.
+  - `secret` (`list[obj]`):  When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.new](#fn-cdn_frontdoor_secretsecretnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.timeouts.new](#fn-cdn_frontdoor_secrettimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_secret` resource into the root Terraform configuration.
@@ -215,7 +215,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `customer_certificate` (`list[obj]`):  When `null`, the `customer_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.customer_certificate.new](#fn-secretcustomercertificatenew) constructor.
+  - `customer_certificate` (`list[obj]`):  When `null`, the `customer_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.customer_certificate.new](#fn-secretcustomer_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret` sub block.

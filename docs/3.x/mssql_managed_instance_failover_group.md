@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `partner_managed_instance_id` (`string`): 
   - `readonly_endpoint_failover_policy_enabled` (`bool`):  When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
-  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-mssqlmanagedinstancefailovergroupreadwriteendpointfailoverpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-mssqlmanagedinstancefailovergrouptimeoutsnew) constructor.
+  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-mssql_managed_instance_failover_groupread_write_endpoint_failover_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-mssql_managed_instance_failover_grouptimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.mssql_managed_instance_failover_group.newAttrs` constructs a new object with attributes and blocks configured for the `mssql_managed_instance_failover_group`
 Terraform resource.
 
-Unlike [azurerm.mssql_managed_instance_failover_group.new](#fn-mssqlmanagedinstancefailovergroupnew), this function will not inject the `resource`
+Unlike [azurerm.mssql_managed_instance_failover_group.new](#fn-mssql_managed_instance_failover_groupnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `partner_managed_instance_id` (`string`): 
   - `readonly_endpoint_failover_policy_enabled` (`bool`):  When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
-  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-mssqlmanagedinstancefailovergroupreadwriteendpointfailoverpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-mssqlmanagedinstancefailovergrouptimeoutsnew) constructor.
+  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-mssql_managed_instance_failover_groupread_write_endpoint_failover_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-mssql_managed_instance_failover_grouptimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_managed_instance_failover_group` resource into the root Terraform configuration.

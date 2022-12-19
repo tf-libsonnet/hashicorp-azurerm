@@ -67,7 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
   - `sku_tier` (`string`):  When `null`, the `sku_tier` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `frontend_ip_configuration` (`list[obj]`):  When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb.frontend_ip_configuration.new](#fn-lbfrontendipconfigurationnew) constructor.
+  - `frontend_ip_configuration` (`list[obj]`):  When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb.frontend_ip_configuration.new](#fn-lbfrontend_ip_configurationnew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb.timeouts.new](#fn-lbtimeoutsnew) constructor.
 
 **Returns**:
@@ -99,7 +99,7 @@ injecting into a complete block.
   - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
   - `sku_tier` (`string`):  When `null`, the `sku_tier` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `frontend_ip_configuration` (`list[obj]`):  When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb.frontend_ip_configuration.new](#fn-lbfrontendipconfigurationnew) constructor.
+  - `frontend_ip_configuration` (`list[obj]`):  When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb.frontend_ip_configuration.new](#fn-lbfrontend_ip_configurationnew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb.timeouts.new](#fn-lbtimeoutsnew) constructor.
 
 **Returns**:

@@ -163,23 +163,23 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `stop_pending_resize_operation` (`bool`):  When `null`, the `stop_pending_resize_operation` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `auto_scale` (`list[obj]`):  When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.auto_scale.new](#fn-batchpoolautoscalenew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.certificate.new](#fn-batchpoolcertificatenew) constructor.
-  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.container_configuration.new](#fn-batchpoolcontainerconfigurationnew) constructor.
-  - `data_disks` (`list[obj]`):  When `null`, the `data_disks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.data_disks.new](#fn-batchpooldatadisksnew) constructor.
-  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.disk_encryption.new](#fn-batchpooldiskencryptionnew) constructor.
-  - `extensions` (`list[obj]`):  When `null`, the `extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.extensions.new](#fn-batchpoolextensionsnew) constructor.
-  - `fixed_scale` (`list[obj]`):  When `null`, the `fixed_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.fixed_scale.new](#fn-batchpoolfixedscalenew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.identity.new](#fn-batchpoolidentitynew) constructor.
-  - `mount` (`list[obj]`):  When `null`, the `mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.new](#fn-batchpoolmountnew) constructor.
-  - `network_configuration` (`list[obj]`):  When `null`, the `network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.new](#fn-batchpoolnetworkconfigurationnew) constructor.
-  - `node_placement` (`list[obj]`):  When `null`, the `node_placement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.node_placement.new](#fn-batchpoolnodeplacementnew) constructor.
-  - `start_task` (`list[obj]`):  When `null`, the `start_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.new](#fn-batchpoolstarttasknew) constructor.
-  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.storage_image_reference.new](#fn-batchpoolstorageimagereferencenew) constructor.
-  - `task_scheduling_policy` (`list[obj]`):  When `null`, the `task_scheduling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.task_scheduling_policy.new](#fn-batchpooltaskschedulingpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.timeouts.new](#fn-batchpooltimeoutsnew) constructor.
-  - `user_accounts` (`list[obj]`):  When `null`, the `user_accounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.new](#fn-batchpooluseraccountsnew) constructor.
-  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.windows.new](#fn-batchpoolwindowsnew) constructor.
+  - `auto_scale` (`list[obj]`):  When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.auto_scale.new](#fn-batch_poolauto_scalenew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.certificate.new](#fn-batch_poolcertificatenew) constructor.
+  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.container_configuration.new](#fn-batch_poolcontainer_configurationnew) constructor.
+  - `data_disks` (`list[obj]`):  When `null`, the `data_disks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.data_disks.new](#fn-batch_pooldata_disksnew) constructor.
+  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.disk_encryption.new](#fn-batch_pooldisk_encryptionnew) constructor.
+  - `extensions` (`list[obj]`):  When `null`, the `extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.extensions.new](#fn-batch_poolextensionsnew) constructor.
+  - `fixed_scale` (`list[obj]`):  When `null`, the `fixed_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.fixed_scale.new](#fn-batch_poolfixed_scalenew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.identity.new](#fn-batch_poolidentitynew) constructor.
+  - `mount` (`list[obj]`):  When `null`, the `mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.new](#fn-batch_poolmountnew) constructor.
+  - `network_configuration` (`list[obj]`):  When `null`, the `network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.new](#fn-batch_poolnetwork_configurationnew) constructor.
+  - `node_placement` (`list[obj]`):  When `null`, the `node_placement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.node_placement.new](#fn-batch_poolnode_placementnew) constructor.
+  - `start_task` (`list[obj]`):  When `null`, the `start_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.new](#fn-batch_poolstart_tasknew) constructor.
+  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.storage_image_reference.new](#fn-batch_poolstorage_image_referencenew) constructor.
+  - `task_scheduling_policy` (`list[obj]`):  When `null`, the `task_scheduling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.task_scheduling_policy.new](#fn-batch_pooltask_scheduling_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.timeouts.new](#fn-batch_pooltimeoutsnew) constructor.
+  - `user_accounts` (`list[obj]`):  When `null`, the `user_accounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.new](#fn-batch_pooluser_accountsnew) constructor.
+  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.windows.new](#fn-batch_poolwindowsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -195,7 +195,7 @@ newAttrs()
 `azurerm.batch_pool.newAttrs` constructs a new object with attributes and blocks configured for the `batch_pool`
 Terraform resource.
 
-Unlike [azurerm.batch_pool.new](#fn-batchpoolnew), this function will not inject the `resource`
+Unlike [azurerm.batch_pool.new](#fn-batch_poolnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -215,23 +215,23 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `stop_pending_resize_operation` (`bool`):  When `null`, the `stop_pending_resize_operation` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `auto_scale` (`list[obj]`):  When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.auto_scale.new](#fn-batchpoolautoscalenew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.certificate.new](#fn-batchpoolcertificatenew) constructor.
-  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.container_configuration.new](#fn-batchpoolcontainerconfigurationnew) constructor.
-  - `data_disks` (`list[obj]`):  When `null`, the `data_disks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.data_disks.new](#fn-batchpooldatadisksnew) constructor.
-  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.disk_encryption.new](#fn-batchpooldiskencryptionnew) constructor.
-  - `extensions` (`list[obj]`):  When `null`, the `extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.extensions.new](#fn-batchpoolextensionsnew) constructor.
-  - `fixed_scale` (`list[obj]`):  When `null`, the `fixed_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.fixed_scale.new](#fn-batchpoolfixedscalenew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.identity.new](#fn-batchpoolidentitynew) constructor.
-  - `mount` (`list[obj]`):  When `null`, the `mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.new](#fn-batchpoolmountnew) constructor.
-  - `network_configuration` (`list[obj]`):  When `null`, the `network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.new](#fn-batchpoolnetworkconfigurationnew) constructor.
-  - `node_placement` (`list[obj]`):  When `null`, the `node_placement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.node_placement.new](#fn-batchpoolnodeplacementnew) constructor.
-  - `start_task` (`list[obj]`):  When `null`, the `start_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.new](#fn-batchpoolstarttasknew) constructor.
-  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.storage_image_reference.new](#fn-batchpoolstorageimagereferencenew) constructor.
-  - `task_scheduling_policy` (`list[obj]`):  When `null`, the `task_scheduling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.task_scheduling_policy.new](#fn-batchpooltaskschedulingpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.timeouts.new](#fn-batchpooltimeoutsnew) constructor.
-  - `user_accounts` (`list[obj]`):  When `null`, the `user_accounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.new](#fn-batchpooluseraccountsnew) constructor.
-  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.windows.new](#fn-batchpoolwindowsnew) constructor.
+  - `auto_scale` (`list[obj]`):  When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.auto_scale.new](#fn-batch_poolauto_scalenew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.certificate.new](#fn-batch_poolcertificatenew) constructor.
+  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.container_configuration.new](#fn-batch_poolcontainer_configurationnew) constructor.
+  - `data_disks` (`list[obj]`):  When `null`, the `data_disks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.data_disks.new](#fn-batch_pooldata_disksnew) constructor.
+  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.disk_encryption.new](#fn-batch_pooldisk_encryptionnew) constructor.
+  - `extensions` (`list[obj]`):  When `null`, the `extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.extensions.new](#fn-batch_poolextensionsnew) constructor.
+  - `fixed_scale` (`list[obj]`):  When `null`, the `fixed_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.fixed_scale.new](#fn-batch_poolfixed_scalenew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.identity.new](#fn-batch_poolidentitynew) constructor.
+  - `mount` (`list[obj]`):  When `null`, the `mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.new](#fn-batch_poolmountnew) constructor.
+  - `network_configuration` (`list[obj]`):  When `null`, the `network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.new](#fn-batch_poolnetwork_configurationnew) constructor.
+  - `node_placement` (`list[obj]`):  When `null`, the `node_placement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.node_placement.new](#fn-batch_poolnode_placementnew) constructor.
+  - `start_task` (`list[obj]`):  When `null`, the `start_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.new](#fn-batch_poolstart_tasknew) constructor.
+  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.storage_image_reference.new](#fn-batch_poolstorage_image_referencenew) constructor.
+  - `task_scheduling_policy` (`list[obj]`):  When `null`, the `task_scheduling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.task_scheduling_policy.new](#fn-batch_pooltask_scheduling_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.timeouts.new](#fn-batch_pooltimeoutsnew) constructor.
+  - `user_accounts` (`list[obj]`):  When `null`, the `user_accounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.new](#fn-batch_pooluser_accountsnew) constructor.
+  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.windows.new](#fn-batch_poolwindowsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `batch_pool` resource into the root Terraform configuration.
@@ -1277,10 +1277,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_blob_file_system` (`list[obj]`):  When `null`, the `azure_blob_file_system` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_blob_file_system.new](#fn-mountazureblobfilesystemnew) constructor.
-  - `azure_file_share` (`list[obj]`):  When `null`, the `azure_file_share` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_file_share.new](#fn-mountazurefilesharenew) constructor.
-  - `cifs_mount` (`list[obj]`):  When `null`, the `cifs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.cifs_mount.new](#fn-mountcifsmountnew) constructor.
-  - `nfs_mount` (`list[obj]`):  When `null`, the `nfs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.nfs_mount.new](#fn-mountnfsmountnew) constructor.
+  - `azure_blob_file_system` (`list[obj]`):  When `null`, the `azure_blob_file_system` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_blob_file_system.new](#fn-mountazure_blob_file_systemnew) constructor.
+  - `azure_file_share` (`list[obj]`):  When `null`, the `azure_file_share` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_file_share.new](#fn-mountazure_file_sharenew) constructor.
+  - `cifs_mount` (`list[obj]`):  When `null`, the `cifs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.cifs_mount.new](#fn-mountcifs_mountnew) constructor.
+  - `nfs_mount` (`list[obj]`):  When `null`, the `nfs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.nfs_mount.new](#fn-mountnfs_mountnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `mount` sub block.
@@ -1415,7 +1415,7 @@ Terraform sub block.
   - `public_address_provisioning_type` (`string`):  When `null`, the `public_address_provisioning_type` field will be omitted from the resulting object.
   - `public_ips` (`list`):  When `null`, the `public_ips` field will be omitted from the resulting object.
   - `subnet_id` (`string`): 
-  - `endpoint_configuration` (`list[obj]`):  When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-networkconfigurationendpointconfigurationnew) constructor.
+  - `endpoint_configuration` (`list[obj]`):  When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-network_configurationendpoint_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_configuration` sub block.
@@ -1442,7 +1442,7 @@ Terraform sub block.
   - `frontend_port_range` (`string`): 
   - `name` (`string`): 
   - `protocol` (`string`): 
-  - `network_security_group_rules` (`list[obj]`):  When `null`, the `network_security_group_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.network_security_group_rules.new](#fn-endpointconfigurationnetworksecuritygrouprulesnew) constructor.
+  - `network_security_group_rules` (`list[obj]`):  When `null`, the `network_security_group_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.network_security_group_rules.new](#fn-endpoint_configurationnetwork_security_group_rulesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `endpoint_configuration` sub block.
@@ -1518,9 +1518,9 @@ Terraform sub block.
   - `common_environment_properties` (`obj`):  When `null`, the `common_environment_properties` field will be omitted from the resulting object.
   - `task_retry_maximum` (`number`):  When `null`, the `task_retry_maximum` field will be omitted from the resulting object.
   - `wait_for_success` (`bool`):  When `null`, the `wait_for_success` field will be omitted from the resulting object.
-  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.container.new](#fn-starttaskcontainernew) constructor.
-  - `resource_file` (`list[obj]`):  When `null`, the `resource_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.resource_file.new](#fn-starttaskresourcefilenew) constructor.
-  - `user_identity` (`list[obj]`):  When `null`, the `user_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.new](#fn-starttaskuseridentitynew) constructor.
+  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.container.new](#fn-start_taskcontainernew) constructor.
+  - `resource_file` (`list[obj]`):  When `null`, the `resource_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.resource_file.new](#fn-start_taskresource_filenew) constructor.
+  - `user_identity` (`list[obj]`):  When `null`, the `user_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.new](#fn-start_taskuser_identitynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `start_task` sub block.
@@ -1625,7 +1625,7 @@ Terraform sub block.
 
 **Args**:
   - `user_name` (`string`):  When `null`, the `user_name` field will be omitted from the resulting object.
-  - `auto_user` (`list[obj]`):  When `null`, the `auto_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.auto_user.new](#fn-useridentityautousernew) constructor.
+  - `auto_user` (`list[obj]`):  When `null`, the `auto_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.auto_user.new](#fn-user_identityauto_usernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `user_identity` sub block.
@@ -1750,8 +1750,8 @@ Terraform sub block.
   - `elevation_level` (`string`): 
   - `name` (`string`): 
   - `password` (`string`): 
-  - `linux_user_configuration` (`list[obj]`):  When `null`, the `linux_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.linux_user_configuration.new](#fn-useraccountslinuxuserconfigurationnew) constructor.
-  - `windows_user_configuration` (`list[obj]`):  When `null`, the `windows_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.windows_user_configuration.new](#fn-useraccountswindowsuserconfigurationnew) constructor.
+  - `linux_user_configuration` (`list[obj]`):  When `null`, the `linux_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.linux_user_configuration.new](#fn-user_accountslinux_user_configurationnew) constructor.
+  - `windows_user_configuration` (`list[obj]`):  When `null`, the `windows_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.windows_user_configuration.new](#fn-user_accountswindows_user_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `user_accounts` sub block.

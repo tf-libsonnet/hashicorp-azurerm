@@ -71,7 +71,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `shared_access_key_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `timestamp_property_name` (`string`):  When `null`, the `timestamp_property_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-iottimeseriesinsightseventsourceeventhubtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-iot_time_series_insights_event_source_eventhubtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,7 +87,7 @@ newAttrs()
 `azurerm.iot_time_series_insights_event_source_eventhub.newAttrs` constructs a new object with attributes and blocks configured for the `iot_time_series_insights_event_source_eventhub`
 Terraform resource.
 
-Unlike [azurerm.iot_time_series_insights_event_source_eventhub.new](#fn-iottimeseriesinsightseventsourceeventhubnew), this function will not inject the `resource`
+Unlike [azurerm.iot_time_series_insights_event_source_eventhub.new](#fn-iot_time_series_insights_event_source_eventhubnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -106,7 +106,7 @@ injecting into a complete block.
   - `shared_access_key_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `timestamp_property_name` (`string`):  When `null`, the `timestamp_property_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-iottimeseriesinsightseventsourceeventhubtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-iot_time_series_insights_event_source_eventhubtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iot_time_series_insights_event_source_eventhub` resource into the root Terraform configuration.

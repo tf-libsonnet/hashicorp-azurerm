@@ -75,9 +75,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `scopes` (`list`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-securitycenterautomationactionnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-securitycenterautomationsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-securitycenterautomationtimeoutsnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-security_center_automationactionnew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-security_center_automationsourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-security_center_automationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,7 +93,7 @@ newAttrs()
 `azurerm.security_center_automation.newAttrs` constructs a new object with attributes and blocks configured for the `security_center_automation`
 Terraform resource.
 
-Unlike [azurerm.security_center_automation.new](#fn-securitycenterautomationnew), this function will not inject the `resource`
+Unlike [azurerm.security_center_automation.new](#fn-security_center_automationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -108,9 +108,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `scopes` (`list`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-securitycenterautomationactionnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-securitycenterautomationsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-securitycenterautomationtimeoutsnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-security_center_automationactionnew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-security_center_automationsourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-security_center_automationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `security_center_automation` resource into the root Terraform configuration.
@@ -382,7 +382,7 @@ Terraform sub block.
 
 **Args**:
   - `event_source` (`string`): 
-  - `rule_set` (`list[obj]`):  When `null`, the `rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.new](#fn-sourcerulesetnew) constructor.
+  - `rule_set` (`list[obj]`):  When `null`, the `rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.new](#fn-sourcerule_setnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -405,7 +405,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.rule.new](#fn-rulesetrulenew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.rule.new](#fn-rule_setrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule_set` sub block.

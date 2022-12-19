@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `private_dns_resolver_id` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_outbound_endpoint.timeouts.new](#fn-privatednsresolveroutboundendpointtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_outbound_endpoint.timeouts.new](#fn-private_dns_resolver_outbound_endpointtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.private_dns_resolver_outbound_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `private_dns_resolver_outbound_endpoint`
 Terraform resource.
 
-Unlike [azurerm.private_dns_resolver_outbound_endpoint.new](#fn-privatednsresolveroutboundendpointnew), this function will not inject the `resource`
+Unlike [azurerm.private_dns_resolver_outbound_endpoint.new](#fn-private_dns_resolver_outbound_endpointnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `private_dns_resolver_id` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_outbound_endpoint.timeouts.new](#fn-privatednsresolveroutboundendpointtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_outbound_endpoint.timeouts.new](#fn-private_dns_resolver_outbound_endpointtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `private_dns_resolver_outbound_endpoint` resource into the root Terraform configuration.

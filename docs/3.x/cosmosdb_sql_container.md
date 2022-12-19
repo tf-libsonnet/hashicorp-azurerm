@@ -93,11 +93,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `partition_key_version` (`number`):  When `null`, the `partition_key_version` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-cosmosdbsqlcontainerautoscalesettingsnew) constructor.
-  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-cosmosdbsqlcontainerconflictresolutionpolicynew) constructor.
-  - `indexing_policy` (`list[obj]`):  When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-cosmosdbsqlcontainerindexingpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-cosmosdbsqlcontainertimeoutsnew) constructor.
-  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-cosmosdbsqlcontaineruniquekeynew) constructor.
+  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-cosmosdb_sql_containerautoscale_settingsnew) constructor.
+  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-cosmosdb_sql_containerconflict_resolution_policynew) constructor.
+  - `indexing_policy` (`list[obj]`):  When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-cosmosdb_sql_containerindexing_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-cosmosdb_sql_containertimeoutsnew) constructor.
+  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-cosmosdb_sql_containerunique_keynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -113,7 +113,7 @@ newAttrs()
 `azurerm.cosmosdb_sql_container.newAttrs` constructs a new object with attributes and blocks configured for the `cosmosdb_sql_container`
 Terraform resource.
 
-Unlike [azurerm.cosmosdb_sql_container.new](#fn-cosmosdbsqlcontainernew), this function will not inject the `resource`
+Unlike [azurerm.cosmosdb_sql_container.new](#fn-cosmosdb_sql_containernew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -130,11 +130,11 @@ injecting into a complete block.
   - `partition_key_version` (`number`):  When `null`, the `partition_key_version` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-cosmosdbsqlcontainerautoscalesettingsnew) constructor.
-  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-cosmosdbsqlcontainerconflictresolutionpolicynew) constructor.
-  - `indexing_policy` (`list[obj]`):  When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-cosmosdbsqlcontainerindexingpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-cosmosdbsqlcontainertimeoutsnew) constructor.
-  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-cosmosdbsqlcontaineruniquekeynew) constructor.
+  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-cosmosdb_sql_containerautoscale_settingsnew) constructor.
+  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-cosmosdb_sql_containerconflict_resolution_policynew) constructor.
+  - `indexing_policy` (`list[obj]`):  When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-cosmosdb_sql_containerindexing_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-cosmosdb_sql_containertimeoutsnew) constructor.
+  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-cosmosdb_sql_containerunique_keynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cosmosdb_sql_container` resource into the root Terraform configuration.
@@ -534,10 +534,10 @@ Terraform sub block.
 
 **Args**:
   - `indexing_mode` (`string`):  When `null`, the `indexing_mode` field will be omitted from the resulting object.
-  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.new](#fn-indexingpolicycompositeindexnew) constructor.
-  - `excluded_path` (`list[obj]`):  When `null`, the `excluded_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.excluded_path.new](#fn-indexingpolicyexcludedpathnew) constructor.
-  - `included_path` (`list[obj]`):  When `null`, the `included_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.included_path.new](#fn-indexingpolicyincludedpathnew) constructor.
-  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.spatial_index.new](#fn-indexingpolicyspatialindexnew) constructor.
+  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.new](#fn-indexing_policycomposite_indexnew) constructor.
+  - `excluded_path` (`list[obj]`):  When `null`, the `excluded_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.excluded_path.new](#fn-indexing_policyexcluded_pathnew) constructor.
+  - `included_path` (`list[obj]`):  When `null`, the `included_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.included_path.new](#fn-indexing_policyincluded_pathnew) constructor.
+  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.spatial_index.new](#fn-indexing_policyspatial_indexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `indexing_policy` sub block.
@@ -560,7 +560,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.index.new](#fn-compositeindexindexnew) constructor.
+  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.index.new](#fn-composite_indexindexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `composite_index` sub block.

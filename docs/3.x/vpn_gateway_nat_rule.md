@@ -73,9 +73,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
   - `vpn_gateway_id` (`string`): 
-  - `external_mapping` (`list[obj]`):  When `null`, the `external_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.external_mapping.new](#fn-vpngatewaynatruleexternalmappingnew) constructor.
-  - `internal_mapping` (`list[obj]`):  When `null`, the `internal_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.internal_mapping.new](#fn-vpngatewaynatruleinternalmappingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.timeouts.new](#fn-vpngatewaynatruletimeoutsnew) constructor.
+  - `external_mapping` (`list[obj]`):  When `null`, the `external_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.external_mapping.new](#fn-vpn_gateway_nat_ruleexternal_mappingnew) constructor.
+  - `internal_mapping` (`list[obj]`):  When `null`, the `internal_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.internal_mapping.new](#fn-vpn_gateway_nat_ruleinternal_mappingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.timeouts.new](#fn-vpn_gateway_nat_ruletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `azurerm.vpn_gateway_nat_rule.newAttrs` constructs a new object with attributes and blocks configured for the `vpn_gateway_nat_rule`
 Terraform resource.
 
-Unlike [azurerm.vpn_gateway_nat_rule.new](#fn-vpngatewaynatrulenew), this function will not inject the `resource`
+Unlike [azurerm.vpn_gateway_nat_rule.new](#fn-vpn_gateway_nat_rulenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,9 +107,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
   - `vpn_gateway_id` (`string`): 
-  - `external_mapping` (`list[obj]`):  When `null`, the `external_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.external_mapping.new](#fn-vpngatewaynatruleexternalmappingnew) constructor.
-  - `internal_mapping` (`list[obj]`):  When `null`, the `internal_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.internal_mapping.new](#fn-vpngatewaynatruleinternalmappingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.timeouts.new](#fn-vpngatewaynatruletimeoutsnew) constructor.
+  - `external_mapping` (`list[obj]`):  When `null`, the `external_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.external_mapping.new](#fn-vpn_gateway_nat_ruleexternal_mappingnew) constructor.
+  - `internal_mapping` (`list[obj]`):  When `null`, the `internal_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.internal_mapping.new](#fn-vpn_gateway_nat_ruleinternal_mappingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_nat_rule.timeouts.new](#fn-vpn_gateway_nat_ruletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpn_gateway_nat_rule` resource into the root Terraform configuration.

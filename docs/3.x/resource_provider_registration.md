@@ -55,8 +55,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `name` (`string`): 
-  - `feature` (`list[obj]`):  When `null`, the `feature` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.feature.new](#fn-resourceproviderregistrationfeaturenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.timeouts.new](#fn-resourceproviderregistrationtimeoutsnew) constructor.
+  - `feature` (`list[obj]`):  When `null`, the `feature` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.feature.new](#fn-resource_provider_registrationfeaturenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.timeouts.new](#fn-resource_provider_registrationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -72,7 +72,7 @@ newAttrs()
 `azurerm.resource_provider_registration.newAttrs` constructs a new object with attributes and blocks configured for the `resource_provider_registration`
 Terraform resource.
 
-Unlike [azurerm.resource_provider_registration.new](#fn-resourceproviderregistrationnew), this function will not inject the `resource`
+Unlike [azurerm.resource_provider_registration.new](#fn-resource_provider_registrationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -81,8 +81,8 @@ injecting into a complete block.
 
 **Args**:
   - `name` (`string`): 
-  - `feature` (`list[obj]`):  When `null`, the `feature` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.feature.new](#fn-resourceproviderregistrationfeaturenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.timeouts.new](#fn-resourceproviderregistrationtimeoutsnew) constructor.
+  - `feature` (`list[obj]`):  When `null`, the `feature` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.feature.new](#fn-resource_provider_registrationfeaturenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.timeouts.new](#fn-resource_provider_registrationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `resource_provider_registration` resource into the root Terraform configuration.

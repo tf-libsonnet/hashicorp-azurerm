@@ -95,10 +95,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `throughput_in_mibps` (`number`):  When `null`, the `throughput_in_mibps` field will be omitted from the resulting object.
   - `volume_path` (`string`): 
-  - `data_protection_replication` (`list[obj]`):  When `null`, the `data_protection_replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_replication.new](#fn-netappvolumedataprotectionreplicationnew) constructor.
-  - `data_protection_snapshot_policy` (`list[obj]`):  When `null`, the `data_protection_snapshot_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_snapshot_policy.new](#fn-netappvolumedataprotectionsnapshotpolicynew) constructor.
-  - `export_policy_rule` (`list[obj]`):  When `null`, the `export_policy_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.export_policy_rule.new](#fn-netappvolumeexportpolicyrulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.timeouts.new](#fn-netappvolumetimeoutsnew) constructor.
+  - `data_protection_replication` (`list[obj]`):  When `null`, the `data_protection_replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_replication.new](#fn-netapp_volumedata_protection_replicationnew) constructor.
+  - `data_protection_snapshot_policy` (`list[obj]`):  When `null`, the `data_protection_snapshot_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_snapshot_policy.new](#fn-netapp_volumedata_protection_snapshot_policynew) constructor.
+  - `export_policy_rule` (`list[obj]`):  When `null`, the `export_policy_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.export_policy_rule.new](#fn-netapp_volumeexport_policy_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.timeouts.new](#fn-netapp_volumetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -114,7 +114,7 @@ newAttrs()
 `azurerm.netapp_volume.newAttrs` constructs a new object with attributes and blocks configured for the `netapp_volume`
 Terraform resource.
 
-Unlike [azurerm.netapp_volume.new](#fn-netappvolumenew), this function will not inject the `resource`
+Unlike [azurerm.netapp_volume.new](#fn-netapp_volumenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -139,10 +139,10 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `throughput_in_mibps` (`number`):  When `null`, the `throughput_in_mibps` field will be omitted from the resulting object.
   - `volume_path` (`string`): 
-  - `data_protection_replication` (`list[obj]`):  When `null`, the `data_protection_replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_replication.new](#fn-netappvolumedataprotectionreplicationnew) constructor.
-  - `data_protection_snapshot_policy` (`list[obj]`):  When `null`, the `data_protection_snapshot_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_snapshot_policy.new](#fn-netappvolumedataprotectionsnapshotpolicynew) constructor.
-  - `export_policy_rule` (`list[obj]`):  When `null`, the `export_policy_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.export_policy_rule.new](#fn-netappvolumeexportpolicyrulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.timeouts.new](#fn-netappvolumetimeoutsnew) constructor.
+  - `data_protection_replication` (`list[obj]`):  When `null`, the `data_protection_replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_replication.new](#fn-netapp_volumedata_protection_replicationnew) constructor.
+  - `data_protection_snapshot_policy` (`list[obj]`):  When `null`, the `data_protection_snapshot_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_snapshot_policy.new](#fn-netapp_volumedata_protection_snapshot_policynew) constructor.
+  - `export_policy_rule` (`list[obj]`):  When `null`, the `export_policy_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.export_policy_rule.new](#fn-netapp_volumeexport_policy_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.timeouts.new](#fn-netapp_volumetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `netapp_volume` resource into the root Terraform configuration.

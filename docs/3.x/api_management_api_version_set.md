@@ -65,7 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `version_header_name` (`string`):  When `null`, the `version_header_name` field will be omitted from the resulting object.
   - `version_query_name` (`string`):  When `null`, the `version_query_name` field will be omitted from the resulting object.
   - `versioning_scheme` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_version_set.timeouts.new](#fn-apimanagementapiversionsettimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_version_set.timeouts.new](#fn-api_management_api_version_settimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `azurerm.api_management_api_version_set.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_api_version_set`
 Terraform resource.
 
-Unlike [azurerm.api_management_api_version_set.new](#fn-apimanagementapiversionsetnew), this function will not inject the `resource`
+Unlike [azurerm.api_management_api_version_set.new](#fn-api_management_api_version_setnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -97,7 +97,7 @@ injecting into a complete block.
   - `version_header_name` (`string`):  When `null`, the `version_header_name` field will be omitted from the resulting object.
   - `version_query_name` (`string`):  When `null`, the `version_query_name` field will be omitted from the resulting object.
   - `versioning_scheme` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_version_set.timeouts.new](#fn-apimanagementapiversionsettimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_version_set.timeouts.new](#fn-api_management_api_version_settimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_api_version_set` resource into the root Terraform configuration.

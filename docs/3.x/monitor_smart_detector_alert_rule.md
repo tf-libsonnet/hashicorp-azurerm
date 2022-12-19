@@ -73,8 +73,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `severity` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `throttling_duration` (`string`):  When `null`, the `throttling_duration` field will be omitted from the resulting object.
-  - `action_group` (`list[obj]`):  When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-monitorsmartdetectoralertruleactiongroupnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-monitorsmartdetectoralertruletimeoutsnew) constructor.
+  - `action_group` (`list[obj]`):  When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-monitor_smart_detector_alert_ruleaction_groupnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-monitor_smart_detector_alert_ruletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `azurerm.monitor_smart_detector_alert_rule.newAttrs` constructs a new object with attributes and blocks configured for the `monitor_smart_detector_alert_rule`
 Terraform resource.
 
-Unlike [azurerm.monitor_smart_detector_alert_rule.new](#fn-monitorsmartdetectoralertrulenew), this function will not inject the `resource`
+Unlike [azurerm.monitor_smart_detector_alert_rule.new](#fn-monitor_smart_detector_alert_rulenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -108,8 +108,8 @@ injecting into a complete block.
   - `severity` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `throttling_duration` (`string`):  When `null`, the `throttling_duration` field will be omitted from the resulting object.
-  - `action_group` (`list[obj]`):  When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-monitorsmartdetectoralertruleactiongroupnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-monitorsmartdetectoralertruletimeoutsnew) constructor.
+  - `action_group` (`list[obj]`):  When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-monitor_smart_detector_alert_ruleaction_groupnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-monitor_smart_detector_alert_ruletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_smart_detector_alert_rule` resource into the root Terraform configuration.

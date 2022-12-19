@@ -81,10 +81,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.identity.new](#fn-eventgriddomainidentitynew) constructor.
-  - `input_mapping_default_values` (`list[obj]`):  When `null`, the `input_mapping_default_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_default_values.new](#fn-eventgriddomaininputmappingdefaultvaluesnew) constructor.
-  - `input_mapping_fields` (`list[obj]`):  When `null`, the `input_mapping_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_fields.new](#fn-eventgriddomaininputmappingfieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.timeouts.new](#fn-eventgriddomaintimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.identity.new](#fn-eventgrid_domainidentitynew) constructor.
+  - `input_mapping_default_values` (`list[obj]`):  When `null`, the `input_mapping_default_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_default_values.new](#fn-eventgrid_domaininput_mapping_default_valuesnew) constructor.
+  - `input_mapping_fields` (`list[obj]`):  When `null`, the `input_mapping_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_fields.new](#fn-eventgrid_domaininput_mapping_fieldsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.timeouts.new](#fn-eventgrid_domaintimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `azurerm.eventgrid_domain.newAttrs` constructs a new object with attributes and blocks configured for the `eventgrid_domain`
 Terraform resource.
 
-Unlike [azurerm.eventgrid_domain.new](#fn-eventgriddomainnew), this function will not inject the `resource`
+Unlike [azurerm.eventgrid_domain.new](#fn-eventgrid_domainnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -118,10 +118,10 @@ injecting into a complete block.
   - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.identity.new](#fn-eventgriddomainidentitynew) constructor.
-  - `input_mapping_default_values` (`list[obj]`):  When `null`, the `input_mapping_default_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_default_values.new](#fn-eventgriddomaininputmappingdefaultvaluesnew) constructor.
-  - `input_mapping_fields` (`list[obj]`):  When `null`, the `input_mapping_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_fields.new](#fn-eventgriddomaininputmappingfieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.timeouts.new](#fn-eventgriddomaintimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.identity.new](#fn-eventgrid_domainidentitynew) constructor.
+  - `input_mapping_default_values` (`list[obj]`):  When `null`, the `input_mapping_default_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_default_values.new](#fn-eventgrid_domaininput_mapping_default_valuesnew) constructor.
+  - `input_mapping_fields` (`list[obj]`):  When `null`, the `input_mapping_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.input_mapping_fields.new](#fn-eventgrid_domaininput_mapping_fieldsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_domain.timeouts.new](#fn-eventgrid_domaintimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `eventgrid_domain` resource into the root Terraform configuration.

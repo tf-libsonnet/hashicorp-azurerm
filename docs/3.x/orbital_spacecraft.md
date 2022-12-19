@@ -67,8 +67,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `title_line` (`string`): 
   - `two_line_elements` (`list`): 
-  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.links.new](#fn-orbitalspacecraftlinksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.timeouts.new](#fn-orbitalspacecrafttimeoutsnew) constructor.
+  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.links.new](#fn-orbital_spacecraftlinksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.timeouts.new](#fn-orbital_spacecrafttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `azurerm.orbital_spacecraft.newAttrs` constructs a new object with attributes and blocks configured for the `orbital_spacecraft`
 Terraform resource.
 
-Unlike [azurerm.orbital_spacecraft.new](#fn-orbitalspacecraftnew), this function will not inject the `resource`
+Unlike [azurerm.orbital_spacecraft.new](#fn-orbital_spacecraftnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `title_line` (`string`): 
   - `two_line_elements` (`list`): 
-  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.links.new](#fn-orbitalspacecraftlinksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.timeouts.new](#fn-orbitalspacecrafttimeoutsnew) constructor.
+  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.links.new](#fn-orbital_spacecraftlinksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_spacecraft.timeouts.new](#fn-orbital_spacecrafttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `orbital_spacecraft` resource into the root Terraform configuration.

@@ -71,8 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `use_local_git` (`bool`): Should the App use local Git configuration. When `null`, the `use_local_git` field will be omitted from the resulting object.
   - `use_manual_integration` (`bool`): Should code be deployed manually. Set to `false` to enable continuous integration, such as webhooks into online repos such as GitHub. Defaults to `false`. When `null`, the `use_manual_integration` field will be omitted from the resulting object.
   - `use_mercurial` (`bool`): The repository specified is Mercurial. Defaults to `false`. When `null`, the `use_mercurial` field will be omitted from the resulting object.
-  - `github_action_configuration` (`list[obj]`):  When `null`, the `github_action_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.new](#fn-appservicesourcecontrolgithubactionconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.timeouts.new](#fn-appservicesourcecontroltimeoutsnew) constructor.
+  - `github_action_configuration` (`list[obj]`):  When `null`, the `github_action_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.new](#fn-app_service_source_controlgithub_action_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.timeouts.new](#fn-app_service_source_controltimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,7 +88,7 @@ newAttrs()
 `azurerm.app_service_source_control.newAttrs` constructs a new object with attributes and blocks configured for the `app_service_source_control`
 Terraform resource.
 
-Unlike [azurerm.app_service_source_control.new](#fn-appservicesourcecontrolnew), this function will not inject the `resource`
+Unlike [azurerm.app_service_source_control.new](#fn-app_service_source_controlnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -103,8 +103,8 @@ injecting into a complete block.
   - `use_local_git` (`bool`): Should the App use local Git configuration. When `null`, the `use_local_git` field will be omitted from the resulting object.
   - `use_manual_integration` (`bool`): Should code be deployed manually. Set to `false` to enable continuous integration, such as webhooks into online repos such as GitHub. Defaults to `false`. When `null`, the `use_manual_integration` field will be omitted from the resulting object.
   - `use_mercurial` (`bool`): The repository specified is Mercurial. Defaults to `false`. When `null`, the `use_mercurial` field will be omitted from the resulting object.
-  - `github_action_configuration` (`list[obj]`):  When `null`, the `github_action_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.new](#fn-appservicesourcecontrolgithubactionconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.timeouts.new](#fn-appservicesourcecontroltimeoutsnew) constructor.
+  - `github_action_configuration` (`list[obj]`):  When `null`, the `github_action_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.new](#fn-app_service_source_controlgithub_action_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.timeouts.new](#fn-app_service_source_controltimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_service_source_control` resource into the root Terraform configuration.
@@ -313,8 +313,8 @@ Terraform sub block.
 
 **Args**:
   - `generate_workflow_file` (`bool`): Should the service generate the GitHub Action Workflow file. Defaults to `true` When `null`, the `generate_workflow_file` field will be omitted from the resulting object.
-  - `code_configuration` (`list[obj]`):  When `null`, the `code_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.code_configuration.new](#fn-githubactionconfigurationcodeconfigurationnew) constructor.
-  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.container_configuration.new](#fn-githubactionconfigurationcontainerconfigurationnew) constructor.
+  - `code_configuration` (`list[obj]`):  When `null`, the `code_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.code_configuration.new](#fn-github_action_configurationcode_configurationnew) constructor.
+  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.container_configuration.new](#fn-github_action_configurationcontainer_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `github_action_configuration` sub block.

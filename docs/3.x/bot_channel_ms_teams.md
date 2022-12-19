@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enable_calling` (`bool`):  When `null`, the `enable_calling` field will be omitted from the resulting object.
   - `location` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_ms_teams.timeouts.new](#fn-botchannelmsteamstimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_ms_teams.timeouts.new](#fn-bot_channel_ms_teamstimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.bot_channel_ms_teams.newAttrs` constructs a new object with attributes and blocks configured for the `bot_channel_ms_teams`
 Terraform resource.
 
-Unlike [azurerm.bot_channel_ms_teams.new](#fn-botchannelmsteamsnew), this function will not inject the `resource`
+Unlike [azurerm.bot_channel_ms_teams.new](#fn-bot_channel_ms_teamsnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `enable_calling` (`bool`):  When `null`, the `enable_calling` field will be omitted from the resulting object.
   - `location` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_ms_teams.timeouts.new](#fn-botchannelmsteamstimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_ms_teams.timeouts.new](#fn-bot_channel_ms_teamstimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bot_channel_ms_teams` resource into the root Terraform configuration.

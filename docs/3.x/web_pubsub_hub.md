@@ -61,8 +61,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `anonymous_connections_enabled` (`bool`):  When `null`, the `anonymous_connections_enabled` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `web_pubsub_id` (`string`): 
-  - `event_handler` (`list[obj]`):  When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-webpubsubhubeventhandlernew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-webpubsubhubtimeoutsnew) constructor.
+  - `event_handler` (`list[obj]`):  When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-web_pubsub_hubevent_handlernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-web_pubsub_hubtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -78,7 +78,7 @@ newAttrs()
 `azurerm.web_pubsub_hub.newAttrs` constructs a new object with attributes and blocks configured for the `web_pubsub_hub`
 Terraform resource.
 
-Unlike [azurerm.web_pubsub_hub.new](#fn-webpubsubhubnew), this function will not inject the `resource`
+Unlike [azurerm.web_pubsub_hub.new](#fn-web_pubsub_hubnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,8 +89,8 @@ injecting into a complete block.
   - `anonymous_connections_enabled` (`bool`):  When `null`, the `anonymous_connections_enabled` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `web_pubsub_id` (`string`): 
-  - `event_handler` (`list[obj]`):  When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-webpubsubhubeventhandlernew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-webpubsubhubtimeoutsnew) constructor.
+  - `event_handler` (`list[obj]`):  When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-web_pubsub_hubevent_handlernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-web_pubsub_hubtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `web_pubsub_hub` resource into the root Terraform configuration.
@@ -237,7 +237,7 @@ Terraform sub block.
   - `system_events` (`list`):  When `null`, the `system_events` field will be omitted from the resulting object.
   - `url_template` (`string`): 
   - `user_event_pattern` (`string`):  When `null`, the `user_event_pattern` field will be omitted from the resulting object.
-  - `auth` (`list[obj]`):  When `null`, the `auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.auth.new](#fn-eventhandlerauthnew) constructor.
+  - `auth` (`list[obj]`):  When `null`, the `auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.auth.new](#fn-event_handlerauthnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `event_handler` sub block.

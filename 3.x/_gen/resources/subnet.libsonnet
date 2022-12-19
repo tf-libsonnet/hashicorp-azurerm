@@ -3,7 +3,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='subnet', url='', help='`subnet` represents the `azurerm_subnet` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   delegation:: {
-    '#new':: d.fn(help='\n`azurerm.subnet.delegation.new` constructs a new object with attributes and blocks configured for the `delegation`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): \n  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservicedelegationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `delegation` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.subnet.delegation.new` constructs a new object with attributes and blocks configured for the `delegation`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): \n  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservice_delegationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `delegation` sub block.\n', args=[]),
     new(
       name,
       service_delegation=null

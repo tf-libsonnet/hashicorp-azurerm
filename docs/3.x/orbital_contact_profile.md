@@ -75,8 +75,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network_configuration_subnet_id` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-orbitalcontactprofilelinksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-orbitalcontactprofiletimeoutsnew) constructor.
+  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-orbital_contact_profilelinksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-orbital_contact_profiletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `azurerm.orbital_contact_profile.newAttrs` constructs a new object with attributes and blocks configured for the `orbital_contact_profile`
 Terraform resource.
 
-Unlike [azurerm.orbital_contact_profile.new](#fn-orbitalcontactprofilenew), this function will not inject the `resource`
+Unlike [azurerm.orbital_contact_profile.new](#fn-orbital_contact_profilenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -109,8 +109,8 @@ injecting into a complete block.
   - `network_configuration_subnet_id` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-orbitalcontactprofilelinksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-orbitalcontactprofiletimeoutsnew) constructor.
+  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-orbital_contact_profilelinksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-orbital_contact_profiletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `orbital_contact_profile` resource into the root Terraform configuration.
@@ -381,7 +381,7 @@ Terraform sub block.
   - `demodulation_configuration` (`string`):  When `null`, the `demodulation_configuration` field will be omitted from the resulting object.
   - `modulation_configuration` (`string`):  When `null`, the `modulation_configuration` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `end_point` (`list[obj]`):  When `null`, the `end_point` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.end_point.new](#fn-channelsendpointnew) constructor.
+  - `end_point` (`list[obj]`):  When `null`, the `end_point` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.end_point.new](#fn-channelsend_pointnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `channels` sub block.

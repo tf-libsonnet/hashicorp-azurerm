@@ -81,11 +81,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `initial_replica_set` (`list[obj]`):  When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-activedirectorydomainserviceinitialreplicasetnew) constructor.
-  - `notifications` (`list[obj]`):  When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-activedirectorydomainservicenotificationsnew) constructor.
-  - `secure_ldap` (`list[obj]`):  When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-activedirectorydomainservicesecureldapnew) constructor.
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-activedirectorydomainservicesecuritynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-activedirectorydomainservicetimeoutsnew) constructor.
+  - `initial_replica_set` (`list[obj]`):  When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-active_directory_domain_serviceinitial_replica_setnew) constructor.
+  - `notifications` (`list[obj]`):  When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-active_directory_domain_servicenotificationsnew) constructor.
+  - `secure_ldap` (`list[obj]`):  When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-active_directory_domain_servicesecure_ldapnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-active_directory_domain_servicesecuritynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-active_directory_domain_servicetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `azurerm.active_directory_domain_service.newAttrs` constructs a new object with attributes and blocks configured for the `active_directory_domain_service`
 Terraform resource.
 
-Unlike [azurerm.active_directory_domain_service.new](#fn-activedirectorydomainservicenew), this function will not inject the `resource`
+Unlike [azurerm.active_directory_domain_service.new](#fn-active_directory_domain_servicenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -117,11 +117,11 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `initial_replica_set` (`list[obj]`):  When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-activedirectorydomainserviceinitialreplicasetnew) constructor.
-  - `notifications` (`list[obj]`):  When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-activedirectorydomainservicenotificationsnew) constructor.
-  - `secure_ldap` (`list[obj]`):  When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-activedirectorydomainservicesecureldapnew) constructor.
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-activedirectorydomainservicesecuritynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-activedirectorydomainservicetimeoutsnew) constructor.
+  - `initial_replica_set` (`list[obj]`):  When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-active_directory_domain_serviceinitial_replica_setnew) constructor.
+  - `notifications` (`list[obj]`):  When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-active_directory_domain_servicenotificationsnew) constructor.
+  - `secure_ldap` (`list[obj]`):  When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-active_directory_domain_servicesecure_ldapnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-active_directory_domain_servicesecuritynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-active_directory_domain_servicetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `active_directory_domain_service` resource into the root Terraform configuration.

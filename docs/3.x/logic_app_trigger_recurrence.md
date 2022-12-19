@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-logicapptriggerrecurrenceschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-logicapptriggerrecurrencetimeoutsnew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-logic_app_trigger_recurrenceschedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-logic_app_trigger_recurrencetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `azurerm.logic_app_trigger_recurrence.newAttrs` constructs a new object with attributes and blocks configured for the `logic_app_trigger_recurrence`
 Terraform resource.
 
-Unlike [azurerm.logic_app_trigger_recurrence.new](#fn-logicapptriggerrecurrencenew), this function will not inject the `resource`
+Unlike [azurerm.logic_app_trigger_recurrence.new](#fn-logic_app_trigger_recurrencenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -96,8 +96,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-logicapptriggerrecurrenceschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-logicapptriggerrecurrencetimeoutsnew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-logic_app_trigger_recurrenceschedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-logic_app_trigger_recurrencetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_trigger_recurrence` resource into the root Terraform configuration.

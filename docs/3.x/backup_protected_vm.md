@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `recovery_vault_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `source_vm_id` (`string`):  When `null`, the `source_vm_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_protected_vm.timeouts.new](#fn-backupprotectedvmtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_protected_vm.timeouts.new](#fn-backup_protected_vmtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.backup_protected_vm.newAttrs` constructs a new object with attributes and blocks configured for the `backup_protected_vm`
 Terraform resource.
 
-Unlike [azurerm.backup_protected_vm.new](#fn-backupprotectedvmnew), this function will not inject the `resource`
+Unlike [azurerm.backup_protected_vm.new](#fn-backup_protected_vmnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `recovery_vault_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `source_vm_id` (`string`):  When `null`, the `source_vm_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_protected_vm.timeouts.new](#fn-backupprotectedvmtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_protected_vm.timeouts.new](#fn-backup_protected_vmtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `backup_protected_vm` resource into the root Terraform configuration.

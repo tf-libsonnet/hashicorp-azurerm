@@ -83,12 +83,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `frontend_private` (`list[obj]`):  When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-nginxdeploymentfrontendprivatenew) constructor.
-  - `frontend_public` (`list[obj]`):  When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-nginxdeploymentfrontendpublicnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-nginxdeploymentidentitynew) constructor.
-  - `logging_storage_account` (`list[obj]`):  When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-nginxdeploymentloggingstorageaccountnew) constructor.
-  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-nginxdeploymentnetworkinterfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-nginxdeploymenttimeoutsnew) constructor.
+  - `frontend_private` (`list[obj]`):  When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-nginx_deploymentfrontend_privatenew) constructor.
+  - `frontend_public` (`list[obj]`):  When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-nginx_deploymentfrontend_publicnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-nginx_deploymentidentitynew) constructor.
+  - `logging_storage_account` (`list[obj]`):  When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-nginx_deploymentlogging_storage_accountnew) constructor.
+  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-nginx_deploymentnetwork_interfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-nginx_deploymenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ newAttrs()
 `azurerm.nginx_deployment.newAttrs` constructs a new object with attributes and blocks configured for the `nginx_deployment`
 Terraform resource.
 
-Unlike [azurerm.nginx_deployment.new](#fn-nginxdeploymentnew), this function will not inject the `resource`
+Unlike [azurerm.nginx_deployment.new](#fn-nginx_deploymentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -119,12 +119,12 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `frontend_private` (`list[obj]`):  When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-nginxdeploymentfrontendprivatenew) constructor.
-  - `frontend_public` (`list[obj]`):  When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-nginxdeploymentfrontendpublicnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-nginxdeploymentidentitynew) constructor.
-  - `logging_storage_account` (`list[obj]`):  When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-nginxdeploymentloggingstorageaccountnew) constructor.
-  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-nginxdeploymentnetworkinterfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-nginxdeploymenttimeoutsnew) constructor.
+  - `frontend_private` (`list[obj]`):  When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-nginx_deploymentfrontend_privatenew) constructor.
+  - `frontend_public` (`list[obj]`):  When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-nginx_deploymentfrontend_publicnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-nginx_deploymentidentitynew) constructor.
+  - `logging_storage_account` (`list[obj]`):  When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-nginx_deploymentlogging_storage_accountnew) constructor.
+  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-nginx_deploymentnetwork_interfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-nginx_deploymenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `nginx_deployment` resource into the root Terraform configuration.

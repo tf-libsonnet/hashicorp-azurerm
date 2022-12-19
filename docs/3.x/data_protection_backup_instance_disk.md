@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `snapshot_resource_group_name` (`string`): 
   - `vault_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_instance_disk.timeouts.new](#fn-dataprotectionbackupinstancedisktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_instance_disk.timeouts.new](#fn-data_protection_backup_instance_disktimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.data_protection_backup_instance_disk.newAttrs` constructs a new object with attributes and blocks configured for the `data_protection_backup_instance_disk`
 Terraform resource.
 
-Unlike [azurerm.data_protection_backup_instance_disk.new](#fn-dataprotectionbackupinstancedisknew), this function will not inject the `resource`
+Unlike [azurerm.data_protection_backup_instance_disk.new](#fn-data_protection_backup_instance_disknew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `snapshot_resource_group_name` (`string`): 
   - `vault_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_instance_disk.timeouts.new](#fn-dataprotectionbackupinstancedisktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_instance_disk.timeouts.new](#fn-data_protection_backup_instance_disktimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_protection_backup_instance_disk` resource into the root Terraform configuration.

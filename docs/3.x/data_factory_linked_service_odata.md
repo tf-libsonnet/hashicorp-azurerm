@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `url` (`string`): 
-  - `basic_authentication` (`list[obj]`):  When `null`, the `basic_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.basic_authentication.new](#fn-datafactorylinkedserviceodatabasicauthenticationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.timeouts.new](#fn-datafactorylinkedserviceodatatimeoutsnew) constructor.
+  - `basic_authentication` (`list[obj]`):  When `null`, the `basic_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.basic_authentication.new](#fn-data_factory_linked_service_odatabasic_authenticationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.timeouts.new](#fn-data_factory_linked_service_odatatimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.data_factory_linked_service_odata.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_linked_service_odata`
 Terraform resource.
 
-Unlike [azurerm.data_factory_linked_service_odata.new](#fn-datafactorylinkedserviceodatanew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_linked_service_odata.new](#fn-data_factory_linked_service_odatanew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `url` (`string`): 
-  - `basic_authentication` (`list[obj]`):  When `null`, the `basic_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.basic_authentication.new](#fn-datafactorylinkedserviceodatabasicauthenticationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.timeouts.new](#fn-datafactorylinkedserviceodatatimeoutsnew) constructor.
+  - `basic_authentication` (`list[obj]`):  When `null`, the `basic_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.basic_authentication.new](#fn-data_factory_linked_service_odatabasic_authenticationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_odata.timeouts.new](#fn-data_factory_linked_service_odatatimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_odata` resource into the root Terraform configuration.

@@ -89,8 +89,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_owner_username` (`string`):  When `null`, the `resource_owner_username` field will be omitted from the resulting object.
   - `support_state` (`bool`):  When `null`, the `support_state` field will be omitted from the resulting object.
   - `token_endpoint` (`string`):  When `null`, the `token_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-apimanagementauthorizationservertimeoutsnew) constructor.
-  - `token_body_parameter` (`list[obj]`):  When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-apimanagementauthorizationservertokenbodyparameternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-api_management_authorization_servertimeoutsnew) constructor.
+  - `token_body_parameter` (`list[obj]`):  When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-api_management_authorization_servertoken_body_parameternew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,7 +106,7 @@ newAttrs()
 `azurerm.api_management_authorization_server.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_authorization_server`
 Terraform resource.
 
-Unlike [azurerm.api_management_authorization_server.new](#fn-apimanagementauthorizationservernew), this function will not inject the `resource`
+Unlike [azurerm.api_management_authorization_server.new](#fn-api_management_authorization_servernew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -132,8 +132,8 @@ injecting into a complete block.
   - `resource_owner_username` (`string`):  When `null`, the `resource_owner_username` field will be omitted from the resulting object.
   - `support_state` (`bool`):  When `null`, the `support_state` field will be omitted from the resulting object.
   - `token_endpoint` (`string`):  When `null`, the `token_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-apimanagementauthorizationservertimeoutsnew) constructor.
-  - `token_body_parameter` (`list[obj]`):  When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-apimanagementauthorizationservertokenbodyparameternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-api_management_authorization_servertimeoutsnew) constructor.
+  - `token_body_parameter` (`list[obj]`):  When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-api_management_authorization_servertoken_body_parameternew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_authorization_server` resource into the root Terraform configuration.

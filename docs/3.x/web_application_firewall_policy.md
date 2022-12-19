@@ -85,10 +85,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_rules` (`list[obj]`):  When `null`, the `custom_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.new](#fn-webapplicationfirewallpolicycustomrulesnew) constructor.
-  - `managed_rules` (`list[obj]`):  When `null`, the `managed_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.new](#fn-webapplicationfirewallpolicymanagedrulesnew) constructor.
-  - `policy_settings` (`list[obj]`):  When `null`, the `policy_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.new](#fn-webapplicationfirewallpolicypolicysettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.timeouts.new](#fn-webapplicationfirewallpolicytimeoutsnew) constructor.
+  - `custom_rules` (`list[obj]`):  When `null`, the `custom_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.new](#fn-web_application_firewall_policycustom_rulesnew) constructor.
+  - `managed_rules` (`list[obj]`):  When `null`, the `managed_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.new](#fn-web_application_firewall_policymanaged_rulesnew) constructor.
+  - `policy_settings` (`list[obj]`):  When `null`, the `policy_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.new](#fn-web_application_firewall_policypolicy_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.timeouts.new](#fn-web_application_firewall_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ newAttrs()
 `azurerm.web_application_firewall_policy.newAttrs` constructs a new object with attributes and blocks configured for the `web_application_firewall_policy`
 Terraform resource.
 
-Unlike [azurerm.web_application_firewall_policy.new](#fn-webapplicationfirewallpolicynew), this function will not inject the `resource`
+Unlike [azurerm.web_application_firewall_policy.new](#fn-web_application_firewall_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -116,10 +116,10 @@ injecting into a complete block.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_rules` (`list[obj]`):  When `null`, the `custom_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.new](#fn-webapplicationfirewallpolicycustomrulesnew) constructor.
-  - `managed_rules` (`list[obj]`):  When `null`, the `managed_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.new](#fn-webapplicationfirewallpolicymanagedrulesnew) constructor.
-  - `policy_settings` (`list[obj]`):  When `null`, the `policy_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.new](#fn-webapplicationfirewallpolicypolicysettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.timeouts.new](#fn-webapplicationfirewallpolicytimeoutsnew) constructor.
+  - `custom_rules` (`list[obj]`):  When `null`, the `custom_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.new](#fn-web_application_firewall_policycustom_rulesnew) constructor.
+  - `managed_rules` (`list[obj]`):  When `null`, the `managed_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.new](#fn-web_application_firewall_policymanaged_rulesnew) constructor.
+  - `policy_settings` (`list[obj]`):  When `null`, the `policy_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.new](#fn-web_application_firewall_policypolicy_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.timeouts.new](#fn-web_application_firewall_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `web_application_firewall_policy` resource into the root Terraform configuration.
@@ -357,7 +357,7 @@ Terraform sub block.
   - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
   - `priority` (`number`): 
   - `rule_type` (`string`): 
-  - `match_conditions` (`list[obj]`):  When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-customrulesmatchconditionsnew) constructor.
+  - `match_conditions` (`list[obj]`):  When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-custom_rulesmatch_conditionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom_rules` sub block.
@@ -384,7 +384,7 @@ Terraform sub block.
   - `negation_condition` (`bool`):  When `null`, the `negation_condition` field will be omitted from the resulting object.
   - `operator` (`string`): 
   - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
-  - `match_variables` (`list[obj]`):  When `null`, the `match_variables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.match_variables.new](#fn-matchconditionsmatchvariablesnew) constructor.
+  - `match_variables` (`list[obj]`):  When `null`, the `match_variables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.match_variables.new](#fn-match_conditionsmatch_variablesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `match_conditions` sub block.
@@ -431,8 +431,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.exclusion.new](#fn-managedrulesexclusionnew) constructor.
-  - `managed_rule_set` (`list[obj]`):  When `null`, the `managed_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.managed_rule_set.new](#fn-managedrulesmanagedrulesetnew) constructor.
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.exclusion.new](#fn-managed_rulesexclusionnew) constructor.
+  - `managed_rule_set` (`list[obj]`):  When `null`, the `managed_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.managed_rule_set.new](#fn-managed_rulesmanaged_rule_setnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `managed_rules` sub block.
@@ -458,7 +458,7 @@ Terraform sub block.
   - `match_variable` (`string`): 
   - `selector` (`string`): 
   - `selector_match_operator` (`string`): 
-  - `excluded_rule_set` (`list[obj]`):  When `null`, the `excluded_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.exclusion.excluded_rule_set.new](#fn-exclusionexcludedrulesetnew) constructor.
+  - `excluded_rule_set` (`list[obj]`):  When `null`, the `excluded_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.exclusion.excluded_rule_set.new](#fn-exclusionexcluded_rule_setnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `exclusion` sub block.
@@ -483,7 +483,7 @@ Terraform sub block.
 **Args**:
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `rule_group` (`list[obj]`):  When `null`, the `rule_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.exclusion.excluded_rule_set.rule_group.new](#fn-excludedrulesetrulegroupnew) constructor.
+  - `rule_group` (`list[obj]`):  When `null`, the `rule_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.exclusion.excluded_rule_set.rule_group.new](#fn-excluded_rule_setrule_groupnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `excluded_rule_set` sub block.
@@ -532,7 +532,7 @@ Terraform sub block.
 **Args**:
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
   - `version` (`string`): 
-  - `rule_group_override` (`list[obj]`):  When `null`, the `rule_group_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.managed_rule_set.rule_group_override.new](#fn-managedrulesetrulegroupoverridenew) constructor.
+  - `rule_group_override` (`list[obj]`):  When `null`, the `rule_group_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.managed_rule_set.rule_group_override.new](#fn-managed_rule_setrule_group_overridenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `managed_rule_set` sub block.
@@ -557,7 +557,7 @@ Terraform sub block.
 **Args**:
   - `disabled_rules` (`list`):  When `null`, the `disabled_rules` field will be omitted from the resulting object.
   - `rule_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.managed_rule_set.rule_group_override.rule.new](#fn-rulegroupoverriderulenew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.managed_rules.managed_rule_set.rule_group_override.rule.new](#fn-rule_group_overriderulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule_group_override` sub block.

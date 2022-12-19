@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `namespace_id` (`string`): 
   - `schema_compatibility` (`string`): 
   - `schema_type` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_schema_group.timeouts.new](#fn-eventhubnamespaceschemagrouptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_schema_group.timeouts.new](#fn-eventhub_namespace_schema_grouptimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.eventhub_namespace_schema_group.newAttrs` constructs a new object with attributes and blocks configured for the `eventhub_namespace_schema_group`
 Terraform resource.
 
-Unlike [azurerm.eventhub_namespace_schema_group.new](#fn-eventhubnamespaceschemagroupnew), this function will not inject the `resource`
+Unlike [azurerm.eventhub_namespace_schema_group.new](#fn-eventhub_namespace_schema_groupnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `namespace_id` (`string`): 
   - `schema_compatibility` (`string`): 
   - `schema_type` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_schema_group.timeouts.new](#fn-eventhubnamespaceschemagrouptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_schema_group.timeouts.new](#fn-eventhub_namespace_schema_grouptimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `eventhub_namespace_schema_group` resource into the root Terraform configuration.

@@ -67,8 +67,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `queries` (`obj`):  When `null`, the `queries` field will be omitted from the resulting object.
   - `uri` (`string`): 
-  - `run_after` (`list[obj]`):  When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-logicappactionhttprunafternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-logicappactionhttptimeoutsnew) constructor.
+  - `run_after` (`list[obj]`):  When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-logic_app_action_httprun_afternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-logic_app_action_httptimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `azurerm.logic_app_action_http.newAttrs` constructs a new object with attributes and blocks configured for the `logic_app_action_http`
 Terraform resource.
 
-Unlike [azurerm.logic_app_action_http.new](#fn-logicappactionhttpnew), this function will not inject the `resource`
+Unlike [azurerm.logic_app_action_http.new](#fn-logic_app_action_httpnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `queries` (`obj`):  When `null`, the `queries` field will be omitted from the resulting object.
   - `uri` (`string`): 
-  - `run_after` (`list[obj]`):  When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-logicappactionhttprunafternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-logicappactionhttptimeoutsnew) constructor.
+  - `run_after` (`list[obj]`):  When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-logic_app_action_httprun_afternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-logic_app_action_httptimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_action_http` resource into the root Terraform configuration.

@@ -77,9 +77,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_wan_id` (`string`): 
-  - `link` (`list[obj]`):  When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-vpnsitelinknew) constructor.
-  - `o365_policy` (`list[obj]`):  When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-vpnsiteo365policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-vpnsitetimeoutsnew) constructor.
+  - `link` (`list[obj]`):  When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-vpn_sitelinknew) constructor.
+  - `o365_policy` (`list[obj]`):  When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-vpn_siteo365_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-vpn_sitetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,7 +95,7 @@ newAttrs()
 `azurerm.vpn_site.newAttrs` constructs a new object with attributes and blocks configured for the `vpn_site`
 Terraform resource.
 
-Unlike [azurerm.vpn_site.new](#fn-vpnsitenew), this function will not inject the `resource`
+Unlike [azurerm.vpn_site.new](#fn-vpn_sitenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,9 +111,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_wan_id` (`string`): 
-  - `link` (`list[obj]`):  When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-vpnsitelinknew) constructor.
-  - `o365_policy` (`list[obj]`):  When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-vpnsiteo365policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-vpnsitetimeoutsnew) constructor.
+  - `link` (`list[obj]`):  When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-vpn_sitelinknew) constructor.
+  - `o365_policy` (`list[obj]`):  When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-vpn_siteo365_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-vpn_sitetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpn_site` resource into the root Terraform configuration.
@@ -426,7 +426,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-o365policytrafficcategorynew) constructor.
+  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-o365_policytraffic_categorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `o365_policy` sub block.

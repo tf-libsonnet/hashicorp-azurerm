@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `file_path` (`string`):  When `null`, the `file_path` field will be omitted from the resulting object.
   - `folder_path` (`string`):  When `null`, the `folder_path` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.storage_account.new](#fn-datasharedatasetblobstoragestorageaccountnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.timeouts.new](#fn-datasharedatasetblobstoragetimeoutsnew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.storage_account.new](#fn-data_share_dataset_blob_storagestorage_accountnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.timeouts.new](#fn-data_share_dataset_blob_storagetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.data_share_dataset_blob_storage.newAttrs` constructs a new object with attributes and blocks configured for the `data_share_dataset_blob_storage`
 Terraform resource.
 
-Unlike [azurerm.data_share_dataset_blob_storage.new](#fn-datasharedatasetblobstoragenew), this function will not inject the `resource`
+Unlike [azurerm.data_share_dataset_blob_storage.new](#fn-data_share_dataset_blob_storagenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `file_path` (`string`):  When `null`, the `file_path` field will be omitted from the resulting object.
   - `folder_path` (`string`):  When `null`, the `folder_path` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.storage_account.new](#fn-datasharedatasetblobstoragestorageaccountnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.timeouts.new](#fn-datasharedatasetblobstoragetimeoutsnew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.storage_account.new](#fn-data_share_dataset_blob_storagestorage_accountnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share_dataset_blob_storage.timeouts.new](#fn-data_share_dataset_blob_storagetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_share_dataset_blob_storage` resource into the root Terraform configuration.

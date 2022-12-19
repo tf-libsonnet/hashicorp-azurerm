@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `container_network_interface` (`list[obj]`):  When `null`, the `container_network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.new](#fn-networkprofilecontainernetworkinterfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.timeouts.new](#fn-networkprofiletimeoutsnew) constructor.
+  - `container_network_interface` (`list[obj]`):  When `null`, the `container_network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.new](#fn-network_profilecontainer_network_interfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.timeouts.new](#fn-network_profiletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.network_profile.newAttrs` constructs a new object with attributes and blocks configured for the `network_profile`
 Terraform resource.
 
-Unlike [azurerm.network_profile.new](#fn-networkprofilenew), this function will not inject the `resource`
+Unlike [azurerm.network_profile.new](#fn-network_profilenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -92,8 +92,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `container_network_interface` (`list[obj]`):  When `null`, the `container_network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.new](#fn-networkprofilecontainernetworkinterfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.timeouts.new](#fn-networkprofiletimeoutsnew) constructor.
+  - `container_network_interface` (`list[obj]`):  When `null`, the `container_network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.new](#fn-network_profilecontainer_network_interfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.timeouts.new](#fn-network_profiletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_profile` resource into the root Terraform configuration.
@@ -254,7 +254,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): 
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.ip_configuration.new](#fn-containernetworkinterfaceipconfigurationnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.ip_configuration.new](#fn-container_network_interfaceip_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `container_network_interface` sub block.

@@ -73,9 +73,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `guest_identity` (`list[obj]`):  When `null`, the `guest_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.guest_identity.new](#fn-logicappintegrationaccountagreementguestidentitynew) constructor.
-  - `host_identity` (`list[obj]`):  When `null`, the `host_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.host_identity.new](#fn-logicappintegrationaccountagreementhostidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.timeouts.new](#fn-logicappintegrationaccountagreementtimeoutsnew) constructor.
+  - `guest_identity` (`list[obj]`):  When `null`, the `guest_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.guest_identity.new](#fn-logic_app_integration_account_agreementguest_identitynew) constructor.
+  - `host_identity` (`list[obj]`):  When `null`, the `host_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.host_identity.new](#fn-logic_app_integration_account_agreementhost_identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.timeouts.new](#fn-logic_app_integration_account_agreementtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `azurerm.logic_app_integration_account_agreement.newAttrs` constructs a new object with attributes and blocks configured for the `logic_app_integration_account_agreement`
 Terraform resource.
 
-Unlike [azurerm.logic_app_integration_account_agreement.new](#fn-logicappintegrationaccountagreementnew), this function will not inject the `resource`
+Unlike [azurerm.logic_app_integration_account_agreement.new](#fn-logic_app_integration_account_agreementnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,9 +107,9 @@ injecting into a complete block.
   - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `guest_identity` (`list[obj]`):  When `null`, the `guest_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.guest_identity.new](#fn-logicappintegrationaccountagreementguestidentitynew) constructor.
-  - `host_identity` (`list[obj]`):  When `null`, the `host_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.host_identity.new](#fn-logicappintegrationaccountagreementhostidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.timeouts.new](#fn-logicappintegrationaccountagreementtimeoutsnew) constructor.
+  - `guest_identity` (`list[obj]`):  When `null`, the `guest_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.guest_identity.new](#fn-logic_app_integration_account_agreementguest_identitynew) constructor.
+  - `host_identity` (`list[obj]`):  When `null`, the `host_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.host_identity.new](#fn-logic_app_integration_account_agreementhost_identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_agreement.timeouts.new](#fn-logic_app_integration_account_agreementtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_integration_account_agreement` resource into the root Terraform configuration.

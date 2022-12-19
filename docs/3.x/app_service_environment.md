@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cluster_setting` (`list[obj]`):  When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.cluster_setting.new](#fn-appserviceenvironmentclustersettingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.timeouts.new](#fn-appserviceenvironmenttimeoutsnew) constructor.
+  - `cluster_setting` (`list[obj]`):  When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.cluster_setting.new](#fn-app_service_environmentcluster_settingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.timeouts.new](#fn-app_service_environmenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.app_service_environment.newAttrs` constructs a new object with attributes and blocks configured for the `app_service_environment`
 Terraform resource.
 
-Unlike [azurerm.app_service_environment.new](#fn-appserviceenvironmentnew), this function will not inject the `resource`
+Unlike [azurerm.app_service_environment.new](#fn-app_service_environmentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cluster_setting` (`list[obj]`):  When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.cluster_setting.new](#fn-appserviceenvironmentclustersettingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.timeouts.new](#fn-appserviceenvironmenttimeoutsnew) constructor.
+  - `cluster_setting` (`list[obj]`):  When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.cluster_setting.new](#fn-app_service_environmentcluster_settingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment.timeouts.new](#fn-app_service_environmenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_service_environment` resource into the root Terraform configuration.

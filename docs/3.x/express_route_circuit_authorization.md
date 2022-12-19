@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `express_route_circuit_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_authorization.timeouts.new](#fn-expressroutecircuitauthorizationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_authorization.timeouts.new](#fn-express_route_circuit_authorizationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `azurerm.express_route_circuit_authorization.newAttrs` constructs a new object with attributes and blocks configured for the `express_route_circuit_authorization`
 Terraform resource.
 
-Unlike [azurerm.express_route_circuit_authorization.new](#fn-expressroutecircuitauthorizationnew), this function will not inject the `resource`
+Unlike [azurerm.express_route_circuit_authorization.new](#fn-express_route_circuit_authorizationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `express_route_circuit_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_authorization.timeouts.new](#fn-expressroutecircuitauthorizationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_authorization.timeouts.new](#fn-express_route_circuit_authorizationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_circuit_authorization` resource into the root Terraform configuration.

@@ -75,7 +75,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `probe_id` (`string`):  When `null`, the `probe_id` field will be omitted from the resulting object.
   - `protocol` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_rule.timeouts.new](#fn-lbruletimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_rule.timeouts.new](#fn-lb_ruletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `azurerm.lb_rule.newAttrs` constructs a new object with attributes and blocks configured for the `lb_rule`
 Terraform resource.
 
-Unlike [azurerm.lb_rule.new](#fn-lbrulenew), this function will not inject the `resource`
+Unlike [azurerm.lb_rule.new](#fn-lb_rulenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -112,7 +112,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `probe_id` (`string`):  When `null`, the `probe_id` field will be omitted from the resulting object.
   - `protocol` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_rule.timeouts.new](#fn-lbruletimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_rule.timeouts.new](#fn-lb_ruletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `lb_rule` resource into the root Terraform configuration.

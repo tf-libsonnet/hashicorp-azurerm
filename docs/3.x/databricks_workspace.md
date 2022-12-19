@@ -77,8 +77,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_parameters` (`list[obj]`):  When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-databricksworkspacecustomparametersnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-databricksworkspacetimeoutsnew) constructor.
+  - `custom_parameters` (`list[obj]`):  When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-databricks_workspacecustom_parametersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-databricks_workspacetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `azurerm.databricks_workspace.newAttrs` constructs a new object with attributes and blocks configured for the `databricks_workspace`
 Terraform resource.
 
-Unlike [azurerm.databricks_workspace.new](#fn-databricksworkspacenew), this function will not inject the `resource`
+Unlike [azurerm.databricks_workspace.new](#fn-databricks_workspacenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -114,8 +114,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_parameters` (`list[obj]`):  When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-databricksworkspacecustomparametersnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-databricksworkspacetimeoutsnew) constructor.
+  - `custom_parameters` (`list[obj]`):  When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-databricks_workspacecustom_parametersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-databricks_workspacetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `databricks_workspace` resource into the root Terraform configuration.

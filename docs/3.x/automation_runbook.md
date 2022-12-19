@@ -89,9 +89,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `runbook_type` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `draft` (`list[obj]`):  When `null`, the `draft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.new](#fn-automationrunbookdraftnew) constructor.
-  - `publish_content_link` (`list[obj]`):  When `null`, the `publish_content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.new](#fn-automationrunbookpublishcontentlinknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.timeouts.new](#fn-automationrunbooktimeoutsnew) constructor.
+  - `draft` (`list[obj]`):  When `null`, the `draft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.new](#fn-automation_runbookdraftnew) constructor.
+  - `publish_content_link` (`list[obj]`):  When `null`, the `publish_content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.new](#fn-automation_runbookpublish_content_linknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.timeouts.new](#fn-automation_runbooktimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,7 +107,7 @@ newAttrs()
 `azurerm.automation_runbook.newAttrs` constructs a new object with attributes and blocks configured for the `automation_runbook`
 Terraform resource.
 
-Unlike [azurerm.automation_runbook.new](#fn-automationrunbooknew), this function will not inject the `resource`
+Unlike [azurerm.automation_runbook.new](#fn-automation_runbooknew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -127,9 +127,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `runbook_type` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `draft` (`list[obj]`):  When `null`, the `draft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.new](#fn-automationrunbookdraftnew) constructor.
-  - `publish_content_link` (`list[obj]`):  When `null`, the `publish_content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.new](#fn-automationrunbookpublishcontentlinknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.timeouts.new](#fn-automationrunbooktimeoutsnew) constructor.
+  - `draft` (`list[obj]`):  When `null`, the `draft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.new](#fn-automation_runbookdraftnew) constructor.
+  - `publish_content_link` (`list[obj]`):  When `null`, the `publish_content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.new](#fn-automation_runbookpublish_content_linknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.timeouts.new](#fn-automation_runbooktimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_runbook` resource into the root Terraform configuration.
@@ -456,7 +456,7 @@ Terraform sub block.
 **Args**:
   - `edit_mode_enabled` (`bool`):  When `null`, the `edit_mode_enabled` field will be omitted from the resulting object.
   - `output_types` (`list`):  When `null`, the `output_types` field will be omitted from the resulting object.
-  - `content_link` (`list[obj]`):  When `null`, the `content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.new](#fn-draftcontentlinknew) constructor.
+  - `content_link` (`list[obj]`):  When `null`, the `content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.new](#fn-draftcontent_linknew) constructor.
   - `parameters` (`list[obj]`):  When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.parameters.new](#fn-draftparametersnew) constructor.
 
 **Returns**:
@@ -482,7 +482,7 @@ Terraform sub block.
 **Args**:
   - `uri` (`string`): 
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.hash.new](#fn-contentlinkhashnew) constructor.
+  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.hash.new](#fn-content_linkhashnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `content_link` sub block.
@@ -558,7 +558,7 @@ Terraform sub block.
 **Args**:
   - `uri` (`string`): 
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.hash.new](#fn-publishcontentlinkhashnew) constructor.
+  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.hash.new](#fn-publish_content_linkhashnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `publish_content_link` sub block.

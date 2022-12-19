@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `content_embedded` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_dsc_nodeconfiguration.timeouts.new](#fn-automationdscnodeconfigurationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_dsc_nodeconfiguration.timeouts.new](#fn-automation_dsc_nodeconfigurationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.automation_dsc_nodeconfiguration.newAttrs` constructs a new object with attributes and blocks configured for the `automation_dsc_nodeconfiguration`
 Terraform resource.
 
-Unlike [azurerm.automation_dsc_nodeconfiguration.new](#fn-automationdscnodeconfigurationnew), this function will not inject the `resource`
+Unlike [azurerm.automation_dsc_nodeconfiguration.new](#fn-automation_dsc_nodeconfigurationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `content_embedded` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_dsc_nodeconfiguration.timeouts.new](#fn-automationdscnodeconfigurationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_dsc_nodeconfiguration.timeouts.new](#fn-automation_dsc_nodeconfigurationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_dsc_nodeconfiguration` resource into the root Terraform configuration.

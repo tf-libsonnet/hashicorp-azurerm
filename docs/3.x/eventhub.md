@@ -67,7 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `partition_count` (`number`): 
   - `resource_group_name` (`string`): 
   - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-eventhubcapturedescriptionnew) constructor.
+  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-eventhubcapture_descriptionnew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-eventhubtimeoutsnew) constructor.
 
 **Returns**:
@@ -98,7 +98,7 @@ injecting into a complete block.
   - `partition_count` (`number`): 
   - `resource_group_name` (`string`): 
   - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-eventhubcapturedescriptionnew) constructor.
+  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-eventhubcapture_descriptionnew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-eventhubtimeoutsnew) constructor.
 
 **Returns**:
@@ -296,7 +296,7 @@ Terraform sub block.
   - `interval_in_seconds` (`number`):  When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
   - `size_limit_in_bytes` (`number`):  When `null`, the `size_limit_in_bytes` field will be omitted from the resulting object.
   - `skip_empty_archives` (`bool`):  When `null`, the `skip_empty_archives` field will be omitted from the resulting object.
-  - `destination` (`list[obj]`):  When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.destination.new](#fn-capturedescriptiondestinationnew) constructor.
+  - `destination` (`list[obj]`):  When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.destination.new](#fn-capture_descriptiondestinationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `capture_description` sub block.

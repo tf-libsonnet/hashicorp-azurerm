@@ -71,8 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `publish_runbook_enabled` (`bool`):  When `null`, the `publish_runbook_enabled` field will be omitted from the resulting object.
   - `repository_url` (`string`): 
   - `source_control_type` (`string`): 
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-automationsourcecontrolsecuritynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-automationsourcecontroltimeoutsnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-automation_source_controlsecuritynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-automation_source_controltimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,7 +88,7 @@ newAttrs()
 `azurerm.automation_source_control.newAttrs` constructs a new object with attributes and blocks configured for the `automation_source_control`
 Terraform resource.
 
-Unlike [azurerm.automation_source_control.new](#fn-automationsourcecontrolnew), this function will not inject the `resource`
+Unlike [azurerm.automation_source_control.new](#fn-automation_source_controlnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,8 +105,8 @@ injecting into a complete block.
   - `publish_runbook_enabled` (`bool`):  When `null`, the `publish_runbook_enabled` field will be omitted from the resulting object.
   - `repository_url` (`string`): 
   - `source_control_type` (`string`): 
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-automationsourcecontrolsecuritynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-automationsourcecontroltimeoutsnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-automation_source_controlsecuritynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-automation_source_controltimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_source_control` resource into the root Terraform configuration.

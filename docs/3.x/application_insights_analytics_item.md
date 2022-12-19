@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `scope` (`string`): 
   - `type` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_analytics_item.timeouts.new](#fn-applicationinsightsanalyticsitemtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_analytics_item.timeouts.new](#fn-application_insights_analytics_itemtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.application_insights_analytics_item.newAttrs` constructs a new object with attributes and blocks configured for the `application_insights_analytics_item`
 Terraform resource.
 
-Unlike [azurerm.application_insights_analytics_item.new](#fn-applicationinsightsanalyticsitemnew), this function will not inject the `resource`
+Unlike [azurerm.application_insights_analytics_item.new](#fn-application_insights_analytics_itemnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `scope` (`string`): 
   - `type` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_analytics_item.timeouts.new](#fn-applicationinsightsanalyticsitemtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_analytics_item.timeouts.new](#fn-application_insights_analytics_itemtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `application_insights_analytics_item` resource into the root Terraform configuration.

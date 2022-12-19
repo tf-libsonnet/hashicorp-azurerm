@@ -99,9 +99,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `scopes` (`list`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.new](#fn-monitoralertprocessingrulesuppressionconditionnew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.schedule.new](#fn-monitoralertprocessingrulesuppressionschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.timeouts.new](#fn-monitoralertprocessingrulesuppressiontimeoutsnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.new](#fn-monitor_alert_processing_rule_suppressionconditionnew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.schedule.new](#fn-monitor_alert_processing_rule_suppressionschedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.timeouts.new](#fn-monitor_alert_processing_rule_suppressiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -117,7 +117,7 @@ newAttrs()
 `azurerm.monitor_alert_processing_rule_suppression.newAttrs` constructs a new object with attributes and blocks configured for the `monitor_alert_processing_rule_suppression`
 Terraform resource.
 
-Unlike [azurerm.monitor_alert_processing_rule_suppression.new](#fn-monitoralertprocessingrulesuppressionnew), this function will not inject the `resource`
+Unlike [azurerm.monitor_alert_processing_rule_suppression.new](#fn-monitor_alert_processing_rule_suppressionnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -131,9 +131,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `scopes` (`list`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.new](#fn-monitoralertprocessingrulesuppressionconditionnew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.schedule.new](#fn-monitoralertprocessingrulesuppressionschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.timeouts.new](#fn-monitoralertprocessingrulesuppressiontimeoutsnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.new](#fn-monitor_alert_processing_rule_suppressionconditionnew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.schedule.new](#fn-monitor_alert_processing_rule_suppressionschedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.timeouts.new](#fn-monitor_alert_processing_rule_suppressiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_alert_processing_rule_suppression` resource into the root Terraform configuration.
@@ -362,17 +362,17 @@ Terraform sub block.
 
 
 **Args**:
-  - `alert_context` (`list[obj]`):  When `null`, the `alert_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.alert_context.new](#fn-conditionalertcontextnew) constructor.
-  - `alert_rule_id` (`list[obj]`):  When `null`, the `alert_rule_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.alert_rule_id.new](#fn-conditionalertruleidnew) constructor.
-  - `alert_rule_name` (`list[obj]`):  When `null`, the `alert_rule_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.alert_rule_name.new](#fn-conditionalertrulenamenew) constructor.
+  - `alert_context` (`list[obj]`):  When `null`, the `alert_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.alert_context.new](#fn-conditionalert_contextnew) constructor.
+  - `alert_rule_id` (`list[obj]`):  When `null`, the `alert_rule_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.alert_rule_id.new](#fn-conditionalert_rule_idnew) constructor.
+  - `alert_rule_name` (`list[obj]`):  When `null`, the `alert_rule_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.alert_rule_name.new](#fn-conditionalert_rule_namenew) constructor.
   - `description` (`list[obj]`):  When `null`, the `description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.description.new](#fn-conditiondescriptionnew) constructor.
-  - `monitor_condition` (`list[obj]`):  When `null`, the `monitor_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.monitor_condition.new](#fn-conditionmonitorconditionnew) constructor.
-  - `monitor_service` (`list[obj]`):  When `null`, the `monitor_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.monitor_service.new](#fn-conditionmonitorservicenew) constructor.
+  - `monitor_condition` (`list[obj]`):  When `null`, the `monitor_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.monitor_condition.new](#fn-conditionmonitor_conditionnew) constructor.
+  - `monitor_service` (`list[obj]`):  When `null`, the `monitor_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.monitor_service.new](#fn-conditionmonitor_servicenew) constructor.
   - `severity` (`list[obj]`):  When `null`, the `severity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.severity.new](#fn-conditionseveritynew) constructor.
-  - `signal_type` (`list[obj]`):  When `null`, the `signal_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.signal_type.new](#fn-conditionsignaltypenew) constructor.
-  - `target_resource` (`list[obj]`):  When `null`, the `target_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.target_resource.new](#fn-conditiontargetresourcenew) constructor.
-  - `target_resource_group` (`list[obj]`):  When `null`, the `target_resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.target_resource_group.new](#fn-conditiontargetresourcegroupnew) constructor.
-  - `target_resource_type` (`list[obj]`):  When `null`, the `target_resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.target_resource_type.new](#fn-conditiontargetresourcetypenew) constructor.
+  - `signal_type` (`list[obj]`):  When `null`, the `signal_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.signal_type.new](#fn-conditionsignal_typenew) constructor.
+  - `target_resource` (`list[obj]`):  When `null`, the `target_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.target_resource.new](#fn-conditiontarget_resourcenew) constructor.
+  - `target_resource_group` (`list[obj]`):  When `null`, the `target_resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.target_resource_group.new](#fn-conditiontarget_resource_groupnew) constructor.
+  - `target_resource_type` (`list[obj]`):  When `null`, the `target_resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_alert_processing_rule_suppression.condition.target_resource_type.new](#fn-conditiontarget_resource_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.

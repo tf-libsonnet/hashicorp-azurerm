@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `managed_disk_id` (`string`): 
   - `virtual_machine_id` (`string`): 
   - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_data_disk_attachment.timeouts.new](#fn-virtualmachinedatadiskattachmenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_data_disk_attachment.timeouts.new](#fn-virtual_machine_data_disk_attachmenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.virtual_machine_data_disk_attachment.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_machine_data_disk_attachment`
 Terraform resource.
 
-Unlike [azurerm.virtual_machine_data_disk_attachment.new](#fn-virtualmachinedatadiskattachmentnew), this function will not inject the `resource`
+Unlike [azurerm.virtual_machine_data_disk_attachment.new](#fn-virtual_machine_data_disk_attachmentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `managed_disk_id` (`string`): 
   - `virtual_machine_id` (`string`): 
   - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_data_disk_attachment.timeouts.new](#fn-virtualmachinedatadiskattachmenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_data_disk_attachment.timeouts.new](#fn-virtual_machine_data_disk_attachmenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_machine_data_disk_attachment` resource into the root Terraform configuration.

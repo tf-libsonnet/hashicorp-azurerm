@@ -95,10 +95,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-postgresqlflexibleserverauthenticationnew) constructor.
-  - `high_availability` (`list[obj]`):  When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-postgresqlflexibleserverhighavailabilitynew) constructor.
-  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-postgresqlflexibleservermaintenancewindownew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-postgresqlflexibleservertimeoutsnew) constructor.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-postgresql_flexible_serverauthenticationnew) constructor.
+  - `high_availability` (`list[obj]`):  When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-postgresql_flexible_serverhigh_availabilitynew) constructor.
+  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-postgresql_flexible_servermaintenance_windownew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-postgresql_flexible_servertimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -114,7 +114,7 @@ newAttrs()
 `azurerm.postgresql_flexible_server.newAttrs` constructs a new object with attributes and blocks configured for the `postgresql_flexible_server`
 Terraform resource.
 
-Unlike [azurerm.postgresql_flexible_server.new](#fn-postgresqlflexibleservernew), this function will not inject the `resource`
+Unlike [azurerm.postgresql_flexible_server.new](#fn-postgresql_flexible_servernew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -139,10 +139,10 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-postgresqlflexibleserverauthenticationnew) constructor.
-  - `high_availability` (`list[obj]`):  When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-postgresqlflexibleserverhighavailabilitynew) constructor.
-  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-postgresqlflexibleservermaintenancewindownew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-postgresqlflexibleservertimeoutsnew) constructor.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-postgresql_flexible_serverauthenticationnew) constructor.
+  - `high_availability` (`list[obj]`):  When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-postgresql_flexible_serverhigh_availabilitynew) constructor.
+  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-postgresql_flexible_servermaintenance_windownew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-postgresql_flexible_servertimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `postgresql_flexible_server` resource into the root Terraform configuration.

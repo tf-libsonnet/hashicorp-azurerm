@@ -83,9 +83,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `query_subscription_ids` (`list`):  When `null`, the `query_subscription_ids` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `additional_workspace` (`list[obj]`):  When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-iotsecuritysolutionadditionalworkspacenew) constructor.
-  - `recommendations_enabled` (`list[obj]`):  When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-iotsecuritysolutionrecommendationsenablednew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-iotsecuritysolutiontimeoutsnew) constructor.
+  - `additional_workspace` (`list[obj]`):  When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-iot_security_solutionadditional_workspacenew) constructor.
+  - `recommendations_enabled` (`list[obj]`):  When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-iot_security_solutionrecommendations_enablednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-iot_security_solutiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `azurerm.iot_security_solution.newAttrs` constructs a new object with attributes and blocks configured for the `iot_security_solution`
 Terraform resource.
 
-Unlike [azurerm.iot_security_solution.new](#fn-iotsecuritysolutionnew), this function will not inject the `resource`
+Unlike [azurerm.iot_security_solution.new](#fn-iot_security_solutionnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,9 +122,9 @@ injecting into a complete block.
   - `query_subscription_ids` (`list`):  When `null`, the `query_subscription_ids` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `additional_workspace` (`list[obj]`):  When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-iotsecuritysolutionadditionalworkspacenew) constructor.
-  - `recommendations_enabled` (`list[obj]`):  When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-iotsecuritysolutionrecommendationsenablednew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-iotsecuritysolutiontimeoutsnew) constructor.
+  - `additional_workspace` (`list[obj]`):  When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-iot_security_solutionadditional_workspacenew) constructor.
+  - `recommendations_enabled` (`list[obj]`):  When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-iot_security_solutionrecommendations_enablednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-iot_security_solutiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iot_security_solution` resource into the root Terraform configuration.

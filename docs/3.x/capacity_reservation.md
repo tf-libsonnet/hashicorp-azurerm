@@ -61,8 +61,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.sku.new](#fn-capacityreservationskunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.timeouts.new](#fn-capacityreservationtimeoutsnew) constructor.
+  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.sku.new](#fn-capacity_reservationskunew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.timeouts.new](#fn-capacity_reservationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -78,7 +78,7 @@ newAttrs()
 `azurerm.capacity_reservation.newAttrs` constructs a new object with attributes and blocks configured for the `capacity_reservation`
 Terraform resource.
 
-Unlike [azurerm.capacity_reservation.new](#fn-capacityreservationnew), this function will not inject the `resource`
+Unlike [azurerm.capacity_reservation.new](#fn-capacity_reservationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -90,8 +90,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.sku.new](#fn-capacityreservationskunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.timeouts.new](#fn-capacityreservationtimeoutsnew) constructor.
+  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.sku.new](#fn-capacity_reservationskunew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.capacity_reservation.timeouts.new](#fn-capacity_reservationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `capacity_reservation` resource into the root Terraform configuration.

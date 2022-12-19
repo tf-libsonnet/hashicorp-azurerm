@@ -73,8 +73,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `streaming_locator_id` (`string`):  When `null`, the `streaming_locator_id` field will be omitted from the resulting object.
   - `streaming_policy_name` (`string`): 
-  - `content_key` (`list[obj]`):  When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-mediastreaminglocatorcontentkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-mediastreaminglocatortimeoutsnew) constructor.
+  - `content_key` (`list[obj]`):  When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-media_streaming_locatorcontent_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-media_streaming_locatortimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `azurerm.media_streaming_locator.newAttrs` constructs a new object with attributes and blocks configured for the `media_streaming_locator`
 Terraform resource.
 
-Unlike [azurerm.media_streaming_locator.new](#fn-mediastreaminglocatornew), this function will not inject the `resource`
+Unlike [azurerm.media_streaming_locator.new](#fn-media_streaming_locatornew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -108,8 +108,8 @@ injecting into a complete block.
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `streaming_locator_id` (`string`):  When `null`, the `streaming_locator_id` field will be omitted from the resulting object.
   - `streaming_policy_name` (`string`): 
-  - `content_key` (`list[obj]`):  When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-mediastreaminglocatorcontentkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-mediastreaminglocatortimeoutsnew) constructor.
+  - `content_key` (`list[obj]`):  When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-media_streaming_locatorcontent_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-media_streaming_locatortimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_streaming_locator` resource into the root Terraform configuration.

@@ -61,9 +61,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `default_action` (`string`): 
   - `signalr_service_id` (`string`): 
-  - `private_endpoint` (`list[obj]`):  When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-signalrservicenetworkaclprivateendpointnew) constructor.
-  - `public_network` (`list[obj]`):  When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-signalrservicenetworkaclpublicnetworknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-signalrservicenetworkacltimeoutsnew) constructor.
+  - `private_endpoint` (`list[obj]`):  When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-signalr_service_network_aclprivate_endpointnew) constructor.
+  - `public_network` (`list[obj]`):  When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-signalr_service_network_aclpublic_networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-signalr_service_network_acltimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `azurerm.signalr_service_network_acl.newAttrs` constructs a new object with attributes and blocks configured for the `signalr_service_network_acl`
 Terraform resource.
 
-Unlike [azurerm.signalr_service_network_acl.new](#fn-signalrservicenetworkaclnew), this function will not inject the `resource`
+Unlike [azurerm.signalr_service_network_acl.new](#fn-signalr_service_network_aclnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,9 +89,9 @@ injecting into a complete block.
 **Args**:
   - `default_action` (`string`): 
   - `signalr_service_id` (`string`): 
-  - `private_endpoint` (`list[obj]`):  When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-signalrservicenetworkaclprivateendpointnew) constructor.
-  - `public_network` (`list[obj]`):  When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-signalrservicenetworkaclpublicnetworknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-signalrservicenetworkacltimeoutsnew) constructor.
+  - `private_endpoint` (`list[obj]`):  When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-signalr_service_network_aclprivate_endpointnew) constructor.
+  - `public_network` (`list[obj]`):  When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-signalr_service_network_aclpublic_networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-signalr_service_network_acltimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `signalr_service_network_acl` resource into the root Terraform configuration.

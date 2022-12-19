@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `template_data` (`string`): 
-  - `galleries` (`list[obj]`):  When `null`, the `galleries` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.galleries.new](#fn-applicationinsightsworkbooktemplategalleriesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.timeouts.new](#fn-applicationinsightsworkbooktemplatetimeoutsnew) constructor.
+  - `galleries` (`list[obj]`):  When `null`, the `galleries` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.galleries.new](#fn-application_insights_workbook_templategalleriesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.timeouts.new](#fn-application_insights_workbook_templatetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.application_insights_workbook_template.newAttrs` constructs a new object with attributes and blocks configured for the `application_insights_workbook_template`
 Terraform resource.
 
-Unlike [azurerm.application_insights_workbook_template.new](#fn-applicationinsightsworkbooktemplatenew), this function will not inject the `resource`
+Unlike [azurerm.application_insights_workbook_template.new](#fn-application_insights_workbook_templatenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `template_data` (`string`): 
-  - `galleries` (`list[obj]`):  When `null`, the `galleries` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.galleries.new](#fn-applicationinsightsworkbooktemplategalleriesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.timeouts.new](#fn-applicationinsightsworkbooktemplatetimeoutsnew) constructor.
+  - `galleries` (`list[obj]`):  When `null`, the `galleries` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.galleries.new](#fn-application_insights_workbook_templategalleriesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_workbook_template.timeouts.new](#fn-application_insights_workbook_templatetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `application_insights_workbook_template` resource into the root Terraform configuration.

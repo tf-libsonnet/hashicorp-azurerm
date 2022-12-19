@@ -59,8 +59,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `additional_data` (`obj`):  When `null`, the `additional_data` field will be omitted from the resulting object.
   - `assessment_policy_id` (`string`): 
   - `target_resource_id` (`string`): 
-  - `status` (`list[obj]`):  When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-securitycenterassessmentstatusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-securitycenterassessmenttimeoutsnew) constructor.
+  - `status` (`list[obj]`):  When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-security_center_assessmentstatusnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-security_center_assessmenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,7 +76,7 @@ newAttrs()
 `azurerm.security_center_assessment.newAttrs` constructs a new object with attributes and blocks configured for the `security_center_assessment`
 Terraform resource.
 
-Unlike [azurerm.security_center_assessment.new](#fn-securitycenterassessmentnew), this function will not inject the `resource`
+Unlike [azurerm.security_center_assessment.new](#fn-security_center_assessmentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -87,8 +87,8 @@ injecting into a complete block.
   - `additional_data` (`obj`):  When `null`, the `additional_data` field will be omitted from the resulting object.
   - `assessment_policy_id` (`string`): 
   - `target_resource_id` (`string`): 
-  - `status` (`list[obj]`):  When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-securitycenterassessmentstatusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-securitycenterassessmenttimeoutsnew) constructor.
+  - `status` (`list[obj]`):  When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-security_center_assessmentstatusnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-security_center_assessmenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `security_center_assessment` resource into the root Terraform configuration.

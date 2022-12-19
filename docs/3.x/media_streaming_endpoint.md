@@ -87,9 +87,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `scale_units` (`number`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `access_control` (`list[obj]`):  When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.new](#fn-mediastreamingendpointaccesscontrolnew) constructor.
-  - `cross_site_access_policy` (`list[obj]`):  When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.cross_site_access_policy.new](#fn-mediastreamingendpointcrosssiteaccesspolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.timeouts.new](#fn-mediastreamingendpointtimeoutsnew) constructor.
+  - `access_control` (`list[obj]`):  When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.new](#fn-media_streaming_endpointaccess_controlnew) constructor.
+  - `cross_site_access_policy` (`list[obj]`):  When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.cross_site_access_policy.new](#fn-media_streaming_endpointcross_site_access_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.timeouts.new](#fn-media_streaming_endpointtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,7 +105,7 @@ newAttrs()
 `azurerm.media_streaming_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `media_streaming_endpoint`
 Terraform resource.
 
-Unlike [azurerm.media_streaming_endpoint.new](#fn-mediastreamingendpointnew), this function will not inject the `resource`
+Unlike [azurerm.media_streaming_endpoint.new](#fn-media_streaming_endpointnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -126,9 +126,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `scale_units` (`number`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `access_control` (`list[obj]`):  When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.new](#fn-mediastreamingendpointaccesscontrolnew) constructor.
-  - `cross_site_access_policy` (`list[obj]`):  When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.cross_site_access_policy.new](#fn-mediastreamingendpointcrosssiteaccesspolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.timeouts.new](#fn-mediastreamingendpointtimeoutsnew) constructor.
+  - `access_control` (`list[obj]`):  When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.new](#fn-media_streaming_endpointaccess_controlnew) constructor.
+  - `cross_site_access_policy` (`list[obj]`):  When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.cross_site_access_policy.new](#fn-media_streaming_endpointcross_site_access_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.timeouts.new](#fn-media_streaming_endpointtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_streaming_endpoint` resource into the root Terraform configuration.
@@ -469,8 +469,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `akamai_signature_header_authentication_key` (`list[obj]`):  When `null`, the `akamai_signature_header_authentication_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.akamai_signature_header_authentication_key.new](#fn-accesscontrolakamaisignatureheaderauthenticationkeynew) constructor.
-  - `ip_allow` (`list[obj]`):  When `null`, the `ip_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.ip_allow.new](#fn-accesscontrolipallownew) constructor.
+  - `akamai_signature_header_authentication_key` (`list[obj]`):  When `null`, the `akamai_signature_header_authentication_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.akamai_signature_header_authentication_key.new](#fn-access_controlakamai_signature_header_authentication_keynew) constructor.
+  - `ip_allow` (`list[obj]`):  When `null`, the `ip_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.ip_allow.new](#fn-access_controlip_allownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `access_control` sub block.

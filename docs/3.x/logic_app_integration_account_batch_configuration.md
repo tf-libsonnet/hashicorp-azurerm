@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `release_criteria` (`list[obj]`):  When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-logicappintegrationaccountbatchconfigurationreleasecriterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-logicappintegrationaccountbatchconfigurationtimeoutsnew) constructor.
+  - `release_criteria` (`list[obj]`):  When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-logic_app_integration_account_batch_configurationrelease_criterianew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-logic_app_integration_account_batch_configurationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.logic_app_integration_account_batch_configuration.newAttrs` constructs a new object with attributes and blocks configured for the `logic_app_integration_account_batch_configuration`
 Terraform resource.
 
-Unlike [azurerm.logic_app_integration_account_batch_configuration.new](#fn-logicappintegrationaccountbatchconfigurationnew), this function will not inject the `resource`
+Unlike [azurerm.logic_app_integration_account_batch_configuration.new](#fn-logic_app_integration_account_batch_configurationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `release_criteria` (`list[obj]`):  When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-logicappintegrationaccountbatchconfigurationreleasecriterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-logicappintegrationaccountbatchconfigurationtimeoutsnew) constructor.
+  - `release_criteria` (`list[obj]`):  When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-logic_app_integration_account_batch_configurationrelease_criterianew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-logic_app_integration_account_batch_configurationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_integration_account_batch_configuration` resource into the root Terraform configuration.
@@ -278,7 +278,7 @@ Terraform sub block.
 **Args**:
   - `batch_size` (`number`):  When `null`, the `batch_size` field will be omitted from the resulting object.
   - `message_count` (`number`):  When `null`, the `message_count` field will be omitted from the resulting object.
-  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.new](#fn-releasecriteriarecurrencenew) constructor.
+  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.new](#fn-release_criteriarecurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `release_criteria` sub block.

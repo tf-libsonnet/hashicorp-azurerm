@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `managed_instance_id` (`string`): 
   - `object_id` (`string`): 
   - `tenant_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_active_directory_administrator.timeouts.new](#fn-mssqlmanagedinstanceactivedirectoryadministratortimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_active_directory_administrator.timeouts.new](#fn-mssql_managed_instance_active_directory_administratortimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.mssql_managed_instance_active_directory_administrator.newAttrs` constructs a new object with attributes and blocks configured for the `mssql_managed_instance_active_directory_administrator`
 Terraform resource.
 
-Unlike [azurerm.mssql_managed_instance_active_directory_administrator.new](#fn-mssqlmanagedinstanceactivedirectoryadministratornew), this function will not inject the `resource`
+Unlike [azurerm.mssql_managed_instance_active_directory_administrator.new](#fn-mssql_managed_instance_active_directory_administratornew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `managed_instance_id` (`string`): 
   - `object_id` (`string`): 
   - `tenant_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_active_directory_administrator.timeouts.new](#fn-mssqlmanagedinstanceactivedirectoryadministratortimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_active_directory_administrator.timeouts.new](#fn-mssql_managed_instance_active_directory_administratortimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_managed_instance_active_directory_administrator` resource into the root Terraform configuration.

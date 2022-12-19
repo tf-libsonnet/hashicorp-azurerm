@@ -77,8 +77,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.schema_column.new](#fn-datafactorydatasetazureblobschemacolumnnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.timeouts.new](#fn-datafactorydatasetazureblobtimeoutsnew) constructor.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.schema_column.new](#fn-data_factory_dataset_azure_blobschema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.timeouts.new](#fn-data_factory_dataset_azure_blobtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `azurerm.data_factory_dataset_azure_blob.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_dataset_azure_blob`
 Terraform resource.
 
-Unlike [azurerm.data_factory_dataset_azure_blob.new](#fn-datafactorydatasetazureblobnew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_dataset_azure_blob.new](#fn-data_factory_dataset_azure_blobnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -114,8 +114,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.schema_column.new](#fn-datafactorydatasetazureblobschemacolumnnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.timeouts.new](#fn-datafactorydatasetazureblobtimeoutsnew) constructor.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.schema_column.new](#fn-data_factory_dataset_azure_blobschema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_azure_blob.timeouts.new](#fn-data_factory_dataset_azure_blobtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_dataset_azure_blob` resource into the root Terraform configuration.

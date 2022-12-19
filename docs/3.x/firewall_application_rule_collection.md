@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `priority` (`number`): 
   - `resource_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.rule.new](#fn-firewallapplicationrulecollectionrulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.timeouts.new](#fn-firewallapplicationrulecollectiontimeoutsnew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.rule.new](#fn-firewall_application_rule_collectionrulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.timeouts.new](#fn-firewall_application_rule_collectiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `azurerm.firewall_application_rule_collection.newAttrs` constructs a new object with attributes and blocks configured for the `firewall_application_rule_collection`
 Terraform resource.
 
-Unlike [azurerm.firewall_application_rule_collection.new](#fn-firewallapplicationrulecollectionnew), this function will not inject the `resource`
+Unlike [azurerm.firewall_application_rule_collection.new](#fn-firewall_application_rule_collectionnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -95,8 +95,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `priority` (`number`): 
   - `resource_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.rule.new](#fn-firewallapplicationrulecollectionrulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.timeouts.new](#fn-firewallapplicationrulecollectiontimeoutsnew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.rule.new](#fn-firewall_application_rule_collectionrulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.timeouts.new](#fn-firewall_application_rule_collectiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall_application_rule_collection` resource into the root Terraform configuration.

@@ -105,11 +105,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `techniques` (`list`):  When `null`, the `techniques` field will be omitted from the resulting object.
   - `trigger_operator` (`string`):  When `null`, the `trigger_operator` field will be omitted from the resulting object.
   - `trigger_threshold` (`number`):  When `null`, the `trigger_threshold` field will be omitted from the resulting object.
-  - `alert_details_override` (`list[obj]`):  When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.alert_details_override.new](#fn-sentinelalertrulescheduledalertdetailsoverridenew) constructor.
-  - `entity_mapping` (`list[obj]`):  When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.new](#fn-sentinelalertrulescheduledentitymappingnew) constructor.
-  - `event_grouping` (`list[obj]`):  When `null`, the `event_grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.event_grouping.new](#fn-sentinelalertrulescheduledeventgroupingnew) constructor.
-  - `incident_configuration` (`list[obj]`):  When `null`, the `incident_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.new](#fn-sentinelalertrulescheduledincidentconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.timeouts.new](#fn-sentinelalertrulescheduledtimeoutsnew) constructor.
+  - `alert_details_override` (`list[obj]`):  When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.alert_details_override.new](#fn-sentinel_alert_rule_scheduledalert_details_overridenew) constructor.
+  - `entity_mapping` (`list[obj]`):  When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.new](#fn-sentinel_alert_rule_scheduledentity_mappingnew) constructor.
+  - `event_grouping` (`list[obj]`):  When `null`, the `event_grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.event_grouping.new](#fn-sentinel_alert_rule_scheduledevent_groupingnew) constructor.
+  - `incident_configuration` (`list[obj]`):  When `null`, the `incident_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.new](#fn-sentinel_alert_rule_scheduledincident_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.timeouts.new](#fn-sentinel_alert_rule_scheduledtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -125,7 +125,7 @@ newAttrs()
 `azurerm.sentinel_alert_rule_scheduled.newAttrs` constructs a new object with attributes and blocks configured for the `sentinel_alert_rule_scheduled`
 Terraform resource.
 
-Unlike [azurerm.sentinel_alert_rule_scheduled.new](#fn-sentinelalertruleschedulednew), this function will not inject the `resource`
+Unlike [azurerm.sentinel_alert_rule_scheduled.new](#fn-sentinel_alert_rule_schedulednew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -151,11 +151,11 @@ injecting into a complete block.
   - `techniques` (`list`):  When `null`, the `techniques` field will be omitted from the resulting object.
   - `trigger_operator` (`string`):  When `null`, the `trigger_operator` field will be omitted from the resulting object.
   - `trigger_threshold` (`number`):  When `null`, the `trigger_threshold` field will be omitted from the resulting object.
-  - `alert_details_override` (`list[obj]`):  When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.alert_details_override.new](#fn-sentinelalertrulescheduledalertdetailsoverridenew) constructor.
-  - `entity_mapping` (`list[obj]`):  When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.new](#fn-sentinelalertrulescheduledentitymappingnew) constructor.
-  - `event_grouping` (`list[obj]`):  When `null`, the `event_grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.event_grouping.new](#fn-sentinelalertrulescheduledeventgroupingnew) constructor.
-  - `incident_configuration` (`list[obj]`):  When `null`, the `incident_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.new](#fn-sentinelalertrulescheduledincidentconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.timeouts.new](#fn-sentinelalertrulescheduledtimeoutsnew) constructor.
+  - `alert_details_override` (`list[obj]`):  When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.alert_details_override.new](#fn-sentinel_alert_rule_scheduledalert_details_overridenew) constructor.
+  - `entity_mapping` (`list[obj]`):  When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.new](#fn-sentinel_alert_rule_scheduledentity_mappingnew) constructor.
+  - `event_grouping` (`list[obj]`):  When `null`, the `event_grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.event_grouping.new](#fn-sentinel_alert_rule_scheduledevent_groupingnew) constructor.
+  - `incident_configuration` (`list[obj]`):  When `null`, the `incident_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.new](#fn-sentinel_alert_rule_scheduledincident_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.timeouts.new](#fn-sentinel_alert_rule_scheduledtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sentinel_alert_rule_scheduled` resource into the root Terraform configuration.
@@ -677,7 +677,7 @@ Terraform sub block.
 
 **Args**:
   - `entity_type` (`string`): 
-  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.field_mapping.new](#fn-entitymappingfieldmappingnew) constructor.
+  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.field_mapping.new](#fn-entity_mappingfield_mappingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `entity_mapping` sub block.
@@ -748,7 +748,7 @@ Terraform sub block.
 
 **Args**:
   - `create_incident` (`bool`): 
-  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.grouping.new](#fn-incidentconfigurationgroupingnew) constructor.
+  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.grouping.new](#fn-incident_configurationgroupingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `incident_configuration` sub block.

@@ -87,12 +87,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `vpn_authentication_types` (`list`): 
   - `vpn_protocols` (`list`):  When `null`, the `vpn_protocols` field will be omitted from the resulting object.
-  - `azure_active_directory_authentication` (`list[obj]`):  When `null`, the `azure_active_directory_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.azure_active_directory_authentication.new](#fn-vpnserverconfigurationazureactivedirectoryauthenticationnew) constructor.
-  - `client_revoked_certificate` (`list[obj]`):  When `null`, the `client_revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_revoked_certificate.new](#fn-vpnserverconfigurationclientrevokedcertificatenew) constructor.
-  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_root_certificate.new](#fn-vpnserverconfigurationclientrootcertificatenew) constructor.
-  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.ipsec_policy.new](#fn-vpnserverconfigurationipsecpolicynew) constructor.
-  - `radius` (`list[obj]`):  When `null`, the `radius` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.new](#fn-vpnserverconfigurationradiusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.timeouts.new](#fn-vpnserverconfigurationtimeoutsnew) constructor.
+  - `azure_active_directory_authentication` (`list[obj]`):  When `null`, the `azure_active_directory_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.azure_active_directory_authentication.new](#fn-vpn_server_configurationazure_active_directory_authenticationnew) constructor.
+  - `client_revoked_certificate` (`list[obj]`):  When `null`, the `client_revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_revoked_certificate.new](#fn-vpn_server_configurationclient_revoked_certificatenew) constructor.
+  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_root_certificate.new](#fn-vpn_server_configurationclient_root_certificatenew) constructor.
+  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.ipsec_policy.new](#fn-vpn_server_configurationipsec_policynew) constructor.
+  - `radius` (`list[obj]`):  When `null`, the `radius` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.new](#fn-vpn_server_configurationradiusnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.timeouts.new](#fn-vpn_server_configurationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,7 +108,7 @@ newAttrs()
 `azurerm.vpn_server_configuration.newAttrs` constructs a new object with attributes and blocks configured for the `vpn_server_configuration`
 Terraform resource.
 
-Unlike [azurerm.vpn_server_configuration.new](#fn-vpnserverconfigurationnew), this function will not inject the `resource`
+Unlike [azurerm.vpn_server_configuration.new](#fn-vpn_server_configurationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,12 +122,12 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `vpn_authentication_types` (`list`): 
   - `vpn_protocols` (`list`):  When `null`, the `vpn_protocols` field will be omitted from the resulting object.
-  - `azure_active_directory_authentication` (`list[obj]`):  When `null`, the `azure_active_directory_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.azure_active_directory_authentication.new](#fn-vpnserverconfigurationazureactivedirectoryauthenticationnew) constructor.
-  - `client_revoked_certificate` (`list[obj]`):  When `null`, the `client_revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_revoked_certificate.new](#fn-vpnserverconfigurationclientrevokedcertificatenew) constructor.
-  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_root_certificate.new](#fn-vpnserverconfigurationclientrootcertificatenew) constructor.
-  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.ipsec_policy.new](#fn-vpnserverconfigurationipsecpolicynew) constructor.
-  - `radius` (`list[obj]`):  When `null`, the `radius` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.new](#fn-vpnserverconfigurationradiusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.timeouts.new](#fn-vpnserverconfigurationtimeoutsnew) constructor.
+  - `azure_active_directory_authentication` (`list[obj]`):  When `null`, the `azure_active_directory_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.azure_active_directory_authentication.new](#fn-vpn_server_configurationazure_active_directory_authenticationnew) constructor.
+  - `client_revoked_certificate` (`list[obj]`):  When `null`, the `client_revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_revoked_certificate.new](#fn-vpn_server_configurationclient_revoked_certificatenew) constructor.
+  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.client_root_certificate.new](#fn-vpn_server_configurationclient_root_certificatenew) constructor.
+  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.ipsec_policy.new](#fn-vpn_server_configurationipsec_policynew) constructor.
+  - `radius` (`list[obj]`):  When `null`, the `radius` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.new](#fn-vpn_server_configurationradiusnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.timeouts.new](#fn-vpn_server_configurationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpn_server_configuration` resource into the root Terraform configuration.
@@ -570,9 +570,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.client_root_certificate.new](#fn-radiusclientrootcertificatenew) constructor.
+  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.client_root_certificate.new](#fn-radiusclient_root_certificatenew) constructor.
   - `server` (`list[obj]`):  When `null`, the `server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server.new](#fn-radiusservernew) constructor.
-  - `server_root_certificate` (`list[obj]`):  When `null`, the `server_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server_root_certificate.new](#fn-radiusserverrootcertificatenew) constructor.
+  - `server_root_certificate` (`list[obj]`):  When `null`, the `server_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server_root_certificate.new](#fn-radiusserver_root_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `radius` sub block.

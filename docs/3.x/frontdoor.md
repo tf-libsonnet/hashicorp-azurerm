@@ -89,12 +89,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `backend_pool` (`list[obj]`):  When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-frontdoorbackendpoolnew) constructor.
-  - `backend_pool_health_probe` (`list[obj]`):  When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-frontdoorbackendpoolhealthprobenew) constructor.
-  - `backend_pool_load_balancing` (`list[obj]`):  When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-frontdoorbackendpoolloadbalancingnew) constructor.
-  - `backend_pool_settings` (`list[obj]`):  When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-frontdoorbackendpoolsettingsnew) constructor.
-  - `frontend_endpoint` (`list[obj]`):  When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontdoorfrontendendpointnew) constructor.
-  - `routing_rule` (`list[obj]`):  When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-frontdoorroutingrulenew) constructor.
+  - `backend_pool` (`list[obj]`):  When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-frontdoorbackend_poolnew) constructor.
+  - `backend_pool_health_probe` (`list[obj]`):  When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-frontdoorbackend_pool_health_probenew) constructor.
+  - `backend_pool_load_balancing` (`list[obj]`):  When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-frontdoorbackend_pool_load_balancingnew) constructor.
+  - `backend_pool_settings` (`list[obj]`):  When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-frontdoorbackend_pool_settingsnew) constructor.
+  - `frontend_endpoint` (`list[obj]`):  When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontdoorfrontend_endpointnew) constructor.
+  - `routing_rule` (`list[obj]`):  When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-frontdoorrouting_rulenew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.timeouts.new](#fn-frontdoortimeoutsnew) constructor.
 
 **Returns**:
@@ -124,12 +124,12 @@ injecting into a complete block.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `backend_pool` (`list[obj]`):  When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-frontdoorbackendpoolnew) constructor.
-  - `backend_pool_health_probe` (`list[obj]`):  When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-frontdoorbackendpoolhealthprobenew) constructor.
-  - `backend_pool_load_balancing` (`list[obj]`):  When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-frontdoorbackendpoolloadbalancingnew) constructor.
-  - `backend_pool_settings` (`list[obj]`):  When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-frontdoorbackendpoolsettingsnew) constructor.
-  - `frontend_endpoint` (`list[obj]`):  When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontdoorfrontendendpointnew) constructor.
-  - `routing_rule` (`list[obj]`):  When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-frontdoorroutingrulenew) constructor.
+  - `backend_pool` (`list[obj]`):  When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-frontdoorbackend_poolnew) constructor.
+  - `backend_pool_health_probe` (`list[obj]`):  When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-frontdoorbackend_pool_health_probenew) constructor.
+  - `backend_pool_load_balancing` (`list[obj]`):  When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-frontdoorbackend_pool_load_balancingnew) constructor.
+  - `backend_pool_settings` (`list[obj]`):  When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-frontdoorbackend_pool_settingsnew) constructor.
+  - `frontend_endpoint` (`list[obj]`):  When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontdoorfrontend_endpointnew) constructor.
+  - `routing_rule` (`list[obj]`):  When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-frontdoorrouting_rulenew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.timeouts.new](#fn-frontdoortimeoutsnew) constructor.
 
 **Returns**:
@@ -494,7 +494,7 @@ Terraform sub block.
   - `health_probe_name` (`string`): 
   - `load_balancing_name` (`string`): 
   - `name` (`string`): 
-  - `backend` (`list[obj]`):  When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.backend.new](#fn-backendpoolbackendnew) constructor.
+  - `backend` (`list[obj]`):  When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.backend.new](#fn-backend_poolbackendnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backend_pool` sub block.
@@ -656,8 +656,8 @@ Terraform sub block.
   - `frontend_endpoints` (`list`): 
   - `name` (`string`): 
   - `patterns_to_match` (`list`): 
-  - `forwarding_configuration` (`list[obj]`):  When `null`, the `forwarding_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.forwarding_configuration.new](#fn-routingruleforwardingconfigurationnew) constructor.
-  - `redirect_configuration` (`list[obj]`):  When `null`, the `redirect_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.redirect_configuration.new](#fn-routingruleredirectconfigurationnew) constructor.
+  - `forwarding_configuration` (`list[obj]`):  When `null`, the `forwarding_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.forwarding_configuration.new](#fn-routing_ruleforwarding_configurationnew) constructor.
+  - `redirect_configuration` (`list[obj]`):  When `null`, the `redirect_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.redirect_configuration.new](#fn-routing_ruleredirect_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing_rule` sub block.

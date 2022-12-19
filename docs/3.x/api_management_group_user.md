@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `group_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `user_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_group_user.timeouts.new](#fn-apimanagementgroupusertimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_group_user.timeouts.new](#fn-api_management_group_usertimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.api_management_group_user.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_group_user`
 Terraform resource.
 
-Unlike [azurerm.api_management_group_user.new](#fn-apimanagementgroupusernew), this function will not inject the `resource`
+Unlike [azurerm.api_management_group_user.new](#fn-api_management_group_usernew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `group_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `user_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_group_user.timeouts.new](#fn-apimanagementgroupusertimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_group_user.timeouts.new](#fn-api_management_group_usertimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_group_user` resource into the root Terraform configuration.

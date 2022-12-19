@@ -81,10 +81,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `subscription_id` (`string`): 
   - `time_grain` (`string`):  When `null`, the `time_grain` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-consumptionbudgetsubscriptionfilternew) constructor.
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-consumptionbudgetsubscriptionnotificationnew) constructor.
-  - `time_period` (`list[obj]`):  When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-consumptionbudgetsubscriptiontimeperiodnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-consumptionbudgetsubscriptiontimeoutsnew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-consumption_budget_subscriptionfilternew) constructor.
+  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-consumption_budget_subscriptionnotificationnew) constructor.
+  - `time_period` (`list[obj]`):  When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-consumption_budget_subscriptiontime_periodnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-consumption_budget_subscriptiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `azurerm.consumption_budget_subscription.newAttrs` constructs a new object with attributes and blocks configured for the `consumption_budget_subscription`
 Terraform resource.
 
-Unlike [azurerm.consumption_budget_subscription.new](#fn-consumptionbudgetsubscriptionnew), this function will not inject the `resource`
+Unlike [azurerm.consumption_budget_subscription.new](#fn-consumption_budget_subscriptionnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -113,10 +113,10 @@ injecting into a complete block.
   - `name` (`string`): 
   - `subscription_id` (`string`): 
   - `time_grain` (`string`):  When `null`, the `time_grain` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-consumptionbudgetsubscriptionfilternew) constructor.
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-consumptionbudgetsubscriptionnotificationnew) constructor.
-  - `time_period` (`list[obj]`):  When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-consumptionbudgetsubscriptiontimeperiodnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-consumptionbudgetsubscriptiontimeoutsnew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-consumption_budget_subscriptionfilternew) constructor.
+  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-consumption_budget_subscriptionnotificationnew) constructor.
+  - `time_period` (`list[obj]`):  When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-consumption_budget_subscriptiontime_periodnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-consumption_budget_subscriptiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `consumption_budget_subscription` resource into the root Terraform configuration.

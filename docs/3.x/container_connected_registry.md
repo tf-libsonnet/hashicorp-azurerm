@@ -75,8 +75,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sync_schedule` (`string`):  When `null`, the `sync_schedule` field will be omitted from the resulting object.
   - `sync_token_id` (`string`): 
   - `sync_window` (`string`):  When `null`, the `sync_window` field will be omitted from the resulting object.
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-containerconnectedregistrynotificationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-containerconnectedregistrytimeoutsnew) constructor.
+  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-container_connected_registrynotificationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-container_connected_registrytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `azurerm.container_connected_registry.newAttrs` constructs a new object with attributes and blocks configured for the `container_connected_registry`
 Terraform resource.
 
-Unlike [azurerm.container_connected_registry.new](#fn-containerconnectedregistrynew), this function will not inject the `resource`
+Unlike [azurerm.container_connected_registry.new](#fn-container_connected_registrynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,8 +111,8 @@ injecting into a complete block.
   - `sync_schedule` (`string`):  When `null`, the `sync_schedule` field will be omitted from the resulting object.
   - `sync_token_id` (`string`): 
   - `sync_window` (`string`):  When `null`, the `sync_window` field will be omitted from the resulting object.
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-containerconnectedregistrynotificationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-containerconnectedregistrytimeoutsnew) constructor.
+  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-container_connected_registrynotificationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-container_connected_registrytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_connected_registry` resource into the root Terraform configuration.

@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `namespace_id` (`string`):  When `null`, the `namespace_id` field will be omitted from the resulting object.
   - `namespace_name` (`string`):  When `null`, the `namespace_name` field will be omitted from the resulting object.
   - `resource_group_name` (`string`):  When `null`, the `resource_group_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.servicebus_namespace_disaster_recovery_config.timeouts.new](#fn-servicebusnamespacedisasterrecoveryconfigtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.servicebus_namespace_disaster_recovery_config.timeouts.new](#fn-servicebus_namespace_disaster_recovery_configtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.data.servicebus_namespace_disaster_recovery_config.newAttrs` constructs a new object with attributes and blocks configured for the `servicebus_namespace_disaster_recovery_config`
 Terraform data source.
 
-Unlike [azurerm.data.servicebus_namespace_disaster_recovery_config.new](#fn-servicebusnamespacedisasterrecoveryconfignew), this function will not inject the `data source`
+Unlike [azurerm.data.servicebus_namespace_disaster_recovery_config.new](#fn-servicebus_namespace_disaster_recovery_confignew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `namespace_id` (`string`):  When `null`, the `namespace_id` field will be omitted from the resulting object.
   - `namespace_name` (`string`):  When `null`, the `namespace_name` field will be omitted from the resulting object.
   - `resource_group_name` (`string`):  When `null`, the `resource_group_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.servicebus_namespace_disaster_recovery_config.timeouts.new](#fn-servicebusnamespacedisasterrecoveryconfigtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.servicebus_namespace_disaster_recovery_config.timeouts.new](#fn-servicebus_namespace_disaster_recovery_configtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `servicebus_namespace_disaster_recovery_config` data source into the root Terraform configuration.

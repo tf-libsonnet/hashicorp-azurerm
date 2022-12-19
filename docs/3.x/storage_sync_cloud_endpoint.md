@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_account_id` (`string`): 
   - `storage_account_tenant_id` (`string`):  When `null`, the `storage_account_tenant_id` field will be omitted from the resulting object.
   - `storage_sync_group_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_sync_cloud_endpoint.timeouts.new](#fn-storagesynccloudendpointtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_sync_cloud_endpoint.timeouts.new](#fn-storage_sync_cloud_endpointtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.storage_sync_cloud_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `storage_sync_cloud_endpoint`
 Terraform resource.
 
-Unlike [azurerm.storage_sync_cloud_endpoint.new](#fn-storagesynccloudendpointnew), this function will not inject the `resource`
+Unlike [azurerm.storage_sync_cloud_endpoint.new](#fn-storage_sync_cloud_endpointnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `storage_account_id` (`string`): 
   - `storage_account_tenant_id` (`string`):  When `null`, the `storage_account_tenant_id` field will be omitted from the resulting object.
   - `storage_sync_group_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_sync_cloud_endpoint.timeouts.new](#fn-storagesynccloudendpointtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_sync_cloud_endpoint.timeouts.new](#fn-storage_sync_cloud_endpointtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_sync_cloud_endpoint` resource into the root Terraform configuration.

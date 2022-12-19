@@ -81,11 +81,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `service_name` (`string`): 
   - `tls_enabled` (`bool`):  When `null`, the `tls_enabled` field will be omitted from the resulting object.
-  - `custom_persistent_disk` (`list[obj]`):  When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-springcloudappcustompersistentdisknew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-springcloudappidentitynew) constructor.
-  - `ingress_settings` (`list[obj]`):  When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-springcloudappingresssettingsnew) constructor.
-  - `persistent_disk` (`list[obj]`):  When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-springcloudapppersistentdisknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-springcloudapptimeoutsnew) constructor.
+  - `custom_persistent_disk` (`list[obj]`):  When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-spring_cloud_appcustom_persistent_disknew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-spring_cloud_appidentitynew) constructor.
+  - `ingress_settings` (`list[obj]`):  When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-spring_cloud_appingress_settingsnew) constructor.
+  - `persistent_disk` (`list[obj]`):  When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-spring_cloud_apppersistent_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-spring_cloud_apptimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `azurerm.spring_cloud_app.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_app`
 Terraform resource.
 
-Unlike [azurerm.spring_cloud_app.new](#fn-springcloudappnew), this function will not inject the `resource`
+Unlike [azurerm.spring_cloud_app.new](#fn-spring_cloud_appnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -117,11 +117,11 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `service_name` (`string`): 
   - `tls_enabled` (`bool`):  When `null`, the `tls_enabled` field will be omitted from the resulting object.
-  - `custom_persistent_disk` (`list[obj]`):  When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-springcloudappcustompersistentdisknew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-springcloudappidentitynew) constructor.
-  - `ingress_settings` (`list[obj]`):  When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-springcloudappingresssettingsnew) constructor.
-  - `persistent_disk` (`list[obj]`):  When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-springcloudapppersistentdisknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-springcloudapptimeoutsnew) constructor.
+  - `custom_persistent_disk` (`list[obj]`):  When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-spring_cloud_appcustom_persistent_disknew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-spring_cloud_appidentitynew) constructor.
+  - `ingress_settings` (`list[obj]`):  When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-spring_cloud_appingress_settingsnew) constructor.
+  - `persistent_disk` (`list[obj]`):  When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-spring_cloud_apppersistent_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-spring_cloud_apptimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_app` resource into the root Terraform configuration.

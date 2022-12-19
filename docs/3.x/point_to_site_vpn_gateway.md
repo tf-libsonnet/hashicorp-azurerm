@@ -77,8 +77,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_hub_id` (`string`): 
   - `vpn_server_configuration_id` (`string`): 
-  - `connection_configuration` (`list[obj]`):  When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-pointtositevpngatewayconnectionconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-pointtositevpngatewaytimeoutsnew) constructor.
+  - `connection_configuration` (`list[obj]`):  When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-point_to_site_vpn_gatewayconnection_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-point_to_site_vpn_gatewaytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `azurerm.point_to_site_vpn_gateway.newAttrs` constructs a new object with attributes and blocks configured for the `point_to_site_vpn_gateway`
 Terraform resource.
 
-Unlike [azurerm.point_to_site_vpn_gateway.new](#fn-pointtositevpngatewaynew), this function will not inject the `resource`
+Unlike [azurerm.point_to_site_vpn_gateway.new](#fn-point_to_site_vpn_gatewaynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,8 +111,8 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_hub_id` (`string`): 
   - `vpn_server_configuration_id` (`string`): 
-  - `connection_configuration` (`list[obj]`):  When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-pointtositevpngatewayconnectionconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-pointtositevpngatewaytimeoutsnew) constructor.
+  - `connection_configuration` (`list[obj]`):  When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-point_to_site_vpn_gatewayconnection_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-point_to_site_vpn_gatewaytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `point_to_site_vpn_gateway` resource into the root Terraform configuration.
@@ -354,8 +354,8 @@ Terraform sub block.
 **Args**:
   - `internet_security_enabled` (`bool`):  When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.new](#fn-connectionconfigurationroutenew) constructor.
-  - `vpn_client_address_pool` (`list[obj]`):  When `null`, the `vpn_client_address_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.vpn_client_address_pool.new](#fn-connectionconfigurationvpnclientaddresspoolnew) constructor.
+  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.new](#fn-connection_configurationroutenew) constructor.
+  - `vpn_client_address_pool` (`list[obj]`):  When `null`, the `vpn_client_address_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.vpn_client_address_pool.new](#fn-connection_configurationvpn_client_address_poolnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `connection_configuration` sub block.
@@ -381,7 +381,7 @@ Terraform sub block.
   - `associated_route_table_id` (`string`): 
   - `inbound_route_map_id` (`string`):  When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
   - `outbound_route_map_id` (`string`):  When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.propagated_route_table.new](#fn-routepropagatedroutetablenew) constructor.
+  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.propagated_route_table.new](#fn-routepropagated_route_tablenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `route` sub block.

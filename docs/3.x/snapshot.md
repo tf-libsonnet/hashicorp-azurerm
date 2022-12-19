@@ -75,7 +75,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `source_uri` (`string`):  When `null`, the `source_uri` field will be omitted from the resulting object.
   - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.new](#fn-snapshotencryptionsettingsnew) constructor.
+  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.new](#fn-snapshotencryption_settingsnew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.timeouts.new](#fn-snapshottimeoutsnew) constructor.
 
 **Returns**:
@@ -109,7 +109,7 @@ injecting into a complete block.
   - `source_uri` (`string`):  When `null`, the `source_uri` field will be omitted from the resulting object.
   - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.new](#fn-snapshotencryptionsettingsnew) constructor.
+  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.new](#fn-snapshotencryption_settingsnew) constructor.
   - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.timeouts.new](#fn-snapshottimeoutsnew) constructor.
 
 **Returns**:
@@ -351,8 +351,8 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `disk_encryption_key` (`list[obj]`):  When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.disk_encryption_key.new](#fn-encryptionsettingsdiskencryptionkeynew) constructor.
-  - `key_encryption_key` (`list[obj]`):  When `null`, the `key_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.key_encryption_key.new](#fn-encryptionsettingskeyencryptionkeynew) constructor.
+  - `disk_encryption_key` (`list[obj]`):  When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.disk_encryption_key.new](#fn-encryption_settingsdisk_encryption_keynew) constructor.
+  - `key_encryption_key` (`list[obj]`):  When `null`, the `key_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.snapshot.encryption_settings.key_encryption_key.new](#fn-encryption_settingskey_encryption_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `encryption_settings` sub block.

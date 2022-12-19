@@ -127,18 +127,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-virtualmachineadditionalcapabilitiesnew) constructor.
-  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-virtualmachinebootdiagnosticsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-virtualmachineidentitynew) constructor.
-  - `os_profile` (`list[obj]`):  When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-virtualmachineosprofilenew) constructor.
-  - `os_profile_linux_config` (`list[obj]`):  When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-virtualmachineosprofilelinuxconfignew) constructor.
-  - `os_profile_secrets` (`list[obj]`):  When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-virtualmachineosprofilesecretsnew) constructor.
-  - `os_profile_windows_config` (`list[obj]`):  When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-virtualmachineosprofilewindowsconfignew) constructor.
-  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-virtualmachineplannew) constructor.
-  - `storage_data_disk` (`list[obj]`):  When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-virtualmachinestoragedatadisknew) constructor.
-  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-virtualmachinestorageimagereferencenew) constructor.
-  - `storage_os_disk` (`list[obj]`):  When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-virtualmachinestorageosdisknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-virtualmachinetimeoutsnew) constructor.
+  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-virtual_machineadditional_capabilitiesnew) constructor.
+  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-virtual_machineboot_diagnosticsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-virtual_machineidentitynew) constructor.
+  - `os_profile` (`list[obj]`):  When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-virtual_machineos_profilenew) constructor.
+  - `os_profile_linux_config` (`list[obj]`):  When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-virtual_machineos_profile_linux_confignew) constructor.
+  - `os_profile_secrets` (`list[obj]`):  When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-virtual_machineos_profile_secretsnew) constructor.
+  - `os_profile_windows_config` (`list[obj]`):  When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-virtual_machineos_profile_windows_confignew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-virtual_machineplannew) constructor.
+  - `storage_data_disk` (`list[obj]`):  When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-virtual_machinestorage_data_disknew) constructor.
+  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-virtual_machinestorage_image_referencenew) constructor.
+  - `storage_os_disk` (`list[obj]`):  When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-virtual_machinestorage_os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-virtual_machinetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -154,7 +154,7 @@ newAttrs()
 `azurerm.virtual_machine.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_machine`
 Terraform resource.
 
-Unlike [azurerm.virtual_machine.new](#fn-virtualmachinenew), this function will not inject the `resource`
+Unlike [azurerm.virtual_machine.new](#fn-virtual_machinenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -175,18 +175,18 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-virtualmachineadditionalcapabilitiesnew) constructor.
-  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-virtualmachinebootdiagnosticsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-virtualmachineidentitynew) constructor.
-  - `os_profile` (`list[obj]`):  When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-virtualmachineosprofilenew) constructor.
-  - `os_profile_linux_config` (`list[obj]`):  When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-virtualmachineosprofilelinuxconfignew) constructor.
-  - `os_profile_secrets` (`list[obj]`):  When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-virtualmachineosprofilesecretsnew) constructor.
-  - `os_profile_windows_config` (`list[obj]`):  When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-virtualmachineosprofilewindowsconfignew) constructor.
-  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-virtualmachineplannew) constructor.
-  - `storage_data_disk` (`list[obj]`):  When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-virtualmachinestoragedatadisknew) constructor.
-  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-virtualmachinestorageimagereferencenew) constructor.
-  - `storage_os_disk` (`list[obj]`):  When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-virtualmachinestorageosdisknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-virtualmachinetimeoutsnew) constructor.
+  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-virtual_machineadditional_capabilitiesnew) constructor.
+  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-virtual_machineboot_diagnosticsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-virtual_machineidentitynew) constructor.
+  - `os_profile` (`list[obj]`):  When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-virtual_machineos_profilenew) constructor.
+  - `os_profile_linux_config` (`list[obj]`):  When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-virtual_machineos_profile_linux_confignew) constructor.
+  - `os_profile_secrets` (`list[obj]`):  When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-virtual_machineos_profile_secretsnew) constructor.
+  - `os_profile_windows_config` (`list[obj]`):  When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-virtual_machineos_profile_windows_confignew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-virtual_machineplannew) constructor.
+  - `storage_data_disk` (`list[obj]`):  When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-virtual_machinestorage_data_disknew) constructor.
+  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-virtual_machinestorage_image_referencenew) constructor.
+  - `storage_os_disk` (`list[obj]`):  When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-virtual_machinestorage_os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-virtual_machinetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_machine` resource into the root Terraform configuration.
@@ -958,7 +958,7 @@ Terraform sub block.
 
 **Args**:
   - `disable_password_authentication` (`bool`): 
-  - `ssh_keys` (`list[obj]`):  When `null`, the `ssh_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.ssh_keys.new](#fn-osprofilelinuxconfigsshkeysnew) constructor.
+  - `ssh_keys` (`list[obj]`):  When `null`, the `ssh_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.ssh_keys.new](#fn-os_profile_linux_configssh_keysnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_linux_config` sub block.
@@ -1006,7 +1006,7 @@ Terraform sub block.
 
 **Args**:
   - `source_vault_id` (`string`): 
-  - `vault_certificates` (`list[obj]`):  When `null`, the `vault_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.vault_certificates.new](#fn-osprofilesecretsvaultcertificatesnew) constructor.
+  - `vault_certificates` (`list[obj]`):  When `null`, the `vault_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.vault_certificates.new](#fn-os_profile_secretsvault_certificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_secrets` sub block.
@@ -1056,8 +1056,8 @@ Terraform sub block.
   - `enable_automatic_upgrades` (`bool`):  When `null`, the `enable_automatic_upgrades` field will be omitted from the resulting object.
   - `provision_vm_agent` (`bool`):  When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
   - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `additional_unattend_config` (`list[obj]`):  When `null`, the `additional_unattend_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.additional_unattend_config.new](#fn-osprofilewindowsconfigadditionalunattendconfignew) constructor.
-  - `winrm` (`list[obj]`):  When `null`, the `winrm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.winrm.new](#fn-osprofilewindowsconfigwinrmnew) constructor.
+  - `additional_unattend_config` (`list[obj]`):  When `null`, the `additional_unattend_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.additional_unattend_config.new](#fn-os_profile_windows_configadditional_unattend_confignew) constructor.
+  - `winrm` (`list[obj]`):  When `null`, the `winrm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.winrm.new](#fn-os_profile_windows_configwinrmnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_windows_config` sub block.

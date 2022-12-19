@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
   - `storage_account_access_key_is_secondary` (`bool`):  When `null`, the `storage_account_access_key_is_secondary` field will be omitted from the resulting object.
   - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_extended_auditing_policy.timeouts.new](#fn-synapsesqlpoolextendedauditingpolicytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_extended_auditing_policy.timeouts.new](#fn-synapse_sql_pool_extended_auditing_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.synapse_sql_pool_extended_auditing_policy.newAttrs` constructs a new object with attributes and blocks configured for the `synapse_sql_pool_extended_auditing_policy`
 Terraform resource.
 
-Unlike [azurerm.synapse_sql_pool_extended_auditing_policy.new](#fn-synapsesqlpoolextendedauditingpolicynew), this function will not inject the `resource`
+Unlike [azurerm.synapse_sql_pool_extended_auditing_policy.new](#fn-synapse_sql_pool_extended_auditing_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
   - `storage_account_access_key_is_secondary` (`bool`):  When `null`, the `storage_account_access_key_is_secondary` field will be omitted from the resulting object.
   - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_extended_auditing_policy.timeouts.new](#fn-synapsesqlpoolextendedauditingpolicytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_extended_auditing_policy.timeouts.new](#fn-synapse_sql_pool_extended_auditing_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_sql_pool_extended_auditing_policy` resource into the root Terraform configuration.

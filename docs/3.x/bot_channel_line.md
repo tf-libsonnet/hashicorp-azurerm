@@ -59,8 +59,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `bot_name` (`string`): 
   - `location` (`string`): 
   - `resource_group_name` (`string`): 
-  - `line_channel` (`list[obj]`):  When `null`, the `line_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.line_channel.new](#fn-botchannellinelinechannelnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.timeouts.new](#fn-botchannellinetimeoutsnew) constructor.
+  - `line_channel` (`list[obj]`):  When `null`, the `line_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.line_channel.new](#fn-bot_channel_lineline_channelnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.timeouts.new](#fn-bot_channel_linetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,7 +76,7 @@ newAttrs()
 `azurerm.bot_channel_line.newAttrs` constructs a new object with attributes and blocks configured for the `bot_channel_line`
 Terraform resource.
 
-Unlike [azurerm.bot_channel_line.new](#fn-botchannellinenew), this function will not inject the `resource`
+Unlike [azurerm.bot_channel_line.new](#fn-bot_channel_linenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -87,8 +87,8 @@ injecting into a complete block.
   - `bot_name` (`string`): 
   - `location` (`string`): 
   - `resource_group_name` (`string`): 
-  - `line_channel` (`list[obj]`):  When `null`, the `line_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.line_channel.new](#fn-botchannellinelinechannelnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.timeouts.new](#fn-botchannellinetimeoutsnew) constructor.
+  - `line_channel` (`list[obj]`):  When `null`, the `line_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.line_channel.new](#fn-bot_channel_lineline_channelnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_line.timeouts.new](#fn-bot_channel_linetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bot_channel_line` resource into the root Terraform configuration.

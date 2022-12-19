@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `synapse_workspace_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_integration_runtime_self_hosted.timeouts.new](#fn-synapseintegrationruntimeselfhostedtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_integration_runtime_self_hosted.timeouts.new](#fn-synapse_integration_runtime_self_hostedtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `azurerm.synapse_integration_runtime_self_hosted.newAttrs` constructs a new object with attributes and blocks configured for the `synapse_integration_runtime_self_hosted`
 Terraform resource.
 
-Unlike [azurerm.synapse_integration_runtime_self_hosted.new](#fn-synapseintegrationruntimeselfhostednew), this function will not inject the `resource`
+Unlike [azurerm.synapse_integration_runtime_self_hosted.new](#fn-synapse_integration_runtime_self_hostednew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `synapse_workspace_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_integration_runtime_self_hosted.timeouts.new](#fn-synapseintegrationruntimeselfhostedtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_integration_runtime_self_hosted.timeouts.new](#fn-synapse_integration_runtime_self_hostedtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_integration_runtime_self_hosted` resource into the root Terraform configuration.

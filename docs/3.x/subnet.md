@@ -368,7 +368,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): 
-  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservicedelegationnew) constructor.
+  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservice_delegationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delegation` sub block.

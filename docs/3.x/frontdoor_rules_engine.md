@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `frontdoor_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-frontdoorrulesenginerulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-frontdoorrulesenginetimeoutsnew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-frontdoor_rules_enginerulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-frontdoor_rules_enginetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.frontdoor_rules_engine.newAttrs` constructs a new object with attributes and blocks configured for the `frontdoor_rules_engine`
 Terraform resource.
 
-Unlike [azurerm.frontdoor_rules_engine.new](#fn-frontdoorrulesenginenew), this function will not inject the `resource`
+Unlike [azurerm.frontdoor_rules_engine.new](#fn-frontdoor_rules_enginenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,8 +98,8 @@ injecting into a complete block.
   - `frontdoor_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-frontdoorrulesenginerulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-frontdoorrulesenginetimeoutsnew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-frontdoor_rules_enginerulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-frontdoor_rules_enginetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `frontdoor_rules_engine` resource into the root Terraform configuration.
@@ -262,7 +262,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `priority` (`number`): 
   - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.new](#fn-ruleactionnew) constructor.
-  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.match_condition.new](#fn-rulematchconditionnew) constructor.
+  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.match_condition.new](#fn-rulematch_conditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -285,8 +285,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.request_header.new](#fn-actionrequestheadernew) constructor.
-  - `response_header` (`list[obj]`):  When `null`, the `response_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.response_header.new](#fn-actionresponseheadernew) constructor.
+  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.request_header.new](#fn-actionrequest_headernew) constructor.
+  - `response_header` (`list[obj]`):  When `null`, the `response_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.response_header.new](#fn-actionresponse_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.

@@ -79,9 +79,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `secondary_peer_address_prefix` (`string`):  When `null`, the `secondary_peer_address_prefix` field will be omitted from the resulting object.
   - `shared_key` (`string`):  When `null`, the `shared_key` field will be omitted from the resulting object.
   - `vlan_id` (`number`): 
-  - `ipv6` (`list[obj]`):  When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-expressroutecircuitpeeringipv6new) constructor.
-  - `microsoft_peering_config` (`list[obj]`):  When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-expressroutecircuitpeeringmicrosoftpeeringconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-expressroutecircuitpeeringtimeoutsnew) constructor.
+  - `ipv6` (`list[obj]`):  When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-express_route_circuit_peeringipv6new) constructor.
+  - `microsoft_peering_config` (`list[obj]`):  When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-express_route_circuit_peeringmicrosoft_peering_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-express_route_circuit_peeringtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,7 +97,7 @@ newAttrs()
 `azurerm.express_route_circuit_peering.newAttrs` constructs a new object with attributes and blocks configured for the `express_route_circuit_peering`
 Terraform resource.
 
-Unlike [azurerm.express_route_circuit_peering.new](#fn-expressroutecircuitpeeringnew), this function will not inject the `resource`
+Unlike [azurerm.express_route_circuit_peering.new](#fn-express_route_circuit_peeringnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,9 +115,9 @@ injecting into a complete block.
   - `secondary_peer_address_prefix` (`string`):  When `null`, the `secondary_peer_address_prefix` field will be omitted from the resulting object.
   - `shared_key` (`string`):  When `null`, the `shared_key` field will be omitted from the resulting object.
   - `vlan_id` (`number`): 
-  - `ipv6` (`list[obj]`):  When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-expressroutecircuitpeeringipv6new) constructor.
-  - `microsoft_peering_config` (`list[obj]`):  When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-expressroutecircuitpeeringmicrosoftpeeringconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-expressroutecircuitpeeringtimeoutsnew) constructor.
+  - `ipv6` (`list[obj]`):  When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-express_route_circuit_peeringipv6new) constructor.
+  - `microsoft_peering_config` (`list[obj]`):  When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-express_route_circuit_peeringmicrosoft_peering_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-express_route_circuit_peeringtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_circuit_peering` resource into the root Terraform configuration.
@@ -414,7 +414,7 @@ Terraform sub block.
   - `primary_peer_address_prefix` (`string`): 
   - `route_filter_id` (`string`):  When `null`, the `route_filter_id` field will be omitted from the resulting object.
   - `secondary_peer_address_prefix` (`string`): 
-  - `microsoft_peering` (`list[obj]`):  When `null`, the `microsoft_peering` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new](#fn-ipv6microsoftpeeringnew) constructor.
+  - `microsoft_peering` (`list[obj]`):  When `null`, the `microsoft_peering` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new](#fn-ipv6microsoft_peeringnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ipv6` sub block.

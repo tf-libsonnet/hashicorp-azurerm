@@ -99,13 +99,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sku_name` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `default_access_policy` (`list[obj]`):  When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-hpccachedefaultaccesspolicynew) constructor.
-  - `directory_active_directory` (`list[obj]`):  When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-hpccachedirectoryactivedirectorynew) constructor.
-  - `directory_flat_file` (`list[obj]`):  When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-hpccachedirectoryflatfilenew) constructor.
-  - `directory_ldap` (`list[obj]`):  When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-hpccachedirectoryldapnew) constructor.
-  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-hpccachednsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-hpccacheidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-hpccachetimeoutsnew) constructor.
+  - `default_access_policy` (`list[obj]`):  When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-hpc_cachedefault_access_policynew) constructor.
+  - `directory_active_directory` (`list[obj]`):  When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-hpc_cachedirectory_active_directorynew) constructor.
+  - `directory_flat_file` (`list[obj]`):  When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-hpc_cachedirectory_flat_filenew) constructor.
+  - `directory_ldap` (`list[obj]`):  When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-hpc_cachedirectory_ldapnew) constructor.
+  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-hpc_cachednsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-hpc_cacheidentitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-hpc_cachetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -121,7 +121,7 @@ newAttrs()
 `azurerm.hpc_cache.newAttrs` constructs a new object with attributes and blocks configured for the `hpc_cache`
 Terraform resource.
 
-Unlike [azurerm.hpc_cache.new](#fn-hpccachenew), this function will not inject the `resource`
+Unlike [azurerm.hpc_cache.new](#fn-hpc_cachenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -140,13 +140,13 @@ injecting into a complete block.
   - `sku_name` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `default_access_policy` (`list[obj]`):  When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-hpccachedefaultaccesspolicynew) constructor.
-  - `directory_active_directory` (`list[obj]`):  When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-hpccachedirectoryactivedirectorynew) constructor.
-  - `directory_flat_file` (`list[obj]`):  When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-hpccachedirectoryflatfilenew) constructor.
-  - `directory_ldap` (`list[obj]`):  When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-hpccachedirectoryldapnew) constructor.
-  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-hpccachednsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-hpccacheidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-hpccachetimeoutsnew) constructor.
+  - `default_access_policy` (`list[obj]`):  When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-hpc_cachedefault_access_policynew) constructor.
+  - `directory_active_directory` (`list[obj]`):  When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-hpc_cachedirectory_active_directorynew) constructor.
+  - `directory_flat_file` (`list[obj]`):  When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-hpc_cachedirectory_flat_filenew) constructor.
+  - `directory_ldap` (`list[obj]`):  When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-hpc_cachedirectory_ldapnew) constructor.
+  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-hpc_cachednsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-hpc_cacheidentitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-hpc_cachetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `hpc_cache` resource into the root Terraform configuration.
@@ -603,7 +603,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_rule` (`list[obj]`):  When `null`, the `access_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.access_rule.new](#fn-defaultaccesspolicyaccessrulenew) constructor.
+  - `access_rule` (`list[obj]`):  When `null`, the `access_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.access_rule.new](#fn-default_access_policyaccess_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_access_policy` sub block.
@@ -714,7 +714,7 @@ Terraform sub block.
   - `download_certificate_automatically` (`bool`):  When `null`, the `download_certificate_automatically` field will be omitted from the resulting object.
   - `encrypted` (`bool`):  When `null`, the `encrypted` field will be omitted from the resulting object.
   - `server` (`string`): 
-  - `bind` (`list[obj]`):  When `null`, the `bind` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.bind.new](#fn-directoryldapbindnew) constructor.
+  - `bind` (`list[obj]`):  When `null`, the `bind` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.bind.new](#fn-directory_ldapbindnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `directory_ldap` sub block.
