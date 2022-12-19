@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `recovery_vault_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `storage_account_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_container_storage_account.timeouts.new](#fn-backup_container_storage_accounttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_container_storage_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `azurerm.backup_container_storage_account.newAttrs` constructs a new object with attributes and blocks configured for the `backup_container_storage_account`
 Terraform resource.
 
-Unlike [azurerm.backup_container_storage_account.new](#fn-backup_container_storage_accountnew), this function will not inject the `resource`
+Unlike [azurerm.backup_container_storage_account.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `recovery_vault_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `storage_account_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_container_storage_account.timeouts.new](#fn-backup_container_storage_accounttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_container_storage_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `backup_container_storage_account` resource into the root Terraform configuration.

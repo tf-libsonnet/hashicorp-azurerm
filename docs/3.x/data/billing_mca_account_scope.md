@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `billing_account_name` (`string`): 
   - `billing_profile_name` (`string`): 
   - `invoice_section_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.billing_mca_account_scope.timeouts.new](#fn-billing_mca_account_scopetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.billing_mca_account_scope.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `azurerm.data.billing_mca_account_scope.newAttrs` constructs a new object with attributes and blocks configured for the `billing_mca_account_scope`
 Terraform data source.
 
-Unlike [azurerm.data.billing_mca_account_scope.new](#fn-billing_mca_account_scopenew), this function will not inject the `data source`
+Unlike [azurerm.data.billing_mca_account_scope.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `billing_account_name` (`string`): 
   - `billing_profile_name` (`string`): 
   - `invoice_section_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.billing_mca_account_scope.timeouts.new](#fn-billing_mca_account_scopetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.billing_mca_account_scope.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `billing_mca_account_scope` data source into the root Terraform configuration.

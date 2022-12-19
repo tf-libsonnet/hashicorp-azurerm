@@ -73,9 +73,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `traffic_routing_method` (`string`): 
   - `traffic_view_enabled` (`bool`):  When `null`, the `traffic_view_enabled` field will be omitted from the resulting object.
-  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-traffic_manager_profiledns_confignew) constructor.
-  - `monitor_config` (`list[obj]`):  When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-traffic_manager_profilemonitor_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-traffic_manager_profiletimeoutsnew) constructor.
+  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-dns_confignew) constructor.
+  - `monitor_config` (`list[obj]`):  When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-monitor_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `azurerm.traffic_manager_profile.newAttrs` constructs a new object with attributes and blocks configured for the `traffic_manager_profile`
 Terraform resource.
 
-Unlike [azurerm.traffic_manager_profile.new](#fn-traffic_manager_profilenew), this function will not inject the `resource`
+Unlike [azurerm.traffic_manager_profile.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -106,9 +106,9 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `traffic_routing_method` (`string`): 
   - `traffic_view_enabled` (`bool`):  When `null`, the `traffic_view_enabled` field will be omitted from the resulting object.
-  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-traffic_manager_profiledns_confignew) constructor.
-  - `monitor_config` (`list[obj]`):  When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-traffic_manager_profilemonitor_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-traffic_manager_profiletimeoutsnew) constructor.
+  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-dns_confignew) constructor.
+  - `monitor_config` (`list[obj]`):  When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-monitor_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `traffic_manager_profile` resource into the root Terraform configuration.
@@ -384,7 +384,7 @@ Terraform sub block.
   - `protocol` (`string`): 
   - `timeout_in_seconds` (`number`):  When `null`, the `timeout_in_seconds` field will be omitted from the resulting object.
   - `tolerated_number_of_failures` (`number`):  When `null`, the `tolerated_number_of_failures` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.custom_header.new](#fn-monitor_configcustom_headernew) constructor.
+  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.custom_header.new](#fn-custom_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `monitor_config` sub block.

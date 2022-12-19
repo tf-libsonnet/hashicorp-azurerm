@@ -87,9 +87,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `sku_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_rule` (`list[obj]`):  When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.custom_rule.new](#fn-cdn_frontdoor_firewall_policycustom_rulenew) constructor.
-  - `managed_rule` (`list[obj]`):  When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.new](#fn-cdn_frontdoor_firewall_policymanaged_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.timeouts.new](#fn-cdn_frontdoor_firewall_policytimeoutsnew) constructor.
+  - `custom_rule` (`list[obj]`):  When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.custom_rule.new](#fn-custom_rulenew) constructor.
+  - `managed_rule` (`list[obj]`):  When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.new](#fn-managed_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,7 +105,7 @@ newAttrs()
 `azurerm.cdn_frontdoor_firewall_policy.newAttrs` constructs a new object with attributes and blocks configured for the `cdn_frontdoor_firewall_policy`
 Terraform resource.
 
-Unlike [azurerm.cdn_frontdoor_firewall_policy.new](#fn-cdn_frontdoor_firewall_policynew), this function will not inject the `resource`
+Unlike [azurerm.cdn_frontdoor_firewall_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,9 +122,9 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `sku_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_rule` (`list[obj]`):  When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.custom_rule.new](#fn-cdn_frontdoor_firewall_policycustom_rulenew) constructor.
-  - `managed_rule` (`list[obj]`):  When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.new](#fn-cdn_frontdoor_firewall_policymanaged_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.timeouts.new](#fn-cdn_frontdoor_firewall_policytimeoutsnew) constructor.
+  - `custom_rule` (`list[obj]`):  When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.custom_rule.new](#fn-custom_rulenew) constructor.
+  - `managed_rule` (`list[obj]`):  When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.new](#fn-managed_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_firewall_policy` resource into the root Terraform configuration.
@@ -408,7 +408,7 @@ Terraform sub block.
   - `rate_limit_duration_in_minutes` (`number`):  When `null`, the `rate_limit_duration_in_minutes` field will be omitted from the resulting object.
   - `rate_limit_threshold` (`number`):  When `null`, the `rate_limit_threshold` field will be omitted from the resulting object.
   - `type` (`string`): 
-  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.custom_rule.match_condition.new](#fn-custom_rulematch_conditionnew) constructor.
+  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.custom_rule.match_condition.new](#fn-match_conditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom_rule` sub block.
@@ -462,8 +462,8 @@ Terraform sub block.
   - `action` (`string`): 
   - `type` (`string`): 
   - `version` (`string`): 
-  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.exclusion.new](#fn-managed_ruleexclusionnew) constructor.
-  - `override` (`list[obj]`):  When `null`, the `override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.new](#fn-managed_ruleoverridenew) constructor.
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.exclusion.new](#fn-exclusionnew) constructor.
+  - `override` (`list[obj]`):  When `null`, the `override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.new](#fn-overridenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `managed_rule` sub block.
@@ -512,8 +512,8 @@ Terraform sub block.
 
 **Args**:
   - `rule_group_name` (`string`): 
-  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.exclusion.new](#fn-overrideexclusionnew) constructor.
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.rule.new](#fn-overriderulenew) constructor.
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.exclusion.new](#fn-managed_ruleexclusionnew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.rule.new](#fn-managed_rulerulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `override` sub block.
@@ -564,7 +564,7 @@ Terraform sub block.
   - `action` (`string`): 
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
   - `rule_id` (`string`): 
-  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.rule.exclusion.new](#fn-ruleexclusionnew) constructor.
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_firewall_policy.managed_rule.override.rule.exclusion.new](#fn-managed_ruleoverrideexclusionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.

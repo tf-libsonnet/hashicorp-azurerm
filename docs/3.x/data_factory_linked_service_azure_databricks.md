@@ -83,10 +83,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `msi_work_space_resource_id` (`string`):  When `null`, the `msi_work_space_resource_id` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `instance_pool` (`list[obj]`):  When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-data_factory_linked_service_azure_databricksinstance_poolnew) constructor.
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-data_factory_linked_service_azure_databrickskey_vault_passwordnew) constructor.
-  - `new_cluster_config` (`list[obj]`):  When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-data_factory_linked_service_azure_databricksnew_cluster_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-data_factory_linked_service_azure_databrickstimeoutsnew) constructor.
+  - `instance_pool` (`list[obj]`):  When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-instance_poolnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `new_cluster_config` (`list[obj]`):  When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-new_cluster_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `azurerm.data_factory_linked_service_azure_databricks.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_linked_service_azure_databricks`
 Terraform resource.
 
-Unlike [azurerm.data_factory_linked_service_azure_databricks.new](#fn-data_factory_linked_service_azure_databricksnew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_linked_service_azure_databricks.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -121,10 +121,10 @@ injecting into a complete block.
   - `msi_work_space_resource_id` (`string`):  When `null`, the `msi_work_space_resource_id` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `instance_pool` (`list[obj]`):  When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-data_factory_linked_service_azure_databricksinstance_poolnew) constructor.
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-data_factory_linked_service_azure_databrickskey_vault_passwordnew) constructor.
-  - `new_cluster_config` (`list[obj]`):  When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-data_factory_linked_service_azure_databricksnew_cluster_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-data_factory_linked_service_azure_databrickstimeoutsnew) constructor.
+  - `instance_pool` (`list[obj]`):  When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-instance_poolnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `new_cluster_config` (`list[obj]`):  When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-new_cluster_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_azure_databricks` resource into the root Terraform configuration.

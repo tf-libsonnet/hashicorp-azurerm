@@ -77,12 +77,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `recovery_vault_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.backup.new](#fn-backup_policy_file_sharebackupnew) constructor.
-  - `retention_daily` (`list[obj]`):  When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_daily.new](#fn-backup_policy_file_shareretention_dailynew) constructor.
-  - `retention_monthly` (`list[obj]`):  When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_monthly.new](#fn-backup_policy_file_shareretention_monthlynew) constructor.
-  - `retention_weekly` (`list[obj]`):  When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_weekly.new](#fn-backup_policy_file_shareretention_weeklynew) constructor.
-  - `retention_yearly` (`list[obj]`):  When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_yearly.new](#fn-backup_policy_file_shareretention_yearlynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.timeouts.new](#fn-backup_policy_file_sharetimeoutsnew) constructor.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.backup.new](#fn-backupnew) constructor.
+  - `retention_daily` (`list[obj]`):  When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_daily.new](#fn-retention_dailynew) constructor.
+  - `retention_monthly` (`list[obj]`):  When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_monthly.new](#fn-retention_monthlynew) constructor.
+  - `retention_weekly` (`list[obj]`):  When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_weekly.new](#fn-retention_weeklynew) constructor.
+  - `retention_yearly` (`list[obj]`):  When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_yearly.new](#fn-retention_yearlynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,7 +98,7 @@ newAttrs()
 `azurerm.backup_policy_file_share.newAttrs` constructs a new object with attributes and blocks configured for the `backup_policy_file_share`
 Terraform resource.
 
-Unlike [azurerm.backup_policy_file_share.new](#fn-backup_policy_file_sharenew), this function will not inject the `resource`
+Unlike [azurerm.backup_policy_file_share.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -110,12 +110,12 @@ injecting into a complete block.
   - `recovery_vault_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.backup.new](#fn-backup_policy_file_sharebackupnew) constructor.
-  - `retention_daily` (`list[obj]`):  When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_daily.new](#fn-backup_policy_file_shareretention_dailynew) constructor.
-  - `retention_monthly` (`list[obj]`):  When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_monthly.new](#fn-backup_policy_file_shareretention_monthlynew) constructor.
-  - `retention_weekly` (`list[obj]`):  When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_weekly.new](#fn-backup_policy_file_shareretention_weeklynew) constructor.
-  - `retention_yearly` (`list[obj]`):  When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_yearly.new](#fn-backup_policy_file_shareretention_yearlynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.timeouts.new](#fn-backup_policy_file_sharetimeoutsnew) constructor.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.backup.new](#fn-backupnew) constructor.
+  - `retention_daily` (`list[obj]`):  When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_daily.new](#fn-retention_dailynew) constructor.
+  - `retention_monthly` (`list[obj]`):  When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_monthly.new](#fn-retention_monthlynew) constructor.
+  - `retention_weekly` (`list[obj]`):  When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_weekly.new](#fn-retention_weeklynew) constructor.
+  - `retention_yearly` (`list[obj]`):  When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.retention_yearly.new](#fn-retention_yearlynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `backup_policy_file_share` resource into the root Terraform configuration.

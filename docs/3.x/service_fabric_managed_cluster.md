@@ -99,11 +99,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `upgrade_wave` (`string`):  When `null`, the `upgrade_wave` field will be omitted from the resulting object.
   - `username` (`string`):  When `null`, the `username` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-service_fabric_managed_clusterauthenticationnew) constructor.
-  - `custom_fabric_setting` (`list[obj]`):  When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-service_fabric_managed_clustercustom_fabric_settingnew) constructor.
-  - `lb_rule` (`list[obj]`):  When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-service_fabric_managed_clusterlb_rulenew) constructor.
-  - `node_type` (`list[obj]`):  When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-service_fabric_managed_clusternode_typenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-service_fabric_managed_clustertimeoutsnew) constructor.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-authenticationnew) constructor.
+  - `custom_fabric_setting` (`list[obj]`):  When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-custom_fabric_settingnew) constructor.
+  - `lb_rule` (`list[obj]`):  When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-lb_rulenew) constructor.
+  - `node_type` (`list[obj]`):  When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-node_typenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,7 +119,7 @@ newAttrs()
 `azurerm.service_fabric_managed_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `service_fabric_managed_cluster`
 Terraform resource.
 
-Unlike [azurerm.service_fabric_managed_cluster.new](#fn-service_fabric_managed_clusternew), this function will not inject the `resource`
+Unlike [azurerm.service_fabric_managed_cluster.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -140,11 +140,11 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `upgrade_wave` (`string`):  When `null`, the `upgrade_wave` field will be omitted from the resulting object.
   - `username` (`string`):  When `null`, the `username` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-service_fabric_managed_clusterauthenticationnew) constructor.
-  - `custom_fabric_setting` (`list[obj]`):  When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-service_fabric_managed_clustercustom_fabric_settingnew) constructor.
-  - `lb_rule` (`list[obj]`):  When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-service_fabric_managed_clusterlb_rulenew) constructor.
-  - `node_type` (`list[obj]`):  When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-service_fabric_managed_clusternode_typenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-service_fabric_managed_clustertimeoutsnew) constructor.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-authenticationnew) constructor.
+  - `custom_fabric_setting` (`list[obj]`):  When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-custom_fabric_settingnew) constructor.
+  - `lb_rule` (`list[obj]`):  When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-lb_rulenew) constructor.
+  - `node_type` (`list[obj]`):  When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-node_typenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `service_fabric_managed_cluster` resource into the root Terraform configuration.
@@ -559,8 +559,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.active_directory.new](#fn-authenticationactive_directorynew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.certificate.new](#fn-authenticationcertificatenew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.active_directory.new](#fn-active_directorynew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.certificate.new](#fn-certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
@@ -701,7 +701,7 @@ Terraform sub block.
   - `vm_image_version` (`string`): 
   - `vm_instance_count` (`number`): 
   - `vm_size` (`string`): 
-  - `vm_secrets` (`list[obj]`):  When `null`, the `vm_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.new](#fn-node_typevm_secretsnew) constructor.
+  - `vm_secrets` (`list[obj]`):  When `null`, the `vm_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.new](#fn-vm_secretsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_type` sub block.
@@ -725,7 +725,7 @@ Terraform sub block.
 
 **Args**:
   - `vault_id` (`string`): 
-  - `certificates` (`list[obj]`):  When `null`, the `certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.certificates.new](#fn-vm_secretscertificatesnew) constructor.
+  - `certificates` (`list[obj]`):  When `null`, the `certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.certificates.new](#fn-node_typecertificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vm_secrets` sub block.

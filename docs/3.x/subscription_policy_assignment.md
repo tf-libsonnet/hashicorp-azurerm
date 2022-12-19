@@ -77,9 +77,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `policy_definition_id` (`string`): 
   - `subscription_id` (`string`): 
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.identity.new](#fn-subscription_policy_assignmentidentitynew) constructor.
-  - `non_compliance_message` (`list[obj]`):  When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.non_compliance_message.new](#fn-subscription_policy_assignmentnon_compliance_messagenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.timeouts.new](#fn-subscription_policy_assignmenttimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.identity.new](#fn-identitynew) constructor.
+  - `non_compliance_message` (`list[obj]`):  When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,7 +95,7 @@ newAttrs()
 `azurerm.subscription_policy_assignment.newAttrs` constructs a new object with attributes and blocks configured for the `subscription_policy_assignment`
 Terraform resource.
 
-Unlike [azurerm.subscription_policy_assignment.new](#fn-subscription_policy_assignmentnew), this function will not inject the `resource`
+Unlike [azurerm.subscription_policy_assignment.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -113,9 +113,9 @@ injecting into a complete block.
   - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `policy_definition_id` (`string`): 
   - `subscription_id` (`string`): 
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.identity.new](#fn-subscription_policy_assignmentidentitynew) constructor.
-  - `non_compliance_message` (`list[obj]`):  When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.non_compliance_message.new](#fn-subscription_policy_assignmentnon_compliance_messagenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.timeouts.new](#fn-subscription_policy_assignmenttimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.identity.new](#fn-identitynew) constructor.
+  - `non_compliance_message` (`list[obj]`):  When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `subscription_policy_assignment` resource into the root Terraform configuration.

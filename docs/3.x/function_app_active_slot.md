@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `overwrite_network_config` (`bool`): The swap action should overwrite the Production slot&#39;s network configuration with the configuration from this slot. Defaults to `true`. When `null`, the `overwrite_network_config` field will be omitted from the resulting object.
   - `slot_id` (`string`): The ID of the Slot to swap with `Production`.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app_active_slot.timeouts.new](#fn-function_app_active_slottimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app_active_slot.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -69,7 +69,7 @@ newAttrs()
 `azurerm.function_app_active_slot.newAttrs` constructs a new object with attributes and blocks configured for the `function_app_active_slot`
 Terraform resource.
 
-Unlike [azurerm.function_app_active_slot.new](#fn-function_app_active_slotnew), this function will not inject the `resource`
+Unlike [azurerm.function_app_active_slot.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -79,7 +79,7 @@ injecting into a complete block.
 **Args**:
   - `overwrite_network_config` (`bool`): The swap action should overwrite the Production slot&#39;s network configuration with the configuration from this slot. Defaults to `true`. When `null`, the `overwrite_network_config` field will be omitted from the resulting object.
   - `slot_id` (`string`): The ID of the Slot to swap with `Production`.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app_active_slot.timeouts.new](#fn-function_app_active_slottimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app_active_slot.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `function_app_active_slot` resource into the root Terraform configuration.

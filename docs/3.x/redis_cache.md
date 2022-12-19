@@ -97,10 +97,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `tenant_settings` (`obj`):  When `null`, the `tenant_settings` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-redis_cacheidentitynew) constructor.
-  - `patch_schedule` (`list[obj]`):  When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-redis_cachepatch_schedulenew) constructor.
-  - `redis_configuration` (`list[obj]`):  When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_cacheredis_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-redis_cachetimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-identitynew) constructor.
+  - `patch_schedule` (`list[obj]`):  When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-patch_schedulenew) constructor.
+  - `redis_configuration` (`list[obj]`):  When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -116,7 +116,7 @@ newAttrs()
 `azurerm.redis_cache.newAttrs` constructs a new object with attributes and blocks configured for the `redis_cache`
 Terraform resource.
 
-Unlike [azurerm.redis_cache.new](#fn-redis_cachenew), this function will not inject the `resource`
+Unlike [azurerm.redis_cache.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -142,10 +142,10 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `tenant_settings` (`obj`):  When `null`, the `tenant_settings` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-redis_cacheidentitynew) constructor.
-  - `patch_schedule` (`list[obj]`):  When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-redis_cachepatch_schedulenew) constructor.
-  - `redis_configuration` (`list[obj]`):  When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_cacheredis_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-redis_cachetimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-identitynew) constructor.
+  - `patch_schedule` (`list[obj]`):  When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-patch_schedulenew) constructor.
+  - `redis_configuration` (`list[obj]`):  When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `redis_cache` resource into the root Terraform configuration.

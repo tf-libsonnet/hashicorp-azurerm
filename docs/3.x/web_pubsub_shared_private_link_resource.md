@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `subresource_name` (`string`): 
   - `target_resource_id` (`string`): 
   - `web_pubsub_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_shared_private_link_resource.timeouts.new](#fn-web_pubsub_shared_private_link_resourcetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_shared_private_link_resource.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `azurerm.web_pubsub_shared_private_link_resource.newAttrs` constructs a new object with attributes and blocks configured for the `web_pubsub_shared_private_link_resource`
 Terraform resource.
 
-Unlike [azurerm.web_pubsub_shared_private_link_resource.new](#fn-web_pubsub_shared_private_link_resourcenew), this function will not inject the `resource`
+Unlike [azurerm.web_pubsub_shared_private_link_resource.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `subresource_name` (`string`): 
   - `target_resource_id` (`string`): 
   - `web_pubsub_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_shared_private_link_resource.timeouts.new](#fn-web_pubsub_shared_private_link_resourcetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_shared_private_link_resource.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `web_pubsub_shared_private_link_resource` resource into the root Terraform configuration.

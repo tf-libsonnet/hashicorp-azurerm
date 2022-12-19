@@ -125,13 +125,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `subnet_ids` (`list`):  When `null`, the `subnet_ids` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.new](#fn-container_groupcontainernew) constructor.
-  - `diagnostics` (`list[obj]`):  When `null`, the `diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.diagnostics.new](#fn-container_groupdiagnosticsnew) constructor.
-  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.dns_config.new](#fn-container_groupdns_confignew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.identity.new](#fn-container_groupidentitynew) constructor.
-  - `image_registry_credential` (`list[obj]`):  When `null`, the `image_registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.image_registry_credential.new](#fn-container_groupimage_registry_credentialnew) constructor.
-  - `init_container` (`list[obj]`):  When `null`, the `init_container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.new](#fn-container_groupinit_containernew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.timeouts.new](#fn-container_grouptimeoutsnew) constructor.
+  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.new](#fn-containernew) constructor.
+  - `diagnostics` (`list[obj]`):  When `null`, the `diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.diagnostics.new](#fn-diagnosticsnew) constructor.
+  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.dns_config.new](#fn-dns_confignew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.identity.new](#fn-identitynew) constructor.
+  - `image_registry_credential` (`list[obj]`):  When `null`, the `image_registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.image_registry_credential.new](#fn-image_registry_credentialnew) constructor.
+  - `init_container` (`list[obj]`):  When `null`, the `init_container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.new](#fn-init_containernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -147,7 +147,7 @@ newAttrs()
 `azurerm.container_group.newAttrs` constructs a new object with attributes and blocks configured for the `container_group`
 Terraform resource.
 
-Unlike [azurerm.container_group.new](#fn-container_groupnew), this function will not inject the `resource`
+Unlike [azurerm.container_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -169,13 +169,13 @@ injecting into a complete block.
   - `subnet_ids` (`list`):  When `null`, the `subnet_ids` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.new](#fn-container_groupcontainernew) constructor.
-  - `diagnostics` (`list[obj]`):  When `null`, the `diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.diagnostics.new](#fn-container_groupdiagnosticsnew) constructor.
-  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.dns_config.new](#fn-container_groupdns_confignew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.identity.new](#fn-container_groupidentitynew) constructor.
-  - `image_registry_credential` (`list[obj]`):  When `null`, the `image_registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.image_registry_credential.new](#fn-container_groupimage_registry_credentialnew) constructor.
-  - `init_container` (`list[obj]`):  When `null`, the `init_container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.new](#fn-container_groupinit_containernew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.timeouts.new](#fn-container_grouptimeoutsnew) constructor.
+  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.new](#fn-containernew) constructor.
+  - `diagnostics` (`list[obj]`):  When `null`, the `diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.diagnostics.new](#fn-diagnosticsnew) constructor.
+  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.dns_config.new](#fn-dns_confignew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.identity.new](#fn-identitynew) constructor.
+  - `image_registry_credential` (`list[obj]`):  When `null`, the `image_registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.image_registry_credential.new](#fn-image_registry_credentialnew) constructor.
+  - `init_container` (`list[obj]`):  When `null`, the `init_container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.new](#fn-init_containernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_group` resource into the root Terraform configuration.
@@ -689,12 +689,12 @@ Terraform sub block.
   - `memory_limit` (`number`):  When `null`, the `memory_limit` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `secure_environment_variables` (`obj`):  When `null`, the `secure_environment_variables` field will be omitted from the resulting object.
-  - `gpu` (`list[obj]`):  When `null`, the `gpu` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.gpu.new](#fn-containergpunew) constructor.
-  - `gpu_limit` (`list[obj]`):  When `null`, the `gpu_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.gpu_limit.new](#fn-containergpu_limitnew) constructor.
-  - `liveness_probe` (`list[obj]`):  When `null`, the `liveness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.liveness_probe.new](#fn-containerliveness_probenew) constructor.
-  - `ports` (`list[obj]`):  When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.ports.new](#fn-containerportsnew) constructor.
-  - `readiness_probe` (`list[obj]`):  When `null`, the `readiness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.readiness_probe.new](#fn-containerreadiness_probenew) constructor.
-  - `volume` (`list[obj]`):  When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.volume.new](#fn-containervolumenew) constructor.
+  - `gpu` (`list[obj]`):  When `null`, the `gpu` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.gpu.new](#fn-gpunew) constructor.
+  - `gpu_limit` (`list[obj]`):  When `null`, the `gpu_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.gpu_limit.new](#fn-gpu_limitnew) constructor.
+  - `liveness_probe` (`list[obj]`):  When `null`, the `liveness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.liveness_probe.new](#fn-liveness_probenew) constructor.
+  - `ports` (`list[obj]`):  When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.ports.new](#fn-portsnew) constructor.
+  - `readiness_probe` (`list[obj]`):  When `null`, the `readiness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.readiness_probe.new](#fn-readiness_probenew) constructor.
+  - `volume` (`list[obj]`):  When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.volume.new](#fn-volumenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `container` sub block.
@@ -771,7 +771,7 @@ Terraform sub block.
   - `period_seconds` (`number`):  When `null`, the `period_seconds` field will be omitted from the resulting object.
   - `success_threshold` (`number`):  When `null`, the `success_threshold` field will be omitted from the resulting object.
   - `timeout_seconds` (`number`):  When `null`, the `timeout_seconds` field will be omitted from the resulting object.
-  - `http_get` (`list[obj]`):  When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.liveness_probe.http_get.new](#fn-liveness_probehttp_getnew) constructor.
+  - `http_get` (`list[obj]`):  When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.liveness_probe.http_get.new](#fn-containerhttp_getnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `liveness_probe` sub block.
@@ -850,7 +850,7 @@ Terraform sub block.
   - `period_seconds` (`number`):  When `null`, the `period_seconds` field will be omitted from the resulting object.
   - `success_threshold` (`number`):  When `null`, the `success_threshold` field will be omitted from the resulting object.
   - `timeout_seconds` (`number`):  When `null`, the `timeout_seconds` field will be omitted from the resulting object.
-  - `http_get` (`list[obj]`):  When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.readiness_probe.http_get.new](#fn-readiness_probehttp_getnew) constructor.
+  - `http_get` (`list[obj]`):  When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.readiness_probe.http_get.new](#fn-containerhttp_getnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `readiness_probe` sub block.
@@ -907,7 +907,7 @@ Terraform sub block.
   - `share_name` (`string`):  When `null`, the `share_name` field will be omitted from the resulting object.
   - `storage_account_key` (`string`):  When `null`, the `storage_account_key` field will be omitted from the resulting object.
   - `storage_account_name` (`string`):  When `null`, the `storage_account_name` field will be omitted from the resulting object.
-  - `git_repo` (`list[obj]`):  When `null`, the `git_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.volume.git_repo.new](#fn-volumegit_reponew) constructor.
+  - `git_repo` (`list[obj]`):  When `null`, the `git_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.volume.git_repo.new](#fn-containergit_reponew) constructor.
 
 **Returns**:
   - An attribute object that represents the `volume` sub block.
@@ -955,7 +955,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `log_analytics` (`list[obj]`):  When `null`, the `log_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.diagnostics.log_analytics.new](#fn-diagnosticslog_analyticsnew) constructor.
+  - `log_analytics` (`list[obj]`):  When `null`, the `log_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.diagnostics.log_analytics.new](#fn-log_analyticsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `diagnostics` sub block.
@@ -1084,7 +1084,7 @@ Terraform sub block.
   - `image` (`string`): 
   - `name` (`string`): 
   - `secure_environment_variables` (`obj`):  When `null`, the `secure_environment_variables` field will be omitted from the resulting object.
-  - `volume` (`list[obj]`):  When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.volume.new](#fn-init_containervolumenew) constructor.
+  - `volume` (`list[obj]`):  When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.volume.new](#fn-volumenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `init_container` sub block.
@@ -1115,7 +1115,7 @@ Terraform sub block.
   - `share_name` (`string`):  When `null`, the `share_name` field will be omitted from the resulting object.
   - `storage_account_key` (`string`):  When `null`, the `storage_account_key` field will be omitted from the resulting object.
   - `storage_account_name` (`string`):  When `null`, the `storage_account_name` field will be omitted from the resulting object.
-  - `git_repo` (`list[obj]`):  When `null`, the `git_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.volume.git_repo.new](#fn-volumegit_reponew) constructor.
+  - `git_repo` (`list[obj]`):  When `null`, the `git_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.volume.git_repo.new](#fn-init_containergit_reponew) constructor.
 
 **Returns**:
   - An attribute object that represents the `volume` sub block.

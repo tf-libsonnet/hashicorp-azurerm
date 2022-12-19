@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `subscription_name` (`string`): The Display Name for the Subscription.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `workload` (`string`): The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`. When `null`, the `workload` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription.timeouts.new](#fn-subscriptiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.subscription.newAttrs` constructs a new object with attributes and blocks configured for the `subscription`
 Terraform resource.
 
-Unlike [azurerm.subscription.new](#fn-subscriptionnew), this function will not inject the `resource`
+Unlike [azurerm.subscription.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `subscription_name` (`string`): The Display Name for the Subscription.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `workload` (`string`): The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`. When `null`, the `workload` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription.timeouts.new](#fn-subscriptiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `subscription` resource into the root Terraform configuration.

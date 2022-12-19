@@ -71,9 +71,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `source_virtual_machine_id` (`string`):  When `null`, the `source_virtual_machine_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_resilient` (`bool`):  When `null`, the `zone_resilient` field will be omitted from the resulting object.
-  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-imagedata_disknew) constructor.
-  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-imageos_disknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-imagetimeoutsnew) constructor.
+  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-data_disknew) constructor.
+  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `azurerm.image.newAttrs` constructs a new object with attributes and blocks configured for the `image`
 Terraform resource.
 
-Unlike [azurerm.image.new](#fn-imagenew), this function will not inject the `resource`
+Unlike [azurerm.image.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -104,9 +104,9 @@ injecting into a complete block.
   - `source_virtual_machine_id` (`string`):  When `null`, the `source_virtual_machine_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_resilient` (`bool`):  When `null`, the `zone_resilient` field will be omitted from the resulting object.
-  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-imagedata_disknew) constructor.
-  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-imageos_disknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-imagetimeoutsnew) constructor.
+  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-data_disknew) constructor.
+  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `image` resource into the root Terraform configuration.

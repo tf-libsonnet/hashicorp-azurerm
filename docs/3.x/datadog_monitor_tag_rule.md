@@ -65,9 +65,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `datadog_monitor_id` (`string`): 
   - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-datadog_monitor_tag_rulelognew) constructor.
-  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-datadog_monitor_tag_rulemetricnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-datadog_monitor_tag_ruletimeoutsnew) constructor.
+  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-lognew) constructor.
+  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-metricnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `azurerm.datadog_monitor_tag_rule.newAttrs` constructs a new object with attributes and blocks configured for the `datadog_monitor_tag_rule`
 Terraform resource.
 
-Unlike [azurerm.datadog_monitor_tag_rule.new](#fn-datadog_monitor_tag_rulenew), this function will not inject the `resource`
+Unlike [azurerm.datadog_monitor_tag_rule.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,9 +93,9 @@ injecting into a complete block.
 **Args**:
   - `datadog_monitor_id` (`string`): 
   - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-datadog_monitor_tag_rulelognew) constructor.
-  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-datadog_monitor_tag_rulemetricnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-datadog_monitor_tag_ruletimeoutsnew) constructor.
+  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-lognew) constructor.
+  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-metricnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `datadog_monitor_tag_rule` resource into the root Terraform configuration.
@@ -263,7 +263,7 @@ Terraform sub block.
   - `aad_log_enabled` (`bool`):  When `null`, the `aad_log_enabled` field will be omitted from the resulting object.
   - `resource_log_enabled` (`bool`):  When `null`, the `resource_log_enabled` field will be omitted from the resulting object.
   - `subscription_log_enabled` (`bool`):  When `null`, the `subscription_log_enabled` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.filter.new](#fn-logfilternew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.filter.new](#fn-filternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `log` sub block.
@@ -311,7 +311,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.filter.new](#fn-metricfilternew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.filter.new](#fn-filternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric` sub block.

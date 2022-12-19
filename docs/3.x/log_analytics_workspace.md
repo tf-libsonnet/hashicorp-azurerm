@@ -73,7 +73,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
   - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-log_analytics_workspacetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `azurerm.log_analytics_workspace.newAttrs` constructs a new object with attributes and blocks configured for the `log_analytics_workspace`
 Terraform resource.
 
-Unlike [azurerm.log_analytics_workspace.new](#fn-log_analytics_workspacenew), this function will not inject the `resource`
+Unlike [azurerm.log_analytics_workspace.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -109,7 +109,7 @@ injecting into a complete block.
   - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
   - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-log_analytics_workspacetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `log_analytics_workspace` resource into the root Terraform configuration.

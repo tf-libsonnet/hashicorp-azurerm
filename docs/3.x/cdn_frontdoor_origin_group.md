@@ -65,9 +65,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` (`number`):  When `null`, the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field will be omitted from the resulting object.
   - `session_affinity_enabled` (`bool`):  When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
-  - `health_probe` (`list[obj]`):  When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-cdn_frontdoor_origin_grouphealth_probenew) constructor.
-  - `load_balancing` (`list[obj]`):  When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-cdn_frontdoor_origin_groupload_balancingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-cdn_frontdoor_origin_grouptimeoutsnew) constructor.
+  - `health_probe` (`list[obj]`):  When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-health_probenew) constructor.
+  - `load_balancing` (`list[obj]`):  When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-load_balancingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `azurerm.cdn_frontdoor_origin_group.newAttrs` constructs a new object with attributes and blocks configured for the `cdn_frontdoor_origin_group`
 Terraform resource.
 
-Unlike [azurerm.cdn_frontdoor_origin_group.new](#fn-cdn_frontdoor_origin_groupnew), this function will not inject the `resource`
+Unlike [azurerm.cdn_frontdoor_origin_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -95,9 +95,9 @@ injecting into a complete block.
   - `name` (`string`): 
   - `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` (`number`):  When `null`, the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field will be omitted from the resulting object.
   - `session_affinity_enabled` (`bool`):  When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
-  - `health_probe` (`list[obj]`):  When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-cdn_frontdoor_origin_grouphealth_probenew) constructor.
-  - `load_balancing` (`list[obj]`):  When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-cdn_frontdoor_origin_groupload_balancingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-cdn_frontdoor_origin_grouptimeoutsnew) constructor.
+  - `health_probe` (`list[obj]`):  When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-health_probenew) constructor.
+  - `load_balancing` (`list[obj]`):  When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-load_balancingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_origin_group` resource into the root Terraform configuration.

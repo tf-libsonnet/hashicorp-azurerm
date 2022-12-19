@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `nat_gateway_id` (`string`): 
   - `public_ip_address_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nat_gateway_public_ip_association.timeouts.new](#fn-nat_gateway_public_ip_associationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nat_gateway_public_ip_association.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -69,7 +69,7 @@ newAttrs()
 `azurerm.nat_gateway_public_ip_association.newAttrs` constructs a new object with attributes and blocks configured for the `nat_gateway_public_ip_association`
 Terraform resource.
 
-Unlike [azurerm.nat_gateway_public_ip_association.new](#fn-nat_gateway_public_ip_associationnew), this function will not inject the `resource`
+Unlike [azurerm.nat_gateway_public_ip_association.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -79,7 +79,7 @@ injecting into a complete block.
 **Args**:
   - `nat_gateway_id` (`string`): 
   - `public_ip_address_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nat_gateway_public_ip_association.timeouts.new](#fn-nat_gateway_public_ip_associationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nat_gateway_public_ip_association.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `nat_gateway_public_ip_association` resource into the root Terraform configuration.

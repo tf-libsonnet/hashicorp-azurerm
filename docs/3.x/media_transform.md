@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `media_services_account_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `output` (`list[obj]`):  When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-media_transformoutputnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-media_transformtimeoutsnew) constructor.
+  - `output` (`list[obj]`):  When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-outputnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.media_transform.newAttrs` constructs a new object with attributes and blocks configured for the `media_transform`
 Terraform resource.
 
-Unlike [azurerm.media_transform.new](#fn-media_transformnew), this function will not inject the `resource`
+Unlike [azurerm.media_transform.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,8 +98,8 @@ injecting into a complete block.
   - `media_services_account_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `output` (`list[obj]`):  When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-media_transformoutputnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-media_transformtimeoutsnew) constructor.
+  - `output` (`list[obj]`):  When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-outputnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_transform` resource into the root Terraform configuration.
@@ -261,10 +261,10 @@ Terraform sub block.
 **Args**:
   - `on_error_action` (`string`):  When `null`, the `on_error_action` field will be omitted from the resulting object.
   - `relative_priority` (`string`):  When `null`, the `relative_priority` field will be omitted from the resulting object.
-  - `audio_analyzer_preset` (`list[obj]`):  When `null`, the `audio_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.audio_analyzer_preset.new](#fn-outputaudio_analyzer_presetnew) constructor.
-  - `builtin_preset` (`list[obj]`):  When `null`, the `builtin_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.builtin_preset.new](#fn-outputbuiltin_presetnew) constructor.
-  - `face_detector_preset` (`list[obj]`):  When `null`, the `face_detector_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.face_detector_preset.new](#fn-outputface_detector_presetnew) constructor.
-  - `video_analyzer_preset` (`list[obj]`):  When `null`, the `video_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.video_analyzer_preset.new](#fn-outputvideo_analyzer_presetnew) constructor.
+  - `audio_analyzer_preset` (`list[obj]`):  When `null`, the `audio_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.audio_analyzer_preset.new](#fn-audio_analyzer_presetnew) constructor.
+  - `builtin_preset` (`list[obj]`):  When `null`, the `builtin_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.builtin_preset.new](#fn-builtin_presetnew) constructor.
+  - `face_detector_preset` (`list[obj]`):  When `null`, the `face_detector_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.face_detector_preset.new](#fn-face_detector_presetnew) constructor.
+  - `video_analyzer_preset` (`list[obj]`):  When `null`, the `video_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.video_analyzer_preset.new](#fn-video_analyzer_presetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `output` sub block.

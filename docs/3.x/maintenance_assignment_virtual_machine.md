@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): 
   - `maintenance_configuration_id` (`string`): 
   - `virtual_machine_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_assignment_virtual_machine.timeouts.new](#fn-maintenance_assignment_virtual_machinetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_assignment_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `azurerm.maintenance_assignment_virtual_machine.newAttrs` constructs a new object with attributes and blocks configured for the `maintenance_assignment_virtual_machine`
 Terraform resource.
 
-Unlike [azurerm.maintenance_assignment_virtual_machine.new](#fn-maintenance_assignment_virtual_machinenew), this function will not inject the `resource`
+Unlike [azurerm.maintenance_assignment_virtual_machine.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `location` (`string`): 
   - `maintenance_configuration_id` (`string`): 
   - `virtual_machine_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_assignment_virtual_machine.timeouts.new](#fn-maintenance_assignment_virtual_machinetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_assignment_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `maintenance_assignment_virtual_machine` resource into the root Terraform configuration.

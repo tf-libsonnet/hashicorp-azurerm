@@ -71,9 +71,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `policy_type` (`string`): 
-  - `policy_definition_group` (`list[obj]`):  When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_set_definitionpolicy_definition_groupnew) constructor.
-  - `policy_definition_reference` (`list[obj]`):  When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_set_definitionpolicy_definition_referencenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-policy_set_definitiontimeoutsnew) constructor.
+  - `policy_definition_group` (`list[obj]`):  When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_definition_groupnew) constructor.
+  - `policy_definition_reference` (`list[obj]`):  When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_definition_referencenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `azurerm.policy_set_definition.newAttrs` constructs a new object with attributes and blocks configured for the `policy_set_definition`
 Terraform resource.
 
-Unlike [azurerm.policy_set_definition.new](#fn-policy_set_definitionnew), this function will not inject the `resource`
+Unlike [azurerm.policy_set_definition.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -104,9 +104,9 @@ injecting into a complete block.
   - `name` (`string`): 
   - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `policy_type` (`string`): 
-  - `policy_definition_group` (`list[obj]`):  When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_set_definitionpolicy_definition_groupnew) constructor.
-  - `policy_definition_reference` (`list[obj]`):  When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_set_definitionpolicy_definition_referencenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-policy_set_definitiontimeoutsnew) constructor.
+  - `policy_definition_group` (`list[obj]`):  When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_definition_groupnew) constructor.
+  - `policy_definition_reference` (`list[obj]`):  When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_definition_referencenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `policy_set_definition` resource into the root Terraform configuration.

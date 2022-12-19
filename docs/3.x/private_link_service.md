@@ -71,8 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `visibility_subscription_ids` (`list`):  When `null`, the `visibility_subscription_ids` field will be omitted from the resulting object.
-  - `nat_ip_configuration` (`list[obj]`):  When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-private_link_servicenat_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-private_link_servicetimeoutsnew) constructor.
+  - `nat_ip_configuration` (`list[obj]`):  When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-nat_ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,7 +88,7 @@ newAttrs()
 `azurerm.private_link_service.newAttrs` constructs a new object with attributes and blocks configured for the `private_link_service`
 Terraform resource.
 
-Unlike [azurerm.private_link_service.new](#fn-private_link_servicenew), this function will not inject the `resource`
+Unlike [azurerm.private_link_service.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,8 +105,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `visibility_subscription_ids` (`list`):  When `null`, the `visibility_subscription_ids` field will be omitted from the resulting object.
-  - `nat_ip_configuration` (`list[obj]`):  When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-private_link_servicenat_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-private_link_servicetimeoutsnew) constructor.
+  - `nat_ip_configuration` (`list[obj]`):  When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-nat_ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `private_link_service` resource into the root Terraform configuration.

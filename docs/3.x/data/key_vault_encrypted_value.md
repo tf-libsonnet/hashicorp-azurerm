@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `encrypted_data` (`string`):  When `null`, the `encrypted_data` field will be omitted from the resulting object.
   - `key_vault_key_id` (`string`): 
   - `plain_text_value` (`string`):  When `null`, the `plain_text_value` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-key_vault_encrypted_valuetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.data.key_vault_encrypted_value.newAttrs` constructs a new object with attributes and blocks configured for the `key_vault_encrypted_value`
 Terraform data source.
 
-Unlike [azurerm.data.key_vault_encrypted_value.new](#fn-key_vault_encrypted_valuenew), this function will not inject the `data source`
+Unlike [azurerm.data.key_vault_encrypted_value.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `encrypted_data` (`string`):  When `null`, the `encrypted_data` field will be omitted from the resulting object.
   - `key_vault_key_id` (`string`): 
   - `plain_text_value` (`string`):  When `null`, the `plain_text_value` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-key_vault_encrypted_valuetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `key_vault_encrypted_value` data source into the root Terraform configuration.

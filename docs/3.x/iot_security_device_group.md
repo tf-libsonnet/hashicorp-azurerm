@@ -61,9 +61,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `iothub_id` (`string`): 
   - `name` (`string`): 
-  - `allow_rule` (`list[obj]`):  When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-iot_security_device_groupallow_rulenew) constructor.
-  - `range_rule` (`list[obj]`):  When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-iot_security_device_grouprange_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-iot_security_device_grouptimeoutsnew) constructor.
+  - `allow_rule` (`list[obj]`):  When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-allow_rulenew) constructor.
+  - `range_rule` (`list[obj]`):  When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-range_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `azurerm.iot_security_device_group.newAttrs` constructs a new object with attributes and blocks configured for the `iot_security_device_group`
 Terraform resource.
 
-Unlike [azurerm.iot_security_device_group.new](#fn-iot_security_device_groupnew), this function will not inject the `resource`
+Unlike [azurerm.iot_security_device_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,9 +89,9 @@ injecting into a complete block.
 **Args**:
   - `iothub_id` (`string`): 
   - `name` (`string`): 
-  - `allow_rule` (`list[obj]`):  When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-iot_security_device_groupallow_rulenew) constructor.
-  - `range_rule` (`list[obj]`):  When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-iot_security_device_grouprange_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-iot_security_device_grouptimeoutsnew) constructor.
+  - `allow_rule` (`list[obj]`):  When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-allow_rulenew) constructor.
+  - `range_rule` (`list[obj]`):  When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-range_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iot_security_device_group` resource into the root Terraform configuration.

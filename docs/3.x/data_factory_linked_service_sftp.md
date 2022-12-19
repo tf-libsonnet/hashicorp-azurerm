@@ -77,7 +77,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `port` (`number`): 
   - `skip_host_key_validation` (`bool`):  When `null`, the `skip_host_key_validation` field will be omitted from the resulting object.
   - `username` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sftp.timeouts.new](#fn-data_factory_linked_service_sftptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sftp.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,7 +93,7 @@ newAttrs()
 `azurerm.data_factory_linked_service_sftp.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_linked_service_sftp`
 Terraform resource.
 
-Unlike [azurerm.data_factory_linked_service_sftp.new](#fn-data_factory_linked_service_sftpnew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_linked_service_sftp.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,7 +115,7 @@ injecting into a complete block.
   - `port` (`number`): 
   - `skip_host_key_validation` (`bool`):  When `null`, the `skip_host_key_validation` field will be omitted from the resulting object.
   - `username` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sftp.timeouts.new](#fn-data_factory_linked_service_sftptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sftp.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_sftp` resource into the root Terraform configuration.

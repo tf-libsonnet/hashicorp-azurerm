@@ -57,8 +57,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `loadbalancer_id` (`string`): 
   - `name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.timeouts.new](#fn-lb_backend_address_pooltimeoutsnew) constructor.
-  - `tunnel_interface` (`list[obj]`):  When `null`, the `tunnel_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.tunnel_interface.new](#fn-lb_backend_address_pooltunnel_interfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tunnel_interface` (`list[obj]`):  When `null`, the `tunnel_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.tunnel_interface.new](#fn-tunnel_interfacenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -74,7 +74,7 @@ newAttrs()
 `azurerm.lb_backend_address_pool.newAttrs` constructs a new object with attributes and blocks configured for the `lb_backend_address_pool`
 Terraform resource.
 
-Unlike [azurerm.lb_backend_address_pool.new](#fn-lb_backend_address_poolnew), this function will not inject the `resource`
+Unlike [azurerm.lb_backend_address_pool.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -84,8 +84,8 @@ injecting into a complete block.
 **Args**:
   - `loadbalancer_id` (`string`): 
   - `name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.timeouts.new](#fn-lb_backend_address_pooltimeoutsnew) constructor.
-  - `tunnel_interface` (`list[obj]`):  When `null`, the `tunnel_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.tunnel_interface.new](#fn-lb_backend_address_pooltunnel_interfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tunnel_interface` (`list[obj]`):  When `null`, the `tunnel_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.tunnel_interface.new](#fn-tunnel_interfacenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `lb_backend_address_pool` resource into the root Terraform configuration.

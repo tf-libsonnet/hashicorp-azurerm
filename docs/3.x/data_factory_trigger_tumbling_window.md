@@ -85,10 +85,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `max_concurrency` (`number`):  When `null`, the `max_concurrency` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `start_time` (`string`): 
-  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-data_factory_trigger_tumbling_windowpipelinenew) constructor.
-  - `retry` (`list[obj]`):  When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-data_factory_trigger_tumbling_windowretrynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-data_factory_trigger_tumbling_windowtimeoutsnew) constructor.
-  - `trigger_dependency` (`list[obj]`):  When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-data_factory_trigger_tumbling_windowtrigger_dependencynew) constructor.
+  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-pipelinenew) constructor.
+  - `retry` (`list[obj]`):  When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-retrynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trigger_dependency` (`list[obj]`):  When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-trigger_dependencynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ newAttrs()
 `azurerm.data_factory_trigger_tumbling_window.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_trigger_tumbling_window`
 Terraform resource.
 
-Unlike [azurerm.data_factory_trigger_tumbling_window.new](#fn-data_factory_trigger_tumbling_windownew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_trigger_tumbling_window.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -124,10 +124,10 @@ injecting into a complete block.
   - `max_concurrency` (`number`):  When `null`, the `max_concurrency` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `start_time` (`string`): 
-  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-data_factory_trigger_tumbling_windowpipelinenew) constructor.
-  - `retry` (`list[obj]`):  When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-data_factory_trigger_tumbling_windowretrynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-data_factory_trigger_tumbling_windowtimeoutsnew) constructor.
-  - `trigger_dependency` (`list[obj]`):  When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-data_factory_trigger_tumbling_windowtrigger_dependencynew) constructor.
+  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-pipelinenew) constructor.
+  - `retry` (`list[obj]`):  When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-retrynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trigger_dependency` (`list[obj]`):  When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-trigger_dependencynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_trigger_tumbling_window` resource into the root Terraform configuration.

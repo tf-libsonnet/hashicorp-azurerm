@@ -67,9 +67,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `readonly_endpoint_failover_policy_enabled` (`bool`):  When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
   - `server_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `partner_server` (`list[obj]`):  When `null`, the `partner_server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.partner_server.new](#fn-mssql_failover_grouppartner_servernew) constructor.
-  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.read_write_endpoint_failover_policy.new](#fn-mssql_failover_groupread_write_endpoint_failover_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.timeouts.new](#fn-mssql_failover_grouptimeoutsnew) constructor.
+  - `partner_server` (`list[obj]`):  When `null`, the `partner_server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.partner_server.new](#fn-partner_servernew) constructor.
+  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.read_write_endpoint_failover_policy.new](#fn-read_write_endpoint_failover_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `azurerm.mssql_failover_group.newAttrs` constructs a new object with attributes and blocks configured for the `mssql_failover_group`
 Terraform resource.
 
-Unlike [azurerm.mssql_failover_group.new](#fn-mssql_failover_groupnew), this function will not inject the `resource`
+Unlike [azurerm.mssql_failover_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,9 +98,9 @@ injecting into a complete block.
   - `readonly_endpoint_failover_policy_enabled` (`bool`):  When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
   - `server_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `partner_server` (`list[obj]`):  When `null`, the `partner_server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.partner_server.new](#fn-mssql_failover_grouppartner_servernew) constructor.
-  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.read_write_endpoint_failover_policy.new](#fn-mssql_failover_groupread_write_endpoint_failover_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.timeouts.new](#fn-mssql_failover_grouptimeoutsnew) constructor.
+  - `partner_server` (`list[obj]`):  When `null`, the `partner_server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.partner_server.new](#fn-partner_servernew) constructor.
+  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.read_write_endpoint_failover_policy.new](#fn-read_write_endpoint_failover_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_failover_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_failover_group` resource into the root Terraform configuration.

@@ -75,8 +75,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `type` (`string`): 
   - `type_handler_version` (`string`): 
   - `virtual_machine_id` (`string`): 
-  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.protected_settings_from_key_vault.new](#fn-virtual_machine_extensionprotected_settings_from_key_vaultnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.timeouts.new](#fn-virtual_machine_extensiontimeoutsnew) constructor.
+  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.protected_settings_from_key_vault.new](#fn-protected_settings_from_key_vaultnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `azurerm.virtual_machine_extension.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_machine_extension`
 Terraform resource.
 
-Unlike [azurerm.virtual_machine_extension.new](#fn-virtual_machine_extensionnew), this function will not inject the `resource`
+Unlike [azurerm.virtual_machine_extension.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,8 +111,8 @@ injecting into a complete block.
   - `type` (`string`): 
   - `type_handler_version` (`string`): 
   - `virtual_machine_id` (`string`): 
-  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.protected_settings_from_key_vault.new](#fn-virtual_machine_extensionprotected_settings_from_key_vaultnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.timeouts.new](#fn-virtual_machine_extensiontimeoutsnew) constructor.
+  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.protected_settings_from_key_vault.new](#fn-protected_settings_from_key_vaultnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_extension.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_machine_extension` resource into the root Terraform configuration.

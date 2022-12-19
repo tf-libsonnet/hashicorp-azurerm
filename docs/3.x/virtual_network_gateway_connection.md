@@ -103,10 +103,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `type` (`string`): 
   - `use_policy_based_traffic_selectors` (`bool`):  When `null`, the `use_policy_based_traffic_selectors` field will be omitted from the resulting object.
   - `virtual_network_gateway_id` (`string`): 
-  - `custom_bgp_addresses` (`list[obj]`):  When `null`, the `custom_bgp_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.custom_bgp_addresses.new](#fn-virtual_network_gateway_connectioncustom_bgp_addressesnew) constructor.
-  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.ipsec_policy.new](#fn-virtual_network_gateway_connectionipsec_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.timeouts.new](#fn-virtual_network_gateway_connectiontimeoutsnew) constructor.
-  - `traffic_selector_policy` (`list[obj]`):  When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.traffic_selector_policy.new](#fn-virtual_network_gateway_connectiontraffic_selector_policynew) constructor.
+  - `custom_bgp_addresses` (`list[obj]`):  When `null`, the `custom_bgp_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.custom_bgp_addresses.new](#fn-custom_bgp_addressesnew) constructor.
+  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.ipsec_policy.new](#fn-ipsec_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `traffic_selector_policy` (`list[obj]`):  When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.traffic_selector_policy.new](#fn-traffic_selector_policynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -122,7 +122,7 @@ newAttrs()
 `azurerm.virtual_network_gateway_connection.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_network_gateway_connection`
 Terraform resource.
 
-Unlike [azurerm.virtual_network_gateway_connection.new](#fn-virtual_network_gateway_connectionnew), this function will not inject the `resource`
+Unlike [azurerm.virtual_network_gateway_connection.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -151,10 +151,10 @@ injecting into a complete block.
   - `type` (`string`): 
   - `use_policy_based_traffic_selectors` (`bool`):  When `null`, the `use_policy_based_traffic_selectors` field will be omitted from the resulting object.
   - `virtual_network_gateway_id` (`string`): 
-  - `custom_bgp_addresses` (`list[obj]`):  When `null`, the `custom_bgp_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.custom_bgp_addresses.new](#fn-virtual_network_gateway_connectioncustom_bgp_addressesnew) constructor.
-  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.ipsec_policy.new](#fn-virtual_network_gateway_connectionipsec_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.timeouts.new](#fn-virtual_network_gateway_connectiontimeoutsnew) constructor.
-  - `traffic_selector_policy` (`list[obj]`):  When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.traffic_selector_policy.new](#fn-virtual_network_gateway_connectiontraffic_selector_policynew) constructor.
+  - `custom_bgp_addresses` (`list[obj]`):  When `null`, the `custom_bgp_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.custom_bgp_addresses.new](#fn-custom_bgp_addressesnew) constructor.
+  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.ipsec_policy.new](#fn-ipsec_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `traffic_selector_policy` (`list[obj]`):  When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway_connection.traffic_selector_policy.new](#fn-traffic_selector_policynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_network_gateway_connection` resource into the root Terraform configuration.

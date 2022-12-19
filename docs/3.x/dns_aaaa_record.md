@@ -63,7 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `target_resource_id` (`string`):  When `null`, the `target_resource_id` field will be omitted from the resulting object.
   - `ttl` (`number`): 
   - `zone_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_aaaa_record.timeouts.new](#fn-dns_aaaa_recordtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_aaaa_record.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `azurerm.dns_aaaa_record.newAttrs` constructs a new object with attributes and blocks configured for the `dns_aaaa_record`
 Terraform resource.
 
-Unlike [azurerm.dns_aaaa_record.new](#fn-dns_aaaa_recordnew), this function will not inject the `resource`
+Unlike [azurerm.dns_aaaa_record.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -94,7 +94,7 @@ injecting into a complete block.
   - `target_resource_id` (`string`):  When `null`, the `target_resource_id` field will be omitted from the resulting object.
   - `ttl` (`number`): 
   - `zone_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_aaaa_record.timeouts.new](#fn-dns_aaaa_recordtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_aaaa_record.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dns_aaaa_record` resource into the root Terraform configuration.

@@ -67,7 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `time_to_live_min` (`number`):  When `null`, the `time_to_live_min` field will be omitted from the resulting object.
   - `virtual_network_enabled` (`bool`):  When `null`, the `virtual_network_enabled` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure.timeouts.new](#fn-data_factory_integration_runtime_azuretimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `azurerm.data_factory_integration_runtime_azure.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_integration_runtime_azure`
 Terraform resource.
 
-Unlike [azurerm.data_factory_integration_runtime_azure.new](#fn-data_factory_integration_runtime_azurenew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_integration_runtime_azure.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -100,7 +100,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `time_to_live_min` (`number`):  When `null`, the `time_to_live_min` field will be omitted from the resulting object.
   - `virtual_network_enabled` (`bool`):  When `null`, the `virtual_network_enabled` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure.timeouts.new](#fn-data_factory_integration_runtime_azuretimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_integration_runtime_azure` resource into the root Terraform configuration.

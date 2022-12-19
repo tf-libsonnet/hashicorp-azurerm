@@ -75,9 +75,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `user_name` (`string`):  When `null`, the `user_name` field will be omitted from the resulting object.
-  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_connection_string.new](#fn-data_factory_linked_service_sql_serverkey_vault_connection_stringnew) constructor.
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_password.new](#fn-data_factory_linked_service_sql_serverkey_vault_passwordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.timeouts.new](#fn-data_factory_linked_service_sql_servertimeoutsnew) constructor.
+  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_connection_string.new](#fn-key_vault_connection_stringnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,7 +93,7 @@ newAttrs()
 `azurerm.data_factory_linked_service_sql_server.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_linked_service_sql_server`
 Terraform resource.
 
-Unlike [azurerm.data_factory_linked_service_sql_server.new](#fn-data_factory_linked_service_sql_servernew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_linked_service_sql_server.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -110,9 +110,9 @@ injecting into a complete block.
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
   - `user_name` (`string`):  When `null`, the `user_name` field will be omitted from the resulting object.
-  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_connection_string.new](#fn-data_factory_linked_service_sql_serverkey_vault_connection_stringnew) constructor.
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_password.new](#fn-data_factory_linked_service_sql_serverkey_vault_passwordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.timeouts.new](#fn-data_factory_linked_service_sql_servertimeoutsnew) constructor.
+  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_connection_string.new](#fn-key_vault_connection_stringnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_sql_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_sql_server` resource into the root Terraform configuration.

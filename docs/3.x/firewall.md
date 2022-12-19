@@ -83,10 +83,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `threat_intel_mode` (`string`):  When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-firewallip_configurationnew) constructor.
-  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-firewallmanagement_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-firewalltimeoutsnew) constructor.
-  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-firewallvirtual_hubnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-management_ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-virtual_hubnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `azurerm.firewall.newAttrs` constructs a new object with attributes and blocks configured for the `firewall`
 Terraform resource.
 
-Unlike [azurerm.firewall.new](#fn-firewallnew), this function will not inject the `resource`
+Unlike [azurerm.firewall.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -121,10 +121,10 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `threat_intel_mode` (`string`):  When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-firewallip_configurationnew) constructor.
-  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-firewallmanagement_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-firewalltimeoutsnew) constructor.
-  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-firewallvirtual_hubnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-management_ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-virtual_hubnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall` resource into the root Terraform configuration.

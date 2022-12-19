@@ -99,13 +99,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `route` (`list`):  When `null`, the `route` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cloud_to_device` (`list[obj]`):  When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-iothubcloud_to_devicenew) constructor.
-  - `fallback_route` (`list[obj]`):  When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-iothubfallback_routenew) constructor.
-  - `file_upload` (`list[obj]`):  When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-iothubfile_uploadnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-iothubidentitynew) constructor.
-  - `network_rule_set` (`list[obj]`):  When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-iothubnetwork_rule_setnew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-iothubskunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-iothubtimeoutsnew) constructor.
+  - `cloud_to_device` (`list[obj]`):  When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-cloud_to_devicenew) constructor.
+  - `fallback_route` (`list[obj]`):  When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-fallback_routenew) constructor.
+  - `file_upload` (`list[obj]`):  When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-file_uploadnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-identitynew) constructor.
+  - `network_rule_set` (`list[obj]`):  When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-network_rule_setnew) constructor.
+  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -121,7 +121,7 @@ newAttrs()
 `azurerm.iothub.newAttrs` constructs a new object with attributes and blocks configured for the `iothub`
 Terraform resource.
 
-Unlike [azurerm.iothub.new](#fn-iothubnew), this function will not inject the `resource`
+Unlike [azurerm.iothub.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -140,13 +140,13 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `route` (`list`):  When `null`, the `route` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cloud_to_device` (`list[obj]`):  When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-iothubcloud_to_devicenew) constructor.
-  - `fallback_route` (`list[obj]`):  When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-iothubfallback_routenew) constructor.
-  - `file_upload` (`list[obj]`):  When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-iothubfile_uploadnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-iothubidentitynew) constructor.
-  - `network_rule_set` (`list[obj]`):  When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-iothubnetwork_rule_setnew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-iothubskunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-iothubtimeoutsnew) constructor.
+  - `cloud_to_device` (`list[obj]`):  When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-cloud_to_devicenew) constructor.
+  - `fallback_route` (`list[obj]`):  When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-fallback_routenew) constructor.
+  - `file_upload` (`list[obj]`):  When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-file_uploadnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-identitynew) constructor.
+  - `network_rule_set` (`list[obj]`):  When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-network_rule_setnew) constructor.
+  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iothub` resource into the root Terraform configuration.
@@ -605,7 +605,7 @@ Terraform sub block.
 **Args**:
   - `default_ttl` (`string`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
   - `max_delivery_count` (`number`):  When `null`, the `max_delivery_count` field will be omitted from the resulting object.
-  - `feedback` (`list[obj]`):  When `null`, the `feedback` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.feedback.new](#fn-cloud_to_devicefeedbacknew) constructor.
+  - `feedback` (`list[obj]`):  When `null`, the `feedback` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.feedback.new](#fn-feedbacknew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cloud_to_device` sub block.
@@ -736,7 +736,7 @@ Terraform sub block.
 **Args**:
   - `apply_to_builtin_eventhub_endpoint` (`bool`):  When `null`, the `apply_to_builtin_eventhub_endpoint` field will be omitted from the resulting object.
   - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.ip_rule.new](#fn-network_rule_setip_rulenew) constructor.
+  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.ip_rule.new](#fn-ip_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rule_set` sub block.
