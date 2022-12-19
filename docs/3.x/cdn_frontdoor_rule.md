@@ -1,0 +1,1034 @@
+---
+permalink: /cdn_frontdoor_rule/
+---
+
+# cdn_frontdoor_rule
+
+`cdn_frontdoor_rule` represents the `azurerm_cdn_frontdoor_rule` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withActions()`](#fn-withactions)
+* [`fn withActionsMixin()`](#fn-withactionsmixin)
+* [`fn withBehaviorOnMatch()`](#fn-withbehavioronmatch)
+* [`fn withCdnFrontdoorRuleSetId()`](#fn-withcdnfrontdoorrulesetid)
+* [`fn withConditions()`](#fn-withconditions)
+* [`fn withConditionsMixin()`](#fn-withconditionsmixin)
+* [`fn withName()`](#fn-withname)
+* [`fn withOrder()`](#fn-withorder)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj actions`](#obj-actions)
+  * [`fn new()`](#fn-actionsnew)
+  * [`obj actions.request_header_action`](#obj-actionsrequest_header_action)
+    * [`fn new()`](#fn-actionsrequest_header_actionnew)
+  * [`obj actions.response_header_action`](#obj-actionsresponse_header_action)
+    * [`fn new()`](#fn-actionsresponse_header_actionnew)
+  * [`obj actions.route_configuration_override_action`](#obj-actionsroute_configuration_override_action)
+    * [`fn new()`](#fn-actionsroute_configuration_override_actionnew)
+  * [`obj actions.url_redirect_action`](#obj-actionsurl_redirect_action)
+    * [`fn new()`](#fn-actionsurl_redirect_actionnew)
+  * [`obj actions.url_rewrite_action`](#obj-actionsurl_rewrite_action)
+    * [`fn new()`](#fn-actionsurl_rewrite_actionnew)
+* [`obj conditions`](#obj-conditions)
+  * [`fn new()`](#fn-conditionsnew)
+  * [`obj conditions.client_port_condition`](#obj-conditionsclient_port_condition)
+    * [`fn new()`](#fn-conditionsclient_port_conditionnew)
+  * [`obj conditions.cookies_condition`](#obj-conditionscookies_condition)
+    * [`fn new()`](#fn-conditionscookies_conditionnew)
+  * [`obj conditions.host_name_condition`](#obj-conditionshost_name_condition)
+    * [`fn new()`](#fn-conditionshost_name_conditionnew)
+  * [`obj conditions.http_version_condition`](#obj-conditionshttp_version_condition)
+    * [`fn new()`](#fn-conditionshttp_version_conditionnew)
+  * [`obj conditions.is_device_condition`](#obj-conditionsis_device_condition)
+    * [`fn new()`](#fn-conditionsis_device_conditionnew)
+  * [`obj conditions.post_args_condition`](#obj-conditionspost_args_condition)
+    * [`fn new()`](#fn-conditionspost_args_conditionnew)
+  * [`obj conditions.query_string_condition`](#obj-conditionsquery_string_condition)
+    * [`fn new()`](#fn-conditionsquery_string_conditionnew)
+  * [`obj conditions.remote_address_condition`](#obj-conditionsremote_address_condition)
+    * [`fn new()`](#fn-conditionsremote_address_conditionnew)
+  * [`obj conditions.request_body_condition`](#obj-conditionsrequest_body_condition)
+    * [`fn new()`](#fn-conditionsrequest_body_conditionnew)
+  * [`obj conditions.request_header_condition`](#obj-conditionsrequest_header_condition)
+    * [`fn new()`](#fn-conditionsrequest_header_conditionnew)
+  * [`obj conditions.request_method_condition`](#obj-conditionsrequest_method_condition)
+    * [`fn new()`](#fn-conditionsrequest_method_conditionnew)
+  * [`obj conditions.request_scheme_condition`](#obj-conditionsrequest_scheme_condition)
+    * [`fn new()`](#fn-conditionsrequest_scheme_conditionnew)
+  * [`obj conditions.request_uri_condition`](#obj-conditionsrequest_uri_condition)
+    * [`fn new()`](#fn-conditionsrequest_uri_conditionnew)
+  * [`obj conditions.server_port_condition`](#obj-conditionsserver_port_condition)
+    * [`fn new()`](#fn-conditionsserver_port_conditionnew)
+  * [`obj conditions.socket_address_condition`](#obj-conditionssocket_address_condition)
+    * [`fn new()`](#fn-conditionssocket_address_conditionnew)
+  * [`obj conditions.ssl_protocol_condition`](#obj-conditionsssl_protocol_condition)
+    * [`fn new()`](#fn-conditionsssl_protocol_conditionnew)
+  * [`obj conditions.url_file_extension_condition`](#obj-conditionsurl_file_extension_condition)
+    * [`fn new()`](#fn-conditionsurl_file_extension_conditionnew)
+  * [`obj conditions.url_filename_condition`](#obj-conditionsurl_filename_condition)
+    * [`fn new()`](#fn-conditionsurl_filename_conditionnew)
+  * [`obj conditions.url_path_condition`](#obj-conditionsurl_path_condition)
+    * [`fn new()`](#fn-conditionsurl_path_conditionnew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.new` injects a new `azurerm_cdn_frontdoor_rule` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.cdn_frontdoor_rule.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.cdn_frontdoor_rule` using the reference:
+
+    $._ref.azurerm_cdn_frontdoor_rule.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_cdn_frontdoor_rule.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `behavior_on_match` (`string`):  When `null`, the `behavior_on_match` field will be omitted from the resulting object.
+  - `cdn_frontdoor_rule_set_id` (`string`): 
+  - `name` (`string`): 
+  - `order` (`number`): 
+  - `actions` (`list[obj]`):  When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.new](#fn-cdnfrontdoorruleactionsnew) constructor.
+  - `conditions` (`list[obj]`):  When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.new](#fn-cdnfrontdoorruleconditionsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.timeouts.new](#fn-cdnfrontdoorruletimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.cdn_frontdoor_rule.newAttrs` constructs a new object with attributes and blocks configured for the `cdn_frontdoor_rule`
+Terraform resource.
+
+Unlike [azurerm.cdn_frontdoor_rule.new](#fn-cdnfrontdoorrulenew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `behavior_on_match` (`string`):  When `null`, the `behavior_on_match` field will be omitted from the resulting object.
+  - `cdn_frontdoor_rule_set_id` (`string`): 
+  - `name` (`string`): 
+  - `order` (`number`): 
+  - `actions` (`list[obj]`):  When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.new](#fn-cdnfrontdoorruleactionsnew) constructor.
+  - `conditions` (`list[obj]`):  When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.new](#fn-cdnfrontdoorruleconditionsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.timeouts.new](#fn-cdnfrontdoorruletimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_rule` resource into the root Terraform configuration.
+
+
+### fn withActions
+
+```ts
+withActions()
+```
+
+`azurerm.cdn_frontdoor_rule.withActions` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the actions field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `actions` field.
+
+
+### fn withActionsMixin
+
+```ts
+withActionsMixin()
+```
+
+`azurerm.cdn_frontdoor_rule.withActionsMixin` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the actions field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.cdn_frontdoor_rule.withActions](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `actions` field.
+
+
+### fn withBehaviorOnMatch
+
+```ts
+withBehaviorOnMatch()
+```
+
+`azurerm.cdn_frontdoor_rule.withBehaviorOnMatch` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the behavior_on_match field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `behavior_on_match` field.
+
+
+### fn withCdnFrontdoorRuleSetId
+
+```ts
+withCdnFrontdoorRuleSetId()
+```
+
+`azurerm.cdn_frontdoor_rule.withCdnFrontdoorRuleSetId` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the cdn_frontdoor_rule_set_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `cdn_frontdoor_rule_set_id` field.
+
+
+### fn withConditions
+
+```ts
+withConditions()
+```
+
+`azurerm.cdn_frontdoor_rule.withConditions` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the conditions field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `conditions` field.
+
+
+### fn withConditionsMixin
+
+```ts
+withConditionsMixin()
+```
+
+`azurerm.cdn_frontdoor_rule.withConditionsMixin` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the conditions field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.cdn_frontdoor_rule.withConditions](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `conditions` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.cdn_frontdoor_rule.withName` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withOrder
+
+```ts
+withOrder()
+```
+
+`azurerm.cdn_frontdoor_rule.withOrder` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the order field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `order` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.cdn_frontdoor_rule.withTimeouts` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.cdn_frontdoor_rule.withTimeoutsMixin` constructs a mixin object that can be merged into the `cdn_frontdoor_rule`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.cdn_frontdoor_rule.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+## obj actions
+
+
+
+### fn actions.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.actions.new` constructs a new object with attributes and blocks configured for the `actions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `request_header_action` (`list[obj]`):  When `null`, the `request_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.request_header_action.new](#fn-actionsrequestheaderactionnew) constructor.
+  - `response_header_action` (`list[obj]`):  When `null`, the `response_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.response_header_action.new](#fn-actionsresponseheaderactionnew) constructor.
+  - `route_configuration_override_action` (`list[obj]`):  When `null`, the `route_configuration_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.route_configuration_override_action.new](#fn-actionsrouteconfigurationoverrideactionnew) constructor.
+  - `url_redirect_action` (`list[obj]`):  When `null`, the `url_redirect_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.url_redirect_action.new](#fn-actionsurlredirectactionnew) constructor.
+  - `url_rewrite_action` (`list[obj]`):  When `null`, the `url_rewrite_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.actions.url_rewrite_action.new](#fn-actionsurlrewriteactionnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `actions` sub block.
+
+
+## obj actions.request_header_action
+
+
+
+### fn actions.request_header_action.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.actions.request_header_action.new` constructs a new object with attributes and blocks configured for the `request_header_action`
+Terraform sub block.
+
+
+
+**Args**:
+  - `header_action` (`string`): 
+  - `header_name` (`string`): 
+  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `request_header_action` sub block.
+
+
+## obj actions.response_header_action
+
+
+
+### fn actions.response_header_action.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.actions.response_header_action.new` constructs a new object with attributes and blocks configured for the `response_header_action`
+Terraform sub block.
+
+
+
+**Args**:
+  - `header_action` (`string`): 
+  - `header_name` (`string`): 
+  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `response_header_action` sub block.
+
+
+## obj actions.route_configuration_override_action
+
+
+
+### fn actions.route_configuration_override_action.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.actions.route_configuration_override_action.new` constructs a new object with attributes and blocks configured for the `route_configuration_override_action`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cache_behavior` (`string`):  When `null`, the `cache_behavior` field will be omitted from the resulting object.
+  - `cache_duration` (`string`):  When `null`, the `cache_duration` field will be omitted from the resulting object.
+  - `cdn_frontdoor_origin_group_id` (`string`):  When `null`, the `cdn_frontdoor_origin_group_id` field will be omitted from the resulting object.
+  - `compression_enabled` (`bool`):  When `null`, the `compression_enabled` field will be omitted from the resulting object.
+  - `forwarding_protocol` (`string`):  When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
+  - `query_string_caching_behavior` (`string`):  When `null`, the `query_string_caching_behavior` field will be omitted from the resulting object.
+  - `query_string_parameters` (`list`):  When `null`, the `query_string_parameters` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `route_configuration_override_action` sub block.
+
+
+## obj actions.url_redirect_action
+
+
+
+### fn actions.url_redirect_action.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.actions.url_redirect_action.new` constructs a new object with attributes and blocks configured for the `url_redirect_action`
+Terraform sub block.
+
+
+
+**Args**:
+  - `destination_fragment` (`string`):  When `null`, the `destination_fragment` field will be omitted from the resulting object.
+  - `destination_hostname` (`string`): 
+  - `destination_path` (`string`):  When `null`, the `destination_path` field will be omitted from the resulting object.
+  - `query_string` (`string`):  When `null`, the `query_string` field will be omitted from the resulting object.
+  - `redirect_protocol` (`string`):  When `null`, the `redirect_protocol` field will be omitted from the resulting object.
+  - `redirect_type` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `url_redirect_action` sub block.
+
+
+## obj actions.url_rewrite_action
+
+
+
+### fn actions.url_rewrite_action.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.actions.url_rewrite_action.new` constructs a new object with attributes and blocks configured for the `url_rewrite_action`
+Terraform sub block.
+
+
+
+**Args**:
+  - `destination` (`string`): 
+  - `preserve_unmatched_path` (`bool`):  When `null`, the `preserve_unmatched_path` field will be omitted from the resulting object.
+  - `source_pattern` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `url_rewrite_action` sub block.
+
+
+## obj conditions
+
+
+
+### fn conditions.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.new` constructs a new object with attributes and blocks configured for the `conditions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `client_port_condition` (`list[obj]`):  When `null`, the `client_port_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.client_port_condition.new](#fn-conditionsclientportconditionnew) constructor.
+  - `cookies_condition` (`list[obj]`):  When `null`, the `cookies_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.cookies_condition.new](#fn-conditionscookiesconditionnew) constructor.
+  - `host_name_condition` (`list[obj]`):  When `null`, the `host_name_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.host_name_condition.new](#fn-conditionshostnameconditionnew) constructor.
+  - `http_version_condition` (`list[obj]`):  When `null`, the `http_version_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.http_version_condition.new](#fn-conditionshttpversionconditionnew) constructor.
+  - `is_device_condition` (`list[obj]`):  When `null`, the `is_device_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.is_device_condition.new](#fn-conditionsisdeviceconditionnew) constructor.
+  - `post_args_condition` (`list[obj]`):  When `null`, the `post_args_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.post_args_condition.new](#fn-conditionspostargsconditionnew) constructor.
+  - `query_string_condition` (`list[obj]`):  When `null`, the `query_string_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.query_string_condition.new](#fn-conditionsquerystringconditionnew) constructor.
+  - `remote_address_condition` (`list[obj]`):  When `null`, the `remote_address_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.remote_address_condition.new](#fn-conditionsremoteaddressconditionnew) constructor.
+  - `request_body_condition` (`list[obj]`):  When `null`, the `request_body_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.request_body_condition.new](#fn-conditionsrequestbodyconditionnew) constructor.
+  - `request_header_condition` (`list[obj]`):  When `null`, the `request_header_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.request_header_condition.new](#fn-conditionsrequestheaderconditionnew) constructor.
+  - `request_method_condition` (`list[obj]`):  When `null`, the `request_method_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.request_method_condition.new](#fn-conditionsrequestmethodconditionnew) constructor.
+  - `request_scheme_condition` (`list[obj]`):  When `null`, the `request_scheme_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.request_scheme_condition.new](#fn-conditionsrequestschemeconditionnew) constructor.
+  - `request_uri_condition` (`list[obj]`):  When `null`, the `request_uri_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.request_uri_condition.new](#fn-conditionsrequesturiconditionnew) constructor.
+  - `server_port_condition` (`list[obj]`):  When `null`, the `server_port_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.server_port_condition.new](#fn-conditionsserverportconditionnew) constructor.
+  - `socket_address_condition` (`list[obj]`):  When `null`, the `socket_address_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.socket_address_condition.new](#fn-conditionssocketaddressconditionnew) constructor.
+  - `ssl_protocol_condition` (`list[obj]`):  When `null`, the `ssl_protocol_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.ssl_protocol_condition.new](#fn-conditionssslprotocolconditionnew) constructor.
+  - `url_file_extension_condition` (`list[obj]`):  When `null`, the `url_file_extension_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.url_file_extension_condition.new](#fn-conditionsurlfileextensionconditionnew) constructor.
+  - `url_filename_condition` (`list[obj]`):  When `null`, the `url_filename_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.url_filename_condition.new](#fn-conditionsurlfilenameconditionnew) constructor.
+  - `url_path_condition` (`list[obj]`):  When `null`, the `url_path_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_rule.conditions.url_path_condition.new](#fn-conditionsurlpathconditionnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `conditions` sub block.
+
+
+## obj conditions.client_port_condition
+
+
+
+### fn conditions.client_port_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.client_port_condition.new` constructs a new object with attributes and blocks configured for the `client_port_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `client_port_condition` sub block.
+
+
+## obj conditions.cookies_condition
+
+
+
+### fn conditions.cookies_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.cookies_condition.new` constructs a new object with attributes and blocks configured for the `cookies_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cookie_name` (`string`): 
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `cookies_condition` sub block.
+
+
+## obj conditions.host_name_condition
+
+
+
+### fn conditions.host_name_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.host_name_condition.new` constructs a new object with attributes and blocks configured for the `host_name_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `host_name_condition` sub block.
+
+
+## obj conditions.http_version_condition
+
+
+
+### fn conditions.http_version_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.http_version_condition.new` constructs a new object with attributes and blocks configured for the `http_version_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `http_version_condition` sub block.
+
+
+## obj conditions.is_device_condition
+
+
+
+### fn conditions.is_device_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.is_device_condition.new` constructs a new object with attributes and blocks configured for the `is_device_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `is_device_condition` sub block.
+
+
+## obj conditions.post_args_condition
+
+
+
+### fn conditions.post_args_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.post_args_condition.new` constructs a new object with attributes and blocks configured for the `post_args_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `post_args_name` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `post_args_condition` sub block.
+
+
+## obj conditions.query_string_condition
+
+
+
+### fn conditions.query_string_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.query_string_condition.new` constructs a new object with attributes and blocks configured for the `query_string_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `query_string_condition` sub block.
+
+
+## obj conditions.remote_address_condition
+
+
+
+### fn conditions.remote_address_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.remote_address_condition.new` constructs a new object with attributes and blocks configured for the `remote_address_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `remote_address_condition` sub block.
+
+
+## obj conditions.request_body_condition
+
+
+
+### fn conditions.request_body_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.request_body_condition.new` constructs a new object with attributes and blocks configured for the `request_body_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `request_body_condition` sub block.
+
+
+## obj conditions.request_header_condition
+
+
+
+### fn conditions.request_header_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.request_header_condition.new` constructs a new object with attributes and blocks configured for the `request_header_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `header_name` (`string`): 
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `request_header_condition` sub block.
+
+
+## obj conditions.request_method_condition
+
+
+
+### fn conditions.request_method_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.request_method_condition.new` constructs a new object with attributes and blocks configured for the `request_method_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `request_method_condition` sub block.
+
+
+## obj conditions.request_scheme_condition
+
+
+
+### fn conditions.request_scheme_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.request_scheme_condition.new` constructs a new object with attributes and blocks configured for the `request_scheme_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `request_scheme_condition` sub block.
+
+
+## obj conditions.request_uri_condition
+
+
+
+### fn conditions.request_uri_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.request_uri_condition.new` constructs a new object with attributes and blocks configured for the `request_uri_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `request_uri_condition` sub block.
+
+
+## obj conditions.server_port_condition
+
+
+
+### fn conditions.server_port_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.server_port_condition.new` constructs a new object with attributes and blocks configured for the `server_port_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `server_port_condition` sub block.
+
+
+## obj conditions.socket_address_condition
+
+
+
+### fn conditions.socket_address_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.socket_address_condition.new` constructs a new object with attributes and blocks configured for the `socket_address_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `socket_address_condition` sub block.
+
+
+## obj conditions.ssl_protocol_condition
+
+
+
+### fn conditions.ssl_protocol_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.ssl_protocol_condition.new` constructs a new object with attributes and blocks configured for the `ssl_protocol_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ssl_protocol_condition` sub block.
+
+
+## obj conditions.url_file_extension_condition
+
+
+
+### fn conditions.url_file_extension_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.url_file_extension_condition.new` constructs a new object with attributes and blocks configured for the `url_file_extension_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `url_file_extension_condition` sub block.
+
+
+## obj conditions.url_filename_condition
+
+
+
+### fn conditions.url_filename_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.url_filename_condition.new` constructs a new object with attributes and blocks configured for the `url_filename_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`): 
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `url_filename_condition` sub block.
+
+
+## obj conditions.url_path_condition
+
+
+
+### fn conditions.url_path_condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.conditions.url_path_condition.new` constructs a new object with attributes and blocks configured for the `url_path_condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `url_path_condition` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.cdn_frontdoor_rule.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

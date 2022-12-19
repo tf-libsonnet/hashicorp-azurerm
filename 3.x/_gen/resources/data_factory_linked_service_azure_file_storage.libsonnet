@@ -1,0 +1,260 @@
+local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
+local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
+{
+  '#':: d.pkg(name='data_factory_linked_service_azure_file_storage', url='', help='`data_factory_linked_service_azure_file_storage` represents the `azurerm_data_factory_linked_service_azure_file_storage` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
+  key_vault_password:: {
+    '#new':: d.fn(help='\n`azurerm.data_factory_linked_service_azure_file_storage.key_vault_password.new` constructs a new object with attributes and blocks configured for the `key_vault_password`\nTerraform sub block.\n\n\n\n**Args**:\n  - `linked_service_name` (`string`): \n  - `secret_name` (`string`): \n\n**Returns**:\n  - An attribute object that represents the `key_vault_password` sub block.\n', args=[]),
+    new(
+      linked_service_name,
+      secret_name
+    ):: std.prune(a={
+      linked_service_name: linked_service_name,
+      secret_name: secret_name,
+    }),
+  },
+  '#new':: d.fn(help="\n`azurerm.data_factory_linked_service_azure_file_storage.new` injects a new `azurerm_data_factory_linked_service_azure_file_storage` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.data_factory_linked_service_azure_file_storage.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.data_factory_linked_service_azure_file_storage` using the reference:\n\n    $._ref.azurerm_data_factory_linked_service_azure_file_storage.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_data_factory_linked_service_azure_file_storage.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.\n  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.\n  - `connection_string` (`string`): \n  - `data_factory_id` (`string`): \n  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.\n  - `file_share` (`string`):  When `null`, the `file_share` field will be omitted from the resulting object.\n  - `host` (`string`):  When `null`, the `host` field will be omitted from the resulting object.\n  - `integration_runtime_name` (`string`):  When `null`, the `integration_runtime_name` field will be omitted from the resulting object.\n  - `name` (`string`): \n  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.\n  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.\n  - `user_id` (`string`):  When `null`, the `user_id` field will be omitted from the resulting object.\n  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_file_storage.key_vault_password.new](#fn-datafactorylinkedserviceazurefilestoragekeyvaultpasswordnew) constructor.\n  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_file_storage.timeouts.new](#fn-datafactorylinkedserviceazurefilestoragetimeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  new(
+    resourceLabel,
+    connection_string,
+    data_factory_id,
+    name,
+    additional_properties=null,
+    annotations=null,
+    description=null,
+    file_share=null,
+    host=null,
+    integration_runtime_name=null,
+    key_vault_password=null,
+    parameters=null,
+    password=null,
+    timeouts=null,
+    user_id=null,
+    _meta={}
+  ):: tf.withResource(
+    type='azurerm_data_factory_linked_service_azure_file_storage',
+    label=resourceLabel,
+    attrs=self.newAttrs(
+      additional_properties=additional_properties,
+      annotations=annotations,
+      connection_string=connection_string,
+      data_factory_id=data_factory_id,
+      description=description,
+      file_share=file_share,
+      host=host,
+      integration_runtime_name=integration_runtime_name,
+      key_vault_password=key_vault_password,
+      name=name,
+      parameters=parameters,
+      password=password,
+      timeouts=timeouts,
+      user_id=user_id
+    ),
+    _meta=_meta
+  ),
+  '#newAttrs':: d.fn(help='\n`azurerm.data_factory_linked_service_azure_file_storage.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_linked_service_azure_file_storage`\nTerraform resource.\n\nUnlike [azurerm.data_factory_linked_service_azure_file_storage.new](#fn-datafactorylinkedserviceazurefilestoragenew), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.\n  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.\n  - `connection_string` (`string`): \n  - `data_factory_id` (`string`): \n  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.\n  - `file_share` (`string`):  When `null`, the `file_share` field will be omitted from the resulting object.\n  - `host` (`string`):  When `null`, the `host` field will be omitted from the resulting object.\n  - `integration_runtime_name` (`string`):  When `null`, the `integration_runtime_name` field will be omitted from the resulting object.\n  - `name` (`string`): \n  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.\n  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.\n  - `user_id` (`string`):  When `null`, the `user_id` field will be omitted from the resulting object.\n  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_file_storage.key_vault_password.new](#fn-datafactorylinkedserviceazurefilestoragekeyvaultpasswordnew) constructor.\n  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_file_storage.timeouts.new](#fn-datafactorylinkedserviceazurefilestoragetimeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_azure_file_storage` resource into the root Terraform configuration.\n', args=[]),
+  newAttrs(
+    connection_string,
+    data_factory_id,
+    name,
+    additional_properties=null,
+    annotations=null,
+    description=null,
+    file_share=null,
+    host=null,
+    integration_runtime_name=null,
+    key_vault_password=null,
+    parameters=null,
+    password=null,
+    timeouts=null,
+    user_id=null
+  ):: std.prune(a={
+    additional_properties: additional_properties,
+    annotations: annotations,
+    connection_string: connection_string,
+    data_factory_id: data_factory_id,
+    description: description,
+    file_share: file_share,
+    host: host,
+    integration_runtime_name: integration_runtime_name,
+    key_vault_password: key_vault_password,
+    name: name,
+    parameters: parameters,
+    password: password,
+    timeouts: timeouts,
+    user_id: user_id,
+  }),
+  timeouts:: {
+    '#new':: d.fn(help='\n`azurerm.data_factory_linked_service_azure_file_storage.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.\n  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.\n  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
+    new(
+      create=null,
+      delete=null,
+      read=null,
+      update=null
+    ):: std.prune(a={
+      create: create,
+      delete: delete,
+      read: read,
+      update: update,
+    }),
+  },
+  '#withAdditionalProperties':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withAdditionalProperties` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the additional_properties field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `additional_properties` field.\n', args=[]),
+  withAdditionalProperties(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          additional_properties: value,
+        },
+      },
+    },
+  },
+  '#withAnnotations':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withAnnotations` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the annotations field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `annotations` field.\n', args=[]),
+  withAnnotations(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          annotations: value,
+        },
+      },
+    },
+  },
+  '#withConnectionString':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withConnectionString` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the connection_string field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `connection_string` field.\n', args=[]),
+  withConnectionString(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          connection_string: value,
+        },
+      },
+    },
+  },
+  '#withDataFactoryId':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withDataFactoryId` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the data_factory_id field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `data_factory_id` field.\n', args=[]),
+  withDataFactoryId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          data_factory_id: value,
+        },
+      },
+    },
+  },
+  '#withDescription':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withDescription` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the description field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `description` field.\n', args=[]),
+  withDescription(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          description: value,
+        },
+      },
+    },
+  },
+  '#withFileShare':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withFileShare` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the file_share field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `file_share` field.\n', args=[]),
+  withFileShare(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          file_share: value,
+        },
+      },
+    },
+  },
+  '#withHost':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withHost` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the host field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `host` field.\n', args=[]),
+  withHost(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          host: value,
+        },
+      },
+    },
+  },
+  '#withIntegrationRuntimeName':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withIntegrationRuntimeName` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the integration_runtime_name field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `integration_runtime_name` field.\n', args=[]),
+  withIntegrationRuntimeName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          integration_runtime_name: value,
+        },
+      },
+    },
+  },
+  '#withKeyVaultPassword':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withKeyVaultPassword` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the key_vault_password field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `key_vault_password` field.\n', args=[]),
+  withKeyVaultPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          key_vault_password: value,
+        },
+      },
+    },
+  },
+  '#withKeyVaultPasswordMixin':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withKeyVaultPasswordMixin` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the key_vault_password field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.data_factory_linked_service_azure_file_storage.withKeyVaultPassword](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `key_vault_password` field.\n', args=[]),
+  withKeyVaultPasswordMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          key_vault_password+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withName':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withName` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the name field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `name` field.\n', args=[]),
+  withName(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          name: value,
+        },
+      },
+    },
+  },
+  '#withParameters':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withParameters` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the parameters field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `parameters` field.\n', args=[]),
+  withParameters(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          parameters: value,
+        },
+      },
+    },
+  },
+  '#withPassword':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withPassword` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the password field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `password` field.\n', args=[]),
+  withPassword(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          password: value,
+        },
+      },
+    },
+  },
+  '#withTimeouts':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withTimeouts` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the timeouts field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `timeouts` field.\n', args=[]),
+  withTimeouts(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  '#withTimeoutsMixin':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withTimeoutsMixin` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the timeouts field.\n\nThis function will merge the passed in value to the existing map. If you wish\nto instead replace the entire map with the passed in `value`, use the [azurerm.data_factory_linked_service_azure_file_storage.withTimeouts](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `timeouts` field.\n', args=[]),
+  withTimeoutsMixin(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+  '#withUserId':: d.fn(help='`azurerm.data_factory_linked_service_azure_file_storage.withUserId` constructs a mixin object that can be merged into the `data_factory_linked_service_azure_file_storage`\nTerraform resource block to set or update the user_id field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `user_id` field.\n', args=[]),
+  withUserId(resourceLabel, value):: {
+    resource+: {
+      azurerm_data_factory_linked_service_azure_file_storage+: {
+        [resourceLabel]+: {
+          user_id: value,
+        },
+      },
+    },
+  },
+}

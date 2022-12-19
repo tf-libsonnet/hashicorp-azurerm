@@ -1,0 +1,224 @@
+---
+permalink: /resource_provider_registration/
+---
+
+# resource_provider_registration
+
+`resource_provider_registration` represents the `azurerm_resource_provider_registration` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withFeature()`](#fn-withfeature)
+* [`fn withFeatureMixin()`](#fn-withfeaturemixin)
+* [`fn withName()`](#fn-withname)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj feature`](#obj-feature)
+  * [`fn new()`](#fn-featurenew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_provider_registration.new` injects a new `azurerm_resource_provider_registration` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.resource_provider_registration.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.resource_provider_registration` using the reference:
+
+    $._ref.azurerm_resource_provider_registration.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_resource_provider_registration.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `name` (`string`): 
+  - `feature` (`list[obj]`):  When `null`, the `feature` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.feature.new](#fn-resourceproviderregistrationfeaturenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.timeouts.new](#fn-resourceproviderregistrationtimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.resource_provider_registration.newAttrs` constructs a new object with attributes and blocks configured for the `resource_provider_registration`
+Terraform resource.
+
+Unlike [azurerm.resource_provider_registration.new](#fn-resourceproviderregistrationnew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `name` (`string`): 
+  - `feature` (`list[obj]`):  When `null`, the `feature` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.feature.new](#fn-resourceproviderregistrationfeaturenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_provider_registration.timeouts.new](#fn-resourceproviderregistrationtimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `resource_provider_registration` resource into the root Terraform configuration.
+
+
+### fn withFeature
+
+```ts
+withFeature()
+```
+
+`azurerm.resource_provider_registration.withFeature` constructs a mixin object that can be merged into the `resource_provider_registration`
+Terraform resource block to set or update the feature field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `feature` field.
+
+
+### fn withFeatureMixin
+
+```ts
+withFeatureMixin()
+```
+
+`azurerm.resource_provider_registration.withFeatureMixin` constructs a mixin object that can be merged into the `resource_provider_registration`
+Terraform resource block to set or update the feature field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.resource_provider_registration.withFeature](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `feature` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.resource_provider_registration.withName` constructs a mixin object that can be merged into the `resource_provider_registration`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.resource_provider_registration.withTimeouts` constructs a mixin object that can be merged into the `resource_provider_registration`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.resource_provider_registration.withTimeoutsMixin` constructs a mixin object that can be merged into the `resource_provider_registration`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.resource_provider_registration.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+## obj feature
+
+
+
+### fn feature.new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_provider_registration.feature.new` constructs a new object with attributes and blocks configured for the `feature`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): 
+  - `registered` (`bool`): 
+
+**Returns**:
+  - An attribute object that represents the `feature` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_provider_registration.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

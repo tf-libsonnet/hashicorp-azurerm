@@ -1,0 +1,546 @@
+---
+permalink: /firewall/
+---
+
+# firewall
+
+`firewall` represents the `azurerm_firewall` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDnsServers()`](#fn-withdnsservers)
+* [`fn withFirewallPolicyId()`](#fn-withfirewallpolicyid)
+* [`fn withIpConfiguration()`](#fn-withipconfiguration)
+* [`fn withIpConfigurationMixin()`](#fn-withipconfigurationmixin)
+* [`fn withLocation()`](#fn-withlocation)
+* [`fn withManagementIpConfiguration()`](#fn-withmanagementipconfiguration)
+* [`fn withManagementIpConfigurationMixin()`](#fn-withmanagementipconfigurationmixin)
+* [`fn withName()`](#fn-withname)
+* [`fn withPrivateIpRanges()`](#fn-withprivateipranges)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSkuName()`](#fn-withskuname)
+* [`fn withSkuTier()`](#fn-withskutier)
+* [`fn withTags()`](#fn-withtags)
+* [`fn withThreatIntelMode()`](#fn-withthreatintelmode)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVirtualHub()`](#fn-withvirtualhub)
+* [`fn withVirtualHubMixin()`](#fn-withvirtualhubmixin)
+* [`fn withZones()`](#fn-withzones)
+* [`obj ip_configuration`](#obj-ip_configuration)
+  * [`fn new()`](#fn-ip_configurationnew)
+* [`obj management_ip_configuration`](#obj-management_ip_configuration)
+  * [`fn new()`](#fn-management_ip_configurationnew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+* [`obj virtual_hub`](#obj-virtual_hub)
+  * [`fn new()`](#fn-virtual_hubnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.firewall.new` injects a new `azurerm_firewall` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.firewall.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.firewall` using the reference:
+
+    $._ref.azurerm_firewall.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_firewall.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `firewall_policy_id` (`string`):  When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `private_ip_ranges` (`list`):  When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`): 
+  - `sku_tier` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `threat_intel_mode` (`string`):  When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-firewallipconfigurationnew) constructor.
+  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-firewallmanagementipconfigurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-firewalltimeoutsnew) constructor.
+  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-firewallvirtualhubnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.firewall.newAttrs` constructs a new object with attributes and blocks configured for the `firewall`
+Terraform resource.
+
+Unlike [azurerm.firewall.new](#fn-firewallnew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `firewall_policy_id` (`string`):  When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `private_ip_ranges` (`list`):  When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`): 
+  - `sku_tier` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `threat_intel_mode` (`string`):  When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-firewallipconfigurationnew) constructor.
+  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-firewallmanagementipconfigurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-firewalltimeoutsnew) constructor.
+  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-firewallvirtualhubnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall` resource into the root Terraform configuration.
+
+
+### fn withDnsServers
+
+```ts
+withDnsServers()
+```
+
+`azurerm.firewall.withDnsServers` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the dns_servers field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `dns_servers` field.
+
+
+### fn withFirewallPolicyId
+
+```ts
+withFirewallPolicyId()
+```
+
+`azurerm.firewall.withFirewallPolicyId` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the firewall_policy_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `firewall_policy_id` field.
+
+
+### fn withIpConfiguration
+
+```ts
+withIpConfiguration()
+```
+
+`azurerm.firewall.withIpConfiguration` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the ip_configuration field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `ip_configuration` field.
+
+
+### fn withIpConfigurationMixin
+
+```ts
+withIpConfigurationMixin()
+```
+
+`azurerm.firewall.withIpConfigurationMixin` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the ip_configuration field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.firewall.withIpConfiguration](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `ip_configuration` field.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`azurerm.firewall.withLocation` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `location` field.
+
+
+### fn withManagementIpConfiguration
+
+```ts
+withManagementIpConfiguration()
+```
+
+`azurerm.firewall.withManagementIpConfiguration` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the management_ip_configuration field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `management_ip_configuration` field.
+
+
+### fn withManagementIpConfigurationMixin
+
+```ts
+withManagementIpConfigurationMixin()
+```
+
+`azurerm.firewall.withManagementIpConfigurationMixin` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the management_ip_configuration field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.firewall.withManagementIpConfiguration](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `management_ip_configuration` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.firewall.withName` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withPrivateIpRanges
+
+```ts
+withPrivateIpRanges()
+```
+
+`azurerm.firewall.withPrivateIpRanges` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the private_ip_ranges field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `private_ip_ranges` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.firewall.withResourceGroupName` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `resource_group_name` field.
+
+
+### fn withSkuName
+
+```ts
+withSkuName()
+```
+
+`azurerm.firewall.withSkuName` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the sku_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `sku_name` field.
+
+
+### fn withSkuTier
+
+```ts
+withSkuTier()
+```
+
+`azurerm.firewall.withSkuTier` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the sku_tier field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `sku_tier` field.
+
+
+### fn withTags
+
+```ts
+withTags()
+```
+
+`azurerm.firewall.withTags` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the tags field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `tags` field.
+
+
+### fn withThreatIntelMode
+
+```ts
+withThreatIntelMode()
+```
+
+`azurerm.firewall.withThreatIntelMode` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the threat_intel_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `threat_intel_mode` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.firewall.withTimeouts` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.firewall.withTimeoutsMixin` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.firewall.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withVirtualHub
+
+```ts
+withVirtualHub()
+```
+
+`azurerm.firewall.withVirtualHub` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the virtual_hub field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `virtual_hub` field.
+
+
+### fn withVirtualHubMixin
+
+```ts
+withVirtualHubMixin()
+```
+
+`azurerm.firewall.withVirtualHubMixin` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the virtual_hub field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.firewall.withVirtualHub](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `virtual_hub` field.
+
+
+### fn withZones
+
+```ts
+withZones()
+```
+
+`azurerm.firewall.withZones` constructs a mixin object that can be merged into the `firewall`
+Terraform resource block to set or update the zones field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `zones` field.
+
+
+## obj ip_configuration
+
+
+
+### fn ip_configuration.new
+
+```ts
+new()
+```
+
+
+`azurerm.firewall.ip_configuration.new` constructs a new object with attributes and blocks configured for the `ip_configuration`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): 
+  - `public_ip_address_id` (`string`): 
+  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ip_configuration` sub block.
+
+
+## obj management_ip_configuration
+
+
+
+### fn management_ip_configuration.new
+
+```ts
+new()
+```
+
+
+`azurerm.firewall.management_ip_configuration.new` constructs a new object with attributes and blocks configured for the `management_ip_configuration`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): 
+  - `public_ip_address_id` (`string`): 
+  - `subnet_id` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `management_ip_configuration` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.firewall.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.
+
+
+## obj virtual_hub
+
+
+
+### fn virtual_hub.new
+
+```ts
+new()
+```
+
+
+`azurerm.firewall.virtual_hub.new` constructs a new object with attributes and blocks configured for the `virtual_hub`
+Terraform sub block.
+
+
+
+**Args**:
+  - `public_ip_count` (`number`):  When `null`, the `public_ip_count` field will be omitted from the resulting object.
+  - `virtual_hub_id` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `virtual_hub` sub block.

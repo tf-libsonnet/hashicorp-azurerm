@@ -1,0 +1,94 @@
+local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
+local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
+{
+  '#':: d.pkg(name='network_service_tags', url='', help='`network_service_tags` represents the `azurerm_network_service_tags` Terraform data source.\n\n\n\nThis package contains functions and utilities for setting up the data source using Jsonnet code.\n'),
+  '#new':: d.fn(help="\n`azurerm.data.network_service_tags.new` injects a new `data_azurerm_network_service_tags` Terraform `data source`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.data.network_service_tags.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.data.network_service_tags` using the reference:\n\n    $._ref.data_azurerm_network_service_tags.some_id.get('id')\n\nThis is the same as directly entering `\"${ data_azurerm_network_service_tags.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `dataSrcLabel` (`string`): The name label of the block.\n  - `location` (`string`): \n  - `location_filter` (`string`):  When `null`, the `location_filter` field will be omitted from the resulting object.\n  - `service` (`string`): \n  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.network_service_tags.timeouts.new](#fn-networkservicetagstimeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new data source into the root Terraform configuration.\n", args=[]),
+  new(
+    dataSrcLabel,
+    location,
+    service,
+    location_filter=null,
+    timeouts=null,
+    _meta={}
+  ):: tf.withData(
+    type='azurerm_network_service_tags',
+    label=dataSrcLabel,
+    attrs=self.newAttrs(
+      location=location,
+      location_filter=location_filter,
+      service=service,
+      timeouts=timeouts
+    ),
+    _meta=_meta
+  ),
+  '#newAttrs':: d.fn(help='\n`azurerm.data.network_service_tags.newAttrs` constructs a new object with attributes and blocks configured for the `network_service_tags`\nTerraform data source.\n\nUnlike [azurerm.data.network_service_tags.new](#fn-networkservicetagsnew), this function will not inject the `data source`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `location` (`string`): \n  - `location_filter` (`string`):  When `null`, the `location_filter` field will be omitted from the resulting object.\n  - `service` (`string`): \n  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.network_service_tags.timeouts.new](#fn-networkservicetagstimeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `network_service_tags` data source into the root Terraform configuration.\n', args=[]),
+  newAttrs(
+    location,
+    service,
+    location_filter=null,
+    timeouts=null
+  ):: std.prune(a={
+    location: location,
+    location_filter: location_filter,
+    service: service,
+    timeouts: timeouts,
+  }),
+  timeouts:: {
+    '#new':: d.fn(help='\n`azurerm.network_service_tags.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
+    new(
+      read=null
+    ):: std.prune(a={
+      read: read,
+    }),
+  },
+  '#withLocation':: d.fn(help='`azurerm.network_service_tags.withLocation` constructs a mixin object that can be merged into the `network_service_tags`\nTerraform data source block to set or update the location field.\n\n\n\n**Args**:\n  - `dataSrcLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `location` field.\n', args=[]),
+  withLocation(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          location: value,
+        },
+      },
+    },
+  },
+  '#withLocationFilter':: d.fn(help='`azurerm.network_service_tags.withLocationFilter` constructs a mixin object that can be merged into the `network_service_tags`\nTerraform data source block to set or update the location_filter field.\n\n\n\n**Args**:\n  - `dataSrcLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `location_filter` field.\n', args=[]),
+  withLocationFilter(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          location_filter: value,
+        },
+      },
+    },
+  },
+  '#withService':: d.fn(help='`azurerm.network_service_tags.withService` constructs a mixin object that can be merged into the `network_service_tags`\nTerraform data source block to set or update the service field.\n\n\n\n**Args**:\n  - `dataSrcLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `service` field.\n', args=[]),
+  withService(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          service: value,
+        },
+      },
+    },
+  },
+  '#withTimeouts':: d.fn(help='`azurerm.network_service_tags.withTimeouts` constructs a mixin object that can be merged into the `network_service_tags`\nTerraform data source block to set or update the timeouts field.\n\n\n\n**Args**:\n  - `dataSrcLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `timeouts` field.\n', args=[]),
+  withTimeouts(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          timeouts: value,
+        },
+      },
+    },
+  },
+  '#withTimeoutsMixin':: d.fn(help='`azurerm.network_service_tags.withTimeoutsMixin` constructs a mixin object that can be merged into the `network_service_tags`\nTerraform data source block to set or update the timeouts field.\n\nThis function will merge the passed in value to the existing map. If you wish\nto instead replace the entire map with the passed in `value`, use the [azurerm.network_service_tags.withTimeouts](TODO)\nfunction.\n\n\n**Args**:\n  - `dataSrcLabel` (`string`): The name label of the block to update.\n  - `value` (`TODO`): The value to set for the `timeouts` field.\n', args=[]),
+  withTimeoutsMixin(dataSrcLabel, value):: {
+    data+: {
+      azurerm_network_service_tags+: {
+        [dataSrcLabel]+: {
+          timeouts+: value,
+        },
+      },
+    },
+  },
+}

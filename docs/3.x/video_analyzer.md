@@ -1,0 +1,345 @@
+---
+permalink: /video_analyzer/
+---
+
+# video_analyzer
+
+`video_analyzer` represents the `azurerm_video_analyzer` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withIdentity()`](#fn-withidentity)
+* [`fn withIdentityMixin()`](#fn-withidentitymixin)
+* [`fn withLocation()`](#fn-withlocation)
+* [`fn withName()`](#fn-withname)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withStorageAccount()`](#fn-withstorageaccount)
+* [`fn withStorageAccountMixin()`](#fn-withstorageaccountmixin)
+* [`fn withTags()`](#fn-withtags)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj identity`](#obj-identity)
+  * [`fn new()`](#fn-identitynew)
+* [`obj storage_account`](#obj-storage_account)
+  * [`fn new()`](#fn-storage_accountnew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.video_analyzer.new` injects a new `azurerm_video_analyzer` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.video_analyzer.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.video_analyzer` using the reference:
+
+    $._ref.azurerm_video_analyzer.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_video_analyzer.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.video_analyzer.identity.new](#fn-videoanalyzeridentitynew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.video_analyzer.storage_account.new](#fn-videoanalyzerstorageaccountnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.video_analyzer.timeouts.new](#fn-videoanalyzertimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.video_analyzer.newAttrs` constructs a new object with attributes and blocks configured for the `video_analyzer`
+Terraform resource.
+
+Unlike [azurerm.video_analyzer.new](#fn-videoanalyzernew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.video_analyzer.identity.new](#fn-videoanalyzeridentitynew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.video_analyzer.storage_account.new](#fn-videoanalyzerstorageaccountnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.video_analyzer.timeouts.new](#fn-videoanalyzertimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `video_analyzer` resource into the root Terraform configuration.
+
+
+### fn withIdentity
+
+```ts
+withIdentity()
+```
+
+`azurerm.video_analyzer.withIdentity` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the identity field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `identity` field.
+
+
+### fn withIdentityMixin
+
+```ts
+withIdentityMixin()
+```
+
+`azurerm.video_analyzer.withIdentityMixin` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the identity field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.video_analyzer.withIdentity](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `identity` field.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`azurerm.video_analyzer.withLocation` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `location` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.video_analyzer.withName` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.video_analyzer.withResourceGroupName` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `resource_group_name` field.
+
+
+### fn withStorageAccount
+
+```ts
+withStorageAccount()
+```
+
+`azurerm.video_analyzer.withStorageAccount` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the storage_account field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `storage_account` field.
+
+
+### fn withStorageAccountMixin
+
+```ts
+withStorageAccountMixin()
+```
+
+`azurerm.video_analyzer.withStorageAccountMixin` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the storage_account field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.video_analyzer.withStorageAccount](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `storage_account` field.
+
+
+### fn withTags
+
+```ts
+withTags()
+```
+
+`azurerm.video_analyzer.withTags` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the tags field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `tags` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.video_analyzer.withTimeouts` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.video_analyzer.withTimeoutsMixin` constructs a mixin object that can be merged into the `video_analyzer`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.video_analyzer.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+## obj identity
+
+
+
+### fn identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.video_analyzer.identity.new` constructs a new object with attributes and blocks configured for the `identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identity_ids` (`list`): 
+  - `type` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `identity` sub block.
+
+
+## obj storage_account
+
+
+
+### fn storage_account.new
+
+```ts
+new()
+```
+
+
+`azurerm.video_analyzer.storage_account.new` constructs a new object with attributes and blocks configured for the `storage_account`
+Terraform sub block.
+
+
+
+**Args**:
+  - `user_assigned_identity_id` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `storage_account` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.video_analyzer.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

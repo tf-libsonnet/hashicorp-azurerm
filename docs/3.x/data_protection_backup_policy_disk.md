@@ -1,0 +1,308 @@
+---
+permalink: /data_protection_backup_policy_disk/
+---
+
+# data_protection_backup_policy_disk
+
+`data_protection_backup_policy_disk` represents the `azurerm_data_protection_backup_policy_disk` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withBackupRepeatingTimeIntervals()`](#fn-withbackuprepeatingtimeintervals)
+* [`fn withDefaultRetentionDuration()`](#fn-withdefaultretentionduration)
+* [`fn withName()`](#fn-withname)
+* [`fn withRetentionRule()`](#fn-withretentionrule)
+* [`fn withRetentionRuleMixin()`](#fn-withretentionrulemixin)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVaultId()`](#fn-withvaultid)
+* [`obj retention_rule`](#obj-retention_rule)
+  * [`fn new()`](#fn-retention_rulenew)
+  * [`obj retention_rule.criteria`](#obj-retention_rulecriteria)
+    * [`fn new()`](#fn-retention_rulecriterianew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.data_protection_backup_policy_disk.new` injects a new `azurerm_data_protection_backup_policy_disk` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.data_protection_backup_policy_disk.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.data_protection_backup_policy_disk` using the reference:
+
+    $._ref.azurerm_data_protection_backup_policy_disk.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_data_protection_backup_policy_disk.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `backup_repeating_time_intervals` (`list`): 
+  - `default_retention_duration` (`string`): 
+  - `name` (`string`): 
+  - `vault_id` (`string`): 
+  - `retention_rule` (`list[obj]`):  When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.new](#fn-dataprotectionbackuppolicydiskretentionrulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.timeouts.new](#fn-dataprotectionbackuppolicydisktimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.data_protection_backup_policy_disk.newAttrs` constructs a new object with attributes and blocks configured for the `data_protection_backup_policy_disk`
+Terraform resource.
+
+Unlike [azurerm.data_protection_backup_policy_disk.new](#fn-dataprotectionbackuppolicydisknew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `backup_repeating_time_intervals` (`list`): 
+  - `default_retention_duration` (`string`): 
+  - `name` (`string`): 
+  - `vault_id` (`string`): 
+  - `retention_rule` (`list[obj]`):  When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.new](#fn-dataprotectionbackuppolicydiskretentionrulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.timeouts.new](#fn-dataprotectionbackuppolicydisktimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_protection_backup_policy_disk` resource into the root Terraform configuration.
+
+
+### fn withBackupRepeatingTimeIntervals
+
+```ts
+withBackupRepeatingTimeIntervals()
+```
+
+`azurerm.data_protection_backup_policy_disk.withBackupRepeatingTimeIntervals` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the backup_repeating_time_intervals field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `backup_repeating_time_intervals` field.
+
+
+### fn withDefaultRetentionDuration
+
+```ts
+withDefaultRetentionDuration()
+```
+
+`azurerm.data_protection_backup_policy_disk.withDefaultRetentionDuration` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the default_retention_duration field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `default_retention_duration` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.data_protection_backup_policy_disk.withName` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withRetentionRule
+
+```ts
+withRetentionRule()
+```
+
+`azurerm.data_protection_backup_policy_disk.withRetentionRule` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the retention_rule field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `retention_rule` field.
+
+
+### fn withRetentionRuleMixin
+
+```ts
+withRetentionRuleMixin()
+```
+
+`azurerm.data_protection_backup_policy_disk.withRetentionRuleMixin` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the retention_rule field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.data_protection_backup_policy_disk.withRetentionRule](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `retention_rule` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.data_protection_backup_policy_disk.withTimeouts` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.data_protection_backup_policy_disk.withTimeoutsMixin` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.data_protection_backup_policy_disk.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withVaultId
+
+```ts
+withVaultId()
+```
+
+`azurerm.data_protection_backup_policy_disk.withVaultId` constructs a mixin object that can be merged into the `data_protection_backup_policy_disk`
+Terraform resource block to set or update the vault_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `vault_id` field.
+
+
+## obj retention_rule
+
+
+
+### fn retention_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.data_protection_backup_policy_disk.retention_rule.new` constructs a new object with attributes and blocks configured for the `retention_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `duration` (`string`): 
+  - `name` (`string`): 
+  - `priority` (`number`): 
+  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.criteria.new](#fn-retentionrulecriterianew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `retention_rule` sub block.
+
+
+## obj retention_rule.criteria
+
+
+
+### fn retention_rule.criteria.new
+
+```ts
+new()
+```
+
+
+`azurerm.data_protection_backup_policy_disk.retention_rule.criteria.new` constructs a new object with attributes and blocks configured for the `criteria`
+Terraform sub block.
+
+
+
+**Args**:
+  - `absolute_criteria` (`string`):  When `null`, the `absolute_criteria` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `criteria` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.data_protection_backup_policy_disk.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

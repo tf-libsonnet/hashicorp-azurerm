@@ -1,0 +1,1001 @@
+---
+permalink: /monitor_action_group/
+---
+
+# monitor_action_group
+
+`monitor_action_group` represents the `azurerm_monitor_action_group` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withArmRoleReceiver()`](#fn-witharmrolereceiver)
+* [`fn withArmRoleReceiverMixin()`](#fn-witharmrolereceivermixin)
+* [`fn withAutomationRunbookReceiver()`](#fn-withautomationrunbookreceiver)
+* [`fn withAutomationRunbookReceiverMixin()`](#fn-withautomationrunbookreceivermixin)
+* [`fn withAzureAppPushReceiver()`](#fn-withazureapppushreceiver)
+* [`fn withAzureAppPushReceiverMixin()`](#fn-withazureapppushreceivermixin)
+* [`fn withAzureFunctionReceiver()`](#fn-withazurefunctionreceiver)
+* [`fn withAzureFunctionReceiverMixin()`](#fn-withazurefunctionreceivermixin)
+* [`fn withEmailReceiver()`](#fn-withemailreceiver)
+* [`fn withEmailReceiverMixin()`](#fn-withemailreceivermixin)
+* [`fn withEnabled()`](#fn-withenabled)
+* [`fn withEventHubReceiver()`](#fn-witheventhubreceiver)
+* [`fn withEventHubReceiverMixin()`](#fn-witheventhubreceivermixin)
+* [`fn withItsmReceiver()`](#fn-withitsmreceiver)
+* [`fn withItsmReceiverMixin()`](#fn-withitsmreceivermixin)
+* [`fn withLogicAppReceiver()`](#fn-withlogicappreceiver)
+* [`fn withLogicAppReceiverMixin()`](#fn-withlogicappreceivermixin)
+* [`fn withName()`](#fn-withname)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withShortName()`](#fn-withshortname)
+* [`fn withSmsReceiver()`](#fn-withsmsreceiver)
+* [`fn withSmsReceiverMixin()`](#fn-withsmsreceivermixin)
+* [`fn withTags()`](#fn-withtags)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVoiceReceiver()`](#fn-withvoicereceiver)
+* [`fn withVoiceReceiverMixin()`](#fn-withvoicereceivermixin)
+* [`fn withWebhookReceiver()`](#fn-withwebhookreceiver)
+* [`fn withWebhookReceiverMixin()`](#fn-withwebhookreceivermixin)
+* [`obj arm_role_receiver`](#obj-arm_role_receiver)
+  * [`fn new()`](#fn-arm_role_receivernew)
+* [`obj automation_runbook_receiver`](#obj-automation_runbook_receiver)
+  * [`fn new()`](#fn-automation_runbook_receivernew)
+* [`obj azure_app_push_receiver`](#obj-azure_app_push_receiver)
+  * [`fn new()`](#fn-azure_app_push_receivernew)
+* [`obj azure_function_receiver`](#obj-azure_function_receiver)
+  * [`fn new()`](#fn-azure_function_receivernew)
+* [`obj email_receiver`](#obj-email_receiver)
+  * [`fn new()`](#fn-email_receivernew)
+* [`obj event_hub_receiver`](#obj-event_hub_receiver)
+  * [`fn new()`](#fn-event_hub_receivernew)
+* [`obj itsm_receiver`](#obj-itsm_receiver)
+  * [`fn new()`](#fn-itsm_receivernew)
+* [`obj logic_app_receiver`](#obj-logic_app_receiver)
+  * [`fn new()`](#fn-logic_app_receivernew)
+* [`obj sms_receiver`](#obj-sms_receiver)
+  * [`fn new()`](#fn-sms_receivernew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+* [`obj voice_receiver`](#obj-voice_receiver)
+  * [`fn new()`](#fn-voice_receivernew)
+* [`obj webhook_receiver`](#obj-webhook_receiver)
+  * [`fn new()`](#fn-webhook_receivernew)
+  * [`obj webhook_receiver.aad_auth`](#obj-webhook_receiveraad_auth)
+    * [`fn new()`](#fn-webhook_receiveraad_authnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.new` injects a new `azurerm_monitor_action_group` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.monitor_action_group.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.monitor_action_group` using the reference:
+
+    $._ref.azurerm_monitor_action_group.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_monitor_action_group.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `short_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `arm_role_receiver` (`list[obj]`):  When `null`, the `arm_role_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.arm_role_receiver.new](#fn-monitoractiongrouparmrolereceivernew) constructor.
+  - `automation_runbook_receiver` (`list[obj]`):  When `null`, the `automation_runbook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.automation_runbook_receiver.new](#fn-monitoractiongroupautomationrunbookreceivernew) constructor.
+  - `azure_app_push_receiver` (`list[obj]`):  When `null`, the `azure_app_push_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_app_push_receiver.new](#fn-monitoractiongroupazureapppushreceivernew) constructor.
+  - `azure_function_receiver` (`list[obj]`):  When `null`, the `azure_function_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_function_receiver.new](#fn-monitoractiongroupazurefunctionreceivernew) constructor.
+  - `email_receiver` (`list[obj]`):  When `null`, the `email_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.email_receiver.new](#fn-monitoractiongroupemailreceivernew) constructor.
+  - `event_hub_receiver` (`list[obj]`):  When `null`, the `event_hub_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.event_hub_receiver.new](#fn-monitoractiongroupeventhubreceivernew) constructor.
+  - `itsm_receiver` (`list[obj]`):  When `null`, the `itsm_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.itsm_receiver.new](#fn-monitoractiongroupitsmreceivernew) constructor.
+  - `logic_app_receiver` (`list[obj]`):  When `null`, the `logic_app_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.logic_app_receiver.new](#fn-monitoractiongrouplogicappreceivernew) constructor.
+  - `sms_receiver` (`list[obj]`):  When `null`, the `sms_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.sms_receiver.new](#fn-monitoractiongroupsmsreceivernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.timeouts.new](#fn-monitoractiongrouptimeoutsnew) constructor.
+  - `voice_receiver` (`list[obj]`):  When `null`, the `voice_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.voice_receiver.new](#fn-monitoractiongroupvoicereceivernew) constructor.
+  - `webhook_receiver` (`list[obj]`):  When `null`, the `webhook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.new](#fn-monitoractiongroupwebhookreceivernew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.monitor_action_group.newAttrs` constructs a new object with attributes and blocks configured for the `monitor_action_group`
+Terraform resource.
+
+Unlike [azurerm.monitor_action_group.new](#fn-monitoractiongroupnew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `short_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `arm_role_receiver` (`list[obj]`):  When `null`, the `arm_role_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.arm_role_receiver.new](#fn-monitoractiongrouparmrolereceivernew) constructor.
+  - `automation_runbook_receiver` (`list[obj]`):  When `null`, the `automation_runbook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.automation_runbook_receiver.new](#fn-monitoractiongroupautomationrunbookreceivernew) constructor.
+  - `azure_app_push_receiver` (`list[obj]`):  When `null`, the `azure_app_push_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_app_push_receiver.new](#fn-monitoractiongroupazureapppushreceivernew) constructor.
+  - `azure_function_receiver` (`list[obj]`):  When `null`, the `azure_function_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_function_receiver.new](#fn-monitoractiongroupazurefunctionreceivernew) constructor.
+  - `email_receiver` (`list[obj]`):  When `null`, the `email_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.email_receiver.new](#fn-monitoractiongroupemailreceivernew) constructor.
+  - `event_hub_receiver` (`list[obj]`):  When `null`, the `event_hub_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.event_hub_receiver.new](#fn-monitoractiongroupeventhubreceivernew) constructor.
+  - `itsm_receiver` (`list[obj]`):  When `null`, the `itsm_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.itsm_receiver.new](#fn-monitoractiongroupitsmreceivernew) constructor.
+  - `logic_app_receiver` (`list[obj]`):  When `null`, the `logic_app_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.logic_app_receiver.new](#fn-monitoractiongrouplogicappreceivernew) constructor.
+  - `sms_receiver` (`list[obj]`):  When `null`, the `sms_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.sms_receiver.new](#fn-monitoractiongroupsmsreceivernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.timeouts.new](#fn-monitoractiongrouptimeoutsnew) constructor.
+  - `voice_receiver` (`list[obj]`):  When `null`, the `voice_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.voice_receiver.new](#fn-monitoractiongroupvoicereceivernew) constructor.
+  - `webhook_receiver` (`list[obj]`):  When `null`, the `webhook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.new](#fn-monitoractiongroupwebhookreceivernew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_action_group` resource into the root Terraform configuration.
+
+
+### fn withArmRoleReceiver
+
+```ts
+withArmRoleReceiver()
+```
+
+`azurerm.monitor_action_group.withArmRoleReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the arm_role_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `arm_role_receiver` field.
+
+
+### fn withArmRoleReceiverMixin
+
+```ts
+withArmRoleReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withArmRoleReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the arm_role_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withArmRoleReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `arm_role_receiver` field.
+
+
+### fn withAutomationRunbookReceiver
+
+```ts
+withAutomationRunbookReceiver()
+```
+
+`azurerm.monitor_action_group.withAutomationRunbookReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the automation_runbook_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `automation_runbook_receiver` field.
+
+
+### fn withAutomationRunbookReceiverMixin
+
+```ts
+withAutomationRunbookReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withAutomationRunbookReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the automation_runbook_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withAutomationRunbookReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `automation_runbook_receiver` field.
+
+
+### fn withAzureAppPushReceiver
+
+```ts
+withAzureAppPushReceiver()
+```
+
+`azurerm.monitor_action_group.withAzureAppPushReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the azure_app_push_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `azure_app_push_receiver` field.
+
+
+### fn withAzureAppPushReceiverMixin
+
+```ts
+withAzureAppPushReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withAzureAppPushReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the azure_app_push_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withAzureAppPushReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `azure_app_push_receiver` field.
+
+
+### fn withAzureFunctionReceiver
+
+```ts
+withAzureFunctionReceiver()
+```
+
+`azurerm.monitor_action_group.withAzureFunctionReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the azure_function_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `azure_function_receiver` field.
+
+
+### fn withAzureFunctionReceiverMixin
+
+```ts
+withAzureFunctionReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withAzureFunctionReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the azure_function_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withAzureFunctionReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `azure_function_receiver` field.
+
+
+### fn withEmailReceiver
+
+```ts
+withEmailReceiver()
+```
+
+`azurerm.monitor_action_group.withEmailReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the email_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `email_receiver` field.
+
+
+### fn withEmailReceiverMixin
+
+```ts
+withEmailReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withEmailReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the email_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withEmailReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `email_receiver` field.
+
+
+### fn withEnabled
+
+```ts
+withEnabled()
+```
+
+`azurerm.monitor_action_group.withEnabled` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `enabled` field.
+
+
+### fn withEventHubReceiver
+
+```ts
+withEventHubReceiver()
+```
+
+`azurerm.monitor_action_group.withEventHubReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the event_hub_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `event_hub_receiver` field.
+
+
+### fn withEventHubReceiverMixin
+
+```ts
+withEventHubReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withEventHubReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the event_hub_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withEventHubReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `event_hub_receiver` field.
+
+
+### fn withItsmReceiver
+
+```ts
+withItsmReceiver()
+```
+
+`azurerm.monitor_action_group.withItsmReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the itsm_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `itsm_receiver` field.
+
+
+### fn withItsmReceiverMixin
+
+```ts
+withItsmReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withItsmReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the itsm_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withItsmReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `itsm_receiver` field.
+
+
+### fn withLogicAppReceiver
+
+```ts
+withLogicAppReceiver()
+```
+
+`azurerm.monitor_action_group.withLogicAppReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the logic_app_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `logic_app_receiver` field.
+
+
+### fn withLogicAppReceiverMixin
+
+```ts
+withLogicAppReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withLogicAppReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the logic_app_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withLogicAppReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `logic_app_receiver` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.monitor_action_group.withName` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.monitor_action_group.withResourceGroupName` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `resource_group_name` field.
+
+
+### fn withShortName
+
+```ts
+withShortName()
+```
+
+`azurerm.monitor_action_group.withShortName` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the short_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `short_name` field.
+
+
+### fn withSmsReceiver
+
+```ts
+withSmsReceiver()
+```
+
+`azurerm.monitor_action_group.withSmsReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the sms_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `sms_receiver` field.
+
+
+### fn withSmsReceiverMixin
+
+```ts
+withSmsReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withSmsReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the sms_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withSmsReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `sms_receiver` field.
+
+
+### fn withTags
+
+```ts
+withTags()
+```
+
+`azurerm.monitor_action_group.withTags` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the tags field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `tags` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.monitor_action_group.withTimeouts` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.monitor_action_group.withTimeoutsMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.monitor_action_group.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withVoiceReceiver
+
+```ts
+withVoiceReceiver()
+```
+
+`azurerm.monitor_action_group.withVoiceReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the voice_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `voice_receiver` field.
+
+
+### fn withVoiceReceiverMixin
+
+```ts
+withVoiceReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withVoiceReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the voice_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withVoiceReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `voice_receiver` field.
+
+
+### fn withWebhookReceiver
+
+```ts
+withWebhookReceiver()
+```
+
+`azurerm.monitor_action_group.withWebhookReceiver` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the webhook_receiver field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `webhook_receiver` field.
+
+
+### fn withWebhookReceiverMixin
+
+```ts
+withWebhookReceiverMixin()
+```
+
+`azurerm.monitor_action_group.withWebhookReceiverMixin` constructs a mixin object that can be merged into the `monitor_action_group`
+Terraform resource block to set or update the webhook_receiver field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.monitor_action_group.withWebhookReceiver](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `webhook_receiver` field.
+
+
+## obj arm_role_receiver
+
+
+
+### fn arm_role_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.arm_role_receiver.new` constructs a new object with attributes and blocks configured for the `arm_role_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): 
+  - `role_id` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `arm_role_receiver` sub block.
+
+
+## obj automation_runbook_receiver
+
+
+
+### fn automation_runbook_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.automation_runbook_receiver.new` constructs a new object with attributes and blocks configured for the `automation_runbook_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `automation_account_id` (`string`): 
+  - `is_global_runbook` (`bool`): 
+  - `name` (`string`): 
+  - `runbook_name` (`string`): 
+  - `service_uri` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `webhook_resource_id` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `automation_runbook_receiver` sub block.
+
+
+## obj azure_app_push_receiver
+
+
+
+### fn azure_app_push_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.azure_app_push_receiver.new` constructs a new object with attributes and blocks configured for the `azure_app_push_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `email_address` (`string`): 
+  - `name` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `azure_app_push_receiver` sub block.
+
+
+## obj azure_function_receiver
+
+
+
+### fn azure_function_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.azure_function_receiver.new` constructs a new object with attributes and blocks configured for the `azure_function_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `function_app_resource_id` (`string`): 
+  - `function_name` (`string`): 
+  - `http_trigger_url` (`string`): 
+  - `name` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `azure_function_receiver` sub block.
+
+
+## obj email_receiver
+
+
+
+### fn email_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.email_receiver.new` constructs a new object with attributes and blocks configured for the `email_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `email_address` (`string`): 
+  - `name` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `email_receiver` sub block.
+
+
+## obj event_hub_receiver
+
+
+
+### fn event_hub_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.event_hub_receiver.new` constructs a new object with attributes and blocks configured for the `event_hub_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `event_hub_id` (`string`):  When `null`, the `event_hub_id` field will be omitted from the resulting object.
+  - `event_hub_name` (`string`):  When `null`, the `event_hub_name` field will be omitted from the resulting object.
+  - `event_hub_namespace` (`string`):  When `null`, the `event_hub_namespace` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `subscription_id` (`string`):  When `null`, the `subscription_id` field will be omitted from the resulting object.
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `event_hub_receiver` sub block.
+
+
+## obj itsm_receiver
+
+
+
+### fn itsm_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.itsm_receiver.new` constructs a new object with attributes and blocks configured for the `itsm_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `connection_id` (`string`): 
+  - `name` (`string`): 
+  - `region` (`string`): 
+  - `ticket_configuration` (`string`): 
+  - `workspace_id` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `itsm_receiver` sub block.
+
+
+## obj logic_app_receiver
+
+
+
+### fn logic_app_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.logic_app_receiver.new` constructs a new object with attributes and blocks configured for the `logic_app_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `callback_url` (`string`): 
+  - `name` (`string`): 
+  - `resource_id` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `logic_app_receiver` sub block.
+
+
+## obj sms_receiver
+
+
+
+### fn sms_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.sms_receiver.new` constructs a new object with attributes and blocks configured for the `sms_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `country_code` (`string`): 
+  - `name` (`string`): 
+  - `phone_number` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `sms_receiver` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.
+
+
+## obj voice_receiver
+
+
+
+### fn voice_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.voice_receiver.new` constructs a new object with attributes and blocks configured for the `voice_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `country_code` (`string`): 
+  - `name` (`string`): 
+  - `phone_number` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `voice_receiver` sub block.
+
+
+## obj webhook_receiver
+
+
+
+### fn webhook_receiver.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.webhook_receiver.new` constructs a new object with attributes and blocks configured for the `webhook_receiver`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): 
+  - `service_uri` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `aad_auth` (`list[obj]`):  When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-webhookreceiveraadauthnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `webhook_receiver` sub block.
+
+
+## obj webhook_receiver.aad_auth
+
+
+
+### fn webhook_receiver.aad_auth.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_action_group.webhook_receiver.aad_auth.new` constructs a new object with attributes and blocks configured for the `aad_auth`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identifier_uri` (`string`):  When `null`, the `identifier_uri` field will be omitted from the resulting object.
+  - `object_id` (`string`): 
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `aad_auth` sub block.

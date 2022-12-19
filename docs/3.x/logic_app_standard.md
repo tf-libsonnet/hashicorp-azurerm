@@ -1,0 +1,703 @@
+---
+permalink: /logic_app_standard/
+---
+
+# logic_app_standard
+
+`logic_app_standard` represents the `azurerm_logic_app_standard` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAppServicePlanId()`](#fn-withappserviceplanid)
+* [`fn withAppSettings()`](#fn-withappsettings)
+* [`fn withBundleVersion()`](#fn-withbundleversion)
+* [`fn withClientAffinityEnabled()`](#fn-withclientaffinityenabled)
+* [`fn withClientCertificateMode()`](#fn-withclientcertificatemode)
+* [`fn withConnectionString()`](#fn-withconnectionstring)
+* [`fn withConnectionStringMixin()`](#fn-withconnectionstringmixin)
+* [`fn withEnabled()`](#fn-withenabled)
+* [`fn withHttpsOnly()`](#fn-withhttpsonly)
+* [`fn withIdentity()`](#fn-withidentity)
+* [`fn withIdentityMixin()`](#fn-withidentitymixin)
+* [`fn withLocation()`](#fn-withlocation)
+* [`fn withName()`](#fn-withname)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSiteConfig()`](#fn-withsiteconfig)
+* [`fn withSiteConfigMixin()`](#fn-withsiteconfigmixin)
+* [`fn withStorageAccountAccessKey()`](#fn-withstorageaccountaccesskey)
+* [`fn withStorageAccountName()`](#fn-withstorageaccountname)
+* [`fn withStorageAccountShareName()`](#fn-withstorageaccountsharename)
+* [`fn withTags()`](#fn-withtags)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withUseExtensionBundle()`](#fn-withuseextensionbundle)
+* [`fn withVersion()`](#fn-withversion)
+* [`fn withVirtualNetworkSubnetId()`](#fn-withvirtualnetworksubnetid)
+* [`obj connection_string`](#obj-connection_string)
+  * [`fn new()`](#fn-connection_stringnew)
+* [`obj identity`](#obj-identity)
+  * [`fn new()`](#fn-identitynew)
+* [`obj site_config`](#obj-site_config)
+  * [`fn new()`](#fn-site_confignew)
+  * [`obj site_config.cors`](#obj-site_configcors)
+    * [`fn new()`](#fn-site_configcorsnew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.logic_app_standard.new` injects a new `azurerm_logic_app_standard` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.logic_app_standard.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.logic_app_standard` using the reference:
+
+    $._ref.azurerm_logic_app_standard.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_logic_app_standard.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `app_service_plan_id` (`string`): 
+  - `app_settings` (`obj`):  When `null`, the `app_settings` field will be omitted from the resulting object.
+  - `bundle_version` (`string`):  When `null`, the `bundle_version` field will be omitted from the resulting object.
+  - `client_affinity_enabled` (`bool`):  When `null`, the `client_affinity_enabled` field will be omitted from the resulting object.
+  - `client_certificate_mode` (`string`):  When `null`, the `client_certificate_mode` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `storage_account_access_key` (`string`): 
+  - `storage_account_name` (`string`): 
+  - `storage_account_share_name` (`string`):  When `null`, the `storage_account_share_name` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `use_extension_bundle` (`bool`):  When `null`, the `use_extension_bundle` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `virtual_network_subnet_id` (`string`):  When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `connection_string` (`list[obj]`):  When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.connection_string.new](#fn-logicappstandardconnectionstringnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.identity.new](#fn-logicappstandardidentitynew) constructor.
+  - `site_config` (`list[obj]`):  When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.site_config.new](#fn-logicappstandardsiteconfignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.timeouts.new](#fn-logicappstandardtimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.logic_app_standard.newAttrs` constructs a new object with attributes and blocks configured for the `logic_app_standard`
+Terraform resource.
+
+Unlike [azurerm.logic_app_standard.new](#fn-logicappstandardnew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `app_service_plan_id` (`string`): 
+  - `app_settings` (`obj`):  When `null`, the `app_settings` field will be omitted from the resulting object.
+  - `bundle_version` (`string`):  When `null`, the `bundle_version` field will be omitted from the resulting object.
+  - `client_affinity_enabled` (`bool`):  When `null`, the `client_affinity_enabled` field will be omitted from the resulting object.
+  - `client_certificate_mode` (`string`):  When `null`, the `client_certificate_mode` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `storage_account_access_key` (`string`): 
+  - `storage_account_name` (`string`): 
+  - `storage_account_share_name` (`string`):  When `null`, the `storage_account_share_name` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `use_extension_bundle` (`bool`):  When `null`, the `use_extension_bundle` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `virtual_network_subnet_id` (`string`):  When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `connection_string` (`list[obj]`):  When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.connection_string.new](#fn-logicappstandardconnectionstringnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.identity.new](#fn-logicappstandardidentitynew) constructor.
+  - `site_config` (`list[obj]`):  When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.site_config.new](#fn-logicappstandardsiteconfignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.timeouts.new](#fn-logicappstandardtimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_standard` resource into the root Terraform configuration.
+
+
+### fn withAppServicePlanId
+
+```ts
+withAppServicePlanId()
+```
+
+`azurerm.logic_app_standard.withAppServicePlanId` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the app_service_plan_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `app_service_plan_id` field.
+
+
+### fn withAppSettings
+
+```ts
+withAppSettings()
+```
+
+`azurerm.logic_app_standard.withAppSettings` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the app_settings field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `app_settings` field.
+
+
+### fn withBundleVersion
+
+```ts
+withBundleVersion()
+```
+
+`azurerm.logic_app_standard.withBundleVersion` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the bundle_version field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `bundle_version` field.
+
+
+### fn withClientAffinityEnabled
+
+```ts
+withClientAffinityEnabled()
+```
+
+`azurerm.logic_app_standard.withClientAffinityEnabled` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the client_affinity_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `client_affinity_enabled` field.
+
+
+### fn withClientCertificateMode
+
+```ts
+withClientCertificateMode()
+```
+
+`azurerm.logic_app_standard.withClientCertificateMode` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the client_certificate_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `client_certificate_mode` field.
+
+
+### fn withConnectionString
+
+```ts
+withConnectionString()
+```
+
+`azurerm.logic_app_standard.withConnectionString` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the connection_string field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `connection_string` field.
+
+
+### fn withConnectionStringMixin
+
+```ts
+withConnectionStringMixin()
+```
+
+`azurerm.logic_app_standard.withConnectionStringMixin` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the connection_string field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.logic_app_standard.withConnectionString](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `connection_string` field.
+
+
+### fn withEnabled
+
+```ts
+withEnabled()
+```
+
+`azurerm.logic_app_standard.withEnabled` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `enabled` field.
+
+
+### fn withHttpsOnly
+
+```ts
+withHttpsOnly()
+```
+
+`azurerm.logic_app_standard.withHttpsOnly` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the https_only field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `https_only` field.
+
+
+### fn withIdentity
+
+```ts
+withIdentity()
+```
+
+`azurerm.logic_app_standard.withIdentity` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the identity field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `identity` field.
+
+
+### fn withIdentityMixin
+
+```ts
+withIdentityMixin()
+```
+
+`azurerm.logic_app_standard.withIdentityMixin` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the identity field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.logic_app_standard.withIdentity](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `identity` field.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`azurerm.logic_app_standard.withLocation` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `location` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.logic_app_standard.withName` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.logic_app_standard.withResourceGroupName` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `resource_group_name` field.
+
+
+### fn withSiteConfig
+
+```ts
+withSiteConfig()
+```
+
+`azurerm.logic_app_standard.withSiteConfig` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the site_config field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `site_config` field.
+
+
+### fn withSiteConfigMixin
+
+```ts
+withSiteConfigMixin()
+```
+
+`azurerm.logic_app_standard.withSiteConfigMixin` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the site_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.logic_app_standard.withSiteConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `site_config` field.
+
+
+### fn withStorageAccountAccessKey
+
+```ts
+withStorageAccountAccessKey()
+```
+
+`azurerm.logic_app_standard.withStorageAccountAccessKey` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the storage_account_access_key field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `storage_account_access_key` field.
+
+
+### fn withStorageAccountName
+
+```ts
+withStorageAccountName()
+```
+
+`azurerm.logic_app_standard.withStorageAccountName` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the storage_account_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `storage_account_name` field.
+
+
+### fn withStorageAccountShareName
+
+```ts
+withStorageAccountShareName()
+```
+
+`azurerm.logic_app_standard.withStorageAccountShareName` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the storage_account_share_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `storage_account_share_name` field.
+
+
+### fn withTags
+
+```ts
+withTags()
+```
+
+`azurerm.logic_app_standard.withTags` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the tags field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `tags` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.logic_app_standard.withTimeouts` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.logic_app_standard.withTimeoutsMixin` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.logic_app_standard.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withUseExtensionBundle
+
+```ts
+withUseExtensionBundle()
+```
+
+`azurerm.logic_app_standard.withUseExtensionBundle` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the use_extension_bundle field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `use_extension_bundle` field.
+
+
+### fn withVersion
+
+```ts
+withVersion()
+```
+
+`azurerm.logic_app_standard.withVersion` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the version field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `version` field.
+
+
+### fn withVirtualNetworkSubnetId
+
+```ts
+withVirtualNetworkSubnetId()
+```
+
+`azurerm.logic_app_standard.withVirtualNetworkSubnetId` constructs a mixin object that can be merged into the `logic_app_standard`
+Terraform resource block to set or update the virtual_network_subnet_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `virtual_network_subnet_id` field.
+
+
+## obj connection_string
+
+
+
+### fn connection_string.new
+
+```ts
+new()
+```
+
+
+`azurerm.logic_app_standard.connection_string.new` constructs a new object with attributes and blocks configured for the `connection_string`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): 
+  - `type` (`string`): 
+  - `value` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `connection_string` sub block.
+
+
+## obj identity
+
+
+
+### fn identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.logic_app_standard.identity.new` constructs a new object with attributes and blocks configured for the `identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
+
+**Returns**:
+  - An attribute object that represents the `identity` sub block.
+
+
+## obj site_config
+
+
+
+### fn site_config.new
+
+```ts
+new()
+```
+
+
+`azurerm.logic_app_standard.site_config.new` constructs a new object with attributes and blocks configured for the `site_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `always_on` (`bool`):  When `null`, the `always_on` field will be omitted from the resulting object.
+  - `app_scale_limit` (`number`):  When `null`, the `app_scale_limit` field will be omitted from the resulting object.
+  - `dotnet_framework_version` (`string`):  When `null`, the `dotnet_framework_version` field will be omitted from the resulting object.
+  - `elastic_instance_minimum` (`number`):  When `null`, the `elastic_instance_minimum` field will be omitted from the resulting object.
+  - `ftps_state` (`string`):  When `null`, the `ftps_state` field will be omitted from the resulting object.
+  - `health_check_path` (`string`):  When `null`, the `health_check_path` field will be omitted from the resulting object.
+  - `http2_enabled` (`bool`):  When `null`, the `http2_enabled` field will be omitted from the resulting object.
+  - `ip_restriction` (`list`):  When `null`, the `ip_restriction` field will be omitted from the resulting object.
+  - `linux_fx_version` (`string`):  When `null`, the `linux_fx_version` field will be omitted from the resulting object.
+  - `min_tls_version` (`string`):  When `null`, the `min_tls_version` field will be omitted from the resulting object.
+  - `pre_warmed_instance_count` (`number`):  When `null`, the `pre_warmed_instance_count` field will be omitted from the resulting object.
+  - `runtime_scale_monitoring_enabled` (`bool`):  When `null`, the `runtime_scale_monitoring_enabled` field will be omitted from the resulting object.
+  - `scm_ip_restriction` (`list`):  When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
+  - `scm_min_tls_version` (`string`):  When `null`, the `scm_min_tls_version` field will be omitted from the resulting object.
+  - `scm_type` (`string`):  When `null`, the `scm_type` field will be omitted from the resulting object.
+  - `scm_use_main_ip_restriction` (`bool`):  When `null`, the `scm_use_main_ip_restriction` field will be omitted from the resulting object.
+  - `use_32_bit_worker_process` (`bool`):  When `null`, the `use_32_bit_worker_process` field will be omitted from the resulting object.
+  - `vnet_route_all_enabled` (`bool`):  When `null`, the `vnet_route_all_enabled` field will be omitted from the resulting object.
+  - `websockets_enabled` (`bool`):  When `null`, the `websockets_enabled` field will be omitted from the resulting object.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_standard.site_config.cors.new](#fn-siteconfigcorsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `site_config` sub block.
+
+
+## obj site_config.cors
+
+
+
+### fn site_config.cors.new
+
+```ts
+new()
+```
+
+
+`azurerm.logic_app_standard.site_config.cors.new` constructs a new object with attributes and blocks configured for the `cors`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_origins` (`list`): 
+  - `support_credentials` (`bool`):  When `null`, the `support_credentials` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `cors` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.logic_app_standard.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

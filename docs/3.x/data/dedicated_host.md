@@ -1,0 +1,194 @@
+---
+permalink: /data/dedicated_host/
+---
+
+# data.dedicated_host
+
+`dedicated_host` represents the `azurerm_dedicated_host` Terraform data source.
+
+
+
+This package contains functions and utilities for setting up the data source using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDedicatedHostGroupName()`](#fn-withdedicatedhostgroupname)
+* [`fn withName()`](#fn-withname)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.data.dedicated_host.new` injects a new `data_azurerm_dedicated_host` Terraform `data source`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.data.dedicated_host.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.data.dedicated_host` using the reference:
+
+    $._ref.data_azurerm_dedicated_host.some_id.get('id')
+
+This is the same as directly entering `"${ data_azurerm_dedicated_host.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block.
+  - `dedicated_host_group_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.dedicated_host.timeouts.new](#fn-dedicatedhosttimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new data source into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.data.dedicated_host.newAttrs` constructs a new object with attributes and blocks configured for the `dedicated_host`
+Terraform data source.
+
+Unlike [azurerm.data.dedicated_host.new](#fn-dedicatedhostnew), this function will not inject the `data source`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `dedicated_host_group_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.dedicated_host.timeouts.new](#fn-dedicatedhosttimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `dedicated_host` data source into the root Terraform configuration.
+
+
+### fn withDedicatedHostGroupName
+
+```ts
+withDedicatedHostGroupName()
+```
+
+`azurerm.dedicated_host.withDedicatedHostGroupName` constructs a mixin object that can be merged into the `dedicated_host`
+Terraform data source block to set or update the dedicated_host_group_name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `dedicated_host_group_name` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.dedicated_host.withName` constructs a mixin object that can be merged into the `dedicated_host`
+Terraform data source block to set or update the name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.dedicated_host.withResourceGroupName` constructs a mixin object that can be merged into the `dedicated_host`
+Terraform data source block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `resource_group_name` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.dedicated_host.withTimeouts` constructs a mixin object that can be merged into the `dedicated_host`
+Terraform data source block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.dedicated_host.withTimeoutsMixin` constructs a mixin object that can be merged into the `dedicated_host`
+Terraform data source block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.dedicated_host.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.dedicated_host.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

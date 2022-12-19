@@ -1,0 +1,194 @@
+---
+permalink: /data/backup_policy_file_share/
+---
+
+# data.backup_policy_file_share
+
+`backup_policy_file_share` represents the `azurerm_backup_policy_file_share` Terraform data source.
+
+
+
+This package contains functions and utilities for setting up the data source using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withName()`](#fn-withname)
+* [`fn withRecoveryVaultName()`](#fn-withrecoveryvaultname)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.data.backup_policy_file_share.new` injects a new `data_azurerm_backup_policy_file_share` Terraform `data source`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.data.backup_policy_file_share.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.data.backup_policy_file_share` using the reference:
+
+    $._ref.data_azurerm_backup_policy_file_share.some_id.get('id')
+
+This is the same as directly entering `"${ data_azurerm_backup_policy_file_share.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block.
+  - `name` (`string`): 
+  - `recovery_vault_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.backup_policy_file_share.timeouts.new](#fn-backuppolicyfilesharetimeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new data source into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.data.backup_policy_file_share.newAttrs` constructs a new object with attributes and blocks configured for the `backup_policy_file_share`
+Terraform data source.
+
+Unlike [azurerm.data.backup_policy_file_share.new](#fn-backuppolicyfilesharenew), this function will not inject the `data source`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `name` (`string`): 
+  - `recovery_vault_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.backup_policy_file_share.timeouts.new](#fn-backuppolicyfilesharetimeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `backup_policy_file_share` data source into the root Terraform configuration.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.backup_policy_file_share.withName` constructs a mixin object that can be merged into the `backup_policy_file_share`
+Terraform data source block to set or update the name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withRecoveryVaultName
+
+```ts
+withRecoveryVaultName()
+```
+
+`azurerm.backup_policy_file_share.withRecoveryVaultName` constructs a mixin object that can be merged into the `backup_policy_file_share`
+Terraform data source block to set or update the recovery_vault_name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `recovery_vault_name` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.backup_policy_file_share.withResourceGroupName` constructs a mixin object that can be merged into the `backup_policy_file_share`
+Terraform data source block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `resource_group_name` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.backup_policy_file_share.withTimeouts` constructs a mixin object that can be merged into the `backup_policy_file_share`
+Terraform data source block to set or update the timeouts field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.backup_policy_file_share.withTimeoutsMixin` constructs a mixin object that can be merged into the `backup_policy_file_share`
+Terraform data source block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.backup_policy_file_share.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `timeouts` field.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.backup_policy_file_share.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.
