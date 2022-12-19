@@ -445,9 +445,9 @@ Terraform sub block.
   - `label` (`string`):  When `null`, the `label` field will be omitted from the resulting object.
   - `search_paths` (`list`):  When `null`, the `search_paths` field will be omitted from the resulting object.
   - `uri` (`string`): 
-  - `http_basic_auth` (`list[obj]`):  When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.http_basic_auth.new](#fn-spring_cloud_servicehttp_basic_authnew) constructor.
-  - `repository` (`list[obj]`):  When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.new](#fn-spring_cloud_servicerepositorynew) constructor.
-  - `ssh_auth` (`list[obj]`):  When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.ssh_auth.new](#fn-spring_cloud_servicessh_authnew) constructor.
+  - `http_basic_auth` (`list[obj]`):  When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.http_basic_auth.new](#fn-config_server_git_settinghttp_basic_authnew) constructor.
+  - `repository` (`list[obj]`):  When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.new](#fn-config_server_git_settingrepositorynew) constructor.
+  - `ssh_auth` (`list[obj]`):  When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.ssh_auth.new](#fn-config_server_git_settingssh_authnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `config_server_git_setting` sub block.
@@ -499,8 +499,8 @@ Terraform sub block.
   - `pattern` (`list`):  When `null`, the `pattern` field will be omitted from the resulting object.
   - `search_paths` (`list`):  When `null`, the `search_paths` field will be omitted from the resulting object.
   - `uri` (`string`): 
-  - `http_basic_auth` (`list[obj]`):  When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.http_basic_auth.new](#fn-spring_cloud_serviceconfig_server_git_settinghttp_basic_authnew) constructor.
-  - `ssh_auth` (`list[obj]`):  When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.ssh_auth.new](#fn-spring_cloud_serviceconfig_server_git_settingssh_authnew) constructor.
+  - `http_basic_auth` (`list[obj]`):  When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.http_basic_auth.new](#fn-config_server_git_settingconfig_server_git_settinghttp_basic_authnew) constructor.
+  - `ssh_auth` (`list[obj]`):  When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.ssh_auth.new](#fn-config_server_git_settingconfig_server_git_settingssh_authnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `repository` sub block.

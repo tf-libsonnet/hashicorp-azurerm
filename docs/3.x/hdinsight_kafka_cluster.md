@@ -986,9 +986,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `ambari` (`list[obj]`):  When `null`, the `ambari` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.metastores.ambari.new](#fn-hdinsight_kafka_clusterambarinew) constructor.
-  - `hive` (`list[obj]`):  When `null`, the `hive` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.metastores.hive.new](#fn-hdinsight_kafka_clusterhivenew) constructor.
-  - `oozie` (`list[obj]`):  When `null`, the `oozie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.metastores.oozie.new](#fn-hdinsight_kafka_clusteroozienew) constructor.
+  - `ambari` (`list[obj]`):  When `null`, the `ambari` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.metastores.ambari.new](#fn-metastoresambarinew) constructor.
+  - `hive` (`list[obj]`):  When `null`, the `hive` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.metastores.hive.new](#fn-metastoreshivenew) constructor.
+  - `oozie` (`list[obj]`):  When `null`, the `oozie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.metastores.oozie.new](#fn-metastoresoozienew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metastores` sub block.
@@ -1161,10 +1161,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `head_node` (`list[obj]`):  When `null`, the `head_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.head_node.new](#fn-hdinsight_kafka_clusterhead_nodenew) constructor.
-  - `kafka_management_node` (`list[obj]`):  When `null`, the `kafka_management_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.kafka_management_node.new](#fn-hdinsight_kafka_clusterkafka_management_nodenew) constructor.
-  - `worker_node` (`list[obj]`):  When `null`, the `worker_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.worker_node.new](#fn-hdinsight_kafka_clusterworker_nodenew) constructor.
-  - `zookeeper_node` (`list[obj]`):  When `null`, the `zookeeper_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.zookeeper_node.new](#fn-hdinsight_kafka_clusterzookeeper_nodenew) constructor.
+  - `head_node` (`list[obj]`):  When `null`, the `head_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.head_node.new](#fn-roleshead_nodenew) constructor.
+  - `kafka_management_node` (`list[obj]`):  When `null`, the `kafka_management_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.kafka_management_node.new](#fn-roleskafka_management_nodenew) constructor.
+  - `worker_node` (`list[obj]`):  When `null`, the `worker_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.worker_node.new](#fn-rolesworker_nodenew) constructor.
+  - `zookeeper_node` (`list[obj]`):  When `null`, the `zookeeper_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.zookeeper_node.new](#fn-roleszookeeper_nodenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `roles` sub block.
@@ -1193,7 +1193,7 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.head_node.script_actions.new](#fn-hdinsight_kafka_clusterrolesscript_actionsnew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.head_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `head_node` sub block.
@@ -1247,7 +1247,7 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.kafka_management_node.script_actions.new](#fn-hdinsight_kafka_clusterrolesscript_actionsnew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.kafka_management_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `kafka_management_node` sub block.
@@ -1303,7 +1303,7 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.worker_node.script_actions.new](#fn-hdinsight_kafka_clusterrolesscript_actionsnew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.worker_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `worker_node` sub block.
@@ -1357,7 +1357,7 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.zookeeper_node.script_actions.new](#fn-hdinsight_kafka_clusterrolesscript_actionsnew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_kafka_cluster.roles.zookeeper_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `zookeeper_node` sub block.

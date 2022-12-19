@@ -13,7 +13,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         subnet_id: subnet_id,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.network_profile.container_network_interface.new` constructs a new object with attributes and blocks configured for the `container_network_interface`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): \n  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.ip_configuration.new](#fn-network_profileip_configurationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `container_network_interface` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.network_profile.container_network_interface.new` constructs a new object with attributes and blocks configured for the `container_network_interface`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): \n  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.ip_configuration.new](#fn-container_network_interfaceip_configurationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `container_network_interface` sub block.\n', args=[]),
     new(
       name,
       ip_configuration=null

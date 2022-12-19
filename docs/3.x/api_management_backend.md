@@ -463,7 +463,7 @@ Terraform sub block.
   - `certificate` (`list`):  When `null`, the `certificate` field will be omitted from the resulting object.
   - `header` (`obj`):  When `null`, the `header` field will be omitted from the resulting object.
   - `query` (`obj`):  When `null`, the `query` field will be omitted from the resulting object.
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.credentials.authorization.new](#fn-api_management_backendauthorizationnew) constructor.
+  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.credentials.authorization.new](#fn-credentialsauthorizationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `credentials` sub block.
@@ -540,7 +540,7 @@ Terraform sub block.
   - `management_endpoints` (`list`): 
   - `max_partition_resolution_retries` (`number`): 
   - `server_certificate_thumbprints` (`list`):  When `null`, the `server_certificate_thumbprints` field will be omitted from the resulting object.
-  - `server_x509_name` (`list[obj]`):  When `null`, the `server_x509_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.server_x509_name.new](#fn-api_management_backendserver_x509_namenew) constructor.
+  - `server_x509_name` (`list[obj]`):  When `null`, the `server_x509_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_backend.service_fabric_cluster.server_x509_name.new](#fn-service_fabric_clusterserver_x509_namenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `service_fabric_cluster` sub block.

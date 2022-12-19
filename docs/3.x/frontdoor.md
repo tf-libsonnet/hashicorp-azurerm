@@ -494,7 +494,7 @@ Terraform sub block.
   - `health_probe_name` (`string`): 
   - `load_balancing_name` (`string`): 
   - `name` (`string`): 
-  - `backend` (`list[obj]`):  When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.backend.new](#fn-frontdoorbackendnew) constructor.
+  - `backend` (`list[obj]`):  When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.backend.new](#fn-backend_poolbackendnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backend_pool` sub block.
@@ -656,8 +656,8 @@ Terraform sub block.
   - `frontend_endpoints` (`list`): 
   - `name` (`string`): 
   - `patterns_to_match` (`list`): 
-  - `forwarding_configuration` (`list[obj]`):  When `null`, the `forwarding_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.forwarding_configuration.new](#fn-frontdoorforwarding_configurationnew) constructor.
-  - `redirect_configuration` (`list[obj]`):  When `null`, the `redirect_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.redirect_configuration.new](#fn-frontdoorredirect_configurationnew) constructor.
+  - `forwarding_configuration` (`list[obj]`):  When `null`, the `forwarding_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.forwarding_configuration.new](#fn-routing_ruleforwarding_configurationnew) constructor.
+  - `redirect_configuration` (`list[obj]`):  When `null`, the `redirect_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.redirect_configuration.new](#fn-routing_ruleredirect_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing_rule` sub block.

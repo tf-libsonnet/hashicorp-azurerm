@@ -244,7 +244,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         name: name,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.cosmosdb_account.restore.new` constructs a new object with attributes and blocks configured for the `restore`\nTerraform sub block.\n\n\n\n**Args**:\n  - `restore_timestamp_in_utc` (`string`): \n  - `source_cosmosdb_account_id` (`string`): \n  - `database` (`list[obj]`):  When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-cosmosdb_accountdatabasenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `restore` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cosmosdb_account.restore.new` constructs a new object with attributes and blocks configured for the `restore`\nTerraform sub block.\n\n\n\n**Args**:\n  - `restore_timestamp_in_utc` (`string`): \n  - `source_cosmosdb_account_id` (`string`): \n  - `database` (`list[obj]`):  When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-restoredatabasenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `restore` sub block.\n', args=[]),
     new(
       restore_timestamp_in_utc,
       source_cosmosdb_account_id,

@@ -208,8 +208,8 @@ Terraform sub block.
 **Args**:
   - `enabled` (`bool`): 
   - `name` (`string`): 
-  - `actions` (`list[obj]`):  When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.new](#fn-storage_management_policyactionsnew) constructor.
-  - `filters` (`list[obj]`):  When `null`, the `filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.new](#fn-storage_management_policyfiltersnew) constructor.
+  - `actions` (`list[obj]`):  When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.new](#fn-ruleactionsnew) constructor.
+  - `filters` (`list[obj]`):  When `null`, the `filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.new](#fn-rulefiltersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -232,9 +232,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `base_blob` (`list[obj]`):  When `null`, the `base_blob` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.base_blob.new](#fn-storage_management_policyrulebase_blobnew) constructor.
-  - `snapshot` (`list[obj]`):  When `null`, the `snapshot` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.snapshot.new](#fn-storage_management_policyrulesnapshotnew) constructor.
-  - `version` (`list[obj]`):  When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.version.new](#fn-storage_management_policyruleversionnew) constructor.
+  - `base_blob` (`list[obj]`):  When `null`, the `base_blob` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.base_blob.new](#fn-rulerulebase_blobnew) constructor.
+  - `snapshot` (`list[obj]`):  When `null`, the `snapshot` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.snapshot.new](#fn-rulerulesnapshotnew) constructor.
+  - `version` (`list[obj]`):  When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.version.new](#fn-ruleruleversionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `actions` sub block.
@@ -343,7 +343,7 @@ Terraform sub block.
 **Args**:
   - `blob_types` (`list`): 
   - `prefix_match` (`list`):  When `null`, the `prefix_match` field will be omitted from the resulting object.
-  - `match_blob_index_tag` (`list[obj]`):  When `null`, the `match_blob_index_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.match_blob_index_tag.new](#fn-storage_management_policyrulematch_blob_index_tagnew) constructor.
+  - `match_blob_index_tag` (`list[obj]`):  When `null`, the `match_blob_index_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.match_blob_index_tag.new](#fn-rulerulematch_blob_index_tagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `filters` sub block.

@@ -27,7 +27,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         identifier: identifier,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.sentinel_alert_rule_nrt.entity_mapping.new` constructs a new object with attributes and blocks configured for the `entity_mapping`\nTerraform sub block.\n\n\n\n**Args**:\n  - `entity_type` (`string`): \n  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.field_mapping.new](#fn-sentinel_alert_rule_nrtfield_mappingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `entity_mapping` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.sentinel_alert_rule_nrt.entity_mapping.new` constructs a new object with attributes and blocks configured for the `entity_mapping`\nTerraform sub block.\n\n\n\n**Args**:\n  - `entity_type` (`string`): \n  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.field_mapping.new](#fn-entity_mappingfield_mappingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `entity_mapping` sub block.\n', args=[]),
     new(
       entity_type,
       field_mapping=null
@@ -57,7 +57,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         reopen_closed_incidents: reopen_closed_incidents,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.sentinel_alert_rule_nrt.incident.new` constructs a new object with attributes and blocks configured for the `incident`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create_incident_enabled` (`bool`): \n  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.grouping.new](#fn-sentinel_alert_rule_nrtgroupingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `incident` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.sentinel_alert_rule_nrt.incident.new` constructs a new object with attributes and blocks configured for the `incident`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create_incident_enabled` (`bool`): \n  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.grouping.new](#fn-incidentgroupingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `incident` sub block.\n', args=[]),
     new(
       create_incident_enabled,
       grouping=null

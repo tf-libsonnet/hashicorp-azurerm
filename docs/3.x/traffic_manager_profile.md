@@ -384,7 +384,7 @@ Terraform sub block.
   - `protocol` (`string`): 
   - `timeout_in_seconds` (`number`):  When `null`, the `timeout_in_seconds` field will be omitted from the resulting object.
   - `tolerated_number_of_failures` (`number`):  When `null`, the `tolerated_number_of_failures` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.custom_header.new](#fn-traffic_manager_profilecustom_headernew) constructor.
+  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.custom_header.new](#fn-monitor_configcustom_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `monitor_config` sub block.

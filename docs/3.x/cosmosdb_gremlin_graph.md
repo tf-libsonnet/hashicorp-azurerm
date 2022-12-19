@@ -514,8 +514,8 @@ Terraform sub block.
   - `excluded_paths` (`list`):  When `null`, the `excluded_paths` field will be omitted from the resulting object.
   - `included_paths` (`list`):  When `null`, the `included_paths` field will be omitted from the resulting object.
   - `indexing_mode` (`string`): 
-  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.new](#fn-cosmosdb_gremlin_graphcomposite_indexnew) constructor.
-  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.spatial_index.new](#fn-cosmosdb_gremlin_graphspatial_indexnew) constructor.
+  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.new](#fn-index_policycomposite_indexnew) constructor.
+  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.spatial_index.new](#fn-index_policyspatial_indexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `index_policy` sub block.
@@ -538,7 +538,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.index.new](#fn-cosmosdb_gremlin_graphindex_policyindexnew) constructor.
+  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.index.new](#fn-index_policyindex_policyindexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `composite_index` sub block.

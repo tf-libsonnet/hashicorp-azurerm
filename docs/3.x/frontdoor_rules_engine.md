@@ -261,8 +261,8 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.new](#fn-frontdoor_rules_engineactionnew) constructor.
-  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.match_condition.new](#fn-frontdoor_rules_enginematch_conditionnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.new](#fn-ruleactionnew) constructor.
+  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.match_condition.new](#fn-rulematch_conditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -285,8 +285,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.request_header.new](#fn-frontdoor_rules_enginerulerequest_headernew) constructor.
-  - `response_header` (`list[obj]`):  When `null`, the `response_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.response_header.new](#fn-frontdoor_rules_engineruleresponse_headernew) constructor.
+  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.request_header.new](#fn-rulerulerequest_headernew) constructor.
+  - `response_header` (`list[obj]`):  When `null`, the `response_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.response_header.new](#fn-ruleruleresponse_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.

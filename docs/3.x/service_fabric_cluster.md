@@ -896,7 +896,7 @@ Terraform sub block.
 
 **Args**:
   - `x509_store_name` (`string`): 
-  - `common_names` (`list[obj]`):  When `null`, the `common_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.certificate_common_names.common_names.new](#fn-service_fabric_clustercommon_namesnew) constructor.
+  - `common_names` (`list[obj]`):  When `null`, the `common_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.certificate_common_names.common_names.new](#fn-certificate_common_namescommon_namesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `certificate_common_names` sub block.
@@ -1054,8 +1054,8 @@ Terraform sub block.
   - `name` (`string`): 
   - `placement_properties` (`obj`):  When `null`, the `placement_properties` field will be omitted from the resulting object.
   - `reverse_proxy_endpoint_port` (`number`):  When `null`, the `reverse_proxy_endpoint_port` field will be omitted from the resulting object.
-  - `application_ports` (`list[obj]`):  When `null`, the `application_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.node_type.application_ports.new](#fn-service_fabric_clusterapplication_portsnew) constructor.
-  - `ephemeral_ports` (`list[obj]`):  When `null`, the `ephemeral_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.node_type.ephemeral_ports.new](#fn-service_fabric_clusterephemeral_portsnew) constructor.
+  - `application_ports` (`list[obj]`):  When `null`, the `application_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.node_type.application_ports.new](#fn-node_typeapplication_portsnew) constructor.
+  - `ephemeral_ports` (`list[obj]`):  When `null`, the `ephemeral_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.node_type.ephemeral_ports.new](#fn-node_typeephemeral_portsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_type` sub block.
@@ -1152,7 +1152,7 @@ Terraform sub block.
 
 **Args**:
   - `x509_store_name` (`string`): 
-  - `common_names` (`list[obj]`):  When `null`, the `common_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.reverse_proxy_certificate_common_names.common_names.new](#fn-service_fabric_clustercommon_namesnew) constructor.
+  - `common_names` (`list[obj]`):  When `null`, the `common_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.reverse_proxy_certificate_common_names.common_names.new](#fn-reverse_proxy_certificate_common_namescommon_namesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `reverse_proxy_certificate_common_names` sub block.
@@ -1232,8 +1232,8 @@ Terraform sub block.
   - `upgrade_domain_timeout` (`string`):  When `null`, the `upgrade_domain_timeout` field will be omitted from the resulting object.
   - `upgrade_replica_set_check_timeout` (`string`):  When `null`, the `upgrade_replica_set_check_timeout` field will be omitted from the resulting object.
   - `upgrade_timeout` (`string`):  When `null`, the `upgrade_timeout` field will be omitted from the resulting object.
-  - `delta_health_policy` (`list[obj]`):  When `null`, the `delta_health_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.upgrade_policy.delta_health_policy.new](#fn-service_fabric_clusterdelta_health_policynew) constructor.
-  - `health_policy` (`list[obj]`):  When `null`, the `health_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.upgrade_policy.health_policy.new](#fn-service_fabric_clusterhealth_policynew) constructor.
+  - `delta_health_policy` (`list[obj]`):  When `null`, the `delta_health_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.upgrade_policy.delta_health_policy.new](#fn-upgrade_policydelta_health_policynew) constructor.
+  - `health_policy` (`list[obj]`):  When `null`, the `health_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_cluster.upgrade_policy.health_policy.new](#fn-upgrade_policyhealth_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `upgrade_policy` sub block.

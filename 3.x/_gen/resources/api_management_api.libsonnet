@@ -15,7 +15,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   'import':: {
-    '#new':: d.fn(help='\n`azurerm.api_management_api.import.new` constructs a new object with attributes and blocks configured for the `import`\nTerraform sub block.\n\n\n\n**Args**:\n  - `content_format` (`string`): \n  - `content_value` (`string`): \n  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-api_management_apiwsdl_selectornew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `import` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.api_management_api.import.new` constructs a new object with attributes and blocks configured for the `import`\nTerraform sub block.\n\n\n\n**Args**:\n  - `content_format` (`string`): \n  - `content_value` (`string`): \n  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-importwsdl_selectornew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `import` sub block.\n', args=[]),
     new(
       content_format,
       content_value,

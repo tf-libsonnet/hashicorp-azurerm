@@ -221,8 +221,8 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): 
   - `next_step_if_matched` (`string`):  When `null`, the `next_step_if_matched` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.new](#fn-route_mapactionnew) constructor.
-  - `match_criterion` (`list[obj]`):  When `null`, the `match_criterion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.match_criterion.new](#fn-route_mapmatch_criterionnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.new](#fn-ruleactionnew) constructor.
+  - `match_criterion` (`list[obj]`):  When `null`, the `match_criterion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.match_criterion.new](#fn-rulematch_criterionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -246,7 +246,7 @@ Terraform sub block.
 
 **Args**:
   - `type` (`string`): 
-  - `parameter` (`list[obj]`):  When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.parameter.new](#fn-route_mapruleparameternew) constructor.
+  - `parameter` (`list[obj]`):  When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.parameter.new](#fn-ruleruleparameternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.

@@ -278,7 +278,7 @@ Terraform sub block.
 **Args**:
   - `batch_size` (`number`):  When `null`, the `batch_size` field will be omitted from the resulting object.
   - `message_count` (`number`):  When `null`, the `message_count` field will be omitted from the resulting object.
-  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.new](#fn-logic_app_integration_account_batch_configurationrecurrencenew) constructor.
+  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.new](#fn-release_criteriarecurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `release_criteria` sub block.
@@ -306,7 +306,7 @@ Terraform sub block.
   - `interval` (`number`): 
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.new](#fn-logic_app_integration_account_batch_configurationrelease_criteriaschedulenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.new](#fn-release_criteriarelease_criteriaschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `recurrence` sub block.
@@ -333,7 +333,7 @@ Terraform sub block.
   - `minutes` (`list`):  When `null`, the `minutes` field will be omitted from the resulting object.
   - `month_days` (`list`):  When `null`, the `month_days` field will be omitted from the resulting object.
   - `week_days` (`list`):  When `null`, the `week_days` field will be omitted from the resulting object.
-  - `monthly` (`list[obj]`):  When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.monthly.new](#fn-logic_app_integration_account_batch_configurationrelease_criteriarecurrencemonthlynew) constructor.
+  - `monthly` (`list[obj]`):  When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.monthly.new](#fn-release_criteriarelease_criteriarecurrencemonthlynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.

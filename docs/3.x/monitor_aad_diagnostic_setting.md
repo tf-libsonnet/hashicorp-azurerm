@@ -274,7 +274,7 @@ Terraform sub block.
 **Args**:
   - `category` (`string`): 
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_aad_diagnostic_setting.log.retention_policy.new](#fn-monitor_aad_diagnostic_settingretention_policynew) constructor.
+  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_aad_diagnostic_setting.log.retention_policy.new](#fn-logretention_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `log` sub block.

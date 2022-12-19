@@ -263,7 +263,7 @@ Terraform sub block.
   - `aad_log_enabled` (`bool`):  When `null`, the `aad_log_enabled` field will be omitted from the resulting object.
   - `resource_log_enabled` (`bool`):  When `null`, the `resource_log_enabled` field will be omitted from the resulting object.
   - `subscription_log_enabled` (`bool`):  When `null`, the `subscription_log_enabled` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.filter.new](#fn-datadog_monitor_tag_rulefilternew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.filter.new](#fn-logfilternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `log` sub block.
@@ -311,7 +311,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.filter.new](#fn-datadog_monitor_tag_rulefilternew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.filter.new](#fn-metricfilternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric` sub block.

@@ -373,8 +373,8 @@ Terraform sub block.
   - `resource_type` (`string`):  When `null`, the `resource_type` field will be omitted from the resulting object.
   - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
   - `sub_status` (`string`):  When `null`, the `sub_status` field will be omitted from the resulting object.
-  - `resource_health` (`list[obj]`):  When `null`, the `resource_health` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_activity_log_alert.criteria.resource_health.new](#fn-monitor_activity_log_alertresource_healthnew) constructor.
-  - `service_health` (`list[obj]`):  When `null`, the `service_health` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_activity_log_alert.criteria.service_health.new](#fn-monitor_activity_log_alertservice_healthnew) constructor.
+  - `resource_health` (`list[obj]`):  When `null`, the `resource_health` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_activity_log_alert.criteria.resource_health.new](#fn-criteriaresource_healthnew) constructor.
+  - `service_health` (`list[obj]`):  When `null`, the `service_health` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_activity_log_alert.criteria.service_health.new](#fn-criteriaservice_healthnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `criteria` sub block.

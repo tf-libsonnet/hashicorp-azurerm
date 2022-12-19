@@ -15,7 +15,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         values: values,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.monitor_scheduled_query_rules_log.criteria.new` constructs a new object with attributes and blocks configured for the `criteria`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metric_name` (`string`): \n  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_log.criteria.dimension.new](#fn-monitor_scheduled_query_rules_logdimensionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `criteria` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.monitor_scheduled_query_rules_log.criteria.new` constructs a new object with attributes and blocks configured for the `criteria`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metric_name` (`string`): \n  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_log.criteria.dimension.new](#fn-criteriadimensionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `criteria` sub block.\n', args=[]),
     new(
       metric_name,
       dimension=null

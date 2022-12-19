@@ -396,7 +396,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `target_resource_id` (`string`):  When `null`, the `target_resource_id` field will be omitted from the resulting object.
   - `target_resource_type` (`string`):  When `null`, the `target_resource_type` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.filter.new](#fn-network_connection_monitorfilternew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.filter.new](#fn-endpointfilternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `endpoint` sub block.
@@ -420,7 +420,7 @@ Terraform sub block.
 
 **Args**:
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `item` (`list[obj]`):  When `null`, the `item` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.filter.item.new](#fn-network_connection_monitorendpointitemnew) constructor.
+  - `item` (`list[obj]`):  When `null`, the `item` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.filter.item.new](#fn-endpointendpointitemnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -471,10 +471,10 @@ Terraform sub block.
   - `preferred_ip_version` (`string`):  When `null`, the `preferred_ip_version` field will be omitted from the resulting object.
   - `protocol` (`string`): 
   - `test_frequency_in_seconds` (`number`):  When `null`, the `test_frequency_in_seconds` field will be omitted from the resulting object.
-  - `http_configuration` (`list[obj]`):  When `null`, the `http_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.new](#fn-network_connection_monitorhttp_configurationnew) constructor.
-  - `icmp_configuration` (`list[obj]`):  When `null`, the `icmp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.icmp_configuration.new](#fn-network_connection_monitoricmp_configurationnew) constructor.
-  - `success_threshold` (`list[obj]`):  When `null`, the `success_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.success_threshold.new](#fn-network_connection_monitorsuccess_thresholdnew) constructor.
-  - `tcp_configuration` (`list[obj]`):  When `null`, the `tcp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.tcp_configuration.new](#fn-network_connection_monitortcp_configurationnew) constructor.
+  - `http_configuration` (`list[obj]`):  When `null`, the `http_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.new](#fn-test_configurationhttp_configurationnew) constructor.
+  - `icmp_configuration` (`list[obj]`):  When `null`, the `icmp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.icmp_configuration.new](#fn-test_configurationicmp_configurationnew) constructor.
+  - `success_threshold` (`list[obj]`):  When `null`, the `success_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.success_threshold.new](#fn-test_configurationsuccess_thresholdnew) constructor.
+  - `tcp_configuration` (`list[obj]`):  When `null`, the `tcp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.tcp_configuration.new](#fn-test_configurationtcp_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `test_configuration` sub block.
@@ -502,7 +502,7 @@ Terraform sub block.
   - `port` (`number`):  When `null`, the `port` field will be omitted from the resulting object.
   - `prefer_https` (`bool`):  When `null`, the `prefer_https` field will be omitted from the resulting object.
   - `valid_status_code_ranges` (`list`):  When `null`, the `valid_status_code_ranges` field will be omitted from the resulting object.
-  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.request_header.new](#fn-network_connection_monitortest_configurationrequest_headernew) constructor.
+  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.request_header.new](#fn-test_configurationtest_configurationrequest_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_configuration` sub block.

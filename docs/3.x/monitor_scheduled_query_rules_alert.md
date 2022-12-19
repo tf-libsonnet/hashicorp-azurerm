@@ -558,7 +558,7 @@ Terraform sub block.
 **Args**:
   - `operator` (`string`): 
   - `threshold` (`number`): 
-  - `metric_trigger` (`list[obj]`):  When `null`, the `metric_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.metric_trigger.new](#fn-monitor_scheduled_query_rules_alertmetric_triggernew) constructor.
+  - `metric_trigger` (`list[obj]`):  When `null`, the `metric_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.metric_trigger.new](#fn-triggermetric_triggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `trigger` sub block.

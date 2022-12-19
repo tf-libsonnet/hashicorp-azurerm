@@ -278,7 +278,7 @@ Terraform sub block.
   - `source_addresses` (`list`):  When `null`, the `source_addresses` field will be omitted from the resulting object.
   - `source_ip_groups` (`list`):  When `null`, the `source_ip_groups` field will be omitted from the resulting object.
   - `target_fqdns` (`list`):  When `null`, the `target_fqdns` field will be omitted from the resulting object.
-  - `protocol` (`list[obj]`):  When `null`, the `protocol` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.rule.protocol.new](#fn-firewall_application_rule_collectionprotocolnew) constructor.
+  - `protocol` (`list[obj]`):  When `null`, the `protocol` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_application_rule_collection.rule.protocol.new](#fn-ruleprotocolnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.

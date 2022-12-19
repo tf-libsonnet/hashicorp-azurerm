@@ -906,8 +906,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom` (`list[obj]`):  When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.custom.new](#fn-container_registry_taskcustomnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.source.new](#fn-container_registry_tasksourcenew) constructor.
+  - `custom` (`list[obj]`):  When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.custom.new](#fn-registry_credentialcustomnew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.source.new](#fn-registry_credentialsourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `registry_credential` sub block.
@@ -985,7 +985,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `repository_url` (`string`): 
   - `source_type` (`string`): 
-  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.authentication.new](#fn-container_registry_taskauthenticationnew) constructor.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.authentication.new](#fn-source_triggerauthenticationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source_trigger` sub block.

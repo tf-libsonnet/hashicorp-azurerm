@@ -315,11 +315,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `issuer_parameters` (`list[obj]`):  When `null`, the `issuer_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.issuer_parameters.new](#fn-key_vault_certificateissuer_parametersnew) constructor.
-  - `key_properties` (`list[obj]`):  When `null`, the `key_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.key_properties.new](#fn-key_vault_certificatekey_propertiesnew) constructor.
-  - `lifetime_action` (`list[obj]`):  When `null`, the `lifetime_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.new](#fn-key_vault_certificatelifetime_actionnew) constructor.
-  - `secret_properties` (`list[obj]`):  When `null`, the `secret_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.secret_properties.new](#fn-key_vault_certificatesecret_propertiesnew) constructor.
-  - `x509_certificate_properties` (`list[obj]`):  When `null`, the `x509_certificate_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.new](#fn-key_vault_certificatex509_certificate_propertiesnew) constructor.
+  - `issuer_parameters` (`list[obj]`):  When `null`, the `issuer_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.issuer_parameters.new](#fn-certificate_policyissuer_parametersnew) constructor.
+  - `key_properties` (`list[obj]`):  When `null`, the `key_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.key_properties.new](#fn-certificate_policykey_propertiesnew) constructor.
+  - `lifetime_action` (`list[obj]`):  When `null`, the `lifetime_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.new](#fn-certificate_policylifetime_actionnew) constructor.
+  - `secret_properties` (`list[obj]`):  When `null`, the `secret_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.secret_properties.new](#fn-certificate_policysecret_propertiesnew) constructor.
+  - `x509_certificate_properties` (`list[obj]`):  When `null`, the `x509_certificate_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.new](#fn-certificate_policyx509_certificate_propertiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `certificate_policy` sub block.
@@ -392,8 +392,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.action.new](#fn-key_vault_certificatecertificate_policyactionnew) constructor.
-  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.trigger.new](#fn-key_vault_certificatecertificate_policytriggernew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.action.new](#fn-certificate_policycertificate_policyactionnew) constructor.
+  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.trigger.new](#fn-certificate_policycertificate_policytriggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `lifetime_action` sub block.
@@ -490,7 +490,7 @@ Terraform sub block.
   - `key_usage` (`list`): 
   - `subject` (`string`): 
   - `validity_in_months` (`number`): 
-  - `subject_alternative_names` (`list[obj]`):  When `null`, the `subject_alternative_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.subject_alternative_names.new](#fn-key_vault_certificatecertificate_policysubject_alternative_namesnew) constructor.
+  - `subject_alternative_names` (`list[obj]`):  When `null`, the `subject_alternative_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.subject_alternative_names.new](#fn-certificate_policycertificate_policysubject_alternative_namesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `x509_certificate_properties` sub block.

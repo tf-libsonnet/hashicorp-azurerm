@@ -605,7 +605,7 @@ Terraform sub block.
 **Args**:
   - `default_ttl` (`string`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
   - `max_delivery_count` (`number`):  When `null`, the `max_delivery_count` field will be omitted from the resulting object.
-  - `feedback` (`list[obj]`):  When `null`, the `feedback` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.feedback.new](#fn-iothubfeedbacknew) constructor.
+  - `feedback` (`list[obj]`):  When `null`, the `feedback` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.feedback.new](#fn-cloud_to_devicefeedbacknew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cloud_to_device` sub block.
@@ -736,7 +736,7 @@ Terraform sub block.
 **Args**:
   - `apply_to_builtin_eventhub_endpoint` (`bool`):  When `null`, the `apply_to_builtin_eventhub_endpoint` field will be omitted from the resulting object.
   - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.ip_rule.new](#fn-iothubip_rulenew) constructor.
+  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.ip_rule.new](#fn-network_rule_setip_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rule_set` sub block.

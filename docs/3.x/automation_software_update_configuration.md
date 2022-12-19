@@ -599,7 +599,7 @@ Terraform sub block.
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `start_time_offset_minutes` (`number`):  When `null`, the `start_time_offset_minutes` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `monthly_occurrence` (`list[obj]`):  When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.monthly_occurrence.new](#fn-automation_software_update_configurationmonthly_occurrencenew) constructor.
+  - `monthly_occurrence` (`list[obj]`):  When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.monthly_occurrence.new](#fn-schedulemonthly_occurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -646,8 +646,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_query` (`list[obj]`):  When `null`, the `azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.new](#fn-automation_software_update_configurationazure_querynew) constructor.
-  - `non_azure_query` (`list[obj]`):  When `null`, the `non_azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.non_azure_query.new](#fn-automation_software_update_configurationnon_azure_querynew) constructor.
+  - `azure_query` (`list[obj]`):  When `null`, the `azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.new](#fn-targetazure_querynew) constructor.
+  - `non_azure_query` (`list[obj]`):  When `null`, the `non_azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.non_azure_query.new](#fn-targetnon_azure_querynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `target` sub block.
@@ -673,7 +673,7 @@ Terraform sub block.
   - `locations` (`list`):  When `null`, the `locations` field will be omitted from the resulting object.
   - `scope` (`list`):  When `null`, the `scope` field will be omitted from the resulting object.
   - `tag_filter` (`string`):  When `null`, the `tag_filter` field will be omitted from the resulting object.
-  - `tags` (`list[obj]`):  When `null`, the `tags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.tags.new](#fn-automation_software_update_configurationtargettagsnew) constructor.
+  - `tags` (`list[obj]`):  When `null`, the `tags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.tags.new](#fn-targettargettagsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `azure_query` sub block.

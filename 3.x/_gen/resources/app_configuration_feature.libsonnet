@@ -76,7 +76,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         rollout_percentage: rollout_percentage,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.app_configuration_feature.targeting_filter.new` constructs a new object with attributes and blocks configured for the `targeting_filter`\nTerraform sub block.\n\n\n\n**Args**:\n  - `default_rollout_percentage` (`number`): \n  - `users` (`list`):  When `null`, the `users` field will be omitted from the resulting object.\n  - `groups` (`list[obj]`):  When `null`, the `groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration_feature.targeting_filter.groups.new](#fn-app_configuration_featuregroupsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `targeting_filter` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.app_configuration_feature.targeting_filter.new` constructs a new object with attributes and blocks configured for the `targeting_filter`\nTerraform sub block.\n\n\n\n**Args**:\n  - `default_rollout_percentage` (`number`): \n  - `users` (`list`):  When `null`, the `users` field will be omitted from the resulting object.\n  - `groups` (`list[obj]`):  When `null`, the `groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration_feature.targeting_filter.groups.new](#fn-targeting_filtergroupsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `targeting_filter` sub block.\n', args=[]),
     new(
       default_rollout_percentage,
       groups=null,

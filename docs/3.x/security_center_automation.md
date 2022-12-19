@@ -382,7 +382,7 @@ Terraform sub block.
 
 **Args**:
   - `event_source` (`string`): 
-  - `rule_set` (`list[obj]`):  When `null`, the `rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.new](#fn-security_center_automationrule_setnew) constructor.
+  - `rule_set` (`list[obj]`):  When `null`, the `rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.new](#fn-sourcerule_setnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -405,7 +405,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.rule.new](#fn-security_center_automationsourcerulenew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.rule.new](#fn-sourcesourcerulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule_set` sub block.

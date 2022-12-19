@@ -44,7 +44,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             cdn_frontdoor_domain_id: cdn_frontdoor_domain_id,
           }),
         },
-        '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new` constructs a new object with attributes and blocks configured for the `association`\nTerraform sub block.\n\n\n\n**Args**:\n  - `patterns_to_match` (`list`): \n  - `domain` (`list[obj]`):  When `null`, the `domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.domain.new](#fn-cdn_frontdoor_security_policysecurity_policiesfirewalldomainnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `association` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new` constructs a new object with attributes and blocks configured for the `association`\nTerraform sub block.\n\n\n\n**Args**:\n  - `patterns_to_match` (`list`): \n  - `domain` (`list[obj]`):  When `null`, the `domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.domain.new](#fn-security_policiessecurity_policiesfirewalldomainnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `association` sub block.\n', args=[]),
         new(
           patterns_to_match,
           domain=null
@@ -53,7 +53,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           patterns_to_match: patterns_to_match,
         }),
       },
-      '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new` constructs a new object with attributes and blocks configured for the `firewall`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cdn_frontdoor_firewall_policy_id` (`string`): \n  - `association` (`list[obj]`):  When `null`, the `association` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new](#fn-cdn_frontdoor_security_policysecurity_policiesassociationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `firewall` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new` constructs a new object with attributes and blocks configured for the `firewall`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cdn_frontdoor_firewall_policy_id` (`string`): \n  - `association` (`list[obj]`):  When `null`, the `association` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new](#fn-security_policiessecurity_policiesassociationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `firewall` sub block.\n', args=[]),
       new(
         cdn_frontdoor_firewall_policy_id,
         association=null
@@ -62,7 +62,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         cdn_frontdoor_firewall_policy_id: cdn_frontdoor_firewall_policy_id,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_security_policy.security_policies.new` constructs a new object with attributes and blocks configured for the `security_policies`\nTerraform sub block.\n\n\n\n**Args**:\n  - `firewall` (`list[obj]`):  When `null`, the `firewall` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new](#fn-cdn_frontdoor_security_policyfirewallnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `security_policies` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_security_policy.security_policies.new` constructs a new object with attributes and blocks configured for the `security_policies`\nTerraform sub block.\n\n\n\n**Args**:\n  - `firewall` (`list[obj]`):  When `null`, the `firewall` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new](#fn-security_policiesfirewallnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `security_policies` sub block.\n', args=[]),
     new(
       firewall=null
     ):: std.prune(a={

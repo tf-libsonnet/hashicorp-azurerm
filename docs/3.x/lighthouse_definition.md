@@ -389,7 +389,7 @@ Terraform sub block.
   - `principal_display_name` (`string`):  When `null`, the `principal_display_name` field will be omitted from the resulting object.
   - `principal_id` (`string`): 
   - `role_definition_id` (`string`): 
-  - `just_in_time_access_policy` (`list[obj]`):  When `null`, the `just_in_time_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.new](#fn-lighthouse_definitionjust_in_time_access_policynew) constructor.
+  - `just_in_time_access_policy` (`list[obj]`):  When `null`, the `just_in_time_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.new](#fn-eligible_authorizationjust_in_time_access_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `eligible_authorization` sub block.
@@ -414,7 +414,7 @@ Terraform sub block.
 **Args**:
   - `maximum_activation_duration` (`string`):  When `null`, the `maximum_activation_duration` field will be omitted from the resulting object.
   - `multi_factor_auth_provider` (`string`):  When `null`, the `multi_factor_auth_provider` field will be omitted from the resulting object.
-  - `approver` (`list[obj]`):  When `null`, the `approver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.approver.new](#fn-lighthouse_definitioneligible_authorizationapprovernew) constructor.
+  - `approver` (`list[obj]`):  When `null`, the `approver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.approver.new](#fn-eligible_authorizationeligible_authorizationapprovernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `just_in_time_access_policy` sub block.

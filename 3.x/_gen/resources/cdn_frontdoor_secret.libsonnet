@@ -42,7 +42,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         key_vault_certificate_id: key_vault_certificate_id,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_secret.secret.new` constructs a new object with attributes and blocks configured for the `secret`\nTerraform sub block.\n\n\n\n**Args**:\n  - `customer_certificate` (`list[obj]`):  When `null`, the `customer_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.customer_certificate.new](#fn-cdn_frontdoor_secretcustomer_certificatenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `secret` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_secret.secret.new` constructs a new object with attributes and blocks configured for the `secret`\nTerraform sub block.\n\n\n\n**Args**:\n  - `customer_certificate` (`list[obj]`):  When `null`, the `customer_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.customer_certificate.new](#fn-secretcustomer_certificatenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `secret` sub block.\n', args=[]),
     new(
       customer_certificate=null
     ):: std.prune(a={

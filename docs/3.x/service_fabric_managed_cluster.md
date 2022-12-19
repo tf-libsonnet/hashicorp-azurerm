@@ -559,8 +559,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.active_directory.new](#fn-service_fabric_managed_clusteractive_directorynew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.certificate.new](#fn-service_fabric_managed_clustercertificatenew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.active_directory.new](#fn-authenticationactive_directorynew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.certificate.new](#fn-authenticationcertificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
@@ -701,7 +701,7 @@ Terraform sub block.
   - `vm_image_version` (`string`): 
   - `vm_instance_count` (`number`): 
   - `vm_size` (`string`): 
-  - `vm_secrets` (`list[obj]`):  When `null`, the `vm_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.new](#fn-service_fabric_managed_clustervm_secretsnew) constructor.
+  - `vm_secrets` (`list[obj]`):  When `null`, the `vm_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.new](#fn-node_typevm_secretsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_type` sub block.
@@ -725,7 +725,7 @@ Terraform sub block.
 
 **Args**:
   - `vault_id` (`string`): 
-  - `certificates` (`list[obj]`):  When `null`, the `certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.certificates.new](#fn-service_fabric_managed_clusternode_typecertificatesnew) constructor.
+  - `certificates` (`list[obj]`):  When `null`, the `certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.certificates.new](#fn-node_typenode_typecertificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vm_secrets` sub block.

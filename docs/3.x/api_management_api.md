@@ -761,7 +761,7 @@ Terraform sub block.
 **Args**:
   - `content_format` (`string`): 
   - `content_value` (`string`): 
-  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-api_management_apiwsdl_selectornew) constructor.
+  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-importwsdl_selectornew) constructor.
 
 **Returns**:
   - An attribute object that represents the `import` sub block.

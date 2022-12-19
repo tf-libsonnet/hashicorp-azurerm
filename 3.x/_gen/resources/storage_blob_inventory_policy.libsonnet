@@ -42,7 +42,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         prefix_match: prefix_match,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.storage_blob_inventory_policy.rules.new` constructs a new object with attributes and blocks configured for the `rules`\nTerraform sub block.\n\n\n\n**Args**:\n  - `format` (`string`): \n  - `name` (`string`): \n  - `schedule` (`string`): \n  - `schema_fields` (`list`): \n  - `scope` (`string`): \n  - `storage_container_name` (`string`): \n  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob_inventory_policy.rules.filter.new](#fn-storage_blob_inventory_policyfilternew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `rules` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.storage_blob_inventory_policy.rules.new` constructs a new object with attributes and blocks configured for the `rules`\nTerraform sub block.\n\n\n\n**Args**:\n  - `format` (`string`): \n  - `name` (`string`): \n  - `schedule` (`string`): \n  - `schema_fields` (`list`): \n  - `scope` (`string`): \n  - `storage_container_name` (`string`): \n  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob_inventory_policy.rules.filter.new](#fn-rulesfilternew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `rules` sub block.\n', args=[]),
     new(
       format,
       name,

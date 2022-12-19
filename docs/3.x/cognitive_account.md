@@ -717,7 +717,7 @@ Terraform sub block.
 **Args**:
   - `default_action` (`string`): 
   - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `virtual_network_rules` (`list[obj]`):  When `null`, the `virtual_network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.virtual_network_rules.new](#fn-cognitive_accountvirtual_network_rulesnew) constructor.
+  - `virtual_network_rules` (`list[obj]`):  When `null`, the `virtual_network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.virtual_network_rules.new](#fn-network_aclsvirtual_network_rulesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_acls` sub block.

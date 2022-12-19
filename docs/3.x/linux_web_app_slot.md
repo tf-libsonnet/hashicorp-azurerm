@@ -729,12 +729,12 @@ Terraform sub block.
   - `token_refresh_extension_hours` (`number`): The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours. When `null`, the `token_refresh_extension_hours` field will be omitted from the resulting object.
   - `token_store_enabled` (`bool`): Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. When `null`, the `token_store_enabled` field will be omitted from the resulting object.
   - `unauthenticated_client_action` (`string`): The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`. When `null`, the `unauthenticated_client_action` field will be omitted from the resulting object.
-  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.active_directory.new](#fn-linux_web_app_slotactive_directorynew) constructor.
-  - `facebook` (`list[obj]`):  When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.facebook.new](#fn-linux_web_app_slotfacebooknew) constructor.
-  - `github` (`list[obj]`):  When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.github.new](#fn-linux_web_app_slotgithubnew) constructor.
-  - `google` (`list[obj]`):  When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.google.new](#fn-linux_web_app_slotgooglenew) constructor.
-  - `microsoft` (`list[obj]`):  When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.microsoft.new](#fn-linux_web_app_slotmicrosoftnew) constructor.
-  - `twitter` (`list[obj]`):  When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.twitter.new](#fn-linux_web_app_slottwitternew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.active_directory.new](#fn-auth_settingsactive_directorynew) constructor.
+  - `facebook` (`list[obj]`):  When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.facebook.new](#fn-auth_settingsfacebooknew) constructor.
+  - `github` (`list[obj]`):  When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.github.new](#fn-auth_settingsgithubnew) constructor.
+  - `google` (`list[obj]`):  When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.google.new](#fn-auth_settingsgooglenew) constructor.
+  - `microsoft` (`list[obj]`):  When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.microsoft.new](#fn-auth_settingsmicrosoftnew) constructor.
+  - `twitter` (`list[obj]`):  When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.auth_settings.twitter.new](#fn-auth_settingstwitternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `auth_settings` sub block.
@@ -915,7 +915,7 @@ Terraform sub block.
   - `enabled` (`bool`): Should this backup job be enabled? When `null`, the `enabled` field will be omitted from the resulting object.
   - `name` (`string`): The name which should be used for this Backup.
   - `storage_account_url` (`string`): The SAS URL to the container.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.backup.schedule.new](#fn-linux_web_app_slotschedulenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.backup.schedule.new](#fn-backupschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
@@ -1016,8 +1016,8 @@ Terraform sub block.
 **Args**:
   - `detailed_error_messages` (`bool`):  When `null`, the `detailed_error_messages` field will be omitted from the resulting object.
   - `failed_request_tracing` (`bool`):  When `null`, the `failed_request_tracing` field will be omitted from the resulting object.
-  - `application_logs` (`list[obj]`):  When `null`, the `application_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.application_logs.new](#fn-linux_web_app_slotapplication_logsnew) constructor.
-  - `http_logs` (`list[obj]`):  When `null`, the `http_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.http_logs.new](#fn-linux_web_app_slothttp_logsnew) constructor.
+  - `application_logs` (`list[obj]`):  When `null`, the `application_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.application_logs.new](#fn-logsapplication_logsnew) constructor.
+  - `http_logs` (`list[obj]`):  When `null`, the `http_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.http_logs.new](#fn-logshttp_logsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `logs` sub block.
@@ -1041,7 +1041,7 @@ Terraform sub block.
 
 **Args**:
   - `file_system_level` (`string`): 
-  - `azure_blob_storage` (`list[obj]`):  When `null`, the `azure_blob_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.application_logs.azure_blob_storage.new](#fn-linux_web_app_slotlogsazure_blob_storagenew) constructor.
+  - `azure_blob_storage` (`list[obj]`):  When `null`, the `azure_blob_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.application_logs.azure_blob_storage.new](#fn-logslogsazure_blob_storagenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `application_logs` sub block.
@@ -1089,8 +1089,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_blob_storage` (`list[obj]`):  When `null`, the `azure_blob_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.http_logs.azure_blob_storage.new](#fn-linux_web_app_slotlogsazure_blob_storagenew) constructor.
-  - `file_system` (`list[obj]`):  When `null`, the `file_system` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.http_logs.file_system.new](#fn-linux_web_app_slotlogsfile_systemnew) constructor.
+  - `azure_blob_storage` (`list[obj]`):  When `null`, the `azure_blob_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.http_logs.azure_blob_storage.new](#fn-logslogsazure_blob_storagenew) constructor.
+  - `file_system` (`list[obj]`):  When `null`, the `file_system` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.logs.http_logs.file_system.new](#fn-logslogsfile_systemnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_logs` sub block.
@@ -1188,9 +1188,9 @@ Terraform sub block.
   - `vnet_route_all_enabled` (`bool`): Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. When `null`, the `vnet_route_all_enabled` field will be omitted from the resulting object.
   - `websockets_enabled` (`bool`):  When `null`, the `websockets_enabled` field will be omitted from the resulting object.
   - `worker_count` (`number`):  When `null`, the `worker_count` field will be omitted from the resulting object.
-  - `application_stack` (`list[obj]`):  When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.application_stack.new](#fn-linux_web_app_slotapplication_stacknew) constructor.
-  - `auto_heal_setting` (`list[obj]`):  When `null`, the `auto_heal_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.new](#fn-linux_web_app_slotauto_heal_settingnew) constructor.
-  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.cors.new](#fn-linux_web_app_slotcorsnew) constructor.
+  - `application_stack` (`list[obj]`):  When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.application_stack.new](#fn-site_configapplication_stacknew) constructor.
+  - `auto_heal_setting` (`list[obj]`):  When `null`, the `auto_heal_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.new](#fn-site_configauto_heal_settingnew) constructor.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.cors.new](#fn-site_configcorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `site_config` sub block.
@@ -1245,8 +1245,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.action.new](#fn-linux_web_app_slotsite_configactionnew) constructor.
-  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.new](#fn-linux_web_app_slotsite_configtriggernew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.action.new](#fn-site_configsite_configactionnew) constructor.
+  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.new](#fn-site_configsite_configtriggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `auto_heal_setting` sub block.
@@ -1293,9 +1293,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `requests` (`list[obj]`):  When `null`, the `requests` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.requests.new](#fn-linux_web_app_slotsite_configauto_heal_settingrequestsnew) constructor.
-  - `slow_request` (`list[obj]`):  When `null`, the `slow_request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.slow_request.new](#fn-linux_web_app_slotsite_configauto_heal_settingslow_requestnew) constructor.
-  - `status_code` (`list[obj]`):  When `null`, the `status_code` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.status_code.new](#fn-linux_web_app_slotsite_configauto_heal_settingstatus_codenew) constructor.
+  - `requests` (`list[obj]`):  When `null`, the `requests` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.requests.new](#fn-site_configsite_configauto_heal_settingrequestsnew) constructor.
+  - `slow_request` (`list[obj]`):  When `null`, the `slow_request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.slow_request.new](#fn-site_configsite_configauto_heal_settingslow_requestnew) constructor.
+  - `status_code` (`list[obj]`):  When `null`, the `status_code` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.status_code.new](#fn-site_configsite_configauto_heal_settingstatus_codenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `trigger` sub block.

@@ -202,7 +202,7 @@ Terraform sub block.
   - `schema_fields` (`list`): 
   - `scope` (`string`): 
   - `storage_container_name` (`string`): 
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob_inventory_policy.rules.filter.new](#fn-storage_blob_inventory_policyfilternew) constructor.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob_inventory_policy.rules.filter.new](#fn-rulesfilternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rules` sub block.

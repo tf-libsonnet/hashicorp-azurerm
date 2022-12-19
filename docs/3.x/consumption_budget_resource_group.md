@@ -366,9 +366,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.dimension.new](#fn-consumption_budget_resource_groupdimensionnew) constructor.
-  - `not` (`list[obj]`):  When `null`, the `not` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.not.new](#fn-consumption_budget_resource_groupnotnew) constructor.
-  - `tag` (`list[obj]`):  When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.tag.new](#fn-consumption_budget_resource_grouptagnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.dimension.new](#fn-filterdimensionnew) constructor.
+  - `not` (`list[obj]`):  When `null`, the `not` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.not.new](#fn-filternotnew) constructor.
+  - `tag` (`list[obj]`):  When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.tag.new](#fn-filtertagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -416,8 +416,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.not.dimension.new](#fn-consumption_budget_resource_groupfilterdimensionnew) constructor.
-  - `tag` (`list[obj]`):  When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.not.tag.new](#fn-consumption_budget_resource_groupfiltertagnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.not.dimension.new](#fn-filterfilterdimensionnew) constructor.
+  - `tag` (`list[obj]`):  When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_resource_group.filter.not.tag.new](#fn-filterfiltertagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `not` sub block.

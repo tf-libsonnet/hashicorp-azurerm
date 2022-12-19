@@ -993,7 +993,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `service_uri` (`string`): 
   - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
-  - `aad_auth` (`list[obj]`):  When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-monitor_action_groupaad_authnew) constructor.
+  - `aad_auth` (`list[obj]`):  When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-webhook_receiveraad_authnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `webhook_receiver` sub block.

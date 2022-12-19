@@ -333,8 +333,8 @@ Terraform sub block.
 **Args**:
   - `asn` (`number`): 
   - `peer_weight` (`number`): 
-  - `instance_0_bgp_peering_address` (`list[obj]`):  When `null`, the `instance_0_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_0_bgp_peering_address.new](#fn-vpn_gatewayinstance_0_bgp_peering_addressnew) constructor.
-  - `instance_1_bgp_peering_address` (`list[obj]`):  When `null`, the `instance_1_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_1_bgp_peering_address.new](#fn-vpn_gatewayinstance_1_bgp_peering_addressnew) constructor.
+  - `instance_0_bgp_peering_address` (`list[obj]`):  When `null`, the `instance_0_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_0_bgp_peering_address.new](#fn-bgp_settingsinstance_0_bgp_peering_addressnew) constructor.
+  - `instance_1_bgp_peering_address` (`list[obj]`):  When `null`, the `instance_1_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_1_bgp_peering_address.new](#fn-bgp_settingsinstance_1_bgp_peering_addressnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bgp_settings` sub block.

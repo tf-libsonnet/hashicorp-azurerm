@@ -1910,7 +1910,7 @@ Terraform sub block.
   - `settings` (`string`):  When `null`, the `settings` field will be omitted from the resulting object.
   - `type` (`string`): 
   - `type_handler_version` (`string`): 
-  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.extension.protected_settings_from_key_vault.new](#fn-windows_virtual_machine_scale_setprotected_settings_from_key_vaultnew) constructor.
+  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.extension.protected_settings_from_key_vault.new](#fn-extensionprotected_settings_from_key_vaultnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `extension` sub block.
@@ -2039,7 +2039,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `network_security_group_id` (`string`):  When `null`, the `network_security_group_id` field will be omitted from the resulting object.
   - `primary` (`bool`):  When `null`, the `primary` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.network_interface.ip_configuration.new](#fn-windows_virtual_machine_scale_setip_configurationnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.network_interface.ip_configuration.new](#fn-network_interfaceip_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_interface` sub block.
@@ -2070,7 +2070,7 @@ Terraform sub block.
   - `primary` (`bool`):  When `null`, the `primary` field will be omitted from the resulting object.
   - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `public_ip_address` (`list[obj]`):  When `null`, the `public_ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.new](#fn-windows_virtual_machine_scale_setnetwork_interfacepublic_ip_addressnew) constructor.
+  - `public_ip_address` (`list[obj]`):  When `null`, the `public_ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.new](#fn-network_interfacenetwork_interfacepublic_ip_addressnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -2098,7 +2098,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `public_ip_prefix_id` (`string`):  When `null`, the `public_ip_prefix_id` field will be omitted from the resulting object.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `ip_tag` (`list[obj]`):  When `null`, the `ip_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.ip_tag.new](#fn-windows_virtual_machine_scale_setnetwork_interfaceip_configurationip_tagnew) constructor.
+  - `ip_tag` (`list[obj]`):  When `null`, the `ip_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.ip_tag.new](#fn-network_interfacenetwork_interfaceip_configurationip_tagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `public_ip_address` sub block.
@@ -2152,7 +2152,7 @@ Terraform sub block.
   - `security_encryption_type` (`string`):  When `null`, the `security_encryption_type` field will be omitted from the resulting object.
   - `storage_account_type` (`string`): 
   - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
-  - `diff_disk_settings` (`list[obj]`):  When `null`, the `diff_disk_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.os_disk.diff_disk_settings.new](#fn-windows_virtual_machine_scale_setdiff_disk_settingsnew) constructor.
+  - `diff_disk_settings` (`list[obj]`):  When `null`, the `diff_disk_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.os_disk.diff_disk_settings.new](#fn-os_diskdiff_disk_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_disk` sub block.
@@ -2277,7 +2277,7 @@ Terraform sub block.
 
 **Args**:
   - `key_vault_id` (`string`): 
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.secret.certificate.new](#fn-windows_virtual_machine_scale_setcertificatenew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_virtual_machine_scale_set.secret.certificate.new](#fn-secretcertificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret` sub block.

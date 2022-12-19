@@ -1447,8 +1447,8 @@ Terraform sub block.
   - `protocol` (`string`): 
   - `request_timeout` (`number`):  When `null`, the `request_timeout` field will be omitted from the resulting object.
   - `trusted_root_certificate_names` (`list`):  When `null`, the `trusted_root_certificate_names` field will be omitted from the resulting object.
-  - `authentication_certificate` (`list[obj]`):  When `null`, the `authentication_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.backend_http_settings.authentication_certificate.new](#fn-application_gatewayauthentication_certificatenew) constructor.
-  - `connection_draining` (`list[obj]`):  When `null`, the `connection_draining` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.backend_http_settings.connection_draining.new](#fn-application_gatewayconnection_drainingnew) constructor.
+  - `authentication_certificate` (`list[obj]`):  When `null`, the `authentication_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.backend_http_settings.authentication_certificate.new](#fn-backend_http_settingsauthentication_certificatenew) constructor.
+  - `connection_draining` (`list[obj]`):  When `null`, the `connection_draining` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.backend_http_settings.connection_draining.new](#fn-backend_http_settingsconnection_drainingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backend_http_settings` sub block.
@@ -1652,7 +1652,7 @@ Terraform sub block.
   - `require_sni` (`bool`):  When `null`, the `require_sni` field will be omitted from the resulting object.
   - `ssl_certificate_name` (`string`):  When `null`, the `ssl_certificate_name` field will be omitted from the resulting object.
   - `ssl_profile_name` (`string`):  When `null`, the `ssl_profile_name` field will be omitted from the resulting object.
-  - `custom_error_configuration` (`list[obj]`):  When `null`, the `custom_error_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.http_listener.custom_error_configuration.new](#fn-application_gatewaycustom_error_configurationnew) constructor.
+  - `custom_error_configuration` (`list[obj]`):  When `null`, the `custom_error_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.http_listener.custom_error_configuration.new](#fn-http_listenercustom_error_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_listener` sub block.
@@ -1724,7 +1724,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): 
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.private_link_configuration.ip_configuration.new](#fn-application_gatewayip_configurationnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.private_link_configuration.ip_configuration.new](#fn-private_link_configurationip_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `private_link_configuration` sub block.
@@ -1784,7 +1784,7 @@ Terraform sub block.
   - `protocol` (`string`): 
   - `timeout` (`number`): 
   - `unhealthy_threshold` (`number`): 
-  - `match` (`list[obj]`):  When `null`, the `match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.probe.match.new](#fn-application_gatewaymatchnew) constructor.
+  - `match` (`list[obj]`):  When `null`, the `match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.probe.match.new](#fn-probematchnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `probe` sub block.
@@ -1891,7 +1891,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): 
-  - `rewrite_rule` (`list[obj]`):  When `null`, the `rewrite_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.new](#fn-application_gatewayrewrite_rulenew) constructor.
+  - `rewrite_rule` (`list[obj]`):  When `null`, the `rewrite_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.new](#fn-rewrite_rule_setrewrite_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rewrite_rule_set` sub block.
@@ -1916,10 +1916,10 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): 
   - `rule_sequence` (`number`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.condition.new](#fn-application_gatewayrewrite_rule_setconditionnew) constructor.
-  - `request_header_configuration` (`list[obj]`):  When `null`, the `request_header_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.request_header_configuration.new](#fn-application_gatewayrewrite_rule_setrequest_header_configurationnew) constructor.
-  - `response_header_configuration` (`list[obj]`):  When `null`, the `response_header_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.response_header_configuration.new](#fn-application_gatewayrewrite_rule_setresponse_header_configurationnew) constructor.
-  - `url` (`list[obj]`):  When `null`, the `url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.url.new](#fn-application_gatewayrewrite_rule_seturlnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.condition.new](#fn-rewrite_rule_setrewrite_rule_setconditionnew) constructor.
+  - `request_header_configuration` (`list[obj]`):  When `null`, the `request_header_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.request_header_configuration.new](#fn-rewrite_rule_setrewrite_rule_setrequest_header_configurationnew) constructor.
+  - `response_header_configuration` (`list[obj]`):  When `null`, the `response_header_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.response_header_configuration.new](#fn-rewrite_rule_setrewrite_rule_setresponse_header_configurationnew) constructor.
+  - `url` (`list[obj]`):  When `null`, the `url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.rewrite_rule_set.rewrite_rule.url.new](#fn-rewrite_rule_setrewrite_rule_seturlnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rewrite_rule` sub block.
@@ -2123,7 +2123,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `trusted_client_certificate_names` (`list`):  When `null`, the `trusted_client_certificate_names` field will be omitted from the resulting object.
   - `verify_client_cert_issuer_dn` (`bool`):  When `null`, the `verify_client_cert_issuer_dn` field will be omitted from the resulting object.
-  - `ssl_policy` (`list[obj]`):  When `null`, the `ssl_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.ssl_profile.ssl_policy.new](#fn-application_gatewayssl_policynew) constructor.
+  - `ssl_policy` (`list[obj]`):  When `null`, the `ssl_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.ssl_profile.ssl_policy.new](#fn-ssl_profilessl_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ssl_profile` sub block.
@@ -2253,7 +2253,7 @@ Terraform sub block.
   - `default_redirect_configuration_name` (`string`):  When `null`, the `default_redirect_configuration_name` field will be omitted from the resulting object.
   - `default_rewrite_rule_set_name` (`string`):  When `null`, the `default_rewrite_rule_set_name` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `path_rule` (`list[obj]`):  When `null`, the `path_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.url_path_map.path_rule.new](#fn-application_gatewaypath_rulenew) constructor.
+  - `path_rule` (`list[obj]`):  When `null`, the `path_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.url_path_map.path_rule.new](#fn-url_path_mappath_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `url_path_map` sub block.
@@ -2312,8 +2312,8 @@ Terraform sub block.
   - `request_body_check` (`bool`):  When `null`, the `request_body_check` field will be omitted from the resulting object.
   - `rule_set_type` (`string`):  When `null`, the `rule_set_type` field will be omitted from the resulting object.
   - `rule_set_version` (`string`): 
-  - `disabled_rule_group` (`list[obj]`):  When `null`, the `disabled_rule_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.waf_configuration.disabled_rule_group.new](#fn-application_gatewaydisabled_rule_groupnew) constructor.
-  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.waf_configuration.exclusion.new](#fn-application_gatewayexclusionnew) constructor.
+  - `disabled_rule_group` (`list[obj]`):  When `null`, the `disabled_rule_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.waf_configuration.disabled_rule_group.new](#fn-waf_configurationdisabled_rule_groupnew) constructor.
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.waf_configuration.exclusion.new](#fn-waf_configurationexclusionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `waf_configuration` sub block.

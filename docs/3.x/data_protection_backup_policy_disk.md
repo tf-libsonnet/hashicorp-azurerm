@@ -256,7 +256,7 @@ Terraform sub block.
   - `duration` (`string`): 
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.criteria.new](#fn-data_protection_backup_policy_diskcriterianew) constructor.
+  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.criteria.new](#fn-retention_rulecriterianew) constructor.
 
 **Returns**:
   - An attribute object that represents the `retention_rule` sub block.

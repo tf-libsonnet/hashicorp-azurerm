@@ -235,7 +235,7 @@ Terraform sub block.
 
 **Args**:
   - `uri` (`string`): 
-  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_module.module_link.hash.new](#fn-automation_modulehashnew) constructor.
+  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_module.module_link.hash.new](#fn-module_linkhashnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `module_link` sub block.

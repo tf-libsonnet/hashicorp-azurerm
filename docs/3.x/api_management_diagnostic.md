@@ -520,7 +520,7 @@ Terraform sub block.
 **Args**:
   - `body_bytes` (`number`):  When `null`, the `body_bytes` field will be omitted from the resulting object.
   - `headers_to_log` (`list`):  When `null`, the `headers_to_log` field will be omitted from the resulting object.
-  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_request.data_masking.new](#fn-api_management_diagnosticdata_maskingnew) constructor.
+  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_request.data_masking.new](#fn-backend_requestdata_maskingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backend_request` sub block.
@@ -543,8 +543,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_request.data_masking.headers.new](#fn-api_management_diagnosticbackend_requestheadersnew) constructor.
-  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_request.data_masking.query_params.new](#fn-api_management_diagnosticbackend_requestquery_paramsnew) constructor.
+  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_request.data_masking.headers.new](#fn-backend_requestbackend_requestheadersnew) constructor.
+  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_request.data_masking.query_params.new](#fn-backend_requestbackend_requestquery_paramsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_masking` sub block.
@@ -617,7 +617,7 @@ Terraform sub block.
 **Args**:
   - `body_bytes` (`number`):  When `null`, the `body_bytes` field will be omitted from the resulting object.
   - `headers_to_log` (`list`):  When `null`, the `headers_to_log` field will be omitted from the resulting object.
-  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_response.data_masking.new](#fn-api_management_diagnosticdata_maskingnew) constructor.
+  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_response.data_masking.new](#fn-backend_responsedata_maskingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backend_response` sub block.
@@ -640,8 +640,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_response.data_masking.headers.new](#fn-api_management_diagnosticbackend_responseheadersnew) constructor.
-  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_response.data_masking.query_params.new](#fn-api_management_diagnosticbackend_responsequery_paramsnew) constructor.
+  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_response.data_masking.headers.new](#fn-backend_responsebackend_responseheadersnew) constructor.
+  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.backend_response.data_masking.query_params.new](#fn-backend_responsebackend_responsequery_paramsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_masking` sub block.
@@ -714,7 +714,7 @@ Terraform sub block.
 **Args**:
   - `body_bytes` (`number`):  When `null`, the `body_bytes` field will be omitted from the resulting object.
   - `headers_to_log` (`list`):  When `null`, the `headers_to_log` field will be omitted from the resulting object.
-  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_request.data_masking.new](#fn-api_management_diagnosticdata_maskingnew) constructor.
+  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_request.data_masking.new](#fn-frontend_requestdata_maskingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `frontend_request` sub block.
@@ -737,8 +737,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_request.data_masking.headers.new](#fn-api_management_diagnosticfrontend_requestheadersnew) constructor.
-  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_request.data_masking.query_params.new](#fn-api_management_diagnosticfrontend_requestquery_paramsnew) constructor.
+  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_request.data_masking.headers.new](#fn-frontend_requestfrontend_requestheadersnew) constructor.
+  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_request.data_masking.query_params.new](#fn-frontend_requestfrontend_requestquery_paramsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_masking` sub block.
@@ -811,7 +811,7 @@ Terraform sub block.
 **Args**:
   - `body_bytes` (`number`):  When `null`, the `body_bytes` field will be omitted from the resulting object.
   - `headers_to_log` (`list`):  When `null`, the `headers_to_log` field will be omitted from the resulting object.
-  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_response.data_masking.new](#fn-api_management_diagnosticdata_maskingnew) constructor.
+  - `data_masking` (`list[obj]`):  When `null`, the `data_masking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_response.data_masking.new](#fn-frontend_responsedata_maskingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `frontend_response` sub block.
@@ -834,8 +834,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_response.data_masking.headers.new](#fn-api_management_diagnosticfrontend_responseheadersnew) constructor.
-  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_response.data_masking.query_params.new](#fn-api_management_diagnosticfrontend_responsequery_paramsnew) constructor.
+  - `headers` (`list[obj]`):  When `null`, the `headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_response.data_masking.headers.new](#fn-frontend_responsefrontend_responseheadersnew) constructor.
+  - `query_params` (`list[obj]`):  When `null`, the `query_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_diagnostic.frontend_response.data_masking.query_params.new](#fn-frontend_responsefrontend_responsequery_paramsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_masking` sub block.
