@@ -88,24 +88,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `automatically_rotate_key_to_latest_enabled` (`bool`):  When `null`, the `automatically_rotate_key_to_latest_enabled` field will be omitted from the resulting object.
-  - `cache_size_in_gb` (`number`): 
-  - `key_vault_key_id` (`string`):  When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `mtu` (`number`):  When `null`, the `mtu` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `ntp_server` (`string`):  When `null`, the `ntp_server` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `subnet_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `default_access_policy` (`list[obj]`):  When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-default_access_policynew) constructor.
-  - `directory_active_directory` (`list[obj]`):  When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-directory_active_directorynew) constructor.
-  - `directory_flat_file` (`list[obj]`):  When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-directory_flat_filenew) constructor.
-  - `directory_ldap` (`list[obj]`):  When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-directory_ldapnew) constructor.
-  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-dnsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automatically_rotate_key_to_latest_enabled` (`bool`): Set the `automatically_rotate_key_to_latest_enabled` field on the resulting resource block. When `null`, the `automatically_rotate_key_to_latest_enabled` field will be omitted from the resulting object.
+  - `cache_size_in_gb` (`number`): Set the `cache_size_in_gb` field on the resulting resource block.
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting resource block. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `mtu` (`number`): Set the `mtu` field on the resulting resource block. When `null`, the `mtu` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `ntp_server` (`string`): Set the `ntp_server` field on the resulting resource block. When `null`, the `ntp_server` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `default_access_policy` (`list[obj]`): Set the `default_access_policy` field on the resulting resource block. When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-default_access_policynew) constructor.
+  - `directory_active_directory` (`list[obj]`): Set the `directory_active_directory` field on the resulting resource block. When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-directory_active_directorynew) constructor.
+  - `directory_flat_file` (`list[obj]`): Set the `directory_flat_file` field on the resulting resource block. When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-directory_flat_filenew) constructor.
+  - `directory_ldap` (`list[obj]`): Set the `directory_ldap` field on the resulting resource block. When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-directory_ldapnew) constructor.
+  - `dns` (`list[obj]`): Set the `dns` field on the resulting resource block. When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-dnsnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -129,24 +129,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `automatically_rotate_key_to_latest_enabled` (`bool`):  When `null`, the `automatically_rotate_key_to_latest_enabled` field will be omitted from the resulting object.
-  - `cache_size_in_gb` (`number`): 
-  - `key_vault_key_id` (`string`):  When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `mtu` (`number`):  When `null`, the `mtu` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `ntp_server` (`string`):  When `null`, the `ntp_server` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `subnet_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `default_access_policy` (`list[obj]`):  When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-default_access_policynew) constructor.
-  - `directory_active_directory` (`list[obj]`):  When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-directory_active_directorynew) constructor.
-  - `directory_flat_file` (`list[obj]`):  When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-directory_flat_filenew) constructor.
-  - `directory_ldap` (`list[obj]`):  When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-directory_ldapnew) constructor.
-  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-dnsnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automatically_rotate_key_to_latest_enabled` (`bool`): Set the `automatically_rotate_key_to_latest_enabled` field on the resulting object. When `null`, the `automatically_rotate_key_to_latest_enabled` field will be omitted from the resulting object.
+  - `cache_size_in_gb` (`number`): Set the `cache_size_in_gb` field on the resulting object.
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `mtu` (`number`): Set the `mtu` field on the resulting object. When `null`, the `mtu` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `ntp_server` (`string`): Set the `ntp_server` field on the resulting object. When `null`, the `ntp_server` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `default_access_policy` (`list[obj]`): Set the `default_access_policy` field on the resulting object. When `null`, the `default_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.new](#fn-default_access_policynew) constructor.
+  - `directory_active_directory` (`list[obj]`): Set the `directory_active_directory` field on the resulting object. When `null`, the `directory_active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_active_directory.new](#fn-directory_active_directorynew) constructor.
+  - `directory_flat_file` (`list[obj]`): Set the `directory_flat_file` field on the resulting object. When `null`, the `directory_flat_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_flat_file.new](#fn-directory_flat_filenew) constructor.
+  - `directory_ldap` (`list[obj]`): Set the `directory_ldap` field on the resulting object. When `null`, the `directory_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.new](#fn-directory_ldapnew) constructor.
+  - `dns` (`list[obj]`): Set the `dns` field on the resulting object. When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.dns.new](#fn-dnsnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `hpc_cache` resource into the root Terraform configuration.
@@ -603,7 +603,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_rule` (`list[obj]`):  When `null`, the `access_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.access_rule.new](#fn-default_access_policyaccess_rulenew) constructor.
+  - `access_rule` (`list[obj]`): Set the `access_rule` field on the resulting object. When `null`, the `access_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.access_rule.new](#fn-default_access_policyaccess_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_access_policy` sub block.
@@ -626,14 +626,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `access` (`string`): 
-  - `anonymous_gid` (`number`):  When `null`, the `anonymous_gid` field will be omitted from the resulting object.
-  - `anonymous_uid` (`number`):  When `null`, the `anonymous_uid` field will be omitted from the resulting object.
-  - `filter` (`string`):  When `null`, the `filter` field will be omitted from the resulting object.
-  - `root_squash_enabled` (`bool`):  When `null`, the `root_squash_enabled` field will be omitted from the resulting object.
-  - `scope` (`string`): 
-  - `submount_access_enabled` (`bool`):  When `null`, the `submount_access_enabled` field will be omitted from the resulting object.
-  - `suid_enabled` (`bool`):  When `null`, the `suid_enabled` field will be omitted from the resulting object.
+  - `access` (`string`): Set the `access` field on the resulting object.
+  - `anonymous_gid` (`number`): Set the `anonymous_gid` field on the resulting object. When `null`, the `anonymous_gid` field will be omitted from the resulting object.
+  - `anonymous_uid` (`number`): Set the `anonymous_uid` field on the resulting object. When `null`, the `anonymous_uid` field will be omitted from the resulting object.
+  - `filter` (`string`): Set the `filter` field on the resulting object. When `null`, the `filter` field will be omitted from the resulting object.
+  - `root_squash_enabled` (`bool`): Set the `root_squash_enabled` field on the resulting object. When `null`, the `root_squash_enabled` field will be omitted from the resulting object.
+  - `scope` (`string`): Set the `scope` field on the resulting object.
+  - `submount_access_enabled` (`bool`): Set the `submount_access_enabled` field on the resulting object. When `null`, the `submount_access_enabled` field will be omitted from the resulting object.
+  - `suid_enabled` (`bool`): Set the `suid_enabled` field on the resulting object. When `null`, the `suid_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `access_rule` sub block.
@@ -656,13 +656,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `cache_netbios_name` (`string`): 
-  - `dns_primary_ip` (`string`): 
-  - `dns_secondary_ip` (`string`):  When `null`, the `dns_secondary_ip` field will be omitted from the resulting object.
-  - `domain_name` (`string`): 
-  - `domain_netbios_name` (`string`): 
-  - `password` (`string`): 
-  - `username` (`string`): 
+  - `cache_netbios_name` (`string`): Set the `cache_netbios_name` field on the resulting object.
+  - `dns_primary_ip` (`string`): Set the `dns_primary_ip` field on the resulting object.
+  - `dns_secondary_ip` (`string`): Set the `dns_secondary_ip` field on the resulting object. When `null`, the `dns_secondary_ip` field will be omitted from the resulting object.
+  - `domain_name` (`string`): Set the `domain_name` field on the resulting object.
+  - `domain_netbios_name` (`string`): Set the `domain_netbios_name` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `directory_active_directory` sub block.
@@ -685,8 +685,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `group_file_uri` (`string`): 
-  - `password_file_uri` (`string`): 
+  - `group_file_uri` (`string`): Set the `group_file_uri` field on the resulting object.
+  - `password_file_uri` (`string`): Set the `password_file_uri` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `directory_flat_file` sub block.
@@ -709,12 +709,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `base_dn` (`string`): 
-  - `certificate_validation_uri` (`string`):  When `null`, the `certificate_validation_uri` field will be omitted from the resulting object.
-  - `download_certificate_automatically` (`bool`):  When `null`, the `download_certificate_automatically` field will be omitted from the resulting object.
-  - `encrypted` (`bool`):  When `null`, the `encrypted` field will be omitted from the resulting object.
-  - `server` (`string`): 
-  - `bind` (`list[obj]`):  When `null`, the `bind` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.bind.new](#fn-directory_ldapbindnew) constructor.
+  - `base_dn` (`string`): Set the `base_dn` field on the resulting object.
+  - `certificate_validation_uri` (`string`): Set the `certificate_validation_uri` field on the resulting object. When `null`, the `certificate_validation_uri` field will be omitted from the resulting object.
+  - `download_certificate_automatically` (`bool`): Set the `download_certificate_automatically` field on the resulting object. When `null`, the `download_certificate_automatically` field will be omitted from the resulting object.
+  - `encrypted` (`bool`): Set the `encrypted` field on the resulting object. When `null`, the `encrypted` field will be omitted from the resulting object.
+  - `server` (`string`): Set the `server` field on the resulting object.
+  - `bind` (`list[obj]`): Set the `bind` field on the resulting object. When `null`, the `bind` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.bind.new](#fn-directory_ldapbindnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `directory_ldap` sub block.
@@ -737,8 +737,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `dn` (`string`): 
-  - `password` (`string`): 
+  - `dn` (`string`): Set the `dn` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `bind` sub block.
@@ -761,8 +761,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `search_domain` (`string`):  When `null`, the `search_domain` field will be omitted from the resulting object.
-  - `servers` (`list`): 
+  - `search_domain` (`string`): Set the `search_domain` field on the resulting object. When `null`, the `search_domain` field will be omitted from the resulting object.
+  - `servers` (`list`): Set the `servers` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dns` sub block.
@@ -785,8 +785,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): 
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -809,10 +809,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

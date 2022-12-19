@@ -65,17 +65,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `exclusion_tag` (`string`):  When `null`, the `exclusion_tag` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `time_zone` (`string`): 
-  - `host_pool` (`list[obj]`):  When `null`, the `host_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.host_pool.new](#fn-host_poolnew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.schedule.new](#fn-schedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `exclusion_tag` (`string`): Set the `exclusion_tag` field on the resulting resource block. When `null`, the `exclusion_tag` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting resource block. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting resource block.
+  - `host_pool` (`list[obj]`): Set the `host_pool` field on the resulting resource block. When `null`, the `host_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.host_pool.new](#fn-host_poolnew) constructor.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting resource block. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,17 +99,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `exclusion_tag` (`string`):  When `null`, the `exclusion_tag` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `time_zone` (`string`): 
-  - `host_pool` (`list[obj]`):  When `null`, the `host_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.host_pool.new](#fn-host_poolnew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.schedule.new](#fn-schedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `exclusion_tag` (`string`): Set the `exclusion_tag` field on the resulting object. When `null`, the `exclusion_tag` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting object. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting object.
+  - `host_pool` (`list[obj]`): Set the `host_pool` field on the resulting object. When `null`, the `host_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.host_pool.new](#fn-host_poolnew) constructor.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_scaling_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_desktop_scaling_plan` resource into the root Terraform configuration.
@@ -370,8 +370,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `hostpool_id` (`string`): 
-  - `scaling_plan_enabled` (`bool`): 
+  - `hostpool_id` (`string`): Set the `hostpool_id` field on the resulting object.
+  - `scaling_plan_enabled` (`bool`): Set the `scaling_plan_enabled` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `host_pool` sub block.
@@ -394,24 +394,24 @@ Terraform sub block.
 
 
 **Args**:
-  - `days_of_week` (`list`): 
-  - `name` (`string`): 
-  - `off_peak_load_balancing_algorithm` (`string`): 
-  - `off_peak_start_time` (`string`): 
-  - `peak_load_balancing_algorithm` (`string`): 
-  - `peak_start_time` (`string`): 
-  - `ramp_down_capacity_threshold_percent` (`number`): 
-  - `ramp_down_force_logoff_users` (`bool`): 
-  - `ramp_down_load_balancing_algorithm` (`string`): 
-  - `ramp_down_minimum_hosts_percent` (`number`): 
-  - `ramp_down_notification_message` (`string`): 
-  - `ramp_down_start_time` (`string`): 
-  - `ramp_down_stop_hosts_when` (`string`): 
-  - `ramp_down_wait_time_minutes` (`number`): 
-  - `ramp_up_capacity_threshold_percent` (`number`):  When `null`, the `ramp_up_capacity_threshold_percent` field will be omitted from the resulting object.
-  - `ramp_up_load_balancing_algorithm` (`string`): 
-  - `ramp_up_minimum_hosts_percent` (`number`):  When `null`, the `ramp_up_minimum_hosts_percent` field will be omitted from the resulting object.
-  - `ramp_up_start_time` (`string`): 
+  - `days_of_week` (`list`): Set the `days_of_week` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `off_peak_load_balancing_algorithm` (`string`): Set the `off_peak_load_balancing_algorithm` field on the resulting object.
+  - `off_peak_start_time` (`string`): Set the `off_peak_start_time` field on the resulting object.
+  - `peak_load_balancing_algorithm` (`string`): Set the `peak_load_balancing_algorithm` field on the resulting object.
+  - `peak_start_time` (`string`): Set the `peak_start_time` field on the resulting object.
+  - `ramp_down_capacity_threshold_percent` (`number`): Set the `ramp_down_capacity_threshold_percent` field on the resulting object.
+  - `ramp_down_force_logoff_users` (`bool`): Set the `ramp_down_force_logoff_users` field on the resulting object.
+  - `ramp_down_load_balancing_algorithm` (`string`): Set the `ramp_down_load_balancing_algorithm` field on the resulting object.
+  - `ramp_down_minimum_hosts_percent` (`number`): Set the `ramp_down_minimum_hosts_percent` field on the resulting object.
+  - `ramp_down_notification_message` (`string`): Set the `ramp_down_notification_message` field on the resulting object.
+  - `ramp_down_start_time` (`string`): Set the `ramp_down_start_time` field on the resulting object.
+  - `ramp_down_stop_hosts_when` (`string`): Set the `ramp_down_stop_hosts_when` field on the resulting object.
+  - `ramp_down_wait_time_minutes` (`number`): Set the `ramp_down_wait_time_minutes` field on the resulting object.
+  - `ramp_up_capacity_threshold_percent` (`number`): Set the `ramp_up_capacity_threshold_percent` field on the resulting object. When `null`, the `ramp_up_capacity_threshold_percent` field will be omitted from the resulting object.
+  - `ramp_up_load_balancing_algorithm` (`string`): Set the `ramp_up_load_balancing_algorithm` field on the resulting object.
+  - `ramp_up_minimum_hosts_percent` (`number`): Set the `ramp_up_minimum_hosts_percent` field on the resulting object. When `null`, the `ramp_up_minimum_hosts_percent` field will be omitted from the resulting object.
+  - `ramp_up_start_time` (`string`): Set the `ramp_up_start_time` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -434,10 +434,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

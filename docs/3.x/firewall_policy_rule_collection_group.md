@@ -72,13 +72,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `firewall_policy_id` (`string`): 
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `application_rule_collection` (`list[obj]`):  When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-application_rule_collectionnew) constructor.
-  - `nat_rule_collection` (`list[obj]`):  When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-nat_rule_collectionnew) constructor.
-  - `network_rule_collection` (`list[obj]`):  When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-network_rule_collectionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `firewall_policy_id` (`string`): Set the `firewall_policy_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `priority` (`number`): Set the `priority` field on the resulting resource block.
+  - `application_rule_collection` (`list[obj]`): Set the `application_rule_collection` field on the resulting resource block. When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-application_rule_collectionnew) constructor.
+  - `nat_rule_collection` (`list[obj]`): Set the `nat_rule_collection` field on the resulting resource block. When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-nat_rule_collectionnew) constructor.
+  - `network_rule_collection` (`list[obj]`): Set the `network_rule_collection` field on the resulting resource block. When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-network_rule_collectionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,13 +102,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `firewall_policy_id` (`string`): 
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `application_rule_collection` (`list[obj]`):  When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-application_rule_collectionnew) constructor.
-  - `nat_rule_collection` (`list[obj]`):  When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-nat_rule_collectionnew) constructor.
-  - `network_rule_collection` (`list[obj]`):  When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-network_rule_collectionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `firewall_policy_id` (`string`): Set the `firewall_policy_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `application_rule_collection` (`list[obj]`): Set the `application_rule_collection` field on the resulting object. When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-application_rule_collectionnew) constructor.
+  - `nat_rule_collection` (`list[obj]`): Set the `nat_rule_collection` field on the resulting object. When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-nat_rule_collectionnew) constructor.
+  - `network_rule_collection` (`list[obj]`): Set the `network_rule_collection` field on the resulting object. When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-network_rule_collectionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall_policy_rule_collection_group` resource into the root Terraform configuration.
@@ -326,10 +326,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.new](#fn-application_rule_collectionrulenew) constructor.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.new](#fn-application_rule_collectionrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `application_rule_collection` sub block.
@@ -352,17 +352,17 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `destination_addresses` (`list`):  When `null`, the `destination_addresses` field will be omitted from the resulting object.
-  - `destination_fqdn_tags` (`list`):  When `null`, the `destination_fqdn_tags` field will be omitted from the resulting object.
-  - `destination_fqdns` (`list`):  When `null`, the `destination_fqdns` field will be omitted from the resulting object.
-  - `destination_urls` (`list`):  When `null`, the `destination_urls` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `source_addresses` (`list`):  When `null`, the `source_addresses` field will be omitted from the resulting object.
-  - `source_ip_groups` (`list`):  When `null`, the `source_ip_groups` field will be omitted from the resulting object.
-  - `terminate_tls` (`bool`):  When `null`, the `terminate_tls` field will be omitted from the resulting object.
-  - `web_categories` (`list`):  When `null`, the `web_categories` field will be omitted from the resulting object.
-  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-application_rule_collectionapplication_rule_collectionprotocolsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.
+  - `destination_fqdn_tags` (`list`): Set the `destination_fqdn_tags` field on the resulting object. When `null`, the `destination_fqdn_tags` field will be omitted from the resulting object.
+  - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.
+  - `destination_urls` (`list`): Set the `destination_urls` field on the resulting object. When `null`, the `destination_urls` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.
+  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.
+  - `terminate_tls` (`bool`): Set the `terminate_tls` field on the resulting object. When `null`, the `terminate_tls` field will be omitted from the resulting object.
+  - `web_categories` (`list`): Set the `web_categories` field on the resulting object. When `null`, the `web_categories` field will be omitted from the resulting object.
+  - `protocols` (`list[obj]`): Set the `protocols` field on the resulting object. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-application_rule_collectionapplication_rule_collectionprotocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -385,8 +385,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `port` (`number`): 
-  - `type` (`string`): 
+  - `port` (`number`): Set the `port` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `protocols` sub block.
@@ -409,10 +409,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.rule.new](#fn-nat_rule_collectionrulenew) constructor.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.rule.new](#fn-nat_rule_collectionrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `nat_rule_collection` sub block.
@@ -435,15 +435,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `destination_address` (`string`):  When `null`, the `destination_address` field will be omitted from the resulting object.
-  - `destination_ports` (`list`):  When `null`, the `destination_ports` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `protocols` (`list`): 
-  - `source_addresses` (`list`):  When `null`, the `source_addresses` field will be omitted from the resulting object.
-  - `source_ip_groups` (`list`):  When `null`, the `source_ip_groups` field will be omitted from the resulting object.
-  - `translated_address` (`string`):  When `null`, the `translated_address` field will be omitted from the resulting object.
-  - `translated_fqdn` (`string`):  When `null`, the `translated_fqdn` field will be omitted from the resulting object.
-  - `translated_port` (`number`): 
+  - `destination_address` (`string`): Set the `destination_address` field on the resulting object. When `null`, the `destination_address` field will be omitted from the resulting object.
+  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object. When `null`, the `destination_ports` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `protocols` (`list`): Set the `protocols` field on the resulting object.
+  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.
+  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.
+  - `translated_address` (`string`): Set the `translated_address` field on the resulting object. When `null`, the `translated_address` field will be omitted from the resulting object.
+  - `translated_fqdn` (`string`): Set the `translated_fqdn` field on the resulting object. When `null`, the `translated_fqdn` field will be omitted from the resulting object.
+  - `translated_port` (`number`): Set the `translated_port` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -466,10 +466,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.rule.new](#fn-network_rule_collectionrulenew) constructor.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.rule.new](#fn-network_rule_collectionrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rule_collection` sub block.
@@ -492,14 +492,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `destination_addresses` (`list`):  When `null`, the `destination_addresses` field will be omitted from the resulting object.
-  - `destination_fqdns` (`list`):  When `null`, the `destination_fqdns` field will be omitted from the resulting object.
-  - `destination_ip_groups` (`list`):  When `null`, the `destination_ip_groups` field will be omitted from the resulting object.
-  - `destination_ports` (`list`): 
-  - `name` (`string`): 
-  - `protocols` (`list`): 
-  - `source_addresses` (`list`):  When `null`, the `source_addresses` field will be omitted from the resulting object.
-  - `source_ip_groups` (`list`):  When `null`, the `source_ip_groups` field will be omitted from the resulting object.
+  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.
+  - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.
+  - `destination_ip_groups` (`list`): Set the `destination_ip_groups` field on the resulting object. When `null`, the `destination_ip_groups` field will be omitted from the resulting object.
+  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `protocols` (`list`): Set the `protocols` field on the resulting object.
+  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.
+  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -522,10 +522,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -56,11 +56,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `soa_record` (`list[obj]`):  When `null`, the `soa_record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.soa_record.new](#fn-soa_recordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `soa_record` (`list[obj]`): Set the `soa_record` field on the resulting resource block. When `null`, the `soa_record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.soa_record.new](#fn-soa_recordnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,11 +84,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `soa_record` (`list[obj]`):  When `null`, the `soa_record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.soa_record.new](#fn-soa_recordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `soa_record` (`list[obj]`): Set the `soa_record` field on the resulting object. When `null`, the `soa_record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.soa_record.new](#fn-soa_recordnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dns_zone` resource into the root Terraform configuration.
@@ -232,15 +232,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `email` (`string`): 
-  - `expire_time` (`number`):  When `null`, the `expire_time` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `minimum_ttl` (`number`):  When `null`, the `minimum_ttl` field will be omitted from the resulting object.
-  - `refresh_time` (`number`):  When `null`, the `refresh_time` field will be omitted from the resulting object.
-  - `retry_time` (`number`):  When `null`, the `retry_time` field will be omitted from the resulting object.
-  - `serial_number` (`number`):  When `null`, the `serial_number` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ttl` (`number`):  When `null`, the `ttl` field will be omitted from the resulting object.
+  - `email` (`string`): Set the `email` field on the resulting object.
+  - `expire_time` (`number`): Set the `expire_time` field on the resulting object. When `null`, the `expire_time` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `minimum_ttl` (`number`): Set the `minimum_ttl` field on the resulting object. When `null`, the `minimum_ttl` field will be omitted from the resulting object.
+  - `refresh_time` (`number`): Set the `refresh_time` field on the resulting object. When `null`, the `refresh_time` field will be omitted from the resulting object.
+  - `retry_time` (`number`): Set the `retry_time` field on the resulting object. When `null`, the `retry_time` field will be omitted from the resulting object.
+  - `serial_number` (`number`): Set the `serial_number` field on the resulting object. When `null`, the `serial_number` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ttl` (`number`): Set the `ttl` field on the resulting object. When `null`, the `ttl` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `soa_record` sub block.
@@ -263,10 +263,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

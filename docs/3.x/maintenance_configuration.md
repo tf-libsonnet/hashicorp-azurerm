@@ -60,15 +60,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `scope` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `visibility` (`string`):  When `null`, the `visibility` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.timeouts.new](#fn-timeoutsnew) constructor.
-  - `window` (`list[obj]`):  When `null`, the `window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.window.new](#fn-windownew) constructor.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `properties` (`obj`): Set the `properties` field on the resulting resource block. When `null`, the `properties` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `scope` (`string`): Set the `scope` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `visibility` (`string`): Set the `visibility` field on the resulting resource block. When `null`, the `visibility` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `window` (`list[obj]`): Set the `window` field on the resulting resource block. When `null`, the `window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.window.new](#fn-windownew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,15 +92,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `scope` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `visibility` (`string`):  When `null`, the `visibility` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.timeouts.new](#fn-timeoutsnew) constructor.
-  - `window` (`list[obj]`):  When `null`, the `window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.window.new](#fn-windownew) constructor.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `properties` (`obj`): Set the `properties` field on the resulting object. When `null`, the `properties` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `scope` (`string`): Set the `scope` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `visibility` (`string`): Set the `visibility` field on the resulting object. When `null`, the `visibility` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `window` (`list[obj]`): Set the `window` field on the resulting object. When `null`, the `window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.window.new](#fn-windownew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `maintenance_configuration` resource into the root Terraform configuration.
@@ -308,10 +308,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -334,11 +334,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
-  - `expiration_date_time` (`string`):  When `null`, the `expiration_date_time` field will be omitted from the resulting object.
-  - `recur_every` (`string`):  When `null`, the `recur_every` field will be omitted from the resulting object.
-  - `start_date_time` (`string`): 
-  - `time_zone` (`string`): 
+  - `duration` (`string`): Set the `duration` field on the resulting object. When `null`, the `duration` field will be omitted from the resulting object.
+  - `expiration_date_time` (`string`): Set the `expiration_date_time` field on the resulting object. When `null`, the `expiration_date_time` field will be omitted from the resulting object.
+  - `recur_every` (`string`): Set the `recur_every` field on the resulting object. When `null`, the `recur_every` field will be omitted from the resulting object.
+  - `start_date_time` (`string`): Set the `start_date_time` field on the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `window` sub block.

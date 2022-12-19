@@ -76,28 +76,28 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_login_password` (`string`):  When `null`, the `administrator_login_password` field will be omitted from the resulting object.
-  - `auto_grow_enabled` (`bool`):  When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
-  - `backup_retention_days` (`number`):  When `null`, the `backup_retention_days` field will be omitted from the resulting object.
-  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `creation_source_server_id` (`string`):  When `null`, the `creation_source_server_id` field will be omitted from the resulting object.
-  - `geo_redundant_backup_enabled` (`bool`):  When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
-  - `infrastructure_encryption_enabled` (`bool`):  When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `restore_point_in_time` (`string`):  When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
-  - `sku_name` (`string`): 
-  - `ssl_enforcement_enabled` (`bool`): 
-  - `ssl_minimal_tls_version_enforced` (`string`):  When `null`, the `ssl_minimal_tls_version_enforced` field will be omitted from the resulting object.
-  - `storage_mb` (`number`):  When `null`, the `storage_mb` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): 
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.identity.new](#fn-identitynew) constructor.
-  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting resource block. When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting resource block. When `null`, the `administrator_login_password` field will be omitted from the resulting object.
+  - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting resource block. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
+  - `backup_retention_days` (`number`): Set the `backup_retention_days` field on the resulting resource block. When `null`, the `backup_retention_days` field will be omitted from the resulting object.
+  - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `creation_source_server_id` (`string`): Set the `creation_source_server_id` field on the resulting resource block. When `null`, the `creation_source_server_id` field will be omitted from the resulting object.
+  - `geo_redundant_backup_enabled` (`bool`): Set the `geo_redundant_backup_enabled` field on the resulting resource block. When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting resource block. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting resource block. When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `ssl_enforcement_enabled` (`bool`): Set the `ssl_enforcement_enabled` field on the resulting resource block.
+  - `ssl_minimal_tls_version_enforced` (`string`): Set the `ssl_minimal_tls_version_enforced` field on the resulting resource block. When `null`, the `ssl_minimal_tls_version_enforced` field will be omitted from the resulting object.
+  - `storage_mb` (`number`): Set the `storage_mb` field on the resulting resource block. When `null`, the `storage_mb` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting resource block.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.identity.new](#fn-identitynew) constructor.
+  - `threat_detection_policy` (`list[obj]`): Set the `threat_detection_policy` field on the resulting resource block. When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -121,28 +121,28 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_login_password` (`string`):  When `null`, the `administrator_login_password` field will be omitted from the resulting object.
-  - `auto_grow_enabled` (`bool`):  When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
-  - `backup_retention_days` (`number`):  When `null`, the `backup_retention_days` field will be omitted from the resulting object.
-  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `creation_source_server_id` (`string`):  When `null`, the `creation_source_server_id` field will be omitted from the resulting object.
-  - `geo_redundant_backup_enabled` (`bool`):  When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
-  - `infrastructure_encryption_enabled` (`bool`):  When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `restore_point_in_time` (`string`):  When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
-  - `sku_name` (`string`): 
-  - `ssl_enforcement_enabled` (`bool`): 
-  - `ssl_minimal_tls_version_enforced` (`string`):  When `null`, the `ssl_minimal_tls_version_enforced` field will be omitted from the resulting object.
-  - `storage_mb` (`number`):  When `null`, the `storage_mb` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): 
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.identity.new](#fn-identitynew) constructor.
-  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting object. When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting object. When `null`, the `administrator_login_password` field will be omitted from the resulting object.
+  - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting object. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
+  - `backup_retention_days` (`number`): Set the `backup_retention_days` field on the resulting object. When `null`, the `backup_retention_days` field will be omitted from the resulting object.
+  - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `creation_source_server_id` (`string`): Set the `creation_source_server_id` field on the resulting object. When `null`, the `creation_source_server_id` field will be omitted from the resulting object.
+  - `geo_redundant_backup_enabled` (`bool`): Set the `geo_redundant_backup_enabled` field on the resulting object. When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting object. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting object. When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `ssl_enforcement_enabled` (`bool`): Set the `ssl_enforcement_enabled` field on the resulting object.
+  - `ssl_minimal_tls_version_enforced` (`string`): Set the `ssl_minimal_tls_version_enforced` field on the resulting object. When `null`, the `ssl_minimal_tls_version_enforced` field will be omitted from the resulting object.
+  - `storage_mb` (`number`): Set the `storage_mb` field on the resulting object. When `null`, the `storage_mb` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.identity.new](#fn-identitynew) constructor.
+  - `threat_detection_policy` (`list[obj]`): Set the `threat_detection_policy` field on the resulting object. When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mysql_server` resource into the root Terraform configuration.
@@ -579,7 +579,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): 
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -602,13 +602,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `disabled_alerts` (`list`):  When `null`, the `disabled_alerts` field will be omitted from the resulting object.
-  - `email_account_admins` (`bool`):  When `null`, the `email_account_admins` field will be omitted from the resulting object.
-  - `email_addresses` (`list`):  When `null`, the `email_addresses` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `retention_days` (`number`):  When `null`, the `retention_days` field will be omitted from the resulting object.
-  - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
-  - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
+  - `disabled_alerts` (`list`): Set the `disabled_alerts` field on the resulting object. When `null`, the `disabled_alerts` field will be omitted from the resulting object.
+  - `email_account_admins` (`bool`): Set the `email_account_admins` field on the resulting object. When `null`, the `email_account_admins` field will be omitted from the resulting object.
+  - `email_addresses` (`list`): Set the `email_addresses` field on the resulting object. When `null`, the `email_addresses` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `retention_days` (`number`): Set the `retention_days` field on the resulting object. When `null`, the `retention_days` field will be omitted from the resulting object.
+  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting object. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
+  - `storage_endpoint` (`string`): Set the `storage_endpoint` field on the resulting object. When `null`, the `storage_endpoint` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `threat_detection_policy` sub block.
@@ -631,10 +631,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

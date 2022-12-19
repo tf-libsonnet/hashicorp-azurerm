@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `bypass` (`list`):  When `null`, the `bypass` field will be omitted from the resulting object.
-  - `default_action` (`string`): 
-  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
-  - `virtual_network_subnet_ids` (`list`):  When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
-  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-timeoutsnew) constructor.
+  - `bypass` (`list`): Set the `bypass` field on the resulting resource block. When `null`, the `bypass` field will be omitted from the resulting object.
+  - `default_action` (`string`): Set the `default_action` field on the resulting resource block.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting resource block. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.
+  - `virtual_network_subnet_ids` (`list`): Set the `virtual_network_subnet_ids` field on the resulting resource block. When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
+  - `private_link_access` (`list[obj]`): Set the `private_link_access` field on the resulting resource block. When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `bypass` (`list`):  When `null`, the `bypass` field will be omitted from the resulting object.
-  - `default_action` (`string`): 
-  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
-  - `virtual_network_subnet_ids` (`list`):  When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
-  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-timeoutsnew) constructor.
+  - `bypass` (`list`): Set the `bypass` field on the resulting object. When `null`, the `bypass` field will be omitted from the resulting object.
+  - `default_action` (`string`): Set the `default_action` field on the resulting object.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting object. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
+  - `virtual_network_subnet_ids` (`list`): Set the `virtual_network_subnet_ids` field on the resulting object. When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
+  - `private_link_access` (`list[obj]`): Set the `private_link_access` field on the resulting object. When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_account_network_rules` resource into the root Terraform configuration.
@@ -270,8 +270,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `endpoint_resource_id` (`string`): 
-  - `endpoint_tenant_id` (`string`):  When `null`, the `endpoint_tenant_id` field will be omitted from the resulting object.
+  - `endpoint_resource_id` (`string`): Set the `endpoint_resource_id` field on the resulting object.
+  - `endpoint_tenant_id` (`string`): Set the `endpoint_tenant_id` field on the resulting object. When `null`, the `endpoint_tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `private_link_access` sub block.
@@ -294,10 +294,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -73,19 +73,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `connectivity_logs_enabled` (`bool`):  When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
-  - `live_trace_enabled` (`bool`):  When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `messaging_logs_enabled` (`bool`):  When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `service_mode` (`string`):  When `null`, the `service_mode` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.cors.new](#fn-corsnew) constructor.
-  - `live_trace` (`list[obj]`):  When `null`, the `live_trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.live_trace.new](#fn-live_tracenew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.timeouts.new](#fn-timeoutsnew) constructor.
-  - `upstream_endpoint` (`list[obj]`):  When `null`, the `upstream_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.upstream_endpoint.new](#fn-upstream_endpointnew) constructor.
+  - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting resource block. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
+  - `live_trace_enabled` (`bool`): Set the `live_trace_enabled` field on the resulting resource block. When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `messaging_logs_enabled` (`bool`): Set the `messaging_logs_enabled` field on the resulting resource block. When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `service_mode` (`string`): Set the `service_mode` field on the resulting resource block. When `null`, the `service_mode` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.cors.new](#fn-corsnew) constructor.
+  - `live_trace` (`list[obj]`): Set the `live_trace` field on the resulting resource block. When `null`, the `live_trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.live_trace.new](#fn-live_tracenew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting resource block. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `upstream_endpoint` (`list[obj]`): Set the `upstream_endpoint` field on the resulting resource block. When `null`, the `upstream_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.upstream_endpoint.new](#fn-upstream_endpointnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,19 +109,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `connectivity_logs_enabled` (`bool`):  When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
-  - `live_trace_enabled` (`bool`):  When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `messaging_logs_enabled` (`bool`):  When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `service_mode` (`string`):  When `null`, the `service_mode` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.cors.new](#fn-corsnew) constructor.
-  - `live_trace` (`list[obj]`):  When `null`, the `live_trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.live_trace.new](#fn-live_tracenew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.timeouts.new](#fn-timeoutsnew) constructor.
-  - `upstream_endpoint` (`list[obj]`):  When `null`, the `upstream_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.upstream_endpoint.new](#fn-upstream_endpointnew) constructor.
+  - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting object. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
+  - `live_trace_enabled` (`bool`): Set the `live_trace_enabled` field on the resulting object. When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `messaging_logs_enabled` (`bool`): Set the `messaging_logs_enabled` field on the resulting object. When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `service_mode` (`string`): Set the `service_mode` field on the resulting object. When `null`, the `service_mode` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.cors.new](#fn-corsnew) constructor.
+  - `live_trace` (`list[obj]`): Set the `live_trace` field on the resulting object. When `null`, the `live_trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.live_trace.new](#fn-live_tracenew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting object. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `upstream_endpoint` (`list[obj]`): Set the `upstream_endpoint` field on the resulting object. When `null`, the `upstream_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.upstream_endpoint.new](#fn-upstream_endpointnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `signalr_service` resource into the root Terraform configuration.
@@ -456,7 +456,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_origins` (`list`): 
+  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
@@ -479,10 +479,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `connectivity_logs_enabled` (`bool`):  When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `http_request_logs_enabled` (`bool`):  When `null`, the `http_request_logs_enabled` field will be omitted from the resulting object.
-  - `messaging_logs_enabled` (`bool`):  When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
+  - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting object. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `http_request_logs_enabled` (`bool`): Set the `http_request_logs_enabled` field on the resulting object. When `null`, the `http_request_logs_enabled` field will be omitted from the resulting object.
+  - `messaging_logs_enabled` (`bool`): Set the `messaging_logs_enabled` field on the resulting object. When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `live_trace` sub block.
@@ -505,8 +505,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`number`): 
-  - `name` (`string`): 
+  - `capacity` (`number`): Set the `capacity` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sku` sub block.
@@ -529,10 +529,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -555,10 +555,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `category_pattern` (`list`): 
-  - `event_pattern` (`list`): 
-  - `hub_pattern` (`list`): 
-  - `url_template` (`string`): 
+  - `category_pattern` (`list`): Set the `category_pattern` field on the resulting object.
+  - `event_pattern` (`list`): Set the `event_pattern` field on the resulting object.
+  - `hub_pattern` (`list`): Set the `hub_pattern` field on the resulting object.
+  - `url_template` (`string`): Set the `url_template` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `upstream_endpoint` sub block.

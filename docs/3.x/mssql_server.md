@@ -69,21 +69,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_login_password` (`string`):  When `null`, the `administrator_login_password` field will be omitted from the resulting object.
-  - `connection_policy` (`string`):  When `null`, the `connection_policy` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `minimum_tls_version` (`string`):  When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `outbound_network_restriction_enabled` (`bool`):  When `null`, the `outbound_network_restriction_enabled` field will be omitted from the resulting object.
-  - `primary_user_assigned_identity_id` (`string`):  When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): 
-  - `azuread_administrator` (`list[obj]`):  When `null`, the `azuread_administrator` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.azuread_administrator.new](#fn-azuread_administratornew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting resource block. When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting resource block. When `null`, the `administrator_login_password` field will be omitted from the resulting object.
+  - `connection_policy` (`string`): Set the `connection_policy` field on the resulting resource block. When `null`, the `connection_policy` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `minimum_tls_version` (`string`): Set the `minimum_tls_version` field on the resulting resource block. When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `outbound_network_restriction_enabled` (`bool`): Set the `outbound_network_restriction_enabled` field on the resulting resource block. When `null`, the `outbound_network_restriction_enabled` field will be omitted from the resulting object.
+  - `primary_user_assigned_identity_id` (`string`): Set the `primary_user_assigned_identity_id` field on the resulting resource block. When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting resource block.
+  - `azuread_administrator` (`list[obj]`): Set the `azuread_administrator` field on the resulting resource block. When `null`, the `azuread_administrator` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.azuread_administrator.new](#fn-azuread_administratornew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,21 +107,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_login_password` (`string`):  When `null`, the `administrator_login_password` field will be omitted from the resulting object.
-  - `connection_policy` (`string`):  When `null`, the `connection_policy` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `minimum_tls_version` (`string`):  When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `outbound_network_restriction_enabled` (`bool`):  When `null`, the `outbound_network_restriction_enabled` field will be omitted from the resulting object.
-  - `primary_user_assigned_identity_id` (`string`):  When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): 
-  - `azuread_administrator` (`list[obj]`):  When `null`, the `azuread_administrator` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.azuread_administrator.new](#fn-azuread_administratornew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting object. When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting object. When `null`, the `administrator_login_password` field will be omitted from the resulting object.
+  - `connection_policy` (`string`): Set the `connection_policy` field on the resulting object. When `null`, the `connection_policy` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `minimum_tls_version` (`string`): Set the `minimum_tls_version` field on the resulting object. When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `outbound_network_restriction_enabled` (`bool`): Set the `outbound_network_restriction_enabled` field on the resulting object. When `null`, the `outbound_network_restriction_enabled` field will be omitted from the resulting object.
+  - `primary_user_assigned_identity_id` (`string`): Set the `primary_user_assigned_identity_id` field on the resulting object. When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
+  - `azuread_administrator` (`list[obj]`): Set the `azuread_administrator` field on the resulting object. When `null`, the `azuread_administrator` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.azuread_administrator.new](#fn-azuread_administratornew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_server` resource into the root Terraform configuration.
@@ -446,10 +446,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `azuread_authentication_only` (`bool`):  When `null`, the `azuread_authentication_only` field will be omitted from the resulting object.
-  - `login_username` (`string`): 
-  - `object_id` (`string`): 
-  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `azuread_authentication_only` (`bool`): Set the `azuread_authentication_only` field on the resulting object. When `null`, the `azuread_authentication_only` field will be omitted from the resulting object.
+  - `login_username` (`string`): Set the `login_username` field on the resulting object.
+  - `object_id` (`string`): Set the `object_id` field on the resulting object.
+  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azuread_administrator` sub block.
@@ -472,8 +472,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -496,10 +496,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

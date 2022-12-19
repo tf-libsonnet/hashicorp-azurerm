@@ -61,16 +61,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `collation` (`string`):  When `null`, the `collation` field will be omitted from the resulting object.
-  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `data_encrypted` (`bool`):  When `null`, the `data_encrypted` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `recovery_database_id` (`string`):  When `null`, the `recovery_database_id` field will be omitted from the resulting object.
-  - `sku_name` (`string`): 
-  - `synapse_workspace_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `restore` (`list[obj]`):  When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.restore.new](#fn-restorenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `collation` (`string`): Set the `collation` field on the resulting resource block. When `null`, the `collation` field will be omitted from the resulting object.
+  - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `data_encrypted` (`bool`): Set the `data_encrypted` field on the resulting resource block. When `null`, the `data_encrypted` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `recovery_database_id` (`string`): Set the `recovery_database_id` field on the resulting resource block. When `null`, the `recovery_database_id` field will be omitted from the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `restore` (`list[obj]`): Set the `restore` field on the resulting resource block. When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.restore.new](#fn-restorenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,16 +94,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `collation` (`string`):  When `null`, the `collation` field will be omitted from the resulting object.
-  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `data_encrypted` (`bool`):  When `null`, the `data_encrypted` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `recovery_database_id` (`string`):  When `null`, the `recovery_database_id` field will be omitted from the resulting object.
-  - `sku_name` (`string`): 
-  - `synapse_workspace_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `restore` (`list[obj]`):  When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.restore.new](#fn-restorenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `collation` (`string`): Set the `collation` field on the resulting object. When `null`, the `collation` field will be omitted from the resulting object.
+  - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `data_encrypted` (`bool`): Set the `data_encrypted` field on the resulting object. When `null`, the `data_encrypted` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `recovery_database_id` (`string`): Set the `recovery_database_id` field on the resulting object. When `null`, the `recovery_database_id` field will be omitted from the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `restore` (`list[obj]`): Set the `restore` field on the resulting object. When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.restore.new](#fn-restorenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_sql_pool` resource into the root Terraform configuration.
@@ -327,8 +327,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `point_in_time` (`string`): 
-  - `source_database_id` (`string`): 
+  - `point_in_time` (`string`): Set the `point_in_time` field on the resulting object.
+  - `source_database_id` (`string`): Set the `source_database_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `restore` sub block.
@@ -351,10 +351,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

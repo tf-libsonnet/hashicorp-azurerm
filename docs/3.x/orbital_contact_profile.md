@@ -66,17 +66,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_tracking` (`string`): 
-  - `event_hub_uri` (`string`):  When `null`, the `event_hub_uri` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `minimum_elevation_degrees` (`number`):  When `null`, the `minimum_elevation_degrees` field will be omitted from the resulting object.
-  - `minimum_variable_contact_duration` (`string`): 
-  - `name` (`string`): 
-  - `network_configuration_subnet_id` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-linksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_tracking` (`string`): Set the `auto_tracking` field on the resulting resource block.
+  - `event_hub_uri` (`string`): Set the `event_hub_uri` field on the resulting resource block. When `null`, the `event_hub_uri` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `minimum_elevation_degrees` (`number`): Set the `minimum_elevation_degrees` field on the resulting resource block. When `null`, the `minimum_elevation_degrees` field will be omitted from the resulting object.
+  - `minimum_variable_contact_duration` (`string`): Set the `minimum_variable_contact_duration` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `network_configuration_subnet_id` (`string`): Set the `network_configuration_subnet_id` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `links` (`list[obj]`): Set the `links` field on the resulting resource block. When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-linksnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,17 +100,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_tracking` (`string`): 
-  - `event_hub_uri` (`string`):  When `null`, the `event_hub_uri` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `minimum_elevation_degrees` (`number`):  When `null`, the `minimum_elevation_degrees` field will be omitted from the resulting object.
-  - `minimum_variable_contact_duration` (`string`): 
-  - `name` (`string`): 
-  - `network_configuration_subnet_id` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `links` (`list[obj]`):  When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-linksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_tracking` (`string`): Set the `auto_tracking` field on the resulting object.
+  - `event_hub_uri` (`string`): Set the `event_hub_uri` field on the resulting object. When `null`, the `event_hub_uri` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `minimum_elevation_degrees` (`number`): Set the `minimum_elevation_degrees` field on the resulting object. When `null`, the `minimum_elevation_degrees` field will be omitted from the resulting object.
+  - `minimum_variable_contact_duration` (`string`): Set the `minimum_variable_contact_duration` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `network_configuration_subnet_id` (`string`): Set the `network_configuration_subnet_id` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `links` (`list[obj]`): Set the `links` field on the resulting object. When `null`, the `links` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.new](#fn-linksnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `orbital_contact_profile` resource into the root Terraform configuration.
@@ -350,10 +350,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `direction` (`string`): 
-  - `name` (`string`): 
-  - `polarization` (`string`): 
-  - `channels` (`list[obj]`):  When `null`, the `channels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.new](#fn-linkschannelsnew) constructor.
+  - `direction` (`string`): Set the `direction` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `polarization` (`string`): Set the `polarization` field on the resulting object.
+  - `channels` (`list[obj]`): Set the `channels` field on the resulting object. When `null`, the `channels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.new](#fn-linkschannelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `links` sub block.
@@ -376,12 +376,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `bandwidth_mhz` (`number`): 
-  - `center_frequency_mhz` (`number`): 
-  - `demodulation_configuration` (`string`):  When `null`, the `demodulation_configuration` field will be omitted from the resulting object.
-  - `modulation_configuration` (`string`):  When `null`, the `modulation_configuration` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `end_point` (`list[obj]`):  When `null`, the `end_point` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.end_point.new](#fn-linkslinksend_pointnew) constructor.
+  - `bandwidth_mhz` (`number`): Set the `bandwidth_mhz` field on the resulting object.
+  - `center_frequency_mhz` (`number`): Set the `center_frequency_mhz` field on the resulting object.
+  - `demodulation_configuration` (`string`): Set the `demodulation_configuration` field on the resulting object. When `null`, the `demodulation_configuration` field will be omitted from the resulting object.
+  - `modulation_configuration` (`string`): Set the `modulation_configuration` field on the resulting object. When `null`, the `modulation_configuration` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `end_point` (`list[obj]`): Set the `end_point` field on the resulting object. When `null`, the `end_point` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.end_point.new](#fn-linkslinksend_pointnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `channels` sub block.
@@ -404,10 +404,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_point_name` (`string`): 
-  - `ip_address` (`string`): 
-  - `port` (`string`): 
-  - `protocol` (`string`): 
+  - `end_point_name` (`string`): Set the `end_point_name` field on the resulting object.
+  - `ip_address` (`string`): Set the `ip_address` field on the resulting object.
+  - `port` (`string`): Set the `port` field on the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `end_point` sub block.
@@ -430,10 +430,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

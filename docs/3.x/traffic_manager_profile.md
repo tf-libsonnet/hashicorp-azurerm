@@ -66,16 +66,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `max_return` (`number`):  When `null`, the `max_return` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `profile_status` (`string`):  When `null`, the `profile_status` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `traffic_routing_method` (`string`): 
-  - `traffic_view_enabled` (`bool`):  When `null`, the `traffic_view_enabled` field will be omitted from the resulting object.
-  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-dns_confignew) constructor.
-  - `monitor_config` (`list[obj]`):  When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-monitor_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `max_return` (`number`): Set the `max_return` field on the resulting resource block. When `null`, the `max_return` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `profile_status` (`string`): Set the `profile_status` field on the resulting resource block. When `null`, the `profile_status` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `traffic_routing_method` (`string`): Set the `traffic_routing_method` field on the resulting resource block.
+  - `traffic_view_enabled` (`bool`): Set the `traffic_view_enabled` field on the resulting resource block. When `null`, the `traffic_view_enabled` field will be omitted from the resulting object.
+  - `dns_config` (`list[obj]`): Set the `dns_config` field on the resulting resource block. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-dns_confignew) constructor.
+  - `monitor_config` (`list[obj]`): Set the `monitor_config` field on the resulting resource block. When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-monitor_confignew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,16 +99,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `max_return` (`number`):  When `null`, the `max_return` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `profile_status` (`string`):  When `null`, the `profile_status` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `traffic_routing_method` (`string`): 
-  - `traffic_view_enabled` (`bool`):  When `null`, the `traffic_view_enabled` field will be omitted from the resulting object.
-  - `dns_config` (`list[obj]`):  When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-dns_confignew) constructor.
-  - `monitor_config` (`list[obj]`):  When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-monitor_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `max_return` (`number`): Set the `max_return` field on the resulting object. When `null`, the `max_return` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `profile_status` (`string`): Set the `profile_status` field on the resulting object. When `null`, the `profile_status` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `traffic_routing_method` (`string`): Set the `traffic_routing_method` field on the resulting object.
+  - `traffic_view_enabled` (`bool`): Set the `traffic_view_enabled` field on the resulting object. When `null`, the `traffic_view_enabled` field will be omitted from the resulting object.
+  - `dns_config` (`list[obj]`): Set the `dns_config` field on the resulting object. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.dns_config.new](#fn-dns_confignew) constructor.
+  - `monitor_config` (`list[obj]`): Set the `monitor_config` field on the resulting object. When `null`, the `monitor_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.new](#fn-monitor_confignew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `traffic_manager_profile` resource into the root Terraform configuration.
@@ -353,8 +353,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `relative_name` (`string`): 
-  - `ttl` (`number`): 
+  - `relative_name` (`string`): Set the `relative_name` field on the resulting object.
+  - `ttl` (`number`): Set the `ttl` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dns_config` sub block.
@@ -377,14 +377,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `expected_status_code_ranges` (`list`):  When `null`, the `expected_status_code_ranges` field will be omitted from the resulting object.
-  - `interval_in_seconds` (`number`):  When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `port` (`number`): 
-  - `protocol` (`string`): 
-  - `timeout_in_seconds` (`number`):  When `null`, the `timeout_in_seconds` field will be omitted from the resulting object.
-  - `tolerated_number_of_failures` (`number`):  When `null`, the `tolerated_number_of_failures` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.custom_header.new](#fn-monitor_configcustom_headernew) constructor.
+  - `expected_status_code_ranges` (`list`): Set the `expected_status_code_ranges` field on the resulting object. When `null`, the `expected_status_code_ranges` field will be omitted from the resulting object.
+  - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `port` (`number`): Set the `port` field on the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object.
+  - `timeout_in_seconds` (`number`): Set the `timeout_in_seconds` field on the resulting object. When `null`, the `timeout_in_seconds` field will be omitted from the resulting object.
+  - `tolerated_number_of_failures` (`number`): Set the `tolerated_number_of_failures` field on the resulting object. When `null`, the `tolerated_number_of_failures` field will be omitted from the resulting object.
+  - `custom_header` (`list[obj]`): Set the `custom_header` field on the resulting object. When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_profile.monitor_config.custom_header.new](#fn-monitor_configcustom_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `monitor_config` sub block.
@@ -407,8 +407,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `value` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `custom_header` sub block.
@@ -431,10 +431,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

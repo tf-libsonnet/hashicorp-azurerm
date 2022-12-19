@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `namespace_id` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `trusted_services_allowed` (`bool`):  When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
-  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-network_rulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
+  - `default_action` (`string`): Set the `default_action` field on the resulting resource block. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting resource block. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `namespace_id` (`string`): Set the `namespace_id` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `trusted_services_allowed` (`bool`): Set the `trusted_services_allowed` field on the resulting resource block. When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
+  - `network_rules` (`list[obj]`): Set the `network_rules` field on the resulting resource block. When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-network_rulesnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `namespace_id` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `trusted_services_allowed` (`bool`):  When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
-  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-network_rulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
+  - `default_action` (`string`): Set the `default_action` field on the resulting object. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting object. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `namespace_id` (`string`): Set the `namespace_id` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `trusted_services_allowed` (`bool`): Set the `trusted_services_allowed` field on the resulting object. When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
+  - `network_rules` (`list[obj]`): Set the `network_rules` field on the resulting object. When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-network_rulesnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `servicebus_namespace_network_rule_set` resource into the root Terraform configuration.
@@ -270,8 +270,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `ignore_missing_vnet_service_endpoint` (`bool`):  When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): 
+  - `ignore_missing_vnet_service_endpoint` (`bool`): Set the `ignore_missing_vnet_service_endpoint` field on the resulting object. When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `network_rules` sub block.
@@ -294,10 +294,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

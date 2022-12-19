@@ -84,20 +84,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `account_name` (`string`): 
-  - `analytical_storage_ttl` (`number`):  When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
-  - `database_name` (`string`): 
-  - `default_ttl` (`number`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `partition_key_path` (`string`): 
-  - `partition_key_version` (`number`):  When `null`, the `partition_key_version` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
-  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-conflict_resolution_policynew) constructor.
-  - `indexing_policy` (`list[obj]`):  When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-indexing_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-timeoutsnew) constructor.
-  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-unique_keynew) constructor.
+  - `account_name` (`string`): Set the `account_name` field on the resulting resource block.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting resource block. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting resource block.
+  - `default_ttl` (`number`): Set the `default_ttl` field on the resulting resource block. When `null`, the `default_ttl` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `partition_key_path` (`string`): Set the `partition_key_path` field on the resulting resource block.
+  - `partition_key_version` (`number`): Set the `partition_key_version` field on the resulting resource block. When `null`, the `partition_key_version` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `throughput` (`number`): Set the `throughput` field on the resulting resource block. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `autoscale_settings` (`list[obj]`): Set the `autoscale_settings` field on the resulting resource block. When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `conflict_resolution_policy` (`list[obj]`): Set the `conflict_resolution_policy` field on the resulting resource block. When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-conflict_resolution_policynew) constructor.
+  - `indexing_policy` (`list[obj]`): Set the `indexing_policy` field on the resulting resource block. When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-indexing_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-timeoutsnew) constructor.
+  - `unique_key` (`list[obj]`): Set the `unique_key` field on the resulting resource block. When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-unique_keynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -121,20 +121,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `account_name` (`string`): 
-  - `analytical_storage_ttl` (`number`):  When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
-  - `database_name` (`string`): 
-  - `default_ttl` (`number`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `partition_key_path` (`string`): 
-  - `partition_key_version` (`number`):  When `null`, the `partition_key_version` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
-  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-conflict_resolution_policynew) constructor.
-  - `indexing_policy` (`list[obj]`):  When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-indexing_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-timeoutsnew) constructor.
-  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-unique_keynew) constructor.
+  - `account_name` (`string`): Set the `account_name` field on the resulting object.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting object. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `default_ttl` (`number`): Set the `default_ttl` field on the resulting object. When `null`, the `default_ttl` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `partition_key_path` (`string`): Set the `partition_key_path` field on the resulting object.
+  - `partition_key_version` (`number`): Set the `partition_key_version` field on the resulting object. When `null`, the `partition_key_version` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `throughput` (`number`): Set the `throughput` field on the resulting object. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `autoscale_settings` (`list[obj]`): Set the `autoscale_settings` field on the resulting object. When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `conflict_resolution_policy` (`list[obj]`): Set the `conflict_resolution_policy` field on the resulting object. When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.conflict_resolution_policy.new](#fn-conflict_resolution_policynew) constructor.
+  - `indexing_policy` (`list[obj]`): Set the `indexing_policy` field on the resulting object. When `null`, the `indexing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.new](#fn-indexing_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.timeouts.new](#fn-timeoutsnew) constructor.
+  - `unique_key` (`list[obj]`): Set the `unique_key` field on the resulting object. When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.unique_key.new](#fn-unique_keynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cosmosdb_sql_container` resource into the root Terraform configuration.
@@ -485,7 +485,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_throughput` (`number`):  When `null`, the `max_throughput` field will be omitted from the resulting object.
+  - `max_throughput` (`number`): Set the `max_throughput` field on the resulting object. When `null`, the `max_throughput` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `autoscale_settings` sub block.
@@ -508,9 +508,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `conflict_resolution_path` (`string`):  When `null`, the `conflict_resolution_path` field will be omitted from the resulting object.
-  - `conflict_resolution_procedure` (`string`):  When `null`, the `conflict_resolution_procedure` field will be omitted from the resulting object.
-  - `mode` (`string`): 
+  - `conflict_resolution_path` (`string`): Set the `conflict_resolution_path` field on the resulting object. When `null`, the `conflict_resolution_path` field will be omitted from the resulting object.
+  - `conflict_resolution_procedure` (`string`): Set the `conflict_resolution_procedure` field on the resulting object. When `null`, the `conflict_resolution_procedure` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `conflict_resolution_policy` sub block.
@@ -533,11 +533,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `indexing_mode` (`string`):  When `null`, the `indexing_mode` field will be omitted from the resulting object.
-  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.new](#fn-indexing_policycomposite_indexnew) constructor.
-  - `excluded_path` (`list[obj]`):  When `null`, the `excluded_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.excluded_path.new](#fn-indexing_policyexcluded_pathnew) constructor.
-  - `included_path` (`list[obj]`):  When `null`, the `included_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.included_path.new](#fn-indexing_policyincluded_pathnew) constructor.
-  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.spatial_index.new](#fn-indexing_policyspatial_indexnew) constructor.
+  - `indexing_mode` (`string`): Set the `indexing_mode` field on the resulting object. When `null`, the `indexing_mode` field will be omitted from the resulting object.
+  - `composite_index` (`list[obj]`): Set the `composite_index` field on the resulting object. When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.new](#fn-indexing_policycomposite_indexnew) constructor.
+  - `excluded_path` (`list[obj]`): Set the `excluded_path` field on the resulting object. When `null`, the `excluded_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.excluded_path.new](#fn-indexing_policyexcluded_pathnew) constructor.
+  - `included_path` (`list[obj]`): Set the `included_path` field on the resulting object. When `null`, the `included_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.included_path.new](#fn-indexing_policyincluded_pathnew) constructor.
+  - `spatial_index` (`list[obj]`): Set the `spatial_index` field on the resulting object. When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.spatial_index.new](#fn-indexing_policyspatial_indexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `indexing_policy` sub block.
@@ -560,7 +560,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.index.new](#fn-indexing_policyindexing_policyindexnew) constructor.
+  - `index` (`list[obj]`): Set the `index` field on the resulting object. When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.index.new](#fn-indexing_policyindexing_policyindexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `composite_index` sub block.
@@ -583,8 +583,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `order` (`string`): 
-  - `path` (`string`): 
+  - `order` (`string`): Set the `order` field on the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `index` sub block.
@@ -607,7 +607,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `path` (`string`): 
+  - `path` (`string`): Set the `path` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `excluded_path` sub block.
@@ -630,7 +630,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `path` (`string`): 
+  - `path` (`string`): Set the `path` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `included_path` sub block.
@@ -653,7 +653,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `path` (`string`): 
+  - `path` (`string`): Set the `path` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `spatial_index` sub block.
@@ -676,10 +676,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -702,7 +702,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `paths` (`list`): 
+  - `paths` (`list`): Set the `paths` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `unique_key` sub block.

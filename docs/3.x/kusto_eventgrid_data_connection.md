@@ -65,23 +65,23 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `blob_storage_event_type` (`string`):  When `null`, the `blob_storage_event_type` field will be omitted from the resulting object.
-  - `cluster_name` (`string`): 
-  - `data_format` (`string`):  When `null`, the `data_format` field will be omitted from the resulting object.
-  - `database_name` (`string`): 
-  - `database_routing_type` (`string`):  When `null`, the `database_routing_type` field will be omitted from the resulting object.
-  - `eventgrid_resource_id` (`string`):  When `null`, the `eventgrid_resource_id` field will be omitted from the resulting object.
-  - `eventhub_consumer_group_name` (`string`): 
-  - `eventhub_id` (`string`): 
-  - `location` (`string`): 
-  - `managed_identity_resource_id` (`string`):  When `null`, the `managed_identity_resource_id` field will be omitted from the resulting object.
-  - `mapping_rule_name` (`string`):  When `null`, the `mapping_rule_name` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `skip_first_record` (`bool`):  When `null`, the `skip_first_record` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
-  - `table_name` (`string`):  When `null`, the `table_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_eventgrid_data_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `blob_storage_event_type` (`string`): Set the `blob_storage_event_type` field on the resulting resource block. When `null`, the `blob_storage_event_type` field will be omitted from the resulting object.
+  - `cluster_name` (`string`): Set the `cluster_name` field on the resulting resource block.
+  - `data_format` (`string`): Set the `data_format` field on the resulting resource block. When `null`, the `data_format` field will be omitted from the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting resource block.
+  - `database_routing_type` (`string`): Set the `database_routing_type` field on the resulting resource block. When `null`, the `database_routing_type` field will be omitted from the resulting object.
+  - `eventgrid_resource_id` (`string`): Set the `eventgrid_resource_id` field on the resulting resource block. When `null`, the `eventgrid_resource_id` field will be omitted from the resulting object.
+  - `eventhub_consumer_group_name` (`string`): Set the `eventhub_consumer_group_name` field on the resulting resource block.
+  - `eventhub_id` (`string`): Set the `eventhub_id` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `managed_identity_resource_id` (`string`): Set the `managed_identity_resource_id` field on the resulting resource block. When `null`, the `managed_identity_resource_id` field will be omitted from the resulting object.
+  - `mapping_rule_name` (`string`): Set the `mapping_rule_name` field on the resulting resource block. When `null`, the `mapping_rule_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `skip_first_record` (`bool`): Set the `skip_first_record` field on the resulting resource block. When `null`, the `skip_first_record` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.
+  - `table_name` (`string`): Set the `table_name` field on the resulting resource block. When `null`, the `table_name` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_eventgrid_data_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,23 +105,23 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `blob_storage_event_type` (`string`):  When `null`, the `blob_storage_event_type` field will be omitted from the resulting object.
-  - `cluster_name` (`string`): 
-  - `data_format` (`string`):  When `null`, the `data_format` field will be omitted from the resulting object.
-  - `database_name` (`string`): 
-  - `database_routing_type` (`string`):  When `null`, the `database_routing_type` field will be omitted from the resulting object.
-  - `eventgrid_resource_id` (`string`):  When `null`, the `eventgrid_resource_id` field will be omitted from the resulting object.
-  - `eventhub_consumer_group_name` (`string`): 
-  - `eventhub_id` (`string`): 
-  - `location` (`string`): 
-  - `managed_identity_resource_id` (`string`):  When `null`, the `managed_identity_resource_id` field will be omitted from the resulting object.
-  - `mapping_rule_name` (`string`):  When `null`, the `mapping_rule_name` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `skip_first_record` (`bool`):  When `null`, the `skip_first_record` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
-  - `table_name` (`string`):  When `null`, the `table_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_eventgrid_data_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `blob_storage_event_type` (`string`): Set the `blob_storage_event_type` field on the resulting object. When `null`, the `blob_storage_event_type` field will be omitted from the resulting object.
+  - `cluster_name` (`string`): Set the `cluster_name` field on the resulting object.
+  - `data_format` (`string`): Set the `data_format` field on the resulting object. When `null`, the `data_format` field will be omitted from the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `database_routing_type` (`string`): Set the `database_routing_type` field on the resulting object. When `null`, the `database_routing_type` field will be omitted from the resulting object.
+  - `eventgrid_resource_id` (`string`): Set the `eventgrid_resource_id` field on the resulting object. When `null`, the `eventgrid_resource_id` field will be omitted from the resulting object.
+  - `eventhub_consumer_group_name` (`string`): Set the `eventhub_consumer_group_name` field on the resulting object.
+  - `eventhub_id` (`string`): Set the `eventhub_id` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `managed_identity_resource_id` (`string`): Set the `managed_identity_resource_id` field on the resulting object. When `null`, the `managed_identity_resource_id` field will be omitted from the resulting object.
+  - `mapping_rule_name` (`string`): Set the `mapping_rule_name` field on the resulting object. When `null`, the `mapping_rule_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `skip_first_record` (`bool`): Set the `skip_first_record` field on the resulting object. When `null`, the `skip_first_record` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
+  - `table_name` (`string`): Set the `table_name` field on the resulting object. When `null`, the `table_name` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_eventgrid_data_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_eventgrid_data_connection` resource into the root Terraform configuration.
@@ -436,10 +436,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

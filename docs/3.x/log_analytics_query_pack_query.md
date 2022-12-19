@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `additional_settings_json` (`string`):  When `null`, the `additional_settings_json` field will be omitted from the resulting object.
-  - `body` (`string`): 
-  - `categories` (`list`):  When `null`, the `categories` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `query_pack_id` (`string`): 
-  - `resource_types` (`list`):  When `null`, the `resource_types` field will be omitted from the resulting object.
-  - `solutions` (`list`):  When `null`, the `solutions` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_query_pack_query.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_settings_json` (`string`): Set the `additional_settings_json` field on the resulting resource block. When `null`, the `additional_settings_json` field will be omitted from the resulting object.
+  - `body` (`string`): Set the `body` field on the resulting resource block.
+  - `categories` (`list`): Set the `categories` field on the resulting resource block. When `null`, the `categories` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block. When `null`, the `name` field will be omitted from the resulting object.
+  - `query_pack_id` (`string`): Set the `query_pack_id` field on the resulting resource block.
+  - `resource_types` (`list`): Set the `resource_types` field on the resulting resource block. When `null`, the `resource_types` field will be omitted from the resulting object.
+  - `solutions` (`list`): Set the `solutions` field on the resulting resource block. When `null`, the `solutions` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_query_pack_query.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `additional_settings_json` (`string`):  When `null`, the `additional_settings_json` field will be omitted from the resulting object.
-  - `body` (`string`): 
-  - `categories` (`list`):  When `null`, the `categories` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `query_pack_id` (`string`): 
-  - `resource_types` (`list`):  When `null`, the `resource_types` field will be omitted from the resulting object.
-  - `solutions` (`list`):  When `null`, the `solutions` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_query_pack_query.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_settings_json` (`string`): Set the `additional_settings_json` field on the resulting object. When `null`, the `additional_settings_json` field will be omitted from the resulting object.
+  - `body` (`string`): Set the `body` field on the resulting object.
+  - `categories` (`list`): Set the `categories` field on the resulting object. When `null`, the `categories` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `query_pack_id` (`string`): Set the `query_pack_id` field on the resulting object.
+  - `resource_types` (`list`): Set the `resource_types` field on the resulting object. When `null`, the `resource_types` field will be omitted from the resulting object.
+  - `solutions` (`list`): Set the `solutions` field on the resulting object. When `null`, the `solutions` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_query_pack_query.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `log_analytics_query_pack_query` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

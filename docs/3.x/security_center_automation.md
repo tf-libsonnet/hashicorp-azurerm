@@ -68,16 +68,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `scopes` (`list`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-actionnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-sourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `scopes` (`list`): Set the `scopes` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting resource block. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-actionnew) constructor.
+  - `source` (`list[obj]`): Set the `source` field on the resulting resource block. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,16 +101,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `scopes` (`list`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-actionnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-sourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `scopes` (`list`): Set the `scopes` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.action.new](#fn-actionnew) constructor.
+  - `source` (`list[obj]`): Set the `source` field on the resulting object. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `security_center_automation` resource into the root Terraform configuration.
@@ -355,10 +355,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_string` (`string`):  When `null`, the `connection_string` field will be omitted from the resulting object.
-  - `resource_id` (`string`): 
-  - `trigger_url` (`string`):  When `null`, the `trigger_url` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `connection_string` (`string`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` field will be omitted from the resulting object.
+  - `resource_id` (`string`): Set the `resource_id` field on the resulting object.
+  - `trigger_url` (`string`): Set the `trigger_url` field on the resulting object. When `null`, the `trigger_url` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -381,8 +381,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `event_source` (`string`): 
-  - `rule_set` (`list[obj]`):  When `null`, the `rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.new](#fn-sourcerule_setnew) constructor.
+  - `event_source` (`string`): Set the `event_source` field on the resulting object.
+  - `rule_set` (`list[obj]`): Set the `rule_set` field on the resulting object. When `null`, the `rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.new](#fn-sourcerule_setnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -405,7 +405,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.rule.new](#fn-sourcesourcerulenew) constructor.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_automation.source.rule_set.rule.new](#fn-sourcesourcerulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule_set` sub block.
@@ -428,10 +428,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `expected_value` (`string`): 
-  - `operator` (`string`): 
-  - `property_path` (`string`): 
-  - `property_type` (`string`): 
+  - `expected_value` (`string`): Set the `expected_value` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `property_path` (`string`): Set the `property_path` field on the resulting object.
+  - `property_type` (`string`): Set the `property_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -454,10 +454,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -54,12 +54,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `alert_notifications` (`bool`): 
-  - `alerts_to_admins` (`bool`): 
-  - `email` (`string`): 
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `phone` (`string`):  When `null`, the `phone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_contact.timeouts.new](#fn-timeoutsnew) constructor.
+  - `alert_notifications` (`bool`): Set the `alert_notifications` field on the resulting resource block.
+  - `alerts_to_admins` (`bool`): Set the `alerts_to_admins` field on the resulting resource block.
+  - `email` (`string`): Set the `email` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block. When `null`, the `name` field will be omitted from the resulting object.
+  - `phone` (`string`): Set the `phone` field on the resulting resource block. When `null`, the `phone` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_contact.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,12 +83,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `alert_notifications` (`bool`): 
-  - `alerts_to_admins` (`bool`): 
-  - `email` (`string`): 
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `phone` (`string`):  When `null`, the `phone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_contact.timeouts.new](#fn-timeoutsnew) constructor.
+  - `alert_notifications` (`bool`): Set the `alert_notifications` field on the resulting object.
+  - `alerts_to_admins` (`bool`): Set the `alerts_to_admins` field on the resulting object.
+  - `email` (`string`): Set the `email` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `phone` (`string`): Set the `phone` field on the resulting object. When `null`, the `phone` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_contact.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `security_center_contact` resource into the root Terraform configuration.
@@ -227,10 +227,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

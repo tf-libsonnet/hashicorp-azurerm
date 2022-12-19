@@ -63,18 +63,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `detector_type` (`string`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `scope_resource_ids` (`list`): 
-  - `severity` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `throttling_duration` (`string`):  When `null`, the `throttling_duration` field will be omitted from the resulting object.
-  - `action_group` (`list[obj]`):  When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-action_groupnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `detector_type` (`string`): Set the `detector_type` field on the resulting resource block.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `scope_resource_ids` (`list`): Set the `scope_resource_ids` field on the resulting resource block.
+  - `severity` (`string`): Set the `severity` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `throttling_duration` (`string`): Set the `throttling_duration` field on the resulting resource block. When `null`, the `throttling_duration` field will be omitted from the resulting object.
+  - `action_group` (`list[obj]`): Set the `action_group` field on the resulting resource block. When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-action_groupnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,18 +98,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `detector_type` (`string`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `scope_resource_ids` (`list`): 
-  - `severity` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `throttling_duration` (`string`):  When `null`, the `throttling_duration` field will be omitted from the resulting object.
-  - `action_group` (`list[obj]`):  When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-action_groupnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `detector_type` (`string`): Set the `detector_type` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `scope_resource_ids` (`list`): Set the `scope_resource_ids` field on the resulting object.
+  - `severity` (`string`): Set the `severity` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `throttling_duration` (`string`): Set the `throttling_duration` field on the resulting object. When `null`, the `throttling_duration` field will be omitted from the resulting object.
+  - `action_group` (`list[obj]`): Set the `action_group` field on the resulting object. When `null`, the `action_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.action_group.new](#fn-action_groupnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_smart_detector_alert_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_smart_detector_alert_rule` resource into the root Terraform configuration.
@@ -365,9 +365,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `email_subject` (`string`):  When `null`, the `email_subject` field will be omitted from the resulting object.
-  - `ids` (`list`): 
-  - `webhook_payload` (`string`):  When `null`, the `webhook_payload` field will be omitted from the resulting object.
+  - `email_subject` (`string`): Set the `email_subject` field on the resulting object. When `null`, the `email_subject` field will be omitted from the resulting object.
+  - `ids` (`list`): Set the `ids` field on the resulting object.
+  - `webhook_payload` (`string`): Set the `webhook_payload` field on the resulting object. When `null`, the `webhook_payload` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action_group` sub block.
@@ -390,10 +390,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

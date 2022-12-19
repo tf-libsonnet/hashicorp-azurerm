@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cluster_purpose` (`string`):  When `null`, the `cluster_purpose` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `kubernetes_cluster_id` (`string`): 
-  - `location` (`string`): 
-  - `machine_learning_workspace_id` (`string`): 
-  - `name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-identitynew) constructor.
-  - `ssl` (`list[obj]`):  When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-sslnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_purpose` (`string`): Set the `cluster_purpose` field on the resulting resource block. When `null`, the `cluster_purpose` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-identitynew) constructor.
+  - `ssl` (`list[obj]`): Set the `ssl` field on the resulting resource block. When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-sslnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cluster_purpose` (`string`):  When `null`, the `cluster_purpose` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `kubernetes_cluster_id` (`string`): 
-  - `location` (`string`): 
-  - `machine_learning_workspace_id` (`string`): 
-  - `name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-identitynew) constructor.
-  - `ssl` (`list[obj]`):  When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-sslnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_purpose` (`string`): Set the `cluster_purpose` field on the resulting object. When `null`, the `cluster_purpose` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-identitynew) constructor.
+  - `ssl` (`list[obj]`): Set the `ssl` field on the resulting object. When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-sslnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `machine_learning_inference_cluster` resource into the root Terraform configuration.
@@ -351,8 +351,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -375,11 +375,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `cert` (`string`):  When `null`, the `cert` field will be omitted from the resulting object.
-  - `cname` (`string`):  When `null`, the `cname` field will be omitted from the resulting object.
-  - `key` (`string`):  When `null`, the `key` field will be omitted from the resulting object.
-  - `leaf_domain_label` (`string`):  When `null`, the `leaf_domain_label` field will be omitted from the resulting object.
-  - `overwrite_existing_domain` (`bool`):  When `null`, the `overwrite_existing_domain` field will be omitted from the resulting object.
+  - `cert` (`string`): Set the `cert` field on the resulting object. When `null`, the `cert` field will be omitted from the resulting object.
+  - `cname` (`string`): Set the `cname` field on the resulting object. When `null`, the `cname` field will be omitted from the resulting object.
+  - `key` (`string`): Set the `key` field on the resulting object. When `null`, the `key` field will be omitted from the resulting object.
+  - `leaf_domain_label` (`string`): Set the `leaf_domain_label` field on the resulting object. When `null`, the `leaf_domain_label` field will be omitted from the resulting object.
+  - `overwrite_existing_domain` (`bool`): Set the `overwrite_existing_domain` field on the resulting object. When `null`, the `overwrite_existing_domain` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ssl` sub block.
@@ -402,10 +402,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -131,25 +131,25 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `content_types_to_compress` (`list`):  When `null`, the `content_types_to_compress` field will be omitted from the resulting object.
-  - `is_compression_enabled` (`bool`):  When `null`, the `is_compression_enabled` field will be omitted from the resulting object.
-  - `is_http_allowed` (`bool`):  When `null`, the `is_http_allowed` field will be omitted from the resulting object.
-  - `is_https_allowed` (`bool`):  When `null`, the `is_https_allowed` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `optimization_type` (`string`):  When `null`, the `optimization_type` field will be omitted from the resulting object.
-  - `origin_host_header` (`string`):  When `null`, the `origin_host_header` field will be omitted from the resulting object.
-  - `origin_path` (`string`):  When `null`, the `origin_path` field will be omitted from the resulting object.
-  - `probe_path` (`string`):  When `null`, the `probe_path` field will be omitted from the resulting object.
-  - `profile_name` (`string`): 
-  - `querystring_caching_behaviour` (`string`):  When `null`, the `querystring_caching_behaviour` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `delivery_rule` (`list[obj]`):  When `null`, the `delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.new](#fn-delivery_rulenew) constructor.
-  - `geo_filter` (`list[obj]`):  When `null`, the `geo_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.geo_filter.new](#fn-geo_filternew) constructor.
-  - `global_delivery_rule` (`list[obj]`):  When `null`, the `global_delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.new](#fn-global_delivery_rulenew) constructor.
-  - `origin` (`list[obj]`):  When `null`, the `origin` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.origin.new](#fn-originnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
+  - `content_types_to_compress` (`list`): Set the `content_types_to_compress` field on the resulting resource block. When `null`, the `content_types_to_compress` field will be omitted from the resulting object.
+  - `is_compression_enabled` (`bool`): Set the `is_compression_enabled` field on the resulting resource block. When `null`, the `is_compression_enabled` field will be omitted from the resulting object.
+  - `is_http_allowed` (`bool`): Set the `is_http_allowed` field on the resulting resource block. When `null`, the `is_http_allowed` field will be omitted from the resulting object.
+  - `is_https_allowed` (`bool`): Set the `is_https_allowed` field on the resulting resource block. When `null`, the `is_https_allowed` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `optimization_type` (`string`): Set the `optimization_type` field on the resulting resource block. When `null`, the `optimization_type` field will be omitted from the resulting object.
+  - `origin_host_header` (`string`): Set the `origin_host_header` field on the resulting resource block. When `null`, the `origin_host_header` field will be omitted from the resulting object.
+  - `origin_path` (`string`): Set the `origin_path` field on the resulting resource block. When `null`, the `origin_path` field will be omitted from the resulting object.
+  - `probe_path` (`string`): Set the `probe_path` field on the resulting resource block. When `null`, the `probe_path` field will be omitted from the resulting object.
+  - `profile_name` (`string`): Set the `profile_name` field on the resulting resource block.
+  - `querystring_caching_behaviour` (`string`): Set the `querystring_caching_behaviour` field on the resulting resource block. When `null`, the `querystring_caching_behaviour` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `delivery_rule` (`list[obj]`): Set the `delivery_rule` field on the resulting resource block. When `null`, the `delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.new](#fn-delivery_rulenew) constructor.
+  - `geo_filter` (`list[obj]`): Set the `geo_filter` field on the resulting resource block. When `null`, the `geo_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.geo_filter.new](#fn-geo_filternew) constructor.
+  - `global_delivery_rule` (`list[obj]`): Set the `global_delivery_rule` field on the resulting resource block. When `null`, the `global_delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.new](#fn-global_delivery_rulenew) constructor.
+  - `origin` (`list[obj]`): Set the `origin` field on the resulting resource block. When `null`, the `origin` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.origin.new](#fn-originnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -173,25 +173,25 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `content_types_to_compress` (`list`):  When `null`, the `content_types_to_compress` field will be omitted from the resulting object.
-  - `is_compression_enabled` (`bool`):  When `null`, the `is_compression_enabled` field will be omitted from the resulting object.
-  - `is_http_allowed` (`bool`):  When `null`, the `is_http_allowed` field will be omitted from the resulting object.
-  - `is_https_allowed` (`bool`):  When `null`, the `is_https_allowed` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `optimization_type` (`string`):  When `null`, the `optimization_type` field will be omitted from the resulting object.
-  - `origin_host_header` (`string`):  When `null`, the `origin_host_header` field will be omitted from the resulting object.
-  - `origin_path` (`string`):  When `null`, the `origin_path` field will be omitted from the resulting object.
-  - `probe_path` (`string`):  When `null`, the `probe_path` field will be omitted from the resulting object.
-  - `profile_name` (`string`): 
-  - `querystring_caching_behaviour` (`string`):  When `null`, the `querystring_caching_behaviour` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `delivery_rule` (`list[obj]`):  When `null`, the `delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.new](#fn-delivery_rulenew) constructor.
-  - `geo_filter` (`list[obj]`):  When `null`, the `geo_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.geo_filter.new](#fn-geo_filternew) constructor.
-  - `global_delivery_rule` (`list[obj]`):  When `null`, the `global_delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.new](#fn-global_delivery_rulenew) constructor.
-  - `origin` (`list[obj]`):  When `null`, the `origin` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.origin.new](#fn-originnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
+  - `content_types_to_compress` (`list`): Set the `content_types_to_compress` field on the resulting object. When `null`, the `content_types_to_compress` field will be omitted from the resulting object.
+  - `is_compression_enabled` (`bool`): Set the `is_compression_enabled` field on the resulting object. When `null`, the `is_compression_enabled` field will be omitted from the resulting object.
+  - `is_http_allowed` (`bool`): Set the `is_http_allowed` field on the resulting object. When `null`, the `is_http_allowed` field will be omitted from the resulting object.
+  - `is_https_allowed` (`bool`): Set the `is_https_allowed` field on the resulting object. When `null`, the `is_https_allowed` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `optimization_type` (`string`): Set the `optimization_type` field on the resulting object. When `null`, the `optimization_type` field will be omitted from the resulting object.
+  - `origin_host_header` (`string`): Set the `origin_host_header` field on the resulting object. When `null`, the `origin_host_header` field will be omitted from the resulting object.
+  - `origin_path` (`string`): Set the `origin_path` field on the resulting object. When `null`, the `origin_path` field will be omitted from the resulting object.
+  - `probe_path` (`string`): Set the `probe_path` field on the resulting object. When `null`, the `probe_path` field will be omitted from the resulting object.
+  - `profile_name` (`string`): Set the `profile_name` field on the resulting object.
+  - `querystring_caching_behaviour` (`string`): Set the `querystring_caching_behaviour` field on the resulting object. When `null`, the `querystring_caching_behaviour` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `delivery_rule` (`list[obj]`): Set the `delivery_rule` field on the resulting object. When `null`, the `delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.new](#fn-delivery_rulenew) constructor.
+  - `geo_filter` (`list[obj]`): Set the `geo_filter` field on the resulting object. When `null`, the `geo_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.geo_filter.new](#fn-geo_filternew) constructor.
+  - `global_delivery_rule` (`list[obj]`): Set the `global_delivery_rule` field on the resulting object. When `null`, the `global_delivery_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.new](#fn-global_delivery_rulenew) constructor.
+  - `origin` (`list[obj]`): Set the `origin` field on the resulting object. When `null`, the `origin` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.origin.new](#fn-originnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_endpoint` resource into the root Terraform configuration.
@@ -622,28 +622,28 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `order` (`number`): 
-  - `cache_expiration_action` (`list[obj]`):  When `null`, the `cache_expiration_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.cache_expiration_action.new](#fn-delivery_rulecache_expiration_actionnew) constructor.
-  - `cache_key_query_string_action` (`list[obj]`):  When `null`, the `cache_key_query_string_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.cache_key_query_string_action.new](#fn-delivery_rulecache_key_query_string_actionnew) constructor.
-  - `cookies_condition` (`list[obj]`):  When `null`, the `cookies_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.cookies_condition.new](#fn-delivery_rulecookies_conditionnew) constructor.
-  - `device_condition` (`list[obj]`):  When `null`, the `device_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.device_condition.new](#fn-delivery_ruledevice_conditionnew) constructor.
-  - `http_version_condition` (`list[obj]`):  When `null`, the `http_version_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.http_version_condition.new](#fn-delivery_rulehttp_version_conditionnew) constructor.
-  - `modify_request_header_action` (`list[obj]`):  When `null`, the `modify_request_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.modify_request_header_action.new](#fn-delivery_rulemodify_request_header_actionnew) constructor.
-  - `modify_response_header_action` (`list[obj]`):  When `null`, the `modify_response_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.modify_response_header_action.new](#fn-delivery_rulemodify_response_header_actionnew) constructor.
-  - `post_arg_condition` (`list[obj]`):  When `null`, the `post_arg_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.post_arg_condition.new](#fn-delivery_rulepost_arg_conditionnew) constructor.
-  - `query_string_condition` (`list[obj]`):  When `null`, the `query_string_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.query_string_condition.new](#fn-delivery_rulequery_string_conditionnew) constructor.
-  - `remote_address_condition` (`list[obj]`):  When `null`, the `remote_address_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.remote_address_condition.new](#fn-delivery_ruleremote_address_conditionnew) constructor.
-  - `request_body_condition` (`list[obj]`):  When `null`, the `request_body_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_body_condition.new](#fn-delivery_rulerequest_body_conditionnew) constructor.
-  - `request_header_condition` (`list[obj]`):  When `null`, the `request_header_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_header_condition.new](#fn-delivery_rulerequest_header_conditionnew) constructor.
-  - `request_method_condition` (`list[obj]`):  When `null`, the `request_method_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_method_condition.new](#fn-delivery_rulerequest_method_conditionnew) constructor.
-  - `request_scheme_condition` (`list[obj]`):  When `null`, the `request_scheme_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_scheme_condition.new](#fn-delivery_rulerequest_scheme_conditionnew) constructor.
-  - `request_uri_condition` (`list[obj]`):  When `null`, the `request_uri_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_uri_condition.new](#fn-delivery_rulerequest_uri_conditionnew) constructor.
-  - `url_file_extension_condition` (`list[obj]`):  When `null`, the `url_file_extension_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_file_extension_condition.new](#fn-delivery_ruleurl_file_extension_conditionnew) constructor.
-  - `url_file_name_condition` (`list[obj]`):  When `null`, the `url_file_name_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_file_name_condition.new](#fn-delivery_ruleurl_file_name_conditionnew) constructor.
-  - `url_path_condition` (`list[obj]`):  When `null`, the `url_path_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_path_condition.new](#fn-delivery_ruleurl_path_conditionnew) constructor.
-  - `url_redirect_action` (`list[obj]`):  When `null`, the `url_redirect_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_redirect_action.new](#fn-delivery_ruleurl_redirect_actionnew) constructor.
-  - `url_rewrite_action` (`list[obj]`):  When `null`, the `url_rewrite_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_rewrite_action.new](#fn-delivery_ruleurl_rewrite_actionnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `order` (`number`): Set the `order` field on the resulting object.
+  - `cache_expiration_action` (`list[obj]`): Set the `cache_expiration_action` field on the resulting object. When `null`, the `cache_expiration_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.cache_expiration_action.new](#fn-delivery_rulecache_expiration_actionnew) constructor.
+  - `cache_key_query_string_action` (`list[obj]`): Set the `cache_key_query_string_action` field on the resulting object. When `null`, the `cache_key_query_string_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.cache_key_query_string_action.new](#fn-delivery_rulecache_key_query_string_actionnew) constructor.
+  - `cookies_condition` (`list[obj]`): Set the `cookies_condition` field on the resulting object. When `null`, the `cookies_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.cookies_condition.new](#fn-delivery_rulecookies_conditionnew) constructor.
+  - `device_condition` (`list[obj]`): Set the `device_condition` field on the resulting object. When `null`, the `device_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.device_condition.new](#fn-delivery_ruledevice_conditionnew) constructor.
+  - `http_version_condition` (`list[obj]`): Set the `http_version_condition` field on the resulting object. When `null`, the `http_version_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.http_version_condition.new](#fn-delivery_rulehttp_version_conditionnew) constructor.
+  - `modify_request_header_action` (`list[obj]`): Set the `modify_request_header_action` field on the resulting object. When `null`, the `modify_request_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.modify_request_header_action.new](#fn-delivery_rulemodify_request_header_actionnew) constructor.
+  - `modify_response_header_action` (`list[obj]`): Set the `modify_response_header_action` field on the resulting object. When `null`, the `modify_response_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.modify_response_header_action.new](#fn-delivery_rulemodify_response_header_actionnew) constructor.
+  - `post_arg_condition` (`list[obj]`): Set the `post_arg_condition` field on the resulting object. When `null`, the `post_arg_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.post_arg_condition.new](#fn-delivery_rulepost_arg_conditionnew) constructor.
+  - `query_string_condition` (`list[obj]`): Set the `query_string_condition` field on the resulting object. When `null`, the `query_string_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.query_string_condition.new](#fn-delivery_rulequery_string_conditionnew) constructor.
+  - `remote_address_condition` (`list[obj]`): Set the `remote_address_condition` field on the resulting object. When `null`, the `remote_address_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.remote_address_condition.new](#fn-delivery_ruleremote_address_conditionnew) constructor.
+  - `request_body_condition` (`list[obj]`): Set the `request_body_condition` field on the resulting object. When `null`, the `request_body_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_body_condition.new](#fn-delivery_rulerequest_body_conditionnew) constructor.
+  - `request_header_condition` (`list[obj]`): Set the `request_header_condition` field on the resulting object. When `null`, the `request_header_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_header_condition.new](#fn-delivery_rulerequest_header_conditionnew) constructor.
+  - `request_method_condition` (`list[obj]`): Set the `request_method_condition` field on the resulting object. When `null`, the `request_method_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_method_condition.new](#fn-delivery_rulerequest_method_conditionnew) constructor.
+  - `request_scheme_condition` (`list[obj]`): Set the `request_scheme_condition` field on the resulting object. When `null`, the `request_scheme_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_scheme_condition.new](#fn-delivery_rulerequest_scheme_conditionnew) constructor.
+  - `request_uri_condition` (`list[obj]`): Set the `request_uri_condition` field on the resulting object. When `null`, the `request_uri_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.request_uri_condition.new](#fn-delivery_rulerequest_uri_conditionnew) constructor.
+  - `url_file_extension_condition` (`list[obj]`): Set the `url_file_extension_condition` field on the resulting object. When `null`, the `url_file_extension_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_file_extension_condition.new](#fn-delivery_ruleurl_file_extension_conditionnew) constructor.
+  - `url_file_name_condition` (`list[obj]`): Set the `url_file_name_condition` field on the resulting object. When `null`, the `url_file_name_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_file_name_condition.new](#fn-delivery_ruleurl_file_name_conditionnew) constructor.
+  - `url_path_condition` (`list[obj]`): Set the `url_path_condition` field on the resulting object. When `null`, the `url_path_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_path_condition.new](#fn-delivery_ruleurl_path_conditionnew) constructor.
+  - `url_redirect_action` (`list[obj]`): Set the `url_redirect_action` field on the resulting object. When `null`, the `url_redirect_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_redirect_action.new](#fn-delivery_ruleurl_redirect_actionnew) constructor.
+  - `url_rewrite_action` (`list[obj]`): Set the `url_rewrite_action` field on the resulting object. When `null`, the `url_rewrite_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.delivery_rule.url_rewrite_action.new](#fn-delivery_ruleurl_rewrite_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delivery_rule` sub block.
@@ -666,8 +666,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `behavior` (`string`): 
-  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
+  - `behavior` (`string`): Set the `behavior` field on the resulting object.
+  - `duration` (`string`): Set the `duration` field on the resulting object. When `null`, the `duration` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cache_expiration_action` sub block.
@@ -690,8 +690,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `behavior` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `behavior` (`string`): Set the `behavior` field on the resulting object.
+  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cache_key_query_string_action` sub block.
@@ -714,11 +714,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `selector` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `selector` (`string`): Set the `selector` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cookies_condition` sub block.
@@ -741,9 +741,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`): 
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `device_condition` sub block.
@@ -766,9 +766,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`): 
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `http_version_condition` sub block.
@@ -791,9 +791,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `modify_request_header_action` sub block.
@@ -816,9 +816,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `modify_response_header_action` sub block.
@@ -841,11 +841,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `selector` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `selector` (`string`): Set the `selector` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `post_arg_condition` sub block.
@@ -868,10 +868,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `query_string_condition` sub block.
@@ -894,9 +894,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `remote_address_condition` sub block.
@@ -919,10 +919,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `request_body_condition` sub block.
@@ -945,11 +945,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `selector` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `selector` (`string`): Set the `selector` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `request_header_condition` sub block.
@@ -972,9 +972,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`): 
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `request_method_condition` sub block.
@@ -997,9 +997,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`): 
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `request_scheme_condition` sub block.
@@ -1022,10 +1022,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `request_uri_condition` sub block.
@@ -1048,10 +1048,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_file_extension_condition` sub block.
@@ -1074,10 +1074,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_file_name_condition` sub block.
@@ -1100,10 +1100,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`):  When `null`, the `match_values` field will be omitted from the resulting object.
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_path_condition` sub block.
@@ -1126,12 +1126,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `fragment` (`string`):  When `null`, the `fragment` field will be omitted from the resulting object.
-  - `hostname` (`string`):  When `null`, the `hostname` field will be omitted from the resulting object.
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `protocol` (`string`):  When `null`, the `protocol` field will be omitted from the resulting object.
-  - `query_string` (`string`):  When `null`, the `query_string` field will be omitted from the resulting object.
-  - `redirect_type` (`string`): 
+  - `fragment` (`string`): Set the `fragment` field on the resulting object. When `null`, the `fragment` field will be omitted from the resulting object.
+  - `hostname` (`string`): Set the `hostname` field on the resulting object. When `null`, the `hostname` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
+  - `query_string` (`string`): Set the `query_string` field on the resulting object. When `null`, the `query_string` field will be omitted from the resulting object.
+  - `redirect_type` (`string`): Set the `redirect_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_redirect_action` sub block.
@@ -1154,9 +1154,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `destination` (`string`): 
-  - `preserve_unmatched_path` (`bool`):  When `null`, the `preserve_unmatched_path` field will be omitted from the resulting object.
-  - `source_pattern` (`string`): 
+  - `destination` (`string`): Set the `destination` field on the resulting object.
+  - `preserve_unmatched_path` (`bool`): Set the `preserve_unmatched_path` field on the resulting object. When `null`, the `preserve_unmatched_path` field will be omitted from the resulting object.
+  - `source_pattern` (`string`): Set the `source_pattern` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_rewrite_action` sub block.
@@ -1179,9 +1179,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `country_codes` (`list`): 
-  - `relative_path` (`string`): 
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `country_codes` (`list`): Set the `country_codes` field on the resulting object.
+  - `relative_path` (`string`): Set the `relative_path` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `geo_filter` sub block.
@@ -1204,12 +1204,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `cache_expiration_action` (`list[obj]`):  When `null`, the `cache_expiration_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.cache_expiration_action.new](#fn-global_delivery_rulecache_expiration_actionnew) constructor.
-  - `cache_key_query_string_action` (`list[obj]`):  When `null`, the `cache_key_query_string_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.cache_key_query_string_action.new](#fn-global_delivery_rulecache_key_query_string_actionnew) constructor.
-  - `modify_request_header_action` (`list[obj]`):  When `null`, the `modify_request_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.modify_request_header_action.new](#fn-global_delivery_rulemodify_request_header_actionnew) constructor.
-  - `modify_response_header_action` (`list[obj]`):  When `null`, the `modify_response_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.modify_response_header_action.new](#fn-global_delivery_rulemodify_response_header_actionnew) constructor.
-  - `url_redirect_action` (`list[obj]`):  When `null`, the `url_redirect_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.url_redirect_action.new](#fn-global_delivery_ruleurl_redirect_actionnew) constructor.
-  - `url_rewrite_action` (`list[obj]`):  When `null`, the `url_rewrite_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.url_rewrite_action.new](#fn-global_delivery_ruleurl_rewrite_actionnew) constructor.
+  - `cache_expiration_action` (`list[obj]`): Set the `cache_expiration_action` field on the resulting object. When `null`, the `cache_expiration_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.cache_expiration_action.new](#fn-global_delivery_rulecache_expiration_actionnew) constructor.
+  - `cache_key_query_string_action` (`list[obj]`): Set the `cache_key_query_string_action` field on the resulting object. When `null`, the `cache_key_query_string_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.cache_key_query_string_action.new](#fn-global_delivery_rulecache_key_query_string_actionnew) constructor.
+  - `modify_request_header_action` (`list[obj]`): Set the `modify_request_header_action` field on the resulting object. When `null`, the `modify_request_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.modify_request_header_action.new](#fn-global_delivery_rulemodify_request_header_actionnew) constructor.
+  - `modify_response_header_action` (`list[obj]`): Set the `modify_response_header_action` field on the resulting object. When `null`, the `modify_response_header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.modify_response_header_action.new](#fn-global_delivery_rulemodify_response_header_actionnew) constructor.
+  - `url_redirect_action` (`list[obj]`): Set the `url_redirect_action` field on the resulting object. When `null`, the `url_redirect_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.url_redirect_action.new](#fn-global_delivery_ruleurl_redirect_actionnew) constructor.
+  - `url_rewrite_action` (`list[obj]`): Set the `url_rewrite_action` field on the resulting object. When `null`, the `url_rewrite_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint.global_delivery_rule.url_rewrite_action.new](#fn-global_delivery_ruleurl_rewrite_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `global_delivery_rule` sub block.
@@ -1232,8 +1232,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `behavior` (`string`): 
-  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
+  - `behavior` (`string`): Set the `behavior` field on the resulting object.
+  - `duration` (`string`): Set the `duration` field on the resulting object. When `null`, the `duration` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cache_expiration_action` sub block.
@@ -1256,8 +1256,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `behavior` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `behavior` (`string`): Set the `behavior` field on the resulting object.
+  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cache_key_query_string_action` sub block.
@@ -1280,9 +1280,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `modify_request_header_action` sub block.
@@ -1305,9 +1305,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `modify_response_header_action` sub block.
@@ -1330,12 +1330,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `fragment` (`string`):  When `null`, the `fragment` field will be omitted from the resulting object.
-  - `hostname` (`string`):  When `null`, the `hostname` field will be omitted from the resulting object.
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `protocol` (`string`):  When `null`, the `protocol` field will be omitted from the resulting object.
-  - `query_string` (`string`):  When `null`, the `query_string` field will be omitted from the resulting object.
-  - `redirect_type` (`string`): 
+  - `fragment` (`string`): Set the `fragment` field on the resulting object. When `null`, the `fragment` field will be omitted from the resulting object.
+  - `hostname` (`string`): Set the `hostname` field on the resulting object. When `null`, the `hostname` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
+  - `query_string` (`string`): Set the `query_string` field on the resulting object. When `null`, the `query_string` field will be omitted from the resulting object.
+  - `redirect_type` (`string`): Set the `redirect_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_redirect_action` sub block.
@@ -1358,9 +1358,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `destination` (`string`): 
-  - `preserve_unmatched_path` (`bool`):  When `null`, the `preserve_unmatched_path` field will be omitted from the resulting object.
-  - `source_pattern` (`string`): 
+  - `destination` (`string`): Set the `destination` field on the resulting object.
+  - `preserve_unmatched_path` (`bool`): Set the `preserve_unmatched_path` field on the resulting object. When `null`, the `preserve_unmatched_path` field will be omitted from the resulting object.
+  - `source_pattern` (`string`): Set the `source_pattern` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_rewrite_action` sub block.
@@ -1383,10 +1383,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `host_name` (`string`): 
-  - `http_port` (`number`):  When `null`, the `http_port` field will be omitted from the resulting object.
-  - `https_port` (`number`):  When `null`, the `https_port` field will be omitted from the resulting object.
-  - `name` (`string`): 
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `http_port` (`number`): Set the `http_port` field on the resulting object. When `null`, the `http_port` field will be omitted from the resulting object.
+  - `https_port` (`number`): Set the `https_port` field on the resulting object. When `null`, the `https_port` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `origin` sub block.
@@ -1409,10 +1409,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

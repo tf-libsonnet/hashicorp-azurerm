@@ -56,14 +56,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `continue_on_errors_enabled` (`bool`):  When `null`, the `continue_on_errors_enabled` field will be omitted from the resulting object.
-  - `database_id` (`string`): 
-  - `force_an_update_when_value_changed` (`string`):  When `null`, the `force_an_update_when_value_changed` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `sas_token` (`string`):  When `null`, the `sas_token` field will be omitted from the resulting object.
-  - `script_content` (`string`):  When `null`, the `script_content` field will be omitted from the resulting object.
-  - `url` (`string`):  When `null`, the `url` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_script.timeouts.new](#fn-timeoutsnew) constructor.
+  - `continue_on_errors_enabled` (`bool`): Set the `continue_on_errors_enabled` field on the resulting resource block. When `null`, the `continue_on_errors_enabled` field will be omitted from the resulting object.
+  - `database_id` (`string`): Set the `database_id` field on the resulting resource block.
+  - `force_an_update_when_value_changed` (`string`): Set the `force_an_update_when_value_changed` field on the resulting resource block. When `null`, the `force_an_update_when_value_changed` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `sas_token` (`string`): Set the `sas_token` field on the resulting resource block. When `null`, the `sas_token` field will be omitted from the resulting object.
+  - `script_content` (`string`): Set the `script_content` field on the resulting resource block. When `null`, the `script_content` field will be omitted from the resulting object.
+  - `url` (`string`): Set the `url` field on the resulting resource block. When `null`, the `url` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_script.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,14 +87,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `continue_on_errors_enabled` (`bool`):  When `null`, the `continue_on_errors_enabled` field will be omitted from the resulting object.
-  - `database_id` (`string`): 
-  - `force_an_update_when_value_changed` (`string`):  When `null`, the `force_an_update_when_value_changed` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `sas_token` (`string`):  When `null`, the `sas_token` field will be omitted from the resulting object.
-  - `script_content` (`string`):  When `null`, the `script_content` field will be omitted from the resulting object.
-  - `url` (`string`):  When `null`, the `url` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_script.timeouts.new](#fn-timeoutsnew) constructor.
+  - `continue_on_errors_enabled` (`bool`): Set the `continue_on_errors_enabled` field on the resulting object. When `null`, the `continue_on_errors_enabled` field will be omitted from the resulting object.
+  - `database_id` (`string`): Set the `database_id` field on the resulting object.
+  - `force_an_update_when_value_changed` (`string`): Set the `force_an_update_when_value_changed` field on the resulting object. When `null`, the `force_an_update_when_value_changed` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `sas_token` (`string`): Set the `sas_token` field on the resulting object. When `null`, the `sas_token` field will be omitted from the resulting object.
+  - `script_content` (`string`): Set the `script_content` field on the resulting object. When `null`, the `script_content` field will be omitted from the resulting object.
+  - `url` (`string`): Set the `url` field on the resulting object. When `null`, the `url` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_script.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_script` resource into the root Terraform configuration.
@@ -265,10 +265,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

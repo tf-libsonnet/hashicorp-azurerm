@@ -65,12 +65,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frontdoor_name` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frontdoor_name` (`string`): Set the `frontdoor_name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting resource block. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,12 +94,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frontdoor_name` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frontdoor_name` (`string`): Set the `frontdoor_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.new](#fn-rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `frontdoor_rules_engine` resource into the root Terraform configuration.
@@ -259,10 +259,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.new](#fn-ruleactionnew) constructor.
-  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.match_condition.new](#fn-rulematch_conditionnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.new](#fn-ruleactionnew) constructor.
+  - `match_condition` (`list[obj]`): Set the `match_condition` field on the resulting object. When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.match_condition.new](#fn-rulematch_conditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -285,8 +285,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.request_header.new](#fn-rulerulerequest_headernew) constructor.
-  - `response_header` (`list[obj]`):  When `null`, the `response_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.response_header.new](#fn-ruleruleresponse_headernew) constructor.
+  - `request_header` (`list[obj]`): Set the `request_header` field on the resulting object. When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.request_header.new](#fn-rulerulerequest_headernew) constructor.
+  - `response_header` (`list[obj]`): Set the `response_header` field on the resulting object. When `null`, the `response_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_rules_engine.rule.action.response_header.new](#fn-ruleruleresponse_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -309,9 +309,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `header_action_type` (`string`):  When `null`, the `header_action_type` field will be omitted from the resulting object.
-  - `header_name` (`string`):  When `null`, the `header_name` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `header_action_type` (`string`): Set the `header_action_type` field on the resulting object. When `null`, the `header_action_type` field will be omitted from the resulting object.
+  - `header_name` (`string`): Set the `header_name` field on the resulting object. When `null`, the `header_name` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `request_header` sub block.
@@ -334,9 +334,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `header_action_type` (`string`):  When `null`, the `header_action_type` field will be omitted from the resulting object.
-  - `header_name` (`string`):  When `null`, the `header_name` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `header_action_type` (`string`): Set the `header_action_type` field on the resulting object. When `null`, the `header_action_type` field will be omitted from the resulting object.
+  - `header_name` (`string`): Set the `header_name` field on the resulting object. When `null`, the `header_name` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `response_header` sub block.
@@ -359,12 +359,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `negate_condition` (`bool`):  When `null`, the `negate_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): 
-  - `selector` (`string`):  When `null`, the `selector` field will be omitted from the resulting object.
-  - `transform` (`list`):  When `null`, the `transform` field will be omitted from the resulting object.
-  - `value` (`list`):  When `null`, the `value` field will be omitted from the resulting object.
-  - `variable` (`string`):  When `null`, the `variable` field will be omitted from the resulting object.
+  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `selector` (`string`): Set the `selector` field on the resulting object. When `null`, the `selector` field will be omitted from the resulting object.
+  - `transform` (`list`): Set the `transform` field on the resulting object. When `null`, the `transform` field will be omitted from the resulting object.
+  - `value` (`list`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
+  - `variable` (`string`): Set the `variable` field on the resulting object. When `null`, the `variable` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `match_condition` sub block.
@@ -387,10 +387,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

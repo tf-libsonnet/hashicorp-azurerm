@@ -80,26 +80,26 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cache_size` (`number`):  When `null`, the `cache_size` field will be omitted from the resulting object.
-  - `compute_isolation_enabled` (`bool`):  When `null`, the `compute_isolation_enabled` field will be omitted from the resulting object.
-  - `dynamic_executor_allocation_enabled` (`bool`):  When `null`, the `dynamic_executor_allocation_enabled` field will be omitted from the resulting object.
-  - `max_executors` (`number`):  When `null`, the `max_executors` field will be omitted from the resulting object.
-  - `min_executors` (`number`):  When `null`, the `min_executors` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `node_count` (`number`):  When `null`, the `node_count` field will be omitted from the resulting object.
-  - `node_size` (`string`): 
-  - `node_size_family` (`string`): 
-  - `session_level_packages_enabled` (`bool`):  When `null`, the `session_level_packages_enabled` field will be omitted from the resulting object.
-  - `spark_events_folder` (`string`):  When `null`, the `spark_events_folder` field will be omitted from the resulting object.
-  - `spark_log_folder` (`string`):  When `null`, the `spark_log_folder` field will be omitted from the resulting object.
-  - `spark_version` (`string`):  When `null`, the `spark_version` field will be omitted from the resulting object.
-  - `synapse_workspace_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `auto_pause` (`list[obj]`):  When `null`, the `auto_pause` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_pause.new](#fn-auto_pausenew) constructor.
-  - `auto_scale` (`list[obj]`):  When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_scale.new](#fn-auto_scalenew) constructor.
-  - `library_requirement` (`list[obj]`):  When `null`, the `library_requirement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.library_requirement.new](#fn-library_requirementnew) constructor.
-  - `spark_config` (`list[obj]`):  When `null`, the `spark_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.spark_config.new](#fn-spark_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cache_size` (`number`): Set the `cache_size` field on the resulting resource block. When `null`, the `cache_size` field will be omitted from the resulting object.
+  - `compute_isolation_enabled` (`bool`): Set the `compute_isolation_enabled` field on the resulting resource block. When `null`, the `compute_isolation_enabled` field will be omitted from the resulting object.
+  - `dynamic_executor_allocation_enabled` (`bool`): Set the `dynamic_executor_allocation_enabled` field on the resulting resource block. When `null`, the `dynamic_executor_allocation_enabled` field will be omitted from the resulting object.
+  - `max_executors` (`number`): Set the `max_executors` field on the resulting resource block. When `null`, the `max_executors` field will be omitted from the resulting object.
+  - `min_executors` (`number`): Set the `min_executors` field on the resulting resource block. When `null`, the `min_executors` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `node_count` (`number`): Set the `node_count` field on the resulting resource block. When `null`, the `node_count` field will be omitted from the resulting object.
+  - `node_size` (`string`): Set the `node_size` field on the resulting resource block.
+  - `node_size_family` (`string`): Set the `node_size_family` field on the resulting resource block.
+  - `session_level_packages_enabled` (`bool`): Set the `session_level_packages_enabled` field on the resulting resource block. When `null`, the `session_level_packages_enabled` field will be omitted from the resulting object.
+  - `spark_events_folder` (`string`): Set the `spark_events_folder` field on the resulting resource block. When `null`, the `spark_events_folder` field will be omitted from the resulting object.
+  - `spark_log_folder` (`string`): Set the `spark_log_folder` field on the resulting resource block. When `null`, the `spark_log_folder` field will be omitted from the resulting object.
+  - `spark_version` (`string`): Set the `spark_version` field on the resulting resource block. When `null`, the `spark_version` field will be omitted from the resulting object.
+  - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `auto_pause` (`list[obj]`): Set the `auto_pause` field on the resulting resource block. When `null`, the `auto_pause` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_pause.new](#fn-auto_pausenew) constructor.
+  - `auto_scale` (`list[obj]`): Set the `auto_scale` field on the resulting resource block. When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_scale.new](#fn-auto_scalenew) constructor.
+  - `library_requirement` (`list[obj]`): Set the `library_requirement` field on the resulting resource block. When `null`, the `library_requirement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.library_requirement.new](#fn-library_requirementnew) constructor.
+  - `spark_config` (`list[obj]`): Set the `spark_config` field on the resulting resource block. When `null`, the `spark_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.spark_config.new](#fn-spark_confignew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -123,26 +123,26 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cache_size` (`number`):  When `null`, the `cache_size` field will be omitted from the resulting object.
-  - `compute_isolation_enabled` (`bool`):  When `null`, the `compute_isolation_enabled` field will be omitted from the resulting object.
-  - `dynamic_executor_allocation_enabled` (`bool`):  When `null`, the `dynamic_executor_allocation_enabled` field will be omitted from the resulting object.
-  - `max_executors` (`number`):  When `null`, the `max_executors` field will be omitted from the resulting object.
-  - `min_executors` (`number`):  When `null`, the `min_executors` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `node_count` (`number`):  When `null`, the `node_count` field will be omitted from the resulting object.
-  - `node_size` (`string`): 
-  - `node_size_family` (`string`): 
-  - `session_level_packages_enabled` (`bool`):  When `null`, the `session_level_packages_enabled` field will be omitted from the resulting object.
-  - `spark_events_folder` (`string`):  When `null`, the `spark_events_folder` field will be omitted from the resulting object.
-  - `spark_log_folder` (`string`):  When `null`, the `spark_log_folder` field will be omitted from the resulting object.
-  - `spark_version` (`string`):  When `null`, the `spark_version` field will be omitted from the resulting object.
-  - `synapse_workspace_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `auto_pause` (`list[obj]`):  When `null`, the `auto_pause` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_pause.new](#fn-auto_pausenew) constructor.
-  - `auto_scale` (`list[obj]`):  When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_scale.new](#fn-auto_scalenew) constructor.
-  - `library_requirement` (`list[obj]`):  When `null`, the `library_requirement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.library_requirement.new](#fn-library_requirementnew) constructor.
-  - `spark_config` (`list[obj]`):  When `null`, the `spark_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.spark_config.new](#fn-spark_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cache_size` (`number`): Set the `cache_size` field on the resulting object. When `null`, the `cache_size` field will be omitted from the resulting object.
+  - `compute_isolation_enabled` (`bool`): Set the `compute_isolation_enabled` field on the resulting object. When `null`, the `compute_isolation_enabled` field will be omitted from the resulting object.
+  - `dynamic_executor_allocation_enabled` (`bool`): Set the `dynamic_executor_allocation_enabled` field on the resulting object. When `null`, the `dynamic_executor_allocation_enabled` field will be omitted from the resulting object.
+  - `max_executors` (`number`): Set the `max_executors` field on the resulting object. When `null`, the `max_executors` field will be omitted from the resulting object.
+  - `min_executors` (`number`): Set the `min_executors` field on the resulting object. When `null`, the `min_executors` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `node_count` (`number`): Set the `node_count` field on the resulting object. When `null`, the `node_count` field will be omitted from the resulting object.
+  - `node_size` (`string`): Set the `node_size` field on the resulting object.
+  - `node_size_family` (`string`): Set the `node_size_family` field on the resulting object.
+  - `session_level_packages_enabled` (`bool`): Set the `session_level_packages_enabled` field on the resulting object. When `null`, the `session_level_packages_enabled` field will be omitted from the resulting object.
+  - `spark_events_folder` (`string`): Set the `spark_events_folder` field on the resulting object. When `null`, the `spark_events_folder` field will be omitted from the resulting object.
+  - `spark_log_folder` (`string`): Set the `spark_log_folder` field on the resulting object. When `null`, the `spark_log_folder` field will be omitted from the resulting object.
+  - `spark_version` (`string`): Set the `spark_version` field on the resulting object. When `null`, the `spark_version` field will be omitted from the resulting object.
+  - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `auto_pause` (`list[obj]`): Set the `auto_pause` field on the resulting object. When `null`, the `auto_pause` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_pause.new](#fn-auto_pausenew) constructor.
+  - `auto_scale` (`list[obj]`): Set the `auto_scale` field on the resulting object. When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.auto_scale.new](#fn-auto_scalenew) constructor.
+  - `library_requirement` (`list[obj]`): Set the `library_requirement` field on the resulting object. When `null`, the `library_requirement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.library_requirement.new](#fn-library_requirementnew) constructor.
+  - `spark_config` (`list[obj]`): Set the `spark_config` field on the resulting object. When `null`, the `spark_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.spark_config.new](#fn-spark_confignew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_spark_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_spark_pool` resource into the root Terraform configuration.
@@ -589,7 +589,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `delay_in_minutes` (`number`): 
+  - `delay_in_minutes` (`number`): Set the `delay_in_minutes` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `auto_pause` sub block.
@@ -612,8 +612,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_node_count` (`number`): 
-  - `min_node_count` (`number`): 
+  - `max_node_count` (`number`): Set the `max_node_count` field on the resulting object.
+  - `min_node_count` (`number`): Set the `min_node_count` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `auto_scale` sub block.
@@ -636,8 +636,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `content` (`string`): 
-  - `filename` (`string`): 
+  - `content` (`string`): Set the `content` field on the resulting object.
+  - `filename` (`string`): Set the `filename` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `library_requirement` sub block.
@@ -660,8 +660,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `content` (`string`): 
-  - `filename` (`string`): 
+  - `content` (`string`): Set the `content` field on the resulting object.
+  - `filename` (`string`): Set the `filename` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `spark_config` sub block.
@@ -684,10 +684,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

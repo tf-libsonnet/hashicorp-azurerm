@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `account_id` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `kind` (`string`): 
-  - `name` (`string`): 
-  - `terms` (`string`):  When `null`, the `terms` field will be omitted from the resulting object.
-  - `snapshot_schedule` (`list[obj]`):  When `null`, the `snapshot_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.snapshot_schedule.new](#fn-snapshot_schedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.timeouts.new](#fn-timeoutsnew) constructor.
+  - `account_id` (`string`): Set the `account_id` field on the resulting resource block.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `kind` (`string`): Set the `kind` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `terms` (`string`): Set the `terms` field on the resulting resource block. When `null`, the `terms` field will be omitted from the resulting object.
+  - `snapshot_schedule` (`list[obj]`): Set the `snapshot_schedule` field on the resulting resource block. When `null`, the `snapshot_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.snapshot_schedule.new](#fn-snapshot_schedulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `account_id` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `kind` (`string`): 
-  - `name` (`string`): 
-  - `terms` (`string`):  When `null`, the `terms` field will be omitted from the resulting object.
-  - `snapshot_schedule` (`list[obj]`):  When `null`, the `snapshot_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.snapshot_schedule.new](#fn-snapshot_schedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.timeouts.new](#fn-timeoutsnew) constructor.
+  - `account_id` (`string`): Set the `account_id` field on the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `kind` (`string`): Set the `kind` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `terms` (`string`): Set the `terms` field on the resulting object. When `null`, the `terms` field will be omitted from the resulting object.
+  - `snapshot_schedule` (`list[obj]`): Set the `snapshot_schedule` field on the resulting object. When `null`, the `snapshot_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.snapshot_schedule.new](#fn-snapshot_schedulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_share.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_share` resource into the root Terraform configuration.
@@ -270,9 +270,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `recurrence` (`string`): 
-  - `start_time` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `recurrence` (`string`): Set the `recurrence` field on the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `snapshot_schedule` sub block.
@@ -295,10 +295,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

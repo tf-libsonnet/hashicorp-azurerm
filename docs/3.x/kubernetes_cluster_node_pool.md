@@ -103,47 +103,47 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `capacity_reservation_group_id` (`string`):  When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
-  - `custom_ca_trust_enabled` (`bool`):  When `null`, the `custom_ca_trust_enabled` field will be omitted from the resulting object.
-  - `enable_auto_scaling` (`bool`):  When `null`, the `enable_auto_scaling` field will be omitted from the resulting object.
-  - `enable_host_encryption` (`bool`):  When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
-  - `enable_node_public_ip` (`bool`):  When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
-  - `eviction_policy` (`string`):  When `null`, the `eviction_policy` field will be omitted from the resulting object.
-  - `fips_enabled` (`bool`):  When `null`, the `fips_enabled` field will be omitted from the resulting object.
-  - `host_group_id` (`string`):  When `null`, the `host_group_id` field will be omitted from the resulting object.
-  - `kubelet_disk_type` (`string`):  When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
-  - `kubernetes_cluster_id` (`string`): 
-  - `max_count` (`number`):  When `null`, the `max_count` field will be omitted from the resulting object.
-  - `max_pods` (`number`):  When `null`, the `max_pods` field will be omitted from the resulting object.
-  - `message_of_the_day` (`string`):  When `null`, the `message_of_the_day` field will be omitted from the resulting object.
-  - `min_count` (`number`):  When `null`, the `min_count` field will be omitted from the resulting object.
-  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `node_count` (`number`):  When `null`, the `node_count` field will be omitted from the resulting object.
-  - `node_labels` (`obj`):  When `null`, the `node_labels` field will be omitted from the resulting object.
-  - `node_public_ip_prefix_id` (`string`):  When `null`, the `node_public_ip_prefix_id` field will be omitted from the resulting object.
-  - `node_taints` (`list`):  When `null`, the `node_taints` field will be omitted from the resulting object.
-  - `orchestrator_version` (`string`):  When `null`, the `orchestrator_version` field will be omitted from the resulting object.
-  - `os_disk_size_gb` (`number`):  When `null`, the `os_disk_size_gb` field will be omitted from the resulting object.
-  - `os_disk_type` (`string`):  When `null`, the `os_disk_type` field will be omitted from the resulting object.
-  - `os_sku` (`string`):  When `null`, the `os_sku` field will be omitted from the resulting object.
-  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
-  - `pod_subnet_id` (`string`):  When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
-  - `priority` (`string`):  When `null`, the `priority` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `scale_down_mode` (`string`):  When `null`, the `scale_down_mode` field will be omitted from the resulting object.
-  - `spot_max_price` (`number`):  When `null`, the `spot_max_price` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ultra_ssd_enabled` (`bool`):  When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
-  - `vm_size` (`string`): 
-  - `vnet_subnet_id` (`string`):  When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
-  - `workload_runtime` (`string`):  When `null`, the `workload_runtime` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `kubelet_config` (`list[obj]`):  When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
-  - `linux_os_config` (`list[obj]`):  When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
-  - `upgrade_settings` (`list[obj]`):  When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
-  - `windows_profile` (`list[obj]`):  When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.windows_profile.new](#fn-windows_profilenew) constructor.
+  - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting resource block. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
+  - `custom_ca_trust_enabled` (`bool`): Set the `custom_ca_trust_enabled` field on the resulting resource block. When `null`, the `custom_ca_trust_enabled` field will be omitted from the resulting object.
+  - `enable_auto_scaling` (`bool`): Set the `enable_auto_scaling` field on the resulting resource block. When `null`, the `enable_auto_scaling` field will be omitted from the resulting object.
+  - `enable_host_encryption` (`bool`): Set the `enable_host_encryption` field on the resulting resource block. When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
+  - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting resource block. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
+  - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting resource block. When `null`, the `eviction_policy` field will be omitted from the resulting object.
+  - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting resource block. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `host_group_id` (`string`): Set the `host_group_id` field on the resulting resource block. When `null`, the `host_group_id` field will be omitted from the resulting object.
+  - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting resource block. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
+  - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting resource block.
+  - `max_count` (`number`): Set the `max_count` field on the resulting resource block. When `null`, the `max_count` field will be omitted from the resulting object.
+  - `max_pods` (`number`): Set the `max_pods` field on the resulting resource block. When `null`, the `max_pods` field will be omitted from the resulting object.
+  - `message_of_the_day` (`string`): Set the `message_of_the_day` field on the resulting resource block. When `null`, the `message_of_the_day` field will be omitted from the resulting object.
+  - `min_count` (`number`): Set the `min_count` field on the resulting resource block. When `null`, the `min_count` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting resource block. When `null`, the `mode` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `node_count` (`number`): Set the `node_count` field on the resulting resource block. When `null`, the `node_count` field will be omitted from the resulting object.
+  - `node_labels` (`obj`): Set the `node_labels` field on the resulting resource block. When `null`, the `node_labels` field will be omitted from the resulting object.
+  - `node_public_ip_prefix_id` (`string`): Set the `node_public_ip_prefix_id` field on the resulting resource block. When `null`, the `node_public_ip_prefix_id` field will be omitted from the resulting object.
+  - `node_taints` (`list`): Set the `node_taints` field on the resulting resource block. When `null`, the `node_taints` field will be omitted from the resulting object.
+  - `orchestrator_version` (`string`): Set the `orchestrator_version` field on the resulting resource block. When `null`, the `orchestrator_version` field will be omitted from the resulting object.
+  - `os_disk_size_gb` (`number`): Set the `os_disk_size_gb` field on the resulting resource block. When `null`, the `os_disk_size_gb` field will be omitted from the resulting object.
+  - `os_disk_type` (`string`): Set the `os_disk_type` field on the resulting resource block. When `null`, the `os_disk_type` field will be omitted from the resulting object.
+  - `os_sku` (`string`): Set the `os_sku` field on the resulting resource block. When `null`, the `os_sku` field will be omitted from the resulting object.
+  - `os_type` (`string`): Set the `os_type` field on the resulting resource block. When `null`, the `os_type` field will be omitted from the resulting object.
+  - `pod_subnet_id` (`string`): Set the `pod_subnet_id` field on the resulting resource block. When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
+  - `priority` (`string`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting resource block. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting resource block. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
+  - `spot_max_price` (`number`): Set the `spot_max_price` field on the resulting resource block. When `null`, the `spot_max_price` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting resource block. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
+  - `vm_size` (`string`): Set the `vm_size` field on the resulting resource block.
+  - `vnet_subnet_id` (`string`): Set the `vnet_subnet_id` field on the resulting resource block. When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
+  - `workload_runtime` (`string`): Set the `workload_runtime` field on the resulting resource block. When `null`, the `workload_runtime` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
+  - `kubelet_config` (`list[obj]`): Set the `kubelet_config` field on the resulting resource block. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
+  - `linux_os_config` (`list[obj]`): Set the `linux_os_config` field on the resulting resource block. When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `upgrade_settings` (`list[obj]`): Set the `upgrade_settings` field on the resulting resource block. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
+  - `windows_profile` (`list[obj]`): Set the `windows_profile` field on the resulting resource block. When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.windows_profile.new](#fn-windows_profilenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -167,47 +167,47 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `capacity_reservation_group_id` (`string`):  When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
-  - `custom_ca_trust_enabled` (`bool`):  When `null`, the `custom_ca_trust_enabled` field will be omitted from the resulting object.
-  - `enable_auto_scaling` (`bool`):  When `null`, the `enable_auto_scaling` field will be omitted from the resulting object.
-  - `enable_host_encryption` (`bool`):  When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
-  - `enable_node_public_ip` (`bool`):  When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
-  - `eviction_policy` (`string`):  When `null`, the `eviction_policy` field will be omitted from the resulting object.
-  - `fips_enabled` (`bool`):  When `null`, the `fips_enabled` field will be omitted from the resulting object.
-  - `host_group_id` (`string`):  When `null`, the `host_group_id` field will be omitted from the resulting object.
-  - `kubelet_disk_type` (`string`):  When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
-  - `kubernetes_cluster_id` (`string`): 
-  - `max_count` (`number`):  When `null`, the `max_count` field will be omitted from the resulting object.
-  - `max_pods` (`number`):  When `null`, the `max_pods` field will be omitted from the resulting object.
-  - `message_of_the_day` (`string`):  When `null`, the `message_of_the_day` field will be omitted from the resulting object.
-  - `min_count` (`number`):  When `null`, the `min_count` field will be omitted from the resulting object.
-  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `node_count` (`number`):  When `null`, the `node_count` field will be omitted from the resulting object.
-  - `node_labels` (`obj`):  When `null`, the `node_labels` field will be omitted from the resulting object.
-  - `node_public_ip_prefix_id` (`string`):  When `null`, the `node_public_ip_prefix_id` field will be omitted from the resulting object.
-  - `node_taints` (`list`):  When `null`, the `node_taints` field will be omitted from the resulting object.
-  - `orchestrator_version` (`string`):  When `null`, the `orchestrator_version` field will be omitted from the resulting object.
-  - `os_disk_size_gb` (`number`):  When `null`, the `os_disk_size_gb` field will be omitted from the resulting object.
-  - `os_disk_type` (`string`):  When `null`, the `os_disk_type` field will be omitted from the resulting object.
-  - `os_sku` (`string`):  When `null`, the `os_sku` field will be omitted from the resulting object.
-  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
-  - `pod_subnet_id` (`string`):  When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
-  - `priority` (`string`):  When `null`, the `priority` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `scale_down_mode` (`string`):  When `null`, the `scale_down_mode` field will be omitted from the resulting object.
-  - `spot_max_price` (`number`):  When `null`, the `spot_max_price` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ultra_ssd_enabled` (`bool`):  When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
-  - `vm_size` (`string`): 
-  - `vnet_subnet_id` (`string`):  When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
-  - `workload_runtime` (`string`):  When `null`, the `workload_runtime` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `kubelet_config` (`list[obj]`):  When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
-  - `linux_os_config` (`list[obj]`):  When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
-  - `upgrade_settings` (`list[obj]`):  When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
-  - `windows_profile` (`list[obj]`):  When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.windows_profile.new](#fn-windows_profilenew) constructor.
+  - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting object. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
+  - `custom_ca_trust_enabled` (`bool`): Set the `custom_ca_trust_enabled` field on the resulting object. When `null`, the `custom_ca_trust_enabled` field will be omitted from the resulting object.
+  - `enable_auto_scaling` (`bool`): Set the `enable_auto_scaling` field on the resulting object. When `null`, the `enable_auto_scaling` field will be omitted from the resulting object.
+  - `enable_host_encryption` (`bool`): Set the `enable_host_encryption` field on the resulting object. When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
+  - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting object. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
+  - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting object. When `null`, the `eviction_policy` field will be omitted from the resulting object.
+  - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting object. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
+  - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting object. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
+  - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting object.
+  - `max_count` (`number`): Set the `max_count` field on the resulting object. When `null`, the `max_count` field will be omitted from the resulting object.
+  - `max_pods` (`number`): Set the `max_pods` field on the resulting object. When `null`, the `max_pods` field will be omitted from the resulting object.
+  - `message_of_the_day` (`string`): Set the `message_of_the_day` field on the resulting object. When `null`, the `message_of_the_day` field will be omitted from the resulting object.
+  - `min_count` (`number`): Set the `min_count` field on the resulting object. When `null`, the `min_count` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `node_count` (`number`): Set the `node_count` field on the resulting object. When `null`, the `node_count` field will be omitted from the resulting object.
+  - `node_labels` (`obj`): Set the `node_labels` field on the resulting object. When `null`, the `node_labels` field will be omitted from the resulting object.
+  - `node_public_ip_prefix_id` (`string`): Set the `node_public_ip_prefix_id` field on the resulting object. When `null`, the `node_public_ip_prefix_id` field will be omitted from the resulting object.
+  - `node_taints` (`list`): Set the `node_taints` field on the resulting object. When `null`, the `node_taints` field will be omitted from the resulting object.
+  - `orchestrator_version` (`string`): Set the `orchestrator_version` field on the resulting object. When `null`, the `orchestrator_version` field will be omitted from the resulting object.
+  - `os_disk_size_gb` (`number`): Set the `os_disk_size_gb` field on the resulting object. When `null`, the `os_disk_size_gb` field will be omitted from the resulting object.
+  - `os_disk_type` (`string`): Set the `os_disk_type` field on the resulting object. When `null`, the `os_disk_type` field will be omitted from the resulting object.
+  - `os_sku` (`string`): Set the `os_sku` field on the resulting object. When `null`, the `os_sku` field will be omitted from the resulting object.
+  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
+  - `pod_subnet_id` (`string`): Set the `pod_subnet_id` field on the resulting object. When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
+  - `priority` (`string`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting object. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
+  - `spot_max_price` (`number`): Set the `spot_max_price` field on the resulting object. When `null`, the `spot_max_price` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting object. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
+  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
+  - `vnet_subnet_id` (`string`): Set the `vnet_subnet_id` field on the resulting object. When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
+  - `workload_runtime` (`string`): Set the `workload_runtime` field on the resulting object. When `null`, the `workload_runtime` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
+  - `kubelet_config` (`list[obj]`): Set the `kubelet_config` field on the resulting object. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
+  - `linux_os_config` (`list[obj]`): Set the `linux_os_config` field on the resulting object. When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `upgrade_settings` (`list[obj]`): Set the `upgrade_settings` field on the resulting object. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
+  - `windows_profile` (`list[obj]`): Set the `windows_profile` field on the resulting object. When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.windows_profile.new](#fn-windows_profilenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kubernetes_cluster_node_pool` resource into the root Terraform configuration.
@@ -990,16 +990,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_unsafe_sysctls` (`list`):  When `null`, the `allowed_unsafe_sysctls` field will be omitted from the resulting object.
-  - `container_log_max_line` (`number`):  When `null`, the `container_log_max_line` field will be omitted from the resulting object.
-  - `container_log_max_size_mb` (`number`):  When `null`, the `container_log_max_size_mb` field will be omitted from the resulting object.
-  - `cpu_cfs_quota_enabled` (`bool`):  When `null`, the `cpu_cfs_quota_enabled` field will be omitted from the resulting object.
-  - `cpu_cfs_quota_period` (`string`):  When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
-  - `cpu_manager_policy` (`string`):  When `null`, the `cpu_manager_policy` field will be omitted from the resulting object.
-  - `image_gc_high_threshold` (`number`):  When `null`, the `image_gc_high_threshold` field will be omitted from the resulting object.
-  - `image_gc_low_threshold` (`number`):  When `null`, the `image_gc_low_threshold` field will be omitted from the resulting object.
-  - `pod_max_pid` (`number`):  When `null`, the `pod_max_pid` field will be omitted from the resulting object.
-  - `topology_manager_policy` (`string`):  When `null`, the `topology_manager_policy` field will be omitted from the resulting object.
+  - `allowed_unsafe_sysctls` (`list`): Set the `allowed_unsafe_sysctls` field on the resulting object. When `null`, the `allowed_unsafe_sysctls` field will be omitted from the resulting object.
+  - `container_log_max_line` (`number`): Set the `container_log_max_line` field on the resulting object. When `null`, the `container_log_max_line` field will be omitted from the resulting object.
+  - `container_log_max_size_mb` (`number`): Set the `container_log_max_size_mb` field on the resulting object. When `null`, the `container_log_max_size_mb` field will be omitted from the resulting object.
+  - `cpu_cfs_quota_enabled` (`bool`): Set the `cpu_cfs_quota_enabled` field on the resulting object. When `null`, the `cpu_cfs_quota_enabled` field will be omitted from the resulting object.
+  - `cpu_cfs_quota_period` (`string`): Set the `cpu_cfs_quota_period` field on the resulting object. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
+  - `cpu_manager_policy` (`string`): Set the `cpu_manager_policy` field on the resulting object. When `null`, the `cpu_manager_policy` field will be omitted from the resulting object.
+  - `image_gc_high_threshold` (`number`): Set the `image_gc_high_threshold` field on the resulting object. When `null`, the `image_gc_high_threshold` field will be omitted from the resulting object.
+  - `image_gc_low_threshold` (`number`): Set the `image_gc_low_threshold` field on the resulting object. When `null`, the `image_gc_low_threshold` field will be omitted from the resulting object.
+  - `pod_max_pid` (`number`): Set the `pod_max_pid` field on the resulting object. When `null`, the `pod_max_pid` field will be omitted from the resulting object.
+  - `topology_manager_policy` (`string`): Set the `topology_manager_policy` field on the resulting object. When `null`, the `topology_manager_policy` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `kubelet_config` sub block.
@@ -1022,10 +1022,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `swap_file_size_mb` (`number`):  When `null`, the `swap_file_size_mb` field will be omitted from the resulting object.
-  - `transparent_huge_page_defrag` (`string`):  When `null`, the `transparent_huge_page_defrag` field will be omitted from the resulting object.
-  - `transparent_huge_page_enabled` (`string`):  When `null`, the `transparent_huge_page_enabled` field will be omitted from the resulting object.
-  - `sysctl_config` (`list[obj]`):  When `null`, the `sysctl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.sysctl_config.new](#fn-linux_os_configsysctl_confignew) constructor.
+  - `swap_file_size_mb` (`number`): Set the `swap_file_size_mb` field on the resulting object. When `null`, the `swap_file_size_mb` field will be omitted from the resulting object.
+  - `transparent_huge_page_defrag` (`string`): Set the `transparent_huge_page_defrag` field on the resulting object. When `null`, the `transparent_huge_page_defrag` field will be omitted from the resulting object.
+  - `transparent_huge_page_enabled` (`string`): Set the `transparent_huge_page_enabled` field on the resulting object. When `null`, the `transparent_huge_page_enabled` field will be omitted from the resulting object.
+  - `sysctl_config` (`list[obj]`): Set the `sysctl_config` field on the resulting object. When `null`, the `sysctl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.sysctl_config.new](#fn-linux_os_configsysctl_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_os_config` sub block.
@@ -1048,35 +1048,35 @@ Terraform sub block.
 
 
 **Args**:
-  - `fs_aio_max_nr` (`number`):  When `null`, the `fs_aio_max_nr` field will be omitted from the resulting object.
-  - `fs_file_max` (`number`):  When `null`, the `fs_file_max` field will be omitted from the resulting object.
-  - `fs_inotify_max_user_watches` (`number`):  When `null`, the `fs_inotify_max_user_watches` field will be omitted from the resulting object.
-  - `fs_nr_open` (`number`):  When `null`, the `fs_nr_open` field will be omitted from the resulting object.
-  - `kernel_threads_max` (`number`):  When `null`, the `kernel_threads_max` field will be omitted from the resulting object.
-  - `net_core_netdev_max_backlog` (`number`):  When `null`, the `net_core_netdev_max_backlog` field will be omitted from the resulting object.
-  - `net_core_optmem_max` (`number`):  When `null`, the `net_core_optmem_max` field will be omitted from the resulting object.
-  - `net_core_rmem_default` (`number`):  When `null`, the `net_core_rmem_default` field will be omitted from the resulting object.
-  - `net_core_rmem_max` (`number`):  When `null`, the `net_core_rmem_max` field will be omitted from the resulting object.
-  - `net_core_somaxconn` (`number`):  When `null`, the `net_core_somaxconn` field will be omitted from the resulting object.
-  - `net_core_wmem_default` (`number`):  When `null`, the `net_core_wmem_default` field will be omitted from the resulting object.
-  - `net_core_wmem_max` (`number`):  When `null`, the `net_core_wmem_max` field will be omitted from the resulting object.
-  - `net_ipv4_ip_local_port_range_max` (`number`):  When `null`, the `net_ipv4_ip_local_port_range_max` field will be omitted from the resulting object.
-  - `net_ipv4_ip_local_port_range_min` (`number`):  When `null`, the `net_ipv4_ip_local_port_range_min` field will be omitted from the resulting object.
-  - `net_ipv4_neigh_default_gc_thresh1` (`number`):  When `null`, the `net_ipv4_neigh_default_gc_thresh1` field will be omitted from the resulting object.
-  - `net_ipv4_neigh_default_gc_thresh2` (`number`):  When `null`, the `net_ipv4_neigh_default_gc_thresh2` field will be omitted from the resulting object.
-  - `net_ipv4_neigh_default_gc_thresh3` (`number`):  When `null`, the `net_ipv4_neigh_default_gc_thresh3` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_fin_timeout` (`number`):  When `null`, the `net_ipv4_tcp_fin_timeout` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_keepalive_intvl` (`number`):  When `null`, the `net_ipv4_tcp_keepalive_intvl` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_keepalive_probes` (`number`):  When `null`, the `net_ipv4_tcp_keepalive_probes` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_keepalive_time` (`number`):  When `null`, the `net_ipv4_tcp_keepalive_time` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_max_syn_backlog` (`number`):  When `null`, the `net_ipv4_tcp_max_syn_backlog` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_max_tw_buckets` (`number`):  When `null`, the `net_ipv4_tcp_max_tw_buckets` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_tw_reuse` (`bool`):  When `null`, the `net_ipv4_tcp_tw_reuse` field will be omitted from the resulting object.
-  - `net_netfilter_nf_conntrack_buckets` (`number`):  When `null`, the `net_netfilter_nf_conntrack_buckets` field will be omitted from the resulting object.
-  - `net_netfilter_nf_conntrack_max` (`number`):  When `null`, the `net_netfilter_nf_conntrack_max` field will be omitted from the resulting object.
-  - `vm_max_map_count` (`number`):  When `null`, the `vm_max_map_count` field will be omitted from the resulting object.
-  - `vm_swappiness` (`number`):  When `null`, the `vm_swappiness` field will be omitted from the resulting object.
-  - `vm_vfs_cache_pressure` (`number`):  When `null`, the `vm_vfs_cache_pressure` field will be omitted from the resulting object.
+  - `fs_aio_max_nr` (`number`): Set the `fs_aio_max_nr` field on the resulting object. When `null`, the `fs_aio_max_nr` field will be omitted from the resulting object.
+  - `fs_file_max` (`number`): Set the `fs_file_max` field on the resulting object. When `null`, the `fs_file_max` field will be omitted from the resulting object.
+  - `fs_inotify_max_user_watches` (`number`): Set the `fs_inotify_max_user_watches` field on the resulting object. When `null`, the `fs_inotify_max_user_watches` field will be omitted from the resulting object.
+  - `fs_nr_open` (`number`): Set the `fs_nr_open` field on the resulting object. When `null`, the `fs_nr_open` field will be omitted from the resulting object.
+  - `kernel_threads_max` (`number`): Set the `kernel_threads_max` field on the resulting object. When `null`, the `kernel_threads_max` field will be omitted from the resulting object.
+  - `net_core_netdev_max_backlog` (`number`): Set the `net_core_netdev_max_backlog` field on the resulting object. When `null`, the `net_core_netdev_max_backlog` field will be omitted from the resulting object.
+  - `net_core_optmem_max` (`number`): Set the `net_core_optmem_max` field on the resulting object. When `null`, the `net_core_optmem_max` field will be omitted from the resulting object.
+  - `net_core_rmem_default` (`number`): Set the `net_core_rmem_default` field on the resulting object. When `null`, the `net_core_rmem_default` field will be omitted from the resulting object.
+  - `net_core_rmem_max` (`number`): Set the `net_core_rmem_max` field on the resulting object. When `null`, the `net_core_rmem_max` field will be omitted from the resulting object.
+  - `net_core_somaxconn` (`number`): Set the `net_core_somaxconn` field on the resulting object. When `null`, the `net_core_somaxconn` field will be omitted from the resulting object.
+  - `net_core_wmem_default` (`number`): Set the `net_core_wmem_default` field on the resulting object. When `null`, the `net_core_wmem_default` field will be omitted from the resulting object.
+  - `net_core_wmem_max` (`number`): Set the `net_core_wmem_max` field on the resulting object. When `null`, the `net_core_wmem_max` field will be omitted from the resulting object.
+  - `net_ipv4_ip_local_port_range_max` (`number`): Set the `net_ipv4_ip_local_port_range_max` field on the resulting object. When `null`, the `net_ipv4_ip_local_port_range_max` field will be omitted from the resulting object.
+  - `net_ipv4_ip_local_port_range_min` (`number`): Set the `net_ipv4_ip_local_port_range_min` field on the resulting object. When `null`, the `net_ipv4_ip_local_port_range_min` field will be omitted from the resulting object.
+  - `net_ipv4_neigh_default_gc_thresh1` (`number`): Set the `net_ipv4_neigh_default_gc_thresh1` field on the resulting object. When `null`, the `net_ipv4_neigh_default_gc_thresh1` field will be omitted from the resulting object.
+  - `net_ipv4_neigh_default_gc_thresh2` (`number`): Set the `net_ipv4_neigh_default_gc_thresh2` field on the resulting object. When `null`, the `net_ipv4_neigh_default_gc_thresh2` field will be omitted from the resulting object.
+  - `net_ipv4_neigh_default_gc_thresh3` (`number`): Set the `net_ipv4_neigh_default_gc_thresh3` field on the resulting object. When `null`, the `net_ipv4_neigh_default_gc_thresh3` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_fin_timeout` (`number`): Set the `net_ipv4_tcp_fin_timeout` field on the resulting object. When `null`, the `net_ipv4_tcp_fin_timeout` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_keepalive_intvl` (`number`): Set the `net_ipv4_tcp_keepalive_intvl` field on the resulting object. When `null`, the `net_ipv4_tcp_keepalive_intvl` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_keepalive_probes` (`number`): Set the `net_ipv4_tcp_keepalive_probes` field on the resulting object. When `null`, the `net_ipv4_tcp_keepalive_probes` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_keepalive_time` (`number`): Set the `net_ipv4_tcp_keepalive_time` field on the resulting object. When `null`, the `net_ipv4_tcp_keepalive_time` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_max_syn_backlog` (`number`): Set the `net_ipv4_tcp_max_syn_backlog` field on the resulting object. When `null`, the `net_ipv4_tcp_max_syn_backlog` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_max_tw_buckets` (`number`): Set the `net_ipv4_tcp_max_tw_buckets` field on the resulting object. When `null`, the `net_ipv4_tcp_max_tw_buckets` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_tw_reuse` (`bool`): Set the `net_ipv4_tcp_tw_reuse` field on the resulting object. When `null`, the `net_ipv4_tcp_tw_reuse` field will be omitted from the resulting object.
+  - `net_netfilter_nf_conntrack_buckets` (`number`): Set the `net_netfilter_nf_conntrack_buckets` field on the resulting object. When `null`, the `net_netfilter_nf_conntrack_buckets` field will be omitted from the resulting object.
+  - `net_netfilter_nf_conntrack_max` (`number`): Set the `net_netfilter_nf_conntrack_max` field on the resulting object. When `null`, the `net_netfilter_nf_conntrack_max` field will be omitted from the resulting object.
+  - `vm_max_map_count` (`number`): Set the `vm_max_map_count` field on the resulting object. When `null`, the `vm_max_map_count` field will be omitted from the resulting object.
+  - `vm_swappiness` (`number`): Set the `vm_swappiness` field on the resulting object. When `null`, the `vm_swappiness` field will be omitted from the resulting object.
+  - `vm_vfs_cache_pressure` (`number`): Set the `vm_vfs_cache_pressure` field on the resulting object. When `null`, the `vm_vfs_cache_pressure` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sysctl_config` sub block.
@@ -1099,10 +1099,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -1125,7 +1125,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_surge` (`string`): 
+  - `max_surge` (`string`): Set the `max_surge` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `upgrade_settings` sub block.
@@ -1148,7 +1148,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `outbound_nat_enabled` (`bool`):  When `null`, the `outbound_nat_enabled` field will be omitted from the resulting object.
+  - `outbound_nat_enabled` (`bool`): Set the `outbound_nat_enabled` field on the resulting object. When `null`, the `outbound_nat_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `windows_profile` sub block.

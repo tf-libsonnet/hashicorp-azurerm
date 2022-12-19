@@ -60,13 +60,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `backup_repeating_time_intervals` (`list`): 
-  - `default_retention_duration` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `vault_name` (`string`): 
-  - `retention_rule` (`list[obj]`):  When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.new](#fn-retention_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.timeouts.new](#fn-timeoutsnew) constructor.
+  - `backup_repeating_time_intervals` (`list`): Set the `backup_repeating_time_intervals` field on the resulting resource block.
+  - `default_retention_duration` (`string`): Set the `default_retention_duration` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `vault_name` (`string`): Set the `vault_name` field on the resulting resource block.
+  - `retention_rule` (`list[obj]`): Set the `retention_rule` field on the resulting resource block. When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.new](#fn-retention_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,13 +90,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `backup_repeating_time_intervals` (`list`): 
-  - `default_retention_duration` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `vault_name` (`string`): 
-  - `retention_rule` (`list[obj]`):  When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.new](#fn-retention_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.timeouts.new](#fn-timeoutsnew) constructor.
+  - `backup_repeating_time_intervals` (`list`): Set the `backup_repeating_time_intervals` field on the resulting object.
+  - `default_retention_duration` (`string`): Set the `default_retention_duration` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `vault_name` (`string`): Set the `vault_name` field on the resulting object.
+  - `retention_rule` (`list[obj]`): Set the `retention_rule` field on the resulting object. When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.new](#fn-retention_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_protection_backup_policy_postgresql` resource into the root Terraform configuration.
@@ -272,10 +272,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `duration` (`string`): 
-  - `name` (`string`): 
-  - `priority` (`number`): 
-  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.criteria.new](#fn-retention_rulecriterianew) constructor.
+  - `duration` (`string`): Set the `duration` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `criteria` (`list[obj]`): Set the `criteria` field on the resulting object. When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.criteria.new](#fn-retention_rulecriterianew) constructor.
 
 **Returns**:
   - An attribute object that represents the `retention_rule` sub block.
@@ -298,11 +298,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `absolute_criteria` (`string`):  When `null`, the `absolute_criteria` field will be omitted from the resulting object.
-  - `days_of_week` (`list`):  When `null`, the `days_of_week` field will be omitted from the resulting object.
-  - `months_of_year` (`list`):  When `null`, the `months_of_year` field will be omitted from the resulting object.
-  - `scheduled_backup_times` (`list`):  When `null`, the `scheduled_backup_times` field will be omitted from the resulting object.
-  - `weeks_of_month` (`list`):  When `null`, the `weeks_of_month` field will be omitted from the resulting object.
+  - `absolute_criteria` (`string`): Set the `absolute_criteria` field on the resulting object. When `null`, the `absolute_criteria` field will be omitted from the resulting object.
+  - `days_of_week` (`list`): Set the `days_of_week` field on the resulting object. When `null`, the `days_of_week` field will be omitted from the resulting object.
+  - `months_of_year` (`list`): Set the `months_of_year` field on the resulting object. When `null`, the `months_of_year` field will be omitted from the resulting object.
+  - `scheduled_backup_times` (`list`): Set the `scheduled_backup_times` field on the resulting object. When `null`, the `scheduled_backup_times` field will be omitted from the resulting object.
+  - `weeks_of_month` (`list`): Set the `weeks_of_month` field on the resulting object. When `null`, the `weeks_of_month` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `criteria` sub block.
@@ -325,10 +325,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

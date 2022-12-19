@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `assignable_scopes` (`list`):  When `null`, the `assignable_scopes` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `role_definition_id` (`string`):  When `null`, the `role_definition_id` field will be omitted from the resulting object.
-  - `scope` (`string`): 
-  - `permissions` (`list[obj]`):  When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.permissions.new](#fn-permissionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `assignable_scopes` (`list`): Set the `assignable_scopes` field on the resulting resource block. When `null`, the `assignable_scopes` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting resource block. When `null`, the `role_definition_id` field will be omitted from the resulting object.
+  - `scope` (`string`): Set the `scope` field on the resulting resource block.
+  - `permissions` (`list[obj]`): Set the `permissions` field on the resulting resource block. When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.permissions.new](#fn-permissionsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `assignable_scopes` (`list`):  When `null`, the `assignable_scopes` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `role_definition_id` (`string`):  When `null`, the `role_definition_id` field will be omitted from the resulting object.
-  - `scope` (`string`): 
-  - `permissions` (`list[obj]`):  When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.permissions.new](#fn-permissionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `assignable_scopes` (`list`): Set the `assignable_scopes` field on the resulting object. When `null`, the `assignable_scopes` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting object. When `null`, the `role_definition_id` field will be omitted from the resulting object.
+  - `scope` (`string`): Set the `scope` field on the resulting object.
+  - `permissions` (`list[obj]`): Set the `permissions` field on the resulting object. When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.permissions.new](#fn-permissionsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `role_definition` resource into the root Terraform configuration.
@@ -270,10 +270,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `actions` (`list`):  When `null`, the `actions` field will be omitted from the resulting object.
-  - `data_actions` (`list`):  When `null`, the `data_actions` field will be omitted from the resulting object.
-  - `not_actions` (`list`):  When `null`, the `not_actions` field will be omitted from the resulting object.
-  - `not_data_actions` (`list`):  When `null`, the `not_data_actions` field will be omitted from the resulting object.
+  - `actions` (`list`): Set the `actions` field on the resulting object. When `null`, the `actions` field will be omitted from the resulting object.
+  - `data_actions` (`list`): Set the `data_actions` field on the resulting object. When `null`, the `data_actions` field will be omitted from the resulting object.
+  - `not_actions` (`list`): Set the `not_actions` field on the resulting object. When `null`, the `not_actions` field will be omitted from the resulting object.
+  - `not_data_actions` (`list`): Set the `not_data_actions` field on the resulting object. When `null`, the `not_data_actions` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `permissions` sub block.
@@ -296,10 +296,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

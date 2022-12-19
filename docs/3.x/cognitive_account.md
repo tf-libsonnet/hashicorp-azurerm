@@ -86,30 +86,30 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `custom_question_answering_search_service_id` (`string`):  When `null`, the `custom_question_answering_search_service_id` field will be omitted from the resulting object.
-  - `custom_question_answering_search_service_key` (`string`):  When `null`, the `custom_question_answering_search_service_key` field will be omitted from the resulting object.
-  - `custom_subdomain_name` (`string`):  When `null`, the `custom_subdomain_name` field will be omitted from the resulting object.
-  - `dynamic_throttling_enabled` (`bool`):  When `null`, the `dynamic_throttling_enabled` field will be omitted from the resulting object.
-  - `fqdns` (`list`):  When `null`, the `fqdns` field will be omitted from the resulting object.
-  - `kind` (`string`): 
-  - `local_auth_enabled` (`bool`):  When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `metrics_advisor_aad_client_id` (`string`):  When `null`, the `metrics_advisor_aad_client_id` field will be omitted from the resulting object.
-  - `metrics_advisor_aad_tenant_id` (`string`):  When `null`, the `metrics_advisor_aad_tenant_id` field will be omitted from the resulting object.
-  - `metrics_advisor_super_user_name` (`string`):  When `null`, the `metrics_advisor_super_user_name` field will be omitted from the resulting object.
-  - `metrics_advisor_website_name` (`string`):  When `null`, the `metrics_advisor_website_name` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `outbound_network_access_restricted` (`bool`):  When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `qna_runtime_endpoint` (`string`):  When `null`, the `qna_runtime_endpoint` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.identity.new](#fn-identitynew) constructor.
-  - `network_acls` (`list[obj]`):  When `null`, the `network_acls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.new](#fn-network_aclsnew) constructor.
-  - `storage` (`list[obj]`):  When `null`, the `storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.storage.new](#fn-storagenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.timeouts.new](#fn-timeoutsnew) constructor.
+  - `custom_question_answering_search_service_id` (`string`): Set the `custom_question_answering_search_service_id` field on the resulting resource block. When `null`, the `custom_question_answering_search_service_id` field will be omitted from the resulting object.
+  - `custom_question_answering_search_service_key` (`string`): Set the `custom_question_answering_search_service_key` field on the resulting resource block. When `null`, the `custom_question_answering_search_service_key` field will be omitted from the resulting object.
+  - `custom_subdomain_name` (`string`): Set the `custom_subdomain_name` field on the resulting resource block. When `null`, the `custom_subdomain_name` field will be omitted from the resulting object.
+  - `dynamic_throttling_enabled` (`bool`): Set the `dynamic_throttling_enabled` field on the resulting resource block. When `null`, the `dynamic_throttling_enabled` field will be omitted from the resulting object.
+  - `fqdns` (`list`): Set the `fqdns` field on the resulting resource block. When `null`, the `fqdns` field will be omitted from the resulting object.
+  - `kind` (`string`): Set the `kind` field on the resulting resource block.
+  - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting resource block. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `metrics_advisor_aad_client_id` (`string`): Set the `metrics_advisor_aad_client_id` field on the resulting resource block. When `null`, the `metrics_advisor_aad_client_id` field will be omitted from the resulting object.
+  - `metrics_advisor_aad_tenant_id` (`string`): Set the `metrics_advisor_aad_tenant_id` field on the resulting resource block. When `null`, the `metrics_advisor_aad_tenant_id` field will be omitted from the resulting object.
+  - `metrics_advisor_super_user_name` (`string`): Set the `metrics_advisor_super_user_name` field on the resulting resource block. When `null`, the `metrics_advisor_super_user_name` field will be omitted from the resulting object.
+  - `metrics_advisor_website_name` (`string`): Set the `metrics_advisor_website_name` field on the resulting resource block. When `null`, the `metrics_advisor_website_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `outbound_network_access_restricted` (`bool`): Set the `outbound_network_access_restricted` field on the resulting resource block. When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `qna_runtime_endpoint` (`string`): Set the `qna_runtime_endpoint` field on the resulting resource block. When `null`, the `qna_runtime_endpoint` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting resource block. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.identity.new](#fn-identitynew) constructor.
+  - `network_acls` (`list[obj]`): Set the `network_acls` field on the resulting resource block. When `null`, the `network_acls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.new](#fn-network_aclsnew) constructor.
+  - `storage` (`list[obj]`): Set the `storage` field on the resulting resource block. When `null`, the `storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.storage.new](#fn-storagenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -133,30 +133,30 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `custom_question_answering_search_service_id` (`string`):  When `null`, the `custom_question_answering_search_service_id` field will be omitted from the resulting object.
-  - `custom_question_answering_search_service_key` (`string`):  When `null`, the `custom_question_answering_search_service_key` field will be omitted from the resulting object.
-  - `custom_subdomain_name` (`string`):  When `null`, the `custom_subdomain_name` field will be omitted from the resulting object.
-  - `dynamic_throttling_enabled` (`bool`):  When `null`, the `dynamic_throttling_enabled` field will be omitted from the resulting object.
-  - `fqdns` (`list`):  When `null`, the `fqdns` field will be omitted from the resulting object.
-  - `kind` (`string`): 
-  - `local_auth_enabled` (`bool`):  When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `metrics_advisor_aad_client_id` (`string`):  When `null`, the `metrics_advisor_aad_client_id` field will be omitted from the resulting object.
-  - `metrics_advisor_aad_tenant_id` (`string`):  When `null`, the `metrics_advisor_aad_tenant_id` field will be omitted from the resulting object.
-  - `metrics_advisor_super_user_name` (`string`):  When `null`, the `metrics_advisor_super_user_name` field will be omitted from the resulting object.
-  - `metrics_advisor_website_name` (`string`):  When `null`, the `metrics_advisor_website_name` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `outbound_network_access_restricted` (`bool`):  When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `qna_runtime_endpoint` (`string`):  When `null`, the `qna_runtime_endpoint` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.identity.new](#fn-identitynew) constructor.
-  - `network_acls` (`list[obj]`):  When `null`, the `network_acls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.new](#fn-network_aclsnew) constructor.
-  - `storage` (`list[obj]`):  When `null`, the `storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.storage.new](#fn-storagenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.timeouts.new](#fn-timeoutsnew) constructor.
+  - `custom_question_answering_search_service_id` (`string`): Set the `custom_question_answering_search_service_id` field on the resulting object. When `null`, the `custom_question_answering_search_service_id` field will be omitted from the resulting object.
+  - `custom_question_answering_search_service_key` (`string`): Set the `custom_question_answering_search_service_key` field on the resulting object. When `null`, the `custom_question_answering_search_service_key` field will be omitted from the resulting object.
+  - `custom_subdomain_name` (`string`): Set the `custom_subdomain_name` field on the resulting object. When `null`, the `custom_subdomain_name` field will be omitted from the resulting object.
+  - `dynamic_throttling_enabled` (`bool`): Set the `dynamic_throttling_enabled` field on the resulting object. When `null`, the `dynamic_throttling_enabled` field will be omitted from the resulting object.
+  - `fqdns` (`list`): Set the `fqdns` field on the resulting object. When `null`, the `fqdns` field will be omitted from the resulting object.
+  - `kind` (`string`): Set the `kind` field on the resulting object.
+  - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting object. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `metrics_advisor_aad_client_id` (`string`): Set the `metrics_advisor_aad_client_id` field on the resulting object. When `null`, the `metrics_advisor_aad_client_id` field will be omitted from the resulting object.
+  - `metrics_advisor_aad_tenant_id` (`string`): Set the `metrics_advisor_aad_tenant_id` field on the resulting object. When `null`, the `metrics_advisor_aad_tenant_id` field will be omitted from the resulting object.
+  - `metrics_advisor_super_user_name` (`string`): Set the `metrics_advisor_super_user_name` field on the resulting object. When `null`, the `metrics_advisor_super_user_name` field will be omitted from the resulting object.
+  - `metrics_advisor_website_name` (`string`): Set the `metrics_advisor_website_name` field on the resulting object. When `null`, the `metrics_advisor_website_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `outbound_network_access_restricted` (`bool`): Set the `outbound_network_access_restricted` field on the resulting object. When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `qna_runtime_endpoint` (`string`): Set the `qna_runtime_endpoint` field on the resulting object. When `null`, the `qna_runtime_endpoint` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting object. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.identity.new](#fn-identitynew) constructor.
+  - `network_acls` (`list[obj]`): Set the `network_acls` field on the resulting object. When `null`, the `network_acls` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.new](#fn-network_aclsnew) constructor.
+  - `storage` (`list[obj]`): Set the `storage` field on the resulting object. When `null`, the `storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.storage.new](#fn-storagenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cognitive_account` resource into the root Terraform configuration.
@@ -667,8 +667,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_client_id` (`string`):  When `null`, the `identity_client_id` field will be omitted from the resulting object.
-  - `key_vault_key_id` (`string`): 
+  - `identity_client_id` (`string`): Set the `identity_client_id` field on the resulting object. When `null`, the `identity_client_id` field will be omitted from the resulting object.
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `customer_managed_key` sub block.
@@ -691,8 +691,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -715,9 +715,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_action` (`string`): 
-  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `virtual_network_rules` (`list[obj]`):  When `null`, the `virtual_network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.virtual_network_rules.new](#fn-network_aclsvirtual_network_rulesnew) constructor.
+  - `default_action` (`string`): Set the `default_action` field on the resulting object.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting object. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `virtual_network_rules` (`list[obj]`): Set the `virtual_network_rules` field on the resulting object. When `null`, the `virtual_network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.virtual_network_rules.new](#fn-network_aclsvirtual_network_rulesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_acls` sub block.
@@ -740,8 +740,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `ignore_missing_vnet_service_endpoint` (`bool`):  When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): 
+  - `ignore_missing_vnet_service_endpoint` (`bool`): Set the `ignore_missing_vnet_service_endpoint` field on the resulting object. When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_network_rules` sub block.
@@ -764,8 +764,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_client_id` (`string`):  When `null`, the `identity_client_id` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
+  - `identity_client_id` (`string`): Set the `identity_client_id` field on the resulting object. When `null`, the `identity_client_id` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage` sub block.
@@ -788,10 +788,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

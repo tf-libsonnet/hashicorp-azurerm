@@ -62,20 +62,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_delete_on_idle` (`string`):  When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
-  - `default_message_ttl` (`string`):  When `null`, the `default_message_ttl` field will be omitted from the resulting object.
-  - `duplicate_detection_history_time_window` (`string`):  When `null`, the `duplicate_detection_history_time_window` field will be omitted from the resulting object.
-  - `enable_batched_operations` (`bool`):  When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
-  - `enable_express` (`bool`):  When `null`, the `enable_express` field will be omitted from the resulting object.
-  - `enable_partitioning` (`bool`):  When `null`, the `enable_partitioning` field will be omitted from the resulting object.
-  - `max_message_size_in_kilobytes` (`number`):  When `null`, the `max_message_size_in_kilobytes` field will be omitted from the resulting object.
-  - `max_size_in_megabytes` (`number`):  When `null`, the `max_size_in_megabytes` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `namespace_id` (`string`): 
-  - `requires_duplicate_detection` (`bool`):  When `null`, the `requires_duplicate_detection` field will be omitted from the resulting object.
-  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `support_ordering` (`bool`):  When `null`, the `support_ordering` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_topic.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_delete_on_idle` (`string`): Set the `auto_delete_on_idle` field on the resulting resource block. When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
+  - `default_message_ttl` (`string`): Set the `default_message_ttl` field on the resulting resource block. When `null`, the `default_message_ttl` field will be omitted from the resulting object.
+  - `duplicate_detection_history_time_window` (`string`): Set the `duplicate_detection_history_time_window` field on the resulting resource block. When `null`, the `duplicate_detection_history_time_window` field will be omitted from the resulting object.
+  - `enable_batched_operations` (`bool`): Set the `enable_batched_operations` field on the resulting resource block. When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
+  - `enable_express` (`bool`): Set the `enable_express` field on the resulting resource block. When `null`, the `enable_express` field will be omitted from the resulting object.
+  - `enable_partitioning` (`bool`): Set the `enable_partitioning` field on the resulting resource block. When `null`, the `enable_partitioning` field will be omitted from the resulting object.
+  - `max_message_size_in_kilobytes` (`number`): Set the `max_message_size_in_kilobytes` field on the resulting resource block. When `null`, the `max_message_size_in_kilobytes` field will be omitted from the resulting object.
+  - `max_size_in_megabytes` (`number`): Set the `max_size_in_megabytes` field on the resulting resource block. When `null`, the `max_size_in_megabytes` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `namespace_id` (`string`): Set the `namespace_id` field on the resulting resource block.
+  - `requires_duplicate_detection` (`bool`): Set the `requires_duplicate_detection` field on the resulting resource block. When `null`, the `requires_duplicate_detection` field will be omitted from the resulting object.
+  - `status` (`string`): Set the `status` field on the resulting resource block. When `null`, the `status` field will be omitted from the resulting object.
+  - `support_ordering` (`bool`): Set the `support_ordering` field on the resulting resource block. When `null`, the `support_ordering` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,20 +99,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_delete_on_idle` (`string`):  When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
-  - `default_message_ttl` (`string`):  When `null`, the `default_message_ttl` field will be omitted from the resulting object.
-  - `duplicate_detection_history_time_window` (`string`):  When `null`, the `duplicate_detection_history_time_window` field will be omitted from the resulting object.
-  - `enable_batched_operations` (`bool`):  When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
-  - `enable_express` (`bool`):  When `null`, the `enable_express` field will be omitted from the resulting object.
-  - `enable_partitioning` (`bool`):  When `null`, the `enable_partitioning` field will be omitted from the resulting object.
-  - `max_message_size_in_kilobytes` (`number`):  When `null`, the `max_message_size_in_kilobytes` field will be omitted from the resulting object.
-  - `max_size_in_megabytes` (`number`):  When `null`, the `max_size_in_megabytes` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `namespace_id` (`string`): 
-  - `requires_duplicate_detection` (`bool`):  When `null`, the `requires_duplicate_detection` field will be omitted from the resulting object.
-  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `support_ordering` (`bool`):  When `null`, the `support_ordering` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_topic.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_delete_on_idle` (`string`): Set the `auto_delete_on_idle` field on the resulting object. When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
+  - `default_message_ttl` (`string`): Set the `default_message_ttl` field on the resulting object. When `null`, the `default_message_ttl` field will be omitted from the resulting object.
+  - `duplicate_detection_history_time_window` (`string`): Set the `duplicate_detection_history_time_window` field on the resulting object. When `null`, the `duplicate_detection_history_time_window` field will be omitted from the resulting object.
+  - `enable_batched_operations` (`bool`): Set the `enable_batched_operations` field on the resulting object. When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
+  - `enable_express` (`bool`): Set the `enable_express` field on the resulting object. When `null`, the `enable_express` field will be omitted from the resulting object.
+  - `enable_partitioning` (`bool`): Set the `enable_partitioning` field on the resulting object. When `null`, the `enable_partitioning` field will be omitted from the resulting object.
+  - `max_message_size_in_kilobytes` (`number`): Set the `max_message_size_in_kilobytes` field on the resulting object. When `null`, the `max_message_size_in_kilobytes` field will be omitted from the resulting object.
+  - `max_size_in_megabytes` (`number`): Set the `max_size_in_megabytes` field on the resulting object. When `null`, the `max_size_in_megabytes` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `namespace_id` (`string`): Set the `namespace_id` field on the resulting object.
+  - `requires_duplicate_detection` (`bool`): Set the `requires_duplicate_detection` field on the resulting object. When `null`, the `requires_duplicate_detection` field will be omitted from the resulting object.
+  - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
+  - `support_ordering` (`bool`): Set the `support_ordering` field on the resulting object. When `null`, the `support_ordering` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `servicebus_topic` resource into the root Terraform configuration.
@@ -379,10 +379,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

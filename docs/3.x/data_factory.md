@@ -74,20 +74,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `customer_managed_key_id` (`string`):  When `null`, the `customer_managed_key_id` field will be omitted from the resulting object.
-  - `customer_managed_key_identity_id` (`string`):  When `null`, the `customer_managed_key_identity_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `managed_virtual_network_enabled` (`bool`):  When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_network_enabled` (`bool`):  When `null`, the `public_network_enabled` field will be omitted from the resulting object.
-  - `purview_id` (`string`):  When `null`, the `purview_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `github_configuration` (`list[obj]`):  When `null`, the `github_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.github_configuration.new](#fn-github_configurationnew) constructor.
-  - `global_parameter` (`list[obj]`):  When `null`, the `global_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.global_parameter.new](#fn-global_parameternew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.timeouts.new](#fn-timeoutsnew) constructor.
-  - `vsts_configuration` (`list[obj]`):  When `null`, the `vsts_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.vsts_configuration.new](#fn-vsts_configurationnew) constructor.
+  - `customer_managed_key_id` (`string`): Set the `customer_managed_key_id` field on the resulting resource block. When `null`, the `customer_managed_key_id` field will be omitted from the resulting object.
+  - `customer_managed_key_identity_id` (`string`): Set the `customer_managed_key_identity_id` field on the resulting resource block. When `null`, the `customer_managed_key_identity_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `managed_virtual_network_enabled` (`bool`): Set the `managed_virtual_network_enabled` field on the resulting resource block. When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_enabled` (`bool`): Set the `public_network_enabled` field on the resulting resource block. When `null`, the `public_network_enabled` field will be omitted from the resulting object.
+  - `purview_id` (`string`): Set the `purview_id` field on the resulting resource block. When `null`, the `purview_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `github_configuration` (`list[obj]`): Set the `github_configuration` field on the resulting resource block. When `null`, the `github_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.github_configuration.new](#fn-github_configurationnew) constructor.
+  - `global_parameter` (`list[obj]`): Set the `global_parameter` field on the resulting resource block. When `null`, the `global_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.global_parameter.new](#fn-global_parameternew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vsts_configuration` (`list[obj]`): Set the `vsts_configuration` field on the resulting resource block. When `null`, the `vsts_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.vsts_configuration.new](#fn-vsts_configurationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -111,20 +111,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `customer_managed_key_id` (`string`):  When `null`, the `customer_managed_key_id` field will be omitted from the resulting object.
-  - `customer_managed_key_identity_id` (`string`):  When `null`, the `customer_managed_key_identity_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `managed_virtual_network_enabled` (`bool`):  When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_network_enabled` (`bool`):  When `null`, the `public_network_enabled` field will be omitted from the resulting object.
-  - `purview_id` (`string`):  When `null`, the `purview_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `github_configuration` (`list[obj]`):  When `null`, the `github_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.github_configuration.new](#fn-github_configurationnew) constructor.
-  - `global_parameter` (`list[obj]`):  When `null`, the `global_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.global_parameter.new](#fn-global_parameternew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.timeouts.new](#fn-timeoutsnew) constructor.
-  - `vsts_configuration` (`list[obj]`):  When `null`, the `vsts_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.vsts_configuration.new](#fn-vsts_configurationnew) constructor.
+  - `customer_managed_key_id` (`string`): Set the `customer_managed_key_id` field on the resulting object. When `null`, the `customer_managed_key_id` field will be omitted from the resulting object.
+  - `customer_managed_key_identity_id` (`string`): Set the `customer_managed_key_identity_id` field on the resulting object. When `null`, the `customer_managed_key_identity_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `managed_virtual_network_enabled` (`bool`): Set the `managed_virtual_network_enabled` field on the resulting object. When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_enabled` (`bool`): Set the `public_network_enabled` field on the resulting object. When `null`, the `public_network_enabled` field will be omitted from the resulting object.
+  - `purview_id` (`string`): Set the `purview_id` field on the resulting object. When `null`, the `purview_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `github_configuration` (`list[obj]`): Set the `github_configuration` field on the resulting object. When `null`, the `github_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.github_configuration.new](#fn-github_configurationnew) constructor.
+  - `global_parameter` (`list[obj]`): Set the `global_parameter` field on the resulting object. When `null`, the `global_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.global_parameter.new](#fn-global_parameternew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vsts_configuration` (`list[obj]`): Set the `vsts_configuration` field on the resulting object. When `null`, the `vsts_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory.vsts_configuration.new](#fn-vsts_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory` resource into the root Terraform configuration.
@@ -475,11 +475,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `account_name` (`string`): 
-  - `branch_name` (`string`): 
-  - `git_url` (`string`): 
-  - `repository_name` (`string`): 
-  - `root_folder` (`string`): 
+  - `account_name` (`string`): Set the `account_name` field on the resulting object.
+  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.
+  - `git_url` (`string`): Set the `git_url` field on the resulting object.
+  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.
+  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `github_configuration` sub block.
@@ -502,9 +502,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `type` (`string`): 
-  - `value` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `global_parameter` sub block.
@@ -527,8 +527,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -551,10 +551,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -577,12 +577,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `account_name` (`string`): 
-  - `branch_name` (`string`): 
-  - `project_name` (`string`): 
-  - `repository_name` (`string`): 
-  - `root_folder` (`string`): 
-  - `tenant_id` (`string`): 
+  - `account_name` (`string`): Set the `account_name` field on the resulting object.
+  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.
+  - `project_name` (`string`): Set the `project_name` field on the resulting object.
+  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.
+  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.
+  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `vsts_configuration` sub block.

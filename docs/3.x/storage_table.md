@@ -57,10 +57,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `name` (`string`): 
-  - `storage_account_name` (`string`): 
-  - `acl` (`list[obj]`):  When `null`, the `acl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.new](#fn-aclnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting resource block.
+  - `acl` (`list[obj]`): Set the `acl` field on the resulting resource block. When `null`, the `acl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.new](#fn-aclnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,10 +84,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`): 
-  - `storage_account_name` (`string`): 
-  - `acl` (`list[obj]`):  When `null`, the `acl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.new](#fn-aclnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting object.
+  - `acl` (`list[obj]`): Set the `acl` field on the resulting object. When `null`, the `acl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.new](#fn-aclnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_table` resource into the root Terraform configuration.
@@ -215,7 +215,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_policy` (`list[obj]`):  When `null`, the `access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.access_policy.new](#fn-aclaccess_policynew) constructor.
+  - `access_policy` (`list[obj]`): Set the `access_policy` field on the resulting object. When `null`, the `access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.access_policy.new](#fn-aclaccess_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `acl` sub block.
@@ -238,9 +238,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `expiry` (`string`): 
-  - `permissions` (`string`): 
-  - `start` (`string`): 
+  - `expiry` (`string`): Set the `expiry` field on the resulting object.
+  - `permissions` (`string`): Set the `permissions` field on the resulting object.
+  - `start` (`string`): Set the `start` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `access_policy` sub block.
@@ -263,10 +263,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -77,14 +77,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `default_content_key_policy_name` (`string`):  When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `common_encryption_cbcs` (`list[obj]`):  When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
-  - `common_encryption_cenc` (`list[obj]`):  When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
-  - `no_encryption_enabled_protocols` (`list[obj]`):  When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `default_content_key_policy_name` (`string`): Set the `default_content_key_policy_name` field on the resulting resource block. When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `common_encryption_cbcs` (`list[obj]`): Set the `common_encryption_cbcs` field on the resulting resource block. When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
+  - `common_encryption_cenc` (`list[obj]`): Set the `common_encryption_cenc` field on the resulting resource block. When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
+  - `no_encryption_enabled_protocols` (`list[obj]`): Set the `no_encryption_enabled_protocols` field on the resulting resource block. When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,14 +108,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `default_content_key_policy_name` (`string`):  When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `common_encryption_cbcs` (`list[obj]`):  When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
-  - `common_encryption_cenc` (`list[obj]`):  When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
-  - `no_encryption_enabled_protocols` (`list[obj]`):  When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `default_content_key_policy_name` (`string`): Set the `default_content_key_policy_name` field on the resulting object. When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `common_encryption_cbcs` (`list[obj]`): Set the `common_encryption_cbcs` field on the resulting object. When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
+  - `common_encryption_cenc` (`list[obj]`): Set the `common_encryption_cenc` field on the resulting object. When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
+  - `no_encryption_enabled_protocols` (`list[obj]`): Set the `no_encryption_enabled_protocols` field on the resulting object. When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_streaming_policy` resource into the root Terraform configuration.
@@ -349,9 +349,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_content_key` (`list[obj]`):  When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.default_content_key.new](#fn-common_encryption_cbcsdefault_content_keynew) constructor.
-  - `drm_fairplay` (`list[obj]`):  When `null`, the `drm_fairplay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.drm_fairplay.new](#fn-common_encryption_cbcsdrm_fairplaynew) constructor.
-  - `enabled_protocols` (`list[obj]`):  When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.enabled_protocols.new](#fn-common_encryption_cbcsenabled_protocolsnew) constructor.
+  - `default_content_key` (`list[obj]`): Set the `default_content_key` field on the resulting object. When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.default_content_key.new](#fn-common_encryption_cbcsdefault_content_keynew) constructor.
+  - `drm_fairplay` (`list[obj]`): Set the `drm_fairplay` field on the resulting object. When `null`, the `drm_fairplay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.drm_fairplay.new](#fn-common_encryption_cbcsdrm_fairplaynew) constructor.
+  - `enabled_protocols` (`list[obj]`): Set the `enabled_protocols` field on the resulting object. When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.enabled_protocols.new](#fn-common_encryption_cbcsenabled_protocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `common_encryption_cbcs` sub block.
@@ -374,8 +374,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `label` (`string`):  When `null`, the `label` field will be omitted from the resulting object.
-  - `policy_name` (`string`):  When `null`, the `policy_name` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `policy_name` (`string`): Set the `policy_name` field on the resulting object. When `null`, the `policy_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `default_content_key` sub block.
@@ -398,8 +398,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allow_persistent_license` (`bool`):  When `null`, the `allow_persistent_license` field will be omitted from the resulting object.
-  - `custom_license_acquisition_url_template` (`string`):  When `null`, the `custom_license_acquisition_url_template` field will be omitted from the resulting object.
+  - `allow_persistent_license` (`bool`): Set the `allow_persistent_license` field on the resulting object. When `null`, the `allow_persistent_license` field will be omitted from the resulting object.
+  - `custom_license_acquisition_url_template` (`string`): Set the `custom_license_acquisition_url_template` field on the resulting object. When `null`, the `custom_license_acquisition_url_template` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `drm_fairplay` sub block.
@@ -422,10 +422,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `dash` (`bool`):  When `null`, the `dash` field will be omitted from the resulting object.
-  - `download` (`bool`):  When `null`, the `download` field will be omitted from the resulting object.
-  - `hls` (`bool`):  When `null`, the `hls` field will be omitted from the resulting object.
-  - `smooth_streaming` (`bool`):  When `null`, the `smooth_streaming` field will be omitted from the resulting object.
+  - `dash` (`bool`): Set the `dash` field on the resulting object. When `null`, the `dash` field will be omitted from the resulting object.
+  - `download` (`bool`): Set the `download` field on the resulting object. When `null`, the `download` field will be omitted from the resulting object.
+  - `hls` (`bool`): Set the `hls` field on the resulting object. When `null`, the `hls` field will be omitted from the resulting object.
+  - `smooth_streaming` (`bool`): Set the `smooth_streaming` field on the resulting object. When `null`, the `smooth_streaming` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `enabled_protocols` sub block.
@@ -448,10 +448,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `drm_widevine_custom_license_acquisition_url_template` (`string`):  When `null`, the `drm_widevine_custom_license_acquisition_url_template` field will be omitted from the resulting object.
-  - `default_content_key` (`list[obj]`):  When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.default_content_key.new](#fn-common_encryption_cencdefault_content_keynew) constructor.
-  - `drm_playready` (`list[obj]`):  When `null`, the `drm_playready` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.drm_playready.new](#fn-common_encryption_cencdrm_playreadynew) constructor.
-  - `enabled_protocols` (`list[obj]`):  When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.enabled_protocols.new](#fn-common_encryption_cencenabled_protocolsnew) constructor.
+  - `drm_widevine_custom_license_acquisition_url_template` (`string`): Set the `drm_widevine_custom_license_acquisition_url_template` field on the resulting object. When `null`, the `drm_widevine_custom_license_acquisition_url_template` field will be omitted from the resulting object.
+  - `default_content_key` (`list[obj]`): Set the `default_content_key` field on the resulting object. When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.default_content_key.new](#fn-common_encryption_cencdefault_content_keynew) constructor.
+  - `drm_playready` (`list[obj]`): Set the `drm_playready` field on the resulting object. When `null`, the `drm_playready` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.drm_playready.new](#fn-common_encryption_cencdrm_playreadynew) constructor.
+  - `enabled_protocols` (`list[obj]`): Set the `enabled_protocols` field on the resulting object. When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.enabled_protocols.new](#fn-common_encryption_cencenabled_protocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `common_encryption_cenc` sub block.
@@ -474,8 +474,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `label` (`string`):  When `null`, the `label` field will be omitted from the resulting object.
-  - `policy_name` (`string`):  When `null`, the `policy_name` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `policy_name` (`string`): Set the `policy_name` field on the resulting object. When `null`, the `policy_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `default_content_key` sub block.
@@ -498,8 +498,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom_attributes` (`string`):  When `null`, the `custom_attributes` field will be omitted from the resulting object.
-  - `custom_license_acquisition_url_template` (`string`):  When `null`, the `custom_license_acquisition_url_template` field will be omitted from the resulting object.
+  - `custom_attributes` (`string`): Set the `custom_attributes` field on the resulting object. When `null`, the `custom_attributes` field will be omitted from the resulting object.
+  - `custom_license_acquisition_url_template` (`string`): Set the `custom_license_acquisition_url_template` field on the resulting object. When `null`, the `custom_license_acquisition_url_template` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `drm_playready` sub block.
@@ -522,10 +522,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `dash` (`bool`):  When `null`, the `dash` field will be omitted from the resulting object.
-  - `download` (`bool`):  When `null`, the `download` field will be omitted from the resulting object.
-  - `hls` (`bool`):  When `null`, the `hls` field will be omitted from the resulting object.
-  - `smooth_streaming` (`bool`):  When `null`, the `smooth_streaming` field will be omitted from the resulting object.
+  - `dash` (`bool`): Set the `dash` field on the resulting object. When `null`, the `dash` field will be omitted from the resulting object.
+  - `download` (`bool`): Set the `download` field on the resulting object. When `null`, the `download` field will be omitted from the resulting object.
+  - `hls` (`bool`): Set the `hls` field on the resulting object. When `null`, the `hls` field will be omitted from the resulting object.
+  - `smooth_streaming` (`bool`): Set the `smooth_streaming` field on the resulting object. When `null`, the `smooth_streaming` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `enabled_protocols` sub block.
@@ -548,10 +548,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `dash` (`bool`):  When `null`, the `dash` field will be omitted from the resulting object.
-  - `download` (`bool`):  When `null`, the `download` field will be omitted from the resulting object.
-  - `hls` (`bool`):  When `null`, the `hls` field will be omitted from the resulting object.
-  - `smooth_streaming` (`bool`):  When `null`, the `smooth_streaming` field will be omitted from the resulting object.
+  - `dash` (`bool`): Set the `dash` field on the resulting object. When `null`, the `dash` field will be omitted from the resulting object.
+  - `download` (`bool`): Set the `download` field on the resulting object. When `null`, the `download` field will be omitted from the resulting object.
+  - `hls` (`bool`): Set the `hls` field on the resulting object. When `null`, the `hls` field will be omitted from the resulting object.
+  - `smooth_streaming` (`bool`): Set the `smooth_streaming` field on the resulting object. When `null`, the `smooth_streaming` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `no_encryption_enabled_protocols` sub block.
@@ -574,9 +574,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

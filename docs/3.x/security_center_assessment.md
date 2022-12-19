@@ -56,11 +56,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `additional_data` (`obj`):  When `null`, the `additional_data` field will be omitted from the resulting object.
-  - `assessment_policy_id` (`string`): 
-  - `target_resource_id` (`string`): 
-  - `status` (`list[obj]`):  When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-statusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_data` (`obj`): Set the `additional_data` field on the resulting resource block. When `null`, the `additional_data` field will be omitted from the resulting object.
+  - `assessment_policy_id` (`string`): Set the `assessment_policy_id` field on the resulting resource block.
+  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting resource block.
+  - `status` (`list[obj]`): Set the `status` field on the resulting resource block. When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-statusnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,11 +84,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `additional_data` (`obj`):  When `null`, the `additional_data` field will be omitted from the resulting object.
-  - `assessment_policy_id` (`string`): 
-  - `target_resource_id` (`string`): 
-  - `status` (`list[obj]`):  When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-statusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_data` (`obj`): Set the `additional_data` field on the resulting object. When `null`, the `additional_data` field will be omitted from the resulting object.
+  - `assessment_policy_id` (`string`): Set the `assessment_policy_id` field on the resulting object.
+  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting object.
+  - `status` (`list[obj]`): Set the `status` field on the resulting object. When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.status.new](#fn-statusnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_assessment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `security_center_assessment` resource into the root Terraform configuration.
@@ -232,9 +232,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `cause` (`string`):  When `null`, the `cause` field will be omitted from the resulting object.
-  - `code` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `cause` (`string`): Set the `cause` field on the resulting object. When `null`, the `cause` field will be omitted from the resulting object.
+  - `code` (`string`): Set the `code` field on the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `status` sub block.
@@ -257,10 +257,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

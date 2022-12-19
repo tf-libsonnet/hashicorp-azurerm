@@ -65,16 +65,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `bgp_route_translation_for_nat_enabled` (`bool`):  When `null`, the `bgp_route_translation_for_nat_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `routing_preference` (`string`):  When `null`, the `routing_preference` field will be omitted from the resulting object.
-  - `scale_unit` (`number`):  When `null`, the `scale_unit` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_hub_id` (`string`): 
-  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `bgp_route_translation_for_nat_enabled` (`bool`): Set the `bgp_route_translation_for_nat_enabled` field on the resulting resource block. When `null`, the `bgp_route_translation_for_nat_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `routing_preference` (`string`): Set the `routing_preference` field on the resulting resource block. When `null`, the `routing_preference` field will be omitted from the resulting object.
+  - `scale_unit` (`number`): Set the `scale_unit` field on the resulting resource block. When `null`, the `scale_unit` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting resource block.
+  - `bgp_settings` (`list[obj]`): Set the `bgp_settings` field on the resulting resource block. When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,16 +98,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `bgp_route_translation_for_nat_enabled` (`bool`):  When `null`, the `bgp_route_translation_for_nat_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `routing_preference` (`string`):  When `null`, the `routing_preference` field will be omitted from the resulting object.
-  - `scale_unit` (`number`):  When `null`, the `scale_unit` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_hub_id` (`string`): 
-  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `bgp_route_translation_for_nat_enabled` (`bool`): Set the `bgp_route_translation_for_nat_enabled` field on the resulting object. When `null`, the `bgp_route_translation_for_nat_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `routing_preference` (`string`): Set the `routing_preference` field on the resulting object. When `null`, the `routing_preference` field will be omitted from the resulting object.
+  - `scale_unit` (`number`): Set the `scale_unit` field on the resulting object. When `null`, the `scale_unit` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.
+  - `bgp_settings` (`list[obj]`): Set the `bgp_settings` field on the resulting object. When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpn_gateway` resource into the root Terraform configuration.
@@ -331,10 +331,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `asn` (`number`): 
-  - `peer_weight` (`number`): 
-  - `instance_0_bgp_peering_address` (`list[obj]`):  When `null`, the `instance_0_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_0_bgp_peering_address.new](#fn-bgp_settingsinstance_0_bgp_peering_addressnew) constructor.
-  - `instance_1_bgp_peering_address` (`list[obj]`):  When `null`, the `instance_1_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_1_bgp_peering_address.new](#fn-bgp_settingsinstance_1_bgp_peering_addressnew) constructor.
+  - `asn` (`number`): Set the `asn` field on the resulting object.
+  - `peer_weight` (`number`): Set the `peer_weight` field on the resulting object.
+  - `instance_0_bgp_peering_address` (`list[obj]`): Set the `instance_0_bgp_peering_address` field on the resulting object. When `null`, the `instance_0_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_0_bgp_peering_address.new](#fn-bgp_settingsinstance_0_bgp_peering_addressnew) constructor.
+  - `instance_1_bgp_peering_address` (`list[obj]`): Set the `instance_1_bgp_peering_address` field on the resulting object. When `null`, the `instance_1_bgp_peering_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway.bgp_settings.instance_1_bgp_peering_address.new](#fn-bgp_settingsinstance_1_bgp_peering_addressnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bgp_settings` sub block.
@@ -357,7 +357,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom_ips` (`list`): 
+  - `custom_ips` (`list`): Set the `custom_ips` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `instance_0_bgp_peering_address` sub block.
@@ -380,7 +380,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom_ips` (`list`): 
+  - `custom_ips` (`list`): Set the `custom_ips` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `instance_1_bgp_peering_address` sub block.
@@ -403,10 +403,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

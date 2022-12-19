@@ -63,11 +63,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `datadog_monitor_id` (`string`): 
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-lognew) constructor.
-  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-metricnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `datadog_monitor_id` (`string`): Set the `datadog_monitor_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block. When `null`, the `name` field will be omitted from the resulting object.
+  - `log` (`list[obj]`): Set the `log` field on the resulting resource block. When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-lognew) constructor.
+  - `metric` (`list[obj]`): Set the `metric` field on the resulting resource block. When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-metricnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,11 +91,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `datadog_monitor_id` (`string`): 
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-lognew) constructor.
-  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-metricnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `datadog_monitor_id` (`string`): Set the `datadog_monitor_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `log` (`list[obj]`): Set the `log` field on the resulting object. When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.new](#fn-lognew) constructor.
+  - `metric` (`list[obj]`): Set the `metric` field on the resulting object. When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.new](#fn-metricnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `datadog_monitor_tag_rule` resource into the root Terraform configuration.
@@ -260,10 +260,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `aad_log_enabled` (`bool`):  When `null`, the `aad_log_enabled` field will be omitted from the resulting object.
-  - `resource_log_enabled` (`bool`):  When `null`, the `resource_log_enabled` field will be omitted from the resulting object.
-  - `subscription_log_enabled` (`bool`):  When `null`, the `subscription_log_enabled` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.filter.new](#fn-logfilternew) constructor.
+  - `aad_log_enabled` (`bool`): Set the `aad_log_enabled` field on the resulting object. When `null`, the `aad_log_enabled` field will be omitted from the resulting object.
+  - `resource_log_enabled` (`bool`): Set the `resource_log_enabled` field on the resulting object. When `null`, the `resource_log_enabled` field will be omitted from the resulting object.
+  - `subscription_log_enabled` (`bool`): Set the `subscription_log_enabled` field on the resulting object. When `null`, the `subscription_log_enabled` field will be omitted from the resulting object.
+  - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.log.filter.new](#fn-logfilternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `log` sub block.
@@ -286,9 +286,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`): 
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -311,7 +311,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.filter.new](#fn-metricfilternew) constructor.
+  - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor_tag_rule.metric.filter.new](#fn-metricfilternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric` sub block.
@@ -334,9 +334,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`): 
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -359,10 +359,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

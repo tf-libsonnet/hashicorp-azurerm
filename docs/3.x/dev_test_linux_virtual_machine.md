@@ -72,24 +72,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allow_claim` (`bool`):  When `null`, the `allow_claim` field will be omitted from the resulting object.
-  - `disallow_public_ip_address` (`bool`):  When `null`, the `disallow_public_ip_address` field will be omitted from the resulting object.
-  - `lab_name` (`string`): 
-  - `lab_subnet_name` (`string`): 
-  - `lab_virtual_network_id` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `notes` (`string`):  When `null`, the `notes` field will be omitted from the resulting object.
-  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `size` (`string`): 
-  - `ssh_key` (`string`):  When `null`, the `ssh_key` field will be omitted from the resulting object.
-  - `storage_type` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `username` (`string`): 
-  - `gallery_image_reference` (`list[obj]`):  When `null`, the `gallery_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.gallery_image_reference.new](#fn-gallery_image_referencenew) constructor.
-  - `inbound_nat_rule` (`list[obj]`):  When `null`, the `inbound_nat_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.inbound_nat_rule.new](#fn-inbound_nat_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_claim` (`bool`): Set the `allow_claim` field on the resulting resource block. When `null`, the `allow_claim` field will be omitted from the resulting object.
+  - `disallow_public_ip_address` (`bool`): Set the `disallow_public_ip_address` field on the resulting resource block. When `null`, the `disallow_public_ip_address` field will be omitted from the resulting object.
+  - `lab_name` (`string`): Set the `lab_name` field on the resulting resource block.
+  - `lab_subnet_name` (`string`): Set the `lab_subnet_name` field on the resulting resource block.
+  - `lab_virtual_network_id` (`string`): Set the `lab_virtual_network_id` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `notes` (`string`): Set the `notes` field on the resulting resource block. When `null`, the `notes` field will be omitted from the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting resource block. When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `size` (`string`): Set the `size` field on the resulting resource block.
+  - `ssh_key` (`string`): Set the `ssh_key` field on the resulting resource block. When `null`, the `ssh_key` field will be omitted from the resulting object.
+  - `storage_type` (`string`): Set the `storage_type` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting resource block.
+  - `gallery_image_reference` (`list[obj]`): Set the `gallery_image_reference` field on the resulting resource block. When `null`, the `gallery_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.gallery_image_reference.new](#fn-gallery_image_referencenew) constructor.
+  - `inbound_nat_rule` (`list[obj]`): Set the `inbound_nat_rule` field on the resulting resource block. When `null`, the `inbound_nat_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.inbound_nat_rule.new](#fn-inbound_nat_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -113,24 +113,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allow_claim` (`bool`):  When `null`, the `allow_claim` field will be omitted from the resulting object.
-  - `disallow_public_ip_address` (`bool`):  When `null`, the `disallow_public_ip_address` field will be omitted from the resulting object.
-  - `lab_name` (`string`): 
-  - `lab_subnet_name` (`string`): 
-  - `lab_virtual_network_id` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `notes` (`string`):  When `null`, the `notes` field will be omitted from the resulting object.
-  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `size` (`string`): 
-  - `ssh_key` (`string`):  When `null`, the `ssh_key` field will be omitted from the resulting object.
-  - `storage_type` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `username` (`string`): 
-  - `gallery_image_reference` (`list[obj]`):  When `null`, the `gallery_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.gallery_image_reference.new](#fn-gallery_image_referencenew) constructor.
-  - `inbound_nat_rule` (`list[obj]`):  When `null`, the `inbound_nat_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.inbound_nat_rule.new](#fn-inbound_nat_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_claim` (`bool`): Set the `allow_claim` field on the resulting object. When `null`, the `allow_claim` field will be omitted from the resulting object.
+  - `disallow_public_ip_address` (`bool`): Set the `disallow_public_ip_address` field on the resulting object. When `null`, the `disallow_public_ip_address` field will be omitted from the resulting object.
+  - `lab_name` (`string`): Set the `lab_name` field on the resulting object.
+  - `lab_subnet_name` (`string`): Set the `lab_subnet_name` field on the resulting object.
+  - `lab_virtual_network_id` (`string`): Set the `lab_virtual_network_id` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `notes` (`string`): Set the `notes` field on the resulting object. When `null`, the `notes` field will be omitted from the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `size` (`string`): Set the `size` field on the resulting object.
+  - `ssh_key` (`string`): Set the `ssh_key` field on the resulting object. When `null`, the `ssh_key` field will be omitted from the resulting object.
+  - `storage_type` (`string`): Set the `storage_type` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
+  - `gallery_image_reference` (`list[obj]`): Set the `gallery_image_reference` field on the resulting object. When `null`, the `gallery_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.gallery_image_reference.new](#fn-gallery_image_referencenew) constructor.
+  - `inbound_nat_rule` (`list[obj]`): Set the `inbound_nat_rule` field on the resulting object. When `null`, the `inbound_nat_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.inbound_nat_rule.new](#fn-inbound_nat_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_linux_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dev_test_linux_virtual_machine` resource into the root Terraform configuration.
@@ -503,10 +503,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `offer` (`string`): 
-  - `publisher` (`string`): 
-  - `sku` (`string`): 
-  - `version` (`string`): 
+  - `offer` (`string`): Set the `offer` field on the resulting object.
+  - `publisher` (`string`): Set the `publisher` field on the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `gallery_image_reference` sub block.
@@ -529,8 +529,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `backend_port` (`number`): 
-  - `protocol` (`string`): 
+  - `backend_port` (`number`): Set the `backend_port` field on the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `inbound_nat_rule` sub block.
@@ -553,10 +553,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

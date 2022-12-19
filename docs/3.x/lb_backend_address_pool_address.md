@@ -55,11 +55,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `backend_address_ip_configuration_id` (`string`): For global load balancer, user needs to specify the `backend_address_ip_configuration_id` of the added regional load balancers When `null`, the `backend_address_ip_configuration_id` field will be omitted from the resulting object.
-  - `backend_address_pool_id` (`string`): 
-  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.
-  - `name` (`string`): 
+  - `backend_address_pool_id` (`string`): Set the `backend_address_pool_id` field on the resulting resource block.
+  - `ip_address` (`string`): Set the `ip_address` field on the resulting resource block. When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
   - `virtual_network_id` (`string`): For regional load balancer, user needs to specify `virtual_network_id` and `ip_address` When `null`, the `virtual_network_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool_address.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool_address.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,11 +84,11 @@ injecting into a complete block.
 
 **Args**:
   - `backend_address_ip_configuration_id` (`string`): For global load balancer, user needs to specify the `backend_address_ip_configuration_id` of the added regional load balancers When `null`, the `backend_address_ip_configuration_id` field will be omitted from the resulting object.
-  - `backend_address_pool_id` (`string`): 
-  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.
-  - `name` (`string`): 
+  - `backend_address_pool_id` (`string`): Set the `backend_address_pool_id` field on the resulting object.
+  - `ip_address` (`string`): Set the `ip_address` field on the resulting object. When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
   - `virtual_network_id` (`string`): For regional load balancer, user needs to specify `virtual_network_id` and `ip_address` When `null`, the `virtual_network_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool_address.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool_address.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `lb_backend_address_pool_address` resource into the root Terraform configuration.
@@ -227,10 +227,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

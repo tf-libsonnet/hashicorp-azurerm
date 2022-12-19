@@ -119,33 +119,33 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `client_certificate_enabled` (`bool`):  When `null`, the `client_certificate_enabled` field will be omitted from the resulting object.
-  - `gateway_disabled` (`bool`):  When `null`, the `gateway_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `min_api_version` (`string`):  When `null`, the `min_api_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `notification_sender_email` (`string`):  When `null`, the `notification_sender_email` field will be omitted from the resulting object.
-  - `policy` (`list`):  When `null`, the `policy` field will be omitted from the resulting object.
-  - `public_ip_address_id` (`string`):  When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `publisher_email` (`string`): 
-  - `publisher_name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_network_type` (`string`):  When `null`, the `virtual_network_type` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_location` (`list[obj]`):  When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
-  - `hostname_configuration` (`list[obj]`):  When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
-  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-securitynew) constructor.
-  - `sign_in` (`list[obj]`):  When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-sign_innew) constructor.
-  - `sign_up` (`list[obj]`):  When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-sign_upnew) constructor.
-  - `tenant_access` (`list[obj]`):  When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-tenant_accessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
+  - `client_certificate_enabled` (`bool`): Set the `client_certificate_enabled` field on the resulting resource block. When `null`, the `client_certificate_enabled` field will be omitted from the resulting object.
+  - `gateway_disabled` (`bool`): Set the `gateway_disabled` field on the resulting resource block. When `null`, the `gateway_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `min_api_version` (`string`): Set the `min_api_version` field on the resulting resource block. When `null`, the `min_api_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `notification_sender_email` (`string`): Set the `notification_sender_email` field on the resulting resource block. When `null`, the `notification_sender_email` field will be omitted from the resulting object.
+  - `policy` (`list`): Set the `policy` field on the resulting resource block. When `null`, the `policy` field will be omitted from the resulting object.
+  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting resource block. When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `publisher_email` (`string`): Set the `publisher_email` field on the resulting resource block.
+  - `publisher_name` (`string`): Set the `publisher_name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_network_type` (`string`): Set the `virtual_network_type` field on the resulting resource block. When `null`, the `virtual_network_type` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
+  - `additional_location` (`list[obj]`): Set the `additional_location` field on the resulting resource block. When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
+  - `certificate` (`list[obj]`): Set the `certificate` field on the resulting resource block. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
+  - `hostname_configuration` (`list[obj]`): Set the `hostname_configuration` field on the resulting resource block. When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
+  - `protocols` (`list[obj]`): Set the `protocols` field on the resulting resource block. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
+  - `security` (`list[obj]`): Set the `security` field on the resulting resource block. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-securitynew) constructor.
+  - `sign_in` (`list[obj]`): Set the `sign_in` field on the resulting resource block. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-sign_innew) constructor.
+  - `sign_up` (`list[obj]`): Set the `sign_up` field on the resulting resource block. When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-sign_upnew) constructor.
+  - `tenant_access` (`list[obj]`): Set the `tenant_access` field on the resulting resource block. When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-tenant_accessnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`): Set the `virtual_network_configuration` field on the resulting resource block. When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -169,33 +169,33 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `client_certificate_enabled` (`bool`):  When `null`, the `client_certificate_enabled` field will be omitted from the resulting object.
-  - `gateway_disabled` (`bool`):  When `null`, the `gateway_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `min_api_version` (`string`):  When `null`, the `min_api_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `notification_sender_email` (`string`):  When `null`, the `notification_sender_email` field will be omitted from the resulting object.
-  - `policy` (`list`):  When `null`, the `policy` field will be omitted from the resulting object.
-  - `public_ip_address_id` (`string`):  When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `publisher_email` (`string`): 
-  - `publisher_name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_network_type` (`string`):  When `null`, the `virtual_network_type` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_location` (`list[obj]`):  When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
-  - `hostname_configuration` (`list[obj]`):  When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
-  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-securitynew) constructor.
-  - `sign_in` (`list[obj]`):  When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-sign_innew) constructor.
-  - `sign_up` (`list[obj]`):  When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-sign_upnew) constructor.
-  - `tenant_access` (`list[obj]`):  When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-tenant_accessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
+  - `client_certificate_enabled` (`bool`): Set the `client_certificate_enabled` field on the resulting object. When `null`, the `client_certificate_enabled` field will be omitted from the resulting object.
+  - `gateway_disabled` (`bool`): Set the `gateway_disabled` field on the resulting object. When `null`, the `gateway_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `min_api_version` (`string`): Set the `min_api_version` field on the resulting object. When `null`, the `min_api_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `notification_sender_email` (`string`): Set the `notification_sender_email` field on the resulting object. When `null`, the `notification_sender_email` field will be omitted from the resulting object.
+  - `policy` (`list`): Set the `policy` field on the resulting object. When `null`, the `policy` field will be omitted from the resulting object.
+  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object. When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `publisher_email` (`string`): Set the `publisher_email` field on the resulting object.
+  - `publisher_name` (`string`): Set the `publisher_name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_network_type` (`string`): Set the `virtual_network_type` field on the resulting object. When `null`, the `virtual_network_type` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
+  - `additional_location` (`list[obj]`): Set the `additional_location` field on the resulting object. When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
+  - `certificate` (`list[obj]`): Set the `certificate` field on the resulting object. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
+  - `hostname_configuration` (`list[obj]`): Set the `hostname_configuration` field on the resulting object. When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
+  - `protocols` (`list[obj]`): Set the `protocols` field on the resulting object. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
+  - `security` (`list[obj]`): Set the `security` field on the resulting object. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-securitynew) constructor.
+  - `sign_in` (`list[obj]`): Set the `sign_in` field on the resulting object. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-sign_innew) constructor.
+  - `sign_up` (`list[obj]`): Set the `sign_up` field on the resulting object. When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-sign_upnew) constructor.
+  - `tenant_access` (`list[obj]`): Set the `tenant_access` field on the resulting object. When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-tenant_accessnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`): Set the `virtual_network_configuration` field on the resulting object. When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management` resource into the root Terraform configuration.
@@ -880,12 +880,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`number`):  When `null`, the `capacity` field will be omitted from the resulting object.
-  - `gateway_disabled` (`bool`):  When `null`, the `gateway_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `public_ip_address_id` (`string`):  When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.virtual_network_configuration.new](#fn-additional_locationvirtual_network_configurationnew) constructor.
+  - `capacity` (`number`): Set the `capacity` field on the resulting object. When `null`, the `capacity` field will be omitted from the resulting object.
+  - `gateway_disabled` (`bool`): Set the `gateway_disabled` field on the resulting object. When `null`, the `gateway_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object. When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
+  - `virtual_network_configuration` (`list[obj]`): Set the `virtual_network_configuration` field on the resulting object. When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.virtual_network_configuration.new](#fn-additional_locationvirtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `additional_location` sub block.
@@ -908,7 +908,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `subnet_id` (`string`): 
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_network_configuration` sub block.
@@ -931,9 +931,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `encoded_certificate` (`string`): 
-  - `store_name` (`string`): 
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `encoded_certificate` (`string`): Set the `encoded_certificate` field on the resulting object.
+  - `store_name` (`string`): Set the `store_name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `certificate` sub block.
@@ -956,11 +956,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.developer_portal.new](#fn-hostname_configurationdeveloper_portalnew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.management.new](#fn-hostname_configurationmanagementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.portal.new](#fn-hostname_configurationportalnew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.proxy.new](#fn-hostname_configurationproxynew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.scm.new](#fn-hostname_configurationscmnew) constructor.
+  - `developer_portal` (`list[obj]`): Set the `developer_portal` field on the resulting object. When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.developer_portal.new](#fn-hostname_configurationdeveloper_portalnew) constructor.
+  - `management` (`list[obj]`): Set the `management` field on the resulting object. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.management.new](#fn-hostname_configurationmanagementnew) constructor.
+  - `portal` (`list[obj]`): Set the `portal` field on the resulting object. When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.portal.new](#fn-hostname_configurationportalnew) constructor.
+  - `proxy` (`list[obj]`): Set the `proxy` field on the resulting object. When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.proxy.new](#fn-hostname_configurationproxynew) constructor.
+  - `scm` (`list[obj]`): Set the `scm` field on the resulting object. When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.scm.new](#fn-hostname_configurationscmnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `hostname_configuration` sub block.
@@ -983,12 +983,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `developer_portal` sub block.
@@ -1011,12 +1011,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `management` sub block.
@@ -1039,12 +1039,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `portal` sub block.
@@ -1067,13 +1067,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `default_ssl_binding` (`bool`):  When `null`, the `default_ssl_binding` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `default_ssl_binding` (`bool`): Set the `default_ssl_binding` field on the resulting object. When `null`, the `default_ssl_binding` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `proxy` sub block.
@@ -1096,12 +1096,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `scm` sub block.
@@ -1124,8 +1124,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -1148,7 +1148,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable_http2` (`bool`):  When `null`, the `enable_http2` field will be omitted from the resulting object.
+  - `enable_http2` (`bool`): Set the `enable_http2` field on the resulting object. When `null`, the `enable_http2` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `protocols` sub block.
@@ -1171,23 +1171,23 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable_backend_ssl30` (`bool`):  When `null`, the `enable_backend_ssl30` field will be omitted from the resulting object.
-  - `enable_backend_tls10` (`bool`):  When `null`, the `enable_backend_tls10` field will be omitted from the resulting object.
-  - `enable_backend_tls11` (`bool`):  When `null`, the `enable_backend_tls11` field will be omitted from the resulting object.
-  - `enable_frontend_ssl30` (`bool`):  When `null`, the `enable_frontend_ssl30` field will be omitted from the resulting object.
-  - `enable_frontend_tls10` (`bool`):  When `null`, the `enable_frontend_tls10` field will be omitted from the resulting object.
-  - `enable_frontend_tls11` (`bool`):  When `null`, the `enable_frontend_tls11` field will be omitted from the resulting object.
-  - `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled` (`bool`):  When `null`, the `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled` (`bool`):  When `null`, the `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled` (`bool`):  When `null`, the `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled` (`bool`):  When `null`, the `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled` (`bool`):  When `null`, the `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_rsa_with_aes128_cbc_sha_ciphers_enabled` (`bool`):  When `null`, the `tls_rsa_with_aes128_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled` (`bool`):  When `null`, the `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled` (`bool`):  When `null`, the `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_rsa_with_aes256_cbc_sha_ciphers_enabled` (`bool`):  When `null`, the `tls_rsa_with_aes256_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
-  - `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled` (`bool`):  When `null`, the `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled` field will be omitted from the resulting object.
-  - `triple_des_ciphers_enabled` (`bool`):  When `null`, the `triple_des_ciphers_enabled` field will be omitted from the resulting object.
+  - `enable_backend_ssl30` (`bool`): Set the `enable_backend_ssl30` field on the resulting object. When `null`, the `enable_backend_ssl30` field will be omitted from the resulting object.
+  - `enable_backend_tls10` (`bool`): Set the `enable_backend_tls10` field on the resulting object. When `null`, the `enable_backend_tls10` field will be omitted from the resulting object.
+  - `enable_backend_tls11` (`bool`): Set the `enable_backend_tls11` field on the resulting object. When `null`, the `enable_backend_tls11` field will be omitted from the resulting object.
+  - `enable_frontend_ssl30` (`bool`): Set the `enable_frontend_ssl30` field on the resulting object. When `null`, the `enable_frontend_ssl30` field will be omitted from the resulting object.
+  - `enable_frontend_tls10` (`bool`): Set the `enable_frontend_tls10` field on the resulting object. When `null`, the `enable_frontend_tls10` field will be omitted from the resulting object.
+  - `enable_frontend_tls11` (`bool`): Set the `enable_frontend_tls11` field on the resulting object. When `null`, the `enable_frontend_tls11` field will be omitted from the resulting object.
+  - `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled` (`bool`): Set the `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled` field on the resulting object. When `null`, the `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled` (`bool`): Set the `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled` field on the resulting object. When `null`, the `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled` (`bool`): Set the `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled` field on the resulting object. When `null`, the `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled` (`bool`): Set the `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled` field on the resulting object. When `null`, the `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled` (`bool`): Set the `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled` field on the resulting object. When `null`, the `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_rsa_with_aes128_cbc_sha_ciphers_enabled` (`bool`): Set the `tls_rsa_with_aes128_cbc_sha_ciphers_enabled` field on the resulting object. When `null`, the `tls_rsa_with_aes128_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled` (`bool`): Set the `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled` field on the resulting object. When `null`, the `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled` (`bool`): Set the `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled` field on the resulting object. When `null`, the `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_rsa_with_aes256_cbc_sha_ciphers_enabled` (`bool`): Set the `tls_rsa_with_aes256_cbc_sha_ciphers_enabled` field on the resulting object. When `null`, the `tls_rsa_with_aes256_cbc_sha_ciphers_enabled` field will be omitted from the resulting object.
+  - `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled` (`bool`): Set the `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled` field on the resulting object. When `null`, the `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled` field will be omitted from the resulting object.
+  - `triple_des_ciphers_enabled` (`bool`): Set the `triple_des_ciphers_enabled` field on the resulting object. When `null`, the `triple_des_ciphers_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `security` sub block.
@@ -1210,7 +1210,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): 
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sign_in` sub block.
@@ -1233,8 +1233,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): 
-  - `terms_of_service` (`list[obj]`):  When `null`, the `terms_of_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.terms_of_service.new](#fn-sign_upterms_of_servicenew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `terms_of_service` (`list[obj]`): Set the `terms_of_service` field on the resulting object. When `null`, the `terms_of_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.terms_of_service.new](#fn-sign_upterms_of_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `sign_up` sub block.
@@ -1257,9 +1257,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `consent_required` (`bool`): 
-  - `enabled` (`bool`): 
-  - `text` (`string`):  When `null`, the `text` field will be omitted from the resulting object.
+  - `consent_required` (`bool`): Set the `consent_required` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `text` (`string`): Set the `text` field on the resulting object. When `null`, the `text` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `terms_of_service` sub block.
@@ -1282,7 +1282,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): 
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `tenant_access` sub block.
@@ -1305,10 +1305,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -1331,7 +1331,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `subnet_id` (`string`): 
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_network_configuration` sub block.

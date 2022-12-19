@@ -67,25 +67,25 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `access` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `destination_address_prefix` (`string`):  When `null`, the `destination_address_prefix` field will be omitted from the resulting object.
-  - `destination_address_prefixes` (`list`):  When `null`, the `destination_address_prefixes` field will be omitted from the resulting object.
-  - `destination_application_security_group_ids` (`list`):  When `null`, the `destination_application_security_group_ids` field will be omitted from the resulting object.
-  - `destination_port_range` (`string`):  When `null`, the `destination_port_range` field will be omitted from the resulting object.
-  - `destination_port_ranges` (`list`):  When `null`, the `destination_port_ranges` field will be omitted from the resulting object.
-  - `direction` (`string`): 
-  - `name` (`string`): 
-  - `network_security_group_name` (`string`): 
-  - `priority` (`number`): 
-  - `protocol` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `source_address_prefix` (`string`):  When `null`, the `source_address_prefix` field will be omitted from the resulting object.
-  - `source_address_prefixes` (`list`):  When `null`, the `source_address_prefixes` field will be omitted from the resulting object.
-  - `source_application_security_group_ids` (`list`):  When `null`, the `source_application_security_group_ids` field will be omitted from the resulting object.
-  - `source_port_range` (`string`):  When `null`, the `source_port_range` field will be omitted from the resulting object.
-  - `source_port_ranges` (`list`):  When `null`, the `source_port_ranges` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_security_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access` (`string`): Set the `access` field on the resulting resource block.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `destination_address_prefix` (`string`): Set the `destination_address_prefix` field on the resulting resource block. When `null`, the `destination_address_prefix` field will be omitted from the resulting object.
+  - `destination_address_prefixes` (`list`): Set the `destination_address_prefixes` field on the resulting resource block. When `null`, the `destination_address_prefixes` field will be omitted from the resulting object.
+  - `destination_application_security_group_ids` (`list`): Set the `destination_application_security_group_ids` field on the resulting resource block. When `null`, the `destination_application_security_group_ids` field will be omitted from the resulting object.
+  - `destination_port_range` (`string`): Set the `destination_port_range` field on the resulting resource block. When `null`, the `destination_port_range` field will be omitted from the resulting object.
+  - `destination_port_ranges` (`list`): Set the `destination_port_ranges` field on the resulting resource block. When `null`, the `destination_port_ranges` field will be omitted from the resulting object.
+  - `direction` (`string`): Set the `direction` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `network_security_group_name` (`string`): Set the `network_security_group_name` field on the resulting resource block.
+  - `priority` (`number`): Set the `priority` field on the resulting resource block.
+  - `protocol` (`string`): Set the `protocol` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `source_address_prefix` (`string`): Set the `source_address_prefix` field on the resulting resource block. When `null`, the `source_address_prefix` field will be omitted from the resulting object.
+  - `source_address_prefixes` (`list`): Set the `source_address_prefixes` field on the resulting resource block. When `null`, the `source_address_prefixes` field will be omitted from the resulting object.
+  - `source_application_security_group_ids` (`list`): Set the `source_application_security_group_ids` field on the resulting resource block. When `null`, the `source_application_security_group_ids` field will be omitted from the resulting object.
+  - `source_port_range` (`string`): Set the `source_port_range` field on the resulting resource block. When `null`, the `source_port_range` field will be omitted from the resulting object.
+  - `source_port_ranges` (`list`): Set the `source_port_ranges` field on the resulting resource block. When `null`, the `source_port_ranges` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_security_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,25 +109,25 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `access` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `destination_address_prefix` (`string`):  When `null`, the `destination_address_prefix` field will be omitted from the resulting object.
-  - `destination_address_prefixes` (`list`):  When `null`, the `destination_address_prefixes` field will be omitted from the resulting object.
-  - `destination_application_security_group_ids` (`list`):  When `null`, the `destination_application_security_group_ids` field will be omitted from the resulting object.
-  - `destination_port_range` (`string`):  When `null`, the `destination_port_range` field will be omitted from the resulting object.
-  - `destination_port_ranges` (`list`):  When `null`, the `destination_port_ranges` field will be omitted from the resulting object.
-  - `direction` (`string`): 
-  - `name` (`string`): 
-  - `network_security_group_name` (`string`): 
-  - `priority` (`number`): 
-  - `protocol` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `source_address_prefix` (`string`):  When `null`, the `source_address_prefix` field will be omitted from the resulting object.
-  - `source_address_prefixes` (`list`):  When `null`, the `source_address_prefixes` field will be omitted from the resulting object.
-  - `source_application_security_group_ids` (`list`):  When `null`, the `source_application_security_group_ids` field will be omitted from the resulting object.
-  - `source_port_range` (`string`):  When `null`, the `source_port_range` field will be omitted from the resulting object.
-  - `source_port_ranges` (`list`):  When `null`, the `source_port_ranges` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_security_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access` (`string`): Set the `access` field on the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `destination_address_prefix` (`string`): Set the `destination_address_prefix` field on the resulting object. When `null`, the `destination_address_prefix` field will be omitted from the resulting object.
+  - `destination_address_prefixes` (`list`): Set the `destination_address_prefixes` field on the resulting object. When `null`, the `destination_address_prefixes` field will be omitted from the resulting object.
+  - `destination_application_security_group_ids` (`list`): Set the `destination_application_security_group_ids` field on the resulting object. When `null`, the `destination_application_security_group_ids` field will be omitted from the resulting object.
+  - `destination_port_range` (`string`): Set the `destination_port_range` field on the resulting object. When `null`, the `destination_port_range` field will be omitted from the resulting object.
+  - `destination_port_ranges` (`list`): Set the `destination_port_ranges` field on the resulting object. When `null`, the `destination_port_ranges` field will be omitted from the resulting object.
+  - `direction` (`string`): Set the `direction` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `network_security_group_name` (`string`): Set the `network_security_group_name` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `source_address_prefix` (`string`): Set the `source_address_prefix` field on the resulting object. When `null`, the `source_address_prefix` field will be omitted from the resulting object.
+  - `source_address_prefixes` (`list`): Set the `source_address_prefixes` field on the resulting object. When `null`, the `source_address_prefixes` field will be omitted from the resulting object.
+  - `source_application_security_group_ids` (`list`): Set the `source_application_security_group_ids` field on the resulting object. When `null`, the `source_application_security_group_ids` field will be omitted from the resulting object.
+  - `source_port_range` (`string`): Set the `source_port_range` field on the resulting object. When `null`, the `source_port_range` field will be omitted from the resulting object.
+  - `source_port_ranges` (`list`): Set the `source_port_ranges` field on the resulting object. When `null`, the `source_port_ranges` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_security_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_security_rule` resource into the root Terraform configuration.
@@ -474,10 +474,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

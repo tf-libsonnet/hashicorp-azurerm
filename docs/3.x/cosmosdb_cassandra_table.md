@@ -68,14 +68,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `analytical_storage_ttl` (`number`):  When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
-  - `cassandra_keyspace_id` (`string`): 
-  - `default_ttl` (`number`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
-  - `schema` (`list[obj]`):  When `null`, the `schema` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.new](#fn-schemanew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.timeouts.new](#fn-timeoutsnew) constructor.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting resource block. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
+  - `cassandra_keyspace_id` (`string`): Set the `cassandra_keyspace_id` field on the resulting resource block.
+  - `default_ttl` (`number`): Set the `default_ttl` field on the resulting resource block. When `null`, the `default_ttl` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `throughput` (`number`): Set the `throughput` field on the resulting resource block. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `autoscale_settings` (`list[obj]`): Set the `autoscale_settings` field on the resulting resource block. When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `schema` (`list[obj]`): Set the `schema` field on the resulting resource block. When `null`, the `schema` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.new](#fn-schemanew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,14 +99,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `analytical_storage_ttl` (`number`):  When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
-  - `cassandra_keyspace_id` (`string`): 
-  - `default_ttl` (`number`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
-  - `schema` (`list[obj]`):  When `null`, the `schema` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.new](#fn-schemanew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.timeouts.new](#fn-timeoutsnew) constructor.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting object. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
+  - `cassandra_keyspace_id` (`string`): Set the `cassandra_keyspace_id` field on the resulting object.
+  - `default_ttl` (`number`): Set the `default_ttl` field on the resulting object. When `null`, the `default_ttl` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `throughput` (`number`): Set the `throughput` field on the resulting object. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `autoscale_settings` (`list[obj]`): Set the `autoscale_settings` field on the resulting object. When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `schema` (`list[obj]`): Set the `schema` field on the resulting object. When `null`, the `schema` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.new](#fn-schemanew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cosmosdb_cassandra_table` resource into the root Terraform configuration.
@@ -319,7 +319,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_throughput` (`number`):  When `null`, the `max_throughput` field will be omitted from the resulting object.
+  - `max_throughput` (`number`): Set the `max_throughput` field on the resulting object. When `null`, the `max_throughput` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `autoscale_settings` sub block.
@@ -342,9 +342,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `cluster_key` (`list[obj]`):  When `null`, the `cluster_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.cluster_key.new](#fn-schemacluster_keynew) constructor.
-  - `column` (`list[obj]`):  When `null`, the `column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.column.new](#fn-schemacolumnnew) constructor.
-  - `partition_key` (`list[obj]`):  When `null`, the `partition_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.partition_key.new](#fn-schemapartition_keynew) constructor.
+  - `cluster_key` (`list[obj]`): Set the `cluster_key` field on the resulting object. When `null`, the `cluster_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.cluster_key.new](#fn-schemacluster_keynew) constructor.
+  - `column` (`list[obj]`): Set the `column` field on the resulting object. When `null`, the `column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.column.new](#fn-schemacolumnnew) constructor.
+  - `partition_key` (`list[obj]`): Set the `partition_key` field on the resulting object. When `null`, the `partition_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.partition_key.new](#fn-schemapartition_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schema` sub block.
@@ -367,8 +367,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `order_by` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `order_by` (`string`): Set the `order_by` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cluster_key` sub block.
@@ -391,8 +391,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `type` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `column` sub block.
@@ -415,7 +415,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `partition_key` sub block.
@@ -438,10 +438,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

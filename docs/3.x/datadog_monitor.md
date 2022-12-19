@@ -67,16 +67,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): 
-  - `monitoring_enabled` (`bool`):  When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `datadog_organization` (`list[obj]`):  When `null`, the `datadog_organization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.datadog_organization.new](#fn-datadog_organizationnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.timeouts.new](#fn-timeoutsnew) constructor.
-  - `user` (`list[obj]`):  When `null`, the `user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.user.new](#fn-usernew) constructor.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `monitoring_enabled` (`bool`): Set the `monitoring_enabled` field on the resulting resource block. When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `datadog_organization` (`list[obj]`): Set the `datadog_organization` field on the resulting resource block. When `null`, the `datadog_organization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.datadog_organization.new](#fn-datadog_organizationnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.timeouts.new](#fn-timeoutsnew) constructor.
+  - `user` (`list[obj]`): Set the `user` field on the resulting resource block. When `null`, the `user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.user.new](#fn-usernew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,16 +100,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): 
-  - `monitoring_enabled` (`bool`):  When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `datadog_organization` (`list[obj]`):  When `null`, the `datadog_organization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.datadog_organization.new](#fn-datadog_organizationnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.timeouts.new](#fn-timeoutsnew) constructor.
-  - `user` (`list[obj]`):  When `null`, the `user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.user.new](#fn-usernew) constructor.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `monitoring_enabled` (`bool`): Set the `monitoring_enabled` field on the resulting object. When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `datadog_organization` (`list[obj]`): Set the `datadog_organization` field on the resulting object. When `null`, the `datadog_organization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.datadog_organization.new](#fn-datadog_organizationnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.timeouts.new](#fn-timeoutsnew) constructor.
+  - `user` (`list[obj]`): Set the `user` field on the resulting object. When `null`, the `user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.datadog_monitor.user.new](#fn-usernew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `datadog_monitor` resource into the root Terraform configuration.
@@ -375,12 +375,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `api_key` (`string`): 
-  - `application_key` (`string`): 
-  - `enterprise_app_id` (`string`):  When `null`, the `enterprise_app_id` field will be omitted from the resulting object.
-  - `linking_auth_code` (`string`):  When `null`, the `linking_auth_code` field will be omitted from the resulting object.
-  - `linking_client_id` (`string`):  When `null`, the `linking_client_id` field will be omitted from the resulting object.
-  - `redirect_uri` (`string`):  When `null`, the `redirect_uri` field will be omitted from the resulting object.
+  - `api_key` (`string`): Set the `api_key` field on the resulting object.
+  - `application_key` (`string`): Set the `application_key` field on the resulting object.
+  - `enterprise_app_id` (`string`): Set the `enterprise_app_id` field on the resulting object. When `null`, the `enterprise_app_id` field will be omitted from the resulting object.
+  - `linking_auth_code` (`string`): Set the `linking_auth_code` field on the resulting object. When `null`, the `linking_auth_code` field will be omitted from the resulting object.
+  - `linking_client_id` (`string`): Set the `linking_client_id` field on the resulting object. When `null`, the `linking_client_id` field will be omitted from the resulting object.
+  - `redirect_uri` (`string`): Set the `redirect_uri` field on the resulting object. When `null`, the `redirect_uri` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `datadog_organization` sub block.
@@ -403,7 +403,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): 
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -426,10 +426,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -452,9 +452,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `email` (`string`): 
-  - `name` (`string`): 
-  - `phone_number` (`string`):  When `null`, the `phone_number` field will be omitted from the resulting object.
+  - `email` (`string`): Set the `email` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `phone_number` (`string`): Set the `phone_number` field on the resulting object. When `null`, the `phone_number` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `user` sub block.

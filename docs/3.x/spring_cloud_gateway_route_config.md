@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `filters` (`list`):  When `null`, the `filters` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `predicates` (`list`):  When `null`, the `predicates` field will be omitted from the resulting object.
-  - `protocol` (`string`):  When `null`, the `protocol` field will be omitted from the resulting object.
-  - `spring_cloud_app_id` (`string`):  When `null`, the `spring_cloud_app_id` field will be omitted from the resulting object.
-  - `spring_cloud_gateway_id` (`string`): 
-  - `sso_validation_enabled` (`bool`):  When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
-  - `open_api` (`list[obj]`):  When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-open_apinew) constructor.
-  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-routenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `filters` (`list`): Set the `filters` field on the resulting resource block. When `null`, the `filters` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `predicates` (`list`): Set the `predicates` field on the resulting resource block. When `null`, the `predicates` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting resource block. When `null`, the `protocol` field will be omitted from the resulting object.
+  - `spring_cloud_app_id` (`string`): Set the `spring_cloud_app_id` field on the resulting resource block. When `null`, the `spring_cloud_app_id` field will be omitted from the resulting object.
+  - `spring_cloud_gateway_id` (`string`): Set the `spring_cloud_gateway_id` field on the resulting resource block.
+  - `sso_validation_enabled` (`bool`): Set the `sso_validation_enabled` field on the resulting resource block. When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
+  - `open_api` (`list[obj]`): Set the `open_api` field on the resulting resource block. When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-open_apinew) constructor.
+  - `route` (`list[obj]`): Set the `route` field on the resulting resource block. When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-routenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `filters` (`list`):  When `null`, the `filters` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `predicates` (`list`):  When `null`, the `predicates` field will be omitted from the resulting object.
-  - `protocol` (`string`):  When `null`, the `protocol` field will be omitted from the resulting object.
-  - `spring_cloud_app_id` (`string`):  When `null`, the `spring_cloud_app_id` field will be omitted from the resulting object.
-  - `spring_cloud_gateway_id` (`string`): 
-  - `sso_validation_enabled` (`bool`):  When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
-  - `open_api` (`list[obj]`):  When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-open_apinew) constructor.
-  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-routenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `filters` (`list`): Set the `filters` field on the resulting object. When `null`, the `filters` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `predicates` (`list`): Set the `predicates` field on the resulting object. When `null`, the `predicates` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
+  - `spring_cloud_app_id` (`string`): Set the `spring_cloud_app_id` field on the resulting object. When `null`, the `spring_cloud_app_id` field will be omitted from the resulting object.
+  - `spring_cloud_gateway_id` (`string`): Set the `spring_cloud_gateway_id` field on the resulting object.
+  - `sso_validation_enabled` (`bool`): Set the `sso_validation_enabled` field on the resulting object. When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
+  - `open_api` (`list[obj]`): Set the `open_api` field on the resulting object. When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-open_apinew) constructor.
+  - `route` (`list[obj]`): Set the `route` field on the resulting object. When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-routenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_gateway_route_config` resource into the root Terraform configuration.
@@ -351,7 +351,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `uri` (`string`):  When `null`, the `uri` field will be omitted from the resulting object.
+  - `uri` (`string`): Set the `uri` field on the resulting object. When `null`, the `uri` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `open_api` sub block.
@@ -374,15 +374,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `classification_tags` (`list`):  When `null`, the `classification_tags` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `filters` (`list`):  When `null`, the `filters` field will be omitted from the resulting object.
-  - `order` (`number`): 
-  - `predicates` (`list`):  When `null`, the `predicates` field will be omitted from the resulting object.
-  - `sso_validation_enabled` (`bool`):  When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
-  - `title` (`string`):  When `null`, the `title` field will be omitted from the resulting object.
-  - `token_relay` (`bool`):  When `null`, the `token_relay` field will be omitted from the resulting object.
-  - `uri` (`string`):  When `null`, the `uri` field will be omitted from the resulting object.
+  - `classification_tags` (`list`): Set the `classification_tags` field on the resulting object. When `null`, the `classification_tags` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `filters` (`list`): Set the `filters` field on the resulting object. When `null`, the `filters` field will be omitted from the resulting object.
+  - `order` (`number`): Set the `order` field on the resulting object.
+  - `predicates` (`list`): Set the `predicates` field on the resulting object. When `null`, the `predicates` field will be omitted from the resulting object.
+  - `sso_validation_enabled` (`bool`): Set the `sso_validation_enabled` field on the resulting object. When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
+  - `title` (`string`): Set the `title` field on the resulting object. When `null`, the `title` field will be omitted from the resulting object.
+  - `token_relay` (`bool`): Set the `token_relay` field on the resulting object. When `null`, the `token_relay` field will be omitted from the resulting object.
+  - `uri` (`string`): Set the `uri` field on the resulting object. When `null`, the `uri` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `route` sub block.
@@ -405,10 +405,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

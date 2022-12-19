@@ -63,18 +63,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `address_space` (`list`): 
-  - `bgp_community` (`string`):  When `null`, the `bgp_community` field will be omitted from the resulting object.
-  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `flow_timeout_in_minutes` (`number`):  When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `subnet` (`list`):  When `null`, the `subnet` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ddos_protection_plan` (`list[obj]`):  When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.
+  - `address_space` (`list`): Set the `address_space` field on the resulting resource block.
+  - `bgp_community` (`string`): Set the `bgp_community` field on the resulting resource block. When `null`, the `bgp_community` field will be omitted from the resulting object.
+  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `flow_timeout_in_minutes` (`number`): Set the `flow_timeout_in_minutes` field on the resulting resource block. When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `subnet` (`list`): Set the `subnet` field on the resulting resource block. When `null`, the `subnet` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting resource block. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,18 +98,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `address_space` (`list`): 
-  - `bgp_community` (`string`):  When `null`, the `bgp_community` field will be omitted from the resulting object.
-  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `flow_timeout_in_minutes` (`number`):  When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `subnet` (`list`):  When `null`, the `subnet` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ddos_protection_plan` (`list[obj]`):  When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.
+  - `address_space` (`list`): Set the `address_space` field on the resulting object.
+  - `bgp_community` (`string`): Set the `bgp_community` field on the resulting object. When `null`, the `bgp_community` field will be omitted from the resulting object.
+  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `flow_timeout_in_minutes` (`number`): Set the `flow_timeout_in_minutes` field on the resulting object. When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `subnet` (`list`): Set the `subnet` field on the resulting object. When `null`, the `subnet` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting object. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_network` resource into the root Terraform configuration.
@@ -365,7 +365,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable` (`bool`): 
+  - `enable` (`bool`): Set the `enable` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ddos_protection_plan` sub block.
@@ -388,10 +388,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

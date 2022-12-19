@@ -61,12 +61,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `internet_security_enabled` (`bool`):  When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `remote_virtual_network_id` (`string`): 
-  - `virtual_hub_id` (`string`): 
-  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `internet_security_enabled` (`bool`): Set the `internet_security_enabled` field on the resulting resource block. When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `remote_virtual_network_id` (`string`): Set the `remote_virtual_network_id` field on the resulting resource block.
+  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting resource block.
+  - `routing` (`list[obj]`): Set the `routing` field on the resulting resource block. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.new](#fn-routingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,12 +90,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `internet_security_enabled` (`bool`):  When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `remote_virtual_network_id` (`string`): 
-  - `virtual_hub_id` (`string`): 
-  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `internet_security_enabled` (`bool`): Set the `internet_security_enabled` field on the resulting object. When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `remote_virtual_network_id` (`string`): Set the `remote_virtual_network_id` field on the resulting object.
+  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.
+  - `routing` (`list[obj]`): Set the `routing` field on the resulting object. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.new](#fn-routingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_hub_connection` resource into the root Terraform configuration.
@@ -255,9 +255,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `associated_route_table_id` (`string`):  When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
-  - `static_vnet_route` (`list[obj]`):  When `null`, the `static_vnet_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.static_vnet_route.new](#fn-routingstatic_vnet_routenew) constructor.
+  - `associated_route_table_id` (`string`): Set the `associated_route_table_id` field on the resulting object. When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
+  - `propagated_route_table` (`list[obj]`): Set the `propagated_route_table` field on the resulting object. When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
+  - `static_vnet_route` (`list[obj]`): Set the `static_vnet_route` field on the resulting object. When `null`, the `static_vnet_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.static_vnet_route.new](#fn-routingstatic_vnet_routenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing` sub block.
@@ -280,8 +280,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
-  - `route_table_ids` (`list`):  When `null`, the `route_table_ids` field will be omitted from the resulting object.
+  - `labels` (`list`): Set the `labels` field on the resulting object. When `null`, the `labels` field will be omitted from the resulting object.
+  - `route_table_ids` (`list`): Set the `route_table_ids` field on the resulting object. When `null`, the `route_table_ids` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `propagated_route_table` sub block.
@@ -304,9 +304,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `address_prefixes` (`list`):  When `null`, the `address_prefixes` field will be omitted from the resulting object.
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `next_hop_ip_address` (`string`):  When `null`, the `next_hop_ip_address` field will be omitted from the resulting object.
+  - `address_prefixes` (`list`): Set the `address_prefixes` field on the resulting object. When `null`, the `address_prefixes` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `next_hop_ip_address` (`string`): Set the `next_hop_ip_address` field on the resulting object. When `null`, the `next_hop_ip_address` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `static_vnet_route` sub block.
@@ -329,10 +329,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

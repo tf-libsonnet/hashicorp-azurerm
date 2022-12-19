@@ -54,12 +54,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `entity` (`obj`): 
-  - `partition_key` (`string`): 
-  - `row_key` (`string`): 
-  - `storage_account_name` (`string`): 
-  - `table_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table_entity.timeouts.new](#fn-timeoutsnew) constructor.
+  - `entity` (`obj`): Set the `entity` field on the resulting resource block.
+  - `partition_key` (`string`): Set the `partition_key` field on the resulting resource block.
+  - `row_key` (`string`): Set the `row_key` field on the resulting resource block.
+  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting resource block.
+  - `table_name` (`string`): Set the `table_name` field on the resulting resource block.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table_entity.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,12 +83,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `entity` (`obj`): 
-  - `partition_key` (`string`): 
-  - `row_key` (`string`): 
-  - `storage_account_name` (`string`): 
-  - `table_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table_entity.timeouts.new](#fn-timeoutsnew) constructor.
+  - `entity` (`obj`): Set the `entity` field on the resulting object.
+  - `partition_key` (`string`): Set the `partition_key` field on the resulting object.
+  - `row_key` (`string`): Set the `row_key` field on the resulting object.
+  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting object.
+  - `table_name` (`string`): Set the `table_name` field on the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table_entity.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_table_entity` resource into the root Terraform configuration.
@@ -227,10 +227,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

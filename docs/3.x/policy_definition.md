@@ -58,16 +58,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `management_group_id` (`string`):  When `null`, the `management_group_id` field will be omitted from the resulting object.
-  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
-  - `mode` (`string`): 
-  - `name` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `policy_rule` (`string`):  When `null`, the `policy_rule` field will be omitted from the resulting object.
-  - `policy_type` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting resource block. When `null`, the `management_group_id` field will be omitted from the resulting object.
+  - `metadata` (`string`): Set the `metadata` field on the resulting resource block. When `null`, the `metadata` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `parameters` (`string`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `policy_rule` (`string`): Set the `policy_rule` field on the resulting resource block. When `null`, the `policy_rule` field will be omitted from the resulting object.
+  - `policy_type` (`string`): Set the `policy_type` field on the resulting resource block.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,16 +91,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `management_group_id` (`string`):  When `null`, the `management_group_id` field will be omitted from the resulting object.
-  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
-  - `mode` (`string`): 
-  - `name` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `policy_rule` (`string`):  When `null`, the `policy_rule` field will be omitted from the resulting object.
-  - `policy_type` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting object. When `null`, the `management_group_id` field will be omitted from the resulting object.
+  - `metadata` (`string`): Set the `metadata` field on the resulting object. When `null`, the `metadata` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `policy_rule` (`string`): Set the `policy_rule` field on the resulting object. When `null`, the `policy_rule` field will be omitted from the resulting object.
+  - `policy_type` (`string`): Set the `policy_type` field on the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `policy_definition` resource into the root Terraform configuration.
@@ -303,10 +303,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

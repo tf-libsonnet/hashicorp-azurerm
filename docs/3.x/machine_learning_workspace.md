@@ -74,26 +74,26 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `application_insights_id` (`string`): 
-  - `container_registry_id` (`string`):  When `null`, the `container_registry_id` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `high_business_impact` (`bool`):  When `null`, the `high_business_impact` field will be omitted from the resulting object.
-  - `image_build_compute_name` (`string`):  When `null`, the `image_build_compute_name` field will be omitted from the resulting object.
-  - `key_vault_id` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `primary_user_assigned_identity` (`string`):  When `null`, the `primary_user_assigned_identity` field will be omitted from the resulting object.
-  - `public_access_behind_virtual_network_enabled` (`bool`):  When `null`, the `public_access_behind_virtual_network_enabled` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`):  When `null`, the `sku_name` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `v1_legacy_mode_enabled` (`bool`):  When `null`, the `v1_legacy_mode_enabled` field will be omitted from the resulting object.
-  - `encryption` (`list[obj]`):  When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.encryption.new](#fn-encryptionnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_insights_id` (`string`): Set the `application_insights_id` field on the resulting resource block.
+  - `container_registry_id` (`string`): Set the `container_registry_id` field on the resulting resource block. When `null`, the `container_registry_id` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting resource block. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `high_business_impact` (`bool`): Set the `high_business_impact` field on the resulting resource block. When `null`, the `high_business_impact` field will be omitted from the resulting object.
+  - `image_build_compute_name` (`string`): Set the `image_build_compute_name` field on the resulting resource block. When `null`, the `image_build_compute_name` field will be omitted from the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `primary_user_assigned_identity` (`string`): Set the `primary_user_assigned_identity` field on the resulting resource block. When `null`, the `primary_user_assigned_identity` field will be omitted from the resulting object.
+  - `public_access_behind_virtual_network_enabled` (`bool`): Set the `public_access_behind_virtual_network_enabled` field on the resulting resource block. When `null`, the `public_access_behind_virtual_network_enabled` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `v1_legacy_mode_enabled` (`bool`): Set the `v1_legacy_mode_enabled` field on the resulting resource block. When `null`, the `v1_legacy_mode_enabled` field will be omitted from the resulting object.
+  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.encryption.new](#fn-encryptionnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -117,26 +117,26 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `application_insights_id` (`string`): 
-  - `container_registry_id` (`string`):  When `null`, the `container_registry_id` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `high_business_impact` (`bool`):  When `null`, the `high_business_impact` field will be omitted from the resulting object.
-  - `image_build_compute_name` (`string`):  When `null`, the `image_build_compute_name` field will be omitted from the resulting object.
-  - `key_vault_id` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `primary_user_assigned_identity` (`string`):  When `null`, the `primary_user_assigned_identity` field will be omitted from the resulting object.
-  - `public_access_behind_virtual_network_enabled` (`bool`):  When `null`, the `public_access_behind_virtual_network_enabled` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`):  When `null`, the `sku_name` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `v1_legacy_mode_enabled` (`bool`):  When `null`, the `v1_legacy_mode_enabled` field will be omitted from the resulting object.
-  - `encryption` (`list[obj]`):  When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.encryption.new](#fn-encryptionnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_insights_id` (`string`): Set the `application_insights_id` field on the resulting object.
+  - `container_registry_id` (`string`): Set the `container_registry_id` field on the resulting object. When `null`, the `container_registry_id` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting object. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `high_business_impact` (`bool`): Set the `high_business_impact` field on the resulting object. When `null`, the `high_business_impact` field will be omitted from the resulting object.
+  - `image_build_compute_name` (`string`): Set the `image_build_compute_name` field on the resulting object. When `null`, the `image_build_compute_name` field will be omitted from the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `primary_user_assigned_identity` (`string`): Set the `primary_user_assigned_identity` field on the resulting object. When `null`, the `primary_user_assigned_identity` field will be omitted from the resulting object.
+  - `public_access_behind_virtual_network_enabled` (`bool`): Set the `public_access_behind_virtual_network_enabled` field on the resulting object. When `null`, the `public_access_behind_virtual_network_enabled` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `v1_legacy_mode_enabled` (`bool`): Set the `v1_legacy_mode_enabled` field on the resulting object. When `null`, the `v1_legacy_mode_enabled` field will be omitted from the resulting object.
+  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.encryption.new](#fn-encryptionnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `machine_learning_workspace` resource into the root Terraform configuration.
@@ -541,9 +541,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_id` (`string`): 
-  - `key_vault_id` (`string`): 
-  - `user_assigned_identity_id` (`string`):  When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
+  - `key_id` (`string`): Set the `key_id` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `encryption` sub block.
@@ -566,8 +566,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -590,10 +590,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

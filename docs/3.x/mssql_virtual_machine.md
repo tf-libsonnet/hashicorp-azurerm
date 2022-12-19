@@ -91,21 +91,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `r_services_enabled` (`bool`):  When `null`, the `r_services_enabled` field will be omitted from the resulting object.
-  - `sql_connectivity_port` (`number`):  When `null`, the `sql_connectivity_port` field will be omitted from the resulting object.
-  - `sql_connectivity_type` (`string`):  When `null`, the `sql_connectivity_type` field will be omitted from the resulting object.
-  - `sql_connectivity_update_password` (`string`):  When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
-  - `sql_connectivity_update_username` (`string`):  When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
-  - `sql_license_type` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_machine_id` (`string`): 
-  - `assessment` (`list[obj]`):  When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
-  - `auto_backup` (`list[obj]`):  When `null`, the `auto_backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_backup.new](#fn-auto_backupnew) constructor.
-  - `auto_patching` (`list[obj]`):  When `null`, the `auto_patching` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_patching.new](#fn-auto_patchingnew) constructor.
-  - `key_vault_credential` (`list[obj]`):  When `null`, the `key_vault_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.key_vault_credential.new](#fn-key_vault_credentialnew) constructor.
-  - `sql_instance` (`list[obj]`):  When `null`, the `sql_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.sql_instance.new](#fn-sql_instancenew) constructor.
-  - `storage_configuration` (`list[obj]`):  When `null`, the `storage_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.new](#fn-storage_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `r_services_enabled` (`bool`): Set the `r_services_enabled` field on the resulting resource block. When `null`, the `r_services_enabled` field will be omitted from the resulting object.
+  - `sql_connectivity_port` (`number`): Set the `sql_connectivity_port` field on the resulting resource block. When `null`, the `sql_connectivity_port` field will be omitted from the resulting object.
+  - `sql_connectivity_type` (`string`): Set the `sql_connectivity_type` field on the resulting resource block. When `null`, the `sql_connectivity_type` field will be omitted from the resulting object.
+  - `sql_connectivity_update_password` (`string`): Set the `sql_connectivity_update_password` field on the resulting resource block. When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
+  - `sql_connectivity_update_username` (`string`): Set the `sql_connectivity_update_username` field on the resulting resource block. When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
+  - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting resource block.
+  - `assessment` (`list[obj]`): Set the `assessment` field on the resulting resource block. When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
+  - `auto_backup` (`list[obj]`): Set the `auto_backup` field on the resulting resource block. When `null`, the `auto_backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_backup.new](#fn-auto_backupnew) constructor.
+  - `auto_patching` (`list[obj]`): Set the `auto_patching` field on the resulting resource block. When `null`, the `auto_patching` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_patching.new](#fn-auto_patchingnew) constructor.
+  - `key_vault_credential` (`list[obj]`): Set the `key_vault_credential` field on the resulting resource block. When `null`, the `key_vault_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.key_vault_credential.new](#fn-key_vault_credentialnew) constructor.
+  - `sql_instance` (`list[obj]`): Set the `sql_instance` field on the resulting resource block. When `null`, the `sql_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.sql_instance.new](#fn-sql_instancenew) constructor.
+  - `storage_configuration` (`list[obj]`): Set the `storage_configuration` field on the resulting resource block. When `null`, the `storage_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.new](#fn-storage_configurationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -129,21 +129,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `r_services_enabled` (`bool`):  When `null`, the `r_services_enabled` field will be omitted from the resulting object.
-  - `sql_connectivity_port` (`number`):  When `null`, the `sql_connectivity_port` field will be omitted from the resulting object.
-  - `sql_connectivity_type` (`string`):  When `null`, the `sql_connectivity_type` field will be omitted from the resulting object.
-  - `sql_connectivity_update_password` (`string`):  When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
-  - `sql_connectivity_update_username` (`string`):  When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
-  - `sql_license_type` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_machine_id` (`string`): 
-  - `assessment` (`list[obj]`):  When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
-  - `auto_backup` (`list[obj]`):  When `null`, the `auto_backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_backup.new](#fn-auto_backupnew) constructor.
-  - `auto_patching` (`list[obj]`):  When `null`, the `auto_patching` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_patching.new](#fn-auto_patchingnew) constructor.
-  - `key_vault_credential` (`list[obj]`):  When `null`, the `key_vault_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.key_vault_credential.new](#fn-key_vault_credentialnew) constructor.
-  - `sql_instance` (`list[obj]`):  When `null`, the `sql_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.sql_instance.new](#fn-sql_instancenew) constructor.
-  - `storage_configuration` (`list[obj]`):  When `null`, the `storage_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.new](#fn-storage_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `r_services_enabled` (`bool`): Set the `r_services_enabled` field on the resulting object. When `null`, the `r_services_enabled` field will be omitted from the resulting object.
+  - `sql_connectivity_port` (`number`): Set the `sql_connectivity_port` field on the resulting object. When `null`, the `sql_connectivity_port` field will be omitted from the resulting object.
+  - `sql_connectivity_type` (`string`): Set the `sql_connectivity_type` field on the resulting object. When `null`, the `sql_connectivity_type` field will be omitted from the resulting object.
+  - `sql_connectivity_update_password` (`string`): Set the `sql_connectivity_update_password` field on the resulting object. When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
+  - `sql_connectivity_update_username` (`string`): Set the `sql_connectivity_update_username` field on the resulting object. When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
+  - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting object.
+  - `assessment` (`list[obj]`): Set the `assessment` field on the resulting object. When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
+  - `auto_backup` (`list[obj]`): Set the `auto_backup` field on the resulting object. When `null`, the `auto_backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_backup.new](#fn-auto_backupnew) constructor.
+  - `auto_patching` (`list[obj]`): Set the `auto_patching` field on the resulting object. When `null`, the `auto_patching` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_patching.new](#fn-auto_patchingnew) constructor.
+  - `key_vault_credential` (`list[obj]`): Set the `key_vault_credential` field on the resulting object. When `null`, the `key_vault_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.key_vault_credential.new](#fn-key_vault_credentialnew) constructor.
+  - `sql_instance` (`list[obj]`): Set the `sql_instance` field on the resulting object. When `null`, the `sql_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.sql_instance.new](#fn-sql_instancenew) constructor.
+  - `storage_configuration` (`list[obj]`): Set the `storage_configuration` field on the resulting object. When `null`, the `storage_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.new](#fn-storage_configurationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_virtual_machine` resource into the root Terraform configuration.
@@ -552,9 +552,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `run_immediately` (`bool`):  When `null`, the `run_immediately` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.schedule.new](#fn-assessmentschedulenew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `run_immediately` (`bool`): Set the `run_immediately` field on the resulting object. When `null`, the `run_immediately` field will be omitted from the resulting object.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.schedule.new](#fn-assessmentschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `assessment` sub block.
@@ -577,10 +577,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `day_of_week` (`string`): 
-  - `monthly_occurrence` (`number`):  When `null`, the `monthly_occurrence` field will be omitted from the resulting object.
-  - `start_time` (`string`): 
-  - `weekly_interval` (`number`):  When `null`, the `weekly_interval` field will be omitted from the resulting object.
+  - `day_of_week` (`string`): Set the `day_of_week` field on the resulting object.
+  - `monthly_occurrence` (`number`): Set the `monthly_occurrence` field on the resulting object. When `null`, the `monthly_occurrence` field will be omitted from the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object.
+  - `weekly_interval` (`number`): Set the `weekly_interval` field on the resulting object. When `null`, the `weekly_interval` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -603,13 +603,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `encryption_enabled` (`bool`):  When `null`, the `encryption_enabled` field will be omitted from the resulting object.
-  - `encryption_password` (`string`):  When `null`, the `encryption_password` field will be omitted from the resulting object.
-  - `retention_period_in_days` (`number`): 
-  - `storage_account_access_key` (`string`): 
-  - `storage_blob_endpoint` (`string`): 
-  - `system_databases_backup_enabled` (`bool`):  When `null`, the `system_databases_backup_enabled` field will be omitted from the resulting object.
-  - `manual_schedule` (`list[obj]`):  When `null`, the `manual_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_backup.manual_schedule.new](#fn-auto_backupmanual_schedulenew) constructor.
+  - `encryption_enabled` (`bool`): Set the `encryption_enabled` field on the resulting object. When `null`, the `encryption_enabled` field will be omitted from the resulting object.
+  - `encryption_password` (`string`): Set the `encryption_password` field on the resulting object. When `null`, the `encryption_password` field will be omitted from the resulting object.
+  - `retention_period_in_days` (`number`): Set the `retention_period_in_days` field on the resulting object.
+  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting object.
+  - `storage_blob_endpoint` (`string`): Set the `storage_blob_endpoint` field on the resulting object.
+  - `system_databases_backup_enabled` (`bool`): Set the `system_databases_backup_enabled` field on the resulting object. When `null`, the `system_databases_backup_enabled` field will be omitted from the resulting object.
+  - `manual_schedule` (`list[obj]`): Set the `manual_schedule` field on the resulting object. When `null`, the `manual_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.auto_backup.manual_schedule.new](#fn-auto_backupmanual_schedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `auto_backup` sub block.
@@ -632,11 +632,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `days_of_week` (`list`):  When `null`, the `days_of_week` field will be omitted from the resulting object.
-  - `full_backup_frequency` (`string`): 
-  - `full_backup_start_hour` (`number`): 
-  - `full_backup_window_in_hours` (`number`): 
-  - `log_backup_frequency_in_minutes` (`number`): 
+  - `days_of_week` (`list`): Set the `days_of_week` field on the resulting object. When `null`, the `days_of_week` field will be omitted from the resulting object.
+  - `full_backup_frequency` (`string`): Set the `full_backup_frequency` field on the resulting object.
+  - `full_backup_start_hour` (`number`): Set the `full_backup_start_hour` field on the resulting object.
+  - `full_backup_window_in_hours` (`number`): Set the `full_backup_window_in_hours` field on the resulting object.
+  - `log_backup_frequency_in_minutes` (`number`): Set the `log_backup_frequency_in_minutes` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `manual_schedule` sub block.
@@ -659,9 +659,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `day_of_week` (`string`): 
-  - `maintenance_window_duration_in_minutes` (`number`): 
-  - `maintenance_window_starting_hour` (`number`): 
+  - `day_of_week` (`string`): Set the `day_of_week` field on the resulting object.
+  - `maintenance_window_duration_in_minutes` (`number`): Set the `maintenance_window_duration_in_minutes` field on the resulting object.
+  - `maintenance_window_starting_hour` (`number`): Set the `maintenance_window_starting_hour` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `auto_patching` sub block.
@@ -684,10 +684,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_vault_url` (`string`): 
-  - `name` (`string`): 
-  - `service_principal_name` (`string`): 
-  - `service_principal_secret` (`string`): 
+  - `key_vault_url` (`string`): Set the `key_vault_url` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `service_principal_name` (`string`): Set the `service_principal_name` field on the resulting object.
+  - `service_principal_secret` (`string`): Set the `service_principal_secret` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `key_vault_credential` sub block.
@@ -710,13 +710,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `adhoc_workloads_optimization_enabled` (`bool`):  When `null`, the `adhoc_workloads_optimization_enabled` field will be omitted from the resulting object.
-  - `collation` (`string`):  When `null`, the `collation` field will be omitted from the resulting object.
-  - `instant_file_initialization_enabled` (`bool`):  When `null`, the `instant_file_initialization_enabled` field will be omitted from the resulting object.
-  - `lock_pages_in_memory_enabled` (`bool`):  When `null`, the `lock_pages_in_memory_enabled` field will be omitted from the resulting object.
-  - `max_dop` (`number`):  When `null`, the `max_dop` field will be omitted from the resulting object.
-  - `max_server_memory_mb` (`number`):  When `null`, the `max_server_memory_mb` field will be omitted from the resulting object.
-  - `min_server_memory_mb` (`number`):  When `null`, the `min_server_memory_mb` field will be omitted from the resulting object.
+  - `adhoc_workloads_optimization_enabled` (`bool`): Set the `adhoc_workloads_optimization_enabled` field on the resulting object. When `null`, the `adhoc_workloads_optimization_enabled` field will be omitted from the resulting object.
+  - `collation` (`string`): Set the `collation` field on the resulting object. When `null`, the `collation` field will be omitted from the resulting object.
+  - `instant_file_initialization_enabled` (`bool`): Set the `instant_file_initialization_enabled` field on the resulting object. When `null`, the `instant_file_initialization_enabled` field will be omitted from the resulting object.
+  - `lock_pages_in_memory_enabled` (`bool`): Set the `lock_pages_in_memory_enabled` field on the resulting object. When `null`, the `lock_pages_in_memory_enabled` field will be omitted from the resulting object.
+  - `max_dop` (`number`): Set the `max_dop` field on the resulting object. When `null`, the `max_dop` field will be omitted from the resulting object.
+  - `max_server_memory_mb` (`number`): Set the `max_server_memory_mb` field on the resulting object. When `null`, the `max_server_memory_mb` field will be omitted from the resulting object.
+  - `min_server_memory_mb` (`number`): Set the `min_server_memory_mb` field on the resulting object. When `null`, the `min_server_memory_mb` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sql_instance` sub block.
@@ -739,12 +739,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `disk_type` (`string`): 
-  - `storage_workload_type` (`string`): 
-  - `system_db_on_data_disk_enabled` (`bool`):  When `null`, the `system_db_on_data_disk_enabled` field will be omitted from the resulting object.
-  - `data_settings` (`list[obj]`):  When `null`, the `data_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.data_settings.new](#fn-storage_configurationdata_settingsnew) constructor.
-  - `log_settings` (`list[obj]`):  When `null`, the `log_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.log_settings.new](#fn-storage_configurationlog_settingsnew) constructor.
-  - `temp_db_settings` (`list[obj]`):  When `null`, the `temp_db_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.temp_db_settings.new](#fn-storage_configurationtemp_db_settingsnew) constructor.
+  - `disk_type` (`string`): Set the `disk_type` field on the resulting object.
+  - `storage_workload_type` (`string`): Set the `storage_workload_type` field on the resulting object.
+  - `system_db_on_data_disk_enabled` (`bool`): Set the `system_db_on_data_disk_enabled` field on the resulting object. When `null`, the `system_db_on_data_disk_enabled` field will be omitted from the resulting object.
+  - `data_settings` (`list[obj]`): Set the `data_settings` field on the resulting object. When `null`, the `data_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.data_settings.new](#fn-storage_configurationdata_settingsnew) constructor.
+  - `log_settings` (`list[obj]`): Set the `log_settings` field on the resulting object. When `null`, the `log_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.log_settings.new](#fn-storage_configurationlog_settingsnew) constructor.
+  - `temp_db_settings` (`list[obj]`): Set the `temp_db_settings` field on the resulting object. When `null`, the `temp_db_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.temp_db_settings.new](#fn-storage_configurationtemp_db_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `storage_configuration` sub block.
@@ -767,8 +767,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_file_path` (`string`): 
-  - `luns` (`list`): 
+  - `default_file_path` (`string`): Set the `default_file_path` field on the resulting object.
+  - `luns` (`list`): Set the `luns` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `data_settings` sub block.
@@ -791,8 +791,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_file_path` (`string`): 
-  - `luns` (`list`): 
+  - `default_file_path` (`string`): Set the `default_file_path` field on the resulting object.
+  - `luns` (`list`): Set the `luns` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `log_settings` sub block.
@@ -815,13 +815,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `data_file_count` (`number`):  When `null`, the `data_file_count` field will be omitted from the resulting object.
-  - `data_file_growth_in_mb` (`number`):  When `null`, the `data_file_growth_in_mb` field will be omitted from the resulting object.
-  - `data_file_size_mb` (`number`):  When `null`, the `data_file_size_mb` field will be omitted from the resulting object.
-  - `default_file_path` (`string`): 
-  - `log_file_growth_mb` (`number`):  When `null`, the `log_file_growth_mb` field will be omitted from the resulting object.
-  - `log_file_size_mb` (`number`):  When `null`, the `log_file_size_mb` field will be omitted from the resulting object.
-  - `luns` (`list`): 
+  - `data_file_count` (`number`): Set the `data_file_count` field on the resulting object. When `null`, the `data_file_count` field will be omitted from the resulting object.
+  - `data_file_growth_in_mb` (`number`): Set the `data_file_growth_in_mb` field on the resulting object. When `null`, the `data_file_growth_in_mb` field will be omitted from the resulting object.
+  - `data_file_size_mb` (`number`): Set the `data_file_size_mb` field on the resulting object. When `null`, the `data_file_size_mb` field will be omitted from the resulting object.
+  - `default_file_path` (`string`): Set the `default_file_path` field on the resulting object.
+  - `log_file_growth_mb` (`number`): Set the `log_file_growth_mb` field on the resulting object. When `null`, the `log_file_growth_mb` field will be omitted from the resulting object.
+  - `log_file_size_mb` (`number`): Set the `log_file_size_mb` field on the resulting object. When `null`, the `log_file_size_mb` field will be omitted from the resulting object.
+  - `luns` (`list`): Set the `luns` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `temp_db_settings` sub block.
@@ -844,10 +844,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

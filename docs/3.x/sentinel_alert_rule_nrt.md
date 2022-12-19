@@ -79,24 +79,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `alert_rule_template_guid` (`string`):  When `null`, the `alert_rule_template_guid` field will be omitted from the resulting object.
-  - `alert_rule_template_version` (`string`):  When `null`, the `alert_rule_template_version` field will be omitted from the resulting object.
-  - `custom_details` (`obj`):  When `null`, the `custom_details` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `log_analytics_workspace_id` (`string`): 
-  - `name` (`string`): 
-  - `query` (`string`): 
-  - `severity` (`string`): 
-  - `suppression_duration` (`string`):  When `null`, the `suppression_duration` field will be omitted from the resulting object.
-  - `suppression_enabled` (`bool`):  When `null`, the `suppression_enabled` field will be omitted from the resulting object.
-  - `tactics` (`list`):  When `null`, the `tactics` field will be omitted from the resulting object.
-  - `techniques` (`list`):  When `null`, the `techniques` field will be omitted from the resulting object.
-  - `alert_details_override` (`list[obj]`):  When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.alert_details_override.new](#fn-alert_details_overridenew) constructor.
-  - `entity_mapping` (`list[obj]`):  When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.new](#fn-entity_mappingnew) constructor.
-  - `incident` (`list[obj]`):  When `null`, the `incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.new](#fn-incidentnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.timeouts.new](#fn-timeoutsnew) constructor.
+  - `alert_rule_template_guid` (`string`): Set the `alert_rule_template_guid` field on the resulting resource block. When `null`, the `alert_rule_template_guid` field will be omitted from the resulting object.
+  - `alert_rule_template_version` (`string`): Set the `alert_rule_template_version` field on the resulting resource block. When `null`, the `alert_rule_template_version` field will be omitted from the resulting object.
+  - `custom_details` (`obj`): Set the `custom_details` field on the resulting resource block. When `null`, the `custom_details` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `query` (`string`): Set the `query` field on the resulting resource block.
+  - `severity` (`string`): Set the `severity` field on the resulting resource block.
+  - `suppression_duration` (`string`): Set the `suppression_duration` field on the resulting resource block. When `null`, the `suppression_duration` field will be omitted from the resulting object.
+  - `suppression_enabled` (`bool`): Set the `suppression_enabled` field on the resulting resource block. When `null`, the `suppression_enabled` field will be omitted from the resulting object.
+  - `tactics` (`list`): Set the `tactics` field on the resulting resource block. When `null`, the `tactics` field will be omitted from the resulting object.
+  - `techniques` (`list`): Set the `techniques` field on the resulting resource block. When `null`, the `techniques` field will be omitted from the resulting object.
+  - `alert_details_override` (`list[obj]`): Set the `alert_details_override` field on the resulting resource block. When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.alert_details_override.new](#fn-alert_details_overridenew) constructor.
+  - `entity_mapping` (`list[obj]`): Set the `entity_mapping` field on the resulting resource block. When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.new](#fn-entity_mappingnew) constructor.
+  - `incident` (`list[obj]`): Set the `incident` field on the resulting resource block. When `null`, the `incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.new](#fn-incidentnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -120,24 +120,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `alert_rule_template_guid` (`string`):  When `null`, the `alert_rule_template_guid` field will be omitted from the resulting object.
-  - `alert_rule_template_version` (`string`):  When `null`, the `alert_rule_template_version` field will be omitted from the resulting object.
-  - `custom_details` (`obj`):  When `null`, the `custom_details` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `log_analytics_workspace_id` (`string`): 
-  - `name` (`string`): 
-  - `query` (`string`): 
-  - `severity` (`string`): 
-  - `suppression_duration` (`string`):  When `null`, the `suppression_duration` field will be omitted from the resulting object.
-  - `suppression_enabled` (`bool`):  When `null`, the `suppression_enabled` field will be omitted from the resulting object.
-  - `tactics` (`list`):  When `null`, the `tactics` field will be omitted from the resulting object.
-  - `techniques` (`list`):  When `null`, the `techniques` field will be omitted from the resulting object.
-  - `alert_details_override` (`list[obj]`):  When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.alert_details_override.new](#fn-alert_details_overridenew) constructor.
-  - `entity_mapping` (`list[obj]`):  When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.new](#fn-entity_mappingnew) constructor.
-  - `incident` (`list[obj]`):  When `null`, the `incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.new](#fn-incidentnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.timeouts.new](#fn-timeoutsnew) constructor.
+  - `alert_rule_template_guid` (`string`): Set the `alert_rule_template_guid` field on the resulting object. When `null`, the `alert_rule_template_guid` field will be omitted from the resulting object.
+  - `alert_rule_template_version` (`string`): Set the `alert_rule_template_version` field on the resulting object. When `null`, the `alert_rule_template_version` field will be omitted from the resulting object.
+  - `custom_details` (`obj`): Set the `custom_details` field on the resulting object. When `null`, the `custom_details` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `query` (`string`): Set the `query` field on the resulting object.
+  - `severity` (`string`): Set the `severity` field on the resulting object.
+  - `suppression_duration` (`string`): Set the `suppression_duration` field on the resulting object. When `null`, the `suppression_duration` field will be omitted from the resulting object.
+  - `suppression_enabled` (`bool`): Set the `suppression_enabled` field on the resulting object. When `null`, the `suppression_enabled` field will be omitted from the resulting object.
+  - `tactics` (`list`): Set the `tactics` field on the resulting object. When `null`, the `tactics` field will be omitted from the resulting object.
+  - `techniques` (`list`): Set the `techniques` field on the resulting object. When `null`, the `techniques` field will be omitted from the resulting object.
+  - `alert_details_override` (`list[obj]`): Set the `alert_details_override` field on the resulting object. When `null`, the `alert_details_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.alert_details_override.new](#fn-alert_details_overridenew) constructor.
+  - `entity_mapping` (`list[obj]`): Set the `entity_mapping` field on the resulting object. When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.new](#fn-entity_mappingnew) constructor.
+  - `incident` (`list[obj]`): Set the `incident` field on the resulting object. When `null`, the `incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.new](#fn-incidentnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sentinel_alert_rule_nrt` resource into the root Terraform configuration.
@@ -531,10 +531,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `description_format` (`string`):  When `null`, the `description_format` field will be omitted from the resulting object.
-  - `display_name_format` (`string`):  When `null`, the `display_name_format` field will be omitted from the resulting object.
-  - `severity_column_name` (`string`):  When `null`, the `severity_column_name` field will be omitted from the resulting object.
-  - `tactics_column_name` (`string`):  When `null`, the `tactics_column_name` field will be omitted from the resulting object.
+  - `description_format` (`string`): Set the `description_format` field on the resulting object. When `null`, the `description_format` field will be omitted from the resulting object.
+  - `display_name_format` (`string`): Set the `display_name_format` field on the resulting object. When `null`, the `display_name_format` field will be omitted from the resulting object.
+  - `severity_column_name` (`string`): Set the `severity_column_name` field on the resulting object. When `null`, the `severity_column_name` field will be omitted from the resulting object.
+  - `tactics_column_name` (`string`): Set the `tactics_column_name` field on the resulting object. When `null`, the `tactics_column_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `alert_details_override` sub block.
@@ -557,8 +557,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `entity_type` (`string`): 
-  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.field_mapping.new](#fn-entity_mappingfield_mappingnew) constructor.
+  - `entity_type` (`string`): Set the `entity_type` field on the resulting object.
+  - `field_mapping` (`list[obj]`): Set the `field_mapping` field on the resulting object. When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.entity_mapping.field_mapping.new](#fn-entity_mappingfield_mappingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `entity_mapping` sub block.
@@ -581,8 +581,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `column_name` (`string`): 
-  - `identifier` (`string`): 
+  - `column_name` (`string`): Set the `column_name` field on the resulting object.
+  - `identifier` (`string`): Set the `identifier` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `field_mapping` sub block.
@@ -605,8 +605,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create_incident_enabled` (`bool`): 
-  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.grouping.new](#fn-incidentgroupingnew) constructor.
+  - `create_incident_enabled` (`bool`): Set the `create_incident_enabled` field on the resulting object.
+  - `grouping` (`list[obj]`): Set the `grouping` field on the resulting object. When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_nrt.incident.grouping.new](#fn-incidentgroupingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `incident` sub block.
@@ -629,13 +629,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `by_alert_details` (`list`):  When `null`, the `by_alert_details` field will be omitted from the resulting object.
-  - `by_custom_details` (`list`):  When `null`, the `by_custom_details` field will be omitted from the resulting object.
-  - `by_entities` (`list`):  When `null`, the `by_entities` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `entity_matching_method` (`string`):  When `null`, the `entity_matching_method` field will be omitted from the resulting object.
-  - `lookback_duration` (`string`):  When `null`, the `lookback_duration` field will be omitted from the resulting object.
-  - `reopen_closed_incidents` (`bool`):  When `null`, the `reopen_closed_incidents` field will be omitted from the resulting object.
+  - `by_alert_details` (`list`): Set the `by_alert_details` field on the resulting object. When `null`, the `by_alert_details` field will be omitted from the resulting object.
+  - `by_custom_details` (`list`): Set the `by_custom_details` field on the resulting object. When `null`, the `by_custom_details` field will be omitted from the resulting object.
+  - `by_entities` (`list`): Set the `by_entities` field on the resulting object. When `null`, the `by_entities` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `entity_matching_method` (`string`): Set the `entity_matching_method` field on the resulting object. When `null`, the `entity_matching_method` field will be omitted from the resulting object.
+  - `lookback_duration` (`string`): Set the `lookback_duration` field on the resulting object. When `null`, the `lookback_duration` field will be omitted from the resulting object.
+  - `reopen_closed_incidents` (`bool`): Set the `reopen_closed_incidents` field on the resulting object. When `null`, the `reopen_closed_incidents` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `grouping` sub block.
@@ -658,10 +658,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

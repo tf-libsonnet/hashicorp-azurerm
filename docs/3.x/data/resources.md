@@ -53,11 +53,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `required_tags` (`obj`):  When `null`, the `required_tags` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`):  When `null`, the `resource_group_name` field will be omitted from the resulting object.
-  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting data source block. When `null`, the `name` field will be omitted from the resulting object.
+  - `required_tags` (`obj`): Set the `required_tags` field on the resulting data source block. When `null`, the `required_tags` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting data source block. When `null`, the `resource_group_name` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting data source block. When `null`, the `type` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -81,11 +81,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `required_tags` (`obj`):  When `null`, the `required_tags` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`):  When `null`, the `resource_group_name` field will be omitted from the resulting object.
-  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `required_tags` (`obj`): Set the `required_tags` field on the resulting object. When `null`, the `required_tags` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object. When `null`, the `resource_group_name` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `resources` data source into the root Terraform configuration.
@@ -208,7 +208,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

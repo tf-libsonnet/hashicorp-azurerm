@@ -62,17 +62,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_approval_subscription_ids` (`list`):  When `null`, the `auto_approval_subscription_ids` field will be omitted from the resulting object.
-  - `enable_proxy_protocol` (`bool`):  When `null`, the `enable_proxy_protocol` field will be omitted from the resulting object.
-  - `fqdns` (`list`):  When `null`, the `fqdns` field will be omitted from the resulting object.
-  - `load_balancer_frontend_ip_configuration_ids` (`list`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `visibility_subscription_ids` (`list`):  When `null`, the `visibility_subscription_ids` field will be omitted from the resulting object.
-  - `nat_ip_configuration` (`list[obj]`):  When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-nat_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_approval_subscription_ids` (`list`): Set the `auto_approval_subscription_ids` field on the resulting resource block. When `null`, the `auto_approval_subscription_ids` field will be omitted from the resulting object.
+  - `enable_proxy_protocol` (`bool`): Set the `enable_proxy_protocol` field on the resulting resource block. When `null`, the `enable_proxy_protocol` field will be omitted from the resulting object.
+  - `fqdns` (`list`): Set the `fqdns` field on the resulting resource block. When `null`, the `fqdns` field will be omitted from the resulting object.
+  - `load_balancer_frontend_ip_configuration_ids` (`list`): Set the `load_balancer_frontend_ip_configuration_ids` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `visibility_subscription_ids` (`list`): Set the `visibility_subscription_ids` field on the resulting resource block. When `null`, the `visibility_subscription_ids` field will be omitted from the resulting object.
+  - `nat_ip_configuration` (`list[obj]`): Set the `nat_ip_configuration` field on the resulting resource block. When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-nat_ip_configurationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,17 +96,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_approval_subscription_ids` (`list`):  When `null`, the `auto_approval_subscription_ids` field will be omitted from the resulting object.
-  - `enable_proxy_protocol` (`bool`):  When `null`, the `enable_proxy_protocol` field will be omitted from the resulting object.
-  - `fqdns` (`list`):  When `null`, the `fqdns` field will be omitted from the resulting object.
-  - `load_balancer_frontend_ip_configuration_ids` (`list`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `visibility_subscription_ids` (`list`):  When `null`, the `visibility_subscription_ids` field will be omitted from the resulting object.
-  - `nat_ip_configuration` (`list[obj]`):  When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-nat_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_approval_subscription_ids` (`list`): Set the `auto_approval_subscription_ids` field on the resulting object. When `null`, the `auto_approval_subscription_ids` field will be omitted from the resulting object.
+  - `enable_proxy_protocol` (`bool`): Set the `enable_proxy_protocol` field on the resulting object. When `null`, the `enable_proxy_protocol` field will be omitted from the resulting object.
+  - `fqdns` (`list`): Set the `fqdns` field on the resulting object. When `null`, the `fqdns` field will be omitted from the resulting object.
+  - `load_balancer_frontend_ip_configuration_ids` (`list`): Set the `load_balancer_frontend_ip_configuration_ids` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `visibility_subscription_ids` (`list`): Set the `visibility_subscription_ids` field on the resulting object. When `null`, the `visibility_subscription_ids` field will be omitted from the resulting object.
+  - `nat_ip_configuration` (`list[obj]`): Set the `nat_ip_configuration` field on the resulting object. When `null`, the `nat_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.nat_ip_configuration.new](#fn-nat_ip_configurationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_link_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `private_link_service` resource into the root Terraform configuration.
@@ -346,11 +346,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `primary` (`bool`): 
-  - `private_ip_address` (`string`):  When `null`, the `private_ip_address` field will be omitted from the resulting object.
-  - `private_ip_address_version` (`string`):  When `null`, the `private_ip_address_version` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `primary` (`bool`): Set the `primary` field on the resulting object.
+  - `private_ip_address` (`string`): Set the `private_ip_address` field on the resulting object. When `null`, the `private_ip_address` field will be omitted from the resulting object.
+  - `private_ip_address_version` (`string`): Set the `private_ip_address_version` field on the resulting object. When `null`, the `private_ip_address_version` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `nat_ip_configuration` sub block.
@@ -373,10 +373,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

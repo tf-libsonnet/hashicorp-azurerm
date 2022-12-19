@@ -76,19 +76,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `diagnose_support_enabled` (`bool`):  When `null`, the `diagnose_support_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `managed_resource_group` (`string`):  When `null`, the `managed_resource_group` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `frontend_private` (`list[obj]`):  When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-frontend_privatenew) constructor.
-  - `frontend_public` (`list[obj]`):  When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-frontend_publicnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-identitynew) constructor.
-  - `logging_storage_account` (`list[obj]`):  When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-logging_storage_accountnew) constructor.
-  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-network_interfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `diagnose_support_enabled` (`bool`): Set the `diagnose_support_enabled` field on the resulting resource block. When `null`, the `diagnose_support_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `managed_resource_group` (`string`): Set the `managed_resource_group` field on the resulting resource block. When `null`, the `managed_resource_group` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku` (`string`): Set the `sku` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `frontend_private` (`list[obj]`): Set the `frontend_private` field on the resulting resource block. When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-frontend_privatenew) constructor.
+  - `frontend_public` (`list[obj]`): Set the `frontend_public` field on the resulting resource block. When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-frontend_publicnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-identitynew) constructor.
+  - `logging_storage_account` (`list[obj]`): Set the `logging_storage_account` field on the resulting resource block. When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-logging_storage_accountnew) constructor.
+  - `network_interface` (`list[obj]`): Set the `network_interface` field on the resulting resource block. When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-network_interfacenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -112,19 +112,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `diagnose_support_enabled` (`bool`):  When `null`, the `diagnose_support_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `managed_resource_group` (`string`):  When `null`, the `managed_resource_group` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `frontend_private` (`list[obj]`):  When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-frontend_privatenew) constructor.
-  - `frontend_public` (`list[obj]`):  When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-frontend_publicnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-identitynew) constructor.
-  - `logging_storage_account` (`list[obj]`):  When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-logging_storage_accountnew) constructor.
-  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-network_interfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `diagnose_support_enabled` (`bool`): Set the `diagnose_support_enabled` field on the resulting object. When `null`, the `diagnose_support_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `managed_resource_group` (`string`): Set the `managed_resource_group` field on the resulting object. When `null`, the `managed_resource_group` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `frontend_private` (`list[obj]`): Set the `frontend_private` field on the resulting object. When `null`, the `frontend_private` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_private.new](#fn-frontend_privatenew) constructor.
+  - `frontend_public` (`list[obj]`): Set the `frontend_public` field on the resulting object. When `null`, the `frontend_public` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.frontend_public.new](#fn-frontend_publicnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.identity.new](#fn-identitynew) constructor.
+  - `logging_storage_account` (`list[obj]`): Set the `logging_storage_account` field on the resulting object. When `null`, the `logging_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.logging_storage_account.new](#fn-logging_storage_accountnew) constructor.
+  - `network_interface` (`list[obj]`): Set the `network_interface` field on the resulting object. When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.network_interface.new](#fn-network_interfacenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `nginx_deployment` resource into the root Terraform configuration.
@@ -480,9 +480,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `allocation_method` (`string`): 
-  - `ip_address` (`string`): 
-  - `subnet_id` (`string`): 
+  - `allocation_method` (`string`): Set the `allocation_method` field on the resulting object.
+  - `ip_address` (`string`): Set the `ip_address` field on the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `frontend_private` sub block.
@@ -505,7 +505,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `ip_address` (`list`):  When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `ip_address` (`list`): Set the `ip_address` field on the resulting object. When `null`, the `ip_address` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `frontend_public` sub block.
@@ -528,8 +528,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -552,8 +552,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `container_name` (`string`):  When `null`, the `container_name` field will be omitted from the resulting object.
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
+  - `container_name` (`string`): Set the `container_name` field on the resulting object. When `null`, the `container_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `logging_storage_account` sub block.
@@ -576,7 +576,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `subnet_id` (`string`): 
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `network_interface` sub block.
@@ -599,10 +599,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
