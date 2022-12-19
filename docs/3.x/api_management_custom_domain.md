@@ -70,13 +70,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_id` (`string`): 
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-developer_portalnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-gatewaynew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-managementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-portalnew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-scmnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_id` (`string`): Set the `api_management_id` field on the resulting resource block.
+  - `developer_portal` (`list[obj]`): Set the `developer_portal` field on the resulting resource block. When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-developer_portalnew) constructor.
+  - `gateway` (`list[obj]`): Set the `gateway` field on the resulting resource block. When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-gatewaynew) constructor.
+  - `management` (`list[obj]`): Set the `management` field on the resulting resource block. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-managementnew) constructor.
+  - `portal` (`list[obj]`): Set the `portal` field on the resulting resource block. When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-portalnew) constructor.
+  - `scm` (`list[obj]`): Set the `scm` field on the resulting resource block. When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-scmnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,13 +100,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_id` (`string`): 
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-developer_portalnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-gatewaynew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-managementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-portalnew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-scmnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_id` (`string`): Set the `api_management_id` field on the resulting object.
+  - `developer_portal` (`list[obj]`): Set the `developer_portal` field on the resulting object. When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-developer_portalnew) constructor.
+  - `gateway` (`list[obj]`): Set the `gateway` field on the resulting object. When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-gatewaynew) constructor.
+  - `management` (`list[obj]`): Set the `management` field on the resulting object. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-managementnew) constructor.
+  - `portal` (`list[obj]`): Set the `portal` field on the resulting object. When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-portalnew) constructor.
+  - `scm` (`list[obj]`): Set the `scm` field on the resulting object. When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-scmnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_custom_domain` resource into the root Terraform configuration.
@@ -366,12 +366,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `developer_portal` sub block.
@@ -394,13 +394,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `default_ssl_binding` (`bool`):  When `null`, the `default_ssl_binding` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `default_ssl_binding` (`bool`): Set the `default_ssl_binding` field on the resulting object. When `null`, the `default_ssl_binding` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `gateway` sub block.
@@ -423,12 +423,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `management` sub block.
@@ -451,12 +451,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `portal` sub block.
@@ -479,12 +479,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate` (`string`):  When `null`, the `certificate` field will be omitted from the resulting object.
-  - `certificate_password` (`string`):  When `null`, the `certificate_password` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `key_vault_id` (`string`):  When `null`, the `key_vault_id` field will be omitted from the resulting object.
-  - `negotiate_client_certificate` (`bool`):  When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
-  - `ssl_keyvault_identity_client_id` (`string`):  When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
+  - `certificate` (`string`): Set the `certificate` field on the resulting object. When `null`, the `certificate` field will be omitted from the resulting object.
+  - `certificate_password` (`string`): Set the `certificate_password` field on the resulting object. When `null`, the `certificate_password` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `negotiate_client_certificate` (`bool`): Set the `negotiate_client_certificate` field on the resulting object. When `null`, the `negotiate_client_certificate` field will be omitted from the resulting object.
+  - `ssl_keyvault_identity_client_id` (`string`): Set the `ssl_keyvault_identity_client_id` field on the resulting object. When `null`, the `ssl_keyvault_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `scm` sub block.
@@ -507,10 +507,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

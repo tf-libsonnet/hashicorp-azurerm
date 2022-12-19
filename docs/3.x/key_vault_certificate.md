@@ -76,12 +76,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `key_vault_id` (`string`): 
-  - `name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate.new](#fn-certificatenew) constructor.
-  - `certificate_policy` (`list[obj]`):  When `null`, the `certificate_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.new](#fn-certificate_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.timeouts.new](#fn-timeoutsnew) constructor.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `certificate` (`list[obj]`): Set the `certificate` field on the resulting resource block. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate.new](#fn-certificatenew) constructor.
+  - `certificate_policy` (`list[obj]`): Set the `certificate_policy` field on the resulting resource block. When `null`, the `certificate_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.new](#fn-certificate_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,12 +105,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `key_vault_id` (`string`): 
-  - `name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate.new](#fn-certificatenew) constructor.
-  - `certificate_policy` (`list[obj]`):  When `null`, the `certificate_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.new](#fn-certificate_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.timeouts.new](#fn-timeoutsnew) constructor.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `certificate` (`list[obj]`): Set the `certificate` field on the resulting object. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate.new](#fn-certificatenew) constructor.
+  - `certificate_policy` (`list[obj]`): Set the `certificate_policy` field on the resulting object. When `null`, the `certificate_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.new](#fn-certificate_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `key_vault_certificate` resource into the root Terraform configuration.
@@ -291,8 +291,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `contents` (`string`): 
-  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `contents` (`string`): Set the `contents` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `certificate` sub block.
@@ -315,11 +315,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `issuer_parameters` (`list[obj]`):  When `null`, the `issuer_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.issuer_parameters.new](#fn-certificate_policyissuer_parametersnew) constructor.
-  - `key_properties` (`list[obj]`):  When `null`, the `key_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.key_properties.new](#fn-certificate_policykey_propertiesnew) constructor.
-  - `lifetime_action` (`list[obj]`):  When `null`, the `lifetime_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.new](#fn-certificate_policylifetime_actionnew) constructor.
-  - `secret_properties` (`list[obj]`):  When `null`, the `secret_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.secret_properties.new](#fn-certificate_policysecret_propertiesnew) constructor.
-  - `x509_certificate_properties` (`list[obj]`):  When `null`, the `x509_certificate_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.new](#fn-certificate_policyx509_certificate_propertiesnew) constructor.
+  - `issuer_parameters` (`list[obj]`): Set the `issuer_parameters` field on the resulting object. When `null`, the `issuer_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.issuer_parameters.new](#fn-certificate_policyissuer_parametersnew) constructor.
+  - `key_properties` (`list[obj]`): Set the `key_properties` field on the resulting object. When `null`, the `key_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.key_properties.new](#fn-certificate_policykey_propertiesnew) constructor.
+  - `lifetime_action` (`list[obj]`): Set the `lifetime_action` field on the resulting object. When `null`, the `lifetime_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.new](#fn-certificate_policylifetime_actionnew) constructor.
+  - `secret_properties` (`list[obj]`): Set the `secret_properties` field on the resulting object. When `null`, the `secret_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.secret_properties.new](#fn-certificate_policysecret_propertiesnew) constructor.
+  - `x509_certificate_properties` (`list[obj]`): Set the `x509_certificate_properties` field on the resulting object. When `null`, the `x509_certificate_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.new](#fn-certificate_policyx509_certificate_propertiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `certificate_policy` sub block.
@@ -342,7 +342,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `issuer_parameters` sub block.
@@ -365,11 +365,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `curve` (`string`):  When `null`, the `curve` field will be omitted from the resulting object.
-  - `exportable` (`bool`): 
-  - `key_size` (`number`):  When `null`, the `key_size` field will be omitted from the resulting object.
-  - `key_type` (`string`): 
-  - `reuse_key` (`bool`): 
+  - `curve` (`string`): Set the `curve` field on the resulting object. When `null`, the `curve` field will be omitted from the resulting object.
+  - `exportable` (`bool`): Set the `exportable` field on the resulting object.
+  - `key_size` (`number`): Set the `key_size` field on the resulting object. When `null`, the `key_size` field will be omitted from the resulting object.
+  - `key_type` (`string`): Set the `key_type` field on the resulting object.
+  - `reuse_key` (`bool`): Set the `reuse_key` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `key_properties` sub block.
@@ -392,8 +392,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.action.new](#fn-certificate_policycertificate_policyactionnew) constructor.
-  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.trigger.new](#fn-certificate_policycertificate_policytriggernew) constructor.
+  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.action.new](#fn-certificate_policycertificate_policyactionnew) constructor.
+  - `trigger` (`list[obj]`): Set the `trigger` field on the resulting object. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.lifetime_action.trigger.new](#fn-certificate_policycertificate_policytriggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `lifetime_action` sub block.
@@ -416,7 +416,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `action_type` (`string`): 
+  - `action_type` (`string`): Set the `action_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -439,8 +439,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `days_before_expiry` (`number`):  When `null`, the `days_before_expiry` field will be omitted from the resulting object.
-  - `lifetime_percentage` (`number`):  When `null`, the `lifetime_percentage` field will be omitted from the resulting object.
+  - `days_before_expiry` (`number`): Set the `days_before_expiry` field on the resulting object. When `null`, the `days_before_expiry` field will be omitted from the resulting object.
+  - `lifetime_percentage` (`number`): Set the `lifetime_percentage` field on the resulting object. When `null`, the `lifetime_percentage` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `trigger` sub block.
@@ -463,7 +463,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `content_type` (`string`): 
+  - `content_type` (`string`): Set the `content_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `secret_properties` sub block.
@@ -486,11 +486,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `extended_key_usage` (`list`):  When `null`, the `extended_key_usage` field will be omitted from the resulting object.
-  - `key_usage` (`list`): 
-  - `subject` (`string`): 
-  - `validity_in_months` (`number`): 
-  - `subject_alternative_names` (`list[obj]`):  When `null`, the `subject_alternative_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.subject_alternative_names.new](#fn-certificate_policycertificate_policysubject_alternative_namesnew) constructor.
+  - `extended_key_usage` (`list`): Set the `extended_key_usage` field on the resulting object. When `null`, the `extended_key_usage` field will be omitted from the resulting object.
+  - `key_usage` (`list`): Set the `key_usage` field on the resulting object.
+  - `subject` (`string`): Set the `subject` field on the resulting object.
+  - `validity_in_months` (`number`): Set the `validity_in_months` field on the resulting object.
+  - `subject_alternative_names` (`list[obj]`): Set the `subject_alternative_names` field on the resulting object. When `null`, the `subject_alternative_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_certificate.certificate_policy.x509_certificate_properties.subject_alternative_names.new](#fn-certificate_policycertificate_policysubject_alternative_namesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `x509_certificate_properties` sub block.
@@ -513,9 +513,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `dns_names` (`list`):  When `null`, the `dns_names` field will be omitted from the resulting object.
-  - `emails` (`list`):  When `null`, the `emails` field will be omitted from the resulting object.
-  - `upns` (`list`):  When `null`, the `upns` field will be omitted from the resulting object.
+  - `dns_names` (`list`): Set the `dns_names` field on the resulting object. When `null`, the `dns_names` field will be omitted from the resulting object.
+  - `emails` (`list`): Set the `emails` field on the resulting object. When `null`, the `emails` field will be omitted from the resulting object.
+  - `upns` (`list`): Set the `upns` field on the resulting object. When `null`, the `upns` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `subject_alternative_names` sub block.
@@ -538,10 +538,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

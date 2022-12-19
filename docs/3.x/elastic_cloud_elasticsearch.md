@@ -62,15 +62,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `elastic_cloud_email_address` (`string`): 
-  - `location` (`string`): 
-  - `monitoring_enabled` (`bool`):  When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `logs` (`list[obj]`):  When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-logsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-timeoutsnew) constructor.
+  - `elastic_cloud_email_address` (`string`): Set the `elastic_cloud_email_address` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `monitoring_enabled` (`bool`): Set the `monitoring_enabled` field on the resulting resource block. When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `logs` (`list[obj]`): Set the `logs` field on the resulting resource block. When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-logsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,15 +94,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `elastic_cloud_email_address` (`string`): 
-  - `location` (`string`): 
-  - `monitoring_enabled` (`bool`):  When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `logs` (`list[obj]`):  When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-logsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-timeoutsnew) constructor.
+  - `elastic_cloud_email_address` (`string`): Set the `elastic_cloud_email_address` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `monitoring_enabled` (`bool`): Set the `monitoring_enabled` field on the resulting object. When `null`, the `monitoring_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `logs` (`list[obj]`): Set the `logs` field on the resulting object. When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-logsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `elastic_cloud_elasticsearch` resource into the root Terraform configuration.
@@ -310,10 +310,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `send_activity_logs` (`bool`):  When `null`, the `send_activity_logs` field will be omitted from the resulting object.
-  - `send_azuread_logs` (`bool`):  When `null`, the `send_azuread_logs` field will be omitted from the resulting object.
-  - `send_subscription_logs` (`bool`):  When `null`, the `send_subscription_logs` field will be omitted from the resulting object.
-  - `filtering_tag` (`list[obj]`):  When `null`, the `filtering_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.filtering_tag.new](#fn-logsfiltering_tagnew) constructor.
+  - `send_activity_logs` (`bool`): Set the `send_activity_logs` field on the resulting object. When `null`, the `send_activity_logs` field will be omitted from the resulting object.
+  - `send_azuread_logs` (`bool`): Set the `send_azuread_logs` field on the resulting object. When `null`, the `send_azuread_logs` field will be omitted from the resulting object.
+  - `send_subscription_logs` (`bool`): Set the `send_subscription_logs` field on the resulting object. When `null`, the `send_subscription_logs` field will be omitted from the resulting object.
+  - `filtering_tag` (`list[obj]`): Set the `filtering_tag` field on the resulting object. When `null`, the `filtering_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.filtering_tag.new](#fn-logsfiltering_tagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `logs` sub block.
@@ -336,9 +336,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `name` (`string`): 
-  - `value` (`string`): 
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `filtering_tag` sub block.
@@ -361,10 +361,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

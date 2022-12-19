@@ -61,14 +61,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `authorization_key` (`string`):  When `null`, the `authorization_key` field will be omitted from the resulting object.
-  - `enable_internet_security` (`bool`):  When `null`, the `enable_internet_security` field will be omitted from the resulting object.
-  - `express_route_circuit_peering_id` (`string`): 
-  - `express_route_gateway_id` (`string`): 
-  - `name` (`string`): 
-  - `routing_weight` (`number`):  When `null`, the `routing_weight` field will be omitted from the resulting object.
-  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `authorization_key` (`string`): Set the `authorization_key` field on the resulting resource block. When `null`, the `authorization_key` field will be omitted from the resulting object.
+  - `enable_internet_security` (`bool`): Set the `enable_internet_security` field on the resulting resource block. When `null`, the `enable_internet_security` field will be omitted from the resulting object.
+  - `express_route_circuit_peering_id` (`string`): Set the `express_route_circuit_peering_id` field on the resulting resource block.
+  - `express_route_gateway_id` (`string`): Set the `express_route_gateway_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `routing_weight` (`number`): Set the `routing_weight` field on the resulting resource block. When `null`, the `routing_weight` field will be omitted from the resulting object.
+  - `routing` (`list[obj]`): Set the `routing` field on the resulting resource block. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.new](#fn-routingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,14 +92,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `authorization_key` (`string`):  When `null`, the `authorization_key` field will be omitted from the resulting object.
-  - `enable_internet_security` (`bool`):  When `null`, the `enable_internet_security` field will be omitted from the resulting object.
-  - `express_route_circuit_peering_id` (`string`): 
-  - `express_route_gateway_id` (`string`): 
-  - `name` (`string`): 
-  - `routing_weight` (`number`):  When `null`, the `routing_weight` field will be omitted from the resulting object.
-  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `authorization_key` (`string`): Set the `authorization_key` field on the resulting object. When `null`, the `authorization_key` field will be omitted from the resulting object.
+  - `enable_internet_security` (`bool`): Set the `enable_internet_security` field on the resulting object. When `null`, the `enable_internet_security` field will be omitted from the resulting object.
+  - `express_route_circuit_peering_id` (`string`): Set the `express_route_circuit_peering_id` field on the resulting object.
+  - `express_route_gateway_id` (`string`): Set the `express_route_gateway_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `routing_weight` (`number`): Set the `routing_weight` field on the resulting object. When `null`, the `routing_weight` field will be omitted from the resulting object.
+  - `routing` (`list[obj]`): Set the `routing` field on the resulting object. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.new](#fn-routingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_connection` resource into the root Terraform configuration.
@@ -291,8 +291,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `associated_route_table_id` (`string`):  When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
+  - `associated_route_table_id` (`string`): Set the `associated_route_table_id` field on the resulting object. When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
+  - `propagated_route_table` (`list[obj]`): Set the `propagated_route_table` field on the resulting object. When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing` sub block.
@@ -315,8 +315,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
-  - `route_table_ids` (`list`):  When `null`, the `route_table_ids` field will be omitted from the resulting object.
+  - `labels` (`list`): Set the `labels` field on the resulting object. When `null`, the `labels` field will be omitted from the resulting object.
+  - `route_table_ids` (`list`): Set the `route_table_ids` field on the resulting object. When `null`, the `route_table_ids` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `propagated_route_table` sub block.
@@ -339,10 +339,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

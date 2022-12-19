@@ -74,24 +74,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `authorized_resource_ids` (`list`):  When `null`, the `authorized_resource_ids` field will be omitted from the resulting object.
-  - `auto_mitigation_enabled` (`bool`):  When `null`, the `auto_mitigation_enabled` field will be omitted from the resulting object.
-  - `data_source_id` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frequency` (`number`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `query` (`string`): 
-  - `query_type` (`string`):  When `null`, the `query_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `severity` (`number`):  When `null`, the `severity` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `throttling` (`number`):  When `null`, the `throttling` field will be omitted from the resulting object.
-  - `time_window` (`number`): 
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.action.new](#fn-actionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.timeouts.new](#fn-timeoutsnew) constructor.
-  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.new](#fn-triggernew) constructor.
+  - `authorized_resource_ids` (`list`): Set the `authorized_resource_ids` field on the resulting resource block. When `null`, the `authorized_resource_ids` field will be omitted from the resulting object.
+  - `auto_mitigation_enabled` (`bool`): Set the `auto_mitigation_enabled` field on the resulting resource block. When `null`, the `auto_mitigation_enabled` field will be omitted from the resulting object.
+  - `data_source_id` (`string`): Set the `data_source_id` field on the resulting resource block.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frequency` (`number`): Set the `frequency` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `query` (`string`): Set the `query` field on the resulting resource block.
+  - `query_type` (`string`): Set the `query_type` field on the resulting resource block. When `null`, the `query_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `severity` (`number`): Set the `severity` field on the resulting resource block. When `null`, the `severity` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `throttling` (`number`): Set the `throttling` field on the resulting resource block. When `null`, the `throttling` field will be omitted from the resulting object.
+  - `time_window` (`number`): Set the `time_window` field on the resulting resource block.
+  - `action` (`list[obj]`): Set the `action` field on the resulting resource block. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.action.new](#fn-actionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trigger` (`list[obj]`): Set the `trigger` field on the resulting resource block. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.new](#fn-triggernew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -115,24 +115,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `authorized_resource_ids` (`list`):  When `null`, the `authorized_resource_ids` field will be omitted from the resulting object.
-  - `auto_mitigation_enabled` (`bool`):  When `null`, the `auto_mitigation_enabled` field will be omitted from the resulting object.
-  - `data_source_id` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frequency` (`number`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `query` (`string`): 
-  - `query_type` (`string`):  When `null`, the `query_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `severity` (`number`):  When `null`, the `severity` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `throttling` (`number`):  When `null`, the `throttling` field will be omitted from the resulting object.
-  - `time_window` (`number`): 
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.action.new](#fn-actionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.timeouts.new](#fn-timeoutsnew) constructor.
-  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.new](#fn-triggernew) constructor.
+  - `authorized_resource_ids` (`list`): Set the `authorized_resource_ids` field on the resulting object. When `null`, the `authorized_resource_ids` field will be omitted from the resulting object.
+  - `auto_mitigation_enabled` (`bool`): Set the `auto_mitigation_enabled` field on the resulting object. When `null`, the `auto_mitigation_enabled` field will be omitted from the resulting object.
+  - `data_source_id` (`string`): Set the `data_source_id` field on the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frequency` (`number`): Set the `frequency` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `query` (`string`): Set the `query` field on the resulting object.
+  - `query_type` (`string`): Set the `query_type` field on the resulting object. When `null`, the `query_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `severity` (`number`): Set the `severity` field on the resulting object. When `null`, the `severity` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `throttling` (`number`): Set the `throttling` field on the resulting object. When `null`, the `throttling` field will be omitted from the resulting object.
+  - `time_window` (`number`): Set the `time_window` field on the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.action.new](#fn-actionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trigger` (`list[obj]`): Set the `trigger` field on the resulting object. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.new](#fn-triggernew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_scheduled_query_rules_alert` resource into the root Terraform configuration.
@@ -505,9 +505,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action_group` (`list`): 
-  - `custom_webhook_payload` (`string`):  When `null`, the `custom_webhook_payload` field will be omitted from the resulting object.
-  - `email_subject` (`string`):  When `null`, the `email_subject` field will be omitted from the resulting object.
+  - `action_group` (`list`): Set the `action_group` field on the resulting object.
+  - `custom_webhook_payload` (`string`): Set the `custom_webhook_payload` field on the resulting object. When `null`, the `custom_webhook_payload` field will be omitted from the resulting object.
+  - `email_subject` (`string`): Set the `email_subject` field on the resulting object. When `null`, the `email_subject` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -530,10 +530,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -556,9 +556,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): 
-  - `threshold` (`number`): 
-  - `metric_trigger` (`list[obj]`):  When `null`, the `metric_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.metric_trigger.new](#fn-triggermetric_triggernew) constructor.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `threshold` (`number`): Set the `threshold` field on the resulting object.
+  - `metric_trigger` (`list[obj]`): Set the `metric_trigger` field on the resulting object. When `null`, the `metric_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert.trigger.metric_trigger.new](#fn-triggermetric_triggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `trigger` sub block.
@@ -581,10 +581,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `metric_column` (`string`): 
-  - `metric_trigger_type` (`string`): 
-  - `operator` (`string`): 
-  - `threshold` (`number`): 
+  - `metric_column` (`string`): Set the `metric_column` field on the resulting object.
+  - `metric_trigger_type` (`string`): Set the `metric_trigger_type` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `threshold` (`number`): Set the `threshold` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `metric_trigger` sub block.

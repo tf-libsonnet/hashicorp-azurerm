@@ -73,22 +73,22 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `activated` (`bool`):  When `null`, the `activated` field will be omitted from the resulting object.
-  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): 
-  - `delay` (`string`):  When `null`, the `delay` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `interval` (`number`): 
-  - `max_concurrency` (`number`):  When `null`, the `max_concurrency` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `start_time` (`string`): 
-  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-pipelinenew) constructor.
-  - `retry` (`list[obj]`):  When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-retrynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-timeoutsnew) constructor.
-  - `trigger_dependency` (`list[obj]`):  When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-trigger_dependencynew) constructor.
+  - `activated` (`bool`): Set the `activated` field on the resulting resource block. When `null`, the `activated` field will be omitted from the resulting object.
+  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting resource block. When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`): Set the `annotations` field on the resulting resource block. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
+  - `delay` (`string`): Set the `delay` field on the resulting resource block. When `null`, the `delay` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `end_time` (`string`): Set the `end_time` field on the resulting resource block. When `null`, the `end_time` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting resource block.
+  - `interval` (`number`): Set the `interval` field on the resulting resource block.
+  - `max_concurrency` (`number`): Set the `max_concurrency` field on the resulting resource block. When `null`, the `max_concurrency` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `start_time` (`string`): Set the `start_time` field on the resulting resource block.
+  - `pipeline` (`list[obj]`): Set the `pipeline` field on the resulting resource block. When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-pipelinenew) constructor.
+  - `retry` (`list[obj]`): Set the `retry` field on the resulting resource block. When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-retrynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trigger_dependency` (`list[obj]`): Set the `trigger_dependency` field on the resulting resource block. When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-trigger_dependencynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -112,22 +112,22 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `activated` (`bool`):  When `null`, the `activated` field will be omitted from the resulting object.
-  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): 
-  - `delay` (`string`):  When `null`, the `delay` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `interval` (`number`): 
-  - `max_concurrency` (`number`):  When `null`, the `max_concurrency` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `start_time` (`string`): 
-  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-pipelinenew) constructor.
-  - `retry` (`list[obj]`):  When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-retrynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-timeoutsnew) constructor.
-  - `trigger_dependency` (`list[obj]`):  When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-trigger_dependencynew) constructor.
+  - `activated` (`bool`): Set the `activated` field on the resulting object. When `null`, the `activated` field will be omitted from the resulting object.
+  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting object. When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`): Set the `annotations` field on the resulting object. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
+  - `delay` (`string`): Set the `delay` field on the resulting object. When `null`, the `delay` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `end_time` (`string`): Set the `end_time` field on the resulting object. When `null`, the `end_time` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object.
+  - `max_concurrency` (`number`): Set the `max_concurrency` field on the resulting object. When `null`, the `max_concurrency` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object.
+  - `pipeline` (`list[obj]`): Set the `pipeline` field on the resulting object. When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.pipeline.new](#fn-pipelinenew) constructor.
+  - `retry` (`list[obj]`): Set the `retry` field on the resulting object. When `null`, the `retry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.retry.new](#fn-retrynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trigger_dependency` (`list[obj]`): Set the `trigger_dependency` field on the resulting object. When `null`, the `trigger_dependency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_tumbling_window.trigger_dependency.new](#fn-trigger_dependencynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_trigger_tumbling_window` resource into the root Terraform configuration.
@@ -489,8 +489,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `pipeline` sub block.
@@ -513,8 +513,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `count` (`number`): 
-  - `interval` (`number`):  When `null`, the `interval` field will be omitted from the resulting object.
+  - `count` (`number`): Set the `count` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object. When `null`, the `interval` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retry` sub block.
@@ -537,10 +537,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -563,9 +563,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `offset` (`string`):  When `null`, the `offset` field will be omitted from the resulting object.
-  - `size` (`string`):  When `null`, the `size` field will be omitted from the resulting object.
-  - `trigger_name` (`string`):  When `null`, the `trigger_name` field will be omitted from the resulting object.
+  - `offset` (`string`): Set the `offset` field on the resulting object. When `null`, the `offset` field will be omitted from the resulting object.
+  - `size` (`string`): Set the `size` field on the resulting object. When `null`, the `size` field will be omitted from the resulting object.
+  - `trigger_name` (`string`): Set the `trigger_name` field on the resulting object. When `null`, the `trigger_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `trigger_dependency` sub block.

@@ -89,40 +89,40 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `create_option` (`string`): 
-  - `disk_access_id` (`string`):  When `null`, the `disk_access_id` field will be omitted from the resulting object.
-  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `disk_iops_read_only` (`number`):  When `null`, the `disk_iops_read_only` field will be omitted from the resulting object.
-  - `disk_iops_read_write` (`number`):  When `null`, the `disk_iops_read_write` field will be omitted from the resulting object.
-  - `disk_mbps_read_only` (`number`):  When `null`, the `disk_mbps_read_only` field will be omitted from the resulting object.
-  - `disk_mbps_read_write` (`number`):  When `null`, the `disk_mbps_read_write` field will be omitted from the resulting object.
-  - `disk_size_gb` (`number`):  When `null`, the `disk_size_gb` field will be omitted from the resulting object.
-  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `gallery_image_reference_id` (`string`):  When `null`, the `gallery_image_reference_id` field will be omitted from the resulting object.
-  - `hyper_v_generation` (`string`):  When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
-  - `image_reference_id` (`string`):  When `null`, the `image_reference_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `logical_sector_size` (`number`):  When `null`, the `logical_sector_size` field will be omitted from the resulting object.
-  - `max_shares` (`number`):  When `null`, the `max_shares` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `network_access_policy` (`string`):  When `null`, the `network_access_policy` field will be omitted from the resulting object.
-  - `on_demand_bursting_enabled` (`bool`):  When `null`, the `on_demand_bursting_enabled` field will be omitted from the resulting object.
-  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `secure_vm_disk_encryption_set_id` (`string`):  When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
-  - `security_type` (`string`):  When `null`, the `security_type` field will be omitted from the resulting object.
-  - `source_resource_id` (`string`):  When `null`, the `source_resource_id` field will be omitted from the resulting object.
-  - `source_uri` (`string`):  When `null`, the `source_uri` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
-  - `storage_account_type` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `tier` (`string`):  When `null`, the `tier` field will be omitted from the resulting object.
-  - `trusted_launch_enabled` (`bool`):  When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
-  - `upload_size_bytes` (`number`):  When `null`, the `upload_size_bytes` field will be omitted from the resulting object.
-  - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-encryption_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-timeoutsnew) constructor.
+  - `create_option` (`string`): Set the `create_option` field on the resulting resource block.
+  - `disk_access_id` (`string`): Set the `disk_access_id` field on the resulting resource block. When `null`, the `disk_access_id` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting resource block. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `disk_iops_read_only` (`number`): Set the `disk_iops_read_only` field on the resulting resource block. When `null`, the `disk_iops_read_only` field will be omitted from the resulting object.
+  - `disk_iops_read_write` (`number`): Set the `disk_iops_read_write` field on the resulting resource block. When `null`, the `disk_iops_read_write` field will be omitted from the resulting object.
+  - `disk_mbps_read_only` (`number`): Set the `disk_mbps_read_only` field on the resulting resource block. When `null`, the `disk_mbps_read_only` field will be omitted from the resulting object.
+  - `disk_mbps_read_write` (`number`): Set the `disk_mbps_read_write` field on the resulting resource block. When `null`, the `disk_mbps_read_write` field will be omitted from the resulting object.
+  - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting resource block. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `gallery_image_reference_id` (`string`): Set the `gallery_image_reference_id` field on the resulting resource block. When `null`, the `gallery_image_reference_id` field will be omitted from the resulting object.
+  - `hyper_v_generation` (`string`): Set the `hyper_v_generation` field on the resulting resource block. When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
+  - `image_reference_id` (`string`): Set the `image_reference_id` field on the resulting resource block. When `null`, the `image_reference_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `logical_sector_size` (`number`): Set the `logical_sector_size` field on the resulting resource block. When `null`, the `logical_sector_size` field will be omitted from the resulting object.
+  - `max_shares` (`number`): Set the `max_shares` field on the resulting resource block. When `null`, the `max_shares` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `network_access_policy` (`string`): Set the `network_access_policy` field on the resulting resource block. When `null`, the `network_access_policy` field will be omitted from the resulting object.
+  - `on_demand_bursting_enabled` (`bool`): Set the `on_demand_bursting_enabled` field on the resulting resource block. When `null`, the `on_demand_bursting_enabled` field will be omitted from the resulting object.
+  - `os_type` (`string`): Set the `os_type` field on the resulting resource block. When `null`, the `os_type` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `secure_vm_disk_encryption_set_id` (`string`): Set the `secure_vm_disk_encryption_set_id` field on the resulting resource block. When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
+  - `security_type` (`string`): Set the `security_type` field on the resulting resource block. When `null`, the `security_type` field will be omitted from the resulting object.
+  - `source_resource_id` (`string`): Set the `source_resource_id` field on the resulting resource block. When `null`, the `source_resource_id` field will be omitted from the resulting object.
+  - `source_uri` (`string`): Set the `source_uri` field on the resulting resource block. When `null`, the `source_uri` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block. When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tier` (`string`): Set the `tier` field on the resulting resource block. When `null`, the `tier` field will be omitted from the resulting object.
+  - `trusted_launch_enabled` (`bool`): Set the `trusted_launch_enabled` field on the resulting resource block. When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
+  - `upload_size_bytes` (`number`): Set the `upload_size_bytes` field on the resulting resource block. When `null`, the `upload_size_bytes` field will be omitted from the resulting object.
+  - `zone` (`string`): Set the `zone` field on the resulting resource block. When `null`, the `zone` field will be omitted from the resulting object.
+  - `encryption_settings` (`list[obj]`): Set the `encryption_settings` field on the resulting resource block. When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-encryption_settingsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -146,40 +146,40 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `create_option` (`string`): 
-  - `disk_access_id` (`string`):  When `null`, the `disk_access_id` field will be omitted from the resulting object.
-  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `disk_iops_read_only` (`number`):  When `null`, the `disk_iops_read_only` field will be omitted from the resulting object.
-  - `disk_iops_read_write` (`number`):  When `null`, the `disk_iops_read_write` field will be omitted from the resulting object.
-  - `disk_mbps_read_only` (`number`):  When `null`, the `disk_mbps_read_only` field will be omitted from the resulting object.
-  - `disk_mbps_read_write` (`number`):  When `null`, the `disk_mbps_read_write` field will be omitted from the resulting object.
-  - `disk_size_gb` (`number`):  When `null`, the `disk_size_gb` field will be omitted from the resulting object.
-  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `gallery_image_reference_id` (`string`):  When `null`, the `gallery_image_reference_id` field will be omitted from the resulting object.
-  - `hyper_v_generation` (`string`):  When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
-  - `image_reference_id` (`string`):  When `null`, the `image_reference_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `logical_sector_size` (`number`):  When `null`, the `logical_sector_size` field will be omitted from the resulting object.
-  - `max_shares` (`number`):  When `null`, the `max_shares` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `network_access_policy` (`string`):  When `null`, the `network_access_policy` field will be omitted from the resulting object.
-  - `on_demand_bursting_enabled` (`bool`):  When `null`, the `on_demand_bursting_enabled` field will be omitted from the resulting object.
-  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `secure_vm_disk_encryption_set_id` (`string`):  When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
-  - `security_type` (`string`):  When `null`, the `security_type` field will be omitted from the resulting object.
-  - `source_resource_id` (`string`):  When `null`, the `source_resource_id` field will be omitted from the resulting object.
-  - `source_uri` (`string`):  When `null`, the `source_uri` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
-  - `storage_account_type` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `tier` (`string`):  When `null`, the `tier` field will be omitted from the resulting object.
-  - `trusted_launch_enabled` (`bool`):  When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
-  - `upload_size_bytes` (`number`):  When `null`, the `upload_size_bytes` field will be omitted from the resulting object.
-  - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-encryption_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-timeoutsnew) constructor.
+  - `create_option` (`string`): Set the `create_option` field on the resulting object.
+  - `disk_access_id` (`string`): Set the `disk_access_id` field on the resulting object. When `null`, the `disk_access_id` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `disk_iops_read_only` (`number`): Set the `disk_iops_read_only` field on the resulting object. When `null`, the `disk_iops_read_only` field will be omitted from the resulting object.
+  - `disk_iops_read_write` (`number`): Set the `disk_iops_read_write` field on the resulting object. When `null`, the `disk_iops_read_write` field will be omitted from the resulting object.
+  - `disk_mbps_read_only` (`number`): Set the `disk_mbps_read_only` field on the resulting object. When `null`, the `disk_mbps_read_only` field will be omitted from the resulting object.
+  - `disk_mbps_read_write` (`number`): Set the `disk_mbps_read_write` field on the resulting object. When `null`, the `disk_mbps_read_write` field will be omitted from the resulting object.
+  - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting object. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `gallery_image_reference_id` (`string`): Set the `gallery_image_reference_id` field on the resulting object. When `null`, the `gallery_image_reference_id` field will be omitted from the resulting object.
+  - `hyper_v_generation` (`string`): Set the `hyper_v_generation` field on the resulting object. When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
+  - `image_reference_id` (`string`): Set the `image_reference_id` field on the resulting object. When `null`, the `image_reference_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `logical_sector_size` (`number`): Set the `logical_sector_size` field on the resulting object. When `null`, the `logical_sector_size` field will be omitted from the resulting object.
+  - `max_shares` (`number`): Set the `max_shares` field on the resulting object. When `null`, the `max_shares` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `network_access_policy` (`string`): Set the `network_access_policy` field on the resulting object. When `null`, the `network_access_policy` field will be omitted from the resulting object.
+  - `on_demand_bursting_enabled` (`bool`): Set the `on_demand_bursting_enabled` field on the resulting object. When `null`, the `on_demand_bursting_enabled` field will be omitted from the resulting object.
+  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `secure_vm_disk_encryption_set_id` (`string`): Set the `secure_vm_disk_encryption_set_id` field on the resulting object. When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
+  - `security_type` (`string`): Set the `security_type` field on the resulting object. When `null`, the `security_type` field will be omitted from the resulting object.
+  - `source_resource_id` (`string`): Set the `source_resource_id` field on the resulting object. When `null`, the `source_resource_id` field will be omitted from the resulting object.
+  - `source_uri` (`string`): Set the `source_uri` field on the resulting object. When `null`, the `source_uri` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object. When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tier` (`string`): Set the `tier` field on the resulting object. When `null`, the `tier` field will be omitted from the resulting object.
+  - `trusted_launch_enabled` (`bool`): Set the `trusted_launch_enabled` field on the resulting object. When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
+  - `upload_size_bytes` (`number`): Set the `upload_size_bytes` field on the resulting object. When `null`, the `upload_size_bytes` field will be omitted from the resulting object.
+  - `zone` (`string`): Set the `zone` field on the resulting object. When `null`, the `zone` field will be omitted from the resulting object.
+  - `encryption_settings` (`list[obj]`): Set the `encryption_settings` field on the resulting object. When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-encryption_settingsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `managed_disk` resource into the root Terraform configuration.
@@ -787,9 +787,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `disk_encryption_key` (`list[obj]`):  When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.disk_encryption_key.new](#fn-encryption_settingsdisk_encryption_keynew) constructor.
-  - `key_encryption_key` (`list[obj]`):  When `null`, the `key_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.key_encryption_key.new](#fn-encryption_settingskey_encryption_keynew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `disk_encryption_key` (`list[obj]`): Set the `disk_encryption_key` field on the resulting object. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.disk_encryption_key.new](#fn-encryption_settingsdisk_encryption_keynew) constructor.
+  - `key_encryption_key` (`list[obj]`): Set the `key_encryption_key` field on the resulting object. When `null`, the `key_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.key_encryption_key.new](#fn-encryption_settingskey_encryption_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `encryption_settings` sub block.
@@ -812,8 +812,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `secret_url` (`string`): 
-  - `source_vault_id` (`string`): 
+  - `secret_url` (`string`): Set the `secret_url` field on the resulting object.
+  - `source_vault_id` (`string`): Set the `source_vault_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `disk_encryption_key` sub block.
@@ -836,8 +836,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_url` (`string`): 
-  - `source_vault_id` (`string`): 
+  - `key_url` (`string`): Set the `key_url` field on the resulting object.
+  - `source_vault_id` (`string`): Set the `source_vault_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `key_encryption_key` sub block.
@@ -860,10 +860,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

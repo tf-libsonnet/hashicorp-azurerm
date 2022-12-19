@@ -84,18 +84,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `load_balancer_enabled` (`bool`):  When `null`, the `load_balancer_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `backend_pool` (`list[obj]`):  When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-backend_poolnew) constructor.
-  - `backend_pool_health_probe` (`list[obj]`):  When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-backend_pool_health_probenew) constructor.
-  - `backend_pool_load_balancing` (`list[obj]`):  When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-backend_pool_load_balancingnew) constructor.
-  - `backend_pool_settings` (`list[obj]`):  When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-backend_pool_settingsnew) constructor.
-  - `frontend_endpoint` (`list[obj]`):  When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontend_endpointnew) constructor.
-  - `routing_rule` (`list[obj]`):  When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-routing_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.timeouts.new](#fn-timeoutsnew) constructor.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting resource block. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `load_balancer_enabled` (`bool`): Set the `load_balancer_enabled` field on the resulting resource block. When `null`, the `load_balancer_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `backend_pool` (`list[obj]`): Set the `backend_pool` field on the resulting resource block. When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-backend_poolnew) constructor.
+  - `backend_pool_health_probe` (`list[obj]`): Set the `backend_pool_health_probe` field on the resulting resource block. When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-backend_pool_health_probenew) constructor.
+  - `backend_pool_load_balancing` (`list[obj]`): Set the `backend_pool_load_balancing` field on the resulting resource block. When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-backend_pool_load_balancingnew) constructor.
+  - `backend_pool_settings` (`list[obj]`): Set the `backend_pool_settings` field on the resulting resource block. When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-backend_pool_settingsnew) constructor.
+  - `frontend_endpoint` (`list[obj]`): Set the `frontend_endpoint` field on the resulting resource block. When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontend_endpointnew) constructor.
+  - `routing_rule` (`list[obj]`): Set the `routing_rule` field on the resulting resource block. When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-routing_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,18 +119,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `load_balancer_enabled` (`bool`):  When `null`, the `load_balancer_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `backend_pool` (`list[obj]`):  When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-backend_poolnew) constructor.
-  - `backend_pool_health_probe` (`list[obj]`):  When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-backend_pool_health_probenew) constructor.
-  - `backend_pool_load_balancing` (`list[obj]`):  When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-backend_pool_load_balancingnew) constructor.
-  - `backend_pool_settings` (`list[obj]`):  When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-backend_pool_settingsnew) constructor.
-  - `frontend_endpoint` (`list[obj]`):  When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontend_endpointnew) constructor.
-  - `routing_rule` (`list[obj]`):  When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-routing_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.timeouts.new](#fn-timeoutsnew) constructor.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting object. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `load_balancer_enabled` (`bool`): Set the `load_balancer_enabled` field on the resulting object. When `null`, the `load_balancer_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `backend_pool` (`list[obj]`): Set the `backend_pool` field on the resulting object. When `null`, the `backend_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.new](#fn-backend_poolnew) constructor.
+  - `backend_pool_health_probe` (`list[obj]`): Set the `backend_pool_health_probe` field on the resulting object. When `null`, the `backend_pool_health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_health_probe.new](#fn-backend_pool_health_probenew) constructor.
+  - `backend_pool_load_balancing` (`list[obj]`): Set the `backend_pool_load_balancing` field on the resulting object. When `null`, the `backend_pool_load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_load_balancing.new](#fn-backend_pool_load_balancingnew) constructor.
+  - `backend_pool_settings` (`list[obj]`): Set the `backend_pool_settings` field on the resulting object. When `null`, the `backend_pool_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool_settings.new](#fn-backend_pool_settingsnew) constructor.
+  - `frontend_endpoint` (`list[obj]`): Set the `frontend_endpoint` field on the resulting object. When `null`, the `frontend_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.frontend_endpoint.new](#fn-frontend_endpointnew) constructor.
+  - `routing_rule` (`list[obj]`): Set the `routing_rule` field on the resulting object. When `null`, the `routing_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.new](#fn-routing_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `frontdoor` resource into the root Terraform configuration.
@@ -491,10 +491,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `health_probe_name` (`string`): 
-  - `load_balancing_name` (`string`): 
-  - `name` (`string`): 
-  - `backend` (`list[obj]`):  When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.backend.new](#fn-backend_poolbackendnew) constructor.
+  - `health_probe_name` (`string`): Set the `health_probe_name` field on the resulting object.
+  - `load_balancing_name` (`string`): Set the `load_balancing_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `backend` (`list[obj]`): Set the `backend` field on the resulting object. When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.backend_pool.backend.new](#fn-backend_poolbackendnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backend_pool` sub block.
@@ -517,13 +517,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `address` (`string`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `host_header` (`string`): 
-  - `http_port` (`number`): 
-  - `https_port` (`number`): 
-  - `priority` (`number`):  When `null`, the `priority` field will be omitted from the resulting object.
-  - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
+  - `address` (`string`): Set the `address` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `host_header` (`string`): Set the `host_header` field on the resulting object.
+  - `http_port` (`number`): Set the `http_port` field on the resulting object.
+  - `https_port` (`number`): Set the `https_port` field on the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
+  - `weight` (`number`): Set the `weight` field on the resulting object. When `null`, the `weight` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `backend` sub block.
@@ -546,12 +546,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `interval_in_seconds` (`number`):  When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `probe_method` (`string`):  When `null`, the `probe_method` field will be omitted from the resulting object.
-  - `protocol` (`string`):  When `null`, the `protocol` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `probe_method` (`string`): Set the `probe_method` field on the resulting object. When `null`, the `probe_method` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `backend_pool_health_probe` sub block.
@@ -574,10 +574,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `additional_latency_milliseconds` (`number`):  When `null`, the `additional_latency_milliseconds` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `sample_size` (`number`):  When `null`, the `sample_size` field will be omitted from the resulting object.
-  - `successful_samples_required` (`number`):  When `null`, the `successful_samples_required` field will be omitted from the resulting object.
+  - `additional_latency_milliseconds` (`number`): Set the `additional_latency_milliseconds` field on the resulting object. When `null`, the `additional_latency_milliseconds` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `sample_size` (`number`): Set the `sample_size` field on the resulting object. When `null`, the `sample_size` field will be omitted from the resulting object.
+  - `successful_samples_required` (`number`): Set the `successful_samples_required` field on the resulting object. When `null`, the `successful_samples_required` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `backend_pool_load_balancing` sub block.
@@ -600,8 +600,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `backend_pools_send_receive_timeout_seconds` (`number`):  When `null`, the `backend_pools_send_receive_timeout_seconds` field will be omitted from the resulting object.
-  - `enforce_backend_pools_certificate_name_check` (`bool`): 
+  - `backend_pools_send_receive_timeout_seconds` (`number`): Set the `backend_pools_send_receive_timeout_seconds` field on the resulting object. When `null`, the `backend_pools_send_receive_timeout_seconds` field will be omitted from the resulting object.
+  - `enforce_backend_pools_certificate_name_check` (`bool`): Set the `enforce_backend_pools_certificate_name_check` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `backend_pool_settings` sub block.
@@ -624,11 +624,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `host_name` (`string`): 
-  - `name` (`string`): 
-  - `session_affinity_enabled` (`bool`):  When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
-  - `session_affinity_ttl_seconds` (`number`):  When `null`, the `session_affinity_ttl_seconds` field will be omitted from the resulting object.
-  - `web_application_firewall_policy_link_id` (`string`):  When `null`, the `web_application_firewall_policy_link_id` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `session_affinity_enabled` (`bool`): Set the `session_affinity_enabled` field on the resulting object. When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
+  - `session_affinity_ttl_seconds` (`number`): Set the `session_affinity_ttl_seconds` field on the resulting object. When `null`, the `session_affinity_ttl_seconds` field will be omitted from the resulting object.
+  - `web_application_firewall_policy_link_id` (`string`): Set the `web_application_firewall_policy_link_id` field on the resulting object. When `null`, the `web_application_firewall_policy_link_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `frontend_endpoint` sub block.
@@ -651,13 +651,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `accepted_protocols` (`list`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frontend_endpoints` (`list`): 
-  - `name` (`string`): 
-  - `patterns_to_match` (`list`): 
-  - `forwarding_configuration` (`list[obj]`):  When `null`, the `forwarding_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.forwarding_configuration.new](#fn-routing_ruleforwarding_configurationnew) constructor.
-  - `redirect_configuration` (`list[obj]`):  When `null`, the `redirect_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.redirect_configuration.new](#fn-routing_ruleredirect_configurationnew) constructor.
+  - `accepted_protocols` (`list`): Set the `accepted_protocols` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frontend_endpoints` (`list`): Set the `frontend_endpoints` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `patterns_to_match` (`list`): Set the `patterns_to_match` field on the resulting object.
+  - `forwarding_configuration` (`list[obj]`): Set the `forwarding_configuration` field on the resulting object. When `null`, the `forwarding_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.forwarding_configuration.new](#fn-routing_ruleforwarding_configurationnew) constructor.
+  - `redirect_configuration` (`list[obj]`): Set the `redirect_configuration` field on the resulting object. When `null`, the `redirect_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor.routing_rule.redirect_configuration.new](#fn-routing_ruleredirect_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing_rule` sub block.
@@ -680,14 +680,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `backend_pool_name` (`string`): 
-  - `cache_duration` (`string`):  When `null`, the `cache_duration` field will be omitted from the resulting object.
-  - `cache_enabled` (`bool`):  When `null`, the `cache_enabled` field will be omitted from the resulting object.
-  - `cache_query_parameter_strip_directive` (`string`):  When `null`, the `cache_query_parameter_strip_directive` field will be omitted from the resulting object.
-  - `cache_query_parameters` (`list`):  When `null`, the `cache_query_parameters` field will be omitted from the resulting object.
-  - `cache_use_dynamic_compression` (`bool`):  When `null`, the `cache_use_dynamic_compression` field will be omitted from the resulting object.
-  - `custom_forwarding_path` (`string`):  When `null`, the `custom_forwarding_path` field will be omitted from the resulting object.
-  - `forwarding_protocol` (`string`):  When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
+  - `backend_pool_name` (`string`): Set the `backend_pool_name` field on the resulting object.
+  - `cache_duration` (`string`): Set the `cache_duration` field on the resulting object. When `null`, the `cache_duration` field will be omitted from the resulting object.
+  - `cache_enabled` (`bool`): Set the `cache_enabled` field on the resulting object. When `null`, the `cache_enabled` field will be omitted from the resulting object.
+  - `cache_query_parameter_strip_directive` (`string`): Set the `cache_query_parameter_strip_directive` field on the resulting object. When `null`, the `cache_query_parameter_strip_directive` field will be omitted from the resulting object.
+  - `cache_query_parameters` (`list`): Set the `cache_query_parameters` field on the resulting object. When `null`, the `cache_query_parameters` field will be omitted from the resulting object.
+  - `cache_use_dynamic_compression` (`bool`): Set the `cache_use_dynamic_compression` field on the resulting object. When `null`, the `cache_use_dynamic_compression` field will be omitted from the resulting object.
+  - `custom_forwarding_path` (`string`): Set the `custom_forwarding_path` field on the resulting object. When `null`, the `custom_forwarding_path` field will be omitted from the resulting object.
+  - `forwarding_protocol` (`string`): Set the `forwarding_protocol` field on the resulting object. When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `forwarding_configuration` sub block.
@@ -710,12 +710,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom_fragment` (`string`):  When `null`, the `custom_fragment` field will be omitted from the resulting object.
-  - `custom_host` (`string`):  When `null`, the `custom_host` field will be omitted from the resulting object.
-  - `custom_path` (`string`):  When `null`, the `custom_path` field will be omitted from the resulting object.
-  - `custom_query_string` (`string`):  When `null`, the `custom_query_string` field will be omitted from the resulting object.
-  - `redirect_protocol` (`string`): 
-  - `redirect_type` (`string`): 
+  - `custom_fragment` (`string`): Set the `custom_fragment` field on the resulting object. When `null`, the `custom_fragment` field will be omitted from the resulting object.
+  - `custom_host` (`string`): Set the `custom_host` field on the resulting object. When `null`, the `custom_host` field will be omitted from the resulting object.
+  - `custom_path` (`string`): Set the `custom_path` field on the resulting object. When `null`, the `custom_path` field will be omitted from the resulting object.
+  - `custom_query_string` (`string`): Set the `custom_query_string` field on the resulting object. When `null`, the `custom_query_string` field will be omitted from the resulting object.
+  - `redirect_protocol` (`string`): Set the `redirect_protocol` field on the resulting object.
+  - `redirect_type` (`string`): Set the `redirect_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `redirect_configuration` sub block.
@@ -738,10 +738,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

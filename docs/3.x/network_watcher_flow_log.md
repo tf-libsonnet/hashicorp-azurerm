@@ -66,18 +66,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enabled` (`bool`): 
-  - `location` (`string`):  When `null`, the `location` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `network_security_group_id` (`string`): 
-  - `network_watcher_name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `storage_account_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`number`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.retention_policy.new](#fn-retention_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.timeouts.new](#fn-timeoutsnew) constructor.
-  - `traffic_analytics` (`list[obj]`):  When `null`, the `traffic_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.traffic_analytics.new](#fn-traffic_analyticsnew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block. When `null`, the `location` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `network_security_group_id` (`string`): Set the `network_security_group_id` field on the resulting resource block.
+  - `network_watcher_name` (`string`): Set the `network_watcher_name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`number`): Set the `version` field on the resulting resource block. When `null`, the `version` field will be omitted from the resulting object.
+  - `retention_policy` (`list[obj]`): Set the `retention_policy` field on the resulting resource block. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.retention_policy.new](#fn-retention_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.timeouts.new](#fn-timeoutsnew) constructor.
+  - `traffic_analytics` (`list[obj]`): Set the `traffic_analytics` field on the resulting resource block. When `null`, the `traffic_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.traffic_analytics.new](#fn-traffic_analyticsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,18 +101,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enabled` (`bool`): 
-  - `location` (`string`):  When `null`, the `location` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `network_security_group_id` (`string`): 
-  - `network_watcher_name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `storage_account_id` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`number`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.retention_policy.new](#fn-retention_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.timeouts.new](#fn-timeoutsnew) constructor.
-  - `traffic_analytics` (`list[obj]`):  When `null`, the `traffic_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.traffic_analytics.new](#fn-traffic_analyticsnew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object. When `null`, the `location` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `network_security_group_id` (`string`): Set the `network_security_group_id` field on the resulting object.
+  - `network_watcher_name` (`string`): Set the `network_watcher_name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`number`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
+  - `retention_policy` (`list[obj]`): Set the `retention_policy` field on the resulting object. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.retention_policy.new](#fn-retention_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.timeouts.new](#fn-timeoutsnew) constructor.
+  - `traffic_analytics` (`list[obj]`): Set the `traffic_analytics` field on the resulting object. When `null`, the `traffic_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_watcher_flow_log.traffic_analytics.new](#fn-traffic_analyticsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_watcher_flow_log` resource into the root Terraform configuration.
@@ -389,8 +389,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`number`): 
-  - `enabled` (`bool`): 
+  - `days` (`number`): Set the `days` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_policy` sub block.
@@ -413,10 +413,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -439,11 +439,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): 
-  - `interval_in_minutes` (`number`):  When `null`, the `interval_in_minutes` field will be omitted from the resulting object.
-  - `workspace_id` (`string`): 
-  - `workspace_region` (`string`): 
-  - `workspace_resource_id` (`string`): 
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `interval_in_minutes` (`number`): Set the `interval_in_minutes` field on the resulting object. When `null`, the `interval_in_minutes` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object.
+  - `workspace_region` (`string`): Set the `workspace_region` field on the resulting object.
+  - `workspace_resource_id` (`string`): Set the `workspace_resource_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `traffic_analytics` sub block.

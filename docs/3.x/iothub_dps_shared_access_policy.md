@@ -57,15 +57,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enrollment_read` (`bool`):  When `null`, the `enrollment_read` field will be omitted from the resulting object.
-  - `enrollment_write` (`bool`):  When `null`, the `enrollment_write` field will be omitted from the resulting object.
-  - `iothub_dps_name` (`string`): 
-  - `name` (`string`): 
-  - `registration_read` (`bool`):  When `null`, the `registration_read` field will be omitted from the resulting object.
-  - `registration_write` (`bool`):  When `null`, the `registration_write` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `service_config` (`bool`):  When `null`, the `service_config` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps_shared_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enrollment_read` (`bool`): Set the `enrollment_read` field on the resulting resource block. When `null`, the `enrollment_read` field will be omitted from the resulting object.
+  - `enrollment_write` (`bool`): Set the `enrollment_write` field on the resulting resource block. When `null`, the `enrollment_write` field will be omitted from the resulting object.
+  - `iothub_dps_name` (`string`): Set the `iothub_dps_name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `registration_read` (`bool`): Set the `registration_read` field on the resulting resource block. When `null`, the `registration_read` field will be omitted from the resulting object.
+  - `registration_write` (`bool`): Set the `registration_write` field on the resulting resource block. When `null`, the `registration_write` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `service_config` (`bool`): Set the `service_config` field on the resulting resource block. When `null`, the `service_config` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps_shared_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,15 +89,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enrollment_read` (`bool`):  When `null`, the `enrollment_read` field will be omitted from the resulting object.
-  - `enrollment_write` (`bool`):  When `null`, the `enrollment_write` field will be omitted from the resulting object.
-  - `iothub_dps_name` (`string`): 
-  - `name` (`string`): 
-  - `registration_read` (`bool`):  When `null`, the `registration_read` field will be omitted from the resulting object.
-  - `registration_write` (`bool`):  When `null`, the `registration_write` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `service_config` (`bool`):  When `null`, the `service_config` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps_shared_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enrollment_read` (`bool`): Set the `enrollment_read` field on the resulting object. When `null`, the `enrollment_read` field will be omitted from the resulting object.
+  - `enrollment_write` (`bool`): Set the `enrollment_write` field on the resulting object. When `null`, the `enrollment_write` field will be omitted from the resulting object.
+  - `iothub_dps_name` (`string`): Set the `iothub_dps_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `registration_read` (`bool`): Set the `registration_read` field on the resulting object. When `null`, the `registration_read` field will be omitted from the resulting object.
+  - `registration_write` (`bool`): Set the `registration_write` field on the resulting object. When `null`, the `registration_write` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `service_config` (`bool`): Set the `service_config` field on the resulting object. When `null`, the `service_config` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps_shared_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iothub_dps_shared_access_policy` resource into the root Terraform configuration.
@@ -284,10 +284,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -81,23 +81,23 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_mitigate` (`bool`):  When `null`, the `auto_mitigate` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frequency` (`string`):  When `null`, the `frequency` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `scopes` (`list`): 
-  - `severity` (`number`):  When `null`, the `severity` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `auto_mitigate` (`bool`): Set the `auto_mitigate` field on the resulting resource block. When `null`, the `auto_mitigate` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting resource block. When `null`, the `frequency` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `scopes` (`list`): Set the `scopes` field on the resulting resource block.
+  - `severity` (`number`): Set the `severity` field on the resulting resource block. When `null`, the `severity` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `target_resource_location` (`string`): The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_location` field will be omitted from the resulting object.
   - `target_resource_type` (`string`): The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_type` field will be omitted from the resulting object.
-  - `window_size` (`string`):  When `null`, the `window_size` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-actionnew) constructor.
-  - `application_insights_web_test_location_availability_criteria` (`list[obj]`):  When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-application_insights_web_test_location_availability_criterianew) constructor.
-  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-criterianew) constructor.
-  - `dynamic_criteria` (`list[obj]`):  When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-dynamic_criterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-timeoutsnew) constructor.
+  - `window_size` (`string`): Set the `window_size` field on the resulting resource block. When `null`, the `window_size` field will be omitted from the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting resource block. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-actionnew) constructor.
+  - `application_insights_web_test_location_availability_criteria` (`list[obj]`): Set the `application_insights_web_test_location_availability_criteria` field on the resulting resource block. When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-application_insights_web_test_location_availability_criterianew) constructor.
+  - `criteria` (`list[obj]`): Set the `criteria` field on the resulting resource block. When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-criterianew) constructor.
+  - `dynamic_criteria` (`list[obj]`): Set the `dynamic_criteria` field on the resulting resource block. When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-dynamic_criterianew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -121,23 +121,23 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_mitigate` (`bool`):  When `null`, the `auto_mitigate` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `frequency` (`string`):  When `null`, the `frequency` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `scopes` (`list`): 
-  - `severity` (`number`):  When `null`, the `severity` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `auto_mitigate` (`bool`): Set the `auto_mitigate` field on the resulting object. When `null`, the `auto_mitigate` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object. When `null`, the `frequency` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `scopes` (`list`): Set the `scopes` field on the resulting object.
+  - `severity` (`number`): Set the `severity` field on the resulting object. When `null`, the `severity` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `target_resource_location` (`string`): The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_location` field will be omitted from the resulting object.
   - `target_resource_type` (`string`): The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_type` field will be omitted from the resulting object.
-  - `window_size` (`string`):  When `null`, the `window_size` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-actionnew) constructor.
-  - `application_insights_web_test_location_availability_criteria` (`list[obj]`):  When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-application_insights_web_test_location_availability_criterianew) constructor.
-  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-criterianew) constructor.
-  - `dynamic_criteria` (`list[obj]`):  When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-dynamic_criterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-timeoutsnew) constructor.
+  - `window_size` (`string`): Set the `window_size` field on the resulting object. When `null`, the `window_size` field will be omitted from the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-actionnew) constructor.
+  - `application_insights_web_test_location_availability_criteria` (`list[obj]`): Set the `application_insights_web_test_location_availability_criteria` field on the resulting object. When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-application_insights_web_test_location_availability_criterianew) constructor.
+  - `criteria` (`list[obj]`): Set the `criteria` field on the resulting object. When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-criterianew) constructor.
+  - `dynamic_criteria` (`list[obj]`): Set the `dynamic_criteria` field on the resulting object. When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-dynamic_criterianew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_metric_alert` resource into the root Terraform configuration.
@@ -536,8 +536,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `action_group_id` (`string`): 
-  - `webhook_properties` (`obj`):  When `null`, the `webhook_properties` field will be omitted from the resulting object.
+  - `action_group_id` (`string`): Set the `action_group_id` field on the resulting object.
+  - `webhook_properties` (`obj`): Set the `webhook_properties` field on the resulting object. When `null`, the `webhook_properties` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -560,9 +560,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `component_id` (`string`): 
-  - `failed_location_count` (`number`): 
-  - `web_test_id` (`string`): 
+  - `component_id` (`string`): Set the `component_id` field on the resulting object.
+  - `failed_location_count` (`number`): Set the `failed_location_count` field on the resulting object.
+  - `web_test_id` (`string`): Set the `web_test_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `application_insights_web_test_location_availability_criteria` sub block.
@@ -585,13 +585,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `aggregation` (`string`): 
-  - `metric_name` (`string`): 
-  - `metric_namespace` (`string`): 
-  - `operator` (`string`): 
-  - `skip_metric_validation` (`bool`):  When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
-  - `threshold` (`number`): 
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.dimension.new](#fn-criteriadimensionnew) constructor.
+  - `aggregation` (`string`): Set the `aggregation` field on the resulting object.
+  - `metric_name` (`string`): Set the `metric_name` field on the resulting object.
+  - `metric_namespace` (`string`): Set the `metric_namespace` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `skip_metric_validation` (`bool`): Set the `skip_metric_validation` field on the resulting object. When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
+  - `threshold` (`number`): Set the `threshold` field on the resulting object.
+  - `dimension` (`list[obj]`): Set the `dimension` field on the resulting object. When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.dimension.new](#fn-criteriadimensionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `criteria` sub block.
@@ -614,9 +614,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `operator` (`string`): 
-  - `values` (`list`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dimension` sub block.
@@ -639,16 +639,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `aggregation` (`string`): 
-  - `alert_sensitivity` (`string`): 
-  - `evaluation_failure_count` (`number`):  When `null`, the `evaluation_failure_count` field will be omitted from the resulting object.
-  - `evaluation_total_count` (`number`):  When `null`, the `evaluation_total_count` field will be omitted from the resulting object.
-  - `ignore_data_before` (`string`):  When `null`, the `ignore_data_before` field will be omitted from the resulting object.
-  - `metric_name` (`string`): 
-  - `metric_namespace` (`string`): 
-  - `operator` (`string`): 
-  - `skip_metric_validation` (`bool`):  When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.dimension.new](#fn-dynamic_criteriadimensionnew) constructor.
+  - `aggregation` (`string`): Set the `aggregation` field on the resulting object.
+  - `alert_sensitivity` (`string`): Set the `alert_sensitivity` field on the resulting object.
+  - `evaluation_failure_count` (`number`): Set the `evaluation_failure_count` field on the resulting object. When `null`, the `evaluation_failure_count` field will be omitted from the resulting object.
+  - `evaluation_total_count` (`number`): Set the `evaluation_total_count` field on the resulting object. When `null`, the `evaluation_total_count` field will be omitted from the resulting object.
+  - `ignore_data_before` (`string`): Set the `ignore_data_before` field on the resulting object. When `null`, the `ignore_data_before` field will be omitted from the resulting object.
+  - `metric_name` (`string`): Set the `metric_name` field on the resulting object.
+  - `metric_namespace` (`string`): Set the `metric_namespace` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `skip_metric_validation` (`bool`): Set the `skip_metric_validation` field on the resulting object. When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
+  - `dimension` (`list[obj]`): Set the `dimension` field on the resulting object. When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.dimension.new](#fn-dynamic_criteriadimensionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dynamic_criteria` sub block.
@@ -671,9 +671,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `operator` (`string`): 
-  - `values` (`list`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dimension` sub block.
@@ -696,10 +696,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

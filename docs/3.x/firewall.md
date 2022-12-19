@@ -72,21 +72,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `firewall_policy_id` (`string`):  When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `private_ip_ranges` (`list`):  When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `sku_tier` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `threat_intel_mode` (`string`):  When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-management_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-virtual_hubnew) constructor.
+  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `firewall_policy_id` (`string`): Set the `firewall_policy_id` field on the resulting resource block. When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `private_ip_ranges` (`list`): Set the `private_ip_ranges` field on the resulting resource block. When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `sku_tier` (`string`): Set the `sku_tier` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `threat_intel_mode` (`string`): Set the `threat_intel_mode` field on the resulting resource block. When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting resource block. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `management_ip_configuration` (`list[obj]`): Set the `management_ip_configuration` field on the resulting resource block. When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-management_ip_configurationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_hub` (`list[obj]`): Set the `virtual_hub` field on the resulting resource block. When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-virtual_hubnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,21 +110,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `firewall_policy_id` (`string`):  When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `private_ip_ranges` (`list`):  When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sku_name` (`string`): 
-  - `sku_tier` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `threat_intel_mode` (`string`):  When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `management_ip_configuration` (`list[obj]`):  When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-management_ip_configurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_hub` (`list[obj]`):  When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-virtual_hubnew) constructor.
+  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `firewall_policy_id` (`string`): Set the `firewall_policy_id` field on the resulting object. When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `private_ip_ranges` (`list`): Set the `private_ip_ranges` field on the resulting object. When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `sku_tier` (`string`): Set the `sku_tier` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `threat_intel_mode` (`string`): Set the `threat_intel_mode` field on the resulting object. When `null`, the `threat_intel_mode` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting object. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `management_ip_configuration` (`list[obj]`): Set the `management_ip_configuration` field on the resulting object. When `null`, the `management_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.management_ip_configuration.new](#fn-management_ip_configurationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_hub` (`list[obj]`): Set the `virtual_hub` field on the resulting object. When `null`, the `virtual_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall.virtual_hub.new](#fn-virtual_hubnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall` resource into the root Terraform configuration.
@@ -470,9 +470,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `public_ip_address_id` (`string`): 
-  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -495,9 +495,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `public_ip_address_id` (`string`): 
-  - `subnet_id` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `management_ip_configuration` sub block.
@@ -520,10 +520,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -546,8 +546,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `public_ip_count` (`number`):  When `null`, the `public_ip_count` field will be omitted from the resulting object.
-  - `virtual_hub_id` (`string`): 
+  - `public_ip_count` (`number`): Set the `public_ip_count` field on the resulting object. When `null`, the `public_ip_count` field will be omitted from the resulting object.
+  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_hub` sub block.

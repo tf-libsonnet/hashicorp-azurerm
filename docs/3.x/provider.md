@@ -59,7 +59,7 @@ Optionally, this inserts the provider into the
 the `src` and/or `version` parameters are set.
 
 **Args**:
-  - `auxiliary_tenant_ids` (`list`):  When `null`, the `auxiliary_tenant_ids` field will be omitted from the resulting object.
+  - `auxiliary_tenant_ids` (`list`): Set the `auxiliary_tenant_ids` field on the resulting provider block. When `null`, the `auxiliary_tenant_ids` field will be omitted from the resulting object.
   - `client_certificate_password` (`string`): The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate When `null`, the `client_certificate_password` field will be omitted from the resulting object.
   - `client_certificate_path` (`string`): The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. When `null`, the `client_certificate_path` field will be omitted from the resulting object.
   - `client_id` (`string`): The Client ID which should be used. When `null`, the `client_id` field will be omitted from the resulting object.
@@ -80,7 +80,7 @@ the `src` and/or `version` parameters are set.
   - `tenant_id` (`string`): The Tenant ID which should be used. When `null`, the `tenant_id` field will be omitted from the resulting object.
   - `use_msi` (`bool`): Allowed Managed Service Identity be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
   - `use_oidc` (`bool`): Allow OpenID Connect to be used for authentication When `null`, the `use_oidc` field will be omitted from the resulting object.
-  - `features` (`list[obj]`):  When `null`, the `features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.provider.features.new](#fn-azurermfeaturesnew) constructor.
+  - `features` (`list[obj]`): Set the `features` field on the resulting provider block. When `null`, the `features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.provider.features.new](#fn-azurermfeaturesnew) constructor.
   - `alias` (`string`): The provider `alias` to set for this instance of the provider block. When `null`, the `alias`
   field will be omitted from the resulting provider block.
   - `src` (`string`): The provider `source` to set on the resulting `required_providers` block. If `src` or `version` is
@@ -112,7 +112,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auxiliary_tenant_ids` (`list`):  When `null`, the `auxiliary_tenant_ids` field will be omitted from the resulting object.
+  - `auxiliary_tenant_ids` (`list`): Set the `auxiliary_tenant_ids` field on the resulting object. When `null`, the `auxiliary_tenant_ids` field will be omitted from the resulting object.
   - `client_certificate_password` (`string`): The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate When `null`, the `client_certificate_password` field will be omitted from the resulting object.
   - `client_certificate_path` (`string`): The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. When `null`, the `client_certificate_path` field will be omitted from the resulting object.
   - `client_id` (`string`): The Client ID which should be used. When `null`, the `client_id` field will be omitted from the resulting object.
@@ -133,7 +133,7 @@ injecting into a complete block.
   - `tenant_id` (`string`): The Tenant ID which should be used. When `null`, the `tenant_id` field will be omitted from the resulting object.
   - `use_msi` (`bool`): Allowed Managed Service Identity be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
   - `use_oidc` (`bool`): Allow OpenID Connect to be used for authentication When `null`, the `use_oidc` field will be omitted from the resulting object.
-  - `features` (`list[obj]`):  When `null`, the `features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.provider.features.new](#fn-azurermfeaturesnew) constructor.
+  - `features` (`list[obj]`): Set the `features` field on the resulting object. When `null`, the `features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.provider.features.new](#fn-azurermfeaturesnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withProvider](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withprovider) to construct a new `azurerm` provider
@@ -157,18 +157,18 @@ Terraform sub block.
 
 
 **Args**:
-  - `api_management` (`list[obj]`):  When `null`, the `api_management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.api_management.new](#fn-api_managementnew) constructor.
-  - `app_configuration` (`list[obj]`):  When `null`, the `app_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.app_configuration.new](#fn-app_configurationnew) constructor.
-  - `application_insights` (`list[obj]`):  When `null`, the `application_insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.application_insights.new](#fn-application_insightsnew) constructor.
-  - `cognitive_account` (`list[obj]`):  When `null`, the `cognitive_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.cognitive_account.new](#fn-cognitive_accountnew) constructor.
-  - `key_vault` (`list[obj]`):  When `null`, the `key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.key_vault.new](#fn-key_vaultnew) constructor.
-  - `log_analytics_workspace` (`list[obj]`):  When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.log_analytics_workspace.new](#fn-log_analytics_workspacenew) constructor.
-  - `managed_disk` (`list[obj]`):  When `null`, the `managed_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.managed_disk.new](#fn-managed_disknew) constructor.
-  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.network.new](#fn-networknew) constructor.
-  - `resource_group` (`list[obj]`):  When `null`, the `resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.resource_group.new](#fn-resource_groupnew) constructor.
-  - `template_deployment` (`list[obj]`):  When `null`, the `template_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.template_deployment.new](#fn-template_deploymentnew) constructor.
-  - `virtual_machine` (`list[obj]`):  When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine.new](#fn-virtual_machinenew) constructor.
-  - `virtual_machine_scale_set` (`list[obj]`):  When `null`, the `virtual_machine_scale_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine_scale_set.new](#fn-virtual_machine_scale_setnew) constructor.
+  - `api_management` (`list[obj]`): Set the `api_management` field on the resulting object. When `null`, the `api_management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.api_management.new](#fn-api_managementnew) constructor.
+  - `app_configuration` (`list[obj]`): Set the `app_configuration` field on the resulting object. When `null`, the `app_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.app_configuration.new](#fn-app_configurationnew) constructor.
+  - `application_insights` (`list[obj]`): Set the `application_insights` field on the resulting object. When `null`, the `application_insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.application_insights.new](#fn-application_insightsnew) constructor.
+  - `cognitive_account` (`list[obj]`): Set the `cognitive_account` field on the resulting object. When `null`, the `cognitive_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.cognitive_account.new](#fn-cognitive_accountnew) constructor.
+  - `key_vault` (`list[obj]`): Set the `key_vault` field on the resulting object. When `null`, the `key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.key_vault.new](#fn-key_vaultnew) constructor.
+  - `log_analytics_workspace` (`list[obj]`): Set the `log_analytics_workspace` field on the resulting object. When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.log_analytics_workspace.new](#fn-log_analytics_workspacenew) constructor.
+  - `managed_disk` (`list[obj]`): Set the `managed_disk` field on the resulting object. When `null`, the `managed_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.managed_disk.new](#fn-managed_disknew) constructor.
+  - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.network.new](#fn-networknew) constructor.
+  - `resource_group` (`list[obj]`): Set the `resource_group` field on the resulting object. When `null`, the `resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.resource_group.new](#fn-resource_groupnew) constructor.
+  - `template_deployment` (`list[obj]`): Set the `template_deployment` field on the resulting object. When `null`, the `template_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.template_deployment.new](#fn-template_deploymentnew) constructor.
+  - `virtual_machine` (`list[obj]`): Set the `virtual_machine` field on the resulting object. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine.new](#fn-virtual_machinenew) constructor.
+  - `virtual_machine_scale_set` (`list[obj]`): Set the `virtual_machine_scale_set` field on the resulting object. When `null`, the `virtual_machine_scale_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine_scale_set.new](#fn-virtual_machine_scale_setnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `features` sub block.
@@ -191,8 +191,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `purge_soft_delete_on_destroy` (`bool`):  When `null`, the `purge_soft_delete_on_destroy` field will be omitted from the resulting object.
-  - `recover_soft_deleted` (`bool`):  When `null`, the `recover_soft_deleted` field will be omitted from the resulting object.
+  - `purge_soft_delete_on_destroy` (`bool`): Set the `purge_soft_delete_on_destroy` field on the resulting object. When `null`, the `purge_soft_delete_on_destroy` field will be omitted from the resulting object.
+  - `recover_soft_deleted` (`bool`): Set the `recover_soft_deleted` field on the resulting object. When `null`, the `recover_soft_deleted` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `api_management` sub block.
@@ -215,8 +215,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `purge_soft_delete_on_destroy` (`bool`):  When `null`, the `purge_soft_delete_on_destroy` field will be omitted from the resulting object.
-  - `recover_soft_deleted` (`bool`):  When `null`, the `recover_soft_deleted` field will be omitted from the resulting object.
+  - `purge_soft_delete_on_destroy` (`bool`): Set the `purge_soft_delete_on_destroy` field on the resulting object. When `null`, the `purge_soft_delete_on_destroy` field will be omitted from the resulting object.
+  - `recover_soft_deleted` (`bool`): Set the `recover_soft_deleted` field on the resulting object. When `null`, the `recover_soft_deleted` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `app_configuration` sub block.
@@ -239,7 +239,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `disable_generated_rule` (`bool`):  When `null`, the `disable_generated_rule` field will be omitted from the resulting object.
+  - `disable_generated_rule` (`bool`): Set the `disable_generated_rule` field on the resulting object. When `null`, the `disable_generated_rule` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `application_insights` sub block.
@@ -262,7 +262,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `purge_soft_delete_on_destroy` (`bool`):  When `null`, the `purge_soft_delete_on_destroy` field will be omitted from the resulting object.
+  - `purge_soft_delete_on_destroy` (`bool`): Set the `purge_soft_delete_on_destroy` field on the resulting object. When `null`, the `purge_soft_delete_on_destroy` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cognitive_account` sub block.
@@ -316,7 +316,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `permanently_delete_on_destroy` (`bool`):  When `null`, the `permanently_delete_on_destroy` field will be omitted from the resulting object.
+  - `permanently_delete_on_destroy` (`bool`): Set the `permanently_delete_on_destroy` field on the resulting object. When `null`, the `permanently_delete_on_destroy` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `log_analytics_workspace` sub block.
@@ -339,7 +339,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `expand_without_downtime` (`bool`):  When `null`, the `expand_without_downtime` field will be omitted from the resulting object.
+  - `expand_without_downtime` (`bool`): Set the `expand_without_downtime` field on the resulting object. When `null`, the `expand_without_downtime` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `managed_disk` sub block.
@@ -362,7 +362,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `relaxed_locking` (`bool`): 
+  - `relaxed_locking` (`bool`): Set the `relaxed_locking` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `network` sub block.
@@ -385,7 +385,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `prevent_deletion_if_contains_resources` (`bool`):  When `null`, the `prevent_deletion_if_contains_resources` field will be omitted from the resulting object.
+  - `prevent_deletion_if_contains_resources` (`bool`): Set the `prevent_deletion_if_contains_resources` field on the resulting object. When `null`, the `prevent_deletion_if_contains_resources` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `resource_group` sub block.
@@ -408,7 +408,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `delete_nested_items_during_deletion` (`bool`): 
+  - `delete_nested_items_during_deletion` (`bool`): Set the `delete_nested_items_during_deletion` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `template_deployment` sub block.
@@ -431,9 +431,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `delete_os_disk_on_deletion` (`bool`):  When `null`, the `delete_os_disk_on_deletion` field will be omitted from the resulting object.
-  - `graceful_shutdown` (`bool`):  When `null`, the `graceful_shutdown` field will be omitted from the resulting object.
-  - `skip_shutdown_and_force_delete` (`bool`):  When `null`, the `skip_shutdown_and_force_delete` field will be omitted from the resulting object.
+  - `delete_os_disk_on_deletion` (`bool`): Set the `delete_os_disk_on_deletion` field on the resulting object. When `null`, the `delete_os_disk_on_deletion` field will be omitted from the resulting object.
+  - `graceful_shutdown` (`bool`): Set the `graceful_shutdown` field on the resulting object. When `null`, the `graceful_shutdown` field will be omitted from the resulting object.
+  - `skip_shutdown_and_force_delete` (`bool`): Set the `skip_shutdown_and_force_delete` field on the resulting object. When `null`, the `skip_shutdown_and_force_delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_machine` sub block.
@@ -456,9 +456,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `force_delete` (`bool`):  When `null`, the `force_delete` field will be omitted from the resulting object.
-  - `roll_instances_when_required` (`bool`): 
-  - `scale_to_zero_before_deletion` (`bool`):  When `null`, the `scale_to_zero_before_deletion` field will be omitted from the resulting object.
+  - `force_delete` (`bool`): Set the `force_delete` field on the resulting object. When `null`, the `force_delete` field will be omitted from the resulting object.
+  - `roll_instances_when_required` (`bool`): Set the `roll_instances_when_required` field on the resulting object.
+  - `scale_to_zero_before_deletion` (`bool`): Set the `scale_to_zero_before_deletion` field on the resulting object. When `null`, the `scale_to_zero_before_deletion` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_machine_scale_set` sub block.

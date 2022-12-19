@@ -65,14 +65,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.action.new](#fn-actionnew) constructor.
-  - `resource_type` (`list[obj]`):  When `null`, the `resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.resource_type.new](#fn-resource_typenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.timeouts.new](#fn-timeoutsnew) constructor.
-  - `validation` (`list[obj]`):  When `null`, the `validation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.validation.new](#fn-validationnew) constructor.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting resource block. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.action.new](#fn-actionnew) constructor.
+  - `resource_type` (`list[obj]`): Set the `resource_type` field on the resulting resource block. When `null`, the `resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.resource_type.new](#fn-resource_typenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.timeouts.new](#fn-timeoutsnew) constructor.
+  - `validation` (`list[obj]`): Set the `validation` field on the resulting resource block. When `null`, the `validation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.validation.new](#fn-validationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,14 +96,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.action.new](#fn-actionnew) constructor.
-  - `resource_type` (`list[obj]`):  When `null`, the `resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.resource_type.new](#fn-resource_typenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.timeouts.new](#fn-timeoutsnew) constructor.
-  - `validation` (`list[obj]`):  When `null`, the `validation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.validation.new](#fn-validationnew) constructor.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.action.new](#fn-actionnew) constructor.
+  - `resource_type` (`list[obj]`): Set the `resource_type` field on the resulting object. When `null`, the `resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.resource_type.new](#fn-resource_typenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.timeouts.new](#fn-timeoutsnew) constructor.
+  - `validation` (`list[obj]`): Set the `validation` field on the resulting object. When `null`, the `validation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.custom_provider.validation.new](#fn-validationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `custom_provider` resource into the root Terraform configuration.
@@ -337,8 +337,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `endpoint` (`string`): 
-  - `name` (`string`): 
+  - `endpoint` (`string`): Set the `endpoint` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -361,9 +361,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `endpoint` (`string`): 
-  - `name` (`string`): 
-  - `routing_type` (`string`):  When `null`, the `routing_type` field will be omitted from the resulting object.
+  - `endpoint` (`string`): Set the `endpoint` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `routing_type` (`string`): Set the `routing_type` field on the resulting object. When `null`, the `routing_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `resource_type` sub block.
@@ -386,10 +386,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -412,7 +412,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `specification` (`string`): 
+  - `specification` (`string`): Set the `specification` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `validation` sub block.

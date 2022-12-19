@@ -63,18 +63,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `authentication_mode` (`string`):  When `null`, the `authentication_mode` field will be omitted from the resulting object.
-  - `eventhub_consumer_group_name` (`string`):  When `null`, the `eventhub_consumer_group_name` field will be omitted from the resulting object.
-  - `eventhub_name` (`string`): 
-  - `name` (`string`): 
-  - `partition_key` (`string`):  When `null`, the `partition_key` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `servicebus_namespace` (`string`): 
-  - `shared_access_policy_key` (`string`):  When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
-  - `shared_access_policy_name` (`string`):  When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
-  - `stream_analytics_job_name` (`string`): 
-  - `serialization` (`list[obj]`):  When `null`, the `serialization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.serialization.new](#fn-serializationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `authentication_mode` (`string`): Set the `authentication_mode` field on the resulting resource block. When `null`, the `authentication_mode` field will be omitted from the resulting object.
+  - `eventhub_consumer_group_name` (`string`): Set the `eventhub_consumer_group_name` field on the resulting resource block. When `null`, the `eventhub_consumer_group_name` field will be omitted from the resulting object.
+  - `eventhub_name` (`string`): Set the `eventhub_name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `partition_key` (`string`): Set the `partition_key` field on the resulting resource block. When `null`, the `partition_key` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `servicebus_namespace` (`string`): Set the `servicebus_namespace` field on the resulting resource block.
+  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting resource block. When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
+  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting resource block. When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
+  - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting resource block.
+  - `serialization` (`list[obj]`): Set the `serialization` field on the resulting resource block. When `null`, the `serialization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.serialization.new](#fn-serializationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,18 +98,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `authentication_mode` (`string`):  When `null`, the `authentication_mode` field will be omitted from the resulting object.
-  - `eventhub_consumer_group_name` (`string`):  When `null`, the `eventhub_consumer_group_name` field will be omitted from the resulting object.
-  - `eventhub_name` (`string`): 
-  - `name` (`string`): 
-  - `partition_key` (`string`):  When `null`, the `partition_key` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `servicebus_namespace` (`string`): 
-  - `shared_access_policy_key` (`string`):  When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
-  - `shared_access_policy_name` (`string`):  When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
-  - `stream_analytics_job_name` (`string`): 
-  - `serialization` (`list[obj]`):  When `null`, the `serialization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.serialization.new](#fn-serializationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `authentication_mode` (`string`): Set the `authentication_mode` field on the resulting object. When `null`, the `authentication_mode` field will be omitted from the resulting object.
+  - `eventhub_consumer_group_name` (`string`): Set the `eventhub_consumer_group_name` field on the resulting object. When `null`, the `eventhub_consumer_group_name` field will be omitted from the resulting object.
+  - `eventhub_name` (`string`): Set the `eventhub_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `partition_key` (`string`): Set the `partition_key` field on the resulting object. When `null`, the `partition_key` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `servicebus_namespace` (`string`): Set the `servicebus_namespace` field on the resulting object.
+  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting object. When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
+  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting object. When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
+  - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting object.
+  - `serialization` (`list[obj]`): Set the `serialization` field on the resulting object. When `null`, the `serialization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.serialization.new](#fn-serializationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_stream_input_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `stream_analytics_stream_input_eventhub` resource into the root Terraform configuration.
@@ -365,9 +365,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `encoding` (`string`):  When `null`, the `encoding` field will be omitted from the resulting object.
-  - `field_delimiter` (`string`):  When `null`, the `field_delimiter` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `encoding` (`string`): Set the `encoding` field on the resulting object. When `null`, the `encoding` field will be omitted from the resulting object.
+  - `field_delimiter` (`string`): Set the `field_delimiter` field on the resulting object. When `null`, the `field_delimiter` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `serialization` sub block.
@@ -390,10 +390,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

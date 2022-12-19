@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `application_group_id` (`string`): 
-  - `command_line_argument_policy` (`string`): 
-  - `command_line_arguments` (`string`):  When `null`, the `command_line_arguments` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `icon_index` (`number`):  When `null`, the `icon_index` field will be omitted from the resulting object.
-  - `icon_path` (`string`):  When `null`, the `icon_path` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `path` (`string`): 
-  - `show_in_portal` (`bool`):  When `null`, the `show_in_portal` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_application.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_group_id` (`string`): Set the `application_group_id` field on the resulting resource block.
+  - `command_line_argument_policy` (`string`): Set the `command_line_argument_policy` field on the resulting resource block.
+  - `command_line_arguments` (`string`): Set the `command_line_arguments` field on the resulting resource block. When `null`, the `command_line_arguments` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting resource block. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `icon_index` (`number`): Set the `icon_index` field on the resulting resource block. When `null`, the `icon_index` field will be omitted from the resulting object.
+  - `icon_path` (`string`): Set the `icon_path` field on the resulting resource block. When `null`, the `icon_path` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `path` (`string`): Set the `path` field on the resulting resource block.
+  - `show_in_portal` (`bool`): Set the `show_in_portal` field on the resulting resource block. When `null`, the `show_in_portal` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_application.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `application_group_id` (`string`): 
-  - `command_line_argument_policy` (`string`): 
-  - `command_line_arguments` (`string`):  When `null`, the `command_line_arguments` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `icon_index` (`number`):  When `null`, the `icon_index` field will be omitted from the resulting object.
-  - `icon_path` (`string`):  When `null`, the `icon_path` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `path` (`string`): 
-  - `show_in_portal` (`bool`):  When `null`, the `show_in_portal` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_application.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_group_id` (`string`): Set the `application_group_id` field on the resulting object.
+  - `command_line_argument_policy` (`string`): Set the `command_line_argument_policy` field on the resulting object.
+  - `command_line_arguments` (`string`): Set the `command_line_arguments` field on the resulting object. When `null`, the `command_line_arguments` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting object. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `icon_index` (`number`): Set the `icon_index` field on the resulting object. When `null`, the `icon_index` field will be omitted from the resulting object.
+  - `icon_path` (`string`): Set the `icon_path` field on the resulting object. When `null`, the `icon_path` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object.
+  - `show_in_portal` (`bool`): Set the `show_in_portal` field on the resulting object. When `null`, the `show_in_portal` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_application.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_desktop_application` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

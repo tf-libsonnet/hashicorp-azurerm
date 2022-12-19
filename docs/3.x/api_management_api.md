@@ -93,31 +93,31 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_name` (`string`): 
-  - `api_type` (`string`):  When `null`, the `api_type` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `protocols` (`list`):  When `null`, the `protocols` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `revision` (`string`): 
-  - `revision_description` (`string`):  When `null`, the `revision_description` field will be omitted from the resulting object.
-  - `service_url` (`string`):  When `null`, the `service_url` field will be omitted from the resulting object.
-  - `soap_pass_through` (`bool`):  When `null`, the `soap_pass_through` field will be omitted from the resulting object.
-  - `source_api_id` (`string`):  When `null`, the `source_api_id` field will be omitted from the resulting object.
-  - `subscription_required` (`bool`):  When `null`, the `subscription_required` field will be omitted from the resulting object.
-  - `terms_of_service_url` (`string`):  When `null`, the `terms_of_service_url` field will be omitted from the resulting object.
-  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `version_description` (`string`):  When `null`, the `version_description` field will be omitted from the resulting object.
-  - `version_set_id` (`string`):  When `null`, the `version_set_id` field will be omitted from the resulting object.
-  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-contactnew) constructor.
-  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-import_new) constructor.
-  - `license` (`list[obj]`):  When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-licensenew) constructor.
-  - `oauth2_authorization` (`list[obj]`):  When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-oauth2_authorizationnew) constructor.
-  - `openid_authentication` (`list[obj]`):  When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-openid_authenticationnew) constructor.
-  - `subscription_key_parameter_names` (`list[obj]`):  When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-subscription_key_parameter_namesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
+  - `api_type` (`string`): Set the `api_type` field on the resulting resource block. When `null`, the `api_type` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `path` (`string`): Set the `path` field on the resulting resource block. When `null`, the `path` field will be omitted from the resulting object.
+  - `protocols` (`list`): Set the `protocols` field on the resulting resource block. When `null`, the `protocols` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `revision` (`string`): Set the `revision` field on the resulting resource block.
+  - `revision_description` (`string`): Set the `revision_description` field on the resulting resource block. When `null`, the `revision_description` field will be omitted from the resulting object.
+  - `service_url` (`string`): Set the `service_url` field on the resulting resource block. When `null`, the `service_url` field will be omitted from the resulting object.
+  - `soap_pass_through` (`bool`): Set the `soap_pass_through` field on the resulting resource block. When `null`, the `soap_pass_through` field will be omitted from the resulting object.
+  - `source_api_id` (`string`): Set the `source_api_id` field on the resulting resource block. When `null`, the `source_api_id` field will be omitted from the resulting object.
+  - `subscription_required` (`bool`): Set the `subscription_required` field on the resulting resource block. When `null`, the `subscription_required` field will be omitted from the resulting object.
+  - `terms_of_service_url` (`string`): Set the `terms_of_service_url` field on the resulting resource block. When `null`, the `terms_of_service_url` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting resource block. When `null`, the `version` field will be omitted from the resulting object.
+  - `version_description` (`string`): Set the `version_description` field on the resulting resource block. When `null`, the `version_description` field will be omitted from the resulting object.
+  - `version_set_id` (`string`): Set the `version_set_id` field on the resulting resource block. When `null`, the `version_set_id` field will be omitted from the resulting object.
+  - `contact` (`list[obj]`): Set the `contact` field on the resulting resource block. When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-contactnew) constructor.
+  - `import_` (`list[obj]`): Set the `import_` field on the resulting resource block. When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-import_new) constructor.
+  - `license` (`list[obj]`): Set the `license` field on the resulting resource block. When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-licensenew) constructor.
+  - `oauth2_authorization` (`list[obj]`): Set the `oauth2_authorization` field on the resulting resource block. When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-oauth2_authorizationnew) constructor.
+  - `openid_authentication` (`list[obj]`): Set the `openid_authentication` field on the resulting resource block. When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-openid_authenticationnew) constructor.
+  - `subscription_key_parameter_names` (`list[obj]`): Set the `subscription_key_parameter_names` field on the resulting resource block. When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-subscription_key_parameter_namesnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -141,31 +141,31 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_name` (`string`): 
-  - `api_type` (`string`):  When `null`, the `api_type` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `protocols` (`list`):  When `null`, the `protocols` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `revision` (`string`): 
-  - `revision_description` (`string`):  When `null`, the `revision_description` field will be omitted from the resulting object.
-  - `service_url` (`string`):  When `null`, the `service_url` field will be omitted from the resulting object.
-  - `soap_pass_through` (`bool`):  When `null`, the `soap_pass_through` field will be omitted from the resulting object.
-  - `source_api_id` (`string`):  When `null`, the `source_api_id` field will be omitted from the resulting object.
-  - `subscription_required` (`bool`):  When `null`, the `subscription_required` field will be omitted from the resulting object.
-  - `terms_of_service_url` (`string`):  When `null`, the `terms_of_service_url` field will be omitted from the resulting object.
-  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `version_description` (`string`):  When `null`, the `version_description` field will be omitted from the resulting object.
-  - `version_set_id` (`string`):  When `null`, the `version_set_id` field will be omitted from the resulting object.
-  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-contactnew) constructor.
-  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-import_new) constructor.
-  - `license` (`list[obj]`):  When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-licensenew) constructor.
-  - `oauth2_authorization` (`list[obj]`):  When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-oauth2_authorizationnew) constructor.
-  - `openid_authentication` (`list[obj]`):  When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-openid_authenticationnew) constructor.
-  - `subscription_key_parameter_names` (`list[obj]`):  When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-subscription_key_parameter_namesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
+  - `api_type` (`string`): Set the `api_type` field on the resulting object. When `null`, the `api_type` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `protocols` (`list`): Set the `protocols` field on the resulting object. When `null`, the `protocols` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `revision` (`string`): Set the `revision` field on the resulting object.
+  - `revision_description` (`string`): Set the `revision_description` field on the resulting object. When `null`, the `revision_description` field will be omitted from the resulting object.
+  - `service_url` (`string`): Set the `service_url` field on the resulting object. When `null`, the `service_url` field will be omitted from the resulting object.
+  - `soap_pass_through` (`bool`): Set the `soap_pass_through` field on the resulting object. When `null`, the `soap_pass_through` field will be omitted from the resulting object.
+  - `source_api_id` (`string`): Set the `source_api_id` field on the resulting object. When `null`, the `source_api_id` field will be omitted from the resulting object.
+  - `subscription_required` (`bool`): Set the `subscription_required` field on the resulting object. When `null`, the `subscription_required` field will be omitted from the resulting object.
+  - `terms_of_service_url` (`string`): Set the `terms_of_service_url` field on the resulting object. When `null`, the `terms_of_service_url` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
+  - `version_description` (`string`): Set the `version_description` field on the resulting object. When `null`, the `version_description` field will be omitted from the resulting object.
+  - `version_set_id` (`string`): Set the `version_set_id` field on the resulting object. When `null`, the `version_set_id` field will be omitted from the resulting object.
+  - `contact` (`list[obj]`): Set the `contact` field on the resulting object. When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-contactnew) constructor.
+  - `import_` (`list[obj]`): Set the `import_` field on the resulting object. When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-import_new) constructor.
+  - `license` (`list[obj]`): Set the `license` field on the resulting object. When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-licensenew) constructor.
+  - `oauth2_authorization` (`list[obj]`): Set the `oauth2_authorization` field on the resulting object. When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-oauth2_authorizationnew) constructor.
+  - `openid_authentication` (`list[obj]`): Set the `openid_authentication` field on the resulting object. When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-openid_authenticationnew) constructor.
+  - `subscription_key_parameter_names` (`list[obj]`): Set the `subscription_key_parameter_names` field on the resulting object. When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-subscription_key_parameter_namesnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_api` resource into the root Terraform configuration.
@@ -734,9 +734,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `email` (`string`):  When `null`, the `email` field will be omitted from the resulting object.
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `url` (`string`):  When `null`, the `url` field will be omitted from the resulting object.
+  - `email` (`string`): Set the `email` field on the resulting object. When `null`, the `email` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `url` (`string`): Set the `url` field on the resulting object. When `null`, the `url` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `contact` sub block.
@@ -759,9 +759,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `content_format` (`string`): 
-  - `content_value` (`string`): 
-  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-importwsdl_selectornew) constructor.
+  - `content_format` (`string`): Set the `content_format` field on the resulting object.
+  - `content_value` (`string`): Set the `content_value` field on the resulting object.
+  - `wsdl_selector` (`list[obj]`): Set the `wsdl_selector` field on the resulting object. When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-importwsdl_selectornew) constructor.
 
 **Returns**:
   - An attribute object that represents the `import` sub block.
@@ -784,8 +784,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `endpoint_name` (`string`): 
-  - `service_name` (`string`): 
+  - `endpoint_name` (`string`): Set the `endpoint_name` field on the resulting object.
+  - `service_name` (`string`): Set the `service_name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `wsdl_selector` sub block.
@@ -808,8 +808,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `url` (`string`):  When `null`, the `url` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `url` (`string`): Set the `url` field on the resulting object. When `null`, the `url` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `license` sub block.
@@ -832,8 +832,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `authorization_server_name` (`string`): 
-  - `scope` (`string`):  When `null`, the `scope` field will be omitted from the resulting object.
+  - `authorization_server_name` (`string`): Set the `authorization_server_name` field on the resulting object.
+  - `scope` (`string`): Set the `scope` field on the resulting object. When `null`, the `scope` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `oauth2_authorization` sub block.
@@ -856,8 +856,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `bearer_token_sending_methods` (`list`):  When `null`, the `bearer_token_sending_methods` field will be omitted from the resulting object.
-  - `openid_provider_name` (`string`): 
+  - `bearer_token_sending_methods` (`list`): Set the `bearer_token_sending_methods` field on the resulting object. When `null`, the `bearer_token_sending_methods` field will be omitted from the resulting object.
+  - `openid_provider_name` (`string`): Set the `openid_provider_name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `openid_authentication` sub block.
@@ -880,8 +880,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `header` (`string`): 
-  - `query` (`string`): 
+  - `header` (`string`): Set the `header` field on the resulting object.
+  - `query` (`string`): Set the `query` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `subscription_key_parameter_names` sub block.
@@ -904,10 +904,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

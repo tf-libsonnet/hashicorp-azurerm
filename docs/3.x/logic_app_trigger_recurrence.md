@@ -59,14 +59,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `frequency` (`string`): 
-  - `interval` (`number`): 
-  - `logic_app_id` (`string`): 
-  - `name` (`string`): 
-  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
-  - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-schedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-timeoutsnew) constructor.
+  - `frequency` (`string`): Set the `frequency` field on the resulting resource block.
+  - `interval` (`number`): Set the `interval` field on the resulting resource block.
+  - `logic_app_id` (`string`): Set the `logic_app_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `start_time` (`string`): Set the `start_time` field on the resulting resource block. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting resource block. When `null`, the `time_zone` field will be omitted from the resulting object.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting resource block. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,14 +90,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `frequency` (`string`): 
-  - `interval` (`number`): 
-  - `logic_app_id` (`string`): 
-  - `name` (`string`): 
-  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
-  - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-schedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-timeoutsnew) constructor.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object.
+  - `logic_app_id` (`string`): Set the `logic_app_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting object. When `null`, the `time_zone` field will be omitted from the resulting object.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_trigger_recurrence.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_trigger_recurrence` resource into the root Terraform configuration.
@@ -289,9 +289,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `at_these_hours` (`list`):  When `null`, the `at_these_hours` field will be omitted from the resulting object.
-  - `at_these_minutes` (`list`):  When `null`, the `at_these_minutes` field will be omitted from the resulting object.
-  - `on_these_days` (`list`):  When `null`, the `on_these_days` field will be omitted from the resulting object.
+  - `at_these_hours` (`list`): Set the `at_these_hours` field on the resulting object. When `null`, the `at_these_hours` field will be omitted from the resulting object.
+  - `at_these_minutes` (`list`): Set the `at_these_minutes` field on the resulting object. When `null`, the `at_these_minutes` field will be omitted from the resulting object.
+  - `on_these_days` (`list`): Set the `on_these_days` field on the resulting object. When `null`, the `on_these_days` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -314,10 +314,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

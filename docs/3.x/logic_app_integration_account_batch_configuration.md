@@ -64,13 +64,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `batch_group_name` (`string`): 
-  - `integration_account_name` (`string`): 
-  - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `release_criteria` (`list[obj]`):  When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-release_criterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `batch_group_name` (`string`): Set the `batch_group_name` field on the resulting resource block.
+  - `integration_account_name` (`string`): Set the `integration_account_name` field on the resulting resource block.
+  - `metadata` (`obj`): Set the `metadata` field on the resulting resource block. When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `release_criteria` (`list[obj]`): Set the `release_criteria` field on the resulting resource block. When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-release_criterianew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,13 +94,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `batch_group_name` (`string`): 
-  - `integration_account_name` (`string`): 
-  - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `release_criteria` (`list[obj]`):  When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-release_criterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `batch_group_name` (`string`): Set the `batch_group_name` field on the resulting object.
+  - `integration_account_name` (`string`): Set the `integration_account_name` field on the resulting object.
+  - `metadata` (`obj`): Set the `metadata` field on the resulting object. When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `release_criteria` (`list[obj]`): Set the `release_criteria` field on the resulting object. When `null`, the `release_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.new](#fn-release_criterianew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_integration_account_batch_configuration` resource into the root Terraform configuration.
@@ -276,9 +276,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `batch_size` (`number`):  When `null`, the `batch_size` field will be omitted from the resulting object.
-  - `message_count` (`number`):  When `null`, the `message_count` field will be omitted from the resulting object.
-  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.new](#fn-release_criteriarecurrencenew) constructor.
+  - `batch_size` (`number`): Set the `batch_size` field on the resulting object. When `null`, the `batch_size` field will be omitted from the resulting object.
+  - `message_count` (`number`): Set the `message_count` field on the resulting object. When `null`, the `message_count` field will be omitted from the resulting object.
+  - `recurrence` (`list[obj]`): Set the `recurrence` field on the resulting object. When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.new](#fn-release_criteriarecurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `release_criteria` sub block.
@@ -301,12 +301,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `interval` (`number`): 
-  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
-  - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.new](#fn-release_criteriarelease_criteriaschedulenew) constructor.
+  - `end_time` (`string`): Set the `end_time` field on the resulting object. When `null`, the `end_time` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting object. When `null`, the `time_zone` field will be omitted from the resulting object.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.new](#fn-release_criteriarelease_criteriaschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `recurrence` sub block.
@@ -329,11 +329,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `hours` (`list`):  When `null`, the `hours` field will be omitted from the resulting object.
-  - `minutes` (`list`):  When `null`, the `minutes` field will be omitted from the resulting object.
-  - `month_days` (`list`):  When `null`, the `month_days` field will be omitted from the resulting object.
-  - `week_days` (`list`):  When `null`, the `week_days` field will be omitted from the resulting object.
-  - `monthly` (`list[obj]`):  When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.monthly.new](#fn-release_criteriarelease_criteriarecurrencemonthlynew) constructor.
+  - `hours` (`list`): Set the `hours` field on the resulting object. When `null`, the `hours` field will be omitted from the resulting object.
+  - `minutes` (`list`): Set the `minutes` field on the resulting object. When `null`, the `minutes` field will be omitted from the resulting object.
+  - `month_days` (`list`): Set the `month_days` field on the resulting object. When `null`, the `month_days` field will be omitted from the resulting object.
+  - `week_days` (`list`): Set the `week_days` field on the resulting object. When `null`, the `week_days` field will be omitted from the resulting object.
+  - `monthly` (`list[obj]`): Set the `monthly` field on the resulting object. When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_batch_configuration.release_criteria.recurrence.schedule.monthly.new](#fn-release_criteriarelease_criteriarecurrencemonthlynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -356,8 +356,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `week` (`number`): 
-  - `weekday` (`string`): 
+  - `week` (`number`): Set the `week` field on the resulting object.
+  - `weekday` (`string`): Set the `weekday` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `monthly` sub block.
@@ -380,10 +380,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

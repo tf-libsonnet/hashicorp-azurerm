@@ -62,20 +62,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `developer_app_insights_api_key` (`string`):  When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
-  - `developer_app_insights_application_id` (`string`):  When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
-  - `developer_app_insights_key` (`string`):  When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
-  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
-  - `endpoint` (`string`):  When `null`, the `endpoint` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `luis_app_ids` (`list`):  When `null`, the `luis_app_ids` field will be omitted from the resulting object.
-  - `luis_key` (`string`):  When `null`, the `luis_key` field will be omitted from the resulting object.
-  - `microsoft_app_id` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_web_app.timeouts.new](#fn-timeoutsnew) constructor.
+  - `developer_app_insights_api_key` (`string`): Set the `developer_app_insights_api_key` field on the resulting resource block. When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
+  - `developer_app_insights_application_id` (`string`): Set the `developer_app_insights_application_id` field on the resulting resource block. When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
+  - `developer_app_insights_key` (`string`): Set the `developer_app_insights_key` field on the resulting resource block. When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `endpoint` (`string`): Set the `endpoint` field on the resulting resource block. When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `luis_app_ids` (`list`): Set the `luis_app_ids` field on the resulting resource block. When `null`, the `luis_app_ids` field will be omitted from the resulting object.
+  - `luis_key` (`string`): Set the `luis_key` field on the resulting resource block. When `null`, the `luis_key` field will be omitted from the resulting object.
+  - `microsoft_app_id` (`string`): Set the `microsoft_app_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku` (`string`): Set the `sku` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_web_app.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,20 +99,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `developer_app_insights_api_key` (`string`):  When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
-  - `developer_app_insights_application_id` (`string`):  When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
-  - `developer_app_insights_key` (`string`):  When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
-  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
-  - `endpoint` (`string`):  When `null`, the `endpoint` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `luis_app_ids` (`list`):  When `null`, the `luis_app_ids` field will be omitted from the resulting object.
-  - `luis_key` (`string`):  When `null`, the `luis_key` field will be omitted from the resulting object.
-  - `microsoft_app_id` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sku` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_web_app.timeouts.new](#fn-timeoutsnew) constructor.
+  - `developer_app_insights_api_key` (`string`): Set the `developer_app_insights_api_key` field on the resulting object. When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
+  - `developer_app_insights_application_id` (`string`): Set the `developer_app_insights_application_id` field on the resulting object. When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
+  - `developer_app_insights_key` (`string`): Set the `developer_app_insights_key` field on the resulting object. When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `endpoint` (`string`): Set the `endpoint` field on the resulting object. When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `luis_app_ids` (`list`): Set the `luis_app_ids` field on the resulting object. When `null`, the `luis_app_ids` field will be omitted from the resulting object.
+  - `luis_key` (`string`): Set the `luis_key` field on the resulting object. When `null`, the `luis_key` field will be omitted from the resulting object.
+  - `microsoft_app_id` (`string`): Set the `microsoft_app_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_web_app.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bot_web_app` resource into the root Terraform configuration.
@@ -379,10 +379,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -56,11 +56,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `apply_to_device` (`bool`):  When `null`, the `apply_to_device` field will be omitted from the resulting object.
-  - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `iotcentral_application_id` (`string`): 
-  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.ip_rule.new](#fn-ip_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
+  - `apply_to_device` (`bool`): Set the `apply_to_device` field on the resulting resource block. When `null`, the `apply_to_device` field will be omitted from the resulting object.
+  - `default_action` (`string`): Set the `default_action` field on the resulting resource block. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `iotcentral_application_id` (`string`): Set the `iotcentral_application_id` field on the resulting resource block.
+  - `ip_rule` (`list[obj]`): Set the `ip_rule` field on the resulting resource block. When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.ip_rule.new](#fn-ip_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,11 +84,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `apply_to_device` (`bool`):  When `null`, the `apply_to_device` field will be omitted from the resulting object.
-  - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `iotcentral_application_id` (`string`): 
-  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.ip_rule.new](#fn-ip_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
+  - `apply_to_device` (`bool`): Set the `apply_to_device` field on the resulting object. When `null`, the `apply_to_device` field will be omitted from the resulting object.
+  - `default_action` (`string`): Set the `default_action` field on the resulting object. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `iotcentral_application_id` (`string`): Set the `iotcentral_application_id` field on the resulting object.
+  - `ip_rule` (`list[obj]`): Set the `ip_rule` field on the resulting object. When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.ip_rule.new](#fn-ip_rulenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iotcentral_application_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iotcentral_application_network_rule_set` resource into the root Terraform configuration.
@@ -232,8 +232,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `ip_mask` (`string`): 
-  - `name` (`string`): 
+  - `ip_mask` (`string`): Set the `ip_mask` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_rule` sub block.
@@ -256,10 +256,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

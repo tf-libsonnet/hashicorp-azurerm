@@ -73,19 +73,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `addon_json` (`string`):  When `null`, the `addon_json` field will be omitted from the resulting object.
-  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
-  - `is_public` (`bool`):  When `null`, the `is_public` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_endpoint_enabled` (`bool`):  When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `service_name` (`string`): 
-  - `tls_enabled` (`bool`):  When `null`, the `tls_enabled` field will be omitted from the resulting object.
-  - `custom_persistent_disk` (`list[obj]`):  When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-custom_persistent_disknew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-identitynew) constructor.
-  - `ingress_settings` (`list[obj]`):  When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-ingress_settingsnew) constructor.
-  - `persistent_disk` (`list[obj]`):  When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-persistent_disknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-timeoutsnew) constructor.
+  - `addon_json` (`string`): Set the `addon_json` field on the resulting resource block. When `null`, the `addon_json` field will be omitted from the resulting object.
+  - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
+  - `is_public` (`bool`): Set the `is_public` field on the resulting resource block. When `null`, the `is_public` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_endpoint_enabled` (`bool`): Set the `public_endpoint_enabled` field on the resulting resource block. When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `service_name` (`string`): Set the `service_name` field on the resulting resource block.
+  - `tls_enabled` (`bool`): Set the `tls_enabled` field on the resulting resource block. When `null`, the `tls_enabled` field will be omitted from the resulting object.
+  - `custom_persistent_disk` (`list[obj]`): Set the `custom_persistent_disk` field on the resulting resource block. When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-custom_persistent_disknew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-identitynew) constructor.
+  - `ingress_settings` (`list[obj]`): Set the `ingress_settings` field on the resulting resource block. When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-ingress_settingsnew) constructor.
+  - `persistent_disk` (`list[obj]`): Set the `persistent_disk` field on the resulting resource block. When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-persistent_disknew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,19 +109,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `addon_json` (`string`):  When `null`, the `addon_json` field will be omitted from the resulting object.
-  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
-  - `is_public` (`bool`):  When `null`, the `is_public` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_endpoint_enabled` (`bool`):  When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `service_name` (`string`): 
-  - `tls_enabled` (`bool`):  When `null`, the `tls_enabled` field will be omitted from the resulting object.
-  - `custom_persistent_disk` (`list[obj]`):  When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-custom_persistent_disknew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-identitynew) constructor.
-  - `ingress_settings` (`list[obj]`):  When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-ingress_settingsnew) constructor.
-  - `persistent_disk` (`list[obj]`):  When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-persistent_disknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-timeoutsnew) constructor.
+  - `addon_json` (`string`): Set the `addon_json` field on the resulting object. When `null`, the `addon_json` field will be omitted from the resulting object.
+  - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
+  - `is_public` (`bool`): Set the `is_public` field on the resulting object. When `null`, the `is_public` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_endpoint_enabled` (`bool`): Set the `public_endpoint_enabled` field on the resulting object. When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `service_name` (`string`): Set the `service_name` field on the resulting object.
+  - `tls_enabled` (`bool`): Set the `tls_enabled` field on the resulting object. When `null`, the `tls_enabled` field will be omitted from the resulting object.
+  - `custom_persistent_disk` (`list[obj]`): Set the `custom_persistent_disk` field on the resulting object. When `null`, the `custom_persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.custom_persistent_disk.new](#fn-custom_persistent_disknew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.identity.new](#fn-identitynew) constructor.
+  - `ingress_settings` (`list[obj]`): Set the `ingress_settings` field on the resulting object. When `null`, the `ingress_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.ingress_settings.new](#fn-ingress_settingsnew) constructor.
+  - `persistent_disk` (`list[obj]`): Set the `persistent_disk` field on the resulting object. When `null`, the `persistent_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.persistent_disk.new](#fn-persistent_disknew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_app.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_app` resource into the root Terraform configuration.
@@ -456,11 +456,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `mount_options` (`list`):  When `null`, the `mount_options` field will be omitted from the resulting object.
-  - `mount_path` (`string`): 
-  - `read_only_enabled` (`bool`):  When `null`, the `read_only_enabled` field will be omitted from the resulting object.
-  - `share_name` (`string`): 
-  - `storage_name` (`string`): 
+  - `mount_options` (`list`): Set the `mount_options` field on the resulting object. When `null`, the `mount_options` field will be omitted from the resulting object.
+  - `mount_path` (`string`): Set the `mount_path` field on the resulting object.
+  - `read_only_enabled` (`bool`): Set the `read_only_enabled` field on the resulting object. When `null`, the `read_only_enabled` field will be omitted from the resulting object.
+  - `share_name` (`string`): Set the `share_name` field on the resulting object.
+  - `storage_name` (`string`): Set the `storage_name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `custom_persistent_disk` sub block.
@@ -483,8 +483,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -507,11 +507,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `backend_protocol` (`string`):  When `null`, the `backend_protocol` field will be omitted from the resulting object.
-  - `read_timeout_in_seconds` (`number`):  When `null`, the `read_timeout_in_seconds` field will be omitted from the resulting object.
-  - `send_timeout_in_seconds` (`number`):  When `null`, the `send_timeout_in_seconds` field will be omitted from the resulting object.
-  - `session_affinity` (`string`):  When `null`, the `session_affinity` field will be omitted from the resulting object.
-  - `session_cookie_max_age` (`number`):  When `null`, the `session_cookie_max_age` field will be omitted from the resulting object.
+  - `backend_protocol` (`string`): Set the `backend_protocol` field on the resulting object. When `null`, the `backend_protocol` field will be omitted from the resulting object.
+  - `read_timeout_in_seconds` (`number`): Set the `read_timeout_in_seconds` field on the resulting object. When `null`, the `read_timeout_in_seconds` field will be omitted from the resulting object.
+  - `send_timeout_in_seconds` (`number`): Set the `send_timeout_in_seconds` field on the resulting object. When `null`, the `send_timeout_in_seconds` field will be omitted from the resulting object.
+  - `session_affinity` (`string`): Set the `session_affinity` field on the resulting object. When `null`, the `session_affinity` field will be omitted from the resulting object.
+  - `session_cookie_max_age` (`number`): Set the `session_cookie_max_age` field on the resulting object. When `null`, the `session_cookie_max_age` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ingress_settings` sub block.
@@ -534,8 +534,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `mount_path` (`string`):  When `null`, the `mount_path` field will be omitted from the resulting object.
-  - `size_in_gb` (`number`): 
+  - `mount_path` (`string`): Set the `mount_path` field on the resulting object. When `null`, the `mount_path` field will be omitted from the resulting object.
+  - `size_in_gb` (`number`): Set the `size_in_gb` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `persistent_disk` sub block.
@@ -558,10 +558,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

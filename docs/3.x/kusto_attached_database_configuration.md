@@ -60,15 +60,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cluster_name` (`string`): 
-  - `cluster_resource_id` (`string`): 
-  - `database_name` (`string`): 
-  - `default_principal_modification_kind` (`string`):  When `null`, the `default_principal_modification_kind` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sharing` (`list[obj]`):  When `null`, the `sharing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.sharing.new](#fn-sharingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_name` (`string`): Set the `cluster_name` field on the resulting resource block.
+  - `cluster_resource_id` (`string`): Set the `cluster_resource_id` field on the resulting resource block.
+  - `database_name` (`string`): Set the `database_name` field on the resulting resource block.
+  - `default_principal_modification_kind` (`string`): Set the `default_principal_modification_kind` field on the resulting resource block. When `null`, the `default_principal_modification_kind` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sharing` (`list[obj]`): Set the `sharing` field on the resulting resource block. When `null`, the `sharing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.sharing.new](#fn-sharingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,15 +92,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cluster_name` (`string`): 
-  - `cluster_resource_id` (`string`): 
-  - `database_name` (`string`): 
-  - `default_principal_modification_kind` (`string`):  When `null`, the `default_principal_modification_kind` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `sharing` (`list[obj]`):  When `null`, the `sharing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.sharing.new](#fn-sharingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_name` (`string`): Set the `cluster_name` field on the resulting object.
+  - `cluster_resource_id` (`string`): Set the `cluster_resource_id` field on the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `default_principal_modification_kind` (`string`): Set the `default_principal_modification_kind` field on the resulting object. When `null`, the `default_principal_modification_kind` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sharing` (`list[obj]`): Set the `sharing` field on the resulting object. When `null`, the `sharing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.sharing.new](#fn-sharingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_attached_database_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_attached_database_configuration` resource into the root Terraform configuration.
@@ -308,12 +308,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `external_tables_to_exclude` (`list`):  When `null`, the `external_tables_to_exclude` field will be omitted from the resulting object.
-  - `external_tables_to_include` (`list`):  When `null`, the `external_tables_to_include` field will be omitted from the resulting object.
-  - `materialized_views_to_exclude` (`list`):  When `null`, the `materialized_views_to_exclude` field will be omitted from the resulting object.
-  - `materialized_views_to_include` (`list`):  When `null`, the `materialized_views_to_include` field will be omitted from the resulting object.
-  - `tables_to_exclude` (`list`):  When `null`, the `tables_to_exclude` field will be omitted from the resulting object.
-  - `tables_to_include` (`list`):  When `null`, the `tables_to_include` field will be omitted from the resulting object.
+  - `external_tables_to_exclude` (`list`): Set the `external_tables_to_exclude` field on the resulting object. When `null`, the `external_tables_to_exclude` field will be omitted from the resulting object.
+  - `external_tables_to_include` (`list`): Set the `external_tables_to_include` field on the resulting object. When `null`, the `external_tables_to_include` field will be omitted from the resulting object.
+  - `materialized_views_to_exclude` (`list`): Set the `materialized_views_to_exclude` field on the resulting object. When `null`, the `materialized_views_to_exclude` field will be omitted from the resulting object.
+  - `materialized_views_to_include` (`list`): Set the `materialized_views_to_include` field on the resulting object. When `null`, the `materialized_views_to_include` field will be omitted from the resulting object.
+  - `tables_to_exclude` (`list`): Set the `tables_to_exclude` field on the resulting object. When `null`, the `tables_to_exclude` field will be omitted from the resulting object.
+  - `tables_to_include` (`list`): Set the `tables_to_include` field on the resulting object. When `null`, the `tables_to_include` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sharing` sub block.
@@ -336,10 +336,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

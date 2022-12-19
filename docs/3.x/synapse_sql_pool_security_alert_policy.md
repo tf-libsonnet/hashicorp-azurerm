@@ -57,15 +57,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `disabled_alerts` (`list`):  When `null`, the `disabled_alerts` field will be omitted from the resulting object.
-  - `email_account_admins_enabled` (`bool`):  When `null`, the `email_account_admins_enabled` field will be omitted from the resulting object.
-  - `email_addresses` (`list`):  When `null`, the `email_addresses` field will be omitted from the resulting object.
-  - `policy_state` (`string`): 
-  - `retention_days` (`number`):  When `null`, the `retention_days` field will be omitted from the resulting object.
-  - `sql_pool_id` (`string`): 
-  - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
-  - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_security_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `disabled_alerts` (`list`): Set the `disabled_alerts` field on the resulting resource block. When `null`, the `disabled_alerts` field will be omitted from the resulting object.
+  - `email_account_admins_enabled` (`bool`): Set the `email_account_admins_enabled` field on the resulting resource block. When `null`, the `email_account_admins_enabled` field will be omitted from the resulting object.
+  - `email_addresses` (`list`): Set the `email_addresses` field on the resulting resource block. When `null`, the `email_addresses` field will be omitted from the resulting object.
+  - `policy_state` (`string`): Set the `policy_state` field on the resulting resource block.
+  - `retention_days` (`number`): Set the `retention_days` field on the resulting resource block. When `null`, the `retention_days` field will be omitted from the resulting object.
+  - `sql_pool_id` (`string`): Set the `sql_pool_id` field on the resulting resource block.
+  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting resource block. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
+  - `storage_endpoint` (`string`): Set the `storage_endpoint` field on the resulting resource block. When `null`, the `storage_endpoint` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_security_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,15 +89,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `disabled_alerts` (`list`):  When `null`, the `disabled_alerts` field will be omitted from the resulting object.
-  - `email_account_admins_enabled` (`bool`):  When `null`, the `email_account_admins_enabled` field will be omitted from the resulting object.
-  - `email_addresses` (`list`):  When `null`, the `email_addresses` field will be omitted from the resulting object.
-  - `policy_state` (`string`): 
-  - `retention_days` (`number`):  When `null`, the `retention_days` field will be omitted from the resulting object.
-  - `sql_pool_id` (`string`): 
-  - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
-  - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_security_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `disabled_alerts` (`list`): Set the `disabled_alerts` field on the resulting object. When `null`, the `disabled_alerts` field will be omitted from the resulting object.
+  - `email_account_admins_enabled` (`bool`): Set the `email_account_admins_enabled` field on the resulting object. When `null`, the `email_account_admins_enabled` field will be omitted from the resulting object.
+  - `email_addresses` (`list`): Set the `email_addresses` field on the resulting object. When `null`, the `email_addresses` field will be omitted from the resulting object.
+  - `policy_state` (`string`): Set the `policy_state` field on the resulting object.
+  - `retention_days` (`number`): Set the `retention_days` field on the resulting object. When `null`, the `retention_days` field will be omitted from the resulting object.
+  - `sql_pool_id` (`string`): Set the `sql_pool_id` field on the resulting object.
+  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting object. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
+  - `storage_endpoint` (`string`): Set the `storage_endpoint` field on the resulting object. When `null`, the `storage_endpoint` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool_security_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_sql_pool_security_alert_policy` resource into the root Terraform configuration.
@@ -284,10 +284,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

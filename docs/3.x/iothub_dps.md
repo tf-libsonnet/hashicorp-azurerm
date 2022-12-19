@@ -68,17 +68,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allocation_policy` (`string`):  When `null`, the `allocation_policy` field will be omitted from the resulting object.
-  - `data_residency_enabled` (`bool`):  When `null`, the `data_residency_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_filter_rule` (`list[obj]`):  When `null`, the `ip_filter_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.ip_filter_rule.new](#fn-ip_filter_rulenew) constructor.
-  - `linked_hub` (`list[obj]`):  When `null`, the `linked_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.linked_hub.new](#fn-linked_hubnew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allocation_policy` (`string`): Set the `allocation_policy` field on the resulting resource block. When `null`, the `allocation_policy` field will be omitted from the resulting object.
+  - `data_residency_enabled` (`bool`): Set the `data_residency_enabled` field on the resulting resource block. When `null`, the `data_residency_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ip_filter_rule` (`list[obj]`): Set the `ip_filter_rule` field on the resulting resource block. When `null`, the `ip_filter_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.ip_filter_rule.new](#fn-ip_filter_rulenew) constructor.
+  - `linked_hub` (`list[obj]`): Set the `linked_hub` field on the resulting resource block. When `null`, the `linked_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.linked_hub.new](#fn-linked_hubnew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting resource block. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,17 +102,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allocation_policy` (`string`):  When `null`, the `allocation_policy` field will be omitted from the resulting object.
-  - `data_residency_enabled` (`bool`):  When `null`, the `data_residency_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_filter_rule` (`list[obj]`):  When `null`, the `ip_filter_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.ip_filter_rule.new](#fn-ip_filter_rulenew) constructor.
-  - `linked_hub` (`list[obj]`):  When `null`, the `linked_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.linked_hub.new](#fn-linked_hubnew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allocation_policy` (`string`): Set the `allocation_policy` field on the resulting object. When `null`, the `allocation_policy` field will be omitted from the resulting object.
+  - `data_residency_enabled` (`bool`): Set the `data_residency_enabled` field on the resulting object. When `null`, the `data_residency_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `ip_filter_rule` (`list[obj]`): Set the `ip_filter_rule` field on the resulting object. When `null`, the `ip_filter_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.ip_filter_rule.new](#fn-ip_filter_rulenew) constructor.
+  - `linked_hub` (`list[obj]`): Set the `linked_hub` field on the resulting object. When `null`, the `linked_hub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.linked_hub.new](#fn-linked_hubnew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting object. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub_dps.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iothub_dps` resource into the root Terraform configuration.
@@ -394,10 +394,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `ip_mask` (`string`): 
-  - `name` (`string`): 
-  - `target` (`string`):  When `null`, the `target` field will be omitted from the resulting object.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `ip_mask` (`string`): Set the `ip_mask` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `target` (`string`): Set the `target` field on the resulting object. When `null`, the `target` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_filter_rule` sub block.
@@ -420,10 +420,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `allocation_weight` (`number`):  When `null`, the `allocation_weight` field will be omitted from the resulting object.
-  - `apply_allocation_policy` (`bool`):  When `null`, the `apply_allocation_policy` field will be omitted from the resulting object.
-  - `connection_string` (`string`): 
-  - `location` (`string`): 
+  - `allocation_weight` (`number`): Set the `allocation_weight` field on the resulting object. When `null`, the `allocation_weight` field will be omitted from the resulting object.
+  - `apply_allocation_policy` (`bool`): Set the `apply_allocation_policy` field on the resulting object. When `null`, the `apply_allocation_policy` field will be omitted from the resulting object.
+  - `connection_string` (`string`): Set the `connection_string` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `linked_hub` sub block.
@@ -446,8 +446,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`number`): 
-  - `name` (`string`): 
+  - `capacity` (`number`): Set the `capacity` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sku` sub block.
@@ -470,10 +470,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

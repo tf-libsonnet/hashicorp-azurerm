@@ -72,24 +72,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `compatibility_level` (`string`):  When `null`, the `compatibility_level` field will be omitted from the resulting object.
-  - `content_storage_policy` (`string`):  When `null`, the `content_storage_policy` field will be omitted from the resulting object.
-  - `data_locale` (`string`):  When `null`, the `data_locale` field will be omitted from the resulting object.
-  - `events_late_arrival_max_delay_in_seconds` (`number`):  When `null`, the `events_late_arrival_max_delay_in_seconds` field will be omitted from the resulting object.
-  - `events_out_of_order_max_delay_in_seconds` (`number`):  When `null`, the `events_out_of_order_max_delay_in_seconds` field will be omitted from the resulting object.
-  - `events_out_of_order_policy` (`string`):  When `null`, the `events_out_of_order_policy` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `output_error_policy` (`string`):  When `null`, the `output_error_policy` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `stream_analytics_cluster_id` (`string`):  When `null`, the `stream_analytics_cluster_id` field will be omitted from the resulting object.
-  - `streaming_units` (`number`):  When `null`, the `streaming_units` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `transformation_query` (`string`): 
-  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.identity.new](#fn-identitynew) constructor.
-  - `job_storage_account` (`list[obj]`):  When `null`, the `job_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.job_storage_account.new](#fn-job_storage_accountnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.timeouts.new](#fn-timeoutsnew) constructor.
+  - `compatibility_level` (`string`): Set the `compatibility_level` field on the resulting resource block. When `null`, the `compatibility_level` field will be omitted from the resulting object.
+  - `content_storage_policy` (`string`): Set the `content_storage_policy` field on the resulting resource block. When `null`, the `content_storage_policy` field will be omitted from the resulting object.
+  - `data_locale` (`string`): Set the `data_locale` field on the resulting resource block. When `null`, the `data_locale` field will be omitted from the resulting object.
+  - `events_late_arrival_max_delay_in_seconds` (`number`): Set the `events_late_arrival_max_delay_in_seconds` field on the resulting resource block. When `null`, the `events_late_arrival_max_delay_in_seconds` field will be omitted from the resulting object.
+  - `events_out_of_order_max_delay_in_seconds` (`number`): Set the `events_out_of_order_max_delay_in_seconds` field on the resulting resource block. When `null`, the `events_out_of_order_max_delay_in_seconds` field will be omitted from the resulting object.
+  - `events_out_of_order_policy` (`string`): Set the `events_out_of_order_policy` field on the resulting resource block. When `null`, the `events_out_of_order_policy` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `output_error_policy` (`string`): Set the `output_error_policy` field on the resulting resource block. When `null`, the `output_error_policy` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `stream_analytics_cluster_id` (`string`): Set the `stream_analytics_cluster_id` field on the resulting resource block. When `null`, the `stream_analytics_cluster_id` field will be omitted from the resulting object.
+  - `streaming_units` (`number`): Set the `streaming_units` field on the resulting resource block. When `null`, the `streaming_units` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `transformation_query` (`string`): Set the `transformation_query` field on the resulting resource block.
+  - `type` (`string`): Set the `type` field on the resulting resource block. When `null`, the `type` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.identity.new](#fn-identitynew) constructor.
+  - `job_storage_account` (`list[obj]`): Set the `job_storage_account` field on the resulting resource block. When `null`, the `job_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.job_storage_account.new](#fn-job_storage_accountnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -113,24 +113,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `compatibility_level` (`string`):  When `null`, the `compatibility_level` field will be omitted from the resulting object.
-  - `content_storage_policy` (`string`):  When `null`, the `content_storage_policy` field will be omitted from the resulting object.
-  - `data_locale` (`string`):  When `null`, the `data_locale` field will be omitted from the resulting object.
-  - `events_late_arrival_max_delay_in_seconds` (`number`):  When `null`, the `events_late_arrival_max_delay_in_seconds` field will be omitted from the resulting object.
-  - `events_out_of_order_max_delay_in_seconds` (`number`):  When `null`, the `events_out_of_order_max_delay_in_seconds` field will be omitted from the resulting object.
-  - `events_out_of_order_policy` (`string`):  When `null`, the `events_out_of_order_policy` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `output_error_policy` (`string`):  When `null`, the `output_error_policy` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `stream_analytics_cluster_id` (`string`):  When `null`, the `stream_analytics_cluster_id` field will be omitted from the resulting object.
-  - `streaming_units` (`number`):  When `null`, the `streaming_units` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `transformation_query` (`string`): 
-  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.identity.new](#fn-identitynew) constructor.
-  - `job_storage_account` (`list[obj]`):  When `null`, the `job_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.job_storage_account.new](#fn-job_storage_accountnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.timeouts.new](#fn-timeoutsnew) constructor.
+  - `compatibility_level` (`string`): Set the `compatibility_level` field on the resulting object. When `null`, the `compatibility_level` field will be omitted from the resulting object.
+  - `content_storage_policy` (`string`): Set the `content_storage_policy` field on the resulting object. When `null`, the `content_storage_policy` field will be omitted from the resulting object.
+  - `data_locale` (`string`): Set the `data_locale` field on the resulting object. When `null`, the `data_locale` field will be omitted from the resulting object.
+  - `events_late_arrival_max_delay_in_seconds` (`number`): Set the `events_late_arrival_max_delay_in_seconds` field on the resulting object. When `null`, the `events_late_arrival_max_delay_in_seconds` field will be omitted from the resulting object.
+  - `events_out_of_order_max_delay_in_seconds` (`number`): Set the `events_out_of_order_max_delay_in_seconds` field on the resulting object. When `null`, the `events_out_of_order_max_delay_in_seconds` field will be omitted from the resulting object.
+  - `events_out_of_order_policy` (`string`): Set the `events_out_of_order_policy` field on the resulting object. When `null`, the `events_out_of_order_policy` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `output_error_policy` (`string`): Set the `output_error_policy` field on the resulting object. When `null`, the `output_error_policy` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `stream_analytics_cluster_id` (`string`): Set the `stream_analytics_cluster_id` field on the resulting object. When `null`, the `stream_analytics_cluster_id` field will be omitted from the resulting object.
+  - `streaming_units` (`number`): Set the `streaming_units` field on the resulting object. When `null`, the `streaming_units` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `transformation_query` (`string`): Set the `transformation_query` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.identity.new](#fn-identitynew) constructor.
+  - `job_storage_account` (`list[obj]`): Set the `job_storage_account` field on the resulting object. When `null`, the `job_storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.job_storage_account.new](#fn-job_storage_accountnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `stream_analytics_job` resource into the root Terraform configuration.
@@ -503,7 +503,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): 
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -526,9 +526,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `account_key` (`string`): 
-  - `account_name` (`string`): 
-  - `authentication_mode` (`string`):  When `null`, the `authentication_mode` field will be omitted from the resulting object.
+  - `account_key` (`string`): Set the `account_key` field on the resulting object.
+  - `account_name` (`string`): Set the `account_name` field on the resulting object.
+  - `authentication_mode` (`string`): Set the `authentication_mode` field on the resulting object. When `null`, the `authentication_mode` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `job_storage_account` sub block.
@@ -551,10 +551,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

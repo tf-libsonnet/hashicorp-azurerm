@@ -64,19 +64,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `automation_account_name` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `expiry_time` (`string`):  When `null`, the `expiry_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `interval` (`number`):  When `null`, the `interval` field will be omitted from the resulting object.
-  - `month_days` (`list`):  When `null`, the `month_days` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
-  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `week_days` (`list`):  When `null`, the `week_days` field will be omitted from the resulting object.
-  - `monthly_occurrence` (`list[obj]`):  When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.monthly_occurrence.new](#fn-monthly_occurrencenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting resource block.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `expiry_time` (`string`): Set the `expiry_time` field on the resulting resource block. When `null`, the `expiry_time` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting resource block.
+  - `interval` (`number`): Set the `interval` field on the resulting resource block. When `null`, the `interval` field will be omitted from the resulting object.
+  - `month_days` (`list`): Set the `month_days` field on the resulting resource block. When `null`, the `month_days` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `start_time` (`string`): Set the `start_time` field on the resulting resource block. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `timezone` (`string`): Set the `timezone` field on the resulting resource block. When `null`, the `timezone` field will be omitted from the resulting object.
+  - `week_days` (`list`): Set the `week_days` field on the resulting resource block. When `null`, the `week_days` field will be omitted from the resulting object.
+  - `monthly_occurrence` (`list[obj]`): Set the `monthly_occurrence` field on the resulting resource block. When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.monthly_occurrence.new](#fn-monthly_occurrencenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,19 +100,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `automation_account_name` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `expiry_time` (`string`):  When `null`, the `expiry_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): 
-  - `interval` (`number`):  When `null`, the `interval` field will be omitted from the resulting object.
-  - `month_days` (`list`):  When `null`, the `month_days` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
-  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `week_days` (`list`):  When `null`, the `week_days` field will be omitted from the resulting object.
-  - `monthly_occurrence` (`list[obj]`):  When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.monthly_occurrence.new](#fn-monthly_occurrencenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `expiry_time` (`string`): Set the `expiry_time` field on the resulting object. When `null`, the `expiry_time` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object. When `null`, the `interval` field will be omitted from the resulting object.
+  - `month_days` (`list`): Set the `month_days` field on the resulting object. When `null`, the `month_days` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
+  - `week_days` (`list`): Set the `week_days` field on the resulting object. When `null`, the `week_days` field will be omitted from the resulting object.
+  - `monthly_occurrence` (`list[obj]`): Set the `monthly_occurrence` field on the resulting object. When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.monthly_occurrence.new](#fn-monthly_occurrencenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_schedule` resource into the root Terraform configuration.
@@ -384,8 +384,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `day` (`string`): 
-  - `occurrence` (`number`): 
+  - `day` (`string`): Set the `day` field on the resulting object.
+  - `occurrence` (`number`): Set the `occurrence` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `monthly_occurrence` sub block.
@@ -408,10 +408,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

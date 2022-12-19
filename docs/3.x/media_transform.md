@@ -65,12 +65,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `output` (`list[obj]`):  When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-outputnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `output` (`list[obj]`): Set the `output` field on the resulting resource block. When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-outputnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,12 +94,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `output` (`list[obj]`):  When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-outputnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `output` (`list[obj]`): Set the `output` field on the resulting object. When `null`, the `output` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.new](#fn-outputnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_transform` resource into the root Terraform configuration.
@@ -259,12 +259,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `on_error_action` (`string`):  When `null`, the `on_error_action` field will be omitted from the resulting object.
-  - `relative_priority` (`string`):  When `null`, the `relative_priority` field will be omitted from the resulting object.
-  - `audio_analyzer_preset` (`list[obj]`):  When `null`, the `audio_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.audio_analyzer_preset.new](#fn-outputaudio_analyzer_presetnew) constructor.
-  - `builtin_preset` (`list[obj]`):  When `null`, the `builtin_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.builtin_preset.new](#fn-outputbuiltin_presetnew) constructor.
-  - `face_detector_preset` (`list[obj]`):  When `null`, the `face_detector_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.face_detector_preset.new](#fn-outputface_detector_presetnew) constructor.
-  - `video_analyzer_preset` (`list[obj]`):  When `null`, the `video_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.video_analyzer_preset.new](#fn-outputvideo_analyzer_presetnew) constructor.
+  - `on_error_action` (`string`): Set the `on_error_action` field on the resulting object. When `null`, the `on_error_action` field will be omitted from the resulting object.
+  - `relative_priority` (`string`): Set the `relative_priority` field on the resulting object. When `null`, the `relative_priority` field will be omitted from the resulting object.
+  - `audio_analyzer_preset` (`list[obj]`): Set the `audio_analyzer_preset` field on the resulting object. When `null`, the `audio_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.audio_analyzer_preset.new](#fn-outputaudio_analyzer_presetnew) constructor.
+  - `builtin_preset` (`list[obj]`): Set the `builtin_preset` field on the resulting object. When `null`, the `builtin_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.builtin_preset.new](#fn-outputbuiltin_presetnew) constructor.
+  - `face_detector_preset` (`list[obj]`): Set the `face_detector_preset` field on the resulting object. When `null`, the `face_detector_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.face_detector_preset.new](#fn-outputface_detector_presetnew) constructor.
+  - `video_analyzer_preset` (`list[obj]`): Set the `video_analyzer_preset` field on the resulting object. When `null`, the `video_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.video_analyzer_preset.new](#fn-outputvideo_analyzer_presetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `output` sub block.
@@ -287,8 +287,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `audio_analysis_mode` (`string`):  When `null`, the `audio_analysis_mode` field will be omitted from the resulting object.
-  - `audio_language` (`string`):  When `null`, the `audio_language` field will be omitted from the resulting object.
+  - `audio_analysis_mode` (`string`): Set the `audio_analysis_mode` field on the resulting object. When `null`, the `audio_analysis_mode` field will be omitted from the resulting object.
+  - `audio_language` (`string`): Set the `audio_language` field on the resulting object. When `null`, the `audio_language` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `audio_analyzer_preset` sub block.
@@ -311,7 +311,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `preset_name` (`string`): 
+  - `preset_name` (`string`): Set the `preset_name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `builtin_preset` sub block.
@@ -334,7 +334,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `analysis_resolution` (`string`):  When `null`, the `analysis_resolution` field will be omitted from the resulting object.
+  - `analysis_resolution` (`string`): Set the `analysis_resolution` field on the resulting object. When `null`, the `analysis_resolution` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `face_detector_preset` sub block.
@@ -357,9 +357,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `audio_analysis_mode` (`string`):  When `null`, the `audio_analysis_mode` field will be omitted from the resulting object.
-  - `audio_language` (`string`):  When `null`, the `audio_language` field will be omitted from the resulting object.
-  - `insights_type` (`string`):  When `null`, the `insights_type` field will be omitted from the resulting object.
+  - `audio_analysis_mode` (`string`): Set the `audio_analysis_mode` field on the resulting object. When `null`, the `audio_analysis_mode` field will be omitted from the resulting object.
+  - `audio_language` (`string`): Set the `audio_language` field on the resulting object. When `null`, the `audio_language` field will be omitted from the resulting object.
+  - `insights_type` (`string`): Set the `insights_type` field on the resulting object. When `null`, the `insights_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `video_analyzer_preset` sub block.
@@ -382,10 +382,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

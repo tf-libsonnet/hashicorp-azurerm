@@ -64,19 +64,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cdn_frontdoor_origin_group_id` (`string`): 
-  - `certificate_name_check_enabled` (`bool`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `health_probes_enabled` (`bool`):  When `null`, the `health_probes_enabled` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `http_port` (`number`):  When `null`, the `http_port` field will be omitted from the resulting object.
-  - `https_port` (`number`):  When `null`, the `https_port` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `origin_host_header` (`string`):  When `null`, the `origin_host_header` field will be omitted from the resulting object.
-  - `priority` (`number`):  When `null`, the `priority` field will be omitted from the resulting object.
-  - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
-  - `private_link` (`list[obj]`):  When `null`, the `private_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.private_link.new](#fn-private_linknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_origin_group_id` (`string`): Set the `cdn_frontdoor_origin_group_id` field on the resulting resource block.
+  - `certificate_name_check_enabled` (`bool`): Set the `certificate_name_check_enabled` field on the resulting resource block.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `health_probes_enabled` (`bool`): Set the `health_probes_enabled` field on the resulting resource block. When `null`, the `health_probes_enabled` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting resource block.
+  - `http_port` (`number`): Set the `http_port` field on the resulting resource block. When `null`, the `http_port` field will be omitted from the resulting object.
+  - `https_port` (`number`): Set the `https_port` field on the resulting resource block. When `null`, the `https_port` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `origin_host_header` (`string`): Set the `origin_host_header` field on the resulting resource block. When `null`, the `origin_host_header` field will be omitted from the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
+  - `weight` (`number`): Set the `weight` field on the resulting resource block. When `null`, the `weight` field will be omitted from the resulting object.
+  - `private_link` (`list[obj]`): Set the `private_link` field on the resulting resource block. When `null`, the `private_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.private_link.new](#fn-private_linknew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,19 +100,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cdn_frontdoor_origin_group_id` (`string`): 
-  - `certificate_name_check_enabled` (`bool`): 
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `health_probes_enabled` (`bool`):  When `null`, the `health_probes_enabled` field will be omitted from the resulting object.
-  - `host_name` (`string`): 
-  - `http_port` (`number`):  When `null`, the `http_port` field will be omitted from the resulting object.
-  - `https_port` (`number`):  When `null`, the `https_port` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `origin_host_header` (`string`):  When `null`, the `origin_host_header` field will be omitted from the resulting object.
-  - `priority` (`number`):  When `null`, the `priority` field will be omitted from the resulting object.
-  - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
-  - `private_link` (`list[obj]`):  When `null`, the `private_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.private_link.new](#fn-private_linknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_origin_group_id` (`string`): Set the `cdn_frontdoor_origin_group_id` field on the resulting object.
+  - `certificate_name_check_enabled` (`bool`): Set the `certificate_name_check_enabled` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `health_probes_enabled` (`bool`): Set the `health_probes_enabled` field on the resulting object. When `null`, the `health_probes_enabled` field will be omitted from the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `http_port` (`number`): Set the `http_port` field on the resulting object. When `null`, the `http_port` field will be omitted from the resulting object.
+  - `https_port` (`number`): Set the `https_port` field on the resulting object. When `null`, the `https_port` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `origin_host_header` (`string`): Set the `origin_host_header` field on the resulting object. When `null`, the `origin_host_header` field will be omitted from the resulting object.
+  - `priority` (`number`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
+  - `weight` (`number`): Set the `weight` field on the resulting object. When `null`, the `weight` field will be omitted from the resulting object.
+  - `private_link` (`list[obj]`): Set the `private_link` field on the resulting object. When `null`, the `private_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.private_link.new](#fn-private_linknew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_origin` resource into the root Terraform configuration.
@@ -384,10 +384,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `location` (`string`): 
-  - `private_link_target_id` (`string`): 
-  - `request_message` (`string`):  When `null`, the `request_message` field will be omitted from the resulting object.
-  - `target_type` (`string`):  When `null`, the `target_type` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `private_link_target_id` (`string`): Set the `private_link_target_id` field on the resulting object.
+  - `request_message` (`string`): Set the `request_message` field on the resulting object. When `null`, the `request_message` field will be omitted from the resulting object.
+  - `target_type` (`string`): Set the `target_type` field on the resulting object. When `null`, the `target_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `private_link` sub block.
@@ -410,10 +410,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -69,22 +69,22 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `custom_rdp_properties` (`string`):  When `null`, the `custom_rdp_properties` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `load_balancer_type` (`string`): 
-  - `location` (`string`): 
-  - `maximum_sessions_allowed` (`number`):  When `null`, the `maximum_sessions_allowed` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `personal_desktop_assignment_type` (`string`):  When `null`, the `personal_desktop_assignment_type` field will be omitted from the resulting object.
+  - `custom_rdp_properties` (`string`): Set the `custom_rdp_properties` field on the resulting resource block. When `null`, the `custom_rdp_properties` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting resource block. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `load_balancer_type` (`string`): Set the `load_balancer_type` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `maximum_sessions_allowed` (`number`): Set the `maximum_sessions_allowed` field on the resulting resource block. When `null`, the `maximum_sessions_allowed` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `personal_desktop_assignment_type` (`string`): Set the `personal_desktop_assignment_type` field on the resulting resource block. When `null`, the `personal_desktop_assignment_type` field will be omitted from the resulting object.
   - `preferred_app_group_type` (`string`): Preferred App Group type to display When `null`, the `preferred_app_group_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `start_vm_on_connect` (`bool`):  When `null`, the `start_vm_on_connect` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `validate_environment` (`bool`):  When `null`, the `validate_environment` field will be omitted from the resulting object.
-  - `scheduled_agent_updates` (`list[obj]`):  When `null`, the `scheduled_agent_updates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.new](#fn-scheduled_agent_updatesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `start_vm_on_connect` (`bool`): Set the `start_vm_on_connect` field on the resulting resource block. When `null`, the `start_vm_on_connect` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting resource block.
+  - `validate_environment` (`bool`): Set the `validate_environment` field on the resulting resource block. When `null`, the `validate_environment` field will be omitted from the resulting object.
+  - `scheduled_agent_updates` (`list[obj]`): Set the `scheduled_agent_updates` field on the resulting resource block. When `null`, the `scheduled_agent_updates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.new](#fn-scheduled_agent_updatesnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,22 +108,22 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `custom_rdp_properties` (`string`):  When `null`, the `custom_rdp_properties` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `friendly_name` (`string`):  When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `load_balancer_type` (`string`): 
-  - `location` (`string`): 
-  - `maximum_sessions_allowed` (`number`):  When `null`, the `maximum_sessions_allowed` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `personal_desktop_assignment_type` (`string`):  When `null`, the `personal_desktop_assignment_type` field will be omitted from the resulting object.
+  - `custom_rdp_properties` (`string`): Set the `custom_rdp_properties` field on the resulting object. When `null`, the `custom_rdp_properties` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `friendly_name` (`string`): Set the `friendly_name` field on the resulting object. When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `load_balancer_type` (`string`): Set the `load_balancer_type` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `maximum_sessions_allowed` (`number`): Set the `maximum_sessions_allowed` field on the resulting object. When `null`, the `maximum_sessions_allowed` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `personal_desktop_assignment_type` (`string`): Set the `personal_desktop_assignment_type` field on the resulting object. When `null`, the `personal_desktop_assignment_type` field will be omitted from the resulting object.
   - `preferred_app_group_type` (`string`): Preferred App Group type to display When `null`, the `preferred_app_group_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `start_vm_on_connect` (`bool`):  When `null`, the `start_vm_on_connect` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `validate_environment` (`bool`):  When `null`, the `validate_environment` field will be omitted from the resulting object.
-  - `scheduled_agent_updates` (`list[obj]`):  When `null`, the `scheduled_agent_updates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.new](#fn-scheduled_agent_updatesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `start_vm_on_connect` (`bool`): Set the `start_vm_on_connect` field on the resulting object. When `null`, the `start_vm_on_connect` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `validate_environment` (`bool`): Set the `validate_environment` field on the resulting object. When `null`, the `validate_environment` field will be omitted from the resulting object.
+  - `scheduled_agent_updates` (`list[obj]`): Set the `scheduled_agent_updates` field on the resulting object. When `null`, the `scheduled_agent_updates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.new](#fn-scheduled_agent_updatesnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_desktop_host_pool` resource into the root Terraform configuration.
@@ -443,10 +443,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `use_session_host_timezone` (`bool`):  When `null`, the `use_session_host_timezone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.schedule.new](#fn-scheduled_agent_updatesschedulenew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
+  - `use_session_host_timezone` (`bool`): Set the `use_session_host_timezone` field on the resulting object. When `null`, the `use_session_host_timezone` field will be omitted from the resulting object.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.schedule.new](#fn-scheduled_agent_updatesschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `scheduled_agent_updates` sub block.
@@ -469,8 +469,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `day_of_week` (`string`): 
-  - `hour_of_day` (`number`): 
+  - `day_of_week` (`string`): Set the `day_of_week` field on the resulting object.
+  - `hour_of_day` (`number`): Set the `hour_of_day` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -493,10 +493,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

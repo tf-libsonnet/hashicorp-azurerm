@@ -61,13 +61,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cdn_frontdoor_profile_id` (`string`): 
-  - `name` (`string`): 
-  - `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` (`number`):  When `null`, the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field will be omitted from the resulting object.
-  - `session_affinity_enabled` (`bool`):  When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
-  - `health_probe` (`list[obj]`):  When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-health_probenew) constructor.
-  - `load_balancing` (`list[obj]`):  When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-load_balancingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_profile_id` (`string`): Set the `cdn_frontdoor_profile_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` (`number`): Set the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field on the resulting resource block. When `null`, the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field will be omitted from the resulting object.
+  - `session_affinity_enabled` (`bool`): Set the `session_affinity_enabled` field on the resulting resource block. When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
+  - `health_probe` (`list[obj]`): Set the `health_probe` field on the resulting resource block. When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-health_probenew) constructor.
+  - `load_balancing` (`list[obj]`): Set the `load_balancing` field on the resulting resource block. When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-load_balancingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,13 +91,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cdn_frontdoor_profile_id` (`string`): 
-  - `name` (`string`): 
-  - `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` (`number`):  When `null`, the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field will be omitted from the resulting object.
-  - `session_affinity_enabled` (`bool`):  When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
-  - `health_probe` (`list[obj]`):  When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-health_probenew) constructor.
-  - `load_balancing` (`list[obj]`):  When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-load_balancingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_profile_id` (`string`): Set the `cdn_frontdoor_profile_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` (`number`): Set the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field on the resulting object. When `null`, the `restore_traffic_time_to_healed_or_new_endpoint_in_minutes` field will be omitted from the resulting object.
+  - `session_affinity_enabled` (`bool`): Set the `session_affinity_enabled` field on the resulting object. When `null`, the `session_affinity_enabled` field will be omitted from the resulting object.
+  - `health_probe` (`list[obj]`): Set the `health_probe` field on the resulting object. When `null`, the `health_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.health_probe.new](#fn-health_probenew) constructor.
+  - `load_balancing` (`list[obj]`): Set the `load_balancing` field on the resulting object. When `null`, the `load_balancing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.load_balancing.new](#fn-load_balancingnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_origin_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_origin_group` resource into the root Terraform configuration.
@@ -294,10 +294,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `interval_in_seconds` (`number`): 
-  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
-  - `protocol` (`string`): 
-  - `request_type` (`string`):  When `null`, the `request_type` field will be omitted from the resulting object.
+  - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object.
+  - `request_type` (`string`): Set the `request_type` field on the resulting object. When `null`, the `request_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `health_probe` sub block.
@@ -320,9 +320,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `additional_latency_in_milliseconds` (`number`):  When `null`, the `additional_latency_in_milliseconds` field will be omitted from the resulting object.
-  - `sample_size` (`number`):  When `null`, the `sample_size` field will be omitted from the resulting object.
-  - `successful_samples_required` (`number`):  When `null`, the `successful_samples_required` field will be omitted from the resulting object.
+  - `additional_latency_in_milliseconds` (`number`): Set the `additional_latency_in_milliseconds` field on the resulting object. When `null`, the `additional_latency_in_milliseconds` field will be omitted from the resulting object.
+  - `sample_size` (`number`): Set the `sample_size` field on the resulting object. When `null`, the `sample_size` field will be omitted from the resulting object.
+  - `successful_samples_required` (`number`): Set the `successful_samples_required` field on the resulting object. When `null`, the `successful_samples_required` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `load_balancing` sub block.
@@ -345,10 +345,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

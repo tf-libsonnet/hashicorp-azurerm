@@ -64,22 +64,22 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `application_type` (`string`): 
-  - `daily_data_cap_in_gb` (`number`):  When `null`, the `daily_data_cap_in_gb` field will be omitted from the resulting object.
-  - `daily_data_cap_notifications_disabled` (`bool`):  When `null`, the `daily_data_cap_notifications_disabled` field will be omitted from the resulting object.
-  - `disable_ip_masking` (`bool`):  When `null`, the `disable_ip_masking` field will be omitted from the resulting object.
-  - `force_customer_storage_for_profiler` (`bool`):  When `null`, the `force_customer_storage_for_profiler` field will be omitted from the resulting object.
-  - `internet_ingestion_enabled` (`bool`):  When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
-  - `internet_query_enabled` (`bool`):  When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
-  - `local_authentication_disabled` (`bool`):  When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `sampling_percentage` (`number`):  When `null`, the `sampling_percentage` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `workspace_id` (`string`):  When `null`, the `workspace_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_type` (`string`): Set the `application_type` field on the resulting resource block.
+  - `daily_data_cap_in_gb` (`number`): Set the `daily_data_cap_in_gb` field on the resulting resource block. When `null`, the `daily_data_cap_in_gb` field will be omitted from the resulting object.
+  - `daily_data_cap_notifications_disabled` (`bool`): Set the `daily_data_cap_notifications_disabled` field on the resulting resource block. When `null`, the `daily_data_cap_notifications_disabled` field will be omitted from the resulting object.
+  - `disable_ip_masking` (`bool`): Set the `disable_ip_masking` field on the resulting resource block. When `null`, the `disable_ip_masking` field will be omitted from the resulting object.
+  - `force_customer_storage_for_profiler` (`bool`): Set the `force_customer_storage_for_profiler` field on the resulting resource block. When `null`, the `force_customer_storage_for_profiler` field will be omitted from the resulting object.
+  - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting resource block. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
+  - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting resource block. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
+  - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting resource block. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting resource block. When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `sampling_percentage` (`number`): Set the `sampling_percentage` field on the resulting resource block. When `null`, the `sampling_percentage` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting resource block. When `null`, the `workspace_id` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -103,22 +103,22 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `application_type` (`string`): 
-  - `daily_data_cap_in_gb` (`number`):  When `null`, the `daily_data_cap_in_gb` field will be omitted from the resulting object.
-  - `daily_data_cap_notifications_disabled` (`bool`):  When `null`, the `daily_data_cap_notifications_disabled` field will be omitted from the resulting object.
-  - `disable_ip_masking` (`bool`):  When `null`, the `disable_ip_masking` field will be omitted from the resulting object.
-  - `force_customer_storage_for_profiler` (`bool`):  When `null`, the `force_customer_storage_for_profiler` field will be omitted from the resulting object.
-  - `internet_ingestion_enabled` (`bool`):  When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
-  - `internet_query_enabled` (`bool`):  When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
-  - `local_authentication_disabled` (`bool`):  When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `sampling_percentage` (`number`):  When `null`, the `sampling_percentage` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `workspace_id` (`string`):  When `null`, the `workspace_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_type` (`string`): Set the `application_type` field on the resulting object.
+  - `daily_data_cap_in_gb` (`number`): Set the `daily_data_cap_in_gb` field on the resulting object. When `null`, the `daily_data_cap_in_gb` field will be omitted from the resulting object.
+  - `daily_data_cap_notifications_disabled` (`bool`): Set the `daily_data_cap_notifications_disabled` field on the resulting object. When `null`, the `daily_data_cap_notifications_disabled` field will be omitted from the resulting object.
+  - `disable_ip_masking` (`bool`): Set the `disable_ip_masking` field on the resulting object. When `null`, the `disable_ip_masking` field will be omitted from the resulting object.
+  - `force_customer_storage_for_profiler` (`bool`): Set the `force_customer_storage_for_profiler` field on the resulting object. When `null`, the `force_customer_storage_for_profiler` field will be omitted from the resulting object.
+  - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting object. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
+  - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting object. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
+  - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting object. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting object. When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `sampling_percentage` (`number`): Set the `sampling_percentage` field on the resulting object. When `null`, the `sampling_percentage` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object. When `null`, the `workspace_id` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `application_insights` resource into the root Terraform configuration.
@@ -417,10 +417,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

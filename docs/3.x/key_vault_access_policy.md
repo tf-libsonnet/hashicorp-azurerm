@@ -57,15 +57,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `application_id` (`string`):  When `null`, the `application_id` field will be omitted from the resulting object.
-  - `certificate_permissions` (`list`):  When `null`, the `certificate_permissions` field will be omitted from the resulting object.
-  - `key_permissions` (`list`):  When `null`, the `key_permissions` field will be omitted from the resulting object.
-  - `key_vault_id` (`string`): 
-  - `object_id` (`string`): 
-  - `secret_permissions` (`list`):  When `null`, the `secret_permissions` field will be omitted from the resulting object.
-  - `storage_permissions` (`list`):  When `null`, the `storage_permissions` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_id` (`string`): Set the `application_id` field on the resulting resource block. When `null`, the `application_id` field will be omitted from the resulting object.
+  - `certificate_permissions` (`list`): Set the `certificate_permissions` field on the resulting resource block. When `null`, the `certificate_permissions` field will be omitted from the resulting object.
+  - `key_permissions` (`list`): Set the `key_permissions` field on the resulting resource block. When `null`, the `key_permissions` field will be omitted from the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.
+  - `object_id` (`string`): Set the `object_id` field on the resulting resource block.
+  - `secret_permissions` (`list`): Set the `secret_permissions` field on the resulting resource block. When `null`, the `secret_permissions` field will be omitted from the resulting object.
+  - `storage_permissions` (`list`): Set the `storage_permissions` field on the resulting resource block. When `null`, the `storage_permissions` field will be omitted from the resulting object.
+  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting resource block.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,15 +89,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `application_id` (`string`):  When `null`, the `application_id` field will be omitted from the resulting object.
-  - `certificate_permissions` (`list`):  When `null`, the `certificate_permissions` field will be omitted from the resulting object.
-  - `key_permissions` (`list`):  When `null`, the `key_permissions` field will be omitted from the resulting object.
-  - `key_vault_id` (`string`): 
-  - `object_id` (`string`): 
-  - `secret_permissions` (`list`):  When `null`, the `secret_permissions` field will be omitted from the resulting object.
-  - `storage_permissions` (`list`):  When `null`, the `storage_permissions` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_id` (`string`): Set the `application_id` field on the resulting object. When `null`, the `application_id` field will be omitted from the resulting object.
+  - `certificate_permissions` (`list`): Set the `certificate_permissions` field on the resulting object. When `null`, the `certificate_permissions` field will be omitted from the resulting object.
+  - `key_permissions` (`list`): Set the `key_permissions` field on the resulting object. When `null`, the `key_permissions` field will be omitted from the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
+  - `object_id` (`string`): Set the `object_id` field on the resulting object.
+  - `secret_permissions` (`list`): Set the `secret_permissions` field on the resulting object. When `null`, the `secret_permissions` field will be omitted from the resulting object.
+  - `storage_permissions` (`list`): Set the `storage_permissions` field on the resulting object. When `null`, the `storage_permissions` field will be omitted from the resulting object.
+  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_access_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `key_vault_access_policy` resource into the root Terraform configuration.
@@ -284,10 +284,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

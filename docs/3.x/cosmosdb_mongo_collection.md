@@ -65,17 +65,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `account_name` (`string`): 
-  - `analytical_storage_ttl` (`number`):  When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
-  - `database_name` (`string`): 
-  - `default_ttl_seconds` (`number`):  When `null`, the `default_ttl_seconds` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `shard_key` (`string`):  When `null`, the `shard_key` field will be omitted from the resulting object.
-  - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.index.new](#fn-indexnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `account_name` (`string`): Set the `account_name` field on the resulting resource block.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting resource block. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting resource block.
+  - `default_ttl_seconds` (`number`): Set the `default_ttl_seconds` field on the resulting resource block. When `null`, the `default_ttl_seconds` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `shard_key` (`string`): Set the `shard_key` field on the resulting resource block. When `null`, the `shard_key` field will be omitted from the resulting object.
+  - `throughput` (`number`): Set the `throughput` field on the resulting resource block. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `autoscale_settings` (`list[obj]`): Set the `autoscale_settings` field on the resulting resource block. When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `index` (`list[obj]`): Set the `index` field on the resulting resource block. When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.index.new](#fn-indexnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,17 +99,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `account_name` (`string`): 
-  - `analytical_storage_ttl` (`number`):  When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
-  - `database_name` (`string`): 
-  - `default_ttl_seconds` (`number`):  When `null`, the `default_ttl_seconds` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `shard_key` (`string`):  When `null`, the `shard_key` field will be omitted from the resulting object.
-  - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.index.new](#fn-indexnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `account_name` (`string`): Set the `account_name` field on the resulting object.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting object. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `default_ttl_seconds` (`number`): Set the `default_ttl_seconds` field on the resulting object. When `null`, the `default_ttl_seconds` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `shard_key` (`string`): Set the `shard_key` field on the resulting object. When `null`, the `shard_key` field will be omitted from the resulting object.
+  - `throughput` (`number`): Set the `throughput` field on the resulting object. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `autoscale_settings` (`list[obj]`): Set the `autoscale_settings` field on the resulting object. When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `index` (`list[obj]`): Set the `index` field on the resulting object. When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.index.new](#fn-indexnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_mongo_collection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cosmosdb_mongo_collection` resource into the root Terraform configuration.
@@ -370,7 +370,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_throughput` (`number`):  When `null`, the `max_throughput` field will be omitted from the resulting object.
+  - `max_throughput` (`number`): Set the `max_throughput` field on the resulting object. When `null`, the `max_throughput` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `autoscale_settings` sub block.
@@ -393,8 +393,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `keys` (`list`): 
-  - `unique` (`bool`):  When `null`, the `unique` field will be omitted from the resulting object.
+  - `keys` (`list`): Set the `keys` field on the resulting object.
+  - `unique` (`bool`): Set the `unique` field on the resulting object. When `null`, the `unique` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `index` sub block.
@@ -417,10 +417,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

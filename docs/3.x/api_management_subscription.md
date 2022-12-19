@@ -60,18 +60,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allow_tracing` (`bool`):  When `null`, the `allow_tracing` field will be omitted from the resulting object.
-  - `api_id` (`string`):  When `null`, the `api_id` field will be omitted from the resulting object.
-  - `api_management_name` (`string`): 
-  - `display_name` (`string`): 
-  - `primary_key` (`string`):  When `null`, the `primary_key` field will be omitted from the resulting object.
-  - `product_id` (`string`):  When `null`, the `product_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `secondary_key` (`string`):  When `null`, the `secondary_key` field will be omitted from the resulting object.
-  - `state` (`string`):  When `null`, the `state` field will be omitted from the resulting object.
-  - `subscription_id` (`string`):  When `null`, the `subscription_id` field will be omitted from the resulting object.
-  - `user_id` (`string`):  When `null`, the `user_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_tracing` (`bool`): Set the `allow_tracing` field on the resulting resource block. When `null`, the `allow_tracing` field will be omitted from the resulting object.
+  - `api_id` (`string`): Set the `api_id` field on the resulting resource block. When `null`, the `api_id` field will be omitted from the resulting object.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `primary_key` (`string`): Set the `primary_key` field on the resulting resource block. When `null`, the `primary_key` field will be omitted from the resulting object.
+  - `product_id` (`string`): Set the `product_id` field on the resulting resource block. When `null`, the `product_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `secondary_key` (`string`): Set the `secondary_key` field on the resulting resource block. When `null`, the `secondary_key` field will be omitted from the resulting object.
+  - `state` (`string`): Set the `state` field on the resulting resource block. When `null`, the `state` field will be omitted from the resulting object.
+  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting resource block. When `null`, the `subscription_id` field will be omitted from the resulting object.
+  - `user_id` (`string`): Set the `user_id` field on the resulting resource block. When `null`, the `user_id` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,18 +95,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allow_tracing` (`bool`):  When `null`, the `allow_tracing` field will be omitted from the resulting object.
-  - `api_id` (`string`):  When `null`, the `api_id` field will be omitted from the resulting object.
-  - `api_management_name` (`string`): 
-  - `display_name` (`string`): 
-  - `primary_key` (`string`):  When `null`, the `primary_key` field will be omitted from the resulting object.
-  - `product_id` (`string`):  When `null`, the `product_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `secondary_key` (`string`):  When `null`, the `secondary_key` field will be omitted from the resulting object.
-  - `state` (`string`):  When `null`, the `state` field will be omitted from the resulting object.
-  - `subscription_id` (`string`):  When `null`, the `subscription_id` field will be omitted from the resulting object.
-  - `user_id` (`string`):  When `null`, the `user_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_tracing` (`bool`): Set the `allow_tracing` field on the resulting object. When `null`, the `allow_tracing` field will be omitted from the resulting object.
+  - `api_id` (`string`): Set the `api_id` field on the resulting object. When `null`, the `api_id` field will be omitted from the resulting object.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `primary_key` (`string`): Set the `primary_key` field on the resulting object. When `null`, the `primary_key` field will be omitted from the resulting object.
+  - `product_id` (`string`): Set the `product_id` field on the resulting object. When `null`, the `product_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `secondary_key` (`string`): Set the `secondary_key` field on the resulting object. When `null`, the `secondary_key` field will be omitted from the resulting object.
+  - `state` (`string`): Set the `state` field on the resulting object. When `null`, the `state` field will be omitted from the resulting object.
+  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting object. When `null`, the `subscription_id` field will be omitted from the resulting object.
+  - `user_id` (`string`): Set the `user_id` field on the resulting object. When `null`, the `user_id` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_subscription` resource into the root Terraform configuration.
@@ -341,10 +341,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

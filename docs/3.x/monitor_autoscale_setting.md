@@ -81,15 +81,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `target_resource_id` (`string`): 
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.new](#fn-notificationnew) constructor.
-  - `profile` (`list[obj]`):  When `null`, the `profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.new](#fn-profilenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting resource block.
+  - `notification` (`list[obj]`): Set the `notification` field on the resulting resource block. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.new](#fn-notificationnew) constructor.
+  - `profile` (`list[obj]`): Set the `profile` field on the resulting resource block. When `null`, the `profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.new](#fn-profilenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -113,15 +113,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `target_resource_id` (`string`): 
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.new](#fn-notificationnew) constructor.
-  - `profile` (`list[obj]`):  When `null`, the `profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.new](#fn-profilenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting object.
+  - `notification` (`list[obj]`): Set the `notification` field on the resulting object. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.new](#fn-notificationnew) constructor.
+  - `profile` (`list[obj]`): Set the `profile` field on the resulting object. When `null`, the `profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.new](#fn-profilenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_autoscale_setting` resource into the root Terraform configuration.
@@ -350,8 +350,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `email` (`list[obj]`):  When `null`, the `email` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.email.new](#fn-notificationemailnew) constructor.
-  - `webhook` (`list[obj]`):  When `null`, the `webhook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.webhook.new](#fn-notificationwebhooknew) constructor.
+  - `email` (`list[obj]`): Set the `email` field on the resulting object. When `null`, the `email` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.email.new](#fn-notificationemailnew) constructor.
+  - `webhook` (`list[obj]`): Set the `webhook` field on the resulting object. When `null`, the `webhook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.webhook.new](#fn-notificationwebhooknew) constructor.
 
 **Returns**:
   - An attribute object that represents the `notification` sub block.
@@ -374,9 +374,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom_emails` (`list`):  When `null`, the `custom_emails` field will be omitted from the resulting object.
-  - `send_to_subscription_administrator` (`bool`):  When `null`, the `send_to_subscription_administrator` field will be omitted from the resulting object.
-  - `send_to_subscription_co_administrator` (`bool`):  When `null`, the `send_to_subscription_co_administrator` field will be omitted from the resulting object.
+  - `custom_emails` (`list`): Set the `custom_emails` field on the resulting object. When `null`, the `custom_emails` field will be omitted from the resulting object.
+  - `send_to_subscription_administrator` (`bool`): Set the `send_to_subscription_administrator` field on the resulting object. When `null`, the `send_to_subscription_administrator` field will be omitted from the resulting object.
+  - `send_to_subscription_co_administrator` (`bool`): Set the `send_to_subscription_co_administrator` field on the resulting object. When `null`, the `send_to_subscription_co_administrator` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `email` sub block.
@@ -399,8 +399,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
-  - `service_uri` (`string`): 
+  - `properties` (`obj`): Set the `properties` field on the resulting object. When `null`, the `properties` field will be omitted from the resulting object.
+  - `service_uri` (`string`): Set the `service_uri` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `webhook` sub block.
@@ -423,11 +423,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `capacity` (`list[obj]`):  When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.capacity.new](#fn-profilecapacitynew) constructor.
-  - `fixed_date` (`list[obj]`):  When `null`, the `fixed_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.fixed_date.new](#fn-profilefixed_datenew) constructor.
-  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.recurrence.new](#fn-profilerecurrencenew) constructor.
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.new](#fn-profilerulenew) constructor.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `capacity` (`list[obj]`): Set the `capacity` field on the resulting object. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.capacity.new](#fn-profilecapacitynew) constructor.
+  - `fixed_date` (`list[obj]`): Set the `fixed_date` field on the resulting object. When `null`, the `fixed_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.fixed_date.new](#fn-profilefixed_datenew) constructor.
+  - `recurrence` (`list[obj]`): Set the `recurrence` field on the resulting object. When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.recurrence.new](#fn-profilerecurrencenew) constructor.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.new](#fn-profilerulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `profile` sub block.
@@ -450,9 +450,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `default` (`number`): 
-  - `maximum` (`number`): 
-  - `minimum` (`number`): 
+  - `default` (`number`): Set the `default` field on the resulting object.
+  - `maximum` (`number`): Set the `maximum` field on the resulting object.
+  - `minimum` (`number`): Set the `minimum` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `capacity` sub block.
@@ -475,9 +475,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `end` (`string`): 
-  - `start` (`string`): 
-  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
+  - `end` (`string`): Set the `end` field on the resulting object.
+  - `start` (`string`): Set the `start` field on the resulting object.
+  - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `fixed_date` sub block.
@@ -500,10 +500,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`list`): 
-  - `hours` (`list`): 
-  - `minutes` (`list`): 
-  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
+  - `days` (`list`): Set the `days` field on the resulting object.
+  - `hours` (`list`): Set the `hours` field on the resulting object.
+  - `minutes` (`list`): Set the `minutes` field on the resulting object.
+  - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `recurrence` sub block.
@@ -526,8 +526,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `metric_trigger` (`list[obj]`):  When `null`, the `metric_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.metric_trigger.new](#fn-profileprofilemetric_triggernew) constructor.
-  - `scale_action` (`list[obj]`):  When `null`, the `scale_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.scale_action.new](#fn-profileprofilescale_actionnew) constructor.
+  - `metric_trigger` (`list[obj]`): Set the `metric_trigger` field on the resulting object. When `null`, the `metric_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.metric_trigger.new](#fn-profileprofilemetric_triggernew) constructor.
+  - `scale_action` (`list[obj]`): Set the `scale_action` field on the resulting object. When `null`, the `scale_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.scale_action.new](#fn-profileprofilescale_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -550,17 +550,17 @@ Terraform sub block.
 
 
 **Args**:
-  - `divide_by_instance_count` (`bool`):  When `null`, the `divide_by_instance_count` field will be omitted from the resulting object.
-  - `metric_name` (`string`): 
-  - `metric_namespace` (`string`):  When `null`, the `metric_namespace` field will be omitted from the resulting object.
-  - `metric_resource_id` (`string`): 
-  - `operator` (`string`): 
-  - `statistic` (`string`): 
-  - `threshold` (`number`): 
-  - `time_aggregation` (`string`): 
-  - `time_grain` (`string`): 
-  - `time_window` (`string`): 
-  - `dimensions` (`list[obj]`):  When `null`, the `dimensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.metric_trigger.dimensions.new](#fn-profileprofileruledimensionsnew) constructor.
+  - `divide_by_instance_count` (`bool`): Set the `divide_by_instance_count` field on the resulting object. When `null`, the `divide_by_instance_count` field will be omitted from the resulting object.
+  - `metric_name` (`string`): Set the `metric_name` field on the resulting object.
+  - `metric_namespace` (`string`): Set the `metric_namespace` field on the resulting object. When `null`, the `metric_namespace` field will be omitted from the resulting object.
+  - `metric_resource_id` (`string`): Set the `metric_resource_id` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `statistic` (`string`): Set the `statistic` field on the resulting object.
+  - `threshold` (`number`): Set the `threshold` field on the resulting object.
+  - `time_aggregation` (`string`): Set the `time_aggregation` field on the resulting object.
+  - `time_grain` (`string`): Set the `time_grain` field on the resulting object.
+  - `time_window` (`string`): Set the `time_window` field on the resulting object.
+  - `dimensions` (`list[obj]`): Set the `dimensions` field on the resulting object. When `null`, the `dimensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.rule.metric_trigger.dimensions.new](#fn-profileprofileruledimensionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric_trigger` sub block.
@@ -583,9 +583,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `operator` (`string`): 
-  - `values` (`list`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `operator` (`string`): Set the `operator` field on the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dimensions` sub block.
@@ -608,10 +608,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `cooldown` (`string`): 
-  - `direction` (`string`): 
-  - `type` (`string`): 
-  - `value` (`number`): 
+  - `cooldown` (`string`): Set the `cooldown` field on the resulting object.
+  - `direction` (`string`): Set the `direction` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `value` (`number`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `scale_action` sub block.
@@ -634,10 +634,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

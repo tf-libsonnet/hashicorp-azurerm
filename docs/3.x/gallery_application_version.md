@@ -68,17 +68,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enable_health_check` (`bool`):  When `null`, the `enable_health_check` field will be omitted from the resulting object.
-  - `end_of_life_date` (`string`):  When `null`, the `end_of_life_date` field will be omitted from the resulting object.
-  - `exclude_from_latest` (`bool`):  When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
-  - `gallery_application_id` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `manage_action` (`list[obj]`):  When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.
-  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting resource block. When `null`, the `enable_health_check` field will be omitted from the resulting object.
+  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
+  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting resource block. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
+  - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting resource block. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.
+  - `source` (`list[obj]`): Set the `source` field on the resulting resource block. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.
+  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting resource block. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,17 +102,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enable_health_check` (`bool`):  When `null`, the `enable_health_check` field will be omitted from the resulting object.
-  - `end_of_life_date` (`string`):  When `null`, the `end_of_life_date` field will be omitted from the resulting object.
-  - `exclude_from_latest` (`bool`):  When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
-  - `gallery_application_id` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `manage_action` (`list[obj]`):  When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.
-  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting object. When `null`, the `enable_health_check` field will be omitted from the resulting object.
+  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
+  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
+  - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting object. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.
+  - `source` (`list[obj]`): Set the `source` field on the resulting object. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.
+  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting object. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gallery_application_version` resource into the root Terraform configuration.
@@ -394,9 +394,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `install` (`string`): 
-  - `remove` (`string`): 
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `install` (`string`): Set the `install` field on the resulting object.
+  - `remove` (`string`): Set the `remove` field on the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `manage_action` sub block.
@@ -419,8 +419,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_configuration_link` (`string`):  When `null`, the `default_configuration_link` field will be omitted from the resulting object.
-  - `media_link` (`string`): 
+  - `default_configuration_link` (`string`): Set the `default_configuration_link` field on the resulting object. When `null`, the `default_configuration_link` field will be omitted from the resulting object.
+  - `media_link` (`string`): Set the `media_link` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -443,9 +443,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `regional_replica_count` (`number`): 
-  - `storage_account_type` (`string`):  When `null`, the `storage_account_type` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `regional_replica_count` (`number`): Set the `regional_replica_count` field on the resulting object.
+  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `target_region` sub block.
@@ -468,10 +468,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

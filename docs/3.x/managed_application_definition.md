@@ -64,19 +64,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `create_ui_definition` (`string`):  When `null`, the `create_ui_definition` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `location` (`string`): 
-  - `lock_level` (`string`): 
-  - `main_template` (`string`):  When `null`, the `main_template` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `package_enabled` (`bool`):  When `null`, the `package_enabled` field will be omitted from the resulting object.
-  - `package_file_uri` (`string`):  When `null`, the `package_file_uri` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.authorization.new](#fn-authorizationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `create_ui_definition` (`string`): Set the `create_ui_definition` field on the resulting resource block. When `null`, the `create_ui_definition` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `lock_level` (`string`): Set the `lock_level` field on the resulting resource block.
+  - `main_template` (`string`): Set the `main_template` field on the resulting resource block. When `null`, the `main_template` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `package_enabled` (`bool`): Set the `package_enabled` field on the resulting resource block. When `null`, the `package_enabled` field will be omitted from the resulting object.
+  - `package_file_uri` (`string`): Set the `package_file_uri` field on the resulting resource block. When `null`, the `package_file_uri` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `authorization` (`list[obj]`): Set the `authorization` field on the resulting resource block. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.authorization.new](#fn-authorizationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,19 +100,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `create_ui_definition` (`string`):  When `null`, the `create_ui_definition` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `location` (`string`): 
-  - `lock_level` (`string`): 
-  - `main_template` (`string`):  When `null`, the `main_template` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `package_enabled` (`bool`):  When `null`, the `package_enabled` field will be omitted from the resulting object.
-  - `package_file_uri` (`string`):  When `null`, the `package_file_uri` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.authorization.new](#fn-authorizationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `create_ui_definition` (`string`): Set the `create_ui_definition` field on the resulting object. When `null`, the `create_ui_definition` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `lock_level` (`string`): Set the `lock_level` field on the resulting object.
+  - `main_template` (`string`): Set the `main_template` field on the resulting object. When `null`, the `main_template` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `package_enabled` (`bool`): Set the `package_enabled` field on the resulting object. When `null`, the `package_enabled` field will be omitted from the resulting object.
+  - `package_file_uri` (`string`): Set the `package_file_uri` field on the resulting object. When `null`, the `package_file_uri` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `authorization` (`list[obj]`): Set the `authorization` field on the resulting object. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.authorization.new](#fn-authorizationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_application_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `managed_application_definition` resource into the root Terraform configuration.
@@ -384,8 +384,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `role_definition_id` (`string`): 
-  - `service_principal_id` (`string`): 
+  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting object.
+  - `service_principal_id` (`string`): Set the `service_principal_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `authorization` sub block.
@@ -408,10 +408,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

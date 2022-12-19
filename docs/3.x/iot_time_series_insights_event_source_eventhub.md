@@ -60,18 +60,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `consumer_group_name` (`string`): 
-  - `environment_id` (`string`): 
-  - `event_source_resource_id` (`string`): 
-  - `eventhub_name` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `namespace_name` (`string`): 
-  - `shared_access_key` (`string`): 
-  - `shared_access_key_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timestamp_property_name` (`string`):  When `null`, the `timestamp_property_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `consumer_group_name` (`string`): Set the `consumer_group_name` field on the resulting resource block.
+  - `environment_id` (`string`): Set the `environment_id` field on the resulting resource block.
+  - `event_source_resource_id` (`string`): Set the `event_source_resource_id` field on the resulting resource block.
+  - `eventhub_name` (`string`): Set the `eventhub_name` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `namespace_name` (`string`): Set the `namespace_name` field on the resulting resource block.
+  - `shared_access_key` (`string`): Set the `shared_access_key` field on the resulting resource block.
+  - `shared_access_key_name` (`string`): Set the `shared_access_key_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timestamp_property_name` (`string`): Set the `timestamp_property_name` field on the resulting resource block. When `null`, the `timestamp_property_name` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,18 +95,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `consumer_group_name` (`string`): 
-  - `environment_id` (`string`): 
-  - `event_source_resource_id` (`string`): 
-  - `eventhub_name` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `namespace_name` (`string`): 
-  - `shared_access_key` (`string`): 
-  - `shared_access_key_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timestamp_property_name` (`string`):  When `null`, the `timestamp_property_name` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `consumer_group_name` (`string`): Set the `consumer_group_name` field on the resulting object.
+  - `environment_id` (`string`): Set the `environment_id` field on the resulting object.
+  - `event_source_resource_id` (`string`): Set the `event_source_resource_id` field on the resulting object.
+  - `eventhub_name` (`string`): Set the `eventhub_name` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `namespace_name` (`string`): Set the `namespace_name` field on the resulting object.
+  - `shared_access_key` (`string`): Set the `shared_access_key` field on the resulting object.
+  - `shared_access_key_name` (`string`): Set the `shared_access_key_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timestamp_property_name` (`string`): Set the `timestamp_property_name` field on the resulting object. When `null`, the `timestamp_property_name` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_time_series_insights_event_source_eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iot_time_series_insights_event_source_eventhub` resource into the root Terraform configuration.
@@ -341,10 +341,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

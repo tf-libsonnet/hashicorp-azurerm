@@ -83,29 +83,29 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allowed_fqdns` (`list`):  When `null`, the `allowed_fqdns` field will be omitted from the resulting object.
-  - `allowed_ip_ranges` (`list`):  When `null`, the `allowed_ip_ranges` field will be omitted from the resulting object.
-  - `auto_stop_enabled` (`bool`):  When `null`, the `auto_stop_enabled` field will be omitted from the resulting object.
-  - `disk_encryption_enabled` (`bool`):  When `null`, the `disk_encryption_enabled` field will be omitted from the resulting object.
-  - `double_encryption_enabled` (`bool`):  When `null`, the `double_encryption_enabled` field will be omitted from the resulting object.
-  - `engine` (`string`):  When `null`, the `engine` field will be omitted from the resulting object.
-  - `language_extensions` (`list`):  When `null`, the `language_extensions` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `outbound_network_access_restricted` (`bool`):  When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
-  - `public_ip_type` (`string`):  When `null`, the `public_ip_type` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `purge_enabled` (`bool`):  When `null`, the `purge_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `streaming_ingestion_enabled` (`bool`):  When `null`, the `streaming_ingestion_enabled` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `trusted_external_tenants` (`list`):  When `null`, the `trusted_external_tenants` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-identitynew) constructor.
-  - `optimized_auto_scale` (`list[obj]`):  When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-optimized_auto_scalenew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
+  - `allowed_fqdns` (`list`): Set the `allowed_fqdns` field on the resulting resource block. When `null`, the `allowed_fqdns` field will be omitted from the resulting object.
+  - `allowed_ip_ranges` (`list`): Set the `allowed_ip_ranges` field on the resulting resource block. When `null`, the `allowed_ip_ranges` field will be omitted from the resulting object.
+  - `auto_stop_enabled` (`bool`): Set the `auto_stop_enabled` field on the resulting resource block. When `null`, the `auto_stop_enabled` field will be omitted from the resulting object.
+  - `disk_encryption_enabled` (`bool`): Set the `disk_encryption_enabled` field on the resulting resource block. When `null`, the `disk_encryption_enabled` field will be omitted from the resulting object.
+  - `double_encryption_enabled` (`bool`): Set the `double_encryption_enabled` field on the resulting resource block. When `null`, the `double_encryption_enabled` field will be omitted from the resulting object.
+  - `engine` (`string`): Set the `engine` field on the resulting resource block. When `null`, the `engine` field will be omitted from the resulting object.
+  - `language_extensions` (`list`): Set the `language_extensions` field on the resulting resource block. When `null`, the `language_extensions` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `outbound_network_access_restricted` (`bool`): Set the `outbound_network_access_restricted` field on the resulting resource block. When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
+  - `public_ip_type` (`string`): Set the `public_ip_type` field on the resulting resource block. When `null`, the `public_ip_type` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `purge_enabled` (`bool`): Set the `purge_enabled` field on the resulting resource block. When `null`, the `purge_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `streaming_ingestion_enabled` (`bool`): Set the `streaming_ingestion_enabled` field on the resulting resource block. When `null`, the `streaming_ingestion_enabled` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `trusted_external_tenants` (`list`): Set the `trusted_external_tenants` field on the resulting resource block. When `null`, the `trusted_external_tenants` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-identitynew) constructor.
+  - `optimized_auto_scale` (`list[obj]`): Set the `optimized_auto_scale` field on the resulting resource block. When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-optimized_auto_scalenew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting resource block. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`): Set the `virtual_network_configuration` field on the resulting resource block. When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -129,29 +129,29 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allowed_fqdns` (`list`):  When `null`, the `allowed_fqdns` field will be omitted from the resulting object.
-  - `allowed_ip_ranges` (`list`):  When `null`, the `allowed_ip_ranges` field will be omitted from the resulting object.
-  - `auto_stop_enabled` (`bool`):  When `null`, the `auto_stop_enabled` field will be omitted from the resulting object.
-  - `disk_encryption_enabled` (`bool`):  When `null`, the `disk_encryption_enabled` field will be omitted from the resulting object.
-  - `double_encryption_enabled` (`bool`):  When `null`, the `double_encryption_enabled` field will be omitted from the resulting object.
-  - `engine` (`string`):  When `null`, the `engine` field will be omitted from the resulting object.
-  - `language_extensions` (`list`):  When `null`, the `language_extensions` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `outbound_network_access_restricted` (`bool`):  When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
-  - `public_ip_type` (`string`):  When `null`, the `public_ip_type` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `purge_enabled` (`bool`):  When `null`, the `purge_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `streaming_ingestion_enabled` (`bool`):  When `null`, the `streaming_ingestion_enabled` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `trusted_external_tenants` (`list`):  When `null`, the `trusted_external_tenants` field will be omitted from the resulting object.
-  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-identitynew) constructor.
-  - `optimized_auto_scale` (`list[obj]`):  When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-optimized_auto_scalenew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
+  - `allowed_fqdns` (`list`): Set the `allowed_fqdns` field on the resulting object. When `null`, the `allowed_fqdns` field will be omitted from the resulting object.
+  - `allowed_ip_ranges` (`list`): Set the `allowed_ip_ranges` field on the resulting object. When `null`, the `allowed_ip_ranges` field will be omitted from the resulting object.
+  - `auto_stop_enabled` (`bool`): Set the `auto_stop_enabled` field on the resulting object. When `null`, the `auto_stop_enabled` field will be omitted from the resulting object.
+  - `disk_encryption_enabled` (`bool`): Set the `disk_encryption_enabled` field on the resulting object. When `null`, the `disk_encryption_enabled` field will be omitted from the resulting object.
+  - `double_encryption_enabled` (`bool`): Set the `double_encryption_enabled` field on the resulting object. When `null`, the `double_encryption_enabled` field will be omitted from the resulting object.
+  - `engine` (`string`): Set the `engine` field on the resulting object. When `null`, the `engine` field will be omitted from the resulting object.
+  - `language_extensions` (`list`): Set the `language_extensions` field on the resulting object. When `null`, the `language_extensions` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `outbound_network_access_restricted` (`bool`): Set the `outbound_network_access_restricted` field on the resulting object. When `null`, the `outbound_network_access_restricted` field will be omitted from the resulting object.
+  - `public_ip_type` (`string`): Set the `public_ip_type` field on the resulting object. When `null`, the `public_ip_type` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `purge_enabled` (`bool`): Set the `purge_enabled` field on the resulting object. When `null`, the `purge_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `streaming_ingestion_enabled` (`bool`): Set the `streaming_ingestion_enabled` field on the resulting object. When `null`, the `streaming_ingestion_enabled` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `trusted_external_tenants` (`list`): Set the `trusted_external_tenants` field on the resulting object. When `null`, the `trusted_external_tenants` field will be omitted from the resulting object.
+  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.identity.new](#fn-identitynew) constructor.
+  - `optimized_auto_scale` (`list[obj]`): Set the `optimized_auto_scale` field on the resulting object. When `null`, the `optimized_auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.optimized_auto_scale.new](#fn-optimized_auto_scalenew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting object. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`): Set the `virtual_network_configuration` field on the resulting object. When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_cluster` resource into the root Terraform configuration.
@@ -646,8 +646,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -670,8 +670,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `maximum_instances` (`number`): 
-  - `minimum_instances` (`number`): 
+  - `maximum_instances` (`number`): Set the `maximum_instances` field on the resulting object.
+  - `minimum_instances` (`number`): Set the `minimum_instances` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `optimized_auto_scale` sub block.
@@ -694,8 +694,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`number`):  When `null`, the `capacity` field will be omitted from the resulting object.
-  - `name` (`string`): 
+  - `capacity` (`number`): Set the `capacity` field on the resulting object. When `null`, the `capacity` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sku` sub block.
@@ -718,10 +718,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -744,9 +744,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `data_management_public_ip_id` (`string`): 
-  - `engine_public_ip_id` (`string`): 
-  - `subnet_id` (`string`): 
+  - `data_management_public_ip_id` (`string`): Set the `data_management_public_ip_id` field on the resulting object.
+  - `engine_public_ip_id` (`string`): Set the `engine_public_ip_id` field on the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_network_configuration` sub block.

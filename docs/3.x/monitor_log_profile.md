@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `categories` (`list`): 
-  - `locations` (`list`): 
-  - `name` (`string`): 
-  - `servicebus_rule_id` (`string`):  When `null`, the `servicebus_rule_id` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.retention_policy.new](#fn-retention_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `categories` (`list`): Set the `categories` field on the resulting resource block.
+  - `locations` (`list`): Set the `locations` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `servicebus_rule_id` (`string`): Set the `servicebus_rule_id` field on the resulting resource block. When `null`, the `servicebus_rule_id` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block. When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `retention_policy` (`list[obj]`): Set the `retention_policy` field on the resulting resource block. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.retention_policy.new](#fn-retention_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `categories` (`list`): 
-  - `locations` (`list`): 
-  - `name` (`string`): 
-  - `servicebus_rule_id` (`string`):  When `null`, the `servicebus_rule_id` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.retention_policy.new](#fn-retention_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `categories` (`list`): Set the `categories` field on the resulting object.
+  - `locations` (`list`): Set the `locations` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `servicebus_rule_id` (`string`): Set the `servicebus_rule_id` field on the resulting object. When `null`, the `servicebus_rule_id` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object. When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `retention_policy` (`list[obj]`): Set the `retention_policy` field on the resulting object. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.retention_policy.new](#fn-retention_policynew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_log_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_log_profile` resource into the root Terraform configuration.
@@ -270,8 +270,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`number`):  When `null`, the `days` field will be omitted from the resulting object.
-  - `enabled` (`bool`): 
+  - `days` (`number`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_policy` sub block.
@@ -294,10 +294,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

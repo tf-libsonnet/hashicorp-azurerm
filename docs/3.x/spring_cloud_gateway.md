@@ -70,16 +70,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
-  - `instance_count` (`number`):  When `null`, the `instance_count` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `spring_cloud_service_id` (`string`): 
-  - `api_metadata` (`list[obj]`):  When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
-  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
-  - `quota` (`list[obj]`):  When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
-  - `sso` (`list[obj]`):  When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
+  - `instance_count` (`number`): Set the `instance_count` field on the resulting resource block. When `null`, the `instance_count` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.
+  - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting resource block. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
+  - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
+  - `quota` (`list[obj]`): Set the `quota` field on the resulting resource block. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
+  - `sso` (`list[obj]`): Set the `sso` field on the resulting resource block. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -103,16 +103,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
-  - `instance_count` (`number`):  When `null`, the `instance_count` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `spring_cloud_service_id` (`string`): 
-  - `api_metadata` (`list[obj]`):  When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
-  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
-  - `quota` (`list[obj]`):  When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
-  - `sso` (`list[obj]`):  When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
+  - `instance_count` (`number`): Set the `instance_count` field on the resulting object. When `null`, the `instance_count` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.
+  - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting object. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
+  - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
+  - `quota` (`list[obj]`): Set the `quota` field on the resulting object. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
+  - `sso` (`list[obj]`): Set the `sso` field on the resulting object. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_gateway` resource into the root Terraform configuration.
@@ -399,11 +399,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `documentation_url` (`string`):  When `null`, the `documentation_url` field will be omitted from the resulting object.
-  - `server_url` (`string`):  When `null`, the `server_url` field will be omitted from the resulting object.
-  - `title` (`string`):  When `null`, the `title` field will be omitted from the resulting object.
-  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `documentation_url` (`string`): Set the `documentation_url` field on the resulting object. When `null`, the `documentation_url` field will be omitted from the resulting object.
+  - `server_url` (`string`): Set the `server_url` field on the resulting object. When `null`, the `server_url` field will be omitted from the resulting object.
+  - `title` (`string`): Set the `title` field on the resulting object. When `null`, the `title` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `api_metadata` sub block.
@@ -426,12 +426,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_headers` (`list`):  When `null`, the `allowed_headers` field will be omitted from the resulting object.
-  - `allowed_methods` (`list`):  When `null`, the `allowed_methods` field will be omitted from the resulting object.
-  - `allowed_origins` (`list`):  When `null`, the `allowed_origins` field will be omitted from the resulting object.
-  - `credentials_allowed` (`bool`):  When `null`, the `credentials_allowed` field will be omitted from the resulting object.
-  - `exposed_headers` (`list`):  When `null`, the `exposed_headers` field will be omitted from the resulting object.
-  - `max_age_seconds` (`number`):  When `null`, the `max_age_seconds` field will be omitted from the resulting object.
+  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object. When `null`, the `allowed_headers` field will be omitted from the resulting object.
+  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object. When `null`, the `allowed_methods` field will be omitted from the resulting object.
+  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object. When `null`, the `allowed_origins` field will be omitted from the resulting object.
+  - `credentials_allowed` (`bool`): Set the `credentials_allowed` field on the resulting object. When `null`, the `credentials_allowed` field will be omitted from the resulting object.
+  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object. When `null`, the `exposed_headers` field will be omitted from the resulting object.
+  - `max_age_seconds` (`number`): Set the `max_age_seconds` field on the resulting object. When `null`, the `max_age_seconds` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
@@ -454,8 +454,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `cpu` (`string`):  When `null`, the `cpu` field will be omitted from the resulting object.
-  - `memory` (`string`):  When `null`, the `memory` field will be omitted from the resulting object.
+  - `cpu` (`string`): Set the `cpu` field on the resulting object. When `null`, the `cpu` field will be omitted from the resulting object.
+  - `memory` (`string`): Set the `memory` field on the resulting object. When `null`, the `memory` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `quota` sub block.
@@ -478,10 +478,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`):  When `null`, the `client_id` field will be omitted from the resulting object.
-  - `client_secret` (`string`):  When `null`, the `client_secret` field will be omitted from the resulting object.
-  - `issuer_uri` (`string`):  When `null`, the `issuer_uri` field will be omitted from the resulting object.
-  - `scope` (`list`):  When `null`, the `scope` field will be omitted from the resulting object.
+  - `client_id` (`string`): Set the `client_id` field on the resulting object. When `null`, the `client_id` field will be omitted from the resulting object.
+  - `client_secret` (`string`): Set the `client_secret` field on the resulting object. When `null`, the `client_secret` field will be omitted from the resulting object.
+  - `issuer_uri` (`string`): Set the `issuer_uri` field on the resulting object. When `null`, the `issuer_uri` field will be omitted from the resulting object.
+  - `scope` (`list`): Set the `scope` field on the resulting object. When `null`, the `scope` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sso` sub block.
@@ -504,10 +504,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

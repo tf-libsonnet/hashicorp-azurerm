@@ -61,19 +61,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allow_resource_only_permissions` (`bool`):  When `null`, the `allow_resource_only_permissions` field will be omitted from the resulting object.
-  - `cmk_for_query_forced` (`bool`):  When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
-  - `daily_quota_gb` (`number`):  When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
-  - `internet_ingestion_enabled` (`bool`):  When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
-  - `internet_query_enabled` (`bool`):  When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `reservation_capacity_in_gb_per_day` (`number`):  When `null`, the `reservation_capacity_in_gb_per_day` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_resource_only_permissions` (`bool`): Set the `allow_resource_only_permissions` field on the resulting resource block. When `null`, the `allow_resource_only_permissions` field will be omitted from the resulting object.
+  - `cmk_for_query_forced` (`bool`): Set the `cmk_for_query_forced` field on the resulting resource block. When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
+  - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting resource block. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
+  - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting resource block. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
+  - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting resource block. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `reservation_capacity_in_gb_per_day` (`number`): Set the `reservation_capacity_in_gb_per_day` field on the resulting resource block. When `null`, the `reservation_capacity_in_gb_per_day` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting resource block. When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,19 +97,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allow_resource_only_permissions` (`bool`):  When `null`, the `allow_resource_only_permissions` field will be omitted from the resulting object.
-  - `cmk_for_query_forced` (`bool`):  When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
-  - `daily_quota_gb` (`number`):  When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
-  - `internet_ingestion_enabled` (`bool`):  When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
-  - `internet_query_enabled` (`bool`):  When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `reservation_capacity_in_gb_per_day` (`number`):  When `null`, the `reservation_capacity_in_gb_per_day` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_resource_only_permissions` (`bool`): Set the `allow_resource_only_permissions` field on the resulting object. When `null`, the `allow_resource_only_permissions` field will be omitted from the resulting object.
+  - `cmk_for_query_forced` (`bool`): Set the `cmk_for_query_forced` field on the resulting object. When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
+  - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting object. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
+  - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting object. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
+  - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting object. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `reservation_capacity_in_gb_per_day` (`number`): Set the `reservation_capacity_in_gb_per_day` field on the resulting object. When `null`, the `reservation_capacity_in_gb_per_day` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting object. When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.log_analytics_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `log_analytics_workspace` resource into the root Terraform configuration.
@@ -360,10 +360,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `action` (`string`):  When `null`, the `action` field will be omitted from the resulting object.
-  - `filter_type` (`string`): 
-  - `name` (`string`): 
-  - `sql_filter` (`string`):  When `null`, the `sql_filter` field will be omitted from the resulting object.
-  - `subscription_id` (`string`): 
-  - `correlation_filter` (`list[obj]`):  When `null`, the `correlation_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.correlation_filter.new](#fn-correlation_filternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `action` (`string`): Set the `action` field on the resulting resource block. When `null`, the `action` field will be omitted from the resulting object.
+  - `filter_type` (`string`): Set the `filter_type` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `sql_filter` (`string`): Set the `sql_filter` field on the resulting resource block. When `null`, the `sql_filter` field will be omitted from the resulting object.
+  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting resource block.
+  - `correlation_filter` (`list[obj]`): Set the `correlation_filter` field on the resulting resource block. When `null`, the `correlation_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.correlation_filter.new](#fn-correlation_filternew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `action` (`string`):  When `null`, the `action` field will be omitted from the resulting object.
-  - `filter_type` (`string`): 
-  - `name` (`string`): 
-  - `sql_filter` (`string`):  When `null`, the `sql_filter` field will be omitted from the resulting object.
-  - `subscription_id` (`string`): 
-  - `correlation_filter` (`list[obj]`):  When `null`, the `correlation_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.correlation_filter.new](#fn-correlation_filternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `action` (`string`): Set the `action` field on the resulting object. When `null`, the `action` field will be omitted from the resulting object.
+  - `filter_type` (`string`): Set the `filter_type` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `sql_filter` (`string`): Set the `sql_filter` field on the resulting object. When `null`, the `sql_filter` field will be omitted from the resulting object.
+  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting object.
+  - `correlation_filter` (`list[obj]`): Set the `correlation_filter` field on the resulting object. When `null`, the `correlation_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.correlation_filter.new](#fn-correlation_filternew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `servicebus_subscription_rule` resource into the root Terraform configuration.
@@ -270,15 +270,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
-  - `correlation_id` (`string`):  When `null`, the `correlation_id` field will be omitted from the resulting object.
-  - `label` (`string`):  When `null`, the `label` field will be omitted from the resulting object.
-  - `message_id` (`string`):  When `null`, the `message_id` field will be omitted from the resulting object.
-  - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
-  - `reply_to` (`string`):  When `null`, the `reply_to` field will be omitted from the resulting object.
-  - `reply_to_session_id` (`string`):  When `null`, the `reply_to_session_id` field will be omitted from the resulting object.
-  - `session_id` (`string`):  When `null`, the `session_id` field will be omitted from the resulting object.
-  - `to` (`string`):  When `null`, the `to` field will be omitted from the resulting object.
+  - `content_type` (`string`): Set the `content_type` field on the resulting object. When `null`, the `content_type` field will be omitted from the resulting object.
+  - `correlation_id` (`string`): Set the `correlation_id` field on the resulting object. When `null`, the `correlation_id` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `message_id` (`string`): Set the `message_id` field on the resulting object. When `null`, the `message_id` field will be omitted from the resulting object.
+  - `properties` (`obj`): Set the `properties` field on the resulting object. When `null`, the `properties` field will be omitted from the resulting object.
+  - `reply_to` (`string`): Set the `reply_to` field on the resulting object. When `null`, the `reply_to` field will be omitted from the resulting object.
+  - `reply_to_session_id` (`string`): Set the `reply_to_session_id` field on the resulting object. When `null`, the `reply_to_session_id` field will be omitted from the resulting object.
+  - `session_id` (`string`): Set the `session_id` field on the resulting object. When `null`, the `session_id` field will be omitted from the resulting object.
+  - `to` (`string`): Set the `to` field on the resulting object. When `null`, the `to` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `correlation_filter` sub block.
@@ -301,10 +301,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

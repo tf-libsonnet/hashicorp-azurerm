@@ -70,15 +70,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `lighthouse_definition_id` (`string`):  When `null`, the `lighthouse_definition_id` field will be omitted from the resulting object.
-  - `managing_tenant_id` (`string`): 
-  - `name` (`string`): 
-  - `scope` (`string`): 
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-authorizationnew) constructor.
-  - `eligible_authorization` (`list[obj]`):  When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-eligible_authorizationnew) constructor.
-  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-plannew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `lighthouse_definition_id` (`string`): Set the `lighthouse_definition_id` field on the resulting resource block. When `null`, the `lighthouse_definition_id` field will be omitted from the resulting object.
+  - `managing_tenant_id` (`string`): Set the `managing_tenant_id` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `scope` (`string`): Set the `scope` field on the resulting resource block.
+  - `authorization` (`list[obj]`): Set the `authorization` field on the resulting resource block. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-authorizationnew) constructor.
+  - `eligible_authorization` (`list[obj]`): Set the `eligible_authorization` field on the resulting resource block. When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-eligible_authorizationnew) constructor.
+  - `plan` (`list[obj]`): Set the `plan` field on the resulting resource block. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-plannew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,15 +102,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `lighthouse_definition_id` (`string`):  When `null`, the `lighthouse_definition_id` field will be omitted from the resulting object.
-  - `managing_tenant_id` (`string`): 
-  - `name` (`string`): 
-  - `scope` (`string`): 
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-authorizationnew) constructor.
-  - `eligible_authorization` (`list[obj]`):  When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-eligible_authorizationnew) constructor.
-  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-plannew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `lighthouse_definition_id` (`string`): Set the `lighthouse_definition_id` field on the resulting object. When `null`, the `lighthouse_definition_id` field will be omitted from the resulting object.
+  - `managing_tenant_id` (`string`): Set the `managing_tenant_id` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `scope` (`string`): Set the `scope` field on the resulting object.
+  - `authorization` (`list[obj]`): Set the `authorization` field on the resulting object. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-authorizationnew) constructor.
+  - `eligible_authorization` (`list[obj]`): Set the `eligible_authorization` field on the resulting object. When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-eligible_authorizationnew) constructor.
+  - `plan` (`list[obj]`): Set the `plan` field on the resulting object. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-plannew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `lighthouse_definition` resource into the root Terraform configuration.
@@ -360,10 +360,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `delegated_role_definition_ids` (`list`):  When `null`, the `delegated_role_definition_ids` field will be omitted from the resulting object.
-  - `principal_display_name` (`string`):  When `null`, the `principal_display_name` field will be omitted from the resulting object.
-  - `principal_id` (`string`): 
-  - `role_definition_id` (`string`): 
+  - `delegated_role_definition_ids` (`list`): Set the `delegated_role_definition_ids` field on the resulting object. When `null`, the `delegated_role_definition_ids` field will be omitted from the resulting object.
+  - `principal_display_name` (`string`): Set the `principal_display_name` field on the resulting object. When `null`, the `principal_display_name` field will be omitted from the resulting object.
+  - `principal_id` (`string`): Set the `principal_id` field on the resulting object.
+  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `authorization` sub block.
@@ -386,10 +386,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `principal_display_name` (`string`):  When `null`, the `principal_display_name` field will be omitted from the resulting object.
-  - `principal_id` (`string`): 
-  - `role_definition_id` (`string`): 
-  - `just_in_time_access_policy` (`list[obj]`):  When `null`, the `just_in_time_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.new](#fn-eligible_authorizationjust_in_time_access_policynew) constructor.
+  - `principal_display_name` (`string`): Set the `principal_display_name` field on the resulting object. When `null`, the `principal_display_name` field will be omitted from the resulting object.
+  - `principal_id` (`string`): Set the `principal_id` field on the resulting object.
+  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting object.
+  - `just_in_time_access_policy` (`list[obj]`): Set the `just_in_time_access_policy` field on the resulting object. When `null`, the `just_in_time_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.new](#fn-eligible_authorizationjust_in_time_access_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `eligible_authorization` sub block.
@@ -412,9 +412,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `maximum_activation_duration` (`string`):  When `null`, the `maximum_activation_duration` field will be omitted from the resulting object.
-  - `multi_factor_auth_provider` (`string`):  When `null`, the `multi_factor_auth_provider` field will be omitted from the resulting object.
-  - `approver` (`list[obj]`):  When `null`, the `approver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.approver.new](#fn-eligible_authorizationeligible_authorizationapprovernew) constructor.
+  - `maximum_activation_duration` (`string`): Set the `maximum_activation_duration` field on the resulting object. When `null`, the `maximum_activation_duration` field will be omitted from the resulting object.
+  - `multi_factor_auth_provider` (`string`): Set the `multi_factor_auth_provider` field on the resulting object. When `null`, the `multi_factor_auth_provider` field will be omitted from the resulting object.
+  - `approver` (`list[obj]`): Set the `approver` field on the resulting object. When `null`, the `approver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.approver.new](#fn-eligible_authorizationeligible_authorizationapprovernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `just_in_time_access_policy` sub block.
@@ -437,8 +437,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `principal_display_name` (`string`):  When `null`, the `principal_display_name` field will be omitted from the resulting object.
-  - `principal_id` (`string`): 
+  - `principal_display_name` (`string`): Set the `principal_display_name` field on the resulting object. When `null`, the `principal_display_name` field will be omitted from the resulting object.
+  - `principal_id` (`string`): Set the `principal_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `approver` sub block.
@@ -461,10 +461,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `product` (`string`): 
-  - `publisher` (`string`): 
-  - `version` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `product` (`string`): Set the `product` field on the resulting object.
+  - `publisher` (`string`): Set the `publisher` field on the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `plan` sub block.
@@ -487,10 +487,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

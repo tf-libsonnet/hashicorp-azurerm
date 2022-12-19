@@ -88,24 +88,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `endpoint` (`list`):  When `null`, the `endpoint` field will be omitted from the resulting object.
-  - `enrichment` (`list`):  When `null`, the `enrichment` field will be omitted from the resulting object.
-  - `event_hub_partition_count` (`number`):  When `null`, the `event_hub_partition_count` field will be omitted from the resulting object.
-  - `event_hub_retention_in_days` (`number`):  When `null`, the `event_hub_retention_in_days` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `min_tls_version` (`string`):  When `null`, the `min_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `route` (`list`):  When `null`, the `route` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cloud_to_device` (`list[obj]`):  When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-cloud_to_devicenew) constructor.
-  - `fallback_route` (`list[obj]`):  When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-fallback_routenew) constructor.
-  - `file_upload` (`list[obj]`):  When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-file_uploadnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-identitynew) constructor.
-  - `network_rule_set` (`list[obj]`):  When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-network_rule_setnew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `endpoint` (`list`): Set the `endpoint` field on the resulting resource block. When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `enrichment` (`list`): Set the `enrichment` field on the resulting resource block. When `null`, the `enrichment` field will be omitted from the resulting object.
+  - `event_hub_partition_count` (`number`): Set the `event_hub_partition_count` field on the resulting resource block. When `null`, the `event_hub_partition_count` field will be omitted from the resulting object.
+  - `event_hub_retention_in_days` (`number`): Set the `event_hub_retention_in_days` field on the resulting resource block. When `null`, the `event_hub_retention_in_days` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting resource block. When `null`, the `min_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `route` (`list`): Set the `route` field on the resulting resource block. When `null`, the `route` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `cloud_to_device` (`list[obj]`): Set the `cloud_to_device` field on the resulting resource block. When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-cloud_to_devicenew) constructor.
+  - `fallback_route` (`list[obj]`): Set the `fallback_route` field on the resulting resource block. When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-fallback_routenew) constructor.
+  - `file_upload` (`list[obj]`): Set the `file_upload` field on the resulting resource block. When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-file_uploadnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-identitynew) constructor.
+  - `network_rule_set` (`list[obj]`): Set the `network_rule_set` field on the resulting resource block. When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-network_rule_setnew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting resource block. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -129,24 +129,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `endpoint` (`list`):  When `null`, the `endpoint` field will be omitted from the resulting object.
-  - `enrichment` (`list`):  When `null`, the `enrichment` field will be omitted from the resulting object.
-  - `event_hub_partition_count` (`number`):  When `null`, the `event_hub_partition_count` field will be omitted from the resulting object.
-  - `event_hub_retention_in_days` (`number`):  When `null`, the `event_hub_retention_in_days` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `min_tls_version` (`string`):  When `null`, the `min_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `route` (`list`):  When `null`, the `route` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `cloud_to_device` (`list[obj]`):  When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-cloud_to_devicenew) constructor.
-  - `fallback_route` (`list[obj]`):  When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-fallback_routenew) constructor.
-  - `file_upload` (`list[obj]`):  When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-file_uploadnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-identitynew) constructor.
-  - `network_rule_set` (`list[obj]`):  When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-network_rule_setnew) constructor.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `endpoint` (`list`): Set the `endpoint` field on the resulting object. When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `enrichment` (`list`): Set the `enrichment` field on the resulting object. When `null`, the `enrichment` field will be omitted from the resulting object.
+  - `event_hub_partition_count` (`number`): Set the `event_hub_partition_count` field on the resulting object. When `null`, the `event_hub_partition_count` field will be omitted from the resulting object.
+  - `event_hub_retention_in_days` (`number`): Set the `event_hub_retention_in_days` field on the resulting object. When `null`, the `event_hub_retention_in_days` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting object. When `null`, the `min_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `route` (`list`): Set the `route` field on the resulting object. When `null`, the `route` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `cloud_to_device` (`list[obj]`): Set the `cloud_to_device` field on the resulting object. When `null`, the `cloud_to_device` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.new](#fn-cloud_to_devicenew) constructor.
+  - `fallback_route` (`list[obj]`): Set the `fallback_route` field on the resulting object. When `null`, the `fallback_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.fallback_route.new](#fn-fallback_routenew) constructor.
+  - `file_upload` (`list[obj]`): Set the `file_upload` field on the resulting object. When `null`, the `file_upload` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.file_upload.new](#fn-file_uploadnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.identity.new](#fn-identitynew) constructor.
+  - `network_rule_set` (`list[obj]`): Set the `network_rule_set` field on the resulting object. When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.new](#fn-network_rule_setnew) constructor.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting object. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iothub` resource into the root Terraform configuration.
@@ -603,9 +603,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_ttl` (`string`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
-  - `max_delivery_count` (`number`):  When `null`, the `max_delivery_count` field will be omitted from the resulting object.
-  - `feedback` (`list[obj]`):  When `null`, the `feedback` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.feedback.new](#fn-cloud_to_devicefeedbacknew) constructor.
+  - `default_ttl` (`string`): Set the `default_ttl` field on the resulting object. When `null`, the `default_ttl` field will be omitted from the resulting object.
+  - `max_delivery_count` (`number`): Set the `max_delivery_count` field on the resulting object. When `null`, the `max_delivery_count` field will be omitted from the resulting object.
+  - `feedback` (`list[obj]`): Set the `feedback` field on the resulting object. When `null`, the `feedback` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.cloud_to_device.feedback.new](#fn-cloud_to_devicefeedbacknew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cloud_to_device` sub block.
@@ -628,9 +628,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `lock_duration` (`string`):  When `null`, the `lock_duration` field will be omitted from the resulting object.
-  - `max_delivery_count` (`number`):  When `null`, the `max_delivery_count` field will be omitted from the resulting object.
-  - `time_to_live` (`string`):  When `null`, the `time_to_live` field will be omitted from the resulting object.
+  - `lock_duration` (`string`): Set the `lock_duration` field on the resulting object. When `null`, the `lock_duration` field will be omitted from the resulting object.
+  - `max_delivery_count` (`number`): Set the `max_delivery_count` field on the resulting object. When `null`, the `max_delivery_count` field will be omitted from the resulting object.
+  - `time_to_live` (`string`): Set the `time_to_live` field on the resulting object. When `null`, the `time_to_live` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `feedback` sub block.
@@ -653,10 +653,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `condition` (`string`):  When `null`, the `condition` field will be omitted from the resulting object.
-  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `endpoint_names` (`list`):  When `null`, the `endpoint_names` field will be omitted from the resulting object.
-  - `source` (`string`):  When `null`, the `source` field will be omitted from the resulting object.
+  - `condition` (`string`): Set the `condition` field on the resulting object. When `null`, the `condition` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `endpoint_names` (`list`): Set the `endpoint_names` field on the resulting object. When `null`, the `endpoint_names` field will be omitted from the resulting object.
+  - `source` (`string`): Set the `source` field on the resulting object. When `null`, the `source` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `fallback_route` sub block.
@@ -679,15 +679,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `authentication_type` (`string`):  When `null`, the `authentication_type` field will be omitted from the resulting object.
-  - `connection_string` (`string`): 
-  - `container_name` (`string`): 
-  - `default_ttl` (`string`):  When `null`, the `default_ttl` field will be omitted from the resulting object.
-  - `identity_id` (`string`):  When `null`, the `identity_id` field will be omitted from the resulting object.
-  - `lock_duration` (`string`):  When `null`, the `lock_duration` field will be omitted from the resulting object.
-  - `max_delivery_count` (`number`):  When `null`, the `max_delivery_count` field will be omitted from the resulting object.
-  - `notifications` (`bool`):  When `null`, the `notifications` field will be omitted from the resulting object.
-  - `sas_ttl` (`string`):  When `null`, the `sas_ttl` field will be omitted from the resulting object.
+  - `authentication_type` (`string`): Set the `authentication_type` field on the resulting object. When `null`, the `authentication_type` field will be omitted from the resulting object.
+  - `connection_string` (`string`): Set the `connection_string` field on the resulting object.
+  - `container_name` (`string`): Set the `container_name` field on the resulting object.
+  - `default_ttl` (`string`): Set the `default_ttl` field on the resulting object. When `null`, the `default_ttl` field will be omitted from the resulting object.
+  - `identity_id` (`string`): Set the `identity_id` field on the resulting object. When `null`, the `identity_id` field will be omitted from the resulting object.
+  - `lock_duration` (`string`): Set the `lock_duration` field on the resulting object. When `null`, the `lock_duration` field will be omitted from the resulting object.
+  - `max_delivery_count` (`number`): Set the `max_delivery_count` field on the resulting object. When `null`, the `max_delivery_count` field will be omitted from the resulting object.
+  - `notifications` (`bool`): Set the `notifications` field on the resulting object. When `null`, the `notifications` field will be omitted from the resulting object.
+  - `sas_ttl` (`string`): Set the `sas_ttl` field on the resulting object. When `null`, the `sas_ttl` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `file_upload` sub block.
@@ -710,8 +710,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -734,9 +734,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `apply_to_builtin_eventhub_endpoint` (`bool`):  When `null`, the `apply_to_builtin_eventhub_endpoint` field will be omitted from the resulting object.
-  - `default_action` (`string`):  When `null`, the `default_action` field will be omitted from the resulting object.
-  - `ip_rule` (`list[obj]`):  When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.ip_rule.new](#fn-network_rule_setip_rulenew) constructor.
+  - `apply_to_builtin_eventhub_endpoint` (`bool`): Set the `apply_to_builtin_eventhub_endpoint` field on the resulting object. When `null`, the `apply_to_builtin_eventhub_endpoint` field will be omitted from the resulting object.
+  - `default_action` (`string`): Set the `default_action` field on the resulting object. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `ip_rule` (`list[obj]`): Set the `ip_rule` field on the resulting object. When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iothub.network_rule_set.ip_rule.new](#fn-network_rule_setip_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rule_set` sub block.
@@ -759,9 +759,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`):  When `null`, the `action` field will be omitted from the resulting object.
-  - `ip_mask` (`string`): 
-  - `name` (`string`): 
+  - `action` (`string`): Set the `action` field on the resulting object. When `null`, the `action` field will be omitted from the resulting object.
+  - `ip_mask` (`string`): Set the `ip_mask` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_rule` sub block.
@@ -784,8 +784,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`number`): 
-  - `name` (`string`): 
+  - `capacity` (`number`): Set the `capacity` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sku` sub block.
@@ -808,10 +808,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

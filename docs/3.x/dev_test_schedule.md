@@ -73,19 +73,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `lab_name` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `task_type` (`string`): 
-  - `time_zone_id` (`string`): 
-  - `daily_recurrence` (`list[obj]`):  When `null`, the `daily_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.daily_recurrence.new](#fn-daily_recurrencenew) constructor.
-  - `hourly_recurrence` (`list[obj]`):  When `null`, the `hourly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.hourly_recurrence.new](#fn-hourly_recurrencenew) constructor.
-  - `notification_settings` (`list[obj]`):  When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.timeouts.new](#fn-timeoutsnew) constructor.
-  - `weekly_recurrence` (`list[obj]`):  When `null`, the `weekly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.weekly_recurrence.new](#fn-weekly_recurrencenew) constructor.
+  - `lab_name` (`string`): Set the `lab_name` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `status` (`string`): Set the `status` field on the resulting resource block. When `null`, the `status` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `task_type` (`string`): Set the `task_type` field on the resulting resource block.
+  - `time_zone_id` (`string`): Set the `time_zone_id` field on the resulting resource block.
+  - `daily_recurrence` (`list[obj]`): Set the `daily_recurrence` field on the resulting resource block. When `null`, the `daily_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.daily_recurrence.new](#fn-daily_recurrencenew) constructor.
+  - `hourly_recurrence` (`list[obj]`): Set the `hourly_recurrence` field on the resulting resource block. When `null`, the `hourly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.hourly_recurrence.new](#fn-hourly_recurrencenew) constructor.
+  - `notification_settings` (`list[obj]`): Set the `notification_settings` field on the resulting resource block. When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `weekly_recurrence` (`list[obj]`): Set the `weekly_recurrence` field on the resulting resource block. When `null`, the `weekly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.weekly_recurrence.new](#fn-weekly_recurrencenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,19 +109,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `lab_name` (`string`): 
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `task_type` (`string`): 
-  - `time_zone_id` (`string`): 
-  - `daily_recurrence` (`list[obj]`):  When `null`, the `daily_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.daily_recurrence.new](#fn-daily_recurrencenew) constructor.
-  - `hourly_recurrence` (`list[obj]`):  When `null`, the `hourly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.hourly_recurrence.new](#fn-hourly_recurrencenew) constructor.
-  - `notification_settings` (`list[obj]`):  When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.timeouts.new](#fn-timeoutsnew) constructor.
-  - `weekly_recurrence` (`list[obj]`):  When `null`, the `weekly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.weekly_recurrence.new](#fn-weekly_recurrencenew) constructor.
+  - `lab_name` (`string`): Set the `lab_name` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `task_type` (`string`): Set the `task_type` field on the resulting object.
+  - `time_zone_id` (`string`): Set the `time_zone_id` field on the resulting object.
+  - `daily_recurrence` (`list[obj]`): Set the `daily_recurrence` field on the resulting object. When `null`, the `daily_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.daily_recurrence.new](#fn-daily_recurrencenew) constructor.
+  - `hourly_recurrence` (`list[obj]`): Set the `hourly_recurrence` field on the resulting object. When `null`, the `hourly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.hourly_recurrence.new](#fn-hourly_recurrencenew) constructor.
+  - `notification_settings` (`list[obj]`): Set the `notification_settings` field on the resulting object. When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `weekly_recurrence` (`list[obj]`): Set the `weekly_recurrence` field on the resulting object. When `null`, the `weekly_recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_schedule.weekly_recurrence.new](#fn-weekly_recurrencenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dev_test_schedule` resource into the root Terraform configuration.
@@ -456,7 +456,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `time` (`string`): 
+  - `time` (`string`): Set the `time` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `daily_recurrence` sub block.
@@ -479,7 +479,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `minute` (`number`): 
+  - `minute` (`number`): Set the `minute` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `hourly_recurrence` sub block.
@@ -502,9 +502,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `time_in_minutes` (`number`):  When `null`, the `time_in_minutes` field will be omitted from the resulting object.
-  - `webhook_url` (`string`):  When `null`, the `webhook_url` field will be omitted from the resulting object.
+  - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
+  - `time_in_minutes` (`number`): Set the `time_in_minutes` field on the resulting object. When `null`, the `time_in_minutes` field will be omitted from the resulting object.
+  - `webhook_url` (`string`): Set the `webhook_url` field on the resulting object. When `null`, the `webhook_url` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `notification_settings` sub block.
@@ -527,10 +527,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -553,8 +553,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `time` (`string`): 
-  - `week_days` (`list`):  When `null`, the `week_days` field will be omitted from the resulting object.
+  - `time` (`string`): Set the `time` field on the resulting object.
+  - `week_days` (`list`): Set the `week_days` field on the resulting object. When `null`, the `week_days` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `weekly_recurrence` sub block.

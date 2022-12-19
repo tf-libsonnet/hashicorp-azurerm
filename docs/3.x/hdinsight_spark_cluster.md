@@ -131,27 +131,27 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cluster_version` (`string`): 
-  - `encryption_in_transit_enabled` (`bool`):  When `null`, the `encryption_in_transit_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `tier` (`string`): 
-  - `tls_min_version` (`string`):  When `null`, the `tls_min_version` field will be omitted from the resulting object.
-  - `component_version` (`list[obj]`):  When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.component_version.new](#fn-component_versionnew) constructor.
-  - `compute_isolation` (`list[obj]`):  When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.compute_isolation.new](#fn-compute_isolationnew) constructor.
-  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.disk_encryption.new](#fn-disk_encryptionnew) constructor.
-  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.extension.new](#fn-extensionnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.gateway.new](#fn-gatewaynew) constructor.
-  - `metastores` (`list[obj]`):  When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.new](#fn-metastoresnew) constructor.
-  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.monitor.new](#fn-monitornew) constructor.
-  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.network.new](#fn-networknew) constructor.
-  - `roles` (`list[obj]`):  When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.new](#fn-rolesnew) constructor.
-  - `security_profile` (`list[obj]`):  When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.security_profile.new](#fn-security_profilenew) constructor.
-  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account.new](#fn-storage_accountnew) constructor.
-  - `storage_account_gen2` (`list[obj]`):  When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account_gen2.new](#fn-storage_account_gen2new) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_version` (`string`): Set the `cluster_version` field on the resulting resource block.
+  - `encryption_in_transit_enabled` (`bool`): Set the `encryption_in_transit_enabled` field on the resulting resource block. When `null`, the `encryption_in_transit_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tier` (`string`): Set the `tier` field on the resulting resource block.
+  - `tls_min_version` (`string`): Set the `tls_min_version` field on the resulting resource block. When `null`, the `tls_min_version` field will be omitted from the resulting object.
+  - `component_version` (`list[obj]`): Set the `component_version` field on the resulting resource block. When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.component_version.new](#fn-component_versionnew) constructor.
+  - `compute_isolation` (`list[obj]`): Set the `compute_isolation` field on the resulting resource block. When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.compute_isolation.new](#fn-compute_isolationnew) constructor.
+  - `disk_encryption` (`list[obj]`): Set the `disk_encryption` field on the resulting resource block. When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.disk_encryption.new](#fn-disk_encryptionnew) constructor.
+  - `extension` (`list[obj]`): Set the `extension` field on the resulting resource block. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.extension.new](#fn-extensionnew) constructor.
+  - `gateway` (`list[obj]`): Set the `gateway` field on the resulting resource block. When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.gateway.new](#fn-gatewaynew) constructor.
+  - `metastores` (`list[obj]`): Set the `metastores` field on the resulting resource block. When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.new](#fn-metastoresnew) constructor.
+  - `monitor` (`list[obj]`): Set the `monitor` field on the resulting resource block. When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.monitor.new](#fn-monitornew) constructor.
+  - `network` (`list[obj]`): Set the `network` field on the resulting resource block. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.network.new](#fn-networknew) constructor.
+  - `roles` (`list[obj]`): Set the `roles` field on the resulting resource block. When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.new](#fn-rolesnew) constructor.
+  - `security_profile` (`list[obj]`): Set the `security_profile` field on the resulting resource block. When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.security_profile.new](#fn-security_profilenew) constructor.
+  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting resource block. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account.new](#fn-storage_accountnew) constructor.
+  - `storage_account_gen2` (`list[obj]`): Set the `storage_account_gen2` field on the resulting resource block. When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account_gen2.new](#fn-storage_account_gen2new) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -175,27 +175,27 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cluster_version` (`string`): 
-  - `encryption_in_transit_enabled` (`bool`):  When `null`, the `encryption_in_transit_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `tier` (`string`): 
-  - `tls_min_version` (`string`):  When `null`, the `tls_min_version` field will be omitted from the resulting object.
-  - `component_version` (`list[obj]`):  When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.component_version.new](#fn-component_versionnew) constructor.
-  - `compute_isolation` (`list[obj]`):  When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.compute_isolation.new](#fn-compute_isolationnew) constructor.
-  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.disk_encryption.new](#fn-disk_encryptionnew) constructor.
-  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.extension.new](#fn-extensionnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.gateway.new](#fn-gatewaynew) constructor.
-  - `metastores` (`list[obj]`):  When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.new](#fn-metastoresnew) constructor.
-  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.monitor.new](#fn-monitornew) constructor.
-  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.network.new](#fn-networknew) constructor.
-  - `roles` (`list[obj]`):  When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.new](#fn-rolesnew) constructor.
-  - `security_profile` (`list[obj]`):  When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.security_profile.new](#fn-security_profilenew) constructor.
-  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account.new](#fn-storage_accountnew) constructor.
-  - `storage_account_gen2` (`list[obj]`):  When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account_gen2.new](#fn-storage_account_gen2new) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_version` (`string`): Set the `cluster_version` field on the resulting object.
+  - `encryption_in_transit_enabled` (`bool`): Set the `encryption_in_transit_enabled` field on the resulting object. When `null`, the `encryption_in_transit_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tier` (`string`): Set the `tier` field on the resulting object.
+  - `tls_min_version` (`string`): Set the `tls_min_version` field on the resulting object. When `null`, the `tls_min_version` field will be omitted from the resulting object.
+  - `component_version` (`list[obj]`): Set the `component_version` field on the resulting object. When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.component_version.new](#fn-component_versionnew) constructor.
+  - `compute_isolation` (`list[obj]`): Set the `compute_isolation` field on the resulting object. When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.compute_isolation.new](#fn-compute_isolationnew) constructor.
+  - `disk_encryption` (`list[obj]`): Set the `disk_encryption` field on the resulting object. When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.disk_encryption.new](#fn-disk_encryptionnew) constructor.
+  - `extension` (`list[obj]`): Set the `extension` field on the resulting object. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.extension.new](#fn-extensionnew) constructor.
+  - `gateway` (`list[obj]`): Set the `gateway` field on the resulting object. When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.gateway.new](#fn-gatewaynew) constructor.
+  - `metastores` (`list[obj]`): Set the `metastores` field on the resulting object. When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.new](#fn-metastoresnew) constructor.
+  - `monitor` (`list[obj]`): Set the `monitor` field on the resulting object. When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.monitor.new](#fn-monitornew) constructor.
+  - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.network.new](#fn-networknew) constructor.
+  - `roles` (`list[obj]`): Set the `roles` field on the resulting object. When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.new](#fn-rolesnew) constructor.
+  - `security_profile` (`list[obj]`): Set the `security_profile` field on the resulting object. When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.security_profile.new](#fn-security_profilenew) constructor.
+  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting object. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account.new](#fn-storage_accountnew) constructor.
+  - `storage_account_gen2` (`list[obj]`): Set the `storage_account_gen2` field on the resulting object. When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.storage_account_gen2.new](#fn-storage_account_gen2new) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `hdinsight_spark_cluster` resource into the root Terraform configuration.
@@ -826,7 +826,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `spark` (`string`): 
+  - `spark` (`string`): Set the `spark` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `component_version` sub block.
@@ -849,8 +849,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `compute_isolation_enabled` (`bool`):  When `null`, the `compute_isolation_enabled` field will be omitted from the resulting object.
-  - `host_sku` (`string`):  When `null`, the `host_sku` field will be omitted from the resulting object.
+  - `compute_isolation_enabled` (`bool`): Set the `compute_isolation_enabled` field on the resulting object. When `null`, the `compute_isolation_enabled` field will be omitted from the resulting object.
+  - `host_sku` (`string`): Set the `host_sku` field on the resulting object. When `null`, the `host_sku` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `compute_isolation` sub block.
@@ -873,10 +873,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `encryption_algorithm` (`string`):  When `null`, the `encryption_algorithm` field will be omitted from the resulting object.
-  - `encryption_at_host_enabled` (`bool`):  When `null`, the `encryption_at_host_enabled` field will be omitted from the resulting object.
-  - `key_vault_key_id` (`string`):  When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
-  - `key_vault_managed_identity_id` (`string`):  When `null`, the `key_vault_managed_identity_id` field will be omitted from the resulting object.
+  - `encryption_algorithm` (`string`): Set the `encryption_algorithm` field on the resulting object. When `null`, the `encryption_algorithm` field will be omitted from the resulting object.
+  - `encryption_at_host_enabled` (`bool`): Set the `encryption_at_host_enabled` field on the resulting object. When `null`, the `encryption_at_host_enabled` field will be omitted from the resulting object.
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `key_vault_managed_identity_id` (`string`): Set the `key_vault_managed_identity_id` field on the resulting object. When `null`, the `key_vault_managed_identity_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `disk_encryption` sub block.
@@ -899,8 +899,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `log_analytics_workspace_id` (`string`): 
-  - `primary_key` (`string`): 
+  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `primary_key` (`string`): Set the `primary_key` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `extension` sub block.
@@ -923,8 +923,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `password` (`string`): 
-  - `username` (`string`): 
+  - `password` (`string`): Set the `password` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `gateway` sub block.
@@ -947,9 +947,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `ambari` (`list[obj]`):  When `null`, the `ambari` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.ambari.new](#fn-metastoresambarinew) constructor.
-  - `hive` (`list[obj]`):  When `null`, the `hive` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.hive.new](#fn-metastoreshivenew) constructor.
-  - `oozie` (`list[obj]`):  When `null`, the `oozie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.oozie.new](#fn-metastoresoozienew) constructor.
+  - `ambari` (`list[obj]`): Set the `ambari` field on the resulting object. When `null`, the `ambari` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.ambari.new](#fn-metastoresambarinew) constructor.
+  - `hive` (`list[obj]`): Set the `hive` field on the resulting object. When `null`, the `hive` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.hive.new](#fn-metastoreshivenew) constructor.
+  - `oozie` (`list[obj]`): Set the `oozie` field on the resulting object. When `null`, the `oozie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.metastores.oozie.new](#fn-metastoresoozienew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metastores` sub block.
@@ -972,10 +972,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `database_name` (`string`): 
-  - `password` (`string`): 
-  - `server` (`string`): 
-  - `username` (`string`): 
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object.
+  - `server` (`string`): Set the `server` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ambari` sub block.
@@ -998,10 +998,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `database_name` (`string`): 
-  - `password` (`string`): 
-  - `server` (`string`): 
-  - `username` (`string`): 
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object.
+  - `server` (`string`): Set the `server` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `hive` sub block.
@@ -1024,10 +1024,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `database_name` (`string`): 
-  - `password` (`string`): 
-  - `server` (`string`): 
-  - `username` (`string`): 
+  - `database_name` (`string`): Set the `database_name` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object.
+  - `server` (`string`): Set the `server` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `oozie` sub block.
@@ -1050,8 +1050,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `log_analytics_workspace_id` (`string`): 
-  - `primary_key` (`string`): 
+  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `primary_key` (`string`): Set the `primary_key` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `monitor` sub block.
@@ -1074,8 +1074,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_direction` (`string`):  When `null`, the `connection_direction` field will be omitted from the resulting object.
-  - `private_link_enabled` (`bool`):  When `null`, the `private_link_enabled` field will be omitted from the resulting object.
+  - `connection_direction` (`string`): Set the `connection_direction` field on the resulting object. When `null`, the `connection_direction` field will be omitted from the resulting object.
+  - `private_link_enabled` (`bool`): Set the `private_link_enabled` field on the resulting object. When `null`, the `private_link_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `network` sub block.
@@ -1098,9 +1098,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `head_node` (`list[obj]`):  When `null`, the `head_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.head_node.new](#fn-roleshead_nodenew) constructor.
-  - `worker_node` (`list[obj]`):  When `null`, the `worker_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.new](#fn-rolesworker_nodenew) constructor.
-  - `zookeeper_node` (`list[obj]`):  When `null`, the `zookeeper_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.zookeeper_node.new](#fn-roleszookeeper_nodenew) constructor.
+  - `head_node` (`list[obj]`): Set the `head_node` field on the resulting object. When `null`, the `head_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.head_node.new](#fn-roleshead_nodenew) constructor.
+  - `worker_node` (`list[obj]`): Set the `worker_node` field on the resulting object. When `null`, the `worker_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.new](#fn-rolesworker_nodenew) constructor.
+  - `zookeeper_node` (`list[obj]`): Set the `zookeeper_node` field on the resulting object. When `null`, the `zookeeper_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.zookeeper_node.new](#fn-roleszookeeper_nodenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `roles` sub block.
@@ -1123,13 +1123,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
-  - `ssh_keys` (`list`):  When `null`, the `ssh_keys` field will be omitted from the resulting object.
-  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
-  - `username` (`string`): 
-  - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
-  - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.head_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
+  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
+  - `ssh_keys` (`list`): Set the `ssh_keys` field on the resulting object. When `null`, the `ssh_keys` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
+  - `virtual_network_id` (`string`): Set the `virtual_network_id` field on the resulting object. When `null`, the `virtual_network_id` field will be omitted from the resulting object.
+  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
+  - `script_actions` (`list[obj]`): Set the `script_actions` field on the resulting object. When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.head_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `head_node` sub block.
@@ -1152,9 +1152,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `uri` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `uri` (`string`): Set the `uri` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `script_actions` sub block.
@@ -1177,15 +1177,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
-  - `ssh_keys` (`list`):  When `null`, the `ssh_keys` field will be omitted from the resulting object.
-  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
-  - `target_instance_count` (`number`): 
-  - `username` (`string`): 
-  - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
-  - `vm_size` (`string`): 
-  - `autoscale` (`list[obj]`):  When `null`, the `autoscale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.new](#fn-rolesrolesautoscalenew) constructor.
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
+  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
+  - `ssh_keys` (`list`): Set the `ssh_keys` field on the resulting object. When `null`, the `ssh_keys` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `target_instance_count` (`number`): Set the `target_instance_count` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
+  - `virtual_network_id` (`string`): Set the `virtual_network_id` field on the resulting object. When `null`, the `virtual_network_id` field will be omitted from the resulting object.
+  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
+  - `autoscale` (`list[obj]`): Set the `autoscale` field on the resulting object. When `null`, the `autoscale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.new](#fn-rolesrolesautoscalenew) constructor.
+  - `script_actions` (`list[obj]`): Set the `script_actions` field on the resulting object. When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `worker_node` sub block.
@@ -1208,8 +1208,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`list[obj]`):  When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.capacity.new](#fn-rolesrolesworker_nodecapacitynew) constructor.
-  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.recurrence.new](#fn-rolesrolesworker_noderecurrencenew) constructor.
+  - `capacity` (`list[obj]`): Set the `capacity` field on the resulting object. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.capacity.new](#fn-rolesrolesworker_nodecapacitynew) constructor.
+  - `recurrence` (`list[obj]`): Set the `recurrence` field on the resulting object. When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.recurrence.new](#fn-rolesrolesworker_noderecurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `autoscale` sub block.
@@ -1232,8 +1232,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_instance_count` (`number`): 
-  - `min_instance_count` (`number`): 
+  - `max_instance_count` (`number`): Set the `max_instance_count` field on the resulting object.
+  - `min_instance_count` (`number`): Set the `min_instance_count` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `capacity` sub block.
@@ -1256,8 +1256,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `timezone` (`string`): 
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.recurrence.schedule.new](#fn-rolesrolesworker_nodeautoscaleschedulenew) constructor.
+  - `timezone` (`string`): Set the `timezone` field on the resulting object.
+  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.worker_node.autoscale.recurrence.schedule.new](#fn-rolesrolesworker_nodeautoscaleschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `recurrence` sub block.
@@ -1280,9 +1280,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`list`): 
-  - `target_instance_count` (`number`): 
-  - `time` (`string`): 
+  - `days` (`list`): Set the `days` field on the resulting object.
+  - `target_instance_count` (`number`): Set the `target_instance_count` field on the resulting object.
+  - `time` (`string`): Set the `time` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -1305,9 +1305,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `uri` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `uri` (`string`): Set the `uri` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `script_actions` sub block.
@@ -1330,13 +1330,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
-  - `ssh_keys` (`list`):  When `null`, the `ssh_keys` field will be omitted from the resulting object.
-  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
-  - `username` (`string`): 
-  - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
-  - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.zookeeper_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
+  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
+  - `ssh_keys` (`list`): Set the `ssh_keys` field on the resulting object. When `null`, the `ssh_keys` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
+  - `virtual_network_id` (`string`): Set the `virtual_network_id` field on the resulting object. When `null`, the `virtual_network_id` field will be omitted from the resulting object.
+  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
+  - `script_actions` (`list[obj]`): Set the `script_actions` field on the resulting object. When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_spark_cluster.roles.zookeeper_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `zookeeper_node` sub block.
@@ -1359,9 +1359,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `uri` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `uri` (`string`): Set the `uri` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `script_actions` sub block.
@@ -1384,13 +1384,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `aadds_resource_id` (`string`): 
-  - `cluster_users_group_dns` (`list`):  When `null`, the `cluster_users_group_dns` field will be omitted from the resulting object.
-  - `domain_name` (`string`): 
-  - `domain_user_password` (`string`): 
-  - `domain_username` (`string`): 
-  - `ldaps_urls` (`list`): 
-  - `msi_resource_id` (`string`): 
+  - `aadds_resource_id` (`string`): Set the `aadds_resource_id` field on the resulting object.
+  - `cluster_users_group_dns` (`list`): Set the `cluster_users_group_dns` field on the resulting object. When `null`, the `cluster_users_group_dns` field will be omitted from the resulting object.
+  - `domain_name` (`string`): Set the `domain_name` field on the resulting object.
+  - `domain_user_password` (`string`): Set the `domain_user_password` field on the resulting object.
+  - `domain_username` (`string`): Set the `domain_username` field on the resulting object.
+  - `ldaps_urls` (`list`): Set the `ldaps_urls` field on the resulting object.
+  - `msi_resource_id` (`string`): Set the `msi_resource_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `security_profile` sub block.
@@ -1413,10 +1413,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `is_default` (`bool`): 
-  - `storage_account_key` (`string`): 
-  - `storage_container_id` (`string`): 
-  - `storage_resource_id` (`string`):  When `null`, the `storage_resource_id` field will be omitted from the resulting object.
+  - `is_default` (`bool`): Set the `is_default` field on the resulting object.
+  - `storage_account_key` (`string`): Set the `storage_account_key` field on the resulting object.
+  - `storage_container_id` (`string`): Set the `storage_container_id` field on the resulting object.
+  - `storage_resource_id` (`string`): Set the `storage_resource_id` field on the resulting object. When `null`, the `storage_resource_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_account` sub block.
@@ -1439,10 +1439,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `filesystem_id` (`string`): 
-  - `is_default` (`bool`): 
-  - `managed_identity_resource_id` (`string`): 
-  - `storage_resource_id` (`string`): 
+  - `filesystem_id` (`string`): Set the `filesystem_id` field on the resulting object.
+  - `is_default` (`bool`): Set the `is_default` field on the resulting object.
+  - `managed_identity_resource_id` (`string`): Set the `managed_identity_resource_id` field on the resulting object.
+  - `storage_resource_id` (`string`): Set the `storage_resource_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_account_gen2` sub block.
@@ -1465,10 +1465,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

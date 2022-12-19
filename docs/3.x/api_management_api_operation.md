@@ -99,18 +99,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_name` (`string`): 
-  - `api_name` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `method` (`string`): 
-  - `operation_id` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `url_template` (`string`): 
-  - `request` (`list[obj]`):  When `null`, the `request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.new](#fn-requestnew) constructor.
-  - `response` (`list[obj]`):  When `null`, the `response` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.new](#fn-responsenew) constructor.
-  - `template_parameter` (`list[obj]`):  When `null`, the `template_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.template_parameter.new](#fn-template_parameternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
+  - `api_name` (`string`): Set the `api_name` field on the resulting resource block.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `method` (`string`): Set the `method` field on the resulting resource block.
+  - `operation_id` (`string`): Set the `operation_id` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `url_template` (`string`): Set the `url_template` field on the resulting resource block.
+  - `request` (`list[obj]`): Set the `request` field on the resulting resource block. When `null`, the `request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.new](#fn-requestnew) constructor.
+  - `response` (`list[obj]`): Set the `response` field on the resulting resource block. When `null`, the `response` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.new](#fn-responsenew) constructor.
+  - `template_parameter` (`list[obj]`): Set the `template_parameter` field on the resulting resource block. When `null`, the `template_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.template_parameter.new](#fn-template_parameternew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -134,18 +134,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_name` (`string`): 
-  - `api_name` (`string`): 
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `method` (`string`): 
-  - `operation_id` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `url_template` (`string`): 
-  - `request` (`list[obj]`):  When `null`, the `request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.new](#fn-requestnew) constructor.
-  - `response` (`list[obj]`):  When `null`, the `response` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.new](#fn-responsenew) constructor.
-  - `template_parameter` (`list[obj]`):  When `null`, the `template_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.template_parameter.new](#fn-template_parameternew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
+  - `api_name` (`string`): Set the `api_name` field on the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `method` (`string`): Set the `method` field on the resulting object.
+  - `operation_id` (`string`): Set the `operation_id` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `url_template` (`string`): Set the `url_template` field on the resulting object.
+  - `request` (`list[obj]`): Set the `request` field on the resulting object. When `null`, the `request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.new](#fn-requestnew) constructor.
+  - `response` (`list[obj]`): Set the `response` field on the resulting object. When `null`, the `response` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.new](#fn-responsenew) constructor.
+  - `template_parameter` (`list[obj]`): Set the `template_parameter` field on the resulting object. When `null`, the `template_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.template_parameter.new](#fn-template_parameternew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_api_operation` resource into the root Terraform configuration.
@@ -443,10 +443,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `header` (`list[obj]`):  When `null`, the `header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.header.new](#fn-requestheadernew) constructor.
-  - `query_parameter` (`list[obj]`):  When `null`, the `query_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.query_parameter.new](#fn-requestquery_parameternew) constructor.
-  - `representation` (`list[obj]`):  When `null`, the `representation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.new](#fn-requestrepresentationnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `header` (`list[obj]`): Set the `header` field on the resulting object. When `null`, the `header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.header.new](#fn-requestheadernew) constructor.
+  - `query_parameter` (`list[obj]`): Set the `query_parameter` field on the resulting object. When `null`, the `query_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.query_parameter.new](#fn-requestquery_parameternew) constructor.
+  - `representation` (`list[obj]`): Set the `representation` field on the resulting object. When `null`, the `representation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.new](#fn-requestrepresentationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `request` sub block.
@@ -469,15 +469,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_value` (`string`):  When `null`, the `default_value` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `required` (`bool`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `values` (`list`):  When `null`, the `values` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.header.example.new](#fn-requestrequestexamplenew) constructor.
+  - `default_value` (`string`): Set the `default_value` field on the resulting object. When `null`, the `default_value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `required` (`bool`): Set the `required` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object. When `null`, the `values` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.header.example.new](#fn-requestrequestexamplenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header` sub block.
@@ -500,11 +500,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -527,15 +527,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_value` (`string`):  When `null`, the `default_value` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `required` (`bool`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `values` (`list`):  When `null`, the `values` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.query_parameter.example.new](#fn-requestrequestexamplenew) constructor.
+  - `default_value` (`string`): Set the `default_value` field on the resulting object. When `null`, the `default_value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `required` (`bool`): Set the `required` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object. When `null`, the `values` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.query_parameter.example.new](#fn-requestrequestexamplenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `query_parameter` sub block.
@@ -558,11 +558,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -585,11 +585,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `content_type` (`string`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.example.new](#fn-requestrequestexamplenew) constructor.
-  - `form_parameter` (`list[obj]`):  When `null`, the `form_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.form_parameter.new](#fn-requestrequestform_parameternew) constructor.
+  - `content_type` (`string`): Set the `content_type` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.example.new](#fn-requestrequestexamplenew) constructor.
+  - `form_parameter` (`list[obj]`): Set the `form_parameter` field on the resulting object. When `null`, the `form_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.form_parameter.new](#fn-requestrequestform_parameternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `representation` sub block.
@@ -612,11 +612,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -639,15 +639,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_value` (`string`):  When `null`, the `default_value` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `required` (`bool`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `values` (`list`):  When `null`, the `values` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.form_parameter.example.new](#fn-requestrequestrepresentationexamplenew) constructor.
+  - `default_value` (`string`): Set the `default_value` field on the resulting object. When `null`, the `default_value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `required` (`bool`): Set the `required` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object. When `null`, the `values` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.request.representation.form_parameter.example.new](#fn-requestrequestrepresentationexamplenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `form_parameter` sub block.
@@ -670,11 +670,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -697,10 +697,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `status_code` (`number`): 
-  - `header` (`list[obj]`):  When `null`, the `header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.header.new](#fn-responseheadernew) constructor.
-  - `representation` (`list[obj]`):  When `null`, the `representation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.new](#fn-responserepresentationnew) constructor.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `status_code` (`number`): Set the `status_code` field on the resulting object.
+  - `header` (`list[obj]`): Set the `header` field on the resulting object. When `null`, the `header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.header.new](#fn-responseheadernew) constructor.
+  - `representation` (`list[obj]`): Set the `representation` field on the resulting object. When `null`, the `representation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.new](#fn-responserepresentationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `response` sub block.
@@ -723,15 +723,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_value` (`string`):  When `null`, the `default_value` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `required` (`bool`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `values` (`list`):  When `null`, the `values` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.header.example.new](#fn-responseresponseexamplenew) constructor.
+  - `default_value` (`string`): Set the `default_value` field on the resulting object. When `null`, the `default_value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `required` (`bool`): Set the `required` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object. When `null`, the `values` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.header.example.new](#fn-responseresponseexamplenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header` sub block.
@@ -754,11 +754,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -781,11 +781,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `content_type` (`string`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.example.new](#fn-responseresponseexamplenew) constructor.
-  - `form_parameter` (`list[obj]`):  When `null`, the `form_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.form_parameter.new](#fn-responseresponseform_parameternew) constructor.
+  - `content_type` (`string`): Set the `content_type` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.example.new](#fn-responseresponseexamplenew) constructor.
+  - `form_parameter` (`list[obj]`): Set the `form_parameter` field on the resulting object. When `null`, the `form_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.form_parameter.new](#fn-responseresponseform_parameternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `representation` sub block.
@@ -808,11 +808,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -835,15 +835,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_value` (`string`):  When `null`, the `default_value` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `required` (`bool`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `values` (`list`):  When `null`, the `values` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.form_parameter.example.new](#fn-responseresponserepresentationexamplenew) constructor.
+  - `default_value` (`string`): Set the `default_value` field on the resulting object. When `null`, the `default_value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `required` (`bool`): Set the `required` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object. When `null`, the `values` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.response.representation.form_parameter.example.new](#fn-responseresponserepresentationexamplenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `form_parameter` sub block.
@@ -866,11 +866,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -893,15 +893,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_value` (`string`):  When `null`, the `default_value` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `required` (`bool`): 
-  - `schema_id` (`string`):  When `null`, the `schema_id` field will be omitted from the resulting object.
-  - `type` (`string`): 
-  - `type_name` (`string`):  When `null`, the `type_name` field will be omitted from the resulting object.
-  - `values` (`list`):  When `null`, the `values` field will be omitted from the resulting object.
-  - `example` (`list[obj]`):  When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.template_parameter.example.new](#fn-template_parameterexamplenew) constructor.
+  - `default_value` (`string`): Set the `default_value` field on the resulting object. When `null`, the `default_value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `required` (`bool`): Set the `required` field on the resulting object.
+  - `schema_id` (`string`): Set the `schema_id` field on the resulting object. When `null`, the `schema_id` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type_name` (`string`): Set the `type_name` field on the resulting object. When `null`, the `type_name` field will be omitted from the resulting object.
+  - `values` (`list`): Set the `values` field on the resulting object. When `null`, the `values` field will be omitted from the resulting object.
+  - `example` (`list[obj]`): Set the `example` field on the resulting object. When `null`, the `example` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api_operation.template_parameter.example.new](#fn-template_parameterexamplenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `template_parameter` sub block.
@@ -924,11 +924,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `external_value` (`string`):  When `null`, the `external_value` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `summary` (`string`):  When `null`, the `summary` field will be omitted from the resulting object.
-  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_value` (`string`): Set the `external_value` field on the resulting object. When `null`, the `external_value` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `summary` (`string`): Set the `summary` field on the resulting object. When `null`, the `summary` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `example` sub block.
@@ -951,10 +951,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

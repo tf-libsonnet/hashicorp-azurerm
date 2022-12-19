@@ -63,18 +63,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allow_classic_operations` (`bool`):  When `null`, the `allow_classic_operations` field will be omitted from the resulting object.
-  - `bandwidth_in_gbps` (`number`):  When `null`, the `bandwidth_in_gbps` field will be omitted from the resulting object.
-  - `bandwidth_in_mbps` (`number`):  When `null`, the `bandwidth_in_mbps` field will be omitted from the resulting object.
-  - `express_route_port_id` (`string`):  When `null`, the `express_route_port_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `peering_location` (`string`):  When `null`, the `peering_location` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `service_provider_name` (`string`):  When `null`, the `service_provider_name` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_classic_operations` (`bool`): Set the `allow_classic_operations` field on the resulting resource block. When `null`, the `allow_classic_operations` field will be omitted from the resulting object.
+  - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting resource block. When `null`, the `bandwidth_in_gbps` field will be omitted from the resulting object.
+  - `bandwidth_in_mbps` (`number`): Set the `bandwidth_in_mbps` field on the resulting resource block. When `null`, the `bandwidth_in_mbps` field will be omitted from the resulting object.
+  - `express_route_port_id` (`string`): Set the `express_route_port_id` field on the resulting resource block. When `null`, the `express_route_port_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `peering_location` (`string`): Set the `peering_location` field on the resulting resource block. When `null`, the `peering_location` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `service_provider_name` (`string`): Set the `service_provider_name` field on the resulting resource block. When `null`, the `service_provider_name` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting resource block. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,18 +98,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allow_classic_operations` (`bool`):  When `null`, the `allow_classic_operations` field will be omitted from the resulting object.
-  - `bandwidth_in_gbps` (`number`):  When `null`, the `bandwidth_in_gbps` field will be omitted from the resulting object.
-  - `bandwidth_in_mbps` (`number`):  When `null`, the `bandwidth_in_mbps` field will be omitted from the resulting object.
-  - `express_route_port_id` (`string`):  When `null`, the `express_route_port_id` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `name` (`string`): 
-  - `peering_location` (`string`):  When `null`, the `peering_location` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `service_provider_name` (`string`):  When `null`, the `service_provider_name` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `sku` (`list[obj]`):  When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.sku.new](#fn-skunew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_classic_operations` (`bool`): Set the `allow_classic_operations` field on the resulting object. When `null`, the `allow_classic_operations` field will be omitted from the resulting object.
+  - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting object. When `null`, the `bandwidth_in_gbps` field will be omitted from the resulting object.
+  - `bandwidth_in_mbps` (`number`): Set the `bandwidth_in_mbps` field on the resulting object. When `null`, the `bandwidth_in_mbps` field will be omitted from the resulting object.
+  - `express_route_port_id` (`string`): Set the `express_route_port_id` field on the resulting object. When `null`, the `express_route_port_id` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `peering_location` (`string`): Set the `peering_location` field on the resulting object. When `null`, the `peering_location` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `service_provider_name` (`string`): Set the `service_provider_name` field on the resulting object. When `null`, the `service_provider_name` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `sku` (`list[obj]`): Set the `sku` field on the resulting object. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.sku.new](#fn-skunew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_circuit` resource into the root Terraform configuration.
@@ -365,8 +365,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `family` (`string`): 
-  - `tier` (`string`): 
+  - `family` (`string`): Set the `family` field on the resulting object.
+  - `tier` (`string`): Set the `tier` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sku` sub block.
@@ -389,10 +389,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

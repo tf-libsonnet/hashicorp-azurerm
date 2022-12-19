@@ -64,19 +64,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `audit_log_enabled` (`bool`):  When `null`, the `audit_log_enabled` field will be omitted from the resulting object.
-  - `client_token_ids` (`list`):  When `null`, the `client_token_ids` field will be omitted from the resulting object.
-  - `container_registry_id` (`string`): 
-  - `log_level` (`string`):  When `null`, the `log_level` field will be omitted from the resulting object.
-  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `parent_registry_id` (`string`):  When `null`, the `parent_registry_id` field will be omitted from the resulting object.
-  - `sync_message_ttl` (`string`):  When `null`, the `sync_message_ttl` field will be omitted from the resulting object.
-  - `sync_schedule` (`string`):  When `null`, the `sync_schedule` field will be omitted from the resulting object.
-  - `sync_token_id` (`string`): 
-  - `sync_window` (`string`):  When `null`, the `sync_window` field will be omitted from the resulting object.
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-notificationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-timeoutsnew) constructor.
+  - `audit_log_enabled` (`bool`): Set the `audit_log_enabled` field on the resulting resource block. When `null`, the `audit_log_enabled` field will be omitted from the resulting object.
+  - `client_token_ids` (`list`): Set the `client_token_ids` field on the resulting resource block. When `null`, the `client_token_ids` field will be omitted from the resulting object.
+  - `container_registry_id` (`string`): Set the `container_registry_id` field on the resulting resource block.
+  - `log_level` (`string`): Set the `log_level` field on the resulting resource block. When `null`, the `log_level` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting resource block. When `null`, the `mode` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `parent_registry_id` (`string`): Set the `parent_registry_id` field on the resulting resource block. When `null`, the `parent_registry_id` field will be omitted from the resulting object.
+  - `sync_message_ttl` (`string`): Set the `sync_message_ttl` field on the resulting resource block. When `null`, the `sync_message_ttl` field will be omitted from the resulting object.
+  - `sync_schedule` (`string`): Set the `sync_schedule` field on the resulting resource block. When `null`, the `sync_schedule` field will be omitted from the resulting object.
+  - `sync_token_id` (`string`): Set the `sync_token_id` field on the resulting resource block.
+  - `sync_window` (`string`): Set the `sync_window` field on the resulting resource block. When `null`, the `sync_window` field will be omitted from the resulting object.
+  - `notification` (`list[obj]`): Set the `notification` field on the resulting resource block. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-notificationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,19 +100,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `audit_log_enabled` (`bool`):  When `null`, the `audit_log_enabled` field will be omitted from the resulting object.
-  - `client_token_ids` (`list`):  When `null`, the `client_token_ids` field will be omitted from the resulting object.
-  - `container_registry_id` (`string`): 
-  - `log_level` (`string`):  When `null`, the `log_level` field will be omitted from the resulting object.
-  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `parent_registry_id` (`string`):  When `null`, the `parent_registry_id` field will be omitted from the resulting object.
-  - `sync_message_ttl` (`string`):  When `null`, the `sync_message_ttl` field will be omitted from the resulting object.
-  - `sync_schedule` (`string`):  When `null`, the `sync_schedule` field will be omitted from the resulting object.
-  - `sync_token_id` (`string`): 
-  - `sync_window` (`string`):  When `null`, the `sync_window` field will be omitted from the resulting object.
-  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-notificationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-timeoutsnew) constructor.
+  - `audit_log_enabled` (`bool`): Set the `audit_log_enabled` field on the resulting object. When `null`, the `audit_log_enabled` field will be omitted from the resulting object.
+  - `client_token_ids` (`list`): Set the `client_token_ids` field on the resulting object. When `null`, the `client_token_ids` field will be omitted from the resulting object.
+  - `container_registry_id` (`string`): Set the `container_registry_id` field on the resulting object.
+  - `log_level` (`string`): Set the `log_level` field on the resulting object. When `null`, the `log_level` field will be omitted from the resulting object.
+  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `parent_registry_id` (`string`): Set the `parent_registry_id` field on the resulting object. When `null`, the `parent_registry_id` field will be omitted from the resulting object.
+  - `sync_message_ttl` (`string`): Set the `sync_message_ttl` field on the resulting object. When `null`, the `sync_message_ttl` field will be omitted from the resulting object.
+  - `sync_schedule` (`string`): Set the `sync_schedule` field on the resulting object. When `null`, the `sync_schedule` field will be omitted from the resulting object.
+  - `sync_token_id` (`string`): Set the `sync_token_id` field on the resulting object.
+  - `sync_window` (`string`): Set the `sync_window` field on the resulting object. When `null`, the `sync_window` field will be omitted from the resulting object.
+  - `notification` (`list[obj]`): Set the `notification` field on the resulting object. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.notification.new](#fn-notificationnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_connected_registry.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_connected_registry` resource into the root Terraform configuration.
@@ -384,10 +384,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): 
-  - `digest` (`string`):  When `null`, the `digest` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `tag` (`string`):  When `null`, the `tag` field will be omitted from the resulting object.
+  - `action` (`string`): Set the `action` field on the resulting object.
+  - `digest` (`string`): Set the `digest` field on the resulting object. When `null`, the `digest` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `tag` (`string`): Set the `tag` field on the resulting object. When `null`, the `tag` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `notification` sub block.
@@ -410,10 +410,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

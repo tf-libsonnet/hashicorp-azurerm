@@ -71,26 +71,26 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_name` (`string`): 
-  - `authorization_endpoint` (`string`): 
-  - `authorization_methods` (`list`): 
-  - `bearer_token_sending_methods` (`list`):  When `null`, the `bearer_token_sending_methods` field will be omitted from the resulting object.
-  - `client_authentication_method` (`list`):  When `null`, the `client_authentication_method` field will be omitted from the resulting object.
-  - `client_id` (`string`): 
-  - `client_registration_endpoint` (`string`): 
-  - `client_secret` (`string`):  When `null`, the `client_secret` field will be omitted from the resulting object.
-  - `default_scope` (`string`):  When `null`, the `default_scope` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `grant_types` (`list`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `resource_owner_password` (`string`):  When `null`, the `resource_owner_password` field will be omitted from the resulting object.
-  - `resource_owner_username` (`string`):  When `null`, the `resource_owner_username` field will be omitted from the resulting object.
-  - `support_state` (`bool`):  When `null`, the `support_state` field will be omitted from the resulting object.
-  - `token_endpoint` (`string`):  When `null`, the `token_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-timeoutsnew) constructor.
-  - `token_body_parameter` (`list[obj]`):  When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-token_body_parameternew) constructor.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
+  - `authorization_endpoint` (`string`): Set the `authorization_endpoint` field on the resulting resource block.
+  - `authorization_methods` (`list`): Set the `authorization_methods` field on the resulting resource block.
+  - `bearer_token_sending_methods` (`list`): Set the `bearer_token_sending_methods` field on the resulting resource block. When `null`, the `bearer_token_sending_methods` field will be omitted from the resulting object.
+  - `client_authentication_method` (`list`): Set the `client_authentication_method` field on the resulting resource block. When `null`, the `client_authentication_method` field will be omitted from the resulting object.
+  - `client_id` (`string`): Set the `client_id` field on the resulting resource block.
+  - `client_registration_endpoint` (`string`): Set the `client_registration_endpoint` field on the resulting resource block.
+  - `client_secret` (`string`): Set the `client_secret` field on the resulting resource block. When `null`, the `client_secret` field will be omitted from the resulting object.
+  - `default_scope` (`string`): Set the `default_scope` field on the resulting resource block. When `null`, the `default_scope` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `grant_types` (`list`): Set the `grant_types` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `resource_owner_password` (`string`): Set the `resource_owner_password` field on the resulting resource block. When `null`, the `resource_owner_password` field will be omitted from the resulting object.
+  - `resource_owner_username` (`string`): Set the `resource_owner_username` field on the resulting resource block. When `null`, the `resource_owner_username` field will be omitted from the resulting object.
+  - `support_state` (`bool`): Set the `support_state` field on the resulting resource block. When `null`, the `support_state` field will be omitted from the resulting object.
+  - `token_endpoint` (`string`): Set the `token_endpoint` field on the resulting resource block. When `null`, the `token_endpoint` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `token_body_parameter` (`list[obj]`): Set the `token_body_parameter` field on the resulting resource block. When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-token_body_parameternew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -114,26 +114,26 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_name` (`string`): 
-  - `authorization_endpoint` (`string`): 
-  - `authorization_methods` (`list`): 
-  - `bearer_token_sending_methods` (`list`):  When `null`, the `bearer_token_sending_methods` field will be omitted from the resulting object.
-  - `client_authentication_method` (`list`):  When `null`, the `client_authentication_method` field will be omitted from the resulting object.
-  - `client_id` (`string`): 
-  - `client_registration_endpoint` (`string`): 
-  - `client_secret` (`string`):  When `null`, the `client_secret` field will be omitted from the resulting object.
-  - `default_scope` (`string`):  When `null`, the `default_scope` field will be omitted from the resulting object.
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `grant_types` (`list`): 
-  - `name` (`string`): 
-  - `resource_group_name` (`string`): 
-  - `resource_owner_password` (`string`):  When `null`, the `resource_owner_password` field will be omitted from the resulting object.
-  - `resource_owner_username` (`string`):  When `null`, the `resource_owner_username` field will be omitted from the resulting object.
-  - `support_state` (`bool`):  When `null`, the `support_state` field will be omitted from the resulting object.
-  - `token_endpoint` (`string`):  When `null`, the `token_endpoint` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-timeoutsnew) constructor.
-  - `token_body_parameter` (`list[obj]`):  When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-token_body_parameternew) constructor.
+  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
+  - `authorization_endpoint` (`string`): Set the `authorization_endpoint` field on the resulting object.
+  - `authorization_methods` (`list`): Set the `authorization_methods` field on the resulting object.
+  - `bearer_token_sending_methods` (`list`): Set the `bearer_token_sending_methods` field on the resulting object. When `null`, the `bearer_token_sending_methods` field will be omitted from the resulting object.
+  - `client_authentication_method` (`list`): Set the `client_authentication_method` field on the resulting object. When `null`, the `client_authentication_method` field will be omitted from the resulting object.
+  - `client_id` (`string`): Set the `client_id` field on the resulting object.
+  - `client_registration_endpoint` (`string`): Set the `client_registration_endpoint` field on the resulting object.
+  - `client_secret` (`string`): Set the `client_secret` field on the resulting object. When `null`, the `client_secret` field will be omitted from the resulting object.
+  - `default_scope` (`string`): Set the `default_scope` field on the resulting object. When `null`, the `default_scope` field will be omitted from the resulting object.
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `grant_types` (`list`): Set the `grant_types` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `resource_owner_password` (`string`): Set the `resource_owner_password` field on the resulting object. When `null`, the `resource_owner_password` field will be omitted from the resulting object.
+  - `resource_owner_username` (`string`): Set the `resource_owner_username` field on the resulting object. When `null`, the `resource_owner_username` field will be omitted from the resulting object.
+  - `support_state` (`bool`): Set the `support_state` field on the resulting object. When `null`, the `support_state` field will be omitted from the resulting object.
+  - `token_endpoint` (`string`): Set the `token_endpoint` field on the resulting object. When `null`, the `token_endpoint` field will be omitted from the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `token_body_parameter` (`list[obj]`): Set the `token_body_parameter` field on the resulting object. When `null`, the `token_body_parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_authorization_server.token_body_parameter.new](#fn-token_body_parameternew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_authorization_server` resource into the root Terraform configuration.
@@ -517,10 +517,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -543,8 +543,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `value` (`string`): 
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `token_body_parameter` sub block.

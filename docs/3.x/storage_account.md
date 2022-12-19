@@ -146,42 +146,42 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `access_tier` (`string`):  When `null`, the `access_tier` field will be omitted from the resulting object.
-  - `account_kind` (`string`):  When `null`, the `account_kind` field will be omitted from the resulting object.
-  - `account_replication_type` (`string`): 
-  - `account_tier` (`string`): 
-  - `allow_nested_items_to_be_public` (`bool`):  When `null`, the `allow_nested_items_to_be_public` field will be omitted from the resulting object.
-  - `cross_tenant_replication_enabled` (`bool`):  When `null`, the `cross_tenant_replication_enabled` field will be omitted from the resulting object.
-  - `default_to_oauth_authentication` (`bool`):  When `null`, the `default_to_oauth_authentication` field will be omitted from the resulting object.
-  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `enable_https_traffic_only` (`bool`):  When `null`, the `enable_https_traffic_only` field will be omitted from the resulting object.
-  - `infrastructure_encryption_enabled` (`bool`):  When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
-  - `is_hns_enabled` (`bool`):  When `null`, the `is_hns_enabled` field will be omitted from the resulting object.
-  - `large_file_share_enabled` (`bool`):  When `null`, the `large_file_share_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `min_tls_version` (`string`):  When `null`, the `min_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `nfsv3_enabled` (`bool`):  When `null`, the `nfsv3_enabled` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `queue_encryption_key_type` (`string`):  When `null`, the `queue_encryption_key_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sftp_enabled` (`bool`):  When `null`, the `sftp_enabled` field will be omitted from the resulting object.
-  - `shared_access_key_enabled` (`bool`):  When `null`, the `shared_access_key_enabled` field will be omitted from the resulting object.
-  - `table_encryption_key_type` (`string`):  When `null`, the `table_encryption_key_type` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `azure_files_authentication` (`list[obj]`):  When `null`, the `azure_files_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.new](#fn-azure_files_authenticationnew) constructor.
-  - `blob_properties` (`list[obj]`):  When `null`, the `blob_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.new](#fn-blob_propertiesnew) constructor.
-  - `custom_domain` (`list[obj]`):  When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.custom_domain.new](#fn-custom_domainnew) constructor.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.identity.new](#fn-identitynew) constructor.
-  - `immutability_policy` (`list[obj]`):  When `null`, the `immutability_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.immutability_policy.new](#fn-immutability_policynew) constructor.
-  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.new](#fn-network_rulesnew) constructor.
-  - `queue_properties` (`list[obj]`):  When `null`, the `queue_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.new](#fn-queue_propertiesnew) constructor.
-  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.routing.new](#fn-routingnew) constructor.
-  - `sas_policy` (`list[obj]`):  When `null`, the `sas_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.sas_policy.new](#fn-sas_policynew) constructor.
-  - `share_properties` (`list[obj]`):  When `null`, the `share_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.new](#fn-share_propertiesnew) constructor.
-  - `static_website` (`list[obj]`):  When `null`, the `static_website` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.static_website.new](#fn-static_websitenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_tier` (`string`): Set the `access_tier` field on the resulting resource block. When `null`, the `access_tier` field will be omitted from the resulting object.
+  - `account_kind` (`string`): Set the `account_kind` field on the resulting resource block. When `null`, the `account_kind` field will be omitted from the resulting object.
+  - `account_replication_type` (`string`): Set the `account_replication_type` field on the resulting resource block.
+  - `account_tier` (`string`): Set the `account_tier` field on the resulting resource block.
+  - `allow_nested_items_to_be_public` (`bool`): Set the `allow_nested_items_to_be_public` field on the resulting resource block. When `null`, the `allow_nested_items_to_be_public` field will be omitted from the resulting object.
+  - `cross_tenant_replication_enabled` (`bool`): Set the `cross_tenant_replication_enabled` field on the resulting resource block. When `null`, the `cross_tenant_replication_enabled` field will be omitted from the resulting object.
+  - `default_to_oauth_authentication` (`bool`): Set the `default_to_oauth_authentication` field on the resulting resource block. When `null`, the `default_to_oauth_authentication` field will be omitted from the resulting object.
+  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `enable_https_traffic_only` (`bool`): Set the `enable_https_traffic_only` field on the resulting resource block. When `null`, the `enable_https_traffic_only` field will be omitted from the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting resource block. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
+  - `is_hns_enabled` (`bool`): Set the `is_hns_enabled` field on the resulting resource block. When `null`, the `is_hns_enabled` field will be omitted from the resulting object.
+  - `large_file_share_enabled` (`bool`): Set the `large_file_share_enabled` field on the resulting resource block. When `null`, the `large_file_share_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting resource block. When `null`, the `min_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `nfsv3_enabled` (`bool`): Set the `nfsv3_enabled` field on the resulting resource block. When `null`, the `nfsv3_enabled` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `queue_encryption_key_type` (`string`): Set the `queue_encryption_key_type` field on the resulting resource block. When `null`, the `queue_encryption_key_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sftp_enabled` (`bool`): Set the `sftp_enabled` field on the resulting resource block. When `null`, the `sftp_enabled` field will be omitted from the resulting object.
+  - `shared_access_key_enabled` (`bool`): Set the `shared_access_key_enabled` field on the resulting resource block. When `null`, the `shared_access_key_enabled` field will be omitted from the resulting object.
+  - `table_encryption_key_type` (`string`): Set the `table_encryption_key_type` field on the resulting resource block. When `null`, the `table_encryption_key_type` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `azure_files_authentication` (`list[obj]`): Set the `azure_files_authentication` field on the resulting resource block. When `null`, the `azure_files_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.new](#fn-azure_files_authenticationnew) constructor.
+  - `blob_properties` (`list[obj]`): Set the `blob_properties` field on the resulting resource block. When `null`, the `blob_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.new](#fn-blob_propertiesnew) constructor.
+  - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting resource block. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.custom_domain.new](#fn-custom_domainnew) constructor.
+  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting resource block. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.identity.new](#fn-identitynew) constructor.
+  - `immutability_policy` (`list[obj]`): Set the `immutability_policy` field on the resulting resource block. When `null`, the `immutability_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.immutability_policy.new](#fn-immutability_policynew) constructor.
+  - `network_rules` (`list[obj]`): Set the `network_rules` field on the resulting resource block. When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.new](#fn-network_rulesnew) constructor.
+  - `queue_properties` (`list[obj]`): Set the `queue_properties` field on the resulting resource block. When `null`, the `queue_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.new](#fn-queue_propertiesnew) constructor.
+  - `routing` (`list[obj]`): Set the `routing` field on the resulting resource block. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.routing.new](#fn-routingnew) constructor.
+  - `sas_policy` (`list[obj]`): Set the `sas_policy` field on the resulting resource block. When `null`, the `sas_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.sas_policy.new](#fn-sas_policynew) constructor.
+  - `share_properties` (`list[obj]`): Set the `share_properties` field on the resulting resource block. When `null`, the `share_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.new](#fn-share_propertiesnew) constructor.
+  - `static_website` (`list[obj]`): Set the `static_website` field on the resulting resource block. When `null`, the `static_website` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.static_website.new](#fn-static_websitenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -205,42 +205,42 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `access_tier` (`string`):  When `null`, the `access_tier` field will be omitted from the resulting object.
-  - `account_kind` (`string`):  When `null`, the `account_kind` field will be omitted from the resulting object.
-  - `account_replication_type` (`string`): 
-  - `account_tier` (`string`): 
-  - `allow_nested_items_to_be_public` (`bool`):  When `null`, the `allow_nested_items_to_be_public` field will be omitted from the resulting object.
-  - `cross_tenant_replication_enabled` (`bool`):  When `null`, the `cross_tenant_replication_enabled` field will be omitted from the resulting object.
-  - `default_to_oauth_authentication` (`bool`):  When `null`, the `default_to_oauth_authentication` field will be omitted from the resulting object.
-  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `enable_https_traffic_only` (`bool`):  When `null`, the `enable_https_traffic_only` field will be omitted from the resulting object.
-  - `infrastructure_encryption_enabled` (`bool`):  When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
-  - `is_hns_enabled` (`bool`):  When `null`, the `is_hns_enabled` field will be omitted from the resulting object.
-  - `large_file_share_enabled` (`bool`):  When `null`, the `large_file_share_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): 
-  - `min_tls_version` (`string`):  When `null`, the `min_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): 
-  - `nfsv3_enabled` (`bool`):  When `null`, the `nfsv3_enabled` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `queue_encryption_key_type` (`string`):  When `null`, the `queue_encryption_key_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): 
-  - `sftp_enabled` (`bool`):  When `null`, the `sftp_enabled` field will be omitted from the resulting object.
-  - `shared_access_key_enabled` (`bool`):  When `null`, the `shared_access_key_enabled` field will be omitted from the resulting object.
-  - `table_encryption_key_type` (`string`):  When `null`, the `table_encryption_key_type` field will be omitted from the resulting object.
-  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `azure_files_authentication` (`list[obj]`):  When `null`, the `azure_files_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.new](#fn-azure_files_authenticationnew) constructor.
-  - `blob_properties` (`list[obj]`):  When `null`, the `blob_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.new](#fn-blob_propertiesnew) constructor.
-  - `custom_domain` (`list[obj]`):  When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.custom_domain.new](#fn-custom_domainnew) constructor.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.identity.new](#fn-identitynew) constructor.
-  - `immutability_policy` (`list[obj]`):  When `null`, the `immutability_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.immutability_policy.new](#fn-immutability_policynew) constructor.
-  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.new](#fn-network_rulesnew) constructor.
-  - `queue_properties` (`list[obj]`):  When `null`, the `queue_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.new](#fn-queue_propertiesnew) constructor.
-  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.routing.new](#fn-routingnew) constructor.
-  - `sas_policy` (`list[obj]`):  When `null`, the `sas_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.sas_policy.new](#fn-sas_policynew) constructor.
-  - `share_properties` (`list[obj]`):  When `null`, the `share_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.new](#fn-share_propertiesnew) constructor.
-  - `static_website` (`list[obj]`):  When `null`, the `static_website` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.static_website.new](#fn-static_websitenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_tier` (`string`): Set the `access_tier` field on the resulting object. When `null`, the `access_tier` field will be omitted from the resulting object.
+  - `account_kind` (`string`): Set the `account_kind` field on the resulting object. When `null`, the `account_kind` field will be omitted from the resulting object.
+  - `account_replication_type` (`string`): Set the `account_replication_type` field on the resulting object.
+  - `account_tier` (`string`): Set the `account_tier` field on the resulting object.
+  - `allow_nested_items_to_be_public` (`bool`): Set the `allow_nested_items_to_be_public` field on the resulting object. When `null`, the `allow_nested_items_to_be_public` field will be omitted from the resulting object.
+  - `cross_tenant_replication_enabled` (`bool`): Set the `cross_tenant_replication_enabled` field on the resulting object. When `null`, the `cross_tenant_replication_enabled` field will be omitted from the resulting object.
+  - `default_to_oauth_authentication` (`bool`): Set the `default_to_oauth_authentication` field on the resulting object. When `null`, the `default_to_oauth_authentication` field will be omitted from the resulting object.
+  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `enable_https_traffic_only` (`bool`): Set the `enable_https_traffic_only` field on the resulting object. When `null`, the `enable_https_traffic_only` field will be omitted from the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting object. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
+  - `is_hns_enabled` (`bool`): Set the `is_hns_enabled` field on the resulting object. When `null`, the `is_hns_enabled` field will be omitted from the resulting object.
+  - `large_file_share_enabled` (`bool`): Set the `large_file_share_enabled` field on the resulting object. When `null`, the `large_file_share_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting object. When `null`, the `min_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `nfsv3_enabled` (`bool`): Set the `nfsv3_enabled` field on the resulting object. When `null`, the `nfsv3_enabled` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `queue_encryption_key_type` (`string`): Set the `queue_encryption_key_type` field on the resulting object. When `null`, the `queue_encryption_key_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sftp_enabled` (`bool`): Set the `sftp_enabled` field on the resulting object. When `null`, the `sftp_enabled` field will be omitted from the resulting object.
+  - `shared_access_key_enabled` (`bool`): Set the `shared_access_key_enabled` field on the resulting object. When `null`, the `shared_access_key_enabled` field will be omitted from the resulting object.
+  - `table_encryption_key_type` (`string`): Set the `table_encryption_key_type` field on the resulting object. When `null`, the `table_encryption_key_type` field will be omitted from the resulting object.
+  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `azure_files_authentication` (`list[obj]`): Set the `azure_files_authentication` field on the resulting object. When `null`, the `azure_files_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.new](#fn-azure_files_authenticationnew) constructor.
+  - `blob_properties` (`list[obj]`): Set the `blob_properties` field on the resulting object. When `null`, the `blob_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.new](#fn-blob_propertiesnew) constructor.
+  - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.custom_domain.new](#fn-custom_domainnew) constructor.
+  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting object. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.identity.new](#fn-identitynew) constructor.
+  - `immutability_policy` (`list[obj]`): Set the `immutability_policy` field on the resulting object. When `null`, the `immutability_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.immutability_policy.new](#fn-immutability_policynew) constructor.
+  - `network_rules` (`list[obj]`): Set the `network_rules` field on the resulting object. When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.new](#fn-network_rulesnew) constructor.
+  - `queue_properties` (`list[obj]`): Set the `queue_properties` field on the resulting object. When `null`, the `queue_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.new](#fn-queue_propertiesnew) constructor.
+  - `routing` (`list[obj]`): Set the `routing` field on the resulting object. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.routing.new](#fn-routingnew) constructor.
+  - `sas_policy` (`list[obj]`): Set the `sas_policy` field on the resulting object. When `null`, the `sas_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.sas_policy.new](#fn-sas_policynew) constructor.
+  - `share_properties` (`list[obj]`): Set the `share_properties` field on the resulting object. When `null`, the `share_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.new](#fn-share_propertiesnew) constructor.
+  - `static_website` (`list[obj]`): Set the `static_website` field on the resulting object. When `null`, the `static_website` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.static_website.new](#fn-static_websitenew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_account` resource into the root Terraform configuration.
@@ -1111,8 +1111,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `directory_type` (`string`): 
-  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.active_directory.new](#fn-azure_files_authenticationactive_directorynew) constructor.
+  - `directory_type` (`string`): Set the `directory_type` field on the resulting object.
+  - `active_directory` (`list[obj]`): Set the `active_directory` field on the resulting object. When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.active_directory.new](#fn-azure_files_authenticationactive_directorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `azure_files_authentication` sub block.
@@ -1135,12 +1135,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `domain_guid` (`string`): 
-  - `domain_name` (`string`): 
-  - `domain_sid` (`string`): 
-  - `forest_name` (`string`): 
-  - `netbios_domain_name` (`string`): 
-  - `storage_sid` (`string`): 
+  - `domain_guid` (`string`): Set the `domain_guid` field on the resulting object.
+  - `domain_name` (`string`): Set the `domain_name` field on the resulting object.
+  - `domain_sid` (`string`): Set the `domain_sid` field on the resulting object.
+  - `forest_name` (`string`): Set the `forest_name` field on the resulting object.
+  - `netbios_domain_name` (`string`): Set the `netbios_domain_name` field on the resulting object.
+  - `storage_sid` (`string`): Set the `storage_sid` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `active_directory` sub block.
@@ -1163,15 +1163,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `change_feed_enabled` (`bool`):  When `null`, the `change_feed_enabled` field will be omitted from the resulting object.
-  - `change_feed_retention_in_days` (`number`):  When `null`, the `change_feed_retention_in_days` field will be omitted from the resulting object.
-  - `default_service_version` (`string`):  When `null`, the `default_service_version` field will be omitted from the resulting object.
-  - `last_access_time_enabled` (`bool`):  When `null`, the `last_access_time_enabled` field will be omitted from the resulting object.
-  - `versioning_enabled` (`bool`):  When `null`, the `versioning_enabled` field will be omitted from the resulting object.
-  - `container_delete_retention_policy` (`list[obj]`):  When `null`, the `container_delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.container_delete_retention_policy.new](#fn-blob_propertiescontainer_delete_retention_policynew) constructor.
-  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.cors_rule.new](#fn-blob_propertiescors_rulenew) constructor.
-  - `delete_retention_policy` (`list[obj]`):  When `null`, the `delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.delete_retention_policy.new](#fn-blob_propertiesdelete_retention_policynew) constructor.
-  - `restore_policy` (`list[obj]`):  When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.restore_policy.new](#fn-blob_propertiesrestore_policynew) constructor.
+  - `change_feed_enabled` (`bool`): Set the `change_feed_enabled` field on the resulting object. When `null`, the `change_feed_enabled` field will be omitted from the resulting object.
+  - `change_feed_retention_in_days` (`number`): Set the `change_feed_retention_in_days` field on the resulting object. When `null`, the `change_feed_retention_in_days` field will be omitted from the resulting object.
+  - `default_service_version` (`string`): Set the `default_service_version` field on the resulting object. When `null`, the `default_service_version` field will be omitted from the resulting object.
+  - `last_access_time_enabled` (`bool`): Set the `last_access_time_enabled` field on the resulting object. When `null`, the `last_access_time_enabled` field will be omitted from the resulting object.
+  - `versioning_enabled` (`bool`): Set the `versioning_enabled` field on the resulting object. When `null`, the `versioning_enabled` field will be omitted from the resulting object.
+  - `container_delete_retention_policy` (`list[obj]`): Set the `container_delete_retention_policy` field on the resulting object. When `null`, the `container_delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.container_delete_retention_policy.new](#fn-blob_propertiescontainer_delete_retention_policynew) constructor.
+  - `cors_rule` (`list[obj]`): Set the `cors_rule` field on the resulting object. When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.cors_rule.new](#fn-blob_propertiescors_rulenew) constructor.
+  - `delete_retention_policy` (`list[obj]`): Set the `delete_retention_policy` field on the resulting object. When `null`, the `delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.delete_retention_policy.new](#fn-blob_propertiesdelete_retention_policynew) constructor.
+  - `restore_policy` (`list[obj]`): Set the `restore_policy` field on the resulting object. When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.restore_policy.new](#fn-blob_propertiesrestore_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `blob_properties` sub block.
@@ -1194,7 +1194,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`number`):  When `null`, the `days` field will be omitted from the resulting object.
+  - `days` (`number`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `container_delete_retention_policy` sub block.
@@ -1217,11 +1217,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_headers` (`list`): 
-  - `allowed_methods` (`list`): 
-  - `allowed_origins` (`list`): 
-  - `exposed_headers` (`list`): 
-  - `max_age_in_seconds` (`number`): 
+  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.
+  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.
+  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
+  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.
+  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors_rule` sub block.
@@ -1244,7 +1244,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`number`):  When `null`, the `days` field will be omitted from the resulting object.
+  - `days` (`number`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `delete_retention_policy` sub block.
@@ -1267,7 +1267,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`number`): 
+  - `days` (`number`): Set the `days` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `restore_policy` sub block.
@@ -1290,8 +1290,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): 
-  - `use_subdomain` (`bool`):  When `null`, the `use_subdomain` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `use_subdomain` (`bool`): Set the `use_subdomain` field on the resulting object. When `null`, the `use_subdomain` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `custom_domain` sub block.
@@ -1314,8 +1314,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_vault_key_id` (`string`): 
-  - `user_assigned_identity_id` (`string`): 
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `customer_managed_key` sub block.
@@ -1338,8 +1338,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): 
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -1362,9 +1362,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `allow_protected_append_writes` (`bool`): 
-  - `period_since_creation_in_days` (`number`): 
-  - `state` (`string`): 
+  - `allow_protected_append_writes` (`bool`): Set the `allow_protected_append_writes` field on the resulting object.
+  - `period_since_creation_in_days` (`number`): Set the `period_since_creation_in_days` field on the resulting object.
+  - `state` (`string`): Set the `state` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `immutability_policy` sub block.
@@ -1387,11 +1387,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `bypass` (`list`):  When `null`, the `bypass` field will be omitted from the resulting object.
-  - `default_action` (`string`): 
-  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
-  - `virtual_network_subnet_ids` (`list`):  When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
-  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.private_link_access.new](#fn-network_rulesprivate_link_accessnew) constructor.
+  - `bypass` (`list`): Set the `bypass` field on the resulting object. When `null`, the `bypass` field will be omitted from the resulting object.
+  - `default_action` (`string`): Set the `default_action` field on the resulting object.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting object. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `virtual_network_subnet_ids` (`list`): Set the `virtual_network_subnet_ids` field on the resulting object. When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
+  - `private_link_access` (`list[obj]`): Set the `private_link_access` field on the resulting object. When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.private_link_access.new](#fn-network_rulesprivate_link_accessnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rules` sub block.
@@ -1414,8 +1414,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `endpoint_resource_id` (`string`): 
-  - `endpoint_tenant_id` (`string`):  When `null`, the `endpoint_tenant_id` field will be omitted from the resulting object.
+  - `endpoint_resource_id` (`string`): Set the `endpoint_resource_id` field on the resulting object.
+  - `endpoint_tenant_id` (`string`): Set the `endpoint_tenant_id` field on the resulting object. When `null`, the `endpoint_tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `private_link_access` sub block.
@@ -1438,10 +1438,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.cors_rule.new](#fn-queue_propertiescors_rulenew) constructor.
-  - `hour_metrics` (`list[obj]`):  When `null`, the `hour_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.hour_metrics.new](#fn-queue_propertieshour_metricsnew) constructor.
-  - `logging` (`list[obj]`):  When `null`, the `logging` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.logging.new](#fn-queue_propertiesloggingnew) constructor.
-  - `minute_metrics` (`list[obj]`):  When `null`, the `minute_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.minute_metrics.new](#fn-queue_propertiesminute_metricsnew) constructor.
+  - `cors_rule` (`list[obj]`): Set the `cors_rule` field on the resulting object. When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.cors_rule.new](#fn-queue_propertiescors_rulenew) constructor.
+  - `hour_metrics` (`list[obj]`): Set the `hour_metrics` field on the resulting object. When `null`, the `hour_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.hour_metrics.new](#fn-queue_propertieshour_metricsnew) constructor.
+  - `logging` (`list[obj]`): Set the `logging` field on the resulting object. When `null`, the `logging` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.logging.new](#fn-queue_propertiesloggingnew) constructor.
+  - `minute_metrics` (`list[obj]`): Set the `minute_metrics` field on the resulting object. When `null`, the `minute_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.minute_metrics.new](#fn-queue_propertiesminute_metricsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `queue_properties` sub block.
@@ -1464,11 +1464,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_headers` (`list`): 
-  - `allowed_methods` (`list`): 
-  - `allowed_origins` (`list`): 
-  - `exposed_headers` (`list`): 
-  - `max_age_in_seconds` (`number`): 
+  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.
+  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.
+  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
+  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.
+  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors_rule` sub block.
@@ -1491,10 +1491,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): 
-  - `include_apis` (`bool`):  When `null`, the `include_apis` field will be omitted from the resulting object.
-  - `retention_policy_days` (`number`):  When `null`, the `retention_policy_days` field will be omitted from the resulting object.
-  - `version` (`string`): 
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `include_apis` (`bool`): Set the `include_apis` field on the resulting object. When `null`, the `include_apis` field will be omitted from the resulting object.
+  - `retention_policy_days` (`number`): Set the `retention_policy_days` field on the resulting object. When `null`, the `retention_policy_days` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `hour_metrics` sub block.
@@ -1517,11 +1517,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `delete` (`bool`): 
-  - `read` (`bool`): 
-  - `retention_policy_days` (`number`):  When `null`, the `retention_policy_days` field will be omitted from the resulting object.
-  - `version` (`string`): 
-  - `write` (`bool`): 
+  - `delete` (`bool`): Set the `delete` field on the resulting object.
+  - `read` (`bool`): Set the `read` field on the resulting object.
+  - `retention_policy_days` (`number`): Set the `retention_policy_days` field on the resulting object. When `null`, the `retention_policy_days` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
+  - `write` (`bool`): Set the `write` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `logging` sub block.
@@ -1544,10 +1544,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): 
-  - `include_apis` (`bool`):  When `null`, the `include_apis` field will be omitted from the resulting object.
-  - `retention_policy_days` (`number`):  When `null`, the `retention_policy_days` field will be omitted from the resulting object.
-  - `version` (`string`): 
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `include_apis` (`bool`): Set the `include_apis` field on the resulting object. When `null`, the `include_apis` field will be omitted from the resulting object.
+  - `retention_policy_days` (`number`): Set the `retention_policy_days` field on the resulting object. When `null`, the `retention_policy_days` field will be omitted from the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `minute_metrics` sub block.
@@ -1570,9 +1570,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `choice` (`string`):  When `null`, the `choice` field will be omitted from the resulting object.
-  - `publish_internet_endpoints` (`bool`):  When `null`, the `publish_internet_endpoints` field will be omitted from the resulting object.
-  - `publish_microsoft_endpoints` (`bool`):  When `null`, the `publish_microsoft_endpoints` field will be omitted from the resulting object.
+  - `choice` (`string`): Set the `choice` field on the resulting object. When `null`, the `choice` field will be omitted from the resulting object.
+  - `publish_internet_endpoints` (`bool`): Set the `publish_internet_endpoints` field on the resulting object. When `null`, the `publish_internet_endpoints` field will be omitted from the resulting object.
+  - `publish_microsoft_endpoints` (`bool`): Set the `publish_microsoft_endpoints` field on the resulting object. When `null`, the `publish_microsoft_endpoints` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `routing` sub block.
@@ -1595,8 +1595,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `expiration_action` (`string`):  When `null`, the `expiration_action` field will be omitted from the resulting object.
-  - `expiration_period` (`string`): 
+  - `expiration_action` (`string`): Set the `expiration_action` field on the resulting object. When `null`, the `expiration_action` field will be omitted from the resulting object.
+  - `expiration_period` (`string`): Set the `expiration_period` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sas_policy` sub block.
@@ -1619,9 +1619,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.cors_rule.new](#fn-share_propertiescors_rulenew) constructor.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.retention_policy.new](#fn-share_propertiesretention_policynew) constructor.
-  - `smb` (`list[obj]`):  When `null`, the `smb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.smb.new](#fn-share_propertiessmbnew) constructor.
+  - `cors_rule` (`list[obj]`): Set the `cors_rule` field on the resulting object. When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.cors_rule.new](#fn-share_propertiescors_rulenew) constructor.
+  - `retention_policy` (`list[obj]`): Set the `retention_policy` field on the resulting object. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.retention_policy.new](#fn-share_propertiesretention_policynew) constructor.
+  - `smb` (`list[obj]`): Set the `smb` field on the resulting object. When `null`, the `smb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.smb.new](#fn-share_propertiessmbnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `share_properties` sub block.
@@ -1644,11 +1644,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_headers` (`list`): 
-  - `allowed_methods` (`list`): 
-  - `allowed_origins` (`list`): 
-  - `exposed_headers` (`list`): 
-  - `max_age_in_seconds` (`number`): 
+  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.
+  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.
+  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
+  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.
+  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors_rule` sub block.
@@ -1671,7 +1671,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `days` (`number`):  When `null`, the `days` field will be omitted from the resulting object.
+  - `days` (`number`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_policy` sub block.
@@ -1694,11 +1694,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `authentication_types` (`list`):  When `null`, the `authentication_types` field will be omitted from the resulting object.
-  - `channel_encryption_type` (`list`):  When `null`, the `channel_encryption_type` field will be omitted from the resulting object.
-  - `kerberos_ticket_encryption_type` (`list`):  When `null`, the `kerberos_ticket_encryption_type` field will be omitted from the resulting object.
-  - `multichannel_enabled` (`bool`):  When `null`, the `multichannel_enabled` field will be omitted from the resulting object.
-  - `versions` (`list`):  When `null`, the `versions` field will be omitted from the resulting object.
+  - `authentication_types` (`list`): Set the `authentication_types` field on the resulting object. When `null`, the `authentication_types` field will be omitted from the resulting object.
+  - `channel_encryption_type` (`list`): Set the `channel_encryption_type` field on the resulting object. When `null`, the `channel_encryption_type` field will be omitted from the resulting object.
+  - `kerberos_ticket_encryption_type` (`list`): Set the `kerberos_ticket_encryption_type` field on the resulting object. When `null`, the `kerberos_ticket_encryption_type` field will be omitted from the resulting object.
+  - `multichannel_enabled` (`bool`): Set the `multichannel_enabled` field on the resulting object. When `null`, the `multichannel_enabled` field will be omitted from the resulting object.
+  - `versions` (`list`): Set the `versions` field on the resulting object. When `null`, the `versions` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `smb` sub block.
@@ -1721,8 +1721,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `error_404_document` (`string`):  When `null`, the `error_404_document` field will be omitted from the resulting object.
-  - `index_document` (`string`):  When `null`, the `index_document` field will be omitted from the resulting object.
+  - `error_404_document` (`string`): Set the `error_404_document` field on the resulting object. When `null`, the `error_404_document` field will be omitted from the resulting object.
+  - `index_document` (`string`): Set the `index_document` field on the resulting object. When `null`, the `index_document` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `static_website` sub block.
@@ -1745,10 +1745,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
