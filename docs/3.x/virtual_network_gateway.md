@@ -559,7 +559,7 @@ Terraform sub block.
 **Args**:
   - `asn` (`number`):  When `null`, the `asn` field will be omitted from the resulting object.
   - `peer_weight` (`number`):  When `null`, the `peer_weight` field will be omitted from the resulting object.
-  - `peering_addresses` (`list[obj]`):  When `null`, the `peering_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.peering_addresses.new](#fn-peering_addressesnew) constructor.
+  - `peering_addresses` (`list[obj]`):  When `null`, the `peering_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.peering_addresses.new](#fn-virtual_network_gatewaypeering_addressesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bgp_settings` sub block.
@@ -689,8 +689,8 @@ Terraform sub block.
   - `radius_server_secret` (`string`):  When `null`, the `radius_server_secret` field will be omitted from the resulting object.
   - `vpn_auth_types` (`list`):  When `null`, the `vpn_auth_types` field will be omitted from the resulting object.
   - `vpn_client_protocols` (`list`):  When `null`, the `vpn_client_protocols` field will be omitted from the resulting object.
-  - `revoked_certificate` (`list[obj]`):  When `null`, the `revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.revoked_certificate.new](#fn-revoked_certificatenew) constructor.
-  - `root_certificate` (`list[obj]`):  When `null`, the `root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.root_certificate.new](#fn-root_certificatenew) constructor.
+  - `revoked_certificate` (`list[obj]`):  When `null`, the `revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.revoked_certificate.new](#fn-virtual_network_gatewayrevoked_certificatenew) constructor.
+  - `root_certificate` (`list[obj]`):  When `null`, the `root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.root_certificate.new](#fn-virtual_network_gatewayroot_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vpn_client_configuration` sub block.

@@ -331,7 +331,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.condition.new](#fn-conditionnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.condition.new](#fn-media_asset_filterconditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `track_selection` sub block.

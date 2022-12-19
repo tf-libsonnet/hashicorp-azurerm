@@ -1667,9 +1667,9 @@ Terraform sub block.
   - `vnet_subnet_id` (`string`):  When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
   - `workload_runtime` (`string`):  When `null`, the `workload_runtime` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `kubelet_config` (`list[obj]`):  When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
-  - `linux_os_config` (`list[obj]`):  When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
-  - `upgrade_settings` (`list[obj]`):  When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
+  - `kubelet_config` (`list[obj]`):  When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.kubelet_config.new](#fn-kubernetes_clusterkubelet_confignew) constructor.
+  - `linux_os_config` (`list[obj]`):  When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.new](#fn-kubernetes_clusterlinux_os_confignew) constructor.
+  - `upgrade_settings` (`list[obj]`):  When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.upgrade_settings.new](#fn-kubernetes_clusterupgrade_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_node_pool` sub block.
@@ -1727,7 +1727,7 @@ Terraform sub block.
   - `swap_file_size_mb` (`number`):  When `null`, the `swap_file_size_mb` field will be omitted from the resulting object.
   - `transparent_huge_page_defrag` (`string`):  When `null`, the `transparent_huge_page_defrag` field will be omitted from the resulting object.
   - `transparent_huge_page_enabled` (`string`):  When `null`, the `transparent_huge_page_enabled` field will be omitted from the resulting object.
-  - `sysctl_config` (`list[obj]`):  When `null`, the `sysctl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.sysctl_config.new](#fn-default_node_poolsysctl_confignew) constructor.
+  - `sysctl_config` (`list[obj]`):  When `null`, the `sysctl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.sysctl_config.new](#fn-kubernetes_clusterdefault_node_poolsysctl_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_os_config` sub block.
@@ -1950,7 +1950,7 @@ Terraform sub block.
 
 **Args**:
   - `admin_username` (`string`): 
-  - `ssh_key` (`list[obj]`):  When `null`, the `ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.ssh_key.new](#fn-ssh_keynew) constructor.
+  - `ssh_key` (`list[obj]`):  When `null`, the `ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.ssh_key.new](#fn-kubernetes_clusterssh_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_profile` sub block.
@@ -1996,8 +1996,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed` (`list[obj]`):  When `null`, the `allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.allowed.new](#fn-allowednew) constructor.
-  - `not_allowed` (`list[obj]`):  When `null`, the `not_allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.not_allowed.new](#fn-not_allowednew) constructor.
+  - `allowed` (`list[obj]`):  When `null`, the `allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.allowed.new](#fn-kubernetes_clusterallowednew) constructor.
+  - `not_allowed` (`list[obj]`):  When `null`, the `not_allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.not_allowed.new](#fn-kubernetes_clusternot_allowednew) constructor.
 
 **Returns**:
   - An attribute object that represents the `maintenance_window` sub block.
@@ -2129,8 +2129,8 @@ Terraform sub block.
   - `pod_cidrs` (`list`):  When `null`, the `pod_cidrs` field will be omitted from the resulting object.
   - `service_cidr` (`string`):  When `null`, the `service_cidr` field will be omitted from the resulting object.
   - `service_cidrs` (`list`):  When `null`, the `service_cidrs` field will be omitted from the resulting object.
-  - `load_balancer_profile` (`list[obj]`):  When `null`, the `load_balancer_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.load_balancer_profile.new](#fn-load_balancer_profilenew) constructor.
-  - `nat_gateway_profile` (`list[obj]`):  When `null`, the `nat_gateway_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.nat_gateway_profile.new](#fn-nat_gateway_profilenew) constructor.
+  - `load_balancer_profile` (`list[obj]`):  When `null`, the `load_balancer_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.load_balancer_profile.new](#fn-kubernetes_clusterload_balancer_profilenew) constructor.
+  - `nat_gateway_profile` (`list[obj]`):  When `null`, the `nat_gateway_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.nat_gateway_profile.new](#fn-kubernetes_clusternat_gateway_profilenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_profile` sub block.
@@ -2331,7 +2331,7 @@ Terraform sub block.
   - `admin_password` (`string`):  When `null`, the `admin_password` field will be omitted from the resulting object.
   - `admin_username` (`string`): 
   - `license` (`string`):  When `null`, the `license` field will be omitted from the resulting object.
-  - `gmsa` (`list[obj]`):  When `null`, the `gmsa` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.gmsa.new](#fn-gmsanew) constructor.
+  - `gmsa` (`list[obj]`):  When `null`, the `gmsa` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.gmsa.new](#fn-kubernetes_clustergmsanew) constructor.
 
 **Returns**:
   - An attribute object that represents the `windows_profile` sub block.

@@ -1340,7 +1340,7 @@ Terraform sub block.
   - `security_encryption_type` (`string`):  When `null`, the `security_encryption_type` field will be omitted from the resulting object.
   - `storage_account_type` (`string`): 
   - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
-  - `diff_disk_settings` (`list[obj]`):  When `null`, the `diff_disk_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine.os_disk.diff_disk_settings.new](#fn-diff_disk_settingsnew) constructor.
+  - `diff_disk_settings` (`list[obj]`):  When `null`, the `diff_disk_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine.os_disk.diff_disk_settings.new](#fn-linux_virtual_machinediff_disk_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_disk` sub block.
@@ -1413,7 +1413,7 @@ Terraform sub block.
 
 **Args**:
   - `key_vault_id` (`string`): 
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine.secret.certificate.new](#fn-certificatenew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine.secret.certificate.new](#fn-linux_virtual_machinecertificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret` sub block.

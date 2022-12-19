@@ -313,8 +313,8 @@ Terraform sub block.
 
 **Args**:
   - `generate_workflow_file` (`bool`): Should the service generate the GitHub Action Workflow file. Defaults to `true` When `null`, the `generate_workflow_file` field will be omitted from the resulting object.
-  - `code_configuration` (`list[obj]`):  When `null`, the `code_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.code_configuration.new](#fn-code_configurationnew) constructor.
-  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.container_configuration.new](#fn-container_configurationnew) constructor.
+  - `code_configuration` (`list[obj]`):  When `null`, the `code_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.code_configuration.new](#fn-app_service_source_controlcode_configurationnew) constructor.
+  - `container_configuration` (`list[obj]`):  When `null`, the `container_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_source_control.github_action_configuration.container_configuration.new](#fn-app_service_source_controlcontainer_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `github_action_configuration` sub block.

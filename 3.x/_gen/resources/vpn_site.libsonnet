@@ -13,7 +13,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         peering_address: peering_address,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.vpn_site.link.new` constructs a new object with attributes and blocks configured for the `link`\nTerraform sub block.\n\n\n\n**Args**:\n  - `fqdn` (`string`):  When `null`, the `fqdn` field will be omitted from the resulting object.\n  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.\n  - `name` (`string`): \n  - `provider_name` (`string`):  When `null`, the `provider_name` field will be omitted from the resulting object.\n  - `speed_in_mbps` (`number`):  When `null`, the `speed_in_mbps` field will be omitted from the resulting object.\n  - `bgp` (`list[obj]`):  When `null`, the `bgp` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.bgp.new](#fn-bgpnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `link` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.vpn_site.link.new` constructs a new object with attributes and blocks configured for the `link`\nTerraform sub block.\n\n\n\n**Args**:\n  - `fqdn` (`string`):  When `null`, the `fqdn` field will be omitted from the resulting object.\n  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.\n  - `name` (`string`): \n  - `provider_name` (`string`):  When `null`, the `provider_name` field will be omitted from the resulting object.\n  - `speed_in_mbps` (`number`):  When `null`, the `speed_in_mbps` field will be omitted from the resulting object.\n  - `bgp` (`list[obj]`):  When `null`, the `bgp` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.bgp.new](#fn-vpn_sitebgpnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `link` sub block.\n', args=[]),
     new(
       name,
       bgp=null,
@@ -90,7 +90,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     virtual_wan_id: virtual_wan_id,
   }),
   o365_policy:: {
-    '#new':: d.fn(help='\n`azurerm.vpn_site.o365_policy.new` constructs a new object with attributes and blocks configured for the `o365_policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-traffic_categorynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `o365_policy` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.vpn_site.o365_policy.new` constructs a new object with attributes and blocks configured for the `o365_policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-vpn_sitetraffic_categorynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `o365_policy` sub block.\n', args=[]),
     new(
       traffic_category=null
     ):: std.prune(a={

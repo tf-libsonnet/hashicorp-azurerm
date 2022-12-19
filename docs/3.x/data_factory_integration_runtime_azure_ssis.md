@@ -666,8 +666,8 @@ Terraform sub block.
 **Args**:
   - `environment` (`obj`):  When `null`, the `environment` field will be omitted from the resulting object.
   - `powershell_version` (`string`):  When `null`, the `powershell_version` field will be omitted from the resulting object.
-  - `command_key` (`list[obj]`):  When `null`, the `command_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.new](#fn-command_keynew) constructor.
-  - `component` (`list[obj]`):  When `null`, the `component` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.new](#fn-componentnew) constructor.
+  - `command_key` (`list[obj]`):  When `null`, the `command_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.new](#fn-data_factory_integration_runtime_azure_ssiscommand_keynew) constructor.
+  - `component` (`list[obj]`):  When `null`, the `component` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.new](#fn-data_factory_integration_runtime_azure_ssiscomponentnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `express_custom_setup` sub block.
@@ -693,7 +693,7 @@ Terraform sub block.
   - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
   - `target_name` (`string`): 
   - `user_name` (`string`): 
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.key_vault_password.new](#fn-express_custom_setupkey_vault_passwordnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.key_vault_password.new](#fn-data_factory_integration_runtime_azure_ssisexpress_custom_setupkey_vault_passwordnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `command_key` sub block.
@@ -744,7 +744,7 @@ Terraform sub block.
 **Args**:
   - `license` (`string`):  When `null`, the `license` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `key_vault_license` (`list[obj]`):  When `null`, the `key_vault_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.key_vault_license.new](#fn-express_custom_setupkey_vault_licensenew) constructor.
+  - `key_vault_license` (`list[obj]`):  When `null`, the `key_vault_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.key_vault_license.new](#fn-data_factory_integration_runtime_azure_ssisexpress_custom_setupkey_vault_licensenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `component` sub block.

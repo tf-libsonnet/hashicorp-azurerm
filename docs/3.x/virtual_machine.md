@@ -958,7 +958,7 @@ Terraform sub block.
 
 **Args**:
   - `disable_password_authentication` (`bool`): 
-  - `ssh_keys` (`list[obj]`):  When `null`, the `ssh_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.ssh_keys.new](#fn-ssh_keysnew) constructor.
+  - `ssh_keys` (`list[obj]`):  When `null`, the `ssh_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.ssh_keys.new](#fn-virtual_machinessh_keysnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_linux_config` sub block.
@@ -1006,7 +1006,7 @@ Terraform sub block.
 
 **Args**:
   - `source_vault_id` (`string`): 
-  - `vault_certificates` (`list[obj]`):  When `null`, the `vault_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.vault_certificates.new](#fn-vault_certificatesnew) constructor.
+  - `vault_certificates` (`list[obj]`):  When `null`, the `vault_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.vault_certificates.new](#fn-virtual_machinevault_certificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_secrets` sub block.
@@ -1056,8 +1056,8 @@ Terraform sub block.
   - `enable_automatic_upgrades` (`bool`):  When `null`, the `enable_automatic_upgrades` field will be omitted from the resulting object.
   - `provision_vm_agent` (`bool`):  When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
   - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
-  - `additional_unattend_config` (`list[obj]`):  When `null`, the `additional_unattend_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.additional_unattend_config.new](#fn-additional_unattend_confignew) constructor.
-  - `winrm` (`list[obj]`):  When `null`, the `winrm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.winrm.new](#fn-winrmnew) constructor.
+  - `additional_unattend_config` (`list[obj]`):  When `null`, the `additional_unattend_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.additional_unattend_config.new](#fn-virtual_machineadditional_unattend_confignew) constructor.
+  - `winrm` (`list[obj]`):  When `null`, the `winrm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.winrm.new](#fn-virtual_machinewinrmnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_windows_config` sub block.

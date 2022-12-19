@@ -603,7 +603,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_rule` (`list[obj]`):  When `null`, the `access_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.access_rule.new](#fn-access_rulenew) constructor.
+  - `access_rule` (`list[obj]`):  When `null`, the `access_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.default_access_policy.access_rule.new](#fn-hpc_cacheaccess_rulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_access_policy` sub block.
@@ -714,7 +714,7 @@ Terraform sub block.
   - `download_certificate_automatically` (`bool`):  When `null`, the `download_certificate_automatically` field will be omitted from the resulting object.
   - `encrypted` (`bool`):  When `null`, the `encrypted` field will be omitted from the resulting object.
   - `server` (`string`): 
-  - `bind` (`list[obj]`):  When `null`, the `bind` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.bind.new](#fn-bindnew) constructor.
+  - `bind` (`list[obj]`):  When `null`, the `bind` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache.directory_ldap.bind.new](#fn-hpc_cachebindnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `directory_ldap` sub block.

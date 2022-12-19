@@ -677,7 +677,7 @@ Terraform sub block.
 
 **Args**:
   - `entity_type` (`string`): 
-  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.field_mapping.new](#fn-field_mappingnew) constructor.
+  - `field_mapping` (`list[obj]`):  When `null`, the `field_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.field_mapping.new](#fn-sentinel_alert_rule_scheduledfield_mappingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `entity_mapping` sub block.
@@ -748,7 +748,7 @@ Terraform sub block.
 
 **Args**:
   - `create_incident` (`bool`): 
-  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.grouping.new](#fn-groupingnew) constructor.
+  - `grouping` (`list[obj]`):  When `null`, the `grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.grouping.new](#fn-sentinel_alert_rule_scheduledgroupingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `incident_configuration` sub block.

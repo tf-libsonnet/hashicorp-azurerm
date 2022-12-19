@@ -551,7 +551,7 @@ Terraform sub block.
   - `access_token` (`string`):  When `null`, the `access_token` field will be omitted from the resulting object.
   - `key_frame_interval_duration` (`string`):  When `null`, the `key_frame_interval_duration` field will be omitted from the resulting object.
   - `streaming_protocol` (`string`):  When `null`, the `streaming_protocol` field will be omitted from the resulting object.
-  - `ip_access_control_allow` (`list[obj]`):  When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.ip_access_control_allow.new](#fn-ip_access_control_allownew) constructor.
+  - `ip_access_control_allow` (`list[obj]`):  When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.ip_access_control_allow.new](#fn-media_live_eventip_access_control_allownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `input` sub block.
@@ -602,7 +602,7 @@ Terraform sub block.
   - `alternative_media_id` (`string`):  When `null`, the `alternative_media_id` field will be omitted from the resulting object.
   - `preview_locator` (`string`):  When `null`, the `preview_locator` field will be omitted from the resulting object.
   - `streaming_policy_name` (`string`):  When `null`, the `streaming_policy_name` field will be omitted from the resulting object.
-  - `ip_access_control_allow` (`list[obj]`):  When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.ip_access_control_allow.new](#fn-ip_access_control_allownew) constructor.
+  - `ip_access_control_allow` (`list[obj]`):  When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.ip_access_control_allow.new](#fn-media_live_eventip_access_control_allownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `preview` sub block.

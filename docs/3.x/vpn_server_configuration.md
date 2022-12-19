@@ -570,9 +570,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.client_root_certificate.new](#fn-client_root_certificatenew) constructor.
-  - `server` (`list[obj]`):  When `null`, the `server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server.new](#fn-servernew) constructor.
-  - `server_root_certificate` (`list[obj]`):  When `null`, the `server_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server_root_certificate.new](#fn-server_root_certificatenew) constructor.
+  - `client_root_certificate` (`list[obj]`):  When `null`, the `client_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.client_root_certificate.new](#fn-vpn_server_configurationclient_root_certificatenew) constructor.
+  - `server` (`list[obj]`):  When `null`, the `server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server.new](#fn-vpn_server_configurationservernew) constructor.
+  - `server_root_certificate` (`list[obj]`):  When `null`, the `server_root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_server_configuration.radius.server_root_certificate.new](#fn-vpn_server_configurationserver_root_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `radius` sub block.

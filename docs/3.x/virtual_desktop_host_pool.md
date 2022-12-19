@@ -446,7 +446,7 @@ Terraform sub block.
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
   - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
   - `use_session_host_timezone` (`bool`):  When `null`, the `use_session_host_timezone` field will be omitted from the resulting object.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.schedule.new](#fn-schedulenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_host_pool.scheduled_agent_updates.schedule.new](#fn-virtual_desktop_host_poolschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `scheduled_agent_updates` sub block.

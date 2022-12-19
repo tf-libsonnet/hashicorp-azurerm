@@ -261,10 +261,10 @@ Terraform sub block.
 **Args**:
   - `on_error_action` (`string`):  When `null`, the `on_error_action` field will be omitted from the resulting object.
   - `relative_priority` (`string`):  When `null`, the `relative_priority` field will be omitted from the resulting object.
-  - `audio_analyzer_preset` (`list[obj]`):  When `null`, the `audio_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.audio_analyzer_preset.new](#fn-audio_analyzer_presetnew) constructor.
-  - `builtin_preset` (`list[obj]`):  When `null`, the `builtin_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.builtin_preset.new](#fn-builtin_presetnew) constructor.
-  - `face_detector_preset` (`list[obj]`):  When `null`, the `face_detector_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.face_detector_preset.new](#fn-face_detector_presetnew) constructor.
-  - `video_analyzer_preset` (`list[obj]`):  When `null`, the `video_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.video_analyzer_preset.new](#fn-video_analyzer_presetnew) constructor.
+  - `audio_analyzer_preset` (`list[obj]`):  When `null`, the `audio_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.audio_analyzer_preset.new](#fn-media_transformaudio_analyzer_presetnew) constructor.
+  - `builtin_preset` (`list[obj]`):  When `null`, the `builtin_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.builtin_preset.new](#fn-media_transformbuiltin_presetnew) constructor.
+  - `face_detector_preset` (`list[obj]`):  When `null`, the `face_detector_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.face_detector_preset.new](#fn-media_transformface_detector_presetnew) constructor.
+  - `video_analyzer_preset` (`list[obj]`):  When `null`, the `video_analyzer_preset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.video_analyzer_preset.new](#fn-media_transformvideo_analyzer_presetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `output` sub block.

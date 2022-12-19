@@ -414,7 +414,7 @@ Terraform sub block.
   - `primary_peer_address_prefix` (`string`): 
   - `route_filter_id` (`string`):  When `null`, the `route_filter_id` field will be omitted from the resulting object.
   - `secondary_peer_address_prefix` (`string`): 
-  - `microsoft_peering` (`list[obj]`):  When `null`, the `microsoft_peering` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new](#fn-microsoft_peeringnew) constructor.
+  - `microsoft_peering` (`list[obj]`):  When `null`, the `microsoft_peering` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new](#fn-express_route_circuit_peeringmicrosoft_peeringnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ipv6` sub block.

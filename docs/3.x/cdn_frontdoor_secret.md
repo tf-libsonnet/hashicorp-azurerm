@@ -215,7 +215,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `customer_certificate` (`list[obj]`):  When `null`, the `customer_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.customer_certificate.new](#fn-customer_certificatenew) constructor.
+  - `customer_certificate` (`list[obj]`):  When `null`, the `customer_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_secret.secret.customer_certificate.new](#fn-cdn_frontdoor_secretcustomer_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret` sub block.

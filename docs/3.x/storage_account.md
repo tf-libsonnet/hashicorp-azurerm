@@ -1112,7 +1112,7 @@ Terraform sub block.
 
 **Args**:
   - `directory_type` (`string`): 
-  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.active_directory.new](#fn-active_directorynew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.azure_files_authentication.active_directory.new](#fn-storage_accountactive_directorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `azure_files_authentication` sub block.
@@ -1168,10 +1168,10 @@ Terraform sub block.
   - `default_service_version` (`string`):  When `null`, the `default_service_version` field will be omitted from the resulting object.
   - `last_access_time_enabled` (`bool`):  When `null`, the `last_access_time_enabled` field will be omitted from the resulting object.
   - `versioning_enabled` (`bool`):  When `null`, the `versioning_enabled` field will be omitted from the resulting object.
-  - `container_delete_retention_policy` (`list[obj]`):  When `null`, the `container_delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.container_delete_retention_policy.new](#fn-container_delete_retention_policynew) constructor.
-  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.cors_rule.new](#fn-cors_rulenew) constructor.
-  - `delete_retention_policy` (`list[obj]`):  When `null`, the `delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.delete_retention_policy.new](#fn-delete_retention_policynew) constructor.
-  - `restore_policy` (`list[obj]`):  When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.restore_policy.new](#fn-restore_policynew) constructor.
+  - `container_delete_retention_policy` (`list[obj]`):  When `null`, the `container_delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.container_delete_retention_policy.new](#fn-storage_accountcontainer_delete_retention_policynew) constructor.
+  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.cors_rule.new](#fn-storage_accountcors_rulenew) constructor.
+  - `delete_retention_policy` (`list[obj]`):  When `null`, the `delete_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.delete_retention_policy.new](#fn-storage_accountdelete_retention_policynew) constructor.
+  - `restore_policy` (`list[obj]`):  When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.blob_properties.restore_policy.new](#fn-storage_accountrestore_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `blob_properties` sub block.
@@ -1391,7 +1391,7 @@ Terraform sub block.
   - `default_action` (`string`): 
   - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
   - `virtual_network_subnet_ids` (`list`):  When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
-  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
+  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.network_rules.private_link_access.new](#fn-storage_accountprivate_link_accessnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rules` sub block.
@@ -1438,10 +1438,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.cors_rule.new](#fn-cors_rulenew) constructor.
-  - `hour_metrics` (`list[obj]`):  When `null`, the `hour_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.hour_metrics.new](#fn-hour_metricsnew) constructor.
-  - `logging` (`list[obj]`):  When `null`, the `logging` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.logging.new](#fn-loggingnew) constructor.
-  - `minute_metrics` (`list[obj]`):  When `null`, the `minute_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.minute_metrics.new](#fn-minute_metricsnew) constructor.
+  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.cors_rule.new](#fn-storage_accountcors_rulenew) constructor.
+  - `hour_metrics` (`list[obj]`):  When `null`, the `hour_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.hour_metrics.new](#fn-storage_accounthour_metricsnew) constructor.
+  - `logging` (`list[obj]`):  When `null`, the `logging` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.logging.new](#fn-storage_accountloggingnew) constructor.
+  - `minute_metrics` (`list[obj]`):  When `null`, the `minute_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.queue_properties.minute_metrics.new](#fn-storage_accountminute_metricsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `queue_properties` sub block.
@@ -1619,9 +1619,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.cors_rule.new](#fn-cors_rulenew) constructor.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.retention_policy.new](#fn-retention_policynew) constructor.
-  - `smb` (`list[obj]`):  When `null`, the `smb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.smb.new](#fn-smbnew) constructor.
+  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.cors_rule.new](#fn-storage_accountcors_rulenew) constructor.
+  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.retention_policy.new](#fn-storage_accountretention_policynew) constructor.
+  - `smb` (`list[obj]`):  When `null`, the `smb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account.share_properties.smb.new](#fn-storage_accountsmbnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `share_properties` sub block.

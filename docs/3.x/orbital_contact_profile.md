@@ -353,7 +353,7 @@ Terraform sub block.
   - `direction` (`string`): 
   - `name` (`string`): 
   - `polarization` (`string`): 
-  - `channels` (`list[obj]`):  When `null`, the `channels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.new](#fn-channelsnew) constructor.
+  - `channels` (`list[obj]`):  When `null`, the `channels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.new](#fn-orbital_contact_profilechannelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `links` sub block.
@@ -381,7 +381,7 @@ Terraform sub block.
   - `demodulation_configuration` (`string`):  When `null`, the `demodulation_configuration` field will be omitted from the resulting object.
   - `modulation_configuration` (`string`):  When `null`, the `modulation_configuration` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `end_point` (`list[obj]`):  When `null`, the `end_point` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.end_point.new](#fn-linksend_pointnew) constructor.
+  - `end_point` (`list[obj]`):  When `null`, the `end_point` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orbital_contact_profile.links.channels.end_point.new](#fn-orbital_contact_profilelinksend_pointnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `channels` sub block.

@@ -456,8 +456,8 @@ Terraform sub block.
 **Args**:
   - `edit_mode_enabled` (`bool`):  When `null`, the `edit_mode_enabled` field will be omitted from the resulting object.
   - `output_types` (`list`):  When `null`, the `output_types` field will be omitted from the resulting object.
-  - `content_link` (`list[obj]`):  When `null`, the `content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.new](#fn-content_linknew) constructor.
-  - `parameters` (`list[obj]`):  When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.parameters.new](#fn-parametersnew) constructor.
+  - `content_link` (`list[obj]`):  When `null`, the `content_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.new](#fn-automation_runbookcontent_linknew) constructor.
+  - `parameters` (`list[obj]`):  When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.parameters.new](#fn-automation_runbookparametersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `draft` sub block.
@@ -482,7 +482,7 @@ Terraform sub block.
 **Args**:
   - `uri` (`string`): 
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.hash.new](#fn-drafthashnew) constructor.
+  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.draft.content_link.hash.new](#fn-automation_runbookdrafthashnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `content_link` sub block.
@@ -558,7 +558,7 @@ Terraform sub block.
 **Args**:
   - `uri` (`string`): 
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.hash.new](#fn-hashnew) constructor.
+  - `hash` (`list[obj]`):  When `null`, the `hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_runbook.publish_content_link.hash.new](#fn-automation_runbookhashnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `publish_content_link` sub block.

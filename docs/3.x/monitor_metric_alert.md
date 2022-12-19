@@ -591,7 +591,7 @@ Terraform sub block.
   - `operator` (`string`): 
   - `skip_metric_validation` (`bool`):  When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
   - `threshold` (`number`): 
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.dimension.new](#fn-dimensionnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.dimension.new](#fn-monitor_metric_alertdimensionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `criteria` sub block.
@@ -648,7 +648,7 @@ Terraform sub block.
   - `metric_namespace` (`string`): 
   - `operator` (`string`): 
   - `skip_metric_validation` (`bool`):  When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.dimension.new](#fn-dimensionnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.dimension.new](#fn-monitor_metric_alertdimensionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dynamic_criteria` sub block.

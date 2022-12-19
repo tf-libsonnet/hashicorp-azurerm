@@ -255,7 +255,7 @@ Terraform sub block.
 **Args**:
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `sub_type` (`list[obj]`):  When `null`, the `sub_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.sub_type.new](#fn-sub_typenew) constructor.
+  - `sub_type` (`list[obj]`):  When `null`, the `sub_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.sub_type.new](#fn-sentinel_alert_rule_fusionsub_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.

@@ -1161,7 +1161,7 @@ Terraform sub block.
 **Args**:
   - `restore_timestamp_in_utc` (`string`): 
   - `source_cosmosdb_account_id` (`string`): 
-  - `database` (`list[obj]`):  When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-databasenew) constructor.
+  - `database` (`list[obj]`):  When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-cosmosdb_accountdatabasenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `restore` sub block.

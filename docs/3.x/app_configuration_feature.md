@@ -393,7 +393,7 @@ Terraform sub block.
 **Args**:
   - `default_rollout_percentage` (`number`): 
   - `users` (`list`):  When `null`, the `users` field will be omitted from the resulting object.
-  - `groups` (`list[obj]`):  When `null`, the `groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration_feature.targeting_filter.groups.new](#fn-groupsnew) constructor.
+  - `groups` (`list[obj]`):  When `null`, the `groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration_feature.targeting_filter.groups.new](#fn-app_configuration_featuregroupsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `targeting_filter` sub block.

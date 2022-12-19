@@ -575,8 +575,8 @@ Terraform sub block.
   - `resource_id_column` (`string`):  When `null`, the `resource_id_column` field will be omitted from the resulting object.
   - `threshold` (`number`): 
   - `time_aggregation_method` (`string`): 
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert_v2.criteria.dimension.new](#fn-dimensionnew) constructor.
-  - `failing_periods` (`list[obj]`):  When `null`, the `failing_periods` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert_v2.criteria.failing_periods.new](#fn-failing_periodsnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert_v2.criteria.dimension.new](#fn-monitor_scheduled_query_rules_alert_v2dimensionnew) constructor.
+  - `failing_periods` (`list[obj]`):  When `null`, the `failing_periods` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_alert_v2.criteria.failing_periods.new](#fn-monitor_scheduled_query_rules_alert_v2failing_periodsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `criteria` sub block.

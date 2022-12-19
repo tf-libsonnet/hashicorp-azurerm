@@ -215,7 +215,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_policy` (`list[obj]`):  When `null`, the `access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.access_policy.new](#fn-access_policynew) constructor.
+  - `access_policy` (`list[obj]`):  When `null`, the `access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.access_policy.new](#fn-storage_tableaccess_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `acl` sub block.

@@ -62,7 +62,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         weeks_of_month: weeks_of_month,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.data_protection_backup_policy_postgresql.retention_rule.new` constructs a new object with attributes and blocks configured for the `retention_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `duration` (`string`): \n  - `name` (`string`): \n  - `priority` (`number`): \n  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.criteria.new](#fn-criterianew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `retention_rule` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.data_protection_backup_policy_postgresql.retention_rule.new` constructs a new object with attributes and blocks configured for the `retention_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `duration` (`string`): \n  - `name` (`string`): \n  - `priority` (`number`): \n  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_postgresql.retention_rule.criteria.new](#fn-data_protection_backup_policy_postgresqlcriterianew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `retention_rule` sub block.\n', args=[]),
     new(
       duration,
       name,

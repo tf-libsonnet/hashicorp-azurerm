@@ -256,7 +256,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         tenant_id: tenant_id,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.monitor_action_group.webhook_receiver.new` constructs a new object with attributes and blocks configured for the `webhook_receiver`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): \n  - `service_uri` (`string`): \n  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.\n  - `aad_auth` (`list[obj]`):  When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-aad_authnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `webhook_receiver` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.monitor_action_group.webhook_receiver.new` constructs a new object with attributes and blocks configured for the `webhook_receiver`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): \n  - `service_uri` (`string`): \n  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.\n  - `aad_auth` (`list[obj]`):  When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-monitor_action_groupaad_authnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `webhook_receiver` sub block.\n', args=[]),
     new(
       name,
       service_uri,

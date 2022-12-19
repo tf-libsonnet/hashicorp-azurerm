@@ -256,8 +256,8 @@ Terraform sub block.
 
 **Args**:
   - `associated_route_table_id` (`string`):  When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.propagated_route_table.new](#fn-propagated_route_tablenew) constructor.
-  - `static_vnet_route` (`list[obj]`):  When `null`, the `static_vnet_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.static_vnet_route.new](#fn-static_vnet_routenew) constructor.
+  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.propagated_route_table.new](#fn-virtual_hub_connectionpropagated_route_tablenew) constructor.
+  - `static_vnet_route` (`list[obj]`):  When `null`, the `static_vnet_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.static_vnet_route.new](#fn-virtual_hub_connectionstatic_vnet_routenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing` sub block.

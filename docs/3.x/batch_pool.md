@@ -1277,10 +1277,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_blob_file_system` (`list[obj]`):  When `null`, the `azure_blob_file_system` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_blob_file_system.new](#fn-azure_blob_file_systemnew) constructor.
-  - `azure_file_share` (`list[obj]`):  When `null`, the `azure_file_share` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_file_share.new](#fn-azure_file_sharenew) constructor.
-  - `cifs_mount` (`list[obj]`):  When `null`, the `cifs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.cifs_mount.new](#fn-cifs_mountnew) constructor.
-  - `nfs_mount` (`list[obj]`):  When `null`, the `nfs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.nfs_mount.new](#fn-nfs_mountnew) constructor.
+  - `azure_blob_file_system` (`list[obj]`):  When `null`, the `azure_blob_file_system` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_blob_file_system.new](#fn-batch_poolazure_blob_file_systemnew) constructor.
+  - `azure_file_share` (`list[obj]`):  When `null`, the `azure_file_share` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.azure_file_share.new](#fn-batch_poolazure_file_sharenew) constructor.
+  - `cifs_mount` (`list[obj]`):  When `null`, the `cifs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.cifs_mount.new](#fn-batch_poolcifs_mountnew) constructor.
+  - `nfs_mount` (`list[obj]`):  When `null`, the `nfs_mount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.mount.nfs_mount.new](#fn-batch_poolnfs_mountnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `mount` sub block.
@@ -1415,7 +1415,7 @@ Terraform sub block.
   - `public_address_provisioning_type` (`string`):  When `null`, the `public_address_provisioning_type` field will be omitted from the resulting object.
   - `public_ips` (`list`):  When `null`, the `public_ips` field will be omitted from the resulting object.
   - `subnet_id` (`string`): 
-  - `endpoint_configuration` (`list[obj]`):  When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-endpoint_configurationnew) constructor.
+  - `endpoint_configuration` (`list[obj]`):  When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-batch_poolendpoint_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_configuration` sub block.
@@ -1442,7 +1442,7 @@ Terraform sub block.
   - `frontend_port_range` (`string`): 
   - `name` (`string`): 
   - `protocol` (`string`): 
-  - `network_security_group_rules` (`list[obj]`):  When `null`, the `network_security_group_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.network_security_group_rules.new](#fn-network_configurationnetwork_security_group_rulesnew) constructor.
+  - `network_security_group_rules` (`list[obj]`):  When `null`, the `network_security_group_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.network_security_group_rules.new](#fn-batch_poolnetwork_configurationnetwork_security_group_rulesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `endpoint_configuration` sub block.
@@ -1518,9 +1518,9 @@ Terraform sub block.
   - `common_environment_properties` (`obj`):  When `null`, the `common_environment_properties` field will be omitted from the resulting object.
   - `task_retry_maximum` (`number`):  When `null`, the `task_retry_maximum` field will be omitted from the resulting object.
   - `wait_for_success` (`bool`):  When `null`, the `wait_for_success` field will be omitted from the resulting object.
-  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.container.new](#fn-containernew) constructor.
-  - `resource_file` (`list[obj]`):  When `null`, the `resource_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.resource_file.new](#fn-resource_filenew) constructor.
-  - `user_identity` (`list[obj]`):  When `null`, the `user_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.new](#fn-user_identitynew) constructor.
+  - `container` (`list[obj]`):  When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.container.new](#fn-batch_poolcontainernew) constructor.
+  - `resource_file` (`list[obj]`):  When `null`, the `resource_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.resource_file.new](#fn-batch_poolresource_filenew) constructor.
+  - `user_identity` (`list[obj]`):  When `null`, the `user_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.new](#fn-batch_pooluser_identitynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `start_task` sub block.
@@ -1546,7 +1546,7 @@ Terraform sub block.
   - `image_name` (`string`): 
   - `run_options` (`string`):  When `null`, the `run_options` field will be omitted from the resulting object.
   - `working_directory` (`string`):  When `null`, the `working_directory` field will be omitted from the resulting object.
-  - `registry` (`list[obj]`):  When `null`, the `registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.container.registry.new](#fn-start_taskregistrynew) constructor.
+  - `registry` (`list[obj]`):  When `null`, the `registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.container.registry.new](#fn-batch_poolstart_taskregistrynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `container` sub block.
@@ -1625,7 +1625,7 @@ Terraform sub block.
 
 **Args**:
   - `user_name` (`string`):  When `null`, the `user_name` field will be omitted from the resulting object.
-  - `auto_user` (`list[obj]`):  When `null`, the `auto_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.auto_user.new](#fn-start_taskauto_usernew) constructor.
+  - `auto_user` (`list[obj]`):  When `null`, the `auto_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.start_task.user_identity.auto_user.new](#fn-batch_poolstart_taskauto_usernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `user_identity` sub block.
@@ -1750,8 +1750,8 @@ Terraform sub block.
   - `elevation_level` (`string`): 
   - `name` (`string`): 
   - `password` (`string`): 
-  - `linux_user_configuration` (`list[obj]`):  When `null`, the `linux_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.linux_user_configuration.new](#fn-linux_user_configurationnew) constructor.
-  - `windows_user_configuration` (`list[obj]`):  When `null`, the `windows_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.windows_user_configuration.new](#fn-windows_user_configurationnew) constructor.
+  - `linux_user_configuration` (`list[obj]`):  When `null`, the `linux_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.linux_user_configuration.new](#fn-batch_poollinux_user_configurationnew) constructor.
+  - `windows_user_configuration` (`list[obj]`):  When `null`, the `windows_user_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.user_accounts.windows_user_configuration.new](#fn-batch_poolwindows_user_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `user_accounts` sub block.

@@ -469,8 +469,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `akamai_signature_header_authentication_key` (`list[obj]`):  When `null`, the `akamai_signature_header_authentication_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.akamai_signature_header_authentication_key.new](#fn-akamai_signature_header_authentication_keynew) constructor.
-  - `ip_allow` (`list[obj]`):  When `null`, the `ip_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.ip_allow.new](#fn-ip_allownew) constructor.
+  - `akamai_signature_header_authentication_key` (`list[obj]`):  When `null`, the `akamai_signature_header_authentication_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.akamai_signature_header_authentication_key.new](#fn-media_streaming_endpointakamai_signature_header_authentication_keynew) constructor.
+  - `ip_allow` (`list[obj]`):  When `null`, the `ip_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_endpoint.access_control.ip_allow.new](#fn-media_streaming_endpointip_allownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `access_control` sub block.

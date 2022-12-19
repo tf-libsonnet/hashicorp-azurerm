@@ -379,7 +379,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `provider_name` (`string`):  When `null`, the `provider_name` field will be omitted from the resulting object.
   - `speed_in_mbps` (`number`):  When `null`, the `speed_in_mbps` field will be omitted from the resulting object.
-  - `bgp` (`list[obj]`):  When `null`, the `bgp` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.bgp.new](#fn-bgpnew) constructor.
+  - `bgp` (`list[obj]`):  When `null`, the `bgp` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.bgp.new](#fn-vpn_sitebgpnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `link` sub block.
@@ -426,7 +426,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-traffic_categorynew) constructor.
+  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-vpn_sitetraffic_categorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `o365_policy` sub block.

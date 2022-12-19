@@ -23,7 +23,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   network_acls:: {
-    '#new':: d.fn(help='\n`azurerm.cognitive_account.network_acls.new` constructs a new object with attributes and blocks configured for the `network_acls`\nTerraform sub block.\n\n\n\n**Args**:\n  - `default_action` (`string`): \n  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.\n  - `virtual_network_rules` (`list[obj]`):  When `null`, the `virtual_network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.virtual_network_rules.new](#fn-virtual_network_rulesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `network_acls` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cognitive_account.network_acls.new` constructs a new object with attributes and blocks configured for the `network_acls`\nTerraform sub block.\n\n\n\n**Args**:\n  - `default_action` (`string`): \n  - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.\n  - `virtual_network_rules` (`list[obj]`):  When `null`, the `virtual_network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_account.network_acls.virtual_network_rules.new](#fn-cognitive_accountvirtual_network_rulesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `network_acls` sub block.\n', args=[]),
     new(
       default_action,
       ip_rules=null,

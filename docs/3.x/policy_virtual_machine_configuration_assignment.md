@@ -238,7 +238,7 @@ Terraform sub block.
   - `content_hash` (`string`):  When `null`, the `content_hash` field will be omitted from the resulting object.
   - `content_uri` (`string`):  When `null`, the `content_uri` field will be omitted from the resulting object.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
-  - `parameter` (`list[obj]`):  When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.parameter.new](#fn-parameternew) constructor.
+  - `parameter` (`list[obj]`):  When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.parameter.new](#fn-policy_virtual_machine_configuration_assignmentparameternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `configuration` sub block.

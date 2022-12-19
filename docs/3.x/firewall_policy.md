@@ -708,7 +708,7 @@ Terraform sub block.
   - `default_log_analytics_workspace_id` (`string`): 
   - `enabled` (`bool`): 
   - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `log_analytics_workspace` (`list[obj]`):  When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.log_analytics_workspace.new](#fn-log_analytics_workspacenew) constructor.
+  - `log_analytics_workspace` (`list[obj]`):  When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.log_analytics_workspace.new](#fn-firewall_policylog_analytics_workspacenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `insights` sub block.
@@ -756,8 +756,8 @@ Terraform sub block.
 **Args**:
   - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
   - `private_ranges` (`list`):  When `null`, the `private_ranges` field will be omitted from the resulting object.
-  - `signature_overrides` (`list[obj]`):  When `null`, the `signature_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.signature_overrides.new](#fn-signature_overridesnew) constructor.
-  - `traffic_bypass` (`list[obj]`):  When `null`, the `traffic_bypass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.traffic_bypass.new](#fn-traffic_bypassnew) constructor.
+  - `signature_overrides` (`list[obj]`):  When `null`, the `signature_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.signature_overrides.new](#fn-firewall_policysignature_overridesnew) constructor.
+  - `traffic_bypass` (`list[obj]`):  When `null`, the `traffic_bypass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.traffic_bypass.new](#fn-firewall_policytraffic_bypassnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `intrusion_detection` sub block.

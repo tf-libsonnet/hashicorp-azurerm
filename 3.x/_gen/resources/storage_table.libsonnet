@@ -15,7 +15,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         start: start,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.storage_table.acl.new` constructs a new object with attributes and blocks configured for the `acl`\nTerraform sub block.\n\n\n\n**Args**:\n  - `access_policy` (`list[obj]`):  When `null`, the `access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.access_policy.new](#fn-access_policynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `acl` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.storage_table.acl.new` constructs a new object with attributes and blocks configured for the `acl`\nTerraform sub block.\n\n\n\n**Args**:\n  - `access_policy` (`list[obj]`):  When `null`, the `access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_table.acl.access_policy.new](#fn-storage_tableaccess_policynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `acl` sub block.\n', args=[]),
     new(
       access_policy=null
     ):: std.prune(a={

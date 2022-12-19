@@ -219,7 +219,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `firewall` (`list[obj]`):  When `null`, the `firewall` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new](#fn-firewallnew) constructor.
+  - `firewall` (`list[obj]`):  When `null`, the `firewall` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new](#fn-cdn_frontdoor_security_policyfirewallnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `security_policies` sub block.
@@ -243,7 +243,7 @@ Terraform sub block.
 
 **Args**:
   - `cdn_frontdoor_firewall_policy_id` (`string`): 
-  - `association` (`list[obj]`):  When `null`, the `association` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new](#fn-security_policiesassociationnew) constructor.
+  - `association` (`list[obj]`):  When `null`, the `association` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new](#fn-cdn_frontdoor_security_policysecurity_policiesassociationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `firewall` sub block.
@@ -267,7 +267,7 @@ Terraform sub block.
 
 **Args**:
   - `patterns_to_match` (`list`): 
-  - `domain` (`list[obj]`):  When `null`, the `domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.domain.new](#fn-security_policiesfirewalldomainnew) constructor.
+  - `domain` (`list[obj]`):  When `null`, the `domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.domain.new](#fn-cdn_frontdoor_security_policysecurity_policiesfirewalldomainnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `association` sub block.

@@ -254,7 +254,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): 
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_profile.container_network_interface.ip_configuration.new](#fn-network_profileip_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `container_network_interface` sub block.

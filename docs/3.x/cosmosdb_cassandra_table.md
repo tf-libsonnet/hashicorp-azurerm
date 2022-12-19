@@ -342,9 +342,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `cluster_key` (`list[obj]`):  When `null`, the `cluster_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.cluster_key.new](#fn-cluster_keynew) constructor.
-  - `column` (`list[obj]`):  When `null`, the `column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.column.new](#fn-columnnew) constructor.
-  - `partition_key` (`list[obj]`):  When `null`, the `partition_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.partition_key.new](#fn-partition_keynew) constructor.
+  - `cluster_key` (`list[obj]`):  When `null`, the `cluster_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.cluster_key.new](#fn-cosmosdb_cassandra_tablecluster_keynew) constructor.
+  - `column` (`list[obj]`):  When `null`, the `column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.column.new](#fn-cosmosdb_cassandra_tablecolumnnew) constructor.
+  - `partition_key` (`list[obj]`):  When `null`, the `partition_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_cassandra_table.schema.partition_key.new](#fn-cosmosdb_cassandra_tablepartition_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schema` sub block.

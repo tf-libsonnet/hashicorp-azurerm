@@ -330,7 +330,7 @@ Terraform sub block.
 
 **Args**:
   - `metric_name` (`string`): 
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_log.criteria.dimension.new](#fn-dimensionnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_scheduled_query_rules_log.criteria.dimension.new](#fn-monitor_scheduled_query_rules_logdimensionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `criteria` sub block.

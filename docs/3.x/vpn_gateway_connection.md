@@ -346,7 +346,7 @@ Terraform sub block.
   - `associated_route_table` (`string`): 
   - `inbound_route_map_id` (`string`):  When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
   - `outbound_route_map_id` (`string`):  When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.propagated_route_table.new](#fn-propagated_route_tablenew) constructor.
+  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.propagated_route_table.new](#fn-vpn_gateway_connectionpropagated_route_tablenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing` sub block.
@@ -456,8 +456,8 @@ Terraform sub block.
   - `route_weight` (`number`):  When `null`, the `route_weight` field will be omitted from the resulting object.
   - `shared_key` (`string`):  When `null`, the `shared_key` field will be omitted from the resulting object.
   - `vpn_site_link_id` (`string`): 
-  - `custom_bgp_address` (`list[obj]`):  When `null`, the `custom_bgp_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.custom_bgp_address.new](#fn-custom_bgp_addressnew) constructor.
-  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.ipsec_policy.new](#fn-ipsec_policynew) constructor.
+  - `custom_bgp_address` (`list[obj]`):  When `null`, the `custom_bgp_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.custom_bgp_address.new](#fn-vpn_gateway_connectioncustom_bgp_addressnew) constructor.
+  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.ipsec_policy.new](#fn-vpn_gateway_connectionipsec_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vpn_link` sub block.

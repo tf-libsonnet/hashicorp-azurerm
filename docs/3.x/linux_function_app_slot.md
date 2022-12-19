@@ -782,12 +782,12 @@ Terraform sub block.
   - `token_refresh_extension_hours` (`number`): The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours. When `null`, the `token_refresh_extension_hours` field will be omitted from the resulting object.
   - `token_store_enabled` (`bool`): Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. When `null`, the `token_store_enabled` field will be omitted from the resulting object.
   - `unauthenticated_client_action` (`string`): The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`. When `null`, the `unauthenticated_client_action` field will be omitted from the resulting object.
-  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.active_directory.new](#fn-active_directorynew) constructor.
-  - `facebook` (`list[obj]`):  When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.facebook.new](#fn-facebooknew) constructor.
-  - `github` (`list[obj]`):  When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.github.new](#fn-githubnew) constructor.
-  - `google` (`list[obj]`):  When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.google.new](#fn-googlenew) constructor.
-  - `microsoft` (`list[obj]`):  When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.microsoft.new](#fn-microsoftnew) constructor.
-  - `twitter` (`list[obj]`):  When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.twitter.new](#fn-twitternew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.active_directory.new](#fn-linux_function_app_slotactive_directorynew) constructor.
+  - `facebook` (`list[obj]`):  When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.facebook.new](#fn-linux_function_app_slotfacebooknew) constructor.
+  - `github` (`list[obj]`):  When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.github.new](#fn-linux_function_app_slotgithubnew) constructor.
+  - `google` (`list[obj]`):  When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.google.new](#fn-linux_function_app_slotgooglenew) constructor.
+  - `microsoft` (`list[obj]`):  When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.microsoft.new](#fn-linux_function_app_slotmicrosoftnew) constructor.
+  - `twitter` (`list[obj]`):  When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.twitter.new](#fn-linux_function_app_slottwitternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `auth_settings` sub block.
@@ -968,7 +968,7 @@ Terraform sub block.
   - `enabled` (`bool`): Should this backup job be enabled? When `null`, the `enabled` field will be omitted from the resulting object.
   - `name` (`string`): The name which should be used for this Backup.
   - `storage_account_url` (`string`): The SAS URL to the container.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.schedule.new](#fn-schedulenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.schedule.new](#fn-linux_function_app_slotschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
@@ -1098,9 +1098,9 @@ Terraform sub block.
   - `vnet_route_all_enabled` (`bool`): Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. When `null`, the `vnet_route_all_enabled` field will be omitted from the resulting object.
   - `websockets_enabled` (`bool`): Should Web Sockets be enabled. Defaults to `false`. When `null`, the `websockets_enabled` field will be omitted from the resulting object.
   - `worker_count` (`number`): The number of Workers for this Linux Function App. When `null`, the `worker_count` field will be omitted from the resulting object.
-  - `app_service_logs` (`list[obj]`):  When `null`, the `app_service_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.app_service_logs.new](#fn-app_service_logsnew) constructor.
-  - `application_stack` (`list[obj]`):  When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.new](#fn-application_stacknew) constructor.
-  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.cors.new](#fn-corsnew) constructor.
+  - `app_service_logs` (`list[obj]`):  When `null`, the `app_service_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.app_service_logs.new](#fn-linux_function_app_slotapp_service_logsnew) constructor.
+  - `application_stack` (`list[obj]`):  When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.new](#fn-linux_function_app_slotapplication_stacknew) constructor.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.cors.new](#fn-linux_function_app_slotcorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `site_config` sub block.
@@ -1154,7 +1154,7 @@ Terraform sub block.
   - `python_version` (`string`): The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`. When `null`, the `python_version` field will be omitted from the resulting object.
   - `use_custom_runtime` (`bool`):  When `null`, the `use_custom_runtime` field will be omitted from the resulting object.
   - `use_dotnet_isolated_runtime` (`bool`): Should the DotNet process use an isolated runtime. Defaults to `false`. When `null`, the `use_dotnet_isolated_runtime` field will be omitted from the resulting object.
-  - `docker` (`list[obj]`): A docker block When `null`, the `docker` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.docker.new](#fn-site_configdockernew) constructor.
+  - `docker` (`list[obj]`): A docker block When `null`, the `docker` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.docker.new](#fn-linux_function_app_slotsite_configdockernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `application_stack` sub block.

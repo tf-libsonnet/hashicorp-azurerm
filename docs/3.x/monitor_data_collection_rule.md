@@ -411,10 +411,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.extension.new](#fn-extensionnew) constructor.
-  - `performance_counter` (`list[obj]`):  When `null`, the `performance_counter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.performance_counter.new](#fn-performance_counternew) constructor.
-  - `syslog` (`list[obj]`):  When `null`, the `syslog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.syslog.new](#fn-syslognew) constructor.
-  - `windows_event_log` (`list[obj]`):  When `null`, the `windows_event_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.windows_event_log.new](#fn-windows_event_lognew) constructor.
+  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.extension.new](#fn-monitor_data_collection_ruleextensionnew) constructor.
+  - `performance_counter` (`list[obj]`):  When `null`, the `performance_counter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.performance_counter.new](#fn-monitor_data_collection_ruleperformance_counternew) constructor.
+  - `syslog` (`list[obj]`):  When `null`, the `syslog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.syslog.new](#fn-monitor_data_collection_rulesyslognew) constructor.
+  - `windows_event_log` (`list[obj]`):  When `null`, the `windows_event_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.windows_event_log.new](#fn-monitor_data_collection_rulewindows_event_lognew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_sources` sub block.
@@ -541,8 +541,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_monitor_metrics` (`list[obj]`):  When `null`, the `azure_monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.azure_monitor_metrics.new](#fn-azure_monitor_metricsnew) constructor.
-  - `log_analytics` (`list[obj]`):  When `null`, the `log_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.log_analytics.new](#fn-log_analyticsnew) constructor.
+  - `azure_monitor_metrics` (`list[obj]`):  When `null`, the `azure_monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.azure_monitor_metrics.new](#fn-monitor_data_collection_ruleazure_monitor_metricsnew) constructor.
+  - `log_analytics` (`list[obj]`):  When `null`, the `log_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.log_analytics.new](#fn-monitor_data_collection_rulelog_analyticsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `destinations` sub block.

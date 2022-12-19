@@ -237,7 +237,7 @@ Terraform sub block.
   - `system_events` (`list`):  When `null`, the `system_events` field will be omitted from the resulting object.
   - `url_template` (`string`): 
   - `user_event_pattern` (`string`):  When `null`, the `user_event_pattern` field will be omitted from the resulting object.
-  - `auth` (`list[obj]`):  When `null`, the `auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.auth.new](#fn-authnew) constructor.
+  - `auth` (`list[obj]`):  When `null`, the `auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.auth.new](#fn-web_pubsub_hubauthnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `event_handler` sub block.

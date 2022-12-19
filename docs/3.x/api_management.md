@@ -885,7 +885,7 @@ Terraform sub block.
   - `location` (`string`): 
   - `public_ip_address_id` (`string`):  When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.virtual_network_configuration.new](#fn-api_managementvirtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `additional_location` sub block.
@@ -956,11 +956,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.developer_portal.new](#fn-developer_portalnew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.management.new](#fn-managementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.portal.new](#fn-portalnew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.proxy.new](#fn-proxynew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.scm.new](#fn-scmnew) constructor.
+  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.developer_portal.new](#fn-api_managementdeveloper_portalnew) constructor.
+  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.management.new](#fn-api_managementmanagementnew) constructor.
+  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.portal.new](#fn-api_managementportalnew) constructor.
+  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.proxy.new](#fn-api_managementproxynew) constructor.
+  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.scm.new](#fn-api_managementscmnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `hostname_configuration` sub block.
@@ -1234,7 +1234,7 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): 
-  - `terms_of_service` (`list[obj]`):  When `null`, the `terms_of_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.terms_of_service.new](#fn-terms_of_servicenew) constructor.
+  - `terms_of_service` (`list[obj]`):  When `null`, the `terms_of_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.terms_of_service.new](#fn-api_managementterms_of_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `sign_up` sub block.

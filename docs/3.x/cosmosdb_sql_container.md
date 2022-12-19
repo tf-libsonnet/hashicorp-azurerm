@@ -534,10 +534,10 @@ Terraform sub block.
 
 **Args**:
   - `indexing_mode` (`string`):  When `null`, the `indexing_mode` field will be omitted from the resulting object.
-  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.new](#fn-composite_indexnew) constructor.
-  - `excluded_path` (`list[obj]`):  When `null`, the `excluded_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.excluded_path.new](#fn-excluded_pathnew) constructor.
-  - `included_path` (`list[obj]`):  When `null`, the `included_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.included_path.new](#fn-included_pathnew) constructor.
-  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.spatial_index.new](#fn-spatial_indexnew) constructor.
+  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.new](#fn-cosmosdb_sql_containercomposite_indexnew) constructor.
+  - `excluded_path` (`list[obj]`):  When `null`, the `excluded_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.excluded_path.new](#fn-cosmosdb_sql_containerexcluded_pathnew) constructor.
+  - `included_path` (`list[obj]`):  When `null`, the `included_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.included_path.new](#fn-cosmosdb_sql_containerincluded_pathnew) constructor.
+  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.spatial_index.new](#fn-cosmosdb_sql_containerspatial_indexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `indexing_policy` sub block.
@@ -560,7 +560,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.index.new](#fn-indexing_policyindexnew) constructor.
+  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_sql_container.indexing_policy.composite_index.index.new](#fn-cosmosdb_sql_containerindexing_policyindexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `composite_index` sub block.

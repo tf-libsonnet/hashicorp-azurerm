@@ -476,7 +476,7 @@ Terraform sub block.
   - `days_of_week` (`list`):  When `null`, the `days_of_week` field will be omitted from the resulting object.
   - `hours` (`list`):  When `null`, the `hours` field will be omitted from the resulting object.
   - `minutes` (`list`):  When `null`, the `minutes` field will be omitted from the resulting object.
-  - `monthly` (`list[obj]`):  When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.monthly.new](#fn-monthlynew) constructor.
+  - `monthly` (`list[obj]`):  When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.monthly.new](#fn-data_factory_trigger_schedulemonthlynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.

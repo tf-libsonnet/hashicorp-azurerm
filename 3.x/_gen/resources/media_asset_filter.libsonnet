@@ -86,7 +86,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         value: value,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.media_asset_filter.track_selection.new` constructs a new object with attributes and blocks configured for the `track_selection`\nTerraform sub block.\n\n\n\n**Args**:\n  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.condition.new](#fn-conditionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `track_selection` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.media_asset_filter.track_selection.new` constructs a new object with attributes and blocks configured for the `track_selection`\nTerraform sub block.\n\n\n\n**Args**:\n  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.condition.new](#fn-media_asset_filterconditionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `track_selection` sub block.\n', args=[]),
     new(
       condition=null
     ):: std.prune(a={
