@@ -81,11 +81,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `linked_service_name` (`string`): 
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.azure_blob_storage_location.new](#fn-datafactorydatasetbinaryazureblobstoragelocationnew) constructor.
-  - `compression` (`list[obj]`):  When `null`, the `compression` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.compression.new](#fn-datafactorydatasetbinarycompressionnew) constructor.
-  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.http_server_location.new](#fn-datafactorydatasetbinaryhttpserverlocationnew) constructor.
-  - `sftp_server_location` (`list[obj]`):  When `null`, the `sftp_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.sftp_server_location.new](#fn-datafactorydatasetbinarysftpserverlocationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.timeouts.new](#fn-datafactorydatasetbinarytimeoutsnew) constructor.
+  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
+  - `compression` (`list[obj]`):  When `null`, the `compression` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.compression.new](#fn-compressionnew) constructor.
+  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.http_server_location.new](#fn-http_server_locationnew) constructor.
+  - `sftp_server_location` (`list[obj]`):  When `null`, the `sftp_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.sftp_server_location.new](#fn-sftp_server_locationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `azurerm.data_factory_dataset_binary.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_dataset_binary`
 Terraform resource.
 
-Unlike [azurerm.data_factory_dataset_binary.new](#fn-datafactorydatasetbinarynew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_dataset_binary.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -117,11 +117,11 @@ injecting into a complete block.
   - `linked_service_name` (`string`): 
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.azure_blob_storage_location.new](#fn-datafactorydatasetbinaryazureblobstoragelocationnew) constructor.
-  - `compression` (`list[obj]`):  When `null`, the `compression` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.compression.new](#fn-datafactorydatasetbinarycompressionnew) constructor.
-  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.http_server_location.new](#fn-datafactorydatasetbinaryhttpserverlocationnew) constructor.
-  - `sftp_server_location` (`list[obj]`):  When `null`, the `sftp_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.sftp_server_location.new](#fn-datafactorydatasetbinarysftpserverlocationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.timeouts.new](#fn-datafactorydatasetbinarytimeoutsnew) constructor.
+  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
+  - `compression` (`list[obj]`):  When `null`, the `compression` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.compression.new](#fn-compressionnew) constructor.
+  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.http_server_location.new](#fn-http_server_locationnew) constructor.
+  - `sftp_server_location` (`list[obj]`):  When `null`, the `sftp_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.sftp_server_location.new](#fn-sftp_server_locationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_binary.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_dataset_binary` resource into the root Terraform configuration.

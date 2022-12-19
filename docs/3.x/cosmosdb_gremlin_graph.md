@@ -87,11 +87,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `partition_key_version` (`number`):  When `null`, the `partition_key_version` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.autoscale_settings.new](#fn-cosmosdbgremlingraphautoscalesettingsnew) constructor.
-  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.conflict_resolution_policy.new](#fn-cosmosdbgremlingraphconflictresolutionpolicynew) constructor.
-  - `index_policy` (`list[obj]`):  When `null`, the `index_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.new](#fn-cosmosdbgremlingraphindexpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.timeouts.new](#fn-cosmosdbgremlingraphtimeoutsnew) constructor.
-  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.unique_key.new](#fn-cosmosdbgremlingraphuniquekeynew) constructor.
+  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.conflict_resolution_policy.new](#fn-conflict_resolution_policynew) constructor.
+  - `index_policy` (`list[obj]`):  When `null`, the `index_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.new](#fn-index_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.timeouts.new](#fn-timeoutsnew) constructor.
+  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.unique_key.new](#fn-unique_keynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,7 +107,7 @@ newAttrs()
 `azurerm.cosmosdb_gremlin_graph.newAttrs` constructs a new object with attributes and blocks configured for the `cosmosdb_gremlin_graph`
 Terraform resource.
 
-Unlike [azurerm.cosmosdb_gremlin_graph.new](#fn-cosmosdbgremlingraphnew), this function will not inject the `resource`
+Unlike [azurerm.cosmosdb_gremlin_graph.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -123,11 +123,11 @@ injecting into a complete block.
   - `partition_key_version` (`number`):  When `null`, the `partition_key_version` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
   - `throughput` (`number`):  When `null`, the `throughput` field will be omitted from the resulting object.
-  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.autoscale_settings.new](#fn-cosmosdbgremlingraphautoscalesettingsnew) constructor.
-  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.conflict_resolution_policy.new](#fn-cosmosdbgremlingraphconflictresolutionpolicynew) constructor.
-  - `index_policy` (`list[obj]`):  When `null`, the `index_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.new](#fn-cosmosdbgremlingraphindexpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.timeouts.new](#fn-cosmosdbgremlingraphtimeoutsnew) constructor.
-  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.unique_key.new](#fn-cosmosdbgremlingraphuniquekeynew) constructor.
+  - `autoscale_settings` (`list[obj]`):  When `null`, the `autoscale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.autoscale_settings.new](#fn-autoscale_settingsnew) constructor.
+  - `conflict_resolution_policy` (`list[obj]`):  When `null`, the `conflict_resolution_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.conflict_resolution_policy.new](#fn-conflict_resolution_policynew) constructor.
+  - `index_policy` (`list[obj]`):  When `null`, the `index_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.new](#fn-index_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.timeouts.new](#fn-timeoutsnew) constructor.
+  - `unique_key` (`list[obj]`):  When `null`, the `unique_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.unique_key.new](#fn-unique_keynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cosmosdb_gremlin_graph` resource into the root Terraform configuration.
@@ -514,8 +514,8 @@ Terraform sub block.
   - `excluded_paths` (`list`):  When `null`, the `excluded_paths` field will be omitted from the resulting object.
   - `included_paths` (`list`):  When `null`, the `included_paths` field will be omitted from the resulting object.
   - `indexing_mode` (`string`): 
-  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.new](#fn-indexpolicycompositeindexnew) constructor.
-  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.spatial_index.new](#fn-indexpolicyspatialindexnew) constructor.
+  - `composite_index` (`list[obj]`):  When `null`, the `composite_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.new](#fn-index_policycomposite_indexnew) constructor.
+  - `spatial_index` (`list[obj]`):  When `null`, the `spatial_index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.spatial_index.new](#fn-index_policyspatial_indexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `index_policy` sub block.
@@ -538,7 +538,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.index.new](#fn-compositeindexindexnew) constructor.
+  - `index` (`list[obj]`):  When `null`, the `index` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_gremlin_graph.index_policy.composite_index.index.new](#fn-index_policyindex_policyindexnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `composite_index` sub block.

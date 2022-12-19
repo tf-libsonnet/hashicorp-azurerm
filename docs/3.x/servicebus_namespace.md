@@ -77,9 +77,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.customer_managed_key.new](#fn-servicebusnamespacecustomermanagedkeynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.identity.new](#fn-servicebusnamespaceidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.timeouts.new](#fn-servicebusnamespacetimeoutsnew) constructor.
+  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,7 +95,7 @@ newAttrs()
 `azurerm.servicebus_namespace.newAttrs` constructs a new object with attributes and blocks configured for the `servicebus_namespace`
 Terraform resource.
 
-Unlike [azurerm.servicebus_namespace.new](#fn-servicebusnamespacenew), this function will not inject the `resource`
+Unlike [azurerm.servicebus_namespace.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -113,9 +113,9 @@ injecting into a complete block.
   - `sku` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.customer_managed_key.new](#fn-servicebusnamespacecustomermanagedkeynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.identity.new](#fn-servicebusnamespaceidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.timeouts.new](#fn-servicebusnamespacetimeoutsnew) constructor.
+  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `servicebus_namespace` resource into the root Terraform configuration.

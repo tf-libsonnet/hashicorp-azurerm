@@ -75,10 +75,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `firewall_policy_id` (`string`): 
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `application_rule_collection` (`list[obj]`):  When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-firewallpolicyrulecollectiongroupapplicationrulecollectionnew) constructor.
-  - `nat_rule_collection` (`list[obj]`):  When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-firewallpolicyrulecollectiongroupnatrulecollectionnew) constructor.
-  - `network_rule_collection` (`list[obj]`):  When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-firewallpolicyrulecollectiongroupnetworkrulecollectionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-firewallpolicyrulecollectiongrouptimeoutsnew) constructor.
+  - `application_rule_collection` (`list[obj]`):  When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-application_rule_collectionnew) constructor.
+  - `nat_rule_collection` (`list[obj]`):  When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-nat_rule_collectionnew) constructor.
+  - `network_rule_collection` (`list[obj]`):  When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-network_rule_collectionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `azurerm.firewall_policy_rule_collection_group.newAttrs` constructs a new object with attributes and blocks configured for the `firewall_policy_rule_collection_group`
 Terraform resource.
 
-Unlike [azurerm.firewall_policy_rule_collection_group.new](#fn-firewallpolicyrulecollectiongroupnew), this function will not inject the `resource`
+Unlike [azurerm.firewall_policy_rule_collection_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,10 +105,10 @@ injecting into a complete block.
   - `firewall_policy_id` (`string`): 
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `application_rule_collection` (`list[obj]`):  When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-firewallpolicyrulecollectiongroupapplicationrulecollectionnew) constructor.
-  - `nat_rule_collection` (`list[obj]`):  When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-firewallpolicyrulecollectiongroupnatrulecollectionnew) constructor.
-  - `network_rule_collection` (`list[obj]`):  When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-firewallpolicyrulecollectiongroupnetworkrulecollectionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-firewallpolicyrulecollectiongrouptimeoutsnew) constructor.
+  - `application_rule_collection` (`list[obj]`):  When `null`, the `application_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.new](#fn-application_rule_collectionnew) constructor.
+  - `nat_rule_collection` (`list[obj]`):  When `null`, the `nat_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.new](#fn-nat_rule_collectionnew) constructor.
+  - `network_rule_collection` (`list[obj]`):  When `null`, the `network_rule_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.new](#fn-network_rule_collectionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall_policy_rule_collection_group` resource into the root Terraform configuration.
@@ -329,7 +329,7 @@ Terraform sub block.
   - `action` (`string`): 
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.new](#fn-applicationrulecollectionrulenew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.new](#fn-application_rule_collectionrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `application_rule_collection` sub block.
@@ -362,7 +362,7 @@ Terraform sub block.
   - `source_ip_groups` (`list`):  When `null`, the `source_ip_groups` field will be omitted from the resulting object.
   - `terminate_tls` (`bool`):  When `null`, the `terminate_tls` field will be omitted from the resulting object.
   - `web_categories` (`list`):  When `null`, the `web_categories` field will be omitted from the resulting object.
-  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-ruleprotocolsnew) constructor.
+  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-application_rule_collectionapplication_rule_collectionprotocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -412,7 +412,7 @@ Terraform sub block.
   - `action` (`string`): 
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.rule.new](#fn-natrulecollectionrulenew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.nat_rule_collection.rule.new](#fn-nat_rule_collectionrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `nat_rule_collection` sub block.
@@ -469,7 +469,7 @@ Terraform sub block.
   - `action` (`string`): 
   - `name` (`string`): 
   - `priority` (`number`): 
-  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.rule.new](#fn-networkrulecollectionrulenew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.network_rule_collection.rule.new](#fn-network_rule_collectionrulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_rule_collection` sub block.

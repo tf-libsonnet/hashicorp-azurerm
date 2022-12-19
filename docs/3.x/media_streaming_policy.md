@@ -81,10 +81,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `media_services_account_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `common_encryption_cbcs` (`list[obj]`):  When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-mediastreamingpolicycommonencryptioncbcsnew) constructor.
-  - `common_encryption_cenc` (`list[obj]`):  When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-mediastreamingpolicycommonencryptioncencnew) constructor.
-  - `no_encryption_enabled_protocols` (`list[obj]`):  When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-mediastreamingpolicynoencryptionenabledprotocolsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-mediastreamingpolicytimeoutsnew) constructor.
+  - `common_encryption_cbcs` (`list[obj]`):  When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
+  - `common_encryption_cenc` (`list[obj]`):  When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
+  - `no_encryption_enabled_protocols` (`list[obj]`):  When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `azurerm.media_streaming_policy.newAttrs` constructs a new object with attributes and blocks configured for the `media_streaming_policy`
 Terraform resource.
 
-Unlike [azurerm.media_streaming_policy.new](#fn-mediastreamingpolicynew), this function will not inject the `resource`
+Unlike [azurerm.media_streaming_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -112,10 +112,10 @@ injecting into a complete block.
   - `media_services_account_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `common_encryption_cbcs` (`list[obj]`):  When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-mediastreamingpolicycommonencryptioncbcsnew) constructor.
-  - `common_encryption_cenc` (`list[obj]`):  When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-mediastreamingpolicycommonencryptioncencnew) constructor.
-  - `no_encryption_enabled_protocols` (`list[obj]`):  When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-mediastreamingpolicynoencryptionenabledprotocolsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-mediastreamingpolicytimeoutsnew) constructor.
+  - `common_encryption_cbcs` (`list[obj]`):  When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
+  - `common_encryption_cenc` (`list[obj]`):  When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
+  - `no_encryption_enabled_protocols` (`list[obj]`):  When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_streaming_policy` resource into the root Terraform configuration.
@@ -349,9 +349,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_content_key` (`list[obj]`):  When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.default_content_key.new](#fn-commonencryptioncbcsdefaultcontentkeynew) constructor.
-  - `drm_fairplay` (`list[obj]`):  When `null`, the `drm_fairplay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.drm_fairplay.new](#fn-commonencryptioncbcsdrmfairplaynew) constructor.
-  - `enabled_protocols` (`list[obj]`):  When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.enabled_protocols.new](#fn-commonencryptioncbcsenabledprotocolsnew) constructor.
+  - `default_content_key` (`list[obj]`):  When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.default_content_key.new](#fn-common_encryption_cbcsdefault_content_keynew) constructor.
+  - `drm_fairplay` (`list[obj]`):  When `null`, the `drm_fairplay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.drm_fairplay.new](#fn-common_encryption_cbcsdrm_fairplaynew) constructor.
+  - `enabled_protocols` (`list[obj]`):  When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.enabled_protocols.new](#fn-common_encryption_cbcsenabled_protocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `common_encryption_cbcs` sub block.
@@ -449,9 +449,9 @@ Terraform sub block.
 
 **Args**:
   - `drm_widevine_custom_license_acquisition_url_template` (`string`):  When `null`, the `drm_widevine_custom_license_acquisition_url_template` field will be omitted from the resulting object.
-  - `default_content_key` (`list[obj]`):  When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.default_content_key.new](#fn-commonencryptioncencdefaultcontentkeynew) constructor.
-  - `drm_playready` (`list[obj]`):  When `null`, the `drm_playready` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.drm_playready.new](#fn-commonencryptioncencdrmplayreadynew) constructor.
-  - `enabled_protocols` (`list[obj]`):  When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.enabled_protocols.new](#fn-commonencryptioncencenabledprotocolsnew) constructor.
+  - `default_content_key` (`list[obj]`):  When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.default_content_key.new](#fn-common_encryption_cencdefault_content_keynew) constructor.
+  - `drm_playready` (`list[obj]`):  When `null`, the `drm_playready` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.drm_playready.new](#fn-common_encryption_cencdrm_playreadynew) constructor.
+  - `enabled_protocols` (`list[obj]`):  When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.enabled_protocols.new](#fn-common_encryption_cencenabled_protocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `common_encryption_cenc` sub block.

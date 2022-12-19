@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `sku_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `logs` (`list[obj]`):  When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-elasticcloudelasticsearchlogsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-elasticcloudelasticsearchtimeoutsnew) constructor.
+  - `logs` (`list[obj]`):  When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-logsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `azurerm.elastic_cloud_elasticsearch.newAttrs` constructs a new object with attributes and blocks configured for the `elastic_cloud_elasticsearch`
 Terraform resource.
 
-Unlike [azurerm.elastic_cloud_elasticsearch.new](#fn-elasticcloudelasticsearchnew), this function will not inject the `resource`
+Unlike [azurerm.elastic_cloud_elasticsearch.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,8 +101,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `sku_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `logs` (`list[obj]`):  When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-elasticcloudelasticsearchlogsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-elasticcloudelasticsearchtimeoutsnew) constructor.
+  - `logs` (`list[obj]`):  When `null`, the `logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.new](#fn-logsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `elastic_cloud_elasticsearch` resource into the root Terraform configuration.
@@ -313,7 +313,7 @@ Terraform sub block.
   - `send_activity_logs` (`bool`):  When `null`, the `send_activity_logs` field will be omitted from the resulting object.
   - `send_azuread_logs` (`bool`):  When `null`, the `send_azuread_logs` field will be omitted from the resulting object.
   - `send_subscription_logs` (`bool`):  When `null`, the `send_subscription_logs` field will be omitted from the resulting object.
-  - `filtering_tag` (`list[obj]`):  When `null`, the `filtering_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.filtering_tag.new](#fn-logsfilteringtagnew) constructor.
+  - `filtering_tag` (`list[obj]`):  When `null`, the `filtering_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.elastic_cloud_elasticsearch.logs.filtering_tag.new](#fn-logsfiltering_tagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `logs` sub block.

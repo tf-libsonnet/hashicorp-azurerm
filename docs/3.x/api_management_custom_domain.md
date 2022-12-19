@@ -71,12 +71,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `api_management_id` (`string`): 
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-apimanagementcustomdomaindeveloperportalnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-apimanagementcustomdomaingatewaynew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-apimanagementcustomdomainmanagementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-apimanagementcustomdomainportalnew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-apimanagementcustomdomainscmnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-apimanagementcustomdomaintimeoutsnew) constructor.
+  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-developer_portalnew) constructor.
+  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-gatewaynew) constructor.
+  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-managementnew) constructor.
+  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-portalnew) constructor.
+  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-scmnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `azurerm.api_management_custom_domain.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_custom_domain`
 Terraform resource.
 
-Unlike [azurerm.api_management_custom_domain.new](#fn-apimanagementcustomdomainnew), this function will not inject the `resource`
+Unlike [azurerm.api_management_custom_domain.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,12 +101,12 @@ injecting into a complete block.
 
 **Args**:
   - `api_management_id` (`string`): 
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-apimanagementcustomdomaindeveloperportalnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-apimanagementcustomdomaingatewaynew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-apimanagementcustomdomainmanagementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-apimanagementcustomdomainportalnew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-apimanagementcustomdomainscmnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-apimanagementcustomdomaintimeoutsnew) constructor.
+  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.developer_portal.new](#fn-developer_portalnew) constructor.
+  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.gateway.new](#fn-gatewaynew) constructor.
+  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.management.new](#fn-managementnew) constructor.
+  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.portal.new](#fn-portalnew) constructor.
+  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.scm.new](#fn-scmnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_custom_domain` resource into the root Terraform configuration.

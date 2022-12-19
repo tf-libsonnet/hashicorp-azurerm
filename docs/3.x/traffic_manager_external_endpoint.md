@@ -73,9 +73,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `profile_id` (`string`): 
   - `target` (`string`): 
   - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.custom_header.new](#fn-trafficmanagerexternalendpointcustomheadernew) constructor.
-  - `subnet` (`list[obj]`):  When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.subnet.new](#fn-trafficmanagerexternalendpointsubnetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.timeouts.new](#fn-trafficmanagerexternalendpointtimeoutsnew) constructor.
+  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.custom_header.new](#fn-custom_headernew) constructor.
+  - `subnet` (`list[obj]`):  When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.subnet.new](#fn-subnetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `azurerm.traffic_manager_external_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `traffic_manager_external_endpoint`
 Terraform resource.
 
-Unlike [azurerm.traffic_manager_external_endpoint.new](#fn-trafficmanagerexternalendpointnew), this function will not inject the `resource`
+Unlike [azurerm.traffic_manager_external_endpoint.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,9 +107,9 @@ injecting into a complete block.
   - `profile_id` (`string`): 
   - `target` (`string`): 
   - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.custom_header.new](#fn-trafficmanagerexternalendpointcustomheadernew) constructor.
-  - `subnet` (`list[obj]`):  When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.subnet.new](#fn-trafficmanagerexternalendpointsubnetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.timeouts.new](#fn-trafficmanagerexternalendpointtimeoutsnew) constructor.
+  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.custom_header.new](#fn-custom_headernew) constructor.
+  - `subnet` (`list[obj]`):  When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.subnet.new](#fn-subnetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_external_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `traffic_manager_external_endpoint` resource into the root Terraform configuration.

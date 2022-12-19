@@ -75,10 +75,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `managing_tenant_id` (`string`): 
   - `name` (`string`): 
   - `scope` (`string`): 
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-lighthousedefinitionauthorizationnew) constructor.
-  - `eligible_authorization` (`list[obj]`):  When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-lighthousedefinitioneligibleauthorizationnew) constructor.
-  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-lighthousedefinitionplannew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-lighthousedefinitiontimeoutsnew) constructor.
+  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-authorizationnew) constructor.
+  - `eligible_authorization` (`list[obj]`):  When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-eligible_authorizationnew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-plannew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `azurerm.lighthouse_definition.newAttrs` constructs a new object with attributes and blocks configured for the `lighthouse_definition`
 Terraform resource.
 
-Unlike [azurerm.lighthouse_definition.new](#fn-lighthousedefinitionnew), this function will not inject the `resource`
+Unlike [azurerm.lighthouse_definition.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,10 +107,10 @@ injecting into a complete block.
   - `managing_tenant_id` (`string`): 
   - `name` (`string`): 
   - `scope` (`string`): 
-  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-lighthousedefinitionauthorizationnew) constructor.
-  - `eligible_authorization` (`list[obj]`):  When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-lighthousedefinitioneligibleauthorizationnew) constructor.
-  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-lighthousedefinitionplannew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-lighthousedefinitiontimeoutsnew) constructor.
+  - `authorization` (`list[obj]`):  When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.authorization.new](#fn-authorizationnew) constructor.
+  - `eligible_authorization` (`list[obj]`):  When `null`, the `eligible_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.new](#fn-eligible_authorizationnew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.plan.new](#fn-plannew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `lighthouse_definition` resource into the root Terraform configuration.
@@ -389,7 +389,7 @@ Terraform sub block.
   - `principal_display_name` (`string`):  When `null`, the `principal_display_name` field will be omitted from the resulting object.
   - `principal_id` (`string`): 
   - `role_definition_id` (`string`): 
-  - `just_in_time_access_policy` (`list[obj]`):  When `null`, the `just_in_time_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.new](#fn-eligibleauthorizationjustintimeaccesspolicynew) constructor.
+  - `just_in_time_access_policy` (`list[obj]`):  When `null`, the `just_in_time_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.new](#fn-eligible_authorizationjust_in_time_access_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `eligible_authorization` sub block.
@@ -414,7 +414,7 @@ Terraform sub block.
 **Args**:
   - `maximum_activation_duration` (`string`):  When `null`, the `maximum_activation_duration` field will be omitted from the resulting object.
   - `multi_factor_auth_provider` (`string`):  When `null`, the `multi_factor_auth_provider` field will be omitted from the resulting object.
-  - `approver` (`list[obj]`):  When `null`, the `approver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.approver.new](#fn-justintimeaccesspolicyapprovernew) constructor.
+  - `approver` (`list[obj]`):  When `null`, the `approver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lighthouse_definition.eligible_authorization.just_in_time_access_policy.approver.new](#fn-eligible_authorizationeligible_authorizationapprovernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `just_in_time_access_policy` sub block.

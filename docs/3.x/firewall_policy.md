@@ -103,14 +103,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sql_redirect_allowed` (`bool`):  When `null`, the `sql_redirect_allowed` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `threat_intelligence_mode` (`string`):  When `null`, the `threat_intelligence_mode` field will be omitted from the resulting object.
-  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-firewallpolicydnsnew) constructor.
-  - `explicit_proxy` (`list[obj]`):  When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-firewallpolicyexplicitproxynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-firewallpolicyidentitynew) constructor.
-  - `insights` (`list[obj]`):  When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-firewallpolicyinsightsnew) constructor.
-  - `intrusion_detection` (`list[obj]`):  When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-firewallpolicyintrusiondetectionnew) constructor.
-  - `threat_intelligence_allowlist` (`list[obj]`):  When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-firewallpolicythreatintelligenceallowlistnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-firewallpolicytimeoutsnew) constructor.
-  - `tls_certificate` (`list[obj]`):  When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-firewallpolicytlscertificatenew) constructor.
+  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-dnsnew) constructor.
+  - `explicit_proxy` (`list[obj]`):  When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-explicit_proxynew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-identitynew) constructor.
+  - `insights` (`list[obj]`):  When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-insightsnew) constructor.
+  - `intrusion_detection` (`list[obj]`):  When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-intrusion_detectionnew) constructor.
+  - `threat_intelligence_allowlist` (`list[obj]`):  When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-threat_intelligence_allowlistnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tls_certificate` (`list[obj]`):  When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-tls_certificatenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -126,7 +126,7 @@ newAttrs()
 `azurerm.firewall_policy.newAttrs` constructs a new object with attributes and blocks configured for the `firewall_policy`
 Terraform resource.
 
-Unlike [azurerm.firewall_policy.new](#fn-firewallpolicynew), this function will not inject the `resource`
+Unlike [azurerm.firewall_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -144,14 +144,14 @@ injecting into a complete block.
   - `sql_redirect_allowed` (`bool`):  When `null`, the `sql_redirect_allowed` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `threat_intelligence_mode` (`string`):  When `null`, the `threat_intelligence_mode` field will be omitted from the resulting object.
-  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-firewallpolicydnsnew) constructor.
-  - `explicit_proxy` (`list[obj]`):  When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-firewallpolicyexplicitproxynew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-firewallpolicyidentitynew) constructor.
-  - `insights` (`list[obj]`):  When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-firewallpolicyinsightsnew) constructor.
-  - `intrusion_detection` (`list[obj]`):  When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-firewallpolicyintrusiondetectionnew) constructor.
-  - `threat_intelligence_allowlist` (`list[obj]`):  When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-firewallpolicythreatintelligenceallowlistnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-firewallpolicytimeoutsnew) constructor.
-  - `tls_certificate` (`list[obj]`):  When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-firewallpolicytlscertificatenew) constructor.
+  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-dnsnew) constructor.
+  - `explicit_proxy` (`list[obj]`):  When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-explicit_proxynew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-identitynew) constructor.
+  - `insights` (`list[obj]`):  When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-insightsnew) constructor.
+  - `intrusion_detection` (`list[obj]`):  When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-intrusion_detectionnew) constructor.
+  - `threat_intelligence_allowlist` (`list[obj]`):  When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-threat_intelligence_allowlistnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tls_certificate` (`list[obj]`):  When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-tls_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall_policy` resource into the root Terraform configuration.
@@ -708,7 +708,7 @@ Terraform sub block.
   - `default_log_analytics_workspace_id` (`string`): 
   - `enabled` (`bool`): 
   - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `log_analytics_workspace` (`list[obj]`):  When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.log_analytics_workspace.new](#fn-insightsloganalyticsworkspacenew) constructor.
+  - `log_analytics_workspace` (`list[obj]`):  When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.log_analytics_workspace.new](#fn-insightslog_analytics_workspacenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `insights` sub block.
@@ -756,8 +756,8 @@ Terraform sub block.
 **Args**:
   - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
   - `private_ranges` (`list`):  When `null`, the `private_ranges` field will be omitted from the resulting object.
-  - `signature_overrides` (`list[obj]`):  When `null`, the `signature_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.signature_overrides.new](#fn-intrusiondetectionsignatureoverridesnew) constructor.
-  - `traffic_bypass` (`list[obj]`):  When `null`, the `traffic_bypass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.traffic_bypass.new](#fn-intrusiondetectiontrafficbypassnew) constructor.
+  - `signature_overrides` (`list[obj]`):  When `null`, the `signature_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.signature_overrides.new](#fn-intrusion_detectionsignature_overridesnew) constructor.
+  - `traffic_bypass` (`list[obj]`):  When `null`, the `traffic_bypass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.traffic_bypass.new](#fn-intrusion_detectiontraffic_bypassnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `intrusion_detection` sub block.

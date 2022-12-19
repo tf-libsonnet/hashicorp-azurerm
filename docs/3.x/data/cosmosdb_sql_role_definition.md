@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `account_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `role_definition_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.cosmosdb_sql_role_definition.timeouts.new](#fn-cosmosdbsqlroledefinitiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.cosmosdb_sql_role_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `azurerm.data.cosmosdb_sql_role_definition.newAttrs` constructs a new object with attributes and blocks configured for the `cosmosdb_sql_role_definition`
 Terraform data source.
 
-Unlike [azurerm.data.cosmosdb_sql_role_definition.new](#fn-cosmosdbsqlroledefinitionnew), this function will not inject the `data source`
+Unlike [azurerm.data.cosmosdb_sql_role_definition.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `account_name` (`string`): 
   - `resource_group_name` (`string`): 
   - `role_definition_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.cosmosdb_sql_role_definition.timeouts.new](#fn-cosmosdbsqlroledefinitiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.cosmosdb_sql_role_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `cosmosdb_sql_role_definition` data source into the root Terraform configuration.

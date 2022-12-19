@@ -93,11 +93,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `target_resource_location` (`string`): The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_location` field will be omitted from the resulting object.
   - `target_resource_type` (`string`): The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_type` field will be omitted from the resulting object.
   - `window_size` (`string`):  When `null`, the `window_size` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-monitormetricalertactionnew) constructor.
-  - `application_insights_web_test_location_availability_criteria` (`list[obj]`):  When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-monitormetricalertapplicationinsightswebtestlocationavailabilitycriterianew) constructor.
-  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-monitormetricalertcriterianew) constructor.
-  - `dynamic_criteria` (`list[obj]`):  When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-monitormetricalertdynamiccriterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-monitormetricalerttimeoutsnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-actionnew) constructor.
+  - `application_insights_web_test_location_availability_criteria` (`list[obj]`):  When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-application_insights_web_test_location_availability_criterianew) constructor.
+  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-criterianew) constructor.
+  - `dynamic_criteria` (`list[obj]`):  When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-dynamic_criterianew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -113,7 +113,7 @@ newAttrs()
 `azurerm.monitor_metric_alert.newAttrs` constructs a new object with attributes and blocks configured for the `monitor_metric_alert`
 Terraform resource.
 
-Unlike [azurerm.monitor_metric_alert.new](#fn-monitormetricalertnew), this function will not inject the `resource`
+Unlike [azurerm.monitor_metric_alert.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -133,11 +133,11 @@ injecting into a complete block.
   - `target_resource_location` (`string`): The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_location` field will be omitted from the resulting object.
   - `target_resource_type` (`string`): The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. When `null`, the `target_resource_type` field will be omitted from the resulting object.
   - `window_size` (`string`):  When `null`, the `window_size` field will be omitted from the resulting object.
-  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-monitormetricalertactionnew) constructor.
-  - `application_insights_web_test_location_availability_criteria` (`list[obj]`):  When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-monitormetricalertapplicationinsightswebtestlocationavailabilitycriterianew) constructor.
-  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-monitormetricalertcriterianew) constructor.
-  - `dynamic_criteria` (`list[obj]`):  When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-monitormetricalertdynamiccriterianew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-monitormetricalerttimeoutsnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.action.new](#fn-actionnew) constructor.
+  - `application_insights_web_test_location_availability_criteria` (`list[obj]`):  When `null`, the `application_insights_web_test_location_availability_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.application_insights_web_test_location_availability_criteria.new](#fn-application_insights_web_test_location_availability_criterianew) constructor.
+  - `criteria` (`list[obj]`):  When `null`, the `criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.criteria.new](#fn-criterianew) constructor.
+  - `dynamic_criteria` (`list[obj]`):  When `null`, the `dynamic_criteria` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.new](#fn-dynamic_criterianew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_metric_alert` resource into the root Terraform configuration.
@@ -648,7 +648,7 @@ Terraform sub block.
   - `metric_namespace` (`string`): 
   - `operator` (`string`): 
   - `skip_metric_validation` (`bool`):  When `null`, the `skip_metric_validation` field will be omitted from the resulting object.
-  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.dimension.new](#fn-dynamiccriteriadimensionnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_metric_alert.dynamic_criteria.dimension.new](#fn-dynamic_criteriadimensionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dynamic_criteria` sub block.

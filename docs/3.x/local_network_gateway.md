@@ -67,8 +67,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.bgp_settings.new](#fn-localnetworkgatewaybgpsettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.timeouts.new](#fn-localnetworkgatewaytimeoutsnew) constructor.
+  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `azurerm.local_network_gateway.newAttrs` constructs a new object with attributes and blocks configured for the `local_network_gateway`
 Terraform resource.
 
-Unlike [azurerm.local_network_gateway.new](#fn-localnetworkgatewaynew), this function will not inject the `resource`
+Unlike [azurerm.local_network_gateway.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.bgp_settings.new](#fn-localnetworkgatewaybgpsettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.timeouts.new](#fn-localnetworkgatewaytimeoutsnew) constructor.
+  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.local_network_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `local_network_gateway` resource into the root Terraform configuration.

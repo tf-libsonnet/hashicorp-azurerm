@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `read_permissions` (`list`):  When `null`, the `read_permissions` field will be omitted from the resulting object.
   - `write_permissions` (`list`):  When `null`, the `write_permissions` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_api_key.timeouts.new](#fn-applicationinsightsapikeytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_api_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.application_insights_api_key.newAttrs` constructs a new object with attributes and blocks configured for the `application_insights_api_key`
 Terraform resource.
 
-Unlike [azurerm.application_insights_api_key.new](#fn-applicationinsightsapikeynew), this function will not inject the `resource`
+Unlike [azurerm.application_insights_api_key.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `read_permissions` (`list`):  When `null`, the `read_permissions` field will be omitted from the resulting object.
   - `write_permissions` (`list`):  When `null`, the `write_permissions` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_api_key.timeouts.new](#fn-applicationinsightsapikeytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_insights_api_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `application_insights_api_key` resource into the root Terraform configuration.

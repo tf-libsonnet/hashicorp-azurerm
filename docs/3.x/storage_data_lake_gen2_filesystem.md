@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `owner` (`string`):  When `null`, the `owner` field will be omitted from the resulting object.
   - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
   - `storage_account_id` (`string`): 
-  - `ace` (`list[obj]`):  When `null`, the `ace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.ace.new](#fn-storagedatalakegen2filesystemacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.timeouts.new](#fn-storagedatalakegen2filesystemtimeoutsnew) constructor.
+  - `ace` (`list[obj]`):  When `null`, the `ace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.ace.new](#fn-acenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.storage_data_lake_gen2_filesystem.newAttrs` constructs a new object with attributes and blocks configured for the `storage_data_lake_gen2_filesystem`
 Terraform resource.
 
-Unlike [azurerm.storage_data_lake_gen2_filesystem.new](#fn-storagedatalakegen2filesystemnew), this function will not inject the `resource`
+Unlike [azurerm.storage_data_lake_gen2_filesystem.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `owner` (`string`):  When `null`, the `owner` field will be omitted from the resulting object.
   - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
   - `storage_account_id` (`string`): 
-  - `ace` (`list[obj]`):  When `null`, the `ace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.ace.new](#fn-storagedatalakegen2filesystemacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.timeouts.new](#fn-storagedatalakegen2filesystemtimeoutsnew) constructor.
+  - `ace` (`list[obj]`):  When `null`, the `ace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.ace.new](#fn-acenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_data_lake_gen2_filesystem.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_data_lake_gen2_filesystem` resource into the root Terraform configuration.

@@ -77,9 +77,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `partner_solution_id` (`string`):  When `null`, the `partner_solution_id` field will be omitted from the resulting object.
   - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
   - `target_resource_id` (`string`): 
-  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.log.new](#fn-monitordiagnosticsettinglognew) constructor.
-  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.metric.new](#fn-monitordiagnosticsettingmetricnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.timeouts.new](#fn-monitordiagnosticsettingtimeoutsnew) constructor.
+  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.log.new](#fn-lognew) constructor.
+  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.metric.new](#fn-metricnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,7 +95,7 @@ newAttrs()
 `azurerm.monitor_diagnostic_setting.newAttrs` constructs a new object with attributes and blocks configured for the `monitor_diagnostic_setting`
 Terraform resource.
 
-Unlike [azurerm.monitor_diagnostic_setting.new](#fn-monitordiagnosticsettingnew), this function will not inject the `resource`
+Unlike [azurerm.monitor_diagnostic_setting.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,9 +111,9 @@ injecting into a complete block.
   - `partner_solution_id` (`string`):  When `null`, the `partner_solution_id` field will be omitted from the resulting object.
   - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
   - `target_resource_id` (`string`): 
-  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.log.new](#fn-monitordiagnosticsettinglognew) constructor.
-  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.metric.new](#fn-monitordiagnosticsettingmetricnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.timeouts.new](#fn-monitordiagnosticsettingtimeoutsnew) constructor.
+  - `log` (`list[obj]`):  When `null`, the `log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.log.new](#fn-lognew) constructor.
+  - `metric` (`list[obj]`):  When `null`, the `metric` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.metric.new](#fn-metricnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_diagnostic_setting` resource into the root Terraform configuration.
@@ -377,7 +377,7 @@ Terraform sub block.
   - `category` (`string`):  When `null`, the `category` field will be omitted from the resulting object.
   - `category_group` (`string`):  When `null`, the `category_group` field will be omitted from the resulting object.
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.log.retention_policy.new](#fn-logretentionpolicynew) constructor.
+  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.log.retention_policy.new](#fn-logretention_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `log` sub block.
@@ -426,7 +426,7 @@ Terraform sub block.
 **Args**:
   - `category` (`string`): 
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.metric.retention_policy.new](#fn-metricretentionpolicynew) constructor.
+  - `retention_policy` (`list[obj]`):  When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_diagnostic_setting.metric.retention_policy.new](#fn-metricretention_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric` sub block.

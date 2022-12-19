@@ -79,8 +79,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-sharedimageversiontargetregionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-sharedimageversiontimeoutsnew) constructor.
+  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-target_regionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,7 +96,7 @@ newAttrs()
 `azurerm.shared_image_version.newAttrs` constructs a new object with attributes and blocks configured for the `shared_image_version`
 Terraform resource.
 
-Unlike [azurerm.shared_image_version.new](#fn-sharedimageversionnew), this function will not inject the `resource`
+Unlike [azurerm.shared_image_version.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -117,8 +117,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-sharedimageversiontargetregionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-sharedimageversiontimeoutsnew) constructor.
+  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-target_regionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `shared_image_version` resource into the root Terraform configuration.

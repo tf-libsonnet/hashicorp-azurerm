@@ -73,10 +73,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-privateendpointipconfigurationnew) constructor.
-  - `private_dns_zone_group` (`list[obj]`):  When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-privateendpointprivatednszonegroupnew) constructor.
-  - `private_service_connection` (`list[obj]`):  When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-privateendpointprivateserviceconnectionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-privateendpointtimeoutsnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `private_dns_zone_group` (`list[obj]`):  When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-private_dns_zone_groupnew) constructor.
+  - `private_service_connection` (`list[obj]`):  When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-private_service_connectionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `azurerm.private_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `private_endpoint`
 Terraform resource.
 
-Unlike [azurerm.private_endpoint.new](#fn-privateendpointnew), this function will not inject the `resource`
+Unlike [azurerm.private_endpoint.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -106,10 +106,10 @@ injecting into a complete block.
   - `resource_group_name` (`string`): 
   - `subnet_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-privateendpointipconfigurationnew) constructor.
-  - `private_dns_zone_group` (`list[obj]`):  When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-privateendpointprivatednszonegroupnew) constructor.
-  - `private_service_connection` (`list[obj]`):  When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-privateendpointprivateserviceconnectionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-privateendpointtimeoutsnew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `private_dns_zone_group` (`list[obj]`):  When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-private_dns_zone_groupnew) constructor.
+  - `private_service_connection` (`list[obj]`):  When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-private_service_connectionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `private_endpoint` resource into the root Terraform configuration.

@@ -75,8 +75,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `service_endpoint_policy_ids` (`list`):  When `null`, the `service_endpoint_policy_ids` field will be omitted from the resulting object.
   - `service_endpoints` (`list`):  When `null`, the `service_endpoints` field will be omitted from the resulting object.
   - `virtual_network_name` (`string`): 
-  - `delegation` (`list[obj]`):  When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-subnetdelegationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-subnettimeoutsnew) constructor.
+  - `delegation` (`list[obj]`):  When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-delegationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `azurerm.subnet.newAttrs` constructs a new object with attributes and blocks configured for the `subnet`
 Terraform resource.
 
-Unlike [azurerm.subnet.new](#fn-subnetnew), this function will not inject the `resource`
+Unlike [azurerm.subnet.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -110,8 +110,8 @@ injecting into a complete block.
   - `service_endpoint_policy_ids` (`list`):  When `null`, the `service_endpoint_policy_ids` field will be omitted from the resulting object.
   - `service_endpoints` (`list`):  When `null`, the `service_endpoints` field will be omitted from the resulting object.
   - `virtual_network_name` (`string`): 
-  - `delegation` (`list[obj]`):  When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-subnetdelegationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-subnettimeoutsnew) constructor.
+  - `delegation` (`list[obj]`):  When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-delegationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `subnet` resource into the root Terraform configuration.
@@ -368,7 +368,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): 
-  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservicedelegationnew) constructor.
+  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservice_delegationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delegation` sub block.

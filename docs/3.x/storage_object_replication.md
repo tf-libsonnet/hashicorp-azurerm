@@ -57,8 +57,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `destination_storage_account_id` (`string`): 
   - `source_storage_account_id` (`string`): 
-  - `rules` (`list[obj]`):  When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.rules.new](#fn-storageobjectreplicationrulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.timeouts.new](#fn-storageobjectreplicationtimeoutsnew) constructor.
+  - `rules` (`list[obj]`):  When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.rules.new](#fn-rulesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -74,7 +74,7 @@ newAttrs()
 `azurerm.storage_object_replication.newAttrs` constructs a new object with attributes and blocks configured for the `storage_object_replication`
 Terraform resource.
 
-Unlike [azurerm.storage_object_replication.new](#fn-storageobjectreplicationnew), this function will not inject the `resource`
+Unlike [azurerm.storage_object_replication.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -84,8 +84,8 @@ injecting into a complete block.
 **Args**:
   - `destination_storage_account_id` (`string`): 
   - `source_storage_account_id` (`string`): 
-  - `rules` (`list[obj]`):  When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.rules.new](#fn-storageobjectreplicationrulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.timeouts.new](#fn-storageobjectreplicationtimeoutsnew) constructor.
+  - `rules` (`list[obj]`):  When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.rules.new](#fn-rulesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_object_replication.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_object_replication` resource into the root Terraform configuration.

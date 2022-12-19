@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `next_hop_type` (`string`): 
   - `resource_group_name` (`string`): 
   - `route_table_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route.timeouts.new](#fn-routetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `azurerm.route.newAttrs` constructs a new object with attributes and blocks configured for the `route`
 Terraform resource.
 
-Unlike [azurerm.route.new](#fn-routenew), this function will not inject the `resource`
+Unlike [azurerm.route.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `next_hop_type` (`string`): 
   - `resource_group_name` (`string`): 
   - `route_table_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route.timeouts.new](#fn-routetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `route` resource into the root Terraform configuration.

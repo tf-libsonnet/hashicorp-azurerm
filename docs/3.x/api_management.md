@@ -135,17 +135,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_type` (`string`):  When `null`, the `virtual_network_type` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_location` (`list[obj]`):  When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-apimanagementadditionallocationnew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-apimanagementcertificatenew) constructor.
-  - `hostname_configuration` (`list[obj]`):  When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-apimanagementhostnameconfigurationnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-apimanagementidentitynew) constructor.
-  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-apimanagementprotocolsnew) constructor.
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-apimanagementsecuritynew) constructor.
-  - `sign_in` (`list[obj]`):  When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-apimanagementsigninnew) constructor.
-  - `sign_up` (`list[obj]`):  When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-apimanagementsignupnew) constructor.
-  - `tenant_access` (`list[obj]`):  When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-apimanagementtenantaccessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-apimanagementtimeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-apimanagementvirtualnetworkconfigurationnew) constructor.
+  - `additional_location` (`list[obj]`):  When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
+  - `hostname_configuration` (`list[obj]`):  When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
+  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-securitynew) constructor.
+  - `sign_in` (`list[obj]`):  When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-sign_innew) constructor.
+  - `sign_up` (`list[obj]`):  When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-sign_upnew) constructor.
+  - `tenant_access` (`list[obj]`):  When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-tenant_accessnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -161,7 +161,7 @@ newAttrs()
 `azurerm.api_management.newAttrs` constructs a new object with attributes and blocks configured for the `api_management`
 Terraform resource.
 
-Unlike [azurerm.api_management.new](#fn-apimanagementnew), this function will not inject the `resource`
+Unlike [azurerm.api_management.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -185,17 +185,17 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_type` (`string`):  When `null`, the `virtual_network_type` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_location` (`list[obj]`):  When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-apimanagementadditionallocationnew) constructor.
-  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-apimanagementcertificatenew) constructor.
-  - `hostname_configuration` (`list[obj]`):  When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-apimanagementhostnameconfigurationnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-apimanagementidentitynew) constructor.
-  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-apimanagementprotocolsnew) constructor.
-  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-apimanagementsecuritynew) constructor.
-  - `sign_in` (`list[obj]`):  When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-apimanagementsigninnew) constructor.
-  - `sign_up` (`list[obj]`):  When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-apimanagementsignupnew) constructor.
-  - `tenant_access` (`list[obj]`):  When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-apimanagementtenantaccessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-apimanagementtimeoutsnew) constructor.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-apimanagementvirtualnetworkconfigurationnew) constructor.
+  - `additional_location` (`list[obj]`):  When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
+  - `hostname_configuration` (`list[obj]`):  When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
+  - `protocols` (`list[obj]`):  When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.security.new](#fn-securitynew) constructor.
+  - `sign_in` (`list[obj]`):  When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_in.new](#fn-sign_innew) constructor.
+  - `sign_up` (`list[obj]`):  When `null`, the `sign_up` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.new](#fn-sign_upnew) constructor.
+  - `tenant_access` (`list[obj]`):  When `null`, the `tenant_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.tenant_access.new](#fn-tenant_accessnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.virtual_network_configuration.new](#fn-virtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management` resource into the root Terraform configuration.
@@ -885,7 +885,7 @@ Terraform sub block.
   - `location` (`string`): 
   - `public_ip_address_id` (`string`):  When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
   - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
-  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.virtual_network_configuration.new](#fn-additionallocationvirtualnetworkconfigurationnew) constructor.
+  - `virtual_network_configuration` (`list[obj]`):  When `null`, the `virtual_network_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.virtual_network_configuration.new](#fn-additional_locationvirtual_network_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `additional_location` sub block.
@@ -956,11 +956,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.developer_portal.new](#fn-hostnameconfigurationdeveloperportalnew) constructor.
-  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.management.new](#fn-hostnameconfigurationmanagementnew) constructor.
-  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.portal.new](#fn-hostnameconfigurationportalnew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.proxy.new](#fn-hostnameconfigurationproxynew) constructor.
-  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.scm.new](#fn-hostnameconfigurationscmnew) constructor.
+  - `developer_portal` (`list[obj]`):  When `null`, the `developer_portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.developer_portal.new](#fn-hostname_configurationdeveloper_portalnew) constructor.
+  - `management` (`list[obj]`):  When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.management.new](#fn-hostname_configurationmanagementnew) constructor.
+  - `portal` (`list[obj]`):  When `null`, the `portal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.portal.new](#fn-hostname_configurationportalnew) constructor.
+  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.proxy.new](#fn-hostname_configurationproxynew) constructor.
+  - `scm` (`list[obj]`):  When `null`, the `scm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.scm.new](#fn-hostname_configurationscmnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `hostname_configuration` sub block.
@@ -1234,7 +1234,7 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): 
-  - `terms_of_service` (`list[obj]`):  When `null`, the `terms_of_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.terms_of_service.new](#fn-signuptermsofservicenew) constructor.
+  - `terms_of_service` (`list[obj]`):  When `null`, the `terms_of_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.sign_up.terms_of_service.new](#fn-sign_upterms_of_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `sign_up` sub block.

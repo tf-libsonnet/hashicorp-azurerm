@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
   - `log_analytics_workspace_id` (`string`): 
   - `name` (`string`): 
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.new](#fn-sentinelalertrulefusionsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.timeouts.new](#fn-sentinelalertrulefusiontimeoutsnew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.sentinel_alert_rule_fusion.newAttrs` constructs a new object with attributes and blocks configured for the `sentinel_alert_rule_fusion`
 Terraform resource.
 
-Unlike [azurerm.sentinel_alert_rule_fusion.new](#fn-sentinelalertrulefusionnew), this function will not inject the `resource`
+Unlike [azurerm.sentinel_alert_rule_fusion.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -92,8 +92,8 @@ injecting into a complete block.
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
   - `log_analytics_workspace_id` (`string`): 
   - `name` (`string`): 
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.new](#fn-sentinelalertrulefusionsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.timeouts.new](#fn-sentinelalertrulefusiontimeoutsnew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sentinel_alert_rule_fusion` resource into the root Terraform configuration.
@@ -255,7 +255,7 @@ Terraform sub block.
 **Args**:
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `sub_type` (`list[obj]`):  When `null`, the `sub_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.sub_type.new](#fn-sourcesubtypenew) constructor.
+  - `sub_type` (`list[obj]`):  When `null`, the `sub_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_fusion.source.sub_type.new](#fn-sourcesub_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.

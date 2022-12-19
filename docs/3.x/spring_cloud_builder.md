@@ -61,9 +61,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `name` (`string`): 
   - `spring_cloud_service_id` (`string`): 
-  - `build_pack_group` (`list[obj]`):  When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-springcloudbuilderbuildpackgroupnew) constructor.
-  - `stack` (`list[obj]`):  When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-springcloudbuilderstacknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-springcloudbuildertimeoutsnew) constructor.
+  - `build_pack_group` (`list[obj]`):  When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-build_pack_groupnew) constructor.
+  - `stack` (`list[obj]`):  When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-stacknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `azurerm.spring_cloud_builder.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_builder`
 Terraform resource.
 
-Unlike [azurerm.spring_cloud_builder.new](#fn-springcloudbuildernew), this function will not inject the `resource`
+Unlike [azurerm.spring_cloud_builder.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,9 +89,9 @@ injecting into a complete block.
 **Args**:
   - `name` (`string`): 
   - `spring_cloud_service_id` (`string`): 
-  - `build_pack_group` (`list[obj]`):  When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-springcloudbuilderbuildpackgroupnew) constructor.
-  - `stack` (`list[obj]`):  When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-springcloudbuilderstacknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-springcloudbuildertimeoutsnew) constructor.
+  - `build_pack_group` (`list[obj]`):  When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-build_pack_groupnew) constructor.
+  - `stack` (`list[obj]`):  When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-stacknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_builder` resource into the root Terraform configuration.

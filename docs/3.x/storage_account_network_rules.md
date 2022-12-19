@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
   - `storage_account_id` (`string`): 
   - `virtual_network_subnet_ids` (`list`):  When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
-  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-storageaccountnetworkrulesprivatelinkaccessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-storageaccountnetworkrulestimeoutsnew) constructor.
+  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.storage_account_network_rules.newAttrs` constructs a new object with attributes and blocks configured for the `storage_account_network_rules`
 Terraform resource.
 
-Unlike [azurerm.storage_account_network_rules.new](#fn-storageaccountnetworkrulesnew), this function will not inject the `resource`
+Unlike [azurerm.storage_account_network_rules.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `ip_rules` (`list`):  When `null`, the `ip_rules` field will be omitted from the resulting object.
   - `storage_account_id` (`string`): 
   - `virtual_network_subnet_ids` (`list`):  When `null`, the `virtual_network_subnet_ids` field will be omitted from the resulting object.
-  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-storageaccountnetworkrulesprivatelinkaccessnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-storageaccountnetworkrulestimeoutsnew) constructor.
+  - `private_link_access` (`list[obj]`):  When `null`, the `private_link_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.private_link_access.new](#fn-private_link_accessnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_network_rules.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_account_network_rules` resource into the root Terraform configuration.

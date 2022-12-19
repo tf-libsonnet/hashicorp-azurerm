@@ -139,19 +139,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `tier` (`string`): 
   - `tls_min_version` (`string`):  When `null`, the `tls_min_version` field will be omitted from the resulting object.
-  - `component_version` (`list[obj]`):  When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.component_version.new](#fn-hdinsightinteractivequeryclustercomponentversionnew) constructor.
-  - `compute_isolation` (`list[obj]`):  When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.compute_isolation.new](#fn-hdinsightinteractivequeryclustercomputeisolationnew) constructor.
-  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.disk_encryption.new](#fn-hdinsightinteractivequeryclusterdiskencryptionnew) constructor.
-  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.extension.new](#fn-hdinsightinteractivequeryclusterextensionnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.gateway.new](#fn-hdinsightinteractivequeryclustergatewaynew) constructor.
-  - `metastores` (`list[obj]`):  When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.metastores.new](#fn-hdinsightinteractivequeryclustermetastoresnew) constructor.
-  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.monitor.new](#fn-hdinsightinteractivequeryclustermonitornew) constructor.
-  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.network.new](#fn-hdinsightinteractivequeryclusternetworknew) constructor.
-  - `roles` (`list[obj]`):  When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.new](#fn-hdinsightinteractivequeryclusterrolesnew) constructor.
-  - `security_profile` (`list[obj]`):  When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.security_profile.new](#fn-hdinsightinteractivequeryclustersecurityprofilenew) constructor.
-  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account.new](#fn-hdinsightinteractivequeryclusterstorageaccountnew) constructor.
-  - `storage_account_gen2` (`list[obj]`):  When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account_gen2.new](#fn-hdinsightinteractivequeryclusterstorageaccountgen2new) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.timeouts.new](#fn-hdinsightinteractivequeryclustertimeoutsnew) constructor.
+  - `component_version` (`list[obj]`):  When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.component_version.new](#fn-component_versionnew) constructor.
+  - `compute_isolation` (`list[obj]`):  When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.compute_isolation.new](#fn-compute_isolationnew) constructor.
+  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.disk_encryption.new](#fn-disk_encryptionnew) constructor.
+  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.extension.new](#fn-extensionnew) constructor.
+  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.gateway.new](#fn-gatewaynew) constructor.
+  - `metastores` (`list[obj]`):  When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.metastores.new](#fn-metastoresnew) constructor.
+  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.monitor.new](#fn-monitornew) constructor.
+  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.network.new](#fn-networknew) constructor.
+  - `roles` (`list[obj]`):  When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.new](#fn-rolesnew) constructor.
+  - `security_profile` (`list[obj]`):  When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.security_profile.new](#fn-security_profilenew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account.new](#fn-storage_accountnew) constructor.
+  - `storage_account_gen2` (`list[obj]`):  When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account_gen2.new](#fn-storage_account_gen2new) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -167,7 +167,7 @@ newAttrs()
 `azurerm.hdinsight_interactive_query_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `hdinsight_interactive_query_cluster`
 Terraform resource.
 
-Unlike [azurerm.hdinsight_interactive_query_cluster.new](#fn-hdinsightinteractivequeryclusternew), this function will not inject the `resource`
+Unlike [azurerm.hdinsight_interactive_query_cluster.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -183,19 +183,19 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `tier` (`string`): 
   - `tls_min_version` (`string`):  When `null`, the `tls_min_version` field will be omitted from the resulting object.
-  - `component_version` (`list[obj]`):  When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.component_version.new](#fn-hdinsightinteractivequeryclustercomponentversionnew) constructor.
-  - `compute_isolation` (`list[obj]`):  When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.compute_isolation.new](#fn-hdinsightinteractivequeryclustercomputeisolationnew) constructor.
-  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.disk_encryption.new](#fn-hdinsightinteractivequeryclusterdiskencryptionnew) constructor.
-  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.extension.new](#fn-hdinsightinteractivequeryclusterextensionnew) constructor.
-  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.gateway.new](#fn-hdinsightinteractivequeryclustergatewaynew) constructor.
-  - `metastores` (`list[obj]`):  When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.metastores.new](#fn-hdinsightinteractivequeryclustermetastoresnew) constructor.
-  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.monitor.new](#fn-hdinsightinteractivequeryclustermonitornew) constructor.
-  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.network.new](#fn-hdinsightinteractivequeryclusternetworknew) constructor.
-  - `roles` (`list[obj]`):  When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.new](#fn-hdinsightinteractivequeryclusterrolesnew) constructor.
-  - `security_profile` (`list[obj]`):  When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.security_profile.new](#fn-hdinsightinteractivequeryclustersecurityprofilenew) constructor.
-  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account.new](#fn-hdinsightinteractivequeryclusterstorageaccountnew) constructor.
-  - `storage_account_gen2` (`list[obj]`):  When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account_gen2.new](#fn-hdinsightinteractivequeryclusterstorageaccountgen2new) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.timeouts.new](#fn-hdinsightinteractivequeryclustertimeoutsnew) constructor.
+  - `component_version` (`list[obj]`):  When `null`, the `component_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.component_version.new](#fn-component_versionnew) constructor.
+  - `compute_isolation` (`list[obj]`):  When `null`, the `compute_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.compute_isolation.new](#fn-compute_isolationnew) constructor.
+  - `disk_encryption` (`list[obj]`):  When `null`, the `disk_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.disk_encryption.new](#fn-disk_encryptionnew) constructor.
+  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.extension.new](#fn-extensionnew) constructor.
+  - `gateway` (`list[obj]`):  When `null`, the `gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.gateway.new](#fn-gatewaynew) constructor.
+  - `metastores` (`list[obj]`):  When `null`, the `metastores` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.metastores.new](#fn-metastoresnew) constructor.
+  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.monitor.new](#fn-monitornew) constructor.
+  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.network.new](#fn-networknew) constructor.
+  - `roles` (`list[obj]`):  When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.new](#fn-rolesnew) constructor.
+  - `security_profile` (`list[obj]`):  When `null`, the `security_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.security_profile.new](#fn-security_profilenew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account.new](#fn-storage_accountnew) constructor.
+  - `storage_account_gen2` (`list[obj]`):  When `null`, the `storage_account_gen2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.storage_account_gen2.new](#fn-storage_account_gen2new) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `hdinsight_interactive_query_cluster` resource into the root Terraform configuration.
@@ -1098,9 +1098,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `head_node` (`list[obj]`):  When `null`, the `head_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.head_node.new](#fn-rolesheadnodenew) constructor.
-  - `worker_node` (`list[obj]`):  When `null`, the `worker_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.new](#fn-rolesworkernodenew) constructor.
-  - `zookeeper_node` (`list[obj]`):  When `null`, the `zookeeper_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.zookeeper_node.new](#fn-roleszookeepernodenew) constructor.
+  - `head_node` (`list[obj]`):  When `null`, the `head_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.head_node.new](#fn-roleshead_nodenew) constructor.
+  - `worker_node` (`list[obj]`):  When `null`, the `worker_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.new](#fn-rolesworker_nodenew) constructor.
+  - `zookeeper_node` (`list[obj]`):  When `null`, the `zookeeper_node` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.zookeeper_node.new](#fn-roleszookeeper_nodenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `roles` sub block.
@@ -1129,7 +1129,7 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.head_node.script_actions.new](#fn-headnodescriptactionsnew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.head_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `head_node` sub block.
@@ -1184,8 +1184,8 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `autoscale` (`list[obj]`):  When `null`, the `autoscale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.new](#fn-workernodeautoscalenew) constructor.
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.script_actions.new](#fn-workernodescriptactionsnew) constructor.
+  - `autoscale` (`list[obj]`):  When `null`, the `autoscale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.new](#fn-rolesrolesautoscalenew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `worker_node` sub block.
@@ -1208,8 +1208,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity` (`list[obj]`):  When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.capacity.new](#fn-autoscalecapacitynew) constructor.
-  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.recurrence.new](#fn-autoscalerecurrencenew) constructor.
+  - `capacity` (`list[obj]`):  When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.capacity.new](#fn-rolesrolesworker_nodecapacitynew) constructor.
+  - `recurrence` (`list[obj]`):  When `null`, the `recurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.recurrence.new](#fn-rolesrolesworker_noderecurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `autoscale` sub block.
@@ -1257,7 +1257,7 @@ Terraform sub block.
 
 **Args**:
   - `timezone` (`string`): 
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.recurrence.schedule.new](#fn-recurrenceschedulenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.worker_node.autoscale.recurrence.schedule.new](#fn-rolesrolesworker_nodeautoscaleschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `recurrence` sub block.
@@ -1336,7 +1336,7 @@ Terraform sub block.
   - `username` (`string`): 
   - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `vm_size` (`string`): 
-  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.zookeeper_node.script_actions.new](#fn-zookeepernodescriptactionsnew) constructor.
+  - `script_actions` (`list[obj]`):  When `null`, the `script_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hdinsight_interactive_query_cluster.roles.zookeeper_node.script_actions.new](#fn-rolesrolesscript_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `zookeeper_node` sub block.

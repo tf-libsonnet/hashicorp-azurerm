@@ -63,9 +63,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cdn_endpoint_id` (`string`): 
   - `host_name` (`string`): 
   - `name` (`string`): 
-  - `cdn_managed_https` (`list[obj]`):  When `null`, the `cdn_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.cdn_managed_https.new](#fn-cdnendpointcustomdomaincdnmanagedhttpsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.timeouts.new](#fn-cdnendpointcustomdomaintimeoutsnew) constructor.
-  - `user_managed_https` (`list[obj]`):  When `null`, the `user_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.user_managed_https.new](#fn-cdnendpointcustomdomainusermanagedhttpsnew) constructor.
+  - `cdn_managed_https` (`list[obj]`):  When `null`, the `cdn_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.cdn_managed_https.new](#fn-cdn_managed_httpsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
+  - `user_managed_https` (`list[obj]`):  When `null`, the `user_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.user_managed_https.new](#fn-user_managed_httpsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `azurerm.cdn_endpoint_custom_domain.newAttrs` constructs a new object with attributes and blocks configured for the `cdn_endpoint_custom_domain`
 Terraform resource.
 
-Unlike [azurerm.cdn_endpoint_custom_domain.new](#fn-cdnendpointcustomdomainnew), this function will not inject the `resource`
+Unlike [azurerm.cdn_endpoint_custom_domain.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -92,9 +92,9 @@ injecting into a complete block.
   - `cdn_endpoint_id` (`string`): 
   - `host_name` (`string`): 
   - `name` (`string`): 
-  - `cdn_managed_https` (`list[obj]`):  When `null`, the `cdn_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.cdn_managed_https.new](#fn-cdnendpointcustomdomaincdnmanagedhttpsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.timeouts.new](#fn-cdnendpointcustomdomaintimeoutsnew) constructor.
-  - `user_managed_https` (`list[obj]`):  When `null`, the `user_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.user_managed_https.new](#fn-cdnendpointcustomdomainusermanagedhttpsnew) constructor.
+  - `cdn_managed_https` (`list[obj]`):  When `null`, the `cdn_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.cdn_managed_https.new](#fn-cdn_managed_httpsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.timeouts.new](#fn-timeoutsnew) constructor.
+  - `user_managed_https` (`list[obj]`):  When `null`, the `user_managed_https` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_endpoint_custom_domain.user_managed_https.new](#fn-user_managed_httpsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_endpoint_custom_domain` resource into the root Terraform configuration.

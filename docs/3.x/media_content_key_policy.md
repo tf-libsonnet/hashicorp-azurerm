@@ -73,8 +73,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `media_services_account_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `policy_option` (`list[obj]`):  When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-mediacontentkeypolicypolicyoptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-mediacontentkeypolicytimeoutsnew) constructor.
+  - `policy_option` (`list[obj]`):  When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-policy_optionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `azurerm.media_content_key_policy.newAttrs` constructs a new object with attributes and blocks configured for the `media_content_key_policy`
 Terraform resource.
 
-Unlike [azurerm.media_content_key_policy.new](#fn-mediacontentkeypolicynew), this function will not inject the `resource`
+Unlike [azurerm.media_content_key_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ injecting into a complete block.
   - `media_services_account_name` (`string`): 
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
-  - `policy_option` (`list[obj]`):  When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-mediacontentkeypolicypolicyoptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-mediacontentkeypolicytimeoutsnew) constructor.
+  - `policy_option` (`list[obj]`):  When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-policy_optionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_content_key_policy` resource into the root Terraform configuration.
@@ -267,9 +267,9 @@ Terraform sub block.
   - `name` (`string`): 
   - `open_restriction_enabled` (`bool`):  When `null`, the `open_restriction_enabled` field will be omitted from the resulting object.
   - `widevine_configuration_template` (`string`):  When `null`, the `widevine_configuration_template` field will be omitted from the resulting object.
-  - `fairplay_configuration` (`list[obj]`):  When `null`, the `fairplay_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.new](#fn-policyoptionfairplayconfigurationnew) constructor.
-  - `playready_configuration_license` (`list[obj]`):  When `null`, the `playready_configuration_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.new](#fn-policyoptionplayreadyconfigurationlicensenew) constructor.
-  - `token_restriction` (`list[obj]`):  When `null`, the `token_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.new](#fn-policyoptiontokenrestrictionnew) constructor.
+  - `fairplay_configuration` (`list[obj]`):  When `null`, the `fairplay_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.new](#fn-policy_optionfairplay_configurationnew) constructor.
+  - `playready_configuration_license` (`list[obj]`):  When `null`, the `playready_configuration_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.new](#fn-policy_optionplayready_configuration_licensenew) constructor.
+  - `token_restriction` (`list[obj]`):  When `null`, the `token_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.new](#fn-policy_optiontoken_restrictionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `policy_option` sub block.
@@ -297,7 +297,7 @@ Terraform sub block.
   - `pfx_password` (`string`):  When `null`, the `pfx_password` field will be omitted from the resulting object.
   - `rental_and_lease_key_type` (`string`):  When `null`, the `rental_and_lease_key_type` field will be omitted from the resulting object.
   - `rental_duration_seconds` (`number`):  When `null`, the `rental_duration_seconds` field will be omitted from the resulting object.
-  - `offline_rental_configuration` (`list[obj]`):  When `null`, the `offline_rental_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.offline_rental_configuration.new](#fn-fairplayconfigurationofflinerentalconfigurationnew) constructor.
+  - `offline_rental_configuration` (`list[obj]`):  When `null`, the `offline_rental_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.offline_rental_configuration.new](#fn-policy_optionpolicy_optionoffline_rental_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fairplay_configuration` sub block.
@@ -354,7 +354,7 @@ Terraform sub block.
   - `license_type` (`string`):  When `null`, the `license_type` field will be omitted from the resulting object.
   - `relative_begin_date` (`string`):  When `null`, the `relative_begin_date` field will be omitted from the resulting object.
   - `relative_expiration_date` (`string`):  When `null`, the `relative_expiration_date` field will be omitted from the resulting object.
-  - `play_right` (`list[obj]`):  When `null`, the `play_right` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.new](#fn-playreadyconfigurationlicenseplayrightnew) constructor.
+  - `play_right` (`list[obj]`):  When `null`, the `play_right` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.new](#fn-policy_optionpolicy_optionplay_rightnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `playready_configuration_license` sub block.
@@ -418,7 +418,7 @@ Terraform sub block.
   - `primary_symmetric_token_key` (`string`):  When `null`, the `primary_symmetric_token_key` field will be omitted from the resulting object.
   - `primary_x509_token_key_raw` (`string`):  When `null`, the `primary_x509_token_key_raw` field will be omitted from the resulting object.
   - `token_type` (`string`):  When `null`, the `token_type` field will be omitted from the resulting object.
-  - `required_claim` (`list[obj]`):  When `null`, the `required_claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.required_claim.new](#fn-tokenrestrictionrequiredclaimnew) constructor.
+  - `required_claim` (`list[obj]`):  When `null`, the `required_claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.required_claim.new](#fn-policy_optionpolicy_optionrequired_claimnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `token_restriction` sub block.

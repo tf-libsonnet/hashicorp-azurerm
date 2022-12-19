@@ -113,11 +113,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `transparent_data_encryption_enabled` (`bool`):  When `null`, the `transparent_data_encryption_enabled` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.import_.new](#fn-mssqldatabaseimportnew) constructor.
-  - `long_term_retention_policy` (`list[obj]`):  When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.long_term_retention_policy.new](#fn-mssqldatabaselongtermretentionpolicynew) constructor.
-  - `short_term_retention_policy` (`list[obj]`):  When `null`, the `short_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.short_term_retention_policy.new](#fn-mssqldatabaseshorttermretentionpolicynew) constructor.
-  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.threat_detection_policy.new](#fn-mssqldatabasethreatdetectionpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.timeouts.new](#fn-mssqldatabasetimeoutsnew) constructor.
+  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.import_.new](#fn-import_new) constructor.
+  - `long_term_retention_policy` (`list[obj]`):  When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.long_term_retention_policy.new](#fn-long_term_retention_policynew) constructor.
+  - `short_term_retention_policy` (`list[obj]`):  When `null`, the `short_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.short_term_retention_policy.new](#fn-short_term_retention_policynew) constructor.
+  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -133,7 +133,7 @@ newAttrs()
 `azurerm.mssql_database.newAttrs` constructs a new object with attributes and blocks configured for the `mssql_database`
 Terraform resource.
 
-Unlike [azurerm.mssql_database.new](#fn-mssqldatabasenew), this function will not inject the `resource`
+Unlike [azurerm.mssql_database.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -165,11 +165,11 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `transparent_data_encryption_enabled` (`bool`):  When `null`, the `transparent_data_encryption_enabled` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.import_.new](#fn-mssqldatabaseimportnew) constructor.
-  - `long_term_retention_policy` (`list[obj]`):  When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.long_term_retention_policy.new](#fn-mssqldatabaselongtermretentionpolicynew) constructor.
-  - `short_term_retention_policy` (`list[obj]`):  When `null`, the `short_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.short_term_retention_policy.new](#fn-mssqldatabaseshorttermretentionpolicynew) constructor.
-  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.threat_detection_policy.new](#fn-mssqldatabasethreatdetectionpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.timeouts.new](#fn-mssqldatabasetimeoutsnew) constructor.
+  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.import_.new](#fn-import_new) constructor.
+  - `long_term_retention_policy` (`list[obj]`):  When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.long_term_retention_policy.new](#fn-long_term_retention_policynew) constructor.
+  - `short_term_retention_policy` (`list[obj]`):  When `null`, the `short_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.short_term_retention_policy.new](#fn-short_term_retention_policynew) constructor.
+  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_database` resource into the root Terraform configuration.

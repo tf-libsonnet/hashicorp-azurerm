@@ -103,14 +103,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `node_size` (`string`): 
   - `number_of_nodes` (`number`):  When `null`, the `number_of_nodes` field will be omitted from the resulting object.
-  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.catalog_info.new](#fn-datafactoryintegrationruntimeazuressiscataloginfonew) constructor.
-  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.custom_setup_script.new](#fn-datafactoryintegrationruntimeazuressiscustomsetupscriptnew) constructor.
-  - `express_custom_setup` (`list[obj]`):  When `null`, the `express_custom_setup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.new](#fn-datafactoryintegrationruntimeazuressisexpresscustomsetupnew) constructor.
-  - `express_vnet_integration` (`list[obj]`):  When `null`, the `express_vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_vnet_integration.new](#fn-datafactoryintegrationruntimeazuressisexpressvnetintegrationnew) constructor.
-  - `package_store` (`list[obj]`):  When `null`, the `package_store` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.package_store.new](#fn-datafactoryintegrationruntimeazuressispackagestorenew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.proxy.new](#fn-datafactoryintegrationruntimeazuressisproxynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.timeouts.new](#fn-datafactoryintegrationruntimeazuressistimeoutsnew) constructor.
-  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.vnet_integration.new](#fn-datafactoryintegrationruntimeazuressisvnetintegrationnew) constructor.
+  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.catalog_info.new](#fn-catalog_infonew) constructor.
+  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
+  - `express_custom_setup` (`list[obj]`):  When `null`, the `express_custom_setup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.new](#fn-express_custom_setupnew) constructor.
+  - `express_vnet_integration` (`list[obj]`):  When `null`, the `express_vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_vnet_integration.new](#fn-express_vnet_integrationnew) constructor.
+  - `package_store` (`list[obj]`):  When `null`, the `package_store` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.package_store.new](#fn-package_storenew) constructor.
+  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.proxy.new](#fn-proxynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.vnet_integration.new](#fn-vnet_integrationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -126,7 +126,7 @@ newAttrs()
 `azurerm.data_factory_integration_runtime_azure_ssis.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_integration_runtime_azure_ssis`
 Terraform resource.
 
-Unlike [azurerm.data_factory_integration_runtime_azure_ssis.new](#fn-datafactoryintegrationruntimeazuressisnew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_integration_runtime_azure_ssis.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -143,14 +143,14 @@ injecting into a complete block.
   - `name` (`string`): 
   - `node_size` (`string`): 
   - `number_of_nodes` (`number`):  When `null`, the `number_of_nodes` field will be omitted from the resulting object.
-  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.catalog_info.new](#fn-datafactoryintegrationruntimeazuressiscataloginfonew) constructor.
-  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.custom_setup_script.new](#fn-datafactoryintegrationruntimeazuressiscustomsetupscriptnew) constructor.
-  - `express_custom_setup` (`list[obj]`):  When `null`, the `express_custom_setup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.new](#fn-datafactoryintegrationruntimeazuressisexpresscustomsetupnew) constructor.
-  - `express_vnet_integration` (`list[obj]`):  When `null`, the `express_vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_vnet_integration.new](#fn-datafactoryintegrationruntimeazuressisexpressvnetintegrationnew) constructor.
-  - `package_store` (`list[obj]`):  When `null`, the `package_store` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.package_store.new](#fn-datafactoryintegrationruntimeazuressispackagestorenew) constructor.
-  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.proxy.new](#fn-datafactoryintegrationruntimeazuressisproxynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.timeouts.new](#fn-datafactoryintegrationruntimeazuressistimeoutsnew) constructor.
-  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.vnet_integration.new](#fn-datafactoryintegrationruntimeazuressisvnetintegrationnew) constructor.
+  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.catalog_info.new](#fn-catalog_infonew) constructor.
+  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
+  - `express_custom_setup` (`list[obj]`):  When `null`, the `express_custom_setup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.new](#fn-express_custom_setupnew) constructor.
+  - `express_vnet_integration` (`list[obj]`):  When `null`, the `express_vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_vnet_integration.new](#fn-express_vnet_integrationnew) constructor.
+  - `package_store` (`list[obj]`):  When `null`, the `package_store` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.package_store.new](#fn-package_storenew) constructor.
+  - `proxy` (`list[obj]`):  When `null`, the `proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.proxy.new](#fn-proxynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.vnet_integration.new](#fn-vnet_integrationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_integration_runtime_azure_ssis` resource into the root Terraform configuration.
@@ -666,8 +666,8 @@ Terraform sub block.
 **Args**:
   - `environment` (`obj`):  When `null`, the `environment` field will be omitted from the resulting object.
   - `powershell_version` (`string`):  When `null`, the `powershell_version` field will be omitted from the resulting object.
-  - `command_key` (`list[obj]`):  When `null`, the `command_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.new](#fn-expresscustomsetupcommandkeynew) constructor.
-  - `component` (`list[obj]`):  When `null`, the `component` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.new](#fn-expresscustomsetupcomponentnew) constructor.
+  - `command_key` (`list[obj]`):  When `null`, the `command_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.new](#fn-express_custom_setupcommand_keynew) constructor.
+  - `component` (`list[obj]`):  When `null`, the `component` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.new](#fn-express_custom_setupcomponentnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `express_custom_setup` sub block.
@@ -693,7 +693,7 @@ Terraform sub block.
   - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
   - `target_name` (`string`): 
   - `user_name` (`string`): 
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.key_vault_password.new](#fn-commandkeykeyvaultpasswordnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.command_key.key_vault_password.new](#fn-express_custom_setupexpress_custom_setupkey_vault_passwordnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `command_key` sub block.
@@ -744,7 +744,7 @@ Terraform sub block.
 **Args**:
   - `license` (`string`):  When `null`, the `license` field will be omitted from the resulting object.
   - `name` (`string`): 
-  - `key_vault_license` (`list[obj]`):  When `null`, the `key_vault_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.key_vault_license.new](#fn-componentkeyvaultlicensenew) constructor.
+  - `key_vault_license` (`list[obj]`):  When `null`, the `key_vault_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_azure_ssis.express_custom_setup.component.key_vault_license.new](#fn-express_custom_setupexpress_custom_setupkey_vault_licensenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `component` sub block.

@@ -87,10 +87,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `notes` (`string`):  When `null`, the `notes` field will be omitted from the resulting object.
   - `output_workspace_resource_ids` (`list`):  When `null`, the `output_workspace_resource_ids` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `endpoint` (`list[obj]`):  When `null`, the `endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.new](#fn-networkconnectionmonitorendpointnew) constructor.
-  - `test_configuration` (`list[obj]`):  When `null`, the `test_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.new](#fn-networkconnectionmonitortestconfigurationnew) constructor.
-  - `test_group` (`list[obj]`):  When `null`, the `test_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_group.new](#fn-networkconnectionmonitortestgroupnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.timeouts.new](#fn-networkconnectionmonitortimeoutsnew) constructor.
+  - `endpoint` (`list[obj]`):  When `null`, the `endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.new](#fn-endpointnew) constructor.
+  - `test_configuration` (`list[obj]`):  When `null`, the `test_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.new](#fn-test_configurationnew) constructor.
+  - `test_group` (`list[obj]`):  When `null`, the `test_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_group.new](#fn-test_groupnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,7 +106,7 @@ newAttrs()
 `azurerm.network_connection_monitor.newAttrs` constructs a new object with attributes and blocks configured for the `network_connection_monitor`
 Terraform resource.
 
-Unlike [azurerm.network_connection_monitor.new](#fn-networkconnectionmonitornew), this function will not inject the `resource`
+Unlike [azurerm.network_connection_monitor.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -120,10 +120,10 @@ injecting into a complete block.
   - `notes` (`string`):  When `null`, the `notes` field will be omitted from the resulting object.
   - `output_workspace_resource_ids` (`list`):  When `null`, the `output_workspace_resource_ids` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `endpoint` (`list[obj]`):  When `null`, the `endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.new](#fn-networkconnectionmonitorendpointnew) constructor.
-  - `test_configuration` (`list[obj]`):  When `null`, the `test_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.new](#fn-networkconnectionmonitortestconfigurationnew) constructor.
-  - `test_group` (`list[obj]`):  When `null`, the `test_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_group.new](#fn-networkconnectionmonitortestgroupnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.timeouts.new](#fn-networkconnectionmonitortimeoutsnew) constructor.
+  - `endpoint` (`list[obj]`):  When `null`, the `endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.new](#fn-endpointnew) constructor.
+  - `test_configuration` (`list[obj]`):  When `null`, the `test_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.new](#fn-test_configurationnew) constructor.
+  - `test_group` (`list[obj]`):  When `null`, the `test_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_group.new](#fn-test_groupnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_connection_monitor` resource into the root Terraform configuration.
@@ -420,7 +420,7 @@ Terraform sub block.
 
 **Args**:
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `item` (`list[obj]`):  When `null`, the `item` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.filter.item.new](#fn-filteritemnew) constructor.
+  - `item` (`list[obj]`):  When `null`, the `item` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.endpoint.filter.item.new](#fn-endpointendpointitemnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -471,10 +471,10 @@ Terraform sub block.
   - `preferred_ip_version` (`string`):  When `null`, the `preferred_ip_version` field will be omitted from the resulting object.
   - `protocol` (`string`): 
   - `test_frequency_in_seconds` (`number`):  When `null`, the `test_frequency_in_seconds` field will be omitted from the resulting object.
-  - `http_configuration` (`list[obj]`):  When `null`, the `http_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.new](#fn-testconfigurationhttpconfigurationnew) constructor.
-  - `icmp_configuration` (`list[obj]`):  When `null`, the `icmp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.icmp_configuration.new](#fn-testconfigurationicmpconfigurationnew) constructor.
-  - `success_threshold` (`list[obj]`):  When `null`, the `success_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.success_threshold.new](#fn-testconfigurationsuccessthresholdnew) constructor.
-  - `tcp_configuration` (`list[obj]`):  When `null`, the `tcp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.tcp_configuration.new](#fn-testconfigurationtcpconfigurationnew) constructor.
+  - `http_configuration` (`list[obj]`):  When `null`, the `http_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.new](#fn-test_configurationhttp_configurationnew) constructor.
+  - `icmp_configuration` (`list[obj]`):  When `null`, the `icmp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.icmp_configuration.new](#fn-test_configurationicmp_configurationnew) constructor.
+  - `success_threshold` (`list[obj]`):  When `null`, the `success_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.success_threshold.new](#fn-test_configurationsuccess_thresholdnew) constructor.
+  - `tcp_configuration` (`list[obj]`):  When `null`, the `tcp_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.tcp_configuration.new](#fn-test_configurationtcp_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `test_configuration` sub block.
@@ -502,7 +502,7 @@ Terraform sub block.
   - `port` (`number`):  When `null`, the `port` field will be omitted from the resulting object.
   - `prefer_https` (`bool`):  When `null`, the `prefer_https` field will be omitted from the resulting object.
   - `valid_status_code_ranges` (`list`):  When `null`, the `valid_status_code_ranges` field will be omitted from the resulting object.
-  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.request_header.new](#fn-httpconfigurationrequestheadernew) constructor.
+  - `request_header` (`list[obj]`):  When `null`, the `request_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_connection_monitor.test_configuration.http_configuration.request_header.new](#fn-test_configurationtest_configurationrequest_headernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_configuration` sub block.

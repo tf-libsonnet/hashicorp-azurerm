@@ -77,11 +77,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `daily_schedule` (`list[obj]`):  When `null`, the `daily_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.daily_schedule.new](#fn-netappsnapshotpolicydailyschedulenew) constructor.
-  - `hourly_schedule` (`list[obj]`):  When `null`, the `hourly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.hourly_schedule.new](#fn-netappsnapshotpolicyhourlyschedulenew) constructor.
-  - `monthly_schedule` (`list[obj]`):  When `null`, the `monthly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.monthly_schedule.new](#fn-netappsnapshotpolicymonthlyschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.timeouts.new](#fn-netappsnapshotpolicytimeoutsnew) constructor.
-  - `weekly_schedule` (`list[obj]`):  When `null`, the `weekly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.weekly_schedule.new](#fn-netappsnapshotpolicyweeklyschedulenew) constructor.
+  - `daily_schedule` (`list[obj]`):  When `null`, the `daily_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.daily_schedule.new](#fn-daily_schedulenew) constructor.
+  - `hourly_schedule` (`list[obj]`):  When `null`, the `hourly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.hourly_schedule.new](#fn-hourly_schedulenew) constructor.
+  - `monthly_schedule` (`list[obj]`):  When `null`, the `monthly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.monthly_schedule.new](#fn-monthly_schedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `weekly_schedule` (`list[obj]`):  When `null`, the `weekly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.weekly_schedule.new](#fn-weekly_schedulenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,7 +97,7 @@ newAttrs()
 `azurerm.netapp_snapshot_policy.newAttrs` constructs a new object with attributes and blocks configured for the `netapp_snapshot_policy`
 Terraform resource.
 
-Unlike [azurerm.netapp_snapshot_policy.new](#fn-netappsnapshotpolicynew), this function will not inject the `resource`
+Unlike [azurerm.netapp_snapshot_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,11 +111,11 @@ injecting into a complete block.
   - `name` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `daily_schedule` (`list[obj]`):  When `null`, the `daily_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.daily_schedule.new](#fn-netappsnapshotpolicydailyschedulenew) constructor.
-  - `hourly_schedule` (`list[obj]`):  When `null`, the `hourly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.hourly_schedule.new](#fn-netappsnapshotpolicyhourlyschedulenew) constructor.
-  - `monthly_schedule` (`list[obj]`):  When `null`, the `monthly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.monthly_schedule.new](#fn-netappsnapshotpolicymonthlyschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.timeouts.new](#fn-netappsnapshotpolicytimeoutsnew) constructor.
-  - `weekly_schedule` (`list[obj]`):  When `null`, the `weekly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.weekly_schedule.new](#fn-netappsnapshotpolicyweeklyschedulenew) constructor.
+  - `daily_schedule` (`list[obj]`):  When `null`, the `daily_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.daily_schedule.new](#fn-daily_schedulenew) constructor.
+  - `hourly_schedule` (`list[obj]`):  When `null`, the `hourly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.hourly_schedule.new](#fn-hourly_schedulenew) constructor.
+  - `monthly_schedule` (`list[obj]`):  When `null`, the `monthly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.monthly_schedule.new](#fn-monthly_schedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `weekly_schedule` (`list[obj]`):  When `null`, the `weekly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_snapshot_policy.weekly_schedule.new](#fn-weekly_schedulenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `netapp_snapshot_policy` resource into the root Terraform configuration.

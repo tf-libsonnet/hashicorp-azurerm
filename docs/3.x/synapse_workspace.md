@@ -99,11 +99,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sql_identity_control_enabled` (`bool`):  When `null`, the `sql_identity_control_enabled` field will be omitted from the resulting object.
   - `storage_data_lake_gen2_filesystem_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `azure_devops_repo` (`list[obj]`):  When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-synapseworkspaceazuredevopsreponew) constructor.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-synapseworkspacecustomermanagedkeynew) constructor.
-  - `github_repo` (`list[obj]`):  When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-synapseworkspacegithubreponew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-synapseworkspaceidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-synapseworkspacetimeoutsnew) constructor.
+  - `azure_devops_repo` (`list[obj]`):  When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-azure_devops_reponew) constructor.
+  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `github_repo` (`list[obj]`):  When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-github_reponew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,7 +119,7 @@ newAttrs()
 `azurerm.synapse_workspace.newAttrs` constructs a new object with attributes and blocks configured for the `synapse_workspace`
 Terraform resource.
 
-Unlike [azurerm.synapse_workspace.new](#fn-synapseworkspacenew), this function will not inject the `resource`
+Unlike [azurerm.synapse_workspace.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -144,11 +144,11 @@ injecting into a complete block.
   - `sql_identity_control_enabled` (`bool`):  When `null`, the `sql_identity_control_enabled` field will be omitted from the resulting object.
   - `storage_data_lake_gen2_filesystem_id` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `azure_devops_repo` (`list[obj]`):  When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-synapseworkspaceazuredevopsreponew) constructor.
-  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-synapseworkspacecustomermanagedkeynew) constructor.
-  - `github_repo` (`list[obj]`):  When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-synapseworkspacegithubreponew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-synapseworkspaceidentitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-synapseworkspacetimeoutsnew) constructor.
+  - `azure_devops_repo` (`list[obj]`):  When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-azure_devops_reponew) constructor.
+  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `github_repo` (`list[obj]`):  When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-github_reponew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_workspace` resource into the root Terraform configuration.

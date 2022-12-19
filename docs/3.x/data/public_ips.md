@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `attachment_status` (`string`):  When `null`, the `attachment_status` field will be omitted from the resulting object.
   - `name_prefix` (`string`):  When `null`, the `name_prefix` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.public_ips.timeouts.new](#fn-publicipstimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.public_ips.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.data.public_ips.newAttrs` constructs a new object with attributes and blocks configured for the `public_ips`
 Terraform data source.
 
-Unlike [azurerm.data.public_ips.new](#fn-publicipsnew), this function will not inject the `data source`
+Unlike [azurerm.data.public_ips.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `attachment_status` (`string`):  When `null`, the `attachment_status` field will be omitted from the resulting object.
   - `name_prefix` (`string`):  When `null`, the `name_prefix` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.public_ips.timeouts.new](#fn-publicipstimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.public_ips.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `public_ips` data source into the root Terraform configuration.

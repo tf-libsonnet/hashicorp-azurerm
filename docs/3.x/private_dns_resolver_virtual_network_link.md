@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `virtual_network_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_virtual_network_link.timeouts.new](#fn-privatednsresolvervirtualnetworklinktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_virtual_network_link.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.private_dns_resolver_virtual_network_link.newAttrs` constructs a new object with attributes and blocks configured for the `private_dns_resolver_virtual_network_link`
 Terraform resource.
 
-Unlike [azurerm.private_dns_resolver_virtual_network_link.new](#fn-privatednsresolvervirtualnetworklinknew), this function will not inject the `resource`
+Unlike [azurerm.private_dns_resolver_virtual_network_link.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): 
   - `virtual_network_id` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_virtual_network_link.timeouts.new](#fn-privatednsresolvervirtualnetworklinktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_dns_resolver_virtual_network_link.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `private_dns_resolver_virtual_network_link` resource into the root Terraform configuration.

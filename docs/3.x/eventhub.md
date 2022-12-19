@@ -67,8 +67,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `partition_count` (`number`): 
   - `resource_group_name` (`string`): 
   - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-eventhubcapturedescriptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-eventhubtimeoutsnew) constructor.
+  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-capture_descriptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `azurerm.eventhub.newAttrs` constructs a new object with attributes and blocks configured for the `eventhub`
 Terraform resource.
 
-Unlike [azurerm.eventhub.new](#fn-eventhubnew), this function will not inject the `resource`
+Unlike [azurerm.eventhub.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,8 +98,8 @@ injecting into a complete block.
   - `partition_count` (`number`): 
   - `resource_group_name` (`string`): 
   - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
-  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-eventhubcapturedescriptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-eventhubtimeoutsnew) constructor.
+  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-capture_descriptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `eventhub` resource into the root Terraform configuration.
@@ -296,7 +296,7 @@ Terraform sub block.
   - `interval_in_seconds` (`number`):  When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
   - `size_limit_in_bytes` (`number`):  When `null`, the `size_limit_in_bytes` field will be omitted from the resulting object.
   - `skip_empty_archives` (`bool`):  When `null`, the `skip_empty_archives` field will be omitted from the resulting object.
-  - `destination` (`list[obj]`):  When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.destination.new](#fn-capturedescriptiondestinationnew) constructor.
+  - `destination` (`list[obj]`):  When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.destination.new](#fn-capture_descriptiondestinationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `capture_description` sub block.

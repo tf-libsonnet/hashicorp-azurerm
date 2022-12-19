@@ -71,9 +71,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `spring_cloud_app_id` (`string`):  When `null`, the `spring_cloud_app_id` field will be omitted from the resulting object.
   - `spring_cloud_gateway_id` (`string`): 
   - `sso_validation_enabled` (`bool`):  When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
-  - `open_api` (`list[obj]`):  When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-springcloudgatewayrouteconfigopenapinew) constructor.
-  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-springcloudgatewayrouteconfigroutenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-springcloudgatewayrouteconfigtimeoutsnew) constructor.
+  - `open_api` (`list[obj]`):  When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-open_apinew) constructor.
+  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-routenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `azurerm.spring_cloud_gateway_route_config.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_gateway_route_config`
 Terraform resource.
 
-Unlike [azurerm.spring_cloud_gateway_route_config.new](#fn-springcloudgatewayrouteconfignew), this function will not inject the `resource`
+Unlike [azurerm.spring_cloud_gateway_route_config.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -104,9 +104,9 @@ injecting into a complete block.
   - `spring_cloud_app_id` (`string`):  When `null`, the `spring_cloud_app_id` field will be omitted from the resulting object.
   - `spring_cloud_gateway_id` (`string`): 
   - `sso_validation_enabled` (`bool`):  When `null`, the `sso_validation_enabled` field will be omitted from the resulting object.
-  - `open_api` (`list[obj]`):  When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-springcloudgatewayrouteconfigopenapinew) constructor.
-  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-springcloudgatewayrouteconfigroutenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-springcloudgatewayrouteconfigtimeoutsnew) constructor.
+  - `open_api` (`list[obj]`):  When `null`, the `open_api` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.open_api.new](#fn-open_apinew) constructor.
+  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.route.new](#fn-routenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway_route_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_gateway_route_config` resource into the root Terraform configuration.

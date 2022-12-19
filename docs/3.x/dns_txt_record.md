@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `ttl` (`number`): 
   - `zone_name` (`string`): 
-  - `record` (`list[obj]`):  When `null`, the `record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.record.new](#fn-dnstxtrecordrecordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.timeouts.new](#fn-dnstxtrecordtimeoutsnew) constructor.
+  - `record` (`list[obj]`):  When `null`, the `record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.record.new](#fn-recordnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.dns_txt_record.newAttrs` constructs a new object with attributes and blocks configured for the `dns_txt_record`
 Terraform resource.
 
-Unlike [azurerm.dns_txt_record.new](#fn-dnstxtrecordnew), this function will not inject the `resource`
+Unlike [azurerm.dns_txt_record.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `ttl` (`number`): 
   - `zone_name` (`string`): 
-  - `record` (`list[obj]`):  When `null`, the `record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.record.new](#fn-dnstxtrecordrecordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.timeouts.new](#fn-dnstxtrecordtimeoutsnew) constructor.
+  - `record` (`list[obj]`):  When `null`, the `record` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.record.new](#fn-recordnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dns_txt_record.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dns_txt_record` resource into the root Terraform configuration.

@@ -63,9 +63,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `nginx_deployment_id` (`string`): 
   - `package_data` (`string`):  When `null`, the `package_data` field will be omitted from the resulting object.
   - `root_file` (`string`): 
-  - `config_file` (`list[obj]`):  When `null`, the `config_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.config_file.new](#fn-nginxconfigurationconfigfilenew) constructor.
-  - `protected_file` (`list[obj]`):  When `null`, the `protected_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.protected_file.new](#fn-nginxconfigurationprotectedfilenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.timeouts.new](#fn-nginxconfigurationtimeoutsnew) constructor.
+  - `config_file` (`list[obj]`):  When `null`, the `config_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.config_file.new](#fn-config_filenew) constructor.
+  - `protected_file` (`list[obj]`):  When `null`, the `protected_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.protected_file.new](#fn-protected_filenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `azurerm.nginx_configuration.newAttrs` constructs a new object with attributes and blocks configured for the `nginx_configuration`
 Terraform resource.
 
-Unlike [azurerm.nginx_configuration.new](#fn-nginxconfigurationnew), this function will not inject the `resource`
+Unlike [azurerm.nginx_configuration.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -92,9 +92,9 @@ injecting into a complete block.
   - `nginx_deployment_id` (`string`): 
   - `package_data` (`string`):  When `null`, the `package_data` field will be omitted from the resulting object.
   - `root_file` (`string`): 
-  - `config_file` (`list[obj]`):  When `null`, the `config_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.config_file.new](#fn-nginxconfigurationconfigfilenew) constructor.
-  - `protected_file` (`list[obj]`):  When `null`, the `protected_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.protected_file.new](#fn-nginxconfigurationprotectedfilenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.timeouts.new](#fn-nginxconfigurationtimeoutsnew) constructor.
+  - `config_file` (`list[obj]`):  When `null`, the `config_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.config_file.new](#fn-config_filenew) constructor.
+  - `protected_file` (`list[obj]`):  When `null`, the `protected_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.protected_file.new](#fn-protected_filenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.nginx_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `nginx_configuration` resource into the root Terraform configuration.

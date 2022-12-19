@@ -81,10 +81,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `linked_service_name` (`string`): 
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_storage_location.new](#fn-datafactorydatasetparquetazureblobstoragelocationnew) constructor.
-  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.http_server_location.new](#fn-datafactorydatasetparquethttpserverlocationnew) constructor.
-  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.schema_column.new](#fn-datafactorydatasetparquetschemacolumnnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.timeouts.new](#fn-datafactorydatasetparquettimeoutsnew) constructor.
+  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
+  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.http_server_location.new](#fn-http_server_locationnew) constructor.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.schema_column.new](#fn-schema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `azurerm.data_factory_dataset_parquet.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_dataset_parquet`
 Terraform resource.
 
-Unlike [azurerm.data_factory_dataset_parquet.new](#fn-datafactorydatasetparquetnew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_dataset_parquet.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -118,10 +118,10 @@ injecting into a complete block.
   - `linked_service_name` (`string`): 
   - `name` (`string`): 
   - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
-  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_storage_location.new](#fn-datafactorydatasetparquetazureblobstoragelocationnew) constructor.
-  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.http_server_location.new](#fn-datafactorydatasetparquethttpserverlocationnew) constructor.
-  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.schema_column.new](#fn-datafactorydatasetparquetschemacolumnnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.timeouts.new](#fn-datafactorydatasetparquettimeoutsnew) constructor.
+  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
+  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.http_server_location.new](#fn-http_server_locationnew) constructor.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.schema_column.new](#fn-schema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_dataset_parquet` resource into the root Terraform configuration.

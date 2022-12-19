@@ -97,11 +97,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `type` (`string`): 
   - `vpn_type` (`string`):  When `null`, the `vpn_type` field will be omitted from the resulting object.
-  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.new](#fn-virtualnetworkgatewaybgpsettingsnew) constructor.
-  - `custom_route` (`list[obj]`):  When `null`, the `custom_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.custom_route.new](#fn-virtualnetworkgatewaycustomroutenew) constructor.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.ip_configuration.new](#fn-virtualnetworkgatewayipconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.timeouts.new](#fn-virtualnetworkgatewaytimeoutsnew) constructor.
-  - `vpn_client_configuration` (`list[obj]`):  When `null`, the `vpn_client_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.new](#fn-virtualnetworkgatewayvpnclientconfigurationnew) constructor.
+  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
+  - `custom_route` (`list[obj]`):  When `null`, the `custom_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.custom_route.new](#fn-custom_routenew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vpn_client_configuration` (`list[obj]`):  When `null`, the `vpn_client_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.new](#fn-vpn_client_configurationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -117,7 +117,7 @@ newAttrs()
 `azurerm.virtual_network_gateway.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_network_gateway`
 Terraform resource.
 
-Unlike [azurerm.virtual_network_gateway.new](#fn-virtualnetworkgatewaynew), this function will not inject the `resource`
+Unlike [azurerm.virtual_network_gateway.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -138,11 +138,11 @@ injecting into a complete block.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `type` (`string`): 
   - `vpn_type` (`string`):  When `null`, the `vpn_type` field will be omitted from the resulting object.
-  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.new](#fn-virtualnetworkgatewaybgpsettingsnew) constructor.
-  - `custom_route` (`list[obj]`):  When `null`, the `custom_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.custom_route.new](#fn-virtualnetworkgatewaycustomroutenew) constructor.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.ip_configuration.new](#fn-virtualnetworkgatewayipconfigurationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.timeouts.new](#fn-virtualnetworkgatewaytimeoutsnew) constructor.
-  - `vpn_client_configuration` (`list[obj]`):  When `null`, the `vpn_client_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.new](#fn-virtualnetworkgatewayvpnclientconfigurationnew) constructor.
+  - `bgp_settings` (`list[obj]`):  When `null`, the `bgp_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.new](#fn-bgp_settingsnew) constructor.
+  - `custom_route` (`list[obj]`):  When `null`, the `custom_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.custom_route.new](#fn-custom_routenew) constructor.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vpn_client_configuration` (`list[obj]`):  When `null`, the `vpn_client_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.new](#fn-vpn_client_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_network_gateway` resource into the root Terraform configuration.
@@ -559,7 +559,7 @@ Terraform sub block.
 **Args**:
   - `asn` (`number`):  When `null`, the `asn` field will be omitted from the resulting object.
   - `peer_weight` (`number`):  When `null`, the `peer_weight` field will be omitted from the resulting object.
-  - `peering_addresses` (`list[obj]`):  When `null`, the `peering_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.peering_addresses.new](#fn-bgpsettingspeeringaddressesnew) constructor.
+  - `peering_addresses` (`list[obj]`):  When `null`, the `peering_addresses` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.bgp_settings.peering_addresses.new](#fn-bgp_settingspeering_addressesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bgp_settings` sub block.
@@ -689,8 +689,8 @@ Terraform sub block.
   - `radius_server_secret` (`string`):  When `null`, the `radius_server_secret` field will be omitted from the resulting object.
   - `vpn_auth_types` (`list`):  When `null`, the `vpn_auth_types` field will be omitted from the resulting object.
   - `vpn_client_protocols` (`list`):  When `null`, the `vpn_client_protocols` field will be omitted from the resulting object.
-  - `revoked_certificate` (`list[obj]`):  When `null`, the `revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.revoked_certificate.new](#fn-vpnclientconfigurationrevokedcertificatenew) constructor.
-  - `root_certificate` (`list[obj]`):  When `null`, the `root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.root_certificate.new](#fn-vpnclientconfigurationrootcertificatenew) constructor.
+  - `revoked_certificate` (`list[obj]`):  When `null`, the `revoked_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.revoked_certificate.new](#fn-vpn_client_configurationrevoked_certificatenew) constructor.
+  - `root_certificate` (`list[obj]`):  When `null`, the `root_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_gateway.vpn_client_configuration.root_certificate.new](#fn-vpn_client_configurationroot_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vpn_client_configuration` sub block.

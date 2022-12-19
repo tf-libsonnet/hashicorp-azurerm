@@ -81,9 +81,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `service_principal_key` (`string`):  When `null`, the `service_principal_key` field will be omitted from the resulting object.
   - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
   - `use_managed_identity` (`bool`):  When `null`, the `use_managed_identity` field will be omitted from the resulting object.
-  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_connection_string.new](#fn-datafactorylinkedserviceazuresqldatabasekeyvaultconnectionstringnew) constructor.
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_password.new](#fn-datafactorylinkedserviceazuresqldatabasekeyvaultpasswordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.timeouts.new](#fn-datafactorylinkedserviceazuresqldatabasetimeoutsnew) constructor.
+  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_connection_string.new](#fn-key_vault_connection_stringnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,7 +99,7 @@ newAttrs()
 `azurerm.data_factory_linked_service_azure_sql_database.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_linked_service_azure_sql_database`
 Terraform resource.
 
-Unlike [azurerm.data_factory_linked_service_azure_sql_database.new](#fn-datafactorylinkedserviceazuresqldatabasenew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_linked_service_azure_sql_database.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -119,9 +119,9 @@ injecting into a complete block.
   - `service_principal_key` (`string`):  When `null`, the `service_principal_key` field will be omitted from the resulting object.
   - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
   - `use_managed_identity` (`bool`):  When `null`, the `use_managed_identity` field will be omitted from the resulting object.
-  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_connection_string.new](#fn-datafactorylinkedserviceazuresqldatabasekeyvaultconnectionstringnew) constructor.
-  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_password.new](#fn-datafactorylinkedserviceazuresqldatabasekeyvaultpasswordnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.timeouts.new](#fn-datafactorylinkedserviceazuresqldatabasetimeoutsnew) constructor.
+  - `key_vault_connection_string` (`list[obj]`):  When `null`, the `key_vault_connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_connection_string.new](#fn-key_vault_connection_stringnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_sql_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_azure_sql_database` resource into the root Terraform configuration.

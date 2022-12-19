@@ -121,8 +121,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `trusted_launch_enabled` (`bool`):  When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
   - `upload_size_bytes` (`number`):  When `null`, the `upload_size_bytes` field will be omitted from the resulting object.
   - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-manageddiskencryptionsettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-manageddisktimeoutsnew) constructor.
+  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-encryption_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -138,7 +138,7 @@ newAttrs()
 `azurerm.managed_disk.newAttrs` constructs a new object with attributes and blocks configured for the `managed_disk`
 Terraform resource.
 
-Unlike [azurerm.managed_disk.new](#fn-manageddisknew), this function will not inject the `resource`
+Unlike [azurerm.managed_disk.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -178,8 +178,8 @@ injecting into a complete block.
   - `trusted_launch_enabled` (`bool`):  When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
   - `upload_size_bytes` (`number`):  When `null`, the `upload_size_bytes` field will be omitted from the resulting object.
   - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
-  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-manageddiskencryptionsettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-manageddisktimeoutsnew) constructor.
+  - `encryption_settings` (`list[obj]`):  When `null`, the `encryption_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.new](#fn-encryption_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `managed_disk` resource into the root Terraform configuration.
@@ -788,8 +788,8 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
-  - `disk_encryption_key` (`list[obj]`):  When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.disk_encryption_key.new](#fn-encryptionsettingsdiskencryptionkeynew) constructor.
-  - `key_encryption_key` (`list[obj]`):  When `null`, the `key_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.key_encryption_key.new](#fn-encryptionsettingskeyencryptionkeynew) constructor.
+  - `disk_encryption_key` (`list[obj]`):  When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.disk_encryption_key.new](#fn-encryption_settingsdisk_encryption_keynew) constructor.
+  - `key_encryption_key` (`list[obj]`):  When `null`, the `key_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.managed_disk.encryption_settings.key_encryption_key.new](#fn-encryption_settingskey_encryption_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `encryption_settings` sub block.

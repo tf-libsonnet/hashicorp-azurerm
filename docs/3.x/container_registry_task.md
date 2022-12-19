@@ -111,17 +111,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `timeout_in_seconds` (`number`):  When `null`, the `timeout_in_seconds` field will be omitted from the resulting object.
-  - `agent_setting` (`list[obj]`):  When `null`, the `agent_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.agent_setting.new](#fn-containerregistrytaskagentsettingnew) constructor.
-  - `base_image_trigger` (`list[obj]`):  When `null`, the `base_image_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.base_image_trigger.new](#fn-containerregistrytaskbaseimagetriggernew) constructor.
-  - `docker_step` (`list[obj]`):  When `null`, the `docker_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.docker_step.new](#fn-containerregistrytaskdockerstepnew) constructor.
-  - `encoded_step` (`list[obj]`):  When `null`, the `encoded_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.encoded_step.new](#fn-containerregistrytaskencodedstepnew) constructor.
-  - `file_step` (`list[obj]`):  When `null`, the `file_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.file_step.new](#fn-containerregistrytaskfilestepnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.identity.new](#fn-containerregistrytaskidentitynew) constructor.
-  - `platform` (`list[obj]`):  When `null`, the `platform` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.platform.new](#fn-containerregistrytaskplatformnew) constructor.
-  - `registry_credential` (`list[obj]`):  When `null`, the `registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.new](#fn-containerregistrytaskregistrycredentialnew) constructor.
-  - `source_trigger` (`list[obj]`):  When `null`, the `source_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.new](#fn-containerregistrytasksourcetriggernew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timeouts.new](#fn-containerregistrytasktimeoutsnew) constructor.
-  - `timer_trigger` (`list[obj]`):  When `null`, the `timer_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timer_trigger.new](#fn-containerregistrytasktimertriggernew) constructor.
+  - `agent_setting` (`list[obj]`):  When `null`, the `agent_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.agent_setting.new](#fn-agent_settingnew) constructor.
+  - `base_image_trigger` (`list[obj]`):  When `null`, the `base_image_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.base_image_trigger.new](#fn-base_image_triggernew) constructor.
+  - `docker_step` (`list[obj]`):  When `null`, the `docker_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.docker_step.new](#fn-docker_stepnew) constructor.
+  - `encoded_step` (`list[obj]`):  When `null`, the `encoded_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.encoded_step.new](#fn-encoded_stepnew) constructor.
+  - `file_step` (`list[obj]`):  When `null`, the `file_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.file_step.new](#fn-file_stepnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.identity.new](#fn-identitynew) constructor.
+  - `platform` (`list[obj]`):  When `null`, the `platform` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.platform.new](#fn-platformnew) constructor.
+  - `registry_credential` (`list[obj]`):  When `null`, the `registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.new](#fn-registry_credentialnew) constructor.
+  - `source_trigger` (`list[obj]`):  When `null`, the `source_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.new](#fn-source_triggernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timer_trigger` (`list[obj]`):  When `null`, the `timer_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timer_trigger.new](#fn-timer_triggernew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -137,7 +137,7 @@ newAttrs()
 `azurerm.container_registry_task.newAttrs` constructs a new object with attributes and blocks configured for the `container_registry_task`
 Terraform resource.
 
-Unlike [azurerm.container_registry_task.new](#fn-containerregistrytasknew), this function will not inject the `resource`
+Unlike [azurerm.container_registry_task.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -153,17 +153,17 @@ injecting into a complete block.
   - `name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `timeout_in_seconds` (`number`):  When `null`, the `timeout_in_seconds` field will be omitted from the resulting object.
-  - `agent_setting` (`list[obj]`):  When `null`, the `agent_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.agent_setting.new](#fn-containerregistrytaskagentsettingnew) constructor.
-  - `base_image_trigger` (`list[obj]`):  When `null`, the `base_image_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.base_image_trigger.new](#fn-containerregistrytaskbaseimagetriggernew) constructor.
-  - `docker_step` (`list[obj]`):  When `null`, the `docker_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.docker_step.new](#fn-containerregistrytaskdockerstepnew) constructor.
-  - `encoded_step` (`list[obj]`):  When `null`, the `encoded_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.encoded_step.new](#fn-containerregistrytaskencodedstepnew) constructor.
-  - `file_step` (`list[obj]`):  When `null`, the `file_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.file_step.new](#fn-containerregistrytaskfilestepnew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.identity.new](#fn-containerregistrytaskidentitynew) constructor.
-  - `platform` (`list[obj]`):  When `null`, the `platform` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.platform.new](#fn-containerregistrytaskplatformnew) constructor.
-  - `registry_credential` (`list[obj]`):  When `null`, the `registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.new](#fn-containerregistrytaskregistrycredentialnew) constructor.
-  - `source_trigger` (`list[obj]`):  When `null`, the `source_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.new](#fn-containerregistrytasksourcetriggernew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timeouts.new](#fn-containerregistrytasktimeoutsnew) constructor.
-  - `timer_trigger` (`list[obj]`):  When `null`, the `timer_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timer_trigger.new](#fn-containerregistrytasktimertriggernew) constructor.
+  - `agent_setting` (`list[obj]`):  When `null`, the `agent_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.agent_setting.new](#fn-agent_settingnew) constructor.
+  - `base_image_trigger` (`list[obj]`):  When `null`, the `base_image_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.base_image_trigger.new](#fn-base_image_triggernew) constructor.
+  - `docker_step` (`list[obj]`):  When `null`, the `docker_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.docker_step.new](#fn-docker_stepnew) constructor.
+  - `encoded_step` (`list[obj]`):  When `null`, the `encoded_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.encoded_step.new](#fn-encoded_stepnew) constructor.
+  - `file_step` (`list[obj]`):  When `null`, the `file_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.file_step.new](#fn-file_stepnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.identity.new](#fn-identitynew) constructor.
+  - `platform` (`list[obj]`):  When `null`, the `platform` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.platform.new](#fn-platformnew) constructor.
+  - `registry_credential` (`list[obj]`):  When `null`, the `registry_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.new](#fn-registry_credentialnew) constructor.
+  - `source_trigger` (`list[obj]`):  When `null`, the `source_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.new](#fn-source_triggernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timer_trigger` (`list[obj]`):  When `null`, the `timer_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.timer_trigger.new](#fn-timer_triggernew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_registry_task` resource into the root Terraform configuration.
@@ -906,8 +906,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `custom` (`list[obj]`):  When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.custom.new](#fn-registrycredentialcustomnew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.source.new](#fn-registrycredentialsourcenew) constructor.
+  - `custom` (`list[obj]`):  When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.custom.new](#fn-registry_credentialcustomnew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.registry_credential.source.new](#fn-registry_credentialsourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `registry_credential` sub block.
@@ -985,7 +985,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `repository_url` (`string`): 
   - `source_type` (`string`): 
-  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.authentication.new](#fn-sourcetriggerauthenticationnew) constructor.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_registry_task.source_trigger.authentication.new](#fn-source_triggerauthenticationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source_trigger` sub block.

@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `namespace_id` (`string`): 
   - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `trusted_services_allowed` (`bool`):  When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
-  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-servicebusnamespacenetworkrulesetnetworkrulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-servicebusnamespacenetworkrulesettimeoutsnew) constructor.
+  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-network_rulesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.servicebus_namespace_network_rule_set.newAttrs` constructs a new object with attributes and blocks configured for the `servicebus_namespace_network_rule_set`
 Terraform resource.
 
-Unlike [azurerm.servicebus_namespace_network_rule_set.new](#fn-servicebusnamespacenetworkrulesetnew), this function will not inject the `resource`
+Unlike [azurerm.servicebus_namespace_network_rule_set.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `namespace_id` (`string`): 
   - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `trusted_services_allowed` (`bool`):  When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
-  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-servicebusnamespacenetworkrulesetnetworkrulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-servicebusnamespacenetworkrulesettimeoutsnew) constructor.
+  - `network_rules` (`list[obj]`):  When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.network_rules.new](#fn-network_rulesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace_network_rule_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `servicebus_namespace_network_rule_set` resource into the root Terraform configuration.

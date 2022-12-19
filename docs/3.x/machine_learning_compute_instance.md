@@ -79,10 +79,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `subnet_resource_id` (`string`):  When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_size` (`string`): 
-  - `assign_to_user` (`list[obj]`):  When `null`, the `assign_to_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.assign_to_user.new](#fn-machinelearningcomputeinstanceassigntousernew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.identity.new](#fn-machinelearningcomputeinstanceidentitynew) constructor.
-  - `ssh` (`list[obj]`):  When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.ssh.new](#fn-machinelearningcomputeinstancesshnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.timeouts.new](#fn-machinelearningcomputeinstancetimeoutsnew) constructor.
+  - `assign_to_user` (`list[obj]`):  When `null`, the `assign_to_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.assign_to_user.new](#fn-assign_to_usernew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.identity.new](#fn-identitynew) constructor.
+  - `ssh` (`list[obj]`):  When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.ssh.new](#fn-sshnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,7 +98,7 @@ newAttrs()
 `azurerm.machine_learning_compute_instance.newAttrs` constructs a new object with attributes and blocks configured for the `machine_learning_compute_instance`
 Terraform resource.
 
-Unlike [azurerm.machine_learning_compute_instance.new](#fn-machinelearningcomputeinstancenew), this function will not inject the `resource`
+Unlike [azurerm.machine_learning_compute_instance.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,10 +115,10 @@ injecting into a complete block.
   - `subnet_resource_id` (`string`):  When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_size` (`string`): 
-  - `assign_to_user` (`list[obj]`):  When `null`, the `assign_to_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.assign_to_user.new](#fn-machinelearningcomputeinstanceassigntousernew) constructor.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.identity.new](#fn-machinelearningcomputeinstanceidentitynew) constructor.
-  - `ssh` (`list[obj]`):  When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.ssh.new](#fn-machinelearningcomputeinstancesshnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.timeouts.new](#fn-machinelearningcomputeinstancetimeoutsnew) constructor.
+  - `assign_to_user` (`list[obj]`):  When `null`, the `assign_to_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.assign_to_user.new](#fn-assign_to_usernew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.identity.new](#fn-identitynew) constructor.
+  - `ssh` (`list[obj]`):  When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.ssh.new](#fn-sshnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `machine_learning_compute_instance` resource into the root Terraform configuration.

@@ -63,7 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `run_on` (`string`):  When `null`, the `run_on` field will be omitted from the resulting object.
   - `runbook_name` (`string`): 
   - `schedule_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_job_schedule.timeouts.new](#fn-automationjobscheduletimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_job_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `azurerm.automation_job_schedule.newAttrs` constructs a new object with attributes and blocks configured for the `automation_job_schedule`
 Terraform resource.
 
-Unlike [azurerm.automation_job_schedule.new](#fn-automationjobschedulenew), this function will not inject the `resource`
+Unlike [azurerm.automation_job_schedule.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -94,7 +94,7 @@ injecting into a complete block.
   - `run_on` (`string`):  When `null`, the `run_on` field will be omitted from the resulting object.
   - `runbook_name` (`string`): 
   - `schedule_name` (`string`): 
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_job_schedule.timeouts.new](#fn-automationjobscheduletimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_job_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_job_schedule` resource into the root Terraform configuration.

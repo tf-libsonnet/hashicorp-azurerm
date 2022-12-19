@@ -71,9 +71,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `machine_learning_workspace_id` (`string`): 
   - `name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-machinelearninginferenceclusteridentitynew) constructor.
-  - `ssl` (`list[obj]`):  When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-machinelearninginferenceclustersslnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-machinelearninginferenceclustertimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-identitynew) constructor.
+  - `ssl` (`list[obj]`):  When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-sslnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `azurerm.machine_learning_inference_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `machine_learning_inference_cluster`
 Terraform resource.
 
-Unlike [azurerm.machine_learning_inference_cluster.new](#fn-machinelearninginferenceclusternew), this function will not inject the `resource`
+Unlike [azurerm.machine_learning_inference_cluster.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -104,9 +104,9 @@ injecting into a complete block.
   - `machine_learning_workspace_id` (`string`): 
   - `name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-machinelearninginferenceclusteridentitynew) constructor.
-  - `ssl` (`list[obj]`):  When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-machinelearninginferenceclustersslnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-machinelearninginferenceclustertimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.identity.new](#fn-identitynew) constructor.
+  - `ssl` (`list[obj]`):  When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.ssl.new](#fn-sslnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_inference_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `machine_learning_inference_cluster` resource into the root Terraform configuration.

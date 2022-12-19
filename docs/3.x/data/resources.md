@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `required_tags` (`obj`):  When `null`, the `required_tags` field will be omitted from the resulting object.
   - `resource_group_name` (`string`):  When `null`, the `resource_group_name` field will be omitted from the resulting object.
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-resourcestimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `azurerm.data.resources.newAttrs` constructs a new object with attributes and blocks configured for the `resources`
 Terraform data source.
 
-Unlike [azurerm.data.resources.new](#fn-resourcesnew), this function will not inject the `data source`
+Unlike [azurerm.data.resources.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `required_tags` (`obj`):  When `null`, the `required_tags` field will be omitted from the resulting object.
   - `resource_group_name` (`string`):  When `null`, the `resource_group_name` field will be omitted from the resulting object.
   - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-resourcestimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.resources.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `resources` data source into the root Terraform configuration.

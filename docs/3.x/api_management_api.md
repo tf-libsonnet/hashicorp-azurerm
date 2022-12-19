@@ -111,13 +111,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
   - `version_description` (`string`):  When `null`, the `version_description` field will be omitted from the resulting object.
   - `version_set_id` (`string`):  When `null`, the `version_set_id` field will be omitted from the resulting object.
-  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-apimanagementapicontactnew) constructor.
-  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-apimanagementapiimportnew) constructor.
-  - `license` (`list[obj]`):  When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-apimanagementapilicensenew) constructor.
-  - `oauth2_authorization` (`list[obj]`):  When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-apimanagementapioauth2authorizationnew) constructor.
-  - `openid_authentication` (`list[obj]`):  When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-apimanagementapiopenidauthenticationnew) constructor.
-  - `subscription_key_parameter_names` (`list[obj]`):  When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-apimanagementapisubscriptionkeyparameternamesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-apimanagementapitimeoutsnew) constructor.
+  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-contactnew) constructor.
+  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-import_new) constructor.
+  - `license` (`list[obj]`):  When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-licensenew) constructor.
+  - `oauth2_authorization` (`list[obj]`):  When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-oauth2_authorizationnew) constructor.
+  - `openid_authentication` (`list[obj]`):  When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-openid_authenticationnew) constructor.
+  - `subscription_key_parameter_names` (`list[obj]`):  When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-subscription_key_parameter_namesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -133,7 +133,7 @@ newAttrs()
 `azurerm.api_management_api.newAttrs` constructs a new object with attributes and blocks configured for the `api_management_api`
 Terraform resource.
 
-Unlike [azurerm.api_management_api.new](#fn-apimanagementapinew), this function will not inject the `resource`
+Unlike [azurerm.api_management_api.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -159,13 +159,13 @@ injecting into a complete block.
   - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
   - `version_description` (`string`):  When `null`, the `version_description` field will be omitted from the resulting object.
   - `version_set_id` (`string`):  When `null`, the `version_set_id` field will be omitted from the resulting object.
-  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-apimanagementapicontactnew) constructor.
-  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-apimanagementapiimportnew) constructor.
-  - `license` (`list[obj]`):  When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-apimanagementapilicensenew) constructor.
-  - `oauth2_authorization` (`list[obj]`):  When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-apimanagementapioauth2authorizationnew) constructor.
-  - `openid_authentication` (`list[obj]`):  When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-apimanagementapiopenidauthenticationnew) constructor.
-  - `subscription_key_parameter_names` (`list[obj]`):  When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-apimanagementapisubscriptionkeyparameternamesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-apimanagementapitimeoutsnew) constructor.
+  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.contact.new](#fn-contactnew) constructor.
+  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import_.new](#fn-import_new) constructor.
+  - `license` (`list[obj]`):  When `null`, the `license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.license.new](#fn-licensenew) constructor.
+  - `oauth2_authorization` (`list[obj]`):  When `null`, the `oauth2_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.oauth2_authorization.new](#fn-oauth2_authorizationnew) constructor.
+  - `openid_authentication` (`list[obj]`):  When `null`, the `openid_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.openid_authentication.new](#fn-openid_authenticationnew) constructor.
+  - `subscription_key_parameter_names` (`list[obj]`):  When `null`, the `subscription_key_parameter_names` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.subscription_key_parameter_names.new](#fn-subscription_key_parameter_namesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_api` resource into the root Terraform configuration.
@@ -761,7 +761,7 @@ Terraform sub block.
 **Args**:
   - `content_format` (`string`): 
   - `content_value` (`string`): 
-  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-importwsdlselectornew) constructor.
+  - `wsdl_selector` (`list[obj]`):  When `null`, the `wsdl_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_api.import.wsdl_selector.new](#fn-importwsdl_selectornew) constructor.
 
 **Returns**:
   - An attribute object that represents the `import` sub block.

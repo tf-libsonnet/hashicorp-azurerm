@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `public_certificate` (`string`):  When `null`, the `public_certificate` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
-  - `key_vault_key` (`list[obj]`):  When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-logicappintegrationaccountcertificatekeyvaultkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-logicappintegrationaccountcertificatetimeoutsnew) constructor.
+  - `key_vault_key` (`list[obj]`):  When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-key_vault_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `azurerm.logic_app_integration_account_certificate.newAttrs` constructs a new object with attributes and blocks configured for the `logic_app_integration_account_certificate`
 Terraform resource.
 
-Unlike [azurerm.logic_app_integration_account_certificate.new](#fn-logicappintegrationaccountcertificatenew), this function will not inject the `resource`
+Unlike [azurerm.logic_app_integration_account_certificate.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `name` (`string`): 
   - `public_certificate` (`string`):  When `null`, the `public_certificate` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): 
-  - `key_vault_key` (`list[obj]`):  When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-logicappintegrationaccountcertificatekeyvaultkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-logicappintegrationaccountcertificatetimeoutsnew) constructor.
+  - `key_vault_key` (`list[obj]`):  When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-key_vault_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_integration_account_certificate` resource into the root Terraform configuration.

@@ -79,10 +79,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `node_size` (`string`): 
   - `number_of_nodes` (`number`):  When `null`, the `number_of_nodes` field will be omitted from the resulting object.
-  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-datafactoryintegrationruntimemanagedcataloginfonew) constructor.
-  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-datafactoryintegrationruntimemanagedcustomsetupscriptnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-datafactoryintegrationruntimemanagedtimeoutsnew) constructor.
-  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-datafactoryintegrationruntimemanagedvnetintegrationnew) constructor.
+  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-catalog_infonew) constructor.
+  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-vnet_integrationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,7 +98,7 @@ newAttrs()
 `azurerm.data_factory_integration_runtime_managed.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_integration_runtime_managed`
 Terraform resource.
 
-Unlike [azurerm.data_factory_integration_runtime_managed.new](#fn-datafactoryintegrationruntimemanagednew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_integration_runtime_managed.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,10 +115,10 @@ injecting into a complete block.
   - `name` (`string`): 
   - `node_size` (`string`): 
   - `number_of_nodes` (`number`):  When `null`, the `number_of_nodes` field will be omitted from the resulting object.
-  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-datafactoryintegrationruntimemanagedcataloginfonew) constructor.
-  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-datafactoryintegrationruntimemanagedcustomsetupscriptnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-datafactoryintegrationruntimemanagedtimeoutsnew) constructor.
-  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-datafactoryintegrationruntimemanagedvnetintegrationnew) constructor.
+  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-catalog_infonew) constructor.
+  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-vnet_integrationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_integration_runtime_managed` resource into the root Terraform configuration.

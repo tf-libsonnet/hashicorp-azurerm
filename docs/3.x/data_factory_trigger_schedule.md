@@ -83,9 +83,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `pipeline_parameters` (`obj`):  When `null`, the `pipeline_parameters` field will be omitted from the resulting object.
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-datafactorytriggerschedulepipelinenew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-datafactorytriggerscheduleschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-datafactorytriggerscheduletimeoutsnew) constructor.
+  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-pipelinenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `azurerm.data_factory_trigger_schedule.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_trigger_schedule`
 Terraform resource.
 
-Unlike [azurerm.data_factory_trigger_schedule.new](#fn-datafactorytriggerschedulenew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_trigger_schedule.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -121,9 +121,9 @@ injecting into a complete block.
   - `pipeline_parameters` (`obj`):  When `null`, the `pipeline_parameters` field will be omitted from the resulting object.
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-datafactorytriggerschedulepipelinenew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-datafactorytriggerscheduleschedulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-datafactorytriggerscheduletimeoutsnew) constructor.
+  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-pipelinenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_trigger_schedule` resource into the root Terraform configuration.

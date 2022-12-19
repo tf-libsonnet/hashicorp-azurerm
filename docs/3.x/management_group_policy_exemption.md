@@ -67,7 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `policy_assignment_id` (`string`): 
   - `policy_definition_reference_ids` (`list`):  When `null`, the `policy_definition_reference_ids` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_exemption.timeouts.new](#fn-managementgrouppolicyexemptiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_exemption.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `azurerm.management_group_policy_exemption.newAttrs` constructs a new object with attributes and blocks configured for the `management_group_policy_exemption`
 Terraform resource.
 
-Unlike [azurerm.management_group_policy_exemption.new](#fn-managementgrouppolicyexemptionnew), this function will not inject the `resource`
+Unlike [azurerm.management_group_policy_exemption.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -100,7 +100,7 @@ injecting into a complete block.
   - `name` (`string`): 
   - `policy_assignment_id` (`string`): 
   - `policy_definition_reference_ids` (`list`):  When `null`, the `policy_definition_reference_ids` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_exemption.timeouts.new](#fn-managementgrouppolicyexemptiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_exemption.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `management_group_policy_exemption` resource into the root Terraform configuration.

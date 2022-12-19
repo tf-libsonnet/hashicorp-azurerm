@@ -75,10 +75,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `peering_location` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-expressrouteportidentitynew) constructor.
-  - `link1` (`list[obj]`):  When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-expressrouteportlink1new) constructor.
-  - `link2` (`list[obj]`):  When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-expressrouteportlink2new) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-expressrouteporttimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-identitynew) constructor.
+  - `link1` (`list[obj]`):  When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-link1new) constructor.
+  - `link2` (`list[obj]`):  When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-link2new) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `azurerm.express_route_port.newAttrs` constructs a new object with attributes and blocks configured for the `express_route_port`
 Terraform resource.
 
-Unlike [azurerm.express_route_port.new](#fn-expressrouteportnew), this function will not inject the `resource`
+Unlike [azurerm.express_route_port.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -109,10 +109,10 @@ injecting into a complete block.
   - `peering_location` (`string`): 
   - `resource_group_name` (`string`): 
   - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-expressrouteportidentitynew) constructor.
-  - `link1` (`list[obj]`):  When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-expressrouteportlink1new) constructor.
-  - `link2` (`list[obj]`):  When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-expressrouteportlink2new) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-expressrouteporttimeoutsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-identitynew) constructor.
+  - `link1` (`list[obj]`):  When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-link1new) constructor.
+  - `link2` (`list[obj]`):  When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-link2new) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_port` resource into the root Terraform configuration.

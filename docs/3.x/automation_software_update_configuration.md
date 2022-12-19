@@ -93,13 +93,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `non_azure_computer_names` (`list`):  When `null`, the `non_azure_computer_names` field will be omitted from the resulting object.
   - `operating_system` (`string`): 
   - `virtual_machine_ids` (`list`):  When `null`, the `virtual_machine_ids` field will be omitted from the resulting object.
-  - `linux` (`list[obj]`):  When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.linux.new](#fn-automationsoftwareupdateconfigurationlinuxnew) constructor.
-  - `post_task` (`list[obj]`):  When `null`, the `post_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.post_task.new](#fn-automationsoftwareupdateconfigurationposttasknew) constructor.
-  - `pre_task` (`list[obj]`):  When `null`, the `pre_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.pre_task.new](#fn-automationsoftwareupdateconfigurationpretasknew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.new](#fn-automationsoftwareupdateconfigurationschedulenew) constructor.
-  - `target` (`list[obj]`):  When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.new](#fn-automationsoftwareupdateconfigurationtargetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.timeouts.new](#fn-automationsoftwareupdateconfigurationtimeoutsnew) constructor.
-  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.windows.new](#fn-automationsoftwareupdateconfigurationwindowsnew) constructor.
+  - `linux` (`list[obj]`):  When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.linux.new](#fn-linuxnew) constructor.
+  - `post_task` (`list[obj]`):  When `null`, the `post_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.post_task.new](#fn-post_tasknew) constructor.
+  - `pre_task` (`list[obj]`):  When `null`, the `pre_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.pre_task.new](#fn-pre_tasknew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.new](#fn-schedulenew) constructor.
+  - `target` (`list[obj]`):  When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.new](#fn-targetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.windows.new](#fn-windowsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -115,7 +115,7 @@ newAttrs()
 `azurerm.automation_software_update_configuration.newAttrs` constructs a new object with attributes and blocks configured for the `automation_software_update_configuration`
 Terraform resource.
 
-Unlike [azurerm.automation_software_update_configuration.new](#fn-automationsoftwareupdateconfigurationnew), this function will not inject the `resource`
+Unlike [azurerm.automation_software_update_configuration.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -129,13 +129,13 @@ injecting into a complete block.
   - `non_azure_computer_names` (`list`):  When `null`, the `non_azure_computer_names` field will be omitted from the resulting object.
   - `operating_system` (`string`): 
   - `virtual_machine_ids` (`list`):  When `null`, the `virtual_machine_ids` field will be omitted from the resulting object.
-  - `linux` (`list[obj]`):  When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.linux.new](#fn-automationsoftwareupdateconfigurationlinuxnew) constructor.
-  - `post_task` (`list[obj]`):  When `null`, the `post_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.post_task.new](#fn-automationsoftwareupdateconfigurationposttasknew) constructor.
-  - `pre_task` (`list[obj]`):  When `null`, the `pre_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.pre_task.new](#fn-automationsoftwareupdateconfigurationpretasknew) constructor.
-  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.new](#fn-automationsoftwareupdateconfigurationschedulenew) constructor.
-  - `target` (`list[obj]`):  When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.new](#fn-automationsoftwareupdateconfigurationtargetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.timeouts.new](#fn-automationsoftwareupdateconfigurationtimeoutsnew) constructor.
-  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.windows.new](#fn-automationsoftwareupdateconfigurationwindowsnew) constructor.
+  - `linux` (`list[obj]`):  When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.linux.new](#fn-linuxnew) constructor.
+  - `post_task` (`list[obj]`):  When `null`, the `post_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.post_task.new](#fn-post_tasknew) constructor.
+  - `pre_task` (`list[obj]`):  When `null`, the `pre_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.pre_task.new](#fn-pre_tasknew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.new](#fn-schedulenew) constructor.
+  - `target` (`list[obj]`):  When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.new](#fn-targetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `windows` (`list[obj]`):  When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.windows.new](#fn-windowsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_software_update_configuration` resource into the root Terraform configuration.
@@ -599,7 +599,7 @@ Terraform sub block.
   - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
   - `start_time_offset_minutes` (`number`):  When `null`, the `start_time_offset_minutes` field will be omitted from the resulting object.
   - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `monthly_occurrence` (`list[obj]`):  When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.monthly_occurrence.new](#fn-schedulemonthlyoccurrencenew) constructor.
+  - `monthly_occurrence` (`list[obj]`):  When `null`, the `monthly_occurrence` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.schedule.monthly_occurrence.new](#fn-schedulemonthly_occurrencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -646,8 +646,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_query` (`list[obj]`):  When `null`, the `azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.new](#fn-targetazurequerynew) constructor.
-  - `non_azure_query` (`list[obj]`):  When `null`, the `non_azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.non_azure_query.new](#fn-targetnonazurequerynew) constructor.
+  - `azure_query` (`list[obj]`):  When `null`, the `azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.new](#fn-targetazure_querynew) constructor.
+  - `non_azure_query` (`list[obj]`):  When `null`, the `non_azure_query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.non_azure_query.new](#fn-targetnon_azure_querynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `target` sub block.
@@ -673,7 +673,7 @@ Terraform sub block.
   - `locations` (`list`):  When `null`, the `locations` field will be omitted from the resulting object.
   - `scope` (`list`):  When `null`, the `scope` field will be omitted from the resulting object.
   - `tag_filter` (`string`):  When `null`, the `tag_filter` field will be omitted from the resulting object.
-  - `tags` (`list[obj]`):  When `null`, the `tags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.tags.new](#fn-azurequerytagsnew) constructor.
+  - `tags` (`list[obj]`):  When `null`, the `tags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.target.azure_query.tags.new](#fn-targettargettagsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `azure_query` sub block.

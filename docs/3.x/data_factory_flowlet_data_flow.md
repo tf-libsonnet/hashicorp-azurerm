@@ -101,10 +101,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): 
   - `script` (`string`):  When `null`, the `script` field will be omitted from the resulting object.
   - `script_lines` (`list`):  When `null`, the `script_lines` field will be omitted from the resulting object.
-  - `sink` (`list[obj]`):  When `null`, the `sink` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.new](#fn-datafactoryflowletdataflowsinknew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.new](#fn-datafactoryflowletdataflowsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.timeouts.new](#fn-datafactoryflowletdataflowtimeoutsnew) constructor.
-  - `transformation` (`list[obj]`):  When `null`, the `transformation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.new](#fn-datafactoryflowletdataflowtransformationnew) constructor.
+  - `sink` (`list[obj]`):  When `null`, the `sink` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.new](#fn-sinknew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.timeouts.new](#fn-timeoutsnew) constructor.
+  - `transformation` (`list[obj]`):  When `null`, the `transformation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.new](#fn-transformationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -120,7 +120,7 @@ newAttrs()
 `azurerm.data_factory_flowlet_data_flow.newAttrs` constructs a new object with attributes and blocks configured for the `data_factory_flowlet_data_flow`
 Terraform resource.
 
-Unlike [azurerm.data_factory_flowlet_data_flow.new](#fn-datafactoryflowletdataflownew), this function will not inject the `resource`
+Unlike [azurerm.data_factory_flowlet_data_flow.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -135,10 +135,10 @@ injecting into a complete block.
   - `name` (`string`): 
   - `script` (`string`):  When `null`, the `script` field will be omitted from the resulting object.
   - `script_lines` (`list`):  When `null`, the `script_lines` field will be omitted from the resulting object.
-  - `sink` (`list[obj]`):  When `null`, the `sink` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.new](#fn-datafactoryflowletdataflowsinknew) constructor.
-  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.new](#fn-datafactoryflowletdataflowsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.timeouts.new](#fn-datafactoryflowletdataflowtimeoutsnew) constructor.
-  - `transformation` (`list[obj]`):  When `null`, the `transformation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.new](#fn-datafactoryflowletdataflowtransformationnew) constructor.
+  - `sink` (`list[obj]`):  When `null`, the `sink` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.new](#fn-sinknew) constructor.
+  - `source` (`list[obj]`):  When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.timeouts.new](#fn-timeoutsnew) constructor.
+  - `transformation` (`list[obj]`):  When `null`, the `transformation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.new](#fn-transformationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_flowlet_data_flow` resource into the root Terraform configuration.
@@ -424,9 +424,9 @@ Terraform sub block.
   - `name` (`string`): 
   - `dataset` (`list[obj]`):  When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.dataset.new](#fn-sinkdatasetnew) constructor.
   - `flowlet` (`list[obj]`):  When `null`, the `flowlet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.flowlet.new](#fn-sinkflowletnew) constructor.
-  - `linked_service` (`list[obj]`):  When `null`, the `linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.linked_service.new](#fn-sinklinkedservicenew) constructor.
-  - `rejected_linked_service` (`list[obj]`):  When `null`, the `rejected_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.rejected_linked_service.new](#fn-sinkrejectedlinkedservicenew) constructor.
-  - `schema_linked_service` (`list[obj]`):  When `null`, the `schema_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.schema_linked_service.new](#fn-sinkschemalinkedservicenew) constructor.
+  - `linked_service` (`list[obj]`):  When `null`, the `linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.linked_service.new](#fn-sinklinked_servicenew) constructor.
+  - `rejected_linked_service` (`list[obj]`):  When `null`, the `rejected_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.rejected_linked_service.new](#fn-sinkrejected_linked_servicenew) constructor.
+  - `schema_linked_service` (`list[obj]`):  When `null`, the `schema_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.sink.schema_linked_service.new](#fn-sinkschema_linked_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `sink` sub block.
@@ -574,9 +574,9 @@ Terraform sub block.
   - `name` (`string`): 
   - `dataset` (`list[obj]`):  When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.dataset.new](#fn-sourcedatasetnew) constructor.
   - `flowlet` (`list[obj]`):  When `null`, the `flowlet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.flowlet.new](#fn-sourceflowletnew) constructor.
-  - `linked_service` (`list[obj]`):  When `null`, the `linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.linked_service.new](#fn-sourcelinkedservicenew) constructor.
-  - `rejected_linked_service` (`list[obj]`):  When `null`, the `rejected_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.rejected_linked_service.new](#fn-sourcerejectedlinkedservicenew) constructor.
-  - `schema_linked_service` (`list[obj]`):  When `null`, the `schema_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.schema_linked_service.new](#fn-sourceschemalinkedservicenew) constructor.
+  - `linked_service` (`list[obj]`):  When `null`, the `linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.linked_service.new](#fn-sourcelinked_servicenew) constructor.
+  - `rejected_linked_service` (`list[obj]`):  When `null`, the `rejected_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.rejected_linked_service.new](#fn-sourcerejected_linked_servicenew) constructor.
+  - `schema_linked_service` (`list[obj]`):  When `null`, the `schema_linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.source.schema_linked_service.new](#fn-sourceschema_linked_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -750,7 +750,7 @@ Terraform sub block.
   - `name` (`string`): 
   - `dataset` (`list[obj]`):  When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.dataset.new](#fn-transformationdatasetnew) constructor.
   - `flowlet` (`list[obj]`):  When `null`, the `flowlet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.flowlet.new](#fn-transformationflowletnew) constructor.
-  - `linked_service` (`list[obj]`):  When `null`, the `linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.linked_service.new](#fn-transformationlinkedservicenew) constructor.
+  - `linked_service` (`list[obj]`):  When `null`, the `linked_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_flowlet_data_flow.transformation.linked_service.new](#fn-transformationlinked_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `transformation` sub block.
