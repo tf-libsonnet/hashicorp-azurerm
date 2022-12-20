@@ -97,6 +97,13 @@ Refer to the [reference docs](/docs/3.x/README.md) for a list of supported data 
 - [resources](/docs/3.x/README.md)
 - [data sources](/docs/3.x/data/index.md)
 
+
+## Support
+
+If you have any questions about how to use the `tf.libsonnet` libraries, ask in the [Organization GitHub
+Discussion](https://github.com/orgs/tf-libsonnet/discussions).
+
+
 ## Contributing
 
 Refer to the [CONTRIBUTING.md](/CONTRIBUTING.md) document for information on how to contribute to `tf.libsonnet`.
