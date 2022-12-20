@@ -67,19 +67,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting resource block. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `enforce` (`bool`): Set the `enforce` field on the resulting resource block. When `null`, the `enforce` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block. When `null`, the `location` field will be omitted from the resulting object.
-  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting resource block.
-  - `metadata` (`string`): Set the `metadata` field on the resulting resource block. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `not_scopes` (`list`): Set the `not_scopes` field on the resulting resource block. When `null`, the `not_scopes` field will be omitted from the resulting object.
-  - `parameters` (`string`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `policy_definition_id` (`string`): Set the `policy_definition_id` field on the resulting resource block.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.identity.new](#fn-identitynew) constructor.
-  - `non_compliance_message` (`list[obj]`): Set the `non_compliance_message` field on the resulting resource block. When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
+  - `enforce` (`bool`):  When `null`, the `enforce` field will be omitted from the resulting object.
+  - `location` (`string`):  When `null`, the `location` field will be omitted from the resulting object.
+  - `management_group_id` (`string`): 
+  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `not_scopes` (`list`):  When `null`, the `not_scopes` field will be omitted from the resulting object.
+  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `policy_definition_id` (`string`): 
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.identity.new](#fn-identitynew) constructor.
+  - `non_compliance_message` (`list[obj]`):  When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -103,19 +103,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `enforce` (`bool`): Set the `enforce` field on the resulting object. When `null`, the `enforce` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object. When `null`, the `location` field will be omitted from the resulting object.
-  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting object.
-  - `metadata` (`string`): Set the `metadata` field on the resulting object. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `not_scopes` (`list`): Set the `not_scopes` field on the resulting object. When `null`, the `not_scopes` field will be omitted from the resulting object.
-  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `policy_definition_id` (`string`): Set the `policy_definition_id` field on the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.identity.new](#fn-identitynew) constructor.
-  - `non_compliance_message` (`list[obj]`): Set the `non_compliance_message` field on the resulting object. When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
+  - `enforce` (`bool`):  When `null`, the `enforce` field will be omitted from the resulting object.
+  - `location` (`string`):  When `null`, the `location` field will be omitted from the resulting object.
+  - `management_group_id` (`string`): 
+  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `not_scopes` (`list`):  When `null`, the `not_scopes` field will be omitted from the resulting object.
+  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `policy_definition_id` (`string`): 
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.identity.new](#fn-identitynew) constructor.
+  - `non_compliance_message` (`list[obj]`):  When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `management_group_policy_assignment` resource into the root Terraform configuration.
@@ -408,8 +408,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -432,8 +432,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `content` (`string`): Set the `content` field on the resulting object.
-  - `policy_definition_reference_id` (`string`): Set the `policy_definition_reference_id` field on the resulting object. When `null`, the `policy_definition_reference_id` field will be omitted from the resulting object.
+  - `content` (`string`): 
+  - `policy_definition_reference_id` (`string`):  When `null`, the `policy_definition_reference_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `non_compliance_message` sub block.
@@ -456,10 +456,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

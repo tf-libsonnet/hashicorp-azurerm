@@ -75,27 +75,27 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `collation` (`string`): Set the `collation` field on the resulting resource block. When `null`, the `collation` field will be omitted from the resulting object.
-  - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `edition` (`string`): Set the `edition` field on the resulting resource block. When `null`, the `edition` field will be omitted from the resulting object.
-  - `elastic_pool_name` (`string`): Set the `elastic_pool_name` field on the resulting resource block. When `null`, the `elastic_pool_name` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `max_size_bytes` (`string`): Set the `max_size_bytes` field on the resulting resource block. When `null`, the `max_size_bytes` field will be omitted from the resulting object.
-  - `max_size_gb` (`string`): Set the `max_size_gb` field on the resulting resource block. When `null`, the `max_size_gb` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `read_scale` (`bool`): Set the `read_scale` field on the resulting resource block. When `null`, the `read_scale` field will be omitted from the resulting object.
-  - `requested_service_objective_id` (`string`): Set the `requested_service_objective_id` field on the resulting resource block. When `null`, the `requested_service_objective_id` field will be omitted from the resulting object.
-  - `requested_service_objective_name` (`string`): Set the `requested_service_objective_name` field on the resulting resource block. When `null`, the `requested_service_objective_name` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting resource block. When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
-  - `server_name` (`string`): Set the `server_name` field on the resulting resource block.
-  - `source_database_deletion_date` (`string`): Set the `source_database_deletion_date` field on the resulting resource block. When `null`, the `source_database_deletion_date` field will be omitted from the resulting object.
-  - `source_database_id` (`string`): Set the `source_database_id` field on the resulting resource block. When `null`, the `source_database_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `import_` (`list[obj]`): Set the `import_` field on the resulting resource block. When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.import_.new](#fn-import_new) constructor.
-  - `threat_detection_policy` (`list[obj]`): Set the `threat_detection_policy` field on the resulting resource block. When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.timeouts.new](#fn-timeoutsnew) constructor.
+  - `collation` (`string`):  When `null`, the `collation` field will be omitted from the resulting object.
+  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `edition` (`string`):  When `null`, the `edition` field will be omitted from the resulting object.
+  - `elastic_pool_name` (`string`):  When `null`, the `elastic_pool_name` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_size_bytes` (`string`):  When `null`, the `max_size_bytes` field will be omitted from the resulting object.
+  - `max_size_gb` (`string`):  When `null`, the `max_size_gb` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `read_scale` (`bool`):  When `null`, the `read_scale` field will be omitted from the resulting object.
+  - `requested_service_objective_id` (`string`):  When `null`, the `requested_service_objective_id` field will be omitted from the resulting object.
+  - `requested_service_objective_name` (`string`):  When `null`, the `requested_service_objective_name` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `restore_point_in_time` (`string`):  When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
+  - `server_name` (`string`): 
+  - `source_database_deletion_date` (`string`):  When `null`, the `source_database_deletion_date` field will be omitted from the resulting object.
+  - `source_database_id` (`string`):  When `null`, the `source_database_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.import_.new](#fn-import_new) constructor.
+  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,27 +119,27 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `collation` (`string`): Set the `collation` field on the resulting object. When `null`, the `collation` field will be omitted from the resulting object.
-  - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `edition` (`string`): Set the `edition` field on the resulting object. When `null`, the `edition` field will be omitted from the resulting object.
-  - `elastic_pool_name` (`string`): Set the `elastic_pool_name` field on the resulting object. When `null`, the `elastic_pool_name` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `max_size_bytes` (`string`): Set the `max_size_bytes` field on the resulting object. When `null`, the `max_size_bytes` field will be omitted from the resulting object.
-  - `max_size_gb` (`string`): Set the `max_size_gb` field on the resulting object. When `null`, the `max_size_gb` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `read_scale` (`bool`): Set the `read_scale` field on the resulting object. When `null`, the `read_scale` field will be omitted from the resulting object.
-  - `requested_service_objective_id` (`string`): Set the `requested_service_objective_id` field on the resulting object. When `null`, the `requested_service_objective_id` field will be omitted from the resulting object.
-  - `requested_service_objective_name` (`string`): Set the `requested_service_objective_name` field on the resulting object. When `null`, the `requested_service_objective_name` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting object. When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
-  - `server_name` (`string`): Set the `server_name` field on the resulting object.
-  - `source_database_deletion_date` (`string`): Set the `source_database_deletion_date` field on the resulting object. When `null`, the `source_database_deletion_date` field will be omitted from the resulting object.
-  - `source_database_id` (`string`): Set the `source_database_id` field on the resulting object. When `null`, the `source_database_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `import_` (`list[obj]`): Set the `import_` field on the resulting object. When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.import_.new](#fn-import_new) constructor.
-  - `threat_detection_policy` (`list[obj]`): Set the `threat_detection_policy` field on the resulting object. When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.timeouts.new](#fn-timeoutsnew) constructor.
+  - `collation` (`string`):  When `null`, the `collation` field will be omitted from the resulting object.
+  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `edition` (`string`):  When `null`, the `edition` field will be omitted from the resulting object.
+  - `elastic_pool_name` (`string`):  When `null`, the `elastic_pool_name` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_size_bytes` (`string`):  When `null`, the `max_size_bytes` field will be omitted from the resulting object.
+  - `max_size_gb` (`string`):  When `null`, the `max_size_gb` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `read_scale` (`bool`):  When `null`, the `read_scale` field will be omitted from the resulting object.
+  - `requested_service_objective_id` (`string`):  When `null`, the `requested_service_objective_id` field will be omitted from the resulting object.
+  - `requested_service_objective_name` (`string`):  When `null`, the `requested_service_objective_name` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `restore_point_in_time` (`string`):  When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
+  - `server_name` (`string`): 
+  - `source_database_deletion_date` (`string`):  When `null`, the `source_database_deletion_date` field will be omitted from the resulting object.
+  - `source_database_id` (`string`):  When `null`, the `source_database_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `import_` (`list[obj]`):  When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.import_.new](#fn-import_new) constructor.
+  - `threat_detection_policy` (`list[obj]`):  When `null`, the `threat_detection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.threat_detection_policy.new](#fn-threat_detection_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sql_database` resource into the root Terraform configuration.
@@ -560,13 +560,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting object.
-  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting object.
-  - `authentication_type` (`string`): Set the `authentication_type` field on the resulting object.
-  - `operation_mode` (`string`): Set the `operation_mode` field on the resulting object. When `null`, the `operation_mode` field will be omitted from the resulting object.
-  - `storage_key` (`string`): Set the `storage_key` field on the resulting object.
-  - `storage_key_type` (`string`): Set the `storage_key_type` field on the resulting object.
-  - `storage_uri` (`string`): Set the `storage_uri` field on the resulting object.
+  - `administrator_login` (`string`): 
+  - `administrator_login_password` (`string`): 
+  - `authentication_type` (`string`): 
+  - `operation_mode` (`string`):  When `null`, the `operation_mode` field will be omitted from the resulting object.
+  - `storage_key` (`string`): 
+  - `storage_key_type` (`string`): 
+  - `storage_uri` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `import` sub block.
@@ -589,13 +589,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `disabled_alerts` (`list`): Set the `disabled_alerts` field on the resulting object. When `null`, the `disabled_alerts` field will be omitted from the resulting object.
-  - `email_account_admins` (`string`): Set the `email_account_admins` field on the resulting object. When `null`, the `email_account_admins` field will be omitted from the resulting object.
-  - `email_addresses` (`list`): Set the `email_addresses` field on the resulting object. When `null`, the `email_addresses` field will be omitted from the resulting object.
-  - `retention_days` (`number`): Set the `retention_days` field on the resulting object. When `null`, the `retention_days` field will be omitted from the resulting object.
-  - `state` (`string`): Set the `state` field on the resulting object. When `null`, the `state` field will be omitted from the resulting object.
-  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting object. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
-  - `storage_endpoint` (`string`): Set the `storage_endpoint` field on the resulting object. When `null`, the `storage_endpoint` field will be omitted from the resulting object.
+  - `disabled_alerts` (`list`):  When `null`, the `disabled_alerts` field will be omitted from the resulting object.
+  - `email_account_admins` (`string`):  When `null`, the `email_account_admins` field will be omitted from the resulting object.
+  - `email_addresses` (`list`):  When `null`, the `email_addresses` field will be omitted from the resulting object.
+  - `retention_days` (`number`):  When `null`, the `retention_days` field will be omitted from the resulting object.
+  - `state` (`string`):  When `null`, the `state` field will be omitted from the resulting object.
+  - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
+  - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `threat_detection_policy` sub block.
@@ -618,10 +618,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `maximum_bytes_per_packet` (`number`): Set the `maximum_bytes_per_packet` field on the resulting resource block. When `null`, the `maximum_bytes_per_packet` field will be omitted from the resulting object.
-  - `maximum_bytes_per_session` (`number`): Set the `maximum_bytes_per_session` field on the resulting resource block. When `null`, the `maximum_bytes_per_session` field will be omitted from the resulting object.
-  - `maximum_capture_duration` (`number`): Set the `maximum_capture_duration` field on the resulting resource block. When `null`, the `maximum_capture_duration` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `network_watcher_name` (`string`): Set the `network_watcher_name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting resource block.
-  - `filter` (`list[obj]`): Set the `filter` field on the resulting resource block. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.filter.new](#fn-filternew) constructor.
-  - `storage_location` (`list[obj]`): Set the `storage_location` field on the resulting resource block. When `null`, the `storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.storage_location.new](#fn-storage_locationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.timeouts.new](#fn-timeoutsnew) constructor.
+  - `maximum_bytes_per_packet` (`number`):  When `null`, the `maximum_bytes_per_packet` field will be omitted from the resulting object.
+  - `maximum_bytes_per_session` (`number`):  When `null`, the `maximum_bytes_per_session` field will be omitted from the resulting object.
+  - `maximum_capture_duration` (`number`):  When `null`, the `maximum_capture_duration` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_watcher_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `target_resource_id` (`string`): 
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.filter.new](#fn-filternew) constructor.
+  - `storage_location` (`list[obj]`):  When `null`, the `storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.storage_location.new](#fn-storage_locationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `maximum_bytes_per_packet` (`number`): Set the `maximum_bytes_per_packet` field on the resulting object. When `null`, the `maximum_bytes_per_packet` field will be omitted from the resulting object.
-  - `maximum_bytes_per_session` (`number`): Set the `maximum_bytes_per_session` field on the resulting object. When `null`, the `maximum_bytes_per_session` field will be omitted from the resulting object.
-  - `maximum_capture_duration` (`number`): Set the `maximum_capture_duration` field on the resulting object. When `null`, the `maximum_capture_duration` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `network_watcher_name` (`string`): Set the `network_watcher_name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting object.
-  - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.filter.new](#fn-filternew) constructor.
-  - `storage_location` (`list[obj]`): Set the `storage_location` field on the resulting object. When `null`, the `storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.storage_location.new](#fn-storage_locationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.timeouts.new](#fn-timeoutsnew) constructor.
+  - `maximum_bytes_per_packet` (`number`):  When `null`, the `maximum_bytes_per_packet` field will be omitted from the resulting object.
+  - `maximum_bytes_per_session` (`number`):  When `null`, the `maximum_bytes_per_session` field will be omitted from the resulting object.
+  - `maximum_capture_duration` (`number`):  When `null`, the `maximum_capture_duration` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_watcher_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `target_resource_id` (`string`): 
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.filter.new](#fn-filternew) constructor.
+  - `storage_location` (`list[obj]`):  When `null`, the `storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.storage_location.new](#fn-storage_locationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_packet_capture.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_packet_capture` resource into the root Terraform configuration.
@@ -351,11 +351,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `local_ip_address` (`string`): Set the `local_ip_address` field on the resulting object. When `null`, the `local_ip_address` field will be omitted from the resulting object.
-  - `local_port` (`string`): Set the `local_port` field on the resulting object. When `null`, the `local_port` field will be omitted from the resulting object.
-  - `protocol` (`string`): Set the `protocol` field on the resulting object.
-  - `remote_ip_address` (`string`): Set the `remote_ip_address` field on the resulting object. When `null`, the `remote_ip_address` field will be omitted from the resulting object.
-  - `remote_port` (`string`): Set the `remote_port` field on the resulting object. When `null`, the `remote_port` field will be omitted from the resulting object.
+  - `local_ip_address` (`string`):  When `null`, the `local_ip_address` field will be omitted from the resulting object.
+  - `local_port` (`string`):  When `null`, the `local_port` field will be omitted from the resulting object.
+  - `protocol` (`string`): 
+  - `remote_ip_address` (`string`):  When `null`, the `remote_ip_address` field will be omitted from the resulting object.
+  - `remote_port` (`string`):  When `null`, the `remote_port` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -378,8 +378,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `file_path` (`string`): Set the `file_path` field on the resulting object. When `null`, the `file_path` field will be omitted from the resulting object.
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object. When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `file_path` (`string`):  When `null`, the `file_path` field will be omitted from the resulting object.
+  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_location` sub block.
@@ -402,10 +402,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

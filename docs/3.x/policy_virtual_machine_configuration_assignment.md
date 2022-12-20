@@ -58,11 +58,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting resource block.
-  - `configuration` (`list[obj]`): Set the `configuration` field on the resulting resource block. When `null`, the `configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.new](#fn-configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `virtual_machine_id` (`string`): 
+  - `configuration` (`list[obj]`):  When `null`, the `configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.new](#fn-configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,11 +86,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting object.
-  - `configuration` (`list[obj]`): Set the `configuration` field on the resulting object. When `null`, the `configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.new](#fn-configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `virtual_machine_id` (`string`): 
+  - `configuration` (`list[obj]`):  When `null`, the `configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.new](#fn-configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `policy_virtual_machine_configuration_assignment` resource into the root Terraform configuration.
@@ -234,11 +234,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `assignment_type` (`string`): Set the `assignment_type` field on the resulting object. When `null`, the `assignment_type` field will be omitted from the resulting object.
-  - `content_hash` (`string`): Set the `content_hash` field on the resulting object. When `null`, the `content_hash` field will be omitted from the resulting object.
-  - `content_uri` (`string`): Set the `content_uri` field on the resulting object. When `null`, the `content_uri` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
-  - `parameter` (`list[obj]`): Set the `parameter` field on the resulting object. When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.parameter.new](#fn-configurationparameternew) constructor.
+  - `assignment_type` (`string`):  When `null`, the `assignment_type` field will be omitted from the resulting object.
+  - `content_hash` (`string`):  When `null`, the `content_hash` field will be omitted from the resulting object.
+  - `content_uri` (`string`):  When `null`, the `content_uri` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `parameter` (`list[obj]`):  When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_virtual_machine_configuration_assignment.configuration.parameter.new](#fn-configurationparameternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `configuration` sub block.
@@ -261,8 +261,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `name` (`string`): 
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `parameter` sub block.
@@ -285,10 +285,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

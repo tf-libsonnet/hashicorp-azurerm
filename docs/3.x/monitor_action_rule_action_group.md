@@ -77,15 +77,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `action_group_id` (`string`): Set the `action_group_id` field on the resulting resource block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.new](#fn-conditionnew) constructor.
-  - `scope` (`list[obj]`): Set the `scope` field on the resulting resource block. When `null`, the `scope` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.scope.new](#fn-scopenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `action_group_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.new](#fn-conditionnew) constructor.
+  - `scope` (`list[obj]`):  When `null`, the `scope` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.scope.new](#fn-scopenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,15 +109,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `action_group_id` (`string`): Set the `action_group_id` field on the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.new](#fn-conditionnew) constructor.
-  - `scope` (`list[obj]`): Set the `scope` field on the resulting object. When `null`, the `scope` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.scope.new](#fn-scopenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `action_group_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.new](#fn-conditionnew) constructor.
+  - `scope` (`list[obj]`):  When `null`, the `scope` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.scope.new](#fn-scopenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_action_rule_action_group` resource into the root Terraform configuration.
@@ -346,13 +346,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `alert_context` (`list[obj]`): Set the `alert_context` field on the resulting object. When `null`, the `alert_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.alert_context.new](#fn-conditionalert_contextnew) constructor.
-  - `alert_rule_id` (`list[obj]`): Set the `alert_rule_id` field on the resulting object. When `null`, the `alert_rule_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.alert_rule_id.new](#fn-conditionalert_rule_idnew) constructor.
-  - `description` (`list[obj]`): Set the `description` field on the resulting object. When `null`, the `description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.description.new](#fn-conditiondescriptionnew) constructor.
-  - `monitor` (`list[obj]`): Set the `monitor` field on the resulting object. When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.monitor.new](#fn-conditionmonitornew) constructor.
-  - `monitor_service` (`list[obj]`): Set the `monitor_service` field on the resulting object. When `null`, the `monitor_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.monitor_service.new](#fn-conditionmonitor_servicenew) constructor.
-  - `severity` (`list[obj]`): Set the `severity` field on the resulting object. When `null`, the `severity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.severity.new](#fn-conditionseveritynew) constructor.
-  - `target_resource_type` (`list[obj]`): Set the `target_resource_type` field on the resulting object. When `null`, the `target_resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.target_resource_type.new](#fn-conditiontarget_resource_typenew) constructor.
+  - `alert_context` (`list[obj]`):  When `null`, the `alert_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.alert_context.new](#fn-conditionalert_contextnew) constructor.
+  - `alert_rule_id` (`list[obj]`):  When `null`, the `alert_rule_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.alert_rule_id.new](#fn-conditionalert_rule_idnew) constructor.
+  - `description` (`list[obj]`):  When `null`, the `description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.description.new](#fn-conditiondescriptionnew) constructor.
+  - `monitor` (`list[obj]`):  When `null`, the `monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.monitor.new](#fn-conditionmonitornew) constructor.
+  - `monitor_service` (`list[obj]`):  When `null`, the `monitor_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.monitor_service.new](#fn-conditionmonitor_servicenew) constructor.
+  - `severity` (`list[obj]`):  When `null`, the `severity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.severity.new](#fn-conditionseveritynew) constructor.
+  - `target_resource_type` (`list[obj]`):  When `null`, the `target_resource_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_rule_action_group.condition.target_resource_type.new](#fn-conditiontarget_resource_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.
@@ -375,8 +375,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `alert_context` sub block.
@@ -399,8 +399,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `alert_rule_id` sub block.
@@ -423,8 +423,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `description` sub block.
@@ -447,8 +447,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `monitor` sub block.
@@ -471,8 +471,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `monitor_service` sub block.
@@ -495,8 +495,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `severity` sub block.
@@ -519,8 +519,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `target_resource_type` sub block.
@@ -543,8 +543,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `resource_ids` (`list`): Set the `resource_ids` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `resource_ids` (`list`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `scope` sub block.
@@ -567,10 +567,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -61,14 +61,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `message_retention` (`number`): Set the `message_retention` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `namespace_name` (`string`): Set the `namespace_name` field on the resulting resource block.
-  - `partition_count` (`number`): Set the `partition_count` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `status` (`string`): Set the `status` field on the resulting resource block. When `null`, the `status` field will be omitted from the resulting object.
-  - `capture_description` (`list[obj]`): Set the `capture_description` field on the resulting resource block. When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-capture_descriptionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `message_retention` (`number`): 
+  - `name` (`string`): 
+  - `namespace_name` (`string`): 
+  - `partition_count` (`number`): 
+  - `resource_group_name` (`string`): 
+  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
+  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-capture_descriptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,14 +92,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `message_retention` (`number`): Set the `message_retention` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `namespace_name` (`string`): Set the `namespace_name` field on the resulting object.
-  - `partition_count` (`number`): Set the `partition_count` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
-  - `capture_description` (`list[obj]`): Set the `capture_description` field on the resulting object. When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-capture_descriptionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-timeoutsnew) constructor.
+  - `message_retention` (`number`): 
+  - `name` (`string`): 
+  - `namespace_name` (`string`): 
+  - `partition_count` (`number`): 
+  - `resource_group_name` (`string`): 
+  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
+  - `capture_description` (`list[obj]`):  When `null`, the `capture_description` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.new](#fn-capture_descriptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `eventhub` resource into the root Terraform configuration.
@@ -291,12 +291,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `encoding` (`string`): Set the `encoding` field on the resulting object.
-  - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
-  - `size_limit_in_bytes` (`number`): Set the `size_limit_in_bytes` field on the resulting object. When `null`, the `size_limit_in_bytes` field will be omitted from the resulting object.
-  - `skip_empty_archives` (`bool`): Set the `skip_empty_archives` field on the resulting object. When `null`, the `skip_empty_archives` field will be omitted from the resulting object.
-  - `destination` (`list[obj]`): Set the `destination` field on the resulting object. When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.destination.new](#fn-capture_descriptiondestinationnew) constructor.
+  - `enabled` (`bool`): 
+  - `encoding` (`string`): 
+  - `interval_in_seconds` (`number`):  When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
+  - `size_limit_in_bytes` (`number`):  When `null`, the `size_limit_in_bytes` field will be omitted from the resulting object.
+  - `skip_empty_archives` (`bool`):  When `null`, the `skip_empty_archives` field will be omitted from the resulting object.
+  - `destination` (`list[obj]`):  When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub.capture_description.destination.new](#fn-capture_descriptiondestinationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `capture_description` sub block.
@@ -319,10 +319,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `archive_name_format` (`string`): Set the `archive_name_format` field on the resulting object.
-  - `blob_container_name` (`string`): Set the `blob_container_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
+  - `archive_name_format` (`string`): 
+  - `blob_container_name` (`string`): 
+  - `name` (`string`): 
+  - `storage_account_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `destination` sub block.
@@ -345,10 +345,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

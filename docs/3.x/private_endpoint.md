@@ -67,16 +67,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `custom_network_interface_name` (`string`): Set the `custom_network_interface_name` field on the resulting resource block. When `null`, the `custom_network_interface_name` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting resource block. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `private_dns_zone_group` (`list[obj]`): Set the `private_dns_zone_group` field on the resulting resource block. When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-private_dns_zone_groupnew) constructor.
-  - `private_service_connection` (`list[obj]`): Set the `private_service_connection` field on the resulting resource block. When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-private_service_connectionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
+  - `custom_network_interface_name` (`string`):  When `null`, the `custom_network_interface_name` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `subnet_id` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `private_dns_zone_group` (`list[obj]`):  When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-private_dns_zone_groupnew) constructor.
+  - `private_service_connection` (`list[obj]`):  When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-private_service_connectionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,16 +100,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `custom_network_interface_name` (`string`): Set the `custom_network_interface_name` field on the resulting object. When `null`, the `custom_network_interface_name` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting object. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `private_dns_zone_group` (`list[obj]`): Set the `private_dns_zone_group` field on the resulting object. When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-private_dns_zone_groupnew) constructor.
-  - `private_service_connection` (`list[obj]`): Set the `private_service_connection` field on the resulting object. When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-private_service_connectionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
+  - `custom_network_interface_name` (`string`):  When `null`, the `custom_network_interface_name` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `subnet_id` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `private_dns_zone_group` (`list[obj]`):  When `null`, the `private_dns_zone_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_dns_zone_group.new](#fn-private_dns_zone_groupnew) constructor.
+  - `private_service_connection` (`list[obj]`):  When `null`, the `private_service_connection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.private_service_connection.new](#fn-private_service_connectionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.private_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `private_endpoint` resource into the root Terraform configuration.
@@ -375,10 +375,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `member_name` (`string`): Set the `member_name` field on the resulting object. When `null`, the `member_name` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `private_ip_address` (`string`): Set the `private_ip_address` field on the resulting object.
-  - `subresource_name` (`string`): Set the `subresource_name` field on the resulting object.
+  - `member_name` (`string`):  When `null`, the `member_name` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `private_ip_address` (`string`): 
+  - `subresource_name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -401,8 +401,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `private_dns_zone_ids` (`list`): Set the `private_dns_zone_ids` field on the resulting object.
+  - `name` (`string`): 
+  - `private_dns_zone_ids` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `private_dns_zone_group` sub block.
@@ -425,12 +425,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `is_manual_connection` (`bool`): Set the `is_manual_connection` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `private_connection_resource_alias` (`string`): Set the `private_connection_resource_alias` field on the resulting object. When `null`, the `private_connection_resource_alias` field will be omitted from the resulting object.
-  - `private_connection_resource_id` (`string`): Set the `private_connection_resource_id` field on the resulting object. When `null`, the `private_connection_resource_id` field will be omitted from the resulting object.
-  - `request_message` (`string`): Set the `request_message` field on the resulting object. When `null`, the `request_message` field will be omitted from the resulting object.
-  - `subresource_names` (`list`): Set the `subresource_names` field on the resulting object. When `null`, the `subresource_names` field will be omitted from the resulting object.
+  - `is_manual_connection` (`bool`): 
+  - `name` (`string`): 
+  - `private_connection_resource_alias` (`string`):  When `null`, the `private_connection_resource_alias` field will be omitted from the resulting object.
+  - `private_connection_resource_id` (`string`):  When `null`, the `private_connection_resource_id` field will be omitted from the resulting object.
+  - `request_message` (`string`):  When `null`, the `request_message` field will be omitted from the resulting object.
+  - `subresource_names` (`list`):  When `null`, the `subresource_names` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `private_service_connection` sub block.
@@ -453,10 +453,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

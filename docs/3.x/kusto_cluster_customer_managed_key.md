@@ -54,12 +54,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cluster_id` (`string`): Set the `cluster_id` field on the resulting resource block.
-  - `key_name` (`string`): Set the `key_name` field on the resulting resource block.
-  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.
-  - `key_version` (`string`): Set the `key_version` field on the resulting resource block.
-  - `user_identity` (`string`): Set the `user_identity` field on the resulting resource block. When `null`, the `user_identity` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_id` (`string`): 
+  - `key_name` (`string`): 
+  - `key_vault_id` (`string`): 
+  - `key_version` (`string`): 
+  - `user_identity` (`string`):  When `null`, the `user_identity` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,12 +83,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cluster_id` (`string`): Set the `cluster_id` field on the resulting object.
-  - `key_name` (`string`): Set the `key_name` field on the resulting object.
-  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
-  - `key_version` (`string`): Set the `key_version` field on the resulting object.
-  - `user_identity` (`string`): Set the `user_identity` field on the resulting object. When `null`, the `user_identity` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cluster_id` (`string`): 
+  - `key_name` (`string`): 
+  - `key_vault_id` (`string`): 
+  - `key_version` (`string`): 
+  - `user_identity` (`string`):  When `null`, the `user_identity` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kusto_cluster_customer_managed_key` resource into the root Terraform configuration.
@@ -227,10 +227,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

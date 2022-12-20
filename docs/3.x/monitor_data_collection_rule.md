@@ -79,16 +79,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `kind` (`string`): Set the `kind` field on the resulting resource block. When `null`, the `kind` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `data_flow` (`list[obj]`): Set the `data_flow` field on the resulting resource block. When `null`, the `data_flow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_flow.new](#fn-data_flownew) constructor.
-  - `data_sources` (`list[obj]`): Set the `data_sources` field on the resulting resource block. When `null`, the `data_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.new](#fn-data_sourcesnew) constructor.
-  - `destinations` (`list[obj]`): Set the `destinations` field on the resulting resource block. When `null`, the `destinations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.new](#fn-destinationsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `kind` (`string`):  When `null`, the `kind` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `data_flow` (`list[obj]`):  When `null`, the `data_flow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_flow.new](#fn-data_flownew) constructor.
+  - `data_sources` (`list[obj]`):  When `null`, the `data_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.new](#fn-data_sourcesnew) constructor.
+  - `destinations` (`list[obj]`):  When `null`, the `destinations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.new](#fn-destinationsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -112,16 +112,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `kind` (`string`): Set the `kind` field on the resulting object. When `null`, the `kind` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `data_flow` (`list[obj]`): Set the `data_flow` field on the resulting object. When `null`, the `data_flow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_flow.new](#fn-data_flownew) constructor.
-  - `data_sources` (`list[obj]`): Set the `data_sources` field on the resulting object. When `null`, the `data_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.new](#fn-data_sourcesnew) constructor.
-  - `destinations` (`list[obj]`): Set the `destinations` field on the resulting object. When `null`, the `destinations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.new](#fn-destinationsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `kind` (`string`):  When `null`, the `kind` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `data_flow` (`list[obj]`):  When `null`, the `data_flow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_flow.new](#fn-data_flownew) constructor.
+  - `data_sources` (`list[obj]`):  When `null`, the `data_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.new](#fn-data_sourcesnew) constructor.
+  - `destinations` (`list[obj]`):  When `null`, the `destinations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.new](#fn-destinationsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_data_collection_rule` resource into the root Terraform configuration.
@@ -387,8 +387,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `destinations` (`list`): Set the `destinations` field on the resulting object.
-  - `streams` (`list`): Set the `streams` field on the resulting object.
+  - `destinations` (`list`): 
+  - `streams` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `data_flow` sub block.
@@ -411,10 +411,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `extension` (`list[obj]`): Set the `extension` field on the resulting object. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.extension.new](#fn-data_sourcesextensionnew) constructor.
-  - `performance_counter` (`list[obj]`): Set the `performance_counter` field on the resulting object. When `null`, the `performance_counter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.performance_counter.new](#fn-data_sourcesperformance_counternew) constructor.
-  - `syslog` (`list[obj]`): Set the `syslog` field on the resulting object. When `null`, the `syslog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.syslog.new](#fn-data_sourcessyslognew) constructor.
-  - `windows_event_log` (`list[obj]`): Set the `windows_event_log` field on the resulting object. When `null`, the `windows_event_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.windows_event_log.new](#fn-data_sourceswindows_event_lognew) constructor.
+  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.extension.new](#fn-data_sourcesextensionnew) constructor.
+  - `performance_counter` (`list[obj]`):  When `null`, the `performance_counter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.performance_counter.new](#fn-data_sourcesperformance_counternew) constructor.
+  - `syslog` (`list[obj]`):  When `null`, the `syslog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.syslog.new](#fn-data_sourcessyslognew) constructor.
+  - `windows_event_log` (`list[obj]`):  When `null`, the `windows_event_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.data_sources.windows_event_log.new](#fn-data_sourceswindows_event_lognew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_sources` sub block.
@@ -437,11 +437,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `extension_json` (`string`): Set the `extension_json` field on the resulting object. When `null`, the `extension_json` field will be omitted from the resulting object.
-  - `extension_name` (`string`): Set the `extension_name` field on the resulting object.
-  - `input_data_sources` (`list`): Set the `input_data_sources` field on the resulting object. When `null`, the `input_data_sources` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `streams` (`list`): Set the `streams` field on the resulting object.
+  - `extension_json` (`string`):  When `null`, the `extension_json` field will be omitted from the resulting object.
+  - `extension_name` (`string`): 
+  - `input_data_sources` (`list`):  When `null`, the `input_data_sources` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `streams` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `extension` sub block.
@@ -464,10 +464,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `counter_specifiers` (`list`): Set the `counter_specifiers` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `sampling_frequency_in_seconds` (`number`): Set the `sampling_frequency_in_seconds` field on the resulting object.
-  - `streams` (`list`): Set the `streams` field on the resulting object.
+  - `counter_specifiers` (`list`): 
+  - `name` (`string`): 
+  - `sampling_frequency_in_seconds` (`number`): 
+  - `streams` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `performance_counter` sub block.
@@ -490,10 +490,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `facility_names` (`list`): Set the `facility_names` field on the resulting object.
-  - `log_levels` (`list`): Set the `log_levels` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `streams` (`list`): Set the `streams` field on the resulting object. When `null`, the `streams` field will be omitted from the resulting object.
+  - `facility_names` (`list`): 
+  - `log_levels` (`list`): 
+  - `name` (`string`): 
+  - `streams` (`list`):  When `null`, the `streams` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `syslog` sub block.
@@ -516,9 +516,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `streams` (`list`): Set the `streams` field on the resulting object.
-  - `x_path_queries` (`list`): Set the `x_path_queries` field on the resulting object.
+  - `name` (`string`): 
+  - `streams` (`list`): 
+  - `x_path_queries` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `windows_event_log` sub block.
@@ -541,8 +541,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `azure_monitor_metrics` (`list[obj]`): Set the `azure_monitor_metrics` field on the resulting object. When `null`, the `azure_monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.azure_monitor_metrics.new](#fn-destinationsazure_monitor_metricsnew) constructor.
-  - `log_analytics` (`list[obj]`): Set the `log_analytics` field on the resulting object. When `null`, the `log_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.log_analytics.new](#fn-destinationslog_analyticsnew) constructor.
+  - `azure_monitor_metrics` (`list[obj]`):  When `null`, the `azure_monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.azure_monitor_metrics.new](#fn-destinationsazure_monitor_metricsnew) constructor.
+  - `log_analytics` (`list[obj]`):  When `null`, the `log_analytics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_data_collection_rule.destinations.log_analytics.new](#fn-destinationslog_analyticsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `destinations` sub block.
@@ -565,7 +565,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `azure_monitor_metrics` sub block.
@@ -588,8 +588,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `workspace_resource_id` (`string`): Set the `workspace_resource_id` field on the resulting object.
+  - `name` (`string`): 
+  - `workspace_resource_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `log_analytics` sub block.
@@ -612,10 +612,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

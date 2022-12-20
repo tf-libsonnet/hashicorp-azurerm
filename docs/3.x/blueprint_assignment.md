@@ -62,17 +62,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `lock_exclude_actions` (`list`): Set the `lock_exclude_actions` field on the resulting resource block. When `null`, the `lock_exclude_actions` field will be omitted from the resulting object.
-  - `lock_exclude_principals` (`list`): Set the `lock_exclude_principals` field on the resulting resource block. When `null`, the `lock_exclude_principals` field will be omitted from the resulting object.
-  - `lock_mode` (`string`): Set the `lock_mode` field on the resulting resource block. When `null`, the `lock_mode` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parameter_values` (`string`): Set the `parameter_values` field on the resulting resource block. When `null`, the `parameter_values` field will be omitted from the resulting object.
-  - `resource_groups` (`string`): Set the `resource_groups` field on the resulting resource block. When `null`, the `resource_groups` field will be omitted from the resulting object.
-  - `target_subscription_id` (`string`): Set the `target_subscription_id` field on the resulting resource block.
-  - `version_id` (`string`): Set the `version_id` field on the resulting resource block.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `lock_exclude_actions` (`list`):  When `null`, the `lock_exclude_actions` field will be omitted from the resulting object.
+  - `lock_exclude_principals` (`list`):  When `null`, the `lock_exclude_principals` field will be omitted from the resulting object.
+  - `lock_mode` (`string`):  When `null`, the `lock_mode` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameter_values` (`string`):  When `null`, the `parameter_values` field will be omitted from the resulting object.
+  - `resource_groups` (`string`):  When `null`, the `resource_groups` field will be omitted from the resulting object.
+  - `target_subscription_id` (`string`): 
+  - `version_id` (`string`): 
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,17 +96,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `lock_exclude_actions` (`list`): Set the `lock_exclude_actions` field on the resulting object. When `null`, the `lock_exclude_actions` field will be omitted from the resulting object.
-  - `lock_exclude_principals` (`list`): Set the `lock_exclude_principals` field on the resulting object. When `null`, the `lock_exclude_principals` field will be omitted from the resulting object.
-  - `lock_mode` (`string`): Set the `lock_mode` field on the resulting object. When `null`, the `lock_mode` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameter_values` (`string`): Set the `parameter_values` field on the resulting object. When `null`, the `parameter_values` field will be omitted from the resulting object.
-  - `resource_groups` (`string`): Set the `resource_groups` field on the resulting object. When `null`, the `resource_groups` field will be omitted from the resulting object.
-  - `target_subscription_id` (`string`): Set the `target_subscription_id` field on the resulting object.
-  - `version_id` (`string`): Set the `version_id` field on the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `lock_exclude_actions` (`list`):  When `null`, the `lock_exclude_actions` field will be omitted from the resulting object.
+  - `lock_exclude_principals` (`list`):  When `null`, the `lock_exclude_principals` field will be omitted from the resulting object.
+  - `lock_mode` (`string`):  When `null`, the `lock_mode` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameter_values` (`string`):  When `null`, the `parameter_values` field will be omitted from the resulting object.
+  - `resource_groups` (`string`):  When `null`, the `resource_groups` field will be omitted from the resulting object.
+  - `target_subscription_id` (`string`): 
+  - `version_id` (`string`): 
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.blueprint_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `blueprint_assignment` resource into the root Terraform configuration.
@@ -346,8 +346,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -370,10 +370,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

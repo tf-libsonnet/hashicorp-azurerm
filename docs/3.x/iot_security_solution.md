@@ -70,22 +70,22 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `disabled_data_sources` (`list`): Set the `disabled_data_sources` field on the resulting resource block. When `null`, the `disabled_data_sources` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `events_to_export` (`list`): Set the `events_to_export` field on the resulting resource block. When `null`, the `events_to_export` field will be omitted from the resulting object.
-  - `iothub_ids` (`list`): Set the `iothub_ids` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.
-  - `log_unmasked_ips_enabled` (`bool`): Set the `log_unmasked_ips_enabled` field on the resulting resource block. When `null`, the `log_unmasked_ips_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `query_for_resources` (`string`): Set the `query_for_resources` field on the resulting resource block. When `null`, the `query_for_resources` field will be omitted from the resulting object.
-  - `query_subscription_ids` (`list`): Set the `query_subscription_ids` field on the resulting resource block. When `null`, the `query_subscription_ids` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `additional_workspace` (`list[obj]`): Set the `additional_workspace` field on the resulting resource block. When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-additional_workspacenew) constructor.
-  - `recommendations_enabled` (`list[obj]`): Set the `recommendations_enabled` field on the resulting resource block. When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-recommendations_enablednew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-timeoutsnew) constructor.
+  - `disabled_data_sources` (`list`):  When `null`, the `disabled_data_sources` field will be omitted from the resulting object.
+  - `display_name` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `events_to_export` (`list`):  When `null`, the `events_to_export` field will be omitted from the resulting object.
+  - `iothub_ids` (`list`): 
+  - `location` (`string`): 
+  - `log_analytics_workspace_id` (`string`):  When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.
+  - `log_unmasked_ips_enabled` (`bool`):  When `null`, the `log_unmasked_ips_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `query_for_resources` (`string`):  When `null`, the `query_for_resources` field will be omitted from the resulting object.
+  - `query_subscription_ids` (`list`):  When `null`, the `query_subscription_ids` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `additional_workspace` (`list[obj]`):  When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-additional_workspacenew) constructor.
+  - `recommendations_enabled` (`list[obj]`):  When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-recommendations_enablednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,22 +109,22 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `disabled_data_sources` (`list`): Set the `disabled_data_sources` field on the resulting object. When `null`, the `disabled_data_sources` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `events_to_export` (`list`): Set the `events_to_export` field on the resulting object. When `null`, the `events_to_export` field will be omitted from the resulting object.
-  - `iothub_ids` (`list`): Set the `iothub_ids` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.
-  - `log_unmasked_ips_enabled` (`bool`): Set the `log_unmasked_ips_enabled` field on the resulting object. When `null`, the `log_unmasked_ips_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `query_for_resources` (`string`): Set the `query_for_resources` field on the resulting object. When `null`, the `query_for_resources` field will be omitted from the resulting object.
-  - `query_subscription_ids` (`list`): Set the `query_subscription_ids` field on the resulting object. When `null`, the `query_subscription_ids` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `additional_workspace` (`list[obj]`): Set the `additional_workspace` field on the resulting object. When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-additional_workspacenew) constructor.
-  - `recommendations_enabled` (`list[obj]`): Set the `recommendations_enabled` field on the resulting object. When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-recommendations_enablednew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-timeoutsnew) constructor.
+  - `disabled_data_sources` (`list`):  When `null`, the `disabled_data_sources` field will be omitted from the resulting object.
+  - `display_name` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `events_to_export` (`list`):  When `null`, the `events_to_export` field will be omitted from the resulting object.
+  - `iothub_ids` (`list`): 
+  - `location` (`string`): 
+  - `log_analytics_workspace_id` (`string`):  When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.
+  - `log_unmasked_ips_enabled` (`bool`):  When `null`, the `log_unmasked_ips_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `query_for_resources` (`string`):  When `null`, the `query_for_resources` field will be omitted from the resulting object.
+  - `query_subscription_ids` (`list`):  When `null`, the `query_subscription_ids` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `additional_workspace` (`list[obj]`):  When `null`, the `additional_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.additional_workspace.new](#fn-additional_workspacenew) constructor.
+  - `recommendations_enabled` (`list[obj]`):  When `null`, the `recommendations_enabled` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.recommendations_enabled.new](#fn-recommendations_enablednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_solution.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iot_security_solution` resource into the root Terraform configuration.
@@ -465,8 +465,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `data_types` (`list`): Set the `data_types` field on the resulting object.
-  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object.
+  - `data_types` (`list`): 
+  - `workspace_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `additional_workspace` sub block.
@@ -489,22 +489,22 @@ Terraform sub block.
 
 
 **Args**:
-  - `acr_authentication` (`bool`): Set the `acr_authentication` field on the resulting object. When `null`, the `acr_authentication` field will be omitted from the resulting object.
-  - `agent_send_unutilized_msg` (`bool`): Set the `agent_send_unutilized_msg` field on the resulting object. When `null`, the `agent_send_unutilized_msg` field will be omitted from the resulting object.
-  - `baseline` (`bool`): Set the `baseline` field on the resulting object. When `null`, the `baseline` field will be omitted from the resulting object.
-  - `edge_hub_mem_optimize` (`bool`): Set the `edge_hub_mem_optimize` field on the resulting object. When `null`, the `edge_hub_mem_optimize` field will be omitted from the resulting object.
-  - `edge_logging_option` (`bool`): Set the `edge_logging_option` field on the resulting object. When `null`, the `edge_logging_option` field will be omitted from the resulting object.
-  - `inconsistent_module_settings` (`bool`): Set the `inconsistent_module_settings` field on the resulting object. When `null`, the `inconsistent_module_settings` field will be omitted from the resulting object.
-  - `install_agent` (`bool`): Set the `install_agent` field on the resulting object. When `null`, the `install_agent` field will be omitted from the resulting object.
-  - `ip_filter_deny_all` (`bool`): Set the `ip_filter_deny_all` field on the resulting object. When `null`, the `ip_filter_deny_all` field will be omitted from the resulting object.
-  - `ip_filter_permissive_rule` (`bool`): Set the `ip_filter_permissive_rule` field on the resulting object. When `null`, the `ip_filter_permissive_rule` field will be omitted from the resulting object.
-  - `open_ports` (`bool`): Set the `open_ports` field on the resulting object. When `null`, the `open_ports` field will be omitted from the resulting object.
-  - `permissive_firewall_policy` (`bool`): Set the `permissive_firewall_policy` field on the resulting object. When `null`, the `permissive_firewall_policy` field will be omitted from the resulting object.
-  - `permissive_input_firewall_rules` (`bool`): Set the `permissive_input_firewall_rules` field on the resulting object. When `null`, the `permissive_input_firewall_rules` field will be omitted from the resulting object.
-  - `permissive_output_firewall_rules` (`bool`): Set the `permissive_output_firewall_rules` field on the resulting object. When `null`, the `permissive_output_firewall_rules` field will be omitted from the resulting object.
-  - `privileged_docker_options` (`bool`): Set the `privileged_docker_options` field on the resulting object. When `null`, the `privileged_docker_options` field will be omitted from the resulting object.
-  - `shared_credentials` (`bool`): Set the `shared_credentials` field on the resulting object. When `null`, the `shared_credentials` field will be omitted from the resulting object.
-  - `vulnerable_tls_cipher_suite` (`bool`): Set the `vulnerable_tls_cipher_suite` field on the resulting object. When `null`, the `vulnerable_tls_cipher_suite` field will be omitted from the resulting object.
+  - `acr_authentication` (`bool`):  When `null`, the `acr_authentication` field will be omitted from the resulting object.
+  - `agent_send_unutilized_msg` (`bool`):  When `null`, the `agent_send_unutilized_msg` field will be omitted from the resulting object.
+  - `baseline` (`bool`):  When `null`, the `baseline` field will be omitted from the resulting object.
+  - `edge_hub_mem_optimize` (`bool`):  When `null`, the `edge_hub_mem_optimize` field will be omitted from the resulting object.
+  - `edge_logging_option` (`bool`):  When `null`, the `edge_logging_option` field will be omitted from the resulting object.
+  - `inconsistent_module_settings` (`bool`):  When `null`, the `inconsistent_module_settings` field will be omitted from the resulting object.
+  - `install_agent` (`bool`):  When `null`, the `install_agent` field will be omitted from the resulting object.
+  - `ip_filter_deny_all` (`bool`):  When `null`, the `ip_filter_deny_all` field will be omitted from the resulting object.
+  - `ip_filter_permissive_rule` (`bool`):  When `null`, the `ip_filter_permissive_rule` field will be omitted from the resulting object.
+  - `open_ports` (`bool`):  When `null`, the `open_ports` field will be omitted from the resulting object.
+  - `permissive_firewall_policy` (`bool`):  When `null`, the `permissive_firewall_policy` field will be omitted from the resulting object.
+  - `permissive_input_firewall_rules` (`bool`):  When `null`, the `permissive_input_firewall_rules` field will be omitted from the resulting object.
+  - `permissive_output_firewall_rules` (`bool`):  When `null`, the `permissive_output_firewall_rules` field will be omitted from the resulting object.
+  - `privileged_docker_options` (`bool`):  When `null`, the `privileged_docker_options` field will be omitted from the resulting object.
+  - `shared_credentials` (`bool`):  When `null`, the `shared_credentials` field will be omitted from the resulting object.
+  - `vulnerable_tls_cipher_suite` (`bool`):  When `null`, the `vulnerable_tls_cipher_suite` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `recommendations_enabled` sub block.
@@ -527,10 +527,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

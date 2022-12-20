@@ -69,17 +69,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `address_cidrs` (`list`): Set the `address_cidrs` field on the resulting resource block. When `null`, the `address_cidrs` field will be omitted from the resulting object.
-  - `device_model` (`string`): Set the `device_model` field on the resulting resource block. When `null`, the `device_model` field will be omitted from the resulting object.
-  - `device_vendor` (`string`): Set the `device_vendor` field on the resulting resource block. When `null`, the `device_vendor` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_wan_id` (`string`): Set the `virtual_wan_id` field on the resulting resource block.
-  - `link` (`list[obj]`): Set the `link` field on the resulting resource block. When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-linknew) constructor.
-  - `o365_policy` (`list[obj]`): Set the `o365_policy` field on the resulting resource block. When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-o365_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-timeoutsnew) constructor.
+  - `address_cidrs` (`list`):  When `null`, the `address_cidrs` field will be omitted from the resulting object.
+  - `device_model` (`string`):  When `null`, the `device_model` field will be omitted from the resulting object.
+  - `device_vendor` (`string`):  When `null`, the `device_vendor` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_wan_id` (`string`): 
+  - `link` (`list[obj]`):  When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-linknew) constructor.
+  - `o365_policy` (`list[obj]`):  When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-o365_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -103,17 +103,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `address_cidrs` (`list`): Set the `address_cidrs` field on the resulting object. When `null`, the `address_cidrs` field will be omitted from the resulting object.
-  - `device_model` (`string`): Set the `device_model` field on the resulting object. When `null`, the `device_model` field will be omitted from the resulting object.
-  - `device_vendor` (`string`): Set the `device_vendor` field on the resulting object. When `null`, the `device_vendor` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_wan_id` (`string`): Set the `virtual_wan_id` field on the resulting object.
-  - `link` (`list[obj]`): Set the `link` field on the resulting object. When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-linknew) constructor.
-  - `o365_policy` (`list[obj]`): Set the `o365_policy` field on the resulting object. When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-o365_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-timeoutsnew) constructor.
+  - `address_cidrs` (`list`):  When `null`, the `address_cidrs` field will be omitted from the resulting object.
+  - `device_model` (`string`):  When `null`, the `device_model` field will be omitted from the resulting object.
+  - `device_vendor` (`string`):  When `null`, the `device_vendor` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_wan_id` (`string`): 
+  - `link` (`list[obj]`):  When `null`, the `link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.new](#fn-linknew) constructor.
+  - `o365_policy` (`list[obj]`):  When `null`, the `o365_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.new](#fn-o365_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpn_site` resource into the root Terraform configuration.
@@ -374,12 +374,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `fqdn` (`string`): Set the `fqdn` field on the resulting object. When `null`, the `fqdn` field will be omitted from the resulting object.
-  - `ip_address` (`string`): Set the `ip_address` field on the resulting object. When `null`, the `ip_address` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `provider_name` (`string`): Set the `provider_name` field on the resulting object. When `null`, the `provider_name` field will be omitted from the resulting object.
-  - `speed_in_mbps` (`number`): Set the `speed_in_mbps` field on the resulting object. When `null`, the `speed_in_mbps` field will be omitted from the resulting object.
-  - `bgp` (`list[obj]`): Set the `bgp` field on the resulting object. When `null`, the `bgp` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.bgp.new](#fn-linkbgpnew) constructor.
+  - `fqdn` (`string`):  When `null`, the `fqdn` field will be omitted from the resulting object.
+  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `provider_name` (`string`):  When `null`, the `provider_name` field will be omitted from the resulting object.
+  - `speed_in_mbps` (`number`):  When `null`, the `speed_in_mbps` field will be omitted from the resulting object.
+  - `bgp` (`list[obj]`):  When `null`, the `bgp` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.link.bgp.new](#fn-linkbgpnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `link` sub block.
@@ -402,8 +402,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `asn` (`number`): Set the `asn` field on the resulting object.
-  - `peering_address` (`string`): Set the `peering_address` field on the resulting object.
+  - `asn` (`number`): 
+  - `peering_address` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `bgp` sub block.
@@ -426,7 +426,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `traffic_category` (`list[obj]`): Set the `traffic_category` field on the resulting object. When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-o365_policytraffic_categorynew) constructor.
+  - `traffic_category` (`list[obj]`):  When `null`, the `traffic_category` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_site.o365_policy.traffic_category.new](#fn-o365_policytraffic_categorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `o365_policy` sub block.
@@ -449,9 +449,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `allow_endpoint_enabled` (`bool`): Set the `allow_endpoint_enabled` field on the resulting object. When `null`, the `allow_endpoint_enabled` field will be omitted from the resulting object.
-  - `default_endpoint_enabled` (`bool`): Set the `default_endpoint_enabled` field on the resulting object. When `null`, the `default_endpoint_enabled` field will be omitted from the resulting object.
-  - `optimize_endpoint_enabled` (`bool`): Set the `optimize_endpoint_enabled` field on the resulting object. When `null`, the `optimize_endpoint_enabled` field will be omitted from the resulting object.
+  - `allow_endpoint_enabled` (`bool`):  When `null`, the `allow_endpoint_enabled` field will be omitted from the resulting object.
+  - `default_endpoint_enabled` (`bool`):  When `null`, the `default_endpoint_enabled` field will be omitted from the resulting object.
+  - `optimize_endpoint_enabled` (`bool`):  When `null`, the `optimize_endpoint_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `traffic_category` sub block.
@@ -474,10 +474,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

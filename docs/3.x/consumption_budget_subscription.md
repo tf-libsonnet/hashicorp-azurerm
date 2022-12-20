@@ -76,15 +76,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `amount` (`number`): Set the `amount` field on the resulting resource block.
-  - `etag` (`string`): Set the `etag` field on the resulting resource block. When `null`, the `etag` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting resource block.
-  - `time_grain` (`string`): Set the `time_grain` field on the resulting resource block. When `null`, the `time_grain` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`): Set the `filter` field on the resulting resource block. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-filternew) constructor.
-  - `notification` (`list[obj]`): Set the `notification` field on the resulting resource block. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-notificationnew) constructor.
-  - `time_period` (`list[obj]`): Set the `time_period` field on the resulting resource block. When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-time_periodnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `amount` (`number`): 
+  - `etag` (`string`):  When `null`, the `etag` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `subscription_id` (`string`): 
+  - `time_grain` (`string`):  When `null`, the `time_grain` field will be omitted from the resulting object.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-filternew) constructor.
+  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-notificationnew) constructor.
+  - `time_period` (`list[obj]`):  When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-time_periodnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,15 +108,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `amount` (`number`): Set the `amount` field on the resulting object.
-  - `etag` (`string`): Set the `etag` field on the resulting object. When `null`, the `etag` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting object.
-  - `time_grain` (`string`): Set the `time_grain` field on the resulting object. When `null`, the `time_grain` field will be omitted from the resulting object.
-  - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-filternew) constructor.
-  - `notification` (`list[obj]`): Set the `notification` field on the resulting object. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-notificationnew) constructor.
-  - `time_period` (`list[obj]`): Set the `time_period` field on the resulting object. When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-time_periodnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `amount` (`number`): 
+  - `etag` (`string`):  When `null`, the `etag` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `subscription_id` (`string`): 
+  - `time_grain` (`string`):  When `null`, the `time_grain` field will be omitted from the resulting object.
+  - `filter` (`list[obj]`):  When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.new](#fn-filternew) constructor.
+  - `notification` (`list[obj]`):  When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.notification.new](#fn-notificationnew) constructor.
+  - `time_period` (`list[obj]`):  When `null`, the `time_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.time_period.new](#fn-time_periodnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `consumption_budget_subscription` resource into the root Terraform configuration.
@@ -366,9 +366,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `dimension` (`list[obj]`): Set the `dimension` field on the resulting object. When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.dimension.new](#fn-filterdimensionnew) constructor.
-  - `not` (`list[obj]`): Set the `not` field on the resulting object. When `null`, the `not` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.not.new](#fn-filternotnew) constructor.
-  - `tag` (`list[obj]`): Set the `tag` field on the resulting object. When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.tag.new](#fn-filtertagnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.dimension.new](#fn-filterdimensionnew) constructor.
+  - `not` (`list[obj]`):  When `null`, the `not` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.not.new](#fn-filternotnew) constructor.
+  - `tag` (`list[obj]`):  When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.tag.new](#fn-filtertagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `filter` sub block.
@@ -391,9 +391,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `name` (`string`): 
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `dimension` sub block.
@@ -416,8 +416,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `dimension` (`list[obj]`): Set the `dimension` field on the resulting object. When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.not.dimension.new](#fn-filterfilterdimensionnew) constructor.
-  - `tag` (`list[obj]`): Set the `tag` field on the resulting object. When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.not.tag.new](#fn-filterfiltertagnew) constructor.
+  - `dimension` (`list[obj]`):  When `null`, the `dimension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.not.dimension.new](#fn-filterfilterdimensionnew) constructor.
+  - `tag` (`list[obj]`):  When `null`, the `tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.consumption_budget_subscription.filter.not.tag.new](#fn-filterfiltertagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `not` sub block.
@@ -440,9 +440,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `name` (`string`): 
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `dimension` sub block.
@@ -465,9 +465,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `name` (`string`): 
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `tag` sub block.
@@ -490,9 +490,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object. When `null`, the `operator` field will be omitted from the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `name` (`string`): 
+  - `operator` (`string`):  When `null`, the `operator` field will be omitted from the resulting object.
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `tag` sub block.
@@ -515,13 +515,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `contact_emails` (`list`): Set the `contact_emails` field on the resulting object. When `null`, the `contact_emails` field will be omitted from the resulting object.
-  - `contact_groups` (`list`): Set the `contact_groups` field on the resulting object. When `null`, the `contact_groups` field will be omitted from the resulting object.
-  - `contact_roles` (`list`): Set the `contact_roles` field on the resulting object. When `null`, the `contact_roles` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `threshold` (`number`): Set the `threshold` field on the resulting object.
-  - `threshold_type` (`string`): Set the `threshold_type` field on the resulting object. When `null`, the `threshold_type` field will be omitted from the resulting object.
+  - `contact_emails` (`list`):  When `null`, the `contact_emails` field will be omitted from the resulting object.
+  - `contact_groups` (`list`):  When `null`, the `contact_groups` field will be omitted from the resulting object.
+  - `contact_roles` (`list`):  When `null`, the `contact_roles` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `threshold` (`number`): 
+  - `threshold_type` (`string`):  When `null`, the `threshold_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `notification` sub block.
@@ -544,8 +544,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_date` (`string`): Set the `end_date` field on the resulting object. When `null`, the `end_date` field will be omitted from the resulting object.
-  - `start_date` (`string`): Set the `start_date` field on the resulting object.
+  - `end_date` (`string`):  When `null`, the `end_date` field will be omitted from the resulting object.
+  - `start_date` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `time_period` sub block.
@@ -568,10 +568,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

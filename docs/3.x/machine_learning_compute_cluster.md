@@ -71,20 +71,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting resource block. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `ssh_public_access_enabled` (`bool`): Set the `ssh_public_access_enabled` field on the resulting resource block. When `null`, the `ssh_public_access_enabled` field will be omitted from the resulting object.
-  - `subnet_resource_id` (`string`): Set the `subnet_resource_id` field on the resulting resource block. When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `vm_priority` (`string`): Set the `vm_priority` field on the resulting resource block.
-  - `vm_size` (`string`): Set the `vm_size` field on the resulting resource block.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.identity.new](#fn-identitynew) constructor.
-  - `scale_settings` (`list[obj]`): Set the `scale_settings` field on the resulting resource block. When `null`, the `scale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.scale_settings.new](#fn-scale_settingsnew) constructor.
-  - `ssh` (`list[obj]`): Set the `ssh` field on the resulting resource block. When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.ssh.new](#fn-sshnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `local_auth_enabled` (`bool`):  When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `machine_learning_workspace_id` (`string`): 
+  - `name` (`string`): 
+  - `ssh_public_access_enabled` (`bool`):  When `null`, the `ssh_public_access_enabled` field will be omitted from the resulting object.
+  - `subnet_resource_id` (`string`):  When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `vm_priority` (`string`): 
+  - `vm_size` (`string`): 
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.identity.new](#fn-identitynew) constructor.
+  - `scale_settings` (`list[obj]`):  When `null`, the `scale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.scale_settings.new](#fn-scale_settingsnew) constructor.
+  - `ssh` (`list[obj]`):  When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.ssh.new](#fn-sshnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,20 +108,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting object. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `ssh_public_access_enabled` (`bool`): Set the `ssh_public_access_enabled` field on the resulting object. When `null`, the `ssh_public_access_enabled` field will be omitted from the resulting object.
-  - `subnet_resource_id` (`string`): Set the `subnet_resource_id` field on the resulting object. When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `vm_priority` (`string`): Set the `vm_priority` field on the resulting object.
-  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.identity.new](#fn-identitynew) constructor.
-  - `scale_settings` (`list[obj]`): Set the `scale_settings` field on the resulting object. When `null`, the `scale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.scale_settings.new](#fn-scale_settingsnew) constructor.
-  - `ssh` (`list[obj]`): Set the `ssh` field on the resulting object. When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.ssh.new](#fn-sshnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `local_auth_enabled` (`bool`):  When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `machine_learning_workspace_id` (`string`): 
+  - `name` (`string`): 
+  - `ssh_public_access_enabled` (`bool`):  When `null`, the `ssh_public_access_enabled` field will be omitted from the resulting object.
+  - `subnet_resource_id` (`string`):  When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `vm_priority` (`string`): 
+  - `vm_size` (`string`): 
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.identity.new](#fn-identitynew) constructor.
+  - `scale_settings` (`list[obj]`):  When `null`, the `scale_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.scale_settings.new](#fn-scale_settingsnew) constructor.
+  - `ssh` (`list[obj]`):  When `null`, the `ssh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.ssh.new](#fn-sshnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.machine_learning_compute_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `machine_learning_compute_cluster` resource into the root Terraform configuration.
@@ -451,8 +451,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -475,9 +475,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_node_count` (`number`): Set the `max_node_count` field on the resulting object.
-  - `min_node_count` (`number`): Set the `min_node_count` field on the resulting object.
-  - `scale_down_nodes_after_idle_duration` (`string`): Set the `scale_down_nodes_after_idle_duration` field on the resulting object.
+  - `max_node_count` (`number`): 
+  - `min_node_count` (`number`): 
+  - `scale_down_nodes_after_idle_duration` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `scale_settings` sub block.
@@ -500,9 +500,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_password` (`string`): Set the `admin_password` field on the resulting object. When `null`, the `admin_password` field will be omitted from the resulting object.
-  - `admin_username` (`string`): Set the `admin_username` field on the resulting object.
-  - `key_value` (`string`): Set the `key_value` field on the resulting object. When `null`, the `key_value` field will be omitted from the resulting object.
+  - `admin_password` (`string`):  When `null`, the `admin_password` field will be omitted from the resulting object.
+  - `admin_username` (`string`): 
+  - `key_value` (`string`):  When `null`, the `key_value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ssh` sub block.
@@ -525,9 +525,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

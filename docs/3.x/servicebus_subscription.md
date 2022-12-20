@@ -67,22 +67,22 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_delete_on_idle` (`string`): Set the `auto_delete_on_idle` field on the resulting resource block. When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
-  - `client_scoped_subscription_enabled` (`bool`): Set the `client_scoped_subscription_enabled` field on the resulting resource block. When `null`, the `client_scoped_subscription_enabled` field will be omitted from the resulting object.
-  - `dead_lettering_on_filter_evaluation_error` (`bool`): Set the `dead_lettering_on_filter_evaluation_error` field on the resulting resource block. When `null`, the `dead_lettering_on_filter_evaluation_error` field will be omitted from the resulting object.
-  - `dead_lettering_on_message_expiration` (`bool`): Set the `dead_lettering_on_message_expiration` field on the resulting resource block. When `null`, the `dead_lettering_on_message_expiration` field will be omitted from the resulting object.
-  - `default_message_ttl` (`string`): Set the `default_message_ttl` field on the resulting resource block. When `null`, the `default_message_ttl` field will be omitted from the resulting object.
-  - `enable_batched_operations` (`bool`): Set the `enable_batched_operations` field on the resulting resource block. When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
-  - `forward_dead_lettered_messages_to` (`string`): Set the `forward_dead_lettered_messages_to` field on the resulting resource block. When `null`, the `forward_dead_lettered_messages_to` field will be omitted from the resulting object.
-  - `forward_to` (`string`): Set the `forward_to` field on the resulting resource block. When `null`, the `forward_to` field will be omitted from the resulting object.
-  - `lock_duration` (`string`): Set the `lock_duration` field on the resulting resource block. When `null`, the `lock_duration` field will be omitted from the resulting object.
-  - `max_delivery_count` (`number`): Set the `max_delivery_count` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `requires_session` (`bool`): Set the `requires_session` field on the resulting resource block. When `null`, the `requires_session` field will be omitted from the resulting object.
-  - `status` (`string`): Set the `status` field on the resulting resource block. When `null`, the `status` field will be omitted from the resulting object.
-  - `topic_id` (`string`): Set the `topic_id` field on the resulting resource block.
-  - `client_scoped_subscription` (`list[obj]`): Set the `client_scoped_subscription` field on the resulting resource block. When `null`, the `client_scoped_subscription` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.client_scoped_subscription.new](#fn-client_scoped_subscriptionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_delete_on_idle` (`string`):  When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
+  - `client_scoped_subscription_enabled` (`bool`):  When `null`, the `client_scoped_subscription_enabled` field will be omitted from the resulting object.
+  - `dead_lettering_on_filter_evaluation_error` (`bool`):  When `null`, the `dead_lettering_on_filter_evaluation_error` field will be omitted from the resulting object.
+  - `dead_lettering_on_message_expiration` (`bool`):  When `null`, the `dead_lettering_on_message_expiration` field will be omitted from the resulting object.
+  - `default_message_ttl` (`string`):  When `null`, the `default_message_ttl` field will be omitted from the resulting object.
+  - `enable_batched_operations` (`bool`):  When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
+  - `forward_dead_lettered_messages_to` (`string`):  When `null`, the `forward_dead_lettered_messages_to` field will be omitted from the resulting object.
+  - `forward_to` (`string`):  When `null`, the `forward_to` field will be omitted from the resulting object.
+  - `lock_duration` (`string`):  When `null`, the `lock_duration` field will be omitted from the resulting object.
+  - `max_delivery_count` (`number`): 
+  - `name` (`string`): 
+  - `requires_session` (`bool`):  When `null`, the `requires_session` field will be omitted from the resulting object.
+  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
+  - `topic_id` (`string`): 
+  - `client_scoped_subscription` (`list[obj]`):  When `null`, the `client_scoped_subscription` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.client_scoped_subscription.new](#fn-client_scoped_subscriptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,22 +106,22 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_delete_on_idle` (`string`): Set the `auto_delete_on_idle` field on the resulting object. When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
-  - `client_scoped_subscription_enabled` (`bool`): Set the `client_scoped_subscription_enabled` field on the resulting object. When `null`, the `client_scoped_subscription_enabled` field will be omitted from the resulting object.
-  - `dead_lettering_on_filter_evaluation_error` (`bool`): Set the `dead_lettering_on_filter_evaluation_error` field on the resulting object. When `null`, the `dead_lettering_on_filter_evaluation_error` field will be omitted from the resulting object.
-  - `dead_lettering_on_message_expiration` (`bool`): Set the `dead_lettering_on_message_expiration` field on the resulting object. When `null`, the `dead_lettering_on_message_expiration` field will be omitted from the resulting object.
-  - `default_message_ttl` (`string`): Set the `default_message_ttl` field on the resulting object. When `null`, the `default_message_ttl` field will be omitted from the resulting object.
-  - `enable_batched_operations` (`bool`): Set the `enable_batched_operations` field on the resulting object. When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
-  - `forward_dead_lettered_messages_to` (`string`): Set the `forward_dead_lettered_messages_to` field on the resulting object. When `null`, the `forward_dead_lettered_messages_to` field will be omitted from the resulting object.
-  - `forward_to` (`string`): Set the `forward_to` field on the resulting object. When `null`, the `forward_to` field will be omitted from the resulting object.
-  - `lock_duration` (`string`): Set the `lock_duration` field on the resulting object. When `null`, the `lock_duration` field will be omitted from the resulting object.
-  - `max_delivery_count` (`number`): Set the `max_delivery_count` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `requires_session` (`bool`): Set the `requires_session` field on the resulting object. When `null`, the `requires_session` field will be omitted from the resulting object.
-  - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
-  - `topic_id` (`string`): Set the `topic_id` field on the resulting object.
-  - `client_scoped_subscription` (`list[obj]`): Set the `client_scoped_subscription` field on the resulting object. When `null`, the `client_scoped_subscription` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.client_scoped_subscription.new](#fn-client_scoped_subscriptionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_delete_on_idle` (`string`):  When `null`, the `auto_delete_on_idle` field will be omitted from the resulting object.
+  - `client_scoped_subscription_enabled` (`bool`):  When `null`, the `client_scoped_subscription_enabled` field will be omitted from the resulting object.
+  - `dead_lettering_on_filter_evaluation_error` (`bool`):  When `null`, the `dead_lettering_on_filter_evaluation_error` field will be omitted from the resulting object.
+  - `dead_lettering_on_message_expiration` (`bool`):  When `null`, the `dead_lettering_on_message_expiration` field will be omitted from the resulting object.
+  - `default_message_ttl` (`string`):  When `null`, the `default_message_ttl` field will be omitted from the resulting object.
+  - `enable_batched_operations` (`bool`):  When `null`, the `enable_batched_operations` field will be omitted from the resulting object.
+  - `forward_dead_lettered_messages_to` (`string`):  When `null`, the `forward_dead_lettered_messages_to` field will be omitted from the resulting object.
+  - `forward_to` (`string`):  When `null`, the `forward_to` field will be omitted from the resulting object.
+  - `lock_duration` (`string`):  When `null`, the `lock_duration` field will be omitted from the resulting object.
+  - `max_delivery_count` (`number`): 
+  - `name` (`string`): 
+  - `requires_session` (`bool`):  When `null`, the `requires_session` field will be omitted from the resulting object.
+  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
+  - `topic_id` (`string`): 
+  - `client_scoped_subscription` (`list[obj]`):  When `null`, the `client_scoped_subscription` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.client_scoped_subscription.new](#fn-client_scoped_subscriptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `servicebus_subscription` resource into the root Terraform configuration.
@@ -441,8 +441,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`): Set the `client_id` field on the resulting object. When `null`, the `client_id` field will be omitted from the resulting object.
-  - `is_client_scoped_subscription_shareable` (`bool`): Set the `is_client_scoped_subscription_shareable` field on the resulting object. When `null`, the `is_client_scoped_subscription_shareable` field will be omitted from the resulting object.
+  - `client_id` (`string`):  When `null`, the `client_id` field will be omitted from the resulting object.
+  - `is_client_scoped_subscription_shareable` (`bool`):  When `null`, the `is_client_scoped_subscription_shareable` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `client_scoped_subscription` sub block.
@@ -465,10 +465,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

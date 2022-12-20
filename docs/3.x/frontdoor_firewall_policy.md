@@ -77,17 +77,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `custom_block_response_body` (`string`): Set the `custom_block_response_body` field on the resulting resource block. When `null`, the `custom_block_response_body` field will be omitted from the resulting object.
-  - `custom_block_response_status_code` (`number`): Set the `custom_block_response_status_code` field on the resulting resource block. When `null`, the `custom_block_response_status_code` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `mode` (`string`): Set the `mode` field on the resulting resource block. When `null`, the `mode` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `redirect_url` (`string`): Set the `redirect_url` field on the resulting resource block. When `null`, the `redirect_url` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_rule` (`list[obj]`): Set the `custom_rule` field on the resulting resource block. When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.custom_rule.new](#fn-custom_rulenew) constructor.
-  - `managed_rule` (`list[obj]`): Set the `managed_rule` field on the resulting resource block. When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.new](#fn-managed_rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `custom_block_response_body` (`string`):  When `null`, the `custom_block_response_body` field will be omitted from the resulting object.
+  - `custom_block_response_status_code` (`number`):  When `null`, the `custom_block_response_status_code` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `redirect_url` (`string`):  When `null`, the `redirect_url` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `custom_rule` (`list[obj]`):  When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.custom_rule.new](#fn-custom_rulenew) constructor.
+  - `managed_rule` (`list[obj]`):  When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.new](#fn-managed_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -111,17 +111,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `custom_block_response_body` (`string`): Set the `custom_block_response_body` field on the resulting object. When `null`, the `custom_block_response_body` field will be omitted from the resulting object.
-  - `custom_block_response_status_code` (`number`): Set the `custom_block_response_status_code` field on the resulting object. When `null`, the `custom_block_response_status_code` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `redirect_url` (`string`): Set the `redirect_url` field on the resulting object. When `null`, the `redirect_url` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_rule` (`list[obj]`): Set the `custom_rule` field on the resulting object. When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.custom_rule.new](#fn-custom_rulenew) constructor.
-  - `managed_rule` (`list[obj]`): Set the `managed_rule` field on the resulting object. When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.new](#fn-managed_rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `custom_block_response_body` (`string`):  When `null`, the `custom_block_response_body` field will be omitted from the resulting object.
+  - `custom_block_response_status_code` (`number`):  When `null`, the `custom_block_response_status_code` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `redirect_url` (`string`):  When `null`, the `redirect_url` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `custom_rule` (`list[obj]`):  When `null`, the `custom_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.custom_rule.new](#fn-custom_rulenew) constructor.
+  - `managed_rule` (`list[obj]`):  When `null`, the `managed_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.new](#fn-managed_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `frontdoor_firewall_policy` resource into the root Terraform configuration.
@@ -382,14 +382,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): Set the `action` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `priority` (`number`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
-  - `rate_limit_duration_in_minutes` (`number`): Set the `rate_limit_duration_in_minutes` field on the resulting object. When `null`, the `rate_limit_duration_in_minutes` field will be omitted from the resulting object.
-  - `rate_limit_threshold` (`number`): Set the `rate_limit_threshold` field on the resulting object. When `null`, the `rate_limit_threshold` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `match_condition` (`list[obj]`): Set the `match_condition` field on the resulting object. When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.custom_rule.match_condition.new](#fn-custom_rulematch_conditionnew) constructor.
+  - `action` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `priority` (`number`):  When `null`, the `priority` field will be omitted from the resulting object.
+  - `rate_limit_duration_in_minutes` (`number`):  When `null`, the `rate_limit_duration_in_minutes` field will be omitted from the resulting object.
+  - `rate_limit_threshold` (`number`):  When `null`, the `rate_limit_threshold` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `match_condition` (`list[obj]`):  When `null`, the `match_condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.custom_rule.match_condition.new](#fn-custom_rulematch_conditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom_rule` sub block.
@@ -412,12 +412,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`): Set the `match_values` field on the resulting object.
-  - `match_variable` (`string`): Set the `match_variable` field on the resulting object.
-  - `negation_condition` (`bool`): Set the `negation_condition` field on the resulting object. When `null`, the `negation_condition` field will be omitted from the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `selector` (`string`): Set the `selector` field on the resulting object. When `null`, the `selector` field will be omitted from the resulting object.
-  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.
+  - `match_values` (`list`): 
+  - `match_variable` (`string`): 
+  - `negation_condition` (`bool`):  When `null`, the `negation_condition` field will be omitted from the resulting object.
+  - `operator` (`string`): 
+  - `selector` (`string`):  When `null`, the `selector` field will be omitted from the resulting object.
+  - `transforms` (`list`):  When `null`, the `transforms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `match_condition` sub block.
@@ -440,10 +440,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object.
-  - `exclusion` (`list[obj]`): Set the `exclusion` field on the resulting object. When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.exclusion.new](#fn-managed_ruleexclusionnew) constructor.
-  - `override` (`list[obj]`): Set the `override` field on the resulting object. When `null`, the `override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.new](#fn-managed_ruleoverridenew) constructor.
+  - `type` (`string`): 
+  - `version` (`string`): 
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.exclusion.new](#fn-managed_ruleexclusionnew) constructor.
+  - `override` (`list[obj]`):  When `null`, the `override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.new](#fn-managed_ruleoverridenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `managed_rule` sub block.
@@ -466,9 +466,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_variable` (`string`): Set the `match_variable` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `selector` (`string`): Set the `selector` field on the resulting object.
+  - `match_variable` (`string`): 
+  - `operator` (`string`): 
+  - `selector` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `exclusion` sub block.
@@ -491,9 +491,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `rule_group_name` (`string`): Set the `rule_group_name` field on the resulting object.
-  - `exclusion` (`list[obj]`): Set the `exclusion` field on the resulting object. When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.exclusion.new](#fn-managed_rulemanaged_ruleexclusionnew) constructor.
-  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.rule.new](#fn-managed_rulemanaged_rulerulenew) constructor.
+  - `rule_group_name` (`string`): 
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.exclusion.new](#fn-managed_rulemanaged_ruleexclusionnew) constructor.
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.rule.new](#fn-managed_rulemanaged_rulerulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `override` sub block.
@@ -516,9 +516,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_variable` (`string`): Set the `match_variable` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `selector` (`string`): Set the `selector` field on the resulting object.
+  - `match_variable` (`string`): 
+  - `operator` (`string`): 
+  - `selector` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `exclusion` sub block.
@@ -541,10 +541,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`string`): Set the `action` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `rule_id` (`string`): Set the `rule_id` field on the resulting object.
-  - `exclusion` (`list[obj]`): Set the `exclusion` field on the resulting object. When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.rule.exclusion.new](#fn-managed_rulemanaged_ruleoverrideexclusionnew) constructor.
+  - `action` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `rule_id` (`string`): 
+  - `exclusion` (`list[obj]`):  When `null`, the `exclusion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.frontdoor_firewall_policy.managed_rule.override.rule.exclusion.new](#fn-managed_rulemanaged_ruleoverrideexclusionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -567,9 +567,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_variable` (`string`): Set the `match_variable` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `selector` (`string`): Set the `selector` field on the resulting object.
+  - `match_variable` (`string`): 
+  - `operator` (`string`): 
+  - `selector` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `exclusion` sub block.
@@ -592,10 +592,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

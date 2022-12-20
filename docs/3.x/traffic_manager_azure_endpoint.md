@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `geo_mappings` (`list`): Set the `geo_mappings` field on the resulting resource block. When `null`, the `geo_mappings` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `priority` (`number`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
-  - `profile_id` (`string`): Set the `profile_id` field on the resulting resource block.
-  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting resource block.
-  - `weight` (`number`): Set the `weight` field on the resulting resource block. When `null`, the `weight` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`): Set the `custom_header` field on the resulting resource block. When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.custom_header.new](#fn-custom_headernew) constructor.
-  - `subnet` (`list[obj]`): Set the `subnet` field on the resulting resource block. When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.subnet.new](#fn-subnetnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `geo_mappings` (`list`):  When `null`, the `geo_mappings` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `priority` (`number`):  When `null`, the `priority` field will be omitted from the resulting object.
+  - `profile_id` (`string`): 
+  - `target_resource_id` (`string`): 
+  - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
+  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.custom_header.new](#fn-custom_headernew) constructor.
+  - `subnet` (`list[obj]`):  When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.subnet.new](#fn-subnetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `geo_mappings` (`list`): Set the `geo_mappings` field on the resulting object. When `null`, the `geo_mappings` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `priority` (`number`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
-  - `profile_id` (`string`): Set the `profile_id` field on the resulting object.
-  - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting object.
-  - `weight` (`number`): Set the `weight` field on the resulting object. When `null`, the `weight` field will be omitted from the resulting object.
-  - `custom_header` (`list[obj]`): Set the `custom_header` field on the resulting object. When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.custom_header.new](#fn-custom_headernew) constructor.
-  - `subnet` (`list[obj]`): Set the `subnet` field on the resulting object. When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.subnet.new](#fn-subnetnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `geo_mappings` (`list`):  When `null`, the `geo_mappings` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `priority` (`number`):  When `null`, the `priority` field will be omitted from the resulting object.
+  - `profile_id` (`string`): 
+  - `target_resource_id` (`string`): 
+  - `weight` (`number`):  When `null`, the `weight` field will be omitted from the resulting object.
+  - `custom_header` (`list[obj]`):  When `null`, the `custom_header` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.custom_header.new](#fn-custom_headernew) constructor.
+  - `subnet` (`list[obj]`):  When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.subnet.new](#fn-subnetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.traffic_manager_azure_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `traffic_manager_azure_endpoint` resource into the root Terraform configuration.
@@ -351,8 +351,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `name` (`string`): 
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `custom_header` sub block.
@@ -375,9 +375,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `first` (`string`): Set the `first` field on the resulting object.
-  - `last` (`string`): Set the `last` field on the resulting object. When `null`, the `last` field will be omitted from the resulting object.
-  - `scope` (`number`): Set the `scope` field on the resulting object. When `null`, the `scope` field will be omitted from the resulting object.
+  - `first` (`string`): 
+  - `last` (`string`):  When `null`, the `last` field will be omitted from the resulting object.
+  - `scope` (`number`):  When `null`, the `scope` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `subnet` sub block.
@@ -400,10 +400,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

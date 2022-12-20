@@ -131,15 +131,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_account_name` (`string`): The backend storage account name which will be used by this Function App Slot. When `null`, the `storage_account_name` field will be omitted from the resulting object.
   - `storage_key_vault_secret_id` (`string`): The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. When `null`, the `storage_key_vault_secret_id` field will be omitted from the resulting object.
   - `storage_uses_managed_identity` (`bool`): Should the Function App Slot use its Managed Identity to access storage? When `null`, the `storage_uses_managed_identity` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
-  - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting resource block. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
-  - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.new](#fn-backupnew) constructor.
-  - `connection_string` (`list[obj]`): Set the `connection_string` field on the resulting resource block. When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.connection_string.new](#fn-connection_stringnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.identity.new](#fn-identitynew) constructor.
-  - `site_config` (`list[obj]`): Set the `site_config` field on the resulting resource block. When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.new](#fn-site_confignew) constructor.
-  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting resource block. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.storage_account.new](#fn-storage_accountnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_network_subnet_id` (`string`):  When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `auth_settings` (`list[obj]`):  When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.new](#fn-backupnew) constructor.
+  - `connection_string` (`list[obj]`):  When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.connection_string.new](#fn-connection_stringnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.identity.new](#fn-identitynew) constructor.
+  - `site_config` (`list[obj]`):  When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.new](#fn-site_confignew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.storage_account.new](#fn-storage_accountnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -180,15 +180,15 @@ injecting into a complete block.
   - `storage_account_name` (`string`): The backend storage account name which will be used by this Function App Slot. When `null`, the `storage_account_name` field will be omitted from the resulting object.
   - `storage_key_vault_secret_id` (`string`): The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. When `null`, the `storage_key_vault_secret_id` field will be omitted from the resulting object.
   - `storage_uses_managed_identity` (`bool`): Should the Function App Slot use its Managed Identity to access storage? When `null`, the `storage_uses_managed_identity` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
-  - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting object. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
-  - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.new](#fn-backupnew) constructor.
-  - `connection_string` (`list[obj]`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.connection_string.new](#fn-connection_stringnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.identity.new](#fn-identitynew) constructor.
-  - `site_config` (`list[obj]`): Set the `site_config` field on the resulting object. When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.new](#fn-site_confignew) constructor.
-  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting object. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.storage_account.new](#fn-storage_accountnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_network_subnet_id` (`string`):  When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `auth_settings` (`list[obj]`):  When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.new](#fn-backupnew) constructor.
+  - `connection_string` (`list[obj]`):  When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.connection_string.new](#fn-connection_stringnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.identity.new](#fn-identitynew) constructor.
+  - `site_config` (`list[obj]`):  When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.new](#fn-site_confignew) constructor.
+  - `storage_account` (`list[obj]`):  When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.storage_account.new](#fn-storage_accountnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `linux_function_app_slot` resource into the root Terraform configuration.
@@ -782,12 +782,12 @@ Terraform sub block.
   - `token_refresh_extension_hours` (`number`): The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours. When `null`, the `token_refresh_extension_hours` field will be omitted from the resulting object.
   - `token_store_enabled` (`bool`): Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. When `null`, the `token_store_enabled` field will be omitted from the resulting object.
   - `unauthenticated_client_action` (`string`): The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`. When `null`, the `unauthenticated_client_action` field will be omitted from the resulting object.
-  - `active_directory` (`list[obj]`): Set the `active_directory` field on the resulting object. When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.active_directory.new](#fn-auth_settingsactive_directorynew) constructor.
-  - `facebook` (`list[obj]`): Set the `facebook` field on the resulting object. When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.facebook.new](#fn-auth_settingsfacebooknew) constructor.
-  - `github` (`list[obj]`): Set the `github` field on the resulting object. When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.github.new](#fn-auth_settingsgithubnew) constructor.
-  - `google` (`list[obj]`): Set the `google` field on the resulting object. When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.google.new](#fn-auth_settingsgooglenew) constructor.
-  - `microsoft` (`list[obj]`): Set the `microsoft` field on the resulting object. When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.microsoft.new](#fn-auth_settingsmicrosoftnew) constructor.
-  - `twitter` (`list[obj]`): Set the `twitter` field on the resulting object. When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.twitter.new](#fn-auth_settingstwitternew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.active_directory.new](#fn-auth_settingsactive_directorynew) constructor.
+  - `facebook` (`list[obj]`):  When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.facebook.new](#fn-auth_settingsfacebooknew) constructor.
+  - `github` (`list[obj]`):  When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.github.new](#fn-auth_settingsgithubnew) constructor.
+  - `google` (`list[obj]`):  When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.google.new](#fn-auth_settingsgooglenew) constructor.
+  - `microsoft` (`list[obj]`):  When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.microsoft.new](#fn-auth_settingsmicrosoftnew) constructor.
+  - `twitter` (`list[obj]`):  When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.twitter.new](#fn-auth_settingstwitternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `auth_settings` sub block.
@@ -968,7 +968,7 @@ Terraform sub block.
   - `enabled` (`bool`): Should this backup job be enabled? When `null`, the `enabled` field will be omitted from the resulting object.
   - `name` (`string`): The name which should be used for this Backup.
   - `storage_account_url` (`string`): The SAS URL to the container.
-  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.schedule.new](#fn-backupschedulenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.schedule.new](#fn-backupschedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
@@ -1043,8 +1043,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -1074,7 +1074,7 @@ Terraform sub block.
   - `app_scale_limit` (`number`): The number of workers this function app can scale out to. Only applicable to apps on the Consumption and Premium plan. When `null`, the `app_scale_limit` field will be omitted from the resulting object.
   - `application_insights_connection_string` (`string`): The Connection String for linking the Linux Function App to Application Insights. When `null`, the `application_insights_connection_string` field will be omitted from the resulting object.
   - `application_insights_key` (`string`): The Instrumentation Key for connecting the Linux Function App to Application Insights. When `null`, the `application_insights_key` field will be omitted from the resulting object.
-  - `auto_swap_slot_name` (`string`): Set the `auto_swap_slot_name` field on the resulting object. When `null`, the `auto_swap_slot_name` field will be omitted from the resulting object.
+  - `auto_swap_slot_name` (`string`):  When `null`, the `auto_swap_slot_name` field will be omitted from the resulting object.
   - `container_registry_managed_identity_client_id` (`string`): The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry. When `null`, the `container_registry_managed_identity_client_id` field will be omitted from the resulting object.
   - `container_registry_use_managed_identity` (`bool`): Should connections for Azure Container Registry use Managed Identity. When `null`, the `container_registry_use_managed_identity` field will be omitted from the resulting object.
   - `default_documents` (`list`): Specifies a list of Default Documents for the Linux Web App. When `null`, the `default_documents` field will be omitted from the resulting object.
@@ -1083,7 +1083,7 @@ Terraform sub block.
   - `health_check_eviction_time_in_min` (`number`): The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path` When `null`, the `health_check_eviction_time_in_min` field will be omitted from the resulting object.
   - `health_check_path` (`string`): The path to be checked for this function app health. When `null`, the `health_check_path` field will be omitted from the resulting object.
   - `http2_enabled` (`bool`): Specifies if the http2 protocol should be enabled. Defaults to `false`. When `null`, the `http2_enabled` field will be omitted from the resulting object.
-  - `ip_restriction` (`list`): Set the `ip_restriction` field on the resulting object. When `null`, the `ip_restriction` field will be omitted from the resulting object.
+  - `ip_restriction` (`list`):  When `null`, the `ip_restriction` field will be omitted from the resulting object.
   - `load_balancing_mode` (`string`): The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. When `null`, the `load_balancing_mode` field will be omitted from the resulting object.
   - `managed_pipeline_mode` (`string`): The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. When `null`, the `managed_pipeline_mode` field will be omitted from the resulting object.
   - `minimum_tls_version` (`string`): The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
@@ -1091,16 +1091,16 @@ Terraform sub block.
   - `remote_debugging_enabled` (`bool`): Should Remote Debugging be enabled. Defaults to `false`. When `null`, the `remote_debugging_enabled` field will be omitted from the resulting object.
   - `remote_debugging_version` (`string`): The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022` When `null`, the `remote_debugging_version` field will be omitted from the resulting object.
   - `runtime_scale_monitoring_enabled` (`bool`): Should Functions Runtime Scale Monitoring be enabled. When `null`, the `runtime_scale_monitoring_enabled` field will be omitted from the resulting object.
-  - `scm_ip_restriction` (`list`): Set the `scm_ip_restriction` field on the resulting object. When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
+  - `scm_ip_restriction` (`list`):  When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
   - `scm_minimum_tls_version` (`string`): Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. When `null`, the `scm_minimum_tls_version` field will be omitted from the resulting object.
   - `scm_use_main_ip_restriction` (`bool`): Should the Linux Function App `ip_restriction` configuration be used for the SCM also. When `null`, the `scm_use_main_ip_restriction` field will be omitted from the resulting object.
   - `use_32_bit_worker` (`bool`): Should the Linux Web App use a 32-bit worker. When `null`, the `use_32_bit_worker` field will be omitted from the resulting object.
   - `vnet_route_all_enabled` (`bool`): Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. When `null`, the `vnet_route_all_enabled` field will be omitted from the resulting object.
   - `websockets_enabled` (`bool`): Should Web Sockets be enabled. Defaults to `false`. When `null`, the `websockets_enabled` field will be omitted from the resulting object.
   - `worker_count` (`number`): The number of Workers for this Linux Function App. When `null`, the `worker_count` field will be omitted from the resulting object.
-  - `app_service_logs` (`list[obj]`): Set the `app_service_logs` field on the resulting object. When `null`, the `app_service_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.app_service_logs.new](#fn-site_configapp_service_logsnew) constructor.
-  - `application_stack` (`list[obj]`): Set the `application_stack` field on the resulting object. When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.new](#fn-site_configapplication_stacknew) constructor.
-  - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.cors.new](#fn-site_configcorsnew) constructor.
+  - `app_service_logs` (`list[obj]`):  When `null`, the `app_service_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.app_service_logs.new](#fn-site_configapp_service_logsnew) constructor.
+  - `application_stack` (`list[obj]`):  When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.new](#fn-site_configapplication_stacknew) constructor.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.cors.new](#fn-site_configcorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `site_config` sub block.
@@ -1152,7 +1152,7 @@ Terraform sub block.
   - `node_version` (`string`): The version of Node to use. Possible values include `12`, and `14` When `null`, the `node_version` field will be omitted from the resulting object.
   - `powershell_core_version` (`string`): The version of PowerShell Core to use. Possibles values are `7`, and `7.2` When `null`, the `powershell_core_version` field will be omitted from the resulting object.
   - `python_version` (`string`): The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`. When `null`, the `python_version` field will be omitted from the resulting object.
-  - `use_custom_runtime` (`bool`): Set the `use_custom_runtime` field on the resulting object. When `null`, the `use_custom_runtime` field will be omitted from the resulting object.
+  - `use_custom_runtime` (`bool`):  When `null`, the `use_custom_runtime` field will be omitted from the resulting object.
   - `use_dotnet_isolated_runtime` (`bool`): Should the DotNet process use an isolated runtime. Defaults to `false`. When `null`, the `use_dotnet_isolated_runtime` field will be omitted from the resulting object.
   - `docker` (`list[obj]`): A docker block When `null`, the `docker` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.site_config.application_stack.docker.new](#fn-site_configsite_configdockernew) constructor.
 
@@ -1228,12 +1228,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_key` (`string`): Set the `access_key` field on the resulting object.
-  - `account_name` (`string`): Set the `account_name` field on the resulting object.
-  - `mount_path` (`string`): Set the `mount_path` field on the resulting object. When `null`, the `mount_path` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `share_name` (`string`): Set the `share_name` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `access_key` (`string`): 
+  - `account_name` (`string`): 
+  - `mount_path` (`string`):  When `null`, the `mount_path` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `share_name` (`string`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `storage_account` sub block.
@@ -1256,10 +1256,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

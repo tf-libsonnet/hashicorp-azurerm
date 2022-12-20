@@ -62,12 +62,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `asset_id` (`string`): Set the `asset_id` field on the resulting resource block.
-  - `first_quality_bitrate` (`number`): Set the `first_quality_bitrate` field on the resulting resource block. When `null`, the `first_quality_bitrate` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `presentation_time_range` (`list[obj]`): Set the `presentation_time_range` field on the resulting resource block. When `null`, the `presentation_time_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.presentation_time_range.new](#fn-presentation_time_rangenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.timeouts.new](#fn-timeoutsnew) constructor.
-  - `track_selection` (`list[obj]`): Set the `track_selection` field on the resulting resource block. When `null`, the `track_selection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.new](#fn-track_selectionnew) constructor.
+  - `asset_id` (`string`): 
+  - `first_quality_bitrate` (`number`):  When `null`, the `first_quality_bitrate` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `presentation_time_range` (`list[obj]`):  When `null`, the `presentation_time_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.presentation_time_range.new](#fn-presentation_time_rangenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.timeouts.new](#fn-timeoutsnew) constructor.
+  - `track_selection` (`list[obj]`):  When `null`, the `track_selection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.new](#fn-track_selectionnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,12 +91,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `asset_id` (`string`): Set the `asset_id` field on the resulting object.
-  - `first_quality_bitrate` (`number`): Set the `first_quality_bitrate` field on the resulting object. When `null`, the `first_quality_bitrate` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `presentation_time_range` (`list[obj]`): Set the `presentation_time_range` field on the resulting object. When `null`, the `presentation_time_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.presentation_time_range.new](#fn-presentation_time_rangenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.timeouts.new](#fn-timeoutsnew) constructor.
-  - `track_selection` (`list[obj]`): Set the `track_selection` field on the resulting object. When `null`, the `track_selection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.new](#fn-track_selectionnew) constructor.
+  - `asset_id` (`string`): 
+  - `first_quality_bitrate` (`number`):  When `null`, the `first_quality_bitrate` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `presentation_time_range` (`list[obj]`):  When `null`, the `presentation_time_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.presentation_time_range.new](#fn-presentation_time_rangenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.timeouts.new](#fn-timeoutsnew) constructor.
+  - `track_selection` (`list[obj]`):  When `null`, the `track_selection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.new](#fn-track_selectionnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_asset_filter` resource into the root Terraform configuration.
@@ -277,12 +277,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_in_units` (`number`): Set the `end_in_units` field on the resulting object. When `null`, the `end_in_units` field will be omitted from the resulting object.
-  - `force_end` (`bool`): Set the `force_end` field on the resulting object. When `null`, the `force_end` field will be omitted from the resulting object.
-  - `live_backoff_in_units` (`number`): Set the `live_backoff_in_units` field on the resulting object. When `null`, the `live_backoff_in_units` field will be omitted from the resulting object.
-  - `presentation_window_in_units` (`number`): Set the `presentation_window_in_units` field on the resulting object. When `null`, the `presentation_window_in_units` field will be omitted from the resulting object.
-  - `start_in_units` (`number`): Set the `start_in_units` field on the resulting object. When `null`, the `start_in_units` field will be omitted from the resulting object.
-  - `unit_timescale_in_miliseconds` (`number`): Set the `unit_timescale_in_miliseconds` field on the resulting object. When `null`, the `unit_timescale_in_miliseconds` field will be omitted from the resulting object.
+  - `end_in_units` (`number`):  When `null`, the `end_in_units` field will be omitted from the resulting object.
+  - `force_end` (`bool`):  When `null`, the `force_end` field will be omitted from the resulting object.
+  - `live_backoff_in_units` (`number`):  When `null`, the `live_backoff_in_units` field will be omitted from the resulting object.
+  - `presentation_window_in_units` (`number`):  When `null`, the `presentation_window_in_units` field will be omitted from the resulting object.
+  - `start_in_units` (`number`):  When `null`, the `start_in_units` field will be omitted from the resulting object.
+  - `unit_timescale_in_miliseconds` (`number`):  When `null`, the `unit_timescale_in_miliseconds` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `presentation_time_range` sub block.
@@ -305,10 +305,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -331,7 +331,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.condition.new](#fn-track_selectionconditionnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_asset_filter.track_selection.condition.new](#fn-track_selectionconditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `track_selection` sub block.
@@ -354,9 +354,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `operation` (`string`): Set the `operation` field on the resulting object. When `null`, the `operation` field will be omitted from the resulting object.
-  - `property` (`string`): Set the `property` field on the resulting object. When `null`, the `property` field will be omitted from the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
+  - `operation` (`string`):  When `null`, the `operation` field will be omitted from the resulting object.
+  - `property` (`string`):  When `null`, the `property` field will be omitted from the resulting object.
+  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.

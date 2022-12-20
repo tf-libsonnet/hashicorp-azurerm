@@ -79,21 +79,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_start_enabled` (`bool`): Set the `auto_start_enabled` field on the resulting resource block. When `null`, the `auto_start_enabled` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `hostname_prefix` (`string`): Set the `hostname_prefix` field on the resulting resource block. When `null`, the `hostname_prefix` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `transcription_languages` (`list`): Set the `transcription_languages` field on the resulting resource block. When `null`, the `transcription_languages` field will be omitted from the resulting object.
-  - `use_static_hostname` (`bool`): Set the `use_static_hostname` field on the resulting resource block. When `null`, the `use_static_hostname` field will be omitted from the resulting object.
-  - `cross_site_access_policy` (`list[obj]`): Set the `cross_site_access_policy` field on the resulting resource block. When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.cross_site_access_policy.new](#fn-cross_site_access_policynew) constructor.
-  - `encoding` (`list[obj]`): Set the `encoding` field on the resulting resource block. When `null`, the `encoding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.encoding.new](#fn-encodingnew) constructor.
-  - `input` (`list[obj]`): Set the `input` field on the resulting resource block. When `null`, the `input` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.new](#fn-inputnew) constructor.
-  - `preview` (`list[obj]`): Set the `preview` field on the resulting resource block. When `null`, the `preview` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.new](#fn-previewnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_start_enabled` (`bool`):  When `null`, the `auto_start_enabled` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `hostname_prefix` (`string`):  When `null`, the `hostname_prefix` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `media_services_account_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `transcription_languages` (`list`):  When `null`, the `transcription_languages` field will be omitted from the resulting object.
+  - `use_static_hostname` (`bool`):  When `null`, the `use_static_hostname` field will be omitted from the resulting object.
+  - `cross_site_access_policy` (`list[obj]`):  When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.cross_site_access_policy.new](#fn-cross_site_access_policynew) constructor.
+  - `encoding` (`list[obj]`):  When `null`, the `encoding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.encoding.new](#fn-encodingnew) constructor.
+  - `input` (`list[obj]`):  When `null`, the `input` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.new](#fn-inputnew) constructor.
+  - `preview` (`list[obj]`):  When `null`, the `preview` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.new](#fn-previewnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -117,21 +117,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_start_enabled` (`bool`): Set the `auto_start_enabled` field on the resulting object. When `null`, the `auto_start_enabled` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `hostname_prefix` (`string`): Set the `hostname_prefix` field on the resulting object. When `null`, the `hostname_prefix` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `transcription_languages` (`list`): Set the `transcription_languages` field on the resulting object. When `null`, the `transcription_languages` field will be omitted from the resulting object.
-  - `use_static_hostname` (`bool`): Set the `use_static_hostname` field on the resulting object. When `null`, the `use_static_hostname` field will be omitted from the resulting object.
-  - `cross_site_access_policy` (`list[obj]`): Set the `cross_site_access_policy` field on the resulting object. When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.cross_site_access_policy.new](#fn-cross_site_access_policynew) constructor.
-  - `encoding` (`list[obj]`): Set the `encoding` field on the resulting object. When `null`, the `encoding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.encoding.new](#fn-encodingnew) constructor.
-  - `input` (`list[obj]`): Set the `input` field on the resulting object. When `null`, the `input` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.new](#fn-inputnew) constructor.
-  - `preview` (`list[obj]`): Set the `preview` field on the resulting object. When `null`, the `preview` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.new](#fn-previewnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_start_enabled` (`bool`):  When `null`, the `auto_start_enabled` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `hostname_prefix` (`string`):  When `null`, the `hostname_prefix` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `media_services_account_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `transcription_languages` (`list`):  When `null`, the `transcription_languages` field will be omitted from the resulting object.
+  - `use_static_hostname` (`bool`):  When `null`, the `use_static_hostname` field will be omitted from the resulting object.
+  - `cross_site_access_policy` (`list[obj]`):  When `null`, the `cross_site_access_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.cross_site_access_policy.new](#fn-cross_site_access_policynew) constructor.
+  - `encoding` (`list[obj]`):  When `null`, the `encoding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.encoding.new](#fn-encodingnew) constructor.
+  - `input` (`list[obj]`):  When `null`, the `input` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.new](#fn-inputnew) constructor.
+  - `preview` (`list[obj]`):  When `null`, the `preview` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.new](#fn-previewnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_live_event` resource into the root Terraform configuration.
@@ -498,8 +498,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_access_policy` (`string`): Set the `client_access_policy` field on the resulting object. When `null`, the `client_access_policy` field will be omitted from the resulting object.
-  - `cross_domain_policy` (`string`): Set the `cross_domain_policy` field on the resulting object. When `null`, the `cross_domain_policy` field will be omitted from the resulting object.
+  - `client_access_policy` (`string`):  When `null`, the `client_access_policy` field will be omitted from the resulting object.
+  - `cross_domain_policy` (`string`):  When `null`, the `cross_domain_policy` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cross_site_access_policy` sub block.
@@ -522,10 +522,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_frame_interval` (`string`): Set the `key_frame_interval` field on the resulting object. When `null`, the `key_frame_interval` field will be omitted from the resulting object.
-  - `preset_name` (`string`): Set the `preset_name` field on the resulting object. When `null`, the `preset_name` field will be omitted from the resulting object.
-  - `stretch_mode` (`string`): Set the `stretch_mode` field on the resulting object. When `null`, the `stretch_mode` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
+  - `key_frame_interval` (`string`):  When `null`, the `key_frame_interval` field will be omitted from the resulting object.
+  - `preset_name` (`string`):  When `null`, the `preset_name` field will be omitted from the resulting object.
+  - `stretch_mode` (`string`):  When `null`, the `stretch_mode` field will be omitted from the resulting object.
+  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `encoding` sub block.
@@ -548,10 +548,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_token` (`string`): Set the `access_token` field on the resulting object. When `null`, the `access_token` field will be omitted from the resulting object.
-  - `key_frame_interval_duration` (`string`): Set the `key_frame_interval_duration` field on the resulting object. When `null`, the `key_frame_interval_duration` field will be omitted from the resulting object.
-  - `streaming_protocol` (`string`): Set the `streaming_protocol` field on the resulting object. When `null`, the `streaming_protocol` field will be omitted from the resulting object.
-  - `ip_access_control_allow` (`list[obj]`): Set the `ip_access_control_allow` field on the resulting object. When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.ip_access_control_allow.new](#fn-inputip_access_control_allownew) constructor.
+  - `access_token` (`string`):  When `null`, the `access_token` field will be omitted from the resulting object.
+  - `key_frame_interval_duration` (`string`):  When `null`, the `key_frame_interval_duration` field will be omitted from the resulting object.
+  - `streaming_protocol` (`string`):  When `null`, the `streaming_protocol` field will be omitted from the resulting object.
+  - `ip_access_control_allow` (`list[obj]`):  When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.input.ip_access_control_allow.new](#fn-inputip_access_control_allownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `input` sub block.
@@ -574,9 +574,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `address` (`string`): Set the `address` field on the resulting object. When `null`, the `address` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
-  - `subnet_prefix_length` (`number`): Set the `subnet_prefix_length` field on the resulting object. When `null`, the `subnet_prefix_length` field will be omitted from the resulting object.
+  - `address` (`string`):  When `null`, the `address` field will be omitted from the resulting object.
+  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
+  - `subnet_prefix_length` (`number`):  When `null`, the `subnet_prefix_length` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_access_control_allow` sub block.
@@ -599,10 +599,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `alternative_media_id` (`string`): Set the `alternative_media_id` field on the resulting object. When `null`, the `alternative_media_id` field will be omitted from the resulting object.
-  - `preview_locator` (`string`): Set the `preview_locator` field on the resulting object. When `null`, the `preview_locator` field will be omitted from the resulting object.
-  - `streaming_policy_name` (`string`): Set the `streaming_policy_name` field on the resulting object. When `null`, the `streaming_policy_name` field will be omitted from the resulting object.
-  - `ip_access_control_allow` (`list[obj]`): Set the `ip_access_control_allow` field on the resulting object. When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.ip_access_control_allow.new](#fn-previewip_access_control_allownew) constructor.
+  - `alternative_media_id` (`string`):  When `null`, the `alternative_media_id` field will be omitted from the resulting object.
+  - `preview_locator` (`string`):  When `null`, the `preview_locator` field will be omitted from the resulting object.
+  - `streaming_policy_name` (`string`):  When `null`, the `streaming_policy_name` field will be omitted from the resulting object.
+  - `ip_access_control_allow` (`list[obj]`):  When `null`, the `ip_access_control_allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event.preview.ip_access_control_allow.new](#fn-previewip_access_control_allownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `preview` sub block.
@@ -625,9 +625,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `address` (`string`): Set the `address` field on the resulting object. When `null`, the `address` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
-  - `subnet_prefix_length` (`number`): Set the `subnet_prefix_length` field on the resulting object. When `null`, the `subnet_prefix_length` field will be omitted from the resulting object.
+  - `address` (`string`):  When `null`, the `address` field will be omitted from the resulting object.
+  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
+  - `subnet_prefix_length` (`number`):  When `null`, the `subnet_prefix_length` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_access_control_allow` sub block.
@@ -650,10 +650,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

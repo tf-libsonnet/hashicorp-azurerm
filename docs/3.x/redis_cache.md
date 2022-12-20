@@ -79,28 +79,28 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `capacity` (`number`): Set the `capacity` field on the resulting resource block.
-  - `enable_non_ssl_port` (`bool`): Set the `enable_non_ssl_port` field on the resulting resource block. When `null`, the `enable_non_ssl_port` field will be omitted from the resulting object.
-  - `family` (`string`): Set the `family` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `minimum_tls_version` (`string`): Set the `minimum_tls_version` field on the resulting resource block. When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `private_static_ip_address` (`string`): Set the `private_static_ip_address` field on the resulting resource block. When `null`, the `private_static_ip_address` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `redis_version` (`string`): Set the `redis_version` field on the resulting resource block. When `null`, the `redis_version` field will be omitted from the resulting object.
-  - `replicas_per_master` (`number`): Set the `replicas_per_master` field on the resulting resource block. When `null`, the `replicas_per_master` field will be omitted from the resulting object.
-  - `replicas_per_primary` (`number`): Set the `replicas_per_primary` field on the resulting resource block. When `null`, the `replicas_per_primary` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `shard_count` (`number`): Set the `shard_count` field on the resulting resource block. When `null`, the `shard_count` field will be omitted from the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting resource block. When `null`, the `subnet_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `tenant_settings` (`obj`): Set the `tenant_settings` field on the resulting resource block. When `null`, the `tenant_settings` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-identitynew) constructor.
-  - `patch_schedule` (`list[obj]`): Set the `patch_schedule` field on the resulting resource block. When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-patch_schedulenew) constructor.
-  - `redis_configuration` (`list[obj]`): Set the `redis_configuration` field on the resulting resource block. When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-timeoutsnew) constructor.
+  - `capacity` (`number`): 
+  - `enable_non_ssl_port` (`bool`):  When `null`, the `enable_non_ssl_port` field will be omitted from the resulting object.
+  - `family` (`string`): 
+  - `location` (`string`): 
+  - `minimum_tls_version` (`string`):  When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `private_static_ip_address` (`string`):  When `null`, the `private_static_ip_address` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `redis_version` (`string`):  When `null`, the `redis_version` field will be omitted from the resulting object.
+  - `replicas_per_master` (`number`):  When `null`, the `replicas_per_master` field will be omitted from the resulting object.
+  - `replicas_per_primary` (`number`):  When `null`, the `replicas_per_primary` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `shard_count` (`number`):  When `null`, the `shard_count` field will be omitted from the resulting object.
+  - `sku_name` (`string`): 
+  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `tenant_settings` (`obj`):  When `null`, the `tenant_settings` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-identitynew) constructor.
+  - `patch_schedule` (`list[obj]`):  When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-patch_schedulenew) constructor.
+  - `redis_configuration` (`list[obj]`):  When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -124,28 +124,28 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `capacity` (`number`): Set the `capacity` field on the resulting object.
-  - `enable_non_ssl_port` (`bool`): Set the `enable_non_ssl_port` field on the resulting object. When `null`, the `enable_non_ssl_port` field will be omitted from the resulting object.
-  - `family` (`string`): Set the `family` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `minimum_tls_version` (`string`): Set the `minimum_tls_version` field on the resulting object. When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `private_static_ip_address` (`string`): Set the `private_static_ip_address` field on the resulting object. When `null`, the `private_static_ip_address` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `redis_version` (`string`): Set the `redis_version` field on the resulting object. When `null`, the `redis_version` field will be omitted from the resulting object.
-  - `replicas_per_master` (`number`): Set the `replicas_per_master` field on the resulting object. When `null`, the `replicas_per_master` field will be omitted from the resulting object.
-  - `replicas_per_primary` (`number`): Set the `replicas_per_primary` field on the resulting object. When `null`, the `replicas_per_primary` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `shard_count` (`number`): Set the `shard_count` field on the resulting object. When `null`, the `shard_count` field will be omitted from the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `tenant_settings` (`obj`): Set the `tenant_settings` field on the resulting object. When `null`, the `tenant_settings` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-identitynew) constructor.
-  - `patch_schedule` (`list[obj]`): Set the `patch_schedule` field on the resulting object. When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-patch_schedulenew) constructor.
-  - `redis_configuration` (`list[obj]`): Set the `redis_configuration` field on the resulting object. When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-timeoutsnew) constructor.
+  - `capacity` (`number`): 
+  - `enable_non_ssl_port` (`bool`):  When `null`, the `enable_non_ssl_port` field will be omitted from the resulting object.
+  - `family` (`string`): 
+  - `location` (`string`): 
+  - `minimum_tls_version` (`string`):  When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `private_static_ip_address` (`string`):  When `null`, the `private_static_ip_address` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `redis_version` (`string`):  When `null`, the `redis_version` field will be omitted from the resulting object.
+  - `replicas_per_master` (`number`):  When `null`, the `replicas_per_master` field will be omitted from the resulting object.
+  - `replicas_per_primary` (`number`):  When `null`, the `replicas_per_primary` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `shard_count` (`number`):  When `null`, the `shard_count` field will be omitted from the resulting object.
+  - `sku_name` (`string`): 
+  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `tenant_settings` (`obj`):  When `null`, the `tenant_settings` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.identity.new](#fn-identitynew) constructor.
+  - `patch_schedule` (`list[obj]`):  When `null`, the `patch_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.patch_schedule.new](#fn-patch_schedulenew) constructor.
+  - `redis_configuration` (`list[obj]`):  When `null`, the `redis_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.redis_configuration.new](#fn-redis_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.redis_cache.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `redis_cache` resource into the root Terraform configuration.
@@ -603,8 +603,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -627,9 +627,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `day_of_week` (`string`): Set the `day_of_week` field on the resulting object.
-  - `maintenance_window` (`string`): Set the `maintenance_window` field on the resulting object. When `null`, the `maintenance_window` field will be omitted from the resulting object.
-  - `start_hour_utc` (`number`): Set the `start_hour_utc` field on the resulting object. When `null`, the `start_hour_utc` field will be omitted from the resulting object.
+  - `day_of_week` (`string`): 
+  - `maintenance_window` (`string`):  When `null`, the `maintenance_window` field will be omitted from the resulting object.
+  - `start_hour_utc` (`number`):  When `null`, the `start_hour_utc` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `patch_schedule` sub block.
@@ -652,19 +652,19 @@ Terraform sub block.
 
 
 **Args**:
-  - `aof_backup_enabled` (`bool`): Set the `aof_backup_enabled` field on the resulting object. When `null`, the `aof_backup_enabled` field will be omitted from the resulting object.
-  - `aof_storage_connection_string_0` (`string`): Set the `aof_storage_connection_string_0` field on the resulting object. When `null`, the `aof_storage_connection_string_0` field will be omitted from the resulting object.
-  - `aof_storage_connection_string_1` (`string`): Set the `aof_storage_connection_string_1` field on the resulting object. When `null`, the `aof_storage_connection_string_1` field will be omitted from the resulting object.
-  - `enable_authentication` (`bool`): Set the `enable_authentication` field on the resulting object. When `null`, the `enable_authentication` field will be omitted from the resulting object.
-  - `maxfragmentationmemory_reserved` (`number`): Set the `maxfragmentationmemory_reserved` field on the resulting object. When `null`, the `maxfragmentationmemory_reserved` field will be omitted from the resulting object.
-  - `maxmemory_delta` (`number`): Set the `maxmemory_delta` field on the resulting object. When `null`, the `maxmemory_delta` field will be omitted from the resulting object.
-  - `maxmemory_policy` (`string`): Set the `maxmemory_policy` field on the resulting object. When `null`, the `maxmemory_policy` field will be omitted from the resulting object.
-  - `maxmemory_reserved` (`number`): Set the `maxmemory_reserved` field on the resulting object. When `null`, the `maxmemory_reserved` field will be omitted from the resulting object.
-  - `notify_keyspace_events` (`string`): Set the `notify_keyspace_events` field on the resulting object. When `null`, the `notify_keyspace_events` field will be omitted from the resulting object.
-  - `rdb_backup_enabled` (`bool`): Set the `rdb_backup_enabled` field on the resulting object. When `null`, the `rdb_backup_enabled` field will be omitted from the resulting object.
-  - `rdb_backup_frequency` (`number`): Set the `rdb_backup_frequency` field on the resulting object. When `null`, the `rdb_backup_frequency` field will be omitted from the resulting object.
-  - `rdb_backup_max_snapshot_count` (`number`): Set the `rdb_backup_max_snapshot_count` field on the resulting object. When `null`, the `rdb_backup_max_snapshot_count` field will be omitted from the resulting object.
-  - `rdb_storage_connection_string` (`string`): Set the `rdb_storage_connection_string` field on the resulting object. When `null`, the `rdb_storage_connection_string` field will be omitted from the resulting object.
+  - `aof_backup_enabled` (`bool`):  When `null`, the `aof_backup_enabled` field will be omitted from the resulting object.
+  - `aof_storage_connection_string_0` (`string`):  When `null`, the `aof_storage_connection_string_0` field will be omitted from the resulting object.
+  - `aof_storage_connection_string_1` (`string`):  When `null`, the `aof_storage_connection_string_1` field will be omitted from the resulting object.
+  - `enable_authentication` (`bool`):  When `null`, the `enable_authentication` field will be omitted from the resulting object.
+  - `maxfragmentationmemory_reserved` (`number`):  When `null`, the `maxfragmentationmemory_reserved` field will be omitted from the resulting object.
+  - `maxmemory_delta` (`number`):  When `null`, the `maxmemory_delta` field will be omitted from the resulting object.
+  - `maxmemory_policy` (`string`):  When `null`, the `maxmemory_policy` field will be omitted from the resulting object.
+  - `maxmemory_reserved` (`number`):  When `null`, the `maxmemory_reserved` field will be omitted from the resulting object.
+  - `notify_keyspace_events` (`string`):  When `null`, the `notify_keyspace_events` field will be omitted from the resulting object.
+  - `rdb_backup_enabled` (`bool`):  When `null`, the `rdb_backup_enabled` field will be omitted from the resulting object.
+  - `rdb_backup_frequency` (`number`):  When `null`, the `rdb_backup_frequency` field will be omitted from the resulting object.
+  - `rdb_backup_max_snapshot_count` (`number`):  When `null`, the `rdb_backup_max_snapshot_count` field will be omitted from the resulting object.
+  - `rdb_storage_connection_string` (`string`):  When `null`, the `rdb_storage_connection_string` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `redis_configuration` sub block.
@@ -687,10 +687,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

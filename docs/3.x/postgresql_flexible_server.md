@@ -78,27 +78,27 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting resource block. When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_password` (`string`): Set the `administrator_password` field on the resulting resource block. When `null`, the `administrator_password` field will be omitted from the resulting object.
-  - `backup_retention_days` (`number`): Set the `backup_retention_days` field on the resulting resource block. When `null`, the `backup_retention_days` field will be omitted from the resulting object.
-  - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `delegated_subnet_id` (`string`): Set the `delegated_subnet_id` field on the resulting resource block. When `null`, the `delegated_subnet_id` field will be omitted from the resulting object.
-  - `geo_redundant_backup_enabled` (`bool`): Set the `geo_redundant_backup_enabled` field on the resulting resource block. When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `point_in_time_restore_time_in_utc` (`string`): Set the `point_in_time_restore_time_in_utc` field on the resulting resource block. When `null`, the `point_in_time_restore_time_in_utc` field will be omitted from the resulting object.
-  - `private_dns_zone_id` (`string`): Set the `private_dns_zone_id` field on the resulting resource block. When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.
-  - `source_server_id` (`string`): Set the `source_server_id` field on the resulting resource block. When `null`, the `source_server_id` field will be omitted from the resulting object.
-  - `storage_mb` (`number`): Set the `storage_mb` field on the resulting resource block. When `null`, the `storage_mb` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting resource block. When `null`, the `version` field will be omitted from the resulting object.
-  - `zone` (`string`): Set the `zone` field on the resulting resource block. When `null`, the `zone` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting resource block. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-authenticationnew) constructor.
-  - `high_availability` (`list[obj]`): Set the `high_availability` field on the resulting resource block. When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-high_availabilitynew) constructor.
-  - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting resource block. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-maintenance_windownew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_password` (`string`):  When `null`, the `administrator_password` field will be omitted from the resulting object.
+  - `backup_retention_days` (`number`):  When `null`, the `backup_retention_days` field will be omitted from the resulting object.
+  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `delegated_subnet_id` (`string`):  When `null`, the `delegated_subnet_id` field will be omitted from the resulting object.
+  - `geo_redundant_backup_enabled` (`bool`):  When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `point_in_time_restore_time_in_utc` (`string`):  When `null`, the `point_in_time_restore_time_in_utc` field will be omitted from the resulting object.
+  - `private_dns_zone_id` (`string`):  When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`):  When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `source_server_id` (`string`):  When `null`, the `source_server_id` field will be omitted from the resulting object.
+  - `storage_mb` (`number`):  When `null`, the `storage_mb` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-authenticationnew) constructor.
+  - `high_availability` (`list[obj]`):  When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-high_availabilitynew) constructor.
+  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -122,27 +122,27 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting object. When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_password` (`string`): Set the `administrator_password` field on the resulting object. When `null`, the `administrator_password` field will be omitted from the resulting object.
-  - `backup_retention_days` (`number`): Set the `backup_retention_days` field on the resulting object. When `null`, the `backup_retention_days` field will be omitted from the resulting object.
-  - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `delegated_subnet_id` (`string`): Set the `delegated_subnet_id` field on the resulting object. When `null`, the `delegated_subnet_id` field will be omitted from the resulting object.
-  - `geo_redundant_backup_enabled` (`bool`): Set the `geo_redundant_backup_enabled` field on the resulting object. When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `point_in_time_restore_time_in_utc` (`string`): Set the `point_in_time_restore_time_in_utc` field on the resulting object. When `null`, the `point_in_time_restore_time_in_utc` field will be omitted from the resulting object.
-  - `private_dns_zone_id` (`string`): Set the `private_dns_zone_id` field on the resulting object. When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.
-  - `source_server_id` (`string`): Set the `source_server_id` field on the resulting object. When `null`, the `source_server_id` field will be omitted from the resulting object.
-  - `storage_mb` (`number`): Set the `storage_mb` field on the resulting object. When `null`, the `storage_mb` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
-  - `zone` (`string`): Set the `zone` field on the resulting object. When `null`, the `zone` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-authenticationnew) constructor.
-  - `high_availability` (`list[obj]`): Set the `high_availability` field on the resulting object. When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-high_availabilitynew) constructor.
-  - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting object. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-maintenance_windownew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-timeoutsnew) constructor.
+  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_password` (`string`):  When `null`, the `administrator_password` field will be omitted from the resulting object.
+  - `backup_retention_days` (`number`):  When `null`, the `backup_retention_days` field will be omitted from the resulting object.
+  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `delegated_subnet_id` (`string`):  When `null`, the `delegated_subnet_id` field will be omitted from the resulting object.
+  - `geo_redundant_backup_enabled` (`bool`):  When `null`, the `geo_redundant_backup_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `point_in_time_restore_time_in_utc` (`string`):  When `null`, the `point_in_time_restore_time_in_utc` field will be omitted from the resulting object.
+  - `private_dns_zone_id` (`string`):  When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`):  When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `source_server_id` (`string`):  When `null`, the `source_server_id` field will be omitted from the resulting object.
+  - `storage_mb` (`number`):  When `null`, the `storage_mb` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `zone` (`string`):  When `null`, the `zone` field will be omitted from the resulting object.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.authentication.new](#fn-authenticationnew) constructor.
+  - `high_availability` (`list[obj]`):  When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.high_availability.new](#fn-high_availabilitynew) constructor.
+  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.postgresql_flexible_server.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `postgresql_flexible_server` resource into the root Terraform configuration.
@@ -584,9 +584,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `active_directory_auth_enabled` (`bool`): Set the `active_directory_auth_enabled` field on the resulting object. When `null`, the `active_directory_auth_enabled` field will be omitted from the resulting object.
-  - `password_auth_enabled` (`bool`): Set the `password_auth_enabled` field on the resulting object. When `null`, the `password_auth_enabled` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `active_directory_auth_enabled` (`bool`):  When `null`, the `active_directory_auth_enabled` field will be omitted from the resulting object.
+  - `password_auth_enabled` (`bool`):  When `null`, the `password_auth_enabled` field will be omitted from the resulting object.
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
@@ -609,8 +609,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `mode` (`string`): Set the `mode` field on the resulting object.
-  - `standby_availability_zone` (`string`): Set the `standby_availability_zone` field on the resulting object. When `null`, the `standby_availability_zone` field will be omitted from the resulting object.
+  - `mode` (`string`): 
+  - `standby_availability_zone` (`string`):  When `null`, the `standby_availability_zone` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `high_availability` sub block.
@@ -633,9 +633,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `day_of_week` (`number`): Set the `day_of_week` field on the resulting object. When `null`, the `day_of_week` field will be omitted from the resulting object.
-  - `start_hour` (`number`): Set the `start_hour` field on the resulting object. When `null`, the `start_hour` field will be omitted from the resulting object.
-  - `start_minute` (`number`): Set the `start_minute` field on the resulting object. When `null`, the `start_minute` field will be omitted from the resulting object.
+  - `day_of_week` (`number`):  When `null`, the `day_of_week` field will be omitted from the resulting object.
+  - `start_hour` (`number`):  When `null`, the `start_hour` field will be omitted from the resulting object.
+  - `start_minute` (`number`):  When `null`, the `start_minute` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `maintenance_window` sub block.
@@ -658,10 +658,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

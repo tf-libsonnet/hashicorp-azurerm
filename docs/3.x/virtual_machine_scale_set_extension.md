@@ -65,20 +65,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_upgrade_minor_version` (`bool`): Set the `auto_upgrade_minor_version` field on the resulting resource block. When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
-  - `automatic_upgrade_enabled` (`bool`): Set the `automatic_upgrade_enabled` field on the resulting resource block. When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
-  - `failure_suppression_enabled` (`bool`): Set the `failure_suppression_enabled` field on the resulting resource block. When `null`, the `failure_suppression_enabled` field will be omitted from the resulting object.
-  - `force_update_tag` (`string`): Set the `force_update_tag` field on the resulting resource block. When `null`, the `force_update_tag` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `protected_settings` (`string`): Set the `protected_settings` field on the resulting resource block. When `null`, the `protected_settings` field will be omitted from the resulting object.
-  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting resource block. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting resource block.
-  - `settings` (`string`): Set the `settings` field on the resulting resource block. When `null`, the `settings` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting resource block.
-  - `type_handler_version` (`string`): Set the `type_handler_version` field on the resulting resource block.
-  - `virtual_machine_scale_set_id` (`string`): Set the `virtual_machine_scale_set_id` field on the resulting resource block.
-  - `protected_settings_from_key_vault` (`list[obj]`): Set the `protected_settings_from_key_vault` field on the resulting resource block. When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.protected_settings_from_key_vault.new](#fn-protected_settings_from_key_vaultnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_upgrade_minor_version` (`bool`):  When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
+  - `automatic_upgrade_enabled` (`bool`):  When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
+  - `failure_suppression_enabled` (`bool`):  When `null`, the `failure_suppression_enabled` field will be omitted from the resulting object.
+  - `force_update_tag` (`string`):  When `null`, the `force_update_tag` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `protected_settings` (`string`):  When `null`, the `protected_settings` field will be omitted from the resulting object.
+  - `provision_after_extensions` (`list`):  When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
+  - `publisher` (`string`): 
+  - `settings` (`string`):  When `null`, the `settings` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `type_handler_version` (`string`): 
+  - `virtual_machine_scale_set_id` (`string`): 
+  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.protected_settings_from_key_vault.new](#fn-protected_settings_from_key_vaultnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,20 +102,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_upgrade_minor_version` (`bool`): Set the `auto_upgrade_minor_version` field on the resulting object. When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
-  - `automatic_upgrade_enabled` (`bool`): Set the `automatic_upgrade_enabled` field on the resulting object. When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
-  - `failure_suppression_enabled` (`bool`): Set the `failure_suppression_enabled` field on the resulting object. When `null`, the `failure_suppression_enabled` field will be omitted from the resulting object.
-  - `force_update_tag` (`string`): Set the `force_update_tag` field on the resulting object. When `null`, the `force_update_tag` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `protected_settings` (`string`): Set the `protected_settings` field on the resulting object. When `null`, the `protected_settings` field will be omitted from the resulting object.
-  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting object. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object.
-  - `settings` (`string`): Set the `settings` field on the resulting object. When `null`, the `settings` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `type_handler_version` (`string`): Set the `type_handler_version` field on the resulting object.
-  - `virtual_machine_scale_set_id` (`string`): Set the `virtual_machine_scale_set_id` field on the resulting object.
-  - `protected_settings_from_key_vault` (`list[obj]`): Set the `protected_settings_from_key_vault` field on the resulting object. When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.protected_settings_from_key_vault.new](#fn-protected_settings_from_key_vaultnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_upgrade_minor_version` (`bool`):  When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
+  - `automatic_upgrade_enabled` (`bool`):  When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
+  - `failure_suppression_enabled` (`bool`):  When `null`, the `failure_suppression_enabled` field will be omitted from the resulting object.
+  - `force_update_tag` (`string`):  When `null`, the `force_update_tag` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `protected_settings` (`string`):  When `null`, the `protected_settings` field will be omitted from the resulting object.
+  - `provision_after_extensions` (`list`):  When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
+  - `publisher` (`string`): 
+  - `settings` (`string`):  When `null`, the `settings` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `type_handler_version` (`string`): 
+  - `virtual_machine_scale_set_id` (`string`): 
+  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.protected_settings_from_key_vault.new](#fn-protected_settings_from_key_vaultnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine_scale_set_extension.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_machine_scale_set_extension` resource into the root Terraform configuration.
@@ -403,8 +403,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `secret_url` (`string`): Set the `secret_url` field on the resulting object.
-  - `source_vault_id` (`string`): Set the `source_vault_id` field on the resulting object.
+  - `secret_url` (`string`): 
+  - `source_vault_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `protected_settings_from_key_vault` sub block.
@@ -427,10 +427,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

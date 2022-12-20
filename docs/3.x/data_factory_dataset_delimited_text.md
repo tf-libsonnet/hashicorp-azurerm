@@ -82,28 +82,28 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting resource block. When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting resource block. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `column_delimiter` (`string`): Set the `column_delimiter` field on the resulting resource block. When `null`, the `column_delimiter` field will be omitted from the resulting object.
-  - `compression_codec` (`string`): Set the `compression_codec` field on the resulting resource block. When `null`, the `compression_codec` field will be omitted from the resulting object.
-  - `compression_level` (`string`): Set the `compression_level` field on the resulting resource block. When `null`, the `compression_level` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `encoding` (`string`): Set the `encoding` field on the resulting resource block. When `null`, the `encoding` field will be omitted from the resulting object.
-  - `escape_character` (`string`): Set the `escape_character` field on the resulting resource block. When `null`, the `escape_character` field will be omitted from the resulting object.
-  - `first_row_as_header` (`bool`): Set the `first_row_as_header` field on the resulting resource block. When `null`, the `first_row_as_header` field will be omitted from the resulting object.
-  - `folder` (`string`): Set the `folder` field on the resulting resource block. When `null`, the `folder` field will be omitted from the resulting object.
-  - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `null_value` (`string`): Set the `null_value` field on the resulting resource block. When `null`, the `null_value` field will be omitted from the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `quote_character` (`string`): Set the `quote_character` field on the resulting resource block. When `null`, the `quote_character` field will be omitted from the resulting object.
-  - `row_delimiter` (`string`): Set the `row_delimiter` field on the resulting resource block. When `null`, the `row_delimiter` field will be omitted from the resulting object.
-  - `azure_blob_fs_location` (`list[obj]`): Set the `azure_blob_fs_location` field on the resulting resource block. When `null`, the `azure_blob_fs_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_fs_location.new](#fn-azure_blob_fs_locationnew) constructor.
-  - `azure_blob_storage_location` (`list[obj]`): Set the `azure_blob_storage_location` field on the resulting resource block. When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
-  - `http_server_location` (`list[obj]`): Set the `http_server_location` field on the resulting resource block. When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.http_server_location.new](#fn-http_server_locationnew) constructor.
-  - `schema_column` (`list[obj]`): Set the `schema_column` field on the resulting resource block. When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.schema_column.new](#fn-schema_columnnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `column_delimiter` (`string`):  When `null`, the `column_delimiter` field will be omitted from the resulting object.
+  - `compression_codec` (`string`):  When `null`, the `compression_codec` field will be omitted from the resulting object.
+  - `compression_level` (`string`):  When `null`, the `compression_level` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `encoding` (`string`):  When `null`, the `encoding` field will be omitted from the resulting object.
+  - `escape_character` (`string`):  When `null`, the `escape_character` field will be omitted from the resulting object.
+  - `first_row_as_header` (`bool`):  When `null`, the `first_row_as_header` field will be omitted from the resulting object.
+  - `folder` (`string`):  When `null`, the `folder` field will be omitted from the resulting object.
+  - `linked_service_name` (`string`): 
+  - `name` (`string`): 
+  - `null_value` (`string`):  When `null`, the `null_value` field will be omitted from the resulting object.
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `quote_character` (`string`):  When `null`, the `quote_character` field will be omitted from the resulting object.
+  - `row_delimiter` (`string`):  When `null`, the `row_delimiter` field will be omitted from the resulting object.
+  - `azure_blob_fs_location` (`list[obj]`):  When `null`, the `azure_blob_fs_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_fs_location.new](#fn-azure_blob_fs_locationnew) constructor.
+  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
+  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.http_server_location.new](#fn-http_server_locationnew) constructor.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.schema_column.new](#fn-schema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -127,28 +127,28 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting object. When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting object. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `column_delimiter` (`string`): Set the `column_delimiter` field on the resulting object. When `null`, the `column_delimiter` field will be omitted from the resulting object.
-  - `compression_codec` (`string`): Set the `compression_codec` field on the resulting object. When `null`, the `compression_codec` field will be omitted from the resulting object.
-  - `compression_level` (`string`): Set the `compression_level` field on the resulting object. When `null`, the `compression_level` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `encoding` (`string`): Set the `encoding` field on the resulting object. When `null`, the `encoding` field will be omitted from the resulting object.
-  - `escape_character` (`string`): Set the `escape_character` field on the resulting object. When `null`, the `escape_character` field will be omitted from the resulting object.
-  - `first_row_as_header` (`bool`): Set the `first_row_as_header` field on the resulting object. When `null`, the `first_row_as_header` field will be omitted from the resulting object.
-  - `folder` (`string`): Set the `folder` field on the resulting object. When `null`, the `folder` field will be omitted from the resulting object.
-  - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `null_value` (`string`): Set the `null_value` field on the resulting object. When `null`, the `null_value` field will be omitted from the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `quote_character` (`string`): Set the `quote_character` field on the resulting object. When `null`, the `quote_character` field will be omitted from the resulting object.
-  - `row_delimiter` (`string`): Set the `row_delimiter` field on the resulting object. When `null`, the `row_delimiter` field will be omitted from the resulting object.
-  - `azure_blob_fs_location` (`list[obj]`): Set the `azure_blob_fs_location` field on the resulting object. When `null`, the `azure_blob_fs_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_fs_location.new](#fn-azure_blob_fs_locationnew) constructor.
-  - `azure_blob_storage_location` (`list[obj]`): Set the `azure_blob_storage_location` field on the resulting object. When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
-  - `http_server_location` (`list[obj]`): Set the `http_server_location` field on the resulting object. When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.http_server_location.new](#fn-http_server_locationnew) constructor.
-  - `schema_column` (`list[obj]`): Set the `schema_column` field on the resulting object. When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.schema_column.new](#fn-schema_columnnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `column_delimiter` (`string`):  When `null`, the `column_delimiter` field will be omitted from the resulting object.
+  - `compression_codec` (`string`):  When `null`, the `compression_codec` field will be omitted from the resulting object.
+  - `compression_level` (`string`):  When `null`, the `compression_level` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `encoding` (`string`):  When `null`, the `encoding` field will be omitted from the resulting object.
+  - `escape_character` (`string`):  When `null`, the `escape_character` field will be omitted from the resulting object.
+  - `first_row_as_header` (`bool`):  When `null`, the `first_row_as_header` field will be omitted from the resulting object.
+  - `folder` (`string`):  When `null`, the `folder` field will be omitted from the resulting object.
+  - `linked_service_name` (`string`): 
+  - `name` (`string`): 
+  - `null_value` (`string`):  When `null`, the `null_value` field will be omitted from the resulting object.
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `quote_character` (`string`):  When `null`, the `quote_character` field will be omitted from the resulting object.
+  - `row_delimiter` (`string`):  When `null`, the `row_delimiter` field will be omitted from the resulting object.
+  - `azure_blob_fs_location` (`list[obj]`):  When `null`, the `azure_blob_fs_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_fs_location.new](#fn-azure_blob_fs_locationnew) constructor.
+  - `azure_blob_storage_location` (`list[obj]`):  When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
+  - `http_server_location` (`list[obj]`):  When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.http_server_location.new](#fn-http_server_locationnew) constructor.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.schema_column.new](#fn-schema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_delimited_text.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_dataset_delimited_text` resource into the root Terraform configuration.
@@ -627,9 +627,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `file_system` (`string`): Set the `file_system` field on the resulting object.
-  - `filename` (`string`): Set the `filename` field on the resulting object. When `null`, the `filename` field will be omitted from the resulting object.
-  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `file_system` (`string`): 
+  - `filename` (`string`):  When `null`, the `filename` field will be omitted from the resulting object.
+  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure_blob_fs_location` sub block.
@@ -652,12 +652,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `container` (`string`): Set the `container` field on the resulting object.
-  - `dynamic_container_enabled` (`bool`): Set the `dynamic_container_enabled` field on the resulting object. When `null`, the `dynamic_container_enabled` field will be omitted from the resulting object.
-  - `dynamic_filename_enabled` (`bool`): Set the `dynamic_filename_enabled` field on the resulting object. When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.
-  - `dynamic_path_enabled` (`bool`): Set the `dynamic_path_enabled` field on the resulting object. When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.
-  - `filename` (`string`): Set the `filename` field on the resulting object. When `null`, the `filename` field will be omitted from the resulting object.
-  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+  - `container` (`string`): 
+  - `dynamic_container_enabled` (`bool`):  When `null`, the `dynamic_container_enabled` field will be omitted from the resulting object.
+  - `dynamic_filename_enabled` (`bool`):  When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.
+  - `dynamic_path_enabled` (`bool`):  When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.
+  - `filename` (`string`):  When `null`, the `filename` field will be omitted from the resulting object.
+  - `path` (`string`):  When `null`, the `path` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure_blob_storage_location` sub block.
@@ -680,11 +680,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `dynamic_filename_enabled` (`bool`): Set the `dynamic_filename_enabled` field on the resulting object. When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.
-  - `dynamic_path_enabled` (`bool`): Set the `dynamic_path_enabled` field on the resulting object. When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.
-  - `filename` (`string`): Set the `filename` field on the resulting object.
-  - `path` (`string`): Set the `path` field on the resulting object.
-  - `relative_url` (`string`): Set the `relative_url` field on the resulting object.
+  - `dynamic_filename_enabled` (`bool`):  When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.
+  - `dynamic_path_enabled` (`bool`):  When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.
+  - `filename` (`string`): 
+  - `path` (`string`): 
+  - `relative_url` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `http_server_location` sub block.
@@ -707,9 +707,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schema_column` sub block.
@@ -732,10 +732,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

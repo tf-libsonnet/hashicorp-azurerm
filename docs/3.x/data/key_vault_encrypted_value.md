@@ -53,11 +53,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `algorithm` (`string`): Set the `algorithm` field on the resulting data source block.
-  - `encrypted_data` (`string`): Set the `encrypted_data` field on the resulting data source block. When `null`, the `encrypted_data` field will be omitted from the resulting object.
-  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting data source block.
-  - `plain_text_value` (`string`): Set the `plain_text_value` field on the resulting data source block. When `null`, the `plain_text_value` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-timeoutsnew) constructor.
+  - `algorithm` (`string`): 
+  - `encrypted_data` (`string`):  When `null`, the `encrypted_data` field will be omitted from the resulting object.
+  - `key_vault_key_id` (`string`): 
+  - `plain_text_value` (`string`):  When `null`, the `plain_text_value` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -81,11 +81,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `algorithm` (`string`): Set the `algorithm` field on the resulting object.
-  - `encrypted_data` (`string`): Set the `encrypted_data` field on the resulting object. When `null`, the `encrypted_data` field will be omitted from the resulting object.
-  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object.
-  - `plain_text_value` (`string`): Set the `plain_text_value` field on the resulting object. When `null`, the `plain_text_value` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-timeoutsnew) constructor.
+  - `algorithm` (`string`): 
+  - `encrypted_data` (`string`):  When `null`, the `encrypted_data` field will be omitted from the resulting object.
+  - `key_vault_key_id` (`string`): 
+  - `plain_text_value` (`string`):  When `null`, the `plain_text_value` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_encrypted_value.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `key_vault_encrypted_value` data source into the root Terraform configuration.
@@ -208,7 +208,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

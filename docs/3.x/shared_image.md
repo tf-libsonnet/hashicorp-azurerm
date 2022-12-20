@@ -78,30 +78,30 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `accelerated_network_support_enabled` (`bool`): Set the `accelerated_network_support_enabled` field on the resulting resource block. When `null`, the `accelerated_network_support_enabled` field will be omitted from the resulting object.
-  - `architecture` (`string`): Set the `architecture` field on the resulting resource block. When `null`, the `architecture` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `disk_types_not_allowed` (`list`): Set the `disk_types_not_allowed` field on the resulting resource block. When `null`, the `disk_types_not_allowed` field will be omitted from the resulting object.
-  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
-  - `eula` (`string`): Set the `eula` field on the resulting resource block. When `null`, the `eula` field will be omitted from the resulting object.
-  - `gallery_name` (`string`): Set the `gallery_name` field on the resulting resource block.
-  - `hyper_v_generation` (`string`): Set the `hyper_v_generation` field on the resulting resource block. When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `max_recommended_memory_in_gb` (`number`): Set the `max_recommended_memory_in_gb` field on the resulting resource block. When `null`, the `max_recommended_memory_in_gb` field will be omitted from the resulting object.
-  - `max_recommended_vcpu_count` (`number`): Set the `max_recommended_vcpu_count` field on the resulting resource block. When `null`, the `max_recommended_vcpu_count` field will be omitted from the resulting object.
-  - `min_recommended_memory_in_gb` (`number`): Set the `min_recommended_memory_in_gb` field on the resulting resource block. When `null`, the `min_recommended_memory_in_gb` field will be omitted from the resulting object.
-  - `min_recommended_vcpu_count` (`number`): Set the `min_recommended_vcpu_count` field on the resulting resource block. When `null`, the `min_recommended_vcpu_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `os_type` (`string`): Set the `os_type` field on the resulting resource block.
-  - `privacy_statement_uri` (`string`): Set the `privacy_statement_uri` field on the resulting resource block. When `null`, the `privacy_statement_uri` field will be omitted from the resulting object.
-  - `release_note_uri` (`string`): Set the `release_note_uri` field on the resulting resource block. When `null`, the `release_note_uri` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `specialized` (`bool`): Set the `specialized` field on the resulting resource block. When `null`, the `specialized` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `trusted_launch_enabled` (`bool`): Set the `trusted_launch_enabled` field on the resulting resource block. When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
-  - `identifier` (`list[obj]`): Set the `identifier` field on the resulting resource block. When `null`, the `identifier` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.identifier.new](#fn-identifiernew) constructor.
-  - `purchase_plan` (`list[obj]`): Set the `purchase_plan` field on the resulting resource block. When `null`, the `purchase_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.purchase_plan.new](#fn-purchase_plannew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.timeouts.new](#fn-timeoutsnew) constructor.
+  - `accelerated_network_support_enabled` (`bool`):  When `null`, the `accelerated_network_support_enabled` field will be omitted from the resulting object.
+  - `architecture` (`string`):  When `null`, the `architecture` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `disk_types_not_allowed` (`list`):  When `null`, the `disk_types_not_allowed` field will be omitted from the resulting object.
+  - `end_of_life_date` (`string`):  When `null`, the `end_of_life_date` field will be omitted from the resulting object.
+  - `eula` (`string`):  When `null`, the `eula` field will be omitted from the resulting object.
+  - `gallery_name` (`string`): 
+  - `hyper_v_generation` (`string`):  When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_recommended_memory_in_gb` (`number`):  When `null`, the `max_recommended_memory_in_gb` field will be omitted from the resulting object.
+  - `max_recommended_vcpu_count` (`number`):  When `null`, the `max_recommended_vcpu_count` field will be omitted from the resulting object.
+  - `min_recommended_memory_in_gb` (`number`):  When `null`, the `min_recommended_memory_in_gb` field will be omitted from the resulting object.
+  - `min_recommended_vcpu_count` (`number`):  When `null`, the `min_recommended_vcpu_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_type` (`string`): 
+  - `privacy_statement_uri` (`string`):  When `null`, the `privacy_statement_uri` field will be omitted from the resulting object.
+  - `release_note_uri` (`string`):  When `null`, the `release_note_uri` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `specialized` (`bool`):  When `null`, the `specialized` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `trusted_launch_enabled` (`bool`):  When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
+  - `identifier` (`list[obj]`):  When `null`, the `identifier` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.identifier.new](#fn-identifiernew) constructor.
+  - `purchase_plan` (`list[obj]`):  When `null`, the `purchase_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.purchase_plan.new](#fn-purchase_plannew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -125,30 +125,30 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `accelerated_network_support_enabled` (`bool`): Set the `accelerated_network_support_enabled` field on the resulting object. When `null`, the `accelerated_network_support_enabled` field will be omitted from the resulting object.
-  - `architecture` (`string`): Set the `architecture` field on the resulting object. When `null`, the `architecture` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `disk_types_not_allowed` (`list`): Set the `disk_types_not_allowed` field on the resulting object. When `null`, the `disk_types_not_allowed` field will be omitted from the resulting object.
-  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
-  - `eula` (`string`): Set the `eula` field on the resulting object. When `null`, the `eula` field will be omitted from the resulting object.
-  - `gallery_name` (`string`): Set the `gallery_name` field on the resulting object.
-  - `hyper_v_generation` (`string`): Set the `hyper_v_generation` field on the resulting object. When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `max_recommended_memory_in_gb` (`number`): Set the `max_recommended_memory_in_gb` field on the resulting object. When `null`, the `max_recommended_memory_in_gb` field will be omitted from the resulting object.
-  - `max_recommended_vcpu_count` (`number`): Set the `max_recommended_vcpu_count` field on the resulting object. When `null`, the `max_recommended_vcpu_count` field will be omitted from the resulting object.
-  - `min_recommended_memory_in_gb` (`number`): Set the `min_recommended_memory_in_gb` field on the resulting object. When `null`, the `min_recommended_memory_in_gb` field will be omitted from the resulting object.
-  - `min_recommended_vcpu_count` (`number`): Set the `min_recommended_vcpu_count` field on the resulting object. When `null`, the `min_recommended_vcpu_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `os_type` (`string`): Set the `os_type` field on the resulting object.
-  - `privacy_statement_uri` (`string`): Set the `privacy_statement_uri` field on the resulting object. When `null`, the `privacy_statement_uri` field will be omitted from the resulting object.
-  - `release_note_uri` (`string`): Set the `release_note_uri` field on the resulting object. When `null`, the `release_note_uri` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `specialized` (`bool`): Set the `specialized` field on the resulting object. When `null`, the `specialized` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `trusted_launch_enabled` (`bool`): Set the `trusted_launch_enabled` field on the resulting object. When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
-  - `identifier` (`list[obj]`): Set the `identifier` field on the resulting object. When `null`, the `identifier` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.identifier.new](#fn-identifiernew) constructor.
-  - `purchase_plan` (`list[obj]`): Set the `purchase_plan` field on the resulting object. When `null`, the `purchase_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.purchase_plan.new](#fn-purchase_plannew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.timeouts.new](#fn-timeoutsnew) constructor.
+  - `accelerated_network_support_enabled` (`bool`):  When `null`, the `accelerated_network_support_enabled` field will be omitted from the resulting object.
+  - `architecture` (`string`):  When `null`, the `architecture` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `disk_types_not_allowed` (`list`):  When `null`, the `disk_types_not_allowed` field will be omitted from the resulting object.
+  - `end_of_life_date` (`string`):  When `null`, the `end_of_life_date` field will be omitted from the resulting object.
+  - `eula` (`string`):  When `null`, the `eula` field will be omitted from the resulting object.
+  - `gallery_name` (`string`): 
+  - `hyper_v_generation` (`string`):  When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_recommended_memory_in_gb` (`number`):  When `null`, the `max_recommended_memory_in_gb` field will be omitted from the resulting object.
+  - `max_recommended_vcpu_count` (`number`):  When `null`, the `max_recommended_vcpu_count` field will be omitted from the resulting object.
+  - `min_recommended_memory_in_gb` (`number`):  When `null`, the `min_recommended_memory_in_gb` field will be omitted from the resulting object.
+  - `min_recommended_vcpu_count` (`number`):  When `null`, the `min_recommended_vcpu_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_type` (`string`): 
+  - `privacy_statement_uri` (`string`):  When `null`, the `privacy_statement_uri` field will be omitted from the resulting object.
+  - `release_note_uri` (`string`):  When `null`, the `release_note_uri` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `specialized` (`bool`):  When `null`, the `specialized` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `trusted_launch_enabled` (`bool`):  When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
+  - `identifier` (`list[obj]`):  When `null`, the `identifier` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.identifier.new](#fn-identifiernew) constructor.
+  - `purchase_plan` (`list[obj]`):  When `null`, the `purchase_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.purchase_plan.new](#fn-purchase_plannew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `shared_image` resource into the root Terraform configuration.
@@ -617,9 +617,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `offer` (`string`): Set the `offer` field on the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object.
+  - `offer` (`string`): 
+  - `publisher` (`string`): 
+  - `sku` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identifier` sub block.
@@ -642,9 +642,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `product` (`string`): Set the `product` field on the resulting object. When `null`, the `product` field will be omitted from the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object. When `null`, the `publisher` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `product` (`string`):  When `null`, the `product` field will be omitted from the resulting object.
+  - `publisher` (`string`):  When `null`, the `publisher` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `purchase_plan` sub block.
@@ -667,10 +667,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

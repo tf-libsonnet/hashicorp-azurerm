@@ -58,16 +58,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting resource block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `expiry_time` (`string`): Set the `expiry_time` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `run_on_worker_group` (`string`): Set the `run_on_worker_group` field on the resulting resource block. When `null`, the `run_on_worker_group` field will be omitted from the resulting object.
-  - `runbook_name` (`string`): Set the `runbook_name` field on the resulting resource block.
-  - `uri` (`string`): Set the `uri` field on the resulting resource block. When `null`, the `uri` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_webhook.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automation_account_name` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `expiry_time` (`string`): 
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `run_on_worker_group` (`string`):  When `null`, the `run_on_worker_group` field will be omitted from the resulting object.
+  - `runbook_name` (`string`): 
+  - `uri` (`string`):  When `null`, the `uri` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_webhook.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,16 +91,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `expiry_time` (`string`): Set the `expiry_time` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `run_on_worker_group` (`string`): Set the `run_on_worker_group` field on the resulting object. When `null`, the `run_on_worker_group` field will be omitted from the resulting object.
-  - `runbook_name` (`string`): Set the `runbook_name` field on the resulting object.
-  - `uri` (`string`): Set the `uri` field on the resulting object. When `null`, the `uri` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_webhook.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automation_account_name` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `expiry_time` (`string`): 
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `run_on_worker_group` (`string`):  When `null`, the `run_on_worker_group` field will be omitted from the resulting object.
+  - `runbook_name` (`string`): 
+  - `uri` (`string`):  When `null`, the `uri` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_webhook.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_webhook` resource into the root Terraform configuration.
@@ -303,10 +303,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

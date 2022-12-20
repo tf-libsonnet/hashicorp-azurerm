@@ -70,19 +70,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `edition` (`string`): Set the `edition` field on the resulting resource block. When `null`, the `edition` field will be omitted from the resulting object.
-  - `license_type` (`string`): Set the `license_type` field on the resulting resource block. When `null`, the `license_type` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `max_parallel_executions_per_node` (`number`): Set the `max_parallel_executions_per_node` field on the resulting resource block. When `null`, the `max_parallel_executions_per_node` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `node_size` (`string`): Set the `node_size` field on the resulting resource block.
-  - `number_of_nodes` (`number`): Set the `number_of_nodes` field on the resulting resource block. When `null`, the `number_of_nodes` field will be omitted from the resulting object.
-  - `catalog_info` (`list[obj]`): Set the `catalog_info` field on the resulting resource block. When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-catalog_infonew) constructor.
-  - `custom_setup_script` (`list[obj]`): Set the `custom_setup_script` field on the resulting resource block. When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-timeoutsnew) constructor.
-  - `vnet_integration` (`list[obj]`): Set the `vnet_integration` field on the resulting resource block. When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-vnet_integrationnew) constructor.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `edition` (`string`):  When `null`, the `edition` field will be omitted from the resulting object.
+  - `license_type` (`string`):  When `null`, the `license_type` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_parallel_executions_per_node` (`number`):  When `null`, the `max_parallel_executions_per_node` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `node_size` (`string`): 
+  - `number_of_nodes` (`number`):  When `null`, the `number_of_nodes` field will be omitted from the resulting object.
+  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-catalog_infonew) constructor.
+  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-vnet_integrationnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,19 +106,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `edition` (`string`): Set the `edition` field on the resulting object. When `null`, the `edition` field will be omitted from the resulting object.
-  - `license_type` (`string`): Set the `license_type` field on the resulting object. When `null`, the `license_type` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `max_parallel_executions_per_node` (`number`): Set the `max_parallel_executions_per_node` field on the resulting object. When `null`, the `max_parallel_executions_per_node` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `node_size` (`string`): Set the `node_size` field on the resulting object.
-  - `number_of_nodes` (`number`): Set the `number_of_nodes` field on the resulting object. When `null`, the `number_of_nodes` field will be omitted from the resulting object.
-  - `catalog_info` (`list[obj]`): Set the `catalog_info` field on the resulting object. When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-catalog_infonew) constructor.
-  - `custom_setup_script` (`list[obj]`): Set the `custom_setup_script` field on the resulting object. When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-timeoutsnew) constructor.
-  - `vnet_integration` (`list[obj]`): Set the `vnet_integration` field on the resulting object. When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-vnet_integrationnew) constructor.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `edition` (`string`):  When `null`, the `edition` field will be omitted from the resulting object.
+  - `license_type` (`string`):  When `null`, the `license_type` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_parallel_executions_per_node` (`number`):  When `null`, the `max_parallel_executions_per_node` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `node_size` (`string`): 
+  - `number_of_nodes` (`number`):  When `null`, the `number_of_nodes` field will be omitted from the resulting object.
+  - `catalog_info` (`list[obj]`):  When `null`, the `catalog_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.catalog_info.new](#fn-catalog_infonew) constructor.
+  - `custom_setup_script` (`list[obj]`):  When `null`, the `custom_setup_script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.custom_setup_script.new](#fn-custom_setup_scriptnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vnet_integration` (`list[obj]`):  When `null`, the `vnet_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_integration_runtime_managed.vnet_integration.new](#fn-vnet_integrationnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_integration_runtime_managed` resource into the root Terraform configuration.
@@ -432,10 +432,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `administrator_login` (`string`): Set the `administrator_login` field on the resulting object. When `null`, the `administrator_login` field will be omitted from the resulting object.
-  - `administrator_password` (`string`): Set the `administrator_password` field on the resulting object. When `null`, the `administrator_password` field will be omitted from the resulting object.
-  - `pricing_tier` (`string`): Set the `pricing_tier` field on the resulting object. When `null`, the `pricing_tier` field will be omitted from the resulting object.
-  - `server_endpoint` (`string`): Set the `server_endpoint` field on the resulting object.
+  - `administrator_login` (`string`):  When `null`, the `administrator_login` field will be omitted from the resulting object.
+  - `administrator_password` (`string`):  When `null`, the `administrator_password` field will be omitted from the resulting object.
+  - `pricing_tier` (`string`):  When `null`, the `pricing_tier` field will be omitted from the resulting object.
+  - `server_endpoint` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `catalog_info` sub block.
@@ -458,8 +458,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `blob_container_uri` (`string`): Set the `blob_container_uri` field on the resulting object.
-  - `sas_token` (`string`): Set the `sas_token` field on the resulting object.
+  - `blob_container_uri` (`string`): 
+  - `sas_token` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `custom_setup_script` sub block.
@@ -482,10 +482,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -508,8 +508,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `subnet_name` (`string`): Set the `subnet_name` field on the resulting object.
-  - `vnet_id` (`string`): Set the `vnet_id` field on the resulting object.
+  - `subnet_name` (`string`): 
+  - `vnet_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `vnet_integration` sub block.

@@ -112,38 +112,38 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `access_key_metadata_writes_enabled` (`bool`): Set the `access_key_metadata_writes_enabled` field on the resulting resource block. When `null`, the `access_key_metadata_writes_enabled` field will be omitted from the resulting object.
-  - `analytical_storage_enabled` (`bool`): Set the `analytical_storage_enabled` field on the resulting resource block. When `null`, the `analytical_storage_enabled` field will be omitted from the resulting object.
-  - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `default_identity_type` (`string`): Set the `default_identity_type` field on the resulting resource block. When `null`, the `default_identity_type` field will be omitted from the resulting object.
-  - `enable_automatic_failover` (`bool`): Set the `enable_automatic_failover` field on the resulting resource block. When `null`, the `enable_automatic_failover` field will be omitted from the resulting object.
-  - `enable_free_tier` (`bool`): Set the `enable_free_tier` field on the resulting resource block. When `null`, the `enable_free_tier` field will be omitted from the resulting object.
-  - `enable_multiple_write_locations` (`bool`): Set the `enable_multiple_write_locations` field on the resulting resource block. When `null`, the `enable_multiple_write_locations` field will be omitted from the resulting object.
-  - `ip_range_filter` (`string`): Set the `ip_range_filter` field on the resulting resource block. When `null`, the `ip_range_filter` field will be omitted from the resulting object.
-  - `is_virtual_network_filter_enabled` (`bool`): Set the `is_virtual_network_filter_enabled` field on the resulting resource block. When `null`, the `is_virtual_network_filter_enabled` field will be omitted from the resulting object.
-  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting resource block. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
-  - `kind` (`string`): Set the `kind` field on the resulting resource block. When `null`, the `kind` field will be omitted from the resulting object.
-  - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting resource block. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `mongo_server_version` (`string`): Set the `mongo_server_version` field on the resulting resource block. When `null`, the `mongo_server_version` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `network_acl_bypass_for_azure_services` (`bool`): Set the `network_acl_bypass_for_azure_services` field on the resulting resource block. When `null`, the `network_acl_bypass_for_azure_services` field will be omitted from the resulting object.
-  - `network_acl_bypass_ids` (`list`): Set the `network_acl_bypass_ids` field on the resulting resource block. When `null`, the `network_acl_bypass_ids` field will be omitted from the resulting object.
-  - `offer_type` (`string`): Set the `offer_type` field on the resulting resource block.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `analytical_storage` (`list[obj]`): Set the `analytical_storage` field on the resulting resource block. When `null`, the `analytical_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.analytical_storage.new](#fn-analytical_storagenew) constructor.
-  - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.backup.new](#fn-backupnew) constructor.
-  - `capabilities` (`list[obj]`): Set the `capabilities` field on the resulting resource block. When `null`, the `capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capabilities.new](#fn-capabilitiesnew) constructor.
-  - `capacity` (`list[obj]`): Set the `capacity` field on the resulting resource block. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capacity.new](#fn-capacitynew) constructor.
-  - `consistency_policy` (`list[obj]`): Set the `consistency_policy` field on the resulting resource block. When `null`, the `consistency_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.consistency_policy.new](#fn-consistency_policynew) constructor.
-  - `cors_rule` (`list[obj]`): Set the `cors_rule` field on the resulting resource block. When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.cors_rule.new](#fn-cors_rulenew) constructor.
-  - `geo_location` (`list[obj]`): Set the `geo_location` field on the resulting resource block. When `null`, the `geo_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.geo_location.new](#fn-geo_locationnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.identity.new](#fn-identitynew) constructor.
-  - `restore` (`list[obj]`): Set the `restore` field on the resulting resource block. When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.new](#fn-restorenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_network_rule` (`list[obj]`): Set the `virtual_network_rule` field on the resulting resource block. When `null`, the `virtual_network_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.virtual_network_rule.new](#fn-virtual_network_rulenew) constructor.
+  - `access_key_metadata_writes_enabled` (`bool`):  When `null`, the `access_key_metadata_writes_enabled` field will be omitted from the resulting object.
+  - `analytical_storage_enabled` (`bool`):  When `null`, the `analytical_storage_enabled` field will be omitted from the resulting object.
+  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `default_identity_type` (`string`):  When `null`, the `default_identity_type` field will be omitted from the resulting object.
+  - `enable_automatic_failover` (`bool`):  When `null`, the `enable_automatic_failover` field will be omitted from the resulting object.
+  - `enable_free_tier` (`bool`):  When `null`, the `enable_free_tier` field will be omitted from the resulting object.
+  - `enable_multiple_write_locations` (`bool`):  When `null`, the `enable_multiple_write_locations` field will be omitted from the resulting object.
+  - `ip_range_filter` (`string`):  When `null`, the `ip_range_filter` field will be omitted from the resulting object.
+  - `is_virtual_network_filter_enabled` (`bool`):  When `null`, the `is_virtual_network_filter_enabled` field will be omitted from the resulting object.
+  - `key_vault_key_id` (`string`):  When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `kind` (`string`):  When `null`, the `kind` field will be omitted from the resulting object.
+  - `local_authentication_disabled` (`bool`):  When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `mongo_server_version` (`string`):  When `null`, the `mongo_server_version` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_acl_bypass_for_azure_services` (`bool`):  When `null`, the `network_acl_bypass_for_azure_services` field will be omitted from the resulting object.
+  - `network_acl_bypass_ids` (`list`):  When `null`, the `network_acl_bypass_ids` field will be omitted from the resulting object.
+  - `offer_type` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `analytical_storage` (`list[obj]`):  When `null`, the `analytical_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.analytical_storage.new](#fn-analytical_storagenew) constructor.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.backup.new](#fn-backupnew) constructor.
+  - `capabilities` (`list[obj]`):  When `null`, the `capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capabilities.new](#fn-capabilitiesnew) constructor.
+  - `capacity` (`list[obj]`):  When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capacity.new](#fn-capacitynew) constructor.
+  - `consistency_policy` (`list[obj]`):  When `null`, the `consistency_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.consistency_policy.new](#fn-consistency_policynew) constructor.
+  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.cors_rule.new](#fn-cors_rulenew) constructor.
+  - `geo_location` (`list[obj]`):  When `null`, the `geo_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.geo_location.new](#fn-geo_locationnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.identity.new](#fn-identitynew) constructor.
+  - `restore` (`list[obj]`):  When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.new](#fn-restorenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_rule` (`list[obj]`):  When `null`, the `virtual_network_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.virtual_network_rule.new](#fn-virtual_network_rulenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -167,38 +167,38 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `access_key_metadata_writes_enabled` (`bool`): Set the `access_key_metadata_writes_enabled` field on the resulting object. When `null`, the `access_key_metadata_writes_enabled` field will be omitted from the resulting object.
-  - `analytical_storage_enabled` (`bool`): Set the `analytical_storage_enabled` field on the resulting object. When `null`, the `analytical_storage_enabled` field will be omitted from the resulting object.
-  - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
-  - `default_identity_type` (`string`): Set the `default_identity_type` field on the resulting object. When `null`, the `default_identity_type` field will be omitted from the resulting object.
-  - `enable_automatic_failover` (`bool`): Set the `enable_automatic_failover` field on the resulting object. When `null`, the `enable_automatic_failover` field will be omitted from the resulting object.
-  - `enable_free_tier` (`bool`): Set the `enable_free_tier` field on the resulting object. When `null`, the `enable_free_tier` field will be omitted from the resulting object.
-  - `enable_multiple_write_locations` (`bool`): Set the `enable_multiple_write_locations` field on the resulting object. When `null`, the `enable_multiple_write_locations` field will be omitted from the resulting object.
-  - `ip_range_filter` (`string`): Set the `ip_range_filter` field on the resulting object. When `null`, the `ip_range_filter` field will be omitted from the resulting object.
-  - `is_virtual_network_filter_enabled` (`bool`): Set the `is_virtual_network_filter_enabled` field on the resulting object. When `null`, the `is_virtual_network_filter_enabled` field will be omitted from the resulting object.
-  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
-  - `kind` (`string`): Set the `kind` field on the resulting object. When `null`, the `kind` field will be omitted from the resulting object.
-  - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting object. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `mongo_server_version` (`string`): Set the `mongo_server_version` field on the resulting object. When `null`, the `mongo_server_version` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `network_acl_bypass_for_azure_services` (`bool`): Set the `network_acl_bypass_for_azure_services` field on the resulting object. When `null`, the `network_acl_bypass_for_azure_services` field will be omitted from the resulting object.
-  - `network_acl_bypass_ids` (`list`): Set the `network_acl_bypass_ids` field on the resulting object. When `null`, the `network_acl_bypass_ids` field will be omitted from the resulting object.
-  - `offer_type` (`string`): Set the `offer_type` field on the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `analytical_storage` (`list[obj]`): Set the `analytical_storage` field on the resulting object. When `null`, the `analytical_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.analytical_storage.new](#fn-analytical_storagenew) constructor.
-  - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.backup.new](#fn-backupnew) constructor.
-  - `capabilities` (`list[obj]`): Set the `capabilities` field on the resulting object. When `null`, the `capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capabilities.new](#fn-capabilitiesnew) constructor.
-  - `capacity` (`list[obj]`): Set the `capacity` field on the resulting object. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capacity.new](#fn-capacitynew) constructor.
-  - `consistency_policy` (`list[obj]`): Set the `consistency_policy` field on the resulting object. When `null`, the `consistency_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.consistency_policy.new](#fn-consistency_policynew) constructor.
-  - `cors_rule` (`list[obj]`): Set the `cors_rule` field on the resulting object. When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.cors_rule.new](#fn-cors_rulenew) constructor.
-  - `geo_location` (`list[obj]`): Set the `geo_location` field on the resulting object. When `null`, the `geo_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.geo_location.new](#fn-geo_locationnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.identity.new](#fn-identitynew) constructor.
-  - `restore` (`list[obj]`): Set the `restore` field on the resulting object. When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.new](#fn-restorenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.timeouts.new](#fn-timeoutsnew) constructor.
-  - `virtual_network_rule` (`list[obj]`): Set the `virtual_network_rule` field on the resulting object. When `null`, the `virtual_network_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.virtual_network_rule.new](#fn-virtual_network_rulenew) constructor.
+  - `access_key_metadata_writes_enabled` (`bool`):  When `null`, the `access_key_metadata_writes_enabled` field will be omitted from the resulting object.
+  - `analytical_storage_enabled` (`bool`):  When `null`, the `analytical_storage_enabled` field will be omitted from the resulting object.
+  - `create_mode` (`string`):  When `null`, the `create_mode` field will be omitted from the resulting object.
+  - `default_identity_type` (`string`):  When `null`, the `default_identity_type` field will be omitted from the resulting object.
+  - `enable_automatic_failover` (`bool`):  When `null`, the `enable_automatic_failover` field will be omitted from the resulting object.
+  - `enable_free_tier` (`bool`):  When `null`, the `enable_free_tier` field will be omitted from the resulting object.
+  - `enable_multiple_write_locations` (`bool`):  When `null`, the `enable_multiple_write_locations` field will be omitted from the resulting object.
+  - `ip_range_filter` (`string`):  When `null`, the `ip_range_filter` field will be omitted from the resulting object.
+  - `is_virtual_network_filter_enabled` (`bool`):  When `null`, the `is_virtual_network_filter_enabled` field will be omitted from the resulting object.
+  - `key_vault_key_id` (`string`):  When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `kind` (`string`):  When `null`, the `kind` field will be omitted from the resulting object.
+  - `local_authentication_disabled` (`bool`):  When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `mongo_server_version` (`string`):  When `null`, the `mongo_server_version` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_acl_bypass_for_azure_services` (`bool`):  When `null`, the `network_acl_bypass_for_azure_services` field will be omitted from the resulting object.
+  - `network_acl_bypass_ids` (`list`):  When `null`, the `network_acl_bypass_ids` field will be omitted from the resulting object.
+  - `offer_type` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `analytical_storage` (`list[obj]`):  When `null`, the `analytical_storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.analytical_storage.new](#fn-analytical_storagenew) constructor.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.backup.new](#fn-backupnew) constructor.
+  - `capabilities` (`list[obj]`):  When `null`, the `capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capabilities.new](#fn-capabilitiesnew) constructor.
+  - `capacity` (`list[obj]`):  When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.capacity.new](#fn-capacitynew) constructor.
+  - `consistency_policy` (`list[obj]`):  When `null`, the `consistency_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.consistency_policy.new](#fn-consistency_policynew) constructor.
+  - `cors_rule` (`list[obj]`):  When `null`, the `cors_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.cors_rule.new](#fn-cors_rulenew) constructor.
+  - `geo_location` (`list[obj]`):  When `null`, the `geo_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.geo_location.new](#fn-geo_locationnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.identity.new](#fn-identitynew) constructor.
+  - `restore` (`list[obj]`):  When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.new](#fn-restorenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_network_rule` (`list[obj]`):  When `null`, the `virtual_network_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.virtual_network_rule.new](#fn-virtual_network_rulenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cosmosdb_account` resource into the root Terraform configuration.
@@ -963,7 +963,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `schema_type` (`string`): Set the `schema_type` field on the resulting object.
+  - `schema_type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `analytical_storage` sub block.
@@ -986,10 +986,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `interval_in_minutes` (`number`): Set the `interval_in_minutes` field on the resulting object. When `null`, the `interval_in_minutes` field will be omitted from the resulting object.
-  - `retention_in_hours` (`number`): Set the `retention_in_hours` field on the resulting object. When `null`, the `retention_in_hours` field will be omitted from the resulting object.
-  - `storage_redundancy` (`string`): Set the `storage_redundancy` field on the resulting object. When `null`, the `storage_redundancy` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `interval_in_minutes` (`number`):  When `null`, the `interval_in_minutes` field will be omitted from the resulting object.
+  - `retention_in_hours` (`number`):  When `null`, the `retention_in_hours` field will be omitted from the resulting object.
+  - `storage_redundancy` (`string`):  When `null`, the `storage_redundancy` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
@@ -1012,7 +1012,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `capabilities` sub block.
@@ -1035,7 +1035,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `total_throughput_limit` (`number`): Set the `total_throughput_limit` field on the resulting object.
+  - `total_throughput_limit` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `capacity` sub block.
@@ -1058,9 +1058,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `consistency_level` (`string`): Set the `consistency_level` field on the resulting object.
-  - `max_interval_in_seconds` (`number`): Set the `max_interval_in_seconds` field on the resulting object. When `null`, the `max_interval_in_seconds` field will be omitted from the resulting object.
-  - `max_staleness_prefix` (`number`): Set the `max_staleness_prefix` field on the resulting object. When `null`, the `max_staleness_prefix` field will be omitted from the resulting object.
+  - `consistency_level` (`string`): 
+  - `max_interval_in_seconds` (`number`):  When `null`, the `max_interval_in_seconds` field will be omitted from the resulting object.
+  - `max_staleness_prefix` (`number`):  When `null`, the `max_staleness_prefix` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `consistency_policy` sub block.
@@ -1083,11 +1083,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.
-  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.
-  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
-  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.
-  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object.
+  - `allowed_headers` (`list`): 
+  - `allowed_methods` (`list`): 
+  - `allowed_origins` (`list`): 
+  - `exposed_headers` (`list`): 
+  - `max_age_in_seconds` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `cors_rule` sub block.
@@ -1110,9 +1110,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `failover_priority` (`number`): Set the `failover_priority` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `failover_priority` (`number`): 
+  - `location` (`string`): 
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `geo_location` sub block.
@@ -1135,8 +1135,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -1159,9 +1159,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `restore_timestamp_in_utc` (`string`): Set the `restore_timestamp_in_utc` field on the resulting object.
-  - `source_cosmosdb_account_id` (`string`): Set the `source_cosmosdb_account_id` field on the resulting object.
-  - `database` (`list[obj]`): Set the `database` field on the resulting object. When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-restoredatabasenew) constructor.
+  - `restore_timestamp_in_utc` (`string`): 
+  - `source_cosmosdb_account_id` (`string`): 
+  - `database` (`list[obj]`):  When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-restoredatabasenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `restore` sub block.
@@ -1184,8 +1184,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `collection_names` (`list`): Set the `collection_names` field on the resulting object. When `null`, the `collection_names` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `collection_names` (`list`):  When `null`, the `collection_names` field will be omitted from the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `database` sub block.
@@ -1208,10 +1208,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -1234,7 +1234,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `ignore_missing_vnet_service_endpoint` (`bool`): Set the `ignore_missing_vnet_service_endpoint` field on the resulting object. When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
+  - `ignore_missing_vnet_service_endpoint` (`bool`):  When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `virtual_network_rule` sub block.

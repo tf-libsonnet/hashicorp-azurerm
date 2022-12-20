@@ -80,19 +80,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting resource block. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting resource block. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting resource block. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting resource block. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
-  - `network` (`list[obj]`): Set the `network` field on the resulting resource block. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
-  - `trace` (`list[obj]`): Set the `trace` field on the resulting resource block. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
+  - `build_agent_pool_size` (`string`):  When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `log_stream_public_endpoint_enabled` (`bool`):  When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `service_registry_enabled` (`bool`):  When `null`, the `service_registry_enabled` field will be omitted from the resulting object.
+  - `sku_name` (`string`):  When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `config_server_git_setting` (`list[obj]`):  When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
+  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trace` (`list[obj]`):  When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -116,19 +116,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting object. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting object. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting object. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting object. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
-  - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
-  - `trace` (`list[obj]`): Set the `trace` field on the resulting object. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
+  - `build_agent_pool_size` (`string`):  When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `log_stream_public_endpoint_enabled` (`bool`):  When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `service_registry_enabled` (`bool`):  When `null`, the `service_registry_enabled` field will be omitted from the resulting object.
+  - `sku_name` (`string`):  When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `config_server_git_setting` (`list[obj]`):  When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
+  - `network` (`list[obj]`):  When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `trace` (`list[obj]`):  When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_service` resource into the root Terraform configuration.
@@ -442,12 +442,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
-  - `search_paths` (`list`): Set the `search_paths` field on the resulting object. When `null`, the `search_paths` field will be omitted from the resulting object.
-  - `uri` (`string`): Set the `uri` field on the resulting object.
-  - `http_basic_auth` (`list[obj]`): Set the `http_basic_auth` field on the resulting object. When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.http_basic_auth.new](#fn-config_server_git_settinghttp_basic_authnew) constructor.
-  - `repository` (`list[obj]`): Set the `repository` field on the resulting object. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.new](#fn-config_server_git_settingrepositorynew) constructor.
-  - `ssh_auth` (`list[obj]`): Set the `ssh_auth` field on the resulting object. When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.ssh_auth.new](#fn-config_server_git_settingssh_authnew) constructor.
+  - `label` (`string`):  When `null`, the `label` field will be omitted from the resulting object.
+  - `search_paths` (`list`):  When `null`, the `search_paths` field will be omitted from the resulting object.
+  - `uri` (`string`): 
+  - `http_basic_auth` (`list[obj]`):  When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.http_basic_auth.new](#fn-config_server_git_settinghttp_basic_authnew) constructor.
+  - `repository` (`list[obj]`):  When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.new](#fn-config_server_git_settingrepositorynew) constructor.
+  - `ssh_auth` (`list[obj]`):  When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.ssh_auth.new](#fn-config_server_git_settingssh_authnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `config_server_git_setting` sub block.
@@ -470,8 +470,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `password` (`string`): Set the `password` field on the resulting object.
-  - `username` (`string`): Set the `username` field on the resulting object.
+  - `password` (`string`): 
+  - `username` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `http_basic_auth` sub block.
@@ -494,13 +494,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `pattern` (`list`): Set the `pattern` field on the resulting object. When `null`, the `pattern` field will be omitted from the resulting object.
-  - `search_paths` (`list`): Set the `search_paths` field on the resulting object. When `null`, the `search_paths` field will be omitted from the resulting object.
-  - `uri` (`string`): Set the `uri` field on the resulting object.
-  - `http_basic_auth` (`list[obj]`): Set the `http_basic_auth` field on the resulting object. When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.http_basic_auth.new](#fn-config_server_git_settingconfig_server_git_settinghttp_basic_authnew) constructor.
-  - `ssh_auth` (`list[obj]`): Set the `ssh_auth` field on the resulting object. When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.ssh_auth.new](#fn-config_server_git_settingconfig_server_git_settingssh_authnew) constructor.
+  - `label` (`string`):  When `null`, the `label` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `pattern` (`list`):  When `null`, the `pattern` field will be omitted from the resulting object.
+  - `search_paths` (`list`):  When `null`, the `search_paths` field will be omitted from the resulting object.
+  - `uri` (`string`): 
+  - `http_basic_auth` (`list[obj]`):  When `null`, the `http_basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.http_basic_auth.new](#fn-config_server_git_settingconfig_server_git_settinghttp_basic_authnew) constructor.
+  - `ssh_auth` (`list[obj]`):  When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.repository.ssh_auth.new](#fn-config_server_git_settingconfig_server_git_settingssh_authnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `repository` sub block.
@@ -523,8 +523,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `password` (`string`): Set the `password` field on the resulting object.
-  - `username` (`string`): Set the `username` field on the resulting object.
+  - `password` (`string`): 
+  - `username` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `http_basic_auth` sub block.
@@ -547,10 +547,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `host_key` (`string`): Set the `host_key` field on the resulting object. When `null`, the `host_key` field will be omitted from the resulting object.
-  - `host_key_algorithm` (`string`): Set the `host_key_algorithm` field on the resulting object. When `null`, the `host_key_algorithm` field will be omitted from the resulting object.
-  - `private_key` (`string`): Set the `private_key` field on the resulting object.
-  - `strict_host_key_checking_enabled` (`bool`): Set the `strict_host_key_checking_enabled` field on the resulting object. When `null`, the `strict_host_key_checking_enabled` field will be omitted from the resulting object.
+  - `host_key` (`string`):  When `null`, the `host_key` field will be omitted from the resulting object.
+  - `host_key_algorithm` (`string`):  When `null`, the `host_key_algorithm` field will be omitted from the resulting object.
+  - `private_key` (`string`): 
+  - `strict_host_key_checking_enabled` (`bool`):  When `null`, the `strict_host_key_checking_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ssh_auth` sub block.
@@ -573,10 +573,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `host_key` (`string`): Set the `host_key` field on the resulting object. When `null`, the `host_key` field will be omitted from the resulting object.
-  - `host_key_algorithm` (`string`): Set the `host_key_algorithm` field on the resulting object. When `null`, the `host_key_algorithm` field will be omitted from the resulting object.
-  - `private_key` (`string`): Set the `private_key` field on the resulting object.
-  - `strict_host_key_checking_enabled` (`bool`): Set the `strict_host_key_checking_enabled` field on the resulting object. When `null`, the `strict_host_key_checking_enabled` field will be omitted from the resulting object.
+  - `host_key` (`string`):  When `null`, the `host_key` field will be omitted from the resulting object.
+  - `host_key_algorithm` (`string`):  When `null`, the `host_key_algorithm` field will be omitted from the resulting object.
+  - `private_key` (`string`): 
+  - `strict_host_key_checking_enabled` (`bool`):  When `null`, the `strict_host_key_checking_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ssh_auth` sub block.
@@ -599,12 +599,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `app_network_resource_group` (`string`): Set the `app_network_resource_group` field on the resulting object. When `null`, the `app_network_resource_group` field will be omitted from the resulting object.
-  - `app_subnet_id` (`string`): Set the `app_subnet_id` field on the resulting object.
-  - `cidr_ranges` (`list`): Set the `cidr_ranges` field on the resulting object.
-  - `read_timeout_seconds` (`number`): Set the `read_timeout_seconds` field on the resulting object. When `null`, the `read_timeout_seconds` field will be omitted from the resulting object.
-  - `service_runtime_network_resource_group` (`string`): Set the `service_runtime_network_resource_group` field on the resulting object. When `null`, the `service_runtime_network_resource_group` field will be omitted from the resulting object.
-  - `service_runtime_subnet_id` (`string`): Set the `service_runtime_subnet_id` field on the resulting object.
+  - `app_network_resource_group` (`string`):  When `null`, the `app_network_resource_group` field will be omitted from the resulting object.
+  - `app_subnet_id` (`string`): 
+  - `cidr_ranges` (`list`): 
+  - `read_timeout_seconds` (`number`):  When `null`, the `read_timeout_seconds` field will be omitted from the resulting object.
+  - `service_runtime_network_resource_group` (`string`):  When `null`, the `service_runtime_network_resource_group` field will be omitted from the resulting object.
+  - `service_runtime_subnet_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `network` sub block.
@@ -627,10 +627,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -653,8 +653,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_string` (`string`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` field will be omitted from the resulting object.
-  - `sample_rate` (`number`): Set the `sample_rate` field on the resulting object. When `null`, the `sample_rate` field will be omitted from the resulting object.
+  - `connection_string` (`string`):  When `null`, the `connection_string` field will be omitted from the resulting object.
+  - `sample_rate` (`number`):  When `null`, the `sample_rate` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `trace` sub block.

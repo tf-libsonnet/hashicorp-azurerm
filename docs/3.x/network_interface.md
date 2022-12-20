@@ -62,17 +62,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `enable_accelerated_networking` (`bool`): Set the `enable_accelerated_networking` field on the resulting resource block. When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
-  - `enable_ip_forwarding` (`bool`): Set the `enable_ip_forwarding` field on the resulting resource block. When `null`, the `enable_ip_forwarding` field will be omitted from the resulting object.
-  - `internal_dns_name_label` (`string`): Set the `internal_dns_name_label` field on the resulting resource block. When `null`, the `internal_dns_name_label` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting resource block. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.timeouts.new](#fn-timeoutsnew) constructor.
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `enable_accelerated_networking` (`bool`):  When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
+  - `enable_ip_forwarding` (`bool`):  When `null`, the `enable_ip_forwarding` field will be omitted from the resulting object.
+  - `internal_dns_name_label` (`string`):  When `null`, the `internal_dns_name_label` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,17 +96,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `enable_accelerated_networking` (`bool`): Set the `enable_accelerated_networking` field on the resulting object. When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
-  - `enable_ip_forwarding` (`bool`): Set the `enable_ip_forwarding` field on the resulting object. When `null`, the `enable_ip_forwarding` field will be omitted from the resulting object.
-  - `internal_dns_name_label` (`string`): Set the `internal_dns_name_label` field on the resulting object. When `null`, the `internal_dns_name_label` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting object. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.timeouts.new](#fn-timeoutsnew) constructor.
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `enable_accelerated_networking` (`bool`):  When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
+  - `enable_ip_forwarding` (`bool`):  When `null`, the `enable_ip_forwarding` field will be omitted from the resulting object.
+  - `internal_dns_name_label` (`string`):  When `null`, the `internal_dns_name_label` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.network_interface.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_interface` resource into the root Terraform configuration.
@@ -346,14 +346,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `gateway_load_balancer_frontend_ip_configuration_id` (`string`): Set the `gateway_load_balancer_frontend_ip_configuration_id` field on the resulting object. When `null`, the `gateway_load_balancer_frontend_ip_configuration_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `primary` (`bool`): Set the `primary` field on the resulting object. When `null`, the `primary` field will be omitted from the resulting object.
-  - `private_ip_address` (`string`): Set the `private_ip_address` field on the resulting object. When `null`, the `private_ip_address` field will be omitted from the resulting object.
-  - `private_ip_address_allocation` (`string`): Set the `private_ip_address_allocation` field on the resulting object.
-  - `private_ip_address_version` (`string`): Set the `private_ip_address_version` field on the resulting object. When `null`, the `private_ip_address_version` field will be omitted from the resulting object.
-  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object. When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `gateway_load_balancer_frontend_ip_configuration_id` (`string`):  When `null`, the `gateway_load_balancer_frontend_ip_configuration_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `primary` (`bool`):  When `null`, the `primary` field will be omitted from the resulting object.
+  - `private_ip_address` (`string`):  When `null`, the `private_ip_address` field will be omitted from the resulting object.
+  - `private_ip_address_allocation` (`string`): 
+  - `private_ip_address_version` (`string`):  When `null`, the `private_ip_address_version` field will be omitted from the resulting object.
+  - `public_ip_address_id` (`string`):  When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
+  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -376,10 +376,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -56,11 +56,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `binding_type` (`string`): Set the `binding_type` field on the resulting resource block. When `null`, the `binding_type` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `spring_cloud_builder_id` (`string`): Set the `spring_cloud_builder_id` field on the resulting resource block.
-  - `launch` (`list[obj]`): Set the `launch` field on the resulting resource block. When `null`, the `launch` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.launch.new](#fn-launchnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.timeouts.new](#fn-timeoutsnew) constructor.
+  - `binding_type` (`string`):  When `null`, the `binding_type` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `spring_cloud_builder_id` (`string`): 
+  - `launch` (`list[obj]`):  When `null`, the `launch` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.launch.new](#fn-launchnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,11 +84,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `binding_type` (`string`): Set the `binding_type` field on the resulting object. When `null`, the `binding_type` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `spring_cloud_builder_id` (`string`): Set the `spring_cloud_builder_id` field on the resulting object.
-  - `launch` (`list[obj]`): Set the `launch` field on the resulting object. When `null`, the `launch` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.launch.new](#fn-launchnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.timeouts.new](#fn-timeoutsnew) constructor.
+  - `binding_type` (`string`):  When `null`, the `binding_type` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `spring_cloud_builder_id` (`string`): 
+  - `launch` (`list[obj]`):  When `null`, the `launch` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.launch.new](#fn-launchnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_build_pack_binding.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_build_pack_binding` resource into the root Terraform configuration.
@@ -232,8 +232,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `properties` (`obj`): Set the `properties` field on the resulting object. When `null`, the `properties` field will be omitted from the resulting object.
-  - `secrets` (`obj`): Set the `secrets` field on the resulting object. When `null`, the `secrets` field will be omitted from the resulting object.
+  - `properties` (`obj`):  When `null`, the `properties` field will be omitted from the resulting object.
+  - `secrets` (`obj`):  When `null`, the `secrets` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `launch` sub block.
@@ -256,10 +256,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

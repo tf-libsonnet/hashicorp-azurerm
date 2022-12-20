@@ -97,28 +97,28 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `app_service_plan_id` (`string`): Set the `app_service_plan_id` field on the resulting resource block.
-  - `app_settings` (`obj`): Set the `app_settings` field on the resulting resource block. When `null`, the `app_settings` field will be omitted from the resulting object.
-  - `client_cert_mode` (`string`): Set the `client_cert_mode` field on the resulting resource block. When `null`, the `client_cert_mode` field will be omitted from the resulting object.
-  - `daily_memory_time_quota` (`number`): Set the `daily_memory_time_quota` field on the resulting resource block. When `null`, the `daily_memory_time_quota` field will be omitted from the resulting object.
-  - `enable_builtin_logging` (`bool`): Set the `enable_builtin_logging` field on the resulting resource block. When `null`, the `enable_builtin_logging` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
-  - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting resource block. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `os_type` (`string`): Set the `os_type` field on the resulting resource block. When `null`, the `os_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting resource block.
-  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting resource block. When `null`, the `version` field will be omitted from the resulting object.
-  - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting resource block. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.new](#fn-auth_settingsnew) constructor.
-  - `connection_string` (`list[obj]`): Set the `connection_string` field on the resulting resource block. When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.connection_string.new](#fn-connection_stringnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.identity.new](#fn-identitynew) constructor.
-  - `site_config` (`list[obj]`): Set the `site_config` field on the resulting resource block. When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.site_config.new](#fn-site_confignew) constructor.
-  - `source_control` (`list[obj]`): Set the `source_control` field on the resulting resource block. When `null`, the `source_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.source_control.new](#fn-source_controlnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.timeouts.new](#fn-timeoutsnew) constructor.
+  - `app_service_plan_id` (`string`): 
+  - `app_settings` (`obj`):  When `null`, the `app_settings` field will be omitted from the resulting object.
+  - `client_cert_mode` (`string`):  When `null`, the `client_cert_mode` field will be omitted from the resulting object.
+  - `daily_memory_time_quota` (`number`):  When `null`, the `daily_memory_time_quota` field will be omitted from the resulting object.
+  - `enable_builtin_logging` (`bool`):  When `null`, the `enable_builtin_logging` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
+  - `key_vault_reference_identity_id` (`string`):  When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `storage_account_access_key` (`string`): 
+  - `storage_account_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `auth_settings` (`list[obj]`):  When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.new](#fn-auth_settingsnew) constructor.
+  - `connection_string` (`list[obj]`):  When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.connection_string.new](#fn-connection_stringnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.identity.new](#fn-identitynew) constructor.
+  - `site_config` (`list[obj]`):  When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.site_config.new](#fn-site_confignew) constructor.
+  - `source_control` (`list[obj]`):  When `null`, the `source_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.source_control.new](#fn-source_controlnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -142,28 +142,28 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `app_service_plan_id` (`string`): Set the `app_service_plan_id` field on the resulting object.
-  - `app_settings` (`obj`): Set the `app_settings` field on the resulting object. When `null`, the `app_settings` field will be omitted from the resulting object.
-  - `client_cert_mode` (`string`): Set the `client_cert_mode` field on the resulting object. When `null`, the `client_cert_mode` field will be omitted from the resulting object.
-  - `daily_memory_time_quota` (`number`): Set the `daily_memory_time_quota` field on the resulting object. When `null`, the `daily_memory_time_quota` field will be omitted from the resulting object.
-  - `enable_builtin_logging` (`bool`): Set the `enable_builtin_logging` field on the resulting object. When `null`, the `enable_builtin_logging` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
-  - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting object. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting object.
-  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
-  - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting object. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.new](#fn-auth_settingsnew) constructor.
-  - `connection_string` (`list[obj]`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.connection_string.new](#fn-connection_stringnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.identity.new](#fn-identitynew) constructor.
-  - `site_config` (`list[obj]`): Set the `site_config` field on the resulting object. When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.site_config.new](#fn-site_confignew) constructor.
-  - `source_control` (`list[obj]`): Set the `source_control` field on the resulting object. When `null`, the `source_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.source_control.new](#fn-source_controlnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.timeouts.new](#fn-timeoutsnew) constructor.
+  - `app_service_plan_id` (`string`): 
+  - `app_settings` (`obj`):  When `null`, the `app_settings` field will be omitted from the resulting object.
+  - `client_cert_mode` (`string`):  When `null`, the `client_cert_mode` field will be omitted from the resulting object.
+  - `daily_memory_time_quota` (`number`):  When `null`, the `daily_memory_time_quota` field will be omitted from the resulting object.
+  - `enable_builtin_logging` (`bool`):  When `null`, the `enable_builtin_logging` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
+  - `key_vault_reference_identity_id` (`string`):  When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `storage_account_access_key` (`string`): 
+  - `storage_account_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `auth_settings` (`list[obj]`):  When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.new](#fn-auth_settingsnew) constructor.
+  - `connection_string` (`list[obj]`):  When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.connection_string.new](#fn-connection_stringnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.identity.new](#fn-identitynew) constructor.
+  - `site_config` (`list[obj]`):  When `null`, the `site_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.site_config.new](#fn-site_confignew) constructor.
+  - `source_control` (`list[obj]`):  When `null`, the `source_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.source_control.new](#fn-source_controlnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `function_app` resource into the root Terraform configuration.
@@ -663,20 +663,20 @@ Terraform sub block.
 
 
 **Args**:
-  - `additional_login_params` (`obj`): Set the `additional_login_params` field on the resulting object. When `null`, the `additional_login_params` field will be omitted from the resulting object.
-  - `allowed_external_redirect_urls` (`list`): Set the `allowed_external_redirect_urls` field on the resulting object. When `null`, the `allowed_external_redirect_urls` field will be omitted from the resulting object.
-  - `default_provider` (`string`): Set the `default_provider` field on the resulting object. When `null`, the `default_provider` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `issuer` (`string`): Set the `issuer` field on the resulting object. When `null`, the `issuer` field will be omitted from the resulting object.
-  - `runtime_version` (`string`): Set the `runtime_version` field on the resulting object. When `null`, the `runtime_version` field will be omitted from the resulting object.
-  - `token_refresh_extension_hours` (`number`): Set the `token_refresh_extension_hours` field on the resulting object. When `null`, the `token_refresh_extension_hours` field will be omitted from the resulting object.
-  - `token_store_enabled` (`bool`): Set the `token_store_enabled` field on the resulting object. When `null`, the `token_store_enabled` field will be omitted from the resulting object.
-  - `unauthenticated_client_action` (`string`): Set the `unauthenticated_client_action` field on the resulting object. When `null`, the `unauthenticated_client_action` field will be omitted from the resulting object.
-  - `active_directory` (`list[obj]`): Set the `active_directory` field on the resulting object. When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.active_directory.new](#fn-auth_settingsactive_directorynew) constructor.
-  - `facebook` (`list[obj]`): Set the `facebook` field on the resulting object. When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.facebook.new](#fn-auth_settingsfacebooknew) constructor.
-  - `google` (`list[obj]`): Set the `google` field on the resulting object. When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.google.new](#fn-auth_settingsgooglenew) constructor.
-  - `microsoft` (`list[obj]`): Set the `microsoft` field on the resulting object. When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.microsoft.new](#fn-auth_settingsmicrosoftnew) constructor.
-  - `twitter` (`list[obj]`): Set the `twitter` field on the resulting object. When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.twitter.new](#fn-auth_settingstwitternew) constructor.
+  - `additional_login_params` (`obj`):  When `null`, the `additional_login_params` field will be omitted from the resulting object.
+  - `allowed_external_redirect_urls` (`list`):  When `null`, the `allowed_external_redirect_urls` field will be omitted from the resulting object.
+  - `default_provider` (`string`):  When `null`, the `default_provider` field will be omitted from the resulting object.
+  - `enabled` (`bool`): 
+  - `issuer` (`string`):  When `null`, the `issuer` field will be omitted from the resulting object.
+  - `runtime_version` (`string`):  When `null`, the `runtime_version` field will be omitted from the resulting object.
+  - `token_refresh_extension_hours` (`number`):  When `null`, the `token_refresh_extension_hours` field will be omitted from the resulting object.
+  - `token_store_enabled` (`bool`):  When `null`, the `token_store_enabled` field will be omitted from the resulting object.
+  - `unauthenticated_client_action` (`string`):  When `null`, the `unauthenticated_client_action` field will be omitted from the resulting object.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.active_directory.new](#fn-auth_settingsactive_directorynew) constructor.
+  - `facebook` (`list[obj]`):  When `null`, the `facebook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.facebook.new](#fn-auth_settingsfacebooknew) constructor.
+  - `google` (`list[obj]`):  When `null`, the `google` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.google.new](#fn-auth_settingsgooglenew) constructor.
+  - `microsoft` (`list[obj]`):  When `null`, the `microsoft` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.microsoft.new](#fn-auth_settingsmicrosoftnew) constructor.
+  - `twitter` (`list[obj]`):  When `null`, the `twitter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.auth_settings.twitter.new](#fn-auth_settingstwitternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `auth_settings` sub block.
@@ -699,9 +699,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_audiences` (`list`): Set the `allowed_audiences` field on the resulting object. When `null`, the `allowed_audiences` field will be omitted from the resulting object.
-  - `client_id` (`string`): Set the `client_id` field on the resulting object.
-  - `client_secret` (`string`): Set the `client_secret` field on the resulting object. When `null`, the `client_secret` field will be omitted from the resulting object.
+  - `allowed_audiences` (`list`):  When `null`, the `allowed_audiences` field will be omitted from the resulting object.
+  - `client_id` (`string`): 
+  - `client_secret` (`string`):  When `null`, the `client_secret` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `active_directory` sub block.
@@ -724,9 +724,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `app_id` (`string`): Set the `app_id` field on the resulting object.
-  - `app_secret` (`string`): Set the `app_secret` field on the resulting object.
-  - `oauth_scopes` (`list`): Set the `oauth_scopes` field on the resulting object. When `null`, the `oauth_scopes` field will be omitted from the resulting object.
+  - `app_id` (`string`): 
+  - `app_secret` (`string`): 
+  - `oauth_scopes` (`list`):  When `null`, the `oauth_scopes` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `facebook` sub block.
@@ -749,9 +749,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`): Set the `client_id` field on the resulting object.
-  - `client_secret` (`string`): Set the `client_secret` field on the resulting object.
-  - `oauth_scopes` (`list`): Set the `oauth_scopes` field on the resulting object. When `null`, the `oauth_scopes` field will be omitted from the resulting object.
+  - `client_id` (`string`): 
+  - `client_secret` (`string`): 
+  - `oauth_scopes` (`list`):  When `null`, the `oauth_scopes` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `google` sub block.
@@ -774,9 +774,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`): Set the `client_id` field on the resulting object.
-  - `client_secret` (`string`): Set the `client_secret` field on the resulting object.
-  - `oauth_scopes` (`list`): Set the `oauth_scopes` field on the resulting object. When `null`, the `oauth_scopes` field will be omitted from the resulting object.
+  - `client_id` (`string`): 
+  - `client_secret` (`string`): 
+  - `oauth_scopes` (`list`):  When `null`, the `oauth_scopes` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `microsoft` sub block.
@@ -799,8 +799,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `consumer_key` (`string`): Set the `consumer_key` field on the resulting object.
-  - `consumer_secret` (`string`): Set the `consumer_secret` field on the resulting object.
+  - `consumer_key` (`string`): 
+  - `consumer_secret` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `twitter` sub block.
@@ -823,9 +823,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `name` (`string`): 
+  - `type` (`string`): 
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `connection_string` sub block.
@@ -848,8 +848,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -872,27 +872,27 @@ Terraform sub block.
 
 
 **Args**:
-  - `always_on` (`bool`): Set the `always_on` field on the resulting object. When `null`, the `always_on` field will be omitted from the resulting object.
-  - `app_scale_limit` (`number`): Set the `app_scale_limit` field on the resulting object. When `null`, the `app_scale_limit` field will be omitted from the resulting object.
-  - `auto_swap_slot_name` (`string`): Set the `auto_swap_slot_name` field on the resulting object. When `null`, the `auto_swap_slot_name` field will be omitted from the resulting object.
-  - `dotnet_framework_version` (`string`): Set the `dotnet_framework_version` field on the resulting object. When `null`, the `dotnet_framework_version` field will be omitted from the resulting object.
-  - `elastic_instance_minimum` (`number`): Set the `elastic_instance_minimum` field on the resulting object. When `null`, the `elastic_instance_minimum` field will be omitted from the resulting object.
-  - `ftps_state` (`string`): Set the `ftps_state` field on the resulting object. When `null`, the `ftps_state` field will be omitted from the resulting object.
-  - `health_check_path` (`string`): Set the `health_check_path` field on the resulting object. When `null`, the `health_check_path` field will be omitted from the resulting object.
-  - `http2_enabled` (`bool`): Set the `http2_enabled` field on the resulting object. When `null`, the `http2_enabled` field will be omitted from the resulting object.
-  - `ip_restriction` (`list`): Set the `ip_restriction` field on the resulting object. When `null`, the `ip_restriction` field will be omitted from the resulting object.
-  - `java_version` (`string`): Set the `java_version` field on the resulting object. When `null`, the `java_version` field will be omitted from the resulting object.
-  - `linux_fx_version` (`string`): Set the `linux_fx_version` field on the resulting object. When `null`, the `linux_fx_version` field will be omitted from the resulting object.
-  - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting object. When `null`, the `min_tls_version` field will be omitted from the resulting object.
-  - `pre_warmed_instance_count` (`number`): Set the `pre_warmed_instance_count` field on the resulting object. When `null`, the `pre_warmed_instance_count` field will be omitted from the resulting object.
-  - `runtime_scale_monitoring_enabled` (`bool`): Set the `runtime_scale_monitoring_enabled` field on the resulting object. When `null`, the `runtime_scale_monitoring_enabled` field will be omitted from the resulting object.
-  - `scm_ip_restriction` (`list`): Set the `scm_ip_restriction` field on the resulting object. When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
-  - `scm_type` (`string`): Set the `scm_type` field on the resulting object. When `null`, the `scm_type` field will be omitted from the resulting object.
-  - `scm_use_main_ip_restriction` (`bool`): Set the `scm_use_main_ip_restriction` field on the resulting object. When `null`, the `scm_use_main_ip_restriction` field will be omitted from the resulting object.
-  - `use_32_bit_worker_process` (`bool`): Set the `use_32_bit_worker_process` field on the resulting object. When `null`, the `use_32_bit_worker_process` field will be omitted from the resulting object.
-  - `vnet_route_all_enabled` (`bool`): Set the `vnet_route_all_enabled` field on the resulting object. When `null`, the `vnet_route_all_enabled` field will be omitted from the resulting object.
-  - `websockets_enabled` (`bool`): Set the `websockets_enabled` field on the resulting object. When `null`, the `websockets_enabled` field will be omitted from the resulting object.
-  - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.site_config.cors.new](#fn-site_configcorsnew) constructor.
+  - `always_on` (`bool`):  When `null`, the `always_on` field will be omitted from the resulting object.
+  - `app_scale_limit` (`number`):  When `null`, the `app_scale_limit` field will be omitted from the resulting object.
+  - `auto_swap_slot_name` (`string`):  When `null`, the `auto_swap_slot_name` field will be omitted from the resulting object.
+  - `dotnet_framework_version` (`string`):  When `null`, the `dotnet_framework_version` field will be omitted from the resulting object.
+  - `elastic_instance_minimum` (`number`):  When `null`, the `elastic_instance_minimum` field will be omitted from the resulting object.
+  - `ftps_state` (`string`):  When `null`, the `ftps_state` field will be omitted from the resulting object.
+  - `health_check_path` (`string`):  When `null`, the `health_check_path` field will be omitted from the resulting object.
+  - `http2_enabled` (`bool`):  When `null`, the `http2_enabled` field will be omitted from the resulting object.
+  - `ip_restriction` (`list`):  When `null`, the `ip_restriction` field will be omitted from the resulting object.
+  - `java_version` (`string`):  When `null`, the `java_version` field will be omitted from the resulting object.
+  - `linux_fx_version` (`string`):  When `null`, the `linux_fx_version` field will be omitted from the resulting object.
+  - `min_tls_version` (`string`):  When `null`, the `min_tls_version` field will be omitted from the resulting object.
+  - `pre_warmed_instance_count` (`number`):  When `null`, the `pre_warmed_instance_count` field will be omitted from the resulting object.
+  - `runtime_scale_monitoring_enabled` (`bool`):  When `null`, the `runtime_scale_monitoring_enabled` field will be omitted from the resulting object.
+  - `scm_ip_restriction` (`list`):  When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
+  - `scm_type` (`string`):  When `null`, the `scm_type` field will be omitted from the resulting object.
+  - `scm_use_main_ip_restriction` (`bool`):  When `null`, the `scm_use_main_ip_restriction` field will be omitted from the resulting object.
+  - `use_32_bit_worker_process` (`bool`):  When `null`, the `use_32_bit_worker_process` field will be omitted from the resulting object.
+  - `vnet_route_all_enabled` (`bool`):  When `null`, the `vnet_route_all_enabled` field will be omitted from the resulting object.
+  - `websockets_enabled` (`bool`):  When `null`, the `websockets_enabled` field will be omitted from the resulting object.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.function_app.site_config.cors.new](#fn-site_configcorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `site_config` sub block.
@@ -915,8 +915,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
-  - `support_credentials` (`bool`): Set the `support_credentials` field on the resulting object. When `null`, the `support_credentials` field will be omitted from the resulting object.
+  - `allowed_origins` (`list`): 
+  - `support_credentials` (`bool`):  When `null`, the `support_credentials` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
@@ -939,11 +939,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `branch` (`string`): Set the `branch` field on the resulting object. When `null`, the `branch` field will be omitted from the resulting object.
-  - `manual_integration` (`bool`): Set the `manual_integration` field on the resulting object. When `null`, the `manual_integration` field will be omitted from the resulting object.
-  - `repo_url` (`string`): Set the `repo_url` field on the resulting object. When `null`, the `repo_url` field will be omitted from the resulting object.
-  - `rollback_enabled` (`bool`): Set the `rollback_enabled` field on the resulting object. When `null`, the `rollback_enabled` field will be omitted from the resulting object.
-  - `use_mercurial` (`bool`): Set the `use_mercurial` field on the resulting object. When `null`, the `use_mercurial` field will be omitted from the resulting object.
+  - `branch` (`string`):  When `null`, the `branch` field will be omitted from the resulting object.
+  - `manual_integration` (`bool`):  When `null`, the `manual_integration` field will be omitted from the resulting object.
+  - `repo_url` (`string`):  When `null`, the `repo_url` field will be omitted from the resulting object.
+  - `rollback_enabled` (`bool`):  When `null`, the `rollback_enabled` field will be omitted from the resulting object.
+  - `use_mercurial` (`bool`):  When `null`, the `use_mercurial` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `source_control` sub block.
@@ -966,10 +966,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

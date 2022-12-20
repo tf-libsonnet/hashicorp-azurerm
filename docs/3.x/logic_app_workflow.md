@@ -80,20 +80,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `integration_service_environment_id` (`string`): Set the `integration_service_environment_id` field on the resulting resource block. When `null`, the `integration_service_environment_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `logic_app_integration_account_id` (`string`): Set the `logic_app_integration_account_id` field on the resulting resource block. When `null`, the `logic_app_integration_account_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `workflow_parameters` (`obj`): Set the `workflow_parameters` field on the resulting resource block. When `null`, the `workflow_parameters` field will be omitted from the resulting object.
-  - `workflow_schema` (`string`): Set the `workflow_schema` field on the resulting resource block. When `null`, the `workflow_schema` field will be omitted from the resulting object.
-  - `workflow_version` (`string`): Set the `workflow_version` field on the resulting resource block. When `null`, the `workflow_version` field will be omitted from the resulting object.
-  - `access_control` (`list[obj]`): Set the `access_control` field on the resulting resource block. When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.new](#fn-access_controlnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `integration_service_environment_id` (`string`):  When `null`, the `integration_service_environment_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `logic_app_integration_account_id` (`string`):  When `null`, the `logic_app_integration_account_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `workflow_parameters` (`obj`):  When `null`, the `workflow_parameters` field will be omitted from the resulting object.
+  - `workflow_schema` (`string`):  When `null`, the `workflow_schema` field will be omitted from the resulting object.
+  - `workflow_version` (`string`):  When `null`, the `workflow_version` field will be omitted from the resulting object.
+  - `access_control` (`list[obj]`):  When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.new](#fn-access_controlnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -117,20 +117,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `integration_service_environment_id` (`string`): Set the `integration_service_environment_id` field on the resulting object. When `null`, the `integration_service_environment_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `logic_app_integration_account_id` (`string`): Set the `logic_app_integration_account_id` field on the resulting object. When `null`, the `logic_app_integration_account_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `workflow_parameters` (`obj`): Set the `workflow_parameters` field on the resulting object. When `null`, the `workflow_parameters` field will be omitted from the resulting object.
-  - `workflow_schema` (`string`): Set the `workflow_schema` field on the resulting object. When `null`, the `workflow_schema` field will be omitted from the resulting object.
-  - `workflow_version` (`string`): Set the `workflow_version` field on the resulting object. When `null`, the `workflow_version` field will be omitted from the resulting object.
-  - `access_control` (`list[obj]`): Set the `access_control` field on the resulting object. When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.new](#fn-access_controlnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.timeouts.new](#fn-timeoutsnew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `integration_service_environment_id` (`string`):  When `null`, the `integration_service_environment_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `logic_app_integration_account_id` (`string`):  When `null`, the `logic_app_integration_account_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `workflow_parameters` (`obj`):  When `null`, the `workflow_parameters` field will be omitted from the resulting object.
+  - `workflow_schema` (`string`):  When `null`, the `workflow_schema` field will be omitted from the resulting object.
+  - `workflow_version` (`string`):  When `null`, the `workflow_version` field will be omitted from the resulting object.
+  - `access_control` (`list[obj]`):  When `null`, the `access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.new](#fn-access_controlnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_workflow` resource into the root Terraform configuration.
@@ -439,10 +439,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.action.new](#fn-access_controlactionnew) constructor.
-  - `content` (`list[obj]`): Set the `content` field on the resulting object. When `null`, the `content` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.content.new](#fn-access_controlcontentnew) constructor.
-  - `trigger` (`list[obj]`): Set the `trigger` field on the resulting object. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.trigger.new](#fn-access_controltriggernew) constructor.
-  - `workflow_management` (`list[obj]`): Set the `workflow_management` field on the resulting object. When `null`, the `workflow_management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.workflow_management.new](#fn-access_controlworkflow_managementnew) constructor.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.action.new](#fn-access_controlactionnew) constructor.
+  - `content` (`list[obj]`):  When `null`, the `content` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.content.new](#fn-access_controlcontentnew) constructor.
+  - `trigger` (`list[obj]`):  When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.trigger.new](#fn-access_controltriggernew) constructor.
+  - `workflow_management` (`list[obj]`):  When `null`, the `workflow_management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.workflow_management.new](#fn-access_controlworkflow_managementnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `access_control` sub block.
@@ -465,7 +465,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_caller_ip_address_range` (`list`): Set the `allowed_caller_ip_address_range` field on the resulting object.
+  - `allowed_caller_ip_address_range` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -488,7 +488,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_caller_ip_address_range` (`list`): Set the `allowed_caller_ip_address_range` field on the resulting object.
+  - `allowed_caller_ip_address_range` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `content` sub block.
@@ -511,8 +511,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_caller_ip_address_range` (`list`): Set the `allowed_caller_ip_address_range` field on the resulting object.
-  - `open_authentication_policy` (`list[obj]`): Set the `open_authentication_policy` field on the resulting object. When `null`, the `open_authentication_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.trigger.open_authentication_policy.new](#fn-access_controlaccess_controlopen_authentication_policynew) constructor.
+  - `allowed_caller_ip_address_range` (`list`): 
+  - `open_authentication_policy` (`list[obj]`):  When `null`, the `open_authentication_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.trigger.open_authentication_policy.new](#fn-access_controlaccess_controlopen_authentication_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `trigger` sub block.
@@ -535,8 +535,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `claim` (`list[obj]`): Set the `claim` field on the resulting object. When `null`, the `claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.trigger.open_authentication_policy.claim.new](#fn-access_controlaccess_controltriggerclaimnew) constructor.
+  - `name` (`string`): 
+  - `claim` (`list[obj]`):  When `null`, the `claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_workflow.access_control.trigger.open_authentication_policy.claim.new](#fn-access_controlaccess_controltriggerclaimnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `open_authentication_policy` sub block.
@@ -559,8 +559,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `name` (`string`): 
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `claim` sub block.
@@ -583,7 +583,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_caller_ip_address_range` (`list`): Set the `allowed_caller_ip_address_range` field on the resulting object.
+  - `allowed_caller_ip_address_range` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `workflow_management` sub block.
@@ -606,8 +606,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -630,10 +630,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

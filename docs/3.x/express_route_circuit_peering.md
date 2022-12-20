@@ -69,19 +69,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `express_route_circuit_name` (`string`): Set the `express_route_circuit_name` field on the resulting resource block.
-  - `ipv4_enabled` (`bool`): Set the `ipv4_enabled` field on the resulting resource block. When `null`, the `ipv4_enabled` field will be omitted from the resulting object.
-  - `peer_asn` (`number`): Set the `peer_asn` field on the resulting resource block. When `null`, the `peer_asn` field will be omitted from the resulting object.
-  - `peering_type` (`string`): Set the `peering_type` field on the resulting resource block.
-  - `primary_peer_address_prefix` (`string`): Set the `primary_peer_address_prefix` field on the resulting resource block. When `null`, the `primary_peer_address_prefix` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `route_filter_id` (`string`): Set the `route_filter_id` field on the resulting resource block. When `null`, the `route_filter_id` field will be omitted from the resulting object.
-  - `secondary_peer_address_prefix` (`string`): Set the `secondary_peer_address_prefix` field on the resulting resource block. When `null`, the `secondary_peer_address_prefix` field will be omitted from the resulting object.
-  - `shared_key` (`string`): Set the `shared_key` field on the resulting resource block. When `null`, the `shared_key` field will be omitted from the resulting object.
-  - `vlan_id` (`number`): Set the `vlan_id` field on the resulting resource block.
-  - `ipv6` (`list[obj]`): Set the `ipv6` field on the resulting resource block. When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-ipv6new) constructor.
-  - `microsoft_peering_config` (`list[obj]`): Set the `microsoft_peering_config` field on the resulting resource block. When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-microsoft_peering_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-timeoutsnew) constructor.
+  - `express_route_circuit_name` (`string`): 
+  - `ipv4_enabled` (`bool`):  When `null`, the `ipv4_enabled` field will be omitted from the resulting object.
+  - `peer_asn` (`number`):  When `null`, the `peer_asn` field will be omitted from the resulting object.
+  - `peering_type` (`string`): 
+  - `primary_peer_address_prefix` (`string`):  When `null`, the `primary_peer_address_prefix` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `route_filter_id` (`string`):  When `null`, the `route_filter_id` field will be omitted from the resulting object.
+  - `secondary_peer_address_prefix` (`string`):  When `null`, the `secondary_peer_address_prefix` field will be omitted from the resulting object.
+  - `shared_key` (`string`):  When `null`, the `shared_key` field will be omitted from the resulting object.
+  - `vlan_id` (`number`): 
+  - `ipv6` (`list[obj]`):  When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-ipv6new) constructor.
+  - `microsoft_peering_config` (`list[obj]`):  When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-microsoft_peering_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,19 +105,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `express_route_circuit_name` (`string`): Set the `express_route_circuit_name` field on the resulting object.
-  - `ipv4_enabled` (`bool`): Set the `ipv4_enabled` field on the resulting object. When `null`, the `ipv4_enabled` field will be omitted from the resulting object.
-  - `peer_asn` (`number`): Set the `peer_asn` field on the resulting object. When `null`, the `peer_asn` field will be omitted from the resulting object.
-  - `peering_type` (`string`): Set the `peering_type` field on the resulting object.
-  - `primary_peer_address_prefix` (`string`): Set the `primary_peer_address_prefix` field on the resulting object. When `null`, the `primary_peer_address_prefix` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `route_filter_id` (`string`): Set the `route_filter_id` field on the resulting object. When `null`, the `route_filter_id` field will be omitted from the resulting object.
-  - `secondary_peer_address_prefix` (`string`): Set the `secondary_peer_address_prefix` field on the resulting object. When `null`, the `secondary_peer_address_prefix` field will be omitted from the resulting object.
-  - `shared_key` (`string`): Set the `shared_key` field on the resulting object. When `null`, the `shared_key` field will be omitted from the resulting object.
-  - `vlan_id` (`number`): Set the `vlan_id` field on the resulting object.
-  - `ipv6` (`list[obj]`): Set the `ipv6` field on the resulting object. When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-ipv6new) constructor.
-  - `microsoft_peering_config` (`list[obj]`): Set the `microsoft_peering_config` field on the resulting object. When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-microsoft_peering_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-timeoutsnew) constructor.
+  - `express_route_circuit_name` (`string`): 
+  - `ipv4_enabled` (`bool`):  When `null`, the `ipv4_enabled` field will be omitted from the resulting object.
+  - `peer_asn` (`number`):  When `null`, the `peer_asn` field will be omitted from the resulting object.
+  - `peering_type` (`string`): 
+  - `primary_peer_address_prefix` (`string`):  When `null`, the `primary_peer_address_prefix` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `route_filter_id` (`string`):  When `null`, the `route_filter_id` field will be omitted from the resulting object.
+  - `secondary_peer_address_prefix` (`string`):  When `null`, the `secondary_peer_address_prefix` field will be omitted from the resulting object.
+  - `shared_key` (`string`):  When `null`, the `shared_key` field will be omitted from the resulting object.
+  - `vlan_id` (`number`): 
+  - `ipv6` (`list[obj]`):  When `null`, the `ipv6` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.new](#fn-ipv6new) constructor.
+  - `microsoft_peering_config` (`list[obj]`):  When `null`, the `microsoft_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.microsoft_peering_config.new](#fn-microsoft_peering_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_circuit_peering` resource into the root Terraform configuration.
@@ -410,11 +410,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `primary_peer_address_prefix` (`string`): Set the `primary_peer_address_prefix` field on the resulting object.
-  - `route_filter_id` (`string`): Set the `route_filter_id` field on the resulting object. When `null`, the `route_filter_id` field will be omitted from the resulting object.
-  - `secondary_peer_address_prefix` (`string`): Set the `secondary_peer_address_prefix` field on the resulting object.
-  - `microsoft_peering` (`list[obj]`): Set the `microsoft_peering` field on the resulting object. When `null`, the `microsoft_peering` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new](#fn-ipv6microsoft_peeringnew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `primary_peer_address_prefix` (`string`): 
+  - `route_filter_id` (`string`):  When `null`, the `route_filter_id` field will be omitted from the resulting object.
+  - `secondary_peer_address_prefix` (`string`): 
+  - `microsoft_peering` (`list[obj]`):  When `null`, the `microsoft_peering` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new](#fn-ipv6microsoft_peeringnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ipv6` sub block.
@@ -437,9 +437,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object. When `null`, the `advertised_public_prefixes` field will be omitted from the resulting object.
-  - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.
-  - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.
+  - `advertised_public_prefixes` (`list`):  When `null`, the `advertised_public_prefixes` field will be omitted from the resulting object.
+  - `customer_asn` (`number`):  When `null`, the `customer_asn` field will be omitted from the resulting object.
+  - `routing_registry_name` (`string`):  When `null`, the `routing_registry_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `microsoft_peering` sub block.
@@ -462,9 +462,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object.
-  - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.
-  - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.
+  - `advertised_public_prefixes` (`list`): 
+  - `customer_asn` (`number`):  When `null`, the `customer_asn` field will be omitted from the resulting object.
+  - `routing_registry_name` (`string`):  When `null`, the `routing_registry_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `microsoft_peering_config` sub block.
@@ -487,10 +487,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

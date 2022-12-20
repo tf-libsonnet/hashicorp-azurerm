@@ -66,9 +66,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.
-  - `rule` (`list[obj]`): Set the `rule` field on the resulting resource block. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `storage_account_id` (`string`): 
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.new](#fn-rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,9 +92,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
-  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `storage_account_id` (`string`): 
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.new](#fn-rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_management_policy` resource into the root Terraform configuration.
@@ -206,10 +206,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `actions` (`list[obj]`): Set the `actions` field on the resulting object. When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.new](#fn-ruleactionsnew) constructor.
-  - `filters` (`list[obj]`): Set the `filters` field on the resulting object. When `null`, the `filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.new](#fn-rulefiltersnew) constructor.
+  - `enabled` (`bool`): 
+  - `name` (`string`): 
+  - `actions` (`list[obj]`):  When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.new](#fn-ruleactionsnew) constructor.
+  - `filters` (`list[obj]`):  When `null`, the `filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.new](#fn-rulefiltersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -232,9 +232,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `base_blob` (`list[obj]`): Set the `base_blob` field on the resulting object. When `null`, the `base_blob` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.base_blob.new](#fn-rulerulebase_blobnew) constructor.
-  - `snapshot` (`list[obj]`): Set the `snapshot` field on the resulting object. When `null`, the `snapshot` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.snapshot.new](#fn-rulerulesnapshotnew) constructor.
-  - `version` (`list[obj]`): Set the `version` field on the resulting object. When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.version.new](#fn-ruleruleversionnew) constructor.
+  - `base_blob` (`list[obj]`):  When `null`, the `base_blob` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.base_blob.new](#fn-rulerulebase_blobnew) constructor.
+  - `snapshot` (`list[obj]`):  When `null`, the `snapshot` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.snapshot.new](#fn-rulerulesnapshotnew) constructor.
+  - `version` (`list[obj]`):  When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.actions.version.new](#fn-ruleruleversionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `actions` sub block.
@@ -257,16 +257,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `delete_after_days_since_creation_greater_than` (`number`): Set the `delete_after_days_since_creation_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_creation_greater_than` field will be omitted from the resulting object.
-  - `delete_after_days_since_last_access_time_greater_than` (`number`): Set the `delete_after_days_since_last_access_time_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
-  - `delete_after_days_since_modification_greater_than` (`number`): Set the `delete_after_days_since_modification_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_modification_greater_than` field will be omitted from the resulting object.
-  - `tier_to_archive_after_days_since_creation_greater_than` (`number`): Set the `tier_to_archive_after_days_since_creation_greater_than` field on the resulting object. When `null`, the `tier_to_archive_after_days_since_creation_greater_than` field will be omitted from the resulting object.
-  - `tier_to_archive_after_days_since_last_access_time_greater_than` (`number`): Set the `tier_to_archive_after_days_since_last_access_time_greater_than` field on the resulting object. When `null`, the `tier_to_archive_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
-  - `tier_to_archive_after_days_since_last_tier_change_greater_than` (`number`): Set the `tier_to_archive_after_days_since_last_tier_change_greater_than` field on the resulting object. When `null`, the `tier_to_archive_after_days_since_last_tier_change_greater_than` field will be omitted from the resulting object.
-  - `tier_to_archive_after_days_since_modification_greater_than` (`number`): Set the `tier_to_archive_after_days_since_modification_greater_than` field on the resulting object. When `null`, the `tier_to_archive_after_days_since_modification_greater_than` field will be omitted from the resulting object.
-  - `tier_to_cool_after_days_since_creation_greater_than` (`number`): Set the `tier_to_cool_after_days_since_creation_greater_than` field on the resulting object. When `null`, the `tier_to_cool_after_days_since_creation_greater_than` field will be omitted from the resulting object.
-  - `tier_to_cool_after_days_since_last_access_time_greater_than` (`number`): Set the `tier_to_cool_after_days_since_last_access_time_greater_than` field on the resulting object. When `null`, the `tier_to_cool_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
-  - `tier_to_cool_after_days_since_modification_greater_than` (`number`): Set the `tier_to_cool_after_days_since_modification_greater_than` field on the resulting object. When `null`, the `tier_to_cool_after_days_since_modification_greater_than` field will be omitted from the resulting object.
+  - `delete_after_days_since_creation_greater_than` (`number`):  When `null`, the `delete_after_days_since_creation_greater_than` field will be omitted from the resulting object.
+  - `delete_after_days_since_last_access_time_greater_than` (`number`):  When `null`, the `delete_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
+  - `delete_after_days_since_modification_greater_than` (`number`):  When `null`, the `delete_after_days_since_modification_greater_than` field will be omitted from the resulting object.
+  - `tier_to_archive_after_days_since_creation_greater_than` (`number`):  When `null`, the `tier_to_archive_after_days_since_creation_greater_than` field will be omitted from the resulting object.
+  - `tier_to_archive_after_days_since_last_access_time_greater_than` (`number`):  When `null`, the `tier_to_archive_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
+  - `tier_to_archive_after_days_since_last_tier_change_greater_than` (`number`):  When `null`, the `tier_to_archive_after_days_since_last_tier_change_greater_than` field will be omitted from the resulting object.
+  - `tier_to_archive_after_days_since_modification_greater_than` (`number`):  When `null`, the `tier_to_archive_after_days_since_modification_greater_than` field will be omitted from the resulting object.
+  - `tier_to_cool_after_days_since_creation_greater_than` (`number`):  When `null`, the `tier_to_cool_after_days_since_creation_greater_than` field will be omitted from the resulting object.
+  - `tier_to_cool_after_days_since_last_access_time_greater_than` (`number`):  When `null`, the `tier_to_cool_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
+  - `tier_to_cool_after_days_since_modification_greater_than` (`number`):  When `null`, the `tier_to_cool_after_days_since_modification_greater_than` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `base_blob` sub block.
@@ -289,10 +289,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `change_tier_to_archive_after_days_since_creation` (`number`): Set the `change_tier_to_archive_after_days_since_creation` field on the resulting object. When `null`, the `change_tier_to_archive_after_days_since_creation` field will be omitted from the resulting object.
-  - `change_tier_to_cool_after_days_since_creation` (`number`): Set the `change_tier_to_cool_after_days_since_creation` field on the resulting object. When `null`, the `change_tier_to_cool_after_days_since_creation` field will be omitted from the resulting object.
-  - `delete_after_days_since_creation_greater_than` (`number`): Set the `delete_after_days_since_creation_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_creation_greater_than` field will be omitted from the resulting object.
-  - `tier_to_archive_after_days_since_last_tier_change_greater_than` (`number`): Set the `tier_to_archive_after_days_since_last_tier_change_greater_than` field on the resulting object. When `null`, the `tier_to_archive_after_days_since_last_tier_change_greater_than` field will be omitted from the resulting object.
+  - `change_tier_to_archive_after_days_since_creation` (`number`):  When `null`, the `change_tier_to_archive_after_days_since_creation` field will be omitted from the resulting object.
+  - `change_tier_to_cool_after_days_since_creation` (`number`):  When `null`, the `change_tier_to_cool_after_days_since_creation` field will be omitted from the resulting object.
+  - `delete_after_days_since_creation_greater_than` (`number`):  When `null`, the `delete_after_days_since_creation_greater_than` field will be omitted from the resulting object.
+  - `tier_to_archive_after_days_since_last_tier_change_greater_than` (`number`):  When `null`, the `tier_to_archive_after_days_since_last_tier_change_greater_than` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `snapshot` sub block.
@@ -315,10 +315,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `change_tier_to_archive_after_days_since_creation` (`number`): Set the `change_tier_to_archive_after_days_since_creation` field on the resulting object. When `null`, the `change_tier_to_archive_after_days_since_creation` field will be omitted from the resulting object.
-  - `change_tier_to_cool_after_days_since_creation` (`number`): Set the `change_tier_to_cool_after_days_since_creation` field on the resulting object. When `null`, the `change_tier_to_cool_after_days_since_creation` field will be omitted from the resulting object.
-  - `delete_after_days_since_creation` (`number`): Set the `delete_after_days_since_creation` field on the resulting object. When `null`, the `delete_after_days_since_creation` field will be omitted from the resulting object.
-  - `tier_to_archive_after_days_since_last_tier_change_greater_than` (`number`): Set the `tier_to_archive_after_days_since_last_tier_change_greater_than` field on the resulting object. When `null`, the `tier_to_archive_after_days_since_last_tier_change_greater_than` field will be omitted from the resulting object.
+  - `change_tier_to_archive_after_days_since_creation` (`number`):  When `null`, the `change_tier_to_archive_after_days_since_creation` field will be omitted from the resulting object.
+  - `change_tier_to_cool_after_days_since_creation` (`number`):  When `null`, the `change_tier_to_cool_after_days_since_creation` field will be omitted from the resulting object.
+  - `delete_after_days_since_creation` (`number`):  When `null`, the `delete_after_days_since_creation` field will be omitted from the resulting object.
+  - `tier_to_archive_after_days_since_last_tier_change_greater_than` (`number`):  When `null`, the `tier_to_archive_after_days_since_last_tier_change_greater_than` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `version` sub block.
@@ -341,9 +341,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `blob_types` (`list`): Set the `blob_types` field on the resulting object.
-  - `prefix_match` (`list`): Set the `prefix_match` field on the resulting object. When `null`, the `prefix_match` field will be omitted from the resulting object.
-  - `match_blob_index_tag` (`list[obj]`): Set the `match_blob_index_tag` field on the resulting object. When `null`, the `match_blob_index_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.match_blob_index_tag.new](#fn-rulerulematch_blob_index_tagnew) constructor.
+  - `blob_types` (`list`): 
+  - `prefix_match` (`list`):  When `null`, the `prefix_match` field will be omitted from the resulting object.
+  - `match_blob_index_tag` (`list[obj]`):  When `null`, the `match_blob_index_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_management_policy.rule.filters.match_blob_index_tag.new](#fn-rulerulematch_blob_index_tagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `filters` sub block.
@@ -366,9 +366,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `operation` (`string`): Set the `operation` field on the resulting object. When `null`, the `operation` field will be omitted from the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `name` (`string`): 
+  - `operation` (`string`):  When `null`, the `operation` field will be omitted from the resulting object.
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `match_blob_index_tag` sub block.
@@ -391,10 +391,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

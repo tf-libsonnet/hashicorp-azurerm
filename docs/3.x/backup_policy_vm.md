@@ -75,18 +75,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `instant_restore_retention_days` (`number`): Set the `instant_restore_retention_days` field on the resulting resource block. When `null`, the `instant_restore_retention_days` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `policy_type` (`string`): Set the `policy_type` field on the resulting resource block. When `null`, the `policy_type` field will be omitted from the resulting object.
-  - `recovery_vault_name` (`string`): Set the `recovery_vault_name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `timezone` (`string`): Set the `timezone` field on the resulting resource block. When `null`, the `timezone` field will be omitted from the resulting object.
-  - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.backup.new](#fn-backupnew) constructor.
-  - `retention_daily` (`list[obj]`): Set the `retention_daily` field on the resulting resource block. When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_daily.new](#fn-retention_dailynew) constructor.
-  - `retention_monthly` (`list[obj]`): Set the `retention_monthly` field on the resulting resource block. When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_monthly.new](#fn-retention_monthlynew) constructor.
-  - `retention_weekly` (`list[obj]`): Set the `retention_weekly` field on the resulting resource block. When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_weekly.new](#fn-retention_weeklynew) constructor.
-  - `retention_yearly` (`list[obj]`): Set the `retention_yearly` field on the resulting resource block. When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_yearly.new](#fn-retention_yearlynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.timeouts.new](#fn-timeoutsnew) constructor.
+  - `instant_restore_retention_days` (`number`):  When `null`, the `instant_restore_retention_days` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `policy_type` (`string`):  When `null`, the `policy_type` field will be omitted from the resulting object.
+  - `recovery_vault_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.backup.new](#fn-backupnew) constructor.
+  - `retention_daily` (`list[obj]`):  When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_daily.new](#fn-retention_dailynew) constructor.
+  - `retention_monthly` (`list[obj]`):  When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_monthly.new](#fn-retention_monthlynew) constructor.
+  - `retention_weekly` (`list[obj]`):  When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_weekly.new](#fn-retention_weeklynew) constructor.
+  - `retention_yearly` (`list[obj]`):  When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_yearly.new](#fn-retention_yearlynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,18 +110,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `instant_restore_retention_days` (`number`): Set the `instant_restore_retention_days` field on the resulting object. When `null`, the `instant_restore_retention_days` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `policy_type` (`string`): Set the `policy_type` field on the resulting object. When `null`, the `policy_type` field will be omitted from the resulting object.
-  - `recovery_vault_name` (`string`): Set the `recovery_vault_name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
-  - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.backup.new](#fn-backupnew) constructor.
-  - `retention_daily` (`list[obj]`): Set the `retention_daily` field on the resulting object. When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_daily.new](#fn-retention_dailynew) constructor.
-  - `retention_monthly` (`list[obj]`): Set the `retention_monthly` field on the resulting object. When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_monthly.new](#fn-retention_monthlynew) constructor.
-  - `retention_weekly` (`list[obj]`): Set the `retention_weekly` field on the resulting object. When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_weekly.new](#fn-retention_weeklynew) constructor.
-  - `retention_yearly` (`list[obj]`): Set the `retention_yearly` field on the resulting object. When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_yearly.new](#fn-retention_yearlynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.timeouts.new](#fn-timeoutsnew) constructor.
+  - `instant_restore_retention_days` (`number`):  When `null`, the `instant_restore_retention_days` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `policy_type` (`string`):  When `null`, the `policy_type` field will be omitted from the resulting object.
+  - `recovery_vault_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
+  - `backup` (`list[obj]`):  When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.backup.new](#fn-backupnew) constructor.
+  - `retention_daily` (`list[obj]`):  When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_daily.new](#fn-retention_dailynew) constructor.
+  - `retention_monthly` (`list[obj]`):  When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_monthly.new](#fn-retention_monthlynew) constructor.
+  - `retention_weekly` (`list[obj]`):  When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_weekly.new](#fn-retention_weeklynew) constructor.
+  - `retention_yearly` (`list[obj]`):  When `null`, the `retention_yearly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_yearly.new](#fn-retention_yearlynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `backup_policy_vm` resource into the root Terraform configuration.
@@ -461,11 +461,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `frequency` (`string`): Set the `frequency` field on the resulting object.
-  - `hour_duration` (`number`): Set the `hour_duration` field on the resulting object. When `null`, the `hour_duration` field will be omitted from the resulting object.
-  - `hour_interval` (`number`): Set the `hour_interval` field on the resulting object. When `null`, the `hour_interval` field will be omitted from the resulting object.
-  - `time` (`string`): Set the `time` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.
+  - `frequency` (`string`): 
+  - `hour_duration` (`number`):  When `null`, the `hour_duration` field will be omitted from the resulting object.
+  - `hour_interval` (`number`):  When `null`, the `hour_interval` field will be omitted from the resulting object.
+  - `time` (`string`): 
+  - `weekdays` (`list`):  When `null`, the `weekdays` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
@@ -488,7 +488,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `count` (`number`): Set the `count` field on the resulting object.
+  - `count` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `retention_daily` sub block.
@@ -511,9 +511,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `count` (`number`): Set the `count` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
-  - `weeks` (`list`): Set the `weeks` field on the resulting object.
+  - `count` (`number`): 
+  - `weekdays` (`list`): 
+  - `weeks` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `retention_monthly` sub block.
@@ -536,8 +536,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `count` (`number`): Set the `count` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
+  - `count` (`number`): 
+  - `weekdays` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `retention_weekly` sub block.
@@ -560,10 +560,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `count` (`number`): Set the `count` field on the resulting object.
-  - `months` (`list`): Set the `months` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
-  - `weeks` (`list`): Set the `weeks` field on the resulting object.
+  - `count` (`number`): 
+  - `months` (`list`): 
+  - `weekdays` (`list`): 
+  - `weeks` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `retention_yearly` sub block.
@@ -586,10 +586,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

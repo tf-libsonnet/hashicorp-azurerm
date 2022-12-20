@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
-  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting resource block. When `null`, the `management_group_id` field will be omitted from the resulting object.
-  - `metadata` (`string`): Set the `metadata` field on the resulting resource block. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parameters` (`string`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `policy_type` (`string`): Set the `policy_type` field on the resulting resource block.
-  - `policy_definition_group` (`list[obj]`): Set the `policy_definition_group` field on the resulting resource block. When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_definition_groupnew) constructor.
-  - `policy_definition_reference` (`list[obj]`): Set the `policy_definition_reference` field on the resulting resource block. When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_definition_referencenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): 
+  - `management_group_id` (`string`):  When `null`, the `management_group_id` field will be omitted from the resulting object.
+  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `policy_type` (`string`): 
+  - `policy_definition_group` (`list[obj]`):  When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_definition_groupnew) constructor.
+  - `policy_definition_reference` (`list[obj]`):  When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_definition_referencenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting object.
-  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting object. When `null`, the `management_group_id` field will be omitted from the resulting object.
-  - `metadata` (`string`): Set the `metadata` field on the resulting object. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameters` (`string`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `policy_type` (`string`): Set the `policy_type` field on the resulting object.
-  - `policy_definition_group` (`list[obj]`): Set the `policy_definition_group` field on the resulting object. When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_definition_groupnew) constructor.
-  - `policy_definition_reference` (`list[obj]`): Set the `policy_definition_reference` field on the resulting object. When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_definition_referencenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): 
+  - `management_group_id` (`string`):  When `null`, the `management_group_id` field will be omitted from the resulting object.
+  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`string`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `policy_type` (`string`): 
+  - `policy_definition_group` (`list[obj]`):  When `null`, the `policy_definition_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_group.new](#fn-policy_definition_groupnew) constructor.
+  - `policy_definition_reference` (`list[obj]`):  When `null`, the `policy_definition_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.policy_definition_reference.new](#fn-policy_definition_referencenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.policy_set_definition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `policy_set_definition` resource into the root Terraform configuration.
@@ -351,11 +351,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `additional_metadata_resource_id` (`string`): Set the `additional_metadata_resource_id` field on the resulting object. When `null`, the `additional_metadata_resource_id` field will be omitted from the resulting object.
-  - `category` (`string`): Set the `category` field on the resulting object. When `null`, the `category` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `additional_metadata_resource_id` (`string`):  When `null`, the `additional_metadata_resource_id` field will be omitted from the resulting object.
+  - `category` (`string`):  When `null`, the `category` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `policy_definition_group` sub block.
@@ -378,10 +378,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `parameter_values` (`string`): Set the `parameter_values` field on the resulting object. When `null`, the `parameter_values` field will be omitted from the resulting object.
-  - `policy_definition_id` (`string`): Set the `policy_definition_id` field on the resulting object.
-  - `policy_group_names` (`list`): Set the `policy_group_names` field on the resulting object. When `null`, the `policy_group_names` field will be omitted from the resulting object.
-  - `reference_id` (`string`): Set the `reference_id` field on the resulting object. When `null`, the `reference_id` field will be omitted from the resulting object.
+  - `parameter_values` (`string`):  When `null`, the `parameter_values` field will be omitted from the resulting object.
+  - `policy_definition_id` (`string`): 
+  - `policy_group_names` (`list`):  When `null`, the `policy_group_names` field will be omitted from the resulting object.
+  - `reference_id` (`string`):  When `null`, the `reference_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `policy_definition_reference` sub block.
@@ -404,10 +404,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

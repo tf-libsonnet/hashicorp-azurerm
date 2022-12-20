@@ -62,17 +62,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting resource block. When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting resource block. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `folder` (`string`): Set the `folder` field on the resulting resource block. When `null`, the `folder` field will be omitted from the resulting object.
-  - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `table_name` (`string`): Set the `table_name` field on the resulting resource block. When `null`, the `table_name` field will be omitted from the resulting object.
-  - `schema_column` (`list[obj]`): Set the `schema_column` field on the resulting resource block. When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.schema_column.new](#fn-schema_columnnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `folder` (`string`):  When `null`, the `folder` field will be omitted from the resulting object.
+  - `linked_service_name` (`string`): 
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `table_name` (`string`):  When `null`, the `table_name` field will be omitted from the resulting object.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.schema_column.new](#fn-schema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,17 +96,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting object. When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting object. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `folder` (`string`): Set the `folder` field on the resulting object. When `null`, the `folder` field will be omitted from the resulting object.
-  - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `table_name` (`string`): Set the `table_name` field on the resulting object. When `null`, the `table_name` field will be omitted from the resulting object.
-  - `schema_column` (`list[obj]`): Set the `schema_column` field on the resulting object. When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.schema_column.new](#fn-schema_columnnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.timeouts.new](#fn-timeoutsnew) constructor.
+  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `folder` (`string`):  When `null`, the `folder` field will be omitted from the resulting object.
+  - `linked_service_name` (`string`): 
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `table_name` (`string`):  When `null`, the `table_name` field will be omitted from the resulting object.
+  - `schema_column` (`list[obj]`):  When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.schema_column.new](#fn-schema_columnnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_mysql.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_dataset_mysql` resource into the root Terraform configuration.
@@ -346,9 +346,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `schema_column` sub block.
@@ -371,10 +371,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

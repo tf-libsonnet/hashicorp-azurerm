@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `integration_account_name` (`string`): Set the `integration_account_name` field on the resulting resource block.
-  - `metadata` (`string`): Set the `metadata` field on the resulting resource block. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `public_certificate` (`string`): Set the `public_certificate` field on the resulting resource block. When `null`, the `public_certificate` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `key_vault_key` (`list[obj]`): Set the `key_vault_key` field on the resulting resource block. When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-key_vault_keynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-timeoutsnew) constructor.
+  - `integration_account_name` (`string`): 
+  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_certificate` (`string`):  When `null`, the `public_certificate` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `key_vault_key` (`list[obj]`):  When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-key_vault_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `integration_account_name` (`string`): Set the `integration_account_name` field on the resulting object.
-  - `metadata` (`string`): Set the `metadata` field on the resulting object. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_certificate` (`string`): Set the `public_certificate` field on the resulting object. When `null`, the `public_certificate` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `key_vault_key` (`list[obj]`): Set the `key_vault_key` field on the resulting object. When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-key_vault_keynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-timeoutsnew) constructor.
+  - `integration_account_name` (`string`): 
+  - `metadata` (`string`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_certificate` (`string`):  When `null`, the `public_certificate` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `key_vault_key` (`list[obj]`):  When `null`, the `key_vault_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.key_vault_key.new](#fn-key_vault_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_integration_account_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_integration_account_certificate` resource into the root Terraform configuration.
@@ -270,9 +270,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_name` (`string`): Set the `key_name` field on the resulting object.
-  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
-  - `key_version` (`string`): Set the `key_version` field on the resulting object. When `null`, the `key_version` field will be omitted from the resulting object.
+  - `key_name` (`string`): 
+  - `key_vault_id` (`string`): 
+  - `key_version` (`string`):  When `null`, the `key_version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `key_vault_key` sub block.
@@ -295,10 +295,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

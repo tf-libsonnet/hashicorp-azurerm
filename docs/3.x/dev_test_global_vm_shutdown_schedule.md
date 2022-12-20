@@ -59,14 +59,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `daily_recurrence_time` (`string`): Set the `daily_recurrence_time` field on the resulting resource block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timezone` (`string`): Set the `timezone` field on the resulting resource block.
-  - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting resource block.
-  - `notification_settings` (`list[obj]`): Set the `notification_settings` field on the resulting resource block. When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `daily_recurrence_time` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `timezone` (`string`): 
+  - `virtual_machine_id` (`string`): 
+  - `notification_settings` (`list[obj]`):  When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,14 +90,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `daily_recurrence_time` (`string`): Set the `daily_recurrence_time` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timezone` (`string`): Set the `timezone` field on the resulting object.
-  - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting object.
-  - `notification_settings` (`list[obj]`): Set the `notification_settings` field on the resulting object. When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `daily_recurrence_time` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `timezone` (`string`): 
+  - `virtual_machine_id` (`string`): 
+  - `notification_settings` (`list[obj]`):  When `null`, the `notification_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.notification_settings.new](#fn-notification_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dev_test_global_vm_shutdown_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dev_test_global_vm_shutdown_schedule` resource into the root Terraform configuration.
@@ -289,10 +289,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `email` (`string`): Set the `email` field on the resulting object. When `null`, the `email` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `time_in_minutes` (`number`): Set the `time_in_minutes` field on the resulting object. When `null`, the `time_in_minutes` field will be omitted from the resulting object.
-  - `webhook_url` (`string`): Set the `webhook_url` field on the resulting object. When `null`, the `webhook_url` field will be omitted from the resulting object.
+  - `email` (`string`):  When `null`, the `email` field will be omitted from the resulting object.
+  - `enabled` (`bool`): 
+  - `time_in_minutes` (`number`):  When `null`, the `time_in_minutes` field will be omitted from the resulting object.
+  - `webhook_url` (`string`):  When `null`, the `webhook_url` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `notification_settings` sub block.
@@ -315,10 +315,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

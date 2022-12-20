@@ -60,18 +60,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `app_service_environment_id` (`string`): Set the `app_service_environment_id` field on the resulting resource block. When `null`, the `app_service_environment_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `maximum_elastic_worker_count` (`number`): Set the `maximum_elastic_worker_count` field on the resulting resource block. When `null`, the `maximum_elastic_worker_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `os_type` (`string`): Set the `os_type` field on the resulting resource block.
-  - `per_site_scaling_enabled` (`bool`): Set the `per_site_scaling_enabled` field on the resulting resource block. When `null`, the `per_site_scaling_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `worker_count` (`number`): Set the `worker_count` field on the resulting resource block. When `null`, the `worker_count` field will be omitted from the resulting object.
-  - `zone_balancing_enabled` (`bool`): Set the `zone_balancing_enabled` field on the resulting resource block. When `null`, the `zone_balancing_enabled` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_plan.timeouts.new](#fn-timeoutsnew) constructor.
+  - `app_service_environment_id` (`string`):  When `null`, the `app_service_environment_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `maximum_elastic_worker_count` (`number`):  When `null`, the `maximum_elastic_worker_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_type` (`string`): 
+  - `per_site_scaling_enabled` (`bool`):  When `null`, the `per_site_scaling_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `worker_count` (`number`):  When `null`, the `worker_count` field will be omitted from the resulting object.
+  - `zone_balancing_enabled` (`bool`):  When `null`, the `zone_balancing_enabled` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,18 +95,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `app_service_environment_id` (`string`): Set the `app_service_environment_id` field on the resulting object. When `null`, the `app_service_environment_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `maximum_elastic_worker_count` (`number`): Set the `maximum_elastic_worker_count` field on the resulting object. When `null`, the `maximum_elastic_worker_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `os_type` (`string`): Set the `os_type` field on the resulting object.
-  - `per_site_scaling_enabled` (`bool`): Set the `per_site_scaling_enabled` field on the resulting object. When `null`, the `per_site_scaling_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `worker_count` (`number`): Set the `worker_count` field on the resulting object. When `null`, the `worker_count` field will be omitted from the resulting object.
-  - `zone_balancing_enabled` (`bool`): Set the `zone_balancing_enabled` field on the resulting object. When `null`, the `zone_balancing_enabled` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_plan.timeouts.new](#fn-timeoutsnew) constructor.
+  - `app_service_environment_id` (`string`):  When `null`, the `app_service_environment_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `maximum_elastic_worker_count` (`number`):  When `null`, the `maximum_elastic_worker_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_type` (`string`): 
+  - `per_site_scaling_enabled` (`bool`):  When `null`, the `per_site_scaling_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `worker_count` (`number`):  When `null`, the `worker_count` field will be omitted from the resulting object.
+  - `zone_balancing_enabled` (`bool`):  When `null`, the `zone_balancing_enabled` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `service_plan` resource into the root Terraform configuration.
@@ -341,10 +341,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

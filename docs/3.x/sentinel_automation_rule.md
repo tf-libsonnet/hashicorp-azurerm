@@ -67,16 +67,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `expiration` (`string`): Set the `expiration` field on the resulting resource block. When `null`, the `expiration` field will be omitted from the resulting object.
-  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `order` (`number`): Set the `order` field on the resulting resource block.
-  - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting resource block. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.
-  - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting resource block. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `display_name` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `expiration` (`string`):  When `null`, the `expiration` field will be omitted from the resulting object.
+  - `log_analytics_workspace_id` (`string`): 
+  - `name` (`string`): 
+  - `order` (`number`): 
+  - `action_incident` (`list[obj]`):  When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.
+  - `action_playbook` (`list[obj]`):  When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,16 +100,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `display_name` (`string`): Set the `display_name` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `expiration` (`string`): Set the `expiration` field on the resulting object. When `null`, the `expiration` field will be omitted from the resulting object.
-  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `order` (`number`): Set the `order` field on the resulting object.
-  - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting object. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.
-  - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting object. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `display_name` (`string`): 
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `expiration` (`string`):  When `null`, the `expiration` field will be omitted from the resulting object.
+  - `log_analytics_workspace_id` (`string`): 
+  - `name` (`string`): 
+  - `order` (`number`): 
+  - `action_incident` (`list[obj]`):  When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.
+  - `action_playbook` (`list[obj]`):  When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sentinel_automation_rule` resource into the root Terraform configuration.
@@ -375,13 +375,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `classification` (`string`): Set the `classification` field on the resulting object. When `null`, the `classification` field will be omitted from the resulting object.
-  - `classification_comment` (`string`): Set the `classification_comment` field on the resulting object. When `null`, the `classification_comment` field will be omitted from the resulting object.
-  - `labels` (`list`): Set the `labels` field on the resulting object. When `null`, the `labels` field will be omitted from the resulting object.
-  - `order` (`number`): Set the `order` field on the resulting object.
-  - `owner_id` (`string`): Set the `owner_id` field on the resulting object. When `null`, the `owner_id` field will be omitted from the resulting object.
-  - `severity` (`string`): Set the `severity` field on the resulting object. When `null`, the `severity` field will be omitted from the resulting object.
-  - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
+  - `classification` (`string`):  When `null`, the `classification` field will be omitted from the resulting object.
+  - `classification_comment` (`string`):  When `null`, the `classification_comment` field will be omitted from the resulting object.
+  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
+  - `order` (`number`): 
+  - `owner_id` (`string`):  When `null`, the `owner_id` field will be omitted from the resulting object.
+  - `severity` (`string`):  When `null`, the `severity` field will be omitted from the resulting object.
+  - `status` (`string`):  When `null`, the `status` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action_incident` sub block.
@@ -404,9 +404,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `logic_app_id` (`string`): Set the `logic_app_id` field on the resulting object.
-  - `order` (`number`): Set the `order` field on the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `logic_app_id` (`string`): 
+  - `order` (`number`): 
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `action_playbook` sub block.
@@ -429,9 +429,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `property` (`string`): Set the `property` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `operator` (`string`): 
+  - `property` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.
@@ -454,10 +454,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

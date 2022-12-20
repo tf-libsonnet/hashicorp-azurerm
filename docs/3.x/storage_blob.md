@@ -63,21 +63,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `access_tier` (`string`): Set the `access_tier` field on the resulting resource block. When `null`, the `access_tier` field will be omitted from the resulting object.
-  - `cache_control` (`string`): Set the `cache_control` field on the resulting resource block. When `null`, the `cache_control` field will be omitted from the resulting object.
-  - `content_md5` (`string`): Set the `content_md5` field on the resulting resource block. When `null`, the `content_md5` field will be omitted from the resulting object.
-  - `content_type` (`string`): Set the `content_type` field on the resulting resource block. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `metadata` (`obj`): Set the `metadata` field on the resulting resource block. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parallelism` (`number`): Set the `parallelism` field on the resulting resource block. When `null`, the `parallelism` field will be omitted from the resulting object.
-  - `size` (`number`): Set the `size` field on the resulting resource block. When `null`, the `size` field will be omitted from the resulting object.
-  - `source` (`string`): Set the `source` field on the resulting resource block. When `null`, the `source` field will be omitted from the resulting object.
-  - `source_content` (`string`): Set the `source_content` field on the resulting resource block. When `null`, the `source_content` field will be omitted from the resulting object.
-  - `source_uri` (`string`): Set the `source_uri` field on the resulting resource block. When `null`, the `source_uri` field will be omitted from the resulting object.
-  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting resource block.
-  - `storage_container_name` (`string`): Set the `storage_container_name` field on the resulting resource block.
-  - `type` (`string`): Set the `type` field on the resulting resource block.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_tier` (`string`):  When `null`, the `access_tier` field will be omitted from the resulting object.
+  - `cache_control` (`string`):  When `null`, the `cache_control` field will be omitted from the resulting object.
+  - `content_md5` (`string`):  When `null`, the `content_md5` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parallelism` (`number`):  When `null`, the `parallelism` field will be omitted from the resulting object.
+  - `size` (`number`):  When `null`, the `size` field will be omitted from the resulting object.
+  - `source` (`string`):  When `null`, the `source` field will be omitted from the resulting object.
+  - `source_content` (`string`):  When `null`, the `source_content` field will be omitted from the resulting object.
+  - `source_uri` (`string`):  When `null`, the `source_uri` field will be omitted from the resulting object.
+  - `storage_account_name` (`string`): 
+  - `storage_container_name` (`string`): 
+  - `type` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,21 +101,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `access_tier` (`string`): Set the `access_tier` field on the resulting object. When `null`, the `access_tier` field will be omitted from the resulting object.
-  - `cache_control` (`string`): Set the `cache_control` field on the resulting object. When `null`, the `cache_control` field will be omitted from the resulting object.
-  - `content_md5` (`string`): Set the `content_md5` field on the resulting object. When `null`, the `content_md5` field will be omitted from the resulting object.
-  - `content_type` (`string`): Set the `content_type` field on the resulting object. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `metadata` (`obj`): Set the `metadata` field on the resulting object. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parallelism` (`number`): Set the `parallelism` field on the resulting object. When `null`, the `parallelism` field will be omitted from the resulting object.
-  - `size` (`number`): Set the `size` field on the resulting object. When `null`, the `size` field will be omitted from the resulting object.
-  - `source` (`string`): Set the `source` field on the resulting object. When `null`, the `source` field will be omitted from the resulting object.
-  - `source_content` (`string`): Set the `source_content` field on the resulting object. When `null`, the `source_content` field will be omitted from the resulting object.
-  - `source_uri` (`string`): Set the `source_uri` field on the resulting object. When `null`, the `source_uri` field will be omitted from the resulting object.
-  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting object.
-  - `storage_container_name` (`string`): Set the `storage_container_name` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_tier` (`string`):  When `null`, the `access_tier` field will be omitted from the resulting object.
+  - `cache_control` (`string`):  When `null`, the `cache_control` field will be omitted from the resulting object.
+  - `content_md5` (`string`):  When `null`, the `content_md5` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `metadata` (`obj`):  When `null`, the `metadata` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parallelism` (`number`):  When `null`, the `parallelism` field will be omitted from the resulting object.
+  - `size` (`number`):  When `null`, the `size` field will be omitted from the resulting object.
+  - `source` (`string`):  When `null`, the `source` field will be omitted from the resulting object.
+  - `source_content` (`string`):  When `null`, the `source_content` field will be omitted from the resulting object.
+  - `source_uri` (`string`):  When `null`, the `source_uri` field will be omitted from the resulting object.
+  - `storage_account_name` (`string`): 
+  - `storage_container_name` (`string`): 
+  - `type` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_blob.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_blob` resource into the root Terraform configuration.
@@ -398,10 +398,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

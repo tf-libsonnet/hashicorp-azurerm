@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
-  - `approval_required` (`bool`): Set the `approval_required` field on the resulting resource block. When `null`, the `approval_required` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
-  - `product_id` (`string`): Set the `product_id` field on the resulting resource block.
-  - `published` (`bool`): Set the `published` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `subscription_required` (`bool`): Set the `subscription_required` field on the resulting resource block. When `null`, the `subscription_required` field will be omitted from the resulting object.
-  - `subscriptions_limit` (`number`): Set the `subscriptions_limit` field on the resulting resource block. When `null`, the `subscriptions_limit` field will be omitted from the resulting object.
-  - `terms` (`string`): Set the `terms` field on the resulting resource block. When `null`, the `terms` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_product.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): 
+  - `approval_required` (`bool`):  When `null`, the `approval_required` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): 
+  - `product_id` (`string`): 
+  - `published` (`bool`): 
+  - `resource_group_name` (`string`): 
+  - `subscription_required` (`bool`):  When `null`, the `subscription_required` field will be omitted from the resulting object.
+  - `subscriptions_limit` (`number`):  When `null`, the `subscriptions_limit` field will be omitted from the resulting object.
+  - `terms` (`string`):  When `null`, the `terms` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_product.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
-  - `approval_required` (`bool`): Set the `approval_required` field on the resulting object. When `null`, the `approval_required` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting object.
-  - `product_id` (`string`): Set the `product_id` field on the resulting object.
-  - `published` (`bool`): Set the `published` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `subscription_required` (`bool`): Set the `subscription_required` field on the resulting object. When `null`, the `subscription_required` field will be omitted from the resulting object.
-  - `subscriptions_limit` (`number`): Set the `subscriptions_limit` field on the resulting object. When `null`, the `subscriptions_limit` field will be omitted from the resulting object.
-  - `terms` (`string`): Set the `terms` field on the resulting object. When `null`, the `terms` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_product.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): 
+  - `approval_required` (`bool`):  When `null`, the `approval_required` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `display_name` (`string`): 
+  - `product_id` (`string`): 
+  - `published` (`bool`): 
+  - `resource_group_name` (`string`): 
+  - `subscription_required` (`bool`):  When `null`, the `subscription_required` field will be omitted from the resulting object.
+  - `subscriptions_limit` (`number`):  When `null`, the `subscriptions_limit` field will be omitted from the resulting object.
+  - `terms` (`string`):  When `null`, the `terms` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_product.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_product` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

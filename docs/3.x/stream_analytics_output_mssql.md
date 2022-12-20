@@ -60,18 +60,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `authentication_mode` (`string`): Set the `authentication_mode` field on the resulting resource block. When `null`, the `authentication_mode` field will be omitted from the resulting object.
-  - `database` (`string`): Set the `database` field on the resulting resource block.
-  - `max_batch_count` (`number`): Set the `max_batch_count` field on the resulting resource block. When `null`, the `max_batch_count` field will be omitted from the resulting object.
-  - `max_writer_count` (`number`): Set the `max_writer_count` field on the resulting resource block. When `null`, the `max_writer_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `password` (`string`): Set the `password` field on the resulting resource block. When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `server` (`string`): Set the `server` field on the resulting resource block.
-  - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting resource block.
-  - `table` (`string`): Set the `table` field on the resulting resource block.
-  - `user` (`string`): Set the `user` field on the resulting resource block. When `null`, the `user` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_mssql.timeouts.new](#fn-timeoutsnew) constructor.
+  - `authentication_mode` (`string`):  When `null`, the `authentication_mode` field will be omitted from the resulting object.
+  - `database` (`string`): 
+  - `max_batch_count` (`number`):  When `null`, the `max_batch_count` field will be omitted from the resulting object.
+  - `max_writer_count` (`number`):  When `null`, the `max_writer_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `server` (`string`): 
+  - `stream_analytics_job_name` (`string`): 
+  - `table` (`string`): 
+  - `user` (`string`):  When `null`, the `user` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_mssql.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,18 +95,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `authentication_mode` (`string`): Set the `authentication_mode` field on the resulting object. When `null`, the `authentication_mode` field will be omitted from the resulting object.
-  - `database` (`string`): Set the `database` field on the resulting object.
-  - `max_batch_count` (`number`): Set the `max_batch_count` field on the resulting object. When `null`, the `max_batch_count` field will be omitted from the resulting object.
-  - `max_writer_count` (`number`): Set the `max_writer_count` field on the resulting object. When `null`, the `max_writer_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `server` (`string`): Set the `server` field on the resulting object.
-  - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting object.
-  - `table` (`string`): Set the `table` field on the resulting object.
-  - `user` (`string`): Set the `user` field on the resulting object. When `null`, the `user` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_mssql.timeouts.new](#fn-timeoutsnew) constructor.
+  - `authentication_mode` (`string`):  When `null`, the `authentication_mode` field will be omitted from the resulting object.
+  - `database` (`string`): 
+  - `max_batch_count` (`number`):  When `null`, the `max_batch_count` field will be omitted from the resulting object.
+  - `max_writer_count` (`number`):  When `null`, the `max_writer_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `server` (`string`): 
+  - `stream_analytics_job_name` (`string`): 
+  - `table` (`string`): 
+  - `user` (`string`):  When `null`, the `user` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_mssql.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `stream_analytics_output_mssql` resource into the root Terraform configuration.
@@ -341,10 +341,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

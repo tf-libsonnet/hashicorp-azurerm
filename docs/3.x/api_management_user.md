@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
-  - `confirmation` (`string`): Set the `confirmation` field on the resulting resource block. When `null`, the `confirmation` field will be omitted from the resulting object.
-  - `email` (`string`): Set the `email` field on the resulting resource block.
-  - `first_name` (`string`): Set the `first_name` field on the resulting resource block.
-  - `last_name` (`string`): Set the `last_name` field on the resulting resource block.
-  - `note` (`string`): Set the `note` field on the resulting resource block. When `null`, the `note` field will be omitted from the resulting object.
-  - `password` (`string`): Set the `password` field on the resulting resource block. When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `state` (`string`): Set the `state` field on the resulting resource block. When `null`, the `state` field will be omitted from the resulting object.
-  - `user_id` (`string`): Set the `user_id` field on the resulting resource block.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_user.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): 
+  - `confirmation` (`string`):  When `null`, the `confirmation` field will be omitted from the resulting object.
+  - `email` (`string`): 
+  - `first_name` (`string`): 
+  - `last_name` (`string`): 
+  - `note` (`string`):  When `null`, the `note` field will be omitted from the resulting object.
+  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `state` (`string`):  When `null`, the `state` field will be omitted from the resulting object.
+  - `user_id` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_user.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
-  - `confirmation` (`string`): Set the `confirmation` field on the resulting object. When `null`, the `confirmation` field will be omitted from the resulting object.
-  - `email` (`string`): Set the `email` field on the resulting object.
-  - `first_name` (`string`): Set the `first_name` field on the resulting object.
-  - `last_name` (`string`): Set the `last_name` field on the resulting object.
-  - `note` (`string`): Set the `note` field on the resulting object. When `null`, the `note` field will be omitted from the resulting object.
-  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `state` (`string`): Set the `state` field on the resulting object. When `null`, the `state` field will be omitted from the resulting object.
-  - `user_id` (`string`): Set the `user_id` field on the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_user.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): 
+  - `confirmation` (`string`):  When `null`, the `confirmation` field will be omitted from the resulting object.
+  - `email` (`string`): 
+  - `first_name` (`string`): 
+  - `last_name` (`string`): 
+  - `note` (`string`):  When `null`, the `note` field will be omitted from the resulting object.
+  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `state` (`string`):  When `null`, the `state` field will be omitted from the resulting object.
+  - `user_id` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_user.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_user` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

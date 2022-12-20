@@ -69,12 +69,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `policy_option` (`list[obj]`): Set the `policy_option` field on the resulting resource block. When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-policy_optionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `policy_option` (`list[obj]`):  When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-policy_optionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,12 +98,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `policy_option` (`list[obj]`): Set the `policy_option` field on the resulting object. When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-policy_optionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `policy_option` (`list[obj]`):  When `null`, the `policy_option` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.new](#fn-policy_optionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_content_key_policy` resource into the root Terraform configuration.
@@ -263,13 +263,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `clear_key_configuration_enabled` (`bool`): Set the `clear_key_configuration_enabled` field on the resulting object. When `null`, the `clear_key_configuration_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `open_restriction_enabled` (`bool`): Set the `open_restriction_enabled` field on the resulting object. When `null`, the `open_restriction_enabled` field will be omitted from the resulting object.
-  - `widevine_configuration_template` (`string`): Set the `widevine_configuration_template` field on the resulting object. When `null`, the `widevine_configuration_template` field will be omitted from the resulting object.
-  - `fairplay_configuration` (`list[obj]`): Set the `fairplay_configuration` field on the resulting object. When `null`, the `fairplay_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.new](#fn-policy_optionfairplay_configurationnew) constructor.
-  - `playready_configuration_license` (`list[obj]`): Set the `playready_configuration_license` field on the resulting object. When `null`, the `playready_configuration_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.new](#fn-policy_optionplayready_configuration_licensenew) constructor.
-  - `token_restriction` (`list[obj]`): Set the `token_restriction` field on the resulting object. When `null`, the `token_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.new](#fn-policy_optiontoken_restrictionnew) constructor.
+  - `clear_key_configuration_enabled` (`bool`):  When `null`, the `clear_key_configuration_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `open_restriction_enabled` (`bool`):  When `null`, the `open_restriction_enabled` field will be omitted from the resulting object.
+  - `widevine_configuration_template` (`string`):  When `null`, the `widevine_configuration_template` field will be omitted from the resulting object.
+  - `fairplay_configuration` (`list[obj]`):  When `null`, the `fairplay_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.new](#fn-policy_optionfairplay_configurationnew) constructor.
+  - `playready_configuration_license` (`list[obj]`):  When `null`, the `playready_configuration_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.new](#fn-policy_optionplayready_configuration_licensenew) constructor.
+  - `token_restriction` (`list[obj]`):  When `null`, the `token_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.new](#fn-policy_optiontoken_restrictionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `policy_option` sub block.
@@ -292,12 +292,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `ask` (`string`): Set the `ask` field on the resulting object. When `null`, the `ask` field will be omitted from the resulting object.
-  - `pfx` (`string`): Set the `pfx` field on the resulting object. When `null`, the `pfx` field will be omitted from the resulting object.
-  - `pfx_password` (`string`): Set the `pfx_password` field on the resulting object. When `null`, the `pfx_password` field will be omitted from the resulting object.
-  - `rental_and_lease_key_type` (`string`): Set the `rental_and_lease_key_type` field on the resulting object. When `null`, the `rental_and_lease_key_type` field will be omitted from the resulting object.
-  - `rental_duration_seconds` (`number`): Set the `rental_duration_seconds` field on the resulting object. When `null`, the `rental_duration_seconds` field will be omitted from the resulting object.
-  - `offline_rental_configuration` (`list[obj]`): Set the `offline_rental_configuration` field on the resulting object. When `null`, the `offline_rental_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.offline_rental_configuration.new](#fn-policy_optionpolicy_optionoffline_rental_configurationnew) constructor.
+  - `ask` (`string`):  When `null`, the `ask` field will be omitted from the resulting object.
+  - `pfx` (`string`):  When `null`, the `pfx` field will be omitted from the resulting object.
+  - `pfx_password` (`string`):  When `null`, the `pfx_password` field will be omitted from the resulting object.
+  - `rental_and_lease_key_type` (`string`):  When `null`, the `rental_and_lease_key_type` field will be omitted from the resulting object.
+  - `rental_duration_seconds` (`number`):  When `null`, the `rental_duration_seconds` field will be omitted from the resulting object.
+  - `offline_rental_configuration` (`list[obj]`):  When `null`, the `offline_rental_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.offline_rental_configuration.new](#fn-policy_optionpolicy_optionoffline_rental_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fairplay_configuration` sub block.
@@ -320,8 +320,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `playback_duration_seconds` (`number`): Set the `playback_duration_seconds` field on the resulting object. When `null`, the `playback_duration_seconds` field will be omitted from the resulting object.
-  - `storage_duration_seconds` (`number`): Set the `storage_duration_seconds` field on the resulting object. When `null`, the `storage_duration_seconds` field will be omitted from the resulting object.
+  - `playback_duration_seconds` (`number`):  When `null`, the `playback_duration_seconds` field will be omitted from the resulting object.
+  - `storage_duration_seconds` (`number`):  When `null`, the `storage_duration_seconds` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `offline_rental_configuration` sub block.
@@ -344,17 +344,17 @@ Terraform sub block.
 
 
 **Args**:
-  - `allow_test_devices` (`bool`): Set the `allow_test_devices` field on the resulting object. When `null`, the `allow_test_devices` field will be omitted from the resulting object.
-  - `begin_date` (`string`): Set the `begin_date` field on the resulting object. When `null`, the `begin_date` field will be omitted from the resulting object.
-  - `content_key_location_from_header_enabled` (`bool`): Set the `content_key_location_from_header_enabled` field on the resulting object. When `null`, the `content_key_location_from_header_enabled` field will be omitted from the resulting object.
-  - `content_key_location_from_key_id` (`string`): Set the `content_key_location_from_key_id` field on the resulting object. When `null`, the `content_key_location_from_key_id` field will be omitted from the resulting object.
-  - `content_type` (`string`): Set the `content_type` field on the resulting object. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `expiration_date` (`string`): Set the `expiration_date` field on the resulting object. When `null`, the `expiration_date` field will be omitted from the resulting object.
-  - `grace_period` (`string`): Set the `grace_period` field on the resulting object. When `null`, the `grace_period` field will be omitted from the resulting object.
-  - `license_type` (`string`): Set the `license_type` field on the resulting object. When `null`, the `license_type` field will be omitted from the resulting object.
-  - `relative_begin_date` (`string`): Set the `relative_begin_date` field on the resulting object. When `null`, the `relative_begin_date` field will be omitted from the resulting object.
-  - `relative_expiration_date` (`string`): Set the `relative_expiration_date` field on the resulting object. When `null`, the `relative_expiration_date` field will be omitted from the resulting object.
-  - `play_right` (`list[obj]`): Set the `play_right` field on the resulting object. When `null`, the `play_right` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.new](#fn-policy_optionpolicy_optionplay_rightnew) constructor.
+  - `allow_test_devices` (`bool`):  When `null`, the `allow_test_devices` field will be omitted from the resulting object.
+  - `begin_date` (`string`):  When `null`, the `begin_date` field will be omitted from the resulting object.
+  - `content_key_location_from_header_enabled` (`bool`):  When `null`, the `content_key_location_from_header_enabled` field will be omitted from the resulting object.
+  - `content_key_location_from_key_id` (`string`):  When `null`, the `content_key_location_from_key_id` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `expiration_date` (`string`):  When `null`, the `expiration_date` field will be omitted from the resulting object.
+  - `grace_period` (`string`):  When `null`, the `grace_period` field will be omitted from the resulting object.
+  - `license_type` (`string`):  When `null`, the `license_type` field will be omitted from the resulting object.
+  - `relative_begin_date` (`string`):  When `null`, the `relative_begin_date` field will be omitted from the resulting object.
+  - `relative_expiration_date` (`string`):  When `null`, the `relative_expiration_date` field will be omitted from the resulting object.
+  - `play_right` (`list[obj]`):  When `null`, the `play_right` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.new](#fn-policy_optionpolicy_optionplay_rightnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `playready_configuration_license` sub block.
@@ -377,17 +377,17 @@ Terraform sub block.
 
 
 **Args**:
-  - `agc_and_color_stripe_restriction` (`number`): Set the `agc_and_color_stripe_restriction` field on the resulting object. When `null`, the `agc_and_color_stripe_restriction` field will be omitted from the resulting object.
-  - `allow_passing_video_content_to_unknown_output` (`string`): Set the `allow_passing_video_content_to_unknown_output` field on the resulting object. When `null`, the `allow_passing_video_content_to_unknown_output` field will be omitted from the resulting object.
-  - `analog_video_opl` (`number`): Set the `analog_video_opl` field on the resulting object. When `null`, the `analog_video_opl` field will be omitted from the resulting object.
-  - `compressed_digital_audio_opl` (`number`): Set the `compressed_digital_audio_opl` field on the resulting object. When `null`, the `compressed_digital_audio_opl` field will be omitted from the resulting object.
-  - `digital_video_only_content_restriction` (`bool`): Set the `digital_video_only_content_restriction` field on the resulting object. When `null`, the `digital_video_only_content_restriction` field will be omitted from the resulting object.
-  - `first_play_expiration` (`string`): Set the `first_play_expiration` field on the resulting object. When `null`, the `first_play_expiration` field will be omitted from the resulting object.
-  - `image_constraint_for_analog_component_video_restriction` (`bool`): Set the `image_constraint_for_analog_component_video_restriction` field on the resulting object. When `null`, the `image_constraint_for_analog_component_video_restriction` field will be omitted from the resulting object.
-  - `image_constraint_for_analog_computer_monitor_restriction` (`bool`): Set the `image_constraint_for_analog_computer_monitor_restriction` field on the resulting object. When `null`, the `image_constraint_for_analog_computer_monitor_restriction` field will be omitted from the resulting object.
-  - `scms_restriction` (`number`): Set the `scms_restriction` field on the resulting object. When `null`, the `scms_restriction` field will be omitted from the resulting object.
-  - `uncompressed_digital_audio_opl` (`number`): Set the `uncompressed_digital_audio_opl` field on the resulting object. When `null`, the `uncompressed_digital_audio_opl` field will be omitted from the resulting object.
-  - `uncompressed_digital_video_opl` (`number`): Set the `uncompressed_digital_video_opl` field on the resulting object. When `null`, the `uncompressed_digital_video_opl` field will be omitted from the resulting object.
+  - `agc_and_color_stripe_restriction` (`number`):  When `null`, the `agc_and_color_stripe_restriction` field will be omitted from the resulting object.
+  - `allow_passing_video_content_to_unknown_output` (`string`):  When `null`, the `allow_passing_video_content_to_unknown_output` field will be omitted from the resulting object.
+  - `analog_video_opl` (`number`):  When `null`, the `analog_video_opl` field will be omitted from the resulting object.
+  - `compressed_digital_audio_opl` (`number`):  When `null`, the `compressed_digital_audio_opl` field will be omitted from the resulting object.
+  - `digital_video_only_content_restriction` (`bool`):  When `null`, the `digital_video_only_content_restriction` field will be omitted from the resulting object.
+  - `first_play_expiration` (`string`):  When `null`, the `first_play_expiration` field will be omitted from the resulting object.
+  - `image_constraint_for_analog_component_video_restriction` (`bool`):  When `null`, the `image_constraint_for_analog_component_video_restriction` field will be omitted from the resulting object.
+  - `image_constraint_for_analog_computer_monitor_restriction` (`bool`):  When `null`, the `image_constraint_for_analog_computer_monitor_restriction` field will be omitted from the resulting object.
+  - `scms_restriction` (`number`):  When `null`, the `scms_restriction` field will be omitted from the resulting object.
+  - `uncompressed_digital_audio_opl` (`number`):  When `null`, the `uncompressed_digital_audio_opl` field will be omitted from the resulting object.
+  - `uncompressed_digital_video_opl` (`number`):  When `null`, the `uncompressed_digital_video_opl` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `play_right` sub block.
@@ -410,15 +410,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `audience` (`string`): Set the `audience` field on the resulting object. When `null`, the `audience` field will be omitted from the resulting object.
-  - `issuer` (`string`): Set the `issuer` field on the resulting object. When `null`, the `issuer` field will be omitted from the resulting object.
-  - `open_id_connect_discovery_document` (`string`): Set the `open_id_connect_discovery_document` field on the resulting object. When `null`, the `open_id_connect_discovery_document` field will be omitted from the resulting object.
-  - `primary_rsa_token_key_exponent` (`string`): Set the `primary_rsa_token_key_exponent` field on the resulting object. When `null`, the `primary_rsa_token_key_exponent` field will be omitted from the resulting object.
-  - `primary_rsa_token_key_modulus` (`string`): Set the `primary_rsa_token_key_modulus` field on the resulting object. When `null`, the `primary_rsa_token_key_modulus` field will be omitted from the resulting object.
-  - `primary_symmetric_token_key` (`string`): Set the `primary_symmetric_token_key` field on the resulting object. When `null`, the `primary_symmetric_token_key` field will be omitted from the resulting object.
-  - `primary_x509_token_key_raw` (`string`): Set the `primary_x509_token_key_raw` field on the resulting object. When `null`, the `primary_x509_token_key_raw` field will be omitted from the resulting object.
-  - `token_type` (`string`): Set the `token_type` field on the resulting object. When `null`, the `token_type` field will be omitted from the resulting object.
-  - `required_claim` (`list[obj]`): Set the `required_claim` field on the resulting object. When `null`, the `required_claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.required_claim.new](#fn-policy_optionpolicy_optionrequired_claimnew) constructor.
+  - `audience` (`string`):  When `null`, the `audience` field will be omitted from the resulting object.
+  - `issuer` (`string`):  When `null`, the `issuer` field will be omitted from the resulting object.
+  - `open_id_connect_discovery_document` (`string`):  When `null`, the `open_id_connect_discovery_document` field will be omitted from the resulting object.
+  - `primary_rsa_token_key_exponent` (`string`):  When `null`, the `primary_rsa_token_key_exponent` field will be omitted from the resulting object.
+  - `primary_rsa_token_key_modulus` (`string`):  When `null`, the `primary_rsa_token_key_modulus` field will be omitted from the resulting object.
+  - `primary_symmetric_token_key` (`string`):  When `null`, the `primary_symmetric_token_key` field will be omitted from the resulting object.
+  - `primary_x509_token_key_raw` (`string`):  When `null`, the `primary_x509_token_key_raw` field will be omitted from the resulting object.
+  - `token_type` (`string`):  When `null`, the `token_type` field will be omitted from the resulting object.
+  - `required_claim` (`list[obj]`):  When `null`, the `required_claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.required_claim.new](#fn-policy_optionpolicy_optionrequired_claimnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `token_restriction` sub block.
@@ -441,8 +441,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
+  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
+  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `required_claim` sub block.
@@ -465,10 +465,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

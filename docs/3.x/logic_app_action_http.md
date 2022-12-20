@@ -60,15 +60,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `body` (`string`): Set the `body` field on the resulting resource block. When `null`, the `body` field will be omitted from the resulting object.
-  - `headers` (`obj`): Set the `headers` field on the resulting resource block. When `null`, the `headers` field will be omitted from the resulting object.
-  - `logic_app_id` (`string`): Set the `logic_app_id` field on the resulting resource block.
-  - `method` (`string`): Set the `method` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `queries` (`obj`): Set the `queries` field on the resulting resource block. When `null`, the `queries` field will be omitted from the resulting object.
-  - `uri` (`string`): Set the `uri` field on the resulting resource block.
-  - `run_after` (`list[obj]`): Set the `run_after` field on the resulting resource block. When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-run_afternew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-timeoutsnew) constructor.
+  - `body` (`string`):  When `null`, the `body` field will be omitted from the resulting object.
+  - `headers` (`obj`):  When `null`, the `headers` field will be omitted from the resulting object.
+  - `logic_app_id` (`string`): 
+  - `method` (`string`): 
+  - `name` (`string`): 
+  - `queries` (`obj`):  When `null`, the `queries` field will be omitted from the resulting object.
+  - `uri` (`string`): 
+  - `run_after` (`list[obj]`):  When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-run_afternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,15 +92,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `body` (`string`): Set the `body` field on the resulting object. When `null`, the `body` field will be omitted from the resulting object.
-  - `headers` (`obj`): Set the `headers` field on the resulting object. When `null`, the `headers` field will be omitted from the resulting object.
-  - `logic_app_id` (`string`): Set the `logic_app_id` field on the resulting object.
-  - `method` (`string`): Set the `method` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `queries` (`obj`): Set the `queries` field on the resulting object. When `null`, the `queries` field will be omitted from the resulting object.
-  - `uri` (`string`): Set the `uri` field on the resulting object.
-  - `run_after` (`list[obj]`): Set the `run_after` field on the resulting object. When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-run_afternew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-timeoutsnew) constructor.
+  - `body` (`string`):  When `null`, the `body` field will be omitted from the resulting object.
+  - `headers` (`obj`):  When `null`, the `headers` field will be omitted from the resulting object.
+  - `logic_app_id` (`string`): 
+  - `method` (`string`): 
+  - `name` (`string`): 
+  - `queries` (`obj`):  When `null`, the `queries` field will be omitted from the resulting object.
+  - `uri` (`string`): 
+  - `run_after` (`list[obj]`):  When `null`, the `run_after` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.run_after.new](#fn-run_afternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.logic_app_action_http.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logic_app_action_http` resource into the root Terraform configuration.
@@ -308,8 +308,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `action_name` (`string`): Set the `action_name` field on the resulting object.
-  - `action_result` (`string`): Set the `action_result` field on the resulting object.
+  - `action_name` (`string`): 
+  - `action_result` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `run_after` sub block.
@@ -332,10 +332,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

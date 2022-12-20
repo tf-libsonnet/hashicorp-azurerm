@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `managed_instance_id` (`string`): Set the `managed_instance_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `partner_managed_instance_id` (`string`): Set the `partner_managed_instance_id` field on the resulting resource block.
-  - `readonly_endpoint_failover_policy_enabled` (`bool`): Set the `readonly_endpoint_failover_policy_enabled` field on the resulting resource block. When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
-  - `read_write_endpoint_failover_policy` (`list[obj]`): Set the `read_write_endpoint_failover_policy` field on the resulting resource block. When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-read_write_endpoint_failover_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `managed_instance_id` (`string`): 
+  - `name` (`string`): 
+  - `partner_managed_instance_id` (`string`): 
+  - `readonly_endpoint_failover_policy_enabled` (`bool`):  When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
+  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-read_write_endpoint_failover_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `managed_instance_id` (`string`): Set the `managed_instance_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `partner_managed_instance_id` (`string`): Set the `partner_managed_instance_id` field on the resulting object.
-  - `readonly_endpoint_failover_policy_enabled` (`bool`): Set the `readonly_endpoint_failover_policy_enabled` field on the resulting object. When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
-  - `read_write_endpoint_failover_policy` (`list[obj]`): Set the `read_write_endpoint_failover_policy` field on the resulting object. When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-read_write_endpoint_failover_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `managed_instance_id` (`string`): 
+  - `name` (`string`): 
+  - `partner_managed_instance_id` (`string`): 
+  - `readonly_endpoint_failover_policy_enabled` (`bool`):  When `null`, the `readonly_endpoint_failover_policy_enabled` field will be omitted from the resulting object.
+  - `read_write_endpoint_failover_policy` (`list[obj]`):  When `null`, the `read_write_endpoint_failover_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.read_write_endpoint_failover_policy.new](#fn-read_write_endpoint_failover_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_instance_failover_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_managed_instance_failover_group` resource into the root Terraform configuration.
@@ -270,8 +270,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `grace_minutes` (`number`): Set the `grace_minutes` field on the resulting object. When `null`, the `grace_minutes` field will be omitted from the resulting object.
-  - `mode` (`string`): Set the `mode` field on the resulting object.
+  - `grace_minutes` (`number`):  When `null`, the `grace_minutes` field will be omitted from the resulting object.
+  - `mode` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `read_write_endpoint_failover_policy` sub block.
@@ -294,10 +294,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -68,17 +68,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting resource block.
-  - `encapsulation` (`string`): Set the `encapsulation` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `peering_location` (`string`): Set the `peering_location` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-identitynew) constructor.
-  - `link1` (`list[obj]`): Set the `link1` field on the resulting resource block. When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-link1new) constructor.
-  - `link2` (`list[obj]`): Set the `link2` field on the resulting resource block. When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-link2new) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-timeoutsnew) constructor.
+  - `bandwidth_in_gbps` (`number`): 
+  - `encapsulation` (`string`): 
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `peering_location` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-identitynew) constructor.
+  - `link1` (`list[obj]`):  When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-link1new) constructor.
+  - `link2` (`list[obj]`):  When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-link2new) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,17 +102,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting object.
-  - `encapsulation` (`string`): Set the `encapsulation` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `peering_location` (`string`): Set the `peering_location` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-identitynew) constructor.
-  - `link1` (`list[obj]`): Set the `link1` field on the resulting object. When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-link1new) constructor.
-  - `link2` (`list[obj]`): Set the `link2` field on the resulting object. When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-link2new) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-timeoutsnew) constructor.
+  - `bandwidth_in_gbps` (`number`): 
+  - `encapsulation` (`string`): 
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `peering_location` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.identity.new](#fn-identitynew) constructor.
+  - `link1` (`list[obj]`):  When `null`, the `link1` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link1.new](#fn-link1new) constructor.
+  - `link2` (`list[obj]`):  When `null`, the `link2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.link2.new](#fn-link2new) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_port.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `express_route_port` resource into the root Terraform configuration.
@@ -394,8 +394,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -418,10 +418,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_enabled` (`bool`): Set the `admin_enabled` field on the resulting object. When `null`, the `admin_enabled` field will be omitted from the resulting object.
-  - `macsec_cak_keyvault_secret_id` (`string`): Set the `macsec_cak_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_cak_keyvault_secret_id` field will be omitted from the resulting object.
-  - `macsec_cipher` (`string`): Set the `macsec_cipher` field on the resulting object. When `null`, the `macsec_cipher` field will be omitted from the resulting object.
-  - `macsec_ckn_keyvault_secret_id` (`string`): Set the `macsec_ckn_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_ckn_keyvault_secret_id` field will be omitted from the resulting object.
+  - `admin_enabled` (`bool`):  When `null`, the `admin_enabled` field will be omitted from the resulting object.
+  - `macsec_cak_keyvault_secret_id` (`string`):  When `null`, the `macsec_cak_keyvault_secret_id` field will be omitted from the resulting object.
+  - `macsec_cipher` (`string`):  When `null`, the `macsec_cipher` field will be omitted from the resulting object.
+  - `macsec_ckn_keyvault_secret_id` (`string`):  When `null`, the `macsec_ckn_keyvault_secret_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `link1` sub block.
@@ -444,10 +444,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_enabled` (`bool`): Set the `admin_enabled` field on the resulting object. When `null`, the `admin_enabled` field will be omitted from the resulting object.
-  - `macsec_cak_keyvault_secret_id` (`string`): Set the `macsec_cak_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_cak_keyvault_secret_id` field will be omitted from the resulting object.
-  - `macsec_cipher` (`string`): Set the `macsec_cipher` field on the resulting object. When `null`, the `macsec_cipher` field will be omitted from the resulting object.
-  - `macsec_ckn_keyvault_secret_id` (`string`): Set the `macsec_ckn_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_ckn_keyvault_secret_id` field will be omitted from the resulting object.
+  - `admin_enabled` (`bool`):  When `null`, the `admin_enabled` field will be omitted from the resulting object.
+  - `macsec_cak_keyvault_secret_id` (`string`):  When `null`, the `macsec_cak_keyvault_secret_id` field will be omitted from the resulting object.
+  - `macsec_cipher` (`string`):  When `null`, the `macsec_cipher` field will be omitted from the resulting object.
+  - `macsec_ckn_keyvault_secret_id` (`string`):  When `null`, the `macsec_ckn_keyvault_secret_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `link2` sub block.
@@ -470,10 +470,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

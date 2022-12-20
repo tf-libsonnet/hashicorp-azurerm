@@ -57,15 +57,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_key` (`string`): Set the `api_key` field on the resulting resource block.
-  - `batch_max_count` (`number`): Set the `batch_max_count` field on the resulting resource block. When `null`, the `batch_max_count` field will be omitted from the resulting object.
-  - `batch_max_in_bytes` (`number`): Set the `batch_max_in_bytes` field on the resulting resource block. When `null`, the `batch_max_in_bytes` field will be omitted from the resulting object.
-  - `function_app` (`string`): Set the `function_app` field on the resulting resource block.
-  - `function_name` (`string`): Set the `function_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting resource block.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_function.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_key` (`string`): 
+  - `batch_max_count` (`number`):  When `null`, the `batch_max_count` field will be omitted from the resulting object.
+  - `batch_max_in_bytes` (`number`):  When `null`, the `batch_max_in_bytes` field will be omitted from the resulting object.
+  - `function_app` (`string`): 
+  - `function_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `stream_analytics_job_name` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_function.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,15 +89,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_key` (`string`): Set the `api_key` field on the resulting object.
-  - `batch_max_count` (`number`): Set the `batch_max_count` field on the resulting object. When `null`, the `batch_max_count` field will be omitted from the resulting object.
-  - `batch_max_in_bytes` (`number`): Set the `batch_max_in_bytes` field on the resulting object. When `null`, the `batch_max_in_bytes` field will be omitted from the resulting object.
-  - `function_app` (`string`): Set the `function_app` field on the resulting object.
-  - `function_name` (`string`): Set the `function_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_function.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_key` (`string`): 
+  - `batch_max_count` (`number`):  When `null`, the `batch_max_count` field will be omitted from the resulting object.
+  - `batch_max_in_bytes` (`number`):  When `null`, the `batch_max_in_bytes` field will be omitted from the resulting object.
+  - `function_app` (`string`): 
+  - `function_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `stream_analytics_job_name` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_function.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `stream_analytics_output_function` resource into the root Terraform configuration.
@@ -284,10 +284,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

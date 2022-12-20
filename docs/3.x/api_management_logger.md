@@ -63,15 +63,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting resource block.
-  - `buffered` (`bool`): Set the `buffered` field on the resulting resource block. When `null`, the `buffered` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `resource_id` (`string`): Set the `resource_id` field on the resulting resource block. When `null`, the `resource_id` field will be omitted from the resulting object.
-  - `application_insights` (`list[obj]`): Set the `application_insights` field on the resulting resource block. When `null`, the `application_insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.application_insights.new](#fn-application_insightsnew) constructor.
-  - `eventhub` (`list[obj]`): Set the `eventhub` field on the resulting resource block. When `null`, the `eventhub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.eventhub.new](#fn-eventhubnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): 
+  - `buffered` (`bool`):  When `null`, the `buffered` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `resource_id` (`string`):  When `null`, the `resource_id` field will be omitted from the resulting object.
+  - `application_insights` (`list[obj]`):  When `null`, the `application_insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.application_insights.new](#fn-application_insightsnew) constructor.
+  - `eventhub` (`list[obj]`):  When `null`, the `eventhub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.eventhub.new](#fn-eventhubnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,15 +95,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_management_name` (`string`): Set the `api_management_name` field on the resulting object.
-  - `buffered` (`bool`): Set the `buffered` field on the resulting object. When `null`, the `buffered` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `resource_id` (`string`): Set the `resource_id` field on the resulting object. When `null`, the `resource_id` field will be omitted from the resulting object.
-  - `application_insights` (`list[obj]`): Set the `application_insights` field on the resulting object. When `null`, the `application_insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.application_insights.new](#fn-application_insightsnew) constructor.
-  - `eventhub` (`list[obj]`): Set the `eventhub` field on the resulting object. When `null`, the `eventhub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.eventhub.new](#fn-eventhubnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.timeouts.new](#fn-timeoutsnew) constructor.
+  - `api_management_name` (`string`): 
+  - `buffered` (`bool`):  When `null`, the `buffered` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `resource_id` (`string`):  When `null`, the `resource_id` field will be omitted from the resulting object.
+  - `application_insights` (`list[obj]`):  When `null`, the `application_insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.application_insights.new](#fn-application_insightsnew) constructor.
+  - `eventhub` (`list[obj]`):  When `null`, the `eventhub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.eventhub.new](#fn-eventhubnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management_logger.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `api_management_logger` resource into the root Terraform configuration.
@@ -332,7 +332,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `instrumentation_key` (`string`): Set the `instrumentation_key` field on the resulting object.
+  - `instrumentation_key` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `application_insights` sub block.
@@ -355,8 +355,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_string` (`string`): Set the `connection_string` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `connection_string` (`string`): 
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `eventhub` sub block.
@@ -379,10 +379,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

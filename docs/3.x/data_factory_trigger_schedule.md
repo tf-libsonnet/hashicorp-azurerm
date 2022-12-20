@@ -71,21 +71,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `activated` (`bool`): Set the `activated` field on the resulting resource block. When `null`, the `activated` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting resource block. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `end_time` (`string`): Set the `end_time` field on the resulting resource block. When `null`, the `end_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): Set the `frequency` field on the resulting resource block. When `null`, the `frequency` field will be omitted from the resulting object.
-  - `interval` (`number`): Set the `interval` field on the resulting resource block. When `null`, the `interval` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `pipeline_name` (`string`): Set the `pipeline_name` field on the resulting resource block. When `null`, the `pipeline_name` field will be omitted from the resulting object.
-  - `pipeline_parameters` (`obj`): Set the `pipeline_parameters` field on the resulting resource block. When `null`, the `pipeline_parameters` field will be omitted from the resulting object.
-  - `start_time` (`string`): Set the `start_time` field on the resulting resource block. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `time_zone` (`string`): Set the `time_zone` field on the resulting resource block. When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `pipeline` (`list[obj]`): Set the `pipeline` field on the resulting resource block. When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-pipelinenew) constructor.
-  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting resource block. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-schedulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `activated` (`bool`):  When `null`, the `activated` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
+  - `frequency` (`string`):  When `null`, the `frequency` field will be omitted from the resulting object.
+  - `interval` (`number`):  When `null`, the `interval` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `pipeline_name` (`string`):  When `null`, the `pipeline_name` field will be omitted from the resulting object.
+  - `pipeline_parameters` (`obj`):  When `null`, the `pipeline_parameters` field will be omitted from the resulting object.
+  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
+  - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
+  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-pipelinenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,21 +109,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `activated` (`bool`): Set the `activated` field on the resulting object. When `null`, the `activated` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting object. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `end_time` (`string`): Set the `end_time` field on the resulting object. When `null`, the `end_time` field will be omitted from the resulting object.
-  - `frequency` (`string`): Set the `frequency` field on the resulting object. When `null`, the `frequency` field will be omitted from the resulting object.
-  - `interval` (`number`): Set the `interval` field on the resulting object. When `null`, the `interval` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `pipeline_name` (`string`): Set the `pipeline_name` field on the resulting object. When `null`, the `pipeline_name` field will be omitted from the resulting object.
-  - `pipeline_parameters` (`obj`): Set the `pipeline_parameters` field on the resulting object. When `null`, the `pipeline_parameters` field will be omitted from the resulting object.
-  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `time_zone` (`string`): Set the `time_zone` field on the resulting object. When `null`, the `time_zone` field will be omitted from the resulting object.
-  - `pipeline` (`list[obj]`): Set the `pipeline` field on the resulting object. When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-pipelinenew) constructor.
-  - `schedule` (`list[obj]`): Set the `schedule` field on the resulting object. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-schedulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `activated` (`bool`):  When `null`, the `activated` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
+  - `frequency` (`string`):  When `null`, the `frequency` field will be omitted from the resulting object.
+  - `interval` (`number`):  When `null`, the `interval` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `pipeline_name` (`string`):  When `null`, the `pipeline_name` field will be omitted from the resulting object.
+  - `pipeline_parameters` (`obj`):  When `null`, the `pipeline_parameters` field will be omitted from the resulting object.
+  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
+  - `time_zone` (`string`):  When `null`, the `time_zone` field will be omitted from the resulting object.
+  - `pipeline` (`list[obj]`):  When `null`, the `pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.pipeline.new](#fn-pipelinenew) constructor.
+  - `schedule` (`list[obj]`):  When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.new](#fn-schedulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_trigger_schedule` resource into the root Terraform configuration.
@@ -448,8 +448,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `pipeline` sub block.
@@ -472,11 +472,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `days_of_month` (`list`): Set the `days_of_month` field on the resulting object. When `null`, the `days_of_month` field will be omitted from the resulting object.
-  - `days_of_week` (`list`): Set the `days_of_week` field on the resulting object. When `null`, the `days_of_week` field will be omitted from the resulting object.
-  - `hours` (`list`): Set the `hours` field on the resulting object. When `null`, the `hours` field will be omitted from the resulting object.
-  - `minutes` (`list`): Set the `minutes` field on the resulting object. When `null`, the `minutes` field will be omitted from the resulting object.
-  - `monthly` (`list[obj]`): Set the `monthly` field on the resulting object. When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.monthly.new](#fn-schedulemonthlynew) constructor.
+  - `days_of_month` (`list`):  When `null`, the `days_of_month` field will be omitted from the resulting object.
+  - `days_of_week` (`list`):  When `null`, the `days_of_week` field will be omitted from the resulting object.
+  - `hours` (`list`):  When `null`, the `hours` field will be omitted from the resulting object.
+  - `minutes` (`list`):  When `null`, the `minutes` field will be omitted from the resulting object.
+  - `monthly` (`list[obj]`):  When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_trigger_schedule.schedule.monthly.new](#fn-schedulemonthlynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -499,8 +499,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `week` (`number`): Set the `week` field on the resulting object. When `null`, the `week` field will be omitted from the resulting object.
-  - `weekday` (`string`): Set the `weekday` field on the resulting object.
+  - `week` (`number`):  When `null`, the `week` field will be omitted from the resulting object.
+  - `weekday` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `monthly` sub block.
@@ -523,10 +523,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

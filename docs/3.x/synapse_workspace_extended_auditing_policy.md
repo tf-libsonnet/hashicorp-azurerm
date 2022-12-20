@@ -55,13 +55,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `log_monitoring_enabled` (`bool`): Set the `log_monitoring_enabled` field on the resulting resource block. When `null`, the `log_monitoring_enabled` field will be omitted from the resulting object.
-  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting resource block. When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting resource block. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
-  - `storage_account_access_key_is_secondary` (`bool`): Set the `storage_account_access_key_is_secondary` field on the resulting resource block. When `null`, the `storage_account_access_key_is_secondary` field will be omitted from the resulting object.
-  - `storage_endpoint` (`string`): Set the `storage_endpoint` field on the resulting resource block. When `null`, the `storage_endpoint` field will be omitted from the resulting object.
-  - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting resource block.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace_extended_auditing_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `log_monitoring_enabled` (`bool`):  When `null`, the `log_monitoring_enabled` field will be omitted from the resulting object.
+  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
+  - `storage_account_access_key_is_secondary` (`bool`):  When `null`, the `storage_account_access_key_is_secondary` field will be omitted from the resulting object.
+  - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
+  - `synapse_workspace_id` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace_extended_auditing_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,13 +85,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `log_monitoring_enabled` (`bool`): Set the `log_monitoring_enabled` field on the resulting object. When `null`, the `log_monitoring_enabled` field will be omitted from the resulting object.
-  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting object. When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `storage_account_access_key` (`string`): Set the `storage_account_access_key` field on the resulting object. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
-  - `storage_account_access_key_is_secondary` (`bool`): Set the `storage_account_access_key_is_secondary` field on the resulting object. When `null`, the `storage_account_access_key_is_secondary` field will be omitted from the resulting object.
-  - `storage_endpoint` (`string`): Set the `storage_endpoint` field on the resulting object. When `null`, the `storage_endpoint` field will be omitted from the resulting object.
-  - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace_extended_auditing_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `log_monitoring_enabled` (`bool`):  When `null`, the `log_monitoring_enabled` field will be omitted from the resulting object.
+  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `storage_account_access_key` (`string`):  When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
+  - `storage_account_access_key_is_secondary` (`bool`):  When `null`, the `storage_account_access_key_is_secondary` field will be omitted from the resulting object.
+  - `storage_endpoint` (`string`):  When `null`, the `storage_endpoint` field will be omitted from the resulting object.
+  - `synapse_workspace_id` (`string`): 
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace_extended_auditing_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_workspace_extended_auditing_policy` resource into the root Terraform configuration.
@@ -246,10 +246,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

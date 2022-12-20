@@ -72,21 +72,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `access_token` (`string`): Set the `access_token` field on the resulting resource block. When `null`, the `access_token` field will be omitted from the resulting object.
-  - `adb_domain` (`string`): Set the `adb_domain` field on the resulting resource block.
-  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting resource block. When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting resource block. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `existing_cluster_id` (`string`): Set the `existing_cluster_id` field on the resulting resource block. When `null`, the `existing_cluster_id` field will be omitted from the resulting object.
-  - `integration_runtime_name` (`string`): Set the `integration_runtime_name` field on the resulting resource block. When `null`, the `integration_runtime_name` field will be omitted from the resulting object.
-  - `msi_work_space_resource_id` (`string`): Set the `msi_work_space_resource_id` field on the resulting resource block. When `null`, the `msi_work_space_resource_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `instance_pool` (`list[obj]`): Set the `instance_pool` field on the resulting resource block. When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-instance_poolnew) constructor.
-  - `key_vault_password` (`list[obj]`): Set the `key_vault_password` field on the resulting resource block. When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
-  - `new_cluster_config` (`list[obj]`): Set the `new_cluster_config` field on the resulting resource block. When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-new_cluster_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_token` (`string`):  When `null`, the `access_token` field will be omitted from the resulting object.
+  - `adb_domain` (`string`): 
+  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `existing_cluster_id` (`string`):  When `null`, the `existing_cluster_id` field will be omitted from the resulting object.
+  - `integration_runtime_name` (`string`):  When `null`, the `integration_runtime_name` field will be omitted from the resulting object.
+  - `msi_work_space_resource_id` (`string`):  When `null`, the `msi_work_space_resource_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `instance_pool` (`list[obj]`):  When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-instance_poolnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `new_cluster_config` (`list[obj]`):  When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-new_cluster_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,21 +110,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `access_token` (`string`): Set the `access_token` field on the resulting object. When `null`, the `access_token` field will be omitted from the resulting object.
-  - `adb_domain` (`string`): Set the `adb_domain` field on the resulting object.
-  - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting object. When `null`, the `additional_properties` field will be omitted from the resulting object.
-  - `annotations` (`list`): Set the `annotations` field on the resulting object. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `existing_cluster_id` (`string`): Set the `existing_cluster_id` field on the resulting object. When `null`, the `existing_cluster_id` field will be omitted from the resulting object.
-  - `integration_runtime_name` (`string`): Set the `integration_runtime_name` field on the resulting object. When `null`, the `integration_runtime_name` field will be omitted from the resulting object.
-  - `msi_work_space_resource_id` (`string`): Set the `msi_work_space_resource_id` field on the resulting object. When `null`, the `msi_work_space_resource_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
-  - `instance_pool` (`list[obj]`): Set the `instance_pool` field on the resulting object. When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-instance_poolnew) constructor.
-  - `key_vault_password` (`list[obj]`): Set the `key_vault_password` field on the resulting object. When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
-  - `new_cluster_config` (`list[obj]`): Set the `new_cluster_config` field on the resulting object. When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-new_cluster_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_token` (`string`):  When `null`, the `access_token` field will be omitted from the resulting object.
+  - `adb_domain` (`string`): 
+  - `additional_properties` (`obj`):  When `null`, the `additional_properties` field will be omitted from the resulting object.
+  - `annotations` (`list`):  When `null`, the `annotations` field will be omitted from the resulting object.
+  - `data_factory_id` (`string`): 
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `existing_cluster_id` (`string`):  When `null`, the `existing_cluster_id` field will be omitted from the resulting object.
+  - `integration_runtime_name` (`string`):  When `null`, the `integration_runtime_name` field will be omitted from the resulting object.
+  - `msi_work_space_resource_id` (`string`):  When `null`, the `msi_work_space_resource_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `parameters` (`obj`):  When `null`, the `parameters` field will be omitted from the resulting object.
+  - `instance_pool` (`list[obj]`):  When `null`, the `instance_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.instance_pool.new](#fn-instance_poolnew) constructor.
+  - `key_vault_password` (`list[obj]`):  When `null`, the `key_vault_password` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.key_vault_password.new](#fn-key_vault_passwordnew) constructor.
+  - `new_cluster_config` (`list[obj]`):  When `null`, the `new_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.new_cluster_config.new](#fn-new_cluster_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_linked_service_azure_databricks.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_factory_linked_service_azure_databricks` resource into the root Terraform configuration.
@@ -147,16 +147,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `cluster_version` (`string`): Set the `cluster_version` field on the resulting object.
-  - `custom_tags` (`obj`): Set the `custom_tags` field on the resulting object. When `null`, the `custom_tags` field will be omitted from the resulting object.
-  - `driver_node_type` (`string`): Set the `driver_node_type` field on the resulting object. When `null`, the `driver_node_type` field will be omitted from the resulting object.
-  - `init_scripts` (`list`): Set the `init_scripts` field on the resulting object. When `null`, the `init_scripts` field will be omitted from the resulting object.
-  - `log_destination` (`string`): Set the `log_destination` field on the resulting object. When `null`, the `log_destination` field will be omitted from the resulting object.
-  - `max_number_of_workers` (`number`): Set the `max_number_of_workers` field on the resulting object. When `null`, the `max_number_of_workers` field will be omitted from the resulting object.
-  - `min_number_of_workers` (`number`): Set the `min_number_of_workers` field on the resulting object. When `null`, the `min_number_of_workers` field will be omitted from the resulting object.
-  - `node_type` (`string`): Set the `node_type` field on the resulting object.
-  - `spark_config` (`obj`): Set the `spark_config` field on the resulting object. When `null`, the `spark_config` field will be omitted from the resulting object.
-  - `spark_environment_variables` (`obj`): Set the `spark_environment_variables` field on the resulting object. When `null`, the `spark_environment_variables` field will be omitted from the resulting object.
+  - `cluster_version` (`string`): 
+  - `custom_tags` (`obj`):  When `null`, the `custom_tags` field will be omitted from the resulting object.
+  - `driver_node_type` (`string`):  When `null`, the `driver_node_type` field will be omitted from the resulting object.
+  - `init_scripts` (`list`):  When `null`, the `init_scripts` field will be omitted from the resulting object.
+  - `log_destination` (`string`):  When `null`, the `log_destination` field will be omitted from the resulting object.
+  - `max_number_of_workers` (`number`):  When `null`, the `max_number_of_workers` field will be omitted from the resulting object.
+  - `min_number_of_workers` (`number`):  When `null`, the `min_number_of_workers` field will be omitted from the resulting object.
+  - `node_type` (`string`): 
+  - `spark_config` (`obj`):  When `null`, the `spark_config` field will be omitted from the resulting object.
+  - `spark_environment_variables` (`obj`):  When `null`, the `spark_environment_variables` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `new_cluster_config` sub block.
@@ -502,10 +502,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `cluster_version` (`string`): Set the `cluster_version` field on the resulting object.
-  - `instance_pool_id` (`string`): Set the `instance_pool_id` field on the resulting object.
-  - `max_number_of_workers` (`number`): Set the `max_number_of_workers` field on the resulting object. When `null`, the `max_number_of_workers` field will be omitted from the resulting object.
-  - `min_number_of_workers` (`number`): Set the `min_number_of_workers` field on the resulting object. When `null`, the `min_number_of_workers` field will be omitted from the resulting object.
+  - `cluster_version` (`string`): 
+  - `instance_pool_id` (`string`): 
+  - `max_number_of_workers` (`number`):  When `null`, the `max_number_of_workers` field will be omitted from the resulting object.
+  - `min_number_of_workers` (`number`):  When `null`, the `min_number_of_workers` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `instance_pool` sub block.
@@ -528,8 +528,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting object.
-  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.
+  - `linked_service_name` (`string`): 
+  - `secret_name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `key_vault_password` sub block.
@@ -552,10 +552,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -61,10 +61,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting resource block.
-  - `rule` (`list[obj]`): Set the `rule` field on the resulting resource block. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): 
+  - `virtual_hub_id` (`string`): 
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.new](#fn-rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,10 +88,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.
-  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): 
+  - `virtual_hub_id` (`string`): 
+  - `rule` (`list[obj]`):  When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.new](#fn-rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `route_map` resource into the root Terraform configuration.
@@ -219,10 +219,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `next_step_if_matched` (`string`): Set the `next_step_if_matched` field on the resulting object. When `null`, the `next_step_if_matched` field will be omitted from the resulting object.
-  - `action` (`list[obj]`): Set the `action` field on the resulting object. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.new](#fn-ruleactionnew) constructor.
-  - `match_criterion` (`list[obj]`): Set the `match_criterion` field on the resulting object. When `null`, the `match_criterion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.match_criterion.new](#fn-rulematch_criterionnew) constructor.
+  - `name` (`string`): 
+  - `next_step_if_matched` (`string`):  When `null`, the `next_step_if_matched` field will be omitted from the resulting object.
+  - `action` (`list[obj]`):  When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.new](#fn-ruleactionnew) constructor.
+  - `match_criterion` (`list[obj]`):  When `null`, the `match_criterion` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.match_criterion.new](#fn-rulematch_criterionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
@@ -245,8 +245,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `parameter` (`list[obj]`): Set the `parameter` field on the resulting object. When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.parameter.new](#fn-ruleruleparameternew) constructor.
+  - `type` (`string`): 
+  - `parameter` (`list[obj]`):  When `null`, the `parameter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.route_map.rule.action.parameter.new](#fn-ruleruleparameternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `action` sub block.
@@ -269,9 +269,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `as_path` (`list`): Set the `as_path` field on the resulting object. When `null`, the `as_path` field will be omitted from the resulting object.
-  - `community` (`list`): Set the `community` field on the resulting object. When `null`, the `community` field will be omitted from the resulting object.
-  - `route_prefix` (`list`): Set the `route_prefix` field on the resulting object. When `null`, the `route_prefix` field will be omitted from the resulting object.
+  - `as_path` (`list`):  When `null`, the `as_path` field will be omitted from the resulting object.
+  - `community` (`list`):  When `null`, the `community` field will be omitted from the resulting object.
+  - `route_prefix` (`list`):  When `null`, the `route_prefix` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `parameter` sub block.
@@ -294,10 +294,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `as_path` (`list`): Set the `as_path` field on the resulting object. When `null`, the `as_path` field will be omitted from the resulting object.
-  - `community` (`list`): Set the `community` field on the resulting object. When `null`, the `community` field will be omitted from the resulting object.
-  - `match_condition` (`string`): Set the `match_condition` field on the resulting object.
-  - `route_prefix` (`list`): Set the `route_prefix` field on the resulting object. When `null`, the `route_prefix` field will be omitted from the resulting object.
+  - `as_path` (`list`):  When `null`, the `as_path` field will be omitted from the resulting object.
+  - `community` (`list`):  When `null`, the `community` field will be omitted from the resulting object.
+  - `match_condition` (`string`): 
+  - `route_prefix` (`list`):  When `null`, the `route_prefix` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `match_criterion` sub block.
@@ -320,10 +320,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

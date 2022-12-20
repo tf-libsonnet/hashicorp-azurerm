@@ -64,19 +64,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `cache_control` (`string`): Set the `cache_control` field on the resulting data source block. When `null`, the `cache_control` field will be omitted from the resulting object.
-  - `connection_string` (`string`): Set the `connection_string` field on the resulting data source block.
-  - `container_name` (`string`): Set the `container_name` field on the resulting data source block.
-  - `content_disposition` (`string`): Set the `content_disposition` field on the resulting data source block. When `null`, the `content_disposition` field will be omitted from the resulting object.
-  - `content_encoding` (`string`): Set the `content_encoding` field on the resulting data source block. When `null`, the `content_encoding` field will be omitted from the resulting object.
-  - `content_language` (`string`): Set the `content_language` field on the resulting data source block. When `null`, the `content_language` field will be omitted from the resulting object.
-  - `content_type` (`string`): Set the `content_type` field on the resulting data source block. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `expiry` (`string`): Set the `expiry` field on the resulting data source block.
-  - `https_only` (`bool`): Set the `https_only` field on the resulting data source block. When `null`, the `https_only` field will be omitted from the resulting object.
-  - `ip_address` (`string`): Set the `ip_address` field on the resulting data source block. When `null`, the `ip_address` field will be omitted from the resulting object.
-  - `start` (`string`): Set the `start` field on the resulting data source block.
-  - `permissions` (`list[obj]`): Set the `permissions` field on the resulting data source block. When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.permissions.new](#fn-permissionsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cache_control` (`string`):  When `null`, the `cache_control` field will be omitted from the resulting object.
+  - `connection_string` (`string`): 
+  - `container_name` (`string`): 
+  - `content_disposition` (`string`):  When `null`, the `content_disposition` field will be omitted from the resulting object.
+  - `content_encoding` (`string`):  When `null`, the `content_encoding` field will be omitted from the resulting object.
+  - `content_language` (`string`):  When `null`, the `content_language` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `expiry` (`string`): 
+  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
+  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `start` (`string`): 
+  - `permissions` (`list[obj]`):  When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.permissions.new](#fn-permissionsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -100,19 +100,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cache_control` (`string`): Set the `cache_control` field on the resulting object. When `null`, the `cache_control` field will be omitted from the resulting object.
-  - `connection_string` (`string`): Set the `connection_string` field on the resulting object.
-  - `container_name` (`string`): Set the `container_name` field on the resulting object.
-  - `content_disposition` (`string`): Set the `content_disposition` field on the resulting object. When `null`, the `content_disposition` field will be omitted from the resulting object.
-  - `content_encoding` (`string`): Set the `content_encoding` field on the resulting object. When `null`, the `content_encoding` field will be omitted from the resulting object.
-  - `content_language` (`string`): Set the `content_language` field on the resulting object. When `null`, the `content_language` field will be omitted from the resulting object.
-  - `content_type` (`string`): Set the `content_type` field on the resulting object. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `expiry` (`string`): Set the `expiry` field on the resulting object.
-  - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
-  - `ip_address` (`string`): Set the `ip_address` field on the resulting object. When `null`, the `ip_address` field will be omitted from the resulting object.
-  - `start` (`string`): Set the `start` field on the resulting object.
-  - `permissions` (`list[obj]`): Set the `permissions` field on the resulting object. When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.permissions.new](#fn-permissionsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cache_control` (`string`):  When `null`, the `cache_control` field will be omitted from the resulting object.
+  - `connection_string` (`string`): 
+  - `container_name` (`string`): 
+  - `content_disposition` (`string`):  When `null`, the `content_disposition` field will be omitted from the resulting object.
+  - `content_encoding` (`string`):  When `null`, the `content_encoding` field will be omitted from the resulting object.
+  - `content_language` (`string`):  When `null`, the `content_language` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `expiry` (`string`): 
+  - `https_only` (`bool`):  When `null`, the `https_only` field will be omitted from the resulting object.
+  - `ip_address` (`string`):  When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `start` (`string`): 
+  - `permissions` (`list[obj]`):  When `null`, the `permissions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.permissions.new](#fn-permissionsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.storage_account_blob_container_sas.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `storage_account_blob_container_sas` data source into the root Terraform configuration.
@@ -384,12 +384,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `add` (`bool`): Set the `add` field on the resulting object.
-  - `create` (`bool`): Set the `create` field on the resulting object.
-  - `delete` (`bool`): Set the `delete` field on the resulting object.
-  - `list` (`bool`): Set the `list` field on the resulting object.
-  - `read` (`bool`): Set the `read` field on the resulting object.
-  - `write` (`bool`): Set the `write` field on the resulting object.
+  - `add` (`bool`): 
+  - `create` (`bool`): 
+  - `delete` (`bool`): 
+  - `list` (`bool`): 
+  - `read` (`bool`): 
+  - `write` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `permissions` sub block.
@@ -412,7 +412,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

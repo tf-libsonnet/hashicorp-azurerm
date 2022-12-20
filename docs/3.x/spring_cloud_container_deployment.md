@@ -63,18 +63,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `addon_json` (`string`): Set the `addon_json` field on the resulting resource block. When `null`, the `addon_json` field will be omitted from the resulting object.
-  - `arguments` (`list`): Set the `arguments` field on the resulting resource block. When `null`, the `arguments` field will be omitted from the resulting object.
-  - `commands` (`list`): Set the `commands` field on the resulting resource block. When `null`, the `commands` field will be omitted from the resulting object.
-  - `environment_variables` (`obj`): Set the `environment_variables` field on the resulting resource block. When `null`, the `environment_variables` field will be omitted from the resulting object.
-  - `image` (`string`): Set the `image` field on the resulting resource block.
-  - `instance_count` (`number`): Set the `instance_count` field on the resulting resource block. When `null`, the `instance_count` field will be omitted from the resulting object.
-  - `language_framework` (`string`): Set the `language_framework` field on the resulting resource block. When `null`, the `language_framework` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `server` (`string`): Set the `server` field on the resulting resource block.
-  - `spring_cloud_app_id` (`string`): Set the `spring_cloud_app_id` field on the resulting resource block.
-  - `quota` (`list[obj]`): Set the `quota` field on the resulting resource block. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.quota.new](#fn-quotanew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `addon_json` (`string`):  When `null`, the `addon_json` field will be omitted from the resulting object.
+  - `arguments` (`list`):  When `null`, the `arguments` field will be omitted from the resulting object.
+  - `commands` (`list`):  When `null`, the `commands` field will be omitted from the resulting object.
+  - `environment_variables` (`obj`):  When `null`, the `environment_variables` field will be omitted from the resulting object.
+  - `image` (`string`): 
+  - `instance_count` (`number`):  When `null`, the `instance_count` field will be omitted from the resulting object.
+  - `language_framework` (`string`):  When `null`, the `language_framework` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `server` (`string`): 
+  - `spring_cloud_app_id` (`string`): 
+  - `quota` (`list[obj]`):  When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.quota.new](#fn-quotanew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,18 +98,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `addon_json` (`string`): Set the `addon_json` field on the resulting object. When `null`, the `addon_json` field will be omitted from the resulting object.
-  - `arguments` (`list`): Set the `arguments` field on the resulting object. When `null`, the `arguments` field will be omitted from the resulting object.
-  - `commands` (`list`): Set the `commands` field on the resulting object. When `null`, the `commands` field will be omitted from the resulting object.
-  - `environment_variables` (`obj`): Set the `environment_variables` field on the resulting object. When `null`, the `environment_variables` field will be omitted from the resulting object.
-  - `image` (`string`): Set the `image` field on the resulting object.
-  - `instance_count` (`number`): Set the `instance_count` field on the resulting object. When `null`, the `instance_count` field will be omitted from the resulting object.
-  - `language_framework` (`string`): Set the `language_framework` field on the resulting object. When `null`, the `language_framework` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `server` (`string`): Set the `server` field on the resulting object.
-  - `spring_cloud_app_id` (`string`): Set the `spring_cloud_app_id` field on the resulting object.
-  - `quota` (`list[obj]`): Set the `quota` field on the resulting object. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.quota.new](#fn-quotanew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `addon_json` (`string`):  When `null`, the `addon_json` field will be omitted from the resulting object.
+  - `arguments` (`list`):  When `null`, the `arguments` field will be omitted from the resulting object.
+  - `commands` (`list`):  When `null`, the `commands` field will be omitted from the resulting object.
+  - `environment_variables` (`obj`):  When `null`, the `environment_variables` field will be omitted from the resulting object.
+  - `image` (`string`): 
+  - `instance_count` (`number`):  When `null`, the `instance_count` field will be omitted from the resulting object.
+  - `language_framework` (`string`):  When `null`, the `language_framework` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `server` (`string`): 
+  - `spring_cloud_app_id` (`string`): 
+  - `quota` (`list[obj]`):  When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.quota.new](#fn-quotanew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_container_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_container_deployment` resource into the root Terraform configuration.
@@ -365,8 +365,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `cpu` (`string`): Set the `cpu` field on the resulting object. When `null`, the `cpu` field will be omitted from the resulting object.
-  - `memory` (`string`): Set the `memory` field on the resulting object. When `null`, the `memory` field will be omitted from the resulting object.
+  - `cpu` (`string`):  When `null`, the `cpu` field will be omitted from the resulting object.
+  - `memory` (`string`):  When `null`, the `memory` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `quota` sub block.
@@ -389,10 +389,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

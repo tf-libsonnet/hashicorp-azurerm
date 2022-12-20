@@ -66,24 +66,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cmk_key_vault_url` (`string`): Set the `cmk_key_vault_url` field on the resulting resource block. When `null`, the `cmk_key_vault_url` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `developer_app_insights_api_key` (`string`): Set the `developer_app_insights_api_key` field on the resulting resource block. When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
-  - `developer_app_insights_application_id` (`string`): Set the `developer_app_insights_application_id` field on the resulting resource block. When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
-  - `developer_app_insights_key` (`string`): Set the `developer_app_insights_key` field on the resulting resource block. When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting resource block. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `endpoint` (`string`): Set the `endpoint` field on the resulting resource block. When `null`, the `endpoint` field will be omitted from the resulting object.
-  - `icon_url` (`string`): Set the `icon_url` field on the resulting resource block. When `null`, the `icon_url` field will be omitted from the resulting object.
-  - `isolated_network_enabled` (`bool`): Set the `isolated_network_enabled` field on the resulting resource block. When `null`, the `isolated_network_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `microsoft_app_id` (`string`): Set the `microsoft_app_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block.
-  - `streaming_endpoint_enabled` (`bool`): Set the `streaming_endpoint_enabled` field on the resulting resource block. When `null`, the `streaming_endpoint_enabled` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channels_registration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cmk_key_vault_url` (`string`):  When `null`, the `cmk_key_vault_url` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `developer_app_insights_api_key` (`string`):  When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
+  - `developer_app_insights_application_id` (`string`):  When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
+  - `developer_app_insights_key` (`string`):  When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
+  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
+  - `endpoint` (`string`):  When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `icon_url` (`string`):  When `null`, the `icon_url` field will be omitted from the resulting object.
+  - `isolated_network_enabled` (`bool`):  When `null`, the `isolated_network_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `microsoft_app_id` (`string`): 
+  - `name` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`): 
+  - `streaming_endpoint_enabled` (`bool`):  When `null`, the `streaming_endpoint_enabled` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channels_registration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,24 +107,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cmk_key_vault_url` (`string`): Set the `cmk_key_vault_url` field on the resulting object. When `null`, the `cmk_key_vault_url` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `developer_app_insights_api_key` (`string`): Set the `developer_app_insights_api_key` field on the resulting object. When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
-  - `developer_app_insights_application_id` (`string`): Set the `developer_app_insights_application_id` field on the resulting object. When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
-  - `developer_app_insights_key` (`string`): Set the `developer_app_insights_key` field on the resulting object. When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
-  - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `endpoint` (`string`): Set the `endpoint` field on the resulting object. When `null`, the `endpoint` field will be omitted from the resulting object.
-  - `icon_url` (`string`): Set the `icon_url` field on the resulting object. When `null`, the `icon_url` field will be omitted from the resulting object.
-  - `isolated_network_enabled` (`bool`): Set the `isolated_network_enabled` field on the resulting object. When `null`, the `isolated_network_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `microsoft_app_id` (`string`): Set the `microsoft_app_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object.
-  - `streaming_endpoint_enabled` (`bool`): Set the `streaming_endpoint_enabled` field on the resulting object. When `null`, the `streaming_endpoint_enabled` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channels_registration.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cmk_key_vault_url` (`string`):  When `null`, the `cmk_key_vault_url` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `developer_app_insights_api_key` (`string`):  When `null`, the `developer_app_insights_api_key` field will be omitted from the resulting object.
+  - `developer_app_insights_application_id` (`string`):  When `null`, the `developer_app_insights_application_id` field will be omitted from the resulting object.
+  - `developer_app_insights_key` (`string`):  When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
+  - `display_name` (`string`):  When `null`, the `display_name` field will be omitted from the resulting object.
+  - `endpoint` (`string`):  When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `icon_url` (`string`):  When `null`, the `icon_url` field will be omitted from the resulting object.
+  - `isolated_network_enabled` (`bool`):  When `null`, the `isolated_network_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `microsoft_app_id` (`string`): 
+  - `name` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`): 
+  - `streaming_endpoint_enabled` (`bool`):  When `null`, the `streaming_endpoint_enabled` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channels_registration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bot_channels_registration` resource into the root Terraform configuration.
@@ -455,10 +455,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

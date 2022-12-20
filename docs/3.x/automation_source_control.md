@@ -62,17 +62,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `automatic_sync` (`bool`): Set the `automatic_sync` field on the resulting resource block. When `null`, the `automatic_sync` field will be omitted from the resulting object.
-  - `automation_account_id` (`string`): Set the `automation_account_id` field on the resulting resource block.
-  - `branch` (`string`): Set the `branch` field on the resulting resource block. When `null`, the `branch` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `folder_path` (`string`): Set the `folder_path` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `publish_runbook_enabled` (`bool`): Set the `publish_runbook_enabled` field on the resulting resource block. When `null`, the `publish_runbook_enabled` field will be omitted from the resulting object.
-  - `repository_url` (`string`): Set the `repository_url` field on the resulting resource block.
-  - `source_control_type` (`string`): Set the `source_control_type` field on the resulting resource block.
-  - `security` (`list[obj]`): Set the `security` field on the resulting resource block. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-securitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automatic_sync` (`bool`):  When `null`, the `automatic_sync` field will be omitted from the resulting object.
+  - `automation_account_id` (`string`): 
+  - `branch` (`string`):  When `null`, the `branch` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `folder_path` (`string`): 
+  - `name` (`string`): 
+  - `publish_runbook_enabled` (`bool`):  When `null`, the `publish_runbook_enabled` field will be omitted from the resulting object.
+  - `repository_url` (`string`): 
+  - `source_control_type` (`string`): 
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-securitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,17 +96,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `automatic_sync` (`bool`): Set the `automatic_sync` field on the resulting object. When `null`, the `automatic_sync` field will be omitted from the resulting object.
-  - `automation_account_id` (`string`): Set the `automation_account_id` field on the resulting object.
-  - `branch` (`string`): Set the `branch` field on the resulting object. When `null`, the `branch` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `folder_path` (`string`): Set the `folder_path` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `publish_runbook_enabled` (`bool`): Set the `publish_runbook_enabled` field on the resulting object. When `null`, the `publish_runbook_enabled` field will be omitted from the resulting object.
-  - `repository_url` (`string`): Set the `repository_url` field on the resulting object.
-  - `source_control_type` (`string`): Set the `source_control_type` field on the resulting object.
-  - `security` (`list[obj]`): Set the `security` field on the resulting object. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-securitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-timeoutsnew) constructor.
+  - `automatic_sync` (`bool`):  When `null`, the `automatic_sync` field will be omitted from the resulting object.
+  - `automation_account_id` (`string`): 
+  - `branch` (`string`):  When `null`, the `branch` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `folder_path` (`string`): 
+  - `name` (`string`): 
+  - `publish_runbook_enabled` (`bool`):  When `null`, the `publish_runbook_enabled` field will be omitted from the resulting object.
+  - `repository_url` (`string`): 
+  - `source_control_type` (`string`): 
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.security.new](#fn-securitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_source_control.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_source_control` resource into the root Terraform configuration.
@@ -346,9 +346,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `refresh_token` (`string`): Set the `refresh_token` field on the resulting object. When `null`, the `refresh_token` field will be omitted from the resulting object.
-  - `token` (`string`): Set the `token` field on the resulting object.
-  - `token_type` (`string`): Set the `token_type` field on the resulting object.
+  - `refresh_token` (`string`):  When `null`, the `refresh_token` field will be omitted from the resulting object.
+  - `token` (`string`): 
+  - `token_type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `security` sub block.
@@ -371,10 +371,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

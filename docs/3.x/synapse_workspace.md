@@ -82,28 +82,28 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `aad_admin` (`list`): Set the `aad_admin` field on the resulting resource block. When `null`, the `aad_admin` field will be omitted from the resulting object.
-  - `compute_subnet_id` (`string`): Set the `compute_subnet_id` field on the resulting resource block. When `null`, the `compute_subnet_id` field will be omitted from the resulting object.
-  - `data_exfiltration_protection_enabled` (`bool`): Set the `data_exfiltration_protection_enabled` field on the resulting resource block. When `null`, the `data_exfiltration_protection_enabled` field will be omitted from the resulting object.
-  - `linking_allowed_for_aad_tenant_ids` (`list`): Set the `linking_allowed_for_aad_tenant_ids` field on the resulting resource block. When `null`, the `linking_allowed_for_aad_tenant_ids` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `managed_resource_group_name` (`string`): Set the `managed_resource_group_name` field on the resulting resource block. When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
-  - `managed_virtual_network_enabled` (`bool`): Set the `managed_virtual_network_enabled` field on the resulting resource block. When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `purview_id` (`string`): Set the `purview_id` field on the resulting resource block. When `null`, the `purview_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sql_aad_admin` (`list`): Set the `sql_aad_admin` field on the resulting resource block. When `null`, the `sql_aad_admin` field will be omitted from the resulting object.
-  - `sql_administrator_login` (`string`): Set the `sql_administrator_login` field on the resulting resource block. When `null`, the `sql_administrator_login` field will be omitted from the resulting object.
-  - `sql_administrator_login_password` (`string`): Set the `sql_administrator_login_password` field on the resulting resource block. When `null`, the `sql_administrator_login_password` field will be omitted from the resulting object.
-  - `sql_identity_control_enabled` (`bool`): Set the `sql_identity_control_enabled` field on the resulting resource block. When `null`, the `sql_identity_control_enabled` field will be omitted from the resulting object.
-  - `storage_data_lake_gen2_filesystem_id` (`string`): Set the `storage_data_lake_gen2_filesystem_id` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `azure_devops_repo` (`list[obj]`): Set the `azure_devops_repo` field on the resulting resource block. When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-azure_devops_reponew) constructor.
-  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting resource block. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
-  - `github_repo` (`list[obj]`): Set the `github_repo` field on the resulting resource block. When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-github_reponew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `aad_admin` (`list`):  When `null`, the `aad_admin` field will be omitted from the resulting object.
+  - `compute_subnet_id` (`string`):  When `null`, the `compute_subnet_id` field will be omitted from the resulting object.
+  - `data_exfiltration_protection_enabled` (`bool`):  When `null`, the `data_exfiltration_protection_enabled` field will be omitted from the resulting object.
+  - `linking_allowed_for_aad_tenant_ids` (`list`):  When `null`, the `linking_allowed_for_aad_tenant_ids` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `managed_resource_group_name` (`string`):  When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
+  - `managed_virtual_network_enabled` (`bool`):  When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `purview_id` (`string`):  When `null`, the `purview_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sql_aad_admin` (`list`):  When `null`, the `sql_aad_admin` field will be omitted from the resulting object.
+  - `sql_administrator_login` (`string`):  When `null`, the `sql_administrator_login` field will be omitted from the resulting object.
+  - `sql_administrator_login_password` (`string`):  When `null`, the `sql_administrator_login_password` field will be omitted from the resulting object.
+  - `sql_identity_control_enabled` (`bool`):  When `null`, the `sql_identity_control_enabled` field will be omitted from the resulting object.
+  - `storage_data_lake_gen2_filesystem_id` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `azure_devops_repo` (`list[obj]`):  When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-azure_devops_reponew) constructor.
+  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `github_repo` (`list[obj]`):  When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-github_reponew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -127,28 +127,28 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `aad_admin` (`list`): Set the `aad_admin` field on the resulting object. When `null`, the `aad_admin` field will be omitted from the resulting object.
-  - `compute_subnet_id` (`string`): Set the `compute_subnet_id` field on the resulting object. When `null`, the `compute_subnet_id` field will be omitted from the resulting object.
-  - `data_exfiltration_protection_enabled` (`bool`): Set the `data_exfiltration_protection_enabled` field on the resulting object. When `null`, the `data_exfiltration_protection_enabled` field will be omitted from the resulting object.
-  - `linking_allowed_for_aad_tenant_ids` (`list`): Set the `linking_allowed_for_aad_tenant_ids` field on the resulting object. When `null`, the `linking_allowed_for_aad_tenant_ids` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `managed_resource_group_name` (`string`): Set the `managed_resource_group_name` field on the resulting object. When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
-  - `managed_virtual_network_enabled` (`bool`): Set the `managed_virtual_network_enabled` field on the resulting object. When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `purview_id` (`string`): Set the `purview_id` field on the resulting object. When `null`, the `purview_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sql_aad_admin` (`list`): Set the `sql_aad_admin` field on the resulting object. When `null`, the `sql_aad_admin` field will be omitted from the resulting object.
-  - `sql_administrator_login` (`string`): Set the `sql_administrator_login` field on the resulting object. When `null`, the `sql_administrator_login` field will be omitted from the resulting object.
-  - `sql_administrator_login_password` (`string`): Set the `sql_administrator_login_password` field on the resulting object. When `null`, the `sql_administrator_login_password` field will be omitted from the resulting object.
-  - `sql_identity_control_enabled` (`bool`): Set the `sql_identity_control_enabled` field on the resulting object. When `null`, the `sql_identity_control_enabled` field will be omitted from the resulting object.
-  - `storage_data_lake_gen2_filesystem_id` (`string`): Set the `storage_data_lake_gen2_filesystem_id` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `azure_devops_repo` (`list[obj]`): Set the `azure_devops_repo` field on the resulting object. When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-azure_devops_reponew) constructor.
-  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting object. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
-  - `github_repo` (`list[obj]`): Set the `github_repo` field on the resulting object. When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-github_reponew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-identitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `aad_admin` (`list`):  When `null`, the `aad_admin` field will be omitted from the resulting object.
+  - `compute_subnet_id` (`string`):  When `null`, the `compute_subnet_id` field will be omitted from the resulting object.
+  - `data_exfiltration_protection_enabled` (`bool`):  When `null`, the `data_exfiltration_protection_enabled` field will be omitted from the resulting object.
+  - `linking_allowed_for_aad_tenant_ids` (`list`):  When `null`, the `linking_allowed_for_aad_tenant_ids` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `managed_resource_group_name` (`string`):  When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
+  - `managed_virtual_network_enabled` (`bool`):  When `null`, the `managed_virtual_network_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `purview_id` (`string`):  When `null`, the `purview_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sql_aad_admin` (`list`):  When `null`, the `sql_aad_admin` field will be omitted from the resulting object.
+  - `sql_administrator_login` (`string`):  When `null`, the `sql_administrator_login` field will be omitted from the resulting object.
+  - `sql_administrator_login_password` (`string`):  When `null`, the `sql_administrator_login_password` field will be omitted from the resulting object.
+  - `sql_identity_control_enabled` (`bool`):  When `null`, the `sql_identity_control_enabled` field will be omitted from the resulting object.
+  - `storage_data_lake_gen2_filesystem_id` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `azure_devops_repo` (`list[obj]`):  When `null`, the `azure_devops_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.azure_devops_repo.new](#fn-azure_devops_reponew) constructor.
+  - `customer_managed_key` (`list[obj]`):  When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
+  - `github_repo` (`list[obj]`):  When `null`, the `github_repo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.github_repo.new](#fn-github_reponew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.identity.new](#fn-identitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `synapse_workspace` resource into the root Terraform configuration.
@@ -627,13 +627,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `account_name` (`string`): Set the `account_name` field on the resulting object.
-  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.
-  - `last_commit_id` (`string`): Set the `last_commit_id` field on the resulting object. When `null`, the `last_commit_id` field will be omitted from the resulting object.
-  - `project_name` (`string`): Set the `project_name` field on the resulting object.
-  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.
-  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `account_name` (`string`): 
+  - `branch_name` (`string`): 
+  - `last_commit_id` (`string`):  When `null`, the `last_commit_id` field will be omitted from the resulting object.
+  - `project_name` (`string`): 
+  - `repository_name` (`string`): 
+  - `root_folder` (`string`): 
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure_devops_repo` sub block.
@@ -656,8 +656,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_name` (`string`): Set the `key_name` field on the resulting object. When `null`, the `key_name` field will be omitted from the resulting object.
-  - `key_versionless_id` (`string`): Set the `key_versionless_id` field on the resulting object.
+  - `key_name` (`string`):  When `null`, the `key_name` field will be omitted from the resulting object.
+  - `key_versionless_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `customer_managed_key` sub block.
@@ -680,12 +680,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `account_name` (`string`): Set the `account_name` field on the resulting object.
-  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.
-  - `git_url` (`string`): Set the `git_url` field on the resulting object. When `null`, the `git_url` field will be omitted from the resulting object.
-  - `last_commit_id` (`string`): Set the `last_commit_id` field on the resulting object. When `null`, the `last_commit_id` field will be omitted from the resulting object.
-  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.
-  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.
+  - `account_name` (`string`): 
+  - `branch_name` (`string`): 
+  - `git_url` (`string`):  When `null`, the `git_url` field will be omitted from the resulting object.
+  - `last_commit_id` (`string`):  When `null`, the `last_commit_id` field will be omitted from the resulting object.
+  - `repository_name` (`string`): 
+  - `root_folder` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `github_repo` sub block.
@@ -708,8 +708,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -732,10 +732,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

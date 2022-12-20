@@ -59,11 +59,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `default_action` (`string`): Set the `default_action` field on the resulting resource block.
-  - `signalr_service_id` (`string`): Set the `signalr_service_id` field on the resulting resource block.
-  - `private_endpoint` (`list[obj]`): Set the `private_endpoint` field on the resulting resource block. When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-private_endpointnew) constructor.
-  - `public_network` (`list[obj]`): Set the `public_network` field on the resulting resource block. When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-public_networknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-timeoutsnew) constructor.
+  - `default_action` (`string`): 
+  - `signalr_service_id` (`string`): 
+  - `private_endpoint` (`list[obj]`):  When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-private_endpointnew) constructor.
+  - `public_network` (`list[obj]`):  When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-public_networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,11 +87,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `default_action` (`string`): Set the `default_action` field on the resulting object.
-  - `signalr_service_id` (`string`): Set the `signalr_service_id` field on the resulting object.
-  - `private_endpoint` (`list[obj]`): Set the `private_endpoint` field on the resulting object. When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-private_endpointnew) constructor.
-  - `public_network` (`list[obj]`): Set the `public_network` field on the resulting object. When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-public_networknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-timeoutsnew) constructor.
+  - `default_action` (`string`): 
+  - `signalr_service_id` (`string`): 
+  - `private_endpoint` (`list[obj]`):  When `null`, the `private_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.private_endpoint.new](#fn-private_endpointnew) constructor.
+  - `public_network` (`list[obj]`):  When `null`, the `public_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.public_network.new](#fn-public_networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service_network_acl.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `signalr_service_network_acl` resource into the root Terraform configuration.
@@ -256,8 +256,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_request_types` (`list`): Set the `allowed_request_types` field on the resulting object. When `null`, the `allowed_request_types` field will be omitted from the resulting object.
-  - `denied_request_types` (`list`): Set the `denied_request_types` field on the resulting object. When `null`, the `denied_request_types` field will be omitted from the resulting object.
+  - `allowed_request_types` (`list`):  When `null`, the `allowed_request_types` field will be omitted from the resulting object.
+  - `denied_request_types` (`list`):  When `null`, the `denied_request_types` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `private_endpoint` sub block.
@@ -280,8 +280,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_request_types` (`list`): Set the `allowed_request_types` field on the resulting object. When `null`, the `allowed_request_types` field will be omitted from the resulting object.
-  - `denied_request_types` (`list`): Set the `denied_request_types` field on the resulting object. When `null`, the `denied_request_types` field will be omitted from the resulting object.
+  - `allowed_request_types` (`list`):  When `null`, the `allowed_request_types` field will be omitted from the resulting object.
+  - `denied_request_types` (`list`):  When `null`, the `denied_request_types` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `public_network` sub block.
@@ -304,10 +304,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

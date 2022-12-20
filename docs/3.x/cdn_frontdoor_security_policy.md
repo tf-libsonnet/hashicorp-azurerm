@@ -61,10 +61,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cdn_frontdoor_profile_id` (`string`): Set the `cdn_frontdoor_profile_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `security_policies` (`list[obj]`): Set the `security_policies` field on the resulting resource block. When `null`, the `security_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.new](#fn-security_policiesnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_profile_id` (`string`): 
+  - `name` (`string`): 
+  - `security_policies` (`list[obj]`):  When `null`, the `security_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.new](#fn-security_policiesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,10 +88,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cdn_frontdoor_profile_id` (`string`): Set the `cdn_frontdoor_profile_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `security_policies` (`list[obj]`): Set the `security_policies` field on the resulting object. When `null`, the `security_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.new](#fn-security_policiesnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_profile_id` (`string`): 
+  - `name` (`string`): 
+  - `security_policies` (`list[obj]`):  When `null`, the `security_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.new](#fn-security_policiesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_security_policy` resource into the root Terraform configuration.
@@ -219,7 +219,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `firewall` (`list[obj]`): Set the `firewall` field on the resulting object. When `null`, the `firewall` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new](#fn-security_policiesfirewallnew) constructor.
+  - `firewall` (`list[obj]`):  When `null`, the `firewall` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.new](#fn-security_policiesfirewallnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `security_policies` sub block.
@@ -242,8 +242,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `cdn_frontdoor_firewall_policy_id` (`string`): Set the `cdn_frontdoor_firewall_policy_id` field on the resulting object.
-  - `association` (`list[obj]`): Set the `association` field on the resulting object. When `null`, the `association` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new](#fn-security_policiessecurity_policiesassociationnew) constructor.
+  - `cdn_frontdoor_firewall_policy_id` (`string`): 
+  - `association` (`list[obj]`):  When `null`, the `association` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.new](#fn-security_policiessecurity_policiesassociationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `firewall` sub block.
@@ -266,8 +266,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `patterns_to_match` (`list`): Set the `patterns_to_match` field on the resulting object.
-  - `domain` (`list[obj]`): Set the `domain` field on the resulting object. When `null`, the `domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.domain.new](#fn-security_policiessecurity_policiesfirewalldomainnew) constructor.
+  - `patterns_to_match` (`list`): 
+  - `domain` (`list[obj]`):  When `null`, the `domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_security_policy.security_policies.firewall.association.domain.new](#fn-security_policiessecurity_policiesfirewalldomainnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `association` sub block.
@@ -290,7 +290,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `cdn_frontdoor_domain_id` (`string`): Set the `cdn_frontdoor_domain_id` field on the resulting object.
+  - `cdn_frontdoor_domain_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `domain` sub block.
@@ -313,9 +313,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

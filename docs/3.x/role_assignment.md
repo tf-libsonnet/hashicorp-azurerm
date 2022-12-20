@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `condition` (`string`): Set the `condition` field on the resulting resource block. When `null`, the `condition` field will be omitted from the resulting object.
-  - `condition_version` (`string`): Set the `condition_version` field on the resulting resource block. When `null`, the `condition_version` field will be omitted from the resulting object.
-  - `delegated_managed_identity_resource_id` (`string`): Set the `delegated_managed_identity_resource_id` field on the resulting resource block. When `null`, the `delegated_managed_identity_resource_id` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block. When `null`, the `name` field will be omitted from the resulting object.
-  - `principal_id` (`string`): Set the `principal_id` field on the resulting resource block.
-  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting resource block. When `null`, the `role_definition_id` field will be omitted from the resulting object.
-  - `role_definition_name` (`string`): Set the `role_definition_name` field on the resulting resource block. When `null`, the `role_definition_name` field will be omitted from the resulting object.
-  - `scope` (`string`): Set the `scope` field on the resulting resource block.
-  - `skip_service_principal_aad_check` (`bool`): Set the `skip_service_principal_aad_check` field on the resulting resource block. When `null`, the `skip_service_principal_aad_check` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `condition` (`string`):  When `null`, the `condition` field will be omitted from the resulting object.
+  - `condition_version` (`string`):  When `null`, the `condition_version` field will be omitted from the resulting object.
+  - `delegated_managed_identity_resource_id` (`string`):  When `null`, the `delegated_managed_identity_resource_id` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
+  - `principal_id` (`string`): 
+  - `role_definition_id` (`string`):  When `null`, the `role_definition_id` field will be omitted from the resulting object.
+  - `role_definition_name` (`string`):  When `null`, the `role_definition_name` field will be omitted from the resulting object.
+  - `scope` (`string`): 
+  - `skip_service_principal_aad_check` (`bool`):  When `null`, the `skip_service_principal_aad_check` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `condition` (`string`): Set the `condition` field on the resulting object. When `null`, the `condition` field will be omitted from the resulting object.
-  - `condition_version` (`string`): Set the `condition_version` field on the resulting object. When `null`, the `condition_version` field will be omitted from the resulting object.
-  - `delegated_managed_identity_resource_id` (`string`): Set the `delegated_managed_identity_resource_id` field on the resulting object. When `null`, the `delegated_managed_identity_resource_id` field will be omitted from the resulting object.
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
-  - `principal_id` (`string`): Set the `principal_id` field on the resulting object.
-  - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting object. When `null`, the `role_definition_id` field will be omitted from the resulting object.
-  - `role_definition_name` (`string`): Set the `role_definition_name` field on the resulting object. When `null`, the `role_definition_name` field will be omitted from the resulting object.
-  - `scope` (`string`): Set the `scope` field on the resulting object.
-  - `skip_service_principal_aad_check` (`bool`): Set the `skip_service_principal_aad_check` field on the resulting object. When `null`, the `skip_service_principal_aad_check` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_assignment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `condition` (`string`):  When `null`, the `condition` field will be omitted from the resulting object.
+  - `condition_version` (`string`):  When `null`, the `condition_version` field will be omitted from the resulting object.
+  - `delegated_managed_identity_resource_id` (`string`):  When `null`, the `delegated_managed_identity_resource_id` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
+  - `principal_id` (`string`): 
+  - `role_definition_id` (`string`):  When `null`, the `role_definition_id` field will be omitted from the resulting object.
+  - `role_definition_name` (`string`):  When `null`, the `role_definition_name` field will be omitted from the resulting object.
+  - `scope` (`string`): 
+  - `skip_service_principal_aad_check` (`bool`):  When `null`, the `skip_service_principal_aad_check` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.role_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `role_assignment` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

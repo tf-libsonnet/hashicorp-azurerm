@@ -86,24 +86,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `backup_service_enabled` (`bool`): Set the `backup_service_enabled` field on the resulting resource block. When `null`, the `backup_service_enabled` field will be omitted from the resulting object.
-  - `client_connection_port` (`number`): Set the `client_connection_port` field on the resulting resource block.
-  - `dns_name` (`string`): Set the `dns_name` field on the resulting resource block. When `null`, the `dns_name` field will be omitted from the resulting object.
-  - `dns_service_enabled` (`bool`): Set the `dns_service_enabled` field on the resulting resource block. When `null`, the `dns_service_enabled` field will be omitted from the resulting object.
-  - `http_gateway_port` (`number`): Set the `http_gateway_port` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `password` (`string`): Set the `password` field on the resulting resource block. When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `upgrade_wave` (`string`): Set the `upgrade_wave` field on the resulting resource block. When `null`, the `upgrade_wave` field will be omitted from the resulting object.
-  - `username` (`string`): Set the `username` field on the resulting resource block. When `null`, the `username` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting resource block. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-authenticationnew) constructor.
-  - `custom_fabric_setting` (`list[obj]`): Set the `custom_fabric_setting` field on the resulting resource block. When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-custom_fabric_settingnew) constructor.
-  - `lb_rule` (`list[obj]`): Set the `lb_rule` field on the resulting resource block. When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-lb_rulenew) constructor.
-  - `node_type` (`list[obj]`): Set the `node_type` field on the resulting resource block. When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-node_typenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `backup_service_enabled` (`bool`):  When `null`, the `backup_service_enabled` field will be omitted from the resulting object.
+  - `client_connection_port` (`number`): 
+  - `dns_name` (`string`):  When `null`, the `dns_name` field will be omitted from the resulting object.
+  - `dns_service_enabled` (`bool`):  When `null`, the `dns_service_enabled` field will be omitted from the resulting object.
+  - `http_gateway_port` (`number`): 
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `upgrade_wave` (`string`):  When `null`, the `upgrade_wave` field will be omitted from the resulting object.
+  - `username` (`string`):  When `null`, the `username` field will be omitted from the resulting object.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-authenticationnew) constructor.
+  - `custom_fabric_setting` (`list[obj]`):  When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-custom_fabric_settingnew) constructor.
+  - `lb_rule` (`list[obj]`):  When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-lb_rulenew) constructor.
+  - `node_type` (`list[obj]`):  When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-node_typenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -127,24 +127,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `backup_service_enabled` (`bool`): Set the `backup_service_enabled` field on the resulting object. When `null`, the `backup_service_enabled` field will be omitted from the resulting object.
-  - `client_connection_port` (`number`): Set the `client_connection_port` field on the resulting object.
-  - `dns_name` (`string`): Set the `dns_name` field on the resulting object. When `null`, the `dns_name` field will be omitted from the resulting object.
-  - `dns_service_enabled` (`bool`): Set the `dns_service_enabled` field on the resulting object. When `null`, the `dns_service_enabled` field will be omitted from the resulting object.
-  - `http_gateway_port` (`number`): Set the `http_gateway_port` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `upgrade_wave` (`string`): Set the `upgrade_wave` field on the resulting object. When `null`, the `upgrade_wave` field will be omitted from the resulting object.
-  - `username` (`string`): Set the `username` field on the resulting object. When `null`, the `username` field will be omitted from the resulting object.
-  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-authenticationnew) constructor.
-  - `custom_fabric_setting` (`list[obj]`): Set the `custom_fabric_setting` field on the resulting object. When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-custom_fabric_settingnew) constructor.
-  - `lb_rule` (`list[obj]`): Set the `lb_rule` field on the resulting object. When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-lb_rulenew) constructor.
-  - `node_type` (`list[obj]`): Set the `node_type` field on the resulting object. When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-node_typenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `backup_service_enabled` (`bool`):  When `null`, the `backup_service_enabled` field will be omitted from the resulting object.
+  - `client_connection_port` (`number`): 
+  - `dns_name` (`string`):  When `null`, the `dns_name` field will be omitted from the resulting object.
+  - `dns_service_enabled` (`bool`):  When `null`, the `dns_service_enabled` field will be omitted from the resulting object.
+  - `http_gateway_port` (`number`): 
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `password` (`string`):  When `null`, the `password` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `upgrade_wave` (`string`):  When `null`, the `upgrade_wave` field will be omitted from the resulting object.
+  - `username` (`string`):  When `null`, the `username` field will be omitted from the resulting object.
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.new](#fn-authenticationnew) constructor.
+  - `custom_fabric_setting` (`list[obj]`):  When `null`, the `custom_fabric_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.custom_fabric_setting.new](#fn-custom_fabric_settingnew) constructor.
+  - `lb_rule` (`list[obj]`):  When `null`, the `lb_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.lb_rule.new](#fn-lb_rulenew) constructor.
+  - `node_type` (`list[obj]`):  When `null`, the `node_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.new](#fn-node_typenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `service_fabric_managed_cluster` resource into the root Terraform configuration.
@@ -559,8 +559,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `active_directory` (`list[obj]`): Set the `active_directory` field on the resulting object. When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.active_directory.new](#fn-authenticationactive_directorynew) constructor.
-  - `certificate` (`list[obj]`): Set the `certificate` field on the resulting object. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.certificate.new](#fn-authenticationcertificatenew) constructor.
+  - `active_directory` (`list[obj]`):  When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.active_directory.new](#fn-authenticationactive_directorynew) constructor.
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.authentication.certificate.new](#fn-authenticationcertificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
@@ -583,9 +583,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_application_id` (`string`): Set the `client_application_id` field on the resulting object.
-  - `cluster_application_id` (`string`): Set the `cluster_application_id` field on the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object.
+  - `client_application_id` (`string`): 
+  - `cluster_application_id` (`string`): 
+  - `tenant_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `active_directory` sub block.
@@ -608,9 +608,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `common_name` (`string`): Set the `common_name` field on the resulting object. When `null`, the `common_name` field will be omitted from the resulting object.
-  - `thumbprint` (`string`): Set the `thumbprint` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `common_name` (`string`):  When `null`, the `common_name` field will be omitted from the resulting object.
+  - `thumbprint` (`string`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `certificate` sub block.
@@ -633,9 +633,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `parameter` (`string`): Set the `parameter` field on the resulting object.
-  - `section` (`string`): Set the `section` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `parameter` (`string`): 
+  - `section` (`string`): 
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `custom_fabric_setting` sub block.
@@ -658,11 +658,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `backend_port` (`number`): Set the `backend_port` field on the resulting object.
-  - `frontend_port` (`number`): Set the `frontend_port` field on the resulting object.
-  - `probe_protocol` (`string`): Set the `probe_protocol` field on the resulting object.
-  - `probe_request_path` (`string`): Set the `probe_request_path` field on the resulting object. When `null`, the `probe_request_path` field will be omitted from the resulting object.
-  - `protocol` (`string`): Set the `protocol` field on the resulting object.
+  - `backend_port` (`number`): 
+  - `frontend_port` (`number`): 
+  - `probe_protocol` (`string`): 
+  - `probe_request_path` (`string`):  When `null`, the `probe_request_path` field will be omitted from the resulting object.
+  - `protocol` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `lb_rule` sub block.
@@ -685,23 +685,23 @@ Terraform sub block.
 
 
 **Args**:
-  - `application_port_range` (`string`): Set the `application_port_range` field on the resulting object.
-  - `capacities` (`obj`): Set the `capacities` field on the resulting object. When `null`, the `capacities` field will be omitted from the resulting object.
-  - `data_disk_size_gb` (`number`): Set the `data_disk_size_gb` field on the resulting object.
-  - `data_disk_type` (`string`): Set the `data_disk_type` field on the resulting object. When `null`, the `data_disk_type` field will be omitted from the resulting object.
-  - `ephemeral_port_range` (`string`): Set the `ephemeral_port_range` field on the resulting object.
-  - `multiple_placement_groups_enabled` (`bool`): Set the `multiple_placement_groups_enabled` field on the resulting object. When `null`, the `multiple_placement_groups_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `placement_properties` (`obj`): Set the `placement_properties` field on the resulting object. When `null`, the `placement_properties` field will be omitted from the resulting object.
-  - `primary` (`bool`): Set the `primary` field on the resulting object. When `null`, the `primary` field will be omitted from the resulting object.
-  - `stateless` (`bool`): Set the `stateless` field on the resulting object. When `null`, the `stateless` field will be omitted from the resulting object.
-  - `vm_image_offer` (`string`): Set the `vm_image_offer` field on the resulting object.
-  - `vm_image_publisher` (`string`): Set the `vm_image_publisher` field on the resulting object.
-  - `vm_image_sku` (`string`): Set the `vm_image_sku` field on the resulting object.
-  - `vm_image_version` (`string`): Set the `vm_image_version` field on the resulting object.
-  - `vm_instance_count` (`number`): Set the `vm_instance_count` field on the resulting object.
-  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
-  - `vm_secrets` (`list[obj]`): Set the `vm_secrets` field on the resulting object. When `null`, the `vm_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.new](#fn-node_typevm_secretsnew) constructor.
+  - `application_port_range` (`string`): 
+  - `capacities` (`obj`):  When `null`, the `capacities` field will be omitted from the resulting object.
+  - `data_disk_size_gb` (`number`): 
+  - `data_disk_type` (`string`):  When `null`, the `data_disk_type` field will be omitted from the resulting object.
+  - `ephemeral_port_range` (`string`): 
+  - `multiple_placement_groups_enabled` (`bool`):  When `null`, the `multiple_placement_groups_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `placement_properties` (`obj`):  When `null`, the `placement_properties` field will be omitted from the resulting object.
+  - `primary` (`bool`):  When `null`, the `primary` field will be omitted from the resulting object.
+  - `stateless` (`bool`):  When `null`, the `stateless` field will be omitted from the resulting object.
+  - `vm_image_offer` (`string`): 
+  - `vm_image_publisher` (`string`): 
+  - `vm_image_sku` (`string`): 
+  - `vm_image_version` (`string`): 
+  - `vm_instance_count` (`number`): 
+  - `vm_size` (`string`): 
+  - `vm_secrets` (`list[obj]`):  When `null`, the `vm_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.new](#fn-node_typevm_secretsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_type` sub block.
@@ -724,8 +724,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `vault_id` (`string`): Set the `vault_id` field on the resulting object.
-  - `certificates` (`list[obj]`): Set the `certificates` field on the resulting object. When `null`, the `certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.certificates.new](#fn-node_typenode_typecertificatesnew) constructor.
+  - `vault_id` (`string`): 
+  - `certificates` (`list[obj]`):  When `null`, the `certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.service_fabric_managed_cluster.node_type.vm_secrets.certificates.new](#fn-node_typenode_typecertificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vm_secrets` sub block.
@@ -748,8 +748,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `store` (`string`): Set the `store` field on the resulting object.
-  - `url` (`string`): Set the `url` field on the resulting object.
+  - `store` (`string`): 
+  - `url` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `certificates` sub block.
@@ -772,10 +772,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cache_name` (`string`): Set the `cache_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `target_host_name` (`string`): Set the `target_host_name` field on the resulting resource block.
-  - `usage_model` (`string`): Set the `usage_model` field on the resulting resource block.
-  - `namespace_junction` (`list[obj]`): Set the `namespace_junction` field on the resulting resource block. When `null`, the `namespace_junction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.namespace_junction.new](#fn-namespace_junctionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cache_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `target_host_name` (`string`): 
+  - `usage_model` (`string`): 
+  - `namespace_junction` (`list[obj]`):  When `null`, the `namespace_junction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.namespace_junction.new](#fn-namespace_junctionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cache_name` (`string`): Set the `cache_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `target_host_name` (`string`): Set the `target_host_name` field on the resulting object.
-  - `usage_model` (`string`): Set the `usage_model` field on the resulting object.
-  - `namespace_junction` (`list[obj]`): Set the `namespace_junction` field on the resulting object. When `null`, the `namespace_junction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.namespace_junction.new](#fn-namespace_junctionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cache_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `target_host_name` (`string`): 
+  - `usage_model` (`string`): 
+  - `namespace_junction` (`list[obj]`):  When `null`, the `namespace_junction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.namespace_junction.new](#fn-namespace_junctionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_nfs_target.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `hpc_cache_nfs_target` resource into the root Terraform configuration.
@@ -270,10 +270,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_policy_name` (`string`): Set the `access_policy_name` field on the resulting object. When `null`, the `access_policy_name` field will be omitted from the resulting object.
-  - `namespace_path` (`string`): Set the `namespace_path` field on the resulting object.
-  - `nfs_export` (`string`): Set the `nfs_export` field on the resulting object.
-  - `target_path` (`string`): Set the `target_path` field on the resulting object. When `null`, the `target_path` field will be omitted from the resulting object.
+  - `access_policy_name` (`string`):  When `null`, the `access_policy_name` field will be omitted from the resulting object.
+  - `namespace_path` (`string`): 
+  - `nfs_export` (`string`): 
+  - `target_path` (`string`):  When `null`, the `target_path` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `namespace_junction` sub block.
@@ -296,10 +296,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

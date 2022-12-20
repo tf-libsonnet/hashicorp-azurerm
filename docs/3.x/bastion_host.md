@@ -64,19 +64,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `copy_paste_enabled` (`bool`): Set the `copy_paste_enabled` field on the resulting resource block. When `null`, the `copy_paste_enabled` field will be omitted from the resulting object.
-  - `file_copy_enabled` (`bool`): Set the `file_copy_enabled` field on the resulting resource block. When `null`, the `file_copy_enabled` field will be omitted from the resulting object.
-  - `ip_connect_enabled` (`bool`): Set the `ip_connect_enabled` field on the resulting resource block. When `null`, the `ip_connect_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `scale_units` (`number`): Set the `scale_units` field on the resulting resource block. When `null`, the `scale_units` field will be omitted from the resulting object.
-  - `shareable_link_enabled` (`bool`): Set the `shareable_link_enabled` field on the resulting resource block. When `null`, the `shareable_link_enabled` field will be omitted from the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `tunneling_enabled` (`bool`): Set the `tunneling_enabled` field on the resulting resource block. When `null`, the `tunneling_enabled` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting resource block. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.timeouts.new](#fn-timeoutsnew) constructor.
+  - `copy_paste_enabled` (`bool`):  When `null`, the `copy_paste_enabled` field will be omitted from the resulting object.
+  - `file_copy_enabled` (`bool`):  When `null`, the `file_copy_enabled` field will be omitted from the resulting object.
+  - `ip_connect_enabled` (`bool`):  When `null`, the `ip_connect_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `scale_units` (`number`):  When `null`, the `scale_units` field will be omitted from the resulting object.
+  - `shareable_link_enabled` (`bool`):  When `null`, the `shareable_link_enabled` field will be omitted from the resulting object.
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `tunneling_enabled` (`bool`):  When `null`, the `tunneling_enabled` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,19 +100,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `copy_paste_enabled` (`bool`): Set the `copy_paste_enabled` field on the resulting object. When `null`, the `copy_paste_enabled` field will be omitted from the resulting object.
-  - `file_copy_enabled` (`bool`): Set the `file_copy_enabled` field on the resulting object. When `null`, the `file_copy_enabled` field will be omitted from the resulting object.
-  - `ip_connect_enabled` (`bool`): Set the `ip_connect_enabled` field on the resulting object. When `null`, the `ip_connect_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `scale_units` (`number`): Set the `scale_units` field on the resulting object. When `null`, the `scale_units` field will be omitted from the resulting object.
-  - `shareable_link_enabled` (`bool`): Set the `shareable_link_enabled` field on the resulting object. When `null`, the `shareable_link_enabled` field will be omitted from the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `tunneling_enabled` (`bool`): Set the `tunneling_enabled` field on the resulting object. When `null`, the `tunneling_enabled` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting object. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.ip_configuration.new](#fn-ip_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.timeouts.new](#fn-timeoutsnew) constructor.
+  - `copy_paste_enabled` (`bool`):  When `null`, the `copy_paste_enabled` field will be omitted from the resulting object.
+  - `file_copy_enabled` (`bool`):  When `null`, the `file_copy_enabled` field will be omitted from the resulting object.
+  - `ip_connect_enabled` (`bool`):  When `null`, the `ip_connect_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `scale_units` (`number`):  When `null`, the `scale_units` field will be omitted from the resulting object.
+  - `shareable_link_enabled` (`bool`):  When `null`, the `shareable_link_enabled` field will be omitted from the resulting object.
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `tunneling_enabled` (`bool`):  When `null`, the `tunneling_enabled` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.ip_configuration.new](#fn-ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bastion_host.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bastion_host` resource into the root Terraform configuration.
@@ -384,9 +384,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+  - `name` (`string`): 
+  - `public_ip_address_id` (`string`): 
+  - `subnet_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -409,10 +409,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

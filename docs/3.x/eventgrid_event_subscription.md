@@ -138,28 +138,28 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `advanced_filtering_on_arrays_enabled` (`bool`): Set the `advanced_filtering_on_arrays_enabled` field on the resulting resource block. When `null`, the `advanced_filtering_on_arrays_enabled` field will be omitted from the resulting object.
-  - `event_delivery_schema` (`string`): Set the `event_delivery_schema` field on the resulting resource block. When `null`, the `event_delivery_schema` field will be omitted from the resulting object.
-  - `eventhub_endpoint_id` (`string`): Set the `eventhub_endpoint_id` field on the resulting resource block. When `null`, the `eventhub_endpoint_id` field will be omitted from the resulting object.
-  - `expiration_time_utc` (`string`): Set the `expiration_time_utc` field on the resulting resource block. When `null`, the `expiration_time_utc` field will be omitted from the resulting object.
-  - `hybrid_connection_endpoint_id` (`string`): Set the `hybrid_connection_endpoint_id` field on the resulting resource block. When `null`, the `hybrid_connection_endpoint_id` field will be omitted from the resulting object.
-  - `included_event_types` (`list`): Set the `included_event_types` field on the resulting resource block. When `null`, the `included_event_types` field will be omitted from the resulting object.
-  - `labels` (`list`): Set the `labels` field on the resulting resource block. When `null`, the `labels` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `scope` (`string`): Set the `scope` field on the resulting resource block.
-  - `service_bus_queue_endpoint_id` (`string`): Set the `service_bus_queue_endpoint_id` field on the resulting resource block. When `null`, the `service_bus_queue_endpoint_id` field will be omitted from the resulting object.
-  - `service_bus_topic_endpoint_id` (`string`): Set the `service_bus_topic_endpoint_id` field on the resulting resource block. When `null`, the `service_bus_topic_endpoint_id` field will be omitted from the resulting object.
-  - `advanced_filter` (`list[obj]`): Set the `advanced_filter` field on the resulting resource block. When `null`, the `advanced_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.new](#fn-advanced_filternew) constructor.
-  - `azure_function_endpoint` (`list[obj]`): Set the `azure_function_endpoint` field on the resulting resource block. When `null`, the `azure_function_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.azure_function_endpoint.new](#fn-azure_function_endpointnew) constructor.
-  - `dead_letter_identity` (`list[obj]`): Set the `dead_letter_identity` field on the resulting resource block. When `null`, the `dead_letter_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.dead_letter_identity.new](#fn-dead_letter_identitynew) constructor.
-  - `delivery_identity` (`list[obj]`): Set the `delivery_identity` field on the resulting resource block. When `null`, the `delivery_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_identity.new](#fn-delivery_identitynew) constructor.
-  - `delivery_property` (`list[obj]`): Set the `delivery_property` field on the resulting resource block. When `null`, the `delivery_property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_property.new](#fn-delivery_propertynew) constructor.
-  - `retry_policy` (`list[obj]`): Set the `retry_policy` field on the resulting resource block. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.retry_policy.new](#fn-retry_policynew) constructor.
-  - `storage_blob_dead_letter_destination` (`list[obj]`): Set the `storage_blob_dead_letter_destination` field on the resulting resource block. When `null`, the `storage_blob_dead_letter_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_blob_dead_letter_destination.new](#fn-storage_blob_dead_letter_destinationnew) constructor.
-  - `storage_queue_endpoint` (`list[obj]`): Set the `storage_queue_endpoint` field on the resulting resource block. When `null`, the `storage_queue_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_queue_endpoint.new](#fn-storage_queue_endpointnew) constructor.
-  - `subject_filter` (`list[obj]`): Set the `subject_filter` field on the resulting resource block. When `null`, the `subject_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.subject_filter.new](#fn-subject_filternew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.timeouts.new](#fn-timeoutsnew) constructor.
-  - `webhook_endpoint` (`list[obj]`): Set the `webhook_endpoint` field on the resulting resource block. When `null`, the `webhook_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.webhook_endpoint.new](#fn-webhook_endpointnew) constructor.
+  - `advanced_filtering_on_arrays_enabled` (`bool`):  When `null`, the `advanced_filtering_on_arrays_enabled` field will be omitted from the resulting object.
+  - `event_delivery_schema` (`string`):  When `null`, the `event_delivery_schema` field will be omitted from the resulting object.
+  - `eventhub_endpoint_id` (`string`):  When `null`, the `eventhub_endpoint_id` field will be omitted from the resulting object.
+  - `expiration_time_utc` (`string`):  When `null`, the `expiration_time_utc` field will be omitted from the resulting object.
+  - `hybrid_connection_endpoint_id` (`string`):  When `null`, the `hybrid_connection_endpoint_id` field will be omitted from the resulting object.
+  - `included_event_types` (`list`):  When `null`, the `included_event_types` field will be omitted from the resulting object.
+  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `scope` (`string`): 
+  - `service_bus_queue_endpoint_id` (`string`):  When `null`, the `service_bus_queue_endpoint_id` field will be omitted from the resulting object.
+  - `service_bus_topic_endpoint_id` (`string`):  When `null`, the `service_bus_topic_endpoint_id` field will be omitted from the resulting object.
+  - `advanced_filter` (`list[obj]`):  When `null`, the `advanced_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.new](#fn-advanced_filternew) constructor.
+  - `azure_function_endpoint` (`list[obj]`):  When `null`, the `azure_function_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.azure_function_endpoint.new](#fn-azure_function_endpointnew) constructor.
+  - `dead_letter_identity` (`list[obj]`):  When `null`, the `dead_letter_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.dead_letter_identity.new](#fn-dead_letter_identitynew) constructor.
+  - `delivery_identity` (`list[obj]`):  When `null`, the `delivery_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_identity.new](#fn-delivery_identitynew) constructor.
+  - `delivery_property` (`list[obj]`):  When `null`, the `delivery_property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_property.new](#fn-delivery_propertynew) constructor.
+  - `retry_policy` (`list[obj]`):  When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.retry_policy.new](#fn-retry_policynew) constructor.
+  - `storage_blob_dead_letter_destination` (`list[obj]`):  When `null`, the `storage_blob_dead_letter_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_blob_dead_letter_destination.new](#fn-storage_blob_dead_letter_destinationnew) constructor.
+  - `storage_queue_endpoint` (`list[obj]`):  When `null`, the `storage_queue_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_queue_endpoint.new](#fn-storage_queue_endpointnew) constructor.
+  - `subject_filter` (`list[obj]`):  When `null`, the `subject_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.subject_filter.new](#fn-subject_filternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `webhook_endpoint` (`list[obj]`):  When `null`, the `webhook_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.webhook_endpoint.new](#fn-webhook_endpointnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -183,28 +183,28 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `advanced_filtering_on_arrays_enabled` (`bool`): Set the `advanced_filtering_on_arrays_enabled` field on the resulting object. When `null`, the `advanced_filtering_on_arrays_enabled` field will be omitted from the resulting object.
-  - `event_delivery_schema` (`string`): Set the `event_delivery_schema` field on the resulting object. When `null`, the `event_delivery_schema` field will be omitted from the resulting object.
-  - `eventhub_endpoint_id` (`string`): Set the `eventhub_endpoint_id` field on the resulting object. When `null`, the `eventhub_endpoint_id` field will be omitted from the resulting object.
-  - `expiration_time_utc` (`string`): Set the `expiration_time_utc` field on the resulting object. When `null`, the `expiration_time_utc` field will be omitted from the resulting object.
-  - `hybrid_connection_endpoint_id` (`string`): Set the `hybrid_connection_endpoint_id` field on the resulting object. When `null`, the `hybrid_connection_endpoint_id` field will be omitted from the resulting object.
-  - `included_event_types` (`list`): Set the `included_event_types` field on the resulting object. When `null`, the `included_event_types` field will be omitted from the resulting object.
-  - `labels` (`list`): Set the `labels` field on the resulting object. When `null`, the `labels` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `scope` (`string`): Set the `scope` field on the resulting object.
-  - `service_bus_queue_endpoint_id` (`string`): Set the `service_bus_queue_endpoint_id` field on the resulting object. When `null`, the `service_bus_queue_endpoint_id` field will be omitted from the resulting object.
-  - `service_bus_topic_endpoint_id` (`string`): Set the `service_bus_topic_endpoint_id` field on the resulting object. When `null`, the `service_bus_topic_endpoint_id` field will be omitted from the resulting object.
-  - `advanced_filter` (`list[obj]`): Set the `advanced_filter` field on the resulting object. When `null`, the `advanced_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.new](#fn-advanced_filternew) constructor.
-  - `azure_function_endpoint` (`list[obj]`): Set the `azure_function_endpoint` field on the resulting object. When `null`, the `azure_function_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.azure_function_endpoint.new](#fn-azure_function_endpointnew) constructor.
-  - `dead_letter_identity` (`list[obj]`): Set the `dead_letter_identity` field on the resulting object. When `null`, the `dead_letter_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.dead_letter_identity.new](#fn-dead_letter_identitynew) constructor.
-  - `delivery_identity` (`list[obj]`): Set the `delivery_identity` field on the resulting object. When `null`, the `delivery_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_identity.new](#fn-delivery_identitynew) constructor.
-  - `delivery_property` (`list[obj]`): Set the `delivery_property` field on the resulting object. When `null`, the `delivery_property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_property.new](#fn-delivery_propertynew) constructor.
-  - `retry_policy` (`list[obj]`): Set the `retry_policy` field on the resulting object. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.retry_policy.new](#fn-retry_policynew) constructor.
-  - `storage_blob_dead_letter_destination` (`list[obj]`): Set the `storage_blob_dead_letter_destination` field on the resulting object. When `null`, the `storage_blob_dead_letter_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_blob_dead_letter_destination.new](#fn-storage_blob_dead_letter_destinationnew) constructor.
-  - `storage_queue_endpoint` (`list[obj]`): Set the `storage_queue_endpoint` field on the resulting object. When `null`, the `storage_queue_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_queue_endpoint.new](#fn-storage_queue_endpointnew) constructor.
-  - `subject_filter` (`list[obj]`): Set the `subject_filter` field on the resulting object. When `null`, the `subject_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.subject_filter.new](#fn-subject_filternew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.timeouts.new](#fn-timeoutsnew) constructor.
-  - `webhook_endpoint` (`list[obj]`): Set the `webhook_endpoint` field on the resulting object. When `null`, the `webhook_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.webhook_endpoint.new](#fn-webhook_endpointnew) constructor.
+  - `advanced_filtering_on_arrays_enabled` (`bool`):  When `null`, the `advanced_filtering_on_arrays_enabled` field will be omitted from the resulting object.
+  - `event_delivery_schema` (`string`):  When `null`, the `event_delivery_schema` field will be omitted from the resulting object.
+  - `eventhub_endpoint_id` (`string`):  When `null`, the `eventhub_endpoint_id` field will be omitted from the resulting object.
+  - `expiration_time_utc` (`string`):  When `null`, the `expiration_time_utc` field will be omitted from the resulting object.
+  - `hybrid_connection_endpoint_id` (`string`):  When `null`, the `hybrid_connection_endpoint_id` field will be omitted from the resulting object.
+  - `included_event_types` (`list`):  When `null`, the `included_event_types` field will be omitted from the resulting object.
+  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `scope` (`string`): 
+  - `service_bus_queue_endpoint_id` (`string`):  When `null`, the `service_bus_queue_endpoint_id` field will be omitted from the resulting object.
+  - `service_bus_topic_endpoint_id` (`string`):  When `null`, the `service_bus_topic_endpoint_id` field will be omitted from the resulting object.
+  - `advanced_filter` (`list[obj]`):  When `null`, the `advanced_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.new](#fn-advanced_filternew) constructor.
+  - `azure_function_endpoint` (`list[obj]`):  When `null`, the `azure_function_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.azure_function_endpoint.new](#fn-azure_function_endpointnew) constructor.
+  - `dead_letter_identity` (`list[obj]`):  When `null`, the `dead_letter_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.dead_letter_identity.new](#fn-dead_letter_identitynew) constructor.
+  - `delivery_identity` (`list[obj]`):  When `null`, the `delivery_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_identity.new](#fn-delivery_identitynew) constructor.
+  - `delivery_property` (`list[obj]`):  When `null`, the `delivery_property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.delivery_property.new](#fn-delivery_propertynew) constructor.
+  - `retry_policy` (`list[obj]`):  When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.retry_policy.new](#fn-retry_policynew) constructor.
+  - `storage_blob_dead_letter_destination` (`list[obj]`):  When `null`, the `storage_blob_dead_letter_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_blob_dead_letter_destination.new](#fn-storage_blob_dead_letter_destinationnew) constructor.
+  - `storage_queue_endpoint` (`list[obj]`):  When `null`, the `storage_queue_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.storage_queue_endpoint.new](#fn-storage_queue_endpointnew) constructor.
+  - `subject_filter` (`list[obj]`):  When `null`, the `subject_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.subject_filter.new](#fn-subject_filternew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `webhook_endpoint` (`list[obj]`):  When `null`, the `webhook_endpoint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.webhook_endpoint.new](#fn-webhook_endpointnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `eventgrid_event_subscription` resource into the root Terraform configuration.
@@ -809,25 +809,25 @@ Terraform sub block.
 
 
 **Args**:
-  - `bool_equals` (`list[obj]`): Set the `bool_equals` field on the resulting object. When `null`, the `bool_equals` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.bool_equals.new](#fn-advanced_filterbool_equalsnew) constructor.
-  - `is_not_null` (`list[obj]`): Set the `is_not_null` field on the resulting object. When `null`, the `is_not_null` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.is_not_null.new](#fn-advanced_filteris_not_nullnew) constructor.
-  - `is_null_or_undefined` (`list[obj]`): Set the `is_null_or_undefined` field on the resulting object. When `null`, the `is_null_or_undefined` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.is_null_or_undefined.new](#fn-advanced_filteris_null_or_undefinednew) constructor.
-  - `number_greater_than` (`list[obj]`): Set the `number_greater_than` field on the resulting object. When `null`, the `number_greater_than` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_greater_than.new](#fn-advanced_filternumber_greater_thannew) constructor.
-  - `number_greater_than_or_equals` (`list[obj]`): Set the `number_greater_than_or_equals` field on the resulting object. When `null`, the `number_greater_than_or_equals` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_greater_than_or_equals.new](#fn-advanced_filternumber_greater_than_or_equalsnew) constructor.
-  - `number_in` (`list[obj]`): Set the `number_in` field on the resulting object. When `null`, the `number_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_in.new](#fn-advanced_filternumber_innew) constructor.
-  - `number_in_range` (`list[obj]`): Set the `number_in_range` field on the resulting object. When `null`, the `number_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_in_range.new](#fn-advanced_filternumber_in_rangenew) constructor.
-  - `number_less_than` (`list[obj]`): Set the `number_less_than` field on the resulting object. When `null`, the `number_less_than` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_less_than.new](#fn-advanced_filternumber_less_thannew) constructor.
-  - `number_less_than_or_equals` (`list[obj]`): Set the `number_less_than_or_equals` field on the resulting object. When `null`, the `number_less_than_or_equals` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_less_than_or_equals.new](#fn-advanced_filternumber_less_than_or_equalsnew) constructor.
-  - `number_not_in` (`list[obj]`): Set the `number_not_in` field on the resulting object. When `null`, the `number_not_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_not_in.new](#fn-advanced_filternumber_not_innew) constructor.
-  - `number_not_in_range` (`list[obj]`): Set the `number_not_in_range` field on the resulting object. When `null`, the `number_not_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_not_in_range.new](#fn-advanced_filternumber_not_in_rangenew) constructor.
-  - `string_begins_with` (`list[obj]`): Set the `string_begins_with` field on the resulting object. When `null`, the `string_begins_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_begins_with.new](#fn-advanced_filterstring_begins_withnew) constructor.
-  - `string_contains` (`list[obj]`): Set the `string_contains` field on the resulting object. When `null`, the `string_contains` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_contains.new](#fn-advanced_filterstring_containsnew) constructor.
-  - `string_ends_with` (`list[obj]`): Set the `string_ends_with` field on the resulting object. When `null`, the `string_ends_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_ends_with.new](#fn-advanced_filterstring_ends_withnew) constructor.
-  - `string_in` (`list[obj]`): Set the `string_in` field on the resulting object. When `null`, the `string_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_in.new](#fn-advanced_filterstring_innew) constructor.
-  - `string_not_begins_with` (`list[obj]`): Set the `string_not_begins_with` field on the resulting object. When `null`, the `string_not_begins_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_begins_with.new](#fn-advanced_filterstring_not_begins_withnew) constructor.
-  - `string_not_contains` (`list[obj]`): Set the `string_not_contains` field on the resulting object. When `null`, the `string_not_contains` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_contains.new](#fn-advanced_filterstring_not_containsnew) constructor.
-  - `string_not_ends_with` (`list[obj]`): Set the `string_not_ends_with` field on the resulting object. When `null`, the `string_not_ends_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_ends_with.new](#fn-advanced_filterstring_not_ends_withnew) constructor.
-  - `string_not_in` (`list[obj]`): Set the `string_not_in` field on the resulting object. When `null`, the `string_not_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_in.new](#fn-advanced_filterstring_not_innew) constructor.
+  - `bool_equals` (`list[obj]`):  When `null`, the `bool_equals` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.bool_equals.new](#fn-advanced_filterbool_equalsnew) constructor.
+  - `is_not_null` (`list[obj]`):  When `null`, the `is_not_null` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.is_not_null.new](#fn-advanced_filteris_not_nullnew) constructor.
+  - `is_null_or_undefined` (`list[obj]`):  When `null`, the `is_null_or_undefined` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.is_null_or_undefined.new](#fn-advanced_filteris_null_or_undefinednew) constructor.
+  - `number_greater_than` (`list[obj]`):  When `null`, the `number_greater_than` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_greater_than.new](#fn-advanced_filternumber_greater_thannew) constructor.
+  - `number_greater_than_or_equals` (`list[obj]`):  When `null`, the `number_greater_than_or_equals` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_greater_than_or_equals.new](#fn-advanced_filternumber_greater_than_or_equalsnew) constructor.
+  - `number_in` (`list[obj]`):  When `null`, the `number_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_in.new](#fn-advanced_filternumber_innew) constructor.
+  - `number_in_range` (`list[obj]`):  When `null`, the `number_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_in_range.new](#fn-advanced_filternumber_in_rangenew) constructor.
+  - `number_less_than` (`list[obj]`):  When `null`, the `number_less_than` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_less_than.new](#fn-advanced_filternumber_less_thannew) constructor.
+  - `number_less_than_or_equals` (`list[obj]`):  When `null`, the `number_less_than_or_equals` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_less_than_or_equals.new](#fn-advanced_filternumber_less_than_or_equalsnew) constructor.
+  - `number_not_in` (`list[obj]`):  When `null`, the `number_not_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_not_in.new](#fn-advanced_filternumber_not_innew) constructor.
+  - `number_not_in_range` (`list[obj]`):  When `null`, the `number_not_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.number_not_in_range.new](#fn-advanced_filternumber_not_in_rangenew) constructor.
+  - `string_begins_with` (`list[obj]`):  When `null`, the `string_begins_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_begins_with.new](#fn-advanced_filterstring_begins_withnew) constructor.
+  - `string_contains` (`list[obj]`):  When `null`, the `string_contains` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_contains.new](#fn-advanced_filterstring_containsnew) constructor.
+  - `string_ends_with` (`list[obj]`):  When `null`, the `string_ends_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_ends_with.new](#fn-advanced_filterstring_ends_withnew) constructor.
+  - `string_in` (`list[obj]`):  When `null`, the `string_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_in.new](#fn-advanced_filterstring_innew) constructor.
+  - `string_not_begins_with` (`list[obj]`):  When `null`, the `string_not_begins_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_begins_with.new](#fn-advanced_filterstring_not_begins_withnew) constructor.
+  - `string_not_contains` (`list[obj]`):  When `null`, the `string_not_contains` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_contains.new](#fn-advanced_filterstring_not_containsnew) constructor.
+  - `string_not_ends_with` (`list[obj]`):  When `null`, the `string_not_ends_with` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_ends_with.new](#fn-advanced_filterstring_not_ends_withnew) constructor.
+  - `string_not_in` (`list[obj]`):  When `null`, the `string_not_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventgrid_event_subscription.advanced_filter.string_not_in.new](#fn-advanced_filterstring_not_innew) constructor.
 
 **Returns**:
   - An attribute object that represents the `advanced_filter` sub block.
@@ -850,8 +850,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `value` (`bool`): Set the `value` field on the resulting object.
+  - `key` (`string`): 
+  - `value` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `bool_equals` sub block.
@@ -874,7 +874,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
+  - `key` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `is_not_null` sub block.
@@ -897,7 +897,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
+  - `key` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `is_null_or_undefined` sub block.
@@ -920,8 +920,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `value` (`number`): Set the `value` field on the resulting object.
+  - `key` (`string`): 
+  - `value` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `number_greater_than` sub block.
@@ -944,8 +944,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `value` (`number`): Set the `value` field on the resulting object.
+  - `key` (`string`): 
+  - `value` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `number_greater_than_or_equals` sub block.
@@ -968,8 +968,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `number_in` sub block.
@@ -992,8 +992,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `number_in_range` sub block.
@@ -1016,8 +1016,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `value` (`number`): Set the `value` field on the resulting object.
+  - `key` (`string`): 
+  - `value` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `number_less_than` sub block.
@@ -1040,8 +1040,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `value` (`number`): Set the `value` field on the resulting object.
+  - `key` (`string`): 
+  - `value` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `number_less_than_or_equals` sub block.
@@ -1064,8 +1064,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `number_not_in` sub block.
@@ -1088,8 +1088,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `number_not_in_range` sub block.
@@ -1112,8 +1112,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_begins_with` sub block.
@@ -1136,8 +1136,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_contains` sub block.
@@ -1160,8 +1160,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_ends_with` sub block.
@@ -1184,8 +1184,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_in` sub block.
@@ -1208,8 +1208,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_not_begins_with` sub block.
@@ -1232,8 +1232,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_not_contains` sub block.
@@ -1256,8 +1256,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_not_ends_with` sub block.
@@ -1280,8 +1280,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `string_not_in` sub block.
@@ -1304,9 +1304,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `function_id` (`string`): Set the `function_id` field on the resulting object.
-  - `max_events_per_batch` (`number`): Set the `max_events_per_batch` field on the resulting object. When `null`, the `max_events_per_batch` field will be omitted from the resulting object.
-  - `preferred_batch_size_in_kilobytes` (`number`): Set the `preferred_batch_size_in_kilobytes` field on the resulting object. When `null`, the `preferred_batch_size_in_kilobytes` field will be omitted from the resulting object.
+  - `function_id` (`string`): 
+  - `max_events_per_batch` (`number`):  When `null`, the `max_events_per_batch` field will be omitted from the resulting object.
+  - `preferred_batch_size_in_kilobytes` (`number`):  When `null`, the `preferred_batch_size_in_kilobytes` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure_function_endpoint` sub block.
@@ -1329,8 +1329,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `user_assigned_identity` (`string`): Set the `user_assigned_identity` field on the resulting object. When `null`, the `user_assigned_identity` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `user_assigned_identity` (`string`):  When `null`, the `user_assigned_identity` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dead_letter_identity` sub block.
@@ -1353,8 +1353,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `user_assigned_identity` (`string`): Set the `user_assigned_identity` field on the resulting object. When `null`, the `user_assigned_identity` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `user_assigned_identity` (`string`):  When `null`, the `user_assigned_identity` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `delivery_identity` sub block.
@@ -1377,11 +1377,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `header_name` (`string`): Set the `header_name` field on the resulting object.
-  - `secret` (`bool`): Set the `secret` field on the resulting object. When `null`, the `secret` field will be omitted from the resulting object.
-  - `source_field` (`string`): Set the `source_field` field on the resulting object. When `null`, the `source_field` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
+  - `header_name` (`string`): 
+  - `secret` (`bool`):  When `null`, the `secret` field will be omitted from the resulting object.
+  - `source_field` (`string`):  When `null`, the `source_field` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `delivery_property` sub block.
@@ -1404,8 +1404,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `event_time_to_live` (`number`): Set the `event_time_to_live` field on the resulting object.
-  - `max_delivery_attempts` (`number`): Set the `max_delivery_attempts` field on the resulting object.
+  - `event_time_to_live` (`number`): 
+  - `max_delivery_attempts` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `retry_policy` sub block.
@@ -1428,8 +1428,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
-  - `storage_blob_container_name` (`string`): Set the `storage_blob_container_name` field on the resulting object.
+  - `storage_account_id` (`string`): 
+  - `storage_blob_container_name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `storage_blob_dead_letter_destination` sub block.
@@ -1452,9 +1452,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `queue_message_time_to_live_in_seconds` (`number`): Set the `queue_message_time_to_live_in_seconds` field on the resulting object. When `null`, the `queue_message_time_to_live_in_seconds` field will be omitted from the resulting object.
-  - `queue_name` (`string`): Set the `queue_name` field on the resulting object.
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
+  - `queue_message_time_to_live_in_seconds` (`number`):  When `null`, the `queue_message_time_to_live_in_seconds` field will be omitted from the resulting object.
+  - `queue_name` (`string`): 
+  - `storage_account_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `storage_queue_endpoint` sub block.
@@ -1477,9 +1477,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `case_sensitive` (`bool`): Set the `case_sensitive` field on the resulting object. When `null`, the `case_sensitive` field will be omitted from the resulting object.
-  - `subject_begins_with` (`string`): Set the `subject_begins_with` field on the resulting object. When `null`, the `subject_begins_with` field will be omitted from the resulting object.
-  - `subject_ends_with` (`string`): Set the `subject_ends_with` field on the resulting object. When `null`, the `subject_ends_with` field will be omitted from the resulting object.
+  - `case_sensitive` (`bool`):  When `null`, the `case_sensitive` field will be omitted from the resulting object.
+  - `subject_begins_with` (`string`):  When `null`, the `subject_begins_with` field will be omitted from the resulting object.
+  - `subject_ends_with` (`string`):  When `null`, the `subject_ends_with` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `subject_filter` sub block.
@@ -1502,10 +1502,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -1528,11 +1528,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `active_directory_app_id_or_uri` (`string`): Set the `active_directory_app_id_or_uri` field on the resulting object. When `null`, the `active_directory_app_id_or_uri` field will be omitted from the resulting object.
-  - `active_directory_tenant_id` (`string`): Set the `active_directory_tenant_id` field on the resulting object. When `null`, the `active_directory_tenant_id` field will be omitted from the resulting object.
-  - `max_events_per_batch` (`number`): Set the `max_events_per_batch` field on the resulting object. When `null`, the `max_events_per_batch` field will be omitted from the resulting object.
-  - `preferred_batch_size_in_kilobytes` (`number`): Set the `preferred_batch_size_in_kilobytes` field on the resulting object. When `null`, the `preferred_batch_size_in_kilobytes` field will be omitted from the resulting object.
-  - `url` (`string`): Set the `url` field on the resulting object.
+  - `active_directory_app_id_or_uri` (`string`):  When `null`, the `active_directory_app_id_or_uri` field will be omitted from the resulting object.
+  - `active_directory_tenant_id` (`string`):  When `null`, the `active_directory_tenant_id` field will be omitted from the resulting object.
+  - `max_events_per_batch` (`number`):  When `null`, the `max_events_per_batch` field will be omitted from the resulting object.
+  - `preferred_batch_size_in_kilobytes` (`number`):  When `null`, the `preferred_batch_size_in_kilobytes` field will be omitted from the resulting object.
+  - `url` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `webhook_endpoint` sub block.

@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `hyper_v_generation` (`string`): Set the `hyper_v_generation` field on the resulting resource block. When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `source_virtual_machine_id` (`string`): Set the `source_virtual_machine_id` field on the resulting resource block. When `null`, the `source_virtual_machine_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_resilient` (`bool`): Set the `zone_resilient` field on the resulting resource block. When `null`, the `zone_resilient` field will be omitted from the resulting object.
-  - `data_disk` (`list[obj]`): Set the `data_disk` field on the resulting resource block. When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-data_disknew) constructor.
-  - `os_disk` (`list[obj]`): Set the `os_disk` field on the resulting resource block. When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-os_disknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-timeoutsnew) constructor.
+  - `hyper_v_generation` (`string`):  When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `source_virtual_machine_id` (`string`):  When `null`, the `source_virtual_machine_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_resilient` (`bool`):  When `null`, the `zone_resilient` field will be omitted from the resulting object.
+  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-data_disknew) constructor.
+  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `hyper_v_generation` (`string`): Set the `hyper_v_generation` field on the resulting object. When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `source_virtual_machine_id` (`string`): Set the `source_virtual_machine_id` field on the resulting object. When `null`, the `source_virtual_machine_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_resilient` (`bool`): Set the `zone_resilient` field on the resulting object. When `null`, the `zone_resilient` field will be omitted from the resulting object.
-  - `data_disk` (`list[obj]`): Set the `data_disk` field on the resulting object. When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-data_disknew) constructor.
-  - `os_disk` (`list[obj]`): Set the `os_disk` field on the resulting object. When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-os_disknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-timeoutsnew) constructor.
+  - `hyper_v_generation` (`string`):  When `null`, the `hyper_v_generation` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `source_virtual_machine_id` (`string`):  When `null`, the `source_virtual_machine_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_resilient` (`bool`):  When `null`, the `zone_resilient` field will be omitted from the resulting object.
+  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.data_disk.new](#fn-data_disknew) constructor.
+  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.os_disk.new](#fn-os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `image` resource into the root Terraform configuration.
@@ -351,11 +351,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.
-  - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.
-  - `lun` (`number`): Set the `lun` field on the resulting object. When `null`, the `lun` field will be omitted from the resulting object.
-  - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.
-  - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.
+  - `blob_uri` (`string`):  When `null`, the `blob_uri` field will be omitted from the resulting object.
+  - `caching` (`string`):  When `null`, the `caching` field will be omitted from the resulting object.
+  - `lun` (`number`):  When `null`, the `lun` field will be omitted from the resulting object.
+  - `managed_disk_id` (`string`):  When `null`, the `managed_disk_id` field will be omitted from the resulting object.
+  - `size_gb` (`number`):  When `null`, the `size_gb` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `data_disk` sub block.
@@ -378,12 +378,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.
-  - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.
-  - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.
-  - `os_state` (`string`): Set the `os_state` field on the resulting object. When `null`, the `os_state` field will be omitted from the resulting object.
-  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
-  - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.
+  - `blob_uri` (`string`):  When `null`, the `blob_uri` field will be omitted from the resulting object.
+  - `caching` (`string`):  When `null`, the `caching` field will be omitted from the resulting object.
+  - `managed_disk_id` (`string`):  When `null`, the `managed_disk_id` field will be omitted from the resulting object.
+  - `os_state` (`string`):  When `null`, the `os_state` field will be omitted from the resulting object.
+  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
+  - `size_gb` (`number`):  When `null`, the `size_gb` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `os_disk` sub block.
@@ -406,10 +406,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

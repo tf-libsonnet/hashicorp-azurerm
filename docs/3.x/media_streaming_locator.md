@@ -63,18 +63,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `alternative_media_id` (`string`): Set the `alternative_media_id` field on the resulting resource block. When `null`, the `alternative_media_id` field will be omitted from the resulting object.
-  - `asset_name` (`string`): Set the `asset_name` field on the resulting resource block.
-  - `default_content_key_policy_name` (`string`): Set the `default_content_key_policy_name` field on the resulting resource block. When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
-  - `end_time` (`string`): Set the `end_time` field on the resulting resource block. When `null`, the `end_time` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `start_time` (`string`): Set the `start_time` field on the resulting resource block. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `streaming_locator_id` (`string`): Set the `streaming_locator_id` field on the resulting resource block. When `null`, the `streaming_locator_id` field will be omitted from the resulting object.
-  - `streaming_policy_name` (`string`): Set the `streaming_policy_name` field on the resulting resource block.
-  - `content_key` (`list[obj]`): Set the `content_key` field on the resulting resource block. When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-content_keynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-timeoutsnew) constructor.
+  - `alternative_media_id` (`string`):  When `null`, the `alternative_media_id` field will be omitted from the resulting object.
+  - `asset_name` (`string`): 
+  - `default_content_key_policy_name` (`string`):  When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
+  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
+  - `streaming_locator_id` (`string`):  When `null`, the `streaming_locator_id` field will be omitted from the resulting object.
+  - `streaming_policy_name` (`string`): 
+  - `content_key` (`list[obj]`):  When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-content_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,18 +98,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `alternative_media_id` (`string`): Set the `alternative_media_id` field on the resulting object. When `null`, the `alternative_media_id` field will be omitted from the resulting object.
-  - `asset_name` (`string`): Set the `asset_name` field on the resulting object.
-  - `default_content_key_policy_name` (`string`): Set the `default_content_key_policy_name` field on the resulting object. When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
-  - `end_time` (`string`): Set the `end_time` field on the resulting object. When `null`, the `end_time` field will be omitted from the resulting object.
-  - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `streaming_locator_id` (`string`): Set the `streaming_locator_id` field on the resulting object. When `null`, the `streaming_locator_id` field will be omitted from the resulting object.
-  - `streaming_policy_name` (`string`): Set the `streaming_policy_name` field on the resulting object.
-  - `content_key` (`list[obj]`): Set the `content_key` field on the resulting object. When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-content_keynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-timeoutsnew) constructor.
+  - `alternative_media_id` (`string`):  When `null`, the `alternative_media_id` field will be omitted from the resulting object.
+  - `asset_name` (`string`): 
+  - `default_content_key_policy_name` (`string`):  When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
+  - `end_time` (`string`):  When `null`, the `end_time` field will be omitted from the resulting object.
+  - `media_services_account_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `start_time` (`string`):  When `null`, the `start_time` field will be omitted from the resulting object.
+  - `streaming_locator_id` (`string`):  When `null`, the `streaming_locator_id` field will be omitted from the resulting object.
+  - `streaming_policy_name` (`string`): 
+  - `content_key` (`list[obj]`):  When `null`, the `content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.content_key.new](#fn-content_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_locator.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_streaming_locator` resource into the root Terraform configuration.
@@ -365,11 +365,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `content_key_id` (`string`): Set the `content_key_id` field on the resulting object. When `null`, the `content_key_id` field will be omitted from the resulting object.
-  - `label_reference_in_streaming_policy` (`string`): Set the `label_reference_in_streaming_policy` field on the resulting object. When `null`, the `label_reference_in_streaming_policy` field will be omitted from the resulting object.
-  - `policy_name` (`string`): Set the `policy_name` field on the resulting object. When `null`, the `policy_name` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object. When `null`, the `value` field will be omitted from the resulting object.
+  - `content_key_id` (`string`):  When `null`, the `content_key_id` field will be omitted from the resulting object.
+  - `label_reference_in_streaming_policy` (`string`):  When `null`, the `label_reference_in_streaming_policy` field will be omitted from the resulting object.
+  - `policy_name` (`string`):  When `null`, the `policy_name` field will be omitted from the resulting object.
+  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
+  - `value` (`string`):  When `null`, the `value` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `content_key` sub block.
@@ -392,9 +392,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

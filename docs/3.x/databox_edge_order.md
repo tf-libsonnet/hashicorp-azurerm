@@ -59,11 +59,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `device_name` (`string`): Set the `device_name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `contact` (`list[obj]`): Set the `contact` field on the resulting resource block. When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.contact.new](#fn-contactnew) constructor.
-  - `shipment_address` (`list[obj]`): Set the `shipment_address` field on the resulting resource block. When `null`, the `shipment_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.shipment_address.new](#fn-shipment_addressnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.timeouts.new](#fn-timeoutsnew) constructor.
+  - `device_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.contact.new](#fn-contactnew) constructor.
+  - `shipment_address` (`list[obj]`):  When `null`, the `shipment_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.shipment_address.new](#fn-shipment_addressnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,11 +87,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `device_name` (`string`): Set the `device_name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `contact` (`list[obj]`): Set the `contact` field on the resulting object. When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.contact.new](#fn-contactnew) constructor.
-  - `shipment_address` (`list[obj]`): Set the `shipment_address` field on the resulting object. When `null`, the `shipment_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.shipment_address.new](#fn-shipment_addressnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.timeouts.new](#fn-timeoutsnew) constructor.
+  - `device_name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `contact` (`list[obj]`):  When `null`, the `contact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.contact.new](#fn-contactnew) constructor.
+  - `shipment_address` (`list[obj]`):  When `null`, the `shipment_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.shipment_address.new](#fn-shipment_addressnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databox_edge_order.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `databox_edge_order` resource into the root Terraform configuration.
@@ -256,10 +256,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `company_name` (`string`): Set the `company_name` field on the resulting object.
-  - `emails` (`list`): Set the `emails` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `phone_number` (`string`): Set the `phone_number` field on the resulting object.
+  - `company_name` (`string`): 
+  - `emails` (`list`): 
+  - `name` (`string`): 
+  - `phone_number` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `contact` sub block.
@@ -282,11 +282,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `address` (`list`): Set the `address` field on the resulting object.
-  - `city` (`string`): Set the `city` field on the resulting object.
-  - `country` (`string`): Set the `country` field on the resulting object.
-  - `postal_code` (`string`): Set the `postal_code` field on the resulting object.
-  - `state` (`string`): Set the `state` field on the resulting object.
+  - `address` (`list`): 
+  - `city` (`string`): 
+  - `country` (`string`): 
+  - `postal_code` (`string`): 
+  - `state` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `shipment_address` sub block.
@@ -309,10 +309,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

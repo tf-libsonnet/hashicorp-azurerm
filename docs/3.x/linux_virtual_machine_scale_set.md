@@ -176,62 +176,62 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `admin_password` (`string`): Set the `admin_password` field on the resulting resource block. When `null`, the `admin_password` field will be omitted from the resulting object.
-  - `admin_username` (`string`): Set the `admin_username` field on the resulting resource block.
-  - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting resource block. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
-  - `computer_name_prefix` (`string`): Set the `computer_name_prefix` field on the resulting resource block. When `null`, the `computer_name_prefix` field will be omitted from the resulting object.
-  - `custom_data` (`string`): Set the `custom_data` field on the resulting resource block. When `null`, the `custom_data` field will be omitted from the resulting object.
-  - `disable_password_authentication` (`bool`): Set the `disable_password_authentication` field on the resulting resource block. When `null`, the `disable_password_authentication` field will be omitted from the resulting object.
-  - `do_not_run_extensions_on_overprovisioned_machines` (`bool`): Set the `do_not_run_extensions_on_overprovisioned_machines` field on the resulting resource block. When `null`, the `do_not_run_extensions_on_overprovisioned_machines` field will be omitted from the resulting object.
-  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `encryption_at_host_enabled` (`bool`): Set the `encryption_at_host_enabled` field on the resulting resource block. When `null`, the `encryption_at_host_enabled` field will be omitted from the resulting object.
-  - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting resource block. When `null`, the `eviction_policy` field will be omitted from the resulting object.
-  - `extension_operations_enabled` (`bool`): Set the `extension_operations_enabled` field on the resulting resource block. When `null`, the `extension_operations_enabled` field will be omitted from the resulting object.
-  - `extensions_time_budget` (`string`): Set the `extensions_time_budget` field on the resulting resource block. When `null`, the `extensions_time_budget` field will be omitted from the resulting object.
-  - `health_probe_id` (`string`): Set the `health_probe_id` field on the resulting resource block. When `null`, the `health_probe_id` field will be omitted from the resulting object.
-  - `host_group_id` (`string`): Set the `host_group_id` field on the resulting resource block. When `null`, the `host_group_id` field will be omitted from the resulting object.
-  - `instances` (`number`): Set the `instances` field on the resulting resource block. When `null`, the `instances` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `max_bid_price` (`number`): Set the `max_bid_price` field on the resulting resource block. When `null`, the `max_bid_price` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `overprovision` (`bool`): Set the `overprovision` field on the resulting resource block. When `null`, the `overprovision` field will be omitted from the resulting object.
-  - `platform_fault_domain_count` (`number`): Set the `platform_fault_domain_count` field on the resulting resource block. When `null`, the `platform_fault_domain_count` field will be omitted from the resulting object.
-  - `priority` (`string`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
-  - `provision_vm_agent` (`bool`): Set the `provision_vm_agent` field on the resulting resource block. When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting resource block. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `scale_in_policy` (`string`): Set the `scale_in_policy` field on the resulting resource block. When `null`, the `scale_in_policy` field will be omitted from the resulting object.
-  - `secure_boot_enabled` (`bool`): Set the `secure_boot_enabled` field on the resulting resource block. When `null`, the `secure_boot_enabled` field will be omitted from the resulting object.
-  - `single_placement_group` (`bool`): Set the `single_placement_group` field on the resulting resource block. When `null`, the `single_placement_group` field will be omitted from the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block.
-  - `source_image_id` (`string`): Set the `source_image_id` field on the resulting resource block. When `null`, the `source_image_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `upgrade_mode` (`string`): Set the `upgrade_mode` field on the resulting resource block. When `null`, the `upgrade_mode` field will be omitted from the resulting object.
-  - `user_data` (`string`): Set the `user_data` field on the resulting resource block. When `null`, the `user_data` field will be omitted from the resulting object.
-  - `vtpm_enabled` (`bool`): Set the `vtpm_enabled` field on the resulting resource block. When `null`, the `vtpm_enabled` field will be omitted from the resulting object.
-  - `zone_balance` (`bool`): Set the `zone_balance` field on the resulting resource block. When `null`, the `zone_balance` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_capabilities` (`list[obj]`): Set the `additional_capabilities` field on the resulting resource block. When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
-  - `admin_ssh_key` (`list[obj]`): Set the `admin_ssh_key` field on the resulting resource block. When `null`, the `admin_ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.admin_ssh_key.new](#fn-admin_ssh_keynew) constructor.
-  - `automatic_instance_repair` (`list[obj]`): Set the `automatic_instance_repair` field on the resulting resource block. When `null`, the `automatic_instance_repair` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_instance_repair.new](#fn-automatic_instance_repairnew) constructor.
-  - `automatic_os_upgrade_policy` (`list[obj]`): Set the `automatic_os_upgrade_policy` field on the resulting resource block. When `null`, the `automatic_os_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_os_upgrade_policy.new](#fn-automatic_os_upgrade_policynew) constructor.
-  - `boot_diagnostics` (`list[obj]`): Set the `boot_diagnostics` field on the resulting resource block. When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
-  - `data_disk` (`list[obj]`): Set the `data_disk` field on the resulting resource block. When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.data_disk.new](#fn-data_disknew) constructor.
-  - `extension` (`list[obj]`): Set the `extension` field on the resulting resource block. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.extension.new](#fn-extensionnew) constructor.
-  - `gallery_application` (`list[obj]`): Set the `gallery_application` field on the resulting resource block. When `null`, the `gallery_application` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_application.new](#fn-gallery_applicationnew) constructor.
-  - `gallery_applications` (`list[obj]`): Set the `gallery_applications` field on the resulting resource block. When `null`, the `gallery_applications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_applications.new](#fn-gallery_applicationsnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.identity.new](#fn-identitynew) constructor.
-  - `network_interface` (`list[obj]`): Set the `network_interface` field on the resulting resource block. When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.new](#fn-network_interfacenew) constructor.
-  - `os_disk` (`list[obj]`): Set the `os_disk` field on the resulting resource block. When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.os_disk.new](#fn-os_disknew) constructor.
-  - `plan` (`list[obj]`): Set the `plan` field on the resulting resource block. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.plan.new](#fn-plannew) constructor.
-  - `rolling_upgrade_policy` (`list[obj]`): Set the `rolling_upgrade_policy` field on the resulting resource block. When `null`, the `rolling_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.rolling_upgrade_policy.new](#fn-rolling_upgrade_policynew) constructor.
-  - `scale_in` (`list[obj]`): Set the `scale_in` field on the resulting resource block. When `null`, the `scale_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.scale_in.new](#fn-scale_innew) constructor.
-  - `secret` (`list[obj]`): Set the `secret` field on the resulting resource block. When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.secret.new](#fn-secretnew) constructor.
-  - `source_image_reference` (`list[obj]`): Set the `source_image_reference` field on the resulting resource block. When `null`, the `source_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.source_image_reference.new](#fn-source_image_referencenew) constructor.
-  - `spot_restore` (`list[obj]`): Set the `spot_restore` field on the resulting resource block. When `null`, the `spot_restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.spot_restore.new](#fn-spot_restorenew) constructor.
-  - `terminate_notification` (`list[obj]`): Set the `terminate_notification` field on the resulting resource block. When `null`, the `terminate_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.terminate_notification.new](#fn-terminate_notificationnew) constructor.
-  - `termination_notification` (`list[obj]`): Set the `termination_notification` field on the resulting resource block. When `null`, the `termination_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.termination_notification.new](#fn-termination_notificationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.timeouts.new](#fn-timeoutsnew) constructor.
+  - `admin_password` (`string`):  When `null`, the `admin_password` field will be omitted from the resulting object.
+  - `admin_username` (`string`): 
+  - `capacity_reservation_group_id` (`string`):  When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
+  - `computer_name_prefix` (`string`):  When `null`, the `computer_name_prefix` field will be omitted from the resulting object.
+  - `custom_data` (`string`):  When `null`, the `custom_data` field will be omitted from the resulting object.
+  - `disable_password_authentication` (`bool`):  When `null`, the `disable_password_authentication` field will be omitted from the resulting object.
+  - `do_not_run_extensions_on_overprovisioned_machines` (`bool`):  When `null`, the `do_not_run_extensions_on_overprovisioned_machines` field will be omitted from the resulting object.
+  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `encryption_at_host_enabled` (`bool`):  When `null`, the `encryption_at_host_enabled` field will be omitted from the resulting object.
+  - `eviction_policy` (`string`):  When `null`, the `eviction_policy` field will be omitted from the resulting object.
+  - `extension_operations_enabled` (`bool`):  When `null`, the `extension_operations_enabled` field will be omitted from the resulting object.
+  - `extensions_time_budget` (`string`):  When `null`, the `extensions_time_budget` field will be omitted from the resulting object.
+  - `health_probe_id` (`string`):  When `null`, the `health_probe_id` field will be omitted from the resulting object.
+  - `host_group_id` (`string`):  When `null`, the `host_group_id` field will be omitted from the resulting object.
+  - `instances` (`number`):  When `null`, the `instances` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_bid_price` (`number`):  When `null`, the `max_bid_price` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `overprovision` (`bool`):  When `null`, the `overprovision` field will be omitted from the resulting object.
+  - `platform_fault_domain_count` (`number`):  When `null`, the `platform_fault_domain_count` field will be omitted from the resulting object.
+  - `priority` (`string`):  When `null`, the `priority` field will be omitted from the resulting object.
+  - `provision_vm_agent` (`bool`):  When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `scale_in_policy` (`string`):  When `null`, the `scale_in_policy` field will be omitted from the resulting object.
+  - `secure_boot_enabled` (`bool`):  When `null`, the `secure_boot_enabled` field will be omitted from the resulting object.
+  - `single_placement_group` (`bool`):  When `null`, the `single_placement_group` field will be omitted from the resulting object.
+  - `sku` (`string`): 
+  - `source_image_id` (`string`):  When `null`, the `source_image_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `upgrade_mode` (`string`):  When `null`, the `upgrade_mode` field will be omitted from the resulting object.
+  - `user_data` (`string`):  When `null`, the `user_data` field will be omitted from the resulting object.
+  - `vtpm_enabled` (`bool`):  When `null`, the `vtpm_enabled` field will be omitted from the resulting object.
+  - `zone_balance` (`bool`):  When `null`, the `zone_balance` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
+  - `admin_ssh_key` (`list[obj]`):  When `null`, the `admin_ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.admin_ssh_key.new](#fn-admin_ssh_keynew) constructor.
+  - `automatic_instance_repair` (`list[obj]`):  When `null`, the `automatic_instance_repair` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_instance_repair.new](#fn-automatic_instance_repairnew) constructor.
+  - `automatic_os_upgrade_policy` (`list[obj]`):  When `null`, the `automatic_os_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_os_upgrade_policy.new](#fn-automatic_os_upgrade_policynew) constructor.
+  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
+  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.data_disk.new](#fn-data_disknew) constructor.
+  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.extension.new](#fn-extensionnew) constructor.
+  - `gallery_application` (`list[obj]`):  When `null`, the `gallery_application` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_application.new](#fn-gallery_applicationnew) constructor.
+  - `gallery_applications` (`list[obj]`):  When `null`, the `gallery_applications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_applications.new](#fn-gallery_applicationsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.identity.new](#fn-identitynew) constructor.
+  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.new](#fn-network_interfacenew) constructor.
+  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.os_disk.new](#fn-os_disknew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.plan.new](#fn-plannew) constructor.
+  - `rolling_upgrade_policy` (`list[obj]`):  When `null`, the `rolling_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.rolling_upgrade_policy.new](#fn-rolling_upgrade_policynew) constructor.
+  - `scale_in` (`list[obj]`):  When `null`, the `scale_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.scale_in.new](#fn-scale_innew) constructor.
+  - `secret` (`list[obj]`):  When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.secret.new](#fn-secretnew) constructor.
+  - `source_image_reference` (`list[obj]`):  When `null`, the `source_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.source_image_reference.new](#fn-source_image_referencenew) constructor.
+  - `spot_restore` (`list[obj]`):  When `null`, the `spot_restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.spot_restore.new](#fn-spot_restorenew) constructor.
+  - `terminate_notification` (`list[obj]`):  When `null`, the `terminate_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.terminate_notification.new](#fn-terminate_notificationnew) constructor.
+  - `termination_notification` (`list[obj]`):  When `null`, the `termination_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.termination_notification.new](#fn-termination_notificationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -255,62 +255,62 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `admin_password` (`string`): Set the `admin_password` field on the resulting object. When `null`, the `admin_password` field will be omitted from the resulting object.
-  - `admin_username` (`string`): Set the `admin_username` field on the resulting object.
-  - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting object. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
-  - `computer_name_prefix` (`string`): Set the `computer_name_prefix` field on the resulting object. When `null`, the `computer_name_prefix` field will be omitted from the resulting object.
-  - `custom_data` (`string`): Set the `custom_data` field on the resulting object. When `null`, the `custom_data` field will be omitted from the resulting object.
-  - `disable_password_authentication` (`bool`): Set the `disable_password_authentication` field on the resulting object. When `null`, the `disable_password_authentication` field will be omitted from the resulting object.
-  - `do_not_run_extensions_on_overprovisioned_machines` (`bool`): Set the `do_not_run_extensions_on_overprovisioned_machines` field on the resulting object. When `null`, the `do_not_run_extensions_on_overprovisioned_machines` field will be omitted from the resulting object.
-  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `encryption_at_host_enabled` (`bool`): Set the `encryption_at_host_enabled` field on the resulting object. When `null`, the `encryption_at_host_enabled` field will be omitted from the resulting object.
-  - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting object. When `null`, the `eviction_policy` field will be omitted from the resulting object.
-  - `extension_operations_enabled` (`bool`): Set the `extension_operations_enabled` field on the resulting object. When `null`, the `extension_operations_enabled` field will be omitted from the resulting object.
-  - `extensions_time_budget` (`string`): Set the `extensions_time_budget` field on the resulting object. When `null`, the `extensions_time_budget` field will be omitted from the resulting object.
-  - `health_probe_id` (`string`): Set the `health_probe_id` field on the resulting object. When `null`, the `health_probe_id` field will be omitted from the resulting object.
-  - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
-  - `instances` (`number`): Set the `instances` field on the resulting object. When `null`, the `instances` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `max_bid_price` (`number`): Set the `max_bid_price` field on the resulting object. When `null`, the `max_bid_price` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `overprovision` (`bool`): Set the `overprovision` field on the resulting object. When `null`, the `overprovision` field will be omitted from the resulting object.
-  - `platform_fault_domain_count` (`number`): Set the `platform_fault_domain_count` field on the resulting object. When `null`, the `platform_fault_domain_count` field will be omitted from the resulting object.
-  - `priority` (`string`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
-  - `provision_vm_agent` (`bool`): Set the `provision_vm_agent` field on the resulting object. When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `scale_in_policy` (`string`): Set the `scale_in_policy` field on the resulting object. When `null`, the `scale_in_policy` field will be omitted from the resulting object.
-  - `secure_boot_enabled` (`bool`): Set the `secure_boot_enabled` field on the resulting object. When `null`, the `secure_boot_enabled` field will be omitted from the resulting object.
-  - `single_placement_group` (`bool`): Set the `single_placement_group` field on the resulting object. When `null`, the `single_placement_group` field will be omitted from the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object.
-  - `source_image_id` (`string`): Set the `source_image_id` field on the resulting object. When `null`, the `source_image_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `upgrade_mode` (`string`): Set the `upgrade_mode` field on the resulting object. When `null`, the `upgrade_mode` field will be omitted from the resulting object.
-  - `user_data` (`string`): Set the `user_data` field on the resulting object. When `null`, the `user_data` field will be omitted from the resulting object.
-  - `vtpm_enabled` (`bool`): Set the `vtpm_enabled` field on the resulting object. When `null`, the `vtpm_enabled` field will be omitted from the resulting object.
-  - `zone_balance` (`bool`): Set the `zone_balance` field on the resulting object. When `null`, the `zone_balance` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_capabilities` (`list[obj]`): Set the `additional_capabilities` field on the resulting object. When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
-  - `admin_ssh_key` (`list[obj]`): Set the `admin_ssh_key` field on the resulting object. When `null`, the `admin_ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.admin_ssh_key.new](#fn-admin_ssh_keynew) constructor.
-  - `automatic_instance_repair` (`list[obj]`): Set the `automatic_instance_repair` field on the resulting object. When `null`, the `automatic_instance_repair` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_instance_repair.new](#fn-automatic_instance_repairnew) constructor.
-  - `automatic_os_upgrade_policy` (`list[obj]`): Set the `automatic_os_upgrade_policy` field on the resulting object. When `null`, the `automatic_os_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_os_upgrade_policy.new](#fn-automatic_os_upgrade_policynew) constructor.
-  - `boot_diagnostics` (`list[obj]`): Set the `boot_diagnostics` field on the resulting object. When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
-  - `data_disk` (`list[obj]`): Set the `data_disk` field on the resulting object. When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.data_disk.new](#fn-data_disknew) constructor.
-  - `extension` (`list[obj]`): Set the `extension` field on the resulting object. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.extension.new](#fn-extensionnew) constructor.
-  - `gallery_application` (`list[obj]`): Set the `gallery_application` field on the resulting object. When `null`, the `gallery_application` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_application.new](#fn-gallery_applicationnew) constructor.
-  - `gallery_applications` (`list[obj]`): Set the `gallery_applications` field on the resulting object. When `null`, the `gallery_applications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_applications.new](#fn-gallery_applicationsnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.identity.new](#fn-identitynew) constructor.
-  - `network_interface` (`list[obj]`): Set the `network_interface` field on the resulting object. When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.new](#fn-network_interfacenew) constructor.
-  - `os_disk` (`list[obj]`): Set the `os_disk` field on the resulting object. When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.os_disk.new](#fn-os_disknew) constructor.
-  - `plan` (`list[obj]`): Set the `plan` field on the resulting object. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.plan.new](#fn-plannew) constructor.
-  - `rolling_upgrade_policy` (`list[obj]`): Set the `rolling_upgrade_policy` field on the resulting object. When `null`, the `rolling_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.rolling_upgrade_policy.new](#fn-rolling_upgrade_policynew) constructor.
-  - `scale_in` (`list[obj]`): Set the `scale_in` field on the resulting object. When `null`, the `scale_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.scale_in.new](#fn-scale_innew) constructor.
-  - `secret` (`list[obj]`): Set the `secret` field on the resulting object. When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.secret.new](#fn-secretnew) constructor.
-  - `source_image_reference` (`list[obj]`): Set the `source_image_reference` field on the resulting object. When `null`, the `source_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.source_image_reference.new](#fn-source_image_referencenew) constructor.
-  - `spot_restore` (`list[obj]`): Set the `spot_restore` field on the resulting object. When `null`, the `spot_restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.spot_restore.new](#fn-spot_restorenew) constructor.
-  - `terminate_notification` (`list[obj]`): Set the `terminate_notification` field on the resulting object. When `null`, the `terminate_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.terminate_notification.new](#fn-terminate_notificationnew) constructor.
-  - `termination_notification` (`list[obj]`): Set the `termination_notification` field on the resulting object. When `null`, the `termination_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.termination_notification.new](#fn-termination_notificationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.timeouts.new](#fn-timeoutsnew) constructor.
+  - `admin_password` (`string`):  When `null`, the `admin_password` field will be omitted from the resulting object.
+  - `admin_username` (`string`): 
+  - `capacity_reservation_group_id` (`string`):  When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
+  - `computer_name_prefix` (`string`):  When `null`, the `computer_name_prefix` field will be omitted from the resulting object.
+  - `custom_data` (`string`):  When `null`, the `custom_data` field will be omitted from the resulting object.
+  - `disable_password_authentication` (`bool`):  When `null`, the `disable_password_authentication` field will be omitted from the resulting object.
+  - `do_not_run_extensions_on_overprovisioned_machines` (`bool`):  When `null`, the `do_not_run_extensions_on_overprovisioned_machines` field will be omitted from the resulting object.
+  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `encryption_at_host_enabled` (`bool`):  When `null`, the `encryption_at_host_enabled` field will be omitted from the resulting object.
+  - `eviction_policy` (`string`):  When `null`, the `eviction_policy` field will be omitted from the resulting object.
+  - `extension_operations_enabled` (`bool`):  When `null`, the `extension_operations_enabled` field will be omitted from the resulting object.
+  - `extensions_time_budget` (`string`):  When `null`, the `extensions_time_budget` field will be omitted from the resulting object.
+  - `health_probe_id` (`string`):  When `null`, the `health_probe_id` field will be omitted from the resulting object.
+  - `host_group_id` (`string`):  When `null`, the `host_group_id` field will be omitted from the resulting object.
+  - `instances` (`number`):  When `null`, the `instances` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `max_bid_price` (`number`):  When `null`, the `max_bid_price` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `overprovision` (`bool`):  When `null`, the `overprovision` field will be omitted from the resulting object.
+  - `platform_fault_domain_count` (`number`):  When `null`, the `platform_fault_domain_count` field will be omitted from the resulting object.
+  - `priority` (`string`):  When `null`, the `priority` field will be omitted from the resulting object.
+  - `provision_vm_agent` (`bool`):  When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `scale_in_policy` (`string`):  When `null`, the `scale_in_policy` field will be omitted from the resulting object.
+  - `secure_boot_enabled` (`bool`):  When `null`, the `secure_boot_enabled` field will be omitted from the resulting object.
+  - `single_placement_group` (`bool`):  When `null`, the `single_placement_group` field will be omitted from the resulting object.
+  - `sku` (`string`): 
+  - `source_image_id` (`string`):  When `null`, the `source_image_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `upgrade_mode` (`string`):  When `null`, the `upgrade_mode` field will be omitted from the resulting object.
+  - `user_data` (`string`):  When `null`, the `user_data` field will be omitted from the resulting object.
+  - `vtpm_enabled` (`bool`):  When `null`, the `vtpm_enabled` field will be omitted from the resulting object.
+  - `zone_balance` (`bool`):  When `null`, the `zone_balance` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
+  - `admin_ssh_key` (`list[obj]`):  When `null`, the `admin_ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.admin_ssh_key.new](#fn-admin_ssh_keynew) constructor.
+  - `automatic_instance_repair` (`list[obj]`):  When `null`, the `automatic_instance_repair` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_instance_repair.new](#fn-automatic_instance_repairnew) constructor.
+  - `automatic_os_upgrade_policy` (`list[obj]`):  When `null`, the `automatic_os_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.automatic_os_upgrade_policy.new](#fn-automatic_os_upgrade_policynew) constructor.
+  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
+  - `data_disk` (`list[obj]`):  When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.data_disk.new](#fn-data_disknew) constructor.
+  - `extension` (`list[obj]`):  When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.extension.new](#fn-extensionnew) constructor.
+  - `gallery_application` (`list[obj]`):  When `null`, the `gallery_application` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_application.new](#fn-gallery_applicationnew) constructor.
+  - `gallery_applications` (`list[obj]`):  When `null`, the `gallery_applications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.gallery_applications.new](#fn-gallery_applicationsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.identity.new](#fn-identitynew) constructor.
+  - `network_interface` (`list[obj]`):  When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.new](#fn-network_interfacenew) constructor.
+  - `os_disk` (`list[obj]`):  When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.os_disk.new](#fn-os_disknew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.plan.new](#fn-plannew) constructor.
+  - `rolling_upgrade_policy` (`list[obj]`):  When `null`, the `rolling_upgrade_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.rolling_upgrade_policy.new](#fn-rolling_upgrade_policynew) constructor.
+  - `scale_in` (`list[obj]`):  When `null`, the `scale_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.scale_in.new](#fn-scale_innew) constructor.
+  - `secret` (`list[obj]`):  When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.secret.new](#fn-secretnew) constructor.
+  - `source_image_reference` (`list[obj]`):  When `null`, the `source_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.source_image_reference.new](#fn-source_image_referencenew) constructor.
+  - `spot_restore` (`list[obj]`):  When `null`, the `spot_restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.spot_restore.new](#fn-spot_restorenew) constructor.
+  - `terminate_notification` (`list[obj]`):  When `null`, the `terminate_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.terminate_notification.new](#fn-terminate_notificationnew) constructor.
+  - `termination_notification` (`list[obj]`):  When `null`, the `termination_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.termination_notification.new](#fn-termination_notificationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `linux_virtual_machine_scale_set` resource into the root Terraform configuration.
@@ -1669,7 +1669,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting object. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
+  - `ultra_ssd_enabled` (`bool`):  When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `additional_capabilities` sub block.
@@ -1692,8 +1692,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `public_key` (`string`): Set the `public_key` field on the resulting object.
-  - `username` (`string`): Set the `username` field on the resulting object.
+  - `public_key` (`string`): 
+  - `username` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `admin_ssh_key` sub block.
@@ -1716,8 +1716,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `grace_period` (`string`): Set the `grace_period` field on the resulting object. When `null`, the `grace_period` field will be omitted from the resulting object.
+  - `enabled` (`bool`): 
+  - `grace_period` (`string`):  When `null`, the `grace_period` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `automatic_instance_repair` sub block.
@@ -1740,8 +1740,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `disable_automatic_rollback` (`bool`): Set the `disable_automatic_rollback` field on the resulting object.
-  - `enable_automatic_os_upgrade` (`bool`): Set the `enable_automatic_os_upgrade` field on the resulting object.
+  - `disable_automatic_rollback` (`bool`): 
+  - `enable_automatic_os_upgrade` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `automatic_os_upgrade_policy` sub block.
@@ -1764,7 +1764,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `storage_account_uri` (`string`): Set the `storage_account_uri` field on the resulting object. When `null`, the `storage_account_uri` field will be omitted from the resulting object.
+  - `storage_account_uri` (`string`):  When `null`, the `storage_account_uri` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `boot_diagnostics` sub block.
@@ -1787,16 +1787,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `caching` (`string`): Set the `caching` field on the resulting object.
-  - `create_option` (`string`): Set the `create_option` field on the resulting object. When `null`, the `create_option` field will be omitted from the resulting object.
-  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting object.
-  - `lun` (`number`): Set the `lun` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
-  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object.
-  - `ultra_ssd_disk_iops_read_write` (`number`): Set the `ultra_ssd_disk_iops_read_write` field on the resulting object. When `null`, the `ultra_ssd_disk_iops_read_write` field will be omitted from the resulting object.
-  - `ultra_ssd_disk_mbps_read_write` (`number`): Set the `ultra_ssd_disk_mbps_read_write` field on the resulting object. When `null`, the `ultra_ssd_disk_mbps_read_write` field will be omitted from the resulting object.
-  - `write_accelerator_enabled` (`bool`): Set the `write_accelerator_enabled` field on the resulting object. When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
+  - `caching` (`string`): 
+  - `create_option` (`string`):  When `null`, the `create_option` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `disk_size_gb` (`number`): 
+  - `lun` (`number`): 
+  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
+  - `storage_account_type` (`string`): 
+  - `ultra_ssd_disk_iops_read_write` (`number`):  When `null`, the `ultra_ssd_disk_iops_read_write` field will be omitted from the resulting object.
+  - `ultra_ssd_disk_mbps_read_write` (`number`):  When `null`, the `ultra_ssd_disk_mbps_read_write` field will be omitted from the resulting object.
+  - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `data_disk` sub block.
@@ -1819,17 +1819,17 @@ Terraform sub block.
 
 
 **Args**:
-  - `auto_upgrade_minor_version` (`bool`): Set the `auto_upgrade_minor_version` field on the resulting object. When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
-  - `automatic_upgrade_enabled` (`bool`): Set the `automatic_upgrade_enabled` field on the resulting object. When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
-  - `force_update_tag` (`string`): Set the `force_update_tag` field on the resulting object. When `null`, the `force_update_tag` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `protected_settings` (`string`): Set the `protected_settings` field on the resulting object. When `null`, the `protected_settings` field will be omitted from the resulting object.
-  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting object. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object.
-  - `settings` (`string`): Set the `settings` field on the resulting object. When `null`, the `settings` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
-  - `type_handler_version` (`string`): Set the `type_handler_version` field on the resulting object.
-  - `protected_settings_from_key_vault` (`list[obj]`): Set the `protected_settings_from_key_vault` field on the resulting object. When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.extension.protected_settings_from_key_vault.new](#fn-extensionprotected_settings_from_key_vaultnew) constructor.
+  - `auto_upgrade_minor_version` (`bool`):  When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
+  - `automatic_upgrade_enabled` (`bool`):  When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
+  - `force_update_tag` (`string`):  When `null`, the `force_update_tag` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `protected_settings` (`string`):  When `null`, the `protected_settings` field will be omitted from the resulting object.
+  - `provision_after_extensions` (`list`):  When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
+  - `publisher` (`string`): 
+  - `settings` (`string`):  When `null`, the `settings` field will be omitted from the resulting object.
+  - `type` (`string`): 
+  - `type_handler_version` (`string`): 
+  - `protected_settings_from_key_vault` (`list[obj]`):  When `null`, the `protected_settings_from_key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.extension.protected_settings_from_key_vault.new](#fn-extensionprotected_settings_from_key_vaultnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `extension` sub block.
@@ -1852,8 +1852,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `secret_url` (`string`): Set the `secret_url` field on the resulting object.
-  - `source_vault_id` (`string`): Set the `source_vault_id` field on the resulting object.
+  - `secret_url` (`string`): 
+  - `source_vault_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `protected_settings_from_key_vault` sub block.
@@ -1876,10 +1876,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `configuration_blob_uri` (`string`): Set the `configuration_blob_uri` field on the resulting object. When `null`, the `configuration_blob_uri` field will be omitted from the resulting object.
-  - `order` (`number`): Set the `order` field on the resulting object. When `null`, the `order` field will be omitted from the resulting object.
-  - `tag` (`string`): Set the `tag` field on the resulting object. When `null`, the `tag` field will be omitted from the resulting object.
-  - `version_id` (`string`): Set the `version_id` field on the resulting object.
+  - `configuration_blob_uri` (`string`):  When `null`, the `configuration_blob_uri` field will be omitted from the resulting object.
+  - `order` (`number`):  When `null`, the `order` field will be omitted from the resulting object.
+  - `tag` (`string`):  When `null`, the `tag` field will be omitted from the resulting object.
+  - `version_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `gallery_application` sub block.
@@ -1902,10 +1902,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `configuration_reference_blob_uri` (`string`): Set the `configuration_reference_blob_uri` field on the resulting object. When `null`, the `configuration_reference_blob_uri` field will be omitted from the resulting object.
-  - `order` (`number`): Set the `order` field on the resulting object. When `null`, the `order` field will be omitted from the resulting object.
-  - `package_reference_id` (`string`): Set the `package_reference_id` field on the resulting object.
-  - `tag` (`string`): Set the `tag` field on the resulting object. When `null`, the `tag` field will be omitted from the resulting object.
+  - `configuration_reference_blob_uri` (`string`):  When `null`, the `configuration_reference_blob_uri` field will be omitted from the resulting object.
+  - `order` (`number`):  When `null`, the `order` field will be omitted from the resulting object.
+  - `package_reference_id` (`string`): 
+  - `tag` (`string`):  When `null`, the `tag` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `gallery_applications` sub block.
@@ -1928,8 +1928,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -1952,13 +1952,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `enable_accelerated_networking` (`bool`): Set the `enable_accelerated_networking` field on the resulting object. When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
-  - `enable_ip_forwarding` (`bool`): Set the `enable_ip_forwarding` field on the resulting object. When `null`, the `enable_ip_forwarding` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `network_security_group_id` (`string`): Set the `network_security_group_id` field on the resulting object. When `null`, the `network_security_group_id` field will be omitted from the resulting object.
-  - `primary` (`bool`): Set the `primary` field on the resulting object. When `null`, the `primary` field will be omitted from the resulting object.
-  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting object. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.ip_configuration.new](#fn-network_interfaceip_configurationnew) constructor.
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `enable_accelerated_networking` (`bool`):  When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
+  - `enable_ip_forwarding` (`bool`):  When `null`, the `enable_ip_forwarding` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_security_group_id` (`string`):  When `null`, the `network_security_group_id` field will be omitted from the resulting object.
+  - `primary` (`bool`):  When `null`, the `primary` field will be omitted from the resulting object.
+  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.ip_configuration.new](#fn-network_interfaceip_configurationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_interface` sub block.
@@ -1981,15 +1981,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `application_gateway_backend_address_pool_ids` (`list`): Set the `application_gateway_backend_address_pool_ids` field on the resulting object. When `null`, the `application_gateway_backend_address_pool_ids` field will be omitted from the resulting object.
-  - `application_security_group_ids` (`list`): Set the `application_security_group_ids` field on the resulting object. When `null`, the `application_security_group_ids` field will be omitted from the resulting object.
-  - `load_balancer_backend_address_pool_ids` (`list`): Set the `load_balancer_backend_address_pool_ids` field on the resulting object. When `null`, the `load_balancer_backend_address_pool_ids` field will be omitted from the resulting object.
-  - `load_balancer_inbound_nat_rules_ids` (`list`): Set the `load_balancer_inbound_nat_rules_ids` field on the resulting object. When `null`, the `load_balancer_inbound_nat_rules_ids` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `primary` (`bool`): Set the `primary` field on the resulting object. When `null`, the `primary` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
-  - `public_ip_address` (`list[obj]`): Set the `public_ip_address` field on the resulting object. When `null`, the `public_ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.new](#fn-network_interfacenetwork_interfacepublic_ip_addressnew) constructor.
+  - `application_gateway_backend_address_pool_ids` (`list`):  When `null`, the `application_gateway_backend_address_pool_ids` field will be omitted from the resulting object.
+  - `application_security_group_ids` (`list`):  When `null`, the `application_security_group_ids` field will be omitted from the resulting object.
+  - `load_balancer_backend_address_pool_ids` (`list`):  When `null`, the `load_balancer_backend_address_pool_ids` field will be omitted from the resulting object.
+  - `load_balancer_inbound_nat_rules_ids` (`list`):  When `null`, the `load_balancer_inbound_nat_rules_ids` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `primary` (`bool`):  When `null`, the `primary` field will be omitted from the resulting object.
+  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `public_ip_address` (`list[obj]`):  When `null`, the `public_ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.new](#fn-network_interfacenetwork_interfacepublic_ip_addressnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -2012,12 +2012,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `domain_name_label` (`string`): Set the `domain_name_label` field on the resulting object. When `null`, the `domain_name_label` field will be omitted from the resulting object.
-  - `idle_timeout_in_minutes` (`number`): Set the `idle_timeout_in_minutes` field on the resulting object. When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_ip_prefix_id` (`string`): Set the `public_ip_prefix_id` field on the resulting object. When `null`, the `public_ip_prefix_id` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
-  - `ip_tag` (`list[obj]`): Set the `ip_tag` field on the resulting object. When `null`, the `ip_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.ip_tag.new](#fn-network_interfacenetwork_interfaceip_configurationip_tagnew) constructor.
+  - `domain_name_label` (`string`):  When `null`, the `domain_name_label` field will be omitted from the resulting object.
+  - `idle_timeout_in_minutes` (`number`):  When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_ip_prefix_id` (`string`):  When `null`, the `public_ip_prefix_id` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
+  - `ip_tag` (`list[obj]`):  When `null`, the `ip_tag` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.network_interface.ip_configuration.public_ip_address.ip_tag.new](#fn-network_interfacenetwork_interfaceip_configurationip_tagnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `public_ip_address` sub block.
@@ -2040,8 +2040,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `tag` (`string`): Set the `tag` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `tag` (`string`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `ip_tag` sub block.
@@ -2064,14 +2064,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `caching` (`string`): Set the `caching` field on the resulting object.
-  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting object. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
-  - `secure_vm_disk_encryption_set_id` (`string`): Set the `secure_vm_disk_encryption_set_id` field on the resulting object. When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
-  - `security_encryption_type` (`string`): Set the `security_encryption_type` field on the resulting object. When `null`, the `security_encryption_type` field will be omitted from the resulting object.
-  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object.
-  - `write_accelerator_enabled` (`bool`): Set the `write_accelerator_enabled` field on the resulting object. When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
-  - `diff_disk_settings` (`list[obj]`): Set the `diff_disk_settings` field on the resulting object. When `null`, the `diff_disk_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.os_disk.diff_disk_settings.new](#fn-os_diskdiff_disk_settingsnew) constructor.
+  - `caching` (`string`): 
+  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `disk_size_gb` (`number`):  When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `secure_vm_disk_encryption_set_id` (`string`):  When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
+  - `security_encryption_type` (`string`):  When `null`, the `security_encryption_type` field will be omitted from the resulting object.
+  - `storage_account_type` (`string`): 
+  - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
+  - `diff_disk_settings` (`list[obj]`):  When `null`, the `diff_disk_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.os_disk.diff_disk_settings.new](#fn-os_diskdiff_disk_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_disk` sub block.
@@ -2094,8 +2094,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `option` (`string`): Set the `option` field on the resulting object.
-  - `placement` (`string`): Set the `placement` field on the resulting object. When `null`, the `placement` field will be omitted from the resulting object.
+  - `option` (`string`): 
+  - `placement` (`string`):  When `null`, the `placement` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `diff_disk_settings` sub block.
@@ -2118,9 +2118,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `product` (`string`): Set the `product` field on the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object.
+  - `name` (`string`): 
+  - `product` (`string`): 
+  - `publisher` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `plan` sub block.
@@ -2143,12 +2143,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `cross_zone_upgrades_enabled` (`bool`): Set the `cross_zone_upgrades_enabled` field on the resulting object. When `null`, the `cross_zone_upgrades_enabled` field will be omitted from the resulting object.
-  - `max_batch_instance_percent` (`number`): Set the `max_batch_instance_percent` field on the resulting object.
-  - `max_unhealthy_instance_percent` (`number`): Set the `max_unhealthy_instance_percent` field on the resulting object.
-  - `max_unhealthy_upgraded_instance_percent` (`number`): Set the `max_unhealthy_upgraded_instance_percent` field on the resulting object.
-  - `pause_time_between_batches` (`string`): Set the `pause_time_between_batches` field on the resulting object.
-  - `prioritize_unhealthy_instances_enabled` (`bool`): Set the `prioritize_unhealthy_instances_enabled` field on the resulting object. When `null`, the `prioritize_unhealthy_instances_enabled` field will be omitted from the resulting object.
+  - `cross_zone_upgrades_enabled` (`bool`):  When `null`, the `cross_zone_upgrades_enabled` field will be omitted from the resulting object.
+  - `max_batch_instance_percent` (`number`): 
+  - `max_unhealthy_instance_percent` (`number`): 
+  - `max_unhealthy_upgraded_instance_percent` (`number`): 
+  - `pause_time_between_batches` (`string`): 
+  - `prioritize_unhealthy_instances_enabled` (`bool`):  When `null`, the `prioritize_unhealthy_instances_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `rolling_upgrade_policy` sub block.
@@ -2171,8 +2171,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `force_deletion_enabled` (`bool`): Set the `force_deletion_enabled` field on the resulting object. When `null`, the `force_deletion_enabled` field will be omitted from the resulting object.
-  - `rule` (`string`): Set the `rule` field on the resulting object. When `null`, the `rule` field will be omitted from the resulting object.
+  - `force_deletion_enabled` (`bool`):  When `null`, the `force_deletion_enabled` field will be omitted from the resulting object.
+  - `rule` (`string`):  When `null`, the `rule` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `scale_in` sub block.
@@ -2195,8 +2195,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
-  - `certificate` (`list[obj]`): Set the `certificate` field on the resulting object. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.secret.certificate.new](#fn-secretcertificatenew) constructor.
+  - `key_vault_id` (`string`): 
+  - `certificate` (`list[obj]`):  When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_virtual_machine_scale_set.secret.certificate.new](#fn-secretcertificatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret` sub block.
@@ -2219,7 +2219,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `url` (`string`): Set the `url` field on the resulting object.
+  - `url` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `certificate` sub block.
@@ -2242,10 +2242,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `offer` (`string`): Set the `offer` field on the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object.
+  - `offer` (`string`): 
+  - `publisher` (`string`): 
+  - `sku` (`string`): 
+  - `version` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `source_image_reference` sub block.
@@ -2268,8 +2268,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `timeout` (`string`): Set the `timeout` field on the resulting object. When `null`, the `timeout` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `timeout` (`string`):  When `null`, the `timeout` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `spot_restore` sub block.
@@ -2292,8 +2292,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `timeout` (`string`): Set the `timeout` field on the resulting object. When `null`, the `timeout` field will be omitted from the resulting object.
+  - `enabled` (`bool`): 
+  - `timeout` (`string`):  When `null`, the `timeout` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `terminate_notification` sub block.
@@ -2316,8 +2316,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `timeout` (`string`): Set the `timeout` field on the resulting object. When `null`, the `timeout` field will be omitted from the resulting object.
+  - `enabled` (`bool`): 
+  - `timeout` (`string`):  When `null`, the `timeout` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `termination_notification` sub block.
@@ -2340,10 +2340,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

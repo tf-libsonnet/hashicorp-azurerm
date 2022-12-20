@@ -65,18 +65,18 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `address_prefixes` (`list`): Set the `address_prefixes` field on the resulting resource block.
-  - `enforce_private_link_endpoint_network_policies` (`bool`): Set the `enforce_private_link_endpoint_network_policies` field on the resulting resource block. When `null`, the `enforce_private_link_endpoint_network_policies` field will be omitted from the resulting object.
-  - `enforce_private_link_service_network_policies` (`bool`): Set the `enforce_private_link_service_network_policies` field on the resulting resource block. When `null`, the `enforce_private_link_service_network_policies` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `private_endpoint_network_policies_enabled` (`bool`): Set the `private_endpoint_network_policies_enabled` field on the resulting resource block. When `null`, the `private_endpoint_network_policies_enabled` field will be omitted from the resulting object.
-  - `private_link_service_network_policies_enabled` (`bool`): Set the `private_link_service_network_policies_enabled` field on the resulting resource block. When `null`, the `private_link_service_network_policies_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `service_endpoint_policy_ids` (`list`): Set the `service_endpoint_policy_ids` field on the resulting resource block. When `null`, the `service_endpoint_policy_ids` field will be omitted from the resulting object.
-  - `service_endpoints` (`list`): Set the `service_endpoints` field on the resulting resource block. When `null`, the `service_endpoints` field will be omitted from the resulting object.
-  - `virtual_network_name` (`string`): Set the `virtual_network_name` field on the resulting resource block.
-  - `delegation` (`list[obj]`): Set the `delegation` field on the resulting resource block. When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-delegationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-timeoutsnew) constructor.
+  - `address_prefixes` (`list`): 
+  - `enforce_private_link_endpoint_network_policies` (`bool`):  When `null`, the `enforce_private_link_endpoint_network_policies` field will be omitted from the resulting object.
+  - `enforce_private_link_service_network_policies` (`bool`):  When `null`, the `enforce_private_link_service_network_policies` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `private_endpoint_network_policies_enabled` (`bool`):  When `null`, the `private_endpoint_network_policies_enabled` field will be omitted from the resulting object.
+  - `private_link_service_network_policies_enabled` (`bool`):  When `null`, the `private_link_service_network_policies_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `service_endpoint_policy_ids` (`list`):  When `null`, the `service_endpoint_policy_ids` field will be omitted from the resulting object.
+  - `service_endpoints` (`list`):  When `null`, the `service_endpoints` field will be omitted from the resulting object.
+  - `virtual_network_name` (`string`): 
+  - `delegation` (`list[obj]`):  When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-delegationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,18 +100,18 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `address_prefixes` (`list`): Set the `address_prefixes` field on the resulting object.
-  - `enforce_private_link_endpoint_network_policies` (`bool`): Set the `enforce_private_link_endpoint_network_policies` field on the resulting object. When `null`, the `enforce_private_link_endpoint_network_policies` field will be omitted from the resulting object.
-  - `enforce_private_link_service_network_policies` (`bool`): Set the `enforce_private_link_service_network_policies` field on the resulting object. When `null`, the `enforce_private_link_service_network_policies` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `private_endpoint_network_policies_enabled` (`bool`): Set the `private_endpoint_network_policies_enabled` field on the resulting object. When `null`, the `private_endpoint_network_policies_enabled` field will be omitted from the resulting object.
-  - `private_link_service_network_policies_enabled` (`bool`): Set the `private_link_service_network_policies_enabled` field on the resulting object. When `null`, the `private_link_service_network_policies_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `service_endpoint_policy_ids` (`list`): Set the `service_endpoint_policy_ids` field on the resulting object. When `null`, the `service_endpoint_policy_ids` field will be omitted from the resulting object.
-  - `service_endpoints` (`list`): Set the `service_endpoints` field on the resulting object. When `null`, the `service_endpoints` field will be omitted from the resulting object.
-  - `virtual_network_name` (`string`): Set the `virtual_network_name` field on the resulting object.
-  - `delegation` (`list[obj]`): Set the `delegation` field on the resulting object. When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-delegationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-timeoutsnew) constructor.
+  - `address_prefixes` (`list`): 
+  - `enforce_private_link_endpoint_network_policies` (`bool`):  When `null`, the `enforce_private_link_endpoint_network_policies` field will be omitted from the resulting object.
+  - `enforce_private_link_service_network_policies` (`bool`):  When `null`, the `enforce_private_link_service_network_policies` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `private_endpoint_network_policies_enabled` (`bool`):  When `null`, the `private_endpoint_network_policies_enabled` field will be omitted from the resulting object.
+  - `private_link_service_network_policies_enabled` (`bool`):  When `null`, the `private_link_service_network_policies_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `service_endpoint_policy_ids` (`list`):  When `null`, the `service_endpoint_policy_ids` field will be omitted from the resulting object.
+  - `service_endpoints` (`list`):  When `null`, the `service_endpoints` field will be omitted from the resulting object.
+  - `virtual_network_name` (`string`): 
+  - `delegation` (`list[obj]`):  When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.new](#fn-delegationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `subnet` resource into the root Terraform configuration.
@@ -367,8 +367,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `service_delegation` (`list[obj]`): Set the `service_delegation` field on the resulting object. When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservice_delegationnew) constructor.
+  - `name` (`string`): 
+  - `service_delegation` (`list[obj]`):  When `null`, the `service_delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.subnet.delegation.service_delegation.new](#fn-delegationservice_delegationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delegation` sub block.
@@ -391,8 +391,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `actions` (`list`): Set the `actions` field on the resulting object. When `null`, the `actions` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `actions` (`list`):  When `null`, the `actions` field will be omitted from the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `service_delegation` sub block.
@@ -415,10 +415,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `failure_percentage` (`number`): Set the `failure_percentage` field on the resulting resource block. When `null`, the `failure_percentage` field will be omitted from the resulting object.
-  - `location_filters` (`list`): Set the `location_filters` field on the resulting resource block. When `null`, the `location_filters` field will be omitted from the resulting object.
-  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `parallel_deployments` (`number`): Set the `parallel_deployments` field on the resulting resource block. When `null`, the `parallel_deployments` field will be omitted from the resulting object.
-  - `policy_assignment_id` (`string`): Set the `policy_assignment_id` field on the resulting resource block.
-  - `policy_definition_id` (`string`): Set the `policy_definition_id` field on the resulting resource block. When `null`, the `policy_definition_id` field will be omitted from the resulting object.
-  - `policy_definition_reference_id` (`string`): Set the `policy_definition_reference_id` field on the resulting resource block. When `null`, the `policy_definition_reference_id` field will be omitted from the resulting object.
-  - `resource_count` (`number`): Set the `resource_count` field on the resulting resource block. When `null`, the `resource_count` field will be omitted from the resulting object.
-  - `resource_discovery_mode` (`string`): Set the `resource_discovery_mode` field on the resulting resource block. When `null`, the `resource_discovery_mode` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_remediation.timeouts.new](#fn-timeoutsnew) constructor.
+  - `failure_percentage` (`number`):  When `null`, the `failure_percentage` field will be omitted from the resulting object.
+  - `location_filters` (`list`):  When `null`, the `location_filters` field will be omitted from the resulting object.
+  - `management_group_id` (`string`): 
+  - `name` (`string`): 
+  - `parallel_deployments` (`number`):  When `null`, the `parallel_deployments` field will be omitted from the resulting object.
+  - `policy_assignment_id` (`string`): 
+  - `policy_definition_id` (`string`):  When `null`, the `policy_definition_id` field will be omitted from the resulting object.
+  - `policy_definition_reference_id` (`string`):  When `null`, the `policy_definition_reference_id` field will be omitted from the resulting object.
+  - `resource_count` (`number`):  When `null`, the `resource_count` field will be omitted from the resulting object.
+  - `resource_discovery_mode` (`string`):  When `null`, the `resource_discovery_mode` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_remediation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `failure_percentage` (`number`): Set the `failure_percentage` field on the resulting object. When `null`, the `failure_percentage` field will be omitted from the resulting object.
-  - `location_filters` (`list`): Set the `location_filters` field on the resulting object. When `null`, the `location_filters` field will be omitted from the resulting object.
-  - `management_group_id` (`string`): Set the `management_group_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `parallel_deployments` (`number`): Set the `parallel_deployments` field on the resulting object. When `null`, the `parallel_deployments` field will be omitted from the resulting object.
-  - `policy_assignment_id` (`string`): Set the `policy_assignment_id` field on the resulting object.
-  - `policy_definition_id` (`string`): Set the `policy_definition_id` field on the resulting object. When `null`, the `policy_definition_id` field will be omitted from the resulting object.
-  - `policy_definition_reference_id` (`string`): Set the `policy_definition_reference_id` field on the resulting object. When `null`, the `policy_definition_reference_id` field will be omitted from the resulting object.
-  - `resource_count` (`number`): Set the `resource_count` field on the resulting object. When `null`, the `resource_count` field will be omitted from the resulting object.
-  - `resource_discovery_mode` (`string`): Set the `resource_discovery_mode` field on the resulting object. When `null`, the `resource_discovery_mode` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_remediation.timeouts.new](#fn-timeoutsnew) constructor.
+  - `failure_percentage` (`number`):  When `null`, the `failure_percentage` field will be omitted from the resulting object.
+  - `location_filters` (`list`):  When `null`, the `location_filters` field will be omitted from the resulting object.
+  - `management_group_id` (`string`): 
+  - `name` (`string`): 
+  - `parallel_deployments` (`number`):  When `null`, the `parallel_deployments` field will be omitted from the resulting object.
+  - `policy_assignment_id` (`string`): 
+  - `policy_definition_id` (`string`):  When `null`, the `policy_definition_id` field will be omitted from the resulting object.
+  - `policy_definition_reference_id` (`string`):  When `null`, the `policy_definition_reference_id` field will be omitted from the resulting object.
+  - `resource_count` (`number`):  When `null`, the `resource_count` field will be omitted from the resulting object.
+  - `resource_discovery_mode` (`string`):  When `null`, the `resource_discovery_mode` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.management_group_policy_remediation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `management_group_policy_remediation` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -68,17 +68,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `routing_preference_internet_enabled` (`bool`): Set the `routing_preference_internet_enabled` field on the resulting resource block. When `null`, the `routing_preference_internet_enabled` field will be omitted from the resulting object.
-  - `scale_unit` (`number`): Set the `scale_unit` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting resource block.
-  - `vpn_server_configuration_id` (`string`): Set the `vpn_server_configuration_id` field on the resulting resource block.
-  - `connection_configuration` (`list[obj]`): Set the `connection_configuration` field on the resulting resource block. When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-connection_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `routing_preference_internet_enabled` (`bool`):  When `null`, the `routing_preference_internet_enabled` field will be omitted from the resulting object.
+  - `scale_unit` (`number`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_hub_id` (`string`): 
+  - `vpn_server_configuration_id` (`string`): 
+  - `connection_configuration` (`list[obj]`):  When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-connection_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,17 +102,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `routing_preference_internet_enabled` (`bool`): Set the `routing_preference_internet_enabled` field on the resulting object. When `null`, the `routing_preference_internet_enabled` field will be omitted from the resulting object.
-  - `scale_unit` (`number`): Set the `scale_unit` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.
-  - `vpn_server_configuration_id` (`string`): Set the `vpn_server_configuration_id` field on the resulting object.
-  - `connection_configuration` (`list[obj]`): Set the `connection_configuration` field on the resulting object. When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-connection_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `dns_servers` (`list`):  When `null`, the `dns_servers` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `routing_preference_internet_enabled` (`bool`):  When `null`, the `routing_preference_internet_enabled` field will be omitted from the resulting object.
+  - `scale_unit` (`number`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_hub_id` (`string`): 
+  - `vpn_server_configuration_id` (`string`): 
+  - `connection_configuration` (`list[obj]`):  When `null`, the `connection_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.new](#fn-connection_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `point_to_site_vpn_gateway` resource into the root Terraform configuration.
@@ -352,10 +352,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `internet_security_enabled` (`bool`): Set the `internet_security_enabled` field on the resulting object. When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `route` (`list[obj]`): Set the `route` field on the resulting object. When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.new](#fn-connection_configurationroutenew) constructor.
-  - `vpn_client_address_pool` (`list[obj]`): Set the `vpn_client_address_pool` field on the resulting object. When `null`, the `vpn_client_address_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.vpn_client_address_pool.new](#fn-connection_configurationvpn_client_address_poolnew) constructor.
+  - `internet_security_enabled` (`bool`):  When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `route` (`list[obj]`):  When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.new](#fn-connection_configurationroutenew) constructor.
+  - `vpn_client_address_pool` (`list[obj]`):  When `null`, the `vpn_client_address_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.vpn_client_address_pool.new](#fn-connection_configurationvpn_client_address_poolnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `connection_configuration` sub block.
@@ -378,10 +378,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `associated_route_table_id` (`string`): Set the `associated_route_table_id` field on the resulting object.
-  - `inbound_route_map_id` (`string`): Set the `inbound_route_map_id` field on the resulting object. When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
-  - `outbound_route_map_id` (`string`): Set the `outbound_route_map_id` field on the resulting object. When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`): Set the `propagated_route_table` field on the resulting object. When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.propagated_route_table.new](#fn-connection_configurationconnection_configurationpropagated_route_tablenew) constructor.
+  - `associated_route_table_id` (`string`): 
+  - `inbound_route_map_id` (`string`):  When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
+  - `outbound_route_map_id` (`string`):  When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
+  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.point_to_site_vpn_gateway.connection_configuration.route.propagated_route_table.new](#fn-connection_configurationconnection_configurationpropagated_route_tablenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `route` sub block.
@@ -404,8 +404,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `ids` (`list`): Set the `ids` field on the resulting object.
-  - `labels` (`list`): Set the `labels` field on the resulting object. When `null`, the `labels` field will be omitted from the resulting object.
+  - `ids` (`list`): 
+  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `propagated_route_table` sub block.
@@ -428,7 +428,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `address_prefixes` (`list`): Set the `address_prefixes` field on the resulting object.
+  - `address_prefixes` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `vpn_client_address_pool` sub block.
@@ -451,10 +451,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

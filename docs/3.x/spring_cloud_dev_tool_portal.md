@@ -58,13 +58,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `application_accelerator_enabled` (`bool`): Set the `application_accelerator_enabled` field on the resulting resource block. When `null`, the `application_accelerator_enabled` field will be omitted from the resulting object.
-  - `application_live_view_enabled` (`bool`): Set the `application_live_view_enabled` field on the resulting resource block. When `null`, the `application_live_view_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.
-  - `sso` (`list[obj]`): Set the `sso` field on the resulting resource block. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.sso.new](#fn-ssonew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_accelerator_enabled` (`bool`):  When `null`, the `application_accelerator_enabled` field will be omitted from the resulting object.
+  - `application_live_view_enabled` (`bool`):  When `null`, the `application_live_view_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `spring_cloud_service_id` (`string`): 
+  - `sso` (`list[obj]`):  When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.sso.new](#fn-ssonew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `application_accelerator_enabled` (`bool`): Set the `application_accelerator_enabled` field on the resulting object. When `null`, the `application_accelerator_enabled` field will be omitted from the resulting object.
-  - `application_live_view_enabled` (`bool`): Set the `application_live_view_enabled` field on the resulting object. When `null`, the `application_live_view_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.
-  - `sso` (`list[obj]`): Set the `sso` field on the resulting object. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.sso.new](#fn-ssonew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.timeouts.new](#fn-timeoutsnew) constructor.
+  - `application_accelerator_enabled` (`bool`):  When `null`, the `application_accelerator_enabled` field will be omitted from the resulting object.
+  - `application_live_view_enabled` (`bool`):  When `null`, the `application_live_view_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `spring_cloud_service_id` (`string`): 
+  - `sso` (`list[obj]`):  When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.sso.new](#fn-ssonew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_dev_tool_portal.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_dev_tool_portal` resource into the root Terraform configuration.
@@ -270,10 +270,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`): Set the `client_id` field on the resulting object. When `null`, the `client_id` field will be omitted from the resulting object.
-  - `client_secret` (`string`): Set the `client_secret` field on the resulting object. When `null`, the `client_secret` field will be omitted from the resulting object.
-  - `metadata_url` (`string`): Set the `metadata_url` field on the resulting object. When `null`, the `metadata_url` field will be omitted from the resulting object.
-  - `scope` (`list`): Set the `scope` field on the resulting object. When `null`, the `scope` field will be omitted from the resulting object.
+  - `client_id` (`string`):  When `null`, the `client_id` field will be omitted from the resulting object.
+  - `client_secret` (`string`):  When `null`, the `client_secret` field will be omitted from the resulting object.
+  - `metadata_url` (`string`):  When `null`, the `metadata_url` field will be omitted from the resulting object.
+  - `scope` (`list`):  When `null`, the `scope` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sso` sub block.
@@ -296,10 +296,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

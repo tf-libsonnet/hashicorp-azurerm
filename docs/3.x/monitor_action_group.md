@@ -100,23 +100,23 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `short_name` (`string`): Set the `short_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `arm_role_receiver` (`list[obj]`): Set the `arm_role_receiver` field on the resulting resource block. When `null`, the `arm_role_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.arm_role_receiver.new](#fn-arm_role_receivernew) constructor.
-  - `automation_runbook_receiver` (`list[obj]`): Set the `automation_runbook_receiver` field on the resulting resource block. When `null`, the `automation_runbook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.automation_runbook_receiver.new](#fn-automation_runbook_receivernew) constructor.
-  - `azure_app_push_receiver` (`list[obj]`): Set the `azure_app_push_receiver` field on the resulting resource block. When `null`, the `azure_app_push_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_app_push_receiver.new](#fn-azure_app_push_receivernew) constructor.
-  - `azure_function_receiver` (`list[obj]`): Set the `azure_function_receiver` field on the resulting resource block. When `null`, the `azure_function_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_function_receiver.new](#fn-azure_function_receivernew) constructor.
-  - `email_receiver` (`list[obj]`): Set the `email_receiver` field on the resulting resource block. When `null`, the `email_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.email_receiver.new](#fn-email_receivernew) constructor.
-  - `event_hub_receiver` (`list[obj]`): Set the `event_hub_receiver` field on the resulting resource block. When `null`, the `event_hub_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.event_hub_receiver.new](#fn-event_hub_receivernew) constructor.
-  - `itsm_receiver` (`list[obj]`): Set the `itsm_receiver` field on the resulting resource block. When `null`, the `itsm_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.itsm_receiver.new](#fn-itsm_receivernew) constructor.
-  - `logic_app_receiver` (`list[obj]`): Set the `logic_app_receiver` field on the resulting resource block. When `null`, the `logic_app_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.logic_app_receiver.new](#fn-logic_app_receivernew) constructor.
-  - `sms_receiver` (`list[obj]`): Set the `sms_receiver` field on the resulting resource block. When `null`, the `sms_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.sms_receiver.new](#fn-sms_receivernew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.timeouts.new](#fn-timeoutsnew) constructor.
-  - `voice_receiver` (`list[obj]`): Set the `voice_receiver` field on the resulting resource block. When `null`, the `voice_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.voice_receiver.new](#fn-voice_receivernew) constructor.
-  - `webhook_receiver` (`list[obj]`): Set the `webhook_receiver` field on the resulting resource block. When `null`, the `webhook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.new](#fn-webhook_receivernew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `short_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `arm_role_receiver` (`list[obj]`):  When `null`, the `arm_role_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.arm_role_receiver.new](#fn-arm_role_receivernew) constructor.
+  - `automation_runbook_receiver` (`list[obj]`):  When `null`, the `automation_runbook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.automation_runbook_receiver.new](#fn-automation_runbook_receivernew) constructor.
+  - `azure_app_push_receiver` (`list[obj]`):  When `null`, the `azure_app_push_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_app_push_receiver.new](#fn-azure_app_push_receivernew) constructor.
+  - `azure_function_receiver` (`list[obj]`):  When `null`, the `azure_function_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_function_receiver.new](#fn-azure_function_receivernew) constructor.
+  - `email_receiver` (`list[obj]`):  When `null`, the `email_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.email_receiver.new](#fn-email_receivernew) constructor.
+  - `event_hub_receiver` (`list[obj]`):  When `null`, the `event_hub_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.event_hub_receiver.new](#fn-event_hub_receivernew) constructor.
+  - `itsm_receiver` (`list[obj]`):  When `null`, the `itsm_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.itsm_receiver.new](#fn-itsm_receivernew) constructor.
+  - `logic_app_receiver` (`list[obj]`):  When `null`, the `logic_app_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.logic_app_receiver.new](#fn-logic_app_receivernew) constructor.
+  - `sms_receiver` (`list[obj]`):  When `null`, the `sms_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.sms_receiver.new](#fn-sms_receivernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `voice_receiver` (`list[obj]`):  When `null`, the `voice_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.voice_receiver.new](#fn-voice_receivernew) constructor.
+  - `webhook_receiver` (`list[obj]`):  When `null`, the `webhook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.new](#fn-webhook_receivernew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -140,23 +140,23 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `short_name` (`string`): Set the `short_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `arm_role_receiver` (`list[obj]`): Set the `arm_role_receiver` field on the resulting object. When `null`, the `arm_role_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.arm_role_receiver.new](#fn-arm_role_receivernew) constructor.
-  - `automation_runbook_receiver` (`list[obj]`): Set the `automation_runbook_receiver` field on the resulting object. When `null`, the `automation_runbook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.automation_runbook_receiver.new](#fn-automation_runbook_receivernew) constructor.
-  - `azure_app_push_receiver` (`list[obj]`): Set the `azure_app_push_receiver` field on the resulting object. When `null`, the `azure_app_push_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_app_push_receiver.new](#fn-azure_app_push_receivernew) constructor.
-  - `azure_function_receiver` (`list[obj]`): Set the `azure_function_receiver` field on the resulting object. When `null`, the `azure_function_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_function_receiver.new](#fn-azure_function_receivernew) constructor.
-  - `email_receiver` (`list[obj]`): Set the `email_receiver` field on the resulting object. When `null`, the `email_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.email_receiver.new](#fn-email_receivernew) constructor.
-  - `event_hub_receiver` (`list[obj]`): Set the `event_hub_receiver` field on the resulting object. When `null`, the `event_hub_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.event_hub_receiver.new](#fn-event_hub_receivernew) constructor.
-  - `itsm_receiver` (`list[obj]`): Set the `itsm_receiver` field on the resulting object. When `null`, the `itsm_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.itsm_receiver.new](#fn-itsm_receivernew) constructor.
-  - `logic_app_receiver` (`list[obj]`): Set the `logic_app_receiver` field on the resulting object. When `null`, the `logic_app_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.logic_app_receiver.new](#fn-logic_app_receivernew) constructor.
-  - `sms_receiver` (`list[obj]`): Set the `sms_receiver` field on the resulting object. When `null`, the `sms_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.sms_receiver.new](#fn-sms_receivernew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.timeouts.new](#fn-timeoutsnew) constructor.
-  - `voice_receiver` (`list[obj]`): Set the `voice_receiver` field on the resulting object. When `null`, the `voice_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.voice_receiver.new](#fn-voice_receivernew) constructor.
-  - `webhook_receiver` (`list[obj]`): Set the `webhook_receiver` field on the resulting object. When `null`, the `webhook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.new](#fn-webhook_receivernew) constructor.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `short_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `arm_role_receiver` (`list[obj]`):  When `null`, the `arm_role_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.arm_role_receiver.new](#fn-arm_role_receivernew) constructor.
+  - `automation_runbook_receiver` (`list[obj]`):  When `null`, the `automation_runbook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.automation_runbook_receiver.new](#fn-automation_runbook_receivernew) constructor.
+  - `azure_app_push_receiver` (`list[obj]`):  When `null`, the `azure_app_push_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_app_push_receiver.new](#fn-azure_app_push_receivernew) constructor.
+  - `azure_function_receiver` (`list[obj]`):  When `null`, the `azure_function_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.azure_function_receiver.new](#fn-azure_function_receivernew) constructor.
+  - `email_receiver` (`list[obj]`):  When `null`, the `email_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.email_receiver.new](#fn-email_receivernew) constructor.
+  - `event_hub_receiver` (`list[obj]`):  When `null`, the `event_hub_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.event_hub_receiver.new](#fn-event_hub_receivernew) constructor.
+  - `itsm_receiver` (`list[obj]`):  When `null`, the `itsm_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.itsm_receiver.new](#fn-itsm_receivernew) constructor.
+  - `logic_app_receiver` (`list[obj]`):  When `null`, the `logic_app_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.logic_app_receiver.new](#fn-logic_app_receivernew) constructor.
+  - `sms_receiver` (`list[obj]`):  When `null`, the `sms_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.sms_receiver.new](#fn-sms_receivernew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `voice_receiver` (`list[obj]`):  When `null`, the `voice_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.voice_receiver.new](#fn-voice_receivernew) constructor.
+  - `webhook_receiver` (`list[obj]`):  When `null`, the `webhook_receiver` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.new](#fn-webhook_receivernew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitor_action_group` resource into the root Terraform configuration.
@@ -702,9 +702,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `role_id` (`string`): Set the `role_id` field on the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `role_id` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `arm_role_receiver` sub block.
@@ -727,13 +727,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `automation_account_id` (`string`): Set the `automation_account_id` field on the resulting object.
-  - `is_global_runbook` (`bool`): Set the `is_global_runbook` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `runbook_name` (`string`): Set the `runbook_name` field on the resulting object.
-  - `service_uri` (`string`): Set the `service_uri` field on the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
-  - `webhook_resource_id` (`string`): Set the `webhook_resource_id` field on the resulting object.
+  - `automation_account_id` (`string`): 
+  - `is_global_runbook` (`bool`): 
+  - `name` (`string`): 
+  - `runbook_name` (`string`): 
+  - `service_uri` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `webhook_resource_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `automation_runbook_receiver` sub block.
@@ -756,8 +756,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `email_address` (`string`): Set the `email_address` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `email_address` (`string`): 
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `azure_app_push_receiver` sub block.
@@ -780,11 +780,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `function_app_resource_id` (`string`): Set the `function_app_resource_id` field on the resulting object.
-  - `function_name` (`string`): Set the `function_name` field on the resulting object.
-  - `http_trigger_url` (`string`): Set the `http_trigger_url` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `function_app_resource_id` (`string`): 
+  - `function_name` (`string`): 
+  - `http_trigger_url` (`string`): 
+  - `name` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure_function_receiver` sub block.
@@ -807,9 +807,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `email_address` (`string`): Set the `email_address` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `email_address` (`string`): 
+  - `name` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `email_receiver` sub block.
@@ -832,13 +832,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `event_hub_id` (`string`): Set the `event_hub_id` field on the resulting object. When `null`, the `event_hub_id` field will be omitted from the resulting object.
-  - `event_hub_name` (`string`): Set the `event_hub_name` field on the resulting object. When `null`, the `event_hub_name` field will be omitted from the resulting object.
-  - `event_hub_namespace` (`string`): Set the `event_hub_namespace` field on the resulting object. When `null`, the `event_hub_namespace` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `subscription_id` (`string`): Set the `subscription_id` field on the resulting object. When `null`, the `subscription_id` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `event_hub_id` (`string`):  When `null`, the `event_hub_id` field will be omitted from the resulting object.
+  - `event_hub_name` (`string`):  When `null`, the `event_hub_name` field will be omitted from the resulting object.
+  - `event_hub_namespace` (`string`):  When `null`, the `event_hub_namespace` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `subscription_id` (`string`):  When `null`, the `subscription_id` field will be omitted from the resulting object.
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `event_hub_receiver` sub block.
@@ -861,11 +861,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_id` (`string`): Set the `connection_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `region` (`string`): Set the `region` field on the resulting object.
-  - `ticket_configuration` (`string`): Set the `ticket_configuration` field on the resulting object.
-  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object.
+  - `connection_id` (`string`): 
+  - `name` (`string`): 
+  - `region` (`string`): 
+  - `ticket_configuration` (`string`): 
+  - `workspace_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `itsm_receiver` sub block.
@@ -888,10 +888,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `callback_url` (`string`): Set the `callback_url` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_id` (`string`): Set the `resource_id` field on the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `callback_url` (`string`): 
+  - `name` (`string`): 
+  - `resource_id` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `logic_app_receiver` sub block.
@@ -914,9 +914,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `country_code` (`string`): Set the `country_code` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `phone_number` (`string`): Set the `phone_number` field on the resulting object.
+  - `country_code` (`string`): 
+  - `name` (`string`): 
+  - `phone_number` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `sms_receiver` sub block.
@@ -939,10 +939,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -965,9 +965,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `country_code` (`string`): Set the `country_code` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `phone_number` (`string`): Set the `phone_number` field on the resulting object.
+  - `country_code` (`string`): 
+  - `name` (`string`): 
+  - `phone_number` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `voice_receiver` sub block.
@@ -990,10 +990,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `service_uri` (`string`): Set the `service_uri` field on the resulting object.
-  - `use_common_alert_schema` (`bool`): Set the `use_common_alert_schema` field on the resulting object. When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
-  - `aad_auth` (`list[obj]`): Set the `aad_auth` field on the resulting object. When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-webhook_receiveraad_authnew) constructor.
+  - `name` (`string`): 
+  - `service_uri` (`string`): 
+  - `use_common_alert_schema` (`bool`):  When `null`, the `use_common_alert_schema` field will be omitted from the resulting object.
+  - `aad_auth` (`list[obj]`):  When `null`, the `aad_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_action_group.webhook_receiver.aad_auth.new](#fn-webhook_receiveraad_authnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `webhook_receiver` sub block.
@@ -1016,9 +1016,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `identifier_uri` (`string`): Set the `identifier_uri` field on the resulting object. When `null`, the `identifier_uri` field will be omitted from the resulting object.
-  - `object_id` (`string`): Set the `object_id` field on the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `identifier_uri` (`string`):  When `null`, the `identifier_uri` field will be omitted from the resulting object.
+  - `object_id` (`string`): 
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `aad_auth` sub block.

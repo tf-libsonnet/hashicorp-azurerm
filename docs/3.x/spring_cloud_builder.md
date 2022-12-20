@@ -59,11 +59,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.
-  - `build_pack_group` (`list[obj]`): Set the `build_pack_group` field on the resulting resource block. When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-build_pack_groupnew) constructor.
-  - `stack` (`list[obj]`): Set the `stack` field on the resulting resource block. When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-stacknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): 
+  - `spring_cloud_service_id` (`string`): 
+  - `build_pack_group` (`list[obj]`):  When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-build_pack_groupnew) constructor.
+  - `stack` (`list[obj]`):  When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-stacknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,11 +87,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.
-  - `build_pack_group` (`list[obj]`): Set the `build_pack_group` field on the resulting object. When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-build_pack_groupnew) constructor.
-  - `stack` (`list[obj]`): Set the `stack` field on the resulting object. When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-stacknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-timeoutsnew) constructor.
+  - `name` (`string`): 
+  - `spring_cloud_service_id` (`string`): 
+  - `build_pack_group` (`list[obj]`):  When `null`, the `build_pack_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.build_pack_group.new](#fn-build_pack_groupnew) constructor.
+  - `stack` (`list[obj]`):  When `null`, the `stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.stack.new](#fn-stacknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_builder.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_builder` resource into the root Terraform configuration.
@@ -256,8 +256,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `build_pack_ids` (`list`): Set the `build_pack_ids` field on the resulting object. When `null`, the `build_pack_ids` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `build_pack_ids` (`list`):  When `null`, the `build_pack_ids` field will be omitted from the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `build_pack_group` sub block.
@@ -280,7 +280,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `version` (`string`): Set the `version` field on the resulting object.
+  - `version` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `stack` sub block.
@@ -303,10 +303,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

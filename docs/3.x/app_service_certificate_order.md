@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_renew` (`bool`): Set the `auto_renew` field on the resulting resource block. When `null`, the `auto_renew` field will be omitted from the resulting object.
-  - `csr` (`string`): Set the `csr` field on the resulting resource block. When `null`, the `csr` field will be omitted from the resulting object.
-  - `distinguished_name` (`string`): Set the `distinguished_name` field on the resulting resource block. When `null`, the `distinguished_name` field will be omitted from the resulting object.
-  - `key_size` (`number`): Set the `key_size` field on the resulting resource block. When `null`, the `key_size` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `product_type` (`string`): Set the `product_type` field on the resulting resource block. When `null`, the `product_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `validity_in_years` (`number`): Set the `validity_in_years` field on the resulting resource block. When `null`, the `validity_in_years` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_certificate_order.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_renew` (`bool`):  When `null`, the `auto_renew` field will be omitted from the resulting object.
+  - `csr` (`string`):  When `null`, the `csr` field will be omitted from the resulting object.
+  - `distinguished_name` (`string`):  When `null`, the `distinguished_name` field will be omitted from the resulting object.
+  - `key_size` (`number`):  When `null`, the `key_size` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `product_type` (`string`):  When `null`, the `product_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `validity_in_years` (`number`):  When `null`, the `validity_in_years` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_certificate_order.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_renew` (`bool`): Set the `auto_renew` field on the resulting object. When `null`, the `auto_renew` field will be omitted from the resulting object.
-  - `csr` (`string`): Set the `csr` field on the resulting object. When `null`, the `csr` field will be omitted from the resulting object.
-  - `distinguished_name` (`string`): Set the `distinguished_name` field on the resulting object. When `null`, the `distinguished_name` field will be omitted from the resulting object.
-  - `key_size` (`number`): Set the `key_size` field on the resulting object. When `null`, the `key_size` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `product_type` (`string`): Set the `product_type` field on the resulting object. When `null`, the `product_type` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `validity_in_years` (`number`): Set the `validity_in_years` field on the resulting object. When `null`, the `validity_in_years` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_certificate_order.timeouts.new](#fn-timeoutsnew) constructor.
+  - `auto_renew` (`bool`):  When `null`, the `auto_renew` field will be omitted from the resulting object.
+  - `csr` (`string`):  When `null`, the `csr` field will be omitted from the resulting object.
+  - `distinguished_name` (`string`):  When `null`, the `distinguished_name` field will be omitted from the resulting object.
+  - `key_size` (`number`):  When `null`, the `key_size` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `product_type` (`string`):  When `null`, the `product_type` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `validity_in_years` (`number`):  When `null`, the `validity_in_years` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_certificate_order.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_service_certificate_order` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

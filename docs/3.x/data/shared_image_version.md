@@ -54,12 +54,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `gallery_name` (`string`): Set the `gallery_name` field on the resulting data source block.
-  - `image_name` (`string`): Set the `image_name` field on the resulting data source block.
-  - `name` (`string`): Set the `name` field on the resulting data source block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting data source block.
-  - `sort_versions_by_semver` (`bool`): Set the `sort_versions_by_semver` field on the resulting data source block. When `null`, the `sort_versions_by_semver` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `gallery_name` (`string`): 
+  - `image_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `sort_versions_by_semver` (`bool`):  When `null`, the `sort_versions_by_semver` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -83,12 +83,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `gallery_name` (`string`): Set the `gallery_name` field on the resulting object.
-  - `image_name` (`string`): Set the `image_name` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sort_versions_by_semver` (`bool`): Set the `sort_versions_by_semver` field on the resulting object. When `null`, the `sort_versions_by_semver` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `gallery_name` (`string`): 
+  - `image_name` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `sort_versions_by_semver` (`bool`):  When `null`, the `sort_versions_by_semver` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `shared_image_version` data source into the root Terraform configuration.
@@ -227,7 +227,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

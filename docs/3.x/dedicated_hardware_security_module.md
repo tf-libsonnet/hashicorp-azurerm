@@ -64,16 +64,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
-  - `stamp_id` (`string`): Set the `stamp_id` field on the resulting resource block. When `null`, the `stamp_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
-  - `management_network_profile` (`list[obj]`): Set the `management_network_profile` field on the resulting resource block. When `null`, the `management_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.management_network_profile.new](#fn-management_network_profilenew) constructor.
-  - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting resource block. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.network_profile.new](#fn-network_profilenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`): 
+  - `stamp_id` (`string`):  When `null`, the `stamp_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `management_network_profile` (`list[obj]`):  When `null`, the `management_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.management_network_profile.new](#fn-management_network_profilenew) constructor.
+  - `network_profile` (`list[obj]`):  When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.network_profile.new](#fn-network_profilenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,16 +97,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
-  - `stamp_id` (`string`): Set the `stamp_id` field on the resulting object. When `null`, the `stamp_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
-  - `management_network_profile` (`list[obj]`): Set the `management_network_profile` field on the resulting object. When `null`, the `management_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.management_network_profile.new](#fn-management_network_profilenew) constructor.
-  - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting object. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.network_profile.new](#fn-network_profilenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.timeouts.new](#fn-timeoutsnew) constructor.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `sku_name` (`string`): 
+  - `stamp_id` (`string`):  When `null`, the `stamp_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `management_network_profile` (`list[obj]`):  When `null`, the `management_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.management_network_profile.new](#fn-management_network_profilenew) constructor.
+  - `network_profile` (`list[obj]`):  When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.network_profile.new](#fn-network_profilenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.dedicated_hardware_security_module.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dedicated_hardware_security_module` resource into the root Terraform configuration.
@@ -351,8 +351,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `network_interface_private_ip_addresses` (`list`): Set the `network_interface_private_ip_addresses` field on the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+  - `network_interface_private_ip_addresses` (`list`): 
+  - `subnet_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `management_network_profile` sub block.
@@ -375,8 +375,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `network_interface_private_ip_addresses` (`list`): Set the `network_interface_private_ip_addresses` field on the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+  - `network_interface_private_ip_addresses` (`list`): 
+  - `subnet_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `network_profile` sub block.
@@ -399,10 +399,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

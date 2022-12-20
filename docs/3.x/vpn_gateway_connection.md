@@ -71,14 +71,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `internet_security_enabled` (`bool`): Set the `internet_security_enabled` field on the resulting resource block. When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `remote_vpn_site_id` (`string`): Set the `remote_vpn_site_id` field on the resulting resource block.
-  - `vpn_gateway_id` (`string`): Set the `vpn_gateway_id` field on the resulting resource block.
-  - `routing` (`list[obj]`): Set the `routing` field on the resulting resource block. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.timeouts.new](#fn-timeoutsnew) constructor.
-  - `traffic_selector_policy` (`list[obj]`): Set the `traffic_selector_policy` field on the resulting resource block. When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.traffic_selector_policy.new](#fn-traffic_selector_policynew) constructor.
-  - `vpn_link` (`list[obj]`): Set the `vpn_link` field on the resulting resource block. When `null`, the `vpn_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.new](#fn-vpn_linknew) constructor.
+  - `internet_security_enabled` (`bool`):  When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `remote_vpn_site_id` (`string`): 
+  - `vpn_gateway_id` (`string`): 
+  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.new](#fn-routingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `traffic_selector_policy` (`list[obj]`):  When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.traffic_selector_policy.new](#fn-traffic_selector_policynew) constructor.
+  - `vpn_link` (`list[obj]`):  When `null`, the `vpn_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.new](#fn-vpn_linknew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,14 +102,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `internet_security_enabled` (`bool`): Set the `internet_security_enabled` field on the resulting object. When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `remote_vpn_site_id` (`string`): Set the `remote_vpn_site_id` field on the resulting object.
-  - `vpn_gateway_id` (`string`): Set the `vpn_gateway_id` field on the resulting object.
-  - `routing` (`list[obj]`): Set the `routing` field on the resulting object. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.timeouts.new](#fn-timeoutsnew) constructor.
-  - `traffic_selector_policy` (`list[obj]`): Set the `traffic_selector_policy` field on the resulting object. When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.traffic_selector_policy.new](#fn-traffic_selector_policynew) constructor.
-  - `vpn_link` (`list[obj]`): Set the `vpn_link` field on the resulting object. When `null`, the `vpn_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.new](#fn-vpn_linknew) constructor.
+  - `internet_security_enabled` (`bool`):  When `null`, the `internet_security_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `remote_vpn_site_id` (`string`): 
+  - `vpn_gateway_id` (`string`): 
+  - `routing` (`list[obj]`):  When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.new](#fn-routingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `traffic_selector_policy` (`list[obj]`):  When `null`, the `traffic_selector_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.traffic_selector_policy.new](#fn-traffic_selector_policynew) constructor.
+  - `vpn_link` (`list[obj]`):  When `null`, the `vpn_link` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.new](#fn-vpn_linknew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpn_gateway_connection` resource into the root Terraform configuration.
@@ -343,10 +343,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `associated_route_table` (`string`): Set the `associated_route_table` field on the resulting object.
-  - `inbound_route_map_id` (`string`): Set the `inbound_route_map_id` field on the resulting object. When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
-  - `outbound_route_map_id` (`string`): Set the `outbound_route_map_id` field on the resulting object. When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
-  - `propagated_route_table` (`list[obj]`): Set the `propagated_route_table` field on the resulting object. When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
+  - `associated_route_table` (`string`): 
+  - `inbound_route_map_id` (`string`):  When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
+  - `outbound_route_map_id` (`string`):  When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
+  - `propagated_route_table` (`list[obj]`):  When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing` sub block.
@@ -369,8 +369,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `labels` (`list`): Set the `labels` field on the resulting object. When `null`, the `labels` field will be omitted from the resulting object.
-  - `route_table_ids` (`list`): Set the `route_table_ids` field on the resulting object.
+  - `labels` (`list`):  When `null`, the `labels` field will be omitted from the resulting object.
+  - `route_table_ids` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `propagated_route_table` sub block.
@@ -393,10 +393,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -419,8 +419,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `local_address_ranges` (`list`): Set the `local_address_ranges` field on the resulting object.
-  - `remote_address_ranges` (`list`): Set the `remote_address_ranges` field on the resulting object.
+  - `local_address_ranges` (`list`): 
+  - `remote_address_ranges` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `traffic_selector_policy` sub block.
@@ -443,21 +443,21 @@ Terraform sub block.
 
 
 **Args**:
-  - `bandwidth_mbps` (`number`): Set the `bandwidth_mbps` field on the resulting object. When `null`, the `bandwidth_mbps` field will be omitted from the resulting object.
-  - `bgp_enabled` (`bool`): Set the `bgp_enabled` field on the resulting object. When `null`, the `bgp_enabled` field will be omitted from the resulting object.
-  - `connection_mode` (`string`): Set the `connection_mode` field on the resulting object. When `null`, the `connection_mode` field will be omitted from the resulting object.
-  - `egress_nat_rule_ids` (`list`): Set the `egress_nat_rule_ids` field on the resulting object. When `null`, the `egress_nat_rule_ids` field will be omitted from the resulting object.
-  - `ingress_nat_rule_ids` (`list`): Set the `ingress_nat_rule_ids` field on the resulting object. When `null`, the `ingress_nat_rule_ids` field will be omitted from the resulting object.
-  - `local_azure_ip_address_enabled` (`bool`): Set the `local_azure_ip_address_enabled` field on the resulting object. When `null`, the `local_azure_ip_address_enabled` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `policy_based_traffic_selector_enabled` (`bool`): Set the `policy_based_traffic_selector_enabled` field on the resulting object. When `null`, the `policy_based_traffic_selector_enabled` field will be omitted from the resulting object.
-  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
-  - `ratelimit_enabled` (`bool`): Set the `ratelimit_enabled` field on the resulting object. When `null`, the `ratelimit_enabled` field will be omitted from the resulting object.
-  - `route_weight` (`number`): Set the `route_weight` field on the resulting object. When `null`, the `route_weight` field will be omitted from the resulting object.
-  - `shared_key` (`string`): Set the `shared_key` field on the resulting object. When `null`, the `shared_key` field will be omitted from the resulting object.
-  - `vpn_site_link_id` (`string`): Set the `vpn_site_link_id` field on the resulting object.
-  - `custom_bgp_address` (`list[obj]`): Set the `custom_bgp_address` field on the resulting object. When `null`, the `custom_bgp_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.custom_bgp_address.new](#fn-vpn_linkcustom_bgp_addressnew) constructor.
-  - `ipsec_policy` (`list[obj]`): Set the `ipsec_policy` field on the resulting object. When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.ipsec_policy.new](#fn-vpn_linkipsec_policynew) constructor.
+  - `bandwidth_mbps` (`number`):  When `null`, the `bandwidth_mbps` field will be omitted from the resulting object.
+  - `bgp_enabled` (`bool`):  When `null`, the `bgp_enabled` field will be omitted from the resulting object.
+  - `connection_mode` (`string`):  When `null`, the `connection_mode` field will be omitted from the resulting object.
+  - `egress_nat_rule_ids` (`list`):  When `null`, the `egress_nat_rule_ids` field will be omitted from the resulting object.
+  - `ingress_nat_rule_ids` (`list`):  When `null`, the `ingress_nat_rule_ids` field will be omitted from the resulting object.
+  - `local_azure_ip_address_enabled` (`bool`):  When `null`, the `local_azure_ip_address_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `policy_based_traffic_selector_enabled` (`bool`):  When `null`, the `policy_based_traffic_selector_enabled` field will be omitted from the resulting object.
+  - `protocol` (`string`):  When `null`, the `protocol` field will be omitted from the resulting object.
+  - `ratelimit_enabled` (`bool`):  When `null`, the `ratelimit_enabled` field will be omitted from the resulting object.
+  - `route_weight` (`number`):  When `null`, the `route_weight` field will be omitted from the resulting object.
+  - `shared_key` (`string`):  When `null`, the `shared_key` field will be omitted from the resulting object.
+  - `vpn_site_link_id` (`string`): 
+  - `custom_bgp_address` (`list[obj]`):  When `null`, the `custom_bgp_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.custom_bgp_address.new](#fn-vpn_linkcustom_bgp_addressnew) constructor.
+  - `ipsec_policy` (`list[obj]`):  When `null`, the `ipsec_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.vpn_gateway_connection.vpn_link.ipsec_policy.new](#fn-vpn_linkipsec_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vpn_link` sub block.
@@ -480,8 +480,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `ip_address` (`string`): Set the `ip_address` field on the resulting object.
-  - `ip_configuration_id` (`string`): Set the `ip_configuration_id` field on the resulting object.
+  - `ip_address` (`string`): 
+  - `ip_configuration_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `custom_bgp_address` sub block.
@@ -504,14 +504,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `dh_group` (`string`): Set the `dh_group` field on the resulting object.
-  - `encryption_algorithm` (`string`): Set the `encryption_algorithm` field on the resulting object.
-  - `ike_encryption_algorithm` (`string`): Set the `ike_encryption_algorithm` field on the resulting object.
-  - `ike_integrity_algorithm` (`string`): Set the `ike_integrity_algorithm` field on the resulting object.
-  - `integrity_algorithm` (`string`): Set the `integrity_algorithm` field on the resulting object.
-  - `pfs_group` (`string`): Set the `pfs_group` field on the resulting object.
-  - `sa_data_size_kb` (`number`): Set the `sa_data_size_kb` field on the resulting object.
-  - `sa_lifetime_sec` (`number`): Set the `sa_lifetime_sec` field on the resulting object.
+  - `dh_group` (`string`): 
+  - `encryption_algorithm` (`string`): 
+  - `ike_encryption_algorithm` (`string`): 
+  - `ike_integrity_algorithm` (`string`): 
+  - `integrity_algorithm` (`string`): 
+  - `pfs_group` (`string`): 
+  - `sa_data_size_kb` (`number`): 
+  - `sa_lifetime_sec` (`number`): 
 
 **Returns**:
   - An attribute object that represents the `ipsec_policy` sub block.

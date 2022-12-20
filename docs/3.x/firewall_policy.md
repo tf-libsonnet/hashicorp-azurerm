@@ -93,24 +93,24 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_learn_private_ranges_enabled` (`bool`): Set the `auto_learn_private_ranges_enabled` field on the resulting resource block. When `null`, the `auto_learn_private_ranges_enabled` field will be omitted from the resulting object.
-  - `base_policy_id` (`string`): Set the `base_policy_id` field on the resulting resource block. When `null`, the `base_policy_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `private_ip_ranges` (`list`): Set the `private_ip_ranges` field on the resulting resource block. When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
-  - `sql_redirect_allowed` (`bool`): Set the `sql_redirect_allowed` field on the resulting resource block. When `null`, the `sql_redirect_allowed` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `threat_intelligence_mode` (`string`): Set the `threat_intelligence_mode` field on the resulting resource block. When `null`, the `threat_intelligence_mode` field will be omitted from the resulting object.
-  - `dns` (`list[obj]`): Set the `dns` field on the resulting resource block. When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-dnsnew) constructor.
-  - `explicit_proxy` (`list[obj]`): Set the `explicit_proxy` field on the resulting resource block. When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-explicit_proxynew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-identitynew) constructor.
-  - `insights` (`list[obj]`): Set the `insights` field on the resulting resource block. When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-insightsnew) constructor.
-  - `intrusion_detection` (`list[obj]`): Set the `intrusion_detection` field on the resulting resource block. When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-intrusion_detectionnew) constructor.
-  - `threat_intelligence_allowlist` (`list[obj]`): Set the `threat_intelligence_allowlist` field on the resulting resource block. When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-threat_intelligence_allowlistnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
-  - `tls_certificate` (`list[obj]`): Set the `tls_certificate` field on the resulting resource block. When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-tls_certificatenew) constructor.
+  - `auto_learn_private_ranges_enabled` (`bool`):  When `null`, the `auto_learn_private_ranges_enabled` field will be omitted from the resulting object.
+  - `base_policy_id` (`string`):  When `null`, the `base_policy_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `private_ip_ranges` (`list`):  When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `sql_redirect_allowed` (`bool`):  When `null`, the `sql_redirect_allowed` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `threat_intelligence_mode` (`string`):  When `null`, the `threat_intelligence_mode` field will be omitted from the resulting object.
+  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-dnsnew) constructor.
+  - `explicit_proxy` (`list[obj]`):  When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-explicit_proxynew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-identitynew) constructor.
+  - `insights` (`list[obj]`):  When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-insightsnew) constructor.
+  - `intrusion_detection` (`list[obj]`):  When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-intrusion_detectionnew) constructor.
+  - `threat_intelligence_allowlist` (`list[obj]`):  When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-threat_intelligence_allowlistnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tls_certificate` (`list[obj]`):  When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-tls_certificatenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -134,24 +134,24 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_learn_private_ranges_enabled` (`bool`): Set the `auto_learn_private_ranges_enabled` field on the resulting object. When `null`, the `auto_learn_private_ranges_enabled` field will be omitted from the resulting object.
-  - `base_policy_id` (`string`): Set the `base_policy_id` field on the resulting object. When `null`, the `base_policy_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `private_ip_ranges` (`list`): Set the `private_ip_ranges` field on the resulting object. When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
-  - `sql_redirect_allowed` (`bool`): Set the `sql_redirect_allowed` field on the resulting object. When `null`, the `sql_redirect_allowed` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `threat_intelligence_mode` (`string`): Set the `threat_intelligence_mode` field on the resulting object. When `null`, the `threat_intelligence_mode` field will be omitted from the resulting object.
-  - `dns` (`list[obj]`): Set the `dns` field on the resulting object. When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-dnsnew) constructor.
-  - `explicit_proxy` (`list[obj]`): Set the `explicit_proxy` field on the resulting object. When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-explicit_proxynew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-identitynew) constructor.
-  - `insights` (`list[obj]`): Set the `insights` field on the resulting object. When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-insightsnew) constructor.
-  - `intrusion_detection` (`list[obj]`): Set the `intrusion_detection` field on the resulting object. When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-intrusion_detectionnew) constructor.
-  - `threat_intelligence_allowlist` (`list[obj]`): Set the `threat_intelligence_allowlist` field on the resulting object. When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-threat_intelligence_allowlistnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
-  - `tls_certificate` (`list[obj]`): Set the `tls_certificate` field on the resulting object. When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-tls_certificatenew) constructor.
+  - `auto_learn_private_ranges_enabled` (`bool`):  When `null`, the `auto_learn_private_ranges_enabled` field will be omitted from the resulting object.
+  - `base_policy_id` (`string`):  When `null`, the `base_policy_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `private_ip_ranges` (`list`):  When `null`, the `private_ip_ranges` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `sql_redirect_allowed` (`bool`):  When `null`, the `sql_redirect_allowed` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `threat_intelligence_mode` (`string`):  When `null`, the `threat_intelligence_mode` field will be omitted from the resulting object.
+  - `dns` (`list[obj]`):  When `null`, the `dns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.dns.new](#fn-dnsnew) constructor.
+  - `explicit_proxy` (`list[obj]`):  When `null`, the `explicit_proxy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.explicit_proxy.new](#fn-explicit_proxynew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.identity.new](#fn-identitynew) constructor.
+  - `insights` (`list[obj]`):  When `null`, the `insights` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.new](#fn-insightsnew) constructor.
+  - `intrusion_detection` (`list[obj]`):  When `null`, the `intrusion_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.new](#fn-intrusion_detectionnew) constructor.
+  - `threat_intelligence_allowlist` (`list[obj]`):  When `null`, the `threat_intelligence_allowlist` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.threat_intelligence_allowlist.new](#fn-threat_intelligence_allowlistnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `tls_certificate` (`list[obj]`):  When `null`, the `tls_certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.tls_certificate.new](#fn-tls_certificatenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall_policy` resource into the root Terraform configuration.
@@ -629,8 +629,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `proxy_enabled` (`bool`): Set the `proxy_enabled` field on the resulting object. When `null`, the `proxy_enabled` field will be omitted from the resulting object.
-  - `servers` (`list`): Set the `servers` field on the resulting object. When `null`, the `servers` field will be omitted from the resulting object.
+  - `proxy_enabled` (`bool`):  When `null`, the `proxy_enabled` field will be omitted from the resulting object.
+  - `servers` (`list`):  When `null`, the `servers` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `dns` sub block.
@@ -653,12 +653,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable_pac_file` (`bool`): Set the `enable_pac_file` field on the resulting object. When `null`, the `enable_pac_file` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `http_port` (`number`): Set the `http_port` field on the resulting object. When `null`, the `http_port` field will be omitted from the resulting object.
-  - `https_port` (`number`): Set the `https_port` field on the resulting object. When `null`, the `https_port` field will be omitted from the resulting object.
-  - `pac_file` (`string`): Set the `pac_file` field on the resulting object. When `null`, the `pac_file` field will be omitted from the resulting object.
-  - `pac_file_port` (`number`): Set the `pac_file_port` field on the resulting object. When `null`, the `pac_file_port` field will be omitted from the resulting object.
+  - `enable_pac_file` (`bool`):  When `null`, the `enable_pac_file` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `http_port` (`number`):  When `null`, the `http_port` field will be omitted from the resulting object.
+  - `https_port` (`number`):  When `null`, the `https_port` field will be omitted from the resulting object.
+  - `pac_file` (`string`):  When `null`, the `pac_file` field will be omitted from the resulting object.
+  - `pac_file_port` (`number`):  When `null`, the `pac_file_port` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `explicit_proxy` sub block.
@@ -681,8 +681,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -705,10 +705,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `default_log_analytics_workspace_id` (`string`): Set the `default_log_analytics_workspace_id` field on the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `retention_in_days` (`number`): Set the `retention_in_days` field on the resulting object. When `null`, the `retention_in_days` field will be omitted from the resulting object.
-  - `log_analytics_workspace` (`list[obj]`): Set the `log_analytics_workspace` field on the resulting object. When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.log_analytics_workspace.new](#fn-insightslog_analytics_workspacenew) constructor.
+  - `default_log_analytics_workspace_id` (`string`): 
+  - `enabled` (`bool`): 
+  - `retention_in_days` (`number`):  When `null`, the `retention_in_days` field will be omitted from the resulting object.
+  - `log_analytics_workspace` (`list[obj]`):  When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.insights.log_analytics_workspace.new](#fn-insightslog_analytics_workspacenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `insights` sub block.
@@ -731,7 +731,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `firewall_location` (`string`): Set the `firewall_location` field on the resulting object.
+  - `firewall_location` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `log_analytics_workspace` sub block.
@@ -754,10 +754,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.
-  - `private_ranges` (`list`): Set the `private_ranges` field on the resulting object. When `null`, the `private_ranges` field will be omitted from the resulting object.
-  - `signature_overrides` (`list[obj]`): Set the `signature_overrides` field on the resulting object. When `null`, the `signature_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.signature_overrides.new](#fn-intrusion_detectionsignature_overridesnew) constructor.
-  - `traffic_bypass` (`list[obj]`): Set the `traffic_bypass` field on the resulting object. When `null`, the `traffic_bypass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.traffic_bypass.new](#fn-intrusion_detectiontraffic_bypassnew) constructor.
+  - `mode` (`string`):  When `null`, the `mode` field will be omitted from the resulting object.
+  - `private_ranges` (`list`):  When `null`, the `private_ranges` field will be omitted from the resulting object.
+  - `signature_overrides` (`list[obj]`):  When `null`, the `signature_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.signature_overrides.new](#fn-intrusion_detectionsignature_overridesnew) constructor.
+  - `traffic_bypass` (`list[obj]`):  When `null`, the `traffic_bypass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy.intrusion_detection.traffic_bypass.new](#fn-intrusion_detectiontraffic_bypassnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `intrusion_detection` sub block.
@@ -780,7 +780,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `state` (`string`): Set the `state` field on the resulting object. When `null`, the `state` field will be omitted from the resulting object.
+  - `state` (`string`):  When `null`, the `state` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `signature_overrides` sub block.
@@ -803,14 +803,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.
-  - `destination_ip_groups` (`list`): Set the `destination_ip_groups` field on the resulting object. When `null`, the `destination_ip_groups` field will be omitted from the resulting object.
-  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object. When `null`, the `destination_ports` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `protocol` (`string`): Set the `protocol` field on the resulting object.
-  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.
-  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `destination_addresses` (`list`):  When `null`, the `destination_addresses` field will be omitted from the resulting object.
+  - `destination_ip_groups` (`list`):  When `null`, the `destination_ip_groups` field will be omitted from the resulting object.
+  - `destination_ports` (`list`):  When `null`, the `destination_ports` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `protocol` (`string`): 
+  - `source_addresses` (`list`):  When `null`, the `source_addresses` field will be omitted from the resulting object.
+  - `source_ip_groups` (`list`):  When `null`, the `source_ip_groups` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `traffic_bypass` sub block.
@@ -833,8 +833,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `fqdns` (`list`): Set the `fqdns` field on the resulting object. When `null`, the `fqdns` field will be omitted from the resulting object.
-  - `ip_addresses` (`list`): Set the `ip_addresses` field on the resulting object. When `null`, the `ip_addresses` field will be omitted from the resulting object.
+  - `fqdns` (`list`):  When `null`, the `fqdns` field will be omitted from the resulting object.
+  - `ip_addresses` (`list`):  When `null`, the `ip_addresses` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `threat_intelligence_allowlist` sub block.
@@ -857,10 +857,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -883,8 +883,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_vault_secret_id` (`string`): Set the `key_vault_secret_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `key_vault_secret_id` (`string`): 
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `tls_certificate` sub block.

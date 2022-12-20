@@ -73,19 +73,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `domain_configuration_type` (`string`): Set the `domain_configuration_type` field on the resulting resource block. When `null`, the `domain_configuration_type` field will be omitted from the resulting object.
-  - `domain_name` (`string`): Set the `domain_name` field on the resulting resource block.
-  - `filtered_sync_enabled` (`bool`): Set the `filtered_sync_enabled` field on the resulting resource block. When `null`, the `filtered_sync_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `initial_replica_set` (`list[obj]`): Set the `initial_replica_set` field on the resulting resource block. When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-initial_replica_setnew) constructor.
-  - `notifications` (`list[obj]`): Set the `notifications` field on the resulting resource block. When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-notificationsnew) constructor.
-  - `secure_ldap` (`list[obj]`): Set the `secure_ldap` field on the resulting resource block. When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-secure_ldapnew) constructor.
-  - `security` (`list[obj]`): Set the `security` field on the resulting resource block. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-securitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `domain_configuration_type` (`string`):  When `null`, the `domain_configuration_type` field will be omitted from the resulting object.
+  - `domain_name` (`string`): 
+  - `filtered_sync_enabled` (`bool`):  When `null`, the `filtered_sync_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `initial_replica_set` (`list[obj]`):  When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-initial_replica_setnew) constructor.
+  - `notifications` (`list[obj]`):  When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-notificationsnew) constructor.
+  - `secure_ldap` (`list[obj]`):  When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-secure_ldapnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-securitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,19 +109,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `domain_configuration_type` (`string`): Set the `domain_configuration_type` field on the resulting object. When `null`, the `domain_configuration_type` field will be omitted from the resulting object.
-  - `domain_name` (`string`): Set the `domain_name` field on the resulting object.
-  - `filtered_sync_enabled` (`bool`): Set the `filtered_sync_enabled` field on the resulting object. When `null`, the `filtered_sync_enabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `initial_replica_set` (`list[obj]`): Set the `initial_replica_set` field on the resulting object. When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-initial_replica_setnew) constructor.
-  - `notifications` (`list[obj]`): Set the `notifications` field on the resulting object. When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-notificationsnew) constructor.
-  - `secure_ldap` (`list[obj]`): Set the `secure_ldap` field on the resulting object. When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-secure_ldapnew) constructor.
-  - `security` (`list[obj]`): Set the `security` field on the resulting object. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-securitynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `domain_configuration_type` (`string`):  When `null`, the `domain_configuration_type` field will be omitted from the resulting object.
+  - `domain_name` (`string`): 
+  - `filtered_sync_enabled` (`bool`):  When `null`, the `filtered_sync_enabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `initial_replica_set` (`list[obj]`):  When `null`, the `initial_replica_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.initial_replica_set.new](#fn-initial_replica_setnew) constructor.
+  - `notifications` (`list[obj]`):  When `null`, the `notifications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.notifications.new](#fn-notificationsnew) constructor.
+  - `secure_ldap` (`list[obj]`):  When `null`, the `secure_ldap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.secure_ldap.new](#fn-secure_ldapnew) constructor.
+  - `security` (`list[obj]`):  When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.security.new](#fn-securitynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.active_directory_domain_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `active_directory_domain_service` resource into the root Terraform configuration.
@@ -456,7 +456,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+  - `subnet_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `initial_replica_set` sub block.
@@ -479,9 +479,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `additional_recipients` (`list`): Set the `additional_recipients` field on the resulting object. When `null`, the `additional_recipients` field will be omitted from the resulting object.
-  - `notify_dc_admins` (`bool`): Set the `notify_dc_admins` field on the resulting object. When `null`, the `notify_dc_admins` field will be omitted from the resulting object.
-  - `notify_global_admins` (`bool`): Set the `notify_global_admins` field on the resulting object. When `null`, the `notify_global_admins` field will be omitted from the resulting object.
+  - `additional_recipients` (`list`):  When `null`, the `additional_recipients` field will be omitted from the resulting object.
+  - `notify_dc_admins` (`bool`):  When `null`, the `notify_dc_admins` field will be omitted from the resulting object.
+  - `notify_global_admins` (`bool`):  When `null`, the `notify_global_admins` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `notifications` sub block.
@@ -504,10 +504,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `external_access_enabled` (`bool`): Set the `external_access_enabled` field on the resulting object. When `null`, the `external_access_enabled` field will be omitted from the resulting object.
-  - `pfx_certificate` (`string`): Set the `pfx_certificate` field on the resulting object.
-  - `pfx_certificate_password` (`string`): Set the `pfx_certificate_password` field on the resulting object.
+  - `enabled` (`bool`): 
+  - `external_access_enabled` (`bool`):  When `null`, the `external_access_enabled` field will be omitted from the resulting object.
+  - `pfx_certificate` (`string`): 
+  - `pfx_certificate_password` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `secure_ldap` sub block.
@@ -530,13 +530,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `kerberos_armoring_enabled` (`bool`): Set the `kerberos_armoring_enabled` field on the resulting object. When `null`, the `kerberos_armoring_enabled` field will be omitted from the resulting object.
-  - `kerberos_rc4_encryption_enabled` (`bool`): Set the `kerberos_rc4_encryption_enabled` field on the resulting object. When `null`, the `kerberos_rc4_encryption_enabled` field will be omitted from the resulting object.
-  - `ntlm_v1_enabled` (`bool`): Set the `ntlm_v1_enabled` field on the resulting object. When `null`, the `ntlm_v1_enabled` field will be omitted from the resulting object.
-  - `sync_kerberos_passwords` (`bool`): Set the `sync_kerberos_passwords` field on the resulting object. When `null`, the `sync_kerberos_passwords` field will be omitted from the resulting object.
-  - `sync_ntlm_passwords` (`bool`): Set the `sync_ntlm_passwords` field on the resulting object. When `null`, the `sync_ntlm_passwords` field will be omitted from the resulting object.
-  - `sync_on_prem_passwords` (`bool`): Set the `sync_on_prem_passwords` field on the resulting object. When `null`, the `sync_on_prem_passwords` field will be omitted from the resulting object.
-  - `tls_v1_enabled` (`bool`): Set the `tls_v1_enabled` field on the resulting object. When `null`, the `tls_v1_enabled` field will be omitted from the resulting object.
+  - `kerberos_armoring_enabled` (`bool`):  When `null`, the `kerberos_armoring_enabled` field will be omitted from the resulting object.
+  - `kerberos_rc4_encryption_enabled` (`bool`):  When `null`, the `kerberos_rc4_encryption_enabled` field will be omitted from the resulting object.
+  - `ntlm_v1_enabled` (`bool`):  When `null`, the `ntlm_v1_enabled` field will be omitted from the resulting object.
+  - `sync_kerberos_passwords` (`bool`):  When `null`, the `sync_kerberos_passwords` field will be omitted from the resulting object.
+  - `sync_ntlm_passwords` (`bool`):  When `null`, the `sync_ntlm_passwords` field will be omitted from the resulting object.
+  - `sync_on_prem_passwords` (`bool`):  When `null`, the `sync_on_prem_passwords` field will be omitted from the resulting object.
+  - `tls_v1_enabled` (`bool`):  When `null`, the `tls_v1_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `security` sub block.
@@ -559,10 +559,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

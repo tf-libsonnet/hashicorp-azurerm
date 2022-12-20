@@ -61,16 +61,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allow_new_private_endpoint_connections` (`bool`): Set the `allow_new_private_endpoint_connections` field on the resulting resource block. When `null`, the `allow_new_private_endpoint_connections` field will be omitted from the resulting object.
-  - `dedicated_host_count` (`number`): Set the `dedicated_host_count` field on the resulting resource block. When `null`, the `dedicated_host_count` field will be omitted from the resulting object.
-  - `internal_load_balancing_mode` (`string`): Set the `internal_load_balancing_mode` field on the resulting resource block. When `null`, the `internal_load_balancing_mode` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `cluster_setting` (`list[obj]`): Set the `cluster_setting` field on the resulting resource block. When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.cluster_setting.new](#fn-cluster_settingnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_new_private_endpoint_connections` (`bool`):  When `null`, the `allow_new_private_endpoint_connections` field will be omitted from the resulting object.
+  - `dedicated_host_count` (`number`):  When `null`, the `dedicated_host_count` field will be omitted from the resulting object.
+  - `internal_load_balancing_mode` (`string`):  When `null`, the `internal_load_balancing_mode` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `subnet_id` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `cluster_setting` (`list[obj]`):  When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.cluster_setting.new](#fn-cluster_settingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,16 +94,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allow_new_private_endpoint_connections` (`bool`): Set the `allow_new_private_endpoint_connections` field on the resulting object. When `null`, the `allow_new_private_endpoint_connections` field will be omitted from the resulting object.
-  - `dedicated_host_count` (`number`): Set the `dedicated_host_count` field on the resulting object. When `null`, the `dedicated_host_count` field will be omitted from the resulting object.
-  - `internal_load_balancing_mode` (`string`): Set the `internal_load_balancing_mode` field on the resulting object. When `null`, the `internal_load_balancing_mode` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
-  - `cluster_setting` (`list[obj]`): Set the `cluster_setting` field on the resulting object. When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.cluster_setting.new](#fn-cluster_settingnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allow_new_private_endpoint_connections` (`bool`):  When `null`, the `allow_new_private_endpoint_connections` field will be omitted from the resulting object.
+  - `dedicated_host_count` (`number`):  When `null`, the `dedicated_host_count` field will be omitted from the resulting object.
+  - `internal_load_balancing_mode` (`string`):  When `null`, the `internal_load_balancing_mode` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `subnet_id` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundant` (`bool`):  When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `cluster_setting` (`list[obj]`):  When `null`, the `cluster_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.cluster_setting.new](#fn-cluster_settingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_service_environment_v3.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_service_environment_v3` resource into the root Terraform configuration.
@@ -327,8 +327,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `value` (`string`): Set the `value` field on the resulting object.
+  - `name` (`string`): 
+  - `value` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `cluster_setting` sub block.
@@ -351,10 +351,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -59,17 +59,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `db_dtu_max` (`number`): Set the `db_dtu_max` field on the resulting resource block. When `null`, the `db_dtu_max` field will be omitted from the resulting object.
-  - `db_dtu_min` (`number`): Set the `db_dtu_min` field on the resulting resource block. When `null`, the `db_dtu_min` field will be omitted from the resulting object.
-  - `dtu` (`number`): Set the `dtu` field on the resulting resource block.
-  - `edition` (`string`): Set the `edition` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `pool_size` (`number`): Set the `pool_size` field on the resulting resource block. When `null`, the `pool_size` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `server_name` (`string`): Set the `server_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_elasticpool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `db_dtu_max` (`number`):  When `null`, the `db_dtu_max` field will be omitted from the resulting object.
+  - `db_dtu_min` (`number`):  When `null`, the `db_dtu_min` field will be omitted from the resulting object.
+  - `dtu` (`number`): 
+  - `edition` (`string`): 
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `pool_size` (`number`):  When `null`, the `pool_size` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `server_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_elasticpool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,17 +93,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `db_dtu_max` (`number`): Set the `db_dtu_max` field on the resulting object. When `null`, the `db_dtu_max` field will be omitted from the resulting object.
-  - `db_dtu_min` (`number`): Set the `db_dtu_min` field on the resulting object. When `null`, the `db_dtu_min` field will be omitted from the resulting object.
-  - `dtu` (`number`): Set the `dtu` field on the resulting object.
-  - `edition` (`string`): Set the `edition` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `pool_size` (`number`): Set the `pool_size` field on the resulting object. When `null`, the `pool_size` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `server_name` (`string`): Set the `server_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_elasticpool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `db_dtu_max` (`number`):  When `null`, the `db_dtu_max` field will be omitted from the resulting object.
+  - `db_dtu_min` (`number`):  When `null`, the `db_dtu_min` field will be omitted from the resulting object.
+  - `dtu` (`number`): 
+  - `edition` (`string`): 
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `pool_size` (`number`):  When `null`, the `pool_size` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `server_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sql_elasticpool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sql_elasticpool` resource into the root Terraform configuration.
@@ -322,10 +322,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

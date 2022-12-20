@@ -177,55 +177,55 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `api_server_authorized_ip_ranges` (`list`): Set the `api_server_authorized_ip_ranges` field on the resulting resource block. When `null`, the `api_server_authorized_ip_ranges` field will be omitted from the resulting object.
-  - `automatic_channel_upgrade` (`string`): Set the `automatic_channel_upgrade` field on the resulting resource block. When `null`, the `automatic_channel_upgrade` field will be omitted from the resulting object.
-  - `azure_policy_enabled` (`bool`): Set the `azure_policy_enabled` field on the resulting resource block. When `null`, the `azure_policy_enabled` field will be omitted from the resulting object.
-  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting resource block. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `dns_prefix` (`string`): Set the `dns_prefix` field on the resulting resource block. When `null`, the `dns_prefix` field will be omitted from the resulting object.
-  - `dns_prefix_private_cluster` (`string`): Set the `dns_prefix_private_cluster` field on the resulting resource block. When `null`, the `dns_prefix_private_cluster` field will be omitted from the resulting object.
-  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `enable_pod_security_policy` (`bool`): Set the `enable_pod_security_policy` field on the resulting resource block. When `null`, the `enable_pod_security_policy` field will be omitted from the resulting object.
-  - `http_application_routing_enabled` (`bool`): Set the `http_application_routing_enabled` field on the resulting resource block. When `null`, the `http_application_routing_enabled` field will be omitted from the resulting object.
-  - `image_cleaner_enabled` (`bool`): Set the `image_cleaner_enabled` field on the resulting resource block. When `null`, the `image_cleaner_enabled` field will be omitted from the resulting object.
-  - `image_cleaner_interval_hours` (`number`): Set the `image_cleaner_interval_hours` field on the resulting resource block. When `null`, the `image_cleaner_interval_hours` field will be omitted from the resulting object.
-  - `kubernetes_version` (`string`): Set the `kubernetes_version` field on the resulting resource block. When `null`, the `kubernetes_version` field will be omitted from the resulting object.
-  - `local_account_disabled` (`bool`): Set the `local_account_disabled` field on the resulting resource block. When `null`, the `local_account_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `node_resource_group` (`string`): Set the `node_resource_group` field on the resulting resource block. When `null`, the `node_resource_group` field will be omitted from the resulting object.
-  - `oidc_issuer_enabled` (`bool`): Set the `oidc_issuer_enabled` field on the resulting resource block. When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
-  - `open_service_mesh_enabled` (`bool`): Set the `open_service_mesh_enabled` field on the resulting resource block. When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
-  - `private_cluster_enabled` (`bool`): Set the `private_cluster_enabled` field on the resulting resource block. When `null`, the `private_cluster_enabled` field will be omitted from the resulting object.
-  - `private_cluster_public_fqdn_enabled` (`bool`): Set the `private_cluster_public_fqdn_enabled` field on the resulting resource block. When `null`, the `private_cluster_public_fqdn_enabled` field will be omitted from the resulting object.
-  - `private_dns_zone_id` (`string`): Set the `private_dns_zone_id` field on the resulting resource block. When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `role_based_access_control_enabled` (`bool`): Set the `role_based_access_control_enabled` field on the resulting resource block. When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
-  - `run_command_enabled` (`bool`): Set the `run_command_enabled` field on the resulting resource block. When `null`, the `run_command_enabled` field will be omitted from the resulting object.
-  - `sku_tier` (`string`): Set the `sku_tier` field on the resulting resource block. When `null`, the `sku_tier` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting resource block. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
-  - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting resource block. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
-  - `auto_scaler_profile` (`list[obj]`): Set the `auto_scaler_profile` field on the resulting resource block. When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
-  - `azure_active_directory_role_based_access_control` (`list[obj]`): Set the `azure_active_directory_role_based_access_control` field on the resulting resource block. When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
-  - `default_node_pool` (`list[obj]`): Set the `default_node_pool` field on the resulting resource block. When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
-  - `http_proxy_config` (`list[obj]`): Set the `http_proxy_config` field on the resulting resource block. When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
-  - `ingress_application_gateway` (`list[obj]`): Set the `ingress_application_gateway` field on the resulting resource block. When `null`, the `ingress_application_gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.ingress_application_gateway.new](#fn-ingress_application_gatewaynew) constructor.
-  - `key_vault_secrets_provider` (`list[obj]`): Set the `key_vault_secrets_provider` field on the resulting resource block. When `null`, the `key_vault_secrets_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_vault_secrets_provider.new](#fn-key_vault_secrets_providernew) constructor.
-  - `kubelet_identity` (`list[obj]`): Set the `kubelet_identity` field on the resulting resource block. When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
-  - `linux_profile` (`list[obj]`): Set the `linux_profile` field on the resulting resource block. When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
-  - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting resource block. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.new](#fn-maintenance_windownew) constructor.
-  - `microsoft_defender` (`list[obj]`): Set the `microsoft_defender` field on the resulting resource block. When `null`, the `microsoft_defender` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.microsoft_defender.new](#fn-microsoft_defendernew) constructor.
-  - `monitor_metrics` (`list[obj]`): Set the `monitor_metrics` field on the resulting resource block. When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
-  - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting resource block. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
-  - `oms_agent` (`list[obj]`): Set the `oms_agent` field on the resulting resource block. When `null`, the `oms_agent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.oms_agent.new](#fn-oms_agentnew) constructor.
-  - `service_principal` (`list[obj]`): Set the `service_principal` field on the resulting resource block. When `null`, the `service_principal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_principal.new](#fn-service_principalnew) constructor.
-  - `storage_profile` (`list[obj]`): Set the `storage_profile` field on the resulting resource block. When `null`, the `storage_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.storage_profile.new](#fn-storage_profilenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.timeouts.new](#fn-timeoutsnew) constructor.
-  - `web_app_routing` (`list[obj]`): Set the `web_app_routing` field on the resulting resource block. When `null`, the `web_app_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.web_app_routing.new](#fn-web_app_routingnew) constructor.
-  - `windows_profile` (`list[obj]`): Set the `windows_profile` field on the resulting resource block. When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.new](#fn-windows_profilenew) constructor.
-  - `workload_autoscaler_profile` (`list[obj]`): Set the `workload_autoscaler_profile` field on the resulting resource block. When `null`, the `workload_autoscaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.workload_autoscaler_profile.new](#fn-workload_autoscaler_profilenew) constructor.
+  - `api_server_authorized_ip_ranges` (`list`):  When `null`, the `api_server_authorized_ip_ranges` field will be omitted from the resulting object.
+  - `automatic_channel_upgrade` (`string`):  When `null`, the `automatic_channel_upgrade` field will be omitted from the resulting object.
+  - `azure_policy_enabled` (`bool`):  When `null`, the `azure_policy_enabled` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `dns_prefix` (`string`):  When `null`, the `dns_prefix` field will be omitted from the resulting object.
+  - `dns_prefix_private_cluster` (`string`):  When `null`, the `dns_prefix_private_cluster` field will be omitted from the resulting object.
+  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `enable_pod_security_policy` (`bool`):  When `null`, the `enable_pod_security_policy` field will be omitted from the resulting object.
+  - `http_application_routing_enabled` (`bool`):  When `null`, the `http_application_routing_enabled` field will be omitted from the resulting object.
+  - `image_cleaner_enabled` (`bool`):  When `null`, the `image_cleaner_enabled` field will be omitted from the resulting object.
+  - `image_cleaner_interval_hours` (`number`):  When `null`, the `image_cleaner_interval_hours` field will be omitted from the resulting object.
+  - `kubernetes_version` (`string`):  When `null`, the `kubernetes_version` field will be omitted from the resulting object.
+  - `local_account_disabled` (`bool`):  When `null`, the `local_account_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `node_resource_group` (`string`):  When `null`, the `node_resource_group` field will be omitted from the resulting object.
+  - `oidc_issuer_enabled` (`bool`):  When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
+  - `open_service_mesh_enabled` (`bool`):  When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
+  - `private_cluster_enabled` (`bool`):  When `null`, the `private_cluster_enabled` field will be omitted from the resulting object.
+  - `private_cluster_public_fqdn_enabled` (`bool`):  When `null`, the `private_cluster_public_fqdn_enabled` field will be omitted from the resulting object.
+  - `private_dns_zone_id` (`string`):  When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `role_based_access_control_enabled` (`bool`):  When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
+  - `run_command_enabled` (`bool`):  When `null`, the `run_command_enabled` field will be omitted from the resulting object.
+  - `sku_tier` (`string`):  When `null`, the `sku_tier` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `workload_identity_enabled` (`bool`):  When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
+  - `aci_connector_linux` (`list[obj]`):  When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
+  - `auto_scaler_profile` (`list[obj]`):  When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
+  - `azure_active_directory_role_based_access_control` (`list[obj]`):  When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
+  - `default_node_pool` (`list[obj]`):  When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
+  - `http_proxy_config` (`list[obj]`):  When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
+  - `ingress_application_gateway` (`list[obj]`):  When `null`, the `ingress_application_gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.ingress_application_gateway.new](#fn-ingress_application_gatewaynew) constructor.
+  - `key_vault_secrets_provider` (`list[obj]`):  When `null`, the `key_vault_secrets_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_vault_secrets_provider.new](#fn-key_vault_secrets_providernew) constructor.
+  - `kubelet_identity` (`list[obj]`):  When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
+  - `linux_profile` (`list[obj]`):  When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
+  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `microsoft_defender` (`list[obj]`):  When `null`, the `microsoft_defender` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.microsoft_defender.new](#fn-microsoft_defendernew) constructor.
+  - `monitor_metrics` (`list[obj]`):  When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
+  - `network_profile` (`list[obj]`):  When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
+  - `oms_agent` (`list[obj]`):  When `null`, the `oms_agent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.oms_agent.new](#fn-oms_agentnew) constructor.
+  - `service_principal` (`list[obj]`):  When `null`, the `service_principal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_principal.new](#fn-service_principalnew) constructor.
+  - `storage_profile` (`list[obj]`):  When `null`, the `storage_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.storage_profile.new](#fn-storage_profilenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `web_app_routing` (`list[obj]`):  When `null`, the `web_app_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.web_app_routing.new](#fn-web_app_routingnew) constructor.
+  - `windows_profile` (`list[obj]`):  When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.new](#fn-windows_profilenew) constructor.
+  - `workload_autoscaler_profile` (`list[obj]`):  When `null`, the `workload_autoscaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.workload_autoscaler_profile.new](#fn-workload_autoscaler_profilenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -249,55 +249,55 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `api_server_authorized_ip_ranges` (`list`): Set the `api_server_authorized_ip_ranges` field on the resulting object. When `null`, the `api_server_authorized_ip_ranges` field will be omitted from the resulting object.
-  - `automatic_channel_upgrade` (`string`): Set the `automatic_channel_upgrade` field on the resulting object. When `null`, the `automatic_channel_upgrade` field will be omitted from the resulting object.
-  - `azure_policy_enabled` (`bool`): Set the `azure_policy_enabled` field on the resulting object. When `null`, the `azure_policy_enabled` field will be omitted from the resulting object.
-  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `dns_prefix` (`string`): Set the `dns_prefix` field on the resulting object. When `null`, the `dns_prefix` field will be omitted from the resulting object.
-  - `dns_prefix_private_cluster` (`string`): Set the `dns_prefix_private_cluster` field on the resulting object. When `null`, the `dns_prefix_private_cluster` field will be omitted from the resulting object.
-  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
-  - `enable_pod_security_policy` (`bool`): Set the `enable_pod_security_policy` field on the resulting object. When `null`, the `enable_pod_security_policy` field will be omitted from the resulting object.
-  - `http_application_routing_enabled` (`bool`): Set the `http_application_routing_enabled` field on the resulting object. When `null`, the `http_application_routing_enabled` field will be omitted from the resulting object.
-  - `image_cleaner_enabled` (`bool`): Set the `image_cleaner_enabled` field on the resulting object. When `null`, the `image_cleaner_enabled` field will be omitted from the resulting object.
-  - `image_cleaner_interval_hours` (`number`): Set the `image_cleaner_interval_hours` field on the resulting object. When `null`, the `image_cleaner_interval_hours` field will be omitted from the resulting object.
-  - `kubernetes_version` (`string`): Set the `kubernetes_version` field on the resulting object. When `null`, the `kubernetes_version` field will be omitted from the resulting object.
-  - `local_account_disabled` (`bool`): Set the `local_account_disabled` field on the resulting object. When `null`, the `local_account_disabled` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `node_resource_group` (`string`): Set the `node_resource_group` field on the resulting object. When `null`, the `node_resource_group` field will be omitted from the resulting object.
-  - `oidc_issuer_enabled` (`bool`): Set the `oidc_issuer_enabled` field on the resulting object. When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
-  - `open_service_mesh_enabled` (`bool`): Set the `open_service_mesh_enabled` field on the resulting object. When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
-  - `private_cluster_enabled` (`bool`): Set the `private_cluster_enabled` field on the resulting object. When `null`, the `private_cluster_enabled` field will be omitted from the resulting object.
-  - `private_cluster_public_fqdn_enabled` (`bool`): Set the `private_cluster_public_fqdn_enabled` field on the resulting object. When `null`, the `private_cluster_public_fqdn_enabled` field will be omitted from the resulting object.
-  - `private_dns_zone_id` (`string`): Set the `private_dns_zone_id` field on the resulting object. When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `role_based_access_control_enabled` (`bool`): Set the `role_based_access_control_enabled` field on the resulting object. When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
-  - `run_command_enabled` (`bool`): Set the `run_command_enabled` field on the resulting object. When `null`, the `run_command_enabled` field will be omitted from the resulting object.
-  - `sku_tier` (`string`): Set the `sku_tier` field on the resulting object. When `null`, the `sku_tier` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting object. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
-  - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting object. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
-  - `auto_scaler_profile` (`list[obj]`): Set the `auto_scaler_profile` field on the resulting object. When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
-  - `azure_active_directory_role_based_access_control` (`list[obj]`): Set the `azure_active_directory_role_based_access_control` field on the resulting object. When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
-  - `default_node_pool` (`list[obj]`): Set the `default_node_pool` field on the resulting object. When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
-  - `http_proxy_config` (`list[obj]`): Set the `http_proxy_config` field on the resulting object. When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
-  - `ingress_application_gateway` (`list[obj]`): Set the `ingress_application_gateway` field on the resulting object. When `null`, the `ingress_application_gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.ingress_application_gateway.new](#fn-ingress_application_gatewaynew) constructor.
-  - `key_vault_secrets_provider` (`list[obj]`): Set the `key_vault_secrets_provider` field on the resulting object. When `null`, the `key_vault_secrets_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_vault_secrets_provider.new](#fn-key_vault_secrets_providernew) constructor.
-  - `kubelet_identity` (`list[obj]`): Set the `kubelet_identity` field on the resulting object. When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
-  - `linux_profile` (`list[obj]`): Set the `linux_profile` field on the resulting object. When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
-  - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting object. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.new](#fn-maintenance_windownew) constructor.
-  - `microsoft_defender` (`list[obj]`): Set the `microsoft_defender` field on the resulting object. When `null`, the `microsoft_defender` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.microsoft_defender.new](#fn-microsoft_defendernew) constructor.
-  - `monitor_metrics` (`list[obj]`): Set the `monitor_metrics` field on the resulting object. When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
-  - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting object. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
-  - `oms_agent` (`list[obj]`): Set the `oms_agent` field on the resulting object. When `null`, the `oms_agent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.oms_agent.new](#fn-oms_agentnew) constructor.
-  - `service_principal` (`list[obj]`): Set the `service_principal` field on the resulting object. When `null`, the `service_principal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_principal.new](#fn-service_principalnew) constructor.
-  - `storage_profile` (`list[obj]`): Set the `storage_profile` field on the resulting object. When `null`, the `storage_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.storage_profile.new](#fn-storage_profilenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.timeouts.new](#fn-timeoutsnew) constructor.
-  - `web_app_routing` (`list[obj]`): Set the `web_app_routing` field on the resulting object. When `null`, the `web_app_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.web_app_routing.new](#fn-web_app_routingnew) constructor.
-  - `windows_profile` (`list[obj]`): Set the `windows_profile` field on the resulting object. When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.new](#fn-windows_profilenew) constructor.
-  - `workload_autoscaler_profile` (`list[obj]`): Set the `workload_autoscaler_profile` field on the resulting object. When `null`, the `workload_autoscaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.workload_autoscaler_profile.new](#fn-workload_autoscaler_profilenew) constructor.
+  - `api_server_authorized_ip_ranges` (`list`):  When `null`, the `api_server_authorized_ip_ranges` field will be omitted from the resulting object.
+  - `automatic_channel_upgrade` (`string`):  When `null`, the `automatic_channel_upgrade` field will be omitted from the resulting object.
+  - `azure_policy_enabled` (`bool`):  When `null`, the `azure_policy_enabled` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `dns_prefix` (`string`):  When `null`, the `dns_prefix` field will be omitted from the resulting object.
+  - `dns_prefix_private_cluster` (`string`):  When `null`, the `dns_prefix_private_cluster` field will be omitted from the resulting object.
+  - `edge_zone` (`string`):  When `null`, the `edge_zone` field will be omitted from the resulting object.
+  - `enable_pod_security_policy` (`bool`):  When `null`, the `enable_pod_security_policy` field will be omitted from the resulting object.
+  - `http_application_routing_enabled` (`bool`):  When `null`, the `http_application_routing_enabled` field will be omitted from the resulting object.
+  - `image_cleaner_enabled` (`bool`):  When `null`, the `image_cleaner_enabled` field will be omitted from the resulting object.
+  - `image_cleaner_interval_hours` (`number`):  When `null`, the `image_cleaner_interval_hours` field will be omitted from the resulting object.
+  - `kubernetes_version` (`string`):  When `null`, the `kubernetes_version` field will be omitted from the resulting object.
+  - `local_account_disabled` (`bool`):  When `null`, the `local_account_disabled` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `node_resource_group` (`string`):  When `null`, the `node_resource_group` field will be omitted from the resulting object.
+  - `oidc_issuer_enabled` (`bool`):  When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
+  - `open_service_mesh_enabled` (`bool`):  When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
+  - `private_cluster_enabled` (`bool`):  When `null`, the `private_cluster_enabled` field will be omitted from the resulting object.
+  - `private_cluster_public_fqdn_enabled` (`bool`):  When `null`, the `private_cluster_public_fqdn_enabled` field will be omitted from the resulting object.
+  - `private_dns_zone_id` (`string`):  When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `role_based_access_control_enabled` (`bool`):  When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
+  - `run_command_enabled` (`bool`):  When `null`, the `run_command_enabled` field will be omitted from the resulting object.
+  - `sku_tier` (`string`):  When `null`, the `sku_tier` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `workload_identity_enabled` (`bool`):  When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
+  - `aci_connector_linux` (`list[obj]`):  When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
+  - `auto_scaler_profile` (`list[obj]`):  When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
+  - `azure_active_directory_role_based_access_control` (`list[obj]`):  When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
+  - `default_node_pool` (`list[obj]`):  When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
+  - `http_proxy_config` (`list[obj]`):  When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
+  - `ingress_application_gateway` (`list[obj]`):  When `null`, the `ingress_application_gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.ingress_application_gateway.new](#fn-ingress_application_gatewaynew) constructor.
+  - `key_vault_secrets_provider` (`list[obj]`):  When `null`, the `key_vault_secrets_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_vault_secrets_provider.new](#fn-key_vault_secrets_providernew) constructor.
+  - `kubelet_identity` (`list[obj]`):  When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
+  - `linux_profile` (`list[obj]`):  When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
+  - `maintenance_window` (`list[obj]`):  When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `microsoft_defender` (`list[obj]`):  When `null`, the `microsoft_defender` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.microsoft_defender.new](#fn-microsoft_defendernew) constructor.
+  - `monitor_metrics` (`list[obj]`):  When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
+  - `network_profile` (`list[obj]`):  When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
+  - `oms_agent` (`list[obj]`):  When `null`, the `oms_agent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.oms_agent.new](#fn-oms_agentnew) constructor.
+  - `service_principal` (`list[obj]`):  When `null`, the `service_principal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_principal.new](#fn-service_principalnew) constructor.
+  - `storage_profile` (`list[obj]`):  When `null`, the `storage_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.storage_profile.new](#fn-storage_profilenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `web_app_routing` (`list[obj]`):  When `null`, the `web_app_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.web_app_routing.new](#fn-web_app_routingnew) constructor.
+  - `windows_profile` (`list[obj]`):  When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.new](#fn-windows_profilenew) constructor.
+  - `workload_autoscaler_profile` (`list[obj]`):  When `null`, the `workload_autoscaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.workload_autoscaler_profile.new](#fn-workload_autoscaler_profilenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kubernetes_cluster` resource into the root Terraform configuration.
@@ -1544,7 +1544,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `subnet_name` (`string`): Set the `subnet_name` field on the resulting object.
+  - `subnet_name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `aci_connector_linux` sub block.
@@ -1567,23 +1567,23 @@ Terraform sub block.
 
 
 **Args**:
-  - `balance_similar_node_groups` (`bool`): Set the `balance_similar_node_groups` field on the resulting object. When `null`, the `balance_similar_node_groups` field will be omitted from the resulting object.
-  - `empty_bulk_delete_max` (`string`): Set the `empty_bulk_delete_max` field on the resulting object. When `null`, the `empty_bulk_delete_max` field will be omitted from the resulting object.
-  - `expander` (`string`): Set the `expander` field on the resulting object. When `null`, the `expander` field will be omitted from the resulting object.
-  - `max_graceful_termination_sec` (`string`): Set the `max_graceful_termination_sec` field on the resulting object. When `null`, the `max_graceful_termination_sec` field will be omitted from the resulting object.
-  - `max_node_provisioning_time` (`string`): Set the `max_node_provisioning_time` field on the resulting object. When `null`, the `max_node_provisioning_time` field will be omitted from the resulting object.
-  - `max_unready_nodes` (`number`): Set the `max_unready_nodes` field on the resulting object. When `null`, the `max_unready_nodes` field will be omitted from the resulting object.
-  - `max_unready_percentage` (`number`): Set the `max_unready_percentage` field on the resulting object. When `null`, the `max_unready_percentage` field will be omitted from the resulting object.
-  - `new_pod_scale_up_delay` (`string`): Set the `new_pod_scale_up_delay` field on the resulting object. When `null`, the `new_pod_scale_up_delay` field will be omitted from the resulting object.
-  - `scale_down_delay_after_add` (`string`): Set the `scale_down_delay_after_add` field on the resulting object. When `null`, the `scale_down_delay_after_add` field will be omitted from the resulting object.
-  - `scale_down_delay_after_delete` (`string`): Set the `scale_down_delay_after_delete` field on the resulting object. When `null`, the `scale_down_delay_after_delete` field will be omitted from the resulting object.
-  - `scale_down_delay_after_failure` (`string`): Set the `scale_down_delay_after_failure` field on the resulting object. When `null`, the `scale_down_delay_after_failure` field will be omitted from the resulting object.
-  - `scale_down_unneeded` (`string`): Set the `scale_down_unneeded` field on the resulting object. When `null`, the `scale_down_unneeded` field will be omitted from the resulting object.
-  - `scale_down_unready` (`string`): Set the `scale_down_unready` field on the resulting object. When `null`, the `scale_down_unready` field will be omitted from the resulting object.
-  - `scale_down_utilization_threshold` (`string`): Set the `scale_down_utilization_threshold` field on the resulting object. When `null`, the `scale_down_utilization_threshold` field will be omitted from the resulting object.
-  - `scan_interval` (`string`): Set the `scan_interval` field on the resulting object. When `null`, the `scan_interval` field will be omitted from the resulting object.
-  - `skip_nodes_with_local_storage` (`bool`): Set the `skip_nodes_with_local_storage` field on the resulting object. When `null`, the `skip_nodes_with_local_storage` field will be omitted from the resulting object.
-  - `skip_nodes_with_system_pods` (`bool`): Set the `skip_nodes_with_system_pods` field on the resulting object. When `null`, the `skip_nodes_with_system_pods` field will be omitted from the resulting object.
+  - `balance_similar_node_groups` (`bool`):  When `null`, the `balance_similar_node_groups` field will be omitted from the resulting object.
+  - `empty_bulk_delete_max` (`string`):  When `null`, the `empty_bulk_delete_max` field will be omitted from the resulting object.
+  - `expander` (`string`):  When `null`, the `expander` field will be omitted from the resulting object.
+  - `max_graceful_termination_sec` (`string`):  When `null`, the `max_graceful_termination_sec` field will be omitted from the resulting object.
+  - `max_node_provisioning_time` (`string`):  When `null`, the `max_node_provisioning_time` field will be omitted from the resulting object.
+  - `max_unready_nodes` (`number`):  When `null`, the `max_unready_nodes` field will be omitted from the resulting object.
+  - `max_unready_percentage` (`number`):  When `null`, the `max_unready_percentage` field will be omitted from the resulting object.
+  - `new_pod_scale_up_delay` (`string`):  When `null`, the `new_pod_scale_up_delay` field will be omitted from the resulting object.
+  - `scale_down_delay_after_add` (`string`):  When `null`, the `scale_down_delay_after_add` field will be omitted from the resulting object.
+  - `scale_down_delay_after_delete` (`string`):  When `null`, the `scale_down_delay_after_delete` field will be omitted from the resulting object.
+  - `scale_down_delay_after_failure` (`string`):  When `null`, the `scale_down_delay_after_failure` field will be omitted from the resulting object.
+  - `scale_down_unneeded` (`string`):  When `null`, the `scale_down_unneeded` field will be omitted from the resulting object.
+  - `scale_down_unready` (`string`):  When `null`, the `scale_down_unready` field will be omitted from the resulting object.
+  - `scale_down_utilization_threshold` (`string`):  When `null`, the `scale_down_utilization_threshold` field will be omitted from the resulting object.
+  - `scan_interval` (`string`):  When `null`, the `scan_interval` field will be omitted from the resulting object.
+  - `skip_nodes_with_local_storage` (`bool`):  When `null`, the `skip_nodes_with_local_storage` field will be omitted from the resulting object.
+  - `skip_nodes_with_system_pods` (`bool`):  When `null`, the `skip_nodes_with_system_pods` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `auto_scaler_profile` sub block.
@@ -1606,13 +1606,13 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_group_object_ids` (`list`): Set the `admin_group_object_ids` field on the resulting object. When `null`, the `admin_group_object_ids` field will be omitted from the resulting object.
-  - `azure_rbac_enabled` (`bool`): Set the `azure_rbac_enabled` field on the resulting object. When `null`, the `azure_rbac_enabled` field will be omitted from the resulting object.
-  - `client_app_id` (`string`): Set the `client_app_id` field on the resulting object. When `null`, the `client_app_id` field will be omitted from the resulting object.
-  - `managed` (`bool`): Set the `managed` field on the resulting object. When `null`, the `managed` field will be omitted from the resulting object.
-  - `server_app_id` (`string`): Set the `server_app_id` field on the resulting object. When `null`, the `server_app_id` field will be omitted from the resulting object.
-  - `server_app_secret` (`string`): Set the `server_app_secret` field on the resulting object. When `null`, the `server_app_secret` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `admin_group_object_ids` (`list`):  When `null`, the `admin_group_object_ids` field will be omitted from the resulting object.
+  - `azure_rbac_enabled` (`bool`):  When `null`, the `azure_rbac_enabled` field will be omitted from the resulting object.
+  - `client_app_id` (`string`):  When `null`, the `client_app_id` field will be omitted from the resulting object.
+  - `managed` (`bool`):  When `null`, the `managed` field will be omitted from the resulting object.
+  - `server_app_id` (`string`):  When `null`, the `server_app_id` field will be omitted from the resulting object.
+  - `server_app_secret` (`string`):  When `null`, the `server_app_secret` field will be omitted from the resulting object.
+  - `tenant_id` (`string`):  When `null`, the `tenant_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure_active_directory_role_based_access_control` sub block.
@@ -1635,41 +1635,41 @@ Terraform sub block.
 
 
 **Args**:
-  - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting object. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
-  - `custom_ca_trust_enabled` (`bool`): Set the `custom_ca_trust_enabled` field on the resulting object. When `null`, the `custom_ca_trust_enabled` field will be omitted from the resulting object.
-  - `enable_auto_scaling` (`bool`): Set the `enable_auto_scaling` field on the resulting object. When `null`, the `enable_auto_scaling` field will be omitted from the resulting object.
-  - `enable_host_encryption` (`bool`): Set the `enable_host_encryption` field on the resulting object. When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
-  - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting object. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
-  - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting object. When `null`, the `fips_enabled` field will be omitted from the resulting object.
-  - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
-  - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting object. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
-  - `max_count` (`number`): Set the `max_count` field on the resulting object. When `null`, the `max_count` field will be omitted from the resulting object.
-  - `max_pods` (`number`): Set the `max_pods` field on the resulting object. When `null`, the `max_pods` field will be omitted from the resulting object.
-  - `message_of_the_day` (`string`): Set the `message_of_the_day` field on the resulting object. When `null`, the `message_of_the_day` field will be omitted from the resulting object.
-  - `min_count` (`number`): Set the `min_count` field on the resulting object. When `null`, the `min_count` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `node_count` (`number`): Set the `node_count` field on the resulting object. When `null`, the `node_count` field will be omitted from the resulting object.
-  - `node_labels` (`obj`): Set the `node_labels` field on the resulting object. When `null`, the `node_labels` field will be omitted from the resulting object.
-  - `node_public_ip_prefix_id` (`string`): Set the `node_public_ip_prefix_id` field on the resulting object. When `null`, the `node_public_ip_prefix_id` field will be omitted from the resulting object.
-  - `node_taints` (`list`): Set the `node_taints` field on the resulting object. When `null`, the `node_taints` field will be omitted from the resulting object.
-  - `only_critical_addons_enabled` (`bool`): Set the `only_critical_addons_enabled` field on the resulting object. When `null`, the `only_critical_addons_enabled` field will be omitted from the resulting object.
-  - `orchestrator_version` (`string`): Set the `orchestrator_version` field on the resulting object. When `null`, the `orchestrator_version` field will be omitted from the resulting object.
-  - `os_disk_size_gb` (`number`): Set the `os_disk_size_gb` field on the resulting object. When `null`, the `os_disk_size_gb` field will be omitted from the resulting object.
-  - `os_disk_type` (`string`): Set the `os_disk_type` field on the resulting object. When `null`, the `os_disk_type` field will be omitted from the resulting object.
-  - `os_sku` (`string`): Set the `os_sku` field on the resulting object. When `null`, the `os_sku` field will be omitted from the resulting object.
-  - `pod_subnet_id` (`string`): Set the `pod_subnet_id` field on the resulting object. When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting object. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
-  - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting object. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
-  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
-  - `vnet_subnet_id` (`string`): Set the `vnet_subnet_id` field on the resulting object. When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
-  - `workload_runtime` (`string`): Set the `workload_runtime` field on the resulting object. When `null`, the `workload_runtime` field will be omitted from the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
-  - `kubelet_config` (`list[obj]`): Set the `kubelet_config` field on the resulting object. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.kubelet_config.new](#fn-default_node_poolkubelet_confignew) constructor.
-  - `linux_os_config` (`list[obj]`): Set the `linux_os_config` field on the resulting object. When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.new](#fn-default_node_poollinux_os_confignew) constructor.
-  - `upgrade_settings` (`list[obj]`): Set the `upgrade_settings` field on the resulting object. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.upgrade_settings.new](#fn-default_node_poolupgrade_settingsnew) constructor.
+  - `capacity_reservation_group_id` (`string`):  When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
+  - `custom_ca_trust_enabled` (`bool`):  When `null`, the `custom_ca_trust_enabled` field will be omitted from the resulting object.
+  - `enable_auto_scaling` (`bool`):  When `null`, the `enable_auto_scaling` field will be omitted from the resulting object.
+  - `enable_host_encryption` (`bool`):  When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
+  - `enable_node_public_ip` (`bool`):  When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
+  - `fips_enabled` (`bool`):  When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `host_group_id` (`string`):  When `null`, the `host_group_id` field will be omitted from the resulting object.
+  - `kubelet_disk_type` (`string`):  When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
+  - `max_count` (`number`):  When `null`, the `max_count` field will be omitted from the resulting object.
+  - `max_pods` (`number`):  When `null`, the `max_pods` field will be omitted from the resulting object.
+  - `message_of_the_day` (`string`):  When `null`, the `message_of_the_day` field will be omitted from the resulting object.
+  - `min_count` (`number`):  When `null`, the `min_count` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `node_count` (`number`):  When `null`, the `node_count` field will be omitted from the resulting object.
+  - `node_labels` (`obj`):  When `null`, the `node_labels` field will be omitted from the resulting object.
+  - `node_public_ip_prefix_id` (`string`):  When `null`, the `node_public_ip_prefix_id` field will be omitted from the resulting object.
+  - `node_taints` (`list`):  When `null`, the `node_taints` field will be omitted from the resulting object.
+  - `only_critical_addons_enabled` (`bool`):  When `null`, the `only_critical_addons_enabled` field will be omitted from the resulting object.
+  - `orchestrator_version` (`string`):  When `null`, the `orchestrator_version` field will be omitted from the resulting object.
+  - `os_disk_size_gb` (`number`):  When `null`, the `os_disk_size_gb` field will be omitted from the resulting object.
+  - `os_disk_type` (`string`):  When `null`, the `os_disk_type` field will be omitted from the resulting object.
+  - `os_sku` (`string`):  When `null`, the `os_sku` field will be omitted from the resulting object.
+  - `pod_subnet_id` (`string`):  When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `scale_down_mode` (`string`):  When `null`, the `scale_down_mode` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `type` (`string`):  When `null`, the `type` field will be omitted from the resulting object.
+  - `ultra_ssd_enabled` (`bool`):  When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
+  - `vm_size` (`string`): 
+  - `vnet_subnet_id` (`string`):  When `null`, the `vnet_subnet_id` field will be omitted from the resulting object.
+  - `workload_runtime` (`string`):  When `null`, the `workload_runtime` field will be omitted from the resulting object.
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `kubelet_config` (`list[obj]`):  When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.kubelet_config.new](#fn-default_node_poolkubelet_confignew) constructor.
+  - `linux_os_config` (`list[obj]`):  When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.new](#fn-default_node_poollinux_os_confignew) constructor.
+  - `upgrade_settings` (`list[obj]`):  When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.upgrade_settings.new](#fn-default_node_poolupgrade_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_node_pool` sub block.
@@ -1692,16 +1692,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_unsafe_sysctls` (`list`): Set the `allowed_unsafe_sysctls` field on the resulting object. When `null`, the `allowed_unsafe_sysctls` field will be omitted from the resulting object.
-  - `container_log_max_line` (`number`): Set the `container_log_max_line` field on the resulting object. When `null`, the `container_log_max_line` field will be omitted from the resulting object.
-  - `container_log_max_size_mb` (`number`): Set the `container_log_max_size_mb` field on the resulting object. When `null`, the `container_log_max_size_mb` field will be omitted from the resulting object.
-  - `cpu_cfs_quota_enabled` (`bool`): Set the `cpu_cfs_quota_enabled` field on the resulting object. When `null`, the `cpu_cfs_quota_enabled` field will be omitted from the resulting object.
-  - `cpu_cfs_quota_period` (`string`): Set the `cpu_cfs_quota_period` field on the resulting object. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
-  - `cpu_manager_policy` (`string`): Set the `cpu_manager_policy` field on the resulting object. When `null`, the `cpu_manager_policy` field will be omitted from the resulting object.
-  - `image_gc_high_threshold` (`number`): Set the `image_gc_high_threshold` field on the resulting object. When `null`, the `image_gc_high_threshold` field will be omitted from the resulting object.
-  - `image_gc_low_threshold` (`number`): Set the `image_gc_low_threshold` field on the resulting object. When `null`, the `image_gc_low_threshold` field will be omitted from the resulting object.
-  - `pod_max_pid` (`number`): Set the `pod_max_pid` field on the resulting object. When `null`, the `pod_max_pid` field will be omitted from the resulting object.
-  - `topology_manager_policy` (`string`): Set the `topology_manager_policy` field on the resulting object. When `null`, the `topology_manager_policy` field will be omitted from the resulting object.
+  - `allowed_unsafe_sysctls` (`list`):  When `null`, the `allowed_unsafe_sysctls` field will be omitted from the resulting object.
+  - `container_log_max_line` (`number`):  When `null`, the `container_log_max_line` field will be omitted from the resulting object.
+  - `container_log_max_size_mb` (`number`):  When `null`, the `container_log_max_size_mb` field will be omitted from the resulting object.
+  - `cpu_cfs_quota_enabled` (`bool`):  When `null`, the `cpu_cfs_quota_enabled` field will be omitted from the resulting object.
+  - `cpu_cfs_quota_period` (`string`):  When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
+  - `cpu_manager_policy` (`string`):  When `null`, the `cpu_manager_policy` field will be omitted from the resulting object.
+  - `image_gc_high_threshold` (`number`):  When `null`, the `image_gc_high_threshold` field will be omitted from the resulting object.
+  - `image_gc_low_threshold` (`number`):  When `null`, the `image_gc_low_threshold` field will be omitted from the resulting object.
+  - `pod_max_pid` (`number`):  When `null`, the `pod_max_pid` field will be omitted from the resulting object.
+  - `topology_manager_policy` (`string`):  When `null`, the `topology_manager_policy` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `kubelet_config` sub block.
@@ -1724,10 +1724,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `swap_file_size_mb` (`number`): Set the `swap_file_size_mb` field on the resulting object. When `null`, the `swap_file_size_mb` field will be omitted from the resulting object.
-  - `transparent_huge_page_defrag` (`string`): Set the `transparent_huge_page_defrag` field on the resulting object. When `null`, the `transparent_huge_page_defrag` field will be omitted from the resulting object.
-  - `transparent_huge_page_enabled` (`string`): Set the `transparent_huge_page_enabled` field on the resulting object. When `null`, the `transparent_huge_page_enabled` field will be omitted from the resulting object.
-  - `sysctl_config` (`list[obj]`): Set the `sysctl_config` field on the resulting object. When `null`, the `sysctl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.sysctl_config.new](#fn-default_node_pooldefault_node_poolsysctl_confignew) constructor.
+  - `swap_file_size_mb` (`number`):  When `null`, the `swap_file_size_mb` field will be omitted from the resulting object.
+  - `transparent_huge_page_defrag` (`string`):  When `null`, the `transparent_huge_page_defrag` field will be omitted from the resulting object.
+  - `transparent_huge_page_enabled` (`string`):  When `null`, the `transparent_huge_page_enabled` field will be omitted from the resulting object.
+  - `sysctl_config` (`list[obj]`):  When `null`, the `sysctl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.sysctl_config.new](#fn-default_node_pooldefault_node_poolsysctl_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_os_config` sub block.
@@ -1750,35 +1750,35 @@ Terraform sub block.
 
 
 **Args**:
-  - `fs_aio_max_nr` (`number`): Set the `fs_aio_max_nr` field on the resulting object. When `null`, the `fs_aio_max_nr` field will be omitted from the resulting object.
-  - `fs_file_max` (`number`): Set the `fs_file_max` field on the resulting object. When `null`, the `fs_file_max` field will be omitted from the resulting object.
-  - `fs_inotify_max_user_watches` (`number`): Set the `fs_inotify_max_user_watches` field on the resulting object. When `null`, the `fs_inotify_max_user_watches` field will be omitted from the resulting object.
-  - `fs_nr_open` (`number`): Set the `fs_nr_open` field on the resulting object. When `null`, the `fs_nr_open` field will be omitted from the resulting object.
-  - `kernel_threads_max` (`number`): Set the `kernel_threads_max` field on the resulting object. When `null`, the `kernel_threads_max` field will be omitted from the resulting object.
-  - `net_core_netdev_max_backlog` (`number`): Set the `net_core_netdev_max_backlog` field on the resulting object. When `null`, the `net_core_netdev_max_backlog` field will be omitted from the resulting object.
-  - `net_core_optmem_max` (`number`): Set the `net_core_optmem_max` field on the resulting object. When `null`, the `net_core_optmem_max` field will be omitted from the resulting object.
-  - `net_core_rmem_default` (`number`): Set the `net_core_rmem_default` field on the resulting object. When `null`, the `net_core_rmem_default` field will be omitted from the resulting object.
-  - `net_core_rmem_max` (`number`): Set the `net_core_rmem_max` field on the resulting object. When `null`, the `net_core_rmem_max` field will be omitted from the resulting object.
-  - `net_core_somaxconn` (`number`): Set the `net_core_somaxconn` field on the resulting object. When `null`, the `net_core_somaxconn` field will be omitted from the resulting object.
-  - `net_core_wmem_default` (`number`): Set the `net_core_wmem_default` field on the resulting object. When `null`, the `net_core_wmem_default` field will be omitted from the resulting object.
-  - `net_core_wmem_max` (`number`): Set the `net_core_wmem_max` field on the resulting object. When `null`, the `net_core_wmem_max` field will be omitted from the resulting object.
-  - `net_ipv4_ip_local_port_range_max` (`number`): Set the `net_ipv4_ip_local_port_range_max` field on the resulting object. When `null`, the `net_ipv4_ip_local_port_range_max` field will be omitted from the resulting object.
-  - `net_ipv4_ip_local_port_range_min` (`number`): Set the `net_ipv4_ip_local_port_range_min` field on the resulting object. When `null`, the `net_ipv4_ip_local_port_range_min` field will be omitted from the resulting object.
-  - `net_ipv4_neigh_default_gc_thresh1` (`number`): Set the `net_ipv4_neigh_default_gc_thresh1` field on the resulting object. When `null`, the `net_ipv4_neigh_default_gc_thresh1` field will be omitted from the resulting object.
-  - `net_ipv4_neigh_default_gc_thresh2` (`number`): Set the `net_ipv4_neigh_default_gc_thresh2` field on the resulting object. When `null`, the `net_ipv4_neigh_default_gc_thresh2` field will be omitted from the resulting object.
-  - `net_ipv4_neigh_default_gc_thresh3` (`number`): Set the `net_ipv4_neigh_default_gc_thresh3` field on the resulting object. When `null`, the `net_ipv4_neigh_default_gc_thresh3` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_fin_timeout` (`number`): Set the `net_ipv4_tcp_fin_timeout` field on the resulting object. When `null`, the `net_ipv4_tcp_fin_timeout` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_keepalive_intvl` (`number`): Set the `net_ipv4_tcp_keepalive_intvl` field on the resulting object. When `null`, the `net_ipv4_tcp_keepalive_intvl` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_keepalive_probes` (`number`): Set the `net_ipv4_tcp_keepalive_probes` field on the resulting object. When `null`, the `net_ipv4_tcp_keepalive_probes` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_keepalive_time` (`number`): Set the `net_ipv4_tcp_keepalive_time` field on the resulting object. When `null`, the `net_ipv4_tcp_keepalive_time` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_max_syn_backlog` (`number`): Set the `net_ipv4_tcp_max_syn_backlog` field on the resulting object. When `null`, the `net_ipv4_tcp_max_syn_backlog` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_max_tw_buckets` (`number`): Set the `net_ipv4_tcp_max_tw_buckets` field on the resulting object. When `null`, the `net_ipv4_tcp_max_tw_buckets` field will be omitted from the resulting object.
-  - `net_ipv4_tcp_tw_reuse` (`bool`): Set the `net_ipv4_tcp_tw_reuse` field on the resulting object. When `null`, the `net_ipv4_tcp_tw_reuse` field will be omitted from the resulting object.
-  - `net_netfilter_nf_conntrack_buckets` (`number`): Set the `net_netfilter_nf_conntrack_buckets` field on the resulting object. When `null`, the `net_netfilter_nf_conntrack_buckets` field will be omitted from the resulting object.
-  - `net_netfilter_nf_conntrack_max` (`number`): Set the `net_netfilter_nf_conntrack_max` field on the resulting object. When `null`, the `net_netfilter_nf_conntrack_max` field will be omitted from the resulting object.
-  - `vm_max_map_count` (`number`): Set the `vm_max_map_count` field on the resulting object. When `null`, the `vm_max_map_count` field will be omitted from the resulting object.
-  - `vm_swappiness` (`number`): Set the `vm_swappiness` field on the resulting object. When `null`, the `vm_swappiness` field will be omitted from the resulting object.
-  - `vm_vfs_cache_pressure` (`number`): Set the `vm_vfs_cache_pressure` field on the resulting object. When `null`, the `vm_vfs_cache_pressure` field will be omitted from the resulting object.
+  - `fs_aio_max_nr` (`number`):  When `null`, the `fs_aio_max_nr` field will be omitted from the resulting object.
+  - `fs_file_max` (`number`):  When `null`, the `fs_file_max` field will be omitted from the resulting object.
+  - `fs_inotify_max_user_watches` (`number`):  When `null`, the `fs_inotify_max_user_watches` field will be omitted from the resulting object.
+  - `fs_nr_open` (`number`):  When `null`, the `fs_nr_open` field will be omitted from the resulting object.
+  - `kernel_threads_max` (`number`):  When `null`, the `kernel_threads_max` field will be omitted from the resulting object.
+  - `net_core_netdev_max_backlog` (`number`):  When `null`, the `net_core_netdev_max_backlog` field will be omitted from the resulting object.
+  - `net_core_optmem_max` (`number`):  When `null`, the `net_core_optmem_max` field will be omitted from the resulting object.
+  - `net_core_rmem_default` (`number`):  When `null`, the `net_core_rmem_default` field will be omitted from the resulting object.
+  - `net_core_rmem_max` (`number`):  When `null`, the `net_core_rmem_max` field will be omitted from the resulting object.
+  - `net_core_somaxconn` (`number`):  When `null`, the `net_core_somaxconn` field will be omitted from the resulting object.
+  - `net_core_wmem_default` (`number`):  When `null`, the `net_core_wmem_default` field will be omitted from the resulting object.
+  - `net_core_wmem_max` (`number`):  When `null`, the `net_core_wmem_max` field will be omitted from the resulting object.
+  - `net_ipv4_ip_local_port_range_max` (`number`):  When `null`, the `net_ipv4_ip_local_port_range_max` field will be omitted from the resulting object.
+  - `net_ipv4_ip_local_port_range_min` (`number`):  When `null`, the `net_ipv4_ip_local_port_range_min` field will be omitted from the resulting object.
+  - `net_ipv4_neigh_default_gc_thresh1` (`number`):  When `null`, the `net_ipv4_neigh_default_gc_thresh1` field will be omitted from the resulting object.
+  - `net_ipv4_neigh_default_gc_thresh2` (`number`):  When `null`, the `net_ipv4_neigh_default_gc_thresh2` field will be omitted from the resulting object.
+  - `net_ipv4_neigh_default_gc_thresh3` (`number`):  When `null`, the `net_ipv4_neigh_default_gc_thresh3` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_fin_timeout` (`number`):  When `null`, the `net_ipv4_tcp_fin_timeout` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_keepalive_intvl` (`number`):  When `null`, the `net_ipv4_tcp_keepalive_intvl` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_keepalive_probes` (`number`):  When `null`, the `net_ipv4_tcp_keepalive_probes` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_keepalive_time` (`number`):  When `null`, the `net_ipv4_tcp_keepalive_time` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_max_syn_backlog` (`number`):  When `null`, the `net_ipv4_tcp_max_syn_backlog` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_max_tw_buckets` (`number`):  When `null`, the `net_ipv4_tcp_max_tw_buckets` field will be omitted from the resulting object.
+  - `net_ipv4_tcp_tw_reuse` (`bool`):  When `null`, the `net_ipv4_tcp_tw_reuse` field will be omitted from the resulting object.
+  - `net_netfilter_nf_conntrack_buckets` (`number`):  When `null`, the `net_netfilter_nf_conntrack_buckets` field will be omitted from the resulting object.
+  - `net_netfilter_nf_conntrack_max` (`number`):  When `null`, the `net_netfilter_nf_conntrack_max` field will be omitted from the resulting object.
+  - `vm_max_map_count` (`number`):  When `null`, the `vm_max_map_count` field will be omitted from the resulting object.
+  - `vm_swappiness` (`number`):  When `null`, the `vm_swappiness` field will be omitted from the resulting object.
+  - `vm_vfs_cache_pressure` (`number`):  When `null`, the `vm_vfs_cache_pressure` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `sysctl_config` sub block.
@@ -1801,7 +1801,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `max_surge` (`string`): Set the `max_surge` field on the resulting object.
+  - `max_surge` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `upgrade_settings` sub block.
@@ -1824,10 +1824,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `http_proxy` (`string`): Set the `http_proxy` field on the resulting object. When `null`, the `http_proxy` field will be omitted from the resulting object.
-  - `https_proxy` (`string`): Set the `https_proxy` field on the resulting object. When `null`, the `https_proxy` field will be omitted from the resulting object.
-  - `no_proxy` (`list`): Set the `no_proxy` field on the resulting object. When `null`, the `no_proxy` field will be omitted from the resulting object.
-  - `trusted_ca` (`string`): Set the `trusted_ca` field on the resulting object. When `null`, the `trusted_ca` field will be omitted from the resulting object.
+  - `http_proxy` (`string`):  When `null`, the `http_proxy` field will be omitted from the resulting object.
+  - `https_proxy` (`string`):  When `null`, the `https_proxy` field will be omitted from the resulting object.
+  - `no_proxy` (`list`):  When `null`, the `no_proxy` field will be omitted from the resulting object.
+  - `trusted_ca` (`string`):  When `null`, the `trusted_ca` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `http_proxy_config` sub block.
@@ -1850,8 +1850,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -1874,10 +1874,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `gateway_id` (`string`): Set the `gateway_id` field on the resulting object. When `null`, the `gateway_id` field will be omitted from the resulting object.
-  - `gateway_name` (`string`): Set the `gateway_name` field on the resulting object. When `null`, the `gateway_name` field will be omitted from the resulting object.
-  - `subnet_cidr` (`string`): Set the `subnet_cidr` field on the resulting object. When `null`, the `subnet_cidr` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `gateway_id` (`string`):  When `null`, the `gateway_id` field will be omitted from the resulting object.
+  - `gateway_name` (`string`):  When `null`, the `gateway_name` field will be omitted from the resulting object.
+  - `subnet_cidr` (`string`):  When `null`, the `subnet_cidr` field will be omitted from the resulting object.
+  - `subnet_id` (`string`):  When `null`, the `subnet_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ingress_application_gateway` sub block.
@@ -1900,8 +1900,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `secret_rotation_enabled` (`bool`): Set the `secret_rotation_enabled` field on the resulting object. When `null`, the `secret_rotation_enabled` field will be omitted from the resulting object.
-  - `secret_rotation_interval` (`string`): Set the `secret_rotation_interval` field on the resulting object. When `null`, the `secret_rotation_interval` field will be omitted from the resulting object.
+  - `secret_rotation_enabled` (`bool`):  When `null`, the `secret_rotation_enabled` field will be omitted from the resulting object.
+  - `secret_rotation_interval` (`string`):  When `null`, the `secret_rotation_interval` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `key_vault_secrets_provider` sub block.
@@ -1924,9 +1924,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`): Set the `client_id` field on the resulting object. When `null`, the `client_id` field will be omitted from the resulting object.
-  - `object_id` (`string`): Set the `object_id` field on the resulting object. When `null`, the `object_id` field will be omitted from the resulting object.
-  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
+  - `client_id` (`string`):  When `null`, the `client_id` field will be omitted from the resulting object.
+  - `object_id` (`string`):  When `null`, the `object_id` field will be omitted from the resulting object.
+  - `user_assigned_identity_id` (`string`):  When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `kubelet_identity` sub block.
@@ -1949,8 +1949,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_username` (`string`): Set the `admin_username` field on the resulting object.
-  - `ssh_key` (`list[obj]`): Set the `ssh_key` field on the resulting object. When `null`, the `ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.ssh_key.new](#fn-linux_profilessh_keynew) constructor.
+  - `admin_username` (`string`): 
+  - `ssh_key` (`list[obj]`):  When `null`, the `ssh_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.ssh_key.new](#fn-linux_profilessh_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_profile` sub block.
@@ -1973,7 +1973,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_data` (`string`): Set the `key_data` field on the resulting object.
+  - `key_data` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `ssh_key` sub block.
@@ -1996,8 +1996,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed` (`list[obj]`): Set the `allowed` field on the resulting object. When `null`, the `allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.allowed.new](#fn-maintenance_windowallowednew) constructor.
-  - `not_allowed` (`list[obj]`): Set the `not_allowed` field on the resulting object. When `null`, the `not_allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.not_allowed.new](#fn-maintenance_windownot_allowednew) constructor.
+  - `allowed` (`list[obj]`):  When `null`, the `allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.allowed.new](#fn-maintenance_windowallowednew) constructor.
+  - `not_allowed` (`list[obj]`):  When `null`, the `not_allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.not_allowed.new](#fn-maintenance_windownot_allowednew) constructor.
 
 **Returns**:
   - An attribute object that represents the `maintenance_window` sub block.
@@ -2020,8 +2020,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `day` (`string`): Set the `day` field on the resulting object.
-  - `hours` (`list`): Set the `hours` field on the resulting object.
+  - `day` (`string`): 
+  - `hours` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `allowed` sub block.
@@ -2044,8 +2044,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `end` (`string`): Set the `end` field on the resulting object.
-  - `start` (`string`): Set the `start` field on the resulting object.
+  - `end` (`string`): 
+  - `start` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `not_allowed` sub block.
@@ -2068,7 +2068,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `log_analytics_workspace_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `microsoft_defender` sub block.
@@ -2091,8 +2091,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `annotations_allowed` (`string`): Set the `annotations_allowed` field on the resulting object. When `null`, the `annotations_allowed` field will be omitted from the resulting object.
-  - `labels_allowed` (`string`): Set the `labels_allowed` field on the resulting object. When `null`, the `labels_allowed` field will be omitted from the resulting object.
+  - `annotations_allowed` (`string`):  When `null`, the `annotations_allowed` field will be omitted from the resulting object.
+  - `labels_allowed` (`string`):  When `null`, the `labels_allowed` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `monitor_metrics` sub block.
@@ -2115,22 +2115,22 @@ Terraform sub block.
 
 
 **Args**:
-  - `dns_service_ip` (`string`): Set the `dns_service_ip` field on the resulting object. When `null`, the `dns_service_ip` field will be omitted from the resulting object.
-  - `docker_bridge_cidr` (`string`): Set the `docker_bridge_cidr` field on the resulting object. When `null`, the `docker_bridge_cidr` field will be omitted from the resulting object.
-  - `ebpf_data_plane` (`string`): Set the `ebpf_data_plane` field on the resulting object. When `null`, the `ebpf_data_plane` field will be omitted from the resulting object.
-  - `ip_versions` (`list`): Set the `ip_versions` field on the resulting object. When `null`, the `ip_versions` field will be omitted from the resulting object.
-  - `load_balancer_sku` (`string`): Set the `load_balancer_sku` field on the resulting object. When `null`, the `load_balancer_sku` field will be omitted from the resulting object.
-  - `network_mode` (`string`): Set the `network_mode` field on the resulting object. When `null`, the `network_mode` field will be omitted from the resulting object.
-  - `network_plugin` (`string`): Set the `network_plugin` field on the resulting object.
-  - `network_plugin_mode` (`string`): Set the `network_plugin_mode` field on the resulting object. When `null`, the `network_plugin_mode` field will be omitted from the resulting object.
-  - `network_policy` (`string`): Set the `network_policy` field on the resulting object. When `null`, the `network_policy` field will be omitted from the resulting object.
-  - `outbound_type` (`string`): Set the `outbound_type` field on the resulting object. When `null`, the `outbound_type` field will be omitted from the resulting object.
-  - `pod_cidr` (`string`): Set the `pod_cidr` field on the resulting object. When `null`, the `pod_cidr` field will be omitted from the resulting object.
-  - `pod_cidrs` (`list`): Set the `pod_cidrs` field on the resulting object. When `null`, the `pod_cidrs` field will be omitted from the resulting object.
-  - `service_cidr` (`string`): Set the `service_cidr` field on the resulting object. When `null`, the `service_cidr` field will be omitted from the resulting object.
-  - `service_cidrs` (`list`): Set the `service_cidrs` field on the resulting object. When `null`, the `service_cidrs` field will be omitted from the resulting object.
-  - `load_balancer_profile` (`list[obj]`): Set the `load_balancer_profile` field on the resulting object. When `null`, the `load_balancer_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.load_balancer_profile.new](#fn-network_profileload_balancer_profilenew) constructor.
-  - `nat_gateway_profile` (`list[obj]`): Set the `nat_gateway_profile` field on the resulting object. When `null`, the `nat_gateway_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.nat_gateway_profile.new](#fn-network_profilenat_gateway_profilenew) constructor.
+  - `dns_service_ip` (`string`):  When `null`, the `dns_service_ip` field will be omitted from the resulting object.
+  - `docker_bridge_cidr` (`string`):  When `null`, the `docker_bridge_cidr` field will be omitted from the resulting object.
+  - `ebpf_data_plane` (`string`):  When `null`, the `ebpf_data_plane` field will be omitted from the resulting object.
+  - `ip_versions` (`list`):  When `null`, the `ip_versions` field will be omitted from the resulting object.
+  - `load_balancer_sku` (`string`):  When `null`, the `load_balancer_sku` field will be omitted from the resulting object.
+  - `network_mode` (`string`):  When `null`, the `network_mode` field will be omitted from the resulting object.
+  - `network_plugin` (`string`): 
+  - `network_plugin_mode` (`string`):  When `null`, the `network_plugin_mode` field will be omitted from the resulting object.
+  - `network_policy` (`string`):  When `null`, the `network_policy` field will be omitted from the resulting object.
+  - `outbound_type` (`string`):  When `null`, the `outbound_type` field will be omitted from the resulting object.
+  - `pod_cidr` (`string`):  When `null`, the `pod_cidr` field will be omitted from the resulting object.
+  - `pod_cidrs` (`list`):  When `null`, the `pod_cidrs` field will be omitted from the resulting object.
+  - `service_cidr` (`string`):  When `null`, the `service_cidr` field will be omitted from the resulting object.
+  - `service_cidrs` (`list`):  When `null`, the `service_cidrs` field will be omitted from the resulting object.
+  - `load_balancer_profile` (`list[obj]`):  When `null`, the `load_balancer_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.load_balancer_profile.new](#fn-network_profileload_balancer_profilenew) constructor.
+  - `nat_gateway_profile` (`list[obj]`):  When `null`, the `nat_gateway_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.nat_gateway_profile.new](#fn-network_profilenat_gateway_profilenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_profile` sub block.
@@ -2153,12 +2153,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `idle_timeout_in_minutes` (`number`): Set the `idle_timeout_in_minutes` field on the resulting object. When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
-  - `managed_outbound_ip_count` (`number`): Set the `managed_outbound_ip_count` field on the resulting object. When `null`, the `managed_outbound_ip_count` field will be omitted from the resulting object.
-  - `managed_outbound_ipv6_count` (`number`): Set the `managed_outbound_ipv6_count` field on the resulting object. When `null`, the `managed_outbound_ipv6_count` field will be omitted from the resulting object.
-  - `outbound_ip_address_ids` (`list`): Set the `outbound_ip_address_ids` field on the resulting object. When `null`, the `outbound_ip_address_ids` field will be omitted from the resulting object.
-  - `outbound_ip_prefix_ids` (`list`): Set the `outbound_ip_prefix_ids` field on the resulting object. When `null`, the `outbound_ip_prefix_ids` field will be omitted from the resulting object.
-  - `outbound_ports_allocated` (`number`): Set the `outbound_ports_allocated` field on the resulting object. When `null`, the `outbound_ports_allocated` field will be omitted from the resulting object.
+  - `idle_timeout_in_minutes` (`number`):  When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
+  - `managed_outbound_ip_count` (`number`):  When `null`, the `managed_outbound_ip_count` field will be omitted from the resulting object.
+  - `managed_outbound_ipv6_count` (`number`):  When `null`, the `managed_outbound_ipv6_count` field will be omitted from the resulting object.
+  - `outbound_ip_address_ids` (`list`):  When `null`, the `outbound_ip_address_ids` field will be omitted from the resulting object.
+  - `outbound_ip_prefix_ids` (`list`):  When `null`, the `outbound_ip_prefix_ids` field will be omitted from the resulting object.
+  - `outbound_ports_allocated` (`number`):  When `null`, the `outbound_ports_allocated` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `load_balancer_profile` sub block.
@@ -2181,8 +2181,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `idle_timeout_in_minutes` (`number`): Set the `idle_timeout_in_minutes` field on the resulting object. When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
-  - `managed_outbound_ip_count` (`number`): Set the `managed_outbound_ip_count` field on the resulting object. When `null`, the `managed_outbound_ip_count` field will be omitted from the resulting object.
+  - `idle_timeout_in_minutes` (`number`):  When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
+  - `managed_outbound_ip_count` (`number`):  When `null`, the `managed_outbound_ip_count` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `nat_gateway_profile` sub block.
@@ -2205,7 +2205,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `log_analytics_workspace_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `oms_agent` sub block.
@@ -2228,8 +2228,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `client_id` (`string`): Set the `client_id` field on the resulting object.
-  - `client_secret` (`string`): Set the `client_secret` field on the resulting object.
+  - `client_id` (`string`): 
+  - `client_secret` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `service_principal` sub block.
@@ -2252,11 +2252,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `blob_driver_enabled` (`bool`): Set the `blob_driver_enabled` field on the resulting object. When `null`, the `blob_driver_enabled` field will be omitted from the resulting object.
-  - `disk_driver_enabled` (`bool`): Set the `disk_driver_enabled` field on the resulting object. When `null`, the `disk_driver_enabled` field will be omitted from the resulting object.
-  - `disk_driver_version` (`string`): Set the `disk_driver_version` field on the resulting object. When `null`, the `disk_driver_version` field will be omitted from the resulting object.
-  - `file_driver_enabled` (`bool`): Set the `file_driver_enabled` field on the resulting object. When `null`, the `file_driver_enabled` field will be omitted from the resulting object.
-  - `snapshot_controller_enabled` (`bool`): Set the `snapshot_controller_enabled` field on the resulting object. When `null`, the `snapshot_controller_enabled` field will be omitted from the resulting object.
+  - `blob_driver_enabled` (`bool`):  When `null`, the `blob_driver_enabled` field will be omitted from the resulting object.
+  - `disk_driver_enabled` (`bool`):  When `null`, the `disk_driver_enabled` field will be omitted from the resulting object.
+  - `disk_driver_version` (`string`):  When `null`, the `disk_driver_version` field will be omitted from the resulting object.
+  - `file_driver_enabled` (`bool`):  When `null`, the `file_driver_enabled` field will be omitted from the resulting object.
+  - `snapshot_controller_enabled` (`bool`):  When `null`, the `snapshot_controller_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_profile` sub block.
@@ -2279,10 +2279,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
@@ -2305,7 +2305,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `dns_zone_id` (`string`): Set the `dns_zone_id` field on the resulting object.
+  - `dns_zone_id` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `web_app_routing` sub block.
@@ -2328,10 +2328,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_password` (`string`): Set the `admin_password` field on the resulting object. When `null`, the `admin_password` field will be omitted from the resulting object.
-  - `admin_username` (`string`): Set the `admin_username` field on the resulting object.
-  - `license` (`string`): Set the `license` field on the resulting object. When `null`, the `license` field will be omitted from the resulting object.
-  - `gmsa` (`list[obj]`): Set the `gmsa` field on the resulting object. When `null`, the `gmsa` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.gmsa.new](#fn-windows_profilegmsanew) constructor.
+  - `admin_password` (`string`):  When `null`, the `admin_password` field will be omitted from the resulting object.
+  - `admin_username` (`string`): 
+  - `license` (`string`):  When `null`, the `license` field will be omitted from the resulting object.
+  - `gmsa` (`list[obj]`):  When `null`, the `gmsa` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.windows_profile.gmsa.new](#fn-windows_profilegmsanew) constructor.
 
 **Returns**:
   - An attribute object that represents the `windows_profile` sub block.
@@ -2354,8 +2354,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `dns_server` (`string`): Set the `dns_server` field on the resulting object.
-  - `root_domain` (`string`): Set the `root_domain` field on the resulting object.
+  - `dns_server` (`string`): 
+  - `root_domain` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `gmsa` sub block.
@@ -2378,7 +2378,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `keda_enabled` (`bool`): Set the `keda_enabled` field on the resulting object. When `null`, the `keda_enabled` field will be omitted from the resulting object.
+  - `keda_enabled` (`bool`):  When `null`, the `keda_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `workload_autoscaler_profile` sub block.

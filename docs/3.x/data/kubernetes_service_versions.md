@@ -52,10 +52,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `include_preview` (`bool`): Set the `include_preview` field on the resulting data source block. When `null`, the `include_preview` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting data source block.
-  - `version_prefix` (`string`): Set the `version_prefix` field on the resulting data source block. When `null`, the `version_prefix` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.kubernetes_service_versions.timeouts.new](#fn-timeoutsnew) constructor.
+  - `include_preview` (`bool`):  When `null`, the `include_preview` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `version_prefix` (`string`):  When `null`, the `version_prefix` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.kubernetes_service_versions.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -79,10 +79,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `include_preview` (`bool`): Set the `include_preview` field on the resulting object. When `null`, the `include_preview` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `version_prefix` (`string`): Set the `version_prefix` field on the resulting object. When `null`, the `version_prefix` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.kubernetes_service_versions.timeouts.new](#fn-timeoutsnew) constructor.
+  - `include_preview` (`bool`):  When `null`, the `include_preview` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `version_prefix` (`string`):  When `null`, the `version_prefix` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.kubernetes_service_versions.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `kubernetes_service_versions` data source into the root Terraform configuration.
@@ -189,7 +189,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

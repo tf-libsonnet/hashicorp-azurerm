@@ -114,31 +114,31 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `availability_set_id` (`string`): Set the `availability_set_id` field on the resulting resource block. When `null`, the `availability_set_id` field will be omitted from the resulting object.
-  - `delete_data_disks_on_termination` (`bool`): Set the `delete_data_disks_on_termination` field on the resulting resource block. When `null`, the `delete_data_disks_on_termination` field will be omitted from the resulting object.
-  - `delete_os_disk_on_termination` (`bool`): Set the `delete_os_disk_on_termination` field on the resulting resource block. When `null`, the `delete_os_disk_on_termination` field will be omitted from the resulting object.
-  - `license_type` (`string`): Set the `license_type` field on the resulting resource block. When `null`, the `license_type` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `network_interface_ids` (`list`): Set the `network_interface_ids` field on the resulting resource block.
-  - `primary_network_interface_id` (`string`): Set the `primary_network_interface_id` field on the resulting resource block. When `null`, the `primary_network_interface_id` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting resource block. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `vm_size` (`string`): Set the `vm_size` field on the resulting resource block.
-  - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_capabilities` (`list[obj]`): Set the `additional_capabilities` field on the resulting resource block. When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
-  - `boot_diagnostics` (`list[obj]`): Set the `boot_diagnostics` field on the resulting resource block. When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-identitynew) constructor.
-  - `os_profile` (`list[obj]`): Set the `os_profile` field on the resulting resource block. When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-os_profilenew) constructor.
-  - `os_profile_linux_config` (`list[obj]`): Set the `os_profile_linux_config` field on the resulting resource block. When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-os_profile_linux_confignew) constructor.
-  - `os_profile_secrets` (`list[obj]`): Set the `os_profile_secrets` field on the resulting resource block. When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-os_profile_secretsnew) constructor.
-  - `os_profile_windows_config` (`list[obj]`): Set the `os_profile_windows_config` field on the resulting resource block. When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-os_profile_windows_confignew) constructor.
-  - `plan` (`list[obj]`): Set the `plan` field on the resulting resource block. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-plannew) constructor.
-  - `storage_data_disk` (`list[obj]`): Set the `storage_data_disk` field on the resulting resource block. When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-storage_data_disknew) constructor.
-  - `storage_image_reference` (`list[obj]`): Set the `storage_image_reference` field on the resulting resource block. When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-storage_image_referencenew) constructor.
-  - `storage_os_disk` (`list[obj]`): Set the `storage_os_disk` field on the resulting resource block. When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-storage_os_disknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `availability_set_id` (`string`):  When `null`, the `availability_set_id` field will be omitted from the resulting object.
+  - `delete_data_disks_on_termination` (`bool`):  When `null`, the `delete_data_disks_on_termination` field will be omitted from the resulting object.
+  - `delete_os_disk_on_termination` (`bool`):  When `null`, the `delete_os_disk_on_termination` field will be omitted from the resulting object.
+  - `license_type` (`string`):  When `null`, the `license_type` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `network_interface_ids` (`list`): 
+  - `primary_network_interface_id` (`string`):  When `null`, the `primary_network_interface_id` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `vm_size` (`string`): 
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
+  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-identitynew) constructor.
+  - `os_profile` (`list[obj]`):  When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-os_profilenew) constructor.
+  - `os_profile_linux_config` (`list[obj]`):  When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-os_profile_linux_confignew) constructor.
+  - `os_profile_secrets` (`list[obj]`):  When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-os_profile_secretsnew) constructor.
+  - `os_profile_windows_config` (`list[obj]`):  When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-os_profile_windows_confignew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-plannew) constructor.
+  - `storage_data_disk` (`list[obj]`):  When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-storage_data_disknew) constructor.
+  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-storage_image_referencenew) constructor.
+  - `storage_os_disk` (`list[obj]`):  When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-storage_os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -162,31 +162,31 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `availability_set_id` (`string`): Set the `availability_set_id` field on the resulting object. When `null`, the `availability_set_id` field will be omitted from the resulting object.
-  - `delete_data_disks_on_termination` (`bool`): Set the `delete_data_disks_on_termination` field on the resulting object. When `null`, the `delete_data_disks_on_termination` field will be omitted from the resulting object.
-  - `delete_os_disk_on_termination` (`bool`): Set the `delete_os_disk_on_termination` field on the resulting object. When `null`, the `delete_os_disk_on_termination` field will be omitted from the resulting object.
-  - `license_type` (`string`): Set the `license_type` field on the resulting object. When `null`, the `license_type` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `network_interface_ids` (`list`): Set the `network_interface_ids` field on the resulting object.
-  - `primary_network_interface_id` (`string`): Set the `primary_network_interface_id` field on the resulting object. When `null`, the `primary_network_interface_id` field will be omitted from the resulting object.
-  - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
-  - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
-  - `additional_capabilities` (`list[obj]`): Set the `additional_capabilities` field on the resulting object. When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
-  - `boot_diagnostics` (`list[obj]`): Set the `boot_diagnostics` field on the resulting object. When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-identitynew) constructor.
-  - `os_profile` (`list[obj]`): Set the `os_profile` field on the resulting object. When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-os_profilenew) constructor.
-  - `os_profile_linux_config` (`list[obj]`): Set the `os_profile_linux_config` field on the resulting object. When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-os_profile_linux_confignew) constructor.
-  - `os_profile_secrets` (`list[obj]`): Set the `os_profile_secrets` field on the resulting object. When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-os_profile_secretsnew) constructor.
-  - `os_profile_windows_config` (`list[obj]`): Set the `os_profile_windows_config` field on the resulting object. When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-os_profile_windows_confignew) constructor.
-  - `plan` (`list[obj]`): Set the `plan` field on the resulting object. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-plannew) constructor.
-  - `storage_data_disk` (`list[obj]`): Set the `storage_data_disk` field on the resulting object. When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-storage_data_disknew) constructor.
-  - `storage_image_reference` (`list[obj]`): Set the `storage_image_reference` field on the resulting object. When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-storage_image_referencenew) constructor.
-  - `storage_os_disk` (`list[obj]`): Set the `storage_os_disk` field on the resulting object. When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-storage_os_disknew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `availability_set_id` (`string`):  When `null`, the `availability_set_id` field will be omitted from the resulting object.
+  - `delete_data_disks_on_termination` (`bool`):  When `null`, the `delete_data_disks_on_termination` field will be omitted from the resulting object.
+  - `delete_os_disk_on_termination` (`bool`):  When `null`, the `delete_os_disk_on_termination` field will be omitted from the resulting object.
+  - `license_type` (`string`):  When `null`, the `license_type` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `network_interface_ids` (`list`): 
+  - `primary_network_interface_id` (`string`):  When `null`, the `primary_network_interface_id` field will be omitted from the resulting object.
+  - `proximity_placement_group_id` (`string`):  When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `vm_size` (`string`): 
+  - `zones` (`list`):  When `null`, the `zones` field will be omitted from the resulting object.
+  - `additional_capabilities` (`list[obj]`):  When `null`, the `additional_capabilities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.additional_capabilities.new](#fn-additional_capabilitiesnew) constructor.
+  - `boot_diagnostics` (`list[obj]`):  When `null`, the `boot_diagnostics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.boot_diagnostics.new](#fn-boot_diagnosticsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.identity.new](#fn-identitynew) constructor.
+  - `os_profile` (`list[obj]`):  When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile.new](#fn-os_profilenew) constructor.
+  - `os_profile_linux_config` (`list[obj]`):  When `null`, the `os_profile_linux_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.new](#fn-os_profile_linux_confignew) constructor.
+  - `os_profile_secrets` (`list[obj]`):  When `null`, the `os_profile_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.new](#fn-os_profile_secretsnew) constructor.
+  - `os_profile_windows_config` (`list[obj]`):  When `null`, the `os_profile_windows_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.new](#fn-os_profile_windows_confignew) constructor.
+  - `plan` (`list[obj]`):  When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.plan.new](#fn-plannew) constructor.
+  - `storage_data_disk` (`list[obj]`):  When `null`, the `storage_data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_data_disk.new](#fn-storage_data_disknew) constructor.
+  - `storage_image_reference` (`list[obj]`):  When `null`, the `storage_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_image_reference.new](#fn-storage_image_referencenew) constructor.
+  - `storage_os_disk` (`list[obj]`):  When `null`, the `storage_os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.storage_os_disk.new](#fn-storage_os_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_machine` resource into the root Terraform configuration.
@@ -860,7 +860,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting object.
+  - `ultra_ssd_enabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `additional_capabilities` sub block.
@@ -883,8 +883,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
-  - `storage_uri` (`string`): Set the `storage_uri` field on the resulting object.
+  - `enabled` (`bool`): 
+  - `storage_uri` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `boot_diagnostics` sub block.
@@ -907,8 +907,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `identity_ids` (`list`):  When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -931,10 +931,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `admin_password` (`string`): Set the `admin_password` field on the resulting object. When `null`, the `admin_password` field will be omitted from the resulting object.
-  - `admin_username` (`string`): Set the `admin_username` field on the resulting object.
-  - `computer_name` (`string`): Set the `computer_name` field on the resulting object.
-  - `custom_data` (`string`): Set the `custom_data` field on the resulting object. When `null`, the `custom_data` field will be omitted from the resulting object.
+  - `admin_password` (`string`):  When `null`, the `admin_password` field will be omitted from the resulting object.
+  - `admin_username` (`string`): 
+  - `computer_name` (`string`): 
+  - `custom_data` (`string`):  When `null`, the `custom_data` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `os_profile` sub block.
@@ -957,8 +957,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `disable_password_authentication` (`bool`): Set the `disable_password_authentication` field on the resulting object.
-  - `ssh_keys` (`list[obj]`): Set the `ssh_keys` field on the resulting object. When `null`, the `ssh_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.ssh_keys.new](#fn-os_profile_linux_configssh_keysnew) constructor.
+  - `disable_password_authentication` (`bool`): 
+  - `ssh_keys` (`list[obj]`):  When `null`, the `ssh_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_linux_config.ssh_keys.new](#fn-os_profile_linux_configssh_keysnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_linux_config` sub block.
@@ -981,8 +981,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `key_data` (`string`): Set the `key_data` field on the resulting object.
-  - `path` (`string`): Set the `path` field on the resulting object.
+  - `key_data` (`string`): 
+  - `path` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `ssh_keys` sub block.
@@ -1005,8 +1005,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `source_vault_id` (`string`): Set the `source_vault_id` field on the resulting object.
-  - `vault_certificates` (`list[obj]`): Set the `vault_certificates` field on the resulting object. When `null`, the `vault_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.vault_certificates.new](#fn-os_profile_secretsvault_certificatesnew) constructor.
+  - `source_vault_id` (`string`): 
+  - `vault_certificates` (`list[obj]`):  When `null`, the `vault_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_secrets.vault_certificates.new](#fn-os_profile_secretsvault_certificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_secrets` sub block.
@@ -1029,8 +1029,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate_store` (`string`): Set the `certificate_store` field on the resulting object. When `null`, the `certificate_store` field will be omitted from the resulting object.
-  - `certificate_url` (`string`): Set the `certificate_url` field on the resulting object.
+  - `certificate_store` (`string`):  When `null`, the `certificate_store` field will be omitted from the resulting object.
+  - `certificate_url` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `vault_certificates` sub block.
@@ -1053,11 +1053,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable_automatic_upgrades` (`bool`): Set the `enable_automatic_upgrades` field on the resulting object. When `null`, the `enable_automatic_upgrades` field will be omitted from the resulting object.
-  - `provision_vm_agent` (`bool`): Set the `provision_vm_agent` field on the resulting object. When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
-  - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
-  - `additional_unattend_config` (`list[obj]`): Set the `additional_unattend_config` field on the resulting object. When `null`, the `additional_unattend_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.additional_unattend_config.new](#fn-os_profile_windows_configadditional_unattend_confignew) constructor.
-  - `winrm` (`list[obj]`): Set the `winrm` field on the resulting object. When `null`, the `winrm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.winrm.new](#fn-os_profile_windows_configwinrmnew) constructor.
+  - `enable_automatic_upgrades` (`bool`):  When `null`, the `enable_automatic_upgrades` field will be omitted from the resulting object.
+  - `provision_vm_agent` (`bool`):  When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
+  - `timezone` (`string`):  When `null`, the `timezone` field will be omitted from the resulting object.
+  - `additional_unattend_config` (`list[obj]`):  When `null`, the `additional_unattend_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.additional_unattend_config.new](#fn-os_profile_windows_configadditional_unattend_confignew) constructor.
+  - `winrm` (`list[obj]`):  When `null`, the `winrm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_machine.os_profile_windows_config.winrm.new](#fn-os_profile_windows_configwinrmnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_profile_windows_config` sub block.
@@ -1080,10 +1080,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `component` (`string`): Set the `component` field on the resulting object.
-  - `content` (`string`): Set the `content` field on the resulting object.
-  - `pass` (`string`): Set the `pass` field on the resulting object.
-  - `setting_name` (`string`): Set the `setting_name` field on the resulting object.
+  - `component` (`string`): 
+  - `content` (`string`): 
+  - `pass` (`string`): 
+  - `setting_name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `additional_unattend_config` sub block.
@@ -1106,8 +1106,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate_url` (`string`): Set the `certificate_url` field on the resulting object. When `null`, the `certificate_url` field will be omitted from the resulting object.
-  - `protocol` (`string`): Set the `protocol` field on the resulting object.
+  - `certificate_url` (`string`):  When `null`, the `certificate_url` field will be omitted from the resulting object.
+  - `protocol` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `winrm` sub block.
@@ -1130,9 +1130,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `product` (`string`): Set the `product` field on the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object.
+  - `name` (`string`): 
+  - `product` (`string`): 
+  - `publisher` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `plan` sub block.
@@ -1155,15 +1155,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.
-  - `create_option` (`string`): Set the `create_option` field on the resulting object.
-  - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting object. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
-  - `lun` (`number`): Set the `lun` field on the resulting object.
-  - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.
-  - `managed_disk_type` (`string`): Set the `managed_disk_type` field on the resulting object. When `null`, the `managed_disk_type` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `vhd_uri` (`string`): Set the `vhd_uri` field on the resulting object. When `null`, the `vhd_uri` field will be omitted from the resulting object.
-  - `write_accelerator_enabled` (`bool`): Set the `write_accelerator_enabled` field on the resulting object. When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
+  - `caching` (`string`):  When `null`, the `caching` field will be omitted from the resulting object.
+  - `create_option` (`string`): 
+  - `disk_size_gb` (`number`):  When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `lun` (`number`): 
+  - `managed_disk_id` (`string`):  When `null`, the `managed_disk_id` field will be omitted from the resulting object.
+  - `managed_disk_type` (`string`):  When `null`, the `managed_disk_type` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `vhd_uri` (`string`):  When `null`, the `vhd_uri` field will be omitted from the resulting object.
+  - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_data_disk` sub block.
@@ -1186,10 +1186,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `offer` (`string`): Set the `offer` field on the resulting object. When `null`, the `offer` field will be omitted from the resulting object.
-  - `publisher` (`string`): Set the `publisher` field on the resulting object. When `null`, the `publisher` field will be omitted from the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
+  - `offer` (`string`):  When `null`, the `offer` field will be omitted from the resulting object.
+  - `publisher` (`string`):  When `null`, the `publisher` field will be omitted from the resulting object.
+  - `sku` (`string`):  When `null`, the `sku` field will be omitted from the resulting object.
+  - `version` (`string`):  When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_image_reference` sub block.
@@ -1212,16 +1212,16 @@ Terraform sub block.
 
 
 **Args**:
-  - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.
-  - `create_option` (`string`): Set the `create_option` field on the resulting object.
-  - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting object. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
-  - `image_uri` (`string`): Set the `image_uri` field on the resulting object. When `null`, the `image_uri` field will be omitted from the resulting object.
-  - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.
-  - `managed_disk_type` (`string`): Set the `managed_disk_type` field on the resulting object. When `null`, the `managed_disk_type` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
-  - `vhd_uri` (`string`): Set the `vhd_uri` field on the resulting object. When `null`, the `vhd_uri` field will be omitted from the resulting object.
-  - `write_accelerator_enabled` (`bool`): Set the `write_accelerator_enabled` field on the resulting object. When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
+  - `caching` (`string`):  When `null`, the `caching` field will be omitted from the resulting object.
+  - `create_option` (`string`): 
+  - `disk_size_gb` (`number`):  When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `image_uri` (`string`):  When `null`, the `image_uri` field will be omitted from the resulting object.
+  - `managed_disk_id` (`string`):  When `null`, the `managed_disk_id` field will be omitted from the resulting object.
+  - `managed_disk_type` (`string`):  When `null`, the `managed_disk_type` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_type` (`string`):  When `null`, the `os_type` field will be omitted from the resulting object.
+  - `vhd_uri` (`string`):  When `null`, the `vhd_uri` field will be omitted from the resulting object.
+  - `write_accelerator_enabled` (`bool`):  When `null`, the `write_accelerator_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `storage_os_disk` sub block.
@@ -1244,10 +1244,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

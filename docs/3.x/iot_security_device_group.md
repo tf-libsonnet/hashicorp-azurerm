@@ -59,11 +59,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `iothub_id` (`string`): Set the `iothub_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `allow_rule` (`list[obj]`): Set the `allow_rule` field on the resulting resource block. When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-allow_rulenew) constructor.
-  - `range_rule` (`list[obj]`): Set the `range_rule` field on the resulting resource block. When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-range_rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `iothub_id` (`string`): 
+  - `name` (`string`): 
+  - `allow_rule` (`list[obj]`):  When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-allow_rulenew) constructor.
+  - `range_rule` (`list[obj]`):  When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-range_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,11 +87,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `iothub_id` (`string`): Set the `iothub_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `allow_rule` (`list[obj]`): Set the `allow_rule` field on the resulting object. When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-allow_rulenew) constructor.
-  - `range_rule` (`list[obj]`): Set the `range_rule` field on the resulting object. When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-range_rulenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `iothub_id` (`string`): 
+  - `name` (`string`): 
+  - `allow_rule` (`list[obj]`):  When `null`, the `allow_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.allow_rule.new](#fn-allow_rulenew) constructor.
+  - `range_rule` (`list[obj]`):  When `null`, the `range_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.range_rule.new](#fn-range_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.iot_security_device_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iot_security_device_group` resource into the root Terraform configuration.
@@ -256,10 +256,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_from_ips_not_allowed` (`list`): Set the `connection_from_ips_not_allowed` field on the resulting object. When `null`, the `connection_from_ips_not_allowed` field will be omitted from the resulting object.
-  - `connection_to_ips_not_allowed` (`list`): Set the `connection_to_ips_not_allowed` field on the resulting object. When `null`, the `connection_to_ips_not_allowed` field will be omitted from the resulting object.
-  - `local_users_not_allowed` (`list`): Set the `local_users_not_allowed` field on the resulting object. When `null`, the `local_users_not_allowed` field will be omitted from the resulting object.
-  - `processes_not_allowed` (`list`): Set the `processes_not_allowed` field on the resulting object. When `null`, the `processes_not_allowed` field will be omitted from the resulting object.
+  - `connection_from_ips_not_allowed` (`list`):  When `null`, the `connection_from_ips_not_allowed` field will be omitted from the resulting object.
+  - `connection_to_ips_not_allowed` (`list`):  When `null`, the `connection_to_ips_not_allowed` field will be omitted from the resulting object.
+  - `local_users_not_allowed` (`list`):  When `null`, the `local_users_not_allowed` field will be omitted from the resulting object.
+  - `processes_not_allowed` (`list`):  When `null`, the `processes_not_allowed` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `allow_rule` sub block.
@@ -282,10 +282,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `duration` (`string`): Set the `duration` field on the resulting object.
-  - `max` (`number`): Set the `max` field on the resulting object.
-  - `min` (`number`): Set the `min` field on the resulting object.
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `duration` (`string`): 
+  - `max` (`number`): 
+  - `min` (`number`): 
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `range_rule` sub block.
@@ -308,10 +308,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

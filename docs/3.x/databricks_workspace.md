@@ -65,20 +65,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `customer_managed_key_enabled` (`bool`): Set the `customer_managed_key_enabled` field on the resulting resource block. When `null`, the `customer_managed_key_enabled` field will be omitted from the resulting object.
-  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting resource block. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
-  - `load_balancer_backend_address_pool_id` (`string`): Set the `load_balancer_backend_address_pool_id` field on the resulting resource block. When `null`, the `load_balancer_backend_address_pool_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `managed_resource_group_name` (`string`): Set the `managed_resource_group_name` field on the resulting resource block. When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
-  - `managed_services_cmk_key_vault_key_id` (`string`): Set the `managed_services_cmk_key_vault_key_id` field on the resulting resource block. When `null`, the `managed_services_cmk_key_vault_key_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `network_security_group_rules_required` (`string`): Set the `network_security_group_rules_required` field on the resulting resource block. When `null`, the `network_security_group_rules_required` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `sku` (`string`): Set the `sku` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_parameters` (`list[obj]`): Set the `custom_parameters` field on the resulting resource block. When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-custom_parametersnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `customer_managed_key_enabled` (`bool`):  When `null`, the `customer_managed_key_enabled` field will be omitted from the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`):  When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
+  - `load_balancer_backend_address_pool_id` (`string`):  When `null`, the `load_balancer_backend_address_pool_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `managed_resource_group_name` (`string`):  When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
+  - `managed_services_cmk_key_vault_key_id` (`string`):  When `null`, the `managed_services_cmk_key_vault_key_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_security_group_rules_required` (`string`):  When `null`, the `network_security_group_rules_required` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `custom_parameters` (`list[obj]`):  When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-custom_parametersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,20 +102,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `customer_managed_key_enabled` (`bool`): Set the `customer_managed_key_enabled` field on the resulting object. When `null`, the `customer_managed_key_enabled` field will be omitted from the resulting object.
-  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting object. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
-  - `load_balancer_backend_address_pool_id` (`string`): Set the `load_balancer_backend_address_pool_id` field on the resulting object. When `null`, the `load_balancer_backend_address_pool_id` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `managed_resource_group_name` (`string`): Set the `managed_resource_group_name` field on the resulting object. When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
-  - `managed_services_cmk_key_vault_key_id` (`string`): Set the `managed_services_cmk_key_vault_key_id` field on the resulting object. When `null`, the `managed_services_cmk_key_vault_key_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `network_security_group_rules_required` (`string`): Set the `network_security_group_rules_required` field on the resulting object. When `null`, the `network_security_group_rules_required` field will be omitted from the resulting object.
-  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `sku` (`string`): Set the `sku` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `custom_parameters` (`list[obj]`): Set the `custom_parameters` field on the resulting object. When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-custom_parametersnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-timeoutsnew) constructor.
+  - `customer_managed_key_enabled` (`bool`):  When `null`, the `customer_managed_key_enabled` field will be omitted from the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`):  When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
+  - `load_balancer_backend_address_pool_id` (`string`):  When `null`, the `load_balancer_backend_address_pool_id` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `managed_resource_group_name` (`string`):  When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
+  - `managed_services_cmk_key_vault_key_id` (`string`):  When `null`, the `managed_services_cmk_key_vault_key_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `network_security_group_rules_required` (`string`):  When `null`, the `network_security_group_rules_required` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`):  When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `sku` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `custom_parameters` (`list[obj]`):  When `null`, the `custom_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.custom_parameters.new](#fn-custom_parametersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_workspace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `databricks_workspace` resource into the root Terraform configuration.
@@ -403,18 +403,18 @@ Terraform sub block.
 
 
 **Args**:
-  - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting object. When `null`, the `machine_learning_workspace_id` field will be omitted from the resulting object.
-  - `nat_gateway_name` (`string`): Set the `nat_gateway_name` field on the resulting object. When `null`, the `nat_gateway_name` field will be omitted from the resulting object.
-  - `no_public_ip` (`bool`): Set the `no_public_ip` field on the resulting object. When `null`, the `no_public_ip` field will be omitted from the resulting object.
-  - `private_subnet_name` (`string`): Set the `private_subnet_name` field on the resulting object. When `null`, the `private_subnet_name` field will be omitted from the resulting object.
-  - `private_subnet_network_security_group_association_id` (`string`): Set the `private_subnet_network_security_group_association_id` field on the resulting object. When `null`, the `private_subnet_network_security_group_association_id` field will be omitted from the resulting object.
-  - `public_ip_name` (`string`): Set the `public_ip_name` field on the resulting object. When `null`, the `public_ip_name` field will be omitted from the resulting object.
-  - `public_subnet_name` (`string`): Set the `public_subnet_name` field on the resulting object. When `null`, the `public_subnet_name` field will be omitted from the resulting object.
-  - `public_subnet_network_security_group_association_id` (`string`): Set the `public_subnet_network_security_group_association_id` field on the resulting object. When `null`, the `public_subnet_network_security_group_association_id` field will be omitted from the resulting object.
-  - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting object. When `null`, the `storage_account_name` field will be omitted from the resulting object.
-  - `storage_account_sku_name` (`string`): Set the `storage_account_sku_name` field on the resulting object. When `null`, the `storage_account_sku_name` field will be omitted from the resulting object.
-  - `virtual_network_id` (`string`): Set the `virtual_network_id` field on the resulting object. When `null`, the `virtual_network_id` field will be omitted from the resulting object.
-  - `vnet_address_prefix` (`string`): Set the `vnet_address_prefix` field on the resulting object. When `null`, the `vnet_address_prefix` field will be omitted from the resulting object.
+  - `machine_learning_workspace_id` (`string`):  When `null`, the `machine_learning_workspace_id` field will be omitted from the resulting object.
+  - `nat_gateway_name` (`string`):  When `null`, the `nat_gateway_name` field will be omitted from the resulting object.
+  - `no_public_ip` (`bool`):  When `null`, the `no_public_ip` field will be omitted from the resulting object.
+  - `private_subnet_name` (`string`):  When `null`, the `private_subnet_name` field will be omitted from the resulting object.
+  - `private_subnet_network_security_group_association_id` (`string`):  When `null`, the `private_subnet_network_security_group_association_id` field will be omitted from the resulting object.
+  - `public_ip_name` (`string`):  When `null`, the `public_ip_name` field will be omitted from the resulting object.
+  - `public_subnet_name` (`string`):  When `null`, the `public_subnet_name` field will be omitted from the resulting object.
+  - `public_subnet_network_security_group_association_id` (`string`):  When `null`, the `public_subnet_network_security_group_association_id` field will be omitted from the resulting object.
+  - `storage_account_name` (`string`):  When `null`, the `storage_account_name` field will be omitted from the resulting object.
+  - `storage_account_sku_name` (`string`):  When `null`, the `storage_account_sku_name` field will be omitted from the resulting object.
+  - `virtual_network_id` (`string`):  When `null`, the `virtual_network_id` field will be omitted from the resulting object.
+  - `vnet_address_prefix` (`string`):  When `null`, the `vnet_address_prefix` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `custom_parameters` sub block.
@@ -437,10 +437,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

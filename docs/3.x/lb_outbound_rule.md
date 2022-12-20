@@ -60,15 +60,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `allocated_outbound_ports` (`number`): Set the `allocated_outbound_ports` field on the resulting resource block. When `null`, the `allocated_outbound_ports` field will be omitted from the resulting object.
-  - `backend_address_pool_id` (`string`): Set the `backend_address_pool_id` field on the resulting resource block.
-  - `enable_tcp_reset` (`bool`): Set the `enable_tcp_reset` field on the resulting resource block. When `null`, the `enable_tcp_reset` field will be omitted from the resulting object.
-  - `idle_timeout_in_minutes` (`number`): Set the `idle_timeout_in_minutes` field on the resulting resource block. When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
-  - `loadbalancer_id` (`string`): Set the `loadbalancer_id` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `protocol` (`string`): Set the `protocol` field on the resulting resource block.
-  - `frontend_ip_configuration` (`list[obj]`): Set the `frontend_ip_configuration` field on the resulting resource block. When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.frontend_ip_configuration.new](#fn-frontend_ip_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allocated_outbound_ports` (`number`):  When `null`, the `allocated_outbound_ports` field will be omitted from the resulting object.
+  - `backend_address_pool_id` (`string`): 
+  - `enable_tcp_reset` (`bool`):  When `null`, the `enable_tcp_reset` field will be omitted from the resulting object.
+  - `idle_timeout_in_minutes` (`number`):  When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
+  - `loadbalancer_id` (`string`): 
+  - `name` (`string`): 
+  - `protocol` (`string`): 
+  - `frontend_ip_configuration` (`list[obj]`):  When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.frontend_ip_configuration.new](#fn-frontend_ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,15 +92,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `allocated_outbound_ports` (`number`): Set the `allocated_outbound_ports` field on the resulting object. When `null`, the `allocated_outbound_ports` field will be omitted from the resulting object.
-  - `backend_address_pool_id` (`string`): Set the `backend_address_pool_id` field on the resulting object.
-  - `enable_tcp_reset` (`bool`): Set the `enable_tcp_reset` field on the resulting object. When `null`, the `enable_tcp_reset` field will be omitted from the resulting object.
-  - `idle_timeout_in_minutes` (`number`): Set the `idle_timeout_in_minutes` field on the resulting object. When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
-  - `loadbalancer_id` (`string`): Set the `loadbalancer_id` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `protocol` (`string`): Set the `protocol` field on the resulting object.
-  - `frontend_ip_configuration` (`list[obj]`): Set the `frontend_ip_configuration` field on the resulting object. When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.frontend_ip_configuration.new](#fn-frontend_ip_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.timeouts.new](#fn-timeoutsnew) constructor.
+  - `allocated_outbound_ports` (`number`):  When `null`, the `allocated_outbound_ports` field will be omitted from the resulting object.
+  - `backend_address_pool_id` (`string`): 
+  - `enable_tcp_reset` (`bool`):  When `null`, the `enable_tcp_reset` field will be omitted from the resulting object.
+  - `idle_timeout_in_minutes` (`number`):  When `null`, the `idle_timeout_in_minutes` field will be omitted from the resulting object.
+  - `loadbalancer_id` (`string`): 
+  - `name` (`string`): 
+  - `protocol` (`string`): 
+  - `frontend_ip_configuration` (`list[obj]`):  When `null`, the `frontend_ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.frontend_ip_configuration.new](#fn-frontend_ip_configurationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_outbound_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `lb_outbound_rule` resource into the root Terraform configuration.
@@ -308,7 +308,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `name` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `frontend_ip_configuration` sub block.
@@ -331,10 +331,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -66,21 +66,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `blob_uri` (`string`): Set the `blob_uri` field on the resulting resource block. When `null`, the `blob_uri` field will be omitted from the resulting object.
-  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
-  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting resource block. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
-  - `gallery_name` (`string`): Set the `gallery_name` field on the resulting resource block.
-  - `image_name` (`string`): Set the `image_name` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `managed_image_id` (`string`): Set the `managed_image_id` field on the resulting resource block. When `null`, the `managed_image_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `os_disk_snapshot_id` (`string`): Set the `os_disk_snapshot_id` field on the resulting resource block. When `null`, the `os_disk_snapshot_id` field will be omitted from the resulting object.
-  - `replication_mode` (`string`): Set the `replication_mode` field on the resulting resource block. When `null`, the `replication_mode` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block. When `null`, the `storage_account_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting resource block. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-target_regionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `blob_uri` (`string`):  When `null`, the `blob_uri` field will be omitted from the resulting object.
+  - `end_of_life_date` (`string`):  When `null`, the `end_of_life_date` field will be omitted from the resulting object.
+  - `exclude_from_latest` (`bool`):  When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
+  - `gallery_name` (`string`): 
+  - `image_name` (`string`): 
+  - `location` (`string`): 
+  - `managed_image_id` (`string`):  When `null`, the `managed_image_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_disk_snapshot_id` (`string`):  When `null`, the `os_disk_snapshot_id` field will be omitted from the resulting object.
+  - `replication_mode` (`string`):  When `null`, the `replication_mode` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-target_regionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,21 +104,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.
-  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
-  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
-  - `gallery_name` (`string`): Set the `gallery_name` field on the resulting object.
-  - `image_name` (`string`): Set the `image_name` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `managed_image_id` (`string`): Set the `managed_image_id` field on the resulting object. When `null`, the `managed_image_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `os_disk_snapshot_id` (`string`): Set the `os_disk_snapshot_id` field on the resulting object. When `null`, the `os_disk_snapshot_id` field will be omitted from the resulting object.
-  - `replication_mode` (`string`): Set the `replication_mode` field on the resulting object. When `null`, the `replication_mode` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object. When `null`, the `storage_account_id` field will be omitted from the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting object. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-target_regionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `blob_uri` (`string`):  When `null`, the `blob_uri` field will be omitted from the resulting object.
+  - `end_of_life_date` (`string`):  When `null`, the `end_of_life_date` field will be omitted from the resulting object.
+  - `exclude_from_latest` (`bool`):  When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
+  - `gallery_name` (`string`): 
+  - `image_name` (`string`): 
+  - `location` (`string`): 
+  - `managed_image_id` (`string`):  When `null`, the `managed_image_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `os_disk_snapshot_id` (`string`):  When `null`, the `os_disk_snapshot_id` field will be omitted from the resulting object.
+  - `replication_mode` (`string`):  When `null`, the `replication_mode` field will be omitted from the resulting object.
+  - `resource_group_name` (`string`): 
+  - `storage_account_id` (`string`):  When `null`, the `storage_account_id` field will be omitted from the resulting object.
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `target_region` (`list[obj]`):  When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.target_region.new](#fn-target_regionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `shared_image_version` resource into the root Terraform configuration.
@@ -422,10 +422,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `regional_replica_count` (`number`): Set the `regional_replica_count` field on the resulting object.
-  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`):  When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `regional_replica_count` (`number`): 
+  - `storage_account_type` (`string`):  When `null`, the `storage_account_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `target_region` sub block.
@@ -448,10 +448,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

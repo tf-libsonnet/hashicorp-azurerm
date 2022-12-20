@@ -74,20 +74,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `access_policy_object_ids` (`list`): Set the `access_policy_object_ids` field on the resulting resource block. When `null`, the `access_policy_object_ids` field will be omitted from the resulting object.
-  - `configuration_export_storage_account_name` (`string`): Set the `configuration_export_storage_account_name` field on the resulting resource block. When `null`, the `configuration_export_storage_account_name` field will be omitted from the resulting object.
-  - `container_registry_login_server_url` (`list`): Set the `container_registry_login_server_url` field on the resulting resource block. When `null`, the `container_registry_login_server_url` field will be omitted from the resulting object.
-  - `kind` (`string`): Set the `kind` field on the resulting resource block. When `null`, the `kind` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting resource block.
-  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting resource block. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.authentication.new](#fn-authenticationnew) constructor.
-  - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.cors.new](#fn-corsnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.identity.new](#fn-identitynew) constructor.
-  - `oci_artifact` (`list[obj]`): Set the `oci_artifact` field on the resulting resource block. When `null`, the `oci_artifact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.oci_artifact.new](#fn-oci_artifactnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_policy_object_ids` (`list`):  When `null`, the `access_policy_object_ids` field will be omitted from the resulting object.
+  - `configuration_export_storage_account_name` (`string`):  When `null`, the `configuration_export_storage_account_name` field will be omitted from the resulting object.
+  - `container_registry_login_server_url` (`list`):  When `null`, the `container_registry_login_server_url` field will be omitted from the resulting object.
+  - `kind` (`string`):  When `null`, the `kind` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): 
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.authentication.new](#fn-authenticationnew) constructor.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.cors.new](#fn-corsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.identity.new](#fn-identitynew) constructor.
+  - `oci_artifact` (`list[obj]`):  When `null`, the `oci_artifact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.oci_artifact.new](#fn-oci_artifactnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -111,20 +111,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `access_policy_object_ids` (`list`): Set the `access_policy_object_ids` field on the resulting object. When `null`, the `access_policy_object_ids` field will be omitted from the resulting object.
-  - `configuration_export_storage_account_name` (`string`): Set the `configuration_export_storage_account_name` field on the resulting object. When `null`, the `configuration_export_storage_account_name` field will be omitted from the resulting object.
-  - `container_registry_login_server_url` (`list`): Set the `container_registry_login_server_url` field on the resulting object. When `null`, the `container_registry_login_server_url` field will be omitted from the resulting object.
-  - `kind` (`string`): Set the `kind` field on the resulting object. When `null`, the `kind` field will be omitted from the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object.
-  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.authentication.new](#fn-authenticationnew) constructor.
-  - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.cors.new](#fn-corsnew) constructor.
-  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.identity.new](#fn-identitynew) constructor.
-  - `oci_artifact` (`list[obj]`): Set the `oci_artifact` field on the resulting object. When `null`, the `oci_artifact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.oci_artifact.new](#fn-oci_artifactnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `access_policy_object_ids` (`list`):  When `null`, the `access_policy_object_ids` field will be omitted from the resulting object.
+  - `configuration_export_storage_account_name` (`string`):  When `null`, the `configuration_export_storage_account_name` field will be omitted from the resulting object.
+  - `container_registry_login_server_url` (`list`):  When `null`, the `container_registry_login_server_url` field will be omitted from the resulting object.
+  - `kind` (`string`):  When `null`, the `kind` field will be omitted from the resulting object.
+  - `location` (`string`): 
+  - `name` (`string`): 
+  - `resource_group_name` (`string`): 
+  - `tags` (`obj`):  When `null`, the `tags` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): 
+  - `authentication` (`list[obj]`):  When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.authentication.new](#fn-authenticationnew) constructor.
+  - `cors` (`list[obj]`):  When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.cors.new](#fn-corsnew) constructor.
+  - `identity` (`list[obj]`):  When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.identity.new](#fn-identitynew) constructor.
+  - `oci_artifact` (`list[obj]`):  When `null`, the `oci_artifact` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.oci_artifact.new](#fn-oci_artifactnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.healthcare_fhir_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `healthcare_fhir_service` resource into the root Terraform configuration.
@@ -475,9 +475,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `audience` (`string`): Set the `audience` field on the resulting object.
-  - `authority` (`string`): Set the `authority` field on the resulting object.
-  - `smart_proxy_enabled` (`bool`): Set the `smart_proxy_enabled` field on the resulting object. When `null`, the `smart_proxy_enabled` field will be omitted from the resulting object.
+  - `audience` (`string`): 
+  - `authority` (`string`): 
+  - `smart_proxy_enabled` (`bool`):  When `null`, the `smart_proxy_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
@@ -500,11 +500,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.
-  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.
-  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
-  - `credentials_allowed` (`bool`): Set the `credentials_allowed` field on the resulting object. When `null`, the `credentials_allowed` field will be omitted from the resulting object.
-  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object. When `null`, the `max_age_in_seconds` field will be omitted from the resulting object.
+  - `allowed_headers` (`list`): 
+  - `allowed_methods` (`list`): 
+  - `allowed_origins` (`list`): 
+  - `credentials_allowed` (`bool`):  When `null`, the `credentials_allowed` field will be omitted from the resulting object.
+  - `max_age_in_seconds` (`number`):  When `null`, the `max_age_in_seconds` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
@@ -527,7 +527,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): Set the `type` field on the resulting object.
+  - `type` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
@@ -550,9 +550,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `digest` (`string`): Set the `digest` field on the resulting object. When `null`, the `digest` field will be omitted from the resulting object.
-  - `image_name` (`string`): Set the `image_name` field on the resulting object. When `null`, the `image_name` field will be omitted from the resulting object.
-  - `login_server` (`string`): Set the `login_server` field on the resulting object.
+  - `digest` (`string`):  When `null`, the `digest` field will be omitted from the resulting object.
+  - `image_name` (`string`):  When `null`, the `image_name` field will be omitted from the resulting object.
+  - `login_server` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `oci_artifact` sub block.
@@ -575,10 +575,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

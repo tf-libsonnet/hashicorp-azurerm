@@ -66,21 +66,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `cdn_frontdoor_custom_domain_ids` (`list`): Set the `cdn_frontdoor_custom_domain_ids` field on the resulting resource block. When `null`, the `cdn_frontdoor_custom_domain_ids` field will be omitted from the resulting object.
-  - `cdn_frontdoor_endpoint_id` (`string`): Set the `cdn_frontdoor_endpoint_id` field on the resulting resource block.
-  - `cdn_frontdoor_origin_group_id` (`string`): Set the `cdn_frontdoor_origin_group_id` field on the resulting resource block.
-  - `cdn_frontdoor_origin_ids` (`list`): Set the `cdn_frontdoor_origin_ids` field on the resulting resource block.
-  - `cdn_frontdoor_origin_path` (`string`): Set the `cdn_frontdoor_origin_path` field on the resulting resource block. When `null`, the `cdn_frontdoor_origin_path` field will be omitted from the resulting object.
-  - `cdn_frontdoor_rule_set_ids` (`list`): Set the `cdn_frontdoor_rule_set_ids` field on the resulting resource block. When `null`, the `cdn_frontdoor_rule_set_ids` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `forwarding_protocol` (`string`): Set the `forwarding_protocol` field on the resulting resource block. When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
-  - `https_redirect_enabled` (`bool`): Set the `https_redirect_enabled` field on the resulting resource block. When `null`, the `https_redirect_enabled` field will be omitted from the resulting object.
-  - `link_to_default_domain` (`bool`): Set the `link_to_default_domain` field on the resulting resource block. When `null`, the `link_to_default_domain` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
-  - `patterns_to_match` (`list`): Set the `patterns_to_match` field on the resulting resource block.
-  - `supported_protocols` (`list`): Set the `supported_protocols` field on the resulting resource block.
-  - `cache` (`list[obj]`): Set the `cache` field on the resulting resource block. When `null`, the `cache` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.cache.new](#fn-cachenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_custom_domain_ids` (`list`):  When `null`, the `cdn_frontdoor_custom_domain_ids` field will be omitted from the resulting object.
+  - `cdn_frontdoor_endpoint_id` (`string`): 
+  - `cdn_frontdoor_origin_group_id` (`string`): 
+  - `cdn_frontdoor_origin_ids` (`list`): 
+  - `cdn_frontdoor_origin_path` (`string`):  When `null`, the `cdn_frontdoor_origin_path` field will be omitted from the resulting object.
+  - `cdn_frontdoor_rule_set_ids` (`list`):  When `null`, the `cdn_frontdoor_rule_set_ids` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `forwarding_protocol` (`string`):  When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
+  - `https_redirect_enabled` (`bool`):  When `null`, the `https_redirect_enabled` field will be omitted from the resulting object.
+  - `link_to_default_domain` (`bool`):  When `null`, the `link_to_default_domain` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `patterns_to_match` (`list`): 
+  - `supported_protocols` (`list`): 
+  - `cache` (`list[obj]`):  When `null`, the `cache` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.cache.new](#fn-cachenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,21 +104,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `cdn_frontdoor_custom_domain_ids` (`list`): Set the `cdn_frontdoor_custom_domain_ids` field on the resulting object. When `null`, the `cdn_frontdoor_custom_domain_ids` field will be omitted from the resulting object.
-  - `cdn_frontdoor_endpoint_id` (`string`): Set the `cdn_frontdoor_endpoint_id` field on the resulting object.
-  - `cdn_frontdoor_origin_group_id` (`string`): Set the `cdn_frontdoor_origin_group_id` field on the resulting object.
-  - `cdn_frontdoor_origin_ids` (`list`): Set the `cdn_frontdoor_origin_ids` field on the resulting object.
-  - `cdn_frontdoor_origin_path` (`string`): Set the `cdn_frontdoor_origin_path` field on the resulting object. When `null`, the `cdn_frontdoor_origin_path` field will be omitted from the resulting object.
-  - `cdn_frontdoor_rule_set_ids` (`list`): Set the `cdn_frontdoor_rule_set_ids` field on the resulting object. When `null`, the `cdn_frontdoor_rule_set_ids` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `forwarding_protocol` (`string`): Set the `forwarding_protocol` field on the resulting object. When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
-  - `https_redirect_enabled` (`bool`): Set the `https_redirect_enabled` field on the resulting object. When `null`, the `https_redirect_enabled` field will be omitted from the resulting object.
-  - `link_to_default_domain` (`bool`): Set the `link_to_default_domain` field on the resulting object. When `null`, the `link_to_default_domain` field will be omitted from the resulting object.
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `patterns_to_match` (`list`): Set the `patterns_to_match` field on the resulting object.
-  - `supported_protocols` (`list`): Set the `supported_protocols` field on the resulting object.
-  - `cache` (`list[obj]`): Set the `cache` field on the resulting object. When `null`, the `cache` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.cache.new](#fn-cachenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.timeouts.new](#fn-timeoutsnew) constructor.
+  - `cdn_frontdoor_custom_domain_ids` (`list`):  When `null`, the `cdn_frontdoor_custom_domain_ids` field will be omitted from the resulting object.
+  - `cdn_frontdoor_endpoint_id` (`string`): 
+  - `cdn_frontdoor_origin_group_id` (`string`): 
+  - `cdn_frontdoor_origin_ids` (`list`): 
+  - `cdn_frontdoor_origin_path` (`string`):  When `null`, the `cdn_frontdoor_origin_path` field will be omitted from the resulting object.
+  - `cdn_frontdoor_rule_set_ids` (`list`):  When `null`, the `cdn_frontdoor_rule_set_ids` field will be omitted from the resulting object.
+  - `enabled` (`bool`):  When `null`, the `enabled` field will be omitted from the resulting object.
+  - `forwarding_protocol` (`string`):  When `null`, the `forwarding_protocol` field will be omitted from the resulting object.
+  - `https_redirect_enabled` (`bool`):  When `null`, the `https_redirect_enabled` field will be omitted from the resulting object.
+  - `link_to_default_domain` (`bool`):  When `null`, the `link_to_default_domain` field will be omitted from the resulting object.
+  - `name` (`string`): 
+  - `patterns_to_match` (`list`): 
+  - `supported_protocols` (`list`): 
+  - `cache` (`list[obj]`):  When `null`, the `cache` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.cache.new](#fn-cachenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cdn_frontdoor_route.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cdn_frontdoor_route` resource into the root Terraform configuration.
@@ -422,10 +422,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `compression_enabled` (`bool`): Set the `compression_enabled` field on the resulting object. When `null`, the `compression_enabled` field will be omitted from the resulting object.
-  - `content_types_to_compress` (`list`): Set the `content_types_to_compress` field on the resulting object. When `null`, the `content_types_to_compress` field will be omitted from the resulting object.
-  - `query_string_caching_behavior` (`string`): Set the `query_string_caching_behavior` field on the resulting object. When `null`, the `query_string_caching_behavior` field will be omitted from the resulting object.
-  - `query_strings` (`list`): Set the `query_strings` field on the resulting object. When `null`, the `query_strings` field will be omitted from the resulting object.
+  - `compression_enabled` (`bool`):  When `null`, the `compression_enabled` field will be omitted from the resulting object.
+  - `content_types_to_compress` (`list`):  When `null`, the `content_types_to_compress` field will be omitted from the resulting object.
+  - `query_string_caching_behavior` (`string`):  When `null`, the `query_string_caching_behavior` field will be omitted from the resulting object.
+  - `query_strings` (`list`):  When `null`, the `query_strings` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cache` sub block.
@@ -448,10 +448,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
