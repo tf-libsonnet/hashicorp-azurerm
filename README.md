@@ -23,3 +23,80 @@ This repository contains [Jsonnet](https://jsonnet.org/) functions for generatin
 >
 > If you would like to contribute a change, you may open a Pull Request with a suggested change, but please note that it
 > will **not be merged in until the necessary updates have been made to the generator**.
+
+## Usage
+
+Install the package using [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler):
+
+```
+jb install github.com/tf-libsonnet/hashicorp-azurerm@main
+
+# Or if you want to install a specific release
+#   jb install github.com/tf-libsonnet/hashicorp-azurerm@v0.0.1
+# Or if you want to install bindings for a specific provider major version series
+#   jb install github.com/tf-libsonnet/hashicorp-azurerm/3.x@main
+```
+
+You can then import the package in your Jsonnet code:
+
+```jsonnet
+// main.tf.json.jsonnet
+local azurerm = import 'github.com/tf-libsonnet/hashicorp-azurerm/main.libsonnet';
+
+azurerm.provider.new(
+  features=[
+    azurerm.provider.features.new(
+      virtual_machine=[azurerm.provider.features.virtual_machine.new(delete_os_disk_on_deletion=false)],
+    )
+  ],
+  src='hashicorp/azurerm',
+)
++ azurerm.resource_group.new('example', name='example', location='West Europe')
+```
+
+This will generate the following Terraform JSON :
+
+```json
+{
+   "provider": {
+      "azurerm": [
+         {
+            "features": [
+               {
+                  "virtual_machine": [
+                     {
+                        "delete_os_disk_on_deletion": false
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   "resource": {
+      "azurerm_resource_group": {
+         "example": {
+            "location": "West Europe",
+            "name": "example"
+         }
+      }
+   },
+   "terraform": {
+      "required_providers": {
+         "azurerm": {
+            "source": "hashicorp/azurerm"
+         }
+      }
+   }
+}
+```
+
+Refer to the [reference docs](/docs/3.x/README.md) for a list of supported data sources and resources:
+
+- [provider config](/docs/3.x/provider.md)
+- [resources](/docs/3.x/README.md)
+- [data sources](/docs/3.x/data/index.md)
+
+## Contributing
+
+Refer to the [CONTRIBUTING.md](/CONTRIBUTING.md) document for information on how to contribute to `tf.libsonnet`.
