@@ -40,6 +40,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVolumePath()`](#fn-withvolumepath)
+* [`fn withZone()`](#fn-withzone)
 * [`obj data_protection_replication`](#obj-data_protection_replication)
   * [`fn new()`](#fn-data_protection_replicationnew)
 * [`obj data_protection_snapshot_policy`](#obj-data_protection_snapshot_policy)
@@ -95,6 +96,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `throughput_in_mibps` (`number`): Set the `throughput_in_mibps` field on the resulting resource block. When `null`, the `throughput_in_mibps` field will be omitted from the resulting object.
   - `volume_path` (`string`): Set the `volume_path` field on the resulting resource block.
+  - `zone` (`string`): Set the `zone` field on the resulting resource block. When `null`, the `zone` field will be omitted from the resulting object.
   - `data_protection_replication` (`list[obj]`): Set the `data_protection_replication` field on the resulting resource block. When `null`, the `data_protection_replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_replication.new](#fn-data_protection_replicationnew) constructor.
   - `data_protection_snapshot_policy` (`list[obj]`): Set the `data_protection_snapshot_policy` field on the resulting resource block. When `null`, the `data_protection_snapshot_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_snapshot_policy.new](#fn-data_protection_snapshot_policynew) constructor.
   - `export_policy_rule` (`list[obj]`): Set the `export_policy_rule` field on the resulting resource block. When `null`, the `export_policy_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.export_policy_rule.new](#fn-export_policy_rulenew) constructor.
@@ -139,6 +141,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `throughput_in_mibps` (`number`): Set the `throughput_in_mibps` field on the resulting object. When `null`, the `throughput_in_mibps` field will be omitted from the resulting object.
   - `volume_path` (`string`): Set the `volume_path` field on the resulting object.
+  - `zone` (`string`): Set the `zone` field on the resulting object. When `null`, the `zone` field will be omitted from the resulting object.
   - `data_protection_replication` (`list[obj]`): Set the `data_protection_replication` field on the resulting object. When `null`, the `data_protection_replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_replication.new](#fn-data_protection_replicationnew) constructor.
   - `data_protection_snapshot_policy` (`list[obj]`): Set the `data_protection_snapshot_policy` field on the resulting object. When `null`, the `data_protection_snapshot_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.data_protection_snapshot_policy.new](#fn-data_protection_snapshot_policynew) constructor.
   - `export_policy_rule` (`list[obj]`): Set the `export_policy_rule` field on the resulting object. When `null`, the `export_policy_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_volume.export_policy_rule.new](#fn-export_policy_rulenew) constructor.
@@ -565,6 +568,22 @@ Terraform resource block to set or update the volume_path field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `volume_path` field.
+
+
+### fn withZone
+
+```ts
+withZone()
+```
+
+`azurerm.string.withZone` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the zone field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `zone` field.
 
 
 ## obj data_protection_replication
