@@ -68,7 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `path_pattern` (`string`): Set the `path_pattern` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `storage_account_key` (`string`): Set the `storage_account_key` field on the resulting resource block.
+  - `storage_account_key` (`string`): Set the `storage_account_key` field on the resulting resource block. When `null`, the `storage_account_key` field will be omitted from the resulting object.
   - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting resource block.
   - `storage_container_name` (`string`): Set the `storage_container_name` field on the resulting resource block.
   - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting resource block.
@@ -103,7 +103,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `path_pattern` (`string`): Set the `path_pattern` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `storage_account_key` (`string`): Set the `storage_account_key` field on the resulting object.
+  - `storage_account_key` (`string`): Set the `storage_account_key` field on the resulting object. When `null`, the `storage_account_key` field will be omitted from the resulting object.
   - `storage_account_name` (`string`): Set the `storage_account_name` field on the resulting object.
   - `storage_container_name` (`string`): Set the `storage_container_name` field on the resulting object.
   - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting object.

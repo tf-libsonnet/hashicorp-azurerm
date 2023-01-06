@@ -577,6 +577,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   network_interface_nat_rule_association: (import 'resources/network_interface_nat_rule_association.libsonnet'),
   network_interface_security_group_association: (import 'resources/network_interface_security_group_association.libsonnet'),
   network_manager: (import 'resources/network_manager.libsonnet'),
+  network_manager_network_group: (import 'resources/network_manager_network_group.libsonnet'),
   network_packet_capture: (import 'resources/network_packet_capture.libsonnet'),
   network_profile: (import 'resources/network_profile.libsonnet'),
   network_security_group: (import 'resources/network_security_group.libsonnet'),

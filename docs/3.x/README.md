@@ -587,6 +587,7 @@ project.
 * [network_interface_nat_rule_association](network_interface_nat_rule_association.md)
 * [network_interface_security_group_association](network_interface_security_group_association.md)
 * [network_manager](network_manager.md)
+* [network_manager_network_group](network_manager_network_group.md)
 * [network_packet_capture](network_packet_capture.md)
 * [network_profile](network_profile.md)
 * [network_security_group](network_security_group.md)
