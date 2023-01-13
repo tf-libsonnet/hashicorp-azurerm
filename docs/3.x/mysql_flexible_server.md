@@ -19,10 +19,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAdministratorPassword()`](#fn-withadministratorpassword)
 * [`fn withBackupRetentionDays()`](#fn-withbackupretentiondays)
 * [`fn withCreateMode()`](#fn-withcreatemode)
+* [`fn withCustomerManagedKey()`](#fn-withcustomermanagedkey)
+* [`fn withCustomerManagedKeyMixin()`](#fn-withcustomermanagedkeymixin)
 * [`fn withDelegatedSubnetId()`](#fn-withdelegatedsubnetid)
 * [`fn withGeoRedundantBackupEnabled()`](#fn-withgeoredundantbackupenabled)
 * [`fn withHighAvailability()`](#fn-withhighavailability)
 * [`fn withHighAvailabilityMixin()`](#fn-withhighavailabilitymixin)
+* [`fn withIdentity()`](#fn-withidentity)
+* [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMaintenanceWindow()`](#fn-withmaintenancewindow)
 * [`fn withMaintenanceWindowMixin()`](#fn-withmaintenancewindowmixin)
@@ -40,8 +44,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVersion()`](#fn-withversion)
 * [`fn withZone()`](#fn-withzone)
+* [`obj customer_managed_key`](#obj-customer_managed_key)
+  * [`fn new()`](#fn-customer_managed_keynew)
 * [`obj high_availability`](#obj-high_availability)
   * [`fn new()`](#fn-high_availabilitynew)
+* [`obj identity`](#obj-identity)
+  * [`fn new()`](#fn-identitynew)
 * [`obj maintenance_window`](#obj-maintenance_window)
   * [`fn new()`](#fn-maintenance_windownew)
 * [`obj storage`](#obj-storage)
@@ -95,7 +103,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `version` (`string`): Set the `version` field on the resulting resource block. When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`): Set the `zone` field on the resulting resource block. When `null`, the `zone` field will be omitted from the resulting object.
+  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting resource block. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
   - `high_availability` (`list[obj]`): Set the `high_availability` field on the resulting resource block. When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.high_availability.new](#fn-high_availabilitynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.identity.new](#fn-identitynew) constructor.
   - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting resource block. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.maintenance_window.new](#fn-maintenance_windownew) constructor.
   - `storage` (`list[obj]`): Set the `storage` field on the resulting resource block. When `null`, the `storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.storage.new](#fn-storagenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.timeouts.new](#fn-timeoutsnew) constructor.
@@ -139,7 +149,9 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`): Set the `zone` field on the resulting object. When `null`, the `zone` field will be omitted from the resulting object.
+  - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting object. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
   - `high_availability` (`list[obj]`): Set the `high_availability` field on the resulting object. When `null`, the `high_availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.high_availability.new](#fn-high_availabilitynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.identity.new](#fn-identitynew) constructor.
   - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting object. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.maintenance_window.new](#fn-maintenance_windownew) constructor.
   - `storage` (`list[obj]`): Set the `storage` field on the resulting object. When `null`, the `storage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.storage.new](#fn-storagenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mysql_flexible_server.timeouts.new](#fn-timeoutsnew) constructor.
@@ -212,6 +224,43 @@ Terraform resource block to set or update the create_mode field.
   - `value` (`string`): The value to set for the `create_mode` field.
 
 
+### fn withCustomerManagedKey
+
+```ts
+withCustomerManagedKey()
+```
+
+`azurerm.list[obj].withCustomerManagedKey` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the customer_managed_key field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withCustomerManagedKeyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `customer_managed_key` field.
+
+
+### fn withCustomerManagedKeyMixin
+
+```ts
+withCustomerManagedKeyMixin()
+```
+
+`azurerm.list[obj].withCustomerManagedKeyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the customer_managed_key field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withCustomerManagedKey](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `customer_managed_key` field.
+
+
 ### fn withDelegatedSubnetId
 
 ```ts
@@ -279,6 +328,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `high_availability` field.
+
+
+### fn withIdentity
+
+```ts
+withIdentity()
+```
+
+`azurerm.list[obj].withIdentity` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withIdentityMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withIdentityMixin
+
+```ts
+withIdentityMixin()
+```
+
+`azurerm.list[obj].withIdentityMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withIdentity](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
 
 
 ### fn withLocation
@@ -567,6 +653,30 @@ Terraform resource block to set or update the zone field.
   - `value` (`string`): The value to set for the `zone` field.
 
 
+## obj customer_managed_key
+
+
+
+### fn customer_managed_key.new
+
+```ts
+new()
+```
+
+
+`azurerm.mysql_flexible_server.customer_managed_key.new` constructs a new object with attributes and blocks configured for the `customer_managed_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `primary_user_assigned_identity_id` (`string`): Set the `primary_user_assigned_identity_id` field on the resulting object. When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `customer_managed_key` sub block.
+
+
 ## obj high_availability
 
 
@@ -589,6 +699,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `high_availability` sub block.
+
+
+## obj identity
+
+
+
+### fn identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.mysql_flexible_server.identity.new` constructs a new object with attributes and blocks configured for the `identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `identity` sub block.
 
 
 ## obj maintenance_window

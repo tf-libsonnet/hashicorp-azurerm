@@ -17,14 +17,17 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withApiMetadata()`](#fn-withapimetadata)
 * [`fn withApiMetadataMixin()`](#fn-withapimetadatamixin)
+* [`fn withApplicationPerformanceMonitoringTypes()`](#fn-withapplicationperformancemonitoringtypes)
 * [`fn withCors()`](#fn-withcors)
 * [`fn withCorsMixin()`](#fn-withcorsmixin)
+* [`fn withEnvironmentVariables()`](#fn-withenvironmentvariables)
 * [`fn withHttpsOnly()`](#fn-withhttpsonly)
 * [`fn withInstanceCount()`](#fn-withinstancecount)
 * [`fn withName()`](#fn-withname)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withQuota()`](#fn-withquota)
 * [`fn withQuotaMixin()`](#fn-withquotamixin)
+* [`fn withSensitiveEnvironmentVariables()`](#fn-withsensitiveenvironmentvariables)
 * [`fn withSpringCloudServiceId()`](#fn-withspringcloudserviceid)
 * [`fn withSso()`](#fn-withsso)
 * [`fn withSsoMixin()`](#fn-withssomixin)
@@ -70,10 +73,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `application_performance_monitoring_types` (`list`): Set the `application_performance_monitoring_types` field on the resulting resource block. When `null`, the `application_performance_monitoring_types` field will be omitted from the resulting object.
+  - `environment_variables` (`obj`): Set the `environment_variables` field on the resulting resource block. When `null`, the `environment_variables` field will be omitted from the resulting object.
   - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
   - `instance_count` (`number`): Set the `instance_count` field on the resulting resource block. When `null`, the `instance_count` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `sensitive_environment_variables` (`obj`): Set the `sensitive_environment_variables` field on the resulting resource block. When `null`, the `sensitive_environment_variables` field will be omitted from the resulting object.
   - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.
   - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting resource block. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
@@ -103,10 +109,13 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `application_performance_monitoring_types` (`list`): Set the `application_performance_monitoring_types` field on the resulting object. When `null`, the `application_performance_monitoring_types` field will be omitted from the resulting object.
+  - `environment_variables` (`obj`): Set the `environment_variables` field on the resulting object. When `null`, the `environment_variables` field will be omitted from the resulting object.
   - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
   - `instance_count` (`number`): Set the `instance_count` field on the resulting object. When `null`, the `instance_count` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `sensitive_environment_variables` (`obj`): Set the `sensitive_environment_variables` field on the resulting object. When `null`, the `sensitive_environment_variables` field will be omitted from the resulting object.
   - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.
   - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting object. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
@@ -155,6 +164,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `api_metadata` field.
 
 
+### fn withApplicationPerformanceMonitoringTypes
+
+```ts
+withApplicationPerformanceMonitoringTypes()
+```
+
+`azurerm.list.withApplicationPerformanceMonitoringTypes` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the application_performance_monitoring_types field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `application_performance_monitoring_types` field.
+
+
 ### fn withCors
 
 ```ts
@@ -190,6 +215,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `cors` field.
+
+
+### fn withEnvironmentVariables
+
+```ts
+withEnvironmentVariables()
+```
+
+`azurerm.obj.withEnvironmentVariables` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the environment_variables field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `environment_variables` field.
 
 
 ### fn withHttpsOnly
@@ -291,6 +332,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `quota` field.
+
+
+### fn withSensitiveEnvironmentVariables
+
+```ts
+withSensitiveEnvironmentVariables()
+```
+
+`azurerm.obj.withSensitiveEnvironmentVariables` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the sensitive_environment_variables field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `sensitive_environment_variables` field.
 
 
 ### fn withSpringCloudServiceId

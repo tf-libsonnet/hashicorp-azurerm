@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withActionPlaybook()`](#fn-withactionplaybook)
 * [`fn withActionPlaybookMixin()`](#fn-withactionplaybookmixin)
 * [`fn withCondition()`](#fn-withcondition)
+* [`fn withConditionJson()`](#fn-withconditionjson)
 * [`fn withConditionMixin()`](#fn-withconditionmixin)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEnabled()`](#fn-withenabled)
@@ -29,6 +30,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withOrder()`](#fn-withorder)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withTriggersOn()`](#fn-withtriggerson)
+* [`fn withTriggersWhen()`](#fn-withtriggerswhen)
 * [`obj action_incident`](#obj-action_incident)
   * [`fn new()`](#fn-action_incidentnew)
 * [`obj action_playbook`](#obj-action_playbook)
@@ -67,12 +70,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `condition_json` (`string`): Set the `condition_json` field on the resulting resource block. When `null`, the `condition_json` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
   - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
   - `expiration` (`string`): Set the `expiration` field on the resulting resource block. When `null`, the `expiration` field will be omitted from the resulting object.
   - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `order` (`number`): Set the `order` field on the resulting resource block.
+  - `triggers_on` (`string`): Set the `triggers_on` field on the resulting resource block. When `null`, the `triggers_on` field will be omitted from the resulting object.
+  - `triggers_when` (`string`): Set the `triggers_when` field on the resulting resource block. When `null`, the `triggers_when` field will be omitted from the resulting object.
   - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting resource block. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.
   - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting resource block. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.
   - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.
@@ -100,12 +106,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `condition_json` (`string`): Set the `condition_json` field on the resulting object. When `null`, the `condition_json` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
   - `expiration` (`string`): Set the `expiration` field on the resulting object. When `null`, the `expiration` field will be omitted from the resulting object.
   - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `order` (`number`): Set the `order` field on the resulting object.
+  - `triggers_on` (`string`): Set the `triggers_on` field on the resulting object. When `null`, the `triggers_on` field will be omitted from the resulting object.
+  - `triggers_when` (`string`): Set the `triggers_when` field on the resulting object. When `null`, the `triggers_when` field will be omitted from the resulting object.
   - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting object. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.
   - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting object. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.
   - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.
@@ -205,6 +214,22 @@ passed in value to the existing array, use the [azurerm.list[obj].withConditionM
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `condition` field.
+
+
+### fn withConditionJson
+
+```ts
+withConditionJson()
+```
+
+`azurerm.string.withConditionJson` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the condition_json field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `condition_json` field.
 
 
 ### fn withConditionMixin
@@ -356,6 +381,38 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withTriggersOn
+
+```ts
+withTriggersOn()
+```
+
+`azurerm.string.withTriggersOn` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the triggers_on field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `triggers_on` field.
+
+
+### fn withTriggersWhen
+
+```ts
+withTriggersWhen()
+```
+
+`azurerm.string.withTriggersWhen` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the triggers_when field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `triggers_when` field.
 
 
 ## obj action_incident

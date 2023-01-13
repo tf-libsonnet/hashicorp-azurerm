@@ -1143,8 +1143,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `dotnet_version` (`string`): The version of .Net. Possible values are `3.1` `6` and `7` When `null`, the `dotnet_version` field will be omitted from the resulting object.
-  - `java_version` (`string`): The version of Java to use. Possible values are `8`, and `11` When `null`, the `java_version` field will be omitted from the resulting object.
+  - `dotnet_version` (`string`): The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0` When `null`, the `dotnet_version` field will be omitted from the resulting object.
+  - `java_version` (`string`): The version of Java to use. Possible values are `1.8`, `11` and `17` When `null`, the `java_version` field will be omitted from the resulting object.
   - `node_version` (`string`): The version of Node to use. Possible values include `12`, and `14` When `null`, the `node_version` field will be omitted from the resulting object.
   - `powershell_core_version` (`string`): The PowerShell Core version to use. Possible values are `7`, and `7.2` When `null`, the `powershell_core_version` field will be omitted from the resulting object.
   - `use_custom_runtime` (`bool`): Does the Function App use a custom Application Stack? When `null`, the `use_custom_runtime` field will be omitted from the resulting object.
