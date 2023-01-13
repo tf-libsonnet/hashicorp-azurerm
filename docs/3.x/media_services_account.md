@@ -15,12 +15,15 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withEncryption()`](#fn-withencryption)
+* [`fn withEncryptionMixin()`](#fn-withencryptionmixin)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withKeyDeliveryAccessControl()`](#fn-withkeydeliveryaccesscontrol)
 * [`fn withKeyDeliveryAccessControlMixin()`](#fn-withkeydeliveryaccesscontrolmixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
+* [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withStorageAccount()`](#fn-withstorageaccount)
 * [`fn withStorageAccountMixin()`](#fn-withstorageaccountmixin)
@@ -28,12 +31,18 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj encryption`](#obj-encryption)
+  * [`fn new()`](#fn-encryptionnew)
+  * [`obj encryption.managed_identity`](#obj-encryptionmanaged_identity)
+    * [`fn new()`](#fn-encryptionmanaged_identitynew)
 * [`obj identity`](#obj-identity)
   * [`fn new()`](#fn-identitynew)
 * [`obj key_delivery_access_control`](#obj-key_delivery_access_control)
   * [`fn new()`](#fn-key_delivery_access_controlnew)
 * [`obj storage_account`](#obj-storage_account)
   * [`fn new()`](#fn-storage_accountnew)
+  * [`obj storage_account.managed_identity`](#obj-storage_accountmanaged_identity)
+    * [`fn new()`](#fn-storage_accountmanaged_identitynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -68,9 +77,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `storage_authentication_type` (`string`): Set the `storage_authentication_type` field on the resulting resource block. When `null`, the `storage_authentication_type` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.encryption.new](#fn-encryptionnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.identity.new](#fn-identitynew) constructor.
   - `key_delivery_access_control` (`list[obj]`): Set the `key_delivery_access_control` field on the resulting resource block. When `null`, the `key_delivery_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.key_delivery_access_control.new](#fn-key_delivery_access_controlnew) constructor.
   - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting resource block. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.new](#fn-storage_accountnew) constructor.
@@ -100,9 +111,11 @@ injecting into a complete block.
 **Args**:
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `storage_authentication_type` (`string`): Set the `storage_authentication_type` field on the resulting object. When `null`, the `storage_authentication_type` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.encryption.new](#fn-encryptionnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.identity.new](#fn-identitynew) constructor.
   - `key_delivery_access_control` (`list[obj]`): Set the `key_delivery_access_control` field on the resulting object. When `null`, the `key_delivery_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.key_delivery_access_control.new](#fn-key_delivery_access_controlnew) constructor.
   - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting object. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.new](#fn-storage_accountnew) constructor.
@@ -110,6 +123,43 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_services_account` resource into the root Terraform configuration.
+
+
+### fn withEncryption
+
+```ts
+withEncryption()
+```
+
+`azurerm.list[obj].withEncryption` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the encryption field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withEncryptionMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `encryption` field.
+
+
+### fn withEncryptionMixin
+
+```ts
+withEncryptionMixin()
+```
+
+`azurerm.list[obj].withEncryptionMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the encryption field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEncryption](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `encryption` field.
 
 
 ### fn withIdentity
@@ -216,6 +266,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPublicNetworkAccessEnabled
+
+```ts
+withPublicNetworkAccessEnabled()
+```
+
+`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_network_access_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.
 
 
 ### fn withResourceGroupName
@@ -339,6 +405,55 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+## obj encryption
+
+
+
+### fn encryption.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_services_account.encryption.new` constructs a new object with attributes and blocks configured for the `encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key_vault_key_identifier` (`string`): Set the `key_vault_key_identifier` field on the resulting object. When `null`, the `key_vault_key_identifier` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
+  - `managed_identity` (`list[obj]`): Set the `managed_identity` field on the resulting object. When `null`, the `managed_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.encryption.managed_identity.new](#fn-encryptionmanaged_identitynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `encryption` sub block.
+
+
+## obj encryption.managed_identity
+
+
+
+### fn encryption.managed_identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_services_account.encryption.managed_identity.new` constructs a new object with attributes and blocks configured for the `managed_identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `use_system_assigned_identity` (`bool`): Set the `use_system_assigned_identity` field on the resulting object. When `null`, the `use_system_assigned_identity` field will be omitted from the resulting object.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `managed_identity` sub block.
+
+
 ## obj identity
 
 
@@ -405,9 +520,34 @@ Terraform sub block.
 
 **Args**:
   - `is_primary` (`bool`): Set the `is_primary` field on the resulting object. When `null`, the `is_primary` field will be omitted from the resulting object.
+  - `managed_identity` (`list[obj]`): Set the `managed_identity` field on the resulting object. When `null`, the `managed_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.managed_identity.new](#fn-storage_accountmanaged_identitynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `storage_account` sub block.
+
+
+## obj storage_account.managed_identity
+
+
+
+### fn storage_account.managed_identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_services_account.storage_account.managed_identity.new` constructs a new object with attributes and blocks configured for the `managed_identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `use_system_assigned_identity` (`bool`): Set the `use_system_assigned_identity` field on the resulting object. When `null`, the `use_system_assigned_identity` field will be omitted from the resulting object.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `managed_identity` sub block.
 
 
 ## obj timeouts

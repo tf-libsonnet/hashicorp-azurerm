@@ -2,6 +2,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='media_services_account', url='', help='`media_services_account` represents the `azurerm_media_services_account` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
+  encryption:: {
+    managed_identity:: {
+      '#new':: d.fn(help='\n`azurerm.media_services_account.encryption.managed_identity.new` constructs a new object with attributes and blocks configured for the `managed_identity`\nTerraform sub block.\n\n\n\n**Args**:\n  - `use_system_assigned_identity` (`bool`): Set the `use_system_assigned_identity` field on the resulting object. When `null`, the `use_system_assigned_identity` field will be omitted from the resulting object.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `managed_identity` sub block.\n', args=[]),
+      new(
+        use_system_assigned_identity=null,
+        user_assigned_identity_id=null
+      ):: std.prune(a={
+        use_system_assigned_identity: use_system_assigned_identity,
+        user_assigned_identity_id: user_assigned_identity_id,
+      }),
+    },
+    '#new':: d.fn(help='\n`azurerm.media_services_account.encryption.new` constructs a new object with attributes and blocks configured for the `encryption`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key_vault_key_identifier` (`string`): Set the `key_vault_key_identifier` field on the resulting object. When `null`, the `key_vault_key_identifier` field will be omitted from the resulting object.\n  - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.\n  - `managed_identity` (`list[obj]`): Set the `managed_identity` field on the resulting object. When `null`, the `managed_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.encryption.managed_identity.new](#fn-encryptionmanaged_identitynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `encryption` sub block.\n', args=[]),
+    new(
+      key_vault_key_identifier=null,
+      managed_identity=null,
+      type=null
+    ):: std.prune(a={
+      key_vault_key_identifier: key_vault_key_identifier,
+      managed_identity: managed_identity,
+      type: type,
+    }),
+  },
   identity:: {
     '#new':: d.fn(help='\n`azurerm.media_services_account.identity.new` constructs a new object with attributes and blocks configured for the `identity`\nTerraform sub block.\n\n\n\n**Args**:\n  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.\n  - `type` (`string`): Set the `type` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `identity` sub block.\n', args=[]),
     new(
@@ -22,14 +44,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       ip_allow_list: ip_allow_list,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.media_services_account.new` injects a new `azurerm_media_services_account` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.media_services_account.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.media_services_account` using the reference:\n\n    $._ref.azurerm_media_services_account.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_media_services_account.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `storage_authentication_type` (`string`): Set the `storage_authentication_type` field on the resulting resource block. When `null`, the `storage_authentication_type` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.identity.new](#fn-identitynew) constructor.\n  - `key_delivery_access_control` (`list[obj]`): Set the `key_delivery_access_control` field on the resulting resource block. When `null`, the `key_delivery_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.key_delivery_access_control.new](#fn-key_delivery_access_controlnew) constructor.\n  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting resource block. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.new](#fn-storage_accountnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.media_services_account.new` injects a new `azurerm_media_services_account` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.media_services_account.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.media_services_account` using the reference:\n\n    $._ref.azurerm_media_services_account.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_media_services_account.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `storage_authentication_type` (`string`): Set the `storage_authentication_type` field on the resulting resource block. When `null`, the `storage_authentication_type` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.encryption.new](#fn-encryptionnew) constructor.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.identity.new](#fn-identitynew) constructor.\n  - `key_delivery_access_control` (`list[obj]`): Set the `key_delivery_access_control` field on the resulting resource block. When `null`, the `key_delivery_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.key_delivery_access_control.new](#fn-key_delivery_access_controlnew) constructor.\n  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting resource block. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.new](#fn-storage_accountnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
     name,
     resource_group_name,
+    encryption=null,
     identity=null,
     key_delivery_access_control=null,
+    public_network_access_enabled=null,
     storage_account=null,
     storage_authentication_type=null,
     tags=null,
@@ -39,10 +63,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     type='azurerm_media_services_account',
     label=resourceLabel,
     attrs=self.newAttrs(
+      encryption=encryption,
       identity=identity,
       key_delivery_access_control=key_delivery_access_control,
       location=location,
       name=name,
+      public_network_access_enabled=public_network_access_enabled,
       resource_group_name=resource_group_name,
       storage_account=storage_account,
       storage_authentication_type=storage_authentication_type,
@@ -51,22 +77,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.media_services_account.newAttrs` constructs a new object with attributes and blocks configured for the `media_services_account`\nTerraform resource.\n\nUnlike [azurerm.media_services_account.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `storage_authentication_type` (`string`): Set the `storage_authentication_type` field on the resulting object. When `null`, the `storage_authentication_type` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.identity.new](#fn-identitynew) constructor.\n  - `key_delivery_access_control` (`list[obj]`): Set the `key_delivery_access_control` field on the resulting object. When `null`, the `key_delivery_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.key_delivery_access_control.new](#fn-key_delivery_access_controlnew) constructor.\n  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting object. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.new](#fn-storage_accountnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_services_account` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.media_services_account.newAttrs` constructs a new object with attributes and blocks configured for the `media_services_account`\nTerraform resource.\n\nUnlike [azurerm.media_services_account.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `storage_authentication_type` (`string`): Set the `storage_authentication_type` field on the resulting object. When `null`, the `storage_authentication_type` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.encryption.new](#fn-encryptionnew) constructor.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.identity.new](#fn-identitynew) constructor.\n  - `key_delivery_access_control` (`list[obj]`): Set the `key_delivery_access_control` field on the resulting object. When `null`, the `key_delivery_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.key_delivery_access_control.new](#fn-key_delivery_access_controlnew) constructor.\n  - `storage_account` (`list[obj]`): Set the `storage_account` field on the resulting object. When `null`, the `storage_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.new](#fn-storage_accountnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `media_services_account` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
     name,
     resource_group_name,
+    encryption=null,
     identity=null,
     key_delivery_access_control=null,
+    public_network_access_enabled=null,
     storage_account=null,
     storage_authentication_type=null,
     tags=null,
     timeouts=null
   ):: std.prune(a={
+    encryption: encryption,
     identity: identity,
     key_delivery_access_control: key_delivery_access_control,
     location: location,
     name: name,
+    public_network_access_enabled: public_network_access_enabled,
     resource_group_name: resource_group_name,
     storage_account: storage_account,
     storage_authentication_type: storage_authentication_type,
@@ -74,11 +104,23 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   storage_account:: {
-    '#new':: d.fn(help='\n`azurerm.media_services_account.storage_account.new` constructs a new object with attributes and blocks configured for the `storage_account`\nTerraform sub block.\n\n\n\n**Args**:\n  - `is_primary` (`bool`): Set the `is_primary` field on the resulting object. When `null`, the `is_primary` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `storage_account` sub block.\n', args=[]),
+    managed_identity:: {
+      '#new':: d.fn(help='\n`azurerm.media_services_account.storage_account.managed_identity.new` constructs a new object with attributes and blocks configured for the `managed_identity`\nTerraform sub block.\n\n\n\n**Args**:\n  - `use_system_assigned_identity` (`bool`): Set the `use_system_assigned_identity` field on the resulting object. When `null`, the `use_system_assigned_identity` field will be omitted from the resulting object.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `managed_identity` sub block.\n', args=[]),
+      new(
+        use_system_assigned_identity=null,
+        user_assigned_identity_id=null
+      ):: std.prune(a={
+        use_system_assigned_identity: use_system_assigned_identity,
+        user_assigned_identity_id: user_assigned_identity_id,
+      }),
+    },
+    '#new':: d.fn(help='\n`azurerm.media_services_account.storage_account.new` constructs a new object with attributes and blocks configured for the `storage_account`\nTerraform sub block.\n\n\n\n**Args**:\n  - `is_primary` (`bool`): Set the `is_primary` field on the resulting object. When `null`, the `is_primary` field will be omitted from the resulting object.\n  - `managed_identity` (`list[obj]`): Set the `managed_identity` field on the resulting object. When `null`, the `managed_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_services_account.storage_account.managed_identity.new](#fn-storage_accountmanaged_identitynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `storage_account` sub block.\n', args=[]),
     new(
-      is_primary=null
+      is_primary=null,
+      managed_identity=null
     ):: std.prune(a={
       is_primary: is_primary,
+      managed_identity: managed_identity,
     }),
   },
   timeouts:: {
@@ -94,6 +136,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       read: read,
       update: update,
     }),
+  },
+  '#withEncryption':: d.fn(help='`azurerm.list[obj].withEncryption` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the encryption field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withEncryptionMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `encryption` field.\n', args=[]),
+  withEncryption(resourceLabel, value): {
+    resource+: {
+      azurerm_media_services_account+: {
+        [resourceLabel]+: {
+          encryption: value,
+        },
+      },
+    },
+  },
+  '#withEncryptionMixin':: d.fn(help='`azurerm.list[obj].withEncryptionMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the encryption field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEncryption](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `encryption` field.\n', args=[]),
+  withEncryptionMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_media_services_account+: {
+        [resourceLabel]+: {
+          encryption+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
   },
   '#withIdentity':: d.fn(help='`azurerm.list[obj].withIdentity` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the identity field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withIdentityMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `identity` field.\n', args=[]),
   withIdentity(resourceLabel, value): {
@@ -151,6 +213,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_media_services_account+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  '#withPublicNetworkAccessEnabled':: d.fn(help='`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the public_network_access_enabled field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.\n', args=[]),
+  withPublicNetworkAccessEnabled(resourceLabel, value): {
+    resource+: {
+      azurerm_media_services_account+: {
+        [resourceLabel]+: {
+          public_network_access_enabled: value,
         },
       },
     },

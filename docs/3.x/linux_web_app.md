@@ -1296,6 +1296,7 @@ Terraform sub block.
   - `docker_image` (`string`): Set the `docker_image` field on the resulting object. When `null`, the `docker_image` field will be omitted from the resulting object.
   - `docker_image_tag` (`string`): Set the `docker_image_tag` field on the resulting object. When `null`, the `docker_image_tag` field will be omitted from the resulting object.
   - `dotnet_version` (`string`): Set the `dotnet_version` field on the resulting object. When `null`, the `dotnet_version` field will be omitted from the resulting object.
+  - `go_version` (`string`): Set the `go_version` field on the resulting object. When `null`, the `go_version` field will be omitted from the resulting object.
   - `java_server` (`string`): Set the `java_server` field on the resulting object. When `null`, the `java_server` field will be omitted from the resulting object.
   - `java_server_version` (`string`): Set the `java_server_version` field on the resulting object. When `null`, the `java_server_version` field will be omitted from the resulting object.
   - `java_version` (`string`): Set the `java_version` field on the resulting object. When `null`, the `java_version` field will be omitted from the resulting object.

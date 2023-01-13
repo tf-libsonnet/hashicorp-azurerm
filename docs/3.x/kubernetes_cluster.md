@@ -17,6 +17,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAciConnectorLinux()`](#fn-withaciconnectorlinux)
 * [`fn withAciConnectorLinuxMixin()`](#fn-withaciconnectorlinuxmixin)
+* [`fn withApiServerAccessProfile()`](#fn-withapiserveraccessprofile)
+* [`fn withApiServerAccessProfileMixin()`](#fn-withapiserveraccessprofilemixin)
 * [`fn withApiServerAuthorizedIpRanges()`](#fn-withapiserverauthorizedipranges)
 * [`fn withAutoScalerProfile()`](#fn-withautoscalerprofile)
 * [`fn withAutoScalerProfileMixin()`](#fn-withautoscalerprofilemixin)
@@ -87,6 +89,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withWorkloadIdentityEnabled()`](#fn-withworkloadidentityenabled)
 * [`obj aci_connector_linux`](#obj-aci_connector_linux)
   * [`fn new()`](#fn-aci_connector_linuxnew)
+* [`obj api_server_access_profile`](#obj-api_server_access_profile)
+  * [`fn new()`](#fn-api_server_access_profilenew)
 * [`obj auto_scaler_profile`](#obj-auto_scaler_profile)
   * [`fn new()`](#fn-auto_scaler_profilenew)
 * [`obj azure_active_directory_role_based_access_control`](#obj-azure_active_directory_role_based_access_control)
@@ -206,6 +210,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting resource block. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
   - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting resource block. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
+  - `api_server_access_profile` (`list[obj]`): Set the `api_server_access_profile` field on the resulting resource block. When `null`, the `api_server_access_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.api_server_access_profile.new](#fn-api_server_access_profilenew) constructor.
   - `auto_scaler_profile` (`list[obj]`): Set the `auto_scaler_profile` field on the resulting resource block. When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
   - `azure_active_directory_role_based_access_control` (`list[obj]`): Set the `azure_active_directory_role_based_access_control` field on the resulting resource block. When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
   - `default_node_pool` (`list[obj]`): Set the `default_node_pool` field on the resulting resource block. When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
@@ -278,6 +283,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting object. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
   - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting object. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
+  - `api_server_access_profile` (`list[obj]`): Set the `api_server_access_profile` field on the resulting object. When `null`, the `api_server_access_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.api_server_access_profile.new](#fn-api_server_access_profilenew) constructor.
   - `auto_scaler_profile` (`list[obj]`): Set the `auto_scaler_profile` field on the resulting object. When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
   - `azure_active_directory_role_based_access_control` (`list[obj]`): Set the `azure_active_directory_role_based_access_control` field on the resulting object. When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
   - `default_node_pool` (`list[obj]`): Set the `default_node_pool` field on the resulting object. When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
@@ -338,6 +344,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `aci_connector_linux` field.
+
+
+### fn withApiServerAccessProfile
+
+```ts
+withApiServerAccessProfile()
+```
+
+`azurerm.list[obj].withApiServerAccessProfile` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the api_server_access_profile field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withApiServerAccessProfileMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `api_server_access_profile` field.
+
+
+### fn withApiServerAccessProfileMixin
+
+```ts
+withApiServerAccessProfileMixin()
+```
+
+`azurerm.list[obj].withApiServerAccessProfileMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the api_server_access_profile field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withApiServerAccessProfile](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `api_server_access_profile` field.
 
 
 ### fn withApiServerAuthorizedIpRanges
@@ -1548,6 +1591,31 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `aci_connector_linux` sub block.
+
+
+## obj api_server_access_profile
+
+
+
+### fn api_server_access_profile.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.api_server_access_profile.new` constructs a new object with attributes and blocks configured for the `api_server_access_profile`
+Terraform sub block.
+
+
+
+**Args**:
+  - `authorized_ip_ranges` (`list`): Set the `authorized_ip_ranges` field on the resulting object. When `null`, the `authorized_ip_ranges` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
+  - `vnet_integration_enabled` (`bool`): Set the `vnet_integration_enabled` field on the resulting object. When `null`, the `vnet_integration_enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `api_server_access_profile` sub block.
 
 
 ## obj auto_scaler_profile

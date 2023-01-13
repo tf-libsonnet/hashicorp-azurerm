@@ -15,6 +15,9 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withInGuestUserPatchMode()`](#fn-withinguestuserpatchmode)
+* [`fn withInstallPatches()`](#fn-withinstallpatches)
+* [`fn withInstallPatchesMixin()`](#fn-withinstallpatchesmixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withProperties()`](#fn-withproperties)
@@ -26,6 +29,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withVisibility()`](#fn-withvisibility)
 * [`fn withWindow()`](#fn-withwindow)
 * [`fn withWindowMixin()`](#fn-withwindowmixin)
+* [`obj install_patches`](#obj-install_patches)
+  * [`fn new()`](#fn-install_patchesnew)
+  * [`obj install_patches.linux`](#obj-install_patcheslinux)
+    * [`fn new()`](#fn-install_patcheslinuxnew)
+  * [`obj install_patches.windows`](#obj-install_patcheswindows)
+    * [`fn new()`](#fn-install_patcheswindowsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj window`](#obj-window)
@@ -60,6 +69,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `in_guest_user_patch_mode` (`string`): Set the `in_guest_user_patch_mode` field on the resulting resource block. When `null`, the `in_guest_user_patch_mode` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `properties` (`obj`): Set the `properties` field on the resulting resource block. When `null`, the `properties` field will be omitted from the resulting object.
@@ -67,6 +77,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `scope` (`string`): Set the `scope` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `visibility` (`string`): Set the `visibility` field on the resulting resource block. When `null`, the `visibility` field will be omitted from the resulting object.
+  - `install_patches` (`list[obj]`): Set the `install_patches` field on the resulting resource block. When `null`, the `install_patches` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.install_patches.new](#fn-install_patchesnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.timeouts.new](#fn-timeoutsnew) constructor.
   - `window` (`list[obj]`): Set the `window` field on the resulting resource block. When `null`, the `window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.window.new](#fn-windownew) constructor.
 
@@ -92,6 +103,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `in_guest_user_patch_mode` (`string`): Set the `in_guest_user_patch_mode` field on the resulting object. When `null`, the `in_guest_user_patch_mode` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `properties` (`obj`): Set the `properties` field on the resulting object. When `null`, the `properties` field will be omitted from the resulting object.
@@ -99,11 +111,65 @@ injecting into a complete block.
   - `scope` (`string`): Set the `scope` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `visibility` (`string`): Set the `visibility` field on the resulting object. When `null`, the `visibility` field will be omitted from the resulting object.
+  - `install_patches` (`list[obj]`): Set the `install_patches` field on the resulting object. When `null`, the `install_patches` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.install_patches.new](#fn-install_patchesnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.timeouts.new](#fn-timeoutsnew) constructor.
   - `window` (`list[obj]`): Set the `window` field on the resulting object. When `null`, the `window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.window.new](#fn-windownew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `maintenance_configuration` resource into the root Terraform configuration.
+
+
+### fn withInGuestUserPatchMode
+
+```ts
+withInGuestUserPatchMode()
+```
+
+`azurerm.string.withInGuestUserPatchMode` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the in_guest_user_patch_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `in_guest_user_patch_mode` field.
+
+
+### fn withInstallPatches
+
+```ts
+withInstallPatches()
+```
+
+`azurerm.list[obj].withInstallPatches` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the install_patches field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withInstallPatchesMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `install_patches` field.
+
+
+### fn withInstallPatchesMixin
+
+```ts
+withInstallPatchesMixin()
+```
+
+`azurerm.list[obj].withInstallPatchesMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the install_patches field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withInstallPatches](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `install_patches` field.
 
 
 ### fn withLocation
@@ -289,6 +355,81 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `window` field.
+
+
+## obj install_patches
+
+
+
+### fn install_patches.new
+
+```ts
+new()
+```
+
+
+`azurerm.maintenance_configuration.install_patches.new` constructs a new object with attributes and blocks configured for the `install_patches`
+Terraform sub block.
+
+
+
+**Args**:
+  - `reboot` (`string`): Set the `reboot` field on the resulting object. When `null`, the `reboot` field will be omitted from the resulting object.
+  - `linux` (`list[obj]`): Set the `linux` field on the resulting object. When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.install_patches.linux.new](#fn-install_patcheslinuxnew) constructor.
+  - `windows` (`list[obj]`): Set the `windows` field on the resulting object. When `null`, the `windows` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.maintenance_configuration.install_patches.windows.new](#fn-install_patcheswindowsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `install_patches` sub block.
+
+
+## obj install_patches.linux
+
+
+
+### fn install_patches.linux.new
+
+```ts
+new()
+```
+
+
+`azurerm.maintenance_configuration.install_patches.linux.new` constructs a new object with attributes and blocks configured for the `linux`
+Terraform sub block.
+
+
+
+**Args**:
+  - `classifications_to_include` (`list`): Set the `classifications_to_include` field on the resulting object. When `null`, the `classifications_to_include` field will be omitted from the resulting object.
+  - `package_names_mask_to_exclude` (`list`): Set the `package_names_mask_to_exclude` field on the resulting object. When `null`, the `package_names_mask_to_exclude` field will be omitted from the resulting object.
+  - `package_names_mask_to_include` (`list`): Set the `package_names_mask_to_include` field on the resulting object. When `null`, the `package_names_mask_to_include` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `linux` sub block.
+
+
+## obj install_patches.windows
+
+
+
+### fn install_patches.windows.new
+
+```ts
+new()
+```
+
+
+`azurerm.maintenance_configuration.install_patches.windows.new` constructs a new object with attributes and blocks configured for the `windows`
+Terraform sub block.
+
+
+
+**Args**:
+  - `classifications_to_include` (`list`): Set the `classifications_to_include` field on the resulting object. When `null`, the `classifications_to_include` field will be omitted from the resulting object.
+  - `kb_numbers_to_exclude` (`list`): Set the `kb_numbers_to_exclude` field on the resulting object. When `null`, the `kb_numbers_to_exclude` field will be omitted from the resulting object.
+  - `kb_numbers_to_include` (`list`): Set the `kb_numbers_to_include` field on the resulting object. When `null`, the `kb_numbers_to_include` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `windows` sub block.
 
 
 ## obj timeouts

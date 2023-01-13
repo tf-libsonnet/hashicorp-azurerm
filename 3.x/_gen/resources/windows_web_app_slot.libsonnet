@@ -339,31 +339,39 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   }),
   site_config:: {
     application_stack:: {
-      '#new':: d.fn(help='\n`azurerm.windows_web_app_slot.site_config.application_stack.new` constructs a new object with attributes and blocks configured for the `application_stack`\nTerraform sub block.\n\n\n\n**Args**:\n  - `current_stack` (`string`): Set the `current_stack` field on the resulting object. When `null`, the `current_stack` field will be omitted from the resulting object.\n  - `docker_container_name` (`string`): Set the `docker_container_name` field on the resulting object. When `null`, the `docker_container_name` field will be omitted from the resulting object.\n  - `docker_container_registry` (`string`): Set the `docker_container_registry` field on the resulting object. When `null`, the `docker_container_registry` field will be omitted from the resulting object.\n  - `docker_container_tag` (`string`): Set the `docker_container_tag` field on the resulting object. When `null`, the `docker_container_tag` field will be omitted from the resulting object.\n  - `dotnet_version` (`string`): Set the `dotnet_version` field on the resulting object. When `null`, the `dotnet_version` field will be omitted from the resulting object.\n  - `java_container` (`string`): Set the `java_container` field on the resulting object. When `null`, the `java_container` field will be omitted from the resulting object.\n  - `java_container_version` (`string`): Set the `java_container_version` field on the resulting object. When `null`, the `java_container_version` field will be omitted from the resulting object.\n  - `java_version` (`string`): Set the `java_version` field on the resulting object. When `null`, the `java_version` field will be omitted from the resulting object.\n  - `node_version` (`string`): Set the `node_version` field on the resulting object. When `null`, the `node_version` field will be omitted from the resulting object.\n  - `php_version` (`string`): Set the `php_version` field on the resulting object. When `null`, the `php_version` field will be omitted from the resulting object.\n  - `python_version` (`string`): Set the `python_version` field on the resulting object. When `null`, the `python_version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `application_stack` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.windows_web_app_slot.site_config.application_stack.new` constructs a new object with attributes and blocks configured for the `application_stack`\nTerraform sub block.\n\n\n\n**Args**:\n  - `current_stack` (`string`): Set the `current_stack` field on the resulting object. When `null`, the `current_stack` field will be omitted from the resulting object.\n  - `docker_container_name` (`string`): Set the `docker_container_name` field on the resulting object. When `null`, the `docker_container_name` field will be omitted from the resulting object.\n  - `docker_container_registry` (`string`): Set the `docker_container_registry` field on the resulting object. When `null`, the `docker_container_registry` field will be omitted from the resulting object.\n  - `docker_container_tag` (`string`): Set the `docker_container_tag` field on the resulting object. When `null`, the `docker_container_tag` field will be omitted from the resulting object.\n  - `dotnet_core_version` (`string`): The version of DotNetCore to use. When `null`, the `dotnet_core_version` field will be omitted from the resulting object.\n  - `dotnet_version` (`string`): Set the `dotnet_version` field on the resulting object. When `null`, the `dotnet_version` field will be omitted from the resulting object.\n  - `java_container` (`string`): Set the `java_container` field on the resulting object. When `null`, the `java_container` field will be omitted from the resulting object.\n  - `java_container_version` (`string`): Set the `java_container_version` field on the resulting object. When `null`, the `java_container_version` field will be omitted from the resulting object.\n  - `java_embedded_server_enabled` (`bool`): Should the application use the embedded web server for the version of Java in use. When `null`, the `java_embedded_server_enabled` field will be omitted from the resulting object.\n  - `java_version` (`string`): Set the `java_version` field on the resulting object. When `null`, the `java_version` field will be omitted from the resulting object.\n  - `node_version` (`string`): Set the `node_version` field on the resulting object. When `null`, the `node_version` field will be omitted from the resulting object.\n  - `php_version` (`string`): Set the `php_version` field on the resulting object. When `null`, the `php_version` field will be omitted from the resulting object.\n  - `python` (`bool`): Set the `python` field on the resulting object. When `null`, the `python` field will be omitted from the resulting object.\n  - `python_version` (`string`): Set the `python_version` field on the resulting object. When `null`, the `python_version` field will be omitted from the resulting object.\n  - `tomcat_version` (`string`): Set the `tomcat_version` field on the resulting object. When `null`, the `tomcat_version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `application_stack` sub block.\n', args=[]),
       new(
         current_stack=null,
         docker_container_name=null,
         docker_container_registry=null,
         docker_container_tag=null,
+        dotnet_core_version=null,
         dotnet_version=null,
         java_container=null,
         java_container_version=null,
+        java_embedded_server_enabled=null,
         java_version=null,
         node_version=null,
         php_version=null,
-        python_version=null
+        python=null,
+        python_version=null,
+        tomcat_version=null
       ):: std.prune(a={
         current_stack: current_stack,
         docker_container_name: docker_container_name,
         docker_container_registry: docker_container_registry,
         docker_container_tag: docker_container_tag,
+        dotnet_core_version: dotnet_core_version,
         dotnet_version: dotnet_version,
         java_container: java_container,
         java_container_version: java_container_version,
+        java_embedded_server_enabled: java_embedded_server_enabled,
         java_version: java_version,
         node_version: node_version,
         php_version: php_version,
+        python: python,
         python_version: python_version,
+        tomcat_version: tomcat_version,
       }),
     },
     auto_heal_setting:: {

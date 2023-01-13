@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAccountReplicationType()`](#fn-withaccountreplicationtype)
 * [`fn withAccountTier()`](#fn-withaccounttier)
 * [`fn withAllowNestedItemsToBePublic()`](#fn-withallownesteditemstobepublic)
+* [`fn withAllowedCopyScope()`](#fn-withallowedcopyscope)
 * [`fn withAzureFilesAuthentication()`](#fn-withazurefilesauthentication)
 * [`fn withAzureFilesAuthenticationMixin()`](#fn-withazurefilesauthenticationmixin)
 * [`fn withBlobProperties()`](#fn-withblobproperties)
@@ -151,6 +152,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `account_replication_type` (`string`): Set the `account_replication_type` field on the resulting resource block.
   - `account_tier` (`string`): Set the `account_tier` field on the resulting resource block.
   - `allow_nested_items_to_be_public` (`bool`): Set the `allow_nested_items_to_be_public` field on the resulting resource block. When `null`, the `allow_nested_items_to_be_public` field will be omitted from the resulting object.
+  - `allowed_copy_scope` (`string`): Set the `allowed_copy_scope` field on the resulting resource block. When `null`, the `allowed_copy_scope` field will be omitted from the resulting object.
   - `cross_tenant_replication_enabled` (`bool`): Set the `cross_tenant_replication_enabled` field on the resulting resource block. When `null`, the `cross_tenant_replication_enabled` field will be omitted from the resulting object.
   - `default_to_oauth_authentication` (`bool`): Set the `default_to_oauth_authentication` field on the resulting resource block. When `null`, the `default_to_oauth_authentication` field will be omitted from the resulting object.
   - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
@@ -210,6 +212,7 @@ injecting into a complete block.
   - `account_replication_type` (`string`): Set the `account_replication_type` field on the resulting object.
   - `account_tier` (`string`): Set the `account_tier` field on the resulting object.
   - `allow_nested_items_to_be_public` (`bool`): Set the `allow_nested_items_to_be_public` field on the resulting object. When `null`, the `allow_nested_items_to_be_public` field will be omitted from the resulting object.
+  - `allowed_copy_scope` (`string`): Set the `allowed_copy_scope` field on the resulting object. When `null`, the `allowed_copy_scope` field will be omitted from the resulting object.
   - `cross_tenant_replication_enabled` (`bool`): Set the `cross_tenant_replication_enabled` field on the resulting object. When `null`, the `cross_tenant_replication_enabled` field will be omitted from the resulting object.
   - `default_to_oauth_authentication` (`bool`): Set the `default_to_oauth_authentication` field on the resulting object. When `null`, the `default_to_oauth_authentication` field will be omitted from the resulting object.
   - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
@@ -324,6 +327,22 @@ Terraform resource block to set or update the allow_nested_items_to_be_public fi
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `allow_nested_items_to_be_public` field.
+
+
+### fn withAllowedCopyScope
+
+```ts
+withAllowedCopyScope()
+```
+
+`azurerm.string.withAllowedCopyScope` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the allowed_copy_scope field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `allowed_copy_scope` field.
 
 
 ### fn withAzureFilesAuthentication

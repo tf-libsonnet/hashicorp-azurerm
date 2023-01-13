@@ -46,7 +46,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       values: values,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.sentinel_automation_rule.new` injects a new `azurerm_sentinel_automation_rule` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.sentinel_automation_rule.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.sentinel_automation_rule` using the reference:\n\n    $._ref.azurerm_sentinel_automation_rule.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_sentinel_automation_rule.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `expiration` (`string`): Set the `expiration` field on the resulting resource block. When `null`, the `expiration` field will be omitted from the resulting object.\n  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `order` (`number`): Set the `order` field on the resulting resource block.\n  - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting resource block. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.\n  - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting resource block. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.\n  - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.sentinel_automation_rule.new` injects a new `azurerm_sentinel_automation_rule` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.sentinel_automation_rule.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.sentinel_automation_rule` using the reference:\n\n    $._ref.azurerm_sentinel_automation_rule.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_sentinel_automation_rule.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `condition_json` (`string`): Set the `condition_json` field on the resulting resource block. When `null`, the `condition_json` field will be omitted from the resulting object.\n  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `expiration` (`string`): Set the `expiration` field on the resulting resource block. When `null`, the `expiration` field will be omitted from the resulting object.\n  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `order` (`number`): Set the `order` field on the resulting resource block.\n  - `triggers_on` (`string`): Set the `triggers_on` field on the resulting resource block. When `null`, the `triggers_on` field will be omitted from the resulting object.\n  - `triggers_when` (`string`): Set the `triggers_when` field on the resulting resource block. When `null`, the `triggers_when` field will be omitted from the resulting object.\n  - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting resource block. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.\n  - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting resource block. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.\n  - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     display_name,
@@ -56,9 +56,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     action_incident=null,
     action_playbook=null,
     condition=null,
+    condition_json=null,
     enabled=null,
     expiration=null,
     timeouts=null,
+    triggers_on=null,
+    triggers_when=null,
     _meta={}
   ):: tf.withResource(
     type='azurerm_sentinel_automation_rule',
@@ -67,17 +70,20 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       action_incident=action_incident,
       action_playbook=action_playbook,
       condition=condition,
+      condition_json=condition_json,
       display_name=display_name,
       enabled=enabled,
       expiration=expiration,
       log_analytics_workspace_id=log_analytics_workspace_id,
       name=name,
       order=order,
-      timeouts=timeouts
+      timeouts=timeouts,
+      triggers_on=triggers_on,
+      triggers_when=triggers_when
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.sentinel_automation_rule.newAttrs` constructs a new object with attributes and blocks configured for the `sentinel_automation_rule`\nTerraform resource.\n\nUnlike [azurerm.sentinel_automation_rule.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `display_name` (`string`): Set the `display_name` field on the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `expiration` (`string`): Set the `expiration` field on the resulting object. When `null`, the `expiration` field will be omitted from the resulting object.\n  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `order` (`number`): Set the `order` field on the resulting object.\n  - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting object. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.\n  - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting object. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.\n  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sentinel_automation_rule` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.sentinel_automation_rule.newAttrs` constructs a new object with attributes and blocks configured for the `sentinel_automation_rule`\nTerraform resource.\n\nUnlike [azurerm.sentinel_automation_rule.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `condition_json` (`string`): Set the `condition_json` field on the resulting object. When `null`, the `condition_json` field will be omitted from the resulting object.\n  - `display_name` (`string`): Set the `display_name` field on the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `expiration` (`string`): Set the `expiration` field on the resulting object. When `null`, the `expiration` field will be omitted from the resulting object.\n  - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `order` (`number`): Set the `order` field on the resulting object.\n  - `triggers_on` (`string`): Set the `triggers_on` field on the resulting object. When `null`, the `triggers_on` field will be omitted from the resulting object.\n  - `triggers_when` (`string`): Set the `triggers_when` field on the resulting object. When `null`, the `triggers_when` field will be omitted from the resulting object.\n  - `action_incident` (`list[obj]`): Set the `action_incident` field on the resulting object. When `null`, the `action_incident` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_incident.new](#fn-action_incidentnew) constructor.\n  - `action_playbook` (`list[obj]`): Set the `action_playbook` field on the resulting object. When `null`, the `action_playbook` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.action_playbook.new](#fn-action_playbooknew) constructor.\n  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.condition.new](#fn-conditionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_automation_rule.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sentinel_automation_rule` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     display_name,
     log_analytics_workspace_id,
@@ -86,13 +92,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     action_incident=null,
     action_playbook=null,
     condition=null,
+    condition_json=null,
     enabled=null,
     expiration=null,
-    timeouts=null
+    timeouts=null,
+    triggers_on=null,
+    triggers_when=null
   ):: std.prune(a={
     action_incident: action_incident,
     action_playbook: action_playbook,
     condition: condition,
+    condition_json: condition_json,
     display_name: display_name,
     enabled: enabled,
     expiration: expiration,
@@ -100,6 +110,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     name: name,
     order: order,
     timeouts: timeouts,
+    triggers_on: triggers_on,
+    triggers_when: triggers_when,
   }),
   timeouts:: {
     '#new':: d.fn(help='\n`azurerm.sentinel_automation_rule.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
@@ -161,6 +173,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_sentinel_automation_rule+: {
         [resourceLabel]+: {
           condition: value,
+        },
+      },
+    },
+  },
+  '#withConditionJson':: d.fn(help='`azurerm.string.withConditionJson` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the condition_json field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `condition_json` field.\n', args=[]),
+  withConditionJson(resourceLabel, value): {
+    resource+: {
+      azurerm_sentinel_automation_rule+: {
+        [resourceLabel]+: {
+          condition_json: value,
         },
       },
     },
@@ -251,6 +273,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_sentinel_automation_rule+: {
         [resourceLabel]+: {
           timeouts+: value,
+        },
+      },
+    },
+  },
+  '#withTriggersOn':: d.fn(help='`azurerm.string.withTriggersOn` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the triggers_on field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `triggers_on` field.\n', args=[]),
+  withTriggersOn(resourceLabel, value): {
+    resource+: {
+      azurerm_sentinel_automation_rule+: {
+        [resourceLabel]+: {
+          triggers_on: value,
+        },
+      },
+    },
+  },
+  '#withTriggersWhen':: d.fn(help='`azurerm.string.withTriggersWhen` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the triggers_when field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `triggers_when` field.\n', args=[]),
+  withTriggersWhen(resourceLabel, value): {
+    resource+: {
+      azurerm_sentinel_automation_rule+: {
+        [resourceLabel]+: {
+          triggers_when: value,
         },
       },
     },
