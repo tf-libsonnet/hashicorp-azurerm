@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCollation()`](#fn-withcollation)
 * [`fn withCreateMode()`](#fn-withcreatemode)
 * [`fn withDataEncrypted()`](#fn-withdataencrypted)
+* [`fn withGeoBackupPolicyEnabled()`](#fn-withgeobackuppolicyenabled)
 * [`fn withName()`](#fn-withname)
 * [`fn withRecoveryDatabaseId()`](#fn-withrecoverydatabaseid)
 * [`fn withRestore()`](#fn-withrestore)
@@ -64,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `collation` (`string`): Set the `collation` field on the resulting resource block. When `null`, the `collation` field will be omitted from the resulting object.
   - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
   - `data_encrypted` (`bool`): Set the `data_encrypted` field on the resulting resource block. When `null`, the `data_encrypted` field will be omitted from the resulting object.
+  - `geo_backup_policy_enabled` (`bool`): Set the `geo_backup_policy_enabled` field on the resulting resource block. When `null`, the `geo_backup_policy_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `recovery_database_id` (`string`): Set the `recovery_database_id` field on the resulting resource block. When `null`, the `recovery_database_id` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
@@ -97,6 +99,7 @@ injecting into a complete block.
   - `collation` (`string`): Set the `collation` field on the resulting object. When `null`, the `collation` field will be omitted from the resulting object.
   - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
   - `data_encrypted` (`bool`): Set the `data_encrypted` field on the resulting object. When `null`, the `data_encrypted` field will be omitted from the resulting object.
+  - `geo_backup_policy_enabled` (`bool`): Set the `geo_backup_policy_enabled` field on the resulting object. When `null`, the `geo_backup_policy_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `recovery_database_id` (`string`): Set the `recovery_database_id` field on the resulting object. When `null`, the `recovery_database_id` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
@@ -155,6 +158,22 @@ Terraform resource block to set or update the data_encrypted field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `data_encrypted` field.
+
+
+### fn withGeoBackupPolicyEnabled
+
+```ts
+withGeoBackupPolicyEnabled()
+```
+
+`azurerm.bool.withGeoBackupPolicyEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the geo_backup_policy_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `geo_backup_policy_enabled` field.
 
 
 ### fn withName

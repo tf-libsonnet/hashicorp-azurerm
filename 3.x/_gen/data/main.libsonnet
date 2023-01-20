@@ -33,6 +33,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   availability_set: (import 'availability_set.libsonnet'),
   backup_policy_file_share: (import 'backup_policy_file_share.libsonnet'),
   backup_policy_vm: (import 'backup_policy_vm.libsonnet'),
+  bastion_host: (import 'bastion_host.libsonnet'),
   batch_account: (import 'batch_account.libsonnet'),
   batch_application: (import 'batch_application.libsonnet'),
   batch_certificate: (import 'batch_certificate.libsonnet'),

@@ -38,6 +38,7 @@ permalink: /data/
 * [availability_set](availability_set.md)
 * [backup_policy_file_share](backup_policy_file_share.md)
 * [backup_policy_vm](backup_policy_vm.md)
+* [bastion_host](bastion_host.md)
 * [batch_account](batch_account.md)
 * [batch_application](batch_application.md)
 * [batch_certificate](batch_certificate.md)
