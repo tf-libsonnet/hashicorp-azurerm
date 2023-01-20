@@ -42,6 +42,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withImageCleanerIntervalHours()`](#fn-withimagecleanerintervalhours)
 * [`fn withIngressApplicationGateway()`](#fn-withingressapplicationgateway)
 * [`fn withIngressApplicationGatewayMixin()`](#fn-withingressapplicationgatewaymixin)
+* [`fn withKeyManagementService()`](#fn-withkeymanagementservice)
+* [`fn withKeyManagementServiceMixin()`](#fn-withkeymanagementservicemixin)
 * [`fn withKeyVaultSecretsProvider()`](#fn-withkeyvaultsecretsprovider)
 * [`fn withKeyVaultSecretsProviderMixin()`](#fn-withkeyvaultsecretsprovidermixin)
 * [`fn withKubeletIdentity()`](#fn-withkubeletidentity)
@@ -111,6 +113,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-identitynew)
 * [`obj ingress_application_gateway`](#obj-ingress_application_gateway)
   * [`fn new()`](#fn-ingress_application_gatewaynew)
+* [`obj key_management_service`](#obj-key_management_service)
+  * [`fn new()`](#fn-key_management_servicenew)
 * [`obj key_vault_secrets_provider`](#obj-key_vault_secrets_provider)
   * [`fn new()`](#fn-key_vault_secrets_providernew)
 * [`obj kubelet_identity`](#obj-kubelet_identity)
@@ -217,6 +221,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `http_proxy_config` (`list[obj]`): Set the `http_proxy_config` field on the resulting resource block. When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
   - `ingress_application_gateway` (`list[obj]`): Set the `ingress_application_gateway` field on the resulting resource block. When `null`, the `ingress_application_gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.ingress_application_gateway.new](#fn-ingress_application_gatewaynew) constructor.
+  - `key_management_service` (`list[obj]`): Set the `key_management_service` field on the resulting resource block. When `null`, the `key_management_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_management_service.new](#fn-key_management_servicenew) constructor.
   - `key_vault_secrets_provider` (`list[obj]`): Set the `key_vault_secrets_provider` field on the resulting resource block. When `null`, the `key_vault_secrets_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_vault_secrets_provider.new](#fn-key_vault_secrets_providernew) constructor.
   - `kubelet_identity` (`list[obj]`): Set the `kubelet_identity` field on the resulting resource block. When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
   - `linux_profile` (`list[obj]`): Set the `linux_profile` field on the resulting resource block. When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
@@ -290,6 +295,7 @@ injecting into a complete block.
   - `http_proxy_config` (`list[obj]`): Set the `http_proxy_config` field on the resulting object. When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
   - `ingress_application_gateway` (`list[obj]`): Set the `ingress_application_gateway` field on the resulting object. When `null`, the `ingress_application_gateway` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.ingress_application_gateway.new](#fn-ingress_application_gatewaynew) constructor.
+  - `key_management_service` (`list[obj]`): Set the `key_management_service` field on the resulting object. When `null`, the `key_management_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_management_service.new](#fn-key_management_servicenew) constructor.
   - `key_vault_secrets_provider` (`list[obj]`): Set the `key_vault_secrets_provider` field on the resulting object. When `null`, the `key_vault_secrets_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.key_vault_secrets_provider.new](#fn-key_vault_secrets_providernew) constructor.
   - `kubelet_identity` (`list[obj]`): Set the `kubelet_identity` field on the resulting object. When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
   - `linux_profile` (`list[obj]`): Set the `linux_profile` field on the resulting object. When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
@@ -779,6 +785,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `ingress_application_gateway` field.
+
+
+### fn withKeyManagementService
+
+```ts
+withKeyManagementService()
+```
+
+`azurerm.list[obj].withKeyManagementService` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the key_management_service field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withKeyManagementServiceMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `key_management_service` field.
+
+
+### fn withKeyManagementServiceMixin
+
+```ts
+withKeyManagementServiceMixin()
+```
+
+`azurerm.list[obj].withKeyManagementServiceMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the key_management_service field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withKeyManagementService](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `key_management_service` field.
 
 
 ### fn withKeyVaultSecretsProvider
@@ -1949,6 +1992,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ingress_application_gateway` sub block.
+
+
+## obj key_management_service
+
+
+
+### fn key_management_service.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.key_management_service.new` constructs a new object with attributes and blocks configured for the `key_management_service`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object.
+  - `key_vault_network_access` (`string`): Set the `key_vault_network_access` field on the resulting object. When `null`, the `key_vault_network_access` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `key_management_service` sub block.
 
 
 ## obj key_vault_secrets_provider
