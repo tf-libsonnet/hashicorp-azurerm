@@ -36,6 +36,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withKeyVaultReferenceIdentityId()`](#fn-withkeyvaultreferenceidentityid)
 * [`fn withName()`](#fn-withname)
+* [`fn withServicePlanId()`](#fn-withserviceplanid)
 * [`fn withSiteConfig()`](#fn-withsiteconfig)
 * [`fn withSiteConfigMixin()`](#fn-withsiteconfigmixin)
 * [`fn withStorageAccount()`](#fn-withstorageaccount)
@@ -127,6 +128,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `https_only` (`bool`): Can the Function App Slot only be accessed via HTTPS? When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): The User Assigned Identity to use for Key Vault access. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Specifies the name of the Function App Slot.
+  - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting resource block. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `storage_account_access_key` (`string`): The access key which will be used to access the storage account for the Function App Slot. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
   - `storage_account_name` (`string`): The backend storage account name which will be used by this Function App Slot. When `null`, the `storage_account_name` field will be omitted from the resulting object.
   - `storage_key_vault_secret_id` (`string`): The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. When `null`, the `storage_key_vault_secret_id` field will be omitted from the resulting object.
@@ -176,6 +178,7 @@ injecting into a complete block.
   - `https_only` (`bool`): Can the Function App Slot only be accessed via HTTPS? When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): The User Assigned Identity to use for Key Vault access. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Specifies the name of the Function App Slot.
+  - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting object. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `storage_account_access_key` (`string`): The access key which will be used to access the storage account for the Function App Slot. When `null`, the `storage_account_access_key` field will be omitted from the resulting object.
   - `storage_account_name` (`string`): The backend storage account name which will be used by this Function App Slot. When `null`, the `storage_account_name` field will be omitted from the resulting object.
   - `storage_key_vault_secret_id` (`string`): The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. When `null`, the `storage_key_vault_secret_id` field will be omitted from the resulting object.
@@ -548,6 +551,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withServicePlanId
+
+```ts
+withServicePlanId()
+```
+
+`azurerm.string.withServicePlanId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the service_plan_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `service_plan_id` field.
 
 
 ### fn withSiteConfig

@@ -105,6 +105,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-default_node_poollinux_os_confignew)
     * [`obj default_node_pool.linux_os_config.sysctl_config`](#obj-default_node_poollinux_os_configsysctl_config)
       * [`fn new()`](#fn-default_node_poollinux_os_configsysctl_confignew)
+  * [`obj default_node_pool.node_network_profile`](#obj-default_node_poolnode_network_profile)
+    * [`fn new()`](#fn-default_node_poolnode_network_profilenew)
   * [`obj default_node_pool.upgrade_settings`](#obj-default_node_poolupgrade_settings)
     * [`fn new()`](#fn-default_node_poolupgrade_settingsnew)
 * [`obj http_proxy_config`](#obj-http_proxy_config)
@@ -1780,6 +1782,7 @@ Terraform sub block.
   - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
   - `kubelet_config` (`list[obj]`): Set the `kubelet_config` field on the resulting object. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.kubelet_config.new](#fn-default_node_poolkubelet_confignew) constructor.
   - `linux_os_config` (`list[obj]`): Set the `linux_os_config` field on the resulting object. When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.linux_os_config.new](#fn-default_node_poollinux_os_confignew) constructor.
+  - `node_network_profile` (`list[obj]`): Set the `node_network_profile` field on the resulting object. When `null`, the `node_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.node_network_profile.new](#fn-default_node_poolnode_network_profilenew) constructor.
   - `upgrade_settings` (`list[obj]`): Set the `upgrade_settings` field on the resulting object. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.upgrade_settings.new](#fn-default_node_poolupgrade_settingsnew) constructor.
 
 **Returns**:
@@ -1893,6 +1896,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `sysctl_config` sub block.
+
+
+## obj default_node_pool.node_network_profile
+
+
+
+### fn default_node_pool.node_network_profile.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.default_node_pool.node_network_profile.new` constructs a new object with attributes and blocks configured for the `node_network_profile`
+Terraform sub block.
+
+
+
+**Args**:
+  - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `node_network_profile` sub block.
 
 
 ## obj default_node_pool.upgrade_settings

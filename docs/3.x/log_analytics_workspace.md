@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDailyQuotaGb()`](#fn-withdailyquotagb)
 * [`fn withInternetIngestionEnabled()`](#fn-withinternetingestionenabled)
 * [`fn withInternetQueryEnabled()`](#fn-withinternetqueryenabled)
+* [`fn withLocalAuthenticationDisabled()`](#fn-withlocalauthenticationdisabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withReservationCapacityInGbPerDay()`](#fn-withreservationcapacityingbperday)
@@ -66,6 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting resource block. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
   - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting resource block. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
   - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting resource block. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
+  - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting resource block. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `reservation_capacity_in_gb_per_day` (`number`): Set the `reservation_capacity_in_gb_per_day` field on the resulting resource block. When `null`, the `reservation_capacity_in_gb_per_day` field will be omitted from the resulting object.
@@ -102,6 +104,7 @@ injecting into a complete block.
   - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting object. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
   - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting object. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
   - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting object. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
+  - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting object. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `reservation_capacity_in_gb_per_day` (`number`): Set the `reservation_capacity_in_gb_per_day` field on the resulting object. When `null`, the `reservation_capacity_in_gb_per_day` field will be omitted from the resulting object.
@@ -193,6 +196,22 @@ Terraform resource block to set or update the internet_query_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `internet_query_enabled` field.
+
+
+### fn withLocalAuthenticationDisabled
+
+```ts
+withLocalAuthenticationDisabled()
+```
+
+`azurerm.bool.withLocalAuthenticationDisabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the local_authentication_disabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `local_authentication_disabled` field.
 
 
 ### fn withLocation

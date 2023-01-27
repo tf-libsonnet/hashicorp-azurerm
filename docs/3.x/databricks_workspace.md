@@ -21,6 +21,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withInfrastructureEncryptionEnabled()`](#fn-withinfrastructureencryptionenabled)
 * [`fn withLoadBalancerBackendAddressPoolId()`](#fn-withloadbalancerbackendaddresspoolid)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withManagedDiskCmkKeyVaultKeyId()`](#fn-withmanageddiskcmkkeyvaultkeyid)
+* [`fn withManagedDiskCmkRotationToLatestVersionEnabled()`](#fn-withmanageddiskcmkrotationtolatestversionenabled)
 * [`fn withManagedResourceGroupName()`](#fn-withmanagedresourcegroupname)
 * [`fn withManagedServicesCmkKeyVaultKeyId()`](#fn-withmanagedservicescmkkeyvaultkeyid)
 * [`fn withName()`](#fn-withname)
@@ -69,6 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting resource block. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
   - `load_balancer_backend_address_pool_id` (`string`): Set the `load_balancer_backend_address_pool_id` field on the resulting resource block. When `null`, the `load_balancer_backend_address_pool_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `managed_disk_cmk_key_vault_key_id` (`string`): Set the `managed_disk_cmk_key_vault_key_id` field on the resulting resource block. When `null`, the `managed_disk_cmk_key_vault_key_id` field will be omitted from the resulting object.
+  - `managed_disk_cmk_rotation_to_latest_version_enabled` (`bool`): Set the `managed_disk_cmk_rotation_to_latest_version_enabled` field on the resulting resource block. When `null`, the `managed_disk_cmk_rotation_to_latest_version_enabled` field will be omitted from the resulting object.
   - `managed_resource_group_name` (`string`): Set the `managed_resource_group_name` field on the resulting resource block. When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
   - `managed_services_cmk_key_vault_key_id` (`string`): Set the `managed_services_cmk_key_vault_key_id` field on the resulting resource block. When `null`, the `managed_services_cmk_key_vault_key_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -106,6 +110,8 @@ injecting into a complete block.
   - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting object. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
   - `load_balancer_backend_address_pool_id` (`string`): Set the `load_balancer_backend_address_pool_id` field on the resulting object. When `null`, the `load_balancer_backend_address_pool_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
+  - `managed_disk_cmk_key_vault_key_id` (`string`): Set the `managed_disk_cmk_key_vault_key_id` field on the resulting object. When `null`, the `managed_disk_cmk_key_vault_key_id` field will be omitted from the resulting object.
+  - `managed_disk_cmk_rotation_to_latest_version_enabled` (`bool`): Set the `managed_disk_cmk_rotation_to_latest_version_enabled` field on the resulting object. When `null`, the `managed_disk_cmk_rotation_to_latest_version_enabled` field will be omitted from the resulting object.
   - `managed_resource_group_name` (`string`): Set the `managed_resource_group_name` field on the resulting object. When `null`, the `managed_resource_group_name` field will be omitted from the resulting object.
   - `managed_services_cmk_key_vault_key_id` (`string`): Set the `managed_services_cmk_key_vault_key_id` field on the resulting object. When `null`, the `managed_services_cmk_key_vault_key_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -220,6 +226,38 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withManagedDiskCmkKeyVaultKeyId
+
+```ts
+withManagedDiskCmkKeyVaultKeyId()
+```
+
+`azurerm.string.withManagedDiskCmkKeyVaultKeyId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the managed_disk_cmk_key_vault_key_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `managed_disk_cmk_key_vault_key_id` field.
+
+
+### fn withManagedDiskCmkRotationToLatestVersionEnabled
+
+```ts
+withManagedDiskCmkRotationToLatestVersionEnabled()
+```
+
+`azurerm.bool.withManagedDiskCmkRotationToLatestVersionEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the managed_disk_cmk_rotation_to_latest_version_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `managed_disk_cmk_rotation_to_latest_version_enabled` field.
 
 
 ### fn withManagedResourceGroupName

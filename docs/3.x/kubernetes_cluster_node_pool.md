@@ -37,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNodeCount()`](#fn-withnodecount)
 * [`fn withNodeLabels()`](#fn-withnodelabels)
+* [`fn withNodeNetworkProfile()`](#fn-withnodenetworkprofile)
+* [`fn withNodeNetworkProfileMixin()`](#fn-withnodenetworkprofilemixin)
 * [`fn withNodePublicIpPrefixId()`](#fn-withnodepublicipprefixid)
 * [`fn withNodeTaints()`](#fn-withnodetaints)
 * [`fn withOrchestratorVersion()`](#fn-withorchestratorversion)
@@ -67,6 +69,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-linux_os_confignew)
   * [`obj linux_os_config.sysctl_config`](#obj-linux_os_configsysctl_config)
     * [`fn new()`](#fn-linux_os_configsysctl_confignew)
+* [`obj node_network_profile`](#obj-node_network_profile)
+  * [`fn new()`](#fn-node_network_profilenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj upgrade_settings`](#obj-upgrade_settings)
@@ -141,6 +145,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
   - `kubelet_config` (`list[obj]`): Set the `kubelet_config` field on the resulting resource block. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
   - `linux_os_config` (`list[obj]`): Set the `linux_os_config` field on the resulting resource block. When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
+  - `node_network_profile` (`list[obj]`): Set the `node_network_profile` field on the resulting resource block. When `null`, the `node_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.node_network_profile.new](#fn-node_network_profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `upgrade_settings` (`list[obj]`): Set the `upgrade_settings` field on the resulting resource block. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
   - `windows_profile` (`list[obj]`): Set the `windows_profile` field on the resulting resource block. When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.windows_profile.new](#fn-windows_profilenew) constructor.
@@ -205,6 +210,7 @@ injecting into a complete block.
   - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
   - `kubelet_config` (`list[obj]`): Set the `kubelet_config` field on the resulting object. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.kubelet_config.new](#fn-kubelet_confignew) constructor.
   - `linux_os_config` (`list[obj]`): Set the `linux_os_config` field on the resulting object. When `null`, the `linux_os_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.linux_os_config.new](#fn-linux_os_confignew) constructor.
+  - `node_network_profile` (`list[obj]`): Set the `node_network_profile` field on the resulting object. When `null`, the `node_network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.node_network_profile.new](#fn-node_network_profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `upgrade_settings` (`list[obj]`): Set the `upgrade_settings` field on the resulting object. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
   - `windows_profile` (`list[obj]`): Set the `windows_profile` field on the resulting object. When `null`, the `windows_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.windows_profile.new](#fn-windows_profilenew) constructor.
@@ -573,6 +579,43 @@ Terraform resource block to set or update the node_labels field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `node_labels` field.
+
+
+### fn withNodeNetworkProfile
+
+```ts
+withNodeNetworkProfile()
+```
+
+`azurerm.list[obj].withNodeNetworkProfile` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the node_network_profile field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withNodeNetworkProfileMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `node_network_profile` field.
+
+
+### fn withNodeNetworkProfileMixin
+
+```ts
+withNodeNetworkProfileMixin()
+```
+
+`azurerm.list[obj].withNodeNetworkProfileMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the node_network_profile field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withNodeNetworkProfile](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `node_network_profile` field.
 
 
 ### fn withNodePublicIpPrefixId
@@ -1080,6 +1123,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `sysctl_config` sub block.
+
+
+## obj node_network_profile
+
+
+
+### fn node_network_profile.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster_node_pool.node_network_profile.new` constructs a new object with attributes and blocks configured for the `node_network_profile`
+Terraform sub block.
+
+
+
+**Args**:
+  - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `node_network_profile` sub block.
 
 
 ## obj timeouts

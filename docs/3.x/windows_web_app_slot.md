@@ -35,6 +35,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLogs()`](#fn-withlogs)
 * [`fn withLogsMixin()`](#fn-withlogsmixin)
 * [`fn withName()`](#fn-withname)
+* [`fn withServicePlanId()`](#fn-withserviceplanid)
 * [`fn withSiteConfig()`](#fn-withsiteconfig)
 * [`fn withSiteConfigMixin()`](#fn-withsiteconfigmixin)
 * [`fn withStorageAccount()`](#fn-withstorageaccount)
@@ -146,6 +147,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting resource block. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting resource block. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
   - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
@@ -190,6 +192,7 @@ injecting into a complete block.
   - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting object. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting object. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
   - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
@@ -549,6 +552,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withServicePlanId
+
+```ts
+withServicePlanId()
+```
+
+`azurerm.string.withServicePlanId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the service_plan_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `service_plan_id` field.
 
 
 ### fn withSiteConfig

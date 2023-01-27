@@ -378,7 +378,7 @@ Terraform sub block.
   - `member_name` (`string`): Set the `member_name` field on the resulting object. When `null`, the `member_name` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `private_ip_address` (`string`): Set the `private_ip_address` field on the resulting object.
-  - `subresource_name` (`string`): Set the `subresource_name` field on the resulting object.
+  - `subresource_name` (`string`): Set the `subresource_name` field on the resulting object. When `null`, the `subresource_name` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.

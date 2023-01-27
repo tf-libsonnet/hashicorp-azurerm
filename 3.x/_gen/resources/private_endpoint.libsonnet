@@ -3,12 +3,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='private_endpoint', url='', help='`private_endpoint` represents the `azurerm_private_endpoint` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   ip_configuration:: {
-    '#new':: d.fn(help='\n`azurerm.private_endpoint.ip_configuration.new` constructs a new object with attributes and blocks configured for the `ip_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `member_name` (`string`): Set the `member_name` field on the resulting object. When `null`, the `member_name` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `private_ip_address` (`string`): Set the `private_ip_address` field on the resulting object.\n  - `subresource_name` (`string`): Set the `subresource_name` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ip_configuration` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.private_endpoint.ip_configuration.new` constructs a new object with attributes and blocks configured for the `ip_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `member_name` (`string`): Set the `member_name` field on the resulting object. When `null`, the `member_name` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `private_ip_address` (`string`): Set the `private_ip_address` field on the resulting object.\n  - `subresource_name` (`string`): Set the `subresource_name` field on the resulting object. When `null`, the `subresource_name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ip_configuration` sub block.\n', args=[]),
     new(
       name,
       private_ip_address,
-      subresource_name,
-      member_name=null
+      member_name=null,
+      subresource_name=null
     ):: std.prune(a={
       member_name: member_name,
       name: name,
