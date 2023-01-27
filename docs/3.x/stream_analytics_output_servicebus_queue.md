@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `queue_name` (`string`): Set the `queue_name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `servicebus_namespace` (`string`): Set the `servicebus_namespace` field on the resulting resource block.
-  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting resource block.
-  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting resource block.
+  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting resource block. When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
+  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting resource block. When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
   - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting resource block.
   - `system_property_columns` (`obj`): Set the `system_property_columns` field on the resulting resource block. When `null`, the `system_property_columns` field will be omitted from the resulting object.
   - `serialization` (`list[obj]`): Set the `serialization` field on the resulting resource block. When `null`, the `serialization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_servicebus_queue.serialization.new](#fn-serializationnew) constructor.
@@ -104,8 +104,8 @@ injecting into a complete block.
   - `queue_name` (`string`): Set the `queue_name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `servicebus_namespace` (`string`): Set the `servicebus_namespace` field on the resulting object.
-  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting object.
-  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting object.
+  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting object. When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
+  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting object. When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
   - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting object.
   - `system_property_columns` (`obj`): Set the `system_property_columns` field on the resulting object. When `null`, the `system_property_columns` field will be omitted from the resulting object.
   - `serialization` (`list[obj]`): Set the `serialization` field on the resulting object. When `null`, the `serialization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stream_analytics_output_servicebus_queue.serialization.new](#fn-serializationnew) constructor.

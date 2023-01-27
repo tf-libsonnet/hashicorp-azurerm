@@ -33,8 +33,12 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-policy_optionplayready_configuration_licensenew)
     * [`obj policy_option.playready_configuration_license.play_right`](#obj-policy_optionplayready_configuration_licenseplay_right)
       * [`fn new()`](#fn-policy_optionplayready_configuration_licenseplay_rightnew)
+      * [`obj policy_option.playready_configuration_license.play_right.explicit_analog_television_output_restriction`](#obj-policy_optionplayready_configuration_licenseplay_rightexplicit_analog_television_output_restriction)
+        * [`fn new()`](#fn-policy_optionplayready_configuration_licenseplay_rightexplicit_analog_television_output_restrictionnew)
   * [`obj policy_option.token_restriction`](#obj-policy_optiontoken_restriction)
     * [`fn new()`](#fn-policy_optiontoken_restrictionnew)
+    * [`obj policy_option.token_restriction.alternate_key`](#obj-policy_optiontoken_restrictionalternate_key)
+      * [`fn new()`](#fn-policy_optiontoken_restrictionalternate_keynew)
     * [`obj policy_option.token_restriction.required_claim`](#obj-policy_optiontoken_restrictionrequired_claim)
       * [`fn new()`](#fn-policy_optiontoken_restrictionrequired_claimnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -266,6 +270,7 @@ Terraform sub block.
   - `clear_key_configuration_enabled` (`bool`): Set the `clear_key_configuration_enabled` field on the resulting object. When `null`, the `clear_key_configuration_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `open_restriction_enabled` (`bool`): Set the `open_restriction_enabled` field on the resulting object. When `null`, the `open_restriction_enabled` field will be omitted from the resulting object.
+  - `playready_response_custom_data` (`string`): Set the `playready_response_custom_data` field on the resulting object. When `null`, the `playready_response_custom_data` field will be omitted from the resulting object.
   - `widevine_configuration_template` (`string`): Set the `widevine_configuration_template` field on the resulting object. When `null`, the `widevine_configuration_template` field will be omitted from the resulting object.
   - `fairplay_configuration` (`list[obj]`): Set the `fairplay_configuration` field on the resulting object. When `null`, the `fairplay_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.fairplay_configuration.new](#fn-policy_optionfairplay_configurationnew) constructor.
   - `playready_configuration_license` (`list[obj]`): Set the `playready_configuration_license` field on the resulting object. When `null`, the `playready_configuration_license` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.new](#fn-policy_optionplayready_configuration_licensenew) constructor.
@@ -354,6 +359,7 @@ Terraform sub block.
   - `license_type` (`string`): Set the `license_type` field on the resulting object. When `null`, the `license_type` field will be omitted from the resulting object.
   - `relative_begin_date` (`string`): Set the `relative_begin_date` field on the resulting object. When `null`, the `relative_begin_date` field will be omitted from the resulting object.
   - `relative_expiration_date` (`string`): Set the `relative_expiration_date` field on the resulting object. When `null`, the `relative_expiration_date` field will be omitted from the resulting object.
+  - `security_level` (`string`): Set the `security_level` field on the resulting object. When `null`, the `security_level` field will be omitted from the resulting object.
   - `play_right` (`list[obj]`): Set the `play_right` field on the resulting object. When `null`, the `play_right` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.new](#fn-policy_optionpolicy_optionplay_rightnew) constructor.
 
 **Returns**:
@@ -381,6 +387,7 @@ Terraform sub block.
   - `allow_passing_video_content_to_unknown_output` (`string`): Set the `allow_passing_video_content_to_unknown_output` field on the resulting object. When `null`, the `allow_passing_video_content_to_unknown_output` field will be omitted from the resulting object.
   - `analog_video_opl` (`number`): Set the `analog_video_opl` field on the resulting object. When `null`, the `analog_video_opl` field will be omitted from the resulting object.
   - `compressed_digital_audio_opl` (`number`): Set the `compressed_digital_audio_opl` field on the resulting object. When `null`, the `compressed_digital_audio_opl` field will be omitted from the resulting object.
+  - `compressed_digital_video_opl` (`number`): Set the `compressed_digital_video_opl` field on the resulting object. When `null`, the `compressed_digital_video_opl` field will be omitted from the resulting object.
   - `digital_video_only_content_restriction` (`bool`): Set the `digital_video_only_content_restriction` field on the resulting object. When `null`, the `digital_video_only_content_restriction` field will be omitted from the resulting object.
   - `first_play_expiration` (`string`): Set the `first_play_expiration` field on the resulting object. When `null`, the `first_play_expiration` field will be omitted from the resulting object.
   - `image_constraint_for_analog_component_video_restriction` (`bool`): Set the `image_constraint_for_analog_component_video_restriction` field on the resulting object. When `null`, the `image_constraint_for_analog_component_video_restriction` field will be omitted from the resulting object.
@@ -388,9 +395,34 @@ Terraform sub block.
   - `scms_restriction` (`number`): Set the `scms_restriction` field on the resulting object. When `null`, the `scms_restriction` field will be omitted from the resulting object.
   - `uncompressed_digital_audio_opl` (`number`): Set the `uncompressed_digital_audio_opl` field on the resulting object. When `null`, the `uncompressed_digital_audio_opl` field will be omitted from the resulting object.
   - `uncompressed_digital_video_opl` (`number`): Set the `uncompressed_digital_video_opl` field on the resulting object. When `null`, the `uncompressed_digital_video_opl` field will be omitted from the resulting object.
+  - `explicit_analog_television_output_restriction` (`list[obj]`): Set the `explicit_analog_television_output_restriction` field on the resulting object. When `null`, the `explicit_analog_television_output_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.explicit_analog_television_output_restriction.new](#fn-policy_optionpolicy_optionplayready_configuration_licenseexplicit_analog_television_output_restrictionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `play_right` sub block.
+
+
+## obj policy_option.playready_configuration_license.play_right.explicit_analog_television_output_restriction
+
+
+
+### fn policy_option.playready_configuration_license.play_right.explicit_analog_television_output_restriction.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_content_key_policy.policy_option.playready_configuration_license.play_right.explicit_analog_television_output_restriction.new` constructs a new object with attributes and blocks configured for the `explicit_analog_television_output_restriction`
+Terraform sub block.
+
+
+
+**Args**:
+  - `best_effort_enforced` (`bool`): Set the `best_effort_enforced` field on the resulting object. When `null`, the `best_effort_enforced` field will be omitted from the resulting object.
+  - `control_bits` (`number`): Set the `control_bits` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `explicit_analog_television_output_restriction` sub block.
 
 
 ## obj policy_option.token_restriction
@@ -418,10 +450,37 @@ Terraform sub block.
   - `primary_symmetric_token_key` (`string`): Set the `primary_symmetric_token_key` field on the resulting object. When `null`, the `primary_symmetric_token_key` field will be omitted from the resulting object.
   - `primary_x509_token_key_raw` (`string`): Set the `primary_x509_token_key_raw` field on the resulting object. When `null`, the `primary_x509_token_key_raw` field will be omitted from the resulting object.
   - `token_type` (`string`): Set the `token_type` field on the resulting object. When `null`, the `token_type` field will be omitted from the resulting object.
+  - `alternate_key` (`list[obj]`): Set the `alternate_key` field on the resulting object. When `null`, the `alternate_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.alternate_key.new](#fn-policy_optionpolicy_optionalternate_keynew) constructor.
   - `required_claim` (`list[obj]`): Set the `required_claim` field on the resulting object. When `null`, the `required_claim` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_content_key_policy.policy_option.token_restriction.required_claim.new](#fn-policy_optionpolicy_optionrequired_claimnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `token_restriction` sub block.
+
+
+## obj policy_option.token_restriction.alternate_key
+
+
+
+### fn policy_option.token_restriction.alternate_key.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_content_key_policy.policy_option.token_restriction.alternate_key.new` constructs a new object with attributes and blocks configured for the `alternate_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `rsa_token_key_exponent` (`string`): Set the `rsa_token_key_exponent` field on the resulting object. When `null`, the `rsa_token_key_exponent` field will be omitted from the resulting object.
+  - `rsa_token_key_modulus` (`string`): Set the `rsa_token_key_modulus` field on the resulting object. When `null`, the `rsa_token_key_modulus` field will be omitted from the resulting object.
+  - `symmetric_token_key` (`string`): Set the `symmetric_token_key` field on the resulting object. When `null`, the `symmetric_token_key` field will be omitted from the resulting object.
+  - `x509_token_key_raw` (`string`): Set the `x509_token_key_raw` field on the resulting object. When `null`, the `x509_token_key_raw` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `alternate_key` sub block.
 
 
 ## obj policy_option.token_restriction.required_claim

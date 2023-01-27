@@ -68,8 +68,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `property_columns` (`list`): Set the `property_columns` field on the resulting resource block. When `null`, the `property_columns` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `servicebus_namespace` (`string`): Set the `servicebus_namespace` field on the resulting resource block.
-  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting resource block.
-  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting resource block.
+  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting resource block. When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
+  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting resource block. When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
   - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting resource block.
   - `system_property_columns` (`obj`): Set the `system_property_columns` field on the resulting resource block. When `null`, the `system_property_columns` field will be omitted from the resulting object.
   - `topic_name` (`string`): Set the `topic_name` field on the resulting resource block.
@@ -103,8 +103,8 @@ injecting into a complete block.
   - `property_columns` (`list`): Set the `property_columns` field on the resulting object. When `null`, the `property_columns` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `servicebus_namespace` (`string`): Set the `servicebus_namespace` field on the resulting object.
-  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting object.
-  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting object.
+  - `shared_access_policy_key` (`string`): Set the `shared_access_policy_key` field on the resulting object. When `null`, the `shared_access_policy_key` field will be omitted from the resulting object.
+  - `shared_access_policy_name` (`string`): Set the `shared_access_policy_name` field on the resulting object. When `null`, the `shared_access_policy_name` field will be omitted from the resulting object.
   - `stream_analytics_job_name` (`string`): Set the `stream_analytics_job_name` field on the resulting object.
   - `system_property_columns` (`obj`): Set the `system_property_columns` field on the resulting object. When `null`, the `system_property_columns` field will be omitted from the resulting object.
   - `topic_name` (`string`): Set the `topic_name` field on the resulting object.
