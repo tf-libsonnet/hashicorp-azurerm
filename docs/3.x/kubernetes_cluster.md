@@ -26,6 +26,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAzureActiveDirectoryRoleBasedAccessControl()`](#fn-withazureactivedirectoryrolebasedaccesscontrol)
 * [`fn withAzureActiveDirectoryRoleBasedAccessControlMixin()`](#fn-withazureactivedirectoryrolebasedaccesscontrolmixin)
 * [`fn withAzurePolicyEnabled()`](#fn-withazurepolicyenabled)
+* [`fn withConfidentialComputing()`](#fn-withconfidentialcomputing)
+* [`fn withConfidentialComputingMixin()`](#fn-withconfidentialcomputingmixin)
 * [`fn withDefaultNodePool()`](#fn-withdefaultnodepool)
 * [`fn withDefaultNodePoolMixin()`](#fn-withdefaultnodepoolmixin)
 * [`fn withDiskEncryptionSetId()`](#fn-withdiskencryptionsetid)
@@ -97,6 +99,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-auto_scaler_profilenew)
 * [`obj azure_active_directory_role_based_access_control`](#obj-azure_active_directory_role_based_access_control)
   * [`fn new()`](#fn-azure_active_directory_role_based_access_controlnew)
+* [`obj confidential_computing`](#obj-confidential_computing)
+  * [`fn new()`](#fn-confidential_computingnew)
 * [`obj default_node_pool`](#obj-default_node_pool)
   * [`fn new()`](#fn-default_node_poolnew)
   * [`obj default_node_pool.kubelet_config`](#obj-default_node_poolkubelet_config)
@@ -219,6 +223,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `api_server_access_profile` (`list[obj]`): Set the `api_server_access_profile` field on the resulting resource block. When `null`, the `api_server_access_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.api_server_access_profile.new](#fn-api_server_access_profilenew) constructor.
   - `auto_scaler_profile` (`list[obj]`): Set the `auto_scaler_profile` field on the resulting resource block. When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
   - `azure_active_directory_role_based_access_control` (`list[obj]`): Set the `azure_active_directory_role_based_access_control` field on the resulting resource block. When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
+  - `confidential_computing` (`list[obj]`): Set the `confidential_computing` field on the resulting resource block. When `null`, the `confidential_computing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.confidential_computing.new](#fn-confidential_computingnew) constructor.
   - `default_node_pool` (`list[obj]`): Set the `default_node_pool` field on the resulting resource block. When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
   - `http_proxy_config` (`list[obj]`): Set the `http_proxy_config` field on the resulting resource block. When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
@@ -293,6 +298,7 @@ injecting into a complete block.
   - `api_server_access_profile` (`list[obj]`): Set the `api_server_access_profile` field on the resulting object. When `null`, the `api_server_access_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.api_server_access_profile.new](#fn-api_server_access_profilenew) constructor.
   - `auto_scaler_profile` (`list[obj]`): Set the `auto_scaler_profile` field on the resulting object. When `null`, the `auto_scaler_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.auto_scaler_profile.new](#fn-auto_scaler_profilenew) constructor.
   - `azure_active_directory_role_based_access_control` (`list[obj]`): Set the `azure_active_directory_role_based_access_control` field on the resulting object. When `null`, the `azure_active_directory_role_based_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.azure_active_directory_role_based_access_control.new](#fn-azure_active_directory_role_based_access_controlnew) constructor.
+  - `confidential_computing` (`list[obj]`): Set the `confidential_computing` field on the resulting object. When `null`, the `confidential_computing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.confidential_computing.new](#fn-confidential_computingnew) constructor.
   - `default_node_pool` (`list[obj]`): Set the `default_node_pool` field on the resulting object. When `null`, the `default_node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.new](#fn-default_node_poolnew) constructor.
   - `http_proxy_config` (`list[obj]`): Set the `http_proxy_config` field on the resulting object. When `null`, the `http_proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.http_proxy_config.new](#fn-http_proxy_confignew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.identity.new](#fn-identitynew) constructor.
@@ -511,6 +517,43 @@ Terraform resource block to set or update the azure_policy_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `azure_policy_enabled` field.
+
+
+### fn withConfidentialComputing
+
+```ts
+withConfidentialComputing()
+```
+
+`azurerm.list[obj].withConfidentialComputing` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the confidential_computing field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withConfidentialComputingMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `confidential_computing` field.
+
+
+### fn withConfidentialComputingMixin
+
+```ts
+withConfidentialComputingMixin()
+```
+
+`azurerm.list[obj].withConfidentialComputingMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the confidential_computing field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withConfidentialComputing](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `confidential_computing` field.
 
 
 ### fn withDefaultNodePool
@@ -1729,6 +1772,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `azure_active_directory_role_based_access_control` sub block.
+
+
+## obj confidential_computing
+
+
+
+### fn confidential_computing.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.confidential_computing.new` constructs a new object with attributes and blocks configured for the `confidential_computing`
+Terraform sub block.
+
+
+
+**Args**:
+  - `sgx_quote_helper_enabled` (`bool`): Set the `sgx_quote_helper_enabled` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `confidential_computing` sub block.
 
 
 ## obj default_node_pool
