@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withTunnelInterface()`](#fn-withtunnelinterface)
 * [`fn withTunnelInterfaceMixin()`](#fn-withtunnelinterfacemixin)
+* [`fn withVirtualNetworkId()`](#fn-withvirtualnetworkid)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj tunnel_interface`](#obj-tunnel_interface)
@@ -57,6 +58,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `loadbalancer_id` (`string`): Set the `loadbalancer_id` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `virtual_network_id` (`string`): Set the `virtual_network_id` field on the resulting resource block. When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `tunnel_interface` (`list[obj]`): Set the `tunnel_interface` field on the resulting resource block. When `null`, the `tunnel_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.tunnel_interface.new](#fn-tunnel_interfacenew) constructor.
 
@@ -84,6 +86,7 @@ injecting into a complete block.
 **Args**:
   - `loadbalancer_id` (`string`): Set the `loadbalancer_id` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `virtual_network_id` (`string`): Set the `virtual_network_id` field on the resulting object. When `null`, the `virtual_network_id` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `tunnel_interface` (`list[obj]`): Set the `tunnel_interface` field on the resulting object. When `null`, the `tunnel_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.lb_backend_address_pool.tunnel_interface.new](#fn-tunnel_interfacenew) constructor.
 
@@ -194,6 +197,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `tunnel_interface` field.
+
+
+### fn withVirtualNetworkId
+
+```ts
+withVirtualNetworkId()
+```
+
+`azurerm.string.withVirtualNetworkId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the virtual_network_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `virtual_network_id` field.
 
 
 ## obj timeouts
