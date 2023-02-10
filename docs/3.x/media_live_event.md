@@ -30,6 +30,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPreview()`](#fn-withpreview)
 * [`fn withPreviewMixin()`](#fn-withpreviewmixin)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withStreamOptions()`](#fn-withstreamoptions)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -86,6 +87,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `stream_options` (`list`): Set the `stream_options` field on the resulting resource block. When `null`, the `stream_options` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `transcription_languages` (`list`): Set the `transcription_languages` field on the resulting resource block. When `null`, the `transcription_languages` field will be omitted from the resulting object.
   - `use_static_hostname` (`bool`): Set the `use_static_hostname` field on the resulting resource block. When `null`, the `use_static_hostname` field will be omitted from the resulting object.
@@ -124,6 +126,7 @@ injecting into a complete block.
   - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `stream_options` (`list`): Set the `stream_options` field on the resulting object. When `null`, the `stream_options` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `transcription_languages` (`list`): Set the `transcription_languages` field on the resulting object. When `null`, the `transcription_languages` field will be omitted from the resulting object.
   - `use_static_hostname` (`bool`): Set the `use_static_hostname` field on the resulting object. When `null`, the `use_static_hostname` field will be omitted from the resulting object.
@@ -395,6 +398,22 @@ Terraform resource block to set or update the resource_group_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withStreamOptions
+
+```ts
+withStreamOptions()
+```
+
+`azurerm.list.withStreamOptions` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the stream_options field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `stream_options` field.
 
 
 ### fn withTags

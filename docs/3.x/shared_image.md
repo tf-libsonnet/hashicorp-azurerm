@@ -17,6 +17,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAcceleratedNetworkSupportEnabled()`](#fn-withacceleratednetworksupportenabled)
 * [`fn withArchitecture()`](#fn-witharchitecture)
+* [`fn withConfidentialVmEnabled()`](#fn-withconfidentialvmenabled)
+* [`fn withConfidentialVmSupported()`](#fn-withconfidentialvmsupported)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDiskTypesNotAllowed()`](#fn-withdisktypesnotallowed)
 * [`fn withEndOfLifeDate()`](#fn-withendoflifedate)
@@ -80,6 +82,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `accelerated_network_support_enabled` (`bool`): Set the `accelerated_network_support_enabled` field on the resulting resource block. When `null`, the `accelerated_network_support_enabled` field will be omitted from the resulting object.
   - `architecture` (`string`): Set the `architecture` field on the resulting resource block. When `null`, the `architecture` field will be omitted from the resulting object.
+  - `confidential_vm_enabled` (`bool`): Set the `confidential_vm_enabled` field on the resulting resource block. When `null`, the `confidential_vm_enabled` field will be omitted from the resulting object.
+  - `confidential_vm_supported` (`bool`): Set the `confidential_vm_supported` field on the resulting resource block. When `null`, the `confidential_vm_supported` field will be omitted from the resulting object.
   - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
   - `disk_types_not_allowed` (`list`): Set the `disk_types_not_allowed` field on the resulting resource block. When `null`, the `disk_types_not_allowed` field will be omitted from the resulting object.
   - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
@@ -127,6 +131,8 @@ injecting into a complete block.
 **Args**:
   - `accelerated_network_support_enabled` (`bool`): Set the `accelerated_network_support_enabled` field on the resulting object. When `null`, the `accelerated_network_support_enabled` field will be omitted from the resulting object.
   - `architecture` (`string`): Set the `architecture` field on the resulting object. When `null`, the `architecture` field will be omitted from the resulting object.
+  - `confidential_vm_enabled` (`bool`): Set the `confidential_vm_enabled` field on the resulting object. When `null`, the `confidential_vm_enabled` field will be omitted from the resulting object.
+  - `confidential_vm_supported` (`bool`): Set the `confidential_vm_supported` field on the resulting object. When `null`, the `confidential_vm_supported` field will be omitted from the resulting object.
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `disk_types_not_allowed` (`list`): Set the `disk_types_not_allowed` field on the resulting object. When `null`, the `disk_types_not_allowed` field will be omitted from the resulting object.
   - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
@@ -184,6 +190,38 @@ Terraform resource block to set or update the architecture field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `architecture` field.
+
+
+### fn withConfidentialVmEnabled
+
+```ts
+withConfidentialVmEnabled()
+```
+
+`azurerm.bool.withConfidentialVmEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the confidential_vm_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `confidential_vm_enabled` field.
+
+
+### fn withConfidentialVmSupported
+
+```ts
+withConfidentialVmSupported()
+```
+
+`azurerm.bool.withConfidentialVmSupported` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the confidential_vm_supported field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `confidential_vm_supported` field.
 
 
 ### fn withDescription

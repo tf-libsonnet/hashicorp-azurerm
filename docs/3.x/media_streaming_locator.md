@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withContentKeyMixin()`](#fn-withcontentkeymixin)
 * [`fn withDefaultContentKeyPolicyName()`](#fn-withdefaultcontentkeypolicyname)
 * [`fn withEndTime()`](#fn-withendtime)
+* [`fn withFilterNames()`](#fn-withfilternames)
 * [`fn withMediaServicesAccountName()`](#fn-withmediaservicesaccountname)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -67,6 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `asset_name` (`string`): Set the `asset_name` field on the resulting resource block.
   - `default_content_key_policy_name` (`string`): Set the `default_content_key_policy_name` field on the resulting resource block. When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
   - `end_time` (`string`): Set the `end_time` field on the resulting resource block. When `null`, the `end_time` field will be omitted from the resulting object.
+  - `filter_names` (`list`): Set the `filter_names` field on the resulting resource block. When `null`, the `filter_names` field will be omitted from the resulting object.
   - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
@@ -102,6 +104,7 @@ injecting into a complete block.
   - `asset_name` (`string`): Set the `asset_name` field on the resulting object.
   - `default_content_key_policy_name` (`string`): Set the `default_content_key_policy_name` field on the resulting object. When `null`, the `default_content_key_policy_name` field will be omitted from the resulting object.
   - `end_time` (`string`): Set the `end_time` field on the resulting object. When `null`, the `end_time` field will be omitted from the resulting object.
+  - `filter_names` (`list`): Set the `filter_names` field on the resulting object. When `null`, the `filter_names` field will be omitted from the resulting object.
   - `media_services_account_name` (`string`): Set the `media_services_account_name` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
@@ -214,6 +217,22 @@ Terraform resource block to set or update the end_time field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `end_time` field.
+
+
+### fn withFilterNames
+
+```ts
+withFilterNames()
+```
+
+`azurerm.list.withFilterNames` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the filter_names field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `filter_names` field.
 
 
 ### fn withMediaServicesAccountName
