@@ -226,6 +226,7 @@ Terraform sub block.
 
 **Args**:
   - `blob_types` (`list`): Set the `blob_types` field on the resulting object.
+  - `exclude_prefixes` (`list`): Set the `exclude_prefixes` field on the resulting object. When `null`, the `exclude_prefixes` field will be omitted from the resulting object.
   - `include_blob_versions` (`bool`): Set the `include_blob_versions` field on the resulting object. When `null`, the `include_blob_versions` field will be omitted from the resulting object.
   - `include_deleted` (`bool`): Set the `include_deleted` field on the resulting object. When `null`, the `include_deleted` field will be omitted from the resulting object.
   - `include_snapshots` (`bool`): Set the `include_snapshots` field on the resulting object. When `null`, the `include_snapshots` field will be omitted from the resulting object.

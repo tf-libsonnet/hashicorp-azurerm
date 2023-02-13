@@ -23,6 +23,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withManifestName()`](#fn-withmanifestname)
 * [`fn withName()`](#fn-withname)
 * [`fn withOutputSnapTimeInSeconds()`](#fn-withoutputsnaptimeinseconds)
+* [`fn withRewindWindowDuration()`](#fn-withrewindwindowduration)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj timeouts`](#obj-timeouts)
@@ -65,6 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `manifest_name` (`string`): Set the `manifest_name` field on the resulting resource block. When `null`, the `manifest_name` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `output_snap_time_in_seconds` (`number`): Set the `output_snap_time_in_seconds` field on the resulting resource block. When `null`, the `output_snap_time_in_seconds` field will be omitted from the resulting object.
+  - `rewind_window_duration` (`string`): Set the `rewind_window_duration` field on the resulting resource block. When `null`, the `rewind_window_duration` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event_output.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -97,6 +99,7 @@ injecting into a complete block.
   - `manifest_name` (`string`): Set the `manifest_name` field on the resulting object. When `null`, the `manifest_name` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `output_snap_time_in_seconds` (`number`): Set the `output_snap_time_in_seconds` field on the resulting object. When `null`, the `output_snap_time_in_seconds` field will be omitted from the resulting object.
+  - `rewind_window_duration` (`string`): Set the `rewind_window_duration` field on the resulting object. When `null`, the `rewind_window_duration` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_live_event_output.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -229,6 +232,22 @@ Terraform resource block to set or update the output_snap_time_in_seconds field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `output_snap_time_in_seconds` field.
+
+
+### fn withRewindWindowDuration
+
+```ts
+withRewindWindowDuration()
+```
+
+`azurerm.string.withRewindWindowDuration` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the rewind_window_duration field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `rewind_window_duration` field.
 
 
 ### fn withTimeouts

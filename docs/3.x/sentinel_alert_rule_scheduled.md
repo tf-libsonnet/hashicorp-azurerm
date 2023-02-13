@@ -34,6 +34,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withQuery()`](#fn-withquery)
 * [`fn withQueryFrequency()`](#fn-withqueryfrequency)
 * [`fn withQueryPeriod()`](#fn-withqueryperiod)
+* [`fn withSentinelEntityMapping()`](#fn-withsentinelentitymapping)
+* [`fn withSentinelEntityMappingMixin()`](#fn-withsentinelentitymappingmixin)
 * [`fn withSeverity()`](#fn-withseverity)
 * [`fn withSuppressionDuration()`](#fn-withsuppressionduration)
 * [`fn withSuppressionEnabled()`](#fn-withsuppressionenabled)
@@ -45,6 +47,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTriggerThreshold()`](#fn-withtriggerthreshold)
 * [`obj alert_details_override`](#obj-alert_details_override)
   * [`fn new()`](#fn-alert_details_overridenew)
+  * [`obj alert_details_override.dynamic_property`](#obj-alert_details_overridedynamic_property)
+    * [`fn new()`](#fn-alert_details_overridedynamic_propertynew)
 * [`obj entity_mapping`](#obj-entity_mapping)
   * [`fn new()`](#fn-entity_mappingnew)
   * [`obj entity_mapping.field_mapping`](#obj-entity_mappingfield_mapping)
@@ -55,6 +59,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-incident_configurationnew)
   * [`obj incident_configuration.grouping`](#obj-incident_configurationgrouping)
     * [`fn new()`](#fn-incident_configurationgroupingnew)
+* [`obj sentinel_entity_mapping`](#obj-sentinel_entity_mapping)
+  * [`fn new()`](#fn-sentinel_entity_mappingnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -109,6 +115,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `entity_mapping` (`list[obj]`): Set the `entity_mapping` field on the resulting resource block. When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.new](#fn-entity_mappingnew) constructor.
   - `event_grouping` (`list[obj]`): Set the `event_grouping` field on the resulting resource block. When `null`, the `event_grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.event_grouping.new](#fn-event_groupingnew) constructor.
   - `incident_configuration` (`list[obj]`): Set the `incident_configuration` field on the resulting resource block. When `null`, the `incident_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.new](#fn-incident_configurationnew) constructor.
+  - `sentinel_entity_mapping` (`list[obj]`): Set the `sentinel_entity_mapping` field on the resulting resource block. When `null`, the `sentinel_entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.sentinel_entity_mapping.new](#fn-sentinel_entity_mappingnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -155,6 +162,7 @@ injecting into a complete block.
   - `entity_mapping` (`list[obj]`): Set the `entity_mapping` field on the resulting object. When `null`, the `entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.entity_mapping.new](#fn-entity_mappingnew) constructor.
   - `event_grouping` (`list[obj]`): Set the `event_grouping` field on the resulting object. When `null`, the `event_grouping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.event_grouping.new](#fn-event_groupingnew) constructor.
   - `incident_configuration` (`list[obj]`): Set the `incident_configuration` field on the resulting object. When `null`, the `incident_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.incident_configuration.new](#fn-incident_configurationnew) constructor.
+  - `sentinel_entity_mapping` (`list[obj]`): Set the `sentinel_entity_mapping` field on the resulting object. When `null`, the `sentinel_entity_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.sentinel_entity_mapping.new](#fn-sentinel_entity_mappingnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -485,6 +493,43 @@ Terraform resource block to set or update the query_period field.
   - `value` (`string`): The value to set for the `query_period` field.
 
 
+### fn withSentinelEntityMapping
+
+```ts
+withSentinelEntityMapping()
+```
+
+`azurerm.list[obj].withSentinelEntityMapping` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sentinel_entity_mapping field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withSentinelEntityMappingMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sentinel_entity_mapping` field.
+
+
+### fn withSentinelEntityMappingMixin
+
+```ts
+withSentinelEntityMappingMixin()
+```
+
+`azurerm.list[obj].withSentinelEntityMappingMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sentinel_entity_mapping field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withSentinelEntityMapping](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sentinel_entity_mapping` field.
+
+
 ### fn withSeverity
 
 ```ts
@@ -654,9 +699,34 @@ Terraform sub block.
   - `display_name_format` (`string`): Set the `display_name_format` field on the resulting object. When `null`, the `display_name_format` field will be omitted from the resulting object.
   - `severity_column_name` (`string`): Set the `severity_column_name` field on the resulting object. When `null`, the `severity_column_name` field will be omitted from the resulting object.
   - `tactics_column_name` (`string`): Set the `tactics_column_name` field on the resulting object. When `null`, the `tactics_column_name` field will be omitted from the resulting object.
+  - `dynamic_property` (`list[obj]`): Set the `dynamic_property` field on the resulting object. When `null`, the `dynamic_property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_alert_rule_scheduled.alert_details_override.dynamic_property.new](#fn-alert_details_overridedynamic_propertynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `alert_details_override` sub block.
+
+
+## obj alert_details_override.dynamic_property
+
+
+
+### fn alert_details_override.dynamic_property.new
+
+```ts
+new()
+```
+
+
+`azurerm.sentinel_alert_rule_scheduled.alert_details_override.dynamic_property.new` constructs a new object with attributes and blocks configured for the `dynamic_property`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `dynamic_property` sub block.
 
 
 ## obj entity_mapping
@@ -781,6 +851,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `grouping` sub block.
+
+
+## obj sentinel_entity_mapping
+
+
+
+### fn sentinel_entity_mapping.new
+
+```ts
+new()
+```
+
+
+`azurerm.sentinel_alert_rule_scheduled.sentinel_entity_mapping.new` constructs a new object with attributes and blocks configured for the `sentinel_entity_mapping`
+Terraform sub block.
+
+
+
+**Args**:
+  - `column_name` (`string`): Set the `column_name` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `sentinel_entity_mapping` sub block.
 
 
 ## obj timeouts

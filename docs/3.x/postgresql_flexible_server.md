@@ -35,6 +35,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withPointInTimeRestoreTimeInUtc()`](#fn-withpointintimerestoretimeinutc)
 * [`fn withPrivateDnsZoneId()`](#fn-withprivatednszoneid)
+* [`fn withReplicationRole()`](#fn-withreplicationrole)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSkuName()`](#fn-withskuname)
 * [`fn withSourceServerId()`](#fn-withsourceserverid)
@@ -96,6 +97,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `point_in_time_restore_time_in_utc` (`string`): Set the `point_in_time_restore_time_in_utc` field on the resulting resource block. When `null`, the `point_in_time_restore_time_in_utc` field will be omitted from the resulting object.
   - `private_dns_zone_id` (`string`): Set the `private_dns_zone_id` field on the resulting resource block. When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
+  - `replication_role` (`string`): Set the `replication_role` field on the resulting resource block. When `null`, the `replication_role` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.
   - `source_server_id` (`string`): Set the `source_server_id` field on the resulting resource block. When `null`, the `source_server_id` field will be omitted from the resulting object.
@@ -142,6 +144,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `point_in_time_restore_time_in_utc` (`string`): Set the `point_in_time_restore_time_in_utc` field on the resulting object. When `null`, the `point_in_time_restore_time_in_utc` field will be omitted from the resulting object.
   - `private_dns_zone_id` (`string`): Set the `private_dns_zone_id` field on the resulting object. When `null`, the `private_dns_zone_id` field will be omitted from the resulting object.
+  - `replication_role` (`string`): Set the `replication_role` field on the resulting object. When `null`, the `replication_role` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.
   - `source_server_id` (`string`): Set the `source_server_id` field on the resulting object. When `null`, the `source_server_id` field will be omitted from the resulting object.
@@ -503,6 +506,22 @@ Terraform resource block to set or update the private_dns_zone_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `private_dns_zone_id` field.
+
+
+### fn withReplicationRole
+
+```ts
+withReplicationRole()
+```
+
+`azurerm.string.withReplicationRole` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the replication_role field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `replication_role` field.
 
 
 ### fn withResourceGroupName

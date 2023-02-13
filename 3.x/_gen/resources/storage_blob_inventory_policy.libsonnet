@@ -27,15 +27,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   }),
   rules:: {
     filter:: {
-      '#new':: d.fn(help='\n`azurerm.storage_blob_inventory_policy.rules.filter.new` constructs a new object with attributes and blocks configured for the `filter`\nTerraform sub block.\n\n\n\n**Args**:\n  - `blob_types` (`list`): Set the `blob_types` field on the resulting object.\n  - `include_blob_versions` (`bool`): Set the `include_blob_versions` field on the resulting object. When `null`, the `include_blob_versions` field will be omitted from the resulting object.\n  - `include_deleted` (`bool`): Set the `include_deleted` field on the resulting object. When `null`, the `include_deleted` field will be omitted from the resulting object.\n  - `include_snapshots` (`bool`): Set the `include_snapshots` field on the resulting object. When `null`, the `include_snapshots` field will be omitted from the resulting object.\n  - `prefix_match` (`list`): Set the `prefix_match` field on the resulting object. When `null`, the `prefix_match` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `filter` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.storage_blob_inventory_policy.rules.filter.new` constructs a new object with attributes and blocks configured for the `filter`\nTerraform sub block.\n\n\n\n**Args**:\n  - `blob_types` (`list`): Set the `blob_types` field on the resulting object.\n  - `exclude_prefixes` (`list`): Set the `exclude_prefixes` field on the resulting object. When `null`, the `exclude_prefixes` field will be omitted from the resulting object.\n  - `include_blob_versions` (`bool`): Set the `include_blob_versions` field on the resulting object. When `null`, the `include_blob_versions` field will be omitted from the resulting object.\n  - `include_deleted` (`bool`): Set the `include_deleted` field on the resulting object. When `null`, the `include_deleted` field will be omitted from the resulting object.\n  - `include_snapshots` (`bool`): Set the `include_snapshots` field on the resulting object. When `null`, the `include_snapshots` field will be omitted from the resulting object.\n  - `prefix_match` (`list`): Set the `prefix_match` field on the resulting object. When `null`, the `prefix_match` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `filter` sub block.\n', args=[]),
       new(
         blob_types,
+        exclude_prefixes=null,
         include_blob_versions=null,
         include_deleted=null,
         include_snapshots=null,
         prefix_match=null
       ):: std.prune(a={
         blob_types: blob_types,
+        exclude_prefixes: exclude_prefixes,
         include_blob_versions: include_blob_versions,
         include_deleted: include_deleted,
         include_snapshots: include_snapshots,
