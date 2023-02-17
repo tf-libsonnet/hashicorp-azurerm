@@ -60,6 +60,7 @@ the `src` and/or `version` parameters are set.
 
 **Args**:
   - `auxiliary_tenant_ids` (`list`): Set the `auxiliary_tenant_ids` field on the resulting provider block. When `null`, the `auxiliary_tenant_ids` field will be omitted from the resulting object.
+  - `client_certificate` (`string`): Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate When `null`, the `client_certificate` field will be omitted from the resulting object.
   - `client_certificate_password` (`string`): The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate When `null`, the `client_certificate_password` field will be omitted from the resulting object.
   - `client_certificate_path` (`string`): The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. When `null`, the `client_certificate_path` field will be omitted from the resulting object.
   - `client_id` (`string`): The Client ID which should be used. When `null`, the `client_id` field will be omitted from the resulting object.
@@ -78,7 +79,8 @@ the `src` and/or `version` parameters are set.
   - `storage_use_azuread` (`bool`): Should the AzureRM Provider use AzureAD to access the Storage Data Plane API&#39;s? When `null`, the `storage_use_azuread` field will be omitted from the resulting object.
   - `subscription_id` (`string`): The Subscription ID which should be used. When `null`, the `subscription_id` field will be omitted from the resulting object.
   - `tenant_id` (`string`): The Tenant ID which should be used. When `null`, the `tenant_id` field will be omitted from the resulting object.
-  - `use_msi` (`bool`): Allowed Managed Service Identity be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
+  - `use_cli` (`bool`): Allow Azure CLI to be used for Authentication. When `null`, the `use_cli` field will be omitted from the resulting object.
+  - `use_msi` (`bool`): Allow Managed Service Identity to be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
   - `use_oidc` (`bool`): Allow OpenID Connect to be used for authentication When `null`, the `use_oidc` field will be omitted from the resulting object.
   - `features` (`list[obj]`): Set the `features` field on the resulting provider block. When `null`, the `features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.provider.features.new](#fn-azurermfeaturesnew) constructor.
   - `alias` (`string`): The provider `alias` to set for this instance of the provider block. When `null`, the `alias`
@@ -113,6 +115,7 @@ injecting into a complete block.
 
 **Args**:
   - `auxiliary_tenant_ids` (`list`): Set the `auxiliary_tenant_ids` field on the resulting object. When `null`, the `auxiliary_tenant_ids` field will be omitted from the resulting object.
+  - `client_certificate` (`string`): Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate When `null`, the `client_certificate` field will be omitted from the resulting object.
   - `client_certificate_password` (`string`): The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate When `null`, the `client_certificate_password` field will be omitted from the resulting object.
   - `client_certificate_path` (`string`): The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. When `null`, the `client_certificate_path` field will be omitted from the resulting object.
   - `client_id` (`string`): The Client ID which should be used. When `null`, the `client_id` field will be omitted from the resulting object.
@@ -131,7 +134,8 @@ injecting into a complete block.
   - `storage_use_azuread` (`bool`): Should the AzureRM Provider use AzureAD to access the Storage Data Plane API&#39;s? When `null`, the `storage_use_azuread` field will be omitted from the resulting object.
   - `subscription_id` (`string`): The Subscription ID which should be used. When `null`, the `subscription_id` field will be omitted from the resulting object.
   - `tenant_id` (`string`): The Tenant ID which should be used. When `null`, the `tenant_id` field will be omitted from the resulting object.
-  - `use_msi` (`bool`): Allowed Managed Service Identity be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
+  - `use_cli` (`bool`): Allow Azure CLI to be used for Authentication. When `null`, the `use_cli` field will be omitted from the resulting object.
+  - `use_msi` (`bool`): Allow Managed Service Identity to be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
   - `use_oidc` (`bool`): Allow OpenID Connect to be used for authentication When `null`, the `use_oidc` field will be omitted from the resulting object.
   - `features` (`list[obj]`): Set the `features` field on the resulting object. When `null`, the `features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.provider.features.new](#fn-azurermfeaturesnew) constructor.
 

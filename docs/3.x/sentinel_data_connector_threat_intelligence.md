@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withLogAnalyticsWorkspaceId()`](#fn-withloganalyticsworkspaceid)
+* [`fn withLookbackDate()`](#fn-withlookbackdate)
 * [`fn withName()`](#fn-withname)
 * [`fn withTenantId()`](#fn-withtenantid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting resource block.
+  - `lookback_date` (`string`): Set the `lookback_date` field on the resulting resource block. When `null`, the `lookback_date` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `tenant_id` (`string`): Set the `tenant_id` field on the resulting resource block. When `null`, the `tenant_id` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_data_connector_threat_intelligence.timeouts.new](#fn-timeoutsnew) constructor.
@@ -80,6 +82,7 @@ injecting into a complete block.
 
 **Args**:
   - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `lookback_date` (`string`): Set the `lookback_date` field on the resulting object. When `null`, the `lookback_date` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_data_connector_threat_intelligence.timeouts.new](#fn-timeoutsnew) constructor.
@@ -102,6 +105,22 @@ Terraform resource block to set or update the log_analytics_workspace_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `log_analytics_workspace_id` field.
+
+
+### fn withLookbackDate
+
+```ts
+withLookbackDate()
+```
+
+`azurerm.string.withLookbackDate` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the lookback_date field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `lookback_date` field.
 
 
 ### fn withName

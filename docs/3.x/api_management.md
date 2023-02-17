@@ -20,6 +20,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCertificate()`](#fn-withcertificate)
 * [`fn withCertificateMixin()`](#fn-withcertificatemixin)
 * [`fn withClientCertificateEnabled()`](#fn-withclientcertificateenabled)
+* [`fn withDelegation()`](#fn-withdelegation)
+* [`fn withDelegationMixin()`](#fn-withdelegationmixin)
 * [`fn withGatewayDisabled()`](#fn-withgatewaydisabled)
 * [`fn withHostnameConfiguration()`](#fn-withhostnameconfiguration)
 * [`fn withHostnameConfigurationMixin()`](#fn-withhostnameconfigurationmixin)
@@ -59,6 +61,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-additional_locationvirtual_network_configurationnew)
 * [`obj certificate`](#obj-certificate)
   * [`fn new()`](#fn-certificatenew)
+* [`obj delegation`](#obj-delegation)
+  * [`fn new()`](#fn-delegationnew)
 * [`obj hostname_configuration`](#obj-hostname_configuration)
   * [`fn new()`](#fn-hostname_configurationnew)
   * [`obj hostname_configuration.developer_portal`](#obj-hostname_configurationdeveloper_portal)
@@ -137,6 +141,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
   - `additional_location` (`list[obj]`): Set the `additional_location` field on the resulting resource block. When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
   - `certificate` (`list[obj]`): Set the `certificate` field on the resulting resource block. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
+  - `delegation` (`list[obj]`): Set the `delegation` field on the resulting resource block. When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.delegation.new](#fn-delegationnew) constructor.
   - `hostname_configuration` (`list[obj]`): Set the `hostname_configuration` field on the resulting resource block. When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
   - `protocols` (`list[obj]`): Set the `protocols` field on the resulting resource block. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
@@ -187,6 +192,7 @@ injecting into a complete block.
   - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
   - `additional_location` (`list[obj]`): Set the `additional_location` field on the resulting object. When `null`, the `additional_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.additional_location.new](#fn-additional_locationnew) constructor.
   - `certificate` (`list[obj]`): Set the `certificate` field on the resulting object. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.certificate.new](#fn-certificatenew) constructor.
+  - `delegation` (`list[obj]`): Set the `delegation` field on the resulting object. When `null`, the `delegation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.delegation.new](#fn-delegationnew) constructor.
   - `hostname_configuration` (`list[obj]`): Set the `hostname_configuration` field on the resulting object. When `null`, the `hostname_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.hostname_configuration.new](#fn-hostname_configurationnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.identity.new](#fn-identitynew) constructor.
   - `protocols` (`list[obj]`): Set the `protocols` field on the resulting object. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.api_management.protocols.new](#fn-protocolsnew) constructor.
@@ -289,6 +295,43 @@ Terraform resource block to set or update the client_certificate_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `client_certificate_enabled` field.
+
+
+### fn withDelegation
+
+```ts
+withDelegation()
+```
+
+`azurerm.list[obj].withDelegation` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the delegation field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withDelegationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `delegation` field.
+
+
+### fn withDelegationMixin
+
+```ts
+withDelegationMixin()
+```
+
+`azurerm.list[obj].withDelegationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the delegation field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withDelegation](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `delegation` field.
 
 
 ### fn withGatewayDisabled
@@ -937,6 +980,32 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `certificate` sub block.
+
+
+## obj delegation
+
+
+
+### fn delegation.new
+
+```ts
+new()
+```
+
+
+`azurerm.api_management.delegation.new` constructs a new object with attributes and blocks configured for the `delegation`
+Terraform sub block.
+
+
+
+**Args**:
+  - `subscriptions_enabled` (`bool`): Set the `subscriptions_enabled` field on the resulting object. When `null`, the `subscriptions_enabled` field will be omitted from the resulting object.
+  - `url` (`string`): Set the `url` field on the resulting object. When `null`, the `url` field will be omitted from the resulting object.
+  - `user_registration_enabled` (`bool`): Set the `user_registration_enabled` field on the resulting object. When `null`, the `user_registration_enabled` field will be omitted from the resulting object.
+  - `validation_key` (`string`): Set the `validation_key` field on the resulting object. When `null`, the `validation_key` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `delegation` sub block.
 
 
 ## obj hostname_configuration

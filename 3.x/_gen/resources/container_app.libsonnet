@@ -132,12 +132,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   registry:: {
-    '#new':: d.fn(help='\n`azurerm.container_app.registry.new` constructs a new object with attributes and blocks configured for the `registry`\nTerraform sub block.\n\n\n\n**Args**:\n  - `password_secret_name` (`string`): The name of the Secret Reference containing the password value for this user on the Container Registry.\n  - `server` (`string`): The hostname for the Container Registry.\n  - `username` (`string`): The username to use for this Container Registry.\n\n**Returns**:\n  - An attribute object that represents the `registry` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.container_app.registry.new` constructs a new object with attributes and blocks configured for the `registry`\nTerraform sub block.\n\n\n\n**Args**:\n  - `identity` (`string`): ID of the System or User Managed Identity used to pull images from the Container Registry When `null`, the `identity` field will be omitted from the resulting object.\n  - `password_secret_name` (`string`): The name of the Secret Reference containing the password value for this user on the Container Registry. When `null`, the `password_secret_name` field will be omitted from the resulting object.\n  - `server` (`string`): The hostname for the Container Registry.\n  - `username` (`string`): The username to use for this Container Registry. When `null`, the `username` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `registry` sub block.\n', args=[]),
     new(
-      password_secret_name,
       server,
-      username
+      identity=null,
+      password_secret_name=null,
+      username=null
     ):: std.prune(a={
+      identity: identity,
       password_secret_name: password_secret_name,
       server: server,
       username: username,

@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAdditionalProperties()`](#fn-withadditionalproperties)
 * [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withConnectionString()`](#fn-withconnectionstring)
+* [`fn withConnectionStringInsecure()`](#fn-withconnectionstringinsecure)
 * [`fn withDataFactoryId()`](#fn-withdatafactoryid)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withIntegrationRuntimeName()`](#fn-withintegrationruntimename)
@@ -75,6 +76,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting resource block. When `null`, the `additional_properties` field will be omitted from the resulting object.
   - `annotations` (`list`): Set the `annotations` field on the resulting resource block. When `null`, the `annotations` field will be omitted from the resulting object.
   - `connection_string` (`string`): Set the `connection_string` field on the resulting resource block. When `null`, the `connection_string` field will be omitted from the resulting object.
+  - `connection_string_insecure` (`string`): Set the `connection_string_insecure` field on the resulting resource block. When `null`, the `connection_string_insecure` field will be omitted from the resulting object.
   - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting resource block.
   - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
   - `integration_runtime_name` (`string`): Set the `integration_runtime_name` field on the resulting resource block. When `null`, the `integration_runtime_name` field will be omitted from the resulting object.
@@ -116,6 +118,7 @@ injecting into a complete block.
   - `additional_properties` (`obj`): Set the `additional_properties` field on the resulting object. When `null`, the `additional_properties` field will be omitted from the resulting object.
   - `annotations` (`list`): Set the `annotations` field on the resulting object. When `null`, the `annotations` field will be omitted from the resulting object.
   - `connection_string` (`string`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` field will be omitted from the resulting object.
+  - `connection_string_insecure` (`string`): Set the `connection_string_insecure` field on the resulting object. When `null`, the `connection_string_insecure` field will be omitted from the resulting object.
   - `data_factory_id` (`string`): Set the `data_factory_id` field on the resulting object.
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `integration_runtime_name` (`string`): Set the `integration_runtime_name` field on the resulting object. When `null`, the `integration_runtime_name` field will be omitted from the resulting object.
@@ -182,6 +185,22 @@ Terraform resource block to set or update the connection_string field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `connection_string` field.
+
+
+### fn withConnectionStringInsecure
+
+```ts
+withConnectionStringInsecure()
+```
+
+`azurerm.string.withConnectionStringInsecure` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the connection_string_insecure field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `connection_string_insecure` field.
 
 
 ### fn withDataFactoryId
