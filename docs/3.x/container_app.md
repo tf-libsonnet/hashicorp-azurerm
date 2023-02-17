@@ -637,9 +637,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `password_secret_name` (`string`): The name of the Secret Reference containing the password value for this user on the Container Registry.
+  - `identity` (`string`): ID of the System or User Managed Identity used to pull images from the Container Registry When `null`, the `identity` field will be omitted from the resulting object.
+  - `password_secret_name` (`string`): The name of the Secret Reference containing the password value for this user on the Container Registry. When `null`, the `password_secret_name` field will be omitted from the resulting object.
   - `server` (`string`): The hostname for the Container Registry.
-  - `username` (`string`): The username to use for this Container Registry.
+  - `username` (`string`): The username to use for this Container Registry. When `null`, the `username` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `registry` sub block.

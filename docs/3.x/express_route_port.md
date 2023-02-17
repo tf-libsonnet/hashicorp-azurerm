@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBandwidthInGbps()`](#fn-withbandwidthingbps)
+* [`fn withBillingType()`](#fn-withbillingtype)
 * [`fn withEncapsulation()`](#fn-withencapsulation)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
@@ -69,6 +70,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting resource block.
+  - `billing_type` (`string`): Set the `billing_type` field on the resulting resource block. When `null`, the `billing_type` field will be omitted from the resulting object.
   - `encapsulation` (`string`): Set the `encapsulation` field on the resulting resource block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -103,6 +105,7 @@ injecting into a complete block.
 
 **Args**:
   - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting object.
+  - `billing_type` (`string`): Set the `billing_type` field on the resulting object. When `null`, the `billing_type` field will be omitted from the resulting object.
   - `encapsulation` (`string`): Set the `encapsulation` field on the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -132,6 +135,22 @@ Terraform resource block to set or update the bandwidth_in_gbps field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `bandwidth_in_gbps` field.
+
+
+### fn withBillingType
+
+```ts
+withBillingType()
+```
+
+`azurerm.string.withBillingType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the billing_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `billing_type` field.
 
 
 ### fn withEncapsulation
