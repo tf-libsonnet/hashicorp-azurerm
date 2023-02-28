@@ -17,6 +17,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBackup()`](#fn-withbackup)
 * [`fn withBackupMixin()`](#fn-withbackupmixin)
+* [`fn withInstantRestoreResourceGroup()`](#fn-withinstantrestoreresourcegroup)
+* [`fn withInstantRestoreResourceGroupMixin()`](#fn-withinstantrestoreresourcegroupmixin)
 * [`fn withInstantRestoreRetentionDays()`](#fn-withinstantrestoreretentiondays)
 * [`fn withName()`](#fn-withname)
 * [`fn withPolicyType()`](#fn-withpolicytype)
@@ -35,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimezone()`](#fn-withtimezone)
 * [`obj backup`](#obj-backup)
   * [`fn new()`](#fn-backupnew)
+* [`obj instant_restore_resource_group`](#obj-instant_restore_resource_group)
+  * [`fn new()`](#fn-instant_restore_resource_groupnew)
 * [`obj retention_daily`](#obj-retention_daily)
   * [`fn new()`](#fn-retention_dailynew)
 * [`obj retention_monthly`](#obj-retention_monthly)
@@ -82,6 +86,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `timezone` (`string`): Set the `timezone` field on the resulting resource block. When `null`, the `timezone` field will be omitted from the resulting object.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.backup.new](#fn-backupnew) constructor.
+  - `instant_restore_resource_group` (`list[obj]`): Set the `instant_restore_resource_group` field on the resulting resource block. When `null`, the `instant_restore_resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.instant_restore_resource_group.new](#fn-instant_restore_resource_groupnew) constructor.
   - `retention_daily` (`list[obj]`): Set the `retention_daily` field on the resulting resource block. When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_daily.new](#fn-retention_dailynew) constructor.
   - `retention_monthly` (`list[obj]`): Set the `retention_monthly` field on the resulting resource block. When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_monthly.new](#fn-retention_monthlynew) constructor.
   - `retention_weekly` (`list[obj]`): Set the `retention_weekly` field on the resulting resource block. When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_weekly.new](#fn-retention_weeklynew) constructor.
@@ -117,6 +122,7 @@ injecting into a complete block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `timezone` (`string`): Set the `timezone` field on the resulting object. When `null`, the `timezone` field will be omitted from the resulting object.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.backup.new](#fn-backupnew) constructor.
+  - `instant_restore_resource_group` (`list[obj]`): Set the `instant_restore_resource_group` field on the resulting object. When `null`, the `instant_restore_resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.instant_restore_resource_group.new](#fn-instant_restore_resource_groupnew) constructor.
   - `retention_daily` (`list[obj]`): Set the `retention_daily` field on the resulting object. When `null`, the `retention_daily` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_daily.new](#fn-retention_dailynew) constructor.
   - `retention_monthly` (`list[obj]`): Set the `retention_monthly` field on the resulting object. When `null`, the `retention_monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_monthly.new](#fn-retention_monthlynew) constructor.
   - `retention_weekly` (`list[obj]`): Set the `retention_weekly` field on the resulting object. When `null`, the `retention_weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_vm.retention_weekly.new](#fn-retention_weeklynew) constructor.
@@ -162,6 +168,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `backup` field.
+
+
+### fn withInstantRestoreResourceGroup
+
+```ts
+withInstantRestoreResourceGroup()
+```
+
+`azurerm.list[obj].withInstantRestoreResourceGroup` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the instant_restore_resource_group field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withInstantRestoreResourceGroupMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `instant_restore_resource_group` field.
+
+
+### fn withInstantRestoreResourceGroupMixin
+
+```ts
+withInstantRestoreResourceGroupMixin()
+```
+
+`azurerm.list[obj].withInstantRestoreResourceGroupMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the instant_restore_resource_group field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withInstantRestoreResourceGroup](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `instant_restore_resource_group` field.
 
 
 ### fn withInstantRestoreRetentionDays
@@ -469,6 +512,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
+
+
+## obj instant_restore_resource_group
+
+
+
+### fn instant_restore_resource_group.new
+
+```ts
+new()
+```
+
+
+`azurerm.backup_policy_vm.instant_restore_resource_group.new` constructs a new object with attributes and blocks configured for the `instant_restore_resource_group`
+Terraform sub block.
+
+
+
+**Args**:
+  - `prefix` (`string`): Set the `prefix` field on the resulting object.
+  - `suffix` (`string`): Set the `suffix` field on the resulting object. When `null`, the `suffix` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `instant_restore_resource_group` sub block.
 
 
 ## obj retention_daily

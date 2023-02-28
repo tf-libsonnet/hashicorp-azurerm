@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cluster_id` (`string`): Set the `cluster_id` field on the resulting resource block.
   - `key_name` (`string`): Set the `key_name` field on the resulting resource block.
   - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.
-  - `key_version` (`string`): Set the `key_version` field on the resulting resource block.
+  - `key_version` (`string`): Set the `key_version` field on the resulting resource block. When `null`, the `key_version` field will be omitted from the resulting object.
   - `user_identity` (`string`): Set the `user_identity` field on the resulting resource block. When `null`, the `user_identity` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -86,7 +86,7 @@ injecting into a complete block.
   - `cluster_id` (`string`): Set the `cluster_id` field on the resulting object.
   - `key_name` (`string`): Set the `key_name` field on the resulting object.
   - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
-  - `key_version` (`string`): Set the `key_version` field on the resulting object.
+  - `key_version` (`string`): Set the `key_version` field on the resulting object. When `null`, the `key_version` field will be omitted from the resulting object.
   - `user_identity` (`string`): Set the `user_identity` field on the resulting object. When `null`, the `user_identity` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kusto_cluster_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 

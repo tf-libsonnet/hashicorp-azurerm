@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAuthorizationKey()`](#fn-withauthorizationkey)
 * [`fn withEnableInternetSecurity()`](#fn-withenableinternetsecurity)
 * [`fn withExpressRouteCircuitPeeringId()`](#fn-withexpressroutecircuitpeeringid)
+* [`fn withExpressRouteGatewayBypassEnabled()`](#fn-withexpressroutegatewaybypassenabled)
 * [`fn withExpressRouteGatewayId()`](#fn-withexpressroutegatewayid)
 * [`fn withName()`](#fn-withname)
 * [`fn withRouting()`](#fn-withrouting)
@@ -64,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `authorization_key` (`string`): Set the `authorization_key` field on the resulting resource block. When `null`, the `authorization_key` field will be omitted from the resulting object.
   - `enable_internet_security` (`bool`): Set the `enable_internet_security` field on the resulting resource block. When `null`, the `enable_internet_security` field will be omitted from the resulting object.
   - `express_route_circuit_peering_id` (`string`): Set the `express_route_circuit_peering_id` field on the resulting resource block.
+  - `express_route_gateway_bypass_enabled` (`bool`): Set the `express_route_gateway_bypass_enabled` field on the resulting resource block. When `null`, the `express_route_gateway_bypass_enabled` field will be omitted from the resulting object.
   - `express_route_gateway_id` (`string`): Set the `express_route_gateway_id` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `routing_weight` (`number`): Set the `routing_weight` field on the resulting resource block. When `null`, the `routing_weight` field will be omitted from the resulting object.
@@ -95,6 +97,7 @@ injecting into a complete block.
   - `authorization_key` (`string`): Set the `authorization_key` field on the resulting object. When `null`, the `authorization_key` field will be omitted from the resulting object.
   - `enable_internet_security` (`bool`): Set the `enable_internet_security` field on the resulting object. When `null`, the `enable_internet_security` field will be omitted from the resulting object.
   - `express_route_circuit_peering_id` (`string`): Set the `express_route_circuit_peering_id` field on the resulting object.
+  - `express_route_gateway_bypass_enabled` (`bool`): Set the `express_route_gateway_bypass_enabled` field on the resulting object. When `null`, the `express_route_gateway_bypass_enabled` field will be omitted from the resulting object.
   - `express_route_gateway_id` (`string`): Set the `express_route_gateway_id` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `routing_weight` (`number`): Set the `routing_weight` field on the resulting object. When `null`, the `routing_weight` field will be omitted from the resulting object.
@@ -151,6 +154,22 @@ Terraform resource block to set or update the express_route_circuit_peering_id f
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `express_route_circuit_peering_id` field.
+
+
+### fn withExpressRouteGatewayBypassEnabled
+
+```ts
+withExpressRouteGatewayBypassEnabled()
+```
+
+`azurerm.bool.withExpressRouteGatewayBypassEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the express_route_gateway_bypass_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `express_route_gateway_bypass_enabled` field.
 
 
 ### fn withExpressRouteGatewayId
@@ -292,6 +311,8 @@ Terraform sub block.
 
 **Args**:
   - `associated_route_table_id` (`string`): Set the `associated_route_table_id` field on the resulting object. When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
+  - `inbound_route_map_id` (`string`): Set the `inbound_route_map_id` field on the resulting object. When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
+  - `outbound_route_map_id` (`string`): Set the `outbound_route_map_id` field on the resulting object. When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
   - `propagated_route_table` (`list[obj]`): Set the `propagated_route_table` field on the resulting object. When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.express_route_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
 
 **Returns**:

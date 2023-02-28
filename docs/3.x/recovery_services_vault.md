@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withClassicVmwareReplicationEnabled()`](#fn-withclassicvmwarereplicationenabled)
 * [`fn withCrossRegionRestoreEnabled()`](#fn-withcrossregionrestoreenabled)
 * [`fn withEncryption()`](#fn-withencryption)
 * [`fn withEncryptionMixin()`](#fn-withencryptionmixin)
@@ -67,6 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `classic_vmware_replication_enabled` (`bool`): Set the `classic_vmware_replication_enabled` field on the resulting resource block. When `null`, the `classic_vmware_replication_enabled` field will be omitted from the resulting object.
   - `cross_region_restore_enabled` (`bool`): Set the `cross_region_restore_enabled` field on the resulting resource block. When `null`, the `cross_region_restore_enabled` field will be omitted from the resulting object.
   - `immutability` (`string`): Set the `immutability` field on the resulting resource block. When `null`, the `immutability` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
@@ -103,6 +105,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `classic_vmware_replication_enabled` (`bool`): Set the `classic_vmware_replication_enabled` field on the resulting object. When `null`, the `classic_vmware_replication_enabled` field will be omitted from the resulting object.
   - `cross_region_restore_enabled` (`bool`): Set the `cross_region_restore_enabled` field on the resulting object. When `null`, the `cross_region_restore_enabled` field will be omitted from the resulting object.
   - `immutability` (`string`): Set the `immutability` field on the resulting object. When `null`, the `immutability` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
@@ -119,6 +122,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `recovery_services_vault` resource into the root Terraform configuration.
+
+
+### fn withClassicVmwareReplicationEnabled
+
+```ts
+withClassicVmwareReplicationEnabled()
+```
+
+`azurerm.bool.withClassicVmwareReplicationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the classic_vmware_replication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `classic_vmware_replication_enabled` field.
 
 
 ### fn withCrossRegionRestoreEnabled

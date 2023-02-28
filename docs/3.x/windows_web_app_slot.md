@@ -19,6 +19,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAppSettings()`](#fn-withappsettings)
 * [`fn withAuthSettings()`](#fn-withauthsettings)
 * [`fn withAuthSettingsMixin()`](#fn-withauthsettingsmixin)
+* [`fn withAuthSettingsV2()`](#fn-withauthsettingsv2)
+* [`fn withAuthSettingsV2Mixin()`](#fn-withauthsettingsv2mixin)
 * [`fn withBackup()`](#fn-withbackup)
 * [`fn withBackupMixin()`](#fn-withbackupmixin)
 * [`fn withClientAffinityEnabled()`](#fn-withclientaffinityenabled)
@@ -59,6 +61,28 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-auth_settingsmicrosoftnew)
   * [`obj auth_settings.twitter`](#obj-auth_settingstwitter)
     * [`fn new()`](#fn-auth_settingstwitternew)
+* [`obj auth_settings_v2`](#obj-auth_settings_v2)
+  * [`fn new()`](#fn-auth_settings_v2new)
+  * [`obj auth_settings_v2.active_directory_v2`](#obj-auth_settings_v2active_directory_v2)
+    * [`fn new()`](#fn-auth_settings_v2active_directory_v2new)
+  * [`obj auth_settings_v2.apple_v2`](#obj-auth_settings_v2apple_v2)
+    * [`fn new()`](#fn-auth_settings_v2apple_v2new)
+  * [`obj auth_settings_v2.azure_static_web_app_v2`](#obj-auth_settings_v2azure_static_web_app_v2)
+    * [`fn new()`](#fn-auth_settings_v2azure_static_web_app_v2new)
+  * [`obj auth_settings_v2.custom_oidc_v2`](#obj-auth_settings_v2custom_oidc_v2)
+    * [`fn new()`](#fn-auth_settings_v2custom_oidc_v2new)
+  * [`obj auth_settings_v2.facebook_v2`](#obj-auth_settings_v2facebook_v2)
+    * [`fn new()`](#fn-auth_settings_v2facebook_v2new)
+  * [`obj auth_settings_v2.github_v2`](#obj-auth_settings_v2github_v2)
+    * [`fn new()`](#fn-auth_settings_v2github_v2new)
+  * [`obj auth_settings_v2.google_v2`](#obj-auth_settings_v2google_v2)
+    * [`fn new()`](#fn-auth_settings_v2google_v2new)
+  * [`obj auth_settings_v2.login`](#obj-auth_settings_v2login)
+    * [`fn new()`](#fn-auth_settings_v2loginnew)
+  * [`obj auth_settings_v2.microsoft_v2`](#obj-auth_settings_v2microsoft_v2)
+    * [`fn new()`](#fn-auth_settings_v2microsoft_v2new)
+  * [`obj auth_settings_v2.twitter_v2`](#obj-auth_settings_v2twitter_v2)
+    * [`fn new()`](#fn-auth_settings_v2twitter_v2new)
 * [`obj backup`](#obj-backup)
   * [`fn new()`](#fn-backupnew)
   * [`obj backup.schedule`](#obj-backupschedule)
@@ -152,6 +176,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
   - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting resource block. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
+  - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting resource block. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.backup.new](#fn-backupnew) constructor.
   - `connection_string` (`list[obj]`): Set the `connection_string` field on the resulting resource block. When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.connection_string.new](#fn-connection_stringnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.identity.new](#fn-identitynew) constructor.
@@ -197,6 +222,7 @@ injecting into a complete block.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
   - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting object. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
+  - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting object. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.backup.new](#fn-backupnew) constructor.
   - `connection_string` (`list[obj]`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.connection_string.new](#fn-connection_stringnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.identity.new](#fn-identitynew) constructor.
@@ -276,6 +302,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `auth_settings` field.
+
+
+### fn withAuthSettingsV2
+
+```ts
+withAuthSettingsV2()
+```
+
+`azurerm.list[obj].withAuthSettingsV2` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the auth_settings_v2 field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withAuthSettingsV2Mixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `auth_settings_v2` field.
+
+
+### fn withAuthSettingsV2Mixin
+
+```ts
+withAuthSettingsV2Mixin()
+```
+
+`azurerm.list[obj].withAuthSettingsV2Mixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the auth_settings_v2 field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withAuthSettingsV2](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `auth_settings_v2` field.
 
 
 ### fn withBackup
@@ -918,6 +981,318 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `twitter` sub block.
+
+
+## obj auth_settings_v2
+
+
+
+### fn auth_settings_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.new` constructs a new object with attributes and blocks configured for the `auth_settings_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `auth_enabled` (`bool`): Should the AuthV2 Settings be enabled. Defaults to `false` When `null`, the `auth_enabled` field will be omitted from the resulting object.
+  - `config_file_path` (`string`): The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. When `null`, the `config_file_path` field will be omitted from the resulting object.
+  - `default_provider` (`string`): The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. When `null`, the `default_provider` field will be omitted from the resulting object.
+  - `excluded_paths` (`list`): The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. When `null`, the `excluded_paths` field will be omitted from the resulting object.
+  - `forward_proxy_convention` (`string`): The convention used to determine the url of the request made. Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy` When `null`, the `forward_proxy_convention` field will be omitted from the resulting object.
+  - `forward_proxy_custom_host_header_name` (`string`): The name of the header containing the host of the request. When `null`, the `forward_proxy_custom_host_header_name` field will be omitted from the resulting object.
+  - `forward_proxy_custom_scheme_header_name` (`string`): The name of the header containing the scheme of the request. When `null`, the `forward_proxy_custom_scheme_header_name` field will be omitted from the resulting object.
+  - `http_route_api_prefix` (`string`): The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth` When `null`, the `http_route_api_prefix` field will be omitted from the resulting object.
+  - `require_authentication` (`bool`): Should the authentication flow be used for all requests. When `null`, the `require_authentication` field will be omitted from the resulting object.
+  - `require_https` (`bool`): Should HTTPS be required on connections? Defaults to true. When `null`, the `require_https` field will be omitted from the resulting object.
+  - `runtime_version` (`string`): The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1` When `null`, the `runtime_version` field will be omitted from the resulting object.
+  - `unauthenticated_action` (`string`): The action to take for requests made without authentication. Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`. When `null`, the `unauthenticated_action` field will be omitted from the resulting object.
+  - `active_directory_v2` (`list[obj]`): Set the `active_directory_v2` field on the resulting object. When `null`, the `active_directory_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.active_directory_v2.new](#fn-auth_settings_v2active_directory_v2new) constructor.
+  - `apple_v2` (`list[obj]`): Set the `apple_v2` field on the resulting object. When `null`, the `apple_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.apple_v2.new](#fn-auth_settings_v2apple_v2new) constructor.
+  - `azure_static_web_app_v2` (`list[obj]`): Set the `azure_static_web_app_v2` field on the resulting object. When `null`, the `azure_static_web_app_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.azure_static_web_app_v2.new](#fn-auth_settings_v2azure_static_web_app_v2new) constructor.
+  - `custom_oidc_v2` (`list[obj]`): Set the `custom_oidc_v2` field on the resulting object. When `null`, the `custom_oidc_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.custom_oidc_v2.new](#fn-auth_settings_v2custom_oidc_v2new) constructor.
+  - `facebook_v2` (`list[obj]`): Set the `facebook_v2` field on the resulting object. When `null`, the `facebook_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.facebook_v2.new](#fn-auth_settings_v2facebook_v2new) constructor.
+  - `github_v2` (`list[obj]`): Set the `github_v2` field on the resulting object. When `null`, the `github_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.github_v2.new](#fn-auth_settings_v2github_v2new) constructor.
+  - `google_v2` (`list[obj]`): Set the `google_v2` field on the resulting object. When `null`, the `google_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.google_v2.new](#fn-auth_settings_v2google_v2new) constructor.
+  - `login` (`list[obj]`): Set the `login` field on the resulting object. When `null`, the `login` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.login.new](#fn-auth_settings_v2loginnew) constructor.
+  - `microsoft_v2` (`list[obj]`): Set the `microsoft_v2` field on the resulting object. When `null`, the `microsoft_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.microsoft_v2.new](#fn-auth_settings_v2microsoft_v2new) constructor.
+  - `twitter_v2` (`list[obj]`): Set the `twitter_v2` field on the resulting object. When `null`, the `twitter_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app_slot.auth_settings_v2.twitter_v2.new](#fn-auth_settings_v2twitter_v2new) constructor.
+
+**Returns**:
+  - An attribute object that represents the `auth_settings_v2` sub block.
+
+
+## obj auth_settings_v2.active_directory_v2
+
+
+
+### fn auth_settings_v2.active_directory_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.active_directory_v2.new` constructs a new object with attributes and blocks configured for the `active_directory_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_applications` (`list`): The list of allowed Applications for the Default Authorisation Policy. When `null`, the `allowed_applications` field will be omitted from the resulting object.
+  - `allowed_audiences` (`list`): Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory. When `null`, the `allowed_audiences` field will be omitted from the resulting object.
+  - `allowed_groups` (`list`): The list of allowed Group Names for the Default Authorisation Policy. When `null`, the `allowed_groups` field will be omitted from the resulting object.
+  - `allowed_identities` (`list`): The list of allowed Identities for the Default Authorisation Policy. When `null`, the `allowed_identities` field will be omitted from the resulting object.
+  - `client_id` (`string`): The ID of the Client to use to authenticate with Azure Active Directory.
+  - `client_secret_certificate_thumbprint` (`string`): The thumbprint of the certificate used for signing purposes. When `null`, the `client_secret_certificate_thumbprint` field will be omitted from the resulting object.
+  - `client_secret_setting_name` (`string`): The App Setting name that contains the client secret of the Client. When `null`, the `client_secret_setting_name` field will be omitted from the resulting object.
+  - `jwt_allowed_client_applications` (`list`): A list of Allowed Client Applications in the JWT Claim. When `null`, the `jwt_allowed_client_applications` field will be omitted from the resulting object.
+  - `jwt_allowed_groups` (`list`): A list of Allowed Groups in the JWT Claim. When `null`, the `jwt_allowed_groups` field will be omitted from the resulting object.
+  - `login_parameters` (`obj`): A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. When `null`, the `login_parameters` field will be omitted from the resulting object.
+  - `tenant_auth_endpoint` (`string`): The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
+  - `www_authentication_disabled` (`bool`): Should the www-authenticate provider should be omitted from the request? Defaults to `false` When `null`, the `www_authentication_disabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `active_directory_v2` sub block.
+
+
+## obj auth_settings_v2.apple_v2
+
+
+
+### fn auth_settings_v2.apple_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.apple_v2.new` constructs a new object with attributes and blocks configured for the `apple_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `client_id` (`string`): The OpenID Connect Client ID for the Apple web application.
+  - `client_secret_setting_name` (`string`): The app setting name that contains the `client_secret` value used for Apple Login.
+
+**Returns**:
+  - An attribute object that represents the `apple_v2` sub block.
+
+
+## obj auth_settings_v2.azure_static_web_app_v2
+
+
+
+### fn auth_settings_v2.azure_static_web_app_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.azure_static_web_app_v2.new` constructs a new object with attributes and blocks configured for the `azure_static_web_app_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `client_id` (`string`): The ID of the Client to use to authenticate with Azure Static Web App Authentication.
+
+**Returns**:
+  - An attribute object that represents the `azure_static_web_app_v2` sub block.
+
+
+## obj auth_settings_v2.custom_oidc_v2
+
+
+
+### fn auth_settings_v2.custom_oidc_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.custom_oidc_v2.new` constructs a new object with attributes and blocks configured for the `custom_oidc_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `client_id` (`string`): The ID of the Client to use to authenticate with this Custom OIDC.
+  - `name` (`string`): The name of the Custom OIDC Authentication Provider.
+  - `name_claim_type` (`string`): The name of the claim that contains the users name. When `null`, the `name_claim_type` field will be omitted from the resulting object.
+  - `openid_configuration_endpoint` (`string`): The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
+  - `scopes` (`list`): The list of the scopes that should be requested while authenticating. When `null`, the `scopes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `custom_oidc_v2` sub block.
+
+
+## obj auth_settings_v2.facebook_v2
+
+
+
+### fn auth_settings_v2.facebook_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.facebook_v2.new` constructs a new object with attributes and blocks configured for the `facebook_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `app_id` (`string`): The App ID of the Facebook app used for login.
+  - `app_secret_setting_name` (`string`): The app setting name that contains the `app_secret` value used for Facebook Login.
+  - `graph_api_version` (`string`): The version of the Facebook API to be used while logging in. When `null`, the `graph_api_version` field will be omitted from the resulting object.
+  - `login_scopes` (`list`): Specifies a list of scopes to be requested as part of Facebook Login authentication. When `null`, the `login_scopes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `facebook_v2` sub block.
+
+
+## obj auth_settings_v2.github_v2
+
+
+
+### fn auth_settings_v2.github_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.github_v2.new` constructs a new object with attributes and blocks configured for the `github_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `client_id` (`string`): The ID of the GitHub app used for login.
+  - `client_secret_setting_name` (`string`): The app setting name that contains the `client_secret` value used for GitHub Login.
+  - `login_scopes` (`list`): Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication. When `null`, the `login_scopes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `github_v2` sub block.
+
+
+## obj auth_settings_v2.google_v2
+
+
+
+### fn auth_settings_v2.google_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.google_v2.new` constructs a new object with attributes and blocks configured for the `google_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_audiences` (`list`): Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication. When `null`, the `allowed_audiences` field will be omitted from the resulting object.
+  - `client_id` (`string`): The OpenID Connect Client ID for the Google web application.
+  - `client_secret_setting_name` (`string`): The app setting name that contains the `client_secret` value used for Google Login.
+  - `login_scopes` (`list`): Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication. When `null`, the `login_scopes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `google_v2` sub block.
+
+
+## obj auth_settings_v2.login
+
+
+
+### fn auth_settings_v2.login.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.login.new` constructs a new object with attributes and blocks configured for the `login`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_external_redirect_urls` (`list`): External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed. When `null`, the `allowed_external_redirect_urls` field will be omitted from the resulting object.
+  - `cookie_expiration_convention` (`string`): The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`. When `null`, the `cookie_expiration_convention` field will be omitted from the resulting object.
+  - `cookie_expiration_time` (`string`): The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. When `null`, the `cookie_expiration_time` field will be omitted from the resulting object.
+  - `logout_endpoint` (`string`): The endpoint to which logout requests should be made. When `null`, the `logout_endpoint` field will be omitted from the resulting object.
+  - `nonce_expiration_time` (`string`): The time after the request is made when the nonce should expire. Defaults to `00:05:00`. When `null`, the `nonce_expiration_time` field will be omitted from the resulting object.
+  - `preserve_url_fragments_for_logins` (`bool`): Should the fragments from the request be preserved after the login request is made. Defaults to `false`. When `null`, the `preserve_url_fragments_for_logins` field will be omitted from the resulting object.
+  - `token_refresh_extension_time` (`number`): The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours. When `null`, the `token_refresh_extension_time` field will be omitted from the resulting object.
+  - `token_store_enabled` (`bool`): Should the Token Store configuration Enabled. Defaults to `false` When `null`, the `token_store_enabled` field will be omitted from the resulting object.
+  - `token_store_path` (`string`): The directory path in the App Filesystem in which the tokens will be stored. When `null`, the `token_store_path` field will be omitted from the resulting object.
+  - `token_store_sas_setting_name` (`string`): The name of the app setting which contains the SAS URL of the blob storage containing the tokens. When `null`, the `token_store_sas_setting_name` field will be omitted from the resulting object.
+  - `validate_nonce` (`bool`): Should the nonce be validated while completing the login flow. Defaults to `true`. When `null`, the `validate_nonce` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `login` sub block.
+
+
+## obj auth_settings_v2.microsoft_v2
+
+
+
+### fn auth_settings_v2.microsoft_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.microsoft_v2.new` constructs a new object with attributes and blocks configured for the `microsoft_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_audiences` (`list`): Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. When `null`, the `allowed_audiences` field will be omitted from the resulting object.
+  - `client_id` (`string`): The OAuth 2.0 client ID that was created for the app used for authentication.
+  - `client_secret_setting_name` (`string`): The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
+  - `login_scopes` (`list`): The list of Login scopes that will be requested as part of Microsoft Account authentication. When `null`, the `login_scopes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `microsoft_v2` sub block.
+
+
+## obj auth_settings_v2.twitter_v2
+
+
+
+### fn auth_settings_v2.twitter_v2.new
+
+```ts
+new()
+```
+
+
+`azurerm.windows_web_app_slot.auth_settings_v2.twitter_v2.new` constructs a new object with attributes and blocks configured for the `twitter_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `consumer_key` (`string`): The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+  - `consumer_secret_setting_name` (`string`): The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+
+**Returns**:
+  - An attribute object that represents the `twitter_v2` sub block.
 
 
 ## obj backup
