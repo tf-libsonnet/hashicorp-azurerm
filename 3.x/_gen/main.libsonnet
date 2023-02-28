@@ -752,6 +752,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   signalr_service_network_acl: (import 'resources/signalr_service_network_acl.libsonnet'),
   signalr_shared_private_link_resource: (import 'resources/signalr_shared_private_link_resource.libsonnet'),
   site_recovery_fabric: (import 'resources/site_recovery_fabric.libsonnet'),
+  site_recovery_hyperv_replication_policy: (import 'resources/site_recovery_hyperv_replication_policy.libsonnet'),
+  site_recovery_hyperv_replication_policy_association: (import 'resources/site_recovery_hyperv_replication_policy_association.libsonnet'),
   site_recovery_network_mapping: (import 'resources/site_recovery_network_mapping.libsonnet'),
   site_recovery_protection_container: (import 'resources/site_recovery_protection_container.libsonnet'),
   site_recovery_protection_container_mapping: (import 'resources/site_recovery_protection_container_mapping.libsonnet'),

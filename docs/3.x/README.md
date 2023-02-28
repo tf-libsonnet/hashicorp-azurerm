@@ -763,6 +763,8 @@ project.
 * [signalr_service_network_acl](signalr_service_network_acl.md)
 * [signalr_shared_private_link_resource](signalr_shared_private_link_resource.md)
 * [site_recovery_fabric](site_recovery_fabric.md)
+* [site_recovery_hyperv_replication_policy](site_recovery_hyperv_replication_policy.md)
+* [site_recovery_hyperv_replication_policy_association](site_recovery_hyperv_replication_policy_association.md)
 * [site_recovery_network_mapping](site_recovery_network_mapping.md)
 * [site_recovery_protection_container](site_recovery_protection_container.md)
 * [site_recovery_protection_container_mapping](site_recovery_protection_container_mapping.md)
