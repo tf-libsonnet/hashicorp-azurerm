@@ -4,12 +4,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   '#':: d.pkg(name='express_route_circuit_peering', url='', help='`express_route_circuit_peering` represents the `azurerm_express_route_circuit_peering` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   ipv6:: {
     microsoft_peering:: {
-      '#new':: d.fn(help='\n`azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new` constructs a new object with attributes and blocks configured for the `microsoft_peering`\nTerraform sub block.\n\n\n\n**Args**:\n  - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object. When `null`, the `advertised_public_prefixes` field will be omitted from the resulting object.\n  - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.\n  - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `microsoft_peering` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.express_route_circuit_peering.ipv6.microsoft_peering.new` constructs a new object with attributes and blocks configured for the `microsoft_peering`\nTerraform sub block.\n\n\n\n**Args**:\n  - `advertised_communities` (`list`): Set the `advertised_communities` field on the resulting object. When `null`, the `advertised_communities` field will be omitted from the resulting object.\n  - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object. When `null`, the `advertised_public_prefixes` field will be omitted from the resulting object.\n  - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.\n  - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `microsoft_peering` sub block.\n', args=[]),
       new(
+        advertised_communities=null,
         advertised_public_prefixes=null,
         customer_asn=null,
         routing_registry_name=null
       ):: std.prune(a={
+        advertised_communities: advertised_communities,
         advertised_public_prefixes: advertised_public_prefixes,
         customer_asn: customer_asn,
         routing_registry_name: routing_registry_name,
@@ -31,12 +33,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   microsoft_peering_config:: {
-    '#new':: d.fn(help='\n`azurerm.express_route_circuit_peering.microsoft_peering_config.new` constructs a new object with attributes and blocks configured for the `microsoft_peering_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object.\n  - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.\n  - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `microsoft_peering_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.express_route_circuit_peering.microsoft_peering_config.new` constructs a new object with attributes and blocks configured for the `microsoft_peering_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `advertised_communities` (`list`): Set the `advertised_communities` field on the resulting object. When `null`, the `advertised_communities` field will be omitted from the resulting object.\n  - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object.\n  - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.\n  - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `microsoft_peering_config` sub block.\n', args=[]),
     new(
       advertised_public_prefixes,
+      advertised_communities=null,
       customer_asn=null,
       routing_registry_name=null
     ):: std.prune(a={
+      advertised_communities: advertised_communities,
       advertised_public_prefixes: advertised_public_prefixes,
       customer_asn: customer_asn,
       routing_registry_name: routing_registry_name,

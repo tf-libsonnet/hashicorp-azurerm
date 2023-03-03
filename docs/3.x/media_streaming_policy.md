@@ -20,6 +20,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCommonEncryptionCenc()`](#fn-withcommonencryptioncenc)
 * [`fn withCommonEncryptionCencMixin()`](#fn-withcommonencryptioncencmixin)
 * [`fn withDefaultContentKeyPolicyName()`](#fn-withdefaultcontentkeypolicyname)
+* [`fn withEnvelopeEncryption()`](#fn-withenvelopeencryption)
+* [`fn withEnvelopeEncryptionMixin()`](#fn-withenvelopeencryptionmixin)
 * [`fn withMediaServicesAccountName()`](#fn-withmediaservicesaccountname)
 * [`fn withName()`](#fn-withname)
 * [`fn withNoEncryptionEnabledProtocols()`](#fn-withnoencryptionenabledprotocols)
@@ -29,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj common_encryption_cbcs`](#obj-common_encryption_cbcs)
   * [`fn new()`](#fn-common_encryption_cbcsnew)
+  * [`obj common_encryption_cbcs.clear_key_encryption`](#obj-common_encryption_cbcsclear_key_encryption)
+    * [`fn new()`](#fn-common_encryption_cbcsclear_key_encryptionnew)
   * [`obj common_encryption_cbcs.default_content_key`](#obj-common_encryption_cbcsdefault_content_key)
     * [`fn new()`](#fn-common_encryption_cbcsdefault_content_keynew)
   * [`obj common_encryption_cbcs.drm_fairplay`](#obj-common_encryption_cbcsdrm_fairplay)
@@ -37,12 +41,30 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-common_encryption_cbcsenabled_protocolsnew)
 * [`obj common_encryption_cenc`](#obj-common_encryption_cenc)
   * [`fn new()`](#fn-common_encryption_cencnew)
+  * [`obj common_encryption_cenc.clear_key_encryption`](#obj-common_encryption_cencclear_key_encryption)
+    * [`fn new()`](#fn-common_encryption_cencclear_key_encryptionnew)
+  * [`obj common_encryption_cenc.clear_track`](#obj-common_encryption_cencclear_track)
+    * [`fn new()`](#fn-common_encryption_cencclear_tracknew)
+    * [`obj common_encryption_cenc.clear_track.condition`](#obj-common_encryption_cencclear_trackcondition)
+      * [`fn new()`](#fn-common_encryption_cencclear_trackconditionnew)
+  * [`obj common_encryption_cenc.content_key_to_track_mapping`](#obj-common_encryption_cenccontent_key_to_track_mapping)
+    * [`fn new()`](#fn-common_encryption_cenccontent_key_to_track_mappingnew)
+    * [`obj common_encryption_cenc.content_key_to_track_mapping.track`](#obj-common_encryption_cenccontent_key_to_track_mappingtrack)
+      * [`fn new()`](#fn-common_encryption_cenccontent_key_to_track_mappingtracknew)
+      * [`obj common_encryption_cenc.content_key_to_track_mapping.track.condition`](#obj-common_encryption_cenccontent_key_to_track_mappingtrackcondition)
+        * [`fn new()`](#fn-common_encryption_cenccontent_key_to_track_mappingtrackconditionnew)
   * [`obj common_encryption_cenc.default_content_key`](#obj-common_encryption_cencdefault_content_key)
     * [`fn new()`](#fn-common_encryption_cencdefault_content_keynew)
   * [`obj common_encryption_cenc.drm_playready`](#obj-common_encryption_cencdrm_playready)
     * [`fn new()`](#fn-common_encryption_cencdrm_playreadynew)
   * [`obj common_encryption_cenc.enabled_protocols`](#obj-common_encryption_cencenabled_protocols)
     * [`fn new()`](#fn-common_encryption_cencenabled_protocolsnew)
+* [`obj envelope_encryption`](#obj-envelope_encryption)
+  * [`fn new()`](#fn-envelope_encryptionnew)
+  * [`obj envelope_encryption.default_content_key`](#obj-envelope_encryptiondefault_content_key)
+    * [`fn new()`](#fn-envelope_encryptiondefault_content_keynew)
+  * [`obj envelope_encryption.enabled_protocols`](#obj-envelope_encryptionenabled_protocols)
+    * [`fn new()`](#fn-envelope_encryptionenabled_protocolsnew)
 * [`obj no_encryption_enabled_protocols`](#obj-no_encryption_enabled_protocols)
   * [`fn new()`](#fn-no_encryption_enabled_protocolsnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -83,6 +105,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `common_encryption_cbcs` (`list[obj]`): Set the `common_encryption_cbcs` field on the resulting resource block. When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
   - `common_encryption_cenc` (`list[obj]`): Set the `common_encryption_cenc` field on the resulting resource block. When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
+  - `envelope_encryption` (`list[obj]`): Set the `envelope_encryption` field on the resulting resource block. When `null`, the `envelope_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.envelope_encryption.new](#fn-envelope_encryptionnew) constructor.
   - `no_encryption_enabled_protocols` (`list[obj]`): Set the `no_encryption_enabled_protocols` field on the resulting resource block. When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -114,6 +137,7 @@ injecting into a complete block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `common_encryption_cbcs` (`list[obj]`): Set the `common_encryption_cbcs` field on the resulting object. When `null`, the `common_encryption_cbcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.new](#fn-common_encryption_cbcsnew) constructor.
   - `common_encryption_cenc` (`list[obj]`): Set the `common_encryption_cenc` field on the resulting object. When `null`, the `common_encryption_cenc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.new](#fn-common_encryption_cencnew) constructor.
+  - `envelope_encryption` (`list[obj]`): Set the `envelope_encryption` field on the resulting object. When `null`, the `envelope_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.envelope_encryption.new](#fn-envelope_encryptionnew) constructor.
   - `no_encryption_enabled_protocols` (`list[obj]`): Set the `no_encryption_enabled_protocols` field on the resulting object. When `null`, the `no_encryption_enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.no_encryption_enabled_protocols.new](#fn-no_encryption_enabled_protocolsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -209,6 +233,43 @@ Terraform resource block to set or update the default_content_key_policy_name fi
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `default_content_key_policy_name` field.
+
+
+### fn withEnvelopeEncryption
+
+```ts
+withEnvelopeEncryption()
+```
+
+`azurerm.list[obj].withEnvelopeEncryption` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the envelope_encryption field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withEnvelopeEncryptionMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `envelope_encryption` field.
+
+
+### fn withEnvelopeEncryptionMixin
+
+```ts
+withEnvelopeEncryptionMixin()
+```
+
+`azurerm.list[obj].withEnvelopeEncryptionMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the envelope_encryption field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEnvelopeEncryption](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `envelope_encryption` field.
 
 
 ### fn withMediaServicesAccountName
@@ -349,12 +410,36 @@ Terraform sub block.
 
 
 **Args**:
+  - `clear_key_encryption` (`list[obj]`): Set the `clear_key_encryption` field on the resulting object. When `null`, the `clear_key_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.clear_key_encryption.new](#fn-common_encryption_cbcsclear_key_encryptionnew) constructor.
   - `default_content_key` (`list[obj]`): Set the `default_content_key` field on the resulting object. When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.default_content_key.new](#fn-common_encryption_cbcsdefault_content_keynew) constructor.
   - `drm_fairplay` (`list[obj]`): Set the `drm_fairplay` field on the resulting object. When `null`, the `drm_fairplay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.drm_fairplay.new](#fn-common_encryption_cbcsdrm_fairplaynew) constructor.
   - `enabled_protocols` (`list[obj]`): Set the `enabled_protocols` field on the resulting object. When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cbcs.enabled_protocols.new](#fn-common_encryption_cbcsenabled_protocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `common_encryption_cbcs` sub block.
+
+
+## obj common_encryption_cbcs.clear_key_encryption
+
+
+
+### fn common_encryption_cbcs.clear_key_encryption.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cbcs.clear_key_encryption.new` constructs a new object with attributes and blocks configured for the `clear_key_encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `custom_keys_acquisition_url_template` (`string`): Set the `custom_keys_acquisition_url_template` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `clear_key_encryption` sub block.
 
 
 ## obj common_encryption_cbcs.default_content_key
@@ -449,12 +534,159 @@ Terraform sub block.
 
 **Args**:
   - `drm_widevine_custom_license_acquisition_url_template` (`string`): Set the `drm_widevine_custom_license_acquisition_url_template` field on the resulting object. When `null`, the `drm_widevine_custom_license_acquisition_url_template` field will be omitted from the resulting object.
+  - `clear_key_encryption` (`list[obj]`): Set the `clear_key_encryption` field on the resulting object. When `null`, the `clear_key_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.clear_key_encryption.new](#fn-common_encryption_cencclear_key_encryptionnew) constructor.
+  - `clear_track` (`list[obj]`): Set the `clear_track` field on the resulting object. When `null`, the `clear_track` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.clear_track.new](#fn-common_encryption_cencclear_tracknew) constructor.
+  - `content_key_to_track_mapping` (`list[obj]`): Set the `content_key_to_track_mapping` field on the resulting object. When `null`, the `content_key_to_track_mapping` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.content_key_to_track_mapping.new](#fn-common_encryption_cenccontent_key_to_track_mappingnew) constructor.
   - `default_content_key` (`list[obj]`): Set the `default_content_key` field on the resulting object. When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.default_content_key.new](#fn-common_encryption_cencdefault_content_keynew) constructor.
   - `drm_playready` (`list[obj]`): Set the `drm_playready` field on the resulting object. When `null`, the `drm_playready` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.drm_playready.new](#fn-common_encryption_cencdrm_playreadynew) constructor.
   - `enabled_protocols` (`list[obj]`): Set the `enabled_protocols` field on the resulting object. When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.enabled_protocols.new](#fn-common_encryption_cencenabled_protocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `common_encryption_cenc` sub block.
+
+
+## obj common_encryption_cenc.clear_key_encryption
+
+
+
+### fn common_encryption_cenc.clear_key_encryption.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cenc.clear_key_encryption.new` constructs a new object with attributes and blocks configured for the `clear_key_encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `custom_keys_acquisition_url_template` (`string`): Set the `custom_keys_acquisition_url_template` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `clear_key_encryption` sub block.
+
+
+## obj common_encryption_cenc.clear_track
+
+
+
+### fn common_encryption_cenc.clear_track.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cenc.clear_track.new` constructs a new object with attributes and blocks configured for the `clear_track`
+Terraform sub block.
+
+
+
+**Args**:
+  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.clear_track.condition.new](#fn-common_encryption_cenccommon_encryption_cencconditionnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `clear_track` sub block.
+
+
+## obj common_encryption_cenc.clear_track.condition
+
+
+
+### fn common_encryption_cenc.clear_track.condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cenc.clear_track.condition.new` constructs a new object with attributes and blocks configured for the `condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `operation` (`string`): Set the `operation` field on the resulting object.
+  - `property` (`string`): Set the `property` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `condition` sub block.
+
+
+## obj common_encryption_cenc.content_key_to_track_mapping
+
+
+
+### fn common_encryption_cenc.content_key_to_track_mapping.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cenc.content_key_to_track_mapping.new` constructs a new object with attributes and blocks configured for the `content_key_to_track_mapping`
+Terraform sub block.
+
+
+
+**Args**:
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `policy_name` (`string`): Set the `policy_name` field on the resulting object. When `null`, the `policy_name` field will be omitted from the resulting object.
+  - `track` (`list[obj]`): Set the `track` field on the resulting object. When `null`, the `track` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.content_key_to_track_mapping.track.new](#fn-common_encryption_cenccommon_encryption_cenctracknew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `content_key_to_track_mapping` sub block.
+
+
+## obj common_encryption_cenc.content_key_to_track_mapping.track
+
+
+
+### fn common_encryption_cenc.content_key_to_track_mapping.track.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cenc.content_key_to_track_mapping.track.new` constructs a new object with attributes and blocks configured for the `track`
+Terraform sub block.
+
+
+
+**Args**:
+  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.common_encryption_cenc.content_key_to_track_mapping.track.condition.new](#fn-common_encryption_cenccommon_encryption_cenccontent_key_to_track_mappingconditionnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `track` sub block.
+
+
+## obj common_encryption_cenc.content_key_to_track_mapping.track.condition
+
+
+
+### fn common_encryption_cenc.content_key_to_track_mapping.track.condition.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.common_encryption_cenc.content_key_to_track_mapping.track.condition.new` constructs a new object with attributes and blocks configured for the `condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `operation` (`string`): Set the `operation` field on the resulting object.
+  - `property` (`string`): Set the `property` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `condition` sub block.
 
 
 ## obj common_encryption_cenc.default_content_key
@@ -517,6 +749,81 @@ new()
 
 
 `azurerm.media_streaming_policy.common_encryption_cenc.enabled_protocols.new` constructs a new object with attributes and blocks configured for the `enabled_protocols`
+Terraform sub block.
+
+
+
+**Args**:
+  - `dash` (`bool`): Set the `dash` field on the resulting object. When `null`, the `dash` field will be omitted from the resulting object.
+  - `download` (`bool`): Set the `download` field on the resulting object. When `null`, the `download` field will be omitted from the resulting object.
+  - `hls` (`bool`): Set the `hls` field on the resulting object. When `null`, the `hls` field will be omitted from the resulting object.
+  - `smooth_streaming` (`bool`): Set the `smooth_streaming` field on the resulting object. When `null`, the `smooth_streaming` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `enabled_protocols` sub block.
+
+
+## obj envelope_encryption
+
+
+
+### fn envelope_encryption.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.envelope_encryption.new` constructs a new object with attributes and blocks configured for the `envelope_encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `custom_keys_acquisition_url_template` (`string`): Set the `custom_keys_acquisition_url_template` field on the resulting object. When `null`, the `custom_keys_acquisition_url_template` field will be omitted from the resulting object.
+  - `default_content_key` (`list[obj]`): Set the `default_content_key` field on the resulting object. When `null`, the `default_content_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.envelope_encryption.default_content_key.new](#fn-envelope_encryptiondefault_content_keynew) constructor.
+  - `enabled_protocols` (`list[obj]`): Set the `enabled_protocols` field on the resulting object. When `null`, the `enabled_protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_streaming_policy.envelope_encryption.enabled_protocols.new](#fn-envelope_encryptionenabled_protocolsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `envelope_encryption` sub block.
+
+
+## obj envelope_encryption.default_content_key
+
+
+
+### fn envelope_encryption.default_content_key.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.envelope_encryption.default_content_key.new` constructs a new object with attributes and blocks configured for the `default_content_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `policy_name` (`string`): Set the `policy_name` field on the resulting object. When `null`, the `policy_name` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `default_content_key` sub block.
+
+
+## obj envelope_encryption.enabled_protocols
+
+
+
+### fn envelope_encryption.enabled_protocols.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_streaming_policy.envelope_encryption.enabled_protocols.new` constructs a new object with attributes and blocks configured for the `enabled_protocols`
 Terraform sub block.
 
 

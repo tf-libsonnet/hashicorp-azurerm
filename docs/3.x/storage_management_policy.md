@@ -257,6 +257,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `auto_tier_to_hot_from_cool_enabled` (`bool`): Set the `auto_tier_to_hot_from_cool_enabled` field on the resulting object. When `null`, the `auto_tier_to_hot_from_cool_enabled` field will be omitted from the resulting object.
   - `delete_after_days_since_creation_greater_than` (`number`): Set the `delete_after_days_since_creation_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_creation_greater_than` field will be omitted from the resulting object.
   - `delete_after_days_since_last_access_time_greater_than` (`number`): Set the `delete_after_days_since_last_access_time_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_last_access_time_greater_than` field will be omitted from the resulting object.
   - `delete_after_days_since_modification_greater_than` (`number`): Set the `delete_after_days_since_modification_greater_than` field on the resulting object. When `null`, the `delete_after_days_since_modification_greater_than` field will be omitted from the resulting object.

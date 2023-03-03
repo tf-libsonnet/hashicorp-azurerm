@@ -19,6 +19,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAuthenticationMixin()`](#fn-withauthenticationmixin)
 * [`fn withClientType()`](#fn-withclienttype)
 * [`fn withName()`](#fn-withname)
+* [`fn withSecretStore()`](#fn-withsecretstore)
+* [`fn withSecretStoreMixin()`](#fn-withsecretstoremixin)
 * [`fn withSpringCloudId()`](#fn-withspringcloudid)
 * [`fn withTargetResourceId()`](#fn-withtargetresourceid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -26,6 +28,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withVnetSolution()`](#fn-withvnetsolution)
 * [`obj authentication`](#obj-authentication)
   * [`fn new()`](#fn-authenticationnew)
+* [`obj secret_store`](#obj-secret_store)
+  * [`fn new()`](#fn-secret_storenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -64,6 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting resource block.
   - `vnet_solution` (`string`): Set the `vnet_solution` field on the resulting resource block. When `null`, the `vnet_solution` field will be omitted from the resulting object.
   - `authentication` (`list[obj]`): Set the `authentication` field on the resulting resource block. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_connection.authentication.new](#fn-authenticationnew) constructor.
+  - `secret_store` (`list[obj]`): Set the `secret_store` field on the resulting resource block. When `null`, the `secret_store` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_connection.secret_store.new](#fn-secret_storenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -94,6 +99,7 @@ injecting into a complete block.
   - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting object.
   - `vnet_solution` (`string`): Set the `vnet_solution` field on the resulting object. When `null`, the `vnet_solution` field will be omitted from the resulting object.
   - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_connection.authentication.new](#fn-authenticationnew) constructor.
+  - `secret_store` (`list[obj]`): Set the `secret_store` field on the resulting object. When `null`, the `secret_store` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_connection.secret_store.new](#fn-secret_storenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -167,6 +173,43 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withSecretStore
+
+```ts
+withSecretStore()
+```
+
+`azurerm.list[obj].withSecretStore` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the secret_store field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withSecretStoreMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `secret_store` field.
+
+
+### fn withSecretStoreMixin
+
+```ts
+withSecretStoreMixin()
+```
+
+`azurerm.list[obj].withSecretStoreMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the secret_store field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withSecretStore](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `secret_store` field.
 
 
 ### fn withSpringCloudId
@@ -280,6 +323,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
+
+
+## obj secret_store
+
+
+
+### fn secret_store.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_connection.secret_store.new` constructs a new object with attributes and blocks configured for the `secret_store`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `secret_store` sub block.
 
 
 ## obj timeouts

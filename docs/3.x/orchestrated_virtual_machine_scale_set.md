@@ -47,6 +47,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPlanMixin()`](#fn-withplanmixin)
 * [`fn withPlatformFaultDomainCount()`](#fn-withplatformfaultdomaincount)
 * [`fn withPriority()`](#fn-withpriority)
+* [`fn withPriorityMix()`](#fn-withprioritymix)
+* [`fn withPriorityMixMixin()`](#fn-withprioritymixmixin)
 * [`fn withProximityPlacementGroupId()`](#fn-withproximityplacementgroupid)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSinglePlacementGroup()`](#fn-withsingleplacementgroup)
@@ -108,6 +110,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-os_profilewindows_configurationwinrm_listenernew)
 * [`obj plan`](#obj-plan)
   * [`fn new()`](#fn-plannew)
+* [`obj priority_mix`](#obj-priority_mix)
+  * [`fn new()`](#fn-priority_mixnew)
 * [`obj source_image_reference`](#obj-source_image_reference)
   * [`fn new()`](#fn-source_image_referencenew)
 * [`obj termination_notification`](#obj-termination_notification)
@@ -175,6 +179,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `os_disk` (`list[obj]`): Set the `os_disk` field on the resulting resource block. When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.os_disk.new](#fn-os_disknew) constructor.
   - `os_profile` (`list[obj]`): Set the `os_profile` field on the resulting resource block. When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.os_profile.new](#fn-os_profilenew) constructor.
   - `plan` (`list[obj]`): Set the `plan` field on the resulting resource block. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.plan.new](#fn-plannew) constructor.
+  - `priority_mix` (`list[obj]`): Set the `priority_mix` field on the resulting resource block. When `null`, the `priority_mix` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.priority_mix.new](#fn-priority_mixnew) constructor.
   - `source_image_reference` (`list[obj]`): Set the `source_image_reference` field on the resulting resource block. When `null`, the `source_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.source_image_reference.new](#fn-source_image_referencenew) constructor.
   - `termination_notification` (`list[obj]`): Set the `termination_notification` field on the resulting resource block. When `null`, the `termination_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.termination_notification.new](#fn-termination_notificationnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.timeouts.new](#fn-timeoutsnew) constructor.
@@ -232,6 +237,7 @@ injecting into a complete block.
   - `os_disk` (`list[obj]`): Set the `os_disk` field on the resulting object. When `null`, the `os_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.os_disk.new](#fn-os_disknew) constructor.
   - `os_profile` (`list[obj]`): Set the `os_profile` field on the resulting object. When `null`, the `os_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.os_profile.new](#fn-os_profilenew) constructor.
   - `plan` (`list[obj]`): Set the `plan` field on the resulting object. When `null`, the `plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.plan.new](#fn-plannew) constructor.
+  - `priority_mix` (`list[obj]`): Set the `priority_mix` field on the resulting object. When `null`, the `priority_mix` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.priority_mix.new](#fn-priority_mixnew) constructor.
   - `source_image_reference` (`list[obj]`): Set the `source_image_reference` field on the resulting object. When `null`, the `source_image_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.source_image_reference.new](#fn-source_image_referencenew) constructor.
   - `termination_notification` (`list[obj]`): Set the `termination_notification` field on the resulting object. When `null`, the `termination_notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.termination_notification.new](#fn-termination_notificationnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.orchestrated_virtual_machine_scale_set.timeouts.new](#fn-timeoutsnew) constructor.
@@ -800,6 +806,43 @@ Terraform resource block to set or update the priority field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `priority` field.
+
+
+### fn withPriorityMix
+
+```ts
+withPriorityMix()
+```
+
+`azurerm.list[obj].withPriorityMix` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the priority_mix field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withPriorityMixMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `priority_mix` field.
+
+
+### fn withPriorityMixMixin
+
+```ts
+withPriorityMixMixin()
+```
+
+`azurerm.list[obj].withPriorityMixMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the priority_mix field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withPriorityMix](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `priority_mix` field.
 
 
 ### fn withProximityPlacementGroupId
@@ -1657,6 +1700,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `plan` sub block.
+
+
+## obj priority_mix
+
+
+
+### fn priority_mix.new
+
+```ts
+new()
+```
+
+
+`azurerm.orchestrated_virtual_machine_scale_set.priority_mix.new` constructs a new object with attributes and blocks configured for the `priority_mix`
+Terraform sub block.
+
+
+
+**Args**:
+  - `base_regular_count` (`number`): Set the `base_regular_count` field on the resulting object. When `null`, the `base_regular_count` field will be omitted from the resulting object.
+  - `regular_percentage_above_base` (`number`): Set the `regular_percentage_above_base` field on the resulting object. When `null`, the `regular_percentage_above_base` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `priority_mix` sub block.
 
 
 ## obj source_image_reference
