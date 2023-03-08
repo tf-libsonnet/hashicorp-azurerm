@@ -437,6 +437,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `advertised_communities` (`list`): Set the `advertised_communities` field on the resulting object. When `null`, the `advertised_communities` field will be omitted from the resulting object.
   - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object. When `null`, the `advertised_public_prefixes` field will be omitted from the resulting object.
   - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.
   - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.
@@ -462,6 +463,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `advertised_communities` (`list`): Set the `advertised_communities` field on the resulting object. When `null`, the `advertised_communities` field will be omitted from the resulting object.
   - `advertised_public_prefixes` (`list`): Set the `advertised_public_prefixes` field on the resulting object.
   - `customer_asn` (`number`): Set the `customer_asn` field on the resulting object. When `null`, the `customer_asn` field will be omitted from the resulting object.
   - `routing_registry_name` (`string`): Set the `routing_registry_name` field on the resulting object. When `null`, the `routing_registry_name` field will be omitted from the resulting object.

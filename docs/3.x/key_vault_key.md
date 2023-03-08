@@ -23,9 +23,15 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withKeyVaultId()`](#fn-withkeyvaultid)
 * [`fn withName()`](#fn-withname)
 * [`fn withNotBeforeDate()`](#fn-withnotbeforedate)
+* [`fn withRotationPolicy()`](#fn-withrotationpolicy)
+* [`fn withRotationPolicyMixin()`](#fn-withrotationpolicymixin)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj rotation_policy`](#obj-rotation_policy)
+  * [`fn new()`](#fn-rotation_policynew)
+  * [`obj rotation_policy.automatic`](#obj-rotation_policyautomatic)
+    * [`fn new()`](#fn-rotation_policyautomaticnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -67,6 +73,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `not_before_date` (`string`): Set the `not_before_date` field on the resulting resource block. When `null`, the `not_before_date` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `rotation_policy` (`list[obj]`): Set the `rotation_policy` field on the resulting resource block. When `null`, the `rotation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_key.rotation_policy.new](#fn-rotation_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -100,6 +107,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `not_before_date` (`string`): Set the `not_before_date` field on the resulting object. When `null`, the `not_before_date` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `rotation_policy` (`list[obj]`): Set the `rotation_policy` field on the resulting object. When `null`, the `rotation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_key.rotation_policy.new](#fn-rotation_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -234,6 +242,43 @@ Terraform resource block to set or update the not_before_date field.
   - `value` (`string`): The value to set for the `not_before_date` field.
 
 
+### fn withRotationPolicy
+
+```ts
+withRotationPolicy()
+```
+
+`azurerm.list[obj].withRotationPolicy` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the rotation_policy field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withRotationPolicyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `rotation_policy` field.
+
+
+### fn withRotationPolicyMixin
+
+```ts
+withRotationPolicyMixin()
+```
+
+`azurerm.list[obj].withRotationPolicyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the rotation_policy field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withRotationPolicy](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `rotation_policy` field.
+
+
 ### fn withTags
 
 ```ts
@@ -284,6 +329,55 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj rotation_policy
+
+
+
+### fn rotation_policy.new
+
+```ts
+new()
+```
+
+
+`azurerm.key_vault_key.rotation_policy.new` constructs a new object with attributes and blocks configured for the `rotation_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `expire_after` (`string`): Set the `expire_after` field on the resulting object. When `null`, the `expire_after` field will be omitted from the resulting object.
+  - `notify_before_expiry` (`string`): Set the `notify_before_expiry` field on the resulting object. When `null`, the `notify_before_expiry` field will be omitted from the resulting object.
+  - `automatic` (`list[obj]`): Set the `automatic` field on the resulting object. When `null`, the `automatic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.key_vault_key.rotation_policy.automatic.new](#fn-rotation_policyautomaticnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `rotation_policy` sub block.
+
+
+## obj rotation_policy.automatic
+
+
+
+### fn rotation_policy.automatic.new
+
+```ts
+new()
+```
+
+
+`azurerm.key_vault_key.rotation_policy.automatic.new` constructs a new object with attributes and blocks configured for the `automatic`
+Terraform sub block.
+
+
+
+**Args**:
+  - `time_after_creation` (`string`): Set the `time_after_creation` field on the resulting object. When `null`, the `time_after_creation` field will be omitted from the resulting object.
+  - `time_before_expiry` (`string`): Set the `time_before_expiry` field on the resulting object. When `null`, the `time_before_expiry` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `automatic` sub block.
 
 
 ## obj timeouts
