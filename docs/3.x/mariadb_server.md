@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRestorePointInTime()`](#fn-withrestorepointintime)
 * [`fn withSkuName()`](#fn-withskuname)
 * [`fn withSslEnforcementEnabled()`](#fn-withsslenforcementenabled)
+* [`fn withSslMinimalTlsVersionEnforced()`](#fn-withsslminimaltlsversionenforced)
 * [`fn withStorageMb()`](#fn-withstoragemb)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -80,6 +81,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting resource block. When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
   - `ssl_enforcement_enabled` (`bool`): Set the `ssl_enforcement_enabled` field on the resulting resource block.
+  - `ssl_minimal_tls_version_enforced` (`string`): Set the `ssl_minimal_tls_version_enforced` field on the resulting resource block. When `null`, the `ssl_minimal_tls_version_enforced` field will be omitted from the resulting object.
   - `storage_mb` (`number`): Set the `storage_mb` field on the resulting resource block. When `null`, the `storage_mb` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `version` (`string`): Set the `version` field on the resulting resource block.
@@ -121,6 +123,7 @@ injecting into a complete block.
   - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting object. When `null`, the `restore_point_in_time` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
   - `ssl_enforcement_enabled` (`bool`): Set the `ssl_enforcement_enabled` field on the resulting object.
+  - `ssl_minimal_tls_version_enforced` (`string`): Set the `ssl_minimal_tls_version_enforced` field on the resulting object. When `null`, the `ssl_minimal_tls_version_enforced` field will be omitted from the resulting object.
   - `storage_mb` (`number`): Set the `storage_mb` field on the resulting object. When `null`, the `storage_mb` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `version` (`string`): Set the `version` field on the resulting object.
@@ -352,6 +355,22 @@ Terraform resource block to set or update the ssl_enforcement_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `ssl_enforcement_enabled` field.
+
+
+### fn withSslMinimalTlsVersionEnforced
+
+```ts
+withSslMinimalTlsVersionEnforced()
+```
+
+`azurerm.string.withSslMinimalTlsVersionEnforced` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the ssl_minimal_tls_version_enforced field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `ssl_minimal_tls_version_enforced` field.
 
 
 ### fn withStorageMb

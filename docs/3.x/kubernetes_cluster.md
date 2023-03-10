@@ -1840,6 +1840,7 @@ Terraform sub block.
   - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
   - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting object. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `temporary_name_for_rotation` (`string`): Set the `temporary_name_for_rotation` field on the resulting object. When `null`, the `temporary_name_for_rotation` field will be omitted from the resulting object.
   - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
   - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting object. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
   - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
@@ -2433,6 +2434,7 @@ Terraform sub block.
 
 **Args**:
   - `log_analytics_workspace_id` (`string`): Set the `log_analytics_workspace_id` field on the resulting object.
+  - `msi_auth_for_monitoring_enabled` (`bool`): Set the `msi_auth_for_monitoring_enabled` field on the resulting object. When `null`, the `msi_auth_for_monitoring_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `oms_agent` sub block.
@@ -2606,6 +2608,7 @@ Terraform sub block.
 
 **Args**:
   - `keda_enabled` (`bool`): Set the `keda_enabled` field on the resulting object. When `null`, the `keda_enabled` field will be omitted from the resulting object.
+  - `vertical_pod_autoscaler_enabled` (`bool`): Set the `vertical_pod_autoscaler_enabled` field on the resulting object. When `null`, the `vertical_pod_autoscaler_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `workload_autoscaler_profile` sub block.

@@ -30,6 +30,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEventHubReceiverMixin()`](#fn-witheventhubreceivermixin)
 * [`fn withItsmReceiver()`](#fn-withitsmreceiver)
 * [`fn withItsmReceiverMixin()`](#fn-withitsmreceivermixin)
+* [`fn withLocation()`](#fn-withlocation)
 * [`fn withLogicAppReceiver()`](#fn-withlogicappreceiver)
 * [`fn withLogicAppReceiverMixin()`](#fn-withlogicappreceivermixin)
 * [`fn withName()`](#fn-withname)
@@ -101,6 +102,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting resource block. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `short_name` (`string`): Set the `short_name` field on the resulting resource block.
@@ -141,6 +143,7 @@ injecting into a complete block.
 
 **Args**:
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `short_name` (`string`): Set the `short_name` field on the resulting object.
@@ -435,6 +438,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `itsm_receiver` field.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`azurerm.string.withLocation` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `location` field.
 
 
 ### fn withLogicAppReceiver
