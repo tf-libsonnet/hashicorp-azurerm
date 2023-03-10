@@ -733,6 +733,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   sentinel_data_connector_threat_intelligence: (import 'resources/sentinel_data_connector_threat_intelligence.libsonnet'),
   sentinel_data_connector_threat_intelligence_taxii: (import 'resources/sentinel_data_connector_threat_intelligence_taxii.libsonnet'),
   sentinel_log_analytics_workspace_onboarding: (import 'resources/sentinel_log_analytics_workspace_onboarding.libsonnet'),
+  sentinel_metadata: (import 'resources/sentinel_metadata.libsonnet'),
   sentinel_watchlist: (import 'resources/sentinel_watchlist.libsonnet'),
   sentinel_watchlist_item: (import 'resources/sentinel_watchlist_item.libsonnet'),
   service_fabric_cluster: (import 'resources/service_fabric_cluster.libsonnet'),

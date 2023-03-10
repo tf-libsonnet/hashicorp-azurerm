@@ -744,6 +744,7 @@ project.
 * [sentinel_data_connector_threat_intelligence](sentinel_data_connector_threat_intelligence.md)
 * [sentinel_data_connector_threat_intelligence_taxii](sentinel_data_connector_threat_intelligence_taxii.md)
 * [sentinel_log_analytics_workspace_onboarding](sentinel_log_analytics_workspace_onboarding.md)
+* [sentinel_metadata](sentinel_metadata.md)
 * [sentinel_watchlist](sentinel_watchlist.md)
 * [sentinel_watchlist_item](sentinel_watchlist_item.md)
 * [service_fabric_cluster](service_fabric_cluster.md)
