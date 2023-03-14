@@ -23,6 +23,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withTriggers()`](#fn-withtriggers)
 * [`fn withUseRemoteGateways()`](#fn-withuseremotegateways)
 * [`fn withVirtualNetworkName()`](#fn-withvirtualnetworkname)
 * [`obj timeouts`](#obj-timeouts)
@@ -63,6 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `remote_virtual_network_id` (`string`): Set the `remote_virtual_network_id` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `triggers` (`obj`): Set the `triggers` field on the resulting resource block. When `null`, the `triggers` field will be omitted from the resulting object.
   - `use_remote_gateways` (`bool`): Set the `use_remote_gateways` field on the resulting resource block. When `null`, the `use_remote_gateways` field will be omitted from the resulting object.
   - `virtual_network_name` (`string`): Set the `virtual_network_name` field on the resulting resource block.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
@@ -95,6 +97,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `remote_virtual_network_id` (`string`): Set the `remote_virtual_network_id` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `triggers` (`obj`): Set the `triggers` field on the resulting object. When `null`, the `triggers` field will be omitted from the resulting object.
   - `use_remote_gateways` (`bool`): Set the `use_remote_gateways` field on the resulting object. When `null`, the `use_remote_gateways` field will be omitted from the resulting object.
   - `virtual_network_name` (`string`): Set the `virtual_network_name` field on the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
@@ -233,6 +236,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withTriggers
+
+```ts
+withTriggers()
+```
+
+`azurerm.obj.withTriggers` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the triggers field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `triggers` field.
 
 
 ### fn withUseRemoteGateways

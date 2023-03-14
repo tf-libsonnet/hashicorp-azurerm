@@ -1604,9 +1604,9 @@ Terraform sub block.
 **Args**:
   - `dotnet_version` (`string`): The version of .Net. Possible values are `3.1`, `6.0` and `7.0` When `null`, the `dotnet_version` field will be omitted from the resulting object.
   - `java_version` (`string`): The version of Java to use. Possible values are `8`, `11`, and `17` When `null`, the `java_version` field will be omitted from the resulting object.
-  - `node_version` (`string`): The version of Node to use. Possible values include `12`, and `14` When `null`, the `node_version` field will be omitted from the resulting object.
+  - `node_version` (`string`): The version of Node to use. Possible values include `12`, `14`, `16` and `18` When `null`, the `node_version` field will be omitted from the resulting object.
   - `powershell_core_version` (`string`): The version of PowerShell Core to use. Possibles values are `7`, and `7.2` When `null`, the `powershell_core_version` field will be omitted from the resulting object.
-  - `python_version` (`string`): The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`. When `null`, the `python_version` field will be omitted from the resulting object.
+  - `python_version` (`string`): The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`. When `null`, the `python_version` field will be omitted from the resulting object.
   - `use_custom_runtime` (`bool`): Set the `use_custom_runtime` field on the resulting object. When `null`, the `use_custom_runtime` field will be omitted from the resulting object.
   - `use_dotnet_isolated_runtime` (`bool`): Should the DotNet process use an isolated runtime. Defaults to `false`. When `null`, the `use_dotnet_isolated_runtime` field will be omitted from the resulting object.
   - `docker` (`list[obj]`): A docker block When `null`, the `docker` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app.site_config.application_stack.docker.new](#fn-site_configsite_configdockernew) constructor.
