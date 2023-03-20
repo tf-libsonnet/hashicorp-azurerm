@@ -175,6 +175,7 @@ permalink: /data/
 * [mobile_network_data_network](mobile_network_data_network.md)
 * [mobile_network_service](mobile_network_service.md)
 * [mobile_network_sim_group](mobile_network_sim_group.md)
+* [mobile_network_sim_policy](mobile_network_sim_policy.md)
 * [mobile_network_site](mobile_network_site.md)
 * [mobile_network_slice](mobile_network_slice.md)
 * [monitor_action_group](monitor_action_group.md)
