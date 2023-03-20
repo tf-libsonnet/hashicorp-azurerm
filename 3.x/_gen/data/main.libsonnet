@@ -170,6 +170,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   mobile_network_data_network: (import 'mobile_network_data_network.libsonnet'),
   mobile_network_service: (import 'mobile_network_service.libsonnet'),
   mobile_network_sim_group: (import 'mobile_network_sim_group.libsonnet'),
+  mobile_network_sim_policy: (import 'mobile_network_sim_policy.libsonnet'),
   mobile_network_site: (import 'mobile_network_site.libsonnet'),
   mobile_network_slice: (import 'mobile_network_slice.libsonnet'),
   monitor_action_group: (import 'monitor_action_group.libsonnet'),
