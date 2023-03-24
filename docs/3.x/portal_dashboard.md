@@ -54,7 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `dashboard_properties` (`string`): Set the `dashboard_properties` field on the resulting resource block. When `null`, the `dashboard_properties` field will be omitted from the resulting object.
+  - `dashboard_properties` (`string`): Set the `dashboard_properties` field on the resulting resource block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
@@ -83,7 +83,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `dashboard_properties` (`string`): Set the `dashboard_properties` field on the resulting object. When `null`, the `dashboard_properties` field will be omitted from the resulting object.
+  - `dashboard_properties` (`string`): Set the `dashboard_properties` field on the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.

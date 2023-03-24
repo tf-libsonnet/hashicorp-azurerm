@@ -15,26 +15,35 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAadAuthEnabled()`](#fn-withaadauthenabled)
 * [`fn withConnectivityLogsEnabled()`](#fn-withconnectivitylogsenabled)
 * [`fn withCors()`](#fn-withcors)
 * [`fn withCorsMixin()`](#fn-withcorsmixin)
+* [`fn withIdentity()`](#fn-withidentity)
+* [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withLiveTrace()`](#fn-withlivetrace)
 * [`fn withLiveTraceEnabled()`](#fn-withlivetraceenabled)
 * [`fn withLiveTraceMixin()`](#fn-withlivetracemixin)
+* [`fn withLocalAuthEnabled()`](#fn-withlocalauthenabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMessagingLogsEnabled()`](#fn-withmessaginglogsenabled)
 * [`fn withName()`](#fn-withname)
+* [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withServerlessConnectionTimeoutInSeconds()`](#fn-withserverlessconnectiontimeoutinseconds)
 * [`fn withServiceMode()`](#fn-withservicemode)
 * [`fn withSku()`](#fn-withsku)
 * [`fn withSkuMixin()`](#fn-withskumixin)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withTlsClientCertEnabled()`](#fn-withtlsclientcertenabled)
 * [`fn withUpstreamEndpoint()`](#fn-withupstreamendpoint)
 * [`fn withUpstreamEndpointMixin()`](#fn-withupstreamendpointmixin)
 * [`obj cors`](#obj-cors)
   * [`fn new()`](#fn-corsnew)
+* [`obj identity`](#obj-identity)
+  * [`fn new()`](#fn-identitynew)
 * [`obj live_trace`](#obj-live_trace)
   * [`fn new()`](#fn-live_tracenew)
 * [`obj sku`](#obj-sku)
@@ -73,15 +82,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `aad_auth_enabled` (`bool`): Set the `aad_auth_enabled` field on the resulting resource block. When `null`, the `aad_auth_enabled` field will be omitted from the resulting object.
   - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting resource block. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
   - `live_trace_enabled` (`bool`): Set the `live_trace_enabled` field on the resulting resource block. When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
+  - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting resource block. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `messaging_logs_enabled` (`bool`): Set the `messaging_logs_enabled` field on the resulting resource block. When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `serverless_connection_timeout_in_seconds` (`number`): Set the `serverless_connection_timeout_in_seconds` field on the resulting resource block. When `null`, the `serverless_connection_timeout_in_seconds` field will be omitted from the resulting object.
   - `service_mode` (`string`): Set the `service_mode` field on the resulting resource block. When `null`, the `service_mode` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tls_client_cert_enabled` (`bool`): Set the `tls_client_cert_enabled` field on the resulting resource block. When `null`, the `tls_client_cert_enabled` field will be omitted from the resulting object.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.cors.new](#fn-corsnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.identity.new](#fn-identitynew) constructor.
   - `live_trace` (`list[obj]`): Set the `live_trace` field on the resulting resource block. When `null`, the `live_trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.live_trace.new](#fn-live_tracenew) constructor.
   - `sku` (`list[obj]`): Set the `sku` field on the resulting resource block. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.sku.new](#fn-skunew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.timeouts.new](#fn-timeoutsnew) constructor.
@@ -109,15 +124,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `aad_auth_enabled` (`bool`): Set the `aad_auth_enabled` field on the resulting object. When `null`, the `aad_auth_enabled` field will be omitted from the resulting object.
   - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting object. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
   - `live_trace_enabled` (`bool`): Set the `live_trace_enabled` field on the resulting object. When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
+  - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting object. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `messaging_logs_enabled` (`bool`): Set the `messaging_logs_enabled` field on the resulting object. When `null`, the `messaging_logs_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `serverless_connection_timeout_in_seconds` (`number`): Set the `serverless_connection_timeout_in_seconds` field on the resulting object. When `null`, the `serverless_connection_timeout_in_seconds` field will be omitted from the resulting object.
   - `service_mode` (`string`): Set the `service_mode` field on the resulting object. When `null`, the `service_mode` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tls_client_cert_enabled` (`bool`): Set the `tls_client_cert_enabled` field on the resulting object. When `null`, the `tls_client_cert_enabled` field will be omitted from the resulting object.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.cors.new](#fn-corsnew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.identity.new](#fn-identitynew) constructor.
   - `live_trace` (`list[obj]`): Set the `live_trace` field on the resulting object. When `null`, the `live_trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.live_trace.new](#fn-live_tracenew) constructor.
   - `sku` (`list[obj]`): Set the `sku` field on the resulting object. When `null`, the `sku` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.sku.new](#fn-skunew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.signalr_service.timeouts.new](#fn-timeoutsnew) constructor.
@@ -125,6 +146,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `signalr_service` resource into the root Terraform configuration.
+
+
+### fn withAadAuthEnabled
+
+```ts
+withAadAuthEnabled()
+```
+
+`azurerm.bool.withAadAuthEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the aad_auth_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `aad_auth_enabled` field.
 
 
 ### fn withConnectivityLogsEnabled
@@ -180,6 +217,43 @@ function.
   - `value` (`list[obj]`): The value to set for the `cors` field.
 
 
+### fn withIdentity
+
+```ts
+withIdentity()
+```
+
+`azurerm.list[obj].withIdentity` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withIdentityMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withIdentityMixin
+
+```ts
+withIdentityMixin()
+```
+
+`azurerm.list[obj].withIdentityMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withIdentity](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
 ### fn withLiveTrace
 
 ```ts
@@ -233,6 +307,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `live_trace` field.
 
 
+### fn withLocalAuthEnabled
+
+```ts
+withLocalAuthEnabled()
+```
+
+`azurerm.bool.withLocalAuthEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the local_auth_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `local_auth_enabled` field.
+
+
 ### fn withLocation
 
 ```ts
@@ -281,6 +371,22 @@ Terraform resource block to set or update the name field.
   - `value` (`string`): The value to set for the `name` field.
 
 
+### fn withPublicNetworkAccessEnabled
+
+```ts
+withPublicNetworkAccessEnabled()
+```
+
+`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_network_access_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.
+
+
 ### fn withResourceGroupName
 
 ```ts
@@ -295,6 +401,22 @@ Terraform resource block to set or update the resource_group_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withServerlessConnectionTimeoutInSeconds
+
+```ts
+withServerlessConnectionTimeoutInSeconds()
+```
+
+`azurerm.number.withServerlessConnectionTimeoutInSeconds` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the serverless_connection_timeout_in_seconds field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `serverless_connection_timeout_in_seconds` field.
 
 
 ### fn withServiceMode
@@ -402,6 +524,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withTlsClientCertEnabled
+
+```ts
+withTlsClientCertEnabled()
+```
+
+`azurerm.bool.withTlsClientCertEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the tls_client_cert_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `tls_client_cert_enabled` field.
+
+
 ### fn withUpstreamEndpoint
 
 ```ts
@@ -460,6 +598,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
+
+
+## obj identity
+
+
+
+### fn identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.signalr_service.identity.new` constructs a new object with attributes and blocks configured for the `identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `identity` sub block.
 
 
 ## obj live_trace

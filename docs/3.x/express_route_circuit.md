@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAllowClassicOperations()`](#fn-withallowclassicoperations)
+* [`fn withAuthorizationKey()`](#fn-withauthorizationkey)
 * [`fn withBandwidthInGbps()`](#fn-withbandwidthingbps)
 * [`fn withBandwidthInMbps()`](#fn-withbandwidthinmbps)
 * [`fn withExpressRoutePortId()`](#fn-withexpressrouteportid)
@@ -64,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `allow_classic_operations` (`bool`): Set the `allow_classic_operations` field on the resulting resource block. When `null`, the `allow_classic_operations` field will be omitted from the resulting object.
+  - `authorization_key` (`string`): Set the `authorization_key` field on the resulting resource block. When `null`, the `authorization_key` field will be omitted from the resulting object.
   - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting resource block. When `null`, the `bandwidth_in_gbps` field will be omitted from the resulting object.
   - `bandwidth_in_mbps` (`number`): Set the `bandwidth_in_mbps` field on the resulting resource block. When `null`, the `bandwidth_in_mbps` field will be omitted from the resulting object.
   - `express_route_port_id` (`string`): Set the `express_route_port_id` field on the resulting resource block. When `null`, the `express_route_port_id` field will be omitted from the resulting object.
@@ -99,6 +101,7 @@ injecting into a complete block.
 
 **Args**:
   - `allow_classic_operations` (`bool`): Set the `allow_classic_operations` field on the resulting object. When `null`, the `allow_classic_operations` field will be omitted from the resulting object.
+  - `authorization_key` (`string`): Set the `authorization_key` field on the resulting object. When `null`, the `authorization_key` field will be omitted from the resulting object.
   - `bandwidth_in_gbps` (`number`): Set the `bandwidth_in_gbps` field on the resulting object. When `null`, the `bandwidth_in_gbps` field will be omitted from the resulting object.
   - `bandwidth_in_mbps` (`number`): Set the `bandwidth_in_mbps` field on the resulting object. When `null`, the `bandwidth_in_mbps` field will be omitted from the resulting object.
   - `express_route_port_id` (`string`): Set the `express_route_port_id` field on the resulting object. When `null`, the `express_route_port_id` field will be omitted from the resulting object.
@@ -129,6 +132,22 @@ Terraform resource block to set or update the allow_classic_operations field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `allow_classic_operations` field.
+
+
+### fn withAuthorizationKey
+
+```ts
+withAuthorizationKey()
+```
+
+`azurerm.string.withAuthorizationKey` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the authorization_key field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `authorization_key` field.
 
 
 ### fn withBandwidthInGbps

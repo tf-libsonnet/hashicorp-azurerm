@@ -1,0 +1,312 @@
+---
+permalink: /databricks_virtual_network_peering/
+---
+
+# databricks_virtual_network_peering
+
+`databricks_virtual_network_peering` represents the `azurerm_databricks_virtual_network_peering` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAllowForwardedTraffic()`](#fn-withallowforwardedtraffic)
+* [`fn withAllowGatewayTransit()`](#fn-withallowgatewaytransit)
+* [`fn withAllowVirtualNetworkAccess()`](#fn-withallowvirtualnetworkaccess)
+* [`fn withName()`](#fn-withname)
+* [`fn withRemoteAddressSpacePrefixes()`](#fn-withremoteaddressspaceprefixes)
+* [`fn withRemoteVirtualNetworkId()`](#fn-withremotevirtualnetworkid)
+* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withUseRemoteGateways()`](#fn-withuseremotegateways)
+* [`fn withWorkspaceId()`](#fn-withworkspaceid)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`azurerm.databricks_virtual_network_peering.new` injects a new `azurerm_databricks_virtual_network_peering` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    azurerm.databricks_virtual_network_peering.new('some_id')
+
+You can get the reference to the `id` field of the created `azurerm.databricks_virtual_network_peering` using the reference:
+
+    $._ref.azurerm_databricks_virtual_network_peering.some_id.get('id')
+
+This is the same as directly entering `"${ azurerm_databricks_virtual_network_peering.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `allow_forwarded_traffic` (`bool`): Set the `allow_forwarded_traffic` field on the resulting resource block. When `null`, the `allow_forwarded_traffic` field will be omitted from the resulting object.
+  - `allow_gateway_transit` (`bool`): Set the `allow_gateway_transit` field on the resulting resource block. When `null`, the `allow_gateway_transit` field will be omitted from the resulting object.
+  - `allow_virtual_network_access` (`bool`): Set the `allow_virtual_network_access` field on the resulting resource block. When `null`, the `allow_virtual_network_access` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `remote_address_space_prefixes` (`list`): Set the `remote_address_space_prefixes` field on the resulting resource block.
+  - `remote_virtual_network_id` (`string`): Set the `remote_virtual_network_id` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `use_remote_gateways` (`bool`): Set the `use_remote_gateways` field on the resulting resource block. When `null`, the `use_remote_gateways` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting resource block.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_virtual_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`azurerm.databricks_virtual_network_peering.newAttrs` constructs a new object with attributes and blocks configured for the `databricks_virtual_network_peering`
+Terraform resource.
+
+Unlike [azurerm.databricks_virtual_network_peering.new](#fn-new), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `allow_forwarded_traffic` (`bool`): Set the `allow_forwarded_traffic` field on the resulting object. When `null`, the `allow_forwarded_traffic` field will be omitted from the resulting object.
+  - `allow_gateway_transit` (`bool`): Set the `allow_gateway_transit` field on the resulting object. When `null`, the `allow_gateway_transit` field will be omitted from the resulting object.
+  - `allow_virtual_network_access` (`bool`): Set the `allow_virtual_network_access` field on the resulting object. When `null`, the `allow_virtual_network_access` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `remote_address_space_prefixes` (`list`): Set the `remote_address_space_prefixes` field on the resulting object.
+  - `remote_virtual_network_id` (`string`): Set the `remote_virtual_network_id` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `use_remote_gateways` (`bool`): Set the `use_remote_gateways` field on the resulting object. When `null`, the `use_remote_gateways` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.databricks_virtual_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `databricks_virtual_network_peering` resource into the root Terraform configuration.
+
+
+### fn withAllowForwardedTraffic
+
+```ts
+withAllowForwardedTraffic()
+```
+
+`azurerm.bool.withAllowForwardedTraffic` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the allow_forwarded_traffic field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `allow_forwarded_traffic` field.
+
+
+### fn withAllowGatewayTransit
+
+```ts
+withAllowGatewayTransit()
+```
+
+`azurerm.bool.withAllowGatewayTransit` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the allow_gateway_transit field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `allow_gateway_transit` field.
+
+
+### fn withAllowVirtualNetworkAccess
+
+```ts
+withAllowVirtualNetworkAccess()
+```
+
+`azurerm.bool.withAllowVirtualNetworkAccess` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the allow_virtual_network_access field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `allow_virtual_network_access` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`azurerm.string.withName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withRemoteAddressSpacePrefixes
+
+```ts
+withRemoteAddressSpacePrefixes()
+```
+
+`azurerm.list.withRemoteAddressSpacePrefixes` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the remote_address_space_prefixes field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `remote_address_space_prefixes` field.
+
+
+### fn withRemoteVirtualNetworkId
+
+```ts
+withRemoteVirtualNetworkId()
+```
+
+`azurerm.string.withRemoteVirtualNetworkId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the remote_virtual_network_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `remote_virtual_network_id` field.
+
+
+### fn withResourceGroupName
+
+```ts
+withResourceGroupName()
+```
+
+`azurerm.string.withResourceGroupName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the resource_group_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`azurerm.obj.withTimeouts` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the timeouts field.
+
+This function will replace the map with the passed in `value`. If you wish to instead merge the
+passed in value to the existing map, use the [azurerm.obj.withTimeoutsMixin](TODO) function.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`azurerm.obj.withTimeoutsMixin` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [azurerm.obj.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withUseRemoteGateways
+
+```ts
+withUseRemoteGateways()
+```
+
+`azurerm.bool.withUseRemoteGateways` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the use_remote_gateways field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `use_remote_gateways` field.
+
+
+### fn withWorkspaceId
+
+```ts
+withWorkspaceId()
+```
+
+`azurerm.string.withWorkspaceId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the workspace_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `workspace_id` field.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`azurerm.databricks_virtual_network_peering.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

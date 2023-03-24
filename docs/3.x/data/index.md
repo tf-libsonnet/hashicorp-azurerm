@@ -204,6 +204,7 @@ permalink: /data/
 * [network_watcher](network_watcher.md)
 * [notification_hub](notification_hub.md)
 * [notification_hub_namespace](notification_hub_namespace.md)
+* [orchestrated_virtual_machine_scale_set](orchestrated_virtual_machine_scale_set.md)
 * [platform_image](platform_image.md)
 * [policy_assignment](policy_assignment.md)
 * [policy_definition](policy_definition.md)

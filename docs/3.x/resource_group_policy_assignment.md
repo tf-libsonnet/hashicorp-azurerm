@@ -26,15 +26,27 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNonComplianceMessage()`](#fn-withnoncompliancemessage)
 * [`fn withNonComplianceMessageMixin()`](#fn-withnoncompliancemessagemixin)
 * [`fn withNotScopes()`](#fn-withnotscopes)
+* [`fn withOverrides()`](#fn-withoverrides)
+* [`fn withOverridesMixin()`](#fn-withoverridesmixin)
 * [`fn withParameters()`](#fn-withparameters)
 * [`fn withPolicyDefinitionId()`](#fn-withpolicydefinitionid)
 * [`fn withResourceGroupId()`](#fn-withresourcegroupid)
+* [`fn withResourceSelectors()`](#fn-withresourceselectors)
+* [`fn withResourceSelectorsMixin()`](#fn-withresourceselectorsmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj identity`](#obj-identity)
   * [`fn new()`](#fn-identitynew)
 * [`obj non_compliance_message`](#obj-non_compliance_message)
   * [`fn new()`](#fn-non_compliance_messagenew)
+* [`obj overrides`](#obj-overrides)
+  * [`fn new()`](#fn-overridesnew)
+  * [`obj overrides.selectors`](#obj-overridesselectors)
+    * [`fn new()`](#fn-overridesselectorsnew)
+* [`obj resource_selectors`](#obj-resource_selectors)
+  * [`fn new()`](#fn-resource_selectorsnew)
+  * [`obj resource_selectors.selectors`](#obj-resource_selectorsselectors)
+    * [`fn new()`](#fn-resource_selectorsselectorsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -79,6 +91,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_id` (`string`): Set the `resource_group_id` field on the resulting resource block.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.identity.new](#fn-identitynew) constructor.
   - `non_compliance_message` (`list[obj]`): Set the `non_compliance_message` field on the resulting resource block. When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
+  - `overrides` (`list[obj]`): Set the `overrides` field on the resulting resource block. When `null`, the `overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.overrides.new](#fn-overridesnew) constructor.
+  - `resource_selectors` (`list[obj]`): Set the `resource_selectors` field on the resulting resource block. When `null`, the `resource_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.resource_selectors.new](#fn-resource_selectorsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -115,6 +129,8 @@ injecting into a complete block.
   - `resource_group_id` (`string`): Set the `resource_group_id` field on the resulting object.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.identity.new](#fn-identitynew) constructor.
   - `non_compliance_message` (`list[obj]`): Set the `non_compliance_message` field on the resulting object. When `null`, the `non_compliance_message` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.non_compliance_message.new](#fn-non_compliance_messagenew) constructor.
+  - `overrides` (`list[obj]`): Set the `overrides` field on the resulting object. When `null`, the `overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.overrides.new](#fn-overridesnew) constructor.
+  - `resource_selectors` (`list[obj]`): Set the `resource_selectors` field on the resulting object. When `null`, the `resource_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.resource_selectors.new](#fn-resource_selectorsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -307,6 +323,43 @@ Terraform resource block to set or update the not_scopes field.
   - `value` (`list`): The value to set for the `not_scopes` field.
 
 
+### fn withOverrides
+
+```ts
+withOverrides()
+```
+
+`azurerm.list[obj].withOverrides` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the overrides field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withOverridesMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `overrides` field.
+
+
+### fn withOverridesMixin
+
+```ts
+withOverridesMixin()
+```
+
+`azurerm.list[obj].withOverridesMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the overrides field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withOverrides](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `overrides` field.
+
+
 ### fn withParameters
 
 ```ts
@@ -353,6 +406,43 @@ Terraform resource block to set or update the resource_group_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_id` field.
+
+
+### fn withResourceSelectors
+
+```ts
+withResourceSelectors()
+```
+
+`azurerm.list[obj].withResourceSelectors` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the resource_selectors field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withResourceSelectorsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `resource_selectors` field.
+
+
+### fn withResourceSelectorsMixin
+
+```ts
+withResourceSelectorsMixin()
+```
+
+`azurerm.list[obj].withResourceSelectorsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the resource_selectors field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withResourceSelectors](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `resource_selectors` field.
 
 
 ### fn withTimeouts
@@ -437,6 +527,103 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `non_compliance_message` sub block.
+
+
+## obj overrides
+
+
+
+### fn overrides.new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_group_policy_assignment.overrides.new` constructs a new object with attributes and blocks configured for the `overrides`
+Terraform sub block.
+
+
+
+**Args**:
+  - `value` (`string`): Set the `value` field on the resulting object.
+  - `selectors` (`list[obj]`): Set the `selectors` field on the resulting object. When `null`, the `selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.overrides.selectors.new](#fn-overridesselectorsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `overrides` sub block.
+
+
+## obj overrides.selectors
+
+
+
+### fn overrides.selectors.new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_group_policy_assignment.overrides.selectors.new` constructs a new object with attributes and blocks configured for the `selectors`
+Terraform sub block.
+
+
+
+**Args**:
+  - `in_` (`list`): Set the `in_` field on the resulting object. When `null`, the `in_` field will be omitted from the resulting object.
+  - `not_in` (`list`): Set the `not_in` field on the resulting object. When `null`, the `not_in` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `selectors` sub block.
+
+
+## obj resource_selectors
+
+
+
+### fn resource_selectors.new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_group_policy_assignment.resource_selectors.new` constructs a new object with attributes and blocks configured for the `resource_selectors`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `selectors` (`list[obj]`): Set the `selectors` field on the resulting object. When `null`, the `selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group_policy_assignment.resource_selectors.selectors.new](#fn-resource_selectorsselectorsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `resource_selectors` sub block.
+
+
+## obj resource_selectors.selectors
+
+
+
+### fn resource_selectors.selectors.new
+
+```ts
+new()
+```
+
+
+`azurerm.resource_group_policy_assignment.resource_selectors.selectors.new` constructs a new object with attributes and blocks configured for the `selectors`
+Terraform sub block.
+
+
+
+**Args**:
+  - `in_` (`list`): Set the `in_` field on the resulting object. When `null`, the `in_` field will be omitted from the resulting object.
+  - `kind` (`string`): Set the `kind` field on the resulting object.
+  - `not_in` (`list`): Set the `not_in` field on the resulting object. When `null`, the `not_in` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `selectors` sub block.
 
 
 ## obj timeouts

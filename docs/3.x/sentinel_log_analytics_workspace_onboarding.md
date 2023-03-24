@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withWorkspaceId()`](#fn-withworkspaceid)
 * [`fn withWorkspaceName()`](#fn-withworkspacename)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
@@ -53,8 +54,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `customer_managed_key_enabled` (`bool`): Set the `customer_managed_key_enabled` field on the resulting resource block. When `null`, the `customer_managed_key_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `workspace_name` (`string`): Set the `workspace_name` field on the resulting resource block.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block. When `null`, the `resource_group_name` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting resource block. When `null`, the `workspace_id` field will be omitted from the resulting object.
+  - `workspace_name` (`string`): Set the `workspace_name` field on the resulting resource block. When `null`, the `workspace_name` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_log_analytics_workspace_onboarding.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -80,8 +82,9 @@ injecting into a complete block.
 
 **Args**:
   - `customer_managed_key_enabled` (`bool`): Set the `customer_managed_key_enabled` field on the resulting object. When `null`, the `customer_managed_key_enabled` field will be omitted from the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `workspace_name` (`string`): Set the `workspace_name` field on the resulting object.
+  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object. When `null`, the `resource_group_name` field will be omitted from the resulting object.
+  - `workspace_id` (`string`): Set the `workspace_id` field on the resulting object. When `null`, the `workspace_id` field will be omitted from the resulting object.
+  - `workspace_name` (`string`): Set the `workspace_name` field on the resulting object. When `null`, the `workspace_name` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.sentinel_log_analytics_workspace_onboarding.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -154,6 +157,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withWorkspaceId
+
+```ts
+withWorkspaceId()
+```
+
+`azurerm.string.withWorkspaceId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the workspace_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `workspace_id` field.
 
 
 ### fn withWorkspaceName
