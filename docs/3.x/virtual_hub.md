@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAddressPrefix()`](#fn-withaddressprefix)
+* [`fn withHubRoutingPreference()`](#fn-withhubroutingpreference)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -61,6 +62,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `address_prefix` (`string`): Set the `address_prefix` field on the resulting resource block. When `null`, the `address_prefix` field will be omitted from the resulting object.
+  - `hub_routing_preference` (`string`): Set the `hub_routing_preference` field on the resulting resource block. When `null`, the `hub_routing_preference` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
@@ -93,6 +95,7 @@ injecting into a complete block.
 
 **Args**:
   - `address_prefix` (`string`): Set the `address_prefix` field on the resulting object. When `null`, the `address_prefix` field will be omitted from the resulting object.
+  - `hub_routing_preference` (`string`): Set the `hub_routing_preference` field on the resulting object. When `null`, the `hub_routing_preference` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
@@ -120,6 +123,22 @@ Terraform resource block to set or update the address_prefix field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `address_prefix` field.
+
+
+### fn withHubRoutingPreference
+
+```ts
+withHubRoutingPreference()
+```
+
+`azurerm.string.withHubRoutingPreference` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the hub_routing_preference field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `hub_routing_preference` field.
 
 
 ### fn withLocation

@@ -108,6 +108,10 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-site_configapplication_stackdockernew)
   * [`obj site_config.cors`](#obj-site_configcors)
     * [`fn new()`](#fn-site_configcorsnew)
+  * [`obj site_config.ip_restriction`](#obj-site_configip_restriction)
+    * [`fn new()`](#fn-site_configip_restrictionnew)
+  * [`obj site_config.scm_ip_restriction`](#obj-site_configscm_ip_restriction)
+    * [`fn new()`](#fn-site_configscm_ip_restrictionnew)
 * [`obj sticky_settings`](#obj-sticky_settings)
   * [`fn new()`](#fn-sticky_settingsnew)
 * [`obj storage_account`](#obj-storage_account)
@@ -1538,7 +1542,6 @@ Terraform sub block.
   - `health_check_eviction_time_in_min` (`number`): The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path` When `null`, the `health_check_eviction_time_in_min` field will be omitted from the resulting object.
   - `health_check_path` (`string`): The path to be checked for this function app health. When `null`, the `health_check_path` field will be omitted from the resulting object.
   - `http2_enabled` (`bool`): Specifies if the http2 protocol should be enabled. Defaults to `false`. When `null`, the `http2_enabled` field will be omitted from the resulting object.
-  - `ip_restriction` (`list`): Set the `ip_restriction` field on the resulting object. When `null`, the `ip_restriction` field will be omitted from the resulting object.
   - `load_balancing_mode` (`string`): The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. When `null`, the `load_balancing_mode` field will be omitted from the resulting object.
   - `managed_pipeline_mode` (`string`): The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. When `null`, the `managed_pipeline_mode` field will be omitted from the resulting object.
   - `minimum_tls_version` (`string`): The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. When `null`, the `minimum_tls_version` field will be omitted from the resulting object.
@@ -1546,7 +1549,6 @@ Terraform sub block.
   - `remote_debugging_enabled` (`bool`): Should Remote Debugging be enabled. Defaults to `false`. When `null`, the `remote_debugging_enabled` field will be omitted from the resulting object.
   - `remote_debugging_version` (`string`): The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`` When `null`, the `remote_debugging_version` field will be omitted from the resulting object.
   - `runtime_scale_monitoring_enabled` (`bool`): Should Functions Runtime Scale Monitoring be enabled. When `null`, the `runtime_scale_monitoring_enabled` field will be omitted from the resulting object.
-  - `scm_ip_restriction` (`list`): Set the `scm_ip_restriction` field on the resulting object. When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
   - `scm_minimum_tls_version` (`string`): Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. When `null`, the `scm_minimum_tls_version` field will be omitted from the resulting object.
   - `scm_use_main_ip_restriction` (`bool`): Should the Linux Function App `ip_restriction` configuration be used for the SCM also. When `null`, the `scm_use_main_ip_restriction` field will be omitted from the resulting object.
   - `use_32_bit_worker` (`bool`): Should the Linux Web App use a 32-bit worker. When `null`, the `use_32_bit_worker` field will be omitted from the resulting object.
@@ -1556,6 +1558,8 @@ Terraform sub block.
   - `app_service_logs` (`list[obj]`): Set the `app_service_logs` field on the resulting object. When `null`, the `app_service_logs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app.site_config.app_service_logs.new](#fn-site_configapp_service_logsnew) constructor.
   - `application_stack` (`list[obj]`): Set the `application_stack` field on the resulting object. When `null`, the `application_stack` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app.site_config.application_stack.new](#fn-site_configapplication_stacknew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app.site_config.cors.new](#fn-site_configcorsnew) constructor.
+  - `ip_restriction` (`list[obj]`): Set the `ip_restriction` field on the resulting object. When `null`, the `ip_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app.site_config.ip_restriction.new](#fn-site_configip_restrictionnew) constructor.
+  - `scm_ip_restriction` (`list[obj]`): Set the `scm_ip_restriction` field on the resulting object. When `null`, the `scm_ip_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app.site_config.scm_ip_restriction.new](#fn-site_configscm_ip_restrictionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `site_config` sub block.
@@ -1659,11 +1663,69 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_origins` (`list`): Specifies a list of origins that should be allowed to make cross-origin calls.
+  - `allowed_origins` (`list`): Specifies a list of origins that should be allowed to make cross-origin calls. When `null`, the `allowed_origins` field will be omitted from the resulting object.
   - `support_credentials` (`bool`): Are credentials allowed in CORS requests? Defaults to `false`. When `null`, the `support_credentials` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
+
+
+## obj site_config.ip_restriction
+
+
+
+### fn site_config.ip_restriction.new
+
+```ts
+new()
+```
+
+
+`azurerm.linux_function_app.site_config.ip_restriction.new` constructs a new object with attributes and blocks configured for the `ip_restriction`
+Terraform sub block.
+
+
+
+**Args**:
+  - `action` (`string`): The action to take. Possible values are `Allow` or `Deny`. When `null`, the `action` field will be omitted from the resulting object.
+  - `headers` (`list`): Set the `headers` field on the resulting object. When `null`, the `headers` field will be omitted from the resulting object.
+  - `ip_address` (`string`): The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22` When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `name` (`string`): The name which should be used for this `ip_restriction`. When `null`, the `name` field will be omitted from the resulting object.
+  - `priority` (`number`): The priority value of this `ip_restriction`. When `null`, the `priority` field will be omitted from the resulting object.
+  - `service_tag` (`string`): The Service Tag used for this IP Restriction. When `null`, the `service_tag` field will be omitted from the resulting object.
+  - `virtual_network_subnet_id` (`string`): The Virtual Network Subnet ID used for this IP Restriction. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ip_restriction` sub block.
+
+
+## obj site_config.scm_ip_restriction
+
+
+
+### fn site_config.scm_ip_restriction.new
+
+```ts
+new()
+```
+
+
+`azurerm.linux_function_app.site_config.scm_ip_restriction.new` constructs a new object with attributes and blocks configured for the `scm_ip_restriction`
+Terraform sub block.
+
+
+
+**Args**:
+  - `action` (`string`): The action to take. Possible values are `Allow` or `Deny`. When `null`, the `action` field will be omitted from the resulting object.
+  - `headers` (`list`): Set the `headers` field on the resulting object. When `null`, the `headers` field will be omitted from the resulting object.
+  - `ip_address` (`string`): The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22` When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `name` (`string`): The name which should be used for this `ip_restriction`. When `null`, the `name` field will be omitted from the resulting object.
+  - `priority` (`number`): The priority value of this `ip_restriction`. When `null`, the `priority` field will be omitted from the resulting object.
+  - `service_tag` (`string`): The Service Tag used for this IP Restriction. When `null`, the `service_tag` field will be omitted from the resulting object.
+  - `virtual_network_subnet_id` (`string`): The Virtual Network Subnet ID used for this IP Restriction. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `scm_ip_restriction` sub block.
 
 
 ## obj sticky_settings

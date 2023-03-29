@@ -3,11 +3,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='mysql_flexible_server', url='', help='`mysql_flexible_server` represents the `azurerm_mysql_flexible_server` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   customer_managed_key:: {
-    '#new':: d.fn(help='\n`azurerm.mysql_flexible_server.customer_managed_key.new` constructs a new object with attributes and blocks configured for the `customer_managed_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.\n  - `primary_user_assigned_identity_id` (`string`): Set the `primary_user_assigned_identity_id` field on the resulting object. When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `customer_managed_key` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.mysql_flexible_server.customer_managed_key.new` constructs a new object with attributes and blocks configured for the `customer_managed_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `geo_backup_key_vault_key_id` (`string`): Set the `geo_backup_key_vault_key_id` field on the resulting object. When `null`, the `geo_backup_key_vault_key_id` field will be omitted from the resulting object.\n  - `geo_backup_user_assigned_identity_id` (`string`): Set the `geo_backup_user_assigned_identity_id` field on the resulting object. When `null`, the `geo_backup_user_assigned_identity_id` field will be omitted from the resulting object.\n  - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.\n  - `primary_user_assigned_identity_id` (`string`): Set the `primary_user_assigned_identity_id` field on the resulting object. When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `customer_managed_key` sub block.\n', args=[]),
     new(
+      geo_backup_key_vault_key_id=null,
+      geo_backup_user_assigned_identity_id=null,
       key_vault_key_id=null,
       primary_user_assigned_identity_id=null
     ):: std.prune(a={
+      geo_backup_key_vault_key_id: geo_backup_key_vault_key_id,
+      geo_backup_user_assigned_identity_id: geo_backup_user_assigned_identity_id,
       key_vault_key_id: key_vault_key_id,
       primary_user_assigned_identity_id: primary_user_assigned_identity_id,
     }),
