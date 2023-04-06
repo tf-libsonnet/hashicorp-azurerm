@@ -61,6 +61,7 @@ permalink: /data/
 * [confidential_ledger](confidential_ledger.md)
 * [consumption_budget_resource_group](consumption_budget_resource_group.md)
 * [consumption_budget_subscription](consumption_budget_subscription.md)
+* [container_app](container_app.md)
 * [container_app_environment](container_app_environment.md)
 * [container_app_environment_certificate](container_app_environment_certificate.md)
 * [container_group](container_group.md)

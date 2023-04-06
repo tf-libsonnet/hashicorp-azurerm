@@ -117,12 +117,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   },
   trigger:: {
     metric_trigger:: {
-      '#new':: d.fn(help='\n`azurerm.monitor_scheduled_query_rules_alert.trigger.metric_trigger.new` constructs a new object with attributes and blocks configured for the `metric_trigger`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metric_column` (`string`): Set the `metric_column` field on the resulting object.\n  - `metric_trigger_type` (`string`): Set the `metric_trigger_type` field on the resulting object.\n  - `operator` (`string`): Set the `operator` field on the resulting object.\n  - `threshold` (`number`): Set the `threshold` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `metric_trigger` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.monitor_scheduled_query_rules_alert.trigger.metric_trigger.new` constructs a new object with attributes and blocks configured for the `metric_trigger`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metric_column` (`string`): Set the `metric_column` field on the resulting object. When `null`, the `metric_column` field will be omitted from the resulting object.\n  - `metric_trigger_type` (`string`): Set the `metric_trigger_type` field on the resulting object.\n  - `operator` (`string`): Set the `operator` field on the resulting object.\n  - `threshold` (`number`): Set the `threshold` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `metric_trigger` sub block.\n', args=[]),
       new(
-        metric_column,
         metric_trigger_type,
         operator,
-        threshold
+        threshold,
+        metric_column=null
       ):: std.prune(a={
         metric_column: metric_column,
         metric_trigger_type: metric_trigger_type,

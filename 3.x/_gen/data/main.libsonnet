@@ -56,6 +56,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   confidential_ledger: (import 'confidential_ledger.libsonnet'),
   consumption_budget_resource_group: (import 'consumption_budget_resource_group.libsonnet'),
   consumption_budget_subscription: (import 'consumption_budget_subscription.libsonnet'),
+  container_app: (import 'container_app.libsonnet'),
   container_app_environment: (import 'container_app_environment.libsonnet'),
   container_app_environment_certificate: (import 'container_app_environment_certificate.libsonnet'),
   container_group: (import 'container_group.libsonnet'),

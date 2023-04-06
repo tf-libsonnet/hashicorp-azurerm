@@ -96,7 +96,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sql_connectivity_type` (`string`): Set the `sql_connectivity_type` field on the resulting resource block. When `null`, the `sql_connectivity_type` field will be omitted from the resulting object.
   - `sql_connectivity_update_password` (`string`): Set the `sql_connectivity_update_password` field on the resulting resource block. When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
   - `sql_connectivity_update_username` (`string`): Set the `sql_connectivity_update_username` field on the resulting resource block. When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
-  - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting resource block.
+  - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting resource block. When `null`, the `sql_license_type` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting resource block.
   - `assessment` (`list[obj]`): Set the `assessment` field on the resulting resource block. When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
@@ -134,7 +134,7 @@ injecting into a complete block.
   - `sql_connectivity_type` (`string`): Set the `sql_connectivity_type` field on the resulting object. When `null`, the `sql_connectivity_type` field will be omitted from the resulting object.
   - `sql_connectivity_update_password` (`string`): Set the `sql_connectivity_update_password` field on the resulting object. When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
   - `sql_connectivity_update_username` (`string`): Set the `sql_connectivity_update_username` field on the resulting object. When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
-  - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting object.
+  - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting object. When `null`, the `sql_license_type` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting object.
   - `assessment` (`list[obj]`): Set the `assessment` field on the resulting object. When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.

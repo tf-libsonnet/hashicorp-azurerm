@@ -581,7 +581,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `metric_column` (`string`): Set the `metric_column` field on the resulting object.
+  - `metric_column` (`string`): Set the `metric_column` field on the resulting object. When `null`, the `metric_column` field will be omitted from the resulting object.
   - `metric_trigger_type` (`string`): Set the `metric_trigger_type` field on the resulting object.
   - `operator` (`string`): Set the `operator` field on the resulting object.
   - `threshold` (`number`): Set the `threshold` field on the resulting object.
