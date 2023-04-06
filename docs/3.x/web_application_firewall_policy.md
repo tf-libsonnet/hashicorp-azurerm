@@ -380,7 +380,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `match_values` (`list`): Set the `match_values` field on the resulting object.
+  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.
   - `negation_condition` (`bool`): Set the `negation_condition` field on the resulting object. When `null`, the `negation_condition` field will be omitted from the resulting object.
   - `operator` (`string`): Set the `operator` field on the resulting object.
   - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.

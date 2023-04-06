@@ -942,6 +942,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   web_app_hybrid_connection: (import 'resources/web_app_hybrid_connection.libsonnet'),
   web_application_firewall_policy: (import 'resources/web_application_firewall_policy.libsonnet'),
   web_pubsub: (import 'resources/web_pubsub.libsonnet'),
+  web_pubsub_custom_certificate: (import 'resources/web_pubsub_custom_certificate.libsonnet'),
   web_pubsub_hub: (import 'resources/web_pubsub_hub.libsonnet'),
   web_pubsub_network_acl: (import 'resources/web_pubsub_network_acl.libsonnet'),
   web_pubsub_shared_private_link_resource: (import 'resources/web_pubsub_shared_private_link_resource.libsonnet'),

@@ -54,6 +54,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVirtualNetworkSubnetId()`](#fn-withvirtualnetworksubnetid)
+* [`fn withZipDeployFile()`](#fn-withzipdeployfile)
 * [`obj auth_settings`](#obj-auth_settings)
   * [`fn new()`](#fn-auth_settingsnew)
   * [`obj auth_settings.active_directory`](#obj-auth_settingsactive_directory)
@@ -167,6 +168,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_uses_managed_identity` (`bool`): Should the Function App use its Managed Identity to access storage? When `null`, the `storage_uses_managed_identity` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Function App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` to be set on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting resource block. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_function_app.auth_settings.new](#fn-auth_settingsnew) constructor.
   - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting resource block. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_function_app.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_function_app.backup.new](#fn-backupnew) constructor.
@@ -220,6 +222,7 @@ injecting into a complete block.
   - `storage_uses_managed_identity` (`bool`): Should the Function App use its Managed Identity to access storage? When `null`, the `storage_uses_managed_identity` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Function App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` to be set on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting object. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_function_app.auth_settings.new](#fn-auth_settingsnew) constructor.
   - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting object. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_function_app.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_function_app.backup.new](#fn-backupnew) constructor.
@@ -900,6 +903,22 @@ Terraform resource block to set or update the virtual_network_subnet_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `virtual_network_subnet_id` field.
+
+
+### fn withZipDeployFile
+
+```ts
+withZipDeployFile()
+```
+
+`azurerm.string.withZipDeployFile` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the zip_deploy_file field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `zip_deploy_file` field.
 
 
 ## obj auth_settings

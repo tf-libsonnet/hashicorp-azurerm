@@ -953,6 +953,7 @@ project.
 * [web_app_hybrid_connection](web_app_hybrid_connection.md)
 * [web_application_firewall_policy](web_application_firewall_policy.md)
 * [web_pubsub](web_pubsub.md)
+* [web_pubsub_custom_certificate](web_pubsub_custom_certificate.md)
 * [web_pubsub_hub](web_pubsub_hub.md)
 * [web_pubsub_network_acl](web_pubsub_network_acl.md)
 * [web_pubsub_shared_private_link_resource](web_pubsub_shared_private_link_resource.md)
