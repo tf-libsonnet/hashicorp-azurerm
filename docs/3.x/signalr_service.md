@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withConnectivityLogsEnabled()`](#fn-withconnectivitylogsenabled)
 * [`fn withCors()`](#fn-withcors)
 * [`fn withCorsMixin()`](#fn-withcorsmixin)
+* [`fn withHttpRequestLogsEnabled()`](#fn-withhttprequestlogsenabled)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withLiveTrace()`](#fn-withlivetrace)
@@ -84,6 +85,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `aad_auth_enabled` (`bool`): Set the `aad_auth_enabled` field on the resulting resource block. When `null`, the `aad_auth_enabled` field will be omitted from the resulting object.
   - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting resource block. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
+  - `http_request_logs_enabled` (`bool`): Set the `http_request_logs_enabled` field on the resulting resource block. When `null`, the `http_request_logs_enabled` field will be omitted from the resulting object.
   - `live_trace_enabled` (`bool`): Set the `live_trace_enabled` field on the resulting resource block. When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
   - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting resource block. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
@@ -126,6 +128,7 @@ injecting into a complete block.
 **Args**:
   - `aad_auth_enabled` (`bool`): Set the `aad_auth_enabled` field on the resulting object. When `null`, the `aad_auth_enabled` field will be omitted from the resulting object.
   - `connectivity_logs_enabled` (`bool`): Set the `connectivity_logs_enabled` field on the resulting object. When `null`, the `connectivity_logs_enabled` field will be omitted from the resulting object.
+  - `http_request_logs_enabled` (`bool`): Set the `http_request_logs_enabled` field on the resulting object. When `null`, the `http_request_logs_enabled` field will be omitted from the resulting object.
   - `live_trace_enabled` (`bool`): Set the `live_trace_enabled` field on the resulting object. When `null`, the `live_trace_enabled` field will be omitted from the resulting object.
   - `local_auth_enabled` (`bool`): Set the `local_auth_enabled` field on the resulting object. When `null`, the `local_auth_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
@@ -215,6 +218,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `cors` field.
+
+
+### fn withHttpRequestLogsEnabled
+
+```ts
+withHttpRequestLogsEnabled()
+```
+
+`azurerm.bool.withHttpRequestLogsEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the http_request_logs_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `http_request_logs_enabled` field.
 
 
 ### fn withIdentity

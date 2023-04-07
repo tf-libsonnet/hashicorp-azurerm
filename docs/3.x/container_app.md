@@ -510,7 +510,7 @@ Terraform sub block.
 
 **Args**:
   - `app_id` (`string`): The Dapr Application Identifier.
-  - `app_port` (`number`): The port which the application is listening on. This is the same as the `ingress` port.
+  - `app_port` (`number`): The port which the application is listening on. This is the same as the `ingress` port. When `null`, the `app_port` field will be omitted from the resulting object.
   - `app_protocol` (`string`): The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`. When `null`, the `app_protocol` field will be omitted from the resulting object.
 
 **Returns**:

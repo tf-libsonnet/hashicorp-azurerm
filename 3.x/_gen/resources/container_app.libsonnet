@@ -3,10 +3,10 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='container_app', url='', help='`container_app` represents the `azurerm_container_app` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   dapr:: {
-    '#new':: d.fn(help='\n`azurerm.container_app.dapr.new` constructs a new object with attributes and blocks configured for the `dapr`\nTerraform sub block.\n\n\n\n**Args**:\n  - `app_id` (`string`): The Dapr Application Identifier.\n  - `app_port` (`number`): The port which the application is listening on. This is the same as the `ingress` port.\n  - `app_protocol` (`string`): The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`. When `null`, the `app_protocol` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `dapr` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.container_app.dapr.new` constructs a new object with attributes and blocks configured for the `dapr`\nTerraform sub block.\n\n\n\n**Args**:\n  - `app_id` (`string`): The Dapr Application Identifier.\n  - `app_port` (`number`): The port which the application is listening on. This is the same as the `ingress` port. When `null`, the `app_port` field will be omitted from the resulting object.\n  - `app_protocol` (`string`): The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`. When `null`, the `app_protocol` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `dapr` sub block.\n', args=[]),
     new(
       app_id,
-      app_port,
+      app_port=null,
       app_protocol=null
     ):: std.prune(a={
       app_id: app_id,

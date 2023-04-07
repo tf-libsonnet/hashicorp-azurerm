@@ -24,13 +24,28 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       user_event_pattern: user_event_pattern,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.web_pubsub_hub.new` injects a new `azurerm_web_pubsub_hub` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.web_pubsub_hub.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.web_pubsub_hub` using the reference:\n\n    $._ref.azurerm_web_pubsub_hub.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_web_pubsub_hub.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `anonymous_connections_enabled` (`bool`): Set the `anonymous_connections_enabled` field on the resulting resource block. When `null`, the `anonymous_connections_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `web_pubsub_id` (`string`): Set the `web_pubsub_id` field on the resulting resource block.\n  - `event_handler` (`list[obj]`): Set the `event_handler` field on the resulting resource block. When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-event_handlernew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  event_listener:: {
+    '#new':: d.fn(help='\n`azurerm.web_pubsub_hub.event_listener.new` constructs a new object with attributes and blocks configured for the `event_listener`\nTerraform sub block.\n\n\n\n**Args**:\n  - `eventhub_name` (`string`): Set the `eventhub_name` field on the resulting object.\n  - `eventhub_namespace_name` (`string`): Set the `eventhub_namespace_name` field on the resulting object.\n  - `system_event_name_filter` (`list`): Set the `system_event_name_filter` field on the resulting object. When `null`, the `system_event_name_filter` field will be omitted from the resulting object.\n  - `user_event_name_filter` (`list`): Set the `user_event_name_filter` field on the resulting object. When `null`, the `user_event_name_filter` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `event_listener` sub block.\n', args=[]),
+    new(
+      eventhub_name,
+      eventhub_namespace_name,
+      system_event_name_filter=null,
+      user_event_name_filter=null
+    ):: std.prune(a={
+      eventhub_name: eventhub_name,
+      eventhub_namespace_name: eventhub_namespace_name,
+      system_event_name_filter: system_event_name_filter,
+      user_event_name_filter: user_event_name_filter,
+    }),
+  },
+  '#new':: d.fn(help="\n`azurerm.web_pubsub_hub.new` injects a new `azurerm_web_pubsub_hub` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.web_pubsub_hub.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.web_pubsub_hub` using the reference:\n\n    $._ref.azurerm_web_pubsub_hub.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_web_pubsub_hub.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `anonymous_connections_enabled` (`bool`): Set the `anonymous_connections_enabled` field on the resulting resource block. When `null`, the `anonymous_connections_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `web_pubsub_id` (`string`): Set the `web_pubsub_id` field on the resulting resource block.\n  - `event_handler` (`list[obj]`): Set the `event_handler` field on the resulting resource block. When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-event_handlernew) constructor.\n  - `event_listener` (`list[obj]`): Set the `event_listener` field on the resulting resource block. When `null`, the `event_listener` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_listener.new](#fn-event_listenernew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     name,
     web_pubsub_id,
     anonymous_connections_enabled=null,
     event_handler=null,
+    event_listener=null,
     timeouts=null,
     _meta={}
   ):: tf.withResource(
@@ -39,22 +54,25 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     attrs=self.newAttrs(
       anonymous_connections_enabled=anonymous_connections_enabled,
       event_handler=event_handler,
+      event_listener=event_listener,
       name=name,
       timeouts=timeouts,
       web_pubsub_id=web_pubsub_id
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.web_pubsub_hub.newAttrs` constructs a new object with attributes and blocks configured for the `web_pubsub_hub`\nTerraform resource.\n\nUnlike [azurerm.web_pubsub_hub.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `anonymous_connections_enabled` (`bool`): Set the `anonymous_connections_enabled` field on the resulting object. When `null`, the `anonymous_connections_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `web_pubsub_id` (`string`): Set the `web_pubsub_id` field on the resulting object.\n  - `event_handler` (`list[obj]`): Set the `event_handler` field on the resulting object. When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-event_handlernew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `web_pubsub_hub` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.web_pubsub_hub.newAttrs` constructs a new object with attributes and blocks configured for the `web_pubsub_hub`\nTerraform resource.\n\nUnlike [azurerm.web_pubsub_hub.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `anonymous_connections_enabled` (`bool`): Set the `anonymous_connections_enabled` field on the resulting object. When `null`, the `anonymous_connections_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `web_pubsub_id` (`string`): Set the `web_pubsub_id` field on the resulting object.\n  - `event_handler` (`list[obj]`): Set the `event_handler` field on the resulting object. When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-event_handlernew) constructor.\n  - `event_listener` (`list[obj]`): Set the `event_listener` field on the resulting object. When `null`, the `event_listener` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_listener.new](#fn-event_listenernew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `web_pubsub_hub` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     name,
     web_pubsub_id,
     anonymous_connections_enabled=null,
     event_handler=null,
+    event_listener=null,
     timeouts=null
   ):: std.prune(a={
     anonymous_connections_enabled: anonymous_connections_enabled,
     event_handler: event_handler,
+    event_listener: event_listener,
     name: name,
     timeouts: timeouts,
     web_pubsub_id: web_pubsub_id,
@@ -99,6 +117,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_web_pubsub_hub+: {
         [resourceLabel]+: {
           event_handler+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withEventListener':: d.fn(help='`azurerm.list[obj].withEventListener` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the event_listener field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withEventListenerMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `event_listener` field.\n', args=[]),
+  withEventListener(resourceLabel, value): {
+    resource+: {
+      azurerm_web_pubsub_hub+: {
+        [resourceLabel]+: {
+          event_listener: value,
+        },
+      },
+    },
+  },
+  '#withEventListenerMixin':: d.fn(help='`azurerm.list[obj].withEventListenerMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the event_listener field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEventListener](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `event_listener` field.\n', args=[]),
+  withEventListenerMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_web_pubsub_hub+: {
+        [resourceLabel]+: {
+          event_listener+: if std.isArray(v=value) then value else [value],
         },
       },
     },
