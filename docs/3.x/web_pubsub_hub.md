@@ -18,6 +18,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAnonymousConnectionsEnabled()`](#fn-withanonymousconnectionsenabled)
 * [`fn withEventHandler()`](#fn-witheventhandler)
 * [`fn withEventHandlerMixin()`](#fn-witheventhandlermixin)
+* [`fn withEventListener()`](#fn-witheventlistener)
+* [`fn withEventListenerMixin()`](#fn-witheventlistenermixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -26,6 +28,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-event_handlernew)
   * [`obj event_handler.auth`](#obj-event_handlerauth)
     * [`fn new()`](#fn-event_handlerauthnew)
+* [`obj event_listener`](#obj-event_listener)
+  * [`fn new()`](#fn-event_listenernew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -62,6 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `web_pubsub_id` (`string`): Set the `web_pubsub_id` field on the resulting resource block.
   - `event_handler` (`list[obj]`): Set the `event_handler` field on the resulting resource block. When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-event_handlernew) constructor.
+  - `event_listener` (`list[obj]`): Set the `event_listener` field on the resulting resource block. When `null`, the `event_listener` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_listener.new](#fn-event_listenernew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -90,6 +95,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `web_pubsub_id` (`string`): Set the `web_pubsub_id` field on the resulting object.
   - `event_handler` (`list[obj]`): Set the `event_handler` field on the resulting object. When `null`, the `event_handler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_handler.new](#fn-event_handlernew) constructor.
+  - `event_listener` (`list[obj]`): Set the `event_listener` field on the resulting object. When `null`, the `event_listener` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.event_listener.new](#fn-event_listenernew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_pubsub_hub.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -147,6 +153,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `event_handler` field.
+
+
+### fn withEventListener
+
+```ts
+withEventListener()
+```
+
+`azurerm.list[obj].withEventListener` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the event_listener field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withEventListenerMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `event_listener` field.
+
+
+### fn withEventListenerMixin
+
+```ts
+withEventListenerMixin()
+```
+
+`azurerm.list[obj].withEventListenerMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the event_listener field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEventListener](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `event_listener` field.
 
 
 ### fn withName
@@ -264,6 +307,32 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `auth` sub block.
+
+
+## obj event_listener
+
+
+
+### fn event_listener.new
+
+```ts
+new()
+```
+
+
+`azurerm.web_pubsub_hub.event_listener.new` constructs a new object with attributes and blocks configured for the `event_listener`
+Terraform sub block.
+
+
+
+**Args**:
+  - `eventhub_name` (`string`): Set the `eventhub_name` field on the resulting object.
+  - `eventhub_namespace_name` (`string`): Set the `eventhub_namespace_name` field on the resulting object.
+  - `system_event_name_filter` (`list`): Set the `system_event_name_filter` field on the resulting object. When `null`, the `system_event_name_filter` field will be omitted from the resulting object.
+  - `user_event_name_filter` (`list`): Set the `user_event_name_filter` field on the resulting object. When `null`, the `user_event_name_filter` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `event_listener` sub block.
 
 
 ## obj timeouts

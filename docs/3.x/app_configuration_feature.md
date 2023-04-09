@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withEnabled()`](#fn-withenabled)
 * [`fn withEtag()`](#fn-withetag)
+* [`fn withKey()`](#fn-withkey)
 * [`fn withLabel()`](#fn-withlabel)
 * [`fn withLocked()`](#fn-withlocked)
 * [`fn withName()`](#fn-withname)
@@ -72,6 +73,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
   - `etag` (`string`): Set the `etag` field on the resulting resource block. When `null`, the `etag` field will be omitted from the resulting object.
+  - `key` (`string`): Set the `key` field on the resulting resource block. When `null`, the `key` field will be omitted from the resulting object.
   - `label` (`string`): Set the `label` field on the resulting resource block. When `null`, the `label` field will be omitted from the resulting object.
   - `locked` (`bool`): Set the `locked` field on the resulting resource block. When `null`, the `locked` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -107,6 +109,7 @@ injecting into a complete block.
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
   - `etag` (`string`): Set the `etag` field on the resulting object. When `null`, the `etag` field will be omitted from the resulting object.
+  - `key` (`string`): Set the `key` field on the resulting object. When `null`, the `key` field will be omitted from the resulting object.
   - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
   - `locked` (`bool`): Set the `locked` field on the resulting object. When `null`, the `locked` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -182,6 +185,22 @@ Terraform resource block to set or update the etag field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `etag` field.
+
+
+### fn withKey
+
+```ts
+withKey()
+```
+
+`azurerm.string.withKey` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the key field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `key` field.
 
 
 ### fn withLabel

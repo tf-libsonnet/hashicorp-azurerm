@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDiskSizeGb()`](#fn-withdisksizegb)
 * [`fn withEncryptionSettings()`](#fn-withencryptionsettings)
 * [`fn withEncryptionSettingsMixin()`](#fn-withencryptionsettingsmixin)
+* [`fn withIncrementalEnabled()`](#fn-withincrementalenabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -68,6 +69,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `create_option` (`string`): Set the `create_option` field on the resulting resource block.
   - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting resource block. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `incremental_enabled` (`bool`): Set the `incremental_enabled` field on the resulting resource block. When `null`, the `incremental_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
@@ -102,6 +104,7 @@ injecting into a complete block.
 **Args**:
   - `create_option` (`string`): Set the `create_option` field on the resulting object.
   - `disk_size_gb` (`number`): Set the `disk_size_gb` field on the resulting object. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `incremental_enabled` (`bool`): Set the `incremental_enabled` field on the resulting object. When `null`, the `incremental_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
@@ -183,6 +186,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `encryption_settings` field.
+
+
+### fn withIncrementalEnabled
+
+```ts
+withIncrementalEnabled()
+```
+
+`azurerm.bool.withIncrementalEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the incremental_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `incremental_enabled` field.
 
 
 ### fn withLocation
