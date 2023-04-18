@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the data source usi
 * [`fn withName()`](#fn-withname)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVersion()`](#fn-withversion)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dataSrcLabel` (`string`): The name label of the block.
   - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting data source block.
   - `name` (`string`): Set the `name` field on the resulting data source block.
+  - `version` (`string`): Set the `version` field on the resulting data source block. When `null`, the `version` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_secret.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -79,6 +81,7 @@ injecting into a complete block.
 **Args**:
   - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.key_vault_secret.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -151,6 +154,22 @@ function.
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withVersion
+
+```ts
+withVersion()
+```
+
+`azurerm.string.withVersion` constructs a mixin object that can be merged into the `string`
+Terraform data source block to set or update the version field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `version` field.
 
 
 ## obj timeouts
