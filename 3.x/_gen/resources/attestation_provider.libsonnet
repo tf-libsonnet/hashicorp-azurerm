@@ -2,12 +2,13 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='attestation_provider', url='', help='`attestation_provider` represents the `azurerm_attestation_provider` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.attestation_provider.new` injects a new `azurerm_attestation_provider` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.attestation_provider.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.attestation_provider` using the reference:\n\n    $._ref.azurerm_attestation_provider.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_attestation_provider.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting resource block. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.attestation_provider.new` injects a new `azurerm_attestation_provider` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.attestation_provider.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.attestation_provider` using the reference:\n\n    $._ref.azurerm_attestation_provider.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_attestation_provider.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting resource block. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `policy` (`list[obj]`): Set the `policy` field on the resulting resource block. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.policy.new](#fn-policynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
     name,
     resource_group_name,
+    policy=null,
     policy_signing_certificate_data=null,
     tags=null,
     timeouts=null,
@@ -18,6 +19,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     attrs=self.newAttrs(
       location=location,
       name=name,
+      policy=policy,
       policy_signing_certificate_data=policy_signing_certificate_data,
       resource_group_name=resource_group_name,
       tags=tags,
@@ -25,22 +27,34 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.attestation_provider.newAttrs` constructs a new object with attributes and blocks configured for the `attestation_provider`\nTerraform resource.\n\nUnlike [azurerm.attestation_provider.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting object. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `attestation_provider` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.attestation_provider.newAttrs` constructs a new object with attributes and blocks configured for the `attestation_provider`\nTerraform resource.\n\nUnlike [azurerm.attestation_provider.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting object. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `policy` (`list[obj]`): Set the `policy` field on the resulting object. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.policy.new](#fn-policynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `attestation_provider` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
     name,
     resource_group_name,
+    policy=null,
     policy_signing_certificate_data=null,
     tags=null,
     timeouts=null
   ):: std.prune(a={
     location: location,
     name: name,
+    policy: policy,
     policy_signing_certificate_data: policy_signing_certificate_data,
     resource_group_name: resource_group_name,
     tags: tags,
     timeouts: timeouts,
   }),
+  policy:: {
+    '#new':: d.fn(help='\n`azurerm.attestation_provider.policy.new` constructs a new object with attributes and blocks configured for the `policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `data` (`string`): Set the `data` field on the resulting object.\n  - `environment_type` (`string`): Set the `environment_type` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `policy` sub block.\n', args=[]),
+    new(
+      data,
+      environment_type
+    ):: std.prune(a={
+      data: data,
+      environment_type: environment_type,
+    }),
+  },
   timeouts:: {
     '#new':: d.fn(help='\n`azurerm.attestation_provider.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
     new(
@@ -71,6 +85,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_attestation_provider+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  '#withPolicy':: d.fn(help='`azurerm.list[obj].withPolicy` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the policy field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withPolicyMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `policy` field.\n', args=[]),
+  withPolicy(resourceLabel, value): {
+    resource+: {
+      azurerm_attestation_provider+: {
+        [resourceLabel]+: {
+          policy: value,
+        },
+      },
+    },
+  },
+  '#withPolicyMixin':: d.fn(help='`azurerm.list[obj].withPolicyMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the policy field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withPolicy](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `policy` field.\n', args=[]),
+  withPolicyMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_attestation_provider+: {
+        [resourceLabel]+: {
+          policy+: if std.isArray(v=value) then value else [value],
         },
       },
     },

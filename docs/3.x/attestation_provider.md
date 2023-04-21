@@ -17,11 +17,15 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
+* [`fn withPolicy()`](#fn-withpolicy)
+* [`fn withPolicyMixin()`](#fn-withpolicymixin)
 * [`fn withPolicySigningCertificateData()`](#fn-withpolicysigningcertificatedata)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj policy`](#obj-policy)
+  * [`fn new()`](#fn-policynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -59,6 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting resource block. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `policy` (`list[obj]`): Set the `policy` field on the resulting resource block. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.policy.new](#fn-policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -88,6 +93,7 @@ injecting into a complete block.
   - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting object. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `policy` (`list[obj]`): Set the `policy` field on the resulting object. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.policy.new](#fn-policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -124,6 +130,43 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPolicy
+
+```ts
+withPolicy()
+```
+
+`azurerm.list[obj].withPolicy` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the policy field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withPolicyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `policy` field.
+
+
+### fn withPolicyMixin
+
+```ts
+withPolicyMixin()
+```
+
+`azurerm.list[obj].withPolicyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the policy field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withPolicy](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `policy` field.
 
 
 ### fn withPolicySigningCertificateData
@@ -208,6 +251,30 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj policy
+
+
+
+### fn policy.new
+
+```ts
+new()
+```
+
+
+`azurerm.attestation_provider.policy.new` constructs a new object with attributes and blocks configured for the `policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `data` (`string`): Set the `data` field on the resulting object.
+  - `environment_type` (`string`): Set the `environment_type` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `policy` sub block.
 
 
 ## obj timeouts
