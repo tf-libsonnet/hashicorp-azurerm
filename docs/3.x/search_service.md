@@ -16,8 +16,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAllowedIps()`](#fn-withallowedips)
+* [`fn withAuthenticationFailureMode()`](#fn-withauthenticationfailuremode)
+* [`fn withCustomerManagedKeyEnforcementEnabled()`](#fn-withcustomermanagedkeyenforcementenabled)
+* [`fn withHostingMode()`](#fn-withhostingmode)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
+* [`fn withLocalAuthenticationEnabled()`](#fn-withlocalauthenticationenabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withPartitionCount()`](#fn-withpartitioncount)
@@ -63,6 +67,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `allowed_ips` (`list`): Set the `allowed_ips` field on the resulting resource block. When `null`, the `allowed_ips` field will be omitted from the resulting object.
+  - `authentication_failure_mode` (`string`): Set the `authentication_failure_mode` field on the resulting resource block. When `null`, the `authentication_failure_mode` field will be omitted from the resulting object.
+  - `customer_managed_key_enforcement_enabled` (`bool`): Set the `customer_managed_key_enforcement_enabled` field on the resulting resource block. When `null`, the `customer_managed_key_enforcement_enabled` field will be omitted from the resulting object.
+  - `hosting_mode` (`string`): Set the `hosting_mode` field on the resulting resource block. When `null`, the `hosting_mode` field will be omitted from the resulting object.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting resource block. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `partition_count` (`number`): Set the `partition_count` field on the resulting resource block. When `null`, the `partition_count` field will be omitted from the resulting object.
@@ -97,6 +105,10 @@ injecting into a complete block.
 
 **Args**:
   - `allowed_ips` (`list`): Set the `allowed_ips` field on the resulting object. When `null`, the `allowed_ips` field will be omitted from the resulting object.
+  - `authentication_failure_mode` (`string`): Set the `authentication_failure_mode` field on the resulting object. When `null`, the `authentication_failure_mode` field will be omitted from the resulting object.
+  - `customer_managed_key_enforcement_enabled` (`bool`): Set the `customer_managed_key_enforcement_enabled` field on the resulting object. When `null`, the `customer_managed_key_enforcement_enabled` field will be omitted from the resulting object.
+  - `hosting_mode` (`string`): Set the `hosting_mode` field on the resulting object. When `null`, the `hosting_mode` field will be omitted from the resulting object.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting object. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `partition_count` (`number`): Set the `partition_count` field on the resulting object. When `null`, the `partition_count` field will be omitted from the resulting object.
@@ -126,6 +138,54 @@ Terraform resource block to set or update the allowed_ips field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `allowed_ips` field.
+
+
+### fn withAuthenticationFailureMode
+
+```ts
+withAuthenticationFailureMode()
+```
+
+`azurerm.string.withAuthenticationFailureMode` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the authentication_failure_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `authentication_failure_mode` field.
+
+
+### fn withCustomerManagedKeyEnforcementEnabled
+
+```ts
+withCustomerManagedKeyEnforcementEnabled()
+```
+
+`azurerm.bool.withCustomerManagedKeyEnforcementEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the customer_managed_key_enforcement_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `customer_managed_key_enforcement_enabled` field.
+
+
+### fn withHostingMode
+
+```ts
+withHostingMode()
+```
+
+`azurerm.string.withHostingMode` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the hosting_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `hosting_mode` field.
 
 
 ### fn withIdentity
@@ -163,6 +223,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withLocalAuthenticationEnabled
+
+```ts
+withLocalAuthenticationEnabled()
+```
+
+`azurerm.bool.withLocalAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the local_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `local_authentication_enabled` field.
 
 
 ### fn withLocation

@@ -17,13 +17,16 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
+* [`fn withOpenEnclavePolicyBase64()`](#fn-withopenenclavepolicybase64)
 * [`fn withPolicy()`](#fn-withpolicy)
 * [`fn withPolicyMixin()`](#fn-withpolicymixin)
 * [`fn withPolicySigningCertificateData()`](#fn-withpolicysigningcertificatedata)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSgxEnclavePolicyBase64()`](#fn-withsgxenclavepolicybase64)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withTpmPolicyBase64()`](#fn-withtpmpolicybase64)
 * [`obj policy`](#obj-policy)
   * [`fn new()`](#fn-policynew)
 * [`obj timeouts`](#obj-timeouts)
@@ -60,9 +63,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `open_enclave_policy_base64` (`string`): Set the `open_enclave_policy_base64` field on the resulting resource block. When `null`, the `open_enclave_policy_base64` field will be omitted from the resulting object.
   - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting resource block. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sgx_enclave_policy_base64` (`string`): Set the `sgx_enclave_policy_base64` field on the resulting resource block. When `null`, the `sgx_enclave_policy_base64` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tpm_policy_base64` (`string`): Set the `tpm_policy_base64` field on the resulting resource block. When `null`, the `tpm_policy_base64` field will be omitted from the resulting object.
   - `policy` (`list[obj]`): Set the `policy` field on the resulting resource block. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.policy.new](#fn-policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -90,9 +96,12 @@ injecting into a complete block.
 **Args**:
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `open_enclave_policy_base64` (`string`): Set the `open_enclave_policy_base64` field on the resulting object. When `null`, the `open_enclave_policy_base64` field will be omitted from the resulting object.
   - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting object. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sgx_enclave_policy_base64` (`string`): Set the `sgx_enclave_policy_base64` field on the resulting object. When `null`, the `sgx_enclave_policy_base64` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `tpm_policy_base64` (`string`): Set the `tpm_policy_base64` field on the resulting object. When `null`, the `tpm_policy_base64` field will be omitted from the resulting object.
   - `policy` (`list[obj]`): Set the `policy` field on the resulting object. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.policy.new](#fn-policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.attestation_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -130,6 +139,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withOpenEnclavePolicyBase64
+
+```ts
+withOpenEnclavePolicyBase64()
+```
+
+`azurerm.string.withOpenEnclavePolicyBase64` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the open_enclave_policy_base64 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `open_enclave_policy_base64` field.
 
 
 ### fn withPolicy
@@ -201,6 +226,22 @@ Terraform resource block to set or update the resource_group_name field.
   - `value` (`string`): The value to set for the `resource_group_name` field.
 
 
+### fn withSgxEnclavePolicyBase64
+
+```ts
+withSgxEnclavePolicyBase64()
+```
+
+`azurerm.string.withSgxEnclavePolicyBase64` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the sgx_enclave_policy_base64 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `sgx_enclave_policy_base64` field.
+
+
 ### fn withTags
 
 ```ts
@@ -253,6 +294,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withTpmPolicyBase64
+
+```ts
+withTpmPolicyBase64()
+```
+
+`azurerm.string.withTpmPolicyBase64` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the tpm_policy_base64 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `tpm_policy_base64` field.
+
+
 ## obj policy
 
 
@@ -270,8 +327,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `data` (`string`): Set the `data` field on the resulting object.
-  - `environment_type` (`string`): Set the `environment_type` field on the resulting object.
+  - `data` (`string`): Set the `data` field on the resulting object. When `null`, the `data` field will be omitted from the resulting object.
+  - `environment_type` (`string`): Set the `environment_type` field on the resulting object. When `null`, the `environment_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `policy` sub block.
