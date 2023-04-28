@@ -76,6 +76,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withRoleBasedAccessControlEnabled()`](#fn-withrolebasedaccesscontrolenabled)
 * [`fn withRunCommandEnabled()`](#fn-withruncommandenabled)
+* [`fn withServiceMeshProfile()`](#fn-withservicemeshprofile)
+* [`fn withServiceMeshProfileMixin()`](#fn-withservicemeshprofilemixin)
 * [`fn withServicePrincipal()`](#fn-withserviceprincipal)
 * [`fn withServicePrincipalMixin()`](#fn-withserviceprincipalmixin)
 * [`fn withSkuTier()`](#fn-withskutier)
@@ -147,6 +149,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-network_profilenat_gateway_profilenew)
 * [`obj oms_agent`](#obj-oms_agent)
   * [`fn new()`](#fn-oms_agentnew)
+* [`obj service_mesh_profile`](#obj-service_mesh_profile)
+  * [`fn new()`](#fn-service_mesh_profilenew)
 * [`obj service_principal`](#obj-service_principal)
   * [`fn new()`](#fn-service_principalnew)
 * [`obj storage_profile`](#obj-storage_profile)
@@ -237,6 +241,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `monitor_metrics` (`list[obj]`): Set the `monitor_metrics` field on the resulting resource block. When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
   - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting resource block. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
   - `oms_agent` (`list[obj]`): Set the `oms_agent` field on the resulting resource block. When `null`, the `oms_agent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.oms_agent.new](#fn-oms_agentnew) constructor.
+  - `service_mesh_profile` (`list[obj]`): Set the `service_mesh_profile` field on the resulting resource block. When `null`, the `service_mesh_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_mesh_profile.new](#fn-service_mesh_profilenew) constructor.
   - `service_principal` (`list[obj]`): Set the `service_principal` field on the resulting resource block. When `null`, the `service_principal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_principal.new](#fn-service_principalnew) constructor.
   - `storage_profile` (`list[obj]`): Set the `storage_profile` field on the resulting resource block. When `null`, the `storage_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.storage_profile.new](#fn-storage_profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.timeouts.new](#fn-timeoutsnew) constructor.
@@ -312,6 +317,7 @@ injecting into a complete block.
   - `monitor_metrics` (`list[obj]`): Set the `monitor_metrics` field on the resulting object. When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
   - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting object. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
   - `oms_agent` (`list[obj]`): Set the `oms_agent` field on the resulting object. When `null`, the `oms_agent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.oms_agent.new](#fn-oms_agentnew) constructor.
+  - `service_mesh_profile` (`list[obj]`): Set the `service_mesh_profile` field on the resulting object. When `null`, the `service_mesh_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_mesh_profile.new](#fn-service_mesh_profilenew) constructor.
   - `service_principal` (`list[obj]`): Set the `service_principal` field on the resulting object. When `null`, the `service_principal` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.service_principal.new](#fn-service_principalnew) constructor.
   - `storage_profile` (`list[obj]`): Set the `storage_profile` field on the resulting object. When `null`, the `storage_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.storage_profile.new](#fn-storage_profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.timeouts.new](#fn-timeoutsnew) constructor.
@@ -1389,6 +1395,43 @@ Terraform resource block to set or update the run_command_enabled field.
   - `value` (`bool`): The value to set for the `run_command_enabled` field.
 
 
+### fn withServiceMeshProfile
+
+```ts
+withServiceMeshProfile()
+```
+
+`azurerm.list[obj].withServiceMeshProfile` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the service_mesh_profile field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withServiceMeshProfileMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `service_mesh_profile` field.
+
+
+### fn withServiceMeshProfileMixin
+
+```ts
+withServiceMeshProfileMixin()
+```
+
+`azurerm.list[obj].withServiceMeshProfileMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the service_mesh_profile field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withServiceMeshProfile](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `service_mesh_profile` field.
+
+
 ### fn withServicePrincipal
 
 ```ts
@@ -2438,6 +2481,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `oms_agent` sub block.
+
+
+## obj service_mesh_profile
+
+
+
+### fn service_mesh_profile.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.service_mesh_profile.new` constructs a new object with attributes and blocks configured for the `service_mesh_profile`
+Terraform sub block.
+
+
+
+**Args**:
+  - `mode` (`string`): Set the `mode` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `service_mesh_profile` sub block.
 
 
 ## obj service_principal

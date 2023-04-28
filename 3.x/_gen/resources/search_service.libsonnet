@@ -10,7 +10,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       type: type,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.search_service.new` injects a new `azurerm_search_service` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.search_service.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.search_service` using the reference:\n\n    $._ref.azurerm_search_service.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_search_service.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `allowed_ips` (`list`): Set the `allowed_ips` field on the resulting resource block. When `null`, the `allowed_ips` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `partition_count` (`number`): Set the `partition_count` field on the resulting resource block. When `null`, the `partition_count` field will be omitted from the resulting object.\n  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.\n  - `replica_count` (`number`): Set the `replica_count` field on the resulting resource block. When `null`, the `replica_count` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `sku` (`string`): Set the `sku` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.identity.new](#fn-identitynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.search_service.new` injects a new `azurerm_search_service` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.search_service.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.search_service` using the reference:\n\n    $._ref.azurerm_search_service.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_search_service.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `allowed_ips` (`list`): Set the `allowed_ips` field on the resulting resource block. When `null`, the `allowed_ips` field will be omitted from the resulting object.\n  - `authentication_failure_mode` (`string`): Set the `authentication_failure_mode` field on the resulting resource block. When `null`, the `authentication_failure_mode` field will be omitted from the resulting object.\n  - `customer_managed_key_enforcement_enabled` (`bool`): Set the `customer_managed_key_enforcement_enabled` field on the resulting resource block. When `null`, the `customer_managed_key_enforcement_enabled` field will be omitted from the resulting object.\n  - `hosting_mode` (`string`): Set the `hosting_mode` field on the resulting resource block. When `null`, the `hosting_mode` field will be omitted from the resulting object.\n  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting resource block. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `partition_count` (`number`): Set the `partition_count` field on the resulting resource block. When `null`, the `partition_count` field will be omitted from the resulting object.\n  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.\n  - `replica_count` (`number`): Set the `replica_count` field on the resulting resource block. When `null`, the `replica_count` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `sku` (`string`): Set the `sku` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.identity.new](#fn-identitynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
@@ -18,7 +18,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     resource_group_name,
     sku,
     allowed_ips=null,
+    authentication_failure_mode=null,
+    customer_managed_key_enforcement_enabled=null,
+    hosting_mode=null,
     identity=null,
+    local_authentication_enabled=null,
     partition_count=null,
     public_network_access_enabled=null,
     replica_count=null,
@@ -30,7 +34,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     label=resourceLabel,
     attrs=self.newAttrs(
       allowed_ips=allowed_ips,
+      authentication_failure_mode=authentication_failure_mode,
+      customer_managed_key_enforcement_enabled=customer_managed_key_enforcement_enabled,
+      hosting_mode=hosting_mode,
       identity=identity,
+      local_authentication_enabled=local_authentication_enabled,
       location=location,
       name=name,
       partition_count=partition_count,
@@ -43,14 +51,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.search_service.newAttrs` constructs a new object with attributes and blocks configured for the `search_service`\nTerraform resource.\n\nUnlike [azurerm.search_service.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `allowed_ips` (`list`): Set the `allowed_ips` field on the resulting object. When `null`, the `allowed_ips` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `partition_count` (`number`): Set the `partition_count` field on the resulting object. When `null`, the `partition_count` field will be omitted from the resulting object.\n  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.\n  - `replica_count` (`number`): Set the `replica_count` field on the resulting object. When `null`, the `replica_count` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `sku` (`string`): Set the `sku` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.identity.new](#fn-identitynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `search_service` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.search_service.newAttrs` constructs a new object with attributes and blocks configured for the `search_service`\nTerraform resource.\n\nUnlike [azurerm.search_service.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `allowed_ips` (`list`): Set the `allowed_ips` field on the resulting object. When `null`, the `allowed_ips` field will be omitted from the resulting object.\n  - `authentication_failure_mode` (`string`): Set the `authentication_failure_mode` field on the resulting object. When `null`, the `authentication_failure_mode` field will be omitted from the resulting object.\n  - `customer_managed_key_enforcement_enabled` (`bool`): Set the `customer_managed_key_enforcement_enabled` field on the resulting object. When `null`, the `customer_managed_key_enforcement_enabled` field will be omitted from the resulting object.\n  - `hosting_mode` (`string`): Set the `hosting_mode` field on the resulting object. When `null`, the `hosting_mode` field will be omitted from the resulting object.\n  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting object. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `partition_count` (`number`): Set the `partition_count` field on the resulting object. When `null`, the `partition_count` field will be omitted from the resulting object.\n  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.\n  - `replica_count` (`number`): Set the `replica_count` field on the resulting object. When `null`, the `replica_count` field will be omitted from the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `sku` (`string`): Set the `sku` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.identity.new](#fn-identitynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `search_service` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
     name,
     resource_group_name,
     sku,
     allowed_ips=null,
+    authentication_failure_mode=null,
+    customer_managed_key_enforcement_enabled=null,
+    hosting_mode=null,
     identity=null,
+    local_authentication_enabled=null,
     partition_count=null,
     public_network_access_enabled=null,
     replica_count=null,
@@ -58,7 +70,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts=null
   ):: std.prune(a={
     allowed_ips: allowed_ips,
+    authentication_failure_mode: authentication_failure_mode,
+    customer_managed_key_enforcement_enabled: customer_managed_key_enforcement_enabled,
+    hosting_mode: hosting_mode,
     identity: identity,
+    local_authentication_enabled: local_authentication_enabled,
     location: location,
     name: name,
     partition_count: partition_count,
@@ -93,6 +109,36 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       },
     },
   },
+  '#withAuthenticationFailureMode':: d.fn(help='`azurerm.string.withAuthenticationFailureMode` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the authentication_failure_mode field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `authentication_failure_mode` field.\n', args=[]),
+  withAuthenticationFailureMode(resourceLabel, value): {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          authentication_failure_mode: value,
+        },
+      },
+    },
+  },
+  '#withCustomerManagedKeyEnforcementEnabled':: d.fn(help='`azurerm.bool.withCustomerManagedKeyEnforcementEnabled` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the customer_managed_key_enforcement_enabled field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `customer_managed_key_enforcement_enabled` field.\n', args=[]),
+  withCustomerManagedKeyEnforcementEnabled(resourceLabel, value): {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          customer_managed_key_enforcement_enabled: value,
+        },
+      },
+    },
+  },
+  '#withHostingMode':: d.fn(help='`azurerm.string.withHostingMode` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the hosting_mode field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `hosting_mode` field.\n', args=[]),
+  withHostingMode(resourceLabel, value): {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          hosting_mode: value,
+        },
+      },
+    },
+  },
   '#withIdentity':: d.fn(help='`azurerm.list[obj].withIdentity` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the identity field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withIdentityMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `identity` field.\n', args=[]),
   withIdentity(resourceLabel, value): {
     resource+: {
@@ -109,6 +155,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_search_service+: {
         [resourceLabel]+: {
           identity+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withLocalAuthenticationEnabled':: d.fn(help='`azurerm.bool.withLocalAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the local_authentication_enabled field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `local_authentication_enabled` field.\n', args=[]),
+  withLocalAuthenticationEnabled(resourceLabel, value): {
+    resource+: {
+      azurerm_search_service+: {
+        [resourceLabel]+: {
+          local_authentication_enabled: value,
         },
       },
     },

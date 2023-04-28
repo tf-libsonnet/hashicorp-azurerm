@@ -193,6 +193,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   netapp_snapshot: (import 'netapp_snapshot.libsonnet'),
   netapp_snapshot_policy: (import 'netapp_snapshot_policy.libsonnet'),
   netapp_volume: (import 'netapp_volume.libsonnet'),
+  netapp_volume_group_sap_hana: (import 'netapp_volume_group_sap_hana.libsonnet'),
   network_ddos_protection_plan: (import 'network_ddos_protection_plan.libsonnet'),
   network_interface: (import 'network_interface.libsonnet'),
   network_security_group: (import 'network_security_group.libsonnet'),

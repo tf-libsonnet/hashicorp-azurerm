@@ -198,6 +198,7 @@ permalink: /data/
 * [netapp_snapshot](netapp_snapshot.md)
 * [netapp_snapshot_policy](netapp_snapshot_policy.md)
 * [netapp_volume](netapp_volume.md)
+* [netapp_volume_group_sap_hana](netapp_volume_group_sap_hana.md)
 * [network_ddos_protection_plan](network_ddos_protection_plan.md)
 * [network_interface](network_interface.md)
 * [network_security_group](network_security_group.md)
