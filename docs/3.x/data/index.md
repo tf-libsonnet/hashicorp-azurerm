@@ -148,6 +148,7 @@ permalink: /data/
 * [key_vault_secrets](key_vault_secrets.md)
 * [kubernetes_cluster](kubernetes_cluster.md)
 * [kubernetes_cluster_node_pool](kubernetes_cluster_node_pool.md)
+* [kubernetes_node_pool_snapshot](kubernetes_node_pool_snapshot.md)
 * [kubernetes_service_versions](kubernetes_service_versions.md)
 * [kusto_cluster](kusto_cluster.md)
 * [kusto_database](kusto_database.md)
