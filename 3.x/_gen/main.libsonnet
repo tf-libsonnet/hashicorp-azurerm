@@ -196,6 +196,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   cosmosdb_mongo_database: (import 'resources/cosmosdb_mongo_database.libsonnet'),
   cosmosdb_notebook_workspace: (import 'resources/cosmosdb_notebook_workspace.libsonnet'),
   cosmosdb_postgresql_cluster: (import 'resources/cosmosdb_postgresql_cluster.libsonnet'),
+  cosmosdb_postgresql_firewall_rule: (import 'resources/cosmosdb_postgresql_firewall_rule.libsonnet'),
   cosmosdb_sql_container: (import 'resources/cosmosdb_sql_container.libsonnet'),
   cosmosdb_sql_database: (import 'resources/cosmosdb_sql_database.libsonnet'),
   cosmosdb_sql_dedicated_gateway: (import 'resources/cosmosdb_sql_dedicated_gateway.libsonnet'),

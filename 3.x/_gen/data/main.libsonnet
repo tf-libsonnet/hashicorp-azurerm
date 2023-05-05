@@ -143,6 +143,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   key_vault_secrets: (import 'key_vault_secrets.libsonnet'),
   kubernetes_cluster: (import 'kubernetes_cluster.libsonnet'),
   kubernetes_cluster_node_pool: (import 'kubernetes_cluster_node_pool.libsonnet'),
+  kubernetes_node_pool_snapshot: (import 'kubernetes_node_pool_snapshot.libsonnet'),
   kubernetes_service_versions: (import 'kubernetes_service_versions.libsonnet'),
   kusto_cluster: (import 'kusto_cluster.libsonnet'),
   kusto_database: (import 'kusto_database.libsonnet'),

@@ -205,6 +205,7 @@ project.
 * [cosmosdb_mongo_database](cosmosdb_mongo_database.md)
 * [cosmosdb_notebook_workspace](cosmosdb_notebook_workspace.md)
 * [cosmosdb_postgresql_cluster](cosmosdb_postgresql_cluster.md)
+* [cosmosdb_postgresql_firewall_rule](cosmosdb_postgresql_firewall_rule.md)
 * [cosmosdb_sql_container](cosmosdb_sql_container.md)
 * [cosmosdb_sql_database](cosmosdb_sql_database.md)
 * [cosmosdb_sql_dedicated_gateway](cosmosdb_sql_dedicated_gateway.md)

@@ -50,6 +50,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPriority()`](#fn-withpriority)
 * [`fn withProximityPlacementGroupId()`](#fn-withproximityplacementgroupid)
 * [`fn withScaleDownMode()`](#fn-withscaledownmode)
+* [`fn withSnapshotId()`](#fn-withsnapshotid)
 * [`fn withSpotMaxPrice()`](#fn-withspotmaxprice)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -136,6 +137,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `priority` (`string`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
   - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting resource block. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
   - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting resource block. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
+  - `snapshot_id` (`string`): Set the `snapshot_id` field on the resulting resource block. When `null`, the `snapshot_id` field will be omitted from the resulting object.
   - `spot_max_price` (`number`): Set the `spot_max_price` field on the resulting resource block. When `null`, the `spot_max_price` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting resource block. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
@@ -201,6 +203,7 @@ injecting into a complete block.
   - `priority` (`string`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
   - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
   - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting object. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
+  - `snapshot_id` (`string`): Set the `snapshot_id` field on the resulting object. When `null`, the `snapshot_id` field will be omitted from the resulting object.
   - `spot_max_price` (`number`): Set the `spot_max_price` field on the resulting object. When `null`, the `spot_max_price` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `ultra_ssd_enabled` (`bool`): Set the `ultra_ssd_enabled` field on the resulting object. When `null`, the `ultra_ssd_enabled` field will be omitted from the resulting object.
@@ -792,6 +795,22 @@ Terraform resource block to set or update the scale_down_mode field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `scale_down_mode` field.
+
+
+### fn withSnapshotId
+
+```ts
+withSnapshotId()
+```
+
+`azurerm.string.withSnapshotId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the snapshot_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `snapshot_id` field.
 
 
 ### fn withSpotMaxPrice
