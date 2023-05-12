@@ -5,12 +5,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   links:: {
     channels:: {
       end_point:: {
-        '#new':: d.fn(help='\n`azurerm.orbital_contact_profile.links.channels.end_point.new` constructs a new object with attributes and blocks configured for the `end_point`\nTerraform sub block.\n\n\n\n**Args**:\n  - `end_point_name` (`string`): Set the `end_point_name` field on the resulting object.\n  - `ip_address` (`string`): Set the `ip_address` field on the resulting object.\n  - `port` (`string`): Set the `port` field on the resulting object.\n  - `protocol` (`string`): Set the `protocol` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `end_point` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`azurerm.orbital_contact_profile.links.channels.end_point.new` constructs a new object with attributes and blocks configured for the `end_point`\nTerraform sub block.\n\n\n\n**Args**:\n  - `end_point_name` (`string`): Set the `end_point_name` field on the resulting object.\n  - `ip_address` (`string`): Set the `ip_address` field on the resulting object. When `null`, the `ip_address` field will be omitted from the resulting object.\n  - `port` (`string`): Set the `port` field on the resulting object.\n  - `protocol` (`string`): Set the `protocol` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `end_point` sub block.\n', args=[]),
         new(
           end_point_name,
-          ip_address,
           port,
-          protocol
+          protocol,
+          ip_address=null
         ):: std.prune(a={
           end_point_name: end_point_name,
           ip_address: ip_address,

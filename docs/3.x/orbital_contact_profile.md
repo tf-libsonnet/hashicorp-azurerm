@@ -405,7 +405,7 @@ Terraform sub block.
 
 **Args**:
   - `end_point_name` (`string`): Set the `end_point_name` field on the resulting object.
-  - `ip_address` (`string`): Set the `ip_address` field on the resulting object.
+  - `ip_address` (`string`): Set the `ip_address` field on the resulting object. When `null`, the `ip_address` field will be omitted from the resulting object.
   - `port` (`string`): Set the `port` field on the resulting object.
   - `protocol` (`string`): Set the `protocol` field on the resulting object.
 

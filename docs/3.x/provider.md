@@ -31,8 +31,6 @@ This package contains functions and utilities for setting up the provider using 
     * [`fn new()`](#fn-featureslog_analytics_workspacenew)
   * [`obj features.managed_disk`](#obj-featuresmanaged_disk)
     * [`fn new()`](#fn-featuresmanaged_disknew)
-  * [`obj features.network`](#obj-featuresnetwork)
-    * [`fn new()`](#fn-featuresnetworknew)
   * [`obj features.resource_group`](#obj-featuresresource_group)
     * [`fn new()`](#fn-featuresresource_groupnew)
   * [`obj features.template_deployment`](#obj-featurestemplate_deployment)
@@ -168,7 +166,6 @@ Terraform sub block.
   - `key_vault` (`list[obj]`): Set the `key_vault` field on the resulting object. When `null`, the `key_vault` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.key_vault.new](#fn-key_vaultnew) constructor.
   - `log_analytics_workspace` (`list[obj]`): Set the `log_analytics_workspace` field on the resulting object. When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.log_analytics_workspace.new](#fn-log_analytics_workspacenew) constructor.
   - `managed_disk` (`list[obj]`): Set the `managed_disk` field on the resulting object. When `null`, the `managed_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.managed_disk.new](#fn-managed_disknew) constructor.
-  - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.network.new](#fn-networknew) constructor.
   - `resource_group` (`list[obj]`): Set the `resource_group` field on the resulting object. When `null`, the `resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.resource_group.new](#fn-resource_groupnew) constructor.
   - `template_deployment` (`list[obj]`): Set the `template_deployment` field on the resulting object. When `null`, the `template_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.template_deployment.new](#fn-template_deploymentnew) constructor.
   - `virtual_machine` (`list[obj]`): Set the `virtual_machine` field on the resulting object. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine.new](#fn-virtual_machinenew) constructor.
@@ -347,29 +344,6 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `managed_disk` sub block.
-
-
-## obj features.network
-
-
-
-### fn features.network.new
-
-```ts
-new()
-```
-
-
-`azurerm.features.network.new` constructs a new object with attributes and blocks configured for the `network`
-Terraform sub block.
-
-
-
-**Args**:
-  - `relaxed_locking` (`bool`): Set the `relaxed_locking` field on the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `network` sub block.
 
 
 ## obj features.resource_group
