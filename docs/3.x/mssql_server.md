@@ -32,7 +32,6 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
-* [`fn withTransparentDataEncryptionKeyVaultKeyId()`](#fn-withtransparentdataencryptionkeyvaultkeyid)
 * [`fn withVersion()`](#fn-withversion)
 * [`obj azuread_administrator`](#obj-azuread_administrator)
   * [`fn new()`](#fn-azuread_administratornew)
@@ -81,7 +80,6 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `transparent_data_encryption_key_vault_key_id` (`string`): Set the `transparent_data_encryption_key_vault_key_id` field on the resulting resource block. When `null`, the `transparent_data_encryption_key_vault_key_id` field will be omitted from the resulting object.
   - `version` (`string`): Set the `version` field on the resulting resource block.
   - `azuread_administrator` (`list[obj]`): Set the `azuread_administrator` field on the resulting resource block. When `null`, the `azuread_administrator` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.azuread_administrator.new](#fn-azuread_administratornew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.identity.new](#fn-identitynew) constructor.
@@ -120,7 +118,6 @@ injecting into a complete block.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `transparent_data_encryption_key_vault_key_id` (`string`): Set the `transparent_data_encryption_key_vault_key_id` field on the resulting object. When `null`, the `transparent_data_encryption_key_vault_key_id` field will be omitted from the resulting object.
   - `version` (`string`): Set the `version` field on the resulting object.
   - `azuread_administrator` (`list[obj]`): Set the `azuread_administrator` field on the resulting object. When `null`, the `azuread_administrator` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.azuread_administrator.new](#fn-azuread_administratornew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_server.identity.new](#fn-identitynew) constructor.
@@ -414,22 +411,6 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
-
-
-### fn withTransparentDataEncryptionKeyVaultKeyId
-
-```ts
-withTransparentDataEncryptionKeyVaultKeyId()
-```
-
-`azurerm.string.withTransparentDataEncryptionKeyVaultKeyId` constructs a mixin object that can be merged into the `string`
-Terraform resource block to set or update the transparent_data_encryption_key_vault_key_id field.
-
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`string`): The value to set for the `transparent_data_encryption_key_vault_key_id` field.
 
 
 ### fn withVersion
