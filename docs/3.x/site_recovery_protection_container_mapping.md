@@ -308,6 +308,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `authentication_type` (`string`): Set the `authentication_type` field on the resulting object. When `null`, the `authentication_type` field will be omitted from the resulting object.
   - `automation_account_id` (`string`): Set the `automation_account_id` field on the resulting object. When `null`, the `automation_account_id` field will be omitted from the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
 

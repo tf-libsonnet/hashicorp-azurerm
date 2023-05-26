@@ -2,13 +2,28 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='site_recovery_replication_recovery_plan', url='', help='`site_recovery_replication_recovery_plan` represents the `azurerm_site_recovery_replication_recovery_plan` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.site_recovery_replication_recovery_plan.new` injects a new `azurerm_site_recovery_replication_recovery_plan` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.site_recovery_replication_recovery_plan.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.site_recovery_replication_recovery_plan` using the reference:\n\n    $._ref.azurerm_site_recovery_replication_recovery_plan.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_site_recovery_replication_recovery_plan.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `recovery_vault_id` (`string`): Set the `recovery_vault_id` field on the resulting resource block.\n  - `source_recovery_fabric_id` (`string`): Set the `source_recovery_fabric_id` field on the resulting resource block.\n  - `target_recovery_fabric_id` (`string`): Set the `target_recovery_fabric_id` field on the resulting resource block.\n  - `recovery_group` (`list[obj]`): Set the `recovery_group` field on the resulting resource block. When `null`, the `recovery_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.recovery_group.new](#fn-recovery_groupnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  azure_to_azure_settings:: {
+    '#new':: d.fn(help='\n`azurerm.site_recovery_replication_recovery_plan.azure_to_azure_settings.new` constructs a new object with attributes and blocks configured for the `azure_to_azure_settings`\nTerraform sub block.\n\n\n\n**Args**:\n  - `primary_edge_zone` (`string`): Set the `primary_edge_zone` field on the resulting object. When `null`, the `primary_edge_zone` field will be omitted from the resulting object.\n  - `primary_zone` (`string`): Set the `primary_zone` field on the resulting object. When `null`, the `primary_zone` field will be omitted from the resulting object.\n  - `recovery_edge_zone` (`string`): Set the `recovery_edge_zone` field on the resulting object. When `null`, the `recovery_edge_zone` field will be omitted from the resulting object.\n  - `recovery_zone` (`string`): Set the `recovery_zone` field on the resulting object. When `null`, the `recovery_zone` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `azure_to_azure_settings` sub block.\n', args=[]),
+    new(
+      primary_edge_zone=null,
+      primary_zone=null,
+      recovery_edge_zone=null,
+      recovery_zone=null
+    ):: std.prune(a={
+      primary_edge_zone: primary_edge_zone,
+      primary_zone: primary_zone,
+      recovery_edge_zone: recovery_edge_zone,
+      recovery_zone: recovery_zone,
+    }),
+  },
+  '#new':: d.fn(help="\n`azurerm.site_recovery_replication_recovery_plan.new` injects a new `azurerm_site_recovery_replication_recovery_plan` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.site_recovery_replication_recovery_plan.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.site_recovery_replication_recovery_plan` using the reference:\n\n    $._ref.azurerm_site_recovery_replication_recovery_plan.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_site_recovery_replication_recovery_plan.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `recovery_vault_id` (`string`): Set the `recovery_vault_id` field on the resulting resource block.\n  - `source_recovery_fabric_id` (`string`): Set the `source_recovery_fabric_id` field on the resulting resource block.\n  - `target_recovery_fabric_id` (`string`): Set the `target_recovery_fabric_id` field on the resulting resource block.\n  - `azure_to_azure_settings` (`list[obj]`): Set the `azure_to_azure_settings` field on the resulting resource block. When `null`, the `azure_to_azure_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.azure_to_azure_settings.new](#fn-azure_to_azure_settingsnew) constructor.\n  - `recovery_group` (`list[obj]`): Set the `recovery_group` field on the resulting resource block. When `null`, the `recovery_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.recovery_group.new](#fn-recovery_groupnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     name,
     recovery_vault_id,
     source_recovery_fabric_id,
     target_recovery_fabric_id,
+    azure_to_azure_settings=null,
     recovery_group=null,
     timeouts=null,
     _meta={}
@@ -16,6 +31,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     type='azurerm_site_recovery_replication_recovery_plan',
     label=resourceLabel,
     attrs=self.newAttrs(
+      azure_to_azure_settings=azure_to_azure_settings,
       name=name,
       recovery_group=recovery_group,
       recovery_vault_id=recovery_vault_id,
@@ -25,15 +41,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.site_recovery_replication_recovery_plan.newAttrs` constructs a new object with attributes and blocks configured for the `site_recovery_replication_recovery_plan`\nTerraform resource.\n\nUnlike [azurerm.site_recovery_replication_recovery_plan.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `recovery_vault_id` (`string`): Set the `recovery_vault_id` field on the resulting object.\n  - `source_recovery_fabric_id` (`string`): Set the `source_recovery_fabric_id` field on the resulting object.\n  - `target_recovery_fabric_id` (`string`): Set the `target_recovery_fabric_id` field on the resulting object.\n  - `recovery_group` (`list[obj]`): Set the `recovery_group` field on the resulting object. When `null`, the `recovery_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.recovery_group.new](#fn-recovery_groupnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `site_recovery_replication_recovery_plan` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.site_recovery_replication_recovery_plan.newAttrs` constructs a new object with attributes and blocks configured for the `site_recovery_replication_recovery_plan`\nTerraform resource.\n\nUnlike [azurerm.site_recovery_replication_recovery_plan.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `recovery_vault_id` (`string`): Set the `recovery_vault_id` field on the resulting object.\n  - `source_recovery_fabric_id` (`string`): Set the `source_recovery_fabric_id` field on the resulting object.\n  - `target_recovery_fabric_id` (`string`): Set the `target_recovery_fabric_id` field on the resulting object.\n  - `azure_to_azure_settings` (`list[obj]`): Set the `azure_to_azure_settings` field on the resulting object. When `null`, the `azure_to_azure_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.azure_to_azure_settings.new](#fn-azure_to_azure_settingsnew) constructor.\n  - `recovery_group` (`list[obj]`): Set the `recovery_group` field on the resulting object. When `null`, the `recovery_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.recovery_group.new](#fn-recovery_groupnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `site_recovery_replication_recovery_plan` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     name,
     recovery_vault_id,
     source_recovery_fabric_id,
     target_recovery_fabric_id,
+    azure_to_azure_settings=null,
     recovery_group=null,
     timeouts=null
   ):: std.prune(a={
+    azure_to_azure_settings: azure_to_azure_settings,
     name: name,
     recovery_group: recovery_group,
     recovery_vault_id: recovery_vault_id,
@@ -112,6 +130,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       read: read,
       update: update,
     }),
+  },
+  '#withAzureToAzureSettings':: d.fn(help='`azurerm.list[obj].withAzureToAzureSettings` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the azure_to_azure_settings field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withAzureToAzureSettingsMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `azure_to_azure_settings` field.\n', args=[]),
+  withAzureToAzureSettings(resourceLabel, value): {
+    resource+: {
+      azurerm_site_recovery_replication_recovery_plan+: {
+        [resourceLabel]+: {
+          azure_to_azure_settings: value,
+        },
+      },
+    },
+  },
+  '#withAzureToAzureSettingsMixin':: d.fn(help='`azurerm.list[obj].withAzureToAzureSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the azure_to_azure_settings field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withAzureToAzureSettings](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `azure_to_azure_settings` field.\n', args=[]),
+  withAzureToAzureSettingsMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_site_recovery_replication_recovery_plan+: {
+        [resourceLabel]+: {
+          azure_to_azure_settings+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
   },
   '#withName':: d.fn(help='`azurerm.string.withName` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the name field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `name` field.\n', args=[]),
   withName(resourceLabel, value): {

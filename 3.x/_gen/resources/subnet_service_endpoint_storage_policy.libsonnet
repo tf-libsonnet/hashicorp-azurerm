@@ -3,14 +3,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='subnet_service_endpoint_storage_policy', url='', help='`subnet_service_endpoint_storage_policy` represents the `azurerm_subnet_service_endpoint_storage_policy` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   definition:: {
-    '#new':: d.fn(help='\n`azurerm.subnet_service_endpoint_storage_policy.definition.new` constructs a new object with attributes and blocks configured for the `definition`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `service_resources` (`list`): Set the `service_resources` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `definition` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.subnet_service_endpoint_storage_policy.definition.new` constructs a new object with attributes and blocks configured for the `definition`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `service` (`string`): Set the `service` field on the resulting object. When `null`, the `service` field will be omitted from the resulting object.\n  - `service_resources` (`list`): Set the `service_resources` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `definition` sub block.\n', args=[]),
     new(
       name,
       service_resources,
-      description=null
+      description=null,
+      service=null
     ):: std.prune(a={
       description: description,
       name: name,
+      service: service,
       service_resources: service_resources,
     }),
   },

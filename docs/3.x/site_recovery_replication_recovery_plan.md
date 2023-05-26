@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAzureToAzureSettings()`](#fn-withazuretoazuresettings)
+* [`fn withAzureToAzureSettingsMixin()`](#fn-withazuretoazuresettingsmixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withRecoveryGroup()`](#fn-withrecoverygroup)
 * [`fn withRecoveryGroupMixin()`](#fn-withrecoverygroupmixin)
@@ -23,6 +25,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTargetRecoveryFabricId()`](#fn-withtargetrecoveryfabricid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj azure_to_azure_settings`](#obj-azure_to_azure_settings)
+  * [`fn new()`](#fn-azure_to_azure_settingsnew)
 * [`obj recovery_group`](#obj-recovery_group)
   * [`fn new()`](#fn-recovery_groupnew)
   * [`obj recovery_group.post_action`](#obj-recovery_grouppost_action)
@@ -65,6 +69,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `recovery_vault_id` (`string`): Set the `recovery_vault_id` field on the resulting resource block.
   - `source_recovery_fabric_id` (`string`): Set the `source_recovery_fabric_id` field on the resulting resource block.
   - `target_recovery_fabric_id` (`string`): Set the `target_recovery_fabric_id` field on the resulting resource block.
+  - `azure_to_azure_settings` (`list[obj]`): Set the `azure_to_azure_settings` field on the resulting resource block. When `null`, the `azure_to_azure_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.azure_to_azure_settings.new](#fn-azure_to_azure_settingsnew) constructor.
   - `recovery_group` (`list[obj]`): Set the `recovery_group` field on the resulting resource block. When `null`, the `recovery_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.recovery_group.new](#fn-recovery_groupnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -94,11 +99,49 @@ injecting into a complete block.
   - `recovery_vault_id` (`string`): Set the `recovery_vault_id` field on the resulting object.
   - `source_recovery_fabric_id` (`string`): Set the `source_recovery_fabric_id` field on the resulting object.
   - `target_recovery_fabric_id` (`string`): Set the `target_recovery_fabric_id` field on the resulting object.
+  - `azure_to_azure_settings` (`list[obj]`): Set the `azure_to_azure_settings` field on the resulting object. When `null`, the `azure_to_azure_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.azure_to_azure_settings.new](#fn-azure_to_azure_settingsnew) constructor.
   - `recovery_group` (`list[obj]`): Set the `recovery_group` field on the resulting object. When `null`, the `recovery_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.recovery_group.new](#fn-recovery_groupnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.site_recovery_replication_recovery_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `site_recovery_replication_recovery_plan` resource into the root Terraform configuration.
+
+
+### fn withAzureToAzureSettings
+
+```ts
+withAzureToAzureSettings()
+```
+
+`azurerm.list[obj].withAzureToAzureSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the azure_to_azure_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withAzureToAzureSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `azure_to_azure_settings` field.
+
+
+### fn withAzureToAzureSettingsMixin
+
+```ts
+withAzureToAzureSettingsMixin()
+```
+
+`azurerm.list[obj].withAzureToAzureSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the azure_to_azure_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withAzureToAzureSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `azure_to_azure_settings` field.
 
 
 ### fn withName
@@ -236,6 +279,32 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj azure_to_azure_settings
+
+
+
+### fn azure_to_azure_settings.new
+
+```ts
+new()
+```
+
+
+`azurerm.site_recovery_replication_recovery_plan.azure_to_azure_settings.new` constructs a new object with attributes and blocks configured for the `azure_to_azure_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `primary_edge_zone` (`string`): Set the `primary_edge_zone` field on the resulting object. When `null`, the `primary_edge_zone` field will be omitted from the resulting object.
+  - `primary_zone` (`string`): Set the `primary_zone` field on the resulting object. When `null`, the `primary_zone` field will be omitted from the resulting object.
+  - `recovery_edge_zone` (`string`): Set the `recovery_edge_zone` field on the resulting object. When `null`, the `recovery_edge_zone` field will be omitted from the resulting object.
+  - `recovery_zone` (`string`): Set the `recovery_zone` field on the resulting object. When `null`, the `recovery_zone` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `azure_to_azure_settings` sub block.
 
 
 ## obj recovery_group

@@ -23,6 +23,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withImmutability()`](#fn-withimmutability)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withMonitoring()`](#fn-withmonitoring)
+* [`fn withMonitoringMixin()`](#fn-withmonitoringmixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -36,6 +38,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-encryptionnew)
 * [`obj identity`](#obj-identity)
   * [`fn new()`](#fn-identitynew)
+* [`obj monitoring`](#obj-monitoring)
+  * [`fn new()`](#fn-monitoringnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -81,6 +85,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.encryption.new](#fn-encryptionnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.identity.new](#fn-identitynew) constructor.
+  - `monitoring` (`list[obj]`): Set the `monitoring` field on the resulting resource block. When `null`, the `monitoring` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.monitoring.new](#fn-monitoringnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -118,6 +123,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.encryption.new](#fn-encryptionnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.identity.new](#fn-identitynew) constructor.
+  - `monitoring` (`list[obj]`): Set the `monitoring` field on the resulting object. When `null`, the `monitoring` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.monitoring.new](#fn-monitoringnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -260,6 +266,43 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withMonitoring
+
+```ts
+withMonitoring()
+```
+
+`azurerm.list[obj].withMonitoring` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the monitoring field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withMonitoringMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `monitoring` field.
+
+
+### fn withMonitoringMixin
+
+```ts
+withMonitoringMixin()
+```
+
+`azurerm.list[obj].withMonitoringMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the monitoring field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withMonitoring](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `monitoring` field.
 
 
 ### fn withName
@@ -458,6 +501,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
+
+
+## obj monitoring
+
+
+
+### fn monitoring.new
+
+```ts
+new()
+```
+
+
+`azurerm.recovery_services_vault.monitoring.new` constructs a new object with attributes and blocks configured for the `monitoring`
+Terraform sub block.
+
+
+
+**Args**:
+  - `alerts_for_all_job_failures_enabled` (`bool`): Set the `alerts_for_all_job_failures_enabled` field on the resulting object. When `null`, the `alerts_for_all_job_failures_enabled` field will be omitted from the resulting object.
+  - `alerts_for_critical_operation_failures_enabled` (`bool`): Set the `alerts_for_critical_operation_failures_enabled` field on the resulting object. When `null`, the `alerts_for_critical_operation_failures_enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `monitoring` sub block.
 
 
 ## obj timeouts

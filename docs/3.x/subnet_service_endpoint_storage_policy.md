@@ -253,6 +253,7 @@ Terraform sub block.
 **Args**:
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `service` (`string`): Set the `service` field on the resulting object. When `null`, the `service` field will be omitted from the resulting object.
   - `service_resources` (`list`): Set the `service_resources` field on the resulting object.
 
 **Returns**:

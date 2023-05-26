@@ -3,11 +3,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='site_recovery_protection_container_mapping', url='', help='`site_recovery_protection_container_mapping` represents the `azurerm_site_recovery_protection_container_mapping` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   automatic_update:: {
-    '#new':: d.fn(help='\n`azurerm.site_recovery_protection_container_mapping.automatic_update.new` constructs a new object with attributes and blocks configured for the `automatic_update`\nTerraform sub block.\n\n\n\n**Args**:\n  - `automation_account_id` (`string`): Set the `automation_account_id` field on the resulting object. When `null`, the `automation_account_id` field will be omitted from the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `automatic_update` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.site_recovery_protection_container_mapping.automatic_update.new` constructs a new object with attributes and blocks configured for the `automatic_update`\nTerraform sub block.\n\n\n\n**Args**:\n  - `authentication_type` (`string`): Set the `authentication_type` field on the resulting object. When `null`, the `authentication_type` field will be omitted from the resulting object.\n  - `automation_account_id` (`string`): Set the `automation_account_id` field on the resulting object. When `null`, the `automation_account_id` field will be omitted from the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `automatic_update` sub block.\n', args=[]),
     new(
+      authentication_type=null,
       automation_account_id=null,
       enabled=null
     ):: std.prune(a={
+      authentication_type: authentication_type,
       automation_account_id: automation_account_id,
       enabled: enabled,
     }),

@@ -740,6 +740,7 @@ Terraform sub block.
   - `event_pattern` (`list`): Set the `event_pattern` field on the resulting object.
   - `hub_pattern` (`list`): Set the `hub_pattern` field on the resulting object.
   - `url_template` (`string`): Set the `url_template` field on the resulting object.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `upstream_endpoint` sub block.

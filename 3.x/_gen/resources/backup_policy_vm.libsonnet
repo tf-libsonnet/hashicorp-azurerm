@@ -104,13 +104,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   retention_monthly:: {
-    '#new':: d.fn(help='\n`azurerm.backup_policy_vm.retention_monthly.new` constructs a new object with attributes and blocks configured for the `retention_monthly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_monthly` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.backup_policy_vm.retention_monthly.new` constructs a new object with attributes and blocks configured for the `retention_monthly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.\n  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_monthly` sub block.\n', args=[]),
     new(
       count,
-      weekdays,
-      weeks
+      days=null,
+      include_last_days=null,
+      weekdays=null,
+      weeks=null
     ):: std.prune(a={
       count: count,
+      days: days,
+      include_last_days: include_last_days,
       weekdays: weekdays,
       weeks: weeks,
     }),
@@ -126,14 +130,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   retention_yearly:: {
-    '#new':: d.fn(help='\n`azurerm.backup_policy_vm.retention_yearly.new` constructs a new object with attributes and blocks configured for the `retention_yearly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `months` (`list`): Set the `months` field on the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_yearly` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.backup_policy_vm.retention_yearly.new` constructs a new object with attributes and blocks configured for the `retention_yearly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.\n  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.\n  - `months` (`list`): Set the `months` field on the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_yearly` sub block.\n', args=[]),
     new(
       count,
       months,
-      weekdays,
-      weeks
+      days=null,
+      include_last_days=null,
+      weekdays=null,
+      weeks=null
     ):: std.prune(a={
       count: count,
+      days: days,
+      include_last_days: include_last_days,
       months: months,
       weekdays: weekdays,
       weeks: weeks,
